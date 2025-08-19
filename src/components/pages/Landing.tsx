@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, color, scale } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import toast from "react-hot-toast";
@@ -45,6 +45,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import EnquiryForm from "@/components/EnquiryForm";
+import style from "styled-jsx/style";
 
 // Data arrays
 const courses = [
@@ -345,6 +346,8 @@ const Landing = () => {
         </div>
       </section>
 
+      
+
       {/* Explore Universities Section with Enquiry Modal */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -460,7 +463,130 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* Cities Section */}
+      
+    
+      {/* Accreditation */}
+      <section
+        className="py-16 px-6"
+        style={{
+          background: "linear-gradient(to right, #0f2027, #203a43, #2c5364)",
+          color: "#ffffff",
+        }}
+        data-aos="fade-up"
+      >
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl font-extrabold mb-4 flex items-center justify-center gap-3">
+            <span role="img" aria-label="scroll">📜</span> Accreditation & Recognition
+          </h2>
+          <p className="text-gray-300 max-w-2xl mx-auto mb-12 text-base sm:text-lg">
+            We only partner with universities that are recognized and accredited by the top education authorities in India and globally.
+          </p>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {[
+              { src: "/ugc.png", label: "UGC Approved", desc: "Recognized by the University Grants Commission for offering quality higher education." },
+              { src: "/aicte.png", label: "AICTE Recognized", desc: "Approved by the All India Council for Technical Education for technical programs." },
+              { src: "/naac.png", label: "NAAC Accredited", desc: "Accredited by NAAC for maintaining academic excellence and infrastructure." },
+              { src: "/iso.png", label: "ISO Certified", desc: "Certified for quality management systems as per international standards." },
+              { src: "/aiu.png", label: "AIU Member", desc: "Member of Association of Indian Universities promoting academic equivalence." },
+              { src: "/nirf.png", label: "NIRF Ranked", desc: "Ranked under the National Institutional Ranking Framework." },
+              { src: "/ioe.png", label: "IOE Recognized", desc: "Recognized as Institution of Eminence by the Government of India." },
+              { src: "/crisil.png", label: "CRISIL Rated", desc: "Rating from CRISIL for academic and operational performance." },
+              { src: "/icar.png", label: "ICAR Approved", desc: "Approved by the Indian Council of Agricultural Research." },
+              { src: "/wes.png", label: "WES Recognized", desc: "Degrees recognized by World Education Services for global equivalency." },
+              { src: "/nabh.png", label: "NABH Accredited", desc: "Applicable to healthcare programs with NABH compliance." },
+              { src: "/iacbe.png", label: "IACBE Member", desc: "Member of the International Accreditation Council for Business Education." },
+              { src: "/aacsb.png", label: "AACSB Accredited", desc: "Top-tier accreditation for business schools worldwide." },
+              { src: "/qaa.png", label: "QAA Approved", desc: "Quality assurance by the UK-based QAA." },
+              { src: "/wasc.png", label: "WASC Accredited", desc: "Accredited by the Western Association of Schools and Colleges." },
+              { src: "/qs.png", label: "QS Ranked", desc: "Ranked in the QS World University Rankings." },
+              { src: "/acu.png", label: "ACU Member", desc: "Member of the Association of Commonwealth Universities." },
+              { src: "/unwto.png", label: "UNWTO Certified", desc: "Certified by United Nations World Tourism Organization." },
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                className="bg-white/10 border border-white/20 rounded-xl p-4 shadow-lg backdrop-blur-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+                onClick={() => alert(`${item.label}\n\n${item.desc}`)}
+                data-aos="zoom-in"
+              >
+                <div className="flex flex-col items-center text-center">
+                  <img src={item.src} alt={item.label} className="w-12 h-12 object-contain mb-2" />
+                  <h3 className="text-sm font-semibold text-white">{item.label}</h3>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Study Cities */}
+      <section className="bg-gradient-to-br from-indigo-900 via-blue-900 to-sky-800 py-16 px-6 text-white overflow-hidden relative" data-aos="fade-up">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 drop-shadow-lg">🏫 Study Cities Across India</h2>
+          <p className="text-blue-100 text-lg max-w-2xl mx-auto mb-12">Explore top universities across India's major educational hubs.</p>
+
+          <div className="overflow-hidden relative backdrop-blur-md rounded-2xl border border-white/20 p-6">
+            <div className="flex gap-10 animate-[scroll_30s_linear_infinite] whitespace-nowrap">
+              {[...Array(2)].flatMap((_, i) =>
+                cities.map((city, idx) => (
+                  <motion.div
+                    key={`city-${i}-${idx}`}
+                    whileHover={{ y: -6 }}
+                    className="min-w-[150px] flex flex-col items-center text-center bg-white/10 backdrop-blur-xl p-4 rounded-xl border border-white/20 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+                  >
+                    <img src={city.img} alt={city.city} className="w-16 h-16 object-contain mb-2 rounded-full border border-white/20 shadow" />
+                    <p className="text-white font-semibold text-sm">{city.city}</p>
+                    <p className="text-blue-200 text-xs">{city.state}</p>
+                  </motion.div>
+                ))
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Founders */}
+      <section className="bg-gradient-to-b from-blue-100 via-blue-50 to-white py-16 px-6" data-aos="fade-up">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-blue-900 mb-6">🚀 Meet Our Visionary Founders</h2>
+          <p className="text-gray-700 max-w-2xl mx-auto mb-12 text-lg">The brilliant minds behind UniFost, shaping the future of education with passion and purpose.</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {[
+              {
+                name: "Priyansh Mishra",
+                role: "Co-Founder & Director",
+                img: "/priyansh.jpg",
+                desc: "Priyansh Mishra, a visionary leader committed to revolutionizing education through innovation and accessibility, has poured his heart, energy, and vision into building UniFost with unwavering passion and dedication.",
+                quote: "Innovation in education is not an option — it's a necessity."
+              },
+              {
+                name: "Aman Pawar",
+                role: "Co-Founder & Director",
+                img: "/aman.jpg",
+                desc: "Aman Pawar is the driving force behind UniFost—blending vision with action, and passion with purpose. His tireless efforts and hands-on leadership have shaped a platform that puts students first.",
+                quote: "Students deserve guidance that goes beyond academics."
+              }
+            ].map((founder, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.25 }}
+                className="bg-white/30 backdrop-blur-lg rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 text-center border border-blue-200 hover:border-blue-500"
+              >
+                <div className="relative w-32 h-32 mx-auto mb-6">
+                  <img src={founder.img} alt={founder.name} className="w-full h-full rounded-full object-cover border-4 border-blue-500 shadow-md" />
+                </div>
+                <h3 className="text-2xl font-bold text-blue-800 mb-2">{founder.name}</h3>
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">{founder.role}</span>
+                <p className="text-gray-700 mt-4 mb-4">{founder.desc}</p>
+                <p className="italic text-blue-700 text-sm">"{founder.quote}"</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       
     </div>
   );
