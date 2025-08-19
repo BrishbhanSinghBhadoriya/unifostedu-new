@@ -7,6 +7,8 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import ImageWithFallback from '@/components/ImageWithFallback';
 import { FaSearch, FaMapMarkerAlt, FaBook, FaStar, FaClock, FaMoneyBillWave, FaArrowRight } from 'react-icons/fa';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import EnquiryForm from '@/components/EnquiryForm';
 
 export interface UniversityInfo {
   name: string;
@@ -224,12 +226,17 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle }:
               </CardContent>
 
               <CardFooter className="pt-0">
-                <Button className="w-full bg-[#001e3c] hover:bg-[#003b6c] text-white group-hover:bg-[#00ffe0] group-hover:text-[#001e3c] transition-all duration-300" asChild>
-                  <Link href={`/universities/${university.name.toLowerCase().replace(/\s+/g, '-')}`}>
-                    View Details
-                    <FaArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </Button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button className="w-full bg-[#001e3c] hover:bg-[#003b6c] text-white">Enquiry Now</Button>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-[560px]">
+                    <DialogHeader>
+                      <DialogTitle>Enquiry for {university.name}</DialogTitle>
+                    </DialogHeader>
+                    <EnquiryForm universityName={university.name} />
+                  </DialogContent>
+                </Dialog>
               </CardFooter>
             </Card>
           </div>

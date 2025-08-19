@@ -27,11 +27,23 @@ import {
   FaStar,
   FaUsers,
   FaClock,
-  FaGlobe
+  FaGlobe,
+  FaUserTie,
+  FaQuestionCircle,
+  FaShieldAlt,
+  FaComments,
+  FaCompass
 } from "react-icons/fa";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
+import EnquiryForm from "@/components/EnquiryForm";
 
 // Data arrays
 const courses = [
@@ -157,183 +169,183 @@ const Landing = () => {
             </p>
           </motion.div>
           
-          <div className="space-y-12">
-            {programs.map((category, categoryIndex) => (
-              <motion.div
-                key={categoryIndex}
-                data-aos="fade-up"
-                data-aos-delay={categoryIndex * 200}
-              >
-                <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-                  {category.category}
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {category.programs.map((program, programIndex) => (
-                    <Card 
-                      key={programIndex}
-                      className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#00ffe0] bg-gradient-to-br from-white to-gray-50"
-                      data-aos="fade-up"
-                      data-aos-delay={categoryIndex * 200 + programIndex * 100}
-                    >
-                      <CardHeader className="pb-3">
-                        <div className="flex items-center justify-between">
-                          <div className="w-12 h-12 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-lg flex items-center justify-center">
-                            <program.icon className="w-6 h-6 text-[#001e3c]" />
-                          </div>
-                          <Badge variant="secondary" className="bg-[#00ffe0] text-[#001e3c] hover:bg-[#00e6cc]">
-                            {program.duration}
-                          </Badge>
+          <Tabs defaultValue="all" className="w-full" data-aos="fade-up">
+            <TabsList className="grid w-full grid-cols-3 max-w-2xl mx-auto bg-white/60 backdrop-blur shadow-sm rounded-xl p-1">
+              <TabsTrigger value="all" className="data-[state=active]:bg-[#001e3c] data-[state=active]:text-white rounded-lg">
+                All Programs
+              </TabsTrigger>
+              <TabsTrigger value="pg" className="data-[state=active]:bg-[#001e3c] data-[state=active]:text-white rounded-lg">
+                Postgraduate Degrees
+              </TabsTrigger>
+              <TabsTrigger value="ug" className="data-[state=active]:bg-[#001e3c] data-[state=active]:text-white rounded-lg">
+                Undergraduate Programs
+              </TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="all" className="mt-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {[...programs[0].programs, ...programs[1].programs].map((program, idx) => (
+                  <Card key={idx} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#00ffe0] bg-gradient-to-br from-white to-gray-50">
+                    <CardHeader className="pb-3">
+                      <div className="flex items-center justify-between">
+                        <div className="w-12 h-12 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-lg flex items-center justify-center">
+                          <program.icon className="w-6 h-6 text-[#001e3c]" />
                         </div>
-                        <CardTitle className="text-lg leading-tight text-gray-900 group-hover:text-[#001e3c] transition-colors">
-                          {program.name}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent className="pb-4">
-                        <div className="space-y-3">
-                          <div className="flex items-center gap-2 text-sm text-gray-600">
-                            <FaClock className="w-4 h-4" />
-                            <span>{program.duration} Duration</span>
-                          </div>
-                          <div className="space-y-2">
-                            <p className="text-sm font-medium text-gray-700">Specializations:</p>
-                            <div className="flex flex-wrap gap-1">
-                              {program.specializations.map((spec, specIndex) => (
-                                <Badge key={specIndex} variant="outline" className="text-xs">
-                                  {spec}
-                                </Badge>
-                              ))}
-                            </div>
+                        <Badge variant="secondary" className="bg-[#00ffe0] text-[#001e3c] hover:bg-[#00e6cc]">
+                          {program.duration}
+                        </Badge>
+                      </div>
+                      <CardTitle className="text-lg leading-tight text-gray-900 group-hover:text-[#001e3c] transition-colors">
+                        {program.name}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="pb-4">
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-2 text-sm text-gray-600">
+                          <FaClock className="w-4 h-4" />
+                          <span>{program.duration} Duration</span>
+                        </div>
+                        <div className="space-y-2">
+                          <p className="text-sm font-medium text-gray-700">Specializations:</p>
+                          <div className="flex flex-wrap gap-1">
+                            {program.specializations.map((spec, specIndex) => (
+                              <Badge key={specIndex} variant="outline" className="text-xs">
+                                {spec}
+                              </Badge>
+                            ))}
                           </div>
                         </div>
-                      </CardContent>
-                      <CardFooter className="pt-0">
-                        <Button 
-                          className="w-full bg-[#001e3c] hover:bg-[#003b6c] text-white group-hover:bg-[#00ffe0] group-hover:text-[#001e3c] transition-all duration-300"
-                          asChild
-                        >
-                          <Link href={`/courses/${program.name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')}`}>
-                            Explore Program
-                            <FaArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                          </Link>
-                        </Button>
-                      </CardFooter>
-                    </Card>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                      </div>
+                    </CardContent>
+                    <CardFooter className="pt-0">
+                      <Button className="w-full bg-[#001e3c] hover:bg-[#003b6c] text-white group-hover:bg-[#00ffe0] group-hover:text-[#001e3c] transition-all duration-300" asChild>
+                        <Link href={`/courses/${program.name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')}`}>
+                          Explore Program
+                          <FaArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="pg" className="mt-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {programs[0].programs.map((program, idx) => (
+                  <Card key={idx} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#00ffe0] bg-gradient-to-br from-white to-gray-50">
+                    <CardHeader className="pb-3">
+                      <div className="flex items-center justify-between">
+                        <div className="w-12 h-12 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-lg flex items-center justify-center">
+                          <program.icon className="w-6 h-6 text-[#001e3c]" />
+                        </div>
+                        <Badge variant="secondary" className="bg-[#00ffe0] text-[#001e3c] hover:bg-[#00e6cc]">
+                          {program.duration}
+                        </Badge>
+                      </div>
+                      <CardTitle className="text-lg leading-tight text-gray-900 group-hover:text-[#001e3c] transition-colors">
+                        {program.name}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="pb-4">
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-2 text-sm text-gray-600">
+                          <FaClock className="w-4 h-4" />
+                          <span>{program.duration} Duration</span>
+                        </div>
+                        <div className="space-y-2">
+                          <p className="text-sm font-medium text-gray-700">Specializations:</p>
+                          <div className="flex flex-wrap gap-1">
+                            {program.specializations.map((spec, specIndex) => (
+                              <Badge key={specIndex} variant="outline" className="text-xs">
+                                {spec}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                    <CardFooter className="pt-0">
+                      <Button className="w-full bg-[#001e3c] hover:bg-[#003b6c] text-white group-hover:bg-[#00ffe0] group-hover:text-[#001e3c] transition-all duration-300" asChild>
+                        <Link href={`/courses/${program.name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')}`}>
+                          Explore Program
+                          <FaArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="ug" className="mt-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {programs[1].programs.map((program, idx) => (
+                  <Card key={idx} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#00ffe0] bg-gradient-to-br from-white to-gray-50">
+                    <CardHeader className="pb-3">
+                      <div className="flex items-center justify-between">
+                        <div className="w-12 h-12 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-lg flex items-center justify-center">
+                          <program.icon className="w-6 h-6 text-[#001e3c]" />
+                        </div>
+                        <Badge variant="secondary" className="bg-[#00ffe0] text-[#001e3c] hover:bg-[#00e6cc]">
+                          {program.duration}
+                        </Badge>
+                      </div>
+                      <CardTitle className="text-lg leading-tight text-gray-900 group-hover:text-[#001e3c] transition-colors">
+                        {program.name}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="pb-4">
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-2 text-sm text-gray-600">
+                          <FaClock className="w-4 h-4" />
+                          <span>{program.duration} Duration</span>
+                        </div>
+                        <div className="space-y-2">
+                          <p className="text-sm font-medium text-gray-700">Specializations:</p>
+                          <div className="flex flex-wrap gap-1">
+                            {program.specializations.map((spec, specIndex) => (
+                              <Badge key={specIndex} variant="outline" className="text-xs">
+                                {spec}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                    <CardFooter className="pt-0">
+                      <Button className="w-full bg-[#001e3c] hover:bg-[#003b6c] text-white group-hover:bg-[#00ffe0] group-hover:text-[#001e3c] transition-all duration-300" asChild>
+                        <Link href={`/courses/${program.name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')}`}>
+                          Explore Program
+                          <FaArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                ))}
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
       </section>
 
-      {/* Enhanced Courses Section with Shadcn UI */}
+      {/* Explore Universities Section with Enquiry Modal */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="text-center mb-16"
-            data-aos="fade-up"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Popular Online Courses
-            </h2>
-            <p className="text-xl text-gray-600">
-              Choose from a wide range of courses designed for your career growth
-            </p>
+          <motion.div className="text-center mb-16" data-aos="fade-up">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">🏛 Explore Over Universities</h2>
+            <p className="text-xl text-gray-600">Find the right university and enquire instantly to get personalized guidance.</p>
           </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {courses.map((course, index) => (
-              <motion.div
-                key={index}
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <Card className="group h-full hover:shadow-xl transition-all duration-300 border-2 hover:border-[#00ffe0] bg-gradient-to-br from-white to-gray-50 overflow-hidden">
-                  <CardHeader className="pb-3">
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="w-12 h-12 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-lg flex items-center justify-center">
-                        <course.icon className="w-6 h-6 text-[#001e3c]" />
-                      </div>
-                      <Badge 
-                        variant="secondary" 
-                        className="bg-[#00ffe0] text-[#001e3c] hover:bg-[#00e6cc] font-semibold"
-                      >
-                        {course.tag}
-                      </Badge>
-                    </div>
-                    <CardTitle className="text-lg leading-tight text-gray-900 group-hover:text-[#001e3c] transition-colors">
-                      {course.title}
-                    </CardTitle>
-                    <CardDescription className="text-gray-600 leading-relaxed">
-                      {course.desc}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="pb-4">
-                    <div className="space-y-3">
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <FaClock className="w-4 h-4" />
-                        <span>{course.duration}</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <FaUsers className="w-4 h-4" />
-                        <span>{course.students} students enrolled</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        {[...Array(5)].map((_, i) => (
-                          <FaStar key={i} className="w-4 h-4 text-yellow-400" />
-                        ))}
-                        <span className="text-sm text-gray-600 ml-2">5.0</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                  <CardFooter className="pt-0">
-                    <Button 
-                      className="w-full bg-[#001e3c] hover:bg-[#003b6c] text-white group-hover:bg-[#00ffe0] group-hover:text-[#001e3c] transition-all duration-300"
-                      asChild
-                    >
-                      <Link href={`/courses/${course.title.toLowerCase().replace(/\s+/g, '-')}`}>
-                        Learn More
-                        <FaArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Colleges Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-16"
-            data-aos="fade-up"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Top Universities
-            </h2>
-            <p className="text-xl text-gray-600">
-              Partner with India's leading educational institutions
-            </p>
-          </motion.div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {colleges.map((college, index) => (
-              <motion.div
-                key={index}
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#00ffe0] bg-gradient-to-br from-gray-50 to-white">
+              <motion.div key={index} data-aos="fade-up" data-aos-delay={index * 100}>
+                <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#00ffe0] bg-gradient-to-br from-white to-gray-50">
                   <CardHeader className="pb-3">
                     <div className="w-12 h-12 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-lg flex items-center justify-center mb-3">
                       <FaUniversity className="w-6 h-6 text-[#001e3c]" />
                     </div>
-                    <CardTitle className="text-lg text-gray-900 group-hover:text-[#001e3c] transition-colors">
-                      {college.name}
-                    </CardTitle>
+                    <CardTitle className="text-lg text-gray-900 group-hover:text-[#001e3c] transition-colors">{college.name}</CardTitle>
                   </CardHeader>
                   <CardContent className="pb-4">
                     <div className="space-y-3">
@@ -348,17 +360,56 @@ const Landing = () => {
                     </div>
                   </CardContent>
                   <CardFooter className="pt-0">
-                    <Button 
-                      variant="outline" 
-                      className="w-full border-[#00ffe0] text-[#00ffe0] hover:bg-[#00ffe0] hover:text-[#001e3c] transition-all duration-300"
-                      asChild
-                    >
-                      <Link href={`/universities/${college.name.toLowerCase().replace(/\s+/g, '-')}`}>
-                        View Details
-                        <FaArrowRight className="ml-2 w-4 h-4" />
-                      </Link>
-                    </Button>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button className="w-full bg-[#001e3c] hover:bg-[#003b6c] text-white">Enquiry Now</Button>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[560px]">
+                        <DialogHeader>
+                          <DialogTitle>Enquiry for {college.name}</DialogTitle>
+                        </DialogHeader>
+                        <EnquiryForm universityName={college.name} />
+                      </DialogContent>
+                    </Dialog>
                   </CardFooter>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Platform Support Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div className="text-center mb-16" data-aos="fade-up">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Platform That Supports You End-to-End</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Everything you need in one place — from expert advice to post-admission support!</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { icon: FaUserTie, title: "Expert Counsellors", desc: "Personalized guidance for the right program and university." },
+              { icon: FaUniversity, title: "Top Universities", desc: "Handpicked, UGC-approved institutions you can trust." },
+              { icon: FaVideo, title: "Video Counselling", desc: "Face-to-face sessions from anywhere, at your convenience." },
+              { icon: FaHome, title: "Home Counselling", desc: "Get assistance at home for forms, documents and more." },
+              { icon: FaComments, title: "Q&A Panel", desc: "Clear all your doubts with quick expert responses." },
+              { icon: FaBook, title: "Post Admission Guide", desc: "Step-by-step help after admission till you settle in." },
+              { icon: FaShieldAlt, title: "Verify Your University", desc: "Authenticity checks so you enroll with confidence." },
+              { icon: FaCompass, title: "Career Guidance", desc: "Plan your career path with mentorship and tools." }
+            ].map((item, idx) => (
+              <motion.div key={idx} data-aos="fade-up" data-aos-delay={idx * 80}>
+                <Card className="relative overflow-hidden group border-2 hover:border-[#00ffe0] transition-all">
+                  <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-[#00ffe0]/20 group-hover:bg-[#00ffe0]/30 transition-colors" />
+                  <CardHeader className="pb-3">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-lg flex items-center justify-center mb-3">
+                      {React.createElement(item.icon, { className: "w-6 h-6 text-[#001e3c]" })}
+                    </div>
+                    <CardTitle className="text-lg text-gray-900">{item.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                  </CardContent>
                 </Card>
               </motion.div>
             ))}

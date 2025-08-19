@@ -24,6 +24,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import ImageWithFallback from '@/components/ImageWithFallback';
 import CourseUniversitiesBrowser from '@/components/CourseUniversitiesBrowser';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import EnquiryForm from "@/components/EnquiryForm";
 
 const courseData = {
   'mba-online': {
