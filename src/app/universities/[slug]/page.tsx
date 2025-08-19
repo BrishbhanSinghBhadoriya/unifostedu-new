@@ -53,6 +53,15 @@ const universityData = {
   }
 };
 
+type University = typeof universityData[keyof typeof universityData];
+
+function slugify(input: string): string {
+  return input
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
+
 interface UniversityPageProps {
   params: Promise<{
     slug: string;
@@ -61,7 +70,17 @@ interface UniversityPageProps {
 
 export default async function UniversityPage({ params }: UniversityPageProps) {
   const { slug } = await params;
-  const university = universityData[slug as keyof typeof universityData];
+
+  // Try direct key match first
+  let university: University | undefined = universityData[
+    slug as keyof typeof universityData
+  ];
+
+  // Fallback: match by slugified university name (e.g., "amity-university-online")
+  if (!university) {
+    const all = Object.values(universityData) as University[];
+    university = all.find((u) => slugify(u.name) === slug);
+  }
 
   if (!university) {
     notFound();
