@@ -45,8 +45,14 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import EnquiryForm from "@/components/EnquiryForm";
+import ImageWithFallback from "@/components/ImageWithFallback";
 
 // Data arrays
+const heroSlides = [
+  { src: "/slider/slider-1.png", alt: "Compare before you decide" },
+  { src: "/slider/slider-2.png", alt: "Your One-Stop Platform for Online Universities" },
+  { src: "/slider/banner-3.png", alt: "Search • Compare • Choose • Succeed" }
+];
 const courses = [
   { title: "MBA Online", desc: "Gain strategic skills from top universities", tag: "Popular", icon: FaGraduationCap, duration: "2 Years", students: "10K+" },
   { title: "MCA Online", desc: "Advance in tech with flexible learning", tag: "Top Rated", icon: FaBook, duration: "3 Years", students: "8K+" },
@@ -126,47 +132,50 @@ const Landing = () => {
     router.push(`/compare?u=${selectedUniversities.join(',')}`);
   };
 
+  // Hero slider
+  const [slide, setSlide] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => {
+      setSlide((s) => (s + 1) % heroSlides.length);
+    }, 4000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h1 
-            className="text-4xl md:text-6xl font-bold mb-6"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            Your Gateway to{" "}
-            <span className="text-[#00ffe0]">Online Education</span>
-          </motion.h1>
-          <motion.p 
-            className="text-xl md:text-2xl mb-8 text-gray-200"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Discover the best online courses from top universities across India
-          </motion.p>
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <Link 
-              href="/coursesearch"
-              className="bg-[#00ffe0] text-[#001e3c] px-8 py-3 rounded-full font-semibold hover:bg-[#00e6cc] transition-colors"
-            >
-              Explore Courses
-            </Link>
-            <Link 
-              href="/bookdemo"
-              className="border border-[#00ffe0] text-[#00ffe0] px-8 py-3 rounded-full font-semibold hover:bg-[#00ffe0] hover:text-[#001e3c] transition-colors"
-            >
-              Book Demo
-            </Link>
-          </motion.div>
+      {/* Hero Section with Full-width Slider */}
+      <section className="relative text-white">
+        <div className="relative w-full">
+          {/* Slides */}
+          <div className="relative h-[260px] sm:h-[380px] md:h-[500px] bg-[#0b1c2a]">
+            {heroSlides.map((s, idx) => (
+              <div
+                key={idx}
+                className={`absolute inset-0 transition-opacity duration-700 ${idx === slide ? 'opacity-100' : 'opacity-0'}`}
+              >
+                <img src={s.src} alt={s.alt} className="w-full h-full object-contain" />
+                {/* Overlay */}
+                <div className="absolute inset-0 " />
+              </div>
+            ))}
+          </div>
+
+          {/* Content overlay */}
+          <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+            <div className="pointer-events-auto text-center px-4" />
+          </div>
+
+          {/* Dots */}
+          <div className="absolute inset-x-0 bottom-4 flex items-center justify-center gap-2">
+            {heroSlides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setSlide(i)}
+                className={`h-2.5 w-2.5 rounded-full ${i === slide ? 'bg-[#00ffe0]' : 'bg-white/60'} transition-colors`}
+                aria-label={`Go to slide ${i + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -405,7 +414,7 @@ const Landing = () => {
                   <CardFooter className="pt-0">
                     <Dialog>
                       <DialogTrigger asChild>
-                        <Button className="w-full bg-[#001e3c] hover:bg-[#003b6c] text-white">Enquiry Now</Button>
+                        <Button type="button" onClick={(e)=>e.stopPropagation()} className="w-full bg-[#001e3c] hover:bg-[#003b6c] text-white">Enquiry Now</Button>
                       </DialogTrigger>
                       <DialogContent className="sm:max-w-[560px]">
                         <DialogHeader>

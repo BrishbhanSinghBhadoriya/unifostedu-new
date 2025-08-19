@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import EnquiryForm from '@/components/EnquiryForm';
-import { FaUniversity, FaMapMarkerAlt, FaStar, FaCalendarAlt, FaMoneyBillWave, FaCheckCircle, FaTimes } from 'react-icons/fa';
+import { FaUniversity, FaMapMarkerAlt, FaStar, FaCalendarAlt, FaMoneyBillWave, FaCheckCircle, FaTimes, FaArrowLeft } from 'react-icons/fa';
 
 type University = {
   key: string;
@@ -166,7 +166,6 @@ export default function ComparePage() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [enquiryDone, setEnquiryDone] = useState(false);
-  const [open, setOpen] = useState(true);
 
   const selectedKeys = useMemo(() => {
     const param = searchParams.get('u') || '';
@@ -194,27 +193,23 @@ export default function ComparePage() {
     }
   }, [selectedUniversities, router]);
 
-  const handleDialogChange = (next: boolean) => {
-    // Prevent closing dialog until enquiryDone is true
-    if (!enquiryDone) {
-      setOpen(true);
-      return;
-    }
-    setOpen(next);
-  };
+  const noop = () => {};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12 px-4 sm:px-6 lg:px-8">
       {/* Enquiry gating (hard block) */}
-      <Dialog open={!enquiryDone && open} onOpenChange={handleDialogChange}>
-        <DialogContent className="sm:max-w-[560px]">
+      <Dialog open={!enquiryDone} onOpenChange={noop}>
+        <DialogContent
+          className="sm:max-w-[560px]"
+          onInteractOutside={(e) => e.preventDefault()}
+          onEscapeKeyDown={(e) => e.preventDefault()}
+        >
           <DialogHeader>
             <DialogTitle>Quick Enquiry before Comparison</DialogTitle>
           </DialogHeader>
           <EnquiryForm
             onSubmitted={() => {
               setEnquiryDone(true);
-              setOpen(false);
             }}
           />
         </DialogContent>
@@ -222,9 +217,14 @@ export default function ComparePage() {
 
       {enquiryDone && (
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900">Compare Online Universities</h1>
-            <p className="text-gray-600 mt-2">You have selected {selectedUniversities.length} universities.</p>
+          <div className="mb-6 flex items-center justify-between">
+            <Button variant="outline" onClick={() => router.back()} className="flex items-center gap-2 border-[#00ffe0] text-[#00ffe0] hover:bg-[#00ffe0] hover:text-[#001e3c]">
+              <FaArrowLeft /> Back
+            </Button>
+            <div className="text-right">
+              <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Compare Online Universities</h1>
+              <p className="text-gray-600">Selected: {selectedUniversities.length}</p>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
