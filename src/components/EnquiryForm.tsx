@@ -12,9 +12,10 @@ import toast from 'react-hot-toast';
 interface EnquiryFormProps {
   universityName?: string;
   defaultProgram?: string;
+  onSubmitted?: () => void;
 }
 
-export default function EnquiryForm({ universityName, defaultProgram = 'MBA' }: EnquiryFormProps) {
+export default function EnquiryForm({ universityName, defaultProgram = 'MBA', onSubmitted }: EnquiryFormProps) {
   const [loading, setLoading] = useState(false);
   const [program, setProgram] = useState<string>(defaultProgram);
 
@@ -28,6 +29,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA' }: 
       // Simulate submit
       await new Promise((r) => setTimeout(r, 900));
       toast.success('Enquiry submitted successfully!');
+      onSubmitted?.();
       (form.querySelector('#message') as HTMLTextAreaElement | null)?.blur();
     } catch (err) {
       toast.error('Something went wrong. Please try again.');

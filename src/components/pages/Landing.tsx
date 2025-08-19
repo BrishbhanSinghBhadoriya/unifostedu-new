@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -109,6 +110,21 @@ const Landing = () => {
       once: true,
     });
   }, []);
+
+  const router = useRouter();
+  const [selectedUniversities, setSelectedUniversities] = useState<string[]>([]);
+  const slugify = (name: string) => name.toLowerCase().replace(/\s+/g, '-');
+  const toggleUniversity = (name: string) => {
+    const slug = slugify(name);
+    setSelectedUniversities((prev) =>
+      prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug].slice(0, 3)
+    );
+  };
+  const canCompare = selectedUniversities.length >= 2 && selectedUniversities.length <= 3;
+  const startCompare = () => {
+    if (!canCompare) return;
+    router.push(`/compare?u=${selectedUniversities.join(',')}`);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -337,6 +353,21 @@ const Landing = () => {
             <p className="text-xl text-gray-600">Find the right university and enquire instantly to get personalized guidance.</p>
           </motion.div>
 
+          {/* Compare selector sticky bar */}
+          <div className="sticky top-2 z-10 mb-4">
+            <div className="max-w-7xl mx-auto bg-white/90 backdrop-blur border rounded-xl p-3 flex items-center justify-between gap-3 shadow-sm">
+              <div className="text-sm text-gray-700">
+                Selected: <span className="font-semibold">{selectedUniversities.length}</span> / 3
+                {selectedUniversities.length > 0 && (
+                  <span className="ml-2 text-gray-500">{selectedUniversities.join(', ')}</span>
+                )}
+              </div>
+              <Button disabled={!canCompare} onClick={startCompare} className="bg-[#001e3c] hover:bg-[#003b6c] text-white">
+                Compare Selected
+              </Button>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {colleges.map((college, index) => (
               <motion.div key={index} data-aos="fade-up" data-aos-delay={index * 100}>
@@ -349,6 +380,18 @@ const Landing = () => {
                   </CardHeader>
                   <CardContent className="pb-4">
                     <div className="space-y-3">
+                      <div className="flex items-center justify-between">
+                        <label className="flex items-center gap-2 text-sm font-medium text-gray-700 cursor-pointer select-none">
+                          <input
+                            type="checkbox"
+                            checked={selectedUniversities.includes(college.name.toLowerCase().replace(/\s+/g, '-'))}
+                            onChange={() => toggleUniversity(college.name)}
+                            className="h-4 w-4 rounded border-gray-300 text-[#001e3c] focus:ring-[#00ffe0]"
+                          />
+                          <span>Select to compare</span>
+                        </label>
+                        <span className="text-xs text-gray-500">Pick 2–3</span>
+                      </div>
                       <div className="flex items-center gap-2">
                         <FaStar className="w-4 h-4 text-yellow-400" />
                         <span className="text-sm font-medium text-gray-700">{college.ranking}</span>
