@@ -418,49 +418,7 @@ const Landing = () => {
       </section>
 
       {/* Cities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="text-center mb-16"
-            data-aos="fade-up"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Popular Cities
-            </h2>
-            <p className="text-xl text-gray-600">
-              Find courses in your preferred location
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {cities.map((city, index) => (
-              <motion.div
-                key={index}
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <Card className="group text-center hover:shadow-xl transition-all duration-300 border-2 hover:border-[#00ffe0] bg-gradient-to-br from-white to-gray-50">
-                  <CardContent className="p-6">
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden border-4 border-[#00ffe0] group-hover:scale-110 transition-transform duration-300">
-                      <img 
-                        src={city.img} 
-                        alt={city.city} 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <CardTitle className="font-semibold text-gray-900 text-lg mb-1">
-                      {city.city}
-                    </CardTitle>
-                    <CardDescription className="text-gray-600">
-                      {city.state}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 };
