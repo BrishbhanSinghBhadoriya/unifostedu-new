@@ -134,40 +134,44 @@ const Landing = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section with Full-width Slider */}
-      <section className="relative text-white">
-        <div className="relative w-full">
-          {/* Slides */}
-          <div className="relative h-[260px] sm:h-[380px] md:h-[500px] bg-[#0b1c2a]">
-            {heroSlides.map((s, idx) => (
-              <div
-                key={idx}
-                className={`absolute inset-0 transition-opacity duration-700 ${idx === slide ? 'opacity-100' : 'opacity-0'}`}
-              >
-                <img src={s.src} alt={s.alt} className="w-full h-full object-contain" />
-                {/* Overlay */}
-                <div className="absolute inset-0 " />
-              </div>
-            ))}
-          </div>
-
-          {/* Content overlay */}
-          <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-            <div className="pointer-events-auto text-center px-4" />
-          </div>
-
-          {/* Dots */}
-          <div className="absolute inset-x-0 bottom-4 flex items-center justify-center gap-2">
-            {heroSlides.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setSlide(i)}
-                className={`h-2.5 w-2.5 rounded-full ${i === slide ? 'bg-[#00ffe0]' : 'bg-white/60'} transition-colors`}
-                aria-label={`Go to slide ${i + 1}`}
-              />
-            ))}
-          </div>
+<section className="relative text-white">
+  <div className="relative w-full">
+    {/* Slides container with fixed aspect ratio */}
+    <div className="relative" style={{ paddingBottom: '34.78%' }}> {/* 800/2300 = 0.3478 */}
+      {heroSlides.map((s, idx) => (
+        <div
+          key={idx}
+          className={`absolute inset-0 transition-opacity duration-700 ${idx === slide ? 'opacity-100' : 'opacity-0'}`}
+        >
+          <img 
+            src={s.src} 
+            alt={s.alt} 
+            className="absolute inset-0 w-full h-full object-cover" 
+          />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/20" />
         </div>
-      </section>
+      ))}
+    </div>
+
+    {/* Content overlay */}
+    <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+      <div className="pointer-events-auto text-center px-4" />
+    </div>
+
+    {/* Dots */}
+    <div className="absolute inset-x-0 bottom-4 flex items-center justify-center gap-2">
+      {heroSlides.map((_, i) => (
+        <button
+          key={i}
+          onClick={() => setSlide(i)}
+          className={`h-2.5 w-2.5 rounded-full ${i === slide ? 'bg-[#00ffe0]' : 'bg-white/60'} transition-colors`}
+          aria-label={`Go to slide ${i + 1}`}
+        />
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Select Best Programs Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
