@@ -4,29 +4,39 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import {
-  FaEnvelope, FaPhoneAlt, FaComments, FaVideo, FaChevronDown, FaBars, FaTimes
+  FaEnvelope, FaPhoneAlt, FaComments, FaVideo, FaChevronDown, FaBars, FaTimes, 
+  FaSearch, FaGraduationCap, FaBookOpen, FaUniversity, FaRocket
 } from 'react-icons/fa';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const router = useRouter();
   const dropdownRef = useRef(null);
 
-const universities = [
-  { name: "Lovely Professional University", link: "/lpu" },
-  { name: "Online Manipal University", link: "/manipal"},
-  { name: "Amity University Online", link: "/amity" },
-  { name: "Chandigarh University Online", link: "/chandigarh" },
-  { name: "JAIN University", link: "/jain" },
-  { name: "DY PATIL", link: "/dypatil" },
-  { name: "OP Jindal University", link: "/opjindal" },
-  { name: "SHOOLINI UNIVERSITY ONLINE", link: "/shoolini" },
-  { name: "Vivekananda Global University Online", link: "/vgu" },
-  { name: "UPES ONLINE", link: "/upes" },
-  { name: "Sharda University Online", link: "/sharda" }
-];
+  const universities = [
+    { name: "Lovely Professional University", link: "/lpu" },
+    { name: "Online Manipal University", link: "/manipal"},
+    { name: "Amity University Online", link: "/amity" },
+    { name: "Chandigarh University Online", link: "/chandigarh" },
+    { name: "JAIN University", link: "/jain" },
+    { name: "DY PATIL", link: "/dypatil" },
+    { name: "OP Jindal University", link: "/opjindal" },
+    { name: "SHOOLINI UNIVERSITY ONLINE", link: "/shoolini" },
+    { name: "Vivekananda Global University Online", link: "/vgu" },
+    { name: "UPES ONLINE", link: "/upes" },
+    { name: "Sharda University Online", link: "/sharda" }
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -69,12 +79,30 @@ const universities = [
       </div>
 
       {/* Navbar */}
-      <div className="bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white px-4 py-3 font-[Poppins] sticky top-0 z-50 backdrop-blur-md bg-opacity-80 shadow-lg border-b border-sky-900/30">
-        <div className="flex flex-wrap items-center justify-between w-full gap-4 lg:gap-6 max-w-7xl mx-auto">
+      <div className="bg-gradient-to-r from-[#001e3c] to-[#002e4d] text-white px-4 py-3 sticky top-0 z-50 backdrop-blur-md bg-opacity-70 shadow-md">
+        <div className="flex flex-wrap items-center justify-between w-full gap-4 lg:gap-6">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0 hover:animate-spin-slow transition duration-700 ease-in-out">
-            <img src="/unilogo.png" alt="Unifost Logo" className="w-44 h-14 object-contain rounded-lg" />
-          </Link>
+          {/* Logo */}
+            <Link href="/" className="flex-shrink-0 group">
+              <div className="relative">
+                <div className={`w-48 h-16 rounded-2xl p-2 transition-all duration-500 ${
+                  scrolled 
+                    ? 'bg-gradient-to-r from-[#001e3c] to-[#003b6c] shadow-lg' 
+                    : 'bg-white/10 backdrop-blur-sm'
+                }`}>
+                  <img 
+                    src="/unilogo.png" 
+                    alt="Unifost Logo" 
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" 
+                  />
+                </div>
+                {!scrolled && (
+                  <div className="absolute -inset-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-2xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                )}
+              </div>
+            </Link>
+
+          
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex flex-wrap items-center gap-4 text-[16px] font-medium" ref={dropdownRef}>
@@ -100,7 +128,7 @@ const universities = [
                 {universities.map((uni, idx) => (
                   <Link key={idx} href={uni.link} onClick={() => setMenuOpen(null)} className="block px-4 py-2 hover:bg-[#00ffe0]/20 transition-all duration-200">{uni.name}</Link>
                 ))}
-                <button onClick={() => { router.push('/listofcollege'); setMenuOpen(null); }} className="block px-4 py-2 hover:bg-[#e0f7fa]">All Colleges</button>
+                <button onClick={() => { router.push('/listofcollege'); setMenuOpen(null); }} className="block w-full text-left px-4 py-2 hover:bg-[#00ffe0]/20 transition-all duration-200">All Colleges</button>
               </div>
             </div>
 
@@ -143,7 +171,9 @@ const universities = [
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             />
-            <button onClick={handleSearch} className="text-sky-600 hover:text-sky-800 px-1">🔍</button>
+            <button onClick={handleSearch} className="text-sky-600 hover:text-sky-800 px-1">
+              <FaSearch className="text-sm" />
+            </button>
           </div>
 
           {/* Contact Icons - Desktop */}
@@ -154,7 +184,7 @@ const universities = [
           </div>
 
           {/* Call/Email - Desktop */}
-          <div className="hidden lg:flex flex-col justify-center items-end text-sm ml-4 font-[Montserrat]">
+          <div className="hidden lg:flex flex-col justify-center items-end text-sm ml-4">
             <div className="flex items-center gap-1 text-[#e6faff] font-semibold">
               <FaPhoneAlt className="text-[#00ffe0]" /> Call: <span className="text-[#00ffe0]">+91 93547 35410</span>
             </div>
@@ -186,18 +216,20 @@ const universities = [
               <input type="text" placeholder="Search..." className="outline-none px-2 py-1 w-full text-sm"
                 value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleSearch()} />
-              <button onClick={handleSearch} className="text-sky-600 hover:text-sky-800 px-1">🔍</button>
+              <button onClick={handleSearch} className="text-sky-600 hover:text-sky-800 px-1">
+                <FaSearch className="text-sm" />
+              </button>
             </div>
 
             {/* Call/Email - Mobile */}
-            <div className="text-sm text-[#e6faff] font-[Montserrat] mt-2">
+            <div className="text-sm text-[#e6faff] mt-2">
               <div className="flex items-center gap-2">
                 <FaPhoneAlt className="text-[#00ffe0]" />
                 <span className="text-[#00ffe0] font-semibold">+91 93547 35410</span>
               </div>
               <div className="flex items-center gap-2 mt-1">
                 <FaEnvelope className="text-sky-400" />
-                <a href="mailto:aman@unifostedu.com" className="underline hover:text-white">aman@unifostedu.com</a>
+                <a href="mailto:info@unifostedu.com" className="underline hover:text-white">info@unifostedu.com</a>
               </div>
             </div>
 
