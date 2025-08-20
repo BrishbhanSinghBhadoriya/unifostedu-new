@@ -443,10 +443,15 @@ const Footer = () => {
                       <ul className="space-y-2">
                         {[
                           { href: "/mba-online", label: "MBA", },
-                          { href: "/bba-online", label: "BBA",  },
-                          { href: "/bca-online", label: "BCA",   },
-                          { href: "/mca-online", label: "MCA",   },
-                          { href: "/ba-online", label: "BA",}
+                          { href: "/bba-online", label: "BBA", },
+                          { href: "/mca-online", label: "MCA",},
+                          { href: "/bca-online", label: "BCA",},
+                          { href: "/mcom-online", label: "M.Com",},
+                          { href: "/bcom-online", label: "B.Com",},
+                          { href: "/ma-online", label: "MA",},
+                          { href: "/ba-online", label: "BA",},
+                          { href: "/bajmc-online", label: "BAJMC", },
+                          { href: "/majmc-online", label: "MAJMC", },
                         ].map((course, index) => (
                           <li key={index}>
                             <a 
