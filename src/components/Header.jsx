@@ -70,49 +70,18 @@ const universities = [
   };
 
   return (
-    <header className="w-full font-sans relative z-50">
-      {/* Top Bar with Gradient */}
-      <div className="bg-gradient-to-r from-[#001e3c] via-[#003b6c] to-[#001e3c] py-3 px-4 relative overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#00ffe0]/10 via-transparent to-[#00ffe0]/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        
-        <div className="relative max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-6">
-            <div className="flex items-center space-x-2 text-white/90">
-              <FaPhoneAlt className="text-[#00ffe0] text-sm" />
-              <span className="text-sm font-medium">+91 93547 35410</span>
-            </div>
-            <div className="flex items-center space-x-2 text-white/90">
-              <FaEnvelope className="text-[#00ffe0] text-sm" />
-              <a href="mailto:info@unifostedu.com" className="text-sm font-medium hover:text-[#00ffe0] transition-colors">
-                info@unifostedu.com
-              </a>
-            </div>
-          </div>
-          
-          <div className="flex items-center space-x-4">
-            <a href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer" 
-               className="bg-[#00ffe0] text-[#001e3c] px-3 py-1 rounded-full text-xs font-semibold hover:bg-white transform hover:scale-105 transition-all duration-300 shadow-lg">
-              💬 WhatsApp
-            </a>
-            <button onClick={() => router.push('/bookdemo')} 
-                    className="bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] px-3 py-1 rounded-full text-xs font-semibold hover:from-[#00d4c4] hover:to-[#00ffe0] transform hover:scale-105 transition-all duration-300 shadow-lg">
-              📹 Book Demo
-            </button>
-          </div>
-        </div>
+    <header className="w-full font-sans">
+      {/* Tagline */}
+      <div className="bg-black py-2 px-4 text-center">
+        <p className="text-white text-base lg:text-lg font-semibold italic">
+          <span className="text-[#00ffe0] font-bold">Unifost</span> – University <span className="text-[#00ffe0]">For</span> Students
+        </p>
       </div>
 
-
-      {/* Main Navigation */}
-      <div className={`sticky top-0 transition-all duration-500 ${
-        scrolled 
-          ? 'bg-white/95 backdrop-blur-xl shadow-2xl border-b border-gray-200/50' 
-          : 'bg-gradient-to-r from-[#001e3c] to-[#003b6c]'
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
+      {/* Navbar */}
+      <div className="bg-gradient-to-r from-[#001e3c] to-[#002e4d] text-white px-4 py-3 sticky top-0 z-50 backdrop-blur-md bg-opacity-70 shadow-md">
+        <div className="flex flex-wrap items-center justify-between w-full gap-4 lg:gap-6">
+          {/* Logo */}
           {/* Logo */}
             <Link href="/" className="flex-shrink-0 group">
               <div className="relative">
@@ -133,21 +102,20 @@ const universities = [
               </div>
           </Link>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8" ref={dropdownRef}>
-              {[
-                { label: 'Home', path: '/', icon: FaRocket },
-                { label: 'About', path: '/about', icon: FaGraduationCap },
-                { label: 'Services', path: '/services', icon: FaBookOpen }
+          
+
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex flex-wrap items-center gap-4 text-[16px] font-medium" ref={dropdownRef}>
+            {[
+              { label: 'Home', path: '/' },
+              { label: 'About', path: '/about' },
+              { label: 'Services', path: '/services' }
             ].map((link, i) => (
-                <Link key={i} href={link.path} 
-                      className={`group flex items-center space-x-2 px-4 py-2 rounded-xl transition-all duration-300 ${
-                        scrolled 
-                          ? 'text-[#001e3c] hover:bg-[#001e3c] hover:text-white' 
-                          : 'text-white hover:bg-white/10 hover:text-[#00ffe0]'
-                      }`}>
-                  <link.icon className="text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0" />
-                  <span className="font-semibold">{link.label}</span>
+              <Link key={i}
+                href={link.path}
+                className="hover:text-[#00ffe0] hover:underline underline-offset-4 transform hover:-translate-y-1 transition duration-300"
+              >
+                {link.label}
               </Link>
             ))}
 
@@ -242,48 +210,38 @@ const universities = [
             </div>
           </nav>
 
-            {/* Search Bar */}
-            <div className="hidden lg:flex items-center relative">
-              <div className={`relative transition-all duration-500 ${
-                scrolled 
-                  ? 'bg-gray-100 border border-gray-200' 
-                  : 'bg-white/10 backdrop-blur-sm border border-white/20'
-              } rounded-full px-4 py-2 min-w-[300px]`}>
+          {/* Search - Desktop */}
+          <div className="hidden lg:flex items-center bg-white rounded-full px-3 py-1 shadow-md flex-grow max-w-md">
             <input
               type="text"
-                  placeholder="Search for courses, universities..."
-                  className={`outline-none w-full text-sm transition-colors duration-300 ${
-                    scrolled ? 'text-[#001e3c] placeholder-gray-500' : 'text-white placeholder-white/70'
-                  } bg-transparent`}
+              placeholder="Search..."
+              className="outline-none text-black px-2 py-1 w-full text-sm"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             />
-                <button 
-                  onClick={handleSearch} 
-                  className={`absolute right-3 top-1/2 transform -translate-y-1/2 p-1 rounded-full transition-all duration-300 ${
-                    scrolled 
-                      ? 'text-[#001e3c] hover:bg-[#001e3c] hover:text-white' 
-                      : 'text-white/70 hover:bg-white/20 hover:text-white'
-                  }`}>
-                  <FaSearch className="text-sm" />
-                </button>
-            </div>
-          </div>
-
-            {/* Mobile Menu Button */}
-            <div className="lg:hidden">
-              <button 
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className={`p-2 rounded-xl transition-all duration-300 ${
-                  scrolled 
-                    ? 'text-[#001e3c] hover:bg-[#001e3c] hover:text-white' 
-                    : 'text-white hover:bg-white/10'
-                }`}>
-                {mobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            <button onClick={handleSearch} className="text-sky-600 hover:text-sky-800 px-1">
+              <FaSearch className="text-sm" />
             </button>
           </div>
-        </div>
+
+          {/* Contact Icons - Desktop */}
+          <div className="hidden lg:flex gap-3 items-center text-[#00ffe0]">
+            <a href="tel:+919354735410"><FaPhoneAlt className="text-xl hover:drop-shadow-md hover:text-cyan-300" /></a>
+            <a href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer"><FaComments className="text-xl hover:drop-shadow-md hover:text-cyan-300" /></a>
+            <button onClick={() => router.push('/bookdemo')}><FaVideo className="text-xl hover:drop-shadow-md hover:text-cyan-300" /></button>
+          </div>
+
+          {/* Call/Email - Desktop */}
+          <div className="hidden lg:flex flex-col justify-center items-end text-sm ml-4">
+            <div className="flex items-center gap-1 text-[#e6faff] font-semibold">
+              <FaPhoneAlt className="text-[#00ffe0]" /> Call: <span className="text-[#00ffe0]">+91 93547 35410</span>
+            </div>
+            <div className="flex items-center gap-1 text-[#e6faff] font-semibold">
+              <FaEnvelope className="text-sky-400" />
+              <a href="mailto:info@unifostedu.com" className="underline hover:text-white">info@unifostedu.com</a>
+            </div>
+          </div>
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
@@ -334,19 +292,26 @@ const universities = [
               </div>
             </div>
 
-                {/* Mobile Action Buttons */}
-                <div className="pt-4 border-t border-gray-200 flex space-x-3">
-                  <a href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer"
-                     className="flex-1 bg-[#00ffe0] text-[#001e3c] py-3 px-4 rounded-xl font-semibold text-center hover:bg-[#00d4c4] transform hover:scale-105 transition-all duration-300">
-                    💬 WhatsApp
-                  </a>
-                  <button onClick={() => { router.push('/bookdemo'); setMobileMenuOpen(false); }}
-                          className="flex-1 bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white py-3 px-4 rounded-xl font-semibold hover:from-[#003b6c] hover:to-[#001e3c] transform hover:scale-105 transition-all duration-300">
-                    📹 Book Demo
-                  </button>
-                </div>
+            {/* Call/Email - Mobile */}
+            <div className="text-sm text-[#e6faff] mt-2">
+              <div className="flex items-center gap-2">
+                <FaPhoneAlt className="text-[#00ffe0]" />
+                <span className="text-[#00ffe0] font-semibold">+91 93547 35410</span>
+              </div>
+              <div className="flex items-center gap-2 mt-1">
+                <FaEnvelope className="text-sky-400" />
+                <a href="mailto:info@unifostedu.com" className="underline hover:text-white">info@unifostedu.com</a>
+              </div>
+            </div>
+
+            {/* Contact Icons - Mobile */}
+            <div className="flex gap-4 mt-3 text-[#00ffe0]">
+              <a href="tel:+919354735410"><FaPhoneAlt className="text-lg" /></a>
+              <a href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer"><FaComments className="text-lg" /></a>
+              <button onClick={() => { router.push('/bookdemo'); setMobileMenuOpen(false); }}><FaVideo className="text-lg" /></button>
             </div>
           </div>
+              </div>
         )}
         </div>
       </div>
