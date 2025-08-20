@@ -137,8 +137,8 @@ export default function Services() {
 
       {/* Services Overview */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[#001e3c] mb-6">
               OUR SERVICES
             </h2>
@@ -147,9 +147,9 @@ export default function Services() {
             </h3>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Select the service that best matches your educational needs
-            </p>
-          </div>
-          
+          </p>
+        </div>
+        
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service) => (
               <div
@@ -191,9 +191,9 @@ export default function Services() {
                 <h2 className="text-4xl md:text-5xl font-bold mb-4">{currentService.title}</h2>
                 <p className="text-xl text-white/90 max-w-2xl mx-auto">
                   {currentService.subtitle}
-                </p>
-              </div>
-
+            </p>
+          </div>
+          
               {/* Service Content */}
               <div className="p-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -408,8 +408,8 @@ export default function Services() {
                       <option value="ma">MA</option>
                     </select>
                   </div>
-                </div>
-
+          </div>
+          
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     <FaMapMarkerAlt className="inline mr-2 text-[#00ffe0]" />
@@ -434,8 +434,8 @@ export default function Services() {
                     <option value="upes">UPES ONLINE</option>
                     <option value="sharda">Sharda University Online</option>
                   </select>
-                </div>
-
+          </div>
+          
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     <FaEnvelope className="inline mr-2 text-[#00ffe0]" />
@@ -449,8 +449,8 @@ export default function Services() {
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#00ffe0] focus:border-transparent transition-all"
                     placeholder="Tell us more about your requirements..."
                   ></textarea>
-                </div>
-
+          </div>
+          
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <button
                     type="submit"
@@ -467,9 +467,9 @@ export default function Services() {
                   </button>
                 </div>
               </form>
-            </div>
           </div>
         </div>
+      </div>
       )}
     </div>
   );

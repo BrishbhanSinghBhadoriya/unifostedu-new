@@ -140,6 +140,50 @@ const RAW_UNIVERSITIES = [
 
 const slugify = (s) => s.toLowerCase().replace(/\s+/g, '-');
 
+// Extend dataset to include commonly selected partners from landing page
+RAW_UNIVERSITIES.push(
+  {
+    key: 'sharda-university-online',
+    name: 'Sharda University Online',
+    logo: '/sharda.png',
+    location: 'Greater Noida, Uttar Pradesh',
+    ranking: 'Top 30',
+    established: '2009',
+    fee: '₹0.8L - ₹1.5L',
+    courses: ['MBA', 'BBA', 'MA', 'BA'],
+    features: ['Quality education', 'Industry connect', 'Career support'],
+    approvals: ['UGC', 'NAAC'],
+    rating: 4.1,
+    eligibility: 'Graduation in any stream',
+    naacGrade: 'A',
+    placementSupport: true,
+    wesApproved: true,
+    emiOption: true,
+    examMode: 'Online',
+    classType: 'Live + Self-paced'
+  },
+  {
+    key: 'jain-university-online',
+    name: 'Jain University Online',
+    logo: '/jain.png',
+    location: 'Bengaluru, Karnataka',
+    ranking: 'Top 12',
+    established: '1990',
+    fee: '₹1.3L - ₹2.6L',
+    courses: ['MBA', 'BBA', 'MCA', 'BCA'],
+    features: ['Modern curriculum', 'Industry projects', 'Career services'],
+    approvals: ['UGC', 'NAAC A+'],
+    rating: 4.4,
+    eligibility: 'Graduation in any stream',
+    naacGrade: 'A+',
+    placementSupport: true,
+    wesApproved: true,
+    emiOption: true,
+    examMode: 'Online',
+    classType: 'Live + Self-paced'
+  }
+);
+
 export default function ComparePage() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -154,12 +198,41 @@ export default function ComparePage() {
   }, [searchParams]);
 
   const selectedUniversities = useMemo(() => {
-    const byKey = new Map(RAW_UNIVERSITIES.map((u) => [u.key, u]));
-    const bySlug = new Map(RAW_UNIVERSITIES.map((u) => [slugify(u.name), u]));
+    const candidates = RAW_UNIVERSITIES;
+    const aliasMap = new Map([
+      ['narsee-monjee-institute-of-management-studies-online', 'nmims'],
+      ['narsee-monjee-institute-of-management-studies', 'nmims'],
+      ['narsee-monjee', 'nmims'],
+      ['nmims-online', 'nmims'],
+    ]);
+
     const list = [];
-    for (const key of selectedKeys) {
-      const u = byKey.get(key) || bySlug.get(key);
-      if (u) list.push(u);
+    for (const raw of selectedKeys) {
+      const k = raw.trim();
+      const lower = k.toLowerCase();
+
+      // 1) Exact key match
+      let found = candidates.find((u) => u.key === k);
+      if (!found) {
+        // 2) Alias mapping
+        const alias = aliasMap.get(lower);
+        if (alias) {
+          found = candidates.find((u) => u.key === alias);
+        }
+      }
+      if (!found) {
+        // 3) Exact name-slug match
+        found = candidates.find((u) => slugify(u.name) === lower);
+      }
+      if (!found) {
+        // 4) Partial fuzzy: param includes name-slug OR name-slug includes param
+        found = candidates.find((u) => lower.includes(slugify(u.name)) || slugify(u.name).includes(lower));
+      }
+
+      if (found) {
+        // Avoid duplicates
+        if (!list.some((x) => x.key === found.key)) list.push(found);
+      }
     }
     return list;
   }, [selectedKeys]);
