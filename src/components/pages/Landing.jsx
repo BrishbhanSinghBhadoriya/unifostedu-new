@@ -59,9 +59,9 @@ const courses = [
 ];
 
 const stats = [
-  { number: "50K+", label: "Students Enrolled", icon: FaUsers, color: "from-blue-500 to-purple-600" },
-  { number: "200+", label: "Partner Universities", icon: FaUniversity, color: "from-green-500 to-teal-600" },
-  { number: "95%", label: "Success Rate", icon: FaAward, color: "from-orange-500 to-red-600" },
+  { number: "5K+", label: "Students Enrolled", icon: FaUsers, color: "from-blue-500 to-purple-600" },
+  { number: "25+", label: "Partner Universities", icon: FaUniversity, color: "from-green-500 to-teal-600" },
+  { number: "100%", label: "Success Rate", icon: FaAward, color: "from-orange-500 to-red-600" },
   { number: "24/7", label: "Support Available", icon: FaHeadset, color: "from-purple-500 to-pink-600" }
 ];
 
@@ -73,14 +73,15 @@ const features = [
 ];
 
 const colleges = [
-  { name: "Amity University Online", ranking: "Top 10", fee: "₹1.2L - ₹2.5L", logo: "/amity.png", rating: 4.8 },
-  { name: "Manipal University Online", ranking: "Top 5", fee: "₹1.5L - ₹3L", logo: "/manipal.png", rating: 4.9 },
-  { name: "Lovely Professional University Online", ranking: "Top 20", fee: "₹90K - ₹2L", logo: "/lpu.png", rating: 4.7 },
-  { name: "University of Petroleum and Energy Studies Online", ranking: "Top 15", fee: "₹1.8L - ₹3.2L", logo: "/upes.png", rating: 4.6 },
-  { name: "Narsee Monjee Institute of Management Studies Online", ranking: "Top 8", fee: "₹2L - ₹3.5L", logo: "/nmims.png", rating: 4.9 },
-  { name: "Sharda University Online", ranking: "Top 30", fee: "₹80K - ₹1.5L", logo: "/sharda.png", rating: 4.5 },
-  { name: "Dr. DY Patil Online", ranking: "Top 25", fee: "₹1.1L - ₹2.2L", logo: "/dypatil.png", rating: 4.6 },
-  { name: "Jain University Online", ranking: "Top 12", fee: "₹1.3L - ₹2.6L", logo: "/jain.png", rating: 4.7 }
+  { name: "Amity University Online", ranking: "NIRF-29", fee: "₹1.2L - ₹2.5L", logo: "/amity.png", rating: 4.8 },
+  { name: "Manipal University Online", ranking: "NIRF-73", fee: "₹1.5L - ₹3L", logo: "/manipal.png", rating: 4.9 },
+  { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹90K - ₹2L", logo: "/lpu.png", rating: 4.7 },
+  { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.8L - ₹3.2L", logo: "/upes.png", rating: 4.6 },
+  { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹2L - ₹3.5L", logo: "/nmims.png", rating: 4.9 },
+  { name: "Sharda University Online", ranking: "NIRF-", fee: "₹80K - ₹1.5L", logo: "/sharda.png", rating: 4.5 },
+  { name: "Dr. DY Patil Online", ranking: "NIRF-", fee: "₹1.1L - ₹2.2L", logo: "/dypatil.png", rating: 4.6 },
+  { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.3L - ₹2.6L", logo: "/jain.png", rating: 4.7 },
+   { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹1.3L - ₹2.6L", logo: "/jain.png", rating: 4.7 }
 ];
 
 const cities = [
@@ -362,7 +363,8 @@ const Landing = () => {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-6 items-center">
             {[
-              '/ugc.png', '/naac.png', '/nirf.png', '/aicte.png', '/wasc.png', '/aiu.png', '/iacbe.png', '/aacsb.png', '/iqas.png', '/wes.png', '/unwto.png', '/nabh.png'
+              '/ugc.png','/aicte.png','/naac.png','/iso.png','/aiu.png','/nirf.png','/ioe.png','/crisil.png','/icar.png','/wes.png','/nabh.png','/iacbe.png','/aacsb.png','/qaa.png','/wasc.png','/qs.png','/acu.png','/unwto.png'
+
             ].map((logo, idx) => (
               <div key={idx} className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all border border-gray-100 flex items-center justify-center h-24">
                 <img src={logo} alt="Accreditation" className="max-h-14 object-contain" />
