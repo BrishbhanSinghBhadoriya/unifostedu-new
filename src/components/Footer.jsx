@@ -126,26 +126,26 @@ const Footer = () => {
         <div className="relative z-10 pt-16 pb-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {/* Main Content Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6">
 
               {/* Column 1: Company Info */}
-              <div className="group">
-                <div className="bg-white/5 backdrop-blur-xl p-6 sm:p-8 rounded-2xl shadow-2xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="lg:col-span-3 group">
+                <div className="h-full bg-white/5 backdrop-blur-xl p-6 rounded-2xl shadow-xl border border-white/10 hover:border-white/20 transition-all duration-300">
                   <div className="text-center mb-6">
-                    <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent mb-4 tracking-tight">
+                    <h1 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent mb-3 tracking-tight">
                       UNIFOST
                     </h1>
-                    <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 mx-auto rounded-full"></div>
+                    <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 mx-auto rounded-full"></div>
                   </div>
                   
-                  <p className="text-gray-200 text-base leading-relaxed text-center mb-8">
-                    UNIFOST is a premier <span className="text-cyan-300 font-semibold">EdTech platform</span> helping students choose the right path through <span className="text-cyan-300 font-semibold">online education</span>, expert counseling, and demo sessions.
+                  <p className="text-gray-200 text-sm leading-relaxed text-center mb-6">
+                    UNIFOST is a premier <span className="text-cyan-300 font-medium">EdTech platform</span> helping students choose the right path through <span className="text-cyan-300 font-medium">online education</span>, expert counseling, and demo sessions.
                   </p>
 
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <div className="flex flex-col gap-3 justify-center">
                     <button
                       onClick={() => setShowContactInfo(!showContactInfo)}
-                      className="group/btn relative overflow-hidden bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-full font-medium shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105"
+                      className="group/btn relative overflow-hidden bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-5 py-2.5 rounded-full font-medium text-sm shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-[1.02]"
                     >
                       <span className="relative z-10">
                         {showContactInfo ? "Hide Contact" : "Contact Info"}
@@ -155,9 +155,9 @@ const Footer = () => {
                     
                     <button
                       onClick={() => setShowHiringInfo(!showHiringInfo)}
-                      className="group/btn relative overflow-hidden bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-6 py-3 rounded-full font-medium shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 hover:scale-105"
+                      className="group/btn relative overflow-hidden bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-5 py-2.5 rounded-full font-medium text-sm shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 hover:scale-[1.02]"
                     >
-                      <span className="relative z-10 flex items-center gap-2">
+                      <span className="relative z-10 flex items-center justify-center gap-2">
                         <span className="w-2 h-2 bg-green-300 rounded-full animate-pulse"></span>
                         We are Hiring
                       </span>
@@ -166,62 +166,62 @@ const Footer = () => {
                   </div>
 
                   {/* Contact Info Dropdown */}
-                  <div className={`mt-6 transition-all duration-500 ${showContactInfo ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
-                    <div className="bg-gradient-to-r from-slate-800/50 to-blue-800/50 backdrop-blur-sm p-6 rounded-xl border border-white/10">
-                      <h4 className="text-cyan-300 font-semibold mb-4 text-center">Get In Touch</h4>
-                      <ul className="space-y-4">
+                  <div className={`mt-5 transition-all duration-500 ${showContactInfo ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+                    <div className="bg-gradient-to-r from-slate-800/50 to-blue-800/50 backdrop-blur-sm p-5 rounded-xl border border-white/10">
+                      <h4 className="text-cyan-300 font-semibold mb-3 text-center text-sm">Get In Touch</h4>
+                      <ul className="space-y-3">
                         <li className="flex items-center gap-3 group/item">
                           <div className="p-2 bg-cyan-500/20 rounded-lg group-hover/item:bg-cyan-500/30 transition-colors">
-                            <FaEnvelope className="text-cyan-400" />
+                            <FaEnvelope className="text-cyan-400 text-sm" />
                           </div>
-                          <a href="mailto:info@unifostedu.com" className="hover:text-cyan-300 transition-colors flex-1">
+                          <a href="mailto:info@unifostedu.com" className="hover:text-cyan-300 transition-colors flex-1 text-sm">
                             info@unifostedu.com
                           </a>
                         </li>
                         <li className="flex items-center gap-3 group/item">
                           <div className="p-2 bg-cyan-500/20 rounded-lg group-hover/item:bg-cyan-500/30 transition-colors">
-                            <FaPhoneAlt className="text-cyan-400" />
+                            <FaPhoneAlt className="text-cyan-400 text-sm" />
                           </div>
-                          <span className="flex-1">+91 93547 35410</span>
+                          <span className="flex-1 text-sm">+91 93547 35410</span>
                         </li>
                         <li className="flex items-center gap-3 group/item">
                           <div className="p-2 bg-cyan-500/20 rounded-lg group-hover/item:bg-cyan-500/30 transition-colors">
-                            <FaMapMarkerAlt className="text-cyan-400" />
+                            <FaMapMarkerAlt className="text-cyan-400 text-sm" />
                           </div>
-                          <span className="flex-1">Noida, Uttar Pradesh, India</span>
+                          <span className="flex-1 text-sm">Noida, Uttar Pradesh, India</span>
                         </li>
                       </ul>
                     </div>
                   </div>
 
                   {/* Hiring Info Dropdown */}
-                  <div className={`mt-6 transition-all duration-500 ${showHiringInfo ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
-                    <div className="bg-white/95 backdrop-blur-sm text-gray-800 p-6 rounded-xl shadow-xl border border-white/20">
-                      <h4 className="text-center text-blue-800 font-bold mb-6 text-lg">Join Our Team!</h4>
+                  <div className={`mt-5 transition-all duration-500 ${showHiringInfo ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+                    <div className="bg-white/95 backdrop-blur-sm text-gray-800 p-5 rounded-xl shadow-lg border border-white/20">
+                      <h4 className="text-center text-blue-800 font-bold mb-4 text-sm">Join Our Team!</h4>
                       
-                      <div className="space-y-6">
-                        <div className="border-l-4 border-blue-500 pl-4">
-                          <p className="font-bold text-blue-800 mb-2">Freshers (0–1 year)</p>
-                          <p className="text-sm text-gray-600 mb-3">Graduate with strong communication skills</p>
-                          <div className="flex flex-col sm:flex-row gap-2">
-                            <a href="mailto:info@unifostedu.com" className="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors">
-                              <MdEmail className="text-lg" /> info@unifostedu.com
+                      <div className="space-y-4">
+                        <div className="border-l-3 border-blue-500 pl-3">
+                          <p className="font-bold text-blue-800 mb-1 text-xs">Freshers (0–1 year)</p>
+                          <p className="text-xs text-gray-600 mb-2">Graduate with strong communication skills</p>
+                          <div className="flex flex-col gap-1">
+                            <a href="mailto:info@unifostedu.com" className="flex items-center gap-1 text-blue-600 hover:text-blue-800 transition-colors text-xs">
+                              <MdEmail className="text-sm" /> info@unifostedu.com
                             </a>
-                            <a href="https://wa.me/917303725297" className="flex items-center gap-2 text-green-600 hover:text-green-800 transition-colors">
-                              <FaWhatsapp className="text-lg" /> 7303725297
+                            <a href="https://wa.me/917303725297" className="flex items-center gap-1 text-green-600 hover:text-green-800 transition-colors text-xs">
+                              <FaWhatsapp className="text-sm" /> 7303725297
                             </a>
                           </div>
                         </div>
                         
-                        <div className="border-l-4 border-emerald-500 pl-4">
-                          <p className="font-bold text-emerald-800 mb-2">Senior Career Counsellor (2+ years)</p>
-                          <p className="text-sm text-gray-600 mb-3">Minimum 2 years EdTech industry experience</p>
-                          <div className="flex flex-col sm:flex-row gap-2">
-                            <a href="mailto:info@unifostedu.com" className="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors">
-                              <MdEmail className="text-lg" /> info@unifostedu.com
+                        <div className="border-l-3 border-emerald-500 pl-3">
+                          <p className="font-bold text-emerald-800 mb-1 text-xs">Senior Career Counsellor (2+ years)</p>
+                          <p className="text-xs text-gray-600 mb-2">Minimum 2 years EdTech industry experience</p>
+                          <div className="flex flex-col gap-1">
+                            <a href="mailto:info@unifostedu.com" className="flex items-center gap-1 text-blue-600 hover:text-blue-800 transition-colors text-xs">
+                              <MdEmail className="text-sm" /> info@unifostedu.com
                             </a>
-                            <a href="https://wa.me/917303725297" className="flex items-center gap-2 text-green-600 hover:text-green-800 transition-colors">
-                              <FaWhatsapp className="text-lg" /> 7303725297
+                            <a href="https://wa.me/917303725297" className="flex items-center gap-1 text-green-600 hover:text-green-800 transition-colors text-xs">
+                              <FaWhatsapp className="text-sm" /> 7303725297
                             </a>
                           </div>
                         </div>
@@ -232,32 +232,32 @@ const Footer = () => {
               </div>
 
               {/* Column 2: Contact Form */}
-              <div className="group">
-                <div className="bg-white/5 backdrop-blur-xl p-6 sm:p-8 rounded-2xl shadow-2xl border border-white/10 hover:border-white/20 transition-all duration-300">
-                  <div className="text-center mb-8">
-                    <h3 className="text-cyan-400 uppercase tracking-wider text-sm font-semibold mb-2">
+              <div className="lg:col-span-6 group">
+                <div className="h-full bg-white/5 backdrop-blur-xl p-6 rounded-2xl shadow-xl border border-white/10 hover:border-white/20 transition-all duration-300">
+                  <div className="text-center mb-6">
+                    <h3 className="text-cyan-400 uppercase tracking-wider text-xs font-semibold mb-2">
                       Contact With Us
                     </h3>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-white leading-tight">
+                    <h2 className="text-xl font-bold text-white leading-tight">
                       Don't Hesitate, Tell Us About Your 
                       <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"> Requirement</span>
                     </h2>
-                    <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 mx-auto mt-4 rounded-full"></div>
+                    <div className="w-12 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 mx-auto mt-3 rounded-full"></div>
                   </div>
 
                   {submitted ? (
-                    <div className="text-center py-8">
-                      <div className="bg-gradient-to-r from-green-400 to-emerald-500 text-white p-6 rounded-2xl shadow-lg">
-                        <div className="text-6xl mb-4">🎉</div>
-                        <h3 className="text-xl font-bold mb-2">Thank You!</h3>
-                        <p className="text-green-100">Our team will connect with you soon.</p>
+                    <div className="text-center py-6">
+                      <div className="bg-gradient-to-r from-green-400 to-emerald-500 text-white p-5 rounded-2xl shadow-lg">
+                        <div className="text-5xl mb-3">🎉</div>
+                        <h3 className="text-lg font-bold mb-2">Thank You!</h3>
+                        <p className="text-green-100 text-sm">Our team will connect with you soon.</p>
                       </div>
                     </div>
                   ) : (
-                    <div className="space-y-6">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="space-y-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div className="group/input relative">
-                          <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                          <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
                           <input
                             type="text"
                             name="name"
@@ -265,12 +265,12 @@ const Footer = () => {
                             value={formData.name}
                             onChange={handleChange}
                             placeholder="Full Name"
-                            className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-lg hover:shadow-xl"
+                            className="w-full pl-10 pr-3 py-2.5 rounded-xl bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-md hover:shadow-lg text-sm"
                           />
                         </div>
                         <div className="group/input">
                           <div className="relative">
-                            <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                            <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
                             <input
                               type="email"
                               name="email"
@@ -278,15 +278,15 @@ const Footer = () => {
                               value={formData.email}
                               onChange={handleChange}
                               placeholder="Email Address"
-                              className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-lg hover:shadow-xl"
+                              className="w-full pl-10 pr-3 py-2.5 rounded-xl bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-md hover:shadow-lg text-sm"
                             />
                           </div>
                         </div>
                       </div>
 
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div className="relative">
-                          <FaPhoneAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                          <FaPhoneAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
                           <input
                             type="tel"
                             name="phone"
@@ -294,17 +294,17 @@ const Footer = () => {
                             value={formData.phone}
                             onChange={handleChange}
                             placeholder="Phone Number"
-                            className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-lg hover:shadow-xl"
+                            className="w-full pl-10 pr-3 py-2.5 rounded-xl bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-md hover:shadow-lg text-sm"
                           />
                         </div>
                         <div className="relative">
-                          <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                          <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
                           <select
                             name="course"
                             value={formData.course}
                             onChange={handleChange}
                             required
-                            className="w-full pl-10 pr-4 py-3 appearance-none rounded-xl bg-white/90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-lg hover:shadow-xl"
+                            className="w-full pl-10 pr-3 py-2.5 appearance-none rounded-xl bg-white/90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-md hover:shadow-lg text-sm"
                           >
                           <option value="">Select Interested Course</option>
                           <option value="BBA">BBA - Bachelor of Business Administration</option>
@@ -319,33 +319,78 @@ const Footer = () => {
                         </div>
                       </div>
 
-                      <div className="relative">
-                        <FaUniversity className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-                        <input
-                          type="text"
-                          name="university"
-                          value={formData.university}
-                          onChange={handleChange}
-                          placeholder="Preferred University (Optional)"
-                          className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-lg hover:shadow-xl"
-                        />
-                      </div>
+                     <div className="relative">
+  <FaUniversity className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
+
+  <select
+    name="university"
+    value={formData.university}
+    onChange={handleChange}
+    className="w-full pl-10 pr-3 py-2.5 rounded-xl bg-white/90 text-gray-800 
+               placeholder-gray-500 focus:outline-none focus:ring-2 
+               focus:ring-cyan-400 focus:bg-white transition-all duration-300 
+               shadow-md hover:shadow-lg text-sm"
+  >
+    <option value="">Preferred University (Optional)</option>
+    <option value="Lovely Professional University">Lovely Professional University</option>
+    <option value="Online Manipal University">Online Manipal University</option>
+    <option value="Amity University Online">Amity University Online</option>
+    <option value="Chandigarh University Online">Chandigarh University Online</option>
+    <option value="JAIN University">JAIN University</option>
+    <option value="DY PATIL">DY PATIL</option>
+    <option value="OP Jindal University">OP Jindal University</option>
+    <option value="SHOOLINI UNIVERSITY ONLINE">SHOOLINI UNIVERSITY ONLINE</option>
+    <option value="Amrita AHEAD’s Online">Amrita AHEAD’s Online</option>
+    <option value="D. Y. Patil University ONLINE Navi Mumbai">D. Y. Patil University ONLINE Navi Mumbai</option>
+    <option value="Swami Vivekanand Subharti University">Swami Vivekanand Subharti University</option>
+    <option value="Vivekananda Global University Online">Vivekananda Global University Online</option>
+    <option value="Kurkshetra University">Kurkshetra University</option>
+    <option value="Andhra University">Andhra University</option>
+    <option value="International Institute of Information Technology Bangalore">
+      International Institute of Information Technology Bangalore
+    </option>
+    <option value="Indian Institute of Management Kozhikade">Indian Institute of Management Kozhikade</option>
+    <option value="Mundra Institute of Communications Ahmedabad">Mundra Institute of Communications Ahmedabad</option>
+    <option value="Indian Institute of Technology Delhi">Indian Institute of Technology Delhi</option>
+    <option value="Institute of Management Technology Ghaziabad">Institute of Management Technology Ghaziabad</option>
+    <option value="Liverpool John Moores University">Liverpool John Moores University</option>
+    <option value="Indian Institute of Management Lucknow">Indian Institute of Management Lucknow</option>
+    <option value="Indian Institute of Management Calcutta">Indian Institute of Management Calcutta</option>
+    <option value="Indian Institute of Technology Guwahati">Indian Institute of Technology Guwahati</option>
+    <option value="Indian Institute of Technology Roorkee">Indian Institute of Technology Roorkee</option>
+    <option value="Indian Institute of Management Raipur">Indian Institute of Management Raipur</option>
+    <option value="Indian Institute of Management Udaipur">Indian Institute of Management Udaipur</option>
+    <option value="Indian Institute of Management Ahmedabad">Indian Institute of Management Ahmedabad</option>
+    <option value="Indian Institute of Management Nagpur">Indian Institute of Management Nagpur</option>
+    <option value="Golden Gate University">Golden Gate University</option>
+    <option value="Deakin University">Deakin University</option>
+    <option value="Narsee Monjee Institutite of Management (NMIMS CDOE)">
+      Narsee Monjee Institutite of Management (NMIMS CDOE)
+    </option>
+    <option value="Rushford Business School">Rushford Business School</option>
+    <option value="Edgewood College">Edgewood College</option>
+    <option value="Ecornell University">Ecornell University</option>
+    <option value="UPES ONLINE">UPES ONLINE</option>
+    <option value="Sharda University Online">Sharda University Online</option>
+  </select>
+</div>
+
 
                       <textarea
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
-                        rows={4}
+                        rows={3}
                         placeholder="Tell us about your educational goals and requirements..."
-                        className="w-full px-4 py-3 rounded-xl bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-lg hover:shadow-xl resize-none"
+                        className="w-full px-3 py-2.5 rounded-xl bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-md hover:shadow-lg resize-none text-sm"
                       />
 
                       <div className="text-center">
                         <button
                           onClick={handleSubmit}
-                          className="group/submit relative overflow-hidden bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:from-cyan-600 hover:via-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-full font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 transform"
+                          className="group/submit relative overflow-hidden bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:from-cyan-600 hover:via-blue-700 hover:to-indigo-700 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] transform text-sm"
                         >
-                          <span className="relative z-10 flex items-center gap-2">
+                          <span className="relative z-10 flex items-center justify-center gap-2">
                             Submit Enquiry
                             <span className="group-hover/submit:translate-x-1 transition-transform duration-300">→</span>
                           </span>
@@ -358,17 +403,17 @@ const Footer = () => {
               </div>
 
               {/* Column 3: Links + Newsletter */}
-              <div className="group">
-                <div className="bg-white/5 backdrop-blur-xl p-6 sm:p-8 rounded-2xl shadow-2xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-8">
+              <div className="lg:col-span-3 group">
+                <div className="h-full bg-white/5 backdrop-blur-xl p-6 rounded-2xl shadow-xl border border-white/10 hover:border-white/20 transition-all duration-300">
+                  <div className="grid grid-cols-2 gap-6">
                     
                     {/* Quick Links */}
-                    <div>
-                      <h3 className="text-xl font-bold mb-6 text-white flex items-center gap-2">
-                        <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                    <div className="col-span-1">
+                      <h3 className="text-lg font-bold mb-4 text-white flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></div>
                         Quick Links
                       </h3>
-                      <ul className="space-y-3">
+                      <ul className="space-y-2">
                         {[
                           { href: "/", label: "Home" },
                           { href: "/about", label: "About" },
@@ -379,9 +424,9 @@ const Footer = () => {
                           <li key={index}>
                             <a 
                               href={link.href} 
-                              className="group/link flex items-center text-cyan-300 hover:text-white transition-all duration-300 hover:translate-x-2"
+                              className="group/link flex items-center text-cyan-300 hover:text-white transition-all duration-300 hover:translate-x-1 text-sm"
                             >
-                              <span className="w-1 h-1 bg-cyan-400 rounded-full mr-3 group-hover/link:w-2 transition-all duration-300"></span>
+                              <span className="w-1 h-1 bg-cyan-400 rounded-full mr-2 group-hover/link:w-2 transition-all duration-300"></span>
                               {link.label}
                             </a>
                           </li>
@@ -390,29 +435,29 @@ const Footer = () => {
                     </div>
 
                     {/* Popular Courses */}
-                    <div>
-                      <h3 className="text-xl font-bold mb-6 text-white flex items-center gap-2">
-                        <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                    <div className="col-span-1">
+                      <h3 className="text-lg font-bold mb-4 text-white flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
                         Popular Courses
                       </h3>
-                      <ul className="space-y-3">
+                      <ul className="space-y-2">
                         {[
-                          { href: "/mba-online", label: "MBA", desc: "Business Administration" },
-                          { href: "/bba-online", label: "BBA", desc: "Business Studies" },
-                          { href: "/bca-online", label: "BCA", desc: "Computer Applications" },
-                          { href: "/mca-online", label: "MCA", desc: "Advanced Computing" },
-                          { href: "/ba-online", label: "BA", desc: "Liberal Arts" }
+                          { href: "/mba-online", label: "MBA", },
+                          { href: "/bba-online", label: "BBA",  },
+                          { href: "/bca-online", label: "BCA",   },
+                          { href: "/mca-online", label: "MCA",   },
+                          { href: "/ba-online", label: "BA",}
                         ].map((course, index) => (
                           <li key={index}>
                             <a 
                               href={course.href} 
-                              className="group/course block p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105"
+                              className="group/course block p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300"
                             >
-                              <div className="flex items-center justify-between">
-                                <span className="text-cyan-300 font-semibold group-hover/course:text-white transition-colors">
+                              <div className="flex flex-col">
+                                <span className="text-cyan-300 font-medium group-hover/course:text-white transition-colors text-sm">
                                   {course.label}
                                 </span>
-                                <span className="text-xs text-gray-400 group-hover/course:text-gray-300 transition-colors">
+                                <span className="text-xs text-gray-400 group-hover/course:text-gray-300 transition-colors mt-1">
                                   {course.desc}
                                 </span>
                               </div>
@@ -424,50 +469,29 @@ const Footer = () => {
                   </div>
 
                   {/* Newsletter */}
-                  <div className="mt-8">
-                    <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/10 to-white/5 p-5">
-                      <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-400/20 to-blue-500/20 blur-2xl" />
-                      <div className="relative">
-                        <h3 className="text-xl font-bold mb-2 text-white">Stay Updated</h3>
-                        <p className="text-sm text-gray-300 mb-4">Get the latest updates on courses and universities.</p>
-                        {newsletterDone ? (
-                          <div className="text-green-300 text-sm font-medium">Thanks! You're subscribed. 🎉</div>
-                        ) : (
-                          <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
-                            <input
-                              type="email"
-                              placeholder="Enter your email"
-                              className="flex-1 px-4 py-2 rounded-lg bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                              value={newsletterEmail}
-                              onChange={(e) => setNewsletterEmail(e.target.value)}
-                              required
-                            />
-                            <button type="submit" className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-colors">Subscribe</button>
-                          </form>
-                        )}
-                      </div>
-                    </div>
+                 
+                        
                   </div>
                 </div>
               </div>
-            </div>
+            
 
             {/* Highlights */}
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
                 { label: "Universities", value: "25+", color: "from-cyan-500 to-blue-500" },
                 { label: "Programs", value: "80+", color: "from-indigo-500 to-purple-500" },
                 { label: "Students Guided", value: "10K+", color: "from-emerald-500 to-teal-500" },
               ].map((item, i) => (
-                <div key={i} className="relative overflow-hidden rounded-2xl p-5 border border-white/10 bg-white/5">
-                  <div className={`absolute -inset-10 blur-3xl opacity-20 bg-gradient-to-r ${item.color}`} />
+                <div key={i} className="relative overflow-hidden rounded-xl p-4 border border-white/10 bg-white/5">
+                  <div className={`absolute -inset-8 blur-2xl opacity-20 bg-gradient-to-r ${item.color}`} />
                   <div className="relative flex items-center justify-between">
                     <div>
-                      <p className="text-3xl font-extrabold text-white drop-shadow-sm">{item.value}</p>
-                      <p className="text-sm text-gray-300">{item.label}</p>
+                      <p className="text-2xl font-extrabold text-white drop-shadow-sm">{item.value}</p>
+                      <p className="text-xs text-gray-300">{item.label}</p>
                     </div>
                     <div className="text-right">
-                      <div className="w-10 h-10 rounded-full bg-white/10 border border-white/10" />
+                      <div className="w-8 h-8 rounded-full bg-white/10 border border-white/10" />
                     </div>
                   </div>
                 </div>
@@ -475,26 +499,28 @@ const Footer = () => {
             </div>
 
             {/* Bottom Section */}
-            <div className="mt-16 pt-8 border-t border-white/10">
-              <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-                <div className="text-center sm:text-left">
-                  <p className="text-gray-400 text-sm">
-                    © {new Date().getFullYear()} UNIFOST. All rights reserved.
-                  </p>
-                  <p className="text-gray-500 text-xs mt-1">
-                    Empowering education through technology
-                  </p>
-                </div>
+           <div className="mt-12 pt-6 border-t border-gray-300">
+  <div className="flex flex-col justify-center items-center gap-3 text-center">
+    <div>
+      <p className="text-black text-xs">
+        © {new Date().getFullYear()} UNIFOST. All rights reserved.
+      </p>
+      <p className="text-black text-xs mt-1">
+        Empowering education through technology
+      </p>
+    </div>
+  
+
                 
-                <div className="flex items-center gap-4">
-                  <div className="flex gap-3">
-                    <a href="mailto:info@unifostedu.com" className="relative p-3 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group">
-                      <span className="absolute inset-0 rounded-full bg-cyan-400/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity" />
-                      <FaEnvelope className="relative text-cyan-400 group-hover:text-white transition-colors" />
+                <div className="flex items-center gap-3">
+                  <div className="flex gap-2">
+                    <a href="mailto:info@unifostedu.com" className="relative p-2.5 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group">
+                      <span className="absolute inset-0 rounded-full bg-cyan-400/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <FaEnvelope className="relative text-cyan-400 group-hover:text-white transition-colors text-sm" />
                     </a>
-                    <a href="https://wa.me/919354735410" className="relative p-3 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group">
-                      <span className="absolute inset-0 rounded-full bg-green-400/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity" />
-                      <FaWhatsapp className="relative text-green-400 group-hover:text-white transition-colors" />
+                    <a href="https://wa.me/919354735410" className="relative p-2.5 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group">
+                      <span className="absolute inset-0 rounded-full bg-green-400/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <FaWhatsapp className="relative text-green-400 group-hover:text-white transition-colors text-sm" />
                     </a>
                   </div>
                 </div>
@@ -508,9 +534,9 @@ const Footer = () => {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-4 rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-110 z-50 group"
+          className="fixed bottom-6 right-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-3 rounded-full shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105 z-50 group"
         >
-          <FaArrowUp className="text-lg group-hover:animate-bounce" />
+          <FaArrowUp className="text-base group-hover:animate-bounce" />
         </button>
       )}
     </>
