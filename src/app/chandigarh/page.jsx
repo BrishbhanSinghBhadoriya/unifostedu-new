@@ -180,7 +180,7 @@ const Chandigarh = () => {
             </p>
           </div>
           <motion.img
-            src="/chandigarh.png"
+            src="/chandigarh.jpg"
             alt="Chandigarh University"
             className="rounded-xl shadow-lg w-full h-auto"
             initial={{ opacity: 0, y: 50 }}
@@ -263,7 +263,7 @@ const Chandigarh = () => {
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
-            <img src="/certificate-cu.png" alt="Chandigarh University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <img src="/certificate-cu.jpg" alt="Chandigarh University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
           </div>
           <div className="flex-1 text-white">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">Earn Your Online Degree from Chandigarh University</h2>

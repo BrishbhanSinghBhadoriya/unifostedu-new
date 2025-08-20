@@ -263,7 +263,7 @@ const Upes = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
           <div className="flex-1">
             <img
-              src="/upescerti.webp"
+              src="/upes-certificate.jpg"
               alt="UPES University Certificate"
               className="w-full max-w-md mx-auto rounded shadow-lg"
             />

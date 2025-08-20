@@ -1,5 +1,7 @@
+'use client';
 import React from 'react';
-
+// import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import {
   FaCheckCircle,
   FaFileAlt,
@@ -8,14 +10,16 @@ import {
   FaCertificate,
   FaBuilding,
 } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
 
-// Reusable Enquire Button
+//Reusable Enquire Button
 const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
-  //const navigate = useNavigate();
-  const university = "Jain University";
+// const navigate = useNavigate();
+const router = useRouter();  
+const university = "Jain University";
 
   const handleClick = () => {
-   // navigate(`/enquiry?university=${encodeURIComponent(university)}&course=${encodeURIComponent(course)}`);
+     router.push(`/enquiry?university=${encodeURIComponent(university)}&course=${encodeURIComponent(course)}`);
   };
 
   return (
@@ -108,10 +112,10 @@ const Manipal = () => {
 
   return (
     <>
-      
+      {/* <Helmet>
         <title>Manipal University Online - Courses, Fees & Admissions</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-   
+      </Helmet> */}
 
       {/* Intro Section */}
       <section className="py-16 bg-white px-6 font-[Inter]">
@@ -146,9 +150,9 @@ const Manipal = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">Undergraduate Courses</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {/* {ugCourses.map((item, index) => (
+            {ugCourses.map((item, index) => (
               <EnquireCard key={index} {...item} />
-            ))} */}
+            ))}
           </div>
         </div>
       </section>
@@ -158,9 +162,9 @@ const Manipal = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">Postgraduate Courses</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {/* {pgCourses.map((item, index) => (
+            {pgCourses.map((item, index) => (
               <EnquireCard key={index} {...item} />
-            ))} */}
+            ))}
           </div>
         </div>
       </section>
