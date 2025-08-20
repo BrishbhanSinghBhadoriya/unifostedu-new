@@ -247,11 +247,11 @@ export default function ComparePage() {
   const noop = () => {};
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12 md:mt-20 px-4 sm:px-6 lg:px-8 ">
       {/* Enquiry gating (hard block) */}
       <Dialog open={!enquiryDone} onOpenChange={noop}>
         <DialogContent
-          className="sm:max-w-[560px]"
+          className="sm:max-w-[560px] md:mt-10"
           onInteractOutside={(e) => e.preventDefault()}
           onEscapeKeyDown={(e) => e.preventDefault()}
         >
@@ -263,6 +263,15 @@ export default function ComparePage() {
               setEnquiryDone(true);
             }}
           />
+          <div className="mt-4 flex justify-end">
+            <Button
+              variant="outline"
+              onClick={() => router.replace('/')}
+              className="border-[#00ffe0] text-[#001e3c] hover:bg-[#00ffe0] hover:text-[#001e3c]"
+            >
+              Cancel
+            </Button>
+          </div>
         </DialogContent>
       </Dialog>
 
