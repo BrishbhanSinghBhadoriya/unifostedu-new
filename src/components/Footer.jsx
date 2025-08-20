@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from "react";
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp, FaArrowUp } from "react-icons/fa";
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp, FaArrowUp, FaUser, FaGraduationCap, FaUniversity } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
@@ -16,6 +16,8 @@ const Footer = () => {
   });
   const [submitted, setSubmitted] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [newsletterDone, setNewsletterDone] = useState(false);
 
   // Mock search params functionality
   useEffect(() => {
@@ -44,6 +46,18 @@ const Footer = () => {
       ...prev,
       [e.target.name]: e.target.value,
     }));
+  };
+
+  const handleNewsletterSubmit = (e) => {
+    e.preventDefault();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(newsletterEmail)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+    setNewsletterDone(true);
+    setTimeout(() => setNewsletterDone(false), 4000);
+    setNewsletterEmail("");
   };
 
   const handleSubmit = async () => {
@@ -94,6 +108,13 @@ const Footer = () => {
 
   return (
     <>
+      {/* Decorative wave */}
+      <div className="relative w-full bg-transparent">
+        <svg className="w-full h-12 text-blue-900" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 40C160 80 320 0 480 0C640 0 800 80 960 80C1120 80 1280 0 1440 40V80H0V40Z" fill="currentColor" opacity="0.25" />
+          <path d="M0 50C160 90 320 10 480 10C640 10 800 90 960 90C1120 90 1280 10 1440 50" stroke="currentColor" strokeOpacity="0.2"/>
+        </svg>
+      </div>
       <footer className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-gray-100 overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 opacity-10">
@@ -235,7 +256,8 @@ const Footer = () => {
                   ) : (
                     <div className="space-y-6">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div className="group/input">
+                        <div className="group/input relative">
+                          <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
                           <input
                             type="text"
                             name="name"
@@ -243,39 +265,47 @@ const Footer = () => {
                             value={formData.name}
                             onChange={handleChange}
                             placeholder="Full Name"
-                            className="w-full px-4 py-3 rounded-xl bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-lg hover:shadow-xl"
+                            className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-lg hover:shadow-xl"
                           />
                         </div>
                         <div className="group/input">
-                          <input
-                            type="email"
-                            name="email"
-                            required
-                            value={formData.email}
-                            onChange={handleChange}
-                            placeholder="Email Address"
-                            className="w-full px-4 py-3 rounded-xl bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-lg hover:shadow-xl"
-                          />
+                          <div className="relative">
+                            <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                            <input
+                              type="email"
+                              name="email"
+                              required
+                              value={formData.email}
+                              onChange={handleChange}
+                              placeholder="Email Address"
+                              className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-lg hover:shadow-xl"
+                            />
+                          </div>
                         </div>
                       </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <input
-                          type="tel"
-                          name="phone"
-                          required
-                          value={formData.phone}
-                          onChange={handleChange}
-                          placeholder="Phone Number"
-                          className="w-full px-4 py-3 rounded-xl bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-lg hover:shadow-xl"
-                        />
-                        <select
-                          name="course"
-                          value={formData.course}
-                          onChange={handleChange}
-                          required
-                          className="w-full px-4 py-3 rounded-xl bg-white/90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-lg hover:shadow-xl"
-                        >
+                        <div className="relative">
+                          <FaPhoneAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                          <input
+                            type="tel"
+                            name="phone"
+                            required
+                            value={formData.phone}
+                            onChange={handleChange}
+                            placeholder="Phone Number"
+                            className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-lg hover:shadow-xl"
+                          />
+                        </div>
+                        <div className="relative">
+                          <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                          <select
+                            name="course"
+                            value={formData.course}
+                            onChange={handleChange}
+                            required
+                            className="w-full pl-10 pr-4 py-3 appearance-none rounded-xl bg-white/90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-lg hover:shadow-xl"
+                          >
                           <option value="">Select Interested Course</option>
                           <option value="BBA">BBA - Bachelor of Business Administration</option>
                           <option value="BCA">BCA - Bachelor of Computer Applications</option>
@@ -285,17 +315,21 @@ const Footer = () => {
                           <option value="MA">MA - Master of Arts</option>
                           <option value="BA">BA - Bachelor of Arts</option>
                           <option value="M.Com">M.Com - Master of Commerce</option>
-                        </select>
+                          </select>
+                        </div>
                       </div>
 
-                      <input
-                        type="text"
-                        name="university"
-                        value={formData.university}
-                        onChange={handleChange}
-                        placeholder="Preferred University (Optional)"
-                        className="w-full px-4 py-3 rounded-xl bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-lg hover:shadow-xl"
-                      />
+                      <div className="relative">
+                        <FaUniversity className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                        <input
+                          type="text"
+                          name="university"
+                          value={formData.university}
+                          onChange={handleChange}
+                          placeholder="Preferred University (Optional)"
+                          className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-lg hover:shadow-xl"
+                        />
+                      </div>
 
                       <textarea
                         name="message"
@@ -323,7 +357,7 @@ const Footer = () => {
                 </div>
               </div>
 
-              {/* Column 3: Links */}
+              {/* Column 3: Links + Newsletter */}
               <div className="group">
                 <div className="bg-white/5 backdrop-blur-xl p-6 sm:p-8 rounded-2xl shadow-2xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-8">
@@ -388,8 +422,56 @@ const Footer = () => {
                       </ul>
                     </div>
                   </div>
+
+                  {/* Newsletter */}
+                  <div className="mt-8">
+                    <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/10 to-white/5 p-5">
+                      <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-400/20 to-blue-500/20 blur-2xl" />
+                      <div className="relative">
+                        <h3 className="text-xl font-bold mb-2 text-white">Stay Updated</h3>
+                        <p className="text-sm text-gray-300 mb-4">Get the latest updates on courses and universities.</p>
+                        {newsletterDone ? (
+                          <div className="text-green-300 text-sm font-medium">Thanks! You're subscribed. 🎉</div>
+                        ) : (
+                          <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
+                            <input
+                              type="email"
+                              placeholder="Enter your email"
+                              className="flex-1 px-4 py-2 rounded-lg bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                              value={newsletterEmail}
+                              onChange={(e) => setNewsletterEmail(e.target.value)}
+                              required
+                            />
+                            <button type="submit" className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-colors">Subscribe</button>
+                          </form>
+                        )}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
+            </div>
+
+            {/* Highlights */}
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {[
+                { label: "Universities", value: "25+", color: "from-cyan-500 to-blue-500" },
+                { label: "Programs", value: "80+", color: "from-indigo-500 to-purple-500" },
+                { label: "Students Guided", value: "10K+", color: "from-emerald-500 to-teal-500" },
+              ].map((item, i) => (
+                <div key={i} className="relative overflow-hidden rounded-2xl p-5 border border-white/10 bg-white/5">
+                  <div className={`absolute -inset-10 blur-3xl opacity-20 bg-gradient-to-r ${item.color}`} />
+                  <div className="relative flex items-center justify-between">
+                    <div>
+                      <p className="text-3xl font-extrabold text-white drop-shadow-sm">{item.value}</p>
+                      <p className="text-sm text-gray-300">{item.label}</p>
+                    </div>
+                    <div className="text-right">
+                      <div className="w-10 h-10 rounded-full bg-white/10 border border-white/10" />
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
 
             {/* Bottom Section */}
@@ -406,11 +488,13 @@ const Footer = () => {
                 
                 <div className="flex items-center gap-4">
                   <div className="flex gap-3">
-                    <a href="mailto:info@unifostedu.com" className="p-3 bg-white/10 hover:bg-cyan-500 rounded-full transition-all duration-300 hover:scale-110 group">
-                      <FaEnvelope className="text-cyan-400 group-hover:text-white transition-colors" />
+                    <a href="mailto:info@unifostedu.com" className="relative p-3 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group">
+                      <span className="absolute inset-0 rounded-full bg-cyan-400/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <FaEnvelope className="relative text-cyan-400 group-hover:text-white transition-colors" />
                     </a>
-                    <a href="https://wa.me/919354735410" className="p-3 bg-white/10 hover:bg-green-500 rounded-full transition-all duration-300 hover:scale-110 group">
-                      <FaWhatsapp className="text-green-400 group-hover:text-white transition-colors" />
+                    <a href="https://wa.me/919354735410" className="relative p-3 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group">
+                      <span className="absolute inset-0 rounded-full bg-green-400/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <FaWhatsapp className="relative text-green-400 group-hover:text-white transition-colors" />
                     </a>
                   </div>
                 </div>
