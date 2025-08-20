@@ -6,12 +6,30 @@ import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
-import { FaUser, FaPhone, FaEnvelope, FaGraduationCap, FaPaperPlane } from 'react-icons/fa';
+import { FaUser, FaPhone, FaEnvelope, FaGraduationCap, FaPaperPlane, FaUniversity } from 'react-icons/fa';
 import toast from 'react-hot-toast';
 
 export default function EnquiryForm({ universityName, defaultProgram = 'MBA', onSubmitted }) {
   const [loading, setLoading] = useState(false);
   const [program, setProgram] = useState(defaultProgram);
+  const [selectedUniversity, setSelectedUniversity] = useState(universityName || '');
+
+  const universities = [
+    'Amity University Online',
+    'Manipal University Online',
+    'Lovely Professional University Online',
+    'University of Petroleum and Energy Studies Online',
+    'Narsee Monjee Institute of Management Studies Online',
+    'Sharda University Online',
+    'Dr. DY Patil Online',
+    'Jain University Online',
+    'Chandigarh University Online',
+    'OP Jindal University',
+    'Shoolini University Online',
+    'Vivekananda Global University Online',
+    'UPES Online',
+    'NMIMS (Narsee Monjee)'
+  ];
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -35,6 +53,8 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
 
   return (
     <form className="space-y-5" onSubmit={handleSubmit}>
+      <input type="hidden" name="program" value={program} />
+      <input type="hidden" name="university" value={selectedUniversity} />
       {universityName && (
         <div className="rounded-lg p-4 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] text-[#001e3c]">
           <p className="text-sm">University</p>
@@ -68,25 +88,42 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
           </div>
         </div>
         <div className="space-y-1.5">
-          <Label>Program</Label>
+          <Label>University</Label>
           <div className="relative">
-            <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-            <Select value={program} onValueChange={setProgram} name="program">
+            <FaUniversity className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+            <Select value={selectedUniversity} onValueChange={setSelectedUniversity}>
               <SelectTrigger className="pl-10">
-                <SelectValue placeholder="Select program" />
+                <SelectValue placeholder="Select university" />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="MBA">MBA</SelectItem>
-                <SelectItem value="MCA">MCA</SelectItem>
-                <SelectItem value="MCOM">M.Com</SelectItem>
-                <SelectItem value="MA">MA</SelectItem>
-                <SelectItem value="BBA">BBA</SelectItem>
-                <SelectItem value="BCA">BCA</SelectItem>
-                <SelectItem value="BCOM">B.Com</SelectItem>
-                <SelectItem value="BA">BA</SelectItem>
+              <SelectContent className="z-[1000] max-h-60 overflow-auto">
+                {universities.map((u) => (
+                  <SelectItem key={u} value={u}>{u}</SelectItem>
+                ))}
               </SelectContent>
             </Select>
           </div>
+        </div>
+      </div>
+
+      <div className="space-y-1.5">
+        <Label>Program</Label>
+        <div className="relative">
+          <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+          <Select value={program} onValueChange={setProgram}>
+            <SelectTrigger className="pl-10">
+              <SelectValue placeholder="Select program" />
+            </SelectTrigger>
+            <SelectContent className="z-[1000] max-h-60 overflow-auto">
+              <SelectItem value="MBA">MBA</SelectItem>
+              <SelectItem value="MCA">MCA</SelectItem>
+              <SelectItem value="MCOM">M.Com</SelectItem>
+              <SelectItem value="MA">MA</SelectItem>
+              <SelectItem value="BBA">BBA</SelectItem>
+              <SelectItem value="BCA">BCA</SelectItem>
+              <SelectItem value="BCOM">B.Com</SelectItem>
+              <SelectItem value="BA">BA</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
       </div>
 

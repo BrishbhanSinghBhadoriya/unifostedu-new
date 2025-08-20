@@ -16,7 +16,7 @@ const Header = () => {
   const router = useRouter();
   const dropdownRef = useRef(null);
 
-  const universities = [
+const universities = [
     { name: "Lovely Professional University", link: "/lpu", icon: FaUniversity },
     { name: "Online Manipal University", link: "/manipal", icon: FaUniversity },
     { name: "Amity University Online", link: "/amity", icon: FaUniversity },
@@ -103,7 +103,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      
+
 
       {/* Main Navigation */}
       <div className={`sticky top-0 transition-all duration-500 ${
@@ -113,7 +113,7 @@ const Header = () => {
       }`}>
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            {/* Logo */}
+          {/* Logo */}
             <Link href="/" className="flex-shrink-0 group">
               <div className="relative">
                 <div className={`w-48 h-16 rounded-2xl p-2 transition-all duration-500 ${
@@ -131,7 +131,7 @@ const Header = () => {
                   <div className="absolute -inset-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-2xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
                 )}
               </div>
-            </Link>
+          </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8" ref={dropdownRef}>
@@ -139,7 +139,7 @@ const Header = () => {
                 { label: 'Home', path: '/', icon: FaRocket },
                 { label: 'About', path: '/about', icon: FaGraduationCap },
                 { label: 'Services', path: '/services', icon: FaBookOpen }
-              ].map((link, i) => (
+            ].map((link, i) => (
                 <Link key={i} href={link.path} 
                       className={`group flex items-center space-x-2 px-4 py-2 rounded-xl transition-all duration-300 ${
                         scrolled 
@@ -148,11 +148,11 @@ const Header = () => {
                       }`}>
                   <link.icon className="text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0" />
                   <span className="font-semibold">{link.label}</span>
-                </Link>
-              ))}
+              </Link>
+            ))}
 
-              {/* Explore Dropdown */}
-              <div className="relative">
+            {/* Explore Dropdown */}
+            <div className="relative">
                 <button 
                   onClick={() => setMenuOpen(menuOpen === "explore" ? null : "explore")} 
                   className={`group flex items-center space-x-2 px-4 py-2 rounded-xl transition-all duration-300 ${
@@ -163,7 +163,7 @@ const Header = () => {
                   <FaUniversity className="text-sm" />
                   <span className="font-semibold">Explore</span>
                   <FaChevronDown className={`text-xs transition-transform duration-300 ${menuOpen === "explore" ? 'rotate-180' : ''}`} />
-                </button>
+              </button>
                 
                 <div className={`absolute left-0 top-full mt-2 w-80 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 transition-all duration-300 transform origin-top ${
                   menuOpen === "explore" ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
@@ -174,7 +174,7 @@ const Header = () => {
                       Partner Universities
                     </h3>
                     <div className="grid grid-cols-1 gap-2 max-h-64 overflow-y-auto">
-                      {universities.map((uni, idx) => (
+                {universities.map((uni, idx) => (
                         <Link key={idx} href={uni.link} onClick={() => setMenuOpen(null)} 
                               className="flex items-center space-x-3 p-3 rounded-xl hover:bg-[#001e3c] hover:text-white transition-all duration-300 group">
                           <div className="w-8 h-8 bg-gradient-to-br from-[#00ffe0] to-[#00d4c4] rounded-lg flex items-center justify-center">
@@ -192,13 +192,13 @@ const Header = () => {
                       </button>
                     </div>
                   </div>
-                </div>
               </div>
+            </div>
 
-              {/* Blogs Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={() => setMenuOpen(menuOpen === "blogs" ? null : "blogs")}
+            {/* Blogs Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setMenuOpen(menuOpen === "blogs" ? null : "blogs")}
                   className={`group flex items-center space-x-2 px-4 py-2 rounded-xl transition-all duration-300 ${
                     scrolled 
                       ? 'text-[#001e3c] hover:bg-[#001e3c] hover:text-white' 
@@ -207,7 +207,7 @@ const Header = () => {
                   <FaBookOpen className="text-sm" />
                   <span className="font-semibold">Blogs</span>
                   <FaChevronDown className={`text-xs transition-transform duration-300 ${menuOpen === "blogs" ? 'rotate-180' : ''}`} />
-                </button>
+              </button>
                 
                 <div className={`absolute left-0 top-full mt-2 w-72 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 transition-all duration-300 transform origin-top ${
                   menuOpen === "blogs" ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
@@ -238,9 +238,9 @@ const Header = () => {
                       </Link>
                     </div>
                   </div>
-                </div>
               </div>
-            </nav>
+            </div>
+          </nav>
 
             {/* Search Bar */}
             <div className="hidden lg:flex items-center relative">
@@ -249,16 +249,16 @@ const Header = () => {
                   ? 'bg-gray-100 border border-gray-200' 
                   : 'bg-white/10 backdrop-blur-sm border border-white/20'
               } rounded-full px-4 py-2 min-w-[300px]`}>
-                <input
-                  type="text"
+            <input
+              type="text"
                   placeholder="Search for courses, universities..."
                   className={`outline-none w-full text-sm transition-colors duration-300 ${
                     scrolled ? 'text-[#001e3c] placeholder-gray-500' : 'text-white placeholder-white/70'
                   } bg-transparent`}
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-                />
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+            />
                 <button 
                   onClick={handleSearch} 
                   className={`absolute right-3 top-1/2 transform -translate-y-1/2 p-1 rounded-full transition-all duration-300 ${
@@ -268,8 +268,8 @@ const Header = () => {
                   }`}>
                   <FaSearch className="text-sm" />
                 </button>
-              </div>
             </div>
+          </div>
 
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
@@ -281,12 +281,12 @@ const Header = () => {
                     : 'text-white hover:bg-white/10'
                 }`}>
                 {mobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-              </button>
-            </div>
+            </button>
           </div>
+        </div>
 
-          {/* Mobile Menu */}
-          {mobileMenuOpen && (
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
             <div className="lg:hidden mt-6 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 p-6 animate-slide-down">
               <div className="space-y-4">
                 {[
@@ -318,21 +318,21 @@ const Header = () => {
                       <FaSearch className="text-sm" />
                     </button>
                   </div>
-                </div>
+            </div>
 
                 {/* Mobile Contact Info */}
                 <div className="pt-4 border-t border-gray-200 space-y-3">
                   <div className="flex items-center space-x-3 text-[#001e3c]">
-                    <FaPhoneAlt className="text-[#00ffe0]" />
+                <FaPhoneAlt className="text-[#00ffe0]" />
                     <span className="font-medium">+91 93547 35410</span>
-                  </div>
+              </div>
                   <div className="flex items-center space-x-3 text-[#001e3c]">
                     <FaEnvelope className="text-[#00ffe0]" />
                     <a href="mailto:info@unifostedu.com" className="font-medium hover:text-[#00ffe0]">
                       info@unifostedu.com
                     </a>
-                  </div>
-                </div>
+              </div>
+            </div>
 
                 {/* Mobile Action Buttons */}
                 <div className="pt-4 border-t border-gray-200 flex space-x-3">
@@ -345,9 +345,9 @@ const Header = () => {
                     📹 Book Demo
                   </button>
                 </div>
-              </div>
             </div>
-          )}
+          </div>
+        )}
         </div>
       </div>
     </header>

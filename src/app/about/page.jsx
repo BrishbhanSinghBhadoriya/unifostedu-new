@@ -39,7 +39,7 @@ export default function About() {
           <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto mb-12 leading-relaxed">
             UniFost is redefining how students discover and access quality education through personalized guidance and innovative technology.
           </p>
-          <button className="bg-[#00ffe0] text-[#001e3c] px-8 py-4 rounded-full text-xl font-bold hover:bg-[#00d4c4] transform hover:scale-105 transition-all duration-300 shadow-2xl">
+          <button className="bg-[#00ffe0] text-[#001e3c] px-8 py-4 rounded-full text-xl font-bold hover:bg-[#00d4c4] transform hover:scale-105 transition-all duration-300 shadow-2xl cursor-pointer">
             Get Started Today
           </button>
         </div>
@@ -211,8 +211,8 @@ export default function About() {
 
       {/* Why Choose Us Section */}
       <section className="py-20 bg-gradient-to-br from-[#001e3c] to-[#003b6c] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-6">
               <FaRocket className="text-4xl text-[#00ffe0] mr-4" />
               <h2 className="text-4xl md:text-5xl font-bold">
@@ -224,10 +224,10 @@ export default function About() {
             </h3>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               What sets us apart in the world of educational guidance
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <FaStar className="text-3xl text-[#00ffe0] mb-4" />
               <h3 className="text-xl font-bold mb-3">Personalized Guidance</h3>
@@ -311,9 +311,9 @@ export default function About() {
               <h3 className="text-3xl font-bold text-[#001e3c] mb-4">Priyansh Mishra</h3>
               <p className="text-gray-600 leading-relaxed max-w-md mx-auto">
                 Priyansh Mishra, a visionary leader committed to revolutionizing education through innovation and accessibility, has poured his heart, energy, and vision into building UniFost with unwavering passion and dedication. With a background in educational technology and student psychology, he ensures UniFost remains student-centric.
-              </p>
-            </div>
-            
+            </p>
+          </div>
+          
             <div className="text-center">
               <div className="relative mb-8">
                 <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-[#00ffe0] to-[#00d4c4] p-2">
@@ -330,10 +330,10 @@ export default function About() {
               <h3 className="text-3xl font-bold text-[#001e3c] mb-4">Aman Pawar</h3>
               <p className="text-gray-600 leading-relaxed max-w-md mx-auto">
                 Aman Pawar is the driving force behind UniFost—blending vision with action, and passion with purpose. His tireless efforts and hands-on leadership have shaped a platform that puts students first. With expertise in business strategy and digital education, he bridges the gap between academia and industry needs.
-              </p>
-            </div>
+            </p>
           </div>
         </div>
+      </div>
       </section>
 
       {/* CTA Section */}
