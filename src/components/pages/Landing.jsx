@@ -620,10 +620,7 @@ const Landing = () => {
               <FaRocket className="text-xl" />
               Get Started Today
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-[#001e3c] transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
-              <FaPhone className="text-xl" />
-              Call Now
-            </button>
+           
           </motion.div>
         </div>
       </section>
