@@ -11,7 +11,8 @@ import {
   FaBookOpen, FaHome, FaVideo, FaArrowRight, FaStar, FaUsers, 
   FaClock, FaGlobe, FaUserTie, FaShieldAlt, FaComments, FaCompass,
   FaRocket, FaAward, FaCheckCircle, FaPlay, FaSearch, FaMapMarkerAlt,
-  FaPhone, FaEnvelope, FaWhatsapp, FaHeadset, FaLightbulb, FaTarget
+  FaPhone, FaEnvelope, FaWhatsapp, FaHeadset, FaLightbulb, FaTarget,
+  FaCalendar, FaCalendarAlt
 } from "react-icons/fa";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -81,7 +82,7 @@ const colleges = [
   { name: "Sharda University Online", ranking: "NIRF-", fee: "₹80K - ₹1.5L", logo: "/sharda.png", rating: 4.5 },
   { name: "Dr. DY Patil Online", ranking: "NIRF-", fee: "₹1.1L - ₹2.2L", logo: "/dypatil.png", rating: 4.6 },
   { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.3L - ₹2.6L", logo: "/jain.png", rating: 4.7 },
-   { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹1.3L - ₹2.6L", logo: "/jain.png", rating: 4.7 }
+  { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹1.3L - ₹2.6L", logo: "/jain.png", rating: 4.7 }
 ];
 
 const cities = [
@@ -110,6 +111,7 @@ const Landing = () => {
 
   const router = useRouter();
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
+  const [modalType, setModalType] = useState("getStarted"); // "getStarted", "videoCall", "homeDemo"
   const [selectedUniversities, setSelectedUniversities] = useState([]);
   
   const slugify = (name) => name.toLowerCase().replace(/\s+/g, '-');
@@ -131,7 +133,6 @@ const Landing = () => {
       'MBA Online': '/courses/mba-online',
       'MCA Online': '/courses/mca-online',
       'BBA Online': '/courses/bba-online',
-      // M.Com uses fallback slug matching in course page
       'M.Com Online': '/courses/mcom-online',
       'MA Online': '/courses/ma-online',
     };
@@ -164,218 +165,116 @@ const Landing = () => {
     return () => clearInterval(id);
   }, []);
 
+  // Function to open modal with specific type
+  const openModal = (type) => {
+    setModalType(type);
+    setShowEnquiryModal(true);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Enhanced Hero Section */}
-      {/* Enhanced Hero Section */}
-<section className="relative text-white overflow-hidden">
-  <div className="relative w-full">
-    {/* Slides */}
-    <div className="relative w-full aspect-[2.875/1] bg-gradient-to-br from-[#001e3c] to-[#003b6c]">
-      {heroSlides.map((s, idx) => (
-        <motion.div
-          key={idx}
-          className={`absolute inset-0 transition-all duration-1000 ${idx === slide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: idx === slide ? 1 : 0, scale: idx === slide ? 1 : 1.1 }}
-          transition={{ duration: 1 }}
-        >
-          <img 
-            src={s.src} 
-            alt={s.alt} 
-            className="w-full h-full object-cover" 
-            style={{ objectPosition: 'center' }}
-          />
-          {/* Enhanced Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c]/80 via-[#001e3c]/60 to-transparent" />
-        </motion.div>
-      ))}
-    </div>
-
-    {/* Enhanced Content overlay */}
-    <div className="pointer-events-none absolute inset-0 flex items-center">
-      <div className="pointer-events-auto text-left px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-2xl"
-        >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
-            {heroSlides[slide].title}
-          </h1>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 text-[#00ffe0]">
-            {heroSlides[slide].subtitle}
-          </h2>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-            {heroSlides[slide].description}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3">
-  <button 
-    onClick={() => setShowEnquiryModal(true)}
-    className="bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] 
-               px-5 py-2.5 rounded-full text-base font-semibold
-               hover:from-[#00d4c4] hover:to-[#00ffe0]
-               transform hover:scale-105 transition-all duration-300 
-               shadow-md shadow-[#00ffe0]/30 flex items-center justify-center gap-2"
-  >
-    <FaRocket className="text-lg" />
-    Get Started Today
-  </button>
-
-  <button 
-    className="border border-white text-white px-5 py-2.5 rounded-full text-base font-semibold 
-               bg-white/10 hover:bg-white hover:text-[#001e3c] 
-               transform hover:scale-105 transition-all duration-300 
-               flex items-center justify-center gap-2"
-  >
-    <FaVideo className="text-lg" />
-    Book a Video Call
-  </button>
-
-  <button 
-    className="border border-white text-white px-5 py-2.5 rounded-full text-base font-semibold 
-               bg-white/10 hover:bg-white hover:text-[#001e3c] 
-               transform hover:scale-105 transition-all duration-300 
-               flex items-center justify-center gap-2"
-  >
-    <FaMapMarkerAlt className="text-lg" />
-    Book a Home Demo
-  </button>
-</div>
-
-        </motion.div>
-      </div>
-    </div>
-
-    {/* Enhanced Dots */}
-    <div className="absolute inset-x-0 bottom-8 flex items-center justify-center gap-3">
-      {heroSlides.map((_, i) => (
-        <button
-          key={i}
-          onClick={() => setSlide(i)}
-          className={`h-3 w-3 rounded-full transition-all duration-300 ${
-            i === slide 
-              ? 'bg-[#00ffe0] w-8 shadow-lg shadow-[#00ffe0]/50' 
-              : 'bg-white/60 hover:bg-white/80'
-          }`}
-          aria-label={`Go to slide ${i + 1}`}
-        />
-      ))}
-    </div>
-
-    {/* Floating Action Cards */}
-    <div className="absolute right-4 top-1/2 transform -translate-y-1/2 hidden lg:block">
-      <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        className="space-y-4"
-      >
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20">
-          <div className="text-center">
-            <FaUsers className="text-3xl text-[#00ffe0] mx-auto mb-2" />
-            <div className="text-2xl font-bold">50K+</div>
-            <div className="text-sm text-white/80">Students</div>
+      <section className="relative text-white overflow-hidden">
+        <div className="relative w-full">
+          {/* Slides */}
+          <div className="relative w-full aspect-[2.875/1] bg-gradient-to-br from-[#001e3c] to-[#003b6c]">
+            {heroSlides.map((s, idx) => (
+              <motion.div
+                key={idx}
+                className={`absolute inset-0 transition-all duration-1000 ${idx === slide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
+                initial={{ opacity: 0, scale: 1.1 }}
+                animate={{ opacity: idx === slide ? 1 : 0, scale: idx === slide ? 1 : 1.1 }}
+                transition={{ duration: 1 }}
+              >
+                <img 
+                  src={s.src} 
+                  alt={s.alt} 
+                  className="w-full h-full object-cover" 
+                  style={{ objectPosition: 'center' }}
+                />
+                {/* Enhanced Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c]/80 via-[#001e3c]/60 to-transparent" />
+              </motion.div>
+            ))}
           </div>
-        </div>
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20">
-          <div className="text-center">
-            <FaUniversity className="text-3xl text-[#00ffe0] mx-auto mb-2" />
-            <div className="text-2xl font-bold">200+</div>
-            <div className="text-sm text-white/80">Universities</div>
-          </div>
-        </div>
-      </motion.div>
-    </div>
-  </div>
-</section>
 
-      {/* Compare Online Universities */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-12"
-            data-aos="fade-up"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#001e3c] mb-4">
-              🎓 Compare Online Universities
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Select up to 3 universities to compare fees, accreditation, placements and more
-            </p>
-          </motion.div>
+          {/* Enhanced Content overlay */}
+          <div className="pointer-events-none absolute inset-0 flex items-center">
+            <div className="pointer-events-auto text-left px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="max-w-2xl"
+              >
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
+                  {heroSlides[slide].title}
+                </h1>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 text-[#00ffe0]">
+                  {heroSlides[slide].subtitle}
+                </h2>
+                <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
+                  {heroSlides[slide].description}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <button 
+                    onClick={() => openModal("getStarted")}
+                    className="bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] 
+                               px-5 py-2.5 rounded-full text-base font-semibold
+                               hover:from-[#00d4c4] hover:to-[#00ffe0]
+                               transform hover:scale-105 transition-all duration-300 
+                               shadow-md shadow-[#00ffe0]/30 flex items-center justify-center gap-2"
+                  >
+                    <FaRocket className="text-lg" />
+                    Get Started Today
+                  </button>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {colleges.map((college, idx) => {
-              const slug = slugify(college.name);
-              const isSelected = selectedUniversities.includes(slug);
-              return (
-                <div key={idx} className={`rounded-2xl border ${isSelected ? 'border-[#00ffe0]' : 'border-gray-200'} p-5 bg-white shadow-sm hover:shadow-lg transition-all`}>
-                  <div className="flex items-start justify-between gap-3">
-                    <div>
-                      <h3 className="text-lg font-semibold text-[#001e3c]">{college.name}</h3>
-                      <div className="mt-2 text-sm text-gray-600"><span className="font-medium">Fees:</span> {college.fee}</div>
-                      <div className="mt-1 text-sm text-gray-600"><span className="font-medium">Ranking:</span> {college.ranking}</div>
-                    </div>
-                    <button 
-                      onClick={() => toggleUniversity(college.name)}
-                      className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${isSelected ? 'bg-[#00ffe0] text-[#001e3c]' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
-                    >
-                      {isSelected ? 'Selected' : 'Select'}
-                    </button>
-                  </div>
+                  <button 
+                    onClick={() => openModal("videoCall")}
+                    className="border border-white text-white px-5 py-2.5 rounded-full text-base font-semibold 
+                               bg-white/10 hover:bg-white hover:text-[#001e3c] 
+                               transform hover:scale-105 transition-all duration-300 
+                               flex items-center justify-center gap-2"
+                  >
+                    <FaVideo className="text-lg" />
+                    Book a Video Call
+                  </button>
+
+                  <button 
+                    onClick={() => openModal("homeDemo")}
+                    className="border border-white text-white px-5 py-2.5 rounded-full text-base font-semibold 
+                               bg-white/10 hover:bg-white hover:text-[#001e3c] 
+                               transform hover:scale-105 transition-all duration-300 
+                               flex items-center justify-center gap-2"
+                  >
+                    <FaMapMarkerAlt className="text-lg" />
+                    Book a Home Demo
+                  </button>
                 </div>
-              );
-            })}
-          </div>
-
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-gray-600 text-sm">
-              Selected: <span className="font-semibold text-[#001e3c]">{selectedUniversities.length}</span> / 3
+              </motion.div>
             </div>
-            <button
-              disabled={!canCompare}
-              onClick={startCompare}
-              className={`px-8 py-3 rounded-full font-bold flex items-center gap-2 transition-all ${canCompare ? 'bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] shadow-lg' : 'bg-gray-200 text-gray-500 cursor-not-allowed'}`}
-            >
-              Compare Now
-              <FaArrowRight />
-            </button>
           </div>
-        </div>
-      </section>
 
-      {/* Accreditation & Recognition */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-12"
-            data-aos="fade-up"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#001e3c] mb-4">
-              Accreditation & Recognition
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We partner only with accredited and government-recognized institutions
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-6 items-center">
-            {[
-              '/ugc.png','/aicte.png','/naac.png','/iso.png','/aiu.png','/nirf.png','/ioe.png','/crisil.png','/icar.png','/wes.png','/nabh.png','/iacbe.png','/aacsb.png','/qaa.png','/wasc.png','/qs.png','/acu.png','/unwto.png'
-
-            ].map((logo, idx) => (
-              <div key={idx} className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all border border-gray-100 flex items-center justify-center h-24">
-                <img src={logo} alt="Accreditation" className="max-h-14 object-contain" />
-              </div>
+          {/* Enhanced Dots */}
+          <div className="absolute inset-x-0 bottom-8 flex items-center justify-center gap-3">
+            {heroSlides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setSlide(i)}
+                className={`h-3 w-3 rounded-full transition-all duration-300 ${
+                  i === slide 
+                    ? 'bg-[#00ffe0] w-8 shadow-lg shadow-[#00ffe0]/50' 
+                    : 'bg-white/60 hover:bg-white/80'
+                }`}
+                aria-label={`Go to slide ${i + 1}`}
+              />
             ))}
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      {/* <section className="py-16 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -390,42 +289,6 @@ const Landing = () => {
                 </div>
                 <h3 className="text-3xl md:text-4xl font-bold text-[#001e3c] mb-2">{stat.number}</h3>
                 <p className="text-gray-600 font-medium">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-      {/* Features Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-16"
-            data-aos="fade-up"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-[#001e3c] mb-6">
-              Why Choose <span className="text-[#00ffe0]">Unifost</span>?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the difference that personalized guidance makes in your educational journey
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                className="group"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className="bg-white rounded-2xl shadow-xl p-8 hover:transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 group-hover:shadow-2xl">
-                  <div className={`bg-gradient-to-br ${feature.color} w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <feature.icon className="text-2xl text-white" />
-                  </div>
-                  <h6 className="text-xl font-bold text-[#001e3c] mb-4">{feature.title}</h6>
-                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-                </div>
               </motion.div>
             ))}
           </div>
@@ -585,45 +448,8 @@ const Landing = () => {
           </div>
         </div>
       </section>
-
-      {/* Accreditation & Recognition - slider */}
-      
-
-      {/* Enhanced Cities Section */}
      
-
-      {/* Enhanced CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#001e3c] to-[#003b6c] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            data-aos="fade-up"
-            className="mb-12"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Start Your Journey?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Join thousands of students who have transformed their careers with Unifost
-            </p>
-          </motion.div>
-          
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-3 justify-center"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <button 
-              onClick={() => setShowEnquiryModal(true)}
-              className="bg-[#00ffe0] text-[#001e3c] px-8 py-4 rounded-full text-lg font-bold hover:bg-[#00d4c4] transform hover:scale-105 transition-all duration-300 shadow-2xl flex items-center justify-center gap-2"
-            >
-              <FaRocket className="text-xl" />
-              Get Started Today
-            </button>
-           
-          </motion.div>
-        </div>
-      </section>
+      {/* Accreditation & Recognition - slider */}
       <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
@@ -656,20 +482,101 @@ const Landing = () => {
           `}</style>
         </div>
       </section>
-        
-      {/* Enquiry Modal */}
-      {showEnquiryModal && (
-        <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal}>
-          <DialogContent className="max-w-2xl">
-            <DialogHeader>
-              <DialogTitle className="text-2xl font-bold text-[#001e3c] text-center">
-                Get Started with Unifost
-              </DialogTitle>
-            </DialogHeader>
-            <EnquiryForm onSubmitted={() => setShowEnquiryModal(false)} />
-          </DialogContent>
-        </Dialog>
-      )}
+         
+      {/* Features Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center mb-16"
+            data-aos="fade-up"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-[#001e3c] mb-6">
+              Why Choose <span className="text-[#00ffe0]">Unifost</span>?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Experience the difference that personalized guidance makes in your educational journey
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                className="group"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                <div className="bg-white rounded-2xl shadow-xl p-8 hover:transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 group-hover:shadow-2xl">
+                  <div className={`bg-gradient-to-br ${feature.color} w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <feature.icon className="text-2xl text-white" />
+                  </div>
+                  <h6 className="text-xl font-bold text-[#001e3c] mb-4">{feature.title}</h6>
+                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-[#001e3c] to-[#003b6c] relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            data-aos="fade-up"
+            className="mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Start Your Journey?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Join thousands of students who have transformed their careers with Unifost
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-3 justify-center"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <button 
+              onClick={() => openModal("getStarted")}
+              className="bg-[#00ffe0] text-[#001e3c] px-8 py-4 rounded-full text-lg font-bold hover:bg-[#00d4c4] transform hover:scale-105 transition-all duration-300 shadow-2xl flex items-center justify-center gap-2"
+            >
+              <FaRocket className="text-xl" />
+              Get Started Today
+            </button>
+            <button 
+              onClick={() => openModal("videoCall")}
+              className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-[#001e3c] transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              <FaPhone className="text-xl" />
+              Call Now
+            </button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Unified Modal */}
+     // In your landing.jsx file
+{showEnquiryModal && (
+  <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal}>
+    <DialogContent className="max-w-2xl">
+      <DialogHeader>
+        <DialogTitle className="text-2xl font-bold text-[#001e3c] text-center">
+          {modalType === "getStarted" && "Get Started with Unifost"}
+          {modalType === "videoCall" && "Book a Video Call"}
+          {modalType === "homeDemo" && "Book a Home Demo"}
+        </DialogTitle>
+      </DialogHeader>
+      <EnquiryForm 
+        onSubmitted={() => setShowEnquiryModal(false)} 
+        formType={modalType}
+      />
+    </DialogContent>
+  </Dialog>
+)}
     </div>
   );
 };
