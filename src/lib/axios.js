@@ -48,6 +48,12 @@ export const enquiryAPI = {
       data,
       { headers: { "Content-Type": "application/json" } }
     ),
+  general: (data) =>
+    axios.post(
+      "https://unifost-backend-ev0y.onrender.com/api/v1/enquiry",
+      data,
+      { headers: { "Content-Type": "application/json" } }
+    ),
 };
 
 export default API;

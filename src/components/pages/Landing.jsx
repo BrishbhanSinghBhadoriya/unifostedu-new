@@ -24,7 +24,7 @@ import EnquiryForm from "@/components/EnquiryForm";
 // Enhanced data arrays
 const heroSlides = [
   { 
-    src: "/slider/slider-1.png", // Your 2300x800px image
+    src: "/slider/slider-1.png", 
     alt: "Compare before you decide",
     title: "Your Gateway to Success",
     subtitle: "Compare • Choose • Succeed",
@@ -561,8 +561,8 @@ const Landing = () => {
       {/* Unified Modal */}
      {/* In your landing.jsx file */}
 {showEnquiryModal && (
-  <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal}>
-    <DialogContent className="p-4 sm:p-6 sm:max-w-lg md:max-w-xl lg:max-w-2xl">
+  <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
+    <DialogContent className="p-4 sm:p-6 sm:max-w-lg md:max-w-xl lg:max-w-2xl z-[30001]">
       <DialogHeader>
         <DialogTitle className="text-2xl font-bold text-[#001e3c] text-center">
           {modalType === "getStarted" && "Get Started with Unifost"}
