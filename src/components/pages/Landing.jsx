@@ -559,8 +559,7 @@ const Landing = () => {
       </section>
 
       {/* Unified Modal */}
-     // In your landing.jsx file
-{showEnquiryModal && (
+     {showEnquiryModal && (
   <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal}>
     <DialogContent className="max-w-2xl">
       <DialogHeader>

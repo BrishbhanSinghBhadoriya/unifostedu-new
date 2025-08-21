@@ -332,23 +332,22 @@ const Footer = () => {
                shadow-md hover:shadow-lg text-sm"
   >
     <option value="">Preferred University (Optional)</option>
-    <option value="Lovely Professional University">Lovely Professional University</option>
+    
+     <option value="Amity University Online">Amity University Online</option>
     <option value="Online Manipal University">Online Manipal University</option>
-    <option value="Amity University Online">Amity University Online</option>
+    <option value="Lovely Professional University">Lovely Professional University</option>
     <option value="Chandigarh University Online">Chandigarh University Online</option>
     <option value="JAIN University">JAIN University</option>
-    <option value="DY PATIL">DY PATIL</option>
+    <option value="DY PATIL">Dr. D Y Patil Pune</option>
     <option value="OP Jindal University">OP Jindal University</option>
-    <option value="SHOOLINI UNIVERSITY ONLINE">SHOOLINI UNIVERSITY ONLINE</option>
-    <option value="Amrita AHEAD’s Online">Amrita AHEAD’s Online</option>
-    <option value="D. Y. Patil University ONLINE Navi Mumbai">D. Y. Patil University ONLINE Navi Mumbai</option>
+    <option value="Shoolini University Online">Shoolini University Online"</option>
+    <option value="Amrita AHEAD’s Online">Amrita Ahead’s Online</option>
+    <option value="D. Y. Patil University Online Navi Mumbai">D. Y. Patil University ONLINE Navi Mumbai</option>
     <option value="Swami Vivekanand Subharti University">Swami Vivekanand Subharti University</option>
     <option value="Vivekananda Global University Online">Vivekananda Global University Online</option>
     <option value="Kurkshetra University">Kurkshetra University</option>
     <option value="Andhra University">Andhra University</option>
-    <option value="International Institute of Information Technology Bangalore">
-      International Institute of Information Technology Bangalore
-    </option>
+    <option value="International Institute of Information Technology Bangalore">International Institute of Information Technology Bangalore</option>
     <option value="Indian Institute of Management Kozhikade">Indian Institute of Management Kozhikade</option>
     <option value="Mundra Institute of Communications Ahmedabad">Mundra Institute of Communications Ahmedabad</option>
     <option value="Indian Institute of Technology Delhi">Indian Institute of Technology Delhi</option>
@@ -364,9 +363,7 @@ const Footer = () => {
     <option value="Indian Institute of Management Nagpur">Indian Institute of Management Nagpur</option>
     <option value="Golden Gate University">Golden Gate University</option>
     <option value="Deakin University">Deakin University</option>
-    <option value="Narsee Monjee Institutite of Management (NMIMS CDOE)">
-      Narsee Monjee Institutite of Management (NMIMS CDOE)
-    </option>
+    <option value="Narsee Monjee Institutite of Management (NMIMS CDOE)">Narsee Monjee Institutite of Management (NMIMS CDOE)</option>
     <option value="Rushford Business School">Rushford Business School</option>
     <option value="Edgewood College">Edgewood College</option>
     <option value="Ecornell University">Ecornell University</option>
@@ -433,44 +430,39 @@ const Footer = () => {
                         ))}
                       </ul>
                     </div>
+{/* Popular Courses */}
+<div className="col-span-1">
+  <h3 className="text-lg font-bold mb-4 text-white flex items-center gap-2">
+    <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+    Popular Courses
+  </h3>
 
-                    {/* Popular Courses */}
-                    <div className="col-span-1">
-                      <h3 className="text-lg font-bold mb-4 text-white flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                        Popular Courses
-                      </h3>
-                      <ul className="space-y-2">
-                        {[
-                          { href: "/mba-online", label: "MBA", },
-                          { href: "/bba-online", label: "BBA", },
-                          { href: "/mca-online", label: "MCA",},
-                          { href: "/bca-online", label: "BCA",},
-                          { href: "/mcom-online", label: "M.Com",},
-                          { href: "/bcom-online", label: "B.Com",},
-                          { href: "/ma-online", label: "MA",},
-                          { href: "/ba-online", label: "BA",},
-                          { href: "/bajmc-online", label: "BAJMC", },
-                          { href: "/majmc-online", label: "MAJMC", },
-                        ].map((course, index) => (
-                          <li key={index}>
-                            <a 
-                              href={course.href} 
-                              className="group/course block p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300"
-                            >
-                              <div className="flex flex-col">
-                                <span className="text-cyan-300 font-medium group-hover/course:text-white transition-colors text-sm">
-                                  {course.label}
-                                </span>
-                                <span className="text-xs text-gray-400 group-hover/course:text-gray-300 transition-colors mt-1">
-                                  {course.desc}
-                                </span>
-                              </div>
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+  <div className="grid grid-cols-2 gap-3">
+    {[
+      { href: "/mba-online", label: "MBA" },
+      { href: "/bba-online", label: "BBA" },
+      { href: "/mca-online", label: "MCA" },
+      { href: "/bca-online", label: "BCA" },
+      { href: "/mcom-online", label: "M.Com" },
+      { href: "/bcom-online", label: "B.Com" },
+      { href: "/ma-online", label: "MA" },
+      { href: "/ba-online", label: "BA" },
+      { href: "/bajmc-online", label: "BAJMC" },
+      { href: "/majmc-online", label: "MAJMC" },
+    ].map((course, index) => (
+      <a
+        key={index}
+        href={course.href}
+        className="group/course block p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300"
+      >
+        <span className="text-cyan-300 font-medium group-hover/course:text-white transition-colors text-sm">
+          {course.label}
+        </span>
+      </a>
+    ))}
+  </div>
+</div>
+
                   </div>
 
                   {/* Newsletter */}
