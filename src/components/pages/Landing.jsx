@@ -177,7 +177,7 @@ const Landing = () => {
       <section className="relative text-white overflow-hidden">
         <div className="relative w-full">
           {/* Slides */}
-          <div className="relative w-full aspect-[2.875/1] bg-gradient-to-br from-[#001e3c] to-[#003b6c]">
+          <div className="relative w-full aspect-[4/5] md:aspect-[2.875/1] bg-gradient-to-br from-[#001e3c] to-[#003b6c]">
             {heroSlides.map((s, idx) => (
               <motion.div
                 key={idx}
@@ -220,7 +220,7 @@ const Landing = () => {
                   <button 
                     onClick={() => openModal("getStarted")}
                     className="bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] 
-                               px-5 py-2.5 rounded-full text-base font-semibold
+                               w-full sm:w-auto px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-base font-semibold
                                hover:from-[#00d4c4] hover:to-[#00ffe0]
                                transform hover:scale-105 transition-all duration-300 
                                shadow-md shadow-[#00ffe0]/30 flex items-center justify-center gap-2"
@@ -231,7 +231,7 @@ const Landing = () => {
 
                   <button 
                     onClick={() => openModal("videoCall")}
-                    className="border border-white text-white px-5 py-2.5 rounded-full text-base font-semibold 
+                    className="border border-white text-white w-full sm:w-auto px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-base font-semibold 
                                bg-white/10 hover:bg-white hover:text-[#001e3c] 
                                transform hover:scale-105 transition-all duration-300 
                                flex items-center justify-center gap-2"
@@ -242,7 +242,7 @@ const Landing = () => {
 
                   <button 
                     onClick={() => openModal("homeDemo")}
-                    className="border border-white text-white px-5 py-2.5 rounded-full text-base font-semibold 
+                    className="border border-white text-white w-full sm:w-auto px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-base font-semibold 
                                bg-white/10 hover:bg-white hover:text-[#001e3c] 
                                transform hover:scale-105 transition-all duration-300 
                                flex items-center justify-center gap-2"
@@ -467,8 +467,8 @@ const Landing = () => {
           <div className="relative overflow-hidden">
             <div className="flex items-center gap-6 animate-[accreditScroll_25s_linear_infinite] will-change-transform">
               {[...accreditationLogos, ...accreditationLogos].map((logo, idx) => (
-                <div key={idx} className="min-w-[140px] rounded-xl p-4 bg-white shadow-sm border border-gray-100 flex items-center justify-center h-24">
-                  <img src={logo} alt="Accreditation" className="max-h-14 object-contain" />
+                <div key={idx} className="min-w-[100px] sm:min-w-[140px] rounded-xl p-4 bg-white shadow-sm border border-gray-100 flex items-center justify-center h-20 sm:h-24">
+                  <img src={logo} alt="Accreditation" className="max-h-12 sm:max-h-14 object-contain" />
                 </div>
               ))}
             </div>
@@ -542,14 +542,14 @@ const Landing = () => {
           >
             <button 
               onClick={() => openModal("getStarted")}
-              className="bg-[#00ffe0] text-[#001e3c] px-8 py-4 rounded-full text-lg font-bold hover:bg-[#00d4c4] transform hover:scale-105 transition-all duration-300 shadow-2xl flex items-center justify-center gap-2"
+              className="bg-[#00ffe0] text-[#001e3c] w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg font-bold hover:bg-[#00d4c4] transform hover:scale-105 transition-all duration-300 shadow-2xl flex items-center justify-center gap-2"
             >
               <FaRocket className="text-xl" />
               Get Started Today
             </button>
             <button 
               onClick={() => openModal("videoCall")}
-              className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-[#001e3c] transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
+              className="border-2 border-white text-white w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg font-bold hover:bg-white hover:text-[#001e3c] transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
             >
               <FaPhone className="text-xl" />
               Call Now
@@ -559,10 +559,10 @@ const Landing = () => {
       </section>
 
       {/* Unified Modal */}
-     // In your landing.jsx file
+     {/* In your landing.jsx file */}
 {showEnquiryModal && (
   <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal}>
-    <DialogContent className="max-w-2xl">
+    <DialogContent className="p-4 sm:p-6 sm:max-w-lg md:max-w-xl lg:max-w-2xl">
       <DialogHeader>
         <DialogTitle className="text-2xl font-bold text-[#001e3c] text-center">
           {modalType === "getStarted" && "Get Started with Unifost"}

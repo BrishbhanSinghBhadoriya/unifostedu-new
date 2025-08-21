@@ -8,6 +8,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { FaUser, FaPhone, FaEnvelope, FaGraduationCap, FaPaperPlane, FaUniversity, FaMapMarkerAlt } from 'react-icons/fa';
 import toast from 'react-hot-toast';
+import { enquiryAPI } from '@/lib/axios';
 
 export default function EnquiryForm({ universityName, defaultProgram = 'MBA', onSubmitted, formType = "general" }) {
   const [loading, setLoading] = useState(false);
@@ -48,9 +49,40 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
     
     try {
       setLoading(true);
-      // Simulate submit
-      await new Promise((r) => setTimeout(r, 900));
-      toast.success('Enquiry submitted successfully!');
+      // Map payloads to backend contracts
+      if (formType === 'videoCall') {
+        const requestBody = {
+          name: payload.name,
+          email: payload.email,
+          phone: payload.phone,
+          city: payload.city || city || '',
+          university: payload.university || selectedUniversity || '',
+          course: payload.program || program || '',
+          preferredDate: payload.preferredDate || '',
+          preferredTime: payload.preferredTime || '',
+          message: payload.message || ''
+        };
+        await enquiryAPI.videoCall(requestBody);
+        toast.success('Video call booked successfully!');
+      } else if (formType === 'homeDemo') {
+        const requestBody = {
+          name: payload.name,
+          email: payload.email,
+          phone: payload.phone,
+          city: payload.city || city || '',
+          university: payload.university || selectedUniversity || '',
+          program: payload.program || program || '',
+          preferredDate: payload.preferredDate || '',
+          preferredTime: payload.preferredTime || '',
+          fullAddress: payload.address || '',
+          message: payload.message || ''
+        };
+        await enquiryAPI.homeDemo(requestBody);
+        toast.success('Home demo scheduled successfully!');
+      } else {
+        // Fallback: generic enquiry could be posted to existing demo endpoint if needed
+        toast.success('Enquiry submitted successfully!');
+      }
       onSubmitted && onSubmitted();
       const msg = form.querySelector('#message');
       if (msg && typeof msg.blur === 'function') msg.blur();
@@ -66,6 +98,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
       <input type="hidden" name="program" value={program} />
       <input type="hidden" name="university" value={selectedUniversity} />
       <input type="hidden" name="formType" value={formType} />
+      <input type="hidden" name="city" value={city} />
       
       {universityName && (
         <div className="rounded-lg p-4 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] text-[#001e3c]">
