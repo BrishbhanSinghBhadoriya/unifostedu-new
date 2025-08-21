@@ -55,7 +55,7 @@ const Chandigarh = () => {
     eligibility: "10+2 Pass",
     fees: "1,66,668/-",
     specialization: "Journalism, Media Studies",
-    image: "/ba-jmc.png",
+    image: "/ba-jmc.jpg",
   },
   {
     course: "Bachelor of Business Administration - Business Analytics (BBA - KPMG)",
@@ -63,7 +63,7 @@ const Chandigarh = () => {
     eligibility: "10+2 Pass",
     fees: "1,60,000/-",
     specialization: "Business Analytics with KPMG,",
-    image: "/bba-kpmg.png",
+    image: "/bba.jpeg",
   },
   {
     course: "Bachelor of Business Administration (BBA)",
@@ -71,7 +71,7 @@ const Chandigarh = () => {
     eligibility: "10+2 Pass",
     fees: "1,68,000/-",
     specialization: "Marketing, HR, Enterpreneurship, Digital Marketing, Fin-Tech,etc",
-    image: "/bba.png",
+    image: "/bba.jpeg",
   },
   {
     course: "Bachelor of Computer Applications (BCA)",
@@ -79,7 +79,7 @@ const Chandigarh = () => {
     eligibility: "10+2 or its equivalent examination in any stream conducted by a recognized Board / University / Council.",
     fees: "1,70,000/-",
     specialization: "IT & Systems",
-    image: "/bca.png",
+    image: "/bca.jpeg",
   },
   
 ];
@@ -100,7 +100,7 @@ const Chandigarh = () => {
     eligibility: "Graduation",
     fees: "2,10,668/-",
     specialization: "Finance, Marketing, HR, IT, HR, Operations, International Business, Digital Marketing, Fin-Tech, etc.",
-    image: "/cu-mba.png",
+    image: "/bba.jpeg",
   },
   {
     course: "Master of Computer Applications - AI & ML",
@@ -108,7 +108,7 @@ const Chandigarh = () => {
     eligibility: "A candidate shall have passed the qualifying examination of BCA/ B.Sc. (Computer Science)/ B.Sc. (IT) / B.E. (CSE)/ B.Tech.(CSE) / B.E. (IT) / B.Tech. (IT) .",
     fees: "1,40,000/-",
     specialization: "Artificial Intelligence, Machine Learning, Data Analytics, Cloud Computing, Full Stack Development",
-    image: "/cu-mcaai.png",
+    image: "/mca.jpeg",
   },
   {
     course: "Master of Science - Data Science",
@@ -116,7 +116,7 @@ const Chandigarh = () => {
     eligibility: "Candidate must have completed bachelor's degree in B.A/ BCA/ B.Sc. (Statistics or Mathematics or Computer Science) / B.E/ B.Tech .",
     fees: "1,46,668/-",
     specialization: "Full Stack, Web Development",
-    image: "/cu-mcafull.png",
+    image: "/mca.jpeg",
   },
   {
     course: "Master of Computer Applications - Cloud Computing (AWS Academy)",
@@ -124,7 +124,7 @@ const Chandigarh = () => {
     eligibility: "A candidate shall have passed the qualifying examination of BCA/ B.Sc. (Computer Science)/ B.Sc. (IT) / B.E. (CSE)/ B.Tech.(CSE) / B.E. (IT) / B.Tech. (IT) or passed any graduation degree.",
     fees: "1,40,000/-",
     specialization: "Cloud Infrastructure, AWS, Data Analytics, DevOps, Full Stack Development",
-    image: "/cu-mcaaws.png",
+    image: "/mca.jpeg",
   },
   {
     course: "Master of Computer Applications - Data Analytics",
@@ -132,7 +132,7 @@ const Chandigarh = () => {
     eligibility: "A candidate shall have passed the qualifying examination of BCA/ B.Sc. (Computer Science)/ B.Sc. (IT) / B.E. (CSE)/ B.Tech.(CSE) / B.E. (IT) / B.Tech. (IT) or passed any graduation degree (e.g.: B.E/ B.Tech / B.Sc. / B.Com. / B.A/ B.Voc) with Mathematics, Business Mathematics, Programming or Statistics at 10+2 level or at Graduation level.",
     fees: "1,40,000/-",
     specialization: "Big Data, Data Mining",
-    image: "/cu-mcadata.png",
+    image: "/mca1.jpeg",
   },
   {
     course: "Master of Computer Applications (MCA)",
@@ -140,7 +140,7 @@ const Chandigarh = () => {
     eligibility: "A candidate shall have passed the qualifying examination of BCA/ B.Sc. (Computer Science)/ B.Sc. (IT) / B.E. (CSE)/ B.Tech.(CSE) / B.E. (IT) / B.Tech. (IT) or passed any graduation degree",
     fees: "1,40,000/-",
     specialization: "General IT, Software Development",
-    image: "/cu-mca.png",
+    image: "/mca.jpeg",
   },
   {
     course: "Master of Science (Mathematics)",
@@ -148,7 +148,7 @@ const Chandigarh = () => {
     eligibility: "Bachelor's Degree with Mathematics as compulsory subject from a recognized Board / University.",
     fees: "1,00,000/-",
     specialization: "Pure Mathematics, Applied Mathematics",
-    image: "/cu-mcom.png",
+    image: "/mba.jpeg",
   },
   {
     course: "Master of Arts (MA)",
@@ -156,7 +156,7 @@ const Chandigarh = () => {
     eligibility: "Graduation in any discipline or equivalemnt, preferably with English as a subject OR Bachelor's of Arts (Hons.) ",
     fees: "1,00,000/-",
     specialization: "Psychology, English, Economics",
-    image: "/cu-ma.png",
+    image: "/ma1.jpeg",
   },
 ];
 
@@ -286,7 +286,7 @@ const Chandigarh = () => {
           <p className="text-xl text-gray-600">Trusted by leading companies</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {["/microsoft.png", "/ibm.png", "/flipkart.png", "/deloitte.png", "/amazon.png", "/sap.png", "/hp.png", "/samsung.png"].map((src, i) => (
+          {["/microsoft.jspg", "/ibm.png", "/flipkart.png", "/deloitte.png", "/amazon.png", "/sap.png", "/hp.png", "/samsung.png"].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
               <img src={src} alt="Company" className="h-12 object-contain" />
             </div>

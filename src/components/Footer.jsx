@@ -337,12 +337,12 @@ const Footer = () => {
     <option value="Online Manipal University">Online Manipal University</option>
     <option value="Lovely Professional University">Lovely Professional University</option>
     <option value="Chandigarh University Online">Chandigarh University Online</option>
-    <option value="JAIN University">JAIN University</option>
+    <option value="JAIN University">Jain University</option>
     <option value="DY PATIL">Dr. D Y Patil Pune</option>
     <option value="OP Jindal University">OP Jindal University</option>
     <option value="Shoolini University Online">Shoolini University Online"</option>
     <option value="Amrita AHEAD’s Online">Amrita Ahead’s Online</option>
-    <option value="D. Y. Patil University Online Navi Mumbai">D. Y. Patil University ONLINE Navi Mumbai</option>
+    <option value="D. Y. Patil University Online Navi Mumbai">D. Y. Patil University Online Navi Mumbai</option>
     <option value="Swami Vivekanand Subharti University">Swami Vivekanand Subharti University</option>
     <option value="Vivekananda Global University Online">Vivekananda Global University Online</option>
     <option value="Kurkshetra University">Kurkshetra University</option>

@@ -21,12 +21,12 @@ const universities = [
     { name: "Online Manipal University", link: "/manipal", icon: FaUniversity },
     { name: "Amity University Online", link: "/amity", icon: FaUniversity },
     { name: "Chandigarh University Online", link: "/chandigarh", icon: FaUniversity },
-    { name: "JAIN University", link: "/jain", icon: FaUniversity },
-    { name: "DY PATIL", link: "/dypatil", icon: FaUniversity },
+    { name: "Jain University", link: "/jain", icon: FaUniversity },
+    { name: "Dr. D Y Patil", link: "/dypatil", icon: FaUniversity },
     { name: "OP Jindal University", link: "/opjindal", icon: FaUniversity },
-    { name: "SHOOLINI UNIVERSITY ONLINE", link: "/shoolini", icon: FaUniversity },
+    { name: "Shoolini University Online", link: "/shoolini", icon: FaUniversity },
     { name: "Vivekananda Global University Online", link: "/vgu", icon: FaUniversity },
-    { name: "UPES ONLINE", link: "/upes", icon: FaUniversity },
+    { name: "Upes Online", link: "/upes", icon: FaUniversity },
     { name: "Sharda University Online", link: "/sharda", icon: FaUniversity }
   ];
 
