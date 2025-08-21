@@ -51,32 +51,32 @@ const Amity = () => {
       course: "Bachelor of Business Administration (BBA)",
       duration: "3 Years",
       eligibility: "10+2 Pass",
-      fees: "165,000",
-      specialization: "BBA (Data Analytics,  BBA+MBA, Travel And Tourism Management, Professional Certificate in Business Analytics) ",
+      fees: "1,65,000- 2,25,000",
+      specialization: "BBA (Data Analytics,   Travel And Tourism Management, Professional Certificate in Business Analytics) ",
       image: "/bba.jpeg",
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
       duration: "3 Years",
       eligibility: "10+2 Pass",
-      fees: "210,000",
-      specialization: " BCA, (Cloud and Security, Softeare Engineering, BCA+MCA, Data Science, Data Engineering, Data Analytics)",
+      fees: "1,50,000 - 2,25,000",
+      specialization: " BCA, (Cloud and Security, Software Engineering,  Data Science, Data Engineering, Data Analytics)",
       image: "/bca.jpeg",
     },
     {
       course: "Bachelor of Commerce (B.Com)",
       duration: "3 Years",
       eligibility: "10+2 Pass",
-      fees: "180,000",
-      specialization: "B,Com(General, Hons, B.Com+MBA,Internationalv Finance & Accounting",
+      fees: "99,000 - 2,50,000",
+      specialization: "B,Com(General, Hons,International Finance & Accounting",
       image: "/bcom.jpeg",
     },
     {
       course: "Bachelor of Arts (BA)",
       duration: "3 Years",
       eligibility: "10+2 Pass",
-      fees: "168,000",
-      specialization: "BA(Genral, Jornalism and Mass Communication, Malayalam Medium, Tamil Medium, Kannada Medium, Telugu Medium, Hindi Medium)",
+      fees: "99,000 - 1,70,000",
+      specialization: "BA(Genral, Jornalism and Mass Communication, Native Language)",
       image: "/ba.jpeg",
     },
   ];
@@ -86,7 +86,7 @@ const Amity = () => {
       course: "Master of Business Administration (MBA)",
       duration: "2 Years",
       eligibility: "Graduation",
-      fees: "200,000",
+      fees: "1,99,000 - 2,99,000",
       specialization: "MBA(Genral, Dual Specilization, Human Resource Analytics, Data Science, Business Analytics, International Finance, Digital Enterpreneurship, Digital Marketing Management, General Management with optional Specialization)",
       image: "/mba.jpeg",
     },
@@ -94,7 +94,7 @@ const Amity = () => {
       course: "Master of Computer Applications (MCA)",
       duration: "2 Years",
       eligibility: "Graduation in BCA/B.Sc(IT)",
-      fees: "180,000",
+      fees: "170,000- 2,50,000",
       specialization: "MCA(Genral, Cyber Security, Blockchain Technology and Management, Machine Learning and Artificial Intelligence, Augmented Reality and Virtual Reality, Software Engineering,",
       image: "/mca1.jpeg",
     },
@@ -102,7 +102,7 @@ const Amity = () => {
       course: "Master of Commerce (M.Com)",
       duration: "2 Years",
       eligibility: "Graduation in Commerce",
-      fees: "160,000",
+      fees: "1,20,000",
       specialization: "Financial Management, Financial Technology, Accounting",
       image: "/m.com.jpeg",
     },
@@ -110,7 +110,7 @@ const Amity = () => {
       course: "Master of Arts (MA)",
       duration: "2 Years",
       eligibility: "Graduation",
-      fees: "152,000",
+      fees: "1,30,000 - 2,50,000",
       specialization: " MA(Psychology, Journalism and Mass Communication, Public Policy& Governance,English, Sociology",
       image: "/ma1.jpeg",
     },
@@ -118,7 +118,7 @@ const Amity = () => {
       course: "Master of Science (M.Sc)",
       duration: "2 Years",
       eligibility: "Graduation ",
-      fees: "160,000",
+      fees: "2,50,000",
       specialization: "Data Science",
       image: "/m.com.jpeg",
     },
@@ -146,12 +146,91 @@ const Amity = () => {
       course: "B.Com + MBA",
       duration: "4.5-5 Years",
       eligibility: "10+2 With minimum 50%",
-      fees: "2,83,100",
+      fees: "2,83,100 - 3,05,000",
       specialization: "B.Com + MBA",
       image: "/m.com.jpeg",
     },
 
-  ]  
+  ] 
+  
+   {
+  const highlights = [
+    {
+      img: "/wasc.png",
+      title: "WASC Accreditation (USA)",
+      description:
+        "Amity Online is India's only university accredited by the Western Association of Schools and Colleges — a distinguished recognition of global academic excellence.",
+    },
+    {
+      img: "/wes.png",
+      title: "WES Recognition",
+      description:
+        "Degrees recognised by World Education Services (WES) Canada & USA, enabling smoother pathways for higher studies and global career mobility.",
+    },
+    {
+      img: "/qs.png",
+      title: "QS Ranked Online MBA",
+      description:
+        "Amity Online offers India's only Online MBA ranked by QS under Asia Pacific Top 10 - a global recognition for academic strength, learner outcomes, and digital innovation.",
+    },
+    {
+      img: "/qaa.png",
+      title: "QAA (UK) Accreditation",
+      description:
+        "Accredited by the UK's Quality Assurance Agency (QAA), assuring students of globally benchmarked academic quality.",
+    },
+    {
+      img: "/the.webp",
+      title: "Times Higher Education Employability Rankings",
+      description:
+        "Amity University is ranked among the best globally for graduate employability and employer reputation by Times Higher Education.",
+    },
+    {
+      img: "/pan-india.png",
+      title: "Pan-India Campus Access & Offline Events",
+      description:
+        "Enjoy access to all Amity campuses for events like orientation, mid-year meetups, on-campus connect and convocation - blending digital convenience with real-world connection.",
+    },
+    {
+      img: "/amigo.png",
+      title: "Amigo: Learning On-the-Go",
+      description:
+        "The Amigo app makes learning seamless and mobile — attend live classes, track progress, access materials, and more on your schedule.",
+    },
+    {
+      img: "/ai-tutor.png",
+      title: "Prof. Ami: Your AI-Powered Personal Tutor",
+      description:
+        "Meet Prof. Ami — your always-on, AI mentor for instant doubt-solving, personalised learning tips, and smart academic support.",
+    },
+
+    {
+      img: "/indu-Certi.png",
+      title: "Industry Certifications for Better Employability",
+      description:
+        "Gain an edge with in-demand certifications from top industry bodies and partners — integrated within your program to boost your skills and CV.",
+    },
+    {
+      img: "/internship.png",
+      title: "Internship Opportunities",
+      description:
+        "Access curated internships with leading companies through our corporate network, helping you gain real-world experience and stand out in the job market.",
+    },
+    {
+      img: "/ai-application.png",
+      title: "AI-Powered Career Discovery Platform",
+      description:
+        "From mock interviews and resume building to job search and easy-apply tools — our AI-powered platform ensures you’re career-ready from day one.",
+    },
+    {
+      img: "/people.png",
+      title: "beSocial App for Campus Life",
+      description:
+        "Your virtual student hub — the beSocial app lets you network, join clubs, attend events, and be part of a vibrant, online-first community.",
+    },
+  ];
+
+  
 
   return (
     <>
@@ -186,7 +265,7 @@ const Amity = () => {
       </section>
 
       {/* UG & PG Course Cards */}
-      {[{ title: "Undergraduate Courses", list: ugCourses }, { title: "Postgraduate Courses", list: pgCourses }].map((section, idx) => (
+      {[{ title: "Undergraduate Courses", list: ugCourses }, { title: "Postgraduate Courses", list: pgCourses }, { title: "UG +PG", list: ug_pgCourses }].map((section, idx) => (
         <section key={idx} className="py-12 bg-white px-6 font-[Inter]">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">{section.title}</h2>
@@ -251,7 +330,29 @@ const Amity = () => {
            <img src="/11.png" alt="11" className="h-16 object-contain" />
         </div>
       </section>
+     <section className="py-12 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-3xl font-bold text-center mb-10 text-gray-800">
+         Highlights of Amity Online
+        </h2>
 
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          {highlights.map((item, idx) => (
+            <div key={idx} className="text-center">
+              <img
+                src={item.img}
+                alt={item.title}
+                className="mx-auto mb-4 h-14 object-contain"
+              />
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                {item.title}
+              </h3>
+              <p className="text-gray-600 text-sm">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
       {/* Admission Process */}
       <section className="bg-gray-100 py-10 px-4">
         <div className="max-w-7xl mx-auto bg-white shadow-md rounded-md p-6">
@@ -307,6 +408,7 @@ const Amity = () => {
       </section>
     </>
   );
+};
 };
 
 export default Amity;
