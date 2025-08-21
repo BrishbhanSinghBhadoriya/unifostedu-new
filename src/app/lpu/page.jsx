@@ -51,15 +51,15 @@ const Lpu = () => {
       duration: "3 Years",
       eligibility: "10+2 Pass",
       fees: "₹1,50,000",
-      specialization: "Genral",
+      specialization: "General",
       image: "/bba.jpeg",
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
       duration: "3 Years",
       eligibility: "10+2 Pass",
-      fees: "₹1,22,400",
-      specialization: "Genral",
+      fees: "₹ 1,50,000",
+      specialization: "General",
       image: "/bca.jpeg",
     },
     
@@ -67,8 +67,8 @@ const Lpu = () => {
       course: "Bachelor’s of Arts (BA)",
       duration: "3 Years",
       eligibility: "10+2",
-      fees: "98,400",
-      specialization: "Genral",
+      fees: "₹ 1,20,000",
+      specialization: "General",
       image: "/ma1.jpeg",
     },
   ];
@@ -78,7 +78,7 @@ const Lpu = () => {
       course: "Master of Business Administration (MBA)",
       duration: "2 Years",
       eligibility: "Graduation",
-      fees: "₹1,61,600",
+      fees: "₹ 2,00,000",
       specialization: "Human Resource Management, Finance, Marketing, Operations Management, Business Analytics, Digital Marketing, Data Science, Information Technology, International Business, Banking & Financial Services, Hospital & Healthcare Management, Logistics & Supply Chain Management",
       image: "/mba.jpeg",
     },
@@ -86,7 +86,7 @@ const Lpu = () => {
       course: "Master of Computer Applications (MCA)",
       duration: "2 Years",
       eligibility: "Graduation in BCA/B.Sc(IT) & equivalent degree with 50%",
-      fees: "₹1,20,000",
+      fees: "₹ 1,48,000",
       specialization: "Machine Learning & Artificial Intelligence (ML & AI), Data Science, Cybersecurity, Full Stack Web Development, Augmented Reality/Virtual Reality (AR/VR) & Game Development", 
       image: "/mca1.jpeg",
     },
@@ -94,8 +94,8 @@ const Lpu = () => {
       course: "Master of Commerce (M.Com)",
       duration: "2 Years",
       eligibility: "Graduation in Commerce",
-      fees: "₹74,240",
-      specialization: "Genral", 
+      fees: "₹ 1,00,000",
+      specialization: "General", 
       image: "/m.com.jpeg",
     },
 
@@ -103,16 +103,16 @@ const Lpu = () => {
       course: "Master of Arts (MA)",
       duration: "2 Years",
       eligibility: "Graduation",
-      fees: "₹65,600",
+      fees: "₹ 80,000",
       specialization: "English, History, Political Science, Sociology,",
       image: "/ma1.jpeg",
     },
 
     {
-      course: "Master of Science (MA)",
+      course: "Master of Science (M.Sc)",
       duration: "2 Years",
       eligibility: "Graduation",
-      fees: "₹65,600",
+      fees: "₹ 80,000",
       specialization: "Mathmatics, Economics",
       image: "/ma1.jpeg",
     },
@@ -238,7 +238,7 @@ const Lpu = () => {
           <img src="/nirf.png" alt="NIRF" className="h-16 object-contain" />
           <img src="/wes.png" alt="WES" className="h-16 object-contain" />
           <img src="/aiu.png" alt="AIU" className="h-16 object-contain" />
-          <img src="/recogin.webp" alt="RECOGIN" className="h-16 object-contain" />
+          <img src="/qs.png" alt="RECOGIN" className="h-16 object-contain" />
         </div>
       </section>
 
@@ -286,7 +286,7 @@ const Lpu = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
           <div className="flex-1">
             <img
-              src="/lpu-certi.jpg"
+              src="/lpu.jpg"
               alt="LPU Online Certificate"
               className="w-full max-w-md mx-auto rounded shadow-lg"
             />

@@ -85,7 +85,7 @@ const colleges = [
   },
   {
     name: "Chandigarh University Online",
-    logo: "/chandigarh.png",
+    logo: "/chandigarh.jpg",
     ranking: "Top 18",
     location: "Chandigarh",
     fee: "₹1L - ₹2L",

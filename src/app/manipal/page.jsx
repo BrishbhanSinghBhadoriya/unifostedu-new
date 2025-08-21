@@ -91,7 +91,7 @@ const Manipal = () => {
       course: "Master of Computer Applications (MCA)",
       duration: "2 Years",
       eligibility: "50% Graduation",
-      fees: "40k/Semester",
+      fees: "1,58,000",
       specialization: "DevOps, Natural Language Processing & Large Language Models Development, Computer Science and IT, Data Analytics, Cyber Security, Full Stack Development, Cloud Computing, Data Science, Artificial Intelligence" , 
 
       image: "/mca1.jpeg",
@@ -100,11 +100,27 @@ const Manipal = () => {
       course: "Master of Commerce (M.Com)",
       duration: "2 Years",
       eligibility: "Graduation in Commerce",
-      fees: "27.5k /Semester",
+      fees: "1,08,000",
       specialization: "Accounting and Finance, Professional Accounting and Finance (Accredited by CPA, US)", 
       image: "/m.com.jpeg",
     },
+    {
+      course: "Master of Science (M.Sc)",
+      duration: "2 Years",
+      eligibility: "Graduation ",
+      fees: "2,80,000",
+      specialization: "Data Science, Business Analytics",
+      image: "/m.com.jpeg",
+    },
 
+    {
+      course: "Master of Arts (MA)",
+      duration: "2 Years",
+      eligibility: "Graduation",
+      fees: "1,40,000",
+      specialization: " MA( Journalism and Mass Communication, ",
+      image: "/ma1.jpeg",
+    },
   ];
 
 
@@ -306,7 +322,7 @@ const Manipal = () => {
       <section className="bg-[#002d5f] text-white py-16 px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2">
-            <img src="/muj-certificate.png" alt="Certificate" className="rounded-lg shadow-lg w-full" />
+            <img src="/muj-certi.jpeg" alt="Certificate" className="rounded-lg shadow-lg w-full" />
           </div>
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Recognized Online Degree from Manipal University</h2>
