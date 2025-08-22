@@ -48,6 +48,7 @@ const heroSlides = [
 
 const courses = [
   { title: "MBA Online", desc: "Gain strategic skills from top universities", tag: "Popular", icon: FaGraduationCap, duration: "2 Years", students: "PG", color: "from-blue-500 to-purple-600" },
+  { title: "MSC Online", desc: "Advanced science and technology programs", tag: "Science", icon: FaBook, duration: "2 Years", students: "PG", color: "from-teal-500 to-cyan-600" },
   { title: "MCA Online", desc: "Advance in tech with flexible learning", tag: "Top Rated", icon: FaBook, duration: "2 Years", students: "PG", color: "from-green-500 to-teal-600" },
   { title: "M.Com Online", desc: "Deepen commerce expertise", tag: "Best Value", icon: FaBriefcase, duration: "2 Years", students: "PG", color: "from-orange-500 to-red-600" },
   { title: "MA Online", desc: "Explore diverse specializations", tag: "Literature", icon: FaBookOpen, duration: "2 Years", students: "PG", color: "from-purple-500 to-pink-600" },
@@ -74,15 +75,15 @@ const features = [
 ];
 
 const colleges = [
-  { name: "Amity University Online", ranking: "NIRF-29", fee: "₹1.2L - ₹2.5L", logo: "/amitylogo.png", rating: 4.8 },
-  { name: "Manipal University Online", ranking: "NIRF-73", fee: "₹1.5L - ₹3L", logo: "/manipallogo.png", rating: 4.9 },
+  { name: "Amity University Online", ranking: "NIRF-29", fee: "₹1.2L - ₹2.5L", logo: "/amity.png", rating: 4.8 },
+  { name: "Manipal University Online", ranking: "NIRF-73", fee: "₹1.5L - ₹3L", logo: "/manipal1.png", rating: 4.9 },
   { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹90K - ₹2L", logo: "/lpulogo.png", rating: 4.7 },
   { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.8L - ₹3.2L", logo: "/upeslogo.png", rating: 4.6 },
-  { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹2L - ₹3.5L", logo: "/nmimslogo.png", rating: 4.9 },
+  { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹2L - ₹3.5L", logo: "/nmims.png", rating: 4.9 },
   { name: "Sharda University Online", ranking: "NIRF-", fee: "₹80K - ₹1.5L", logo: "/shardalogo.png", rating: 4.5 },
   { name: "Dr. DY Patil Online", ranking: "NIRF-", fee: "₹1.1L - ₹2.2L", logo: "/dypatillogo.png", rating: 4.6 },
   { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.3L - ₹2.6L", logo: "/jainlogo.png", rating: 4.7 },
-  { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹1.3L - ₹2.6L", logo: "/cu-logo.png", rating: 4.7 }
+  { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹1.3L - ₹2.6L", logo: "/chandigarh.jpg", rating: 4.7 }
 ];
 
 const cities = [
@@ -484,38 +485,118 @@ const Landing = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
-            {courses.map((course, index) => (
-              <motion.a
-                key={index}
-                href={getCourseHref(course.title)}
-                className="group"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-5 hover:-translate-y-1 transition-all duration-200 shadow-sm hover:shadow group cursor-pointer hover:bg-slate-50/60 hover:border-gray-300 ring-0 hover:ring-2 hover:ring-[#00ffe0]/20">
-                  <div className={`bg-gradient-to-br ${course.color} w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-3 sm:mb-4 ring-1 ring-black/5 shadow-sm group-hover:scale-105 transition-transform duration-200`}>
-                    <course.icon className="text-xl sm:text-2xl text-white" />
-                  </div>
-                  <Badge className="mb-2 sm:mb-3 bg-[#00ffe0]/10 text-[#001e3c] ring-1 ring-[#00ffe0]/40 text-[11px] sm:text-xs font-medium">
-                    {course.tag}
-                  </Badge>
-                  <h3 className="text-base sm:text-lg font-semibold text-[#001e3c] mb-1.5">{course.title}</h3>
-                  <p className="text-xs sm:text-[13px] text-gray-600 mb-3 sm:mb-3.5 leading-relaxed">{course.desc}</p>
-                  <div className="mt-2 pt-3 border-t border-gray-100 flex items-center justify-between text-[11px] sm:text-xs text-gray-600">
-                    <span className="flex items-center gap-1">
-                      <FaClock className="text-[#00ffe0]" />
-                      {course.duration}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <FaUsers className="text-[#00ffe0]" />
-                      {course.students}
-                    </span>
-                  </div>
-                </div>
-              </motion.a>
-            ))}
-          </div>
+          <Tabs defaultValue="all" className="w-full">
+            <TabsList className="mx-auto mb-6 sm:mb-8 grid grid-cols-3 w-full max-w-md">
+              <TabsTrigger value="all">All</TabsTrigger>
+              <TabsTrigger value="ug">UG</TabsTrigger>
+              <TabsTrigger value="pg">PG</TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="all">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
+                {courses.map((course, index) => (
+                  <motion.a
+                    key={index}
+                    href={getCourseHref(course.title)}
+                    className="group"
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100}
+                  >
+                    <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-5 hover:-translate-y-1 transition-all duration-200 shadow-sm hover:shadow group cursor-pointer hover:bg-slate-50/60 hover:border-gray-300 ring-0 hover:ring-2 hover:ring-[#00ffe0]/20">
+                      <div className={`bg-gradient-to-br ${course.color} w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-3 sm:mb-4 ring-1 ring-black/5 shadow-sm group-hover:scale-105 transition-transform duration-200`}>
+                        <course.icon className="text-xl sm:text-2xl text-white" />
+                      </div>
+                      <Badge className="mb-2 sm:mb-3 bg-[#00ffe0]/10 text-[#001e3c] ring-1 ring-[#00ffe0]/40 text-[11px] sm:text-xs font-medium">
+                        {course.tag}
+                      </Badge>
+                      <h3 className="text-base sm:text-lg font-semibold text-[#001e3c] mb-1.5">{course.title}</h3>
+                      <p className="text-xs sm:text-[13px] text-gray-600 mb-3 sm:mb-3.5 leading-relaxed">{course.desc}</p>
+                      <div className="mt-2 pt-3 border-t border-gray-100 flex items-center justify-between text-[11px] sm:text-xs text-gray-600">
+                        <span className="flex items-center gap-1">
+                          <FaClock className="text-[#00ffe0]" />
+                          {course.duration}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <FaUsers className="text-[#00ffe0]" />
+                          {course.students}
+                        </span>
+                      </div>
+                    </div>
+                  </motion.a>
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="ug">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
+                {courses.filter(c => c.students === "UG").map((course, index) => (
+                  <motion.a
+                    key={index}
+                    href={getCourseHref(course.title)}
+                    className="group"
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100}
+                  >
+                    <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-5 hover:-translate-y-1 transition-all duration-200 shadow-sm hover:shadow group cursor-pointer hover:bg-slate-50/60 hover:border-gray-300 ring-0 hover:ring-2 hover:ring-[#00ffe0]/20">
+                      <div className={`bg-gradient-to-br ${course.color} w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-3 sm:mb-4 ring-1 ring-black/5 shadow-sm group-hover:scale-105 transition-transform duration-200`}>
+                        <course.icon className="text-xl sm:text-2xl text-white" />
+                      </div>
+                      <Badge className="mb-2 sm:mb-3 bg-[#00ffe0]/10 text-[#001e3c] ring-1 ring-[#00ffe0]/40 text-[11px] sm:text-xs font-medium">
+                        {course.tag}
+                      </Badge>
+                      <h3 className="text-base sm:text-lg font-semibold text-[#001e3c] mb-1.5">{course.title}</h3>
+                      <p className="text-xs sm:text-[13px] text-gray-600 mb-3 sm:mb-3.5 leading-relaxed">{course.desc}</p>
+                      <div className="mt-2 pt-3 border-t border-gray-100 flex items-center justify-between text-[11px] sm:text-xs text-gray-600">
+                        <span className="flex items-center gap-1">
+                          <FaClock className="text-[#00ffe0]" />
+                          {course.duration}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <FaUsers className="text-[#00ffe0]" />
+                          {course.students}
+                        </span>
+                      </div>
+                    </div>
+                  </motion.a>
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="pg">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
+                {courses.filter(c => c.students === "PG").map((course, index) => (
+                  <motion.a
+                    key={index}
+                    href={getCourseHref(course.title)}
+                    className="group"
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100}
+                  >
+                    <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-5 hover:-translate-y-1 transition-all duration-200 shadow-sm hover:shadow group cursor-pointer hover:bg-slate-50/60 hover:border-gray-300 ring-0 hover:ring-2 hover:ring-[#00ffe0]/20">
+                      <div className={`bg-gradient-to-br ${course.color} w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-3 sm:mb-4 ring-1 ring-black/5 shadow-sm group-hover:scale-105 transition-transform duration-200`}>
+                        <course.icon className="text-xl sm:text-2xl text-white" />
+                      </div>
+                      <Badge className="mb-2 sm:mb-3 bg-[#00ffe0]/10 text-[#001e3c] ring-1 ring-[#00ffe0]/40 text-[11px] sm:text-xs font-medium">
+                        {course.tag}
+                      </Badge>
+                      <h3 className="text-base sm:text-lg font-semibold text-[#001e3c] mb-1.5">{course.title}</h3>
+                      <p className="text-xs sm:text-[13px] text-gray-600 mb-3 sm:mb-3.5 leading-relaxed">{course.desc}</p>
+                      <div className="mt-2 pt-3 border-t border-gray-100 flex items-center justify-between text-[11px] sm:text-xs text-gray-600">
+                        <span className="flex items-center gap-1">
+                          <FaClock className="text-[#00ffe0]" />
+                          {course.duration}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <FaUsers className="text-[#00ffe0]" />
+                          {course.students}
+                        </span>
+                      </div>
+                    </div>
+                  </motion.a>
+                ))}
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
       </section>
 
@@ -538,29 +619,33 @@ const Landing = () => {
       data-aos="fade-up"
       data-aos-delay={index * 100}
     >
-      <div
-        className="relative rounded-2xl shadow-xl hover:transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 group-hover:shadow-2xl h-64 flex flex-col justify-between p-6 bg-cover bg-center"
-        style={{ backgroundImage: `url(${college.logo})` }}
-      >
-        {/* Dark overlay */}
-        {/* <div className="absolute inset-0 bg-black bg-opacity-50 rounded-2xl"></div> */}
+      <div className="relative rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-[#00ffe0]/10 to-[#00d4c4]/10"></div>
 
-        {/* Content */}
-        <div className="relative z-10 flex items-center justify-between mb-4">
-          <Badge className="bg-[#00ffe0] text-[#001e3c]">{college.ranking}</Badge>
-          <div className="flex items-center gap-1">
-            <FaStar className="text-yellow-400 text-sm" />
-            <span className="text-sm font-medium text-white">{college.rating}</span>
+        <div className="p-5 sm:p-6 relative z-[1]">
+          <div className="flex items-center justify-between">
+            <Badge className="bg-[#00ffe0]/10 text-[#001e3c] ring-1 ring-[#00ffe0]/40 text-[11px] sm:text-xs font-medium">{college.ranking}</Badge>
+            <div className="flex items-center gap-1">
+              <FaStar className="text-yellow-400 text-sm" />
+              <span className="text-sm font-medium text-gray-700">{college.rating}</span>
+            </div>
           </div>
         </div>
 
-        <div className="relative z-10 text-white">
-          <h3 className="text-lg font-bold mb-2 line-clamp-2">{college.name}</h3>
-          <div className="text-sm mb-4">
+        {/* Logo/Image area */}
+        <div className="px-5 sm:px-6">
+          <div className="h-28 sm:h-32 w-full rounded-xl border border-gray-100 bg-gradient-to-br from-slate-50 to-white flex items-center justify-center overflow-hidden ring-1 ring-black/5 group-hover:ring-[#00ffe0]/20 group-hover:border-[#00ffe0]/30 transition-all">
+            <img src={college.logo} alt={`${college.name} logo`} className="max-h-20 sm:max-h-24 w-auto object-contain" />
+          </div>
+        </div>
+
+        <div className="p-5 sm:p-6 relative z-[1]">
+          <h3 className="text-base sm:text-lg font-semibold text-[#001e3c] mb-2 line-clamp-2">{college.name}</h3>
+          <div className="text-sm text-gray-600 mb-4">
             <span className="font-medium">Fees:</span> {college.fee}
           </div>
           <a href={getUniversityHref(college.name)} className="block w-full">
-            <div className="w-full bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white py-2 px-4 rounded-xl font-medium text-center hover:from-[#003b6c] hover:to-[#001e3c] transform hover:scale-105 transition-all duration-300">
+            <div className="w-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] py-2.5 px-4 rounded-xl font-semibold text-center hover:from-[#00d4c4] hover:to-[#00ffe0] transform hover:scale-[1.02] transition-all duration-200 text-sm ring-1 ring-[#00ffe0]/40">
               Learn More
             </div>
           </a>
@@ -592,19 +677,33 @@ const Landing = () => {
               const slug = slugify(college.name);
               const isSelected = selectedUniversities.includes(slug);
               return (
-                <div key={idx} className={`rounded-2xl border ${isSelected ? 'border-[#00ffe0]' : 'border-gray-200'} p-4 sm:p-5 bg-white shadow-sm hover:shadow-lg transition-all`}>
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="flex-1">
-                      <h3 className="text-sm sm:text-lg font-semibold text-[#001e3c]">{college.name}</h3>
-                      <div className="mt-2 text-xs sm:text-sm text-gray-600"><span className="font-medium">Fees:</span> {college.fee}</div>
-                      <div className="mt-1 text-xs sm:text-sm text-gray-600"><span className="font-medium">Ranking:</span> {college.ranking}</div>
+                <div key={idx} className={`rounded-2xl border ${isSelected ? 'border-[#00ffe0]' : 'border-gray-200'} bg-white shadow-sm hover:shadow-md transition-all`}>
+                  <div className="p-4 sm:p-5">
+                    <div className="flex items-start gap-4">
+                      <div className="h-14 w-14 sm:h-16 sm:w-16 rounded-lg bg-slate-50 border border-gray-100 flex items-center justify-center overflow-hidden">
+                        <img src={college.logo} alt={`${college.name} logo`} className="max-h-12 sm:max-h-14 w-auto object-contain" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center justify-between gap-2">
+                          <h3 className="text-sm sm:text-base font-semibold text-[#001e3c] leading-snug line-clamp-2">{college.name}</h3>
+                          <span className="inline-flex items-center gap-1 text-[11px] sm:text-xs text-gray-700"><FaStar className="text-yellow-400" /> {college.rating}</span>
+                        </div>
+                        <div className="mt-1.5 flex items-center gap-2">
+                          <Badge className="bg-[#00ffe0]/10 text-[#001e3c] ring-1 ring-[#00ffe0]/40 text-[10px] sm:text-[11px]">{college.ranking}</Badge>
+                          <span className="text-[11px] sm:text-xs text-gray-600"><span className="font-medium">Fees:</span> {college.fee}</span>
+                        </div>
+                      </div>
                     </div>
-                    <button 
-                      onClick={() => toggleUniversity(college.name)}
-                      className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all flex-shrink-0 ${isSelected ? 'bg-[#00ffe0] text-[#001e3c]' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
-                    >
-                      {isSelected ? 'Selected' : 'Select'}
-                    </button>
+
+                    <div className="mt-4 flex items-center justify-between">
+                      <a href={getUniversityHref(college.name)} className="text-[#003b6c] text-xs sm:text-sm font-semibold hover:underline">View details</a>
+                      <button
+                        onClick={() => toggleUniversity(college.name)}
+                        className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all ${isSelected ? 'bg-[#00ffe0] text-[#001e3c]' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
+                      >
+                        {isSelected ? 'Selected' : 'Select to compare'}
+                      </button>
+                    </div>
                   </div>
                 </div>
               );
@@ -612,13 +711,13 @@ const Landing = () => {
           </div>
 
           <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-gray-600 text-sm">
-              Selected: <span className="font-semibold text-[#001e3c]">{selectedUniversities.length}</span> / 3
+            <div className="text-gray-700 text-sm sm:text-base font-medium">
+              Selected for compare: <span className="font-bold text-[#001e3c]">{selectedUniversities.length}</span> / 3
             </div>
             <button
               disabled={!canCompare}
               onClick={startCompare}
-              className={`px-6 sm:px-8 py-3 rounded-full font-bold flex items-center gap-2 transition-all text-sm sm:text-base ${canCompare ? 'bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] shadow-lg' : 'bg-gray-200 text-gray-500 cursor-not-allowed'}`}
+              className={`px-6 sm:px-8 py-3 rounded-full font-bold flex items-center gap-2 transition-all text-sm sm:text-base ${canCompare ? 'bg-[#00ffe0] text-[#001e3c] hover:bg-[#00d4c4] shadow-lg' : 'bg-gray-200 text-gray-500 cursor-not-allowed'}`}
             >
               Compare Now
               <FaArrowRight />
