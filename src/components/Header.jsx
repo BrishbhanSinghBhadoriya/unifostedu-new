@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import {
-  FaEnvelope, FaPhoneAlt, FaComments, FaVideo, FaChevronDown, FaBars, FaTimes, 
+  FaEnvelope, FaPhoneAlt, FaComments, FaVideo, FaChevronDown, FaBars, FaTimes,
   FaSearch, FaGraduationCap, FaBookOpen, FaUniversity, FaRocket
 } from 'react-icons/fa';
 
@@ -95,23 +95,23 @@ const universities = [
       <div className="bg-gradient-to-r from-[#001e3c] to-[#002e4d] text-white px-4 py-4 sticky top-0 z-50 backdrop-blur-md bg-opacity-70 shadow-md">
         <div className="flex items-center justify-between w-full gap-6 lg:gap-8 flex-nowrap">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0 group">
-            <div className="relative">
-              <div className={`w-40 sm:w-48 h-14 sm:h-16 rounded-2xl p-2 transition-all duration-500 ${
-                scrolled 
-                  ? 'bg-gradient-to-r from-[#001e3c] to-[#003b6c] shadow-lg' 
-                  : 'bg-white/10 backdrop-blur-sm'
-              }`}>
-                <img 
-                  src="/unilogo.png" 
-                  alt="Unifost Logo" 
-                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" 
-                />
+            <Link href="/" className="flex-shrink-0 group">
+              <div className="relative">
+                <div className={`w-40 h-16 rounded-2xl p-2 transition-all duration-500 ${
+                  scrolled 
+                    ? 'bg-gradient-to-r from-[#001e3c] to-[#003b6c] shadow-lg' 
+                    : 'bg-white/10 backdrop-blur-sm'
+                }`}>
+                  <img 
+                    src="/unilogo.png" 
+                    alt="Unifost Logo" 
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" 
+                  />
+                </div>
+                {!scrolled && (
+                  <div className="absolute -inset-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-2xl blur opacity-10 group-hover:opacity-40 transition-opacity duration-500"></div>
+                )}
               </div>
-              {!scrolled && (
-                <div className="absolute -inset-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-2xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-              )}
-            </div>
           </Link>
 
           {/* Desktop Nav */}
