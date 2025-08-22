@@ -131,10 +131,15 @@ const Landing = () => {
   const getCourseHref = (title) => {
     const map = {
       'MBA Online': '/courses/mba-online',
-      'MCA Online': '/courses/mca-online',
       'BBA Online': '/courses/bba-online',
+      'MCA Online': '/courses/mca-online',
+       'BCA Online': '/courses/bca-online',
       'M.Com Online': '/courses/mcom-online',
+      'B.Com Online': '/courses/bcom-online',
       'MA Online': '/courses/ma-online',
+      'BA Online': '/courses/ba-online',
+      'MAJMC Online': '/courses/majmc-online',
+      'BAJMC Online': '/courses/bajmc-online',
     };
     return map[title] || '/coursesearch';
   };
@@ -346,52 +351,56 @@ const Landing = () => {
       </section>
 
       {/* Enhanced Universities Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-16"
-            data-aos="fade-up"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-[#001e3c] mb-6">
-              🏆 Top Partner Universities
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose from India's most prestigious online universities
-            </p>
-          </motion.div>
+     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
+        <motion.div className="text-center mb-16" data-aos="fade-up" > 
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {colleges.map((college, index) => (
-              <motion.div
-                key={index}
-                className="group"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className="bg-white rounded-2xl shadow-xl p-6 hover:transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 group-hover:shadow-2xl">
-                  <div className="flex items-center justify-between mb-4">
-                    <Badge className="bg-[#00ffe0] text-[#001e3c]">
-                      {college.ranking}
-                    </Badge>
-                    <div className="flex items-center gap-1">
-                      <FaStar className="text-yellow-400 text-sm" />
-                      <span className="text-sm font-medium text-gray-700">{college.rating}</span>
-                    </div>
-                  </div>
-                  <h3 className="text-lg font-bold text-[#001e3c] mb-3 line-clamp-2">{college.name}</h3>
-                  <div className="text-sm text-gray-600 mb-4">
-                    <span className="font-medium">Fees:</span> {college.fee}
-                  </div>
-                  <a href={getUniversityHref(college.name)} className="block w-full">
-                    <div className="w-full bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white py-2 px-4 rounded-xl font-medium text-center hover:from-[#003b6c] hover:to-[#001e3c] transform hover:scale-105 transition-all duration-300">
-                      Learn More
-                    </div>
-                  </a>
-                </div>
-              </motion.div>
-            ))}
+          <h2 className="text-4xl md:text-5xl font-bold text-[#001e3c] mb-6">
+             🏆 Top Partner Universities 
+             </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                 Choose from India's most prestigious online universities
+                  </p>
+                   </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+  {colleges.map((college, index) => (
+    <motion.div
+      key={index}
+      className="group"
+      data-aos="fade-up"
+      data-aos-delay={index * 100}
+    >
+      <div
+        className="relative rounded-2xl shadow-xl hover:transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 group-hover:shadow-2xl h-64 flex flex-col justify-between p-6 bg-cover bg-center"
+        style={{ backgroundImage: `url(${college.logo})` }}
+      >
+        {/* Dark overlay */}
+        {/* <div className="absolute inset-0 bg-black bg-opacity-50 rounded-2xl"></div> */}
+
+        {/* Content */}
+        <div className="relative z-10 flex items-center justify-between mb-4">
+          <Badge className="bg-[#00ffe0] text-[#001e3c]">{college.ranking}</Badge>
+          <div className="flex items-center gap-1">
+            <FaStar className="text-yellow-400 text-sm" />
+            <span className="text-sm font-medium text-white">{college.rating}</span>
           </div>
         </div>
+
+        <div className="relative z-10 text-white">
+          <h3 className="text-lg font-bold mb-2 line-clamp-2">{college.name}</h3>
+          <div className="text-sm mb-4">
+            <span className="font-medium">Fees:</span> {college.fee}
+          </div>
+          <a href={getUniversityHref(college.name)} className="block w-full">
+            <div className="w-full bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white py-2 px-4 rounded-xl font-medium text-center hover:from-[#003b6c] hover:to-[#001e3c] transform hover:scale-105 transition-all duration-300">
+              Learn More
+            </div>
+          </a>
+        </div>
+      </div>
+    </motion.div>
+  ))}
+</div>
+</div>
       </section>
 
       {/* Compare Online Universities - moved below Partner Universities */}

@@ -39,10 +39,11 @@ const courseData = {
       {
         name: 'Amity University',
         location: 'Noida, Uttar Pradesh',
+        NIRF: '29',
         rating: 4.8,
         image: '/amity.png',
-        specializations: ['General', 'Dual Specialization', 'Human Resource Analytics', 'Finance', 'Marketing', 'IT', 'Operations', 'International Business'],
-        fee: '₹1.2L - ₹2.5L',
+        specializations: ['Genral' , 'Dual Specilization', 'Human Resource Analytics', 'Data Science', 'Business Analytics', 'International Finance', 'Digital Enterpreneurship', 'Digital Marketing Management', 'General Management with optional Specialization'],
+        fee: '₹1,99,000 - ₹2,99,000',
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Live Classes', 'Placement Support', 'Industry Projects']
@@ -384,6 +385,9 @@ export default async function CoursePage({ params }) {
                 <div className="w-16 h-16 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-full flex items-center justify-center mx-auto mb-4">
                   <FaGraduationCap className="w-8 h-8 text-[#001e3c]" />
                 </div>
+                 <h3 className="text-xl font-semibold text-gray-900 mb-2">NIRF</h3>
+                <p className="text-[#00ffe0] font-bold text-lg">{course.NIRF}</p>
+              
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Eligibility</h3>
                 <p className="text-[#00ffe0] font-bold text-lg">{course.eligibility}</p>
               </div>

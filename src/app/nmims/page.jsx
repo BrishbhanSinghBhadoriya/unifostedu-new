@@ -1,4 +1,4 @@
-// File: src/pages/universities/Nmims.jsx
+'use client';
 import React from 'react';
 // import { useNavigate } from 'react-router-dom';
 // import { Helmet } from 'react-helmet';
@@ -81,9 +81,9 @@ const Nmims = () => {
 
   return (
     <>
-      <Helmet>
+    
         <title>NMIMS Online - Courses, Fees & Admissions</title>
-      </Helmet>
+    
 
       <section className="py-16 px-6 font-[Inter] bg-white">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
