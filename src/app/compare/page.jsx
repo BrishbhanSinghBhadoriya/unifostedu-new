@@ -46,8 +46,8 @@ const RAW_UNIVERSITIES = [
     name: 'Manipal University Online',
     logo: '/manipallogo.jpg',
     location: 'Manipal, Jaipur',
-    ranking: 'Top 5',
-    established: '1953',
+    ranking: 'Top 10',
+    established: '2011',
     fee: '₹0.99L - ₹1.75L',
     courses: ['MBA', 'BBA', 'BCA', 'MCA', 'MA', 'BA'],
     features: ['UGC recognized', 'NAAC A++ accreditation', 'International partnerships', 'Career development'],
@@ -67,9 +67,8 @@ const RAW_UNIVERSITIES = [
     name: 'NMIMS',
     logo: '/nmims.png',
     location: 'Mumbai, Maharashtra',
-    ranking: 'Top 8',
     established: '1981',
-    fee: '₹1.8L - ₹2.20L',
+    fee: '₹0.94L - ₹2.20L',
     courses: ['MBA', 'BBA', 'M.Com'],
     features: ['Industry connect', 'Placement assistance', 'Quality education'],
     approvals: ['UGC', 'NAAC A+'],
@@ -88,7 +87,6 @@ const RAW_UNIVERSITIES = [
     name: 'Lovely Professional University Online',
     logo: '/lpu.png',
     location: 'Punjab',
-    ranking: 'Top 20',
     established: '2005',
     fee: '₹0.80L - ₹2.0L',
     courses: ['MBA', 'BBA', 'MCA', 'BCA', 'M.Com', 'BA'],
@@ -109,9 +107,8 @@ const RAW_UNIVERSITIES = [
     name: 'University of Petroleum and Energy Studies Online',
     logo: '/upes.png',
     location: 'Dehradun, Uttarakhand',
-    ranking: 'Top 15',
     established: '2003',
-    fee: '₹1.20L - ₹2.25L',
+    fee: '₹1.50L - ₹1.75L',
     courses: ['MBA', 'BBA', 'MCA', 'BCA', 'M.Com'],
     features: ['Placement support', 'Industry focused'],
     approvals: ['UGC', 'AICTE', 'NAAC'],
@@ -130,16 +127,15 @@ const RAW_UNIVERSITIES = [
     name: 'Dr. DY Patil Online',
     logo: '/dypatil.png',
     location: 'Pune, Maharashtra',
-    ranking: 'Top 25',
     established: '2003',
-    fee: '₹0.85L - ₹1.7L',
+    fee: '₹1.45L - ₹1.90L',
     courses: ['MBA', 'BBA', 'MCA', 'BCA', 'M.Com'],
     features: ['Placement support', 'EMI options', 'WES approved'],
     approvals: ['UGC', 'AICTE', 'NAAC'],
     rating: 4.4,
     eligibility: '10+2,Graduation in any stream',
     nirfRank: 63,
-    naacGrade: 'A',
+    naacGrade: 'A++',
     placementSupport: true,
     wesApproved: true,
     emiOption: true,
@@ -151,15 +147,15 @@ const RAW_UNIVERSITIES = [
     name: 'Sharda University Online',
     logo: '/sharda.png',
     location: 'Greater Noida, Uttar Pradesh',
-    ranking: 'Top 30',
     established: '2009',
-    fee: '₹0.8L - ₹1.5L',
+    fee: '₹0.8L - ₹1.30L',
     courses: ['MBA', 'BBA', 'MA', 'BA'],
     features: ['Quality education', 'Industry connect', 'Career support'],
     approvals: ['UGC', 'NAAC'],
     rating: 4.1,
     eligibility: '10+2,Graduation in any stream',
-    naacGrade: 'A',
+    nirfRank: 87,
+    naacGrade: 'A+',
     placementSupport: true,
     wesApproved: true,
     emiOption: true,
@@ -171,14 +167,14 @@ const RAW_UNIVERSITIES = [
     name: 'Jain University Online',
     logo: '/jain.png',
     location: 'Bengaluru, Karnataka',
-    ranking: 'Top 12',
     established: '1990',
-    fee: '₹1.28L - ₹3.60L',
+    fee: '1.05L - ₹2.98L',
     courses: ['MBA', 'BBA', 'MCA', 'BCA'],
     features: ['Modern curriculum', 'Industry projects', 'Career services'],
     approvals: ['UGC', 'NAAC A+'],
     rating: 4.5,
     eligibility: '10+2,Graduation in any stream',
+    nirfRank: 65,
     naacGrade: 'A+',
     placementSupport: true,
     wesApproved: true,
@@ -302,22 +298,15 @@ export default function ComparePage() {
   {u.rating && (
     <div className="flex justify-between items-center">
      <span className="flex items-center gap-2 px-3 py-1 rounded-md bg-blue-100 text-blue-800 font-medium shadow-sm">
-  ⭐ Rating
-</span>
+       ⭐ Rating
+     </span>
 
       <span className="font-semibold">{u.rating.toFixed(1)} ★</span>
     </div>
   )}
 
   <div className="flex justify-between items-center">
-    <span className="flex items-center gap-2 px-3 py-1 rounded-md bg-purple-100 text-purple-800 text-[#00ffe0] font-bold shadow-sm">
-      📊 Ranking
-    </span>
-    <span>{u.ranking}</span>
-  </div>
-
-  <div className="flex justify-between items-center">
-    <span className="flex items-center gap-2 px-3 py-1 rounded-md bg-orange-100 text-orange-800 text-[#00ffe0] font-bold shadow-sm">
+    <span className="flex items-center gap-2 px-3 py-1 rounded-md bg-orange-100 text-orange-800 font-bold shadow-sm">
       📅 Established
     </span>
     <span>{u.established}</span>
@@ -341,7 +330,7 @@ export default function ComparePage() {
 
   {u.nirfRank !== undefined && (
     <div className="flex justify-between items-center">
-      <span className="flex items-center gap-2 px-3 py-1 rounded-md bg-pink-100 text-pink-800 bg-[#001e3c] text-[#00ffe0] font-bold shadow-sm">
+      <span className="flex items-center gap-2 px-3 py-1 rounded-md bg-pink-100 text-pink-800 font-bold shadow-sm">
         🏆 NIRF Ranking
       </span>
       <span>{u.nirfRank}</span>
