@@ -17,17 +17,17 @@ const Header = () => {
   const dropdownRef = useRef(null);
 
 const universities = [
-    { name: "Lovely Professional University", link: "/lpu", icon: FaUniversity },
-    { name: "Online Manipal University", link: "/manipal", icon: FaUniversity },
-    { name: "Amity University Online", link: "/amity", icon: FaUniversity },
-    { name: "Chandigarh University Online", link: "/chandigarh", icon: FaUniversity },
-    { name: "Jain University", link: "/jain", icon: FaUniversity },
-    { name: "Dr. D Y Patil", link: "/dypatil", icon: FaUniversity },
-    { name: "OP Jindal University", link: "/opjindal", icon: FaUniversity },
-    { name: "Shoolini University Online", link: "/shoolini", icon: FaUniversity },
-    { name: "Vivekananda Global University Online", link: "/vgu", icon: FaUniversity },
-    { name: "Upes Online", link: "/upes", icon: FaUniversity },
-    { name: "Sharda University Online", link: "/sharda", icon: FaUniversity }
+    { name: "Lovely Professional University", link: "/lpu", logo: "/lpu.png" },
+    { name: "Online Manipal University", link: "/manipal", logo: "/manipal.png" },
+    { name: "Amity University Online", link: "/amity", logo: "/amity.png" },
+    { name: "Chandigarh University Online", link: "/chandigarh", logo: "/chandigarh.jpg" },
+    { name: "Jain University", link: "/jain", logo: "/jain.png" },
+    { name: "Dr. D Y Patil", link: "/dypatil", logo: "/dypatil.png" },
+    { name: "OP Jindal University", link: "/opjindal", logo: "/opjindal.png" },
+    { name: "Shoolini University Online", link: "/shoolini", logo: "/shoolini.jpg" },
+    { name: "Vivekananda Global University Online", link: "/vgu", logo: "/vgu1.png" },
+    { name: "Upes Online", link: "/upes", logo: "/upes.png" },
+    { name: "Sharda University Online", link: "/sharda", logo: "/sharda.png" }
   ];
 
   useEffect(() => {
@@ -133,11 +133,7 @@ const universities = [
             <div className="relative">
                 <button 
                   onClick={() => setMenuOpen(menuOpen === "explore" ? null : "explore")} 
-                  className={`group flex items-center space-x-3 px-5 py-3 rounded-xl transition-all duration-300 ${
-                    scrolled 
-                      ? 'text-[#001e3c] hover:bg-[#001e3c] hover:text-white' 
-                      : 'text-white hover:bg-white/10 hover:text-[#00ffe0]'
-                  }`}>
+                  className={`group flex items-center space-x-3 px-5 py-3 rounded-xl transition-all duration-300 text-white hover:bg-white/10 hover:text-[#00ffe0]`}>
                   <FaUniversity className="text-sm" />
                   <span className="font-semibold">Explore</span>
                   <FaChevronDown className={`text-xs transition-transform duration-300 ${menuOpen === "explore" ? 'rotate-180' : ''}`} />
@@ -155,8 +151,8 @@ const universities = [
                 {universities.map((uni, idx) => (
                         <Link key={idx} href={uni.link} onClick={() => setMenuOpen(null)} 
                               className="flex items-center space-x-4 p-4 rounded-xl hover:bg-[#001e3c] hover:text-white transition-all duration-300 group text-[#001e3c]">
-                          <div className="w-10 h-10 bg-gradient-to-br from-[#00ffe0] to-[#00d4c4] rounded-lg flex items-center justify-center">
-                            <uni.icon className="text-[#001e3c] text-sm" />
+                          <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center overflow-hidden border border-gray-200">
+                            <img src={uni.logo} alt={uni.name} className="w-full h-full object-contain" />
                           </div>
                           <span className="font-medium group-hover:text-white">{uni.name}</span>
                         </Link>
@@ -166,7 +162,7 @@ const universities = [
                       <button 
                         onClick={() => { router.push('/listofcollege'); setMenuOpen(null); }} 
                         className="w-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] py-3 px-6 rounded-xl font-semibold hover:from-[#00d4c4] hover:to-[#00ffe0] transform hover:scale-105 transition-all duration-300">
-                        View All Colleges
+                        View All Universities
                       </button>
                     </div>
                   </div>
@@ -177,11 +173,7 @@ const universities = [
             <div className="relative">
               <button
                 onClick={() => setMenuOpen(menuOpen === "blogs" ? null : "blogs")}
-                  className={`group flex items-center space-x-3 px-5 py-3 rounded-xl transition-all duration-300 ${
-                    scrolled 
-                      ? 'text-[#001e3c] hover:bg-[#001e3c] hover:text-white' 
-                      : 'text-white hover:bg-white/10 hover:text-[#00ffe0]'
-                  }`}>
+                  className={`group flex items-center space-x-3 px-5 py-3 rounded-xl transition-all duration-300 text-white hover:bg-white/10 hover:text-[#00ffe0]`}>
                   <FaBookOpen className="text-sm" />
                   <span className="font-semibold">Blogs</span>
                   <FaChevronDown className={`text-xs transition-transform duration-300 ${menuOpen === "blogs" ? 'rotate-180' : ''}`} />

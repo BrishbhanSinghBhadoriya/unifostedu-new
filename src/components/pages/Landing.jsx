@@ -193,7 +193,7 @@ const Landing = () => {
                   style={{ objectPosition: 'center' }}
                 />
                 {/* Enhanced Overlay - Responsive gradient */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c]/90 via-[#001e3c]/70 to-transparent md:from-[#001e3c]/80 md:via-[#001e3c]/60 md:to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c]/80 via-[#001e3c]/60 to-transparent md:from-[#001e3c]/70 md:via-[#001e3c]/50 md:to-transparent" />
               </motion.div>
             ))}
           </div>
@@ -207,19 +207,21 @@ const Landing = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="max-w-2xl lg:max-w-3xl xl:max-w-4xl"
               >
-                {/* Responsive Typography */}
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-4 leading-tight">
-                  {heroSlides[slide].title}
-                </h1>
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 sm:mb-6 text-[#00ffe0]">
-                  {heroSlides[slide].subtitle}
-                </h2>
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-6 sm:mb-8 leading-relaxed">
-                  {heroSlides[slide].description}
-                </p>
-                
+                {/* Responsive Typography (professional, compact) */}
+                <div className="bg-transparent rounded-2xl p-4 sm:p-6 inline-block max-w-2xl">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-3 leading-tight text-white">
+                    {heroSlides[slide].title}
+                  </h1>
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-3 sm:mb-4 bg-gradient-to-r from-cyan-300 to-emerald-300 bg-clip-text text-transparent">
+                    {heroSlides[slide].subtitle}
+                  </h2>
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200/90 mb-5 sm:mb-6 leading-relaxed">
+                    {heroSlides[slide].description}
+                  </p>
+                </div>
+
                 {/* Responsive Button Layout */}
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <div className="mt-3 sm:mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4">
                   <button 
                     onClick={() => openModal("getStarted")}
                     className="bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] 
@@ -236,10 +238,12 @@ const Landing = () => {
 
                   <button 
                     onClick={() => openModal("videoCall")}
-                    className="border border-white text-white w-full sm:w-auto px-4 sm:px-5 lg:px-6 py-3 sm:py-3.5 lg:py-4 rounded-full 
+                    className="w-full sm:w-auto px-4 sm:px-5 lg:px-6 py-3 sm:py-3.5 lg:py-4 rounded-full 
                                text-sm sm:text-base lg:text-lg font-semibold 
-                               bg-white/10 hover:bg-white hover:text-[#001e3c] 
-                               transform hover:scale-105 transition-all duration-300 
+                               bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-500 text-white 
+                               shadow-xl shadow-rose-500/30 ring-2 ring-white/30 
+                               hover:from-rose-500 hover:via-pink-500 hover:to-fuchsia-500 
+                               transform hover:scale-110 hover:-translate-y-0.5 transition-all duration-300 
                                flex items-center justify-center gap-2"
                   >
                     <FaVideo className="text-sm sm:text-base lg:text-lg" />
@@ -249,10 +253,12 @@ const Landing = () => {
 
                   <button 
                     onClick={() => openModal("homeDemo")}
-                    className="border border-white text-white w-full sm:w-auto px-4 sm:px-5 lg:px-6 py-3 sm:py-3.5 lg:py-4 rounded-full 
+                    className="w-full sm:w-auto px-4 sm:px-5 lg:px-6 py-3 sm:py-3.5 lg:py-4 rounded-full 
                                text-sm sm:text-base lg:text-lg font-semibold 
-                               bg-white/10 hover:bg-white hover:text-[#001e3c] 
-                               transform hover:scale-105 transition-all duration-300 
+                               bg-gradient-to-r from-amber-400 via-orange-500 to-rose-500 text-white 
+                               shadow-xl shadow-orange-500/30 ring-2 ring-white/30 
+                               hover:from-rose-500 hover:via-orange-500 hover:to-amber-400 
+                               transform hover:scale-110 hover:-translate-y-0.5 transition-all duration-300 
                                flex items-center justify-center gap-2"
                   >
                     <FaMapMarkerAlt className="text-sm sm:text-base lg:text-lg" />
@@ -309,14 +315,15 @@ const Landing = () => {
       <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div 
-            className="text-center mb-12 sm:mb-16"
+            className="text-center mb-10 sm:mb-14"
             data-aos="fade-up"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#001e3c] mb-4 sm:mb-6">
-              🎯 Select Best Programs
+            <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold tracking-tight text-[#001e3c] mb-2">
+              Select the Best Programs
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-              Pick the right program to unlock your future today!
+            <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-3 sm:mb-4"></div>
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+              Explore curated online programs from leading universities.
             </p>
           </motion.div>
           
@@ -329,16 +336,16 @@ const Landing = () => {
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
-                <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 hover:transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 group-hover:shadow-2xl cursor-pointer">
-                  <div className={`bg-gradient-to-br ${course.color} w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-5 hover:-translate-y-1 transition-all duration-200 shadow-sm hover:shadow group cursor-pointer hover:bg-slate-50/60 hover:border-gray-300 ring-0 hover:ring-2 hover:ring-[#00ffe0]/20">
+                  <div className={`bg-gradient-to-br ${course.color} w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-3 sm:mb-4 ring-1 ring-black/5 shadow-sm group-hover:scale-105 transition-transform duration-200`}>
                     <course.icon className="text-xl sm:text-2xl text-white" />
                   </div>
-                  <Badge className="mb-2 sm:mb-3 bg-[#00ffe0] text-[#001e3c] hover:bg-[#00d4c4] text-xs sm:text-sm">
+                  <Badge className="mb-2 sm:mb-3 bg-[#00ffe0]/10 text-[#001e3c] ring-1 ring-[#00ffe0]/40 text-[11px] sm:text-xs font-medium">
                     {course.tag}
                   </Badge>
-                  <h3 className="text-base sm:text-lg font-bold text-[#001e3c] mb-2">{course.title}</h3>
-                  <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">{course.desc}</p>
-                  <div className="flex items-center justify-between text-xs sm:text-sm text-gray-500">
+                  <h3 className="text-base sm:text-lg font-semibold text-[#001e3c] mb-1.5">{course.title}</h3>
+                  <p className="text-xs sm:text-[13px] text-gray-600 mb-3 sm:mb-3.5 leading-relaxed">{course.desc}</p>
+                  <div className="mt-2 pt-3 border-t border-gray-100 flex items-center justify-between text-[11px] sm:text-xs text-gray-600">
                     <span className="flex items-center gap-1">
                       <FaClock className="text-[#00ffe0]" />
                       {course.duration}
@@ -378,9 +385,9 @@ const Landing = () => {
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
-                <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 hover:transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 group-hover:shadow-2xl">
+                <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-5 transition-all duration-200 shadow-sm hover:shadow group hover:-translate-y-1 hover:bg-slate-50/60 hover:border-gray-300 ring-0 hover:ring-2 hover:ring-[#00ffe0]/20">
                   <div className="flex items-center justify-between mb-3 sm:mb-4">
-                    <Badge className="bg-[#00ffe0] text-[#001e3c] text-xs sm:text-sm">
+                    <Badge className="bg-[#00ffe0]/10 text-[#001e3c] ring-1 ring-[#00ffe0]/40 text-[11px] sm:text-xs font-medium">
                       {college.ranking}
                     </Badge>
                     <div className="flex items-center gap-1">
@@ -388,12 +395,12 @@ const Landing = () => {
                       <span className="text-xs sm:text-sm font-medium text-gray-700">{college.rating}</span>
                     </div>
                   </div>
-                  <h3 className="text-sm sm:text-lg font-bold text-[#001e3c] mb-2 sm:mb-3 line-clamp-2">{college.name}</h3>
-                  <div className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">
+                  <h3 className="text-sm sm:text-lg font-semibold text-[#001e3c] mb-2 sm:mb-2.5 line-clamp-2">{college.name}</h3>
+                  <div className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-3.5">
                     <span className="font-medium">Fees:</span> {college.fee}
                   </div>
                   <a href={getUniversityHref(college.name)} className="block w-full">
-                    <div className="w-full bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white py-2 sm:py-3 px-3 sm:px-4 rounded-xl font-medium text-center hover:from-[#003b6c] hover:to-[#001e3c] transform hover:scale-105 transition-all duration-300 text-sm sm:text-base">
+                    <div className="w-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] py-2.5 sm:py-3 px-3 sm:px-4 rounded-lg font-semibold text-center hover:from-[#00d4c4] hover:to-[#00ffe0] transform hover:scale-[1.02] transition-all duration-200 text-sm sm:text-base ring-1 ring-[#00ffe0]/40">
                       Learn More
                     </div>
                   </a>
