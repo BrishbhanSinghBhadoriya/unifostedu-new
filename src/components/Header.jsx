@@ -85,7 +85,7 @@ const universities = [
           {/* Logo */}
             <Link href="/" className="flex-shrink-0 group">
               <div className="relative">
-                <div className={`w-48 h-16 rounded-2xl p-2 transition-all duration-500 ${
+                <div className={`w-40 h-16 rounded-2xl p-2 transition-all duration-500 ${
                   scrolled 
                     ? 'bg-gradient-to-r from-[#001e3c] to-[#003b6c] shadow-lg' 
                     : 'bg-white/10 backdrop-blur-sm'
@@ -97,7 +97,7 @@ const universities = [
                   />
                 </div>
                 {!scrolled && (
-                  <div className="absolute -inset-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-2xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-2xl blur opacity-10 group-hover:opacity-40 transition-opacity duration-500"></div>
                 )}
               </div>
           </Link>

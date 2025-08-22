@@ -141,10 +141,10 @@ const universityLogos = [
   { name: "Amrita University", logo: "/amritalogo.png" }
 ];
 
-// University Logo Slider Component
+// University Logo Slider Component with Framer Motion Auto-Scrolling
 const UniversityLogoSlider = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsToShow, setItemsToShow] = useState(6);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -166,87 +166,44 @@ const UniversityLogoSlider = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      (prevIndex + 1) % (universityLogos.length - itemsToShow + 1)
-    );
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? (universityLogos.length - itemsToShow) : prevIndex - 1
-    );
-  };
-
   return (
-    <section className="py-12 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          className="text-center mb-10"
-          data-aos="fade-up"
-        >
-        </motion.div>
-
-        <div className="relative">
-          {/* Navigation Buttons */}
-          <button 
-            onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white rounded-full p-2 shadow-md hover:shadow-lg transition-all"
-            aria-label="Previous slide"
-          >
-            <FaChevronLeft className="h-5 w-5 text-[#001e3c]" />
-          </button>
+    <section className="py-1 bg-white">
+      <div className="max-w-7xl mx-auto px-1">
+        <div className="relative overflow-hidden" 
+             onMouseEnter={() => setIsPaused(true)}
+             onMouseLeave={() => setIsPaused(false)}>
           
-          <button 
-            onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white rounded-full p-2 shadow-md hover:shadow-lg transition-all"
-            aria-label="Next slide"
+          {/* Auto-scrolling Marquee Container with Framer Motion */}
+          <motion.div 
+            className="flex"
+            animate={{ 
+              x: [0, -100 * (universityLogos.length / itemsToShow) + "%"]
+            }}
+            transition={{ 
+              ease: "linear",
+              duration: 40,
+              repeat: Infinity,
+              repeatType: "loop",
+              pause: isPaused
+            }}
           >
-            <FaChevronRight className="h-5 w-5 text-[#001e3c]" />
-          </button>
-
-          {/* Slider Container */}
-          <div className="overflow-hidden">
-            <motion.div 
-              className="flex gap-8"
-              animate={{ x: `-${currentIndex * (100 / itemsToShow)}%`}}
-              transition={{ type: "spring", damping: 20, stiffness: 100 }}
-            >
-              {universityLogos.map((university, index) => (
-                <motion.div
-                  key={index}
-                  className="flex-shrink-0 flex items-center justify-center"
-                  style={{ width: `${100 / itemsToShow}%` }}
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <div className="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all duration-300 h-32 w-full flex items-center justify-center">
-                    <img 
-                      src={university.logo} 
-                      alt={university.name} 
-                      className="max-h-16 max-w-full object-contain"
-                    />
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center mt-6 gap-2">
-            {Array.from({ length: universityLogos.length - itemsToShow + 1 }).map((_, index) => (
-              <button
+            {/* Double the logos for seamless looping */}
+            {[...universityLogos, ...universityLogos].map((university, index) => (
+              <div
                 key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`h-2 rounded-full transition-all ${
-                  index === currentIndex 
-                    ? 'w-6 bg-[#00ffe0]' 
-                    : 'w-2 bg-gray-300'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
+                className="flex-shrink-0 flex items-center justify-center"
+                style={{ width: `${100 / itemsToShow}%` }}
+              >
+                <div className="h-24 w-full flex items-center justify-center px-2">
+                  <img 
+                    src={university.logo} 
+                    alt={university.name} 
+                    className="max-h-14 max-w-full object-contain hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+              </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

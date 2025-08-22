@@ -7,9 +7,14 @@ import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
+
+
 export const metadata = {
-  title: "Unifost Education",
-  description: "Your gateway to online education excellence",
+  title: "UNIFOST| Because The Right University Matters",
+  description: "Unifost",
+  icons: {
+    icon: "/uni.jpg",
+  },
 };
 
 export default function RootLayout({ children }) {
