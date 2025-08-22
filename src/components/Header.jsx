@@ -17,6 +17,7 @@ const Header = () => {
   const dropdownRef = useRef(null);
 
 const universities = [
+<<<<<<< HEAD
     { name: "Lovely Professional University", link: "/lpu", logo: "/lpu.png" },
     { name: "Online Manipal University", link: "/manipal", logo: "/manipal.png" },
     { name: "Amity University Online", link: "/amity", logo: "/amity.png" },
@@ -28,6 +29,20 @@ const universities = [
     { name: "Vivekananda Global University Online", link: "/vgu", logo: "/vgu1.png" },
     { name: "Upes Online", link: "/upes", logo: "/upes.png" },
     { name: "Sharda University Online", link: "/sharda", logo: "/sharda.png" }
+=======
+    { name: "Lovely Professional University", link: "/lpu", icon: FaUniversity },
+    { name: "Online Manipal University", link: "/manipal", icon: FaUniversity },
+    { name: "Amity University Online", link: "/amity", icon: FaUniversity },
+    { name: "Chandigarh University Online", link: "/chandigarh", icon: FaUniversity },
+    { name: "Jain University", link: "/jain", icon: FaUniversity },
+    { name: "Dr. D Y Patil", link: "/dypatil", icon: FaUniversity },
+    { name: "UPES", link: "/upes", icon: FaUniversity },
+    { name: "OP Jindal University", link: "/opjindal", icon: FaUniversity },
+    { name: "Shoolini University Online", link: "/shoolini", icon: FaUniversity },
+    { name: "Vivekananda Global University Online", link: "/vgu", icon: FaUniversity },
+    { name: "Upes Online", link: "/upes", icon: FaUniversity },
+    { name: "Sharda University Online", link: "/sharda", icon: FaUniversity }
+>>>>>>> d9dafa40020f6b9c920bbc242b3eff0392fd062d
   ];
 
   useEffect(() => {
