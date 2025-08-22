@@ -216,6 +216,206 @@ const courseData = {
       }
     ]
   },
+  'bca-online': {
+    title: 'BCA Online',
+    subtitle: 'Bachelor of Computer Applications',
+    description: 'Build a solid foundation in computer science, programming, and software development with flexible online BCA programs from top universities.',
+    duration: '3 Years',
+    fee: '₹80K - ₹2L',
+    eligibility: '10+2 with Mathematics/Computer Science preferred',
+    features: [
+      'Core CS and programming fundamentals',
+      'Specializations in trending technologies',
+      'Hands-on projects and labs',
+      'Flexible online learning',
+      'Career and placement support'
+    ],
+    universities: [
+      {
+        name: 'Manipal University',
+        location: 'Jaipur, Rajasthan',
+        rating: 4.6,
+        image: '/manipal.png',
+        specializations: ['Full Stack Development', 'Data Science', 'Cloud & DevOps'],
+        fee: '₹1.0L - ₹1.8L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Industry Projects', 'Career Services', 'Flexible Learning']
+      },
+      {
+        name: 'LPU Online',
+        location: 'Punjab',
+        rating: 4.5,
+        image: '/lpu.png',
+        specializations: ['Software Engineering', 'Cyber Security', 'Data Analytics'],
+        fee: '₹80K - ₹1.6L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Affordable Education', 'Practical Curriculum', 'Career Guidance']
+      },
+      {
+        name: 'Amity University',
+        location: 'Noida, Uttar Pradesh',
+        rating: 4.4,
+        image: '/amity.png',
+        specializations: ['Data Science', 'AI/ML', 'Cloud Computing'],
+        fee: '₹90K - ₹1.7L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Live Classes', 'Placement Support', 'Industry Faculty']
+      }
+    ]
+  },
+  'bcom-online': {
+    title: 'B.Com Online',
+    subtitle: 'Bachelor of Commerce',
+    description: 'Build strong fundamentals in accounting, finance, taxation, and business with flexible UGC-approved online B.Com programs from top universities.',
+    duration: '3 Years',
+    fee: '₹70K - ₹1.8L',
+    eligibility: '10+2 in any stream (Commerce preferred)',
+    features: [
+      'Accounting, finance and business core',
+      'Industry-relevant curriculum',
+      'Live and recorded classes',
+      'Exam and schedule flexibility',
+      'Career guidance and placement support'
+    ],
+    universities: [
+      {
+        name: 'Amity University',
+        location: 'Noida, Uttar Pradesh',
+        rating: 4.5,
+        image: '/amity.png',
+        specializations: ['Accounting & Finance', 'Banking & Insurance', 'Taxation'],
+        fee: '₹80K - ₹1.6L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Live Classes', 'Industry Faculty', 'Placement Support']
+      },
+      {
+        name: 'LPU Online',
+        location: 'Punjab',
+        rating: 4.4,
+        image: '/lpu.png',
+        specializations: ['Accounting', 'Taxation', 'Finance'],
+        fee: '₹70K - ₹1.4L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Affordable', 'Curriculum Focus', 'Career Services']
+      },
+      {
+        name: 'Sharda University',
+        location: 'Greater Noida, Uttar Pradesh',
+        rating: 4.3,
+        image: '/sharda.png',
+        specializations: ['Accounting & Finance', 'Banking & Insurance'],
+        fee: '₹75K - ₹1.3L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Experienced Faculty', 'Industry Exposure', 'Counselling']
+      }
+    ]
+  },
+  'ba-online': {
+    title: 'BA Online',
+    subtitle: 'Bachelor of Arts',
+    description: 'Build strong foundations in humanities and social sciences with flexible UGC-approved online BA programs from top universities.',
+    duration: '3 Years',
+    fee: '₹60K - ₹1.5L',
+    eligibility: '10+2 in any stream',
+    features: [
+      'Wide choice of specializations',
+      'Live and recorded classes',
+      'Project and research exposure',
+      'Flexible exams and schedules',
+      'Career mentorship and support'
+    ],
+    universities: [
+      {
+        name: 'Sharda University',
+        location: 'Greater Noida, Uttar Pradesh',
+        rating: 4.3,
+        image: '/sharda.png',
+        specializations: ['English', 'Psychology', 'Sociology', 'Political Science'],
+        fee: '₹60K - ₹1.2L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Experienced Faculty', 'Industry Exposure', 'Counselling']
+      },
+      {
+        name: 'Amity University',
+        location: 'Noida, Uttar Pradesh',
+        rating: 4.4,
+        image: '/amity.png',
+        specializations: ['English', 'Economics', 'Public Policy', 'Psychology'],
+        fee: '₹70K - ₹1.4L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Live Classes', 'Research Focus', 'Career Support']
+      },
+      {
+        name: 'Jain University',
+        location: 'Bangalore, Karnataka',
+        rating: 4.4,
+        image: '/jain.png',
+        specializations: ['English', 'Journalism', 'Economics'],
+        fee: '₹65K - ₹1.3L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Modern Curriculum', 'Projects', 'Career Services']
+      }
+    ]
+  },
+  'bajmc-online': {
+    title: 'BAJMC Online',
+    subtitle: 'Bachelor of Arts in Journalism & Mass Communication',
+    description: 'Launch your media career with a comprehensive BAJMC covering journalism, digital media, PR, advertising, and production with hands-on projects.',
+    duration: '3 Years',
+    fee: '₹80K - ₹1.8L',
+    eligibility: '10+2 in any stream',
+    features: [
+      'Foundation in media and communication',
+      'Digital journalism and content creation',
+      'PR, advertising, and media research',
+      'Workshops, labs and portfolio projects',
+      'Career and placement support'
+    ],
+    universities: [
+      {
+        name: 'Amity University',
+        location: 'Noida, Uttar Pradesh',
+        rating: 4.5,
+        image: '/amity.png',
+        specializations: ['Digital Media', 'Advertising & PR', 'Broadcast Journalism'],
+        fee: '₹1.0L - ₹1.8L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Live Classes', 'Industry Mentors', 'Portfolio Guidance']
+      },
+      {
+        name: 'Jain University',
+        location: 'Bangalore, Karnataka',
+        rating: 4.4,
+        image: '/jain.png',
+        specializations: ['Journalism', 'Digital Journalism', 'Media Studies'],
+        fee: '₹90K - ₹1.6L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Practical Curriculum', 'Industry Projects', 'Career Services']
+      },
+      {
+        name: 'LPU Online',
+        location: 'Punjab',
+        rating: 4.4,
+        image: '/lpu.png',
+        specializations: ['Journalism & Mass Communication', 'Advertising & PR'],
+        fee: '₹80K - ₹1.4L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Affordable', 'Workshops', 'Career Guidance']
+      }
+    ]
+  },
   'mcom-online': {
     title: 'M.Com Online',
     subtitle: 'Master of Commerce',
@@ -291,6 +491,67 @@ const courseData = {
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Live Classes', 'Research Focus', 'Career Support']
+      }
+    ]
+  },
+  'majmc-online': {
+    title: 'MAJMC Online',
+    subtitle: 'Master of Arts in Journalism & Mass Communication',
+    description: 'Master journalism and mass communication with industry-focused curricula, practical projects, and expert mentorship from top online universities.',
+    duration: '2 Years',
+    fee: '₹90K - ₹2.2L',
+    eligibility: 'Graduation in any discipline with 50% marks',
+    features: [
+      'Digital journalism & new media focus',
+      'PR, advertising and media research',
+      'Live/recorded classes and workshops',
+      'Portfolio-driven capstone projects',
+      'Career and placement support'
+    ],
+    universities: [
+      {
+        name: 'Amity University',
+        location: 'Noida, Uttar Pradesh',
+        rating: 4.6,
+        image: '/amity.png',
+        specializations: ['Digital Media', 'Advertising & PR', 'Broadcast Journalism'],
+        fee: '₹1.2L - ₹2.0L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Live Classes', 'Industry Mentors', 'Portfolio Guidance']
+      },
+      {
+        name: 'NMIMS',
+        location: 'Mumbai, Maharashtra',
+        rating: 4.7,
+        image: '/nmims.png',
+        specializations: ['Mass Communication', 'Public Relations', 'Advertising Management'],
+        fee: '₹1.4L - ₹2.2L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Industry Connect', 'Placement Assistance', 'Experienced Faculty']
+      },
+      {
+        name: 'Jain University',
+        location: 'Bangalore, Karnataka',
+        rating: 4.5,
+        image: '/jain.png',
+        specializations: ['Journalism', 'Digital Journalism', 'Media Studies'],
+        fee: '₹1.0L - ₹1.8L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Practical Curriculum', 'Industry Projects', 'Career Services']
+      },
+      {
+        name: 'LPU Online',
+        location: 'Punjab',
+        rating: 4.4,
+        image: '/lpu.png',
+        specializations: ['Journalism & Mass Communication', 'Advertising & PR'],
+        fee: '₹90K - ₹1.6L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Affordable', 'Workshops', 'Career Guidance']
       }
     ]
   }
