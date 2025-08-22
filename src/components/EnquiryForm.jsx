@@ -61,42 +61,39 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
         .string()
         .matches(/^\d{10}$/, { message: 'Enter 10 digit phone number', excludeEmptyString: true })
         .required('Phone number is required'),
-      // city is required only for videoCall and homeDemo
+      // city is required for all form types
       city: yup.string().trim().required('City is required'),
       // university required across all three schemas
       university: yup.string().trim().required('University is required'),
       program: yup.string().trim().required('Program is required'),
       message: yup.string().trim(),
-      qualification: yup.string().trim().required('Qualification is required'), // Updated validation
-      experience: yup.string().trim().optional(),
+      qualification: yup.string().trim().required('Qualification is required'),
+      otherQualification: yup.string().trim().when('qualification', {
+        is: 'Other',
+        then: (schema) => schema.required('Please specify your qualification'),
+        otherwise: (schema) => schema.optional(),
+      }),
+      experience: yup.string().trim().optional(), // Experience is optional
       preferredDate: yup.string().trim().optional(),
       preferredTime: yup.string().trim().optional(),
       address: yup.string().trim().optional(),
     };
 
-    if (formType == 'getStarted' || formType === 'general') {
-      // Qualification is already required in base schema
-      // Make city and university optional for smoother first contact
-      base.city = yup.string().trim().optional();
-      base.university = yup.string().trim().optional();
-    }
     if (formType === 'videoCall') {
       base.preferredDate = yup.string().trim().required('Preferred date is required');
       base.preferredTime = yup.string().trim().required('Preferred time is required');
-      base.city = yup.string().trim().required('City is required');
-      // phone is optional for video call per backend
-      base.phone = yup.string().matches(/^\d{10}$/, { message: 'Enter 10 digit phone number', excludeEmptyString: true }).optional();
-      // Qualification is not required for videoCall
-      base.qualification = yup.string().trim().optional();
+      // phone is required for video call
+      base.phone = yup.string().matches(/^\d{10}$/, { message: 'Enter 10 digit phone number', excludeEmptyString: true }).required('Phone number is required');
+      // Qualification is required for videoCall
+      base.qualification = yup.string().trim().required('Qualification is required');
     }
     if (formType === 'homeDemo') {
       base.preferredDate = yup.string().trim().required('Preferred date is required');
       base.preferredTime = yup.string().trim().required('Preferred time is required');
       base.address = yup.string().trim().required('Full address is required');
-      base.city = yup.string().trim().required('City is required');
       // phone remains required
-      // Qualification is not required for homeDemo
-      base.qualification = yup.string().trim().optional();
+      // Qualification is required for homeDemo
+      base.qualification = yup.string().trim().required('Qualification is required');
     }
 
     return yup.object(base);
@@ -113,6 +110,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
       program: defaultProgram || program || '',
       message: '',
       qualification: '',
+      otherQualification: '',
       experience: '',
       preferredDate: '',
       preferredTime: '',
@@ -143,9 +141,9 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
           name: values.name,
           email: values.email,
           phone: values.phone,
-          city: values.city || city || '',
-          university: values.university || selectedUniversity || '',
-          course: values.program || program || '',
+          city: city || values.city || '',
+          university: selectedUniversity || values.university || '',
+          course: program || values.program || '',
           preferredDate: values.preferredDate || '',
           preferredTime: values.preferredTime || '',
           message: values.message || ''
@@ -157,9 +155,9 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
           name: values.name,
           email: values.email,
           phone: values.phone,
-          city: values.city || city || '',
-          university: values.university || selectedUniversity || '',
-          program: values.program || program || '',
+          city: city || values.city || '',
+          university: selectedUniversity || values.university || '',
+          program: program || values.program || '',
           preferredDate: values.preferredDate || '',
           preferredTime: values.preferredTime || '',
           fullAddress: values.address || '',
@@ -172,9 +170,10 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
           name: values.name,
           email: values.email,
           phone: values.phone,
-          course: values.program || program || '',
-          university: values.university || selectedUniversity || '',
-          qualification: values.qualification || '',
+          city: city || values.city || '',
+          course: program || values.program || '',
+          university: selectedUniversity || values.university || '',
+          qualification: values.qualification === 'Other' ? values.otherQualification || '' : values.qualification || '',
           experience: values.experience || '',
           message: values.message || ''
         };
@@ -220,7 +219,9 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-1.5">
-          <Label htmlFor="name">Full Name *</Label>
+          <Label htmlFor="name" className="flex items-center gap-1">
+            Full Name <span className="text-red-500">*</span>
+          </Label>
           <div className="relative">
             <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
             <Input id="name" placeholder="Your name" className="pl-10" aria-invalid={!!formState.errors.name} {...register('name')} />
@@ -228,7 +229,9 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
           </div>
         </div>
         <div className="space-y-1.5">
-          <Label htmlFor="phone">Phone *</Label>
+          <Label htmlFor="phone" className="flex items-center gap-1">
+            Phone <span className="text-red-500">*</span>
+          </Label>
           <div className="relative">
             <FaPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
             <Input id="phone" placeholder="Your phone" className="pl-10" aria-invalid={!!formState.errors.phone} {...register('phone')} />
@@ -239,7 +242,9 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-1.5">
-          <Label htmlFor="email">Email *</Label>
+          <Label htmlFor="email" className="flex items-center gap-1">
+            Email <span className="text-red-500">*</span>
+          </Label>
           <div className="relative">
             <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
             <Input id="email" type="email" placeholder="you@example.com" className="pl-10" aria-invalid={!!formState.errors.email} {...register('email')} />
@@ -249,7 +254,9 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
         
         {/* City Field - Always shown */}
         <div className="space-y-1.5">
-          <Label htmlFor="city">City *</Label>
+          <Label htmlFor="city" className="flex items-center gap-1">
+            City <span className="text-red-500">*</span>
+          </Label>
           <div className="relative">
             <FaMapMarkerAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
             <Select value={city} onValueChange={onCityChange}>
@@ -270,7 +277,9 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-1.5">
-          <Label>University</Label>
+          <Label className="flex items-center gap-1">
+            University <span className="text-red-500">*</span>
+          </Label>
           <div className="relative">
             <FaUniversity className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
             <Select value={selectedUniversity} onValueChange={onUniversityChange}>
@@ -289,7 +298,9 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
         </div>
         
         <div className="space-y-1.5">
-          <Label>Program</Label>
+          <Label className="flex items-center gap-1">
+            Program <span className="text-red-500">*</span>
+          </Label>
           <div className="relative">
             <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
             <Select value={program} onValueChange={onProgramChange}>
@@ -307,7 +318,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
                 <SelectItem value="BA">BA</SelectItem>
               </SelectContent>
             </Select>
-            {(formType === 'getStarted' || formType === 'general') && formState.errors.program && (
+            {formState.errors.program && (
               <p className="text-red-600 text-xs mt-1">{formState.errors.program.message}</p>
             )}
           </div>
@@ -318,33 +329,96 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
       {(formType === 'getStarted' || formType === 'general') && (
         <div className="grid grid-cols-1 gap-4">
           <div className="space-y-1.5">
-            <Label htmlFor="qualification">Highest Qualification *</Label>
-            <Input 
-              id="qualification" 
-              placeholder="e.g., Senior Secondary (Arts)" 
-              className="w-full" 
-              aria-invalid={!!formState.errors.qualification}
-              {...register('qualification')} 
-            />
+            <Label htmlFor="qualification" className="flex items-center gap-1">
+              Highest Qualification <span className="text-red-500">*</span>
+            </Label>
+            <div className="relative">
+              <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+              <Select value={getValues('qualification') || ''} onValueChange={(value) => setValue('qualification', value, { shouldValidate: true })}>
+                <SelectTrigger className="pl-10">
+                  <SelectValue placeholder="Select your qualification" />
+                </SelectTrigger>
+                <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
+                  <SelectItem value="12th">12th (Senior Secondary)</SelectItem>
+                  <SelectItem value="Diploma">Diploma</SelectItem>
+                  <SelectItem value="Graduate">Graduate (Bachelor's Degree)</SelectItem>
+                  <SelectItem value="Post Graduate">Post Graduate (Master's Degree)</SelectItem>
+                  <SelectItem value="Other">Other</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
             {formState.errors.qualification && (
               <p className="text-red-600 text-xs mt-1">{formState.errors.qualification.message}</p>
             )}
           </div>
+          
+          {/* Show input field when "Other" is selected */}
+          {getValues('qualification') === 'Other' && (
+            <div className="space-y-1.5">
+              <Label htmlFor="otherQualification" className="flex items-center gap-1">
+                Specify Qualification <span className="text-red-500">*</span>
+              </Label>
+              <Input 
+                id="otherQualification" 
+                placeholder="Please specify your qualification" 
+                className="w-full" 
+                aria-invalid={!!formState.errors.otherQualification}
+                {...register('otherQualification')} 
+              />
+              {formState.errors.otherQualification && (
+                <p className="text-red-600 text-xs mt-1">{formState.errors.otherQualification.message}</p>
+              )}
+            </div>
+          )}
+          
           <div className="space-y-1.5">
-            <Label htmlFor="experience">Experience</Label>
+            <Label htmlFor="experience">Experience (Optional)</Label>
             <Textarea id="experience" placeholder="Describe your relevant experience (optional)" rows={3} {...register('experience')} />
+          </div>
+        </div>
+      )}
+
+      {/* Qualification field for videoCall and homeDemo */}
+      {(formType === 'videoCall' || formType === 'homeDemo') && (
+        <div className="grid grid-cols-1 gap-4">
+          <div className="space-y-1.5">
+            <Label htmlFor="qualification" className="flex items-center gap-1">
+              Highest Qualification <span className="text-red-500">*</span>
+            </Label>
+            <div className="relative">
+              <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+              <Select value={getValues('qualification') || ''} onValueChange={(value) => setValue('qualification', value, { shouldValidate: true })}>
+                <SelectTrigger className="pl-10">
+                  <SelectValue placeholder="Select your qualification" />
+                </SelectTrigger>
+                <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
+                  <SelectItem value="12th">12th (Senior Secondary)</SelectItem>
+                  <SelectItem value="Graduate">Graduate (Bachelor's Degree)</SelectItem>
+                  <SelectItem value="Post Graduate">Post Graduate (Master's Degree)</SelectItem>
+                  <SelectItem value="Diploma">Diploma</SelectItem>
+                  <SelectItem value="Other">Other</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            {formState.errors.qualification && (
+              <p className="text-red-600 text-xs mt-1">{formState.errors.qualification.message}</p>
+            )}
           </div>
         </div>
       )}
       {formType === "videoCall" && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-1.5">
-            <Label htmlFor="preferredDate">Preferred Date</Label>
+            <Label htmlFor="preferredDate" className="flex items-center gap-1">
+              Preferred Date <span className="text-red-500">*</span>
+            </Label>
             <Input id="preferredDate" type="date" className="w-full" aria-invalid={!!formState.errors.preferredDate} {...register('preferredDate')} />
             {formState.errors.preferredDate && (<p className="text-red-600 text-xs mt-1">{formState.errors.preferredDate.message}</p>)}
           </div>
           <div className="space-y-1.5">
-            <Label htmlFor="preferredTime">Preferred Time</Label>
+            <Label htmlFor="preferredTime" className="flex items-center gap-1">
+              Preferred Time <span className="text-red-500">*</span>
+            </Label>
             <Input id="preferredTime" type="time" className="w-full" aria-invalid={!!formState.errors.preferredTime} {...register('preferredTime')} />
             {formState.errors.preferredTime && (<p className="text-red-600 text-xs mt-1">{formState.errors.preferredTime.message}</p>)}
           </div>
@@ -354,17 +428,23 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
       {formType === "homeDemo" && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-1.5">
-            <Label htmlFor="preferredDate">Preferred Date</Label>
+            <Label htmlFor="preferredDate" className="flex items-center gap-1">
+              Preferred Date <span className="text-red-500">*</span>
+            </Label>
             <Input id="preferredDate" type="date" className="w-full" aria-invalid={!!formState.errors.preferredDate} {...register('preferredDate')} />
             {formState.errors.preferredDate && (<p className="text-red-600 text-xs mt-1">{formState.errors.preferredDate.message}</p>)}
           </div>
           <div className="space-y-1.5">
-            <Label htmlFor="preferredTime">Preferred Time</Label>
+            <Label htmlFor="preferredTime" className="flex items-center gap-1">
+              Preferred Time <span className="text-red-500">*</span>
+            </Label>
             <Input id="preferredTime" type="time" className="w-full" aria-invalid={!!formState.errors.preferredTime} {...register('preferredTime')} />
             {formState.errors.preferredTime && (<p className="text-red-600 text-xs mt-1">{formState.errors.preferredTime.message}</p>)}
           </div>
           <div className="md:col-span-2 space-y-1.5">
-            <Label htmlFor="address">Full Address</Label>
+            <Label htmlFor="address" className="flex items-center gap-1">
+              Full Address <span className="text-red-500">*</span>
+            </Label>
             <Textarea id="address" placeholder="Please provide your complete address for the home demo" rows={3} aria-invalid={!!formState.errors.address} {...register('address')} />
             {formState.errors.address && (<p className="text-red-600 text-xs mt-1">{formState.errors.address.message}</p>)}
           </div>
@@ -372,13 +452,13 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
       )}
 
       <div className="space-y-1.5">
-        <Label htmlFor="message">Message</Label>
+        <Label htmlFor="message">Message (Optional)</Label>
         <Textarea 
           id="message" 
           placeholder={
             formType === "homeDemo" ? "Any specific requirements for the home demo" :
             formType === "videoCall" ? "Any specific topics you'd like to discuss" :
-            "Tell us more about your interest"
+            "Tell us more about your interest (optional)"
           } 
           rows={4} 
           {...register('message')}

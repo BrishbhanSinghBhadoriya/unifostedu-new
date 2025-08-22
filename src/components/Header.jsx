@@ -23,6 +23,7 @@ const universities = [
     { name: "Chandigarh University Online", link: "/chandigarh", icon: FaUniversity },
     { name: "Jain University", link: "/jain", icon: FaUniversity },
     { name: "Dr. D Y Patil", link: "/dypatil", icon: FaUniversity },
+    { name: "UPES", link: "/upes", icon: FaUniversity },
     { name: "OP Jindal University", link: "/opjindal", icon: FaUniversity },
     { name: "Shoolini University Online", link: "/shoolini", icon: FaUniversity },
     { name: "Vivekananda Global University Online", link: "/vgu", icon: FaUniversity },
