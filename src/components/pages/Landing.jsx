@@ -12,7 +12,7 @@ import {
   FaClock, FaGlobe, FaUserTie, FaShieldAlt, FaComments, FaCompass,
   FaRocket, FaAward, FaCheckCircle, FaPlay, FaSearch, FaMapMarkerAlt,
   FaPhone, FaEnvelope, FaWhatsapp, FaHeadset, FaLightbulb, FaTarget,
-  FaCalendar, FaCalendarAlt
+  FaCalendar, FaCalendarAlt, FaChevronLeft, FaChevronRight
 } from "react-icons/fa";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -74,15 +74,15 @@ const features = [
 ];
 
 const colleges = [
-  { name: "Amity University Online", ranking: "NIRF-29", fee: "₹1.2L - ₹2.5L", logo: "/amity.png", rating: 4.8 },
-  { name: "Manipal University Online", ranking: "NIRF-73", fee: "₹1.5L - ₹3L", logo: "/manipal.png", rating: 4.9 },
-  { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹90K - ₹2L", logo: "/lpu.png", rating: 4.7 },
-  { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.8L - ₹3.2L", logo: "/upes.png", rating: 4.6 },
-  { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹2L - ₹3.5L", logo: "/nmims.png", rating: 4.9 },
-  { name: "Sharda University Online", ranking: "NIRF-", fee: "₹80K - ₹1.5L", logo: "/sharda.png", rating: 4.5 },
-  { name: "Dr. DY Patil Online", ranking: "NIRF-", fee: "₹1.1L - ₹2.2L", logo: "/dypatil.png", rating: 4.6 },
-  { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.3L - ₹2.6L", logo: "/jain.png", rating: 4.7 },
-  { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹1.3L - ₹2.6L", logo: "/jain.png", rating: 4.7 }
+  { name: "Amity University Online", ranking: "NIRF-29", fee: "₹1.2L - ₹2.5L", logo: "/amitylogo.png", rating: 4.8 },
+  { name: "Manipal University Online", ranking: "NIRF-73", fee: "₹1.5L - ₹3L", logo: "/manipallogo.png", rating: 4.9 },
+  { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹90K - ₹2L", logo: "/lpulogo.png", rating: 4.7 },
+  { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.8L - ₹3.2L", logo: "/upeslogo.png", rating: 4.6 },
+  { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹2L - ₹3.5L", logo: "/nmimslogo.png", rating: 4.9 },
+  { name: "Sharda University Online", ranking: "NIRF-", fee: "₹80K - ₹1.5L", logo: "/shardalogo.png", rating: 4.5 },
+  { name: "Dr. DY Patil Online", ranking: "NIRF-", fee: "₹1.1L - ₹2.2L", logo: "/dypatillogo.png", rating: 4.6 },
+  { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.3L - ₹2.6L", logo: "/jainlogo.png", rating: 4.7 },
+  { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹1.3L - ₹2.6L", logo: "/cu-logo.png", rating: 4.7 }
 ];
 
 const cities = [
@@ -101,6 +101,158 @@ const accreditationLogos = [
   '/iacbe.png', '/aacsb.png', '/iqas.png', '/wes.png', '/unwto.png', '/nabh.png'
 ];
 
+// University logos for the slider
+const universityLogos = [
+  { name: "Amity University", logo: "/amitylogo.jpg" },
+  { name: "Manipal University", logo: "/manipallogo.jpg" },
+  { name: "Lovely Professional University", logo: "/lpulogo.png" },
+  { name: "UPES University", logo: "/upeslogo.png" },
+  { name: "NMIMS University", logo: "/nmimslogo.jpg" },
+  { name: "Sharda University", logo: "/shardalogo.png" },
+  { name: "DY Patil University", logo: "/dypatillogo.png" },
+  { name: "Jain University", logo: "/jainlogo.png" },
+  { name: "Chandigarh University", logo: "/cu-logo.png" },
+  { name: "Vivekananda Global University", logo: "/vgulogo.png" },
+  { name: "Shoolini University", logo: "/shoolinilogo.png" },
+  { name: "OP Jindal University", logo: "/opjindallogo.png" },
+  { name: "eCornell University", logo: "/ecornellogo.png" },
+  { name: "Edgewood University", logo: "/edgewoodlogo.png" },
+  { name: "Rushford University", logo: "/rushfordlogo.png" },
+  { name: "Deakin University", logo: "/deakinlogo.png" },
+  { name: "Golden Gate University", logo: "/goldengatelogo.png" },
+  { name: "IIM Nagpur", logo: "/iimnagpurlogo.png" },
+  { name: "IIM Ahmedabad", logo: "/iimalogo.png" },
+  { name: "IIM Udaipur", logo: "/iimulogo.png" },
+  { name: "IIM Ranchi", logo: "/iimrlogo.png" },
+  { name: "IIT Roorkee", logo: "/iitrlogo.png" },
+  { name: "IIT Guwahati", logo: "/iitglogo.png" },
+  { name: "IIM Calcutta", logo: "/iimclogo.png" },
+  { name: "IIM Bangalore", logo: "/iimlogo.png" },
+  { name: "Liverpool University", logo: "/liverpoollogo.png" },
+  { name: "IMT University", logo: "/imtlogo.png" },
+  { name: "IIT Delhi", logo: "/iitdlogo.png" },
+  { name: "Mundra University", logo: "/mundralogo.png" },
+  { name: "IIM Kozhikode", logo: "/iimklogo.png" },
+  { name: "IIIT Bangalore", logo: "/iiitblogo.png" },
+  { name: "Andhra University", logo: "/andhralogo.png" },
+  { name: "Kurukshetra University", logo: "/kurkshetralogo.jpg" },
+  { name: "Subharti University", logo: "/subhartilogo.jpg" },
+  { name: "DY Patil Mumbai", logo: "/dypatilmumbailogo.png" },
+  { name: "Amrita University", logo: "/amritalogo.png" }
+];
+
+// University Logo Slider Component
+const UniversityLogoSlider = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [itemsToShow, setItemsToShow] = useState(6);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setItemsToShow(2);
+      } else if (window.innerWidth < 768) {
+        setItemsToShow(3);
+      } else if (window.innerWidth < 1024) {
+        setItemsToShow(4);
+      } else if (window.innerWidth < 1280) {
+        setItemsToShow(5);
+      } else {
+        setItemsToShow(6);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      (prevIndex + 1) % (universityLogos.length - itemsToShow + 1)
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? (universityLogos.length - itemsToShow) : prevIndex - 1
+    );
+  };
+
+  return (
+    <section className="py-12 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div 
+          className="text-center mb-10"
+          data-aos="fade-up"
+        >
+        </motion.div>
+
+        <div className="relative">
+          {/* Navigation Buttons */}
+          <button 
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white rounded-full p-2 shadow-md hover:shadow-lg transition-all"
+            aria-label="Previous slide"
+          >
+            <FaChevronLeft className="h-5 w-5 text-[#001e3c]" />
+          </button>
+          
+          <button 
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white rounded-full p-2 shadow-md hover:shadow-lg transition-all"
+            aria-label="Next slide"
+          >
+            <FaChevronRight className="h-5 w-5 text-[#001e3c]" />
+          </button>
+
+          {/* Slider Container */}
+          <div className="overflow-hidden">
+            <motion.div 
+              className="flex gap-8"
+              animate={{ x: `-${currentIndex * (100 / itemsToShow)}%`}}
+              transition={{ type: "spring", damping: 20, stiffness: 100 }}
+            >
+              {universityLogos.map((university, index) => (
+                <motion.div
+                  key={index}
+                  className="flex-shrink-0 flex items-center justify-center"
+                  style={{ width: `${100 / itemsToShow}%` }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <div className="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all duration-300 h-32 w-full flex items-center justify-center">
+                    <img 
+                      src={university.logo} 
+                      alt={university.name} 
+                      className="max-h-16 max-w-full object-contain"
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center mt-6 gap-2">
+            {Array.from({ length: universityLogos.length - itemsToShow + 1 }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`h-2 rounded-full transition-all ${
+                  index === currentIndex 
+                    ? 'w-6 bg-[#00ffe0]' 
+                    : 'w-2 bg-gray-300'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Landing = () => {
   useEffect(() => {
     AOS.init({
@@ -111,7 +263,7 @@ const Landing = () => {
 
   const router = useRouter();
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
-  const [modalType, setModalType] = useState("getStarted"); // "getStarted", "videoCall", "homeDemo"
+  const [modalType, setModalType] = useState("getStarted");
   const [selectedUniversities, setSelectedUniversities] = useState([]);
   
   const slugify = (name) => name.toLowerCase().replace(/\s+/g, '-');
