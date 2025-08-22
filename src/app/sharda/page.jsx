@@ -134,6 +134,7 @@ const Sharda = () => {
             <p className="text-gray-700 text-lg">
               Sharda University Online is a platform for distance and online education launched by Sharda University in 2023. It offers a variety of undergraduate and postgraduate courses, including online BA, MBA, MCA, BBA, and BCA programs. The platform emphasizes flexibility, accessibility, and affordability, allowing students to pursue their education while balancing work and other commitments. 
             </p>
+            <h4 className="text-2xl md:text-3xl font-bold text-blue-800">Private University in Greater Noida, Uttar Pradesh</h4>
           </div>
           <div className="md:w-1/2">
             <img src="/sharda.png" alt="Sharda University" className="w-full rounded-xl shadow-lg" />
@@ -219,7 +220,7 @@ const Sharda = () => {
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
-            <img src="/certificateshardaonline.webp" alt="certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <img src="/certificateshardaonline.jpg" alt="certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
           </div>
           <div className="flex-1 text-white">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">Online Degree from Sharda Online University</h2>

@@ -1,5 +1,7 @@
+'use client';
 import React from 'react';
-
+// import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import {
   FaCheckCircle,
   FaFileAlt,
@@ -8,14 +10,16 @@ import {
   FaCertificate,
   FaBuilding,
 } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
 
-// Reusable Enquire Button
+//Reusable Enquire Button
 const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
-  //const navigate = useNavigate();
-  const university = "Jain University";
+// const navigate = useNavigate();
+const router = useRouter();  
+const university = "Jain University";
 
   const handleClick = () => {
-   // navigate(`/enquiry?university=${encodeURIComponent(university)}&course=${encodeURIComponent(course)}`);
+     router.push(`/enquiry?university=${encodeURIComponent(university)}&course=${encodeURIComponent(course)}`);
   };
 
   return (
@@ -87,7 +91,7 @@ const Manipal = () => {
       course: "Master of Computer Applications (MCA)",
       duration: "2 Years",
       eligibility: "50% Graduation",
-      fees: "40k/Semester",
+      fees: "1,58,000",
       specialization: "DevOps, Natural Language Processing & Large Language Models Development, Computer Science and IT, Data Analytics, Cyber Security, Full Stack Development, Cloud Computing, Data Science, Artificial Intelligence" , 
 
       image: "/mca1.jpeg",
@@ -96,11 +100,27 @@ const Manipal = () => {
       course: "Master of Commerce (M.Com)",
       duration: "2 Years",
       eligibility: "Graduation in Commerce",
-      fees: "27.5k /Semester",
+      fees: "1,08,000",
       specialization: "Accounting and Finance, Professional Accounting and Finance (Accredited by CPA, US)", 
       image: "/m.com.jpeg",
     },
+    {
+      course: "Master of Science (M.Sc)",
+      duration: "2 Years",
+      eligibility: "Graduation ",
+      fees: "2,80,000",
+      specialization: "Data Science, Business Analytics",
+      image: "/m.com.jpeg",
+    },
 
+    {
+      course: "Master of Arts (MA)",
+      duration: "2 Years",
+      eligibility: "Graduation",
+      fees: "1,40,000",
+      specialization: " MA( Journalism and Mass Communication, ",
+      image: "/ma1.jpeg",
+    },
   ];
 
 
@@ -108,10 +128,10 @@ const Manipal = () => {
 
   return (
     <>
-      
+      {/* <Helmet>
         <title>Manipal University Online - Courses, Fees & Admissions</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-   
+      </Helmet> */}
 
       {/* Intro Section */}
       <section className="py-16 bg-white px-6 font-[Inter]">
@@ -146,9 +166,9 @@ const Manipal = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">Undergraduate Courses</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {/* {ugCourses.map((item, index) => (
+            {ugCourses.map((item, index) => (
               <EnquireCard key={index} {...item} />
-            ))} */}
+            ))}
           </div>
         </div>
       </section>
@@ -158,9 +178,9 @@ const Manipal = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">Postgraduate Courses</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {/* {pgCourses.map((item, index) => (
+            {pgCourses.map((item, index) => (
               <EnquireCard key={index} {...item} />
-            ))} */}
+            ))}
           </div>
         </div>
       </section>
@@ -302,7 +322,7 @@ const Manipal = () => {
       <section className="bg-[#002d5f] text-white py-16 px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2">
-            <img src="/muj-certificate.png" alt="Certificate" className="rounded-lg shadow-lg w-full" />
+            <img src="/muj-certi.jpeg" alt="Certificate" className="rounded-lg shadow-lg w-full" />
           </div>
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Recognized Online Degree from Manipal University</h2>

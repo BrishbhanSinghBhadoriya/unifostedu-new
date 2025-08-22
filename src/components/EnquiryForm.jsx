@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
@@ -8,6 +8,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { FaUser, FaPhone, FaEnvelope, FaGraduationCap, FaPaperPlane, FaUniversity, FaMapMarkerAlt } from 'react-icons/fa';
 import toast from 'react-hot-toast';
+import { enquiryAPI } from '@/lib/axios';
+import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
 
 export default function EnquiryForm({ universityName, defaultProgram = 'MBA', onSubmitted, formType = "general" }) {
   const [loading, setLoading] = useState(false);
@@ -32,6 +36,14 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
     'NMIMS (Narsee Monjee)'
   ];
 
+  const allUniversities = useMemo(() => {
+    let list = [...universities];
+    if (universityName && !list.includes(universityName)) {
+      list = [universityName, ...list];
+    }
+    return list;
+  }, [universities, universityName]);
+
   // Popular cities for dropdown
   const popularCities = [
     'Delhi', 'Mumbai', 'Bangalore', 'Chennai', 'Hyderabad', 
@@ -40,32 +52,164 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
     'Kochi', 'Coimbatore', 'Visakhapatnam', 'Patna', 'Bhubaneswar'
   ];
 
-  async function handleSubmit(e) {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    const payload = Object.fromEntries(formData.entries());
-    
+  const schema = useMemo(() => {
+    const base = {
+      name: yup.string().trim().required('Name is required').min(2, 'Name must be at least 2 characters long'),
+      email: yup.string().trim().email('Please provide a valid email address').required('Email is required'),
+      // phone defaults to required; overridden as optional for videoCall below
+      phone: yup
+        .string()
+        .matches(/^\d{10}$/, { message: 'Enter 10 digit phone number', excludeEmptyString: true })
+        .required('Phone number is required'),
+      // city is required only for videoCall and homeDemo
+      city: yup.string().trim().required('City is required'),
+      // university required across all three schemas
+      university: yup.string().trim().required('University is required'),
+      program: yup.string().trim().required('Program is required'),
+      message: yup.string().trim(),
+      qualification: yup.string().trim().required('Qualification is required'), // Updated validation
+      experience: yup.string().trim().optional(),
+      preferredDate: yup.string().trim().optional(),
+      preferredTime: yup.string().trim().optional(),
+      address: yup.string().trim().optional(),
+    };
+
+    if (formType == 'getStarted' || formType === 'general') {
+      // Qualification is already required in base schema
+      // Make city and university optional for smoother first contact
+      base.city = yup.string().trim().optional();
+      base.university = yup.string().trim().optional();
+    }
+    if (formType === 'videoCall') {
+      base.preferredDate = yup.string().trim().required('Preferred date is required');
+      base.preferredTime = yup.string().trim().required('Preferred time is required');
+      base.city = yup.string().trim().required('City is required');
+      // phone is optional for video call per backend
+      base.phone = yup.string().matches(/^\d{10}$/, { message: 'Enter 10 digit phone number', excludeEmptyString: true }).optional();
+      // Qualification is not required for videoCall
+      base.qualification = yup.string().trim().optional();
+    }
+    if (formType === 'homeDemo') {
+      base.preferredDate = yup.string().trim().required('Preferred date is required');
+      base.preferredTime = yup.string().trim().required('Preferred time is required');
+      base.address = yup.string().trim().required('Full address is required');
+      base.city = yup.string().trim().required('City is required');
+      // phone remains required
+      // Qualification is not required for homeDemo
+      base.qualification = yup.string().trim().optional();
+    }
+
+    return yup.object(base);
+  }, [formType]);
+
+  const { register, handleSubmit, formState, setValue, getValues } = useForm({
+    resolver: yupResolver(schema),
+    defaultValues: {
+      name: '',
+      email: '',
+      phone: '',
+      city: '',
+      university: universityName || '',
+      program: defaultProgram || program || '',
+      message: '',
+      qualification: '',
+      experience: '',
+      preferredDate: '',
+      preferredTime: '',
+      address: '',
+    },
+    mode: 'onTouched',
+  });
+
+  // Sync local select states into RHF values
+  const onCityChange = (val) => {
+    setCity(val);
+    setValue('city', val, { shouldValidate: true });
+  };
+  const onUniversityChange = (val) => {
+    setSelectedUniversity(val);
+    setValue('university', val, { shouldValidate: true });
+  };
+  const onProgramChange = (val) => {
+    setProgram(val);
+    setValue('program', val, { shouldValidate: true });
+  };
+
+  const onSubmit = async (values) => {
     try {
       setLoading(true);
-      // Simulate submit
-      await new Promise((r) => setTimeout(r, 900));
-      toast.success('Enquiry submitted successfully!');
+      if (formType === 'videoCall') {
+        const requestBody = {
+          name: values.name,
+          email: values.email,
+          phone: values.phone,
+          city: values.city || city || '',
+          university: values.university || selectedUniversity || '',
+          course: values.program || program || '',
+          preferredDate: values.preferredDate || '',
+          preferredTime: values.preferredTime || '',
+          message: values.message || ''
+        };
+        await enquiryAPI.videoCall(requestBody);
+        toast.success('Video call booked successfully!');
+      } else if (formType === 'homeDemo') {
+        const requestBody = {
+          name: values.name,
+          email: values.email,
+          phone: values.phone,
+          city: values.city || city || '',
+          university: values.university || selectedUniversity || '',
+          program: values.program || program || '',
+          preferredDate: values.preferredDate || '',
+          preferredTime: values.preferredTime || '',
+          fullAddress: values.address || '',
+          message: values.message || ''
+        };
+        await enquiryAPI.homeDemo(requestBody);
+        toast.success('Home demo scheduled successfully!');
+      } else {
+        const requestBody = {
+          name: values.name,
+          email: values.email,
+          phone: values.phone,
+          course: values.program || program || '',
+          university: values.university || selectedUniversity || '',
+          qualification: values.qualification || '',
+          experience: values.experience || '',
+          message: values.message || ''
+        };
+        await enquiryAPI.general(requestBody);
+        toast.success('Enquiry submitted successfully!');
+      }
       onSubmitted && onSubmitted();
-      const msg = form.querySelector('#message');
-      if (msg && typeof msg.blur === 'function') msg.blur();
     } catch (err) {
-      toast.error('Something went wrong. Please try again.');
+      const data = err?.response?.data;
+      const parsedMessage =
+        (data && typeof data === 'object' && (data.message || data.error)) ||
+        (Array.isArray(data?.errors)
+          ? (typeof data.errors[0] === 'string'
+              ? data.errors[0]
+              : (data.errors[0]?.msg || data.errors[0]?.message))
+          : undefined) ||
+        (typeof data === 'string' ? data : undefined) ||
+        err?.message;
+
+      const errorMessage = (formType === 'videoCall' || formType === 'getStarted')
+        ? (parsedMessage || 'Something went wrong. Please try again.')
+        : 'Something went wrong. Please try again.';
+
+      toast.error(errorMessage);
     } finally {
       setLoading(false);
     }
-  }
+  };
 
   return (
-    <form className="space-y-5" onSubmit={handleSubmit}>
-      <input type="hidden" name="program" value={program} />
-      <input type="hidden" name="university" value={selectedUniversity} />
-      <input type="hidden" name="formType" value={formType} />
+    <form className="space-y-5 relative z-[20002]" onSubmit={handleSubmit(onSubmit)}>
+      <input type="hidden" {...register('program')} value={program} readOnly />
+      <input type="hidden" {...register('university')} value={selectedUniversity} readOnly />
+      <input type="hidden" value={formType} readOnly />
+      <input type="hidden" {...register('city')} value={city} readOnly />
       
       {universityName && (
         <div className="rounded-lg p-4 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] text-[#001e3c]">
@@ -79,14 +223,16 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
           <Label htmlFor="name">Full Name *</Label>
           <div className="relative">
             <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-            <Input id="name" name="name" placeholder="Your name" required className="pl-10" />
+            <Input id="name" placeholder="Your name" className="pl-10" aria-invalid={!!formState.errors.name} {...register('name')} />
+            {formState.errors.name && (<p className="text-red-600 text-xs mt-1">{formState.errors.name.message}</p>)}
           </div>
         </div>
         <div className="space-y-1.5">
           <Label htmlFor="phone">Phone *</Label>
           <div className="relative">
             <FaPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-            <Input id="phone" name="phone" placeholder="Your phone" required className="pl-10" />
+            <Input id="phone" placeholder="Your phone" className="pl-10" aria-invalid={!!formState.errors.phone} {...register('phone')} />
+            {formState.errors.phone && (<p className="text-red-600 text-xs mt-1">{formState.errors.phone.message}</p>)}
           </div>
         </div>
       </div>
@@ -96,7 +242,8 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
           <Label htmlFor="email">Email *</Label>
           <div className="relative">
             <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-            <Input id="email" name="email" type="email" placeholder="you@example.com" required className="pl-10" />
+            <Input id="email" type="email" placeholder="you@example.com" className="pl-10" aria-invalid={!!formState.errors.email} {...register('email')} />
+            {formState.errors.email && (<p className="text-red-600 text-xs mt-1">{formState.errors.email.message}</p>)}
           </div>
         </div>
         
@@ -104,18 +251,19 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
         <div className="space-y-1.5">
           <Label htmlFor="city">City *</Label>
           <div className="relative">
-            <FaMapMarkerAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-            <Select name="city" value={city} onValueChange={setCity} required>
+            <FaMapMarkerAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+            <Select value={city} onValueChange={onCityChange}>
               <SelectTrigger className="pl-10">
                 <SelectValue placeholder="Select your city" />
               </SelectTrigger>
-              <SelectContent className="z-[1000] max-h-60 overflow-auto">
+              <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
                 {popularCities.map((city) => (
                   <SelectItem key={city} value={city}>{city}</SelectItem>
                 ))}
                 <SelectItem value="other">Other (please specify in message)</SelectItem>
               </SelectContent>
             </Select>
+            {formState.errors.city && (<p className="text-red-600 text-xs mt-1">{formState.errors.city.message}</p>)}
           </div>
         </div>
       </div>
@@ -124,29 +272,31 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
         <div className="space-y-1.5">
           <Label>University</Label>
           <div className="relative">
-            <FaUniversity className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-            <Select value={selectedUniversity} onValueChange={setSelectedUniversity}>
+            <FaUniversity className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+            <Select value={selectedUniversity} onValueChange={onUniversityChange}>
               <SelectTrigger className="pl-10">
                 <SelectValue placeholder="Select university" />
               </SelectTrigger>
-              <SelectContent className="z-[1000] max-h-60 overflow-auto">
-                {universities.map((u) => (
+              <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
+                {allUniversities.map((u) => (
                   <SelectItem key={u} value={u}>{u}</SelectItem>
                 ))}
               </SelectContent>
             </Select>
+            {formState.errors.university && (<p className="text-red-600 text-xs mt-1">{formState.errors.university.message}</p>)}
+
           </div>
         </div>
         
         <div className="space-y-1.5">
           <Label>Program</Label>
           <div className="relative">
-            <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-            <Select value={program} onValueChange={setProgram}>
+            <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+            <Select value={program} onValueChange={onProgramChange}>
               <SelectTrigger className="pl-10">
                 <SelectValue placeholder="Select program" />
               </SelectTrigger>
-              <SelectContent className="z-[1000] max-h-60 overflow-auto">
+              <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
                 <SelectItem value="MBA">MBA</SelectItem>
                 <SelectItem value="MCA">MCA</SelectItem>
                 <SelectItem value="MCOM">M.Com</SelectItem>
@@ -157,30 +307,46 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
                 <SelectItem value="BA">BA</SelectItem>
               </SelectContent>
             </Select>
+            {(formType === 'getStarted' || formType === 'general') && formState.errors.program && (
+              <p className="text-red-600 text-xs mt-1">{formState.errors.program.message}</p>
+            )}
           </div>
         </div>
       </div>
 
       {/* Additional fields for specific form types */}
+      {(formType === 'getStarted' || formType === 'general') && (
+        <div className="grid grid-cols-1 gap-4">
+          <div className="space-y-1.5">
+            <Label htmlFor="qualification">Highest Qualification *</Label>
+            <Input 
+              id="qualification" 
+              placeholder="e.g., Senior Secondary (Arts)" 
+              className="w-full" 
+              aria-invalid={!!formState.errors.qualification}
+              {...register('qualification')} 
+            />
+            {formState.errors.qualification && (
+              <p className="text-red-600 text-xs mt-1">{formState.errors.qualification.message}</p>
+            )}
+          </div>
+          <div className="space-y-1.5">
+            <Label htmlFor="experience">Experience</Label>
+            <Textarea id="experience" placeholder="Describe your relevant experience (optional)" rows={3} {...register('experience')} />
+          </div>
+        </div>
+      )}
       {formType === "videoCall" && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-1.5">
             <Label htmlFor="preferredDate">Preferred Date</Label>
-            <Input 
-              id="preferredDate" 
-              name="preferredDate" 
-              type="date" 
-              className="w-full"
-            />
+            <Input id="preferredDate" type="date" className="w-full" aria-invalid={!!formState.errors.preferredDate} {...register('preferredDate')} />
+            {formState.errors.preferredDate && (<p className="text-red-600 text-xs mt-1">{formState.errors.preferredDate.message}</p>)}
           </div>
           <div className="space-y-1.5">
             <Label htmlFor="preferredTime">Preferred Time</Label>
-            <Input 
-              id="preferredTime" 
-              name="preferredTime" 
-              type="time" 
-              className="w-full"
-            />
+            <Input id="preferredTime" type="time" className="w-full" aria-invalid={!!formState.errors.preferredTime} {...register('preferredTime')} />
+            {formState.errors.preferredTime && (<p className="text-red-600 text-xs mt-1">{formState.errors.preferredTime.message}</p>)}
           </div>
         </div>
       )}
@@ -189,30 +355,18 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-1.5">
             <Label htmlFor="preferredDate">Preferred Date</Label>
-            <Input 
-              id="preferredDate" 
-              name="preferredDate" 
-              type="date" 
-              className="w-full"
-            />
+            <Input id="preferredDate" type="date" className="w-full" aria-invalid={!!formState.errors.preferredDate} {...register('preferredDate')} />
+            {formState.errors.preferredDate && (<p className="text-red-600 text-xs mt-1">{formState.errors.preferredDate.message}</p>)}
           </div>
           <div className="space-y-1.5">
             <Label htmlFor="preferredTime">Preferred Time</Label>
-            <Input 
-              id="preferredTime" 
-              name="preferredTime" 
-              type="time" 
-              className="w-full"
-            />
+            <Input id="preferredTime" type="time" className="w-full" aria-invalid={!!formState.errors.preferredTime} {...register('preferredTime')} />
+            {formState.errors.preferredTime && (<p className="text-red-600 text-xs mt-1">{formState.errors.preferredTime.message}</p>)}
           </div>
           <div className="md:col-span-2 space-y-1.5">
             <Label htmlFor="address">Full Address</Label>
-            <Textarea 
-              id="address" 
-              name="address" 
-              placeholder="Please provide your complete address for the home demo" 
-              rows={3}
-            />
+            <Textarea id="address" placeholder="Please provide your complete address for the home demo" rows={3} aria-invalid={!!formState.errors.address} {...register('address')} />
+            {formState.errors.address && (<p className="text-red-600 text-xs mt-1">{formState.errors.address.message}</p>)}
           </div>
         </div>
       )}
@@ -221,21 +375,22 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
         <Label htmlFor="message">Message</Label>
         <Textarea 
           id="message" 
-          name="message" 
           placeholder={
             formType === "homeDemo" ? "Any specific requirements for the home demo" :
             formType === "videoCall" ? "Any specific topics you'd like to discuss" :
             "Tell us more about your interest"
           } 
           rows={4} 
+          {...register('message')}
         />
         <p className="text-xs text-gray-500">We'll contact you within 24 hours.</p>
       </div>
 
       <Button 
         type="submit" 
+        onClick={handleSubmit(onSubmit)}
         disabled={loading} 
-        className="w-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] font-bold"
+        className="w-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] font-bold relative z-[20002]"
       >
         <FaPaperPlane className="mr-2" />
         {loading ? 'Submitting...' : 

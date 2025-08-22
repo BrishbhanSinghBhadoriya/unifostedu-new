@@ -34,4 +34,26 @@ export const demoAPI = {
   bookDemo: (data) => API.post("/api/enquiry/enquiry", data),
 };
 
+// 🧩 Specific enquiries (absolute URLs as provided)
+export const enquiryAPI = {
+  videoCall: (data) =>
+    axios.post(
+      "https://unifost-backend-ev0y.onrender.com/api/v1/videoCallEnquiry",
+      data,
+      { headers: { "Content-Type": "application/json" } }
+    ),
+  homeDemo: (data) =>
+    axios.post(
+      "https://unifost-backend-ev0y.onrender.com/api/v1/homeDemoEnquiry",
+      data,
+      { headers: { "Content-Type": "application/json" } }
+    ),
+  general: (data) =>
+    axios.post(
+      "https://unifost-backend-ev0y.onrender.com/api/v1/enquiry",
+      data,
+      { headers: { "Content-Type": "application/json" } }
+    ),
+};
+
 export default API;

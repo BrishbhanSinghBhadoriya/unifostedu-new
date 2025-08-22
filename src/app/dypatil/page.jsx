@@ -55,7 +55,7 @@ const Dypatil = () => {
       course: "Master of Computer Applications (MCA)",
       duration: "2 Years",
       fees: "₹1,40,000",
-       specialization: "genral",
+       specialization: "General",
       image: "/mca1.jpeg",
     },
     

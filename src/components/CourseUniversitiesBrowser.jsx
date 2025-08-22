@@ -217,7 +217,21 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle })
                     <DialogHeader>
                       <DialogTitle>Enquiry for {university.name}</DialogTitle>
                     </DialogHeader>
-                    <EnquiryForm universityName={university.name} />
+                    <EnquiryForm 
+                      formType="getStarted"
+                      universityName={university.name}
+                      defaultProgram={(function mapCourse(title){
+                        const t = (title || '').toLowerCase();
+                        if (t.includes('mba')) return 'MBA';
+                        if (t.includes('mca')) return 'MCA';
+                        if (t.includes('bba')) return 'BBA';
+                        if (t.includes('m.com') || t.includes('mcom')) return 'MCOM';
+                        if (t.includes('b.com') || t.includes('bcom')) return 'BCOM';
+                        if (t.includes('ma ' ) || t === 'ma' || t.includes(' master of arts')) return 'MA';
+                        if (t.includes('ba ' ) || t === 'ba' || t.includes(' bachelor of arts')) return 'BA';
+                        return 'MBA';
+                      })(courseTitle)}
+                    />
                   </DialogContent>
                 </Dialog>
               </CardFooter>
