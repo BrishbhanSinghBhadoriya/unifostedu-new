@@ -87,7 +87,7 @@ const Amity = () => {
       duration: "2 Years",
       eligibility: "Graduation",
       fees: "1,99,000 - 2,99,000",
-      specialization: "MBA(Genral, Dual Specilization, Human Resource Analytics, Data Science, Business Analytics, International Finance, Digital Enterpreneurship, Digital Marketing Management, General Management with optional Specialization)",
+      specialization: "MBA(General, Dual Specilization, Human Resource Analytics, Data Science, Business Analytics, International Finance, Digital Enterpreneurship, Digital Marketing Management, General Management with optional Specialization)",
       image: "/mba.jpeg",
     },
     {

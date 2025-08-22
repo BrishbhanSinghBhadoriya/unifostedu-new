@@ -1,6 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import EnquiryForm from "@/components/EnquiryForm";
 import { 
   FaUsers, 
   FaUniversity, 
@@ -23,6 +25,10 @@ import {
 
 
 export default function About() {
+  const [showEnquiryModal, setShowEnquiryModal] = useState(false);
+  const [modalType, setModalType] = useState("getStarted");
+  const openGetStarted = () => { setModalType("getStarted"); setShowEnquiryModal(true); };
+  const openVideoCall = () => { setModalType("videoCall"); setShowEnquiryModal(true); };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Hero Section */}
@@ -39,7 +45,7 @@ export default function About() {
           <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto mb-12 leading-relaxed">
             UniFost is redefining how students discover and access quality education through personalized guidance and innovative technology.
           </p>
-          <button className="bg-[#00ffe0] cursor-pointer text-[#001e3c] px-8 py-4 rounded-full text-xl font-bold hover:bg-[#00d4c4] transform hover:scale-105 transition-all duration-300 shadow-2xl ">
+          <button onClick={openGetStarted} className="bg-[#00ffe0] cursor-pointer text-[#001e3c] px-8 py-4 rounded-full text-xl font-bold hover:bg-[#00d4c4] transform hover:scale-105 transition-all duration-300 shadow-2xl ">
             Get Started Today
           </button>
         </div>
@@ -346,15 +352,26 @@ export default function About() {
             Whether you're exploring online courses or traditional universities, our experts will guide you to the perfect path for your career goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-[#001e3c] text-white px-8 py-4 rounded-full text-xl font-bold hover:bg-[#003b6c] transform hover:scale-105 transition-all duration-300 shadow-2xl">
+            <button onClick={openVideoCall} className="bg-[#001e3c] text-white px-8 py-4 rounded-full text-xl font-bold hover:bg-[#003b6c] transform hover:scale-105 transition-all duration-300 shadow-2xl">
               Book Free Counseling Session
             </button>
-            <button className="bg-white text-[#001e3c] px-8 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-2xl">
-              Explore Our Programs
-            </button>
+            
           </div>
         </div>
       </section>
+      {/* Enquiry Modal */}
+      {showEnquiryModal && (
+        <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
+          <DialogContent className="p-4 sm:p-6 sm:max-w-lg md:max-w-xl lg:max-w-2xl z-[30001] mx-4">
+            <DialogHeader>
+              <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
+                {modalType === 'videoCall' ? 'Book a Video Call' : 'Get Started with Unifost'}
+              </DialogTitle>
+            </DialogHeader>
+            <EnquiryForm onSubmitted={() => setShowEnquiryModal(false)} formType={modalType} />
+          </DialogContent>
+        </Dialog>
+      )}
     </div>
   );
 }

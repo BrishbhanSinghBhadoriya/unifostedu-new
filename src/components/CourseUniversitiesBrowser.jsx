@@ -32,6 +32,7 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle })
   const [locationFilter, setLocationFilter] = useState('All');
   const [specializationFilter, setSpecializationFilter] = useState('All');
   const [sortBy, setSortBy] = useState('rating-desc');
+  const [openIndex, setOpenIndex] = useState(null);
 
   const locations = useMemo(() => ['All', ...Array.from(new Set(universities.map((u) => u.location.split(',')[0])))], [universities]);
   const specializations = useMemo(
@@ -209,10 +210,14 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle })
               </CardContent>
 
               <CardFooter className="pt-0">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button className="w-full bg-[#001e3c] hover:bg-[#003b6c] text-white">Enquiry Now</Button>
-                  </DialogTrigger>
+                <Button 
+                  className="w-full rounded-xl bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] font-semibold shadow-md hover:shadow-lg hover:from-[#00d4c4] hover:to-[#00ffe0] transition-all duration-300 flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00e6cc]"
+                  onClick={() => setOpenIndex(index)}
+                >
+                  Enquiry Now
+                  <FaArrowRight className="text-[#007a71]" />
+                </Button>
+                <Dialog open={openIndex === index} onOpenChange={(v) => setOpenIndex(v ? index : null)}>
                   <DialogContent className="sm:max-w-[560px]">
                     <DialogHeader>
                       <DialogTitle>Enquiry for {university.name}</DialogTitle>
@@ -231,6 +236,7 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle })
                         if (t.includes('ba ' ) || t === 'ba' || t.includes(' bachelor of arts')) return 'BA';
                         return 'MBA';
                       })(courseTitle)}
+                      onSubmitted={() => setOpenIndex(null)}
                     />
                   </DialogContent>
                 </Dialog>

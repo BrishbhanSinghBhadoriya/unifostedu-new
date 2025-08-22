@@ -208,7 +208,7 @@ const Sharda = () => {
       <section className="py-10 bg-white">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
         <div className="flex flex-wrap justify-center items-center gap-10 px-4">
-          {["ugc", "aicte", "naac", "wes", "nirf", "aiu"].map((logo, i) => (
+          {["ugc", "aicte", "naac",  "nirf", "aiu"].map((logo, i) => (
             <img key={i} src={`/${logo}.png`} alt={logo.toUpperCase()} className="h-16 object-contain" />
           ))}
         </div>
