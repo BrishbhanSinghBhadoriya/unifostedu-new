@@ -39,7 +39,7 @@ export default function About() {
           <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto mb-12 leading-relaxed">
             UniFost is redefining how students discover and access quality education through personalized guidance and innovative technology.
           </p>
-          <button className="bg-[#00ffe0] text-[#001e3c] px-8 py-4 rounded-full text-xl font-bold hover:bg-[#00d4c4] transform hover:scale-105 transition-all duration-300 shadow-2xl cursor-pointer">
+          <button className="bg-[#00ffe0] cursor-pointer text-[#001e3c] px-8 py-4 rounded-full text-xl font-bold hover:bg-[#00d4c4] transform hover:scale-105 transition-all duration-300 shadow-2xl ">
             Get Started Today
           </button>
         </div>

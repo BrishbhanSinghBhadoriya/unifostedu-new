@@ -282,11 +282,11 @@ const Landing = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-      {/* Enhanced Hero Section */}
+      {/* Enhanced Hero Section - Fully Responsive */}
       <section className="relative text-white overflow-hidden">
         <div className="relative w-full">
-          {/* Slides */}
-          <div className="relative w-full aspect-[4/5] md:aspect-[2.875/1] bg-gradient-to-br from-[#001e3c] to-[#003b6c]">
+          {/* Slides - Responsive aspect ratio */}
+          <div className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[85vh] xl:h-[90vh] bg-gradient-to-br from-[#001e3c] to-[#003b6c]">
             {heroSlides.map((s, idx) => (
               <motion.div
                 key={idx}
@@ -301,78 +301,88 @@ const Landing = () => {
                   className="w-full h-full object-cover" 
                   style={{ objectPosition: 'center' }}
                 />
-                {/* Enhanced Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c]/80 via-[#001e3c]/60 to-transparent" />
+                {/* Enhanced Overlay - Responsive gradient */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c]/90 via-[#001e3c]/70 to-transparent md:from-[#001e3c]/80 md:via-[#001e3c]/60 md:to-transparent" />
               </motion.div>
             ))}
           </div>
 
-          {/* Enhanced Content overlay */}
+          {/* Enhanced Content overlay - Fully responsive */}
           <div className="pointer-events-none absolute inset-0 flex items-center">
-            <div className="pointer-events-auto text-left px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+            <div className="pointer-events-auto text-left px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl mx-auto w-full">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="max-w-2xl"
+                className="max-w-2xl lg:max-w-3xl xl:max-w-4xl"
               >
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
+                {/* Responsive Typography */}
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-4 leading-tight">
                   {heroSlides[slide].title}
                 </h1>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 text-[#00ffe0]">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 sm:mb-6 text-[#00ffe0]">
                   {heroSlides[slide].subtitle}
                 </h2>
-                <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-6 sm:mb-8 leading-relaxed">
                   {heroSlides[slide].description}
                 </p>
-                <div className="flex flex-col sm:flex-row gap-3">
+                
+                {/* Responsive Button Layout */}
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                   <button 
                     onClick={() => openModal("getStarted")}
                     className="bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] 
-                               w-full sm:w-auto px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-base font-semibold
+                               w-full sm:w-auto px-4 sm:px-5 lg:px-6 py-3 sm:py-3.5 lg:py-4 rounded-full 
+                               text-sm sm:text-base lg:text-lg font-semibold
                                hover:from-[#00d4c4] hover:to-[#00ffe0]
                                transform hover:scale-105 transition-all duration-300 
                                shadow-md shadow-[#00ffe0]/30 flex items-center justify-center gap-2"
                   >
-                    <FaRocket className="text-lg" />
-                    Get Started Today
+                    <FaRocket className="text-sm sm:text-base lg:text-lg" />
+                    <span className="hidden xs:inline">Get Started Today</span>
+                    <span className="xs:hidden">Get Started</span>
                   </button>
 
                   <button 
                     onClick={() => openModal("videoCall")}
-                    className="border border-white text-white w-full sm:w-auto px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-base font-semibold 
+                    className="border border-white text-white w-full sm:w-auto px-4 sm:px-5 lg:px-6 py-3 sm:py-3.5 lg:py-4 rounded-full 
+                               text-sm sm:text-base lg:text-lg font-semibold 
                                bg-white/10 hover:bg-white hover:text-[#001e3c] 
                                transform hover:scale-105 transition-all duration-300 
                                flex items-center justify-center gap-2"
                   >
-                    <FaVideo className="text-lg" />
-                    Book a Video Call
+                    <FaVideo className="text-sm sm:text-base lg:text-lg" />
+                    <span className="hidden sm:inline">Book a Video Call</span>
+                    <span className="sm:hidden">Video Call</span>
                   </button>
 
                   <button 
                     onClick={() => openModal("homeDemo")}
-                    className="border border-white text-white w-full sm:w-auto px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-base font-semibold 
+                    className="border border-white text-white w-full sm:w-auto px-4 sm:px-5 lg:px-6 py-3 sm:py-3.5 lg:py-4 rounded-full 
+                               text-sm sm:text-base lg:text-lg font-semibold 
                                bg-white/10 hover:bg-white hover:text-[#001e3c] 
                                transform hover:scale-105 transition-all duration-300 
                                flex items-center justify-center gap-2"
                   >
-                    <FaMapMarkerAlt className="text-lg" />
-                    Book a Home Demo
+                    <FaMapMarkerAlt className="text-sm sm:text-base lg:text-lg" />
+                    <span className="hidden lg:inline">Book a Home Demo</span>
+                    <span className="hidden sm:inline lg:hidden">Home Demo</span>
+                    <span className="sm:hidden">Demo</span>
                   </button>
                 </div>
               </motion.div>
             </div>
           </div>
 
-          {/* Enhanced Dots */}
-          <div className="absolute inset-x-0 bottom-8 flex items-center justify-center gap-3">
+          {/* Enhanced Dots - Responsive positioning */}
+          <div className="absolute inset-x-0 bottom-4 sm:bottom-6 md:bottom-8 flex items-center justify-center gap-2 sm:gap-3">
             {heroSlides.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setSlide(i)}
-                className={`h-3 w-3 rounded-full transition-all duration-300 ${
+                className={`h-2 sm:h-3 w-2 sm:w-3 rounded-full transition-all duration-300 ${
                   i === slide 
-                    ? 'bg-[#00ffe0] w-8 shadow-lg shadow-[#00ffe0]/50' 
+                    ? 'bg-[#00ffe0] w-6 sm:w-8 shadow-lg shadow-[#00ffe0]/50' 
                     : 'bg-white/60 hover:bg-white/80'
                 }`}
                 aria-label={`Go to slide ${i + 1}`}
@@ -382,13 +392,10 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* University Logo Slider */}
-      <UniversityLogoSlider />
-
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
+      {/* Stats Section - Responsive Grid */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -396,33 +403,33 @@ const Landing = () => {
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
-                <div className={`bg-gradient-to-br ${stat.color} w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg`}>
-                  <stat.icon className="text-3xl text-white" />
+                <div className={`bg-gradient-to-br ${stat.color} w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg`}>
+                  <stat.icon className="text-2xl sm:text-3xl text-white" />
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold text-[#001e3c] mb-2">{stat.number}</h3>
-                <p className="text-gray-600 font-medium">{stat.label}</p>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#001e3c] mb-1 sm:mb-2">{stat.number}</h3>
+                <p className="text-sm sm:text-base text-gray-600 font-medium">{stat.label}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Enhanced Programs Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      {/* Enhanced Programs Section - Responsive Grid */}
+      <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
             data-aos="fade-up"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-[#001e3c] mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#001e3c] mb-4 sm:mb-6">
               🎯 Select Best Programs
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Pick the right program to unlock your future today!
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
             {courses.map((course, index) => (
               <motion.a
                 key={index}
@@ -431,16 +438,16 @@ const Landing = () => {
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
-                <div className="bg-white rounded-2xl shadow-xl p-6 hover:transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 group-hover:shadow-2xl cursor-pointer">
-                  <div className={`bg-gradient-to-br ${course.color} w-16 h-16 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <course.icon className="text-2xl text-white" />
+                <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 hover:transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 group-hover:shadow-2xl cursor-pointer">
+                  <div className={`bg-gradient-to-br ${course.color} w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <course.icon className="text-xl sm:text-2xl text-white" />
                   </div>
-                  <Badge className="mb-3 bg-[#00ffe0] text-[#001e3c] hover:bg-[#00d4c4]">
+                  <Badge className="mb-2 sm:mb-3 bg-[#00ffe0] text-[#001e3c] hover:bg-[#00d4c4] text-xs sm:text-sm">
                     {course.tag}
                   </Badge>
-                  <h3 className="text-lg font-bold text-[#001e3c] mb-2">{course.title}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{course.desc}</p>
-                  <div className="flex items-center justify-between text-sm text-gray-500">
+                  <h3 className="text-base sm:text-lg font-bold text-[#001e3c] mb-2">{course.title}</h3>
+                  <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">{course.desc}</p>
+                  <div className="flex items-center justify-between text-xs sm:text-sm text-gray-500">
                     <span className="flex items-center gap-1">
                       <FaClock className="text-[#00ffe0]" />
                       {course.duration}
@@ -457,22 +464,22 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* Enhanced Universities Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* Enhanced Universities Section - Responsive Grid */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
             data-aos="fade-up"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-[#001e3c] mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#001e3c] mb-4 sm:mb-6">
               🏆 Top Partner Universities
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Choose from India's most prestigious online universities
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {colleges.map((college, index) => (
               <motion.div
                 key={index}
@@ -480,22 +487,22 @@ const Landing = () => {
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
-                <div className="bg-white rounded-2xl shadow-xl p-6 hover:transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 group-hover:shadow-2xl">
-                  <div className="flex items-center justify-between mb-4">
-                    <Badge className="bg-[#00ffe0] text-[#001e3c]">
+                <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 hover:transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 group-hover:shadow-2xl">
+                  <div className="flex items-center justify-between mb-3 sm:mb-4">
+                    <Badge className="bg-[#00ffe0] text-[#001e3c] text-xs sm:text-sm">
                       {college.ranking}
                     </Badge>
                     <div className="flex items-center gap-1">
-                      <FaStar className="text-yellow-400 text-sm" />
-                      <span className="text-sm font-medium text-gray-700">{college.rating}</span>
+                      <FaStar className="text-yellow-400 text-xs sm:text-sm" />
+                      <span className="text-xs sm:text-sm font-medium text-gray-700">{college.rating}</span>
                     </div>
                   </div>
-                  <h3 className="text-lg font-bold text-[#001e3c] mb-3 line-clamp-2">{college.name}</h3>
-                  <div className="text-sm text-gray-600 mb-4">
+                  <h3 className="text-sm sm:text-lg font-bold text-[#001e3c] mb-2 sm:mb-3 line-clamp-2">{college.name}</h3>
+                  <div className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">
                     <span className="font-medium">Fees:</span> {college.fee}
                   </div>
                   <a href={getUniversityHref(college.name)} className="block w-full">
-                    <div className="w-full bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white py-2 px-4 rounded-xl font-medium text-center hover:from-[#003b6c] hover:to-[#001e3c] transform hover:scale-105 transition-all duration-300">
+                    <div className="w-full bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white py-2 sm:py-3 px-3 sm:px-4 rounded-xl font-medium text-center hover:from-[#003b6c] hover:to-[#001e3c] transform hover:scale-105 transition-all duration-300 text-sm sm:text-base">
                       Learn More
                     </div>
                   </a>
@@ -506,36 +513,36 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* Compare Online Universities */}
-      <section className="py-20 bg-white">
+      {/* Compare Online Universities - Responsive */}
+      <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
-            className="text-center mb-12"
+            className="text-center mb-8 sm:mb-12"
             data-aos="fade-up"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#001e3c] mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#001e3c] mb-3 sm:mb-4">
               🎓 Compare Online Universities
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
               Select up to 3 universities to compare fees, accreditation, placements and more
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {colleges.map((college, idx) => {
               const slug = slugify(college.name);
               const isSelected = selectedUniversities.includes(slug);
               return (
-                <div key={idx} className={`rounded-2xl border ${isSelected ? 'border-[#00ffe0]' : 'border-gray-200'} p-5 bg-white shadow-sm hover:shadow-lg transition-all`}>
+                <div key={idx} className={`rounded-2xl border ${isSelected ? 'border-[#00ffe0]' : 'border-gray-200'} p-4 sm:p-5 bg-white shadow-sm hover:shadow-lg transition-all`}>
                   <div className="flex items-start justify-between gap-3">
-                    <div>
-                      <h3 className="text-lg font-semibold text-[#001e3c]">{college.name}</h3>
-                      <div className="mt-2 text-sm text-gray-600"><span className="font-medium">Fees:</span> {college.fee}</div>
-                      <div className="mt-1 text-sm text-gray-600"><span className="font-medium">Ranking:</span> {college.ranking}</div>
+                    <div className="flex-1">
+                      <h3 className="text-sm sm:text-lg font-semibold text-[#001e3c]">{college.name}</h3>
+                      <div className="mt-2 text-xs sm:text-sm text-gray-600"><span className="font-medium">Fees:</span> {college.fee}</div>
+                      <div className="mt-1 text-xs sm:text-sm text-gray-600"><span className="font-medium">Ranking:</span> {college.ranking}</div>
                     </div>
                     <button 
                       onClick={() => toggleUniversity(college.name)}
-                      className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${isSelected ? 'bg-[#00ffe0] text-[#001e3c]' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
+                      className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all flex-shrink-0 ${isSelected ? 'bg-[#00ffe0] text-[#001e3c]' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
                     >
                       {isSelected ? 'Selected' : 'Select'}
                     </button>
@@ -545,14 +552,14 @@ const Landing = () => {
             })}
           </div>
 
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-gray-600 text-sm">
               Selected: <span className="font-semibold text-[#001e3c]">{selectedUniversities.length}</span> / 3
             </div>
             <button
               disabled={!canCompare}
               onClick={startCompare}
-              className={`px-8 py-3 rounded-full font-bold flex items-center gap-2 transition-all ${canCompare ? 'bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] shadow-lg' : 'bg-gray-200 text-gray-500 cursor-not-allowed'}`}
+              className={`px-6 sm:px-8 py-3 rounded-full font-bold flex items-center gap-2 transition-all text-sm sm:text-base ${canCompare ? 'bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] shadow-lg' : 'bg-gray-200 text-gray-500 cursor-not-allowed'}`}
             >
               Compare Now
               <FaArrowRight />
@@ -561,26 +568,26 @@ const Landing = () => {
         </div>
       </section>
      
-      {/* Accreditation & Recognition - slider */}
-      <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* Accreditation & Recognition - Responsive slider */}
+      <section className="py-12 sm:py-16 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
-            className="text-center mb-10"
+            className="text-center mb-8 sm:mb-10"
             data-aos="fade-up"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#001e3c] mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#001e3c] mb-3 sm:mb-4">
               Accreditation & Recognition
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
               We partner only with accredited and government-recognized institutions
             </p>
           </motion.div>
 
           <div className="relative overflow-hidden">
-            <div className="flex items-center gap-6 animate-[accreditScroll_25s_linear_infinite] will-change-transform">
+            <div className="flex items-center gap-4 sm:gap-6 animate-[accreditScroll_25s_linear_infinite] will-change-transform">
               {[...accreditationLogos, ...accreditationLogos].map((logo, idx) => (
-                <div key={idx} className="min-w-[100px] sm:min-w-[140px] rounded-xl p-4 bg-white shadow-sm border border-gray-100 flex items-center justify-center h-20 sm:h-24">
-                  <img src={logo} alt="Accreditation" className="max-h-12 sm:max-h-14 object-contain" />
+                <div key={idx} className="min-w-[80px] sm:min-w-[100px] md:min-w-[140px] rounded-xl p-3 sm:p-4 bg-white shadow-sm border border-gray-100 flex items-center justify-center h-16 sm:h-20 md:h-24">
+                  <img src={logo} alt="Accreditation" className="max-h-10 sm:max-h-12 md:max-h-14 object-contain" />
                 </div>
               ))}
             </div>
@@ -595,22 +602,22 @@ const Landing = () => {
         </div>
       </section>
          
-      {/* Features Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* Features Section - Responsive */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
             data-aos="fade-up"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-[#001e3c] mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#001e3c] mb-4 sm:mb-6">
               Why Choose <span className="text-[#00ffe0]">Unifost</span>?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Experience the difference that personalized guidance makes in your educational journey
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -618,12 +625,12 @@ const Landing = () => {
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
-                <div className="bg-white rounded-2xl shadow-xl p-8 hover:transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 group-hover:shadow-2xl">
-                  <div className={`bg-gradient-to-br ${feature.color} w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <feature.icon className="text-2xl text-white" />
+                <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 hover:transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 group-hover:shadow-2xl">
+                  <div className={`bg-gradient-to-br ${feature.color} w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <feature.icon className="text-xl sm:text-2xl text-white" />
                   </div>
-                  <h6 className="text-xl font-bold text-[#001e3c] mb-4">{feature.title}</h6>
-                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                  <h6 className="text-lg sm:text-xl font-bold text-[#001e3c] mb-3 sm:mb-4">{feature.title}</h6>
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{feature.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -631,52 +638,52 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* Enhanced CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#001e3c] to-[#003b6c] relative overflow-hidden">
+      {/* Enhanced CTA Section - Responsive */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-[#001e3c] to-[#003b6c] relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             data-aos="fade-up"
-            className="mb-12"
+            className="mb-8 sm:mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
               Ready to Start Your Journey?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
               Join thousands of students who have transformed their careers with Unifost
             </p>
           </motion.div>
           
           <motion.div 
-            className="flex flex-col sm:flex-row gap-3 justify-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
             data-aos="fade-up"
             data-aos-delay="200"
           >
             <button 
               onClick={() => openModal("getStarted")}
-              className="bg-[#00ffe0] text-[#001e3c] w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg font-bold hover:bg-[#00d4c4] transform hover:scale-105 transition-all duration-300 shadow-2xl flex items-center justify-center gap-2"
+              className="  bg-[#00ffe0] text-[#001e3c] cursor-pointer w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-bold hover:bg-[#00d4c4] transform hover:scale-105 transition-all duration-300 shadow-2xl flex items-center justify-center gap-2"
             >
-              <FaRocket className="text-xl" />
+              <FaRocket className="text-lg sm:text-xl" />
               Get Started Today
             </button>
             <button 
               onClick={() => openModal("videoCall")}
-              className="border-2 border-white text-white w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg font-bold hover:bg-white hover:text-[#001e3c] transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
+              className="border-2 border-white text-white w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-bold hover:bg-white hover:text-[#001e3c] transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
             >
-              <FaPhone className="text-xl" />
+              <FaPhone className="text-lg sm:text-xl" />
               Call Now
             </button>
           </motion.div>
         </div>
       </section>
 
-      {/* Unified Modal */}
+      {/* Unified Modal - Responsive */}
      {/* In your landing.jsx file */}
 {showEnquiryModal && (
   <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
-    <DialogContent className="p-4 sm:p-6 sm:max-w-lg md:max-w-xl lg:max-w-2xl z-[30001]">
+    <DialogContent className="p-4 sm:p-6 sm:max-w-lg md:max-w-xl lg:max-w-2xl z-[30001] mx-4">
       <DialogHeader>
-        <DialogTitle className="text-2xl font-bold text-[#001e3c] text-center">
+        <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
           {modalType === "getStarted" && "Get Started with Unifost"}
           {modalType === "videoCall" && "Book a Video Call"}
           {modalType === "homeDemo" && "Book a Home Demo"}
