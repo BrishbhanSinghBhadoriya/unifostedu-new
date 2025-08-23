@@ -75,15 +75,15 @@ const features = [
 ];
 
 const colleges = [
-  { name: "Amity University Online", ranking: "NIRF-29", fee: "₹99k - ₹2.0L", logo: "/amity.png", rating: 4.8 },
-  { name: "Manipal University Online", ranking: "NIRF-73", fee: "₹99k - ₹1.8L", logo: "/manipal1.png", rating: 4.9 },
-  { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹80K - ₹1.5L", logo: "/lpulogo.png", rating: 4.7 },
-  { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.5L - ₹2.2L", logo: "/upeslogo.png", rating: 4.6 },
-  { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹2L - ₹3.45L", logo: "/nmims.png", rating: 4.9 },
-  { name: "Sharda University Online", ranking: "NIRF-86", fee: "₹80K - ₹1.5L", logo: "/shardalogo.png", rating: 4.5 },
-  { name: "Dr. DY Patil Online", ranking: "NIRF-81", fee: "₹1.8L - ₹2.0L", logo: "/dypatillogo.png", rating: 4.6 },
-  { name: "Jain University Online", ranking: "NIRF-65", fee: "₹90k - ₹2.0L", logo: "/jainlogo.png", rating: 4.7 },
-  { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹1.3L - ₹2.6L", logo: "/chandigarh.jpg", rating: 4.7 }
+  { name: "Amity University Online", ranking: "NIRF-29", fee: "₹0.99L - ₹3.45L", logo: "/amity.png", rating: 4.8 },
+  { name: "Manipal University Online", ranking: "NIRF-73", fee: "0.99L - ₹1.75L", logo: "/manipal1.png", rating: 4.6 },
+  { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹0.80L - ₹2.0L", logo: "/lpulogo.png", rating: 4.1},
+  { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.50L - ₹1.75L", logo: "/upeslogo.png", rating: 4.4 },
+  { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹0.94L - ₹2.20L", logo: "/nmims.png", rating: 4.5 },
+  { name: "Sharda University Online", ranking: "NIRF-87", fee: "₹0.80L - ₹1.30L", logo: "/shardalogo.png", rating: 4.1 },
+  { name: "Dr. DY Patil Online", ranking: "NIRF-63", fee: "₹1.45L - ₹1.90L", logo: "/dypatillogo.png", rating: 4.4 },
+  { name: "Jain University Online", ranking: "NIRF-65", fee: "₹1.05L - ₹2.98L", logo: "/jainlogo.png", rating: 4.5 },
+  { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹0.75L - ₹1.58", logo: "/chandigarh.jpg", rating: 4.7 }
 ];
 
 const cities = [
