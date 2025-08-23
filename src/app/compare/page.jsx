@@ -209,8 +209,8 @@ const RAW_UNIVERSITIES = [
 // ---------- UTILS ----------
 const slugify = (s) => s.toLowerCase().replace(/\s+/g, '-');
 
-// ---------- MAIN COMPONENT ----------
-export default function ComparePage() {
+// ---------- COMPONENT WITH SEARCH PARAMS ----------
+function CompareContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [enquiryDone, setEnquiryDone] = useState(false);
@@ -465,5 +465,21 @@ export default function ComparePage() {
         </div>
       )}
     </div>
+  );
+}
+
+// ---------- MAIN COMPONENT ----------
+export default function ComparePage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12 md:mt-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#00ffe0] mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading comparison...</p>
+        </div>
+      </div>
+    }>
+      <CompareContent />
+    </Suspense>
   );
 }
