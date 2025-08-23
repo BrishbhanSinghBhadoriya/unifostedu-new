@@ -192,7 +192,7 @@ const RAW_UNIVERSITIES = [
     courses: ['MBA', 'BBA', 'MCA', 'BCA'],
     features: ['Modern curriculum', 'Industry projects', 'Career services'],
     approvals: ['UGC', 'NAAC A+'],
-    rating: 4.1,
+    rating: 4.2,
     eligibility: '10+2,Graduation in any stream',
     nirfRank: 36,
     naacGrade: 'A+',
