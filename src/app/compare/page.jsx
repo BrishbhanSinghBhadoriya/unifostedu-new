@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useMemo, useState, useEffect } from 'react';
+import { Suspense } from "react";
+
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
