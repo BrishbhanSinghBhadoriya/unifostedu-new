@@ -19,6 +19,8 @@ const Header = () => {
 const universities = [
     { name: "Lovely Professional University", link: "/lpu", logo: "/lpu.png" },
     { name: "Online Manipal University", link: "/manipal", logo: "/manipal.png" },
+    { name: " Sikkim Manipal University", link: "/smu", logo: "/manipal.png" },
+    { name: " Uttaranchal University", link: "/uu", logo: "/manipal.png" },
     { name: "Amity University Online", link: "/amity", logo: "/amity.png" },
     { name: "Chandigarh University Online", link: "/chandigarh", logo: "/chandigarh.jpg" },
     { name: "Jain University", link: "/jain", logo: "/jain.png" },
@@ -28,6 +30,7 @@ const universities = [
     { name: "Vivekananda Global University Online", link: "/vgu", logo: "/vgu1.png" },
     { name: "Upes Online", link: "/upes", logo: "/upes.png" },
     { name: "Sharda University Online", link: "/sharda", logo: "/sharda.png" }
+    
   ];
 
   useEffect(() => {

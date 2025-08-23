@@ -157,7 +157,7 @@ const RAW_UNIVERSITIES = [
     nirfRank: 87,
     naacGrade: 'A+',
     placementSupport: true,
-    wesApproved: true,
+    wesApproved: false,
     emiOption: true,
     examMode: 'Online',
     classType: 'Live + Self-paced',
