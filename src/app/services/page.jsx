@@ -287,7 +287,7 @@ export default function Services() {
       {/* Enquiry Modal (Unified) */}
       {showEnquiryModal && (
         <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
-          <DialogContent className="p-4 sm:p-6 sm:max-w-lg md:max-w-xl lg:max-w-2xl z-[30001] mx-4">
+          <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10 p-4 sm:p-6 z-[30001]">
             <DialogHeader>
               <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
                 {modalType === 'videoCall' ? 'Book a Video Call' : 'Get Started with Unifost'}

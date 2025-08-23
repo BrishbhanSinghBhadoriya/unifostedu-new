@@ -204,27 +204,27 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
   };
 
   return (
-    <form className="space-y-5 relative z-[20002]" onSubmit={handleSubmit(onSubmit)}>
+    <form className="space-y-4 sm:space-y-5 relative z-[20002]" onSubmit={handleSubmit(onSubmit)}>
       <input type="hidden" {...register('program')} value={program} readOnly />
       <input type="hidden" {...register('university')} value={selectedUniversity} readOnly />
       <input type="hidden" value={formType} readOnly />
       <input type="hidden" {...register('city')} value={city} readOnly />
       
       {universityName && (
-        <div className="rounded-lg p-4 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] text-[#001e3c]">
-          <p className="text-sm">University</p>
-          <p className="font-semibold text-lg leading-tight">{universityName}</p>
+        <div className="rounded-lg p-3 sm:p-4 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] text-[#001e3c]">
+          <p className="text-xs sm:text-sm">University</p>
+          <p className="font-semibold text-base sm:text-lg leading-tight">{universityName}</p>
         </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         <div className="space-y-1.5">
           <Label htmlFor="name" className="flex items-center gap-1">
             Full Name <span className="text-red-500">*</span>
           </Label>
           <div className="relative">
             <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-            <Input id="name" placeholder="Your name" className="pl-10" aria-invalid={!!formState.errors.name} {...register('name')} />
+            <Input id="name" placeholder="Your name" className="pl-10 h-11 sm:h-10" aria-invalid={!!formState.errors.name} {...register('name')} />
             {formState.errors.name && (<p className="text-red-600 text-xs mt-1">{formState.errors.name.message}</p>)}
           </div>
         </div>
@@ -234,20 +234,20 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
           </Label>
           <div className="relative">
             <FaPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-            <Input id="phone" placeholder="Your phone" className="pl-10" aria-invalid={!!formState.errors.phone} {...register('phone')} />
+            <Input id="phone" placeholder="Your phone" className="pl-10 h-11 sm:h-10" aria-invalid={!!formState.errors.phone} {...register('phone')} />
             {formState.errors.phone && (<p className="text-red-600 text-xs mt-1">{formState.errors.phone.message}</p>)}
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         <div className="space-y-1.5">
           <Label htmlFor="email" className="flex items-center gap-1">
             Email <span className="text-red-500">*</span>
           </Label>
           <div className="relative">
             <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-            <Input id="email" type="email" placeholder="you@example.com" className="pl-10" aria-invalid={!!formState.errors.email} {...register('email')} />
+            <Input id="email" type="email" placeholder="you@example.com" className="pl-10 h-11 sm:h-10" aria-invalid={!!formState.errors.email} {...register('email')} />
             {formState.errors.email && (<p className="text-red-600 text-xs mt-1">{formState.errors.email.message}</p>)}
           </div>
         </div>
@@ -260,7 +260,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
           <div className="relative">
             <FaMapMarkerAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
             <Select value={city} onValueChange={onCityChange}>
-              <SelectTrigger className="pl-10">
+              <SelectTrigger className="pl-10 h-11 sm:h-10">
                 <SelectValue placeholder="Select your city" />
               </SelectTrigger>
               <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
@@ -275,7 +275,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         <div className="space-y-1.5">
           <Label className="flex items-center gap-1">
             University <span className="text-red-500">*</span>
@@ -283,7 +283,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
           <div className="relative">
             <FaUniversity className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
             <Select value={selectedUniversity} onValueChange={onUniversityChange}>
-              <SelectTrigger className="pl-10">
+              <SelectTrigger className="pl-10 h-11 sm:h-10">
                 <SelectValue placeholder="Select university" />
               </SelectTrigger>
               <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
@@ -304,7 +304,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
           <div className="relative">
             <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
             <Select value={program} onValueChange={onProgramChange}>
-              <SelectTrigger className="pl-10">
+              <SelectTrigger className="pl-10 h-11 sm:h-10">
                 <SelectValue placeholder="Select program" />
               </SelectTrigger>
               <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
@@ -327,7 +327,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
 
       {/* Additional fields for specific form types */}
       {(formType === 'getStarted' || formType === 'general') && (
-        <div className="grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-1 gap-3 sm:gap-4">
           <div className="space-y-1.5">
             <Label htmlFor="qualification" className="flex items-center gap-1">
               Highest Qualification <span className="text-red-500">*</span>
@@ -335,7 +335,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
             <div className="relative">
               <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
               <Select value={getValues('qualification') || ''} onValueChange={(value) => setValue('qualification', value, { shouldValidate: true })}>
-                <SelectTrigger className="pl-10">
+                <SelectTrigger className="pl-10 h-11 sm:h-10">
                   <SelectValue placeholder="Select your qualification" />
                 </SelectTrigger>
                 <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
@@ -380,7 +380,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
 
       {/* Qualification field for videoCall and homeDemo */}
       {(formType === 'videoCall' || formType === 'homeDemo') && (
-        <div className="grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-1 gap-3 sm:gap-4">
           <div className="space-y-1.5">
             <Label htmlFor="qualification" className="flex items-center gap-1">
               Highest Qualification <span className="text-red-500">*</span>
@@ -388,7 +388,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
             <div className="relative">
               <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
               <Select value={getValues('qualification') || ''} onValueChange={(value) => setValue('qualification', value, { shouldValidate: true })}>
-                <SelectTrigger className="pl-10">
+                <SelectTrigger className="pl-10 h-11 sm:h-10">
                   <SelectValue placeholder="Select your qualification" />
                 </SelectTrigger>
                 <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
@@ -407,41 +407,41 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
         </div>
       )}
       {formType === "videoCall" && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
           <div className="space-y-1.5">
             <Label htmlFor="preferredDate" className="flex items-center gap-1">
               Preferred Date <span className="text-red-500">*</span>
             </Label>
-            <Input id="preferredDate" type="date" className="w-full" aria-invalid={!!formState.errors.preferredDate} {...register('preferredDate')} />
+            <Input id="preferredDate" type="date" className="w-full h-11 sm:h-10" aria-invalid={!!formState.errors.preferredDate} {...register('preferredDate')} />
             {formState.errors.preferredDate && (<p className="text-red-600 text-xs mt-1">{formState.errors.preferredDate.message}</p>)}
           </div>
           <div className="space-y-1.5">
             <Label htmlFor="preferredTime" className="flex items-center gap-1">
               Preferred Time <span className="text-red-500">*</span>
             </Label>
-            <Input id="preferredTime" type="time" className="w-full" aria-invalid={!!formState.errors.preferredTime} {...register('preferredTime')} />
+            <Input id="preferredTime" type="time" className="w-full h-11 sm:h-10" aria-invalid={!!formState.errors.preferredTime} {...register('preferredTime')} />
             {formState.errors.preferredTime && (<p className="text-red-600 text-xs mt-1">{formState.errors.preferredTime.message}</p>)}
           </div>
         </div>
       )}
 
       {formType === "homeDemo" && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
           <div className="space-y-1.5">
             <Label htmlFor="preferredDate" className="flex items-center gap-1">
               Preferred Date <span className="text-red-500">*</span>
             </Label>
-            <Input id="preferredDate" type="date" className="w-full" aria-invalid={!!formState.errors.preferredDate} {...register('preferredDate')} />
+            <Input id="preferredDate" type="date" className="w-full h-11 sm:h-10" aria-invalid={!!formState.errors.preferredDate} {...register('preferredDate')} />
             {formState.errors.preferredDate && (<p className="text-red-600 text-xs mt-1">{formState.errors.preferredDate.message}</p>)}
           </div>
           <div className="space-y-1.5">
             <Label htmlFor="preferredTime" className="flex items-center gap-1">
               Preferred Time <span className="text-red-500">*</span>
             </Label>
-            <Input id="preferredTime" type="time" className="w-full" aria-invalid={!!formState.errors.preferredTime} {...register('preferredTime')} />
+            <Input id="preferredTime" type="time" className="w-full h-11 sm:h-10" aria-invalid={!!formState.errors.preferredTime} {...register('preferredTime')} />
             {formState.errors.preferredTime && (<p className="text-red-600 text-xs mt-1">{formState.errors.preferredTime.message}</p>)}
           </div>
-          <div className="md:col-span-2 space-y-1.5">
+          <div className="sm:col-span-2 space-y-1.5">
             <Label htmlFor="address" className="flex items-center gap-1">
               Full Address <span className="text-red-500">*</span>
             </Label>
@@ -470,7 +470,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
         type="submit" 
         onClick={handleSubmit(onSubmit)}
         disabled={loading} 
-        className="w-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] font-bold relative z-[20002]"
+        className="w-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] font-bold relative z-[20002] py-3 sm:py-2.5 text-sm sm:text-base"
       >
         <FaPaperPlane className="mr-2" />
         {loading ? 'Submitting...' : 
