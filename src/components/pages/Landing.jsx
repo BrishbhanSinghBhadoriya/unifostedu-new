@@ -241,6 +241,7 @@ const Landing = () => {
   const getCourseHref = (title) => {
     const map = {
       'MBA Online': '/courses/mba-online',
+      'MSC Online': '/courses/msc-online',
       'BBA Online': '/courses/bba-online',
       'MCA Online': '/courses/mca-online',
        'BCA Online': '/courses/bca-online',
