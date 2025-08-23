@@ -1,20 +1,32 @@
 'use client';
 
-import React, { useState } from "react";
-import { FaRobot } from "react-icons/fa";
+import React, { useState, useRef, useEffect } from "react";
+import { FaRobot, FaTimes, FaPaperPlane, FaSpinner } from "react-icons/fa";
 import axios from "axios";
 
 const ChatbotWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState("");
   const [messages, setMessages] = useState([
-    { from: "bot", text: "Hello! 👋 How can I assist you today?" }
+    { 
+      from: "bot", 
+      text: "Hello! 👋 I'm your Unifost AI assistant. How can I help you with your educational journey today? Ask me about courses, universities, admissions, or anything related to online education!" 
+    }
   ]);
   const [loading, setLoading] = useState(false);
+  const messagesEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   const sendMessage = async (e) => {
     e.preventDefault();
-    if (!prompt.trim()) return;
+    if (!prompt.trim() || loading) return;
 
     const userMsg = { from: "user", text: prompt };
     setMessages((prev) => [...prev, userMsg]);
@@ -22,16 +34,43 @@ const ChatbotWidget = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5001/api/openai/ask", { prompt });
-      const botMsg = { from: "bot", text: res.data.response };
-      setMessages((prev) => [...prev, botMsg]);
+      const response = await axios.post("https://unifost-backend-ev0y.onrender.com/api/v1/openai/ask", {
+        prompt: prompt
+      }, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        timeout: 30000 // 30 seconds timeout
+      });
+
+      if (response.data && response.data.response) {
+        const botMsg = { from: "bot", text: response.data.response };
+        setMessages((prev) => [...prev, botMsg]);
+      } else {
+        throw new Error('Invalid response format');
+      }
     } catch (err) {
-      setMessages((prev) => [
-        ...prev,
-        { from: "bot", text: "⚠️ Sorry, something went wrong." }
-      ]);
+      console.error('Chatbot API Error:', err);
+      let errorMessage = "⚠️ Sorry, I'm having trouble connecting right now. Please try again in a moment.";
+      
+      if (err.response?.status === 429) {
+        errorMessage = "⚠️ Too many requests. Please wait a moment before trying again.";
+      } else if (err.code === 'ECONNABORTED') {
+        errorMessage = "⚠️ Request timed out. Please try again.";
+      } else if (err.response?.status >= 500) {
+        errorMessage = "⚠️ Server is temporarily unavailable. Please try again later.";
+      }
+      
+      setMessages((prev) => [...prev, { from: "bot", text: errorMessage }]);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage(e);
     }
   };
 
@@ -39,54 +78,93 @@ const ChatbotWidget = () => {
     <>
       {/* Floating Icon */}
       <div
-        className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg cursor-pointer transition"
+        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] hover:from-[#00d4c4] hover:to-[#00ffe0] text-[#001e3c] p-4 rounded-full shadow-lg cursor-pointer transition-all duration-300 transform hover:scale-110 hover:shadow-xl"
         onClick={() => setIsOpen(!isOpen)}
+        title="Chat with AI Assistant"
       >
         <FaRobot size={24} />
       </div>
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-20 right-6 z-50 w-80 h-96 bg-white rounded-xl shadow-2xl border border-gray-300 flex flex-col">
+        <div className="fixed bottom-20 right-6 z-50 w-80 sm:w-96 h-[500px] bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden">
           {/* Header */}
-          <div className="flex justify-between items-center p-3 border-b">
-            <h2 className="font-semibold text-gray-800">Chatbot</h2>
-            <button onClick={() => setIsOpen(false)} className="text-gray-500 hover:text-red-600 text-xl">×</button>
+          <div className="flex justify-between items-center p-4 bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-[#00ffe0] rounded-full flex items-center justify-center">
+                <FaRobot size={16} className="text-[#001e3c]" />
+              </div>
+              <div>
+                <h2 className="font-bold text-sm">Unifost AI Assistant</h2>
+                <p className="text-xs text-[#00ffe0] opacity-90">Online Education Expert</p>
+              </div>
+            </div>
+            <button 
+              onClick={() => setIsOpen(false)} 
+              className="text-white hover:text-[#00ffe0] transition-colors duration-200 p-1 rounded-full hover:bg-white/10"
+            >
+              <FaTimes size={18} />
+            </button>
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-3 space-y-2 text-sm">
+          <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-gray-50">
             {messages.map((msg, i) => (
               <div
                 key={i}
-                className={`p-2 rounded-md max-w-[80%] ${
-                  msg.from === "user"
-                    ? "bg-blue-100 text-right self-end ml-auto"
-                    : "bg-gray-100 text-left"
-                }`}
+                className={`flex ${msg.from === "user" ? "justify-end" : "justify-start"}`}
               >
-                {msg.text}
+                <div
+                  className={`max-w-[85%] p-3 rounded-2xl text-sm leading-relaxed ${
+                    msg.from === "user"
+                      ? "bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] font-medium"
+                      : "bg-white text-gray-800 border border-gray-200 shadow-sm"
+                  }`}
+                >
+                  {msg.text}
+                </div>
               </div>
             ))}
-            {loading && <div className="text-gray-500 text-xs">Thinking...</div>}
+            {loading && (
+              <div className="flex justify-start">
+                <div className="bg-white border border-gray-200 rounded-2xl p-3 shadow-sm">
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <FaSpinner className="animate-spin" size={14} />
+                    <span className="text-sm">Thinking...</span>
+                  </div>
+                </div>
+              </div>
+            )}
+            <div ref={messagesEndRef} />
           </div>
 
           {/* Input */}
-          <form onSubmit={sendMessage} className="p-2 border-t flex gap-1">
-            <input
-              type="text"
-              value={prompt}
-              onChange={(e) => setPrompt(e.target.value)}
-              placeholder="Ask a question..."
-              className="flex-1 px-2 py-1 border rounded text-sm"
-            />
-            <button
-              type="submit"
-              className="bg-blue-600 text-white px-3 rounded text-sm hover:bg-blue-700"
-              disabled={loading}
-            >
-              Send
-            </button>
+          <form onSubmit={sendMessage} className="p-4 border-t border-gray-200 bg-white">
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={prompt}
+                onChange={(e) => setPrompt(e.target.value)}
+                onKeyPress={handleKeyPress}
+                placeholder="Ask about courses, universities, admissions..."
+                className="flex-1 px-3 py-2 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-[#00ffe0] focus:border-transparent"
+                disabled={loading}
+              />
+              <button
+                type="submit"
+                className="bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] p-2 rounded-full hover:from-[#00d4c4] hover:to-[#00ffe0] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={loading || !prompt.trim()}
+              >
+                {loading ? (
+                  <FaSpinner className="animate-spin" size={16} />
+                ) : (
+                  <FaPaperPlane size={16} />
+                )}
+              </button>
+            </div>
+            <p className="text-xs text-gray-500 mt-2 text-center">
+              Press Enter to send • Shift+Enter for new line
+            </p>
           </form>
         </div>
       )}
