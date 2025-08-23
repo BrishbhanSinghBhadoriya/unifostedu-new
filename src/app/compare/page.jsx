@@ -257,12 +257,12 @@ function CompareContent() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12 md:mt-20 px-4 sm:px-6 lg:px-8">
              {/* Enquiry gating */}
-       <Dialog open={!enquiryDone} onOpenChange={noop}>
-         <DialogContent
-           className="w-[95vw] max-w-[560px] max-h-[90vh] overflow-y-auto mx-4 md:mx-auto md:mt-10"
-           onInteractOutside={(e) => e.preventDefault()}
-           onEscapeKeyDown={(e) => e.preventDefault()}
-         >
+               <Dialog open={!enquiryDone} onOpenChange={noop}>
+          <DialogContent
+            className="w-[95vw] max-w-[560px] max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10"
+            onInteractOutside={(e) => e.preventDefault()}
+            onEscapeKeyDown={(e) => e.preventDefault()}
+          >
            <DialogHeader className="px-4 sm:px-6">
              <DialogTitle className="text-lg sm:text-xl font-bold text-center">Quick Enquiry before Comparison</DialogTitle>
            </DialogHeader>
