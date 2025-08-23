@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useMemo, useState, useEffect } from 'react';
+import { Suspense } from "react";
+
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -86,7 +88,7 @@ const RAW_UNIVERSITIES = [
     key: 'lovely-professional-university-online',
     name: 'Lovely Professional University Online',
     logo: '/lpu.png',
-    location: 'Punjab',
+    location: 'Jalandhar,Punjab',
     established: '2005',
     fee: '₹0.80L - ₹2.0L',
     courses: ['MBA', 'BBA', 'MCA', 'BCA', 'M.Com', 'BA'],
@@ -157,7 +159,7 @@ const RAW_UNIVERSITIES = [
     nirfRank: 87,
     naacGrade: 'A+',
     placementSupport: true,
-    wesApproved: true,
+    wesApproved: false,
     emiOption: true,
     examMode: 'Online',
     classType: 'Live + Self-paced',
@@ -175,6 +177,26 @@ const RAW_UNIVERSITIES = [
     rating: 4.5,
     eligibility: '10+2,Graduation in any stream',
     nirfRank: 65,
+    naacGrade: 'A+',
+    placementSupport: true,
+    wesApproved: true,
+    emiOption: true,
+    examMode: 'Online',
+    classType: 'Live + Self-paced',
+  },
+  {
+    key: 'chandigarh-university-online',
+    name: 'Chandigarh University Online',
+    logo: '/cu-online.png',
+    location: 'Chandigarh, Punjab',
+    established: '2012',
+    fee: '0.75L - ₹1.58L',
+    courses: ['MBA', 'BBA', 'MCA', 'BCA'],
+    features: ['Modern curriculum', 'Industry projects', 'Career services'],
+    approvals: ['UGC', 'NAAC A+'],
+    rating: 4.1,
+    eligibility: '10+2,Graduation in any stream',
+    nirfRank: 36,
     naacGrade: 'A+',
     placementSupport: true,
     wesApproved: true,
