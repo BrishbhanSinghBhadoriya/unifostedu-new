@@ -288,7 +288,7 @@ const pgCourses = [
           <p className="text-xl text-gray-600">Top Hiring Partners of SMU</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {["/company.png", "/company1.png", "/company9.jpg", "/com10.png", "/companany4.png", "/company6.png", "/companany5.png", "/adove.png", "/samsung.png"].map((src, i) => (
+          {["/company.png", "/company1.png", "/company9.jpg", "/com10.png", "/companany4.png", "/company6.png", "/adove.png", "/samsung.png","/ey.png","/ibm.png","/hp.png"].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
               <img src={src} alt="Company" className="h-12 object-contain" />
             </div>

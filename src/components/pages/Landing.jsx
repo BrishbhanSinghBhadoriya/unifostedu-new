@@ -82,7 +82,7 @@ const colleges = [
   { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹0.94L - ₹2.20L", logo: "/nmims.png", rating: 4.5 },
   { name: "Sharda University Online", ranking: "NIRF-87", fee: "₹0.80L - ₹1.30L", logo: "/shardalogo.png", rating: 4.1 },
   { name: "Dr. DY Patil Online", ranking: "NIRF-63", fee: "₹1.45L - ₹1.90L", logo: "/dypatillogo.png", rating: 4.4 },
-  { name: "Jain University Online", ranking: "NIRF-65", fee: "₹1.05L - ₹2.98L", logo: "/jainlogo.png", rating: 4.5 },
+  { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.05L - ₹2.98L", logo: "/jainlogo.png", rating: 4.5 },
   { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹0.75L - ₹1.58", logo: "/chandigarh.jpg", rating: 4.7 }
 ];
 

@@ -108,12 +108,13 @@ const Upes = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
               Build Your Future with UPES University Online
             </h1><br />
+            <p> <span className="font-semibold text-gray-700">Private University in Dehradun, Uttrakhand, India.</span><br /><br/></p>
             <p className="text-gray-700 text-lg">
               UPES (University of Petroleum and Energy Studies) is a leading institution in India offering UGC-entitled online degree programs with a focus on energy, technology, and business domains.<br /><br />
               Recognized for its industry-aligned curriculum, UPES provides students with cutting-edge knowledge and skills to excel in their careers. The university is known for its strong industry connections and focus on innovation.
             </p>
 
-            <h4 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">Private University in Dehradun, Uttarakhand</h4>
+            
           </div>
           <div className="md:w-1/2">
             <img src="/upes.png" alt="UPES University" className="w-full rounded-xl shadow-lg" />
@@ -313,13 +314,13 @@ const Upes = () => {
               <img src="/com10.png" alt="Company 10" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <img src="/companany4.png" alt="Company4" className="h-12 object-contain" />
+              <img src="/ibm.png" alt="Company4" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
               <img src="/company6.png" alt="Company 6" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <img src="/companany5.png" alt="Companany5" className="h-12 object-contain" />
+              <img src="/tcs.png" alt="Companany5" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
               <img src="/adove.png" alt="Adove" className="h-12 object-contain" />

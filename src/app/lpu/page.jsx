@@ -136,12 +136,13 @@ const Lpu = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
               Transform Your Career with LPU Online
             </h1><br />
+            <p> <span className="font-semibold text-gray-700">Private University in Jalandhar, Punjab, India.</span><br /><br/></p>
             <p className="text-gray-700 text-lg">
               Lovely Professional University (LPU) is a NAAC A++ accredited institution offering UGC-entitled online degree programs designed to provide flexible and quality education.<br /><br />
               With over 30,000 students on campus and a strong focus on innovation, LPU Online brings the same academic excellence through its digital platform, making education accessible to learners across India.
             </p>
 
-            <h4 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">Private University in Phagwara, Punjab</h4>
+            
           </div>
           <div className="md:w-1/2">
             <img src="/lpu.png" alt="Lovely Professional University" className="w-full rounded-xl shadow-lg" />

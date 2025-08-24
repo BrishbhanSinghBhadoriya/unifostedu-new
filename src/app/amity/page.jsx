@@ -245,12 +245,13 @@ const Amity = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4 leading-snug font-[Poppins]">
               Build a great career with Amity University Online
             </h1>
+            <p> <span className="font-semibold text-gray-700">Private University in Noida, Uttar Pradesh, India.</span><br /><br/></p>
             <p className="text-gray-700 text-lg">
              Amity University online offers student a globally recognised degree programs as well as certification courses to enhance and boost up the career for future aspect.<br />
               It is India's first university recognised by UGC for providing online degree programs by expert facility.<br />
               It is mainly designed for working profressionals and students who want to persue a good degree but dur to some factors they couldn't complete the degree, Amity University has provided a great opportunity for them to complete their dream life and achieve whatever they want.
             </p>
-            <h4 className="text-2xl md:text-3xl font-bold text-blue-800">Private University in  Noida, Uttar Pradesh</h4>
+            
           </div>
           <motion.img
             src="/amitypic.png"
