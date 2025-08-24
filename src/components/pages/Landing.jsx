@@ -561,15 +561,16 @@ const Landing = () => {
       {/* Enhanced Universities Section */}
      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
-        <motion.div className="text-center mb-16" data-aos="fade-up" > 
-          
+        <motion.div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl font-bold text-[#001e3c] mb-6">
-             🏆 Top Partner Universities 
-             </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                 Choose from India's most prestigious online universities
-                  </p>
-                   </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            🏆 Top Partner Universities 
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Choose from India's most prestigious online universities
+          </p>
+        </motion.div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
   {colleges.map((college, index) => (
     <motion.div
       key={index}
@@ -794,24 +795,23 @@ const Landing = () => {
       </section>
 
       {/* Unified Modal - Responsive */}
-     {/* In your landing.jsx file */}
-{showEnquiryModal && (
-  <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
-    <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10 p-4 sm:p-6 z-[30001]">
-      <DialogHeader>
-        <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
-          {modalType === "getStarted" && "Get Started with Unifost"}
-          {modalType === "videoCall" && "Book a Video Call"}
-          {modalType === "homeDemo" && "Book a Home Demo"}
-        </DialogTitle>
-      </DialogHeader>
-      <EnquiryForm 
-        onSubmitted={() => setShowEnquiryModal(false)} 
-        formType={modalType}
-      />
-    </DialogContent>
-  </Dialog>
-)}
+      {showEnquiryModal && (
+        <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
+          <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10 p-4 sm:p-6 z-[30001]">
+            <DialogHeader>
+              <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
+                {modalType === "getStarted" && "Get Started with Unifost"}
+                {modalType === "videoCall" && "Book a Video Call"}
+                {modalType === "homeDemo" && "Book a Home Demo"}
+              </DialogTitle>
+            </DialogHeader>
+            <EnquiryForm 
+              onSubmitted={() => setShowEnquiryModal(false)} 
+              formType={modalType}
+            />
+          </DialogContent>
+        </Dialog>
+      )}
     </div>
   );
 };
