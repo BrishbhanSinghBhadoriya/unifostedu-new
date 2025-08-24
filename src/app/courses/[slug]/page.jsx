@@ -42,7 +42,7 @@ const courseData = {
         NIRF: '29',
         rating: 4.8,
         image: '/amity.png',
-        specializations: ['Genral' , 'Dual Specilization', 'Human Resource Analytics', 'Data Science', 'Business Analytics', 'International Finance', 'Digital Enterpreneurship', 'Digital Marketing Management', 'General Management with optional Specialization'],
+        specializations: ['General Management', 'Dual Specialization', 'Human Resource Analytics', 'Data Science', 'Business Analytics', 'International Finance', 'Digital Entrepreneurship', 'Digital Marketing Management', 'General Management with optional Specialization'],
         fee: '₹1,99,000 - ₹2,99,000',
         duration: '2 Years',
         accreditation: 'UGC Approved',
@@ -51,6 +51,7 @@ const courseData = {
       {
         name: 'Manipal University',
         location: 'Jaipur, Rajasthan',
+        NIRF: 'N/A',
         rating: 4.6,
         image: '/manipal.png',
         specializations: ['Human Resource Management and Analytics', 'Finance and Marketing', 'Marketing and Human Resource Management', 'Business Analytics', 'Digital Marketing', 'Finance', 'Operations', 'International Business'],
@@ -62,6 +63,7 @@ const courseData = {
       {
         name: 'NMIMS',
         location: 'Mumbai, Maharashtra',
+        NIRF: 'N/A',
         rating: 4.7,
         image: '/nmims.png',
         specializations: ['Applied Finance', 'Business Administration', 'Business Analytics', 'Digital Marketing', 'Finance', 'Marketing', 'Operations', 'Human Resources'],
@@ -73,6 +75,7 @@ const courseData = {
       {
         name: 'Jain University',
         location: 'Bangalore, Karnataka',
+        NIRF: 'N/A',
         rating: 4.4,
         image: '/jain.png',
         specializations: ['MBA in Finance', 'MBA in Digital Marketing', 'MBA in Entrepreneurship', 'MBA in HR', 'MBA in Marketing'],
@@ -84,6 +87,7 @@ const courseData = {
       {
         name: 'LPU Online',
         location: 'Punjab',
+        NIRF: 'N/A',
         rating: 4.5,
         image: '/lpu.png',
         specializations: ['Finance', 'Marketing', 'Human Resources', 'Information Technology', 'Operations Management'],
@@ -95,6 +99,7 @@ const courseData = {
       {
         name: 'UPES Online',
         location: 'Dehradun, Uttarakhand',
+        NIRF: 'N/A',
         rating: 4.3,
         image: '/upes.png',
         specializations: ['Oil & Gas', 'Power Management', 'Logistics', 'Business Analytics', 'Finance'],
@@ -102,6 +107,114 @@ const courseData = {
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Industry Focused', 'Expert Faculty', 'Placement Support']
+      },
+      {
+        name: 'DYPATIL University',
+        location: 'Pune, Maharashtra',
+        NIRF: 'N/A',
+        rating: 4.5,
+        image: '/dypatil.png',
+        specializations: ['Finance', 'Marketing', 'Human Resources', 'Operations Management', 'International Business', 'Business Analytics'],
+        fee: '₹1.5L - ₹2.8L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Industry Connect', 'Placement Support', 'Expert Faculty']
+      },
+      {
+        name: 'OP Jindal Global University',
+        location: 'Sonipat, Haryana',
+        NIRF: 'N/A',
+        rating: 4.6,
+        image: '/opjindal.png',
+        specializations: ['Finance', 'Marketing', 'Human Resources', 'Operations', 'International Business', 'Business Analytics'],
+        fee: '₹2.2L - ₹3.5L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Global Perspective', 'Industry Partnerships', 'Career Services']
+      },
+      {
+        name: 'Chandigarh University',
+        location: 'Mohali, Punjab',
+        NIRF: '36',
+        rating: 4.4,
+        image: '/chandigarh.jpg',
+        specializations: ['Finance', 'Marketing', 'Human Resources', 'Information Technology', 'Operations Management', 'International Business'],
+        fee: '₹1.3L - ₹2.5L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Modern Curriculum', 'Industry Projects', 'Placement Assistance']
+      },
+      {
+        name: 'Amrita University',
+        location: 'Coimbatore, Tamil Nadu',
+        NIRF: 'N/A',
+        rating: 4.5,
+        image: '/amrita.webp',
+        specializations: ['Finance', 'Marketing', 'Human Resources', 'Operations', 'Business Analytics', 'International Business'],
+        fee: '₹1.8L - ₹3.0L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Industry Connect', 'Research Focus', 'Career Services']
+      },
+      {
+        name: 'Andhra University',
+        location: 'Visakhapatnam, Andhra Pradesh',
+        NIRF: 'N/A',
+        rating: 4.3,
+        image: '/andhra.webp',
+        specializations: ['Finance', 'Marketing', 'Human Resources', 'Operations', 'Business Analytics'],
+        fee: '₹1.2L - ₹2.5L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
+      },
+      {
+        name: 'Kurukshetra University',
+        location: 'Kurukshetra, Haryana',
+        NIRF: 'N/A',
+        rating: 4.2,
+        image: '/kurukshetra.png',
+        specializations: ['Finance', 'Marketing', 'Human Resources', 'Operations', 'Business Analytics'],
+        fee: '₹1.0L - ₹2.2L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
+      },
+      {
+        name: 'Manglayatan University',
+        location: 'Aligarh, Uttar Pradesh',
+        NIRF: 'N/A',
+        rating: 4.1,
+        image: '/manglayatan.png',
+        specializations: ['Finance', 'Marketing', 'Human Resources', 'Operations', 'Business Analytics'],
+        fee: '₹90K - ₹2.0L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
+      },
+      {
+        name: 'Sikkim Manipal University',
+        location: 'Gangtok, Sikkim',
+        NIRF: 'N/A',
+        rating: 4.3,
+        image: '/sikkim-manipal.png',
+        specializations: ['Finance', 'Marketing', 'Human Resources', 'Operations', 'Business Analytics', 'International Business'],
+        fee: '₹1.2L - ₹2.8L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+      },
+      {
+        name: 'Uttaranchal University',
+        location: 'Dehradun, Uttarakhand',
+        NIRF: 'N/A',
+        rating: 4.2,
+        image: '/uttaranchal.png',
+        specializations: ['Finance', 'Marketing', 'Human Resources', 'Operations', 'Business Analytics'],
+        fee: '₹1.0L - ₹2.3L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
       }
     ]
   },
@@ -123,6 +236,7 @@ const courseData = {
       {
         name: 'Manipal University',
         location: 'Jaipur, Rajasthan',
+        NIRF: 'N/A',
         rating: 4.6,
         image: '/manipal.png',
         specializations: ['Data Science', 'Artificial Intelligence & ML', 'Cloud Computing', 'Full Stack Development'],
@@ -134,10 +248,11 @@ const courseData = {
       {
         name: 'LPU Online',
         location: 'Punjab',
+        NIRF: 'N/A',
         rating: 4.5,
         image: '/lpu.png',
         specializations: ['Software Engineering', 'Cyber Security', 'Data Analytics', 'Cloud and DevOps'],
-        fee: '₹90K - ₹2L',
+        fee: '₹90K - ₹2.8L',
         duration: '3 Years',
         accreditation: 'UGC Approved',
         features: ['Affordable Education', 'Practical Curriculum', 'Career Guidance']
@@ -145,6 +260,7 @@ const courseData = {
       {
         name: 'Amity University',
         location: 'Noida, Uttar Pradesh',
+        NIRF: '29',
         rating: 4.4,
         image: '/amity.png',
         specializations: ['Data Science', 'Blockchain', 'AI/ML', 'Networking'],
@@ -156,6 +272,7 @@ const courseData = {
       {
         name: 'UPES Online',
         location: 'Dehradun, Uttarakhand',
+        NIRF: 'N/A',
         rating: 4.3,
         image: '/upes.png',
         specializations: ['Data Science', 'Big Data', 'AI & ML'],
@@ -163,6 +280,150 @@ const courseData = {
         duration: '3 Years',
         accreditation: 'UGC Approved',
         features: ['Domain Focus', 'Industry Connect', 'Career Support']
+      },
+      {
+        name: 'Chandigarh University',
+        location: 'Mohali, Punjab',
+        NIRF: '36',
+        rating: 4.3,
+        image: '/chandigarh.jpg',
+        specializations: ['Computer Science', 'Data Science', 'Software Engineering', 'AI & ML'],
+        fee: '₹1.0L - ₹2.0L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
+      },
+      {
+        name: 'Jain University',
+        location: 'Bangalore, Karnataka',
+        NIRF: 'N/A',
+        rating: 4.4,
+        image: '/jain.png',
+        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Cloud Computing'],
+        fee: '₹1.1L - ₹2.1L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Modern Curriculum', 'Industry Projects', 'Career Services']
+      },
+      {
+        name: 'DYPATIL University',
+        location: 'Pune, Maharashtra',
+        NIRF: 'N/A',
+        rating: 4.3,
+        image: '/dypatil.png',
+        specializations: ['Computer Science', 'Data Science', 'Software Engineering', 'AI & ML'],
+        fee: '₹1.0L - ₹2.0L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Industry Connect', 'Practical Learning', 'Career Support']
+      },
+      {
+        name: 'Shoolini University',
+        location: 'Solan, Himachal Pradesh',
+        NIRF: 'N/A',
+        rating: 4.2,
+        image: '/shoolini.jpg',
+        specializations: ['Computer Science', 'Data Science', 'AI & ML', 'Cloud Computing'],
+        fee: '₹90K - ₹1.8L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Research Focus', 'Industry Connect', 'Career Guidance']
+      },
+      {
+        name: 'VGU',
+        location: 'Jaipur, Rajasthan',
+        NIRF: 'N/A',
+        rating: 4.1,
+        image: '/vgu.png',
+        specializations: ['Computer Science', 'Data Science', 'Software Engineering', 'AI & ML'],
+        fee: '₹85K - ₹1.7L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
+      },
+      {
+        name: 'Sharda University',
+        location: 'Greater Noida, Uttar Pradesh',
+        NIRF: 'N/A',
+        rating: 4.2,
+        image: '/sharda.png',
+        specializations: ['Computer Science', 'Data Science', 'AI & ML', 'Cloud Computing'],
+        fee: '₹95K - ₹1.9L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Experienced Faculty', 'Industry Exposure', 'Career Guidance']
+      },
+      {
+        name: 'Amrita University',
+        location: 'Coimbatore, Tamil Nadu',
+        NIRF: 'N/A',
+        rating: 4.4,
+        image: '/amrita.png',
+        specializations: ['Computer Science', 'Data Science', 'AI & ML', 'Software Engineering', 'Cloud Computing'],
+        fee: '₹1.1L - ₹2.2L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Industry Connect', 'Research Focus', 'Career Services']
+      },
+      {
+        name: 'Andhra University',
+        location: 'Visakhapatnam, Andhra Pradesh',
+        NIRF: 'N/A',
+        rating: 4.2,
+        image: '/andhra.png',
+        specializations: ['Computer Science', 'Data Science', 'AI & ML', 'Software Engineering'],
+        fee: '₹90K - ₹1.8L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
+      },
+      {
+        name: 'Kurukshetra University',
+        location: 'Kurukshetra, Haryana',
+        NIRF: 'N/A',
+        rating: 4.1,
+        image: '/kurukshetra.png',
+        specializations: ['Computer Science', 'Data Science', 'AI & ML', 'Software Engineering'],
+        fee: '₹80K - ₹1.6L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
+      },
+      {
+        name: 'Manglayatan University',
+        location: 'Aligarh, Uttar Pradesh',
+        NIRF: 'N/A',
+        rating: 4.0,
+        image: '/manglayatan.png',
+        specializations: ['Computer Science', 'Data Science', 'AI & ML', 'Software Engineering'],
+        fee: '₹75K - ₹1.5L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
+      },
+      {
+        name: 'Sikkim Manipal University',
+        location: 'Gangtok, Sikkim',
+        NIRF: 'N/A',
+        rating: 4.2,
+        image: '/sikkim-manipal.png',
+        specializations: ['Computer Science', 'Data Science', 'AI & ML', 'Software Engineering', 'Cloud Computing'],
+        fee: '₹95K - ₹1.9L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+      },
+      {
+        name: 'Uttaranchal University',
+        location: 'Dehradun, Uttarakhand',
+        NIRF: 'N/A',
+        rating: 4.1,
+        image: '/uttaranchal.png',
+        specializations: ['Computer Science', 'Data Science', 'AI & ML', 'Software Engineering'],
+        fee: '₹85K - ₹1.7L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
       }
     ]
   },
@@ -184,6 +445,7 @@ const courseData = {
       {
         name: 'Amity University',
         location: 'Noida, Uttar Pradesh',
+        NIRF: '29',
         rating: 4.7,
         image: '/amity.png',
         specializations: ['General Management', 'Finance', 'Marketing', 'Human Resources', 'International Business'],
@@ -195,6 +457,7 @@ const courseData = {
       {
         name: 'Manipal University',
         location: 'Jaipur, Rajasthan',
+        NIRF: 'N/A',
         rating: 4.5,
         image: '/manipal.png',
         specializations: ['Business Administration', 'Finance', 'Marketing', 'Human Resources', 'Operations'],
@@ -206,6 +469,7 @@ const courseData = {
       {
         name: 'Sharda University',
         location: 'Greater Noida, Uttar Pradesh',
+        NIRF: 'N/A',
         rating: 4.4,
         image: '/sharda.png',
         specializations: ['Business Management', 'Finance', 'Marketing', 'Human Resources', 'International Business'],
@@ -213,6 +477,149 @@ const courseData = {
         duration: '3 Years',
         accreditation: 'UGC Approved',
         features: ['Quality Education', 'Industry Connect', 'Career Support']
+      },
+      {
+        name: 'LPU Online',
+        location: 'Punjab',
+        NIRF: 'N/A',
+        rating: 4.4,
+        image: '/lpu.png',
+        specializations: ['Business Administration', 'Finance', 'Marketing', 'Human Resources', 'Operations'],
+        fee: '₹75K - ₹1.6L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
+      },
+      {
+        name: 'Chandigarh University',
+        location: 'Mohali, Punjab',
+        rating: 4.3,
+        image: '/chandigarh.jpg',
+        specializations: ['Business Management', 'Finance', 'Marketing', 'Human Resources', 'International Business'],
+        fee: '₹70K - ₹1.4L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
+      },
+      {
+        name: 'Jain University',
+        location: 'Bangalore, Karnataka',
+        NIRF: 'N/A',
+        rating: 4.4,
+        image: '/jain.png',
+        specializations: ['Business Administration', 'Finance', 'Marketing', 'Human Resources', 'Operations'],
+        fee: '₹80K - ₹1.7L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Modern Curriculum', 'Industry Projects', 'Career Support']
+      },
+      {
+        name: 'DYPATIL University',
+        location: 'Pune, Maharashtra',
+        NIRF: 'N/A',
+        rating: 4.3,
+        image: '/dypatil.png',
+        specializations: ['Business Management', 'Finance', 'Marketing', 'Human Resources', 'Operations'],
+        fee: '₹75K - ₹1.5L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Industry Connect', 'Quality Education', 'Career Support']
+      },
+      {
+        name: 'OP Jindal Global University',
+        location: 'Sonipat, Haryana',
+        NIRF: 'N/A',
+        rating: 4.5,
+        image: '/opjindal.png',
+        specializations: ['Business Administration', 'Finance', 'Marketing', 'Human Resources', 'International Business'],
+        fee: '₹1.0L - ₹2.0L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Global Perspective', 'Industry Partnerships', 'Career Services']
+      },
+      {
+        name: 'Shoolini University',
+        location: 'Solan, Himachal Pradesh',
+        NIRF: 'N/A',
+        rating: 4.2,
+        image: '/shoolini.png',
+        specializations: ['Business Management', 'Finance', 'Marketing', 'Human Resources', 'Operations'],
+        fee: '₹65K - ₹1.3L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Research Focus', 'Industry Connect', 'Career Guidance']
+      },
+      {
+        name: 'Amrita University',
+        location: 'Coimbatore, Tamil Nadu',
+        NIRF: 'N/A',
+        rating: 4.4,
+        image: '/amrita.png',
+        specializations: ['Business Administration', 'Finance', 'Marketing', 'Human Resources', 'International Business'],
+        fee: '₹85K - ₹1.8L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Industry Connect', 'Research Focus', 'Career Services']
+      },
+      {
+        name: 'Andhra University',
+        location: 'Visakhapatnam, Andhra Pradesh',
+        NIRF: 'N/A',
+        rating: 4.2,
+        image: '/andhra.png',
+        specializations: ['Business Management', 'Finance', 'Marketing', 'Human Resources', 'Operations'],
+        fee: '₹70K - ₹1.5L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
+      },
+      {
+        name: 'Kurukshetra University',
+        location: 'Kurukshetra, Haryana',
+        NIRF: 'N/A',
+        rating: 4.1,
+        image: '/kurukshetra.png',
+        specializations: ['Business Administration', 'Finance', 'Marketing', 'Human Resources', 'Operations'],
+        fee: '₹60K - ₹1.3L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
+      },
+      {
+        name: 'Manglayatan University',
+        location: 'Aligarh, Uttar Pradesh',
+        NIRF: 'N/A',
+        rating: 4.0,
+        image: '/manglayatan.png',
+        specializations: ['Business Administration', 'Finance', 'Marketing', 'Human Resources', 'Operations'],
+        fee: '₹55K - ₹1.2L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
+      },
+      {
+        name: 'Sikkim Manipal University',
+        location: 'Gangtok, Sikkim',
+        NIRF: 'N/A',
+        rating: 4.2,
+        image: '/sikkim-manipal.png',
+        specializations: ['Business Administration', 'Finance', 'Marketing', 'Human Resources', 'International Business'],
+        fee: '₹75K - ₹1.6L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+      },
+      {
+        name: 'Uttaranchal University',
+        location: 'Dehradun, Uttarakhand',
+        NIRF: 'N/A',
+        rating: 4.1,
+        image: '/uttaranchal.png',
+        specializations: ['Business Management', 'Finance', 'Marketing', 'Human Resources', 'Operations'],
+        fee: '₹65K - ₹1.4L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
       }
     ]
   },
@@ -234,6 +641,7 @@ const courseData = {
       {
         name: 'Manipal University',
         location: 'Jaipur, Rajasthan',
+        NIRF: 'N/A',
         rating: 4.6,
         image: '/manipal.png',
         specializations: ['Full Stack Development', 'Data Science', 'Cloud & DevOps'],
@@ -245,6 +653,7 @@ const courseData = {
       {
         name: 'LPU Online',
         location: 'Punjab',
+        NIRF: 'N/A',
         rating: 4.5,
         image: '/lpu.png',
         specializations: ['Software Engineering', 'Cyber Security', 'Data Analytics'],
@@ -256,6 +665,7 @@ const courseData = {
       {
         name: 'Amity University',
         location: 'Noida, Uttar Pradesh',
+        NIRF: '29',
         rating: 4.4,
         image: '/amity.png',
         specializations: ['Data Science', 'AI/ML', 'Cloud Computing'],
@@ -263,6 +673,234 @@ const courseData = {
         duration: '3 Years',
         accreditation: 'UGC Approved',
         features: ['Live Classes', 'Placement Support', 'Industry Faculty']
+      },
+      {
+        name: 'Chandigarh University',
+        location: 'Mohali, Punjab',
+        NIRF: '36',
+        rating: 4.2,
+        image: '/chandigarh.jpg',
+        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Software Engineering'],
+        fee: '₹75K - ₹1.5L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
+      },
+      {
+        name: 'Jain University',
+        location: 'Bangalore, Karnataka',
+        NIRF: 'N/A',
+        rating: 4.3,
+        image: '/jain.png',
+        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Cloud Computing'],
+        fee: '₹80K - ₹1.6L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Modern Curriculum', 'Industry Projects', 'Career Services']
+      },
+      {
+        name: 'Shoolini University',
+        location: 'Solan, Himachal Pradesh',
+        NIRF: 'N/A',
+        rating: 4.1,
+        image: '/shoolini.png',
+        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Software Engineering'],
+        fee: '₹70K - ₹1.4L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Research Focus', 'Industry Connect', 'Career Guidance']
+      },
+      {
+        name: 'VGU',
+        location: 'Jaipur, Rajasthan',
+        NIRF: 'N/A',
+        rating: 4.0,
+        image: '/vgu.png',
+        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Software Engineering'],
+        fee: '₹65K - ₹1.3L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
+      },
+      {
+        name: 'UPES Online',
+        location: 'Dehradun, Uttarakhand',
+        NIRF: 'N/A',
+        rating: 4.2,
+        image: '/upes.png',
+        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Cloud Computing'],
+        fee: '₹85K - ₹1.6L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Domain Focus', 'Industry Connect', 'Career Support']
+      },
+      {
+        name: 'Sharda University',
+        location: 'Greater Noida, Uttar Pradesh',
+        NIRF: 'N/A',
+        rating: 4.1,
+        image: '/sharda.png',
+        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Software Engineering'],
+        fee: '₹70K - ₹1.4L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Experienced Faculty', 'Industry Exposure', 'Career Guidance']
+      },
+      {
+        name: 'Amity University',
+        location: 'Noida, Uttar Pradesh',
+        NIRF: '29',
+        rating: 4.4,
+        image: '/amity.png',
+        specializations: ['Data Science', 'AI/ML', 'Cloud Computing'],
+        fee: '₹90K - ₹1.7L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Live Classes', 'Placement Support', 'Industry Faculty']
+      },
+      {
+        name: 'Chandigarh University',
+        location: 'Mohali, Punjab',
+        NIRF: '36',
+        rating: 4.2,
+        image: '/chandigarh.jpg',
+        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Software Engineering'],
+        fee: '₹75K - ₹1.5L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
+      },
+      {
+        name: 'Jain University',
+        location: 'Bangalore, Karnataka',
+        NIRF: 'N/A',
+        rating: 4.3,
+        image: '/jain.png',
+        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Cloud Computing'],
+        fee: '₹80K - ₹1.6L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Modern Curriculum', 'Industry Projects', 'Career Services']
+      },
+      {
+        name: 'Shoolini University',
+        location: 'Solan, Himachal Pradesh',
+        NIRF: 'N/A',
+        rating: 4.1,
+        image: '/shoolini.png',
+        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Software Engineering'],
+        fee: '₹70K - ₹1.4L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Research Focus', 'Industry Connect', 'Career Guidance']
+      },
+      {
+        name: 'VGU',
+        location: 'Jaipur, Rajasthan',
+        NIRF: 'N/A',
+        rating: 4.0,
+        image: '/vgu.png',
+        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Software Engineering'],
+        fee: '₹65K - ₹1.3L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
+      },
+      {
+        name: 'UPES Online',
+        location: 'Dehradun, Uttarakhand',
+        NIRF: 'N/A',
+        rating: 4.2,
+        image: '/upes.png',
+        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Cloud Computing'],
+        fee: '₹85K - ₹1.6L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Domain Focus', 'Industry Connect', 'Career Support']
+      },
+      {
+        name: 'Sharda University',
+        location: 'Greater Noida, Uttar Pradesh',
+        NIRF: 'N/A',
+        rating: 4.1,
+        image: '/sharda.png',
+        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Software Engineering'],
+        fee: '₹70K - ₹1.4L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Experienced Faculty', 'Industry Exposure', 'Career Guidance']
+      },
+      {
+        name: 'Amrita University',
+        location: 'Coimbatore, Tamil Nadu',
+        NIRF: 'N/A',
+        rating: 4.3,
+        image: '/amrita.png',
+        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Software Engineering', 'Cloud Computing'],
+        fee: '₹80K - ₹1.6L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Industry Connect', 'Research Focus', 'Career Services']
+      },
+      {
+        name: 'Andhra University',
+        location: 'Visakhapatnam, Andhra Pradesh',
+        NIRF: 'N/A',
+        rating: 4.1,
+        image: '/andhra.png',
+        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Software Engineering'],
+        fee: '₹65K - ₹1.3L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
+      },
+      {
+        name: 'Kurukshetra University',
+        location: 'Kurukshetra, Haryana',
+        NIRF: 'N/A',
+        rating: 4.0,
+        image: '/kurukshetra.png',
+        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Software Engineering'],
+        fee: '₹60K - ₹1.2L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
+      },
+      {
+        name: 'Manglayatan University',
+        location: 'Aligarh, Uttar Pradesh',
+        NIRF: 'N/A',
+        rating: 3.9,
+        image: '/manglayatan.png',
+        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Software Engineering'],
+        fee: '₹55K - ₹1.1L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
+      },
+      {
+        name: 'Sikkim Manipal University',
+        location: 'Gangtok, Sikkim',
+        NIRF: 'N/A',
+        rating: 4.1,
+        image: '/sikkim-manipal.png',
+        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Software Engineering', 'Cloud Computing'],
+        fee: '₹70K - ₹1.5L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+      },
+      {
+        name: 'Uttaranchal University',
+        location: 'Dehradun, Uttarakhand',
+        NIRF: 'N/A',
+        rating: 4.0,
+        image: '/uttaranchal.png',
+        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Software Engineering'],
+        fee: '₹65K - ₹1.3L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
       }
     ]
   },
@@ -313,6 +951,105 @@ const courseData = {
         duration: '3 Years',
         accreditation: 'UGC Approved',
         features: ['Experienced Faculty', 'Industry Exposure', 'Counselling']
+      },
+      {
+        name: 'Manipal University',
+        location: 'Jaipur, Rajasthan',
+        rating: 4.4,
+        image: '/manipal.png',
+        specializations: ['Accounting', 'Finance', 'Banking', 'Insurance', 'Taxation'],
+        fee: '₹80K - ₹1.5L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+      },
+      {
+        name: 'Jain University',
+        location: 'Bangalore, Karnataka',
+        rating: 4.3,
+        image: '/jain.png',
+        specializations: ['Accounting', 'Finance', 'Banking', 'Insurance', 'Taxation'],
+        fee: '₹75K - ₹1.4L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Modern Curriculum', 'Industry Projects', 'Career Services']
+      },
+      {
+        name: 'Shoolini University',
+        location: 'Solan, Himachal Pradesh',
+        rating: 4.1,
+        image: '/shoolini.png',
+        specializations: ['Accounting', 'Finance', 'Banking', 'Insurance'],
+        fee: '₹65K - ₹1.2L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Research Focus', 'Industry Connect', 'Career Guidance']
+      },
+      {
+        name: 'Amrita University',
+        location: 'Coimbatore, Tamil Nadu',
+        rating: 4.3,
+        image: '/amrita.png',
+        specializations: ['Accounting', 'Finance', 'Banking', 'Insurance', 'Taxation'],
+        fee: '₹75K - ₹1.5L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Industry Connect', 'Research Focus', 'Career Services']
+      },
+      {
+        name: 'Andhra University',
+        location: 'Visakhapatnam, Andhra Pradesh',
+        rating: 4.1,
+        image: '/andhra.png',
+        specializations: ['Accounting', 'Finance', 'Banking', 'Insurance'],
+        fee: '₹65K - ₹1.3L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
+      },
+      {
+        name: 'Kurukshetra University',
+        location: 'Kurukshetra, Haryana',
+        rating: 4.0,
+        image: '/kurukshetra.png',
+        specializations: ['Accounting', 'Finance', 'Banking', 'Insurance'],
+        fee: '₹60K - ₹1.2L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
+      },
+      {
+        name: 'Manglayatan University',
+        location: 'Aligarh, Uttar Pradesh',
+        rating: 3.9,
+        image: '/manglayatan.png',
+        specializations: ['Accounting', 'Finance', 'Banking', 'Insurance'],
+        fee: '₹55K - ₹1.1L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
+      },
+      {
+        name: 'Sikkim Manipal University',
+        location: 'Gangtok, Sikkim',
+        rating: 4.1,
+        image: '/sikkim-manipal.png',
+        specializations: ['Accounting', 'Finance', 'Banking', 'Insurance', 'Taxation'],
+        fee: '₹70K - ₹1.4L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+      },
+      {
+        name: 'Uttaranchal University',
+        location: 'Dehradun, Uttarakhand',
+        rating: 4.0,
+        image: '/uttaranchal.png',
+        specializations: ['Accounting', 'Finance', 'Banking', 'Insurance'],
+        fee: '₹65K - ₹1.3L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
       }
     ]
   },
@@ -363,6 +1100,94 @@ const courseData = {
         duration: '3 Years',
         accreditation: 'UGC Approved',
         features: ['Modern Curriculum', 'Projects', 'Career Services']
+      },
+      {
+        name: 'LPU Online',
+        location: 'Punjab',
+        rating: 4.3,
+        image: '/lpu.png',
+        specializations: ['English', 'Psychology', 'Sociology', 'Political Science'],
+        fee: '₹60K - ₹1.1L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Affordable Education', 'Research Focus', 'Career Guidance']
+      },
+      {
+        name: 'VGU',
+        location: 'Jaipur, Rajasthan',
+        rating: 4.1,
+        image: '/vgu.png',
+        specializations: ['English', 'Psychology', 'Sociology', 'Economics'],
+        fee: '₹55K - ₹1.0L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Research Projects', 'Career Support']
+      },
+      {
+        name: 'Amrita University',
+        location: 'Coimbatore, Tamil Nadu',
+        rating: 4.3,
+        image: '/amrita.png',
+        specializations: ['English', 'Psychology', 'Sociology', 'Economics', 'Political Science'],
+        fee: '₹65K - ₹1.3L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Industry Connect', 'Research Focus', 'Career Services']
+      },
+      {
+        name: 'Andhra University',
+        location: 'Visakhapatnam, Andhra Pradesh',
+        rating: 4.1,
+        image: '/andhra.png',
+        specializations: ['English', 'Psychology', 'Sociology', 'Economics', 'Political Science'],
+        fee: '₹55K - ₹1.1L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
+      },
+      {
+        name: 'Kurukshetra University',
+        location: 'Kurukshetra, Haryana',
+        rating: 4.0,
+        image: '/kurukshetra.png',
+        specializations: ['English', 'Psychology', 'Sociology', 'Economics'],
+        fee: '₹50K - ₹1.0L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
+      },
+      {
+        name: 'Manglayatan University',
+        location: 'Aligarh, Uttar Pradesh',
+        rating: 3.9,
+        image: '/manglayatan.png',
+        specializations: ['English', 'Psychology', 'Sociology', 'Economics'],
+        fee: '₹45K - ₹95K',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
+      },
+      {
+        name: 'Sikkim Manipal University',
+        location: 'Gangtok, Sikkim',
+        rating: 4.1,
+        image: '/sikkim-manipal.png',
+        specializations: ['English', 'Psychology', 'Sociology', 'Economics', 'Political Science'],
+        fee: '₹60K - ₹1.2L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+      },
+      {
+        name: 'Uttaranchal University',
+        location: 'Dehradun, Uttarakhand',
+        rating: 4.0,
+        image: '/uttaranchal.png',
+        specializations: ['English', 'Psychology', 'Sociology', 'Economics'],
+        fee: '₹55K - ₹1.1L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
       }
     ]
   },
@@ -413,6 +1238,83 @@ const courseData = {
         duration: '3 Years',
         accreditation: 'UGC Approved',
         features: ['Affordable', 'Workshops', 'Career Guidance']
+      },
+      {
+        name: 'Chandigarh University',
+        location: 'Mohali, Punjab',
+        rating: 4.2,
+        image: '/chandigarh.jpg',
+        specializations: ['Journalism', 'Mass Communication', 'Digital Media', 'Advertising & PR'],
+        fee: '₹75K - ₹1.3L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
+      },
+      {
+        name: 'Amrita University',
+        location: 'Coimbatore, Tamil Nadu',
+        rating: 4.3,
+        image: '/amrita.png',
+        specializations: ['Journalism', 'Mass Communication', 'Digital Media', 'Advertising & PR', 'Broadcast Journalism'],
+        fee: '₹80K - ₹1.5L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Industry Connect', 'Research Focus', 'Career Services']
+      },
+      {
+        name: 'Andhra University',
+        location: 'Visakhapatnam, Andhra Pradesh',
+        rating: 4.1,
+        image: '/andhra.png',
+        specializations: ['Journalism', 'Mass Communication', 'Digital Media', 'Advertising'],
+        fee: '₹70K - ₹1.3L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
+      },
+      {
+        name: 'Kurukshetra University',
+        location: 'Kurukshetra, Haryana',
+        rating: 4.0,
+        image: '/kurukshetra.png',
+        specializations: ['Journalism', 'Mass Communication', 'Digital Media', 'Advertising'],
+        fee: '₹65K - ₹1.2L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
+      },
+      {
+        name: 'Manglayatan University',
+        location: 'Aligarh, Uttar Pradesh',
+        rating: 3.9,
+        image: '/manglayatan.png',
+        specializations: ['Journalism', 'Mass Communication', 'Digital Media', 'Advertising'],
+        fee: '₹60K - ₹1.1L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
+      },
+      {
+        name: 'Sikkim Manipal University',
+        location: 'Gangtok, Sikkim',
+        rating: 4.1,
+        image: '/sikkim-manipal.png',
+        specializations: ['Journalism', 'Mass Communication', 'Digital Media', 'Advertising & PR'],
+        fee: '₹70K - ₹1.4L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+      },
+      {
+        name: 'Uttaranchal University',
+        location: 'Dehradun, Uttarakhand',
+        rating: 4.0,
+        image: '/uttaranchal.png',
+        specializations: ['Journalism', 'Mass Communication', 'Digital Media', 'Advertising'],
+        fee: '₹65K - ₹1.3L',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
       }
     ]
   },
@@ -452,6 +1354,94 @@ const courseData = {
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Affordable', 'Curriculum Focus', 'Career Services']
+      },
+      {
+        name: 'Manipal University',
+        location: 'Jaipur, Rajasthan',
+        rating: 4.5,
+        image: '/manipal.png',
+        specializations: ['Accounting', 'Finance', 'Economics', 'Banking'],
+        fee: '₹1.0L - ₹1.9L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+      },
+      {
+        name: 'Jain University',
+        location: 'Bangalore, Karnataka',
+        rating: 4.4,
+        image: '/jain.png',
+        specializations: ['Accounting', 'Finance', 'Economics', 'Banking'],
+        fee: '₹85K - ₹1.7L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Modern Curriculum', 'Industry Projects', 'Career Services']
+      },
+      {
+        name: 'Amrita University',
+        location: 'Coimbatore, Tamil Nadu',
+        rating: 4.4,
+        image: '/amrita.png',
+        specializations: ['Accounting', 'Finance', 'Economics', 'Banking', 'Taxation'],
+        fee: '₹90K - ₹1.8L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Industry Connect', 'Research Focus', 'Career Services']
+      },
+      {
+        name: 'Andhra University',
+        location: 'Visakhapatnam, Andhra Pradesh',
+        rating: 4.2,
+        image: '/andhra.png',
+        specializations: ['Accounting', 'Finance', 'Economics', 'Banking'],
+        fee: '₹75K - ₹1.5L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
+      },
+      {
+        name: 'Kurukshetra University',
+        location: 'Kurukshetra, Haryana',
+        rating: 4.1,
+        image: '/kurukshetra.png',
+        specializations: ['Accounting', 'Finance', 'Economics', 'Banking'],
+        fee: '₹70K - ₹1.4L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
+      },
+      {
+        name: 'Manglayatan University',
+        location: 'Aligarh, Uttar Pradesh',
+        rating: 4.0,
+        image: '/manglayatan.png',
+        specializations: ['Accounting', 'Finance', 'Economics', 'Banking'],
+        fee: '₹65K - ₹1.3L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
+      },
+      {
+        name: 'Sikkim Manipal University',
+        location: 'Gangtok, Sikkim',
+        rating: 4.2,
+        image: '/sikkim-manipal.png',
+        specializations: ['Accounting', 'Finance', 'Economics', 'Banking', 'Taxation'],
+        fee: '₹80K - ₹1.6L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+      },
+      {
+        name: 'Uttaranchal University',
+        location: 'Dehradun, Uttarakhand',
+        rating: 4.1,
+        image: '/uttaranchal.png',
+        specializations: ['Accounting', 'Finance', 'Economics', 'Banking'],
+        fee: '₹75K - ₹1.5L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
       }
     ]
   },
@@ -491,6 +1481,127 @@ const courseData = {
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Live Classes', 'Research Focus', 'Career Support']
+      },
+      {
+        name: 'LPU Online',
+        location: 'Punjab',
+        rating: 4.3,
+        image: '/lpu.png',
+        specializations: ['English', 'Psychology', 'Sociology', 'Political Science'],
+        fee: '₹65K - ₹1.1L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Affordable Education', 'Research Focus', 'Career Guidance']
+      },
+      {
+        name: 'Chandigarh University',
+        location: 'Mohali, Punjab',
+        rating: 4.2,
+        image: '/chandigarh.jpg',
+        specializations: ['English', 'Psychology', 'Sociology', 'Economics'],
+        fee: '₹70K - ₹1.3L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Research Projects', 'Career Support']
+      },
+      {
+        name: 'Jain University',
+        location: 'Bangalore, Karnataka',
+        rating: 4.3,
+        image: '/jain.png',
+        specializations: ['English', 'Psychology', 'Sociology', 'Economics'],
+        fee: '₹75K - ₹1.4L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Modern Curriculum', 'Research Focus', 'Career Services']
+      },
+      {
+        name: 'OP Jindal Global University',
+        location: 'Sonipat, Haryana',
+        rating: 4.4,
+        image: '/opjindal.png',
+        specializations: ['English', 'Psychology', 'Public Policy', 'Economics'],
+        fee: '₹90K - ₹1.6L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Global Perspective', 'Research Excellence', 'Career Services']
+      },
+      {
+        name: 'Shoolini University',
+        location: 'Solan, Himachal Pradesh',
+        rating: 4.1,
+        image: '/shoolini.png',
+        specializations: ['English', 'Psychology', 'Sociology', 'Political Science'],
+        fee: '₹60K - ₹1.0L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Research Focus', 'Industry Connect', 'Career Guidance']
+      },
+      {
+        name: 'Amrita University',
+        location: 'Coimbatore, Tamil Nadu',
+        rating: 4.3,
+        image: '/amrita.png',
+        specializations: ['English', 'Psychology', 'Sociology', 'Economics', 'Political Science'],
+        fee: '₹75K - ₹1.4L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Industry Connect', 'Research Focus', 'Career Services']
+      },
+      {
+        name: 'Andhra University',
+        location: 'Visakhapatnam, Andhra Pradesh',
+        rating: 4.1,
+        image: '/andhra.png',
+        specializations: ['English', 'Psychology', 'Sociology', 'Economics', 'Political Science'],
+        fee: '₹65K - ₹1.2L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
+      },
+      {
+        name: 'Kurukshetra University',
+        location: 'Kurukshetra, Haryana',
+        rating: 4.0,
+        image: '/kurukshetra.png',
+        specializations: ['English', 'Psychology', 'Sociology', 'Economics'],
+        fee: '₹60K - ₹1.1L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
+      },
+      {
+        name: 'Manglayatan University',
+        location: 'Aligarh, Uttar Pradesh',
+        rating: 3.9,
+        image: '/manglayatan.png',
+        specializations: ['English', 'Psychology', 'Sociology', 'Economics'],
+        fee: '₹55K - ₹1.0L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
+      },
+      {
+        name: 'Sikkim Manipal University',
+        location: 'Gangtok, Sikkim',
+        rating: 4.1,
+        image: '/sikkim-manipal.png',
+        specializations: ['English', 'Psychology', 'Sociology', 'Economics', 'Political Science'],
+        fee: '₹70K - ₹1.3L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+      },
+      {
+        name: 'Uttaranchal University',
+        location: 'Dehradun, Uttarakhand',
+        rating: 4.0,
+        image: '/uttaranchal.png',
+        specializations: ['English', 'Psychology', 'Sociology', 'Economics'],
+        fee: '₹65K - ₹1.2L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
       }
     ]
   },
@@ -552,10 +1663,517 @@ const courseData = {
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Affordable', 'Workshops', 'Career Guidance']
+      },
+      {
+        name: 'Manipal University',
+        location: 'Jaipur, Rajasthan',
+        rating: 4.5,
+        image: '/manipal.png',
+        specializations: ['Journalism', 'Digital Media', 'Advertising & PR', 'Mass Communication'],
+        fee: '₹1.1L - ₹1.9L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Expert Faculty', 'Industry Connect', 'Career Services']
+      },
+      {
+        name: 'VGU',
+        location: 'Jaipur, Rajasthan',
+        rating: 4.2,
+        image: '/vgu.png',
+        specializations: ['Journalism', 'Mass Communication', 'Digital Media', 'Advertising'],
+        fee: '₹85K - ₹1.5L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
+      },
+      {
+        name: 'Amrita University',
+        location: 'Coimbatore, Tamil Nadu',
+        rating: 4.4,
+        image: '/amrita.png',
+        specializations: ['Journalism', 'Mass Communication', 'Digital Media', 'Advertising & PR', 'Broadcast Journalism'],
+        fee: '₹95K - ₹1.8L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Industry Connect', 'Research Focus', 'Career Services']
+      },
+      {
+        name: 'Andhra University',
+        location: 'Visakhapatnam, Andhra Pradesh',
+        rating: 4.2,
+        image: '/andhra.png',
+        specializations: ['Journalism', 'Mass Communication', 'Digital Media', 'Advertising'],
+        fee: '₹80K - ₹1.5L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
+      },
+      {
+        name: 'Kurukshetra University',
+        location: 'Kurukshetra, Haryana',
+        rating: 4.1,
+        image: '/kurukshetra.png',
+        specializations: ['Journalism', 'Mass Communication', 'Digital Media', 'Advertising'],
+        fee: '₹75K - ₹1.4L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
+      },
+      {
+        name: 'Manglayatan University',
+        location: 'Aligarh, Uttar Pradesh',
+        rating: 4.0,
+        image: '/manglayatan.png',
+        specializations: ['Journalism', 'Mass Communication', 'Digital Media', 'Advertising'],
+        fee: '₹70K - ₹1.3L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
+      },
+      {
+        name: 'Sikkim Manipal University',
+        location: 'Gangtok, Sikkim',
+        rating: 4.2,
+        image: '/sikkim-manipal.png',
+        specializations: ['Journalism', 'Mass Communication', 'Digital Media', 'Advertising & PR'],
+        fee: '₹80K - ₹1.6L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+      },
+      {
+        name: 'Uttaranchal University',
+        location: 'Dehradun, Uttarakhand',
+        rating: 4.1,
+        image: '/uttaranchal.png',
+        specializations: ['Journalism', 'Mass Communication', 'Digital Media', 'Advertising'],
+        fee: '₹75K - ₹1.4L',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
       }
     ]
-  }
-};
+  },
+
+    'msc-online': {
+      title: 'MSC Online',
+      subtitle: 'Master of Science',
+      description: 'Advance your scientific career with specialized MSC programs in Computer Science, Data Science, Mathematics, and more from top online universities.',
+      duration: '2 Years',
+      fee: '₹1.2L - ₹3L',
+      eligibility: 'B.Sc in relevant discipline with 50% marks',
+      features: [
+        'Specialized scientific curriculum',
+        'Research and project work',
+        'Industry-aligned specializations',
+        'Expert faculty from academia and industry',
+        'Career advancement opportunities'
+      ],
+      universities: [
+        {
+          name: 'Amity University',
+          location: 'Noida, Uttar Pradesh',
+          NIRF: '29',
+          rating: 4.6,
+          image: '/amity.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry', 'Biotechnology'],
+          fee: '₹1.5L - ₹2.8L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Live Classes', 'Research Projects', 'Industry Connect']
+        },
+        {
+          name: 'Manipal University',
+          location: 'Jaipur, Rajasthan',
+          NIRF: 'N/A',
+          rating: 4.5,
+          image: '/manipal.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Statistics', 'Physics'],
+          fee: '₹1.3L - ₹2.5L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Expert Faculty', 'Research Focus', 'Career Services']
+        },
+        {
+          name: 'LPU Online',
+          location: 'Punjab',
+          NIRF: 'N/A',
+          rating: 4.4,
+          image: '/lpu.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry'],
+          fee: '₹1.0L - ₹2.0L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Affordable Education', 'Practical Learning', 'Research Projects']
+        },
+        {
+          name: 'Jain University',
+          location: 'Bangalore, Karnataka',
+          NIRF: 'N/A',
+          rating: 4.5,
+          image: '/jain.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Biotechnology'],
+          fee: '₹1.4L - ₹2.6L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Modern Curriculum', 'Industry Projects', 'Research Focus']
+        },
+        {
+          name: 'Chandigarh University',
+          location: 'Mohali, Punjab',
+          NIRF: '36',
+          rating: 4.3,
+          image: '/chandigarh.jpg',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry'],
+          fee: '₹1.2L - ₹2.2L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Quality Education', 'Research Projects', 'Career Support']
+        },
+        {
+          name: 'DYPATIL University',
+          location: 'Pune, Maharashtra',
+          NIRF: 'N/A',
+          rating: 4.4,
+          image: '/dypatil.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry'],
+          fee: '₹1.3L - ₹2.4L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Industry Connect', 'Research Focus', 'Expert Faculty']
+        },
+        {
+          name: 'UPES Online',
+          location: 'Dehradun, Uttarakhand',
+          NIRF: 'N/A',
+          rating: 4.3,
+          image: '/upes.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry'],
+          fee: '₹1.1L - ₹2.1L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Domain Focus', 'Industry Connect', 'Career Support']
+        },
+        {
+          name: 'Shoolini University',
+          location: 'Solan, Himachal Pradesh',
+          NIRF: 'N/A',
+          rating: 4.2,
+          image: '/shoolini.jpg',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Biotechnology'],
+          fee: '₹1.0L - ₹1.9L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Research Focus', 'Industry Connect', 'Career Guidance']
+        },
+        {
+          name: 'VGU',
+          location: 'Jaipur, Rajasthan',
+          NIRF: 'N/A',
+          rating: 4.1,
+          image: '/vgu.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry'],
+          fee: '₹95K - ₹1.8L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Quality Education', 'Research Projects', 'Career Support']
+        },
+        {
+          name: 'Sharda University',
+          location: 'Greater Noida, Uttar Pradesh',
+          NIRF: 'N/A',
+          rating: 4.2,
+          image: '/sharda.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Biotechnology'],
+          fee: '₹1.0L - ₹1.8L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Experienced Faculty', 'Industry Exposure', 'Career Guidance']
+        },
+        {
+          name: 'Amrita University',
+          location: 'Coimbatore, Tamil Nadu',
+          NIRF: 'N/A',
+          rating: 4.4,
+          image: '/amrita.webp',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry', 'Biotechnology'],
+          fee: '₹1.2L - ₹2.3L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Industry Connect', 'Research Focus', 'Career Services']
+        },
+        {
+          name: 'Andhra University',
+          location: 'Visakhapatnam, Andhra Pradesh',
+          NIRF: 'N/A',
+          rating: 4.1,
+          image: '/andhra.webp',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry'],
+          fee: '₹95K - ₹1.7L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Quality Education', 'Research Projects', 'Career Support']
+        },
+        {
+          name: 'Kurukshetra University',
+          location: 'Kurukshetra, Haryana',
+          NIRF: 'N/A',
+          rating: 4.0,
+          image: '/kurukshetra.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry'],
+          fee: '₹90K - ₹1.6L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
+        },
+        {
+          name: 'Manglayatan University',
+          location: 'Aligarh, Uttar Pradesh',
+          NIRF: 'N/A',
+          rating: 3.9,
+          image: '/manglayatan.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry'],
+          fee: '₹85K - ₹1.5L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
+        },
+        {
+          name: 'Sikkim Manipal University',
+          location: 'Gangtok, Sikkim',
+          NIRF: 'N/A',
+          rating: 4.1,
+          image: '/sikkim-manipal.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry', 'Biotechnology'],
+          fee: '₹95K - ₹1.8L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+        },
+        {
+          name: 'Uttaranchal University',
+          location: 'Dehradun, Uttarakhand',
+          NIRF: 'N/A',
+          rating: 4.0,
+          image: '/uttaranchal.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry'],
+          fee: '₹90K - ₹1.7L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Quality Education', 'Research Projects', 'Career Support']
+        }
+      ]
+    },
+    'msc-online': {
+      title: 'MSC Online',
+      subtitle: 'Master of Science',
+      description: 'Advance your scientific career with specialized MSC programs in Computer Science, Data Science, Mathematics, and more from top online universities.',
+      duration: '2 Years',
+      fee: '₹1.2L - ₹3L',
+      eligibility: 'B.Sc in relevant discipline with 50% marks',
+      features: [
+        'Specialized scientific curriculum',
+        'Research and project work',
+        'Industry-aligned specializations',
+        'Expert faculty from academia and industry',
+        'Career advancement opportunities'
+      ],
+      universities: [
+        {
+          name: 'Amity University',
+          location: 'Noida, Uttar Pradesh',
+          NIRF: '29',
+          rating: 4.6,
+          image: '/amity.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry', 'Biotechnology'],
+          fee: '₹1.5L - ₹2.8L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Live Classes', 'Research Projects', 'Industry Connect']
+        },
+        {
+          name: 'Manipal University',
+          location: 'Jaipur, Rajasthan',
+          NIRF: 'N/A',
+          rating: 4.5,
+          image: '/manipal.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Statistics', 'Physics'],
+          fee: '₹1.3L - ₹2.5L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Expert Faculty', 'Research Focus', 'Career Services']
+        },
+        {
+          name: 'LPU Online',
+          location: 'Punjab',
+          NIRF: 'N/A',
+          rating: 4.4,
+          image: '/lpu.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry'],
+          fee: '₹1.0L - ₹2.0L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Affordable Education', 'Practical Learning', 'Research Projects']
+        },
+        {
+          name: 'Jain University',
+          location: 'Bangalore, Karnataka',
+          NIRF: 'N/A',
+          rating: 4.5,
+          image: '/jain.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Biotechnology'],
+          fee: '₹1.4L - ₹2.6L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Modern Curriculum', 'Industry Projects', 'Research Focus']
+        },
+        {
+          name: 'Chandigarh University',
+          location: 'Mohali, Punjab',
+          NIRF: '36',
+          rating: 4.3,
+          image: '/chandigarh.jpg',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry'],
+          fee: '₹1.2L - ₹2.2L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Quality Education', 'Research Projects', 'Career Support']
+        },
+        {
+          name: 'DYPATIL University',
+          location: 'Pune, Maharashtra',
+          NIRF: 'N/A',
+          rating: 4.4,
+          image: '/dypatil.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry'],
+          fee: '₹1.3L - ₹2.4L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Industry Connect', 'Research Focus', 'Expert Faculty']
+        },
+        {
+          name: 'UPES Online',
+          location: 'Dehradun, Uttarakhand',
+          NIRF: 'N/A',
+          rating: 4.3,
+          image: '/upes.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry'],
+          fee: '₹1.1L - ₹2.1L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Domain Focus', 'Industry Connect', 'Career Support']
+        },
+        {
+          name: 'Shoolini University',
+          location: 'Solan, Himachal Pradesh',
+          NIRF: 'N/A',
+          rating: 4.2,
+          image: '/shoolini.jpg',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Biotechnology'],
+          fee: '₹1.0L - ₹1.9L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Research Focus', 'Industry Connect', 'Career Guidance']
+        },
+        {
+          name: 'VGU',
+          location: 'Jaipur, Rajasthan',
+          NIRF: 'N/A',
+          rating: 4.1,
+          image: '/vgu.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry'],
+          fee: '₹95K - ₹1.8L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Quality Education', 'Research Projects', 'Career Support']
+        },
+        {
+          name: 'Sharda University',
+          location: 'Greater Noida, Uttar Pradesh',
+          NIRF: 'N/A',
+          rating: 4.2,
+          image: '/sharda.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Biotechnology'],
+          fee: '₹1.0L - ₹1.8L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Experienced Faculty', 'Industry Exposure', 'Career Guidance']
+        },
+        {
+          name: 'Amrita University',
+          location: 'Coimbatore, Tamil Nadu',
+          NIRF: 'N/A',
+          rating: 4.4,
+          image: '/amrita.webp',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry', 'Biotechnology'],
+          fee: '₹1.2L - ₹2.3L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Industry Connect', 'Research Focus', 'Career Services']
+        },
+        {
+          name: 'Andhra University',
+          location: 'Visakhapatnam, Andhra Pradesh',
+          NIRF: 'N/A',
+          rating: 4.1,
+          image: '/andhra.webp',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry'],
+          fee: '₹95K - ₹1.7L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Quality Education', 'Research Projects', 'Career Support']
+        },
+        {
+          name: 'Kurukshetra University',
+          location: 'Kurukshetra, Haryana',
+          NIRF: 'N/A',
+          rating: 4.0,
+          image: '/kurukshetra.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry'],
+          fee: '₹90K - ₹1.6L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
+        },
+        {
+          name: 'Manglayatan University',
+          location: 'Aligarh, Uttar Pradesh',
+          NIRF: 'N/A',
+          rating: 3.9,
+          image: '/manglayatan.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry'],
+          fee: '₹85K - ₹1.5L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
+        },
+        {
+          name: 'Sikkim Manipal University',
+          location: 'Gangtok, Sikkim',
+          NIRF: 'N/A',
+          rating: 4.1,
+          image: '/sikkim-manipal.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry', 'Biotechnology'],
+          fee: '₹95K - ₹1.8L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+        },
+        {
+          name: 'Uttaranchal University',
+          location: 'Dehradun, Uttarakhand',
+          NIRF: 'N/A',
+          rating: 4.0,
+          image: '/uttaranchal.png',
+          specializations: ['Computer Science', 'Data Science', 'Mathematics', 'Physics', 'Chemistry'],
+          fee: '₹90K - ₹1.7L',
+          duration: '2 Years',
+          accreditation: 'UGC Approved',
+          features: ['Quality Education', 'Research Projects', 'Career Support']
+        }
+      ]
+    }
+  };
 
 function slugify(input) {
   return input
@@ -698,6 +2316,8 @@ export default async function CoursePage({ params }) {
           </div>
         </section>
 
+        {/* Compare Online Universities Section */}
+       
         {/* Call to Action Section */}
         <section className="py-16 bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -709,7 +2329,7 @@ export default async function CoursePage({ params }) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                className="bg-[#00ffe0] text-[#001e3c] hover:bg-[#00ffe0] px-8 py-3 text-lg font-semibold"
+                className="bg-[#00ffe0] text-[#001e3c] hover:bg-[#00e6cc] px-8 py-3 text-lg font-semibold"
                 asChild
               >
                 <Link href="/bookdemo">

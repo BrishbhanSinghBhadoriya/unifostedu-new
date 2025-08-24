@@ -52,7 +52,7 @@ const Amity = () => {
       duration: "3 Years",
       eligibility: "10+2 Pass",
       fees: "1,65,000- 2,25,000",
-      specialization: "BBA (Data Analytics,   Travel And Tourism Management, Professional Certificate in Business Analytics) ",
+      specialization: "BBA (General,Data Analytics,   Travel And Tourism Management, Professional Certificate in Business Analytics) ",
       image: "/bba.jpeg",
     },
     {
@@ -60,7 +60,7 @@ const Amity = () => {
       duration: "3 Years",
       eligibility: "10+2 Pass",
       fees: "1,50,000 - 2,25,000",
-      specialization: " BCA, (Cloud and Security, Software Engineering,  Data Science, Data Engineering, Data Analytics)",
+      specialization: " BCA, (General, Cloud  and Security, Software Engineering,  Data Science, Data Engineering(HCL Tech), Data Analytics,Software Engineering(HCL Tech))",
       image: "/bca.jpeg",
     },
     {
@@ -76,7 +76,7 @@ const Amity = () => {
       duration: "3 Years",
       eligibility: "10+2 Pass",
       fees: "99,000 - 1,70,000",
-      specialization: "BA(Genral, Jornalism and Mass Communication, Native Language)",
+      specialization: "BA(Genral, Jornalism and Mass Communication, Native Languages(Kannada,Malayalam, Tamil, Telugu), Psychology, English, Sociology, Political Science,Economics)",
       image: "/ba.jpeg",
     },
   ];
@@ -87,7 +87,7 @@ const Amity = () => {
       duration: "2 Years",
       eligibility: "Graduation",
       fees: "1,99,000 - 2,99,000",
-      specialization: "MBA(General, Dual Specilization, Human Resource Analytics, Data Science, Business Analytics, International Finance, Digital Enterpreneurship, Digital Marketing Management, General Management with optional Specialization)",
+      specialization: "MBA(General,Information Technology Management, Dual Specilization, Human Resource Analytics, Data Science, Business Analytics, International Business Management, Digital Enterpreneurship, Digital Marketing Management,Enterpreneurship & Leadership Management,Finance & Accounting Management,Hospitality Management,Global Finance Market,Insurance Management,Marketing & Sales Management,Petroleum & Natural Gas,Producation and Operations Management,Retail Management )",
       image: "/mba.jpeg",
     },
     {
@@ -95,7 +95,7 @@ const Amity = () => {
       duration: "2 Years",
       eligibility: "Graduation in BCA/B.Sc(IT)",
       fees: "170,000- 2,50,000",
-      specialization: "MCA(Genral, Cyber Security, Blockchain Technology and Management, Machine Learning and Artificial Intelligence, Augmented Reality and Virtual Reality, Software Engineering,",
+      specialization: "MCA(General, Cyber Security, Blockchain Technology , Machine Learning and Artificial Intelligence, Augmented Reality and Virtual Reality, Software Engineering,",
       image: "/mca1.jpeg",
     },
     {
@@ -103,7 +103,7 @@ const Amity = () => {
       duration: "2 Years",
       eligibility: "Graduation in Commerce",
       fees: "1,20,000",
-      specialization: "Financial Management, Financial Technology, Accounting",
+      specialization: "General, Financial Management, Financial Technology",
       image: "/m.com.jpeg",
     },
     {
