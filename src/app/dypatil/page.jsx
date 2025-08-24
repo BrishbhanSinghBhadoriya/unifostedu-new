@@ -42,7 +42,7 @@ const Dypatil = () => {
       duration: "3 Years",
       fees: "₹1,45,400",
       eligibility: "10+2 Pass",
-      specialization: "Marketing , Finance, Retail, E-Commerce, Human Resource, It and System Management, Internatinal Business Management, Banking Financial Services and Insurance Management ",
+      specialization: "Finance Management , Retail Management, E-Commerce Management,Marketing Management,  Human Resource Management, It and System Management, Internatinal Business Management, Banking Financial Services and Insurance Management ",
       image: "/bba.jpeg",
     },
   
@@ -55,6 +55,7 @@ const Dypatil = () => {
       course: "Master of Computer Applications (MCA)",
       duration: "2 Years",
       fees: "₹1,40,000",
+      eligibility: "Graduation with 50% Marks",
        specialization: "General",
       image: "/mca1.jpeg",
     },
