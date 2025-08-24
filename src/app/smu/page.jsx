@@ -45,46 +45,53 @@ const EnquireCard = ({ course, duration, eligibility, fees, specialization, imag
 
 const SMU = () => {
   // Using data from the smu.pdf file
-  const ugCourses = [
-    {
-      course: "Bachelor of Arts (BA)",
-      duration: "2 Years",
-      eligibility: "10+2 or equivalent",
-      fees: "₹75,000",
-      image: "/ba.jpeg",
-    },
-    {
-      course: "Bachelor of Commerce (B.Com)",
-      duration: "3 Years",
-      eligibility: "10+2 or equivalent",
-      fees: "₹75,000",
-      image: "/bcom.jpeg",
-    },
-  ];
+ const ugCourses = [
+  {
+    course: "Bachelor of Arts (BA)",
+    duration: "3 Years",
+    eligibility: "10+2 or equivalent",
+    fees: "₹75,000",
+    image: "/ba.jpeg",
+  },
+  {
+    course: "Bachelor of Commerce (B.Com)",
+    duration: "3 Years",
+    eligibility: "10+2 or equivalent",
+    fees: "₹75,000",
+    image: "/bcom.jpeg",
+  },
+];
 
-  const pgCourses = [
-    {
-      course: "Doctor of Business Administration (DBA)",
-      duration: "2 Years",
-      eligibility: "MBA + 50% Minimum",
-      fees: "₹4,110,000",
-      image: "/dba.jpeg",
-    },
-    {
-      course: "Master of Computer Applications (MCA)",
-      duration: "2 Years",
-      eligibility: "Graduation with minimum 40%",
-      fees: "₹195,000",
-      image: "/mca1.jpeg",
-    },
-    {
-      course: "Master of Arts (MA)",
-      duration: "2 Years",
-      eligibility: "Graduation",
-      fees: "₹475,000",
-      image: "/ma1.jpeg",
-    },
-  ];
+const pgCourses = [
+  {
+    course: "Master of Business Administration (MBA)",
+    duration: "2 Years",
+    eligibility: "Graduation with minimum 50% marks",
+    fees: "₹1,10,000",
+    image: "/mba.jpeg",
+  },
+  {
+    course: "Master of Computer Applications (MCA)",
+    duration: "2 Years",
+    eligibility: "BBA or UG Degree with minimum 40% + 10th & 12th",
+    fees: "₹98,000",
+    image: "/mca1.jpeg",
+  },
+  {
+    course: "Master of Arts (MA - English / Sociology / Political Science)",
+    duration: "2 Years",
+    eligibility: "Graduation in relevant stream",
+    fees: "₹79,000",
+    image: "/ma1.jpeg",
+  },
+  {
+    course: "Master of Commerce (M.Com)",
+    duration: "2 Years",
+    eligibility: "Graduation in Commerce or equivalent",
+    fees: "₹75,000",
+    image: "/bcom.jpeg",
+  },
+];
 
   return (
     <>
@@ -108,7 +115,7 @@ const SMU = () => {
           </div>
           <div className="md:w-1/2">
             <img
-              src="/smu.png" // You'll need to add this image
+              src="/smu-uni.jpg" // You'll need to add this image
               alt="Sikkim Manipal University"
               className="w-full rounded-xl shadow-lg"
             />
@@ -257,7 +264,7 @@ const SMU = () => {
       <section className="bg-[#002d5f] text-white py-16 px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2">
-            <img src="/smu-certi.jpeg" alt="Certificate" className="rounded-lg shadow-lg w-full" />
+            <img src="/smu.webp" alt="Certificate" className="rounded-lg shadow-lg w-full" />
           </div>
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">UGC-Entitled Online Degrees from SMU</h2>
