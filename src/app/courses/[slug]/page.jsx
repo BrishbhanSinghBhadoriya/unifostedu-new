@@ -26,7 +26,7 @@ const courseData = {
     subtitle: 'Master of Business Administration',
     description: 'Compare India\'s leading UGC-approved MBA programs with flexible schedules and career-focused specializations.',
     duration: '2 Years',
-    fee: '₹1.2L - ₹3.5L',
+    fee: '₹1.10L - ₹2.99L',
     eligibility: 'Graduation in any discipline with 50% marks',
     features: [
       'Live online classes',
@@ -54,7 +54,7 @@ const courseData = {
         rating: 4.6,
         image: '/manipal.png',
         specializations: ['Human Resource Management and Analytics', 'Finance and Marketing', 'Marketing and Human Resource Management', 'Business Analytics', 'Digital Marketing', 'Finance', 'Operations', 'International Business'],
-        fee: '₹1.5L - ₹3L',
+        fee: '₹1.75L',
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
@@ -65,7 +65,7 @@ const courseData = {
         rating: 4.7,
         image: '/nmims.png',
         specializations: ['Applied Finance', 'Business Administration', 'Business Analytics', 'Digital Marketing', 'Finance', 'Marketing', 'Operations', 'Human Resources'],
-        fee: '₹2L - ₹3.5L',
+        fee: '₹2.20L',
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Industry Connect', 'Placement Assistance', 'Quality Education']
