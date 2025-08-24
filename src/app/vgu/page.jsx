@@ -83,7 +83,7 @@ const Vgu = () => {
       course: "Masters of Business Administration (MBA)",
       duration: "2 Years",
       eligibility: "Graduation in any stream",
-      fees: "₹1,50,000-2,40,000/-",
+      fees: "₹1,50,000/-",
       specialization: "Marketing Management, Human Resource Management, Financial Management, Operations Management, Information Technology Management,  Healthcare Management, Agri Business, International Business, ",
       image: "/mba.jpeg",
     },

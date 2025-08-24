@@ -80,14 +80,7 @@ const Sharda = () => {
       specialization: " Finance, Healthcare, Human Resource, ",
       image: "/mba.jpeg",
     },
-       {
-      course: "Master of Business Administration (MBA)",
-      duration: "2 Years",
-      eligibility: "Passed Bachelor’s Degree of minimum 3 years duration.",
-      fees: "₹1,60,000",
-      specialization: "Sales and Marketing, ",
-      image: "/mca.jpeg",
-    },
+      
     {
       course: "Master of Computer Applications (MCA)",
       duration: "2 Years",
@@ -121,13 +114,14 @@ const Sharda = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
               Study Smarter with Sharda University Online
             </h1>
+            <p> <span className="font-semibold text-gray-700">Private University in Greater Noida, Uttar Pradesh, India.</span><br /><br/></p>
             <p className="text-gray-700 text-lg">
               Sharda University Online is NAAC A+ accredited and offers globally recognized online degrees. Join learners from over 85 countries and experience academic excellence with dedicated career support and world-class faculty.
             </p>
             <p className="text-gray-700 text-lg">
               Sharda University Online is a platform for distance and online education launched by Sharda University in 2023. It offers a variety of undergraduate and postgraduate courses, including online BA, MBA, MCA, BBA, and BCA programs. The platform emphasizes flexibility, accessibility, and affordability, allowing students to pursue their education while balancing work and other commitments. 
             </p>
-            <h4 className="text-2xl md:text-3xl font-bold text-blue-800">Private University in Greater Noida, Uttar Pradesh</h4>
+            
           </div>
           <div className="md:w-1/2">
             <img src="/sharda.png" alt="Sharda University" className="w-full rounded-xl shadow-lg" />

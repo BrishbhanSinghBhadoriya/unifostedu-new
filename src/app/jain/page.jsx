@@ -126,12 +126,13 @@ const Jain = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
               Bring a Bright Future with Jain University Online
             </h1><br />
+            <p> <span className="font-semibold text-gray-700">Private University in Bengaluru, Karnataka, India.</span><br /><br/></p>
             <p className="text-gray-700 text-lg">
               Jain University Online is a part of NAAC A++ grade accreditation offering UGC-Entitled online degree programs intending to empower learners by providing the latest knowledge to help students effectively.<br /><br />
               30 years of excellence in education field, Jain University is one of the top universities in India with a strong focus on quality education and building a great future ahead for students and working professionals.
             </p>
 
-            <h4 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">Private University in  Bangalore</h4>
+            
           </div>
           <div className="md:w-1/2">
             <img src="/jain.png" alt="Jain University" className="w-full rounded-xl shadow-lg" />

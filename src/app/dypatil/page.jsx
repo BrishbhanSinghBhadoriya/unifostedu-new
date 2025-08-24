@@ -85,12 +85,12 @@ const Dypatil = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
              DY Patil University Online 
             </h1>
-            <h1>DR.D.Y. PATIL VIDYAPEET, PUNE</h1>
+            <p> <span className="font-semibold text-gray-700">Private University in Pune, Maharasthtra, India.</span><br /><br/></p>
             <br />
             <p className="text-gray-700 text-lg">
-              DY Patil University offers flexible online degrees in collaboration with Harvard, aimed at career growth for students and professionals alike. Join to access expert faculty and 24/7 learning support.DY Patil University Online is recognized by the University Grants Commission (UGC) and the All India Council for Technical Education (AICTE). It's also accredited by NAAC with an A++ grade
+              DY Patil University offers flexible online degrees in collaboration with Harvard, aimed at career growth for students and professionals alike. Join to access expert faculty and 24/7 learning support.DY Patil University Online is recognized by the University Grants Commission (UGC) and the All India Council for Technical Education (AICTE). It's also accredited by NAAC with an A++ grade. We offer a range of undergraduate and postgraduate programs in fields like Business Administration, Computer Applications, and more. Our online platform provides flexibility for working professionals and students to learn at their own pace while receiving quality education from experienced faculty.  
             </p>
-            <h4 className="text-2xl md:text-3xl font-bold text-blue-800">Private University in PUNE</h4>
+            
           </div>
           
           <div className="md:w-1/2">

@@ -337,10 +337,43 @@ const pgCourses = [
             </div>
             
             <div className="mt-12 text-center">
-              <button className="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105">
-                Apply Now
-              </button>
+              
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certificate Section */}
+      <section className="bg-[#003366] py-12 px-4">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
+          <div className="flex-1">
+            <img
+              src="/uu-certificate.png"
+              alt="UU University Certificate"
+              className="w-full max-w-md mx-auto rounded shadow-lg"
+            />
+          </div>
+
+          <div className="flex-1 text-white">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+              Online Degree from Uttranchal University
+            </h2>
+
+            <p className="mb-6 text-lg leading-relaxed">
+              Uttranchal University Online provides comprehensive services including e-lectures, counseling from academic advisors, career assistance, and more to help students succeed in their professional journeys.
+            </p>
+
+            <h3 className="text-xl font-semibold mb-2">Benefits of Uttranchal University Online</h3>
+            <ul className="list-disc list-inside space-y-2 text-base">
+              <li>Live Classes by Industry Experts</li>
+              <li>Career Assistance & Exclusive Virtual Job Fairs</li>
+              <li>Globally recognized degrees equivalent to on-campus programs</li>
+              <li>Practical & Immersive Learning through industry-relevant curriculum</li>
+              <li>24/7 Access to Learning Resources</li>
+              <li>Robust Alumni Network</li>
+              <li>Flexible Learning Options</li>
+              <li>Dedicated Student Support</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -376,7 +409,7 @@ const pgCourses = [
             ].map((testimonial, index) => (
               <div key={index} className="bg-gray-50 p-6 rounded-xl border border-gray-200">
                 <div className="flex items-center mb-4">
-                  <img src={testimonial.avatar} alt={testimonial.name} className="w-12 h-12 rounded-full mr-4 object-cover" />
+                  
                   <div>
                     <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
                     <p className="text-blue-600 text-sm">{testimonial.course}</p>
@@ -396,6 +429,47 @@ const pgCourses = [
         </div>
       </section>
 
+      {/* Companies Section */}
+      <section className="py-12 bg-gray-100">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-800">
+              Our learners work at
+            </h2>
+            <p className="text-xl text-gray-600 mt-2">
+              Top hiring partners at Uttranchal University Online
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
+              <img src="/tcs.png" alt="Company" className="h-12 object-contain" />
+            </div>
+            <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
+              <img src="/lt.jpg" alt="Microsoft" className="h-12 object-contain" />
+            </div>
+            <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
+              <img src="/company9.jpg" alt="Company 9" className="h-12 object-contain" />
+            </div>
+            <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
+              <img src="/com10.png" alt="Company 10" className="h-12 object-contain" />
+            </div>
+            <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
+              <img src="/companany4.png" alt="Company4" className="h-12 object-contain" />
+            </div>
+            <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
+              <img src="/sap.png" alt="Company 6" className="h-12 object-contain" />
+            </div>
+            <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
+              <img src="/icici.png" alt="Companany5" className="h-12 object-contain" />
+            </div>
+            <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
+              <img src="/adove.png" alt="Adove" className="h-12 object-contain" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-800 to-purple-800 text-white">
         <div className="max-w-5xl mx-auto text-center px-4">
@@ -403,12 +477,7 @@ const pgCourses = [
           <p className="text-xl mb-8 max-w-3xl mx-auto">Join thousands of students who have advanced their careers with UU University's online programs</p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-white text-blue-800 font-bold py-3 px-8 rounded-lg shadow-md hover:bg-gray-100 transition-all duration-300">
-              Explore Programs
-            </button>
-            <button className="bg-yellow-400 text-blue-900 font-bold py-3 px-8 rounded-lg shadow-md hover:bg-yellow-300 transition-all duration-300">
-              Speak to an Advisor
-            </button>
+           
           </div>
           
           <p className="mt-8 text-blue-200">Applications for the next batch are now open. Limited seats available.</p>
