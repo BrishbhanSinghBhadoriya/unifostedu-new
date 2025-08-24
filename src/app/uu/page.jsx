@@ -55,53 +55,55 @@ const EnquireCard = ({ course, duration, eligibility, fees, specialization, imag
 const UU = () => {
   // Using data from the uu.pdf file
   const ugCourses = [
-    {
-      course: "Bachelor of Arts (BA)",
-      duration: "3 Years",
-      eligibility: "10+2 pass from a recognized board",
-      fees: "₹72,000",
-      image: "/ba.jpeg",
-    },
-    {
-      course: "Bachelor of Business Administration (BBA)",
-      duration: "3 Years",
-      eligibility: "10+2 pass from a recognized board",
-      fees: "₹1,20,000",
-      image: "/bba.jpeg",
-    },
-    {
-      course: "Bachelor of Computer Applications (BCA)",
-      duration: "3 Years",
-      eligibility: "10+2 pass from a recognized board",
-      fees: "₹1,20,000",
-      image: "/bca.jpeg",
-    },
-  ];
+  {
+    course: "Bachelor of Arts (BA)",
+    duration: "3 Years",
+    eligibility: "10+2 pass from a recognized board",
+    fees: "₹72,000",
+    image: "/ba.jpeg",
+  },
+  {
+    course: "Bachelor of Business Administration (BBA)",
+    duration: "3 Years",
+    eligibility: "10+2 pass from a recognized board",
+    fees: "₹1,20,000",
+    image: "/bba.jpg",
+  },
+  {
+    course: "Bachelor of Computer Applications (BCA)",
+    duration: "3 Years",
+    eligibility: "10+2 pass from a recognized board",
+    fees: "₹1,20,000",
+    image: "/bca.jpeg",
+  },
+];
 
-  const pgCourses = [
-    {
-      course: "Master of Business Administration (MBA)",
-      duration: "2 Years",
-      eligibility: "Graduation with minimum 50% marks or eligibility test for below 40%",
-      fees: "₹1,40,000",
-      image: "/mba.jpeg",
-    },
-    {
-      course: "Executive MBA",
-      duration: "2 Years",
-      eligibility: "Graduation with relevant work experience",
-      fees: "₹1,40,000",
-      image: "/executive-mba.jpeg",
-    },
-    {
-      course: "Master of Computer Applications (MCA)",
-      duration: "2 Years",
-      eligibility: "Graduation in Computer Science/IT or any field with Mathematics",
-      fees: "₹1,20,000",
-      image: "/mca1.jpeg",
-    },
-  ];
-
+const pgCourses = [
+  {
+    course: "Master of Business Administration (MBA)",
+    duration: "2 Years",
+    eligibility:
+      "Graduation in any field from a recognized university with a minimum of 40% marks in aggregate OR below 40% with eligibility test",
+    fees: "₹1,40,000",
+    image: "/mba.jpeg",
+  },
+  {
+    course: "Executive MBA",
+    duration: "2 Years",
+    eligibility:
+      "Graduation in any field from a recognized university with relevant work experience (specific criteria may vary)",
+    fees: "₹1,40,000",
+    image: "/mca.jpeg",
+  },
+  {
+    course: "Master of Computer Applications (MCA)",
+    duration: "2 Years",
+    eligibility:
+      "Graduate in Computer Applications/CS/IT/Engineering with 50% marks (45% reserved) OR Graduate with Mathematics at 10+2 or graduation level. If not studied, must complete a bridge course.",
+    fees: "₹1,20,000",
+    image: "/mca1.jpeg",
+  },
+];
   return (
     <>
       {/* Hero Section with Gradient Background */}
@@ -137,7 +139,7 @@ const UU = () => {
           </div>
           <div className="md:w-1/2">
             <img
-              src="/uu-university.png" // You'll need to add this image
+              src="/uu-uni.webp" // You'll need to add this image
               alt="UU University"
               className="w-full rounded-xl shadow-2xl border-4 border-white"
             />
@@ -356,20 +358,20 @@ const UU = () => {
               {
                 name: "Priya Sharma",
                 course: "MBA Graduate",
-                text: "The flexibility of UU's online MBA allowed me to balance my job and studies. The curriculum was practical and immediately applicable to my work.",
-                avatar: "/avatar1.jpg"
+                text: "The flexibility of UU's online MBA allowed me to balance my job and studies. The curriculum was practical and immediately applicable to my work."
+                
               },
               {
                 name: "Rahul Verma",
                 course: "BCA Student",
-                text: "The faculty support and learning resources are exceptional. I've gained valuable skills that helped me secure an internship at a tech company.",
-                avatar: "/avatar2.jpg"
+                text: "The faculty support and learning resources are exceptional. I've gained valuable skills that helped me secure an internship at a tech company."
+                
               },
               {
                 name: "Anjali Patel",
                 course: "Executive MBA",
-                text: "As a working professional, the Executive MBA program was perfect for upgrading my skills without taking a career break. Highly recommended!",
-                avatar: "/avatar3.jpg"
+                text: "As a working professional, the Executive MBA program was perfect for upgrading my skills without taking a career break. Highly recommended!"
+                
               }
             ].map((testimonial, index) => (
               <div key={index} className="bg-gray-50 p-6 rounded-xl border border-gray-200">
