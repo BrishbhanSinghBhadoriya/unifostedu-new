@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useMemo, useState, useEffect } from 'react';
+import { Suspense } from "react";
+
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -86,7 +88,7 @@ const RAW_UNIVERSITIES = [
     key: 'lovely-professional-university-online',
     name: 'Lovely Professional University Online',
     logo: '/lpu.png',
-    location: 'Punjab',
+    location: 'Jalandhar,Punjab',
     established: '2005',
     fee: '₹0.80L - ₹2.0L',
     courses: ['MBA', 'BBA', 'MCA', 'BCA', 'M.Com', 'BA'],
@@ -182,13 +184,33 @@ const RAW_UNIVERSITIES = [
     examMode: 'Online',
     classType: 'Live + Self-paced',
   },
+  {
+    key: 'chandigarh-university-online',
+    name: 'Chandigarh University Online',
+    logo: '/cu-online.png',
+    location: 'Chandigarh, Punjab',
+    established: '2012',
+    fee: '0.75L - ₹1.58L',
+    courses: ['MBA', 'BBA', 'MCA', 'BCA'],
+    features: ['Modern curriculum', 'Industry projects', 'Career services'],
+    approvals: ['UGC', 'NAAC A+'],
+    rating: 4.1,
+    eligibility: '10+2,Graduation in any stream',
+    nirfRank: 36,
+    naacGrade: 'A+',
+    placementSupport: true,
+    wesApproved: true,
+    emiOption: true,
+    examMode: 'Online',
+    classType: 'Live + Self-paced',
+  },
 ];
 
 // ---------- UTILS ----------
 const slugify = (s) => s.toLowerCase().replace(/\s+/g, '-');
 
-// ---------- MAIN COMPONENT ----------
-export default function ComparePage() {
+// ---------- COMPONENT WITH SEARCH PARAMS ----------
+function CompareContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [enquiryDone, setEnquiryDone] = useState(false);
@@ -234,28 +256,30 @@ export default function ComparePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12 md:mt-20 px-4 sm:px-6 lg:px-8">
-      {/* Enquiry gating */}
-      <Dialog open={!enquiryDone} onOpenChange={noop}>
-        <DialogContent
-          className="sm:max-w-[560px] md:mt-10"
-          onInteractOutside={(e) => e.preventDefault()}
-          onEscapeKeyDown={(e) => e.preventDefault()}
-        >
-          <DialogHeader>
-            <DialogTitle>Quick Enquiry before Comparison</DialogTitle>
-          </DialogHeader>
-          <EnquiryForm onSubmitted={() => setEnquiryDone(true)} />
-          <div className="mt-4 flex justify-end">
-            <Button
-              variant="outline"
-              onClick={() => router.replace('/')}
-              className="border-[#00ffe0] text-[#001e3c] hover:bg-[#00ffe0] hover:text-[#001e3c]"
-            >
-              Cancel
-            </Button>
-          </div>
-        </DialogContent>
-      </Dialog>
+             {/* Enquiry gating */}
+               <Dialog open={!enquiryDone} onOpenChange={noop}>
+          <DialogContent
+            className="w-[95vw] max-w-[560px] max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10"
+            onInteractOutside={(e) => e.preventDefault()}
+            onEscapeKeyDown={(e) => e.preventDefault()}
+          >
+           <DialogHeader className="px-4 sm:px-6">
+             <DialogTitle className="text-lg sm:text-xl font-bold text-center">Quick Enquiry before Comparison</DialogTitle>
+           </DialogHeader>
+           <div className="px-4 sm:px-6 pb-4">
+             <EnquiryForm onSubmitted={() => setEnquiryDone(true)} />
+           </div>
+           <div className="mt-4 px-4 sm:px-6 pb-4 flex flex-col sm:flex-row gap-3 justify-end">
+             <Button
+               variant="outline"
+               onClick={() => router.replace('/')}
+               className="w-full sm:w-auto border-[#00ffe0] text-[#001e3c] hover:bg-[#00ffe0] hover:text-[#001e3c] py-2.5"
+             >
+               Cancel
+             </Button>
+           </div>
+         </DialogContent>
+       </Dialog>
 
       {enquiryDone && (
         <div className="max-w-7xl mx-auto">
@@ -443,5 +467,21 @@ export default function ComparePage() {
         </div>
       )}
     </div>
+  );
+}
+
+// ---------- MAIN COMPONENT ----------
+export default function ComparePage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12 md:mt-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#00ffe0] mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading comparison...</p>
+        </div>
+      </div>
+    }>
+      <CompareContent />
+    </Suspense>
   );
 }

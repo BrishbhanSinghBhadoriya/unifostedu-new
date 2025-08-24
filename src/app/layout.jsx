@@ -28,7 +28,33 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Footer />
         <ChatbotWidget />
-        <Toaster position="top-right" />
+        <Toaster 
+          position="top-center" 
+          toastOptions={{
+            duration: 4000,
+            style: {
+              background: '#363636',
+              color: '#fff',
+              fontSize: '14px',
+              padding: '12px 16px',
+              borderRadius: '8px',
+              maxWidth: '90vw',
+              wordBreak: 'break-word'
+            },
+            success: {
+              style: {
+                background: '#10b981',
+                color: '#fff',
+              },
+            },
+            error: {
+              style: {
+                background: '#ef4444',
+                color: '#fff',
+              },
+            },
+          }}
+        />
       </body>
     </html>
   );

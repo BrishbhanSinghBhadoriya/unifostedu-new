@@ -75,15 +75,15 @@ const features = [
 ];
 
 const colleges = [
-  { name: "Amity University Online", ranking: "NIRF-29", fee: "₹1.2L - ₹2.5L", logo: "/amity.png", rating: 4.8 },
-  { name: "Manipal University Online", ranking: "NIRF-73", fee: "₹1.5L - ₹3L", logo: "/manipal1.png", rating: 4.9 },
-  { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹90K - ₹2L", logo: "/lpulogo.png", rating: 4.7 },
-  { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.8L - ₹3.2L", logo: "/upeslogo.png", rating: 4.6 },
-  { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹2L - ₹3.5L", logo: "/nmims.png", rating: 4.9 },
-  { name: "Sharda University Online", ranking: "NIRF-", fee: "₹80K - ₹1.5L", logo: "/shardalogo.png", rating: 4.5 },
-  { name: "Dr. DY Patil Online", ranking: "NIRF-", fee: "₹1.1L - ₹2.2L", logo: "/dypatillogo.png", rating: 4.6 },
-  { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.3L - ₹2.6L", logo: "/jainlogo.png", rating: 4.7 },
-  { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹1.3L - ₹2.6L", logo: "/chandigarh.jpg", rating: 4.7 }
+  { name: "Amity University Online", ranking: "NIRF-29", fee: "₹0.99L - ₹3.45L", logo: "/amity.png", rating: 4.8 },
+  { name: "Manipal University Online", ranking: "NIRF-73", fee: "0.99L - ₹1.75L", logo: "/manipal1.png", rating: 4.6 },
+  { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹0.80L - ₹2.0L", logo: "/lpulogo.png", rating: 4.1},
+  { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.50L - ₹1.75L", logo: "/upeslogo.png", rating: 4.4 },
+  { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹0.94L - ₹2.20L", logo: "/nmims.png", rating: 4.5 },
+  { name: "Sharda University Online", ranking: "NIRF-87", fee: "₹0.80L - ₹1.30L", logo: "/shardalogo.png", rating: 4.1 },
+  { name: "Dr. DY Patil Online", ranking: "NIRF-63", fee: "₹1.45L - ₹1.90L", logo: "/dypatillogo.png", rating: 4.4 },
+  { name: "Jain University Online", ranking: "NIRF-65", fee: "₹1.05L - ₹2.98L", logo: "/jainlogo.png", rating: 4.5 },
+  { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹0.75L - ₹1.58", logo: "/chandigarh.jpg", rating: 4.7 }
 ];
 
 const cities = [
@@ -241,6 +241,7 @@ const Landing = () => {
   const getCourseHref = (title) => {
     const map = {
       'MBA Online': '/courses/mba-online',
+      'MSC Online': '/courses/msc-online',
       'BBA Online': '/courses/bba-online',
       'MCA Online': '/courses/mca-online',
        'BCA Online': '/courses/bca-online',
@@ -796,7 +797,7 @@ const Landing = () => {
      {/* In your landing.jsx file */}
 {showEnquiryModal && (
   <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
-    <DialogContent className="p-4 sm:p-6 sm:max-w-lg md:max-w-xl lg:max-w-2xl z-[30001] mx-4">
+    <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10 p-4 sm:p-6 z-[30001]">
       <DialogHeader>
         <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
           {modalType === "getStarted" && "Get Started with Unifost"}
