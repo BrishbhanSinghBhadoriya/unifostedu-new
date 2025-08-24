@@ -56,7 +56,7 @@ const Vgu = () => {
       duration: "3 Years",
       eligibility: "Passed 10+2 examination in any stream from a recognized Board ",
       fees: "₹1,32,000/-",
-      specialization: "UX, Data Science, Blockchain Technology, AI, Cloud Technology & Information Security",
+      specialization: "'Full-stack development, cybersecurity, and software project management'  'Al, machine learning, deep learning, and chatbot development'  'Data mining, analytics, R & Python, big data, visualization' 'Virtualization, cloud platforms, cryptography, ethical hacking' 'UX research, wireframing, usability testing, visual tools'  'DLT, smart contracts, blockchain architecture, Ethereum'",
       image: "/bca.jpeg",
     },
     {
@@ -64,7 +64,7 @@ const Vgu = () => {
       duration: "3 Years",
       eligibility: "10+2 in any stream",
       fees: "₹72,000/-",
-      
+      specialization: "'Economics + Public Policy + Computer Applications' 'Public Policy + English' 'English + History + Political Science' 'Computer Applications + Public Policy/IR' 'Political Science + International Relations + Public Policy' '51+ COMBINATIONS AVAILABLE'",
       image: "/ba.jpg",
     },
     {
@@ -83,8 +83,8 @@ const Vgu = () => {
       course: "Masters of Business Administration (MBA)",
       duration: "2 Years",
       eligibility: "Graduation in any stream",
-      fees: "₹1,50,000/year",
-      specialization: "HR, Marketing, Finance, Healthcare, Agri Business, Information Technology, Operation Management",
+      fees: "₹1,50,000-2,40,000/-",
+      specialization: "Marketing Management, Human Resource Management, Financial Management, Operations Management, Information Technology Management,  Healthcare Management, Agri Business, International Business, ",
       image: "/mba.jpeg",
     },
     {
@@ -92,7 +92,7 @@ const Vgu = () => {
       duration: "2 Years",
       eligibility: "Passed Bachelor 's Degree (any stream) of minimum 3 year duration",
       fees: "₹1,50,000/-",
-      
+      specialization: "Software Engineering & Development, Data Science & Analytics, Cyber Security, Cloud & Devops, web & App Development, Blockchain & Emerging Technologies, Database Management",
       image: "/mca.jpeg",
     },
      {

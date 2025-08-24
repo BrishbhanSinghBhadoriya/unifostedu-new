@@ -531,16 +531,16 @@ const Footer = () => {
 
   <div className="grid grid-cols-2 gap-3">
     {[
-      { href: "/mba-online", label: "MBA" },
-      { href: "/bba-online", label: "BBA" },
-      { href: "/mca-online", label: "MCA" },
-      { href: "/bca-online", label: "BCA" },
-      { href: "/mcom-online", label: "M.Com" },
-      { href: "/bcom-online", label: "B.Com" },
-      { href: "/ma-online", label: "MA" },
-      { href: "/ba-online", label: "BA" },
-      { href: "/bajmc-online", label: "BAJMC" },
-      { href: "/majmc-online", label: "MAJMC" },
+      { href: "/courses/mba-online", label: "MBA" },
+      { href: "/courses/bba-online", label: "BBA" },
+      { href: "/courses/mca-online", label: "MCA" },
+      { href: "/courses/bca-online", label: "BCA" },
+      { href: "/courses/mcom-online", label: "M.Com" },
+      { href: "/courses/bcom-online", label: "B.Com" },
+      { href: "/courses/ma-online", label: "MA" },
+      { href: "/courses/ba-online", label: "BA" },
+      { href: "/courses/bajmc-online", label: "BAJMC" },
+      { href: "/courses/majmc-online", label: "MAJMC" },
     ].map((course, index) => (
       <a
         key={index}

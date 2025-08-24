@@ -104,14 +104,7 @@ const Sharda = () => {
       specialization: "Master of commerce",
       image: "/m.com.jpeg",
     },
-    {
-      course: "Master of Arts (MA)",
-      duration: "2 Years",
-      eligibility: "Graduation",
-      fees: "₹    ",
-      specialization: "English, Economics, Public Policy",
-      image: "/ma1.jpeg",
-    },
+ 
   ];
 
   return (
