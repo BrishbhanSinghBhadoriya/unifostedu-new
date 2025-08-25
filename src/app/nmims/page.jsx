@@ -27,34 +27,20 @@ const Nmims = () => {
       course: "Bachelor of Business Administration (BBA)",
       duration: "3 Years",
       eligibility: "10+2 from a recognized board with minimum 50% marks",
-      fees: "₹1,50,000",
-      specialization: "General Management, Digital Marketing, Finance, Human Resources",
+      fees: "₹1,45,000",
+      specialization: "General Management,",
       image: "/bba.jpeg",
     },
     {
       course: "Bachelor of Commerce (B.Com)",
       duration: "3 Years",
       eligibility: "10+2 with commerce stream and minimum 50% marks",
-      fees: "₹1,20,000",
-      specialization: "Accounting, Finance, Taxation, Banking",
+      fees: "94,000",
+      specialization: "General",
       image: "/bcom.jpeg",
     },
-    {
-      course: "Bachelor of Arts (BA) Liberal Arts",
-      duration: "3 Years",
-      eligibility: "10+2 in any stream with minimum 50% marks",
-      fees: "₹1,30,000",
-      specialization: "Psychology, Sociology, Economics, English Literature",
-      image: "/ba.jpeg",
-    },
-    {
-      course: "Bachelor of Computer Applications (BCA)",
-      duration: "3 Years",
-      eligibility: "10+2 with Mathematics and minimum 50% marks",
-      fees: "₹1,60,000",
-      specialization: "Software Development, Data Science, Web Technologies",
-      image: "/bca.jpeg",
-    }
+    
+    
   ];
 
   const pgCourses = [
@@ -62,42 +48,19 @@ const Nmims = () => {
       course: "Master of Business Administration (MBA)",
       duration: "2 Years",
       eligibility: "Graduation in any discipline with minimum 50% marks",
-      fees: "₹1,44,000",
-      specialization: "Finance, Marketing, Human Resources, Operations, Business Analytics, International Business, Digital Marketing, Supply Chain Management",
+      fees: "₹1,96,000",
+      specialization: "Financial Management, Marketing, Human Resources, Operations, Business Management, Operations, Data Science",
       image: "/mba.jpeg",
     },
     {
-      course: "Master of Computer Applications (MCA)",
+      course: "Master of Business Administration (WX)",
       duration: "2 Years",
-      eligibility: "BCA or B.Sc. in Computer Science with minimum 50% marks",
-      fees: "₹1,35,000",
-      specialization: "Software Engineering, Data Analytics, Cloud Computing, Cybersecurity",
+      eligibility: "Graducation with minimum 55% marks + 3 years work experience",
+      fees: "₹4,00,000",
+      specialization: "Applied Finance, Digital Marketing, Leadership & Strategy, Marketing, Operations and supply chain,",
       image: "/mca1.jpeg",
     },
-    {
-      course: "Master of Commerce (M.Com)",
-      duration: "2 Years",
-      eligibility: "B.Com or related degree with minimum 50% marks",
-      fees: "₹1,25,000",
-      specialization: "Advanced Accounting, Financial Management, Taxation",
-      image: "/m.com.jpeg",
-    },
-    {
-      course: "Master of Science (M.Sc) Applied Finance",
-      duration: "2 Years",
-      eligibility: "Bachelor's degree in Finance or related field with minimum 50% marks",
-      fees: "₹1,20,000",
-      specialization: "Investment Management, Risk Management, Financial Modeling",
-      image: "/m.com.jpeg",
-    },
-    {
-      course: "Master of Arts (MA) Journalism & Mass Communication",
-      duration: "2 Years",
-      eligibility: "Graduation in any discipline with minimum 50% marks",
-      fees: "₹1,40,000",
-      specialization: "Digital Journalism, Public Relations, Advertising, Media Management",
-      image: "/ma1.jpeg",
-    }
+   
   ];
 
   return (
@@ -110,12 +73,12 @@ const Nmims = () => {
               Welcome to NMIMS Global Online
             </h1>
             <p className="text-gray-700 text-lg leading-relaxed mb-6">
-              NMIMS Global is a premier education institute offering UGC-entitled and NAAC A+ accredited online programs with flexible learning, a vibrant student community, and personalized mentorship.
+              NMIMS Global is a premier education institute offering UGC-entitled and NAAC A++ accredited online programs with flexible learning, a vibrant student community, and personalized mentorship.
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center gap-2 text-[#001e3c] font-semibold">
                 <FaAward className="text-[#00ffe0] text-xl" />
-                <span>NAAC A+ Accredited</span>
+                <span>NAAC A++ Accredited</span>
               </div>
               <div className="flex items-center gap-2 text-[#001e3c] font-semibold">
                 <FaCertificate className="text-[#00ffe0] text-xl" />
@@ -156,7 +119,7 @@ const Nmims = () => {
                 <FaAward className="w-8 h-8 text-[#001e3c]" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Accreditation</h3>
-              <p className="text-[#00ffe0] font-bold text-lg">NAAC A+</p>
+              <p className="text-[#00ffe0] font-bold text-lg">NAAC A++</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-full flex items-center justify-center mx-auto mb-4">
@@ -289,7 +252,7 @@ const Nmims = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact Section
       <section className="py-16 px-6 bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">
@@ -312,6 +275,52 @@ const Nmims = () => {
               Explore More Courses
             </button>
           </div>
+        </div>
+      </section> */}
+      {/* Certificate Section - NMIMS */}
+<section className="bg-[#7b1fa2] text-white py-16 px-6 font-[Inter]">
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    {/* Certificate Image */}
+    <div className="md:w-1/2">
+      <img 
+        src="/nmims-certi.png" 
+        alt="NMIMS Certificate" 
+        className="rounded-lg shadow-lg w-full" 
+      />
+    </div>
+
+    {/* Text Content */}
+    <div className="md:w-1/2">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        Recognized Online Degree from NMIMS University
+      </h2>
+      <p className="mb-6 text-lg">
+        Earn a prestigious UGC-entitled degree from NMIMS, one of India’s top-ranked universities, 
+        designed for working professionals and students aspiring to build global careers.
+      </p>
+      <ul className="list-disc list-inside space-y-2 text-base">
+        <li> NAAC A++ Accredited University</li>
+        <li>Live Interactive + Recorded Sessions</li>
+        <li>Strong Industry-Aligned Curriculum</li>
+        <li>Dedicated Career & Placement Assistance</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+ {/* Hiring Partners */}
+      <section className="py-12 bg-gray-100">
+        <div className="max-w-6xl mx-auto px-4 text-center mb-10">
+          <h2 className="text-3xl font-bold text-gray-800">Our Students Work At</h2>
+          <p className="text-xl text-gray-600">Top Hiring Partners of Nmims</p>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          {["/company.png", "/company1.png", "/company9.jpg", "/com10.png", "/companany4.png", "/company6.png", "/companany5.png", "/adove.png", "/samsung.png"].map((src, i) => (
+            <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
+              <img src={src} alt="Company" className="h-12 object-contain" />
+            </div>
+          ))}
         </div>
       </section>
     </>
