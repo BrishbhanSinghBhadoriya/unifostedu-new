@@ -2,38 +2,8 @@
 import React from 'react';
 // import { useNavigate } from 'react-router-dom';
 // import { Helmet } from 'react-helmet';
+import EnquireCard from '@/components/EnquireCard';
 import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck } from "react-icons/fa";
-
-const EnquireCard = ({ course, duration, fees, specialization, image }) => {
-//   const navigate = useNavigate();
-  const university = "DY Patil University";
-
-  const handleClick = () => {
-    // navigate(`/enquiry?university=${encodeURIComponent(university)}&course=${encodeURIComponent(course)}`);
-  };
-
-  return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition duration-300">
-      <img src={image} alt={course} className="h-40 w-full object-cover sm:h-48" />
-      <div className="p-4 flex-1 flex flex-col justify-between">
-        <div>
-          <h3 className="text-lg font-semibold text-gray-800 mb-2">{course}</h3>
-          <p className="text-sm text-gray-600 mb-1"><strong>Duration:</strong> {duration}</p>
-          <p className="text-sm text-gray-600"><strong>Fees:</strong> {fees}</p>
-           <p className="text-sm text-gray-600"><strong>Specialization,:</strong> {specialization}</p>
-        </div>
-        <div className="mt-4">
-          <button
-            onClick={handleClick}
-            className="bg-gradient-to-r from-blue-600 to-sky-500 text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition w-full"
-          >
-            Enquire Now
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 const Dypatil = () => {
   const ugCourses = [
@@ -104,9 +74,9 @@ const Dypatil = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">UG Courses</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {ugCourses.map((item, index) => (
-              <EnquireCard key={index} {...item} />
-            ))}
+                          {ugCourses.map((item, index) => (
+                <EnquireCard key={index} {...item} universityName="Dr. DY Patil Online" />
+              ))}
           </div>
         </div>
       </section>
@@ -116,9 +86,9 @@ const Dypatil = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">PG Courses</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {pgCourses.map((item, index) => (
-              <EnquireCard key={index} {...item} />
-            ))}
+                          {pgCourses.map((item, index) => (
+                <EnquireCard key={index} {...item} universityName="Dr. DY Patil Online" />
+              ))}
           </div>
         </div>
       </section>

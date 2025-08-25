@@ -21,8 +21,8 @@ const Header = () => {
   const universities = [
     { name: "Lovely Professional University", link: "/lpu", logo: "/lpu.png" },
     { name: "Online Manipal University", link: "/manipal", logo: "/manipal.png" },
-    { name: " Sikkim Manipal University", link: "/smu", logo: "/manipal.png" },
-    { name: " Uttaranchal University", link: "/uu", logo: "/manipal.png" },
+    { name: "Sikkim Manipal University", link: "/smu", logo: "/smu-uni.jpg" },
+    { name: "Uttaranchal University", link: "/uu", logo: "/uu-uni.webp" },
     { name: "Amity University Online", link: "/amity", logo: "/amity.png" },
     { name: "Chandigarh University Online", link: "/chandigarh", logo: "/chandigarh.jpg" },
     { name: "Jain University", link: "/jain", logo: "/jain.png" },
@@ -31,7 +31,8 @@ const Header = () => {
     { name: "Shoolini University Online", link: "/shoolini", logo: "/shoolini.jpg" },
     { name: "Vivekananda Global University Online", link: "/vgu", logo: "/vgu1.png" },
     { name: "Upes Online", link: "/upes", logo: "/upes.png" },
-    { name: "Sharda University Online", link: "/sharda", logo: "/sharda.png" }
+    { name: "Sharda University Online", link: "/sharda", logo: "/sharda.png" },
+    { name: "NMIMS University", link: "/nmims", logo: "/nmims.png" }
     
   ];
 
