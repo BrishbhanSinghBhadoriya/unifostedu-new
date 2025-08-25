@@ -136,7 +136,7 @@ const Header = () => {
                   : 'bg-white/10 backdrop-blur-sm'
               }`}>
                 <img 
-                  src="/images/uni.jpg" 
+                  src="/images/unilogo.png" 
                   alt="Unifost Logo" 
                   className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" 
                 />

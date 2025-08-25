@@ -21,7 +21,7 @@ const Manipal = () => {
       eligibility: "10+2 Minimum 40%",
       fees: "1,35,000",
       specialization: " Bachelor of Business Administration, Digital Marketing, Healthcare Management, Data Science and Analytics, Finance and Accounting",
-      image: "images/bba.jpeg",
+      image: "/images/bba.jpeg",
     },
      {
       course: "Bachelor of Computer Applications (BCA)",
@@ -29,7 +29,7 @@ const Manipal = () => {
       eligibility: "10+2 Minimum 40%",
       fees: "1,35,000",
       specialization: " Data Science and Analytics, Cyber Security, Cloud Computing",
-      image: "images/bca.jpeg",
+      image: "/images/bca.jpeg",
     },
     {
       course: "Bachelor of Commerce (B.Com)",
@@ -37,7 +37,7 @@ const Manipal = () => {
       eligibility: "10+2 Minimum 40%",
       fees : "99,000",
       specialization: "Online Bachelor of Commerce, Corporate Accounting",
-      image: "images/bcom.jpeg",
+      image: "/images/bcom.jpeg",
     },
  
   ];
@@ -52,7 +52,7 @@ const Manipal = () => {
       fees: "1,75,000",
       specialization: "Human Resource Management and Finance, Finance and Marketing,Marketing and Human Resource Management,Marketing and Business Analytics,Finance and Business Analytics, Human Resource and Business Analytics, Project Management, Retail Management and Quick Commerce, ,Artificial Intelligence  Banking and Finance, 15 other field,",
 
-      image: "images/mba.jpeg",
+      image: "/images/mba.jpeg",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -61,7 +61,7 @@ const Manipal = () => {
       fees: "1,58,000",
       specialization: "DevOps, Natural Language Processing & Large Language Models Development, Computer Science and IT, Data Analytics, Cyber Security, Full Stack Development, Cloud Computing, Data Science, Artificial Intelligence" , 
 
-      image: "images/mca1.jpeg",
+      image: "/images/mca1.jpeg",
     },
     {
       course: "Master of Commerce (M.Com)",
@@ -69,7 +69,7 @@ const Manipal = () => {
       eligibility: "Graduation in Commerce",
       fees: "1,08,000",
       specialization: "Accounting and Finance, Professional Accounting and Finance (Accredited by CPA, US)", 
-      image: "images/m.com.jpeg",
+      image: "/images/m.com.jpeg",
     },
     {
       course: "Master of Science (M.Sc)",
@@ -77,7 +77,7 @@ const Manipal = () => {
       eligibility: "Graduation ",
       fees: "2,80,000",
       specialization: "Data Science, Business Analytics",
-      image: "images/m.com.jpeg",
+      image: "/images/m.com.jpeg",
     },
 
     {
@@ -86,7 +86,7 @@ const Manipal = () => {
       eligibility: "Graduation",
       fees: "1,40,000",
       specialization: " MA( Journalism and Mass Communication, ",
-      image: "images/ma1.jpeg",
+      image: "/images/ma1.jpeg",
     },
   ];
 
@@ -118,7 +118,7 @@ const Manipal = () => {
           </div>
           <div className="md:w-1/2">
             <img
-              src="images/manipal.png"
+              src="/images/manipal.png"
               alt="Manipal University"
               className="w-full rounded-xl shadow-lg"
             />
@@ -215,15 +215,15 @@ const Manipal = () => {
       <section className="bg-white py-12 px-4">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
         <div className="flex flex-wrap justify-center items-center gap-20">
-          <img src="images/ugc.png" alt="UGC" className="h-16 object-contain" />
-          <img src="images/aicte.png" alt="AICTE" className="h-16 object-contain" />
-          <img src="images/naac.png" alt="NAAC" className="h-16 object-contain" />
+          <img src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
+          <img src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
+          <img src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
           
          
-          <img src="images/aiu.png" alt="AIU" className="h-16 object-contain" />
-          <img src="images/nba.png" alt="NBA" className="h-16 object-contain" />
-          <img src="images/qs.png" alt="QS" className="h-16 object-contain" />
-          <img src="images/acu.png" alt="ACU" className="h-16 object-contain" />
+          <img src="/images/aiu.png" alt="AIU" className="h-16 object-contain" />
+          <img src="/images/nba.png" alt="NBA" className="h-16 object-contain" />
+          <img src="/images/qs.png" alt="QS" className="h-16 object-contain" />
+          <img src="/images/acu.png" alt="ACU" className="h-16 object-contain" />
           
           
           
@@ -289,7 +289,7 @@ const Manipal = () => {
       <section className="bg-[#002d5f] text-white py-16 px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2">
-            <img src="images/muj-certi.jpeg" alt="Certificate" className="rounded-lg shadow-lg w-full" />
+            <img src="/images/muj-certi.jpeg" alt="Certificate" className="rounded-lg shadow-lg w-full" />
           </div>
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Recognized Online Degree from Manipal University</h2>
@@ -314,7 +314,7 @@ const Manipal = () => {
           <p className="text-xl text-gray-600">Top Hiring Partners of Manipal Online</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {["images/company.png", "images/company1.png", "images/company9.jpg", "images/com10.png", "images/companany4.png", "images/company6.png", "images/companany5.png", "images/adove.png", "images/samsung.png"].map((src, i) => (
+          {["/images/company.png", "/images/company1.png", "/images/company9.jpg", "/images/com10.png", "/images/companany4.png", "/images/company6.png", "/images/companany5.png", "/images/adove.png", "/images/samsung.png"].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
               <img src={src} alt="Company" className="h-12 object-contain" />
             </div>

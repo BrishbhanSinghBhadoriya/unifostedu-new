@@ -22,7 +22,7 @@ const Amity = () => {
       eligibility: "10+2 Pass",
       fees: "1,65,000- 2,25,000",
       specialization: "BBA (General,Data Analytics,   Travel And Tourism Management, Professional Certificate in Business Analytics) ",
-      image: "images/bba.jpeg",
+      image: "/images/bba.jpeg",
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
@@ -30,7 +30,7 @@ const Amity = () => {
       eligibility: "10+2 Pass",
       fees: "1,50,000 - 2,25,000",
       specialization: " BCA, (General, Cloud  and Security, Software Engineering,  Data Science, Data Engineering(HCL Tech), Data Analytics,Software Engineering(HCL Tech))",
-      image: "images/bca.jpeg",
+      image: "/images/bca.jpeg",
     },
     {
       course: "Bachelor of Commerce (B.Com)",
@@ -38,7 +38,7 @@ const Amity = () => {
       eligibility: "10+2 Pass",
       fees: "99,000 - 2,50,000",
       specialization: "B,Com(General, Hons,International Finance & Accounting",
-      image: "images/bcom.jpeg",
+      image: "/images/bcom.jpeg",
     },
     {
       course: "Bachelor of Arts (BA)",
@@ -46,7 +46,7 @@ const Amity = () => {
       eligibility: "10+2 Pass",
       fees: "99,000 - 1,70,000",
       specialization: "BA(Genral, Jornalism and Mass Communication, Native Languages(Kannada,Malayalam, Tamil, Telugu), Psychology, English, Sociology, Political Science,Economics)",
-      image: "images/ba.jpeg",
+      image: "/images/ba.jpeg",
     },
   ];
 
@@ -57,7 +57,7 @@ const Amity = () => {
       eligibility: "Graduation",
       fees: "1,99,000 - 2,99,000",
       specialization: "MBA(General,Information Technology Management, Dual Specilization, Human Resource Analytics, Data Science, Business Analytics, International Business Management, Digital Enterpreneurship, Digital Marketing Management,Enterpreneurship & Leadership Management,Finance & Accounting Management,Hospitality Management,Global Finance Market,Insurance Management,Marketing & Sales Management,Petroleum & Natural Gas,Producation and Operations Management,Retail Management )",
-      image: "images/mba.jpeg",
+      image: "/images/mba.jpeg",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -65,7 +65,7 @@ const Amity = () => {
       eligibility: "Graduation in BCA/B.Sc(IT)",
       fees: "170,000- 2,50,000",
       specialization: "MCA(General, Cyber Security, Blockchain Technology , Machine Learning and Artificial Intelligence, Augmented Reality and Virtual Reality, Software Engineering,",
-      image: "images/mca1.jpeg",
+      image: "/images/mca1.jpeg",
     },
     {
       course: "Master of Commerce (M.Com)",
@@ -73,7 +73,7 @@ const Amity = () => {
       eligibility: "Graduation in Commerce",
       fees: "1,20,000",
       specialization: "General, Financial Management, Financial Technology",
-      image: "images/m.com.jpeg",
+      image: "/images/m.com.jpeg",
     },
     {
       course: "Master of Arts (MA)",
@@ -81,7 +81,7 @@ const Amity = () => {
       eligibility: "Graduation",
       fees: "1,30,000 - 2,50,000",
       specialization: " MA(Psychology, Journalism and Mass Communication, Public Policy& Governance,English, Sociology",
-      image: "images/ma1.jpeg",
+      image: "/images/ma1.jpeg",
     },
      {
       course: "Master of Science (M.Sc)",
@@ -89,7 +89,7 @@ const Amity = () => {
       eligibility: "Graduation ",
       fees: "2,50,000",
       specialization: "Data Science",
-      image: "images/m.com.jpeg",
+      image: "/images/m.com.jpeg",
     },
   ];
 
@@ -101,7 +101,7 @@ const Amity = () => {
       eligibility: "10+2 With minimum 50%",
       fees: "3,45,800",
       specialization: "BBA + MBA",
-      image: "images/mba.jpeg",
+      image: "/images/mba.jpeg",
     },
     {
       course: "BCA+ MCA",
@@ -109,7 +109,7 @@ const Amity = () => {
       eligibility: "10+2 With minimum 50%",
       fees: "3,04,000",
       specialization: "BCA+ MCA",
-      image: "images/mca1.jpeg",
+      image: "/images/mca1.jpeg",
     },
     {
       course: "B.Com + MBA",
@@ -117,7 +117,7 @@ const Amity = () => {
       eligibility: "10+2 With minimum 50%",
       fees: "2,83,100 - 3,05,000",
       specialization: "B.Com + MBA",
-      image: "images/m.com.jpeg",
+      image: "/images/m.com.jpeg",
     },
 
   ] 
@@ -223,7 +223,7 @@ const Amity = () => {
             
           </div>
           <motion.img
-            src="images/amitypic.png"
+            src="/images/amitypic.png"
             alt="Amity University"
             className="rounded-xl shadow-lg w-full h-auto"
             initial={{ opacity: 0, y: 50 }}
@@ -283,21 +283,21 @@ const Amity = () => {
       <section className="py-10 bg-white">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
         <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <img src="images/ugc.png" alt="UGC" className="h-16 object-contain" />
-          <img src="images/aicte.png" alt="AICTE" className="h-16 object-contain" />
+          <img src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
+          <img src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
           
            
-           <img src="images/naac.png" alt="NAAC" className="h-16 object-contain" />
-           <img src="images/nirf.png" alt="NIRF" className="h-16 object-contain" />
-           <img src="images/wes.png" alt="WES" className="h-16 object-contain" />
-           <img src="images/aiu.png" alt="AIU" className="h-16 object-contain" />
-          <img src="images/acu.png" alt="CARRES" className="h-16 object-contain" />
+           <img src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
+           <img src="/images/nirf.png" alt="NIRF" className="h-16 object-contain" />
+           <img src="/images/wes.png" alt="WES" className="h-16 object-contain" />
+           <img src="/images/aiu.png" alt="AIU" className="h-16 object-contain" />
+          <img src="/images/acu.png" alt="CARRES" className="h-16 object-contain" />
          
-         <img src="images/unwto.png" alt="UNWTO" className="h-16 object-contain" />
-         <img src="images/recogin.webp" alt="RECOGIN" className="h-16 object-contain" />
-         <img src="images/10.webp" alt="11" className="h-16 object-contain" />
-           <img src="images/qaa.png" alt="QAA" className="h-16 object-contain" />
-           <img src="images/11.png" alt="11" className="h-16 object-contain" />
+         <img src="/images/unwto.png" alt="UNWTO" className="h-16 object-contain" />
+         <img src="/images/recogin.webp" alt="RECOGIN" className="h-16 object-contain" />
+         <img src="/images/10.webp" alt="11" className="h-16 object-contain" />
+           <img src="/images/qaa.png" alt="QAA" className="h-16 object-contain" />
+           <img src="/images/11.png" alt="11" className="h-16 object-contain" />
         </div>
       </section>
      <section className="py-12 bg-white">
@@ -346,7 +346,7 @@ const Amity = () => {
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
-            <img src="images/amicri.jpeg" alt="Amity University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <img src="/images/amicri.jpeg" alt="Amity University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
           </div>
           <div className="flex-1 text-white">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">Online Degree from Amity Online University</h2>
