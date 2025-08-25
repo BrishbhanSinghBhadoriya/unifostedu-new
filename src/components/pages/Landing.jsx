@@ -61,17 +61,17 @@ const courses = [
 ];
 
 const stats = [
-  { number: "5K+", label: "Students Enrolled", icon: FaUsers, color: "from-blue-500 to-purple-600" },
-  { number: "25+", label: "Partner Universities", icon: FaUniversity, color: "from-green-500 to-teal-600" },
-  { number: "100%", label: "Success Rate", icon: FaAward, color: "from-orange-500 to-red-600" },
-  { number: "24/7", label: "Support Available", icon: FaHeadset, color: "from-purple-500 to-pink-600" }
+  { number: "5K+", label: "Students Enrolled", icon: FaUsers, color: "from-blue-500 to-teal-600" },
+  { number: "25+", label: "Partner Universities", icon: FaUniversity, color: "from-blue-500 to-teal-600" },
+  { number: "100%", label: "Success Rate", icon: FaAward, color: "from-blue-500 to-teal-600" },
+  { number: "24/7", label: "Support Available", icon: FaHeadset, color: "from-blue-500 to-teal-600" }
 ];
 
 const features = [
-  { title: "Expert Counseling", description: "Get personalized guidance from education experts", icon: FaUserTie, color: "from-blue-500 to-purple-600" },
-  { title: "Compare Programs", description: "Side-by-side comparison of courses and universities", icon: FaCompass, color: "from-green-500 to-teal-600" },
-  { title: "Flexible Learning", description: "Study at your own pace from anywhere", icon: FaGlobe, color: "from-orange-500 to-red-600" },
-  { title: "Career Support", description: "Get assistance with job placement and career guidance", icon: FaBriefcase, color: "from-purple-500 to-pink-600" }
+  { title: "Expert Counseling", description: "Get personalized guidance from education experts", icon: FaUserTie, color: "from-blue-500 to-teal-600" },
+  { title: "Compare Programs", description: "Side-by-side comparison of courses and universities", icon: FaCompass, color: "from-blue-500 to-teal-600" },
+  { title: "Flexible Learning", description: "Study at your own pace from anywhere", icon: FaGlobe, color: "from-blue-500 to-teal-600" },
+  { title: "Career Support", description: "Get assistance with job placement and career guidance", icon: FaBriefcase, color: "from-blue-500 to-teal-600" }
 ];
 
 const colleges = [
