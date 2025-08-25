@@ -67,7 +67,7 @@ const Nmims = () => {
       image: "images/mba.jpeg",
     },
     {
-      course: "Master of Computer Applications (MCA)",
+      course: "Master of Business Administration (WX)",
       duration: "2 Years",
       eligibility: "BCA or B.Sc. in Computer Science with minimum 50% marks",
       fees: "₹1,35,000",
@@ -110,12 +110,12 @@ const Nmims = () => {
               Welcome to NMIMS Global Online
             </h1>
             <p className="text-gray-700 text-lg leading-relaxed mb-6">
-              NMIMS Global is a premier education institute offering UGC-entitled and NAAC A+ accredited online programs with flexible learning, a vibrant student community, and personalized mentorship.
+              NMIMS Global is a premier education institute offering UGC-entitled and NAAC A++ accredited online programs with flexible learning, a vibrant student community, and personalized mentorship.
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center gap-2 text-[#001e3c] font-semibold">
                 <FaAward className="text-[#00ffe0] text-xl" />
-                <span>NAAC A+ Accredited</span>
+                <span>NAAC A++ Accredited</span>
               </div>
               <div className="flex items-center gap-2 text-[#001e3c] font-semibold">
                 <FaCertificate className="text-[#00ffe0] text-xl" />
@@ -156,7 +156,7 @@ const Nmims = () => {
                 <FaAward className="w-8 h-8 text-[#001e3c]" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Accreditation</h3>
-              <p className="text-[#00ffe0] font-bold text-lg">NAAC A+</p>
+              <p className="text-[#00ffe0] font-bold text-lg">NAAC A++</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-full flex items-center justify-center mx-auto mb-4">
@@ -289,7 +289,7 @@ const Nmims = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact Section
       <section className="py-16 px-6 bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">
@@ -312,6 +312,52 @@ const Nmims = () => {
               Explore More Courses
             </button>
           </div>
+        </div>
+      </section> */}
+      {/* Certificate Section - NMIMS */}
+<section className="bg-[#7b1fa2] text-white py-16 px-6 font-[Inter]">
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    {/* Certificate Image */}
+    <div className="md:w-1/2">
+      <img 
+        src="/nmims-certi.png" 
+        alt="NMIMS Certificate" 
+        className="rounded-lg shadow-lg w-full" 
+      />
+    </div>
+
+    {/* Text Content */}
+    <div className="md:w-1/2">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        Recognized Online Degree from NMIMS University
+      </h2>
+      <p className="mb-6 text-lg">
+        Earn a prestigious UGC-entitled degree from NMIMS, one of India’s top-ranked universities, 
+        designed for working professionals and students aspiring to build global careers.
+      </p>
+      <ul className="list-disc list-inside space-y-2 text-base">
+        <li> NAAC A++ Accredited University</li>
+        <li>Live Interactive + Recorded Sessions</li>
+        <li>Strong Industry-Aligned Curriculum</li>
+        <li>Dedicated Career & Placement Assistance</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+ {/* Hiring Partners */}
+      <section className="py-12 bg-gray-100">
+        <div className="max-w-6xl mx-auto px-4 text-center mb-10">
+          <h2 className="text-3xl font-bold text-gray-800">Our Students Work At</h2>
+          <p className="text-xl text-gray-600">Top Hiring Partners of Nmims</p>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          {["/company.png", "/company1.png", "/company9.jpg", "/com10.png", "/companany4.png", "/company6.png", "/companany5.png", "/adove.png", "/samsung.png"].map((src, i) => (
+            <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
+              <img src={src} alt="Company" className="h-12 object-contain" />
+            </div>
+          ))}
         </div>
       </section>
     </>

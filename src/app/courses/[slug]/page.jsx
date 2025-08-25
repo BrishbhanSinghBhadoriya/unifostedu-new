@@ -26,7 +26,7 @@ const courseData = {
     subtitle: 'Master of Business Administration',
     description: 'Compare India\'s leading UGC-approved MBA programs with flexible schedules and career-focused specializations.',
     duration: '2 Years',
-    fee: '₹1.2L - ₹3.5L',
+    fee: '₹1.1L - ₹3.5L',
     eligibility: 'Graduation in any discipline with 50% marks',
     features: [
       'Live online classes',
@@ -51,11 +51,11 @@ const courseData = {
       {
         name: 'Manipal University',
         location: 'Jaipur, Rajasthan',
-        NIRF: 'N/A',
+        NIRF: '73',
         rating: 4.6,
         image: '/images/manipal.png',
         specializations: ['Human Resource Management and Analytics', 'Finance and Marketing', 'Marketing and Human Resource Management', 'Business Analytics', 'Digital Marketing', 'Finance', 'Operations', 'International Business'],
-        fee: '₹1.5L - ₹3L',
+        fee: '₹1,75,000 ',
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
@@ -63,11 +63,11 @@ const courseData = {
       {
         name: 'NMIMS',
         location: 'Mumbai, Maharashtra',
-        NIRF: 'N/A',
+        NIRF: '21',
         rating: 4.7,
         image: '/images/nmims.png',
         specializations: ['Applied Finance', 'Business Administration', 'Business Analytics', 'Digital Marketing', 'Finance', 'Marketing', 'Operations', 'Human Resources'],
-        fee: '₹2L - ₹3.5L',
+        fee: '₹1,96,000',
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Industry Connect', 'Placement Assistance', 'Quality Education']
@@ -75,11 +75,11 @@ const courseData = {
       {
         name: 'Jain University',
         location: 'Bangalore, Karnataka',
-        NIRF: 'N/A',
+        NIRF: '77',
         rating: 4.4,
         image: '/images/jain.png',
         specializations: ['MBA in Finance', 'MBA in Digital Marketing', 'MBA in Entrepreneurship', 'MBA in HR', 'MBA in Marketing'],
-        fee: '₹1.3L - ₹2.6L',
+        fee: '₹1,96,000 - ₹2,16,000',
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Modern Curriculum', 'Industry Projects', 'Career Support']
@@ -87,11 +87,11 @@ const courseData = {
       {
         name: 'LPU Online',
         location: 'Punjab',
-        NIRF: 'N/A',
+        NIRF: '38',
         rating: 4.5,
         image: '/images/lpu.png',
         specializations: ['Finance', 'Marketing', 'Human Resources', 'Information Technology', 'Operations Management'],
-        fee: '₹90K - ₹2L',
+        fee: ' ₹2,00,000',
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
@@ -99,11 +99,11 @@ const courseData = {
       {
         name: 'UPES Online',
         location: 'Dehradun, Uttarakhand',
-        NIRF: 'N/A',
+        NIRF: '41',
         rating: 4.3,
         image: '/images/upes.png',
         specializations: ['Oil & Gas', 'Power Management', 'Logistics', 'Business Analytics', 'Finance'],
-        fee: '₹1.8L - ₹3.2L',
+        fee: '₹1,75,000 - ₹2,20,000',
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Industry Focused', 'Expert Faculty', 'Placement Support']
@@ -115,10 +115,22 @@ const courseData = {
         rating: 4.5,
         image: '/images/dypatil.png',
         specializations: ['Finance', 'Marketing', 'Human Resources', 'Operations Management', 'International Business', 'Business Analytics'],
-        fee: '₹1.5L - ₹2.8L',
+        fee: '₹1,89,000',
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Industry Connect', 'Placement Support', 'Expert Faculty']
+      },
+       {
+        name: 'Shoolini University',
+        location: 'Solan, Himachal Pradesh, India',
+        NIRF: '73',
+        rating: 4.6,
+        image: '/shoolini.jpg',
+        specializations: ['Marketing', 'HRM', 'Retail Management', 'Finance, International Business', 'Digital Marketing', 'Entrepreneurship', 'Business Analytics', 'Operations Management'],
+        fee: '₹1,10,000 ',
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
       },
       {
         name: 'OP Jindal Global University',
@@ -127,7 +139,7 @@ const courseData = {
         rating: 4.6,
         image: '/images/opjindal.png',
         specializations: ['Finance', 'Marketing', 'Human Resources', 'Operations', 'International Business', 'Business Analytics'],
-        fee: '₹2.2L - ₹3.5L',
+        fee: '₹2,00,000 - ₹3,00,000',
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Global Perspective', 'Industry Partnerships', 'Career Services']
@@ -139,7 +151,7 @@ const courseData = {
         rating: 4.4,
         image: '/images/chandigarh.jpg',
         specializations: ['Finance', 'Marketing', 'Human Resources', 'Information Technology', 'Operations Management', 'International Business'],
-        fee: '₹1.3L - ₹2.5L',
+        fee: '₹2,00,000 - ₹2,10,000',
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Modern Curriculum', 'Industry Projects', 'Placement Assistance']
@@ -199,7 +211,7 @@ const courseData = {
         rating: 4.3,
         image: '/images/sikkim-manipal.png',
         specializations: ['Finance', 'Marketing', 'Human Resources', 'Operations', 'Business Analytics', 'International Business'],
-        fee: '₹1.2L - ₹2.8L',
+        fee: '₹1,10,000',
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
@@ -211,7 +223,7 @@ const courseData = {
         rating: 4.2,
         image: '/images/uttaranchal.png',
         specializations: ['Finance', 'Marketing', 'Human Resources', 'Operations', 'Business Analytics'],
-        fee: '₹1.0L - ₹2.3L',
+        fee: '₹1,10,000',
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Quality Education', 'Industry Projects', 'Career Support']
