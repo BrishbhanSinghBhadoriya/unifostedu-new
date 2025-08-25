@@ -13,10 +13,11 @@ export default function Services() {
   const services = [
     {
       id: 'online-degree',
-      title: 'Online Degree Counseling',
+      title: 'Video Call Counseling',
       subtitle: 'Virtual guidance for digital learning',
       icon: FaGraduationCap,
       color: 'from-blue-500 to-purple-600',
+      ctaButton: 'Schedule Video Call', // Added this property
       features: [
         'Connect with education experts virtually',
         'Find the perfect online program for your career goals',
@@ -38,6 +39,7 @@ export default function Services() {
       subtitle: 'Personalized in-home sessions',
       icon: FaHome,
       color: 'from-green-500 to-teal-600',
+      ctaButton: 'Book Home Demo', // Added this property
       features: [
         'Personalized one-on-one sessions at your home',
         'Hands-on learning experience before commitment',
@@ -59,6 +61,7 @@ export default function Services() {
       subtitle: 'Strategic career roadmap',
       icon: FaRoute,
       color: 'from-orange-500 to-red-600',
+      ctaButton: 'Get Started Today', // Added this property
       features: [
         'Comprehensive career assessment and analysis',
         'Industry trend analysis and future predictions',
@@ -77,8 +80,6 @@ export default function Services() {
   ];
 
   const currentService = services.find(service => service.id === activeService);
-
-  // Get Started modal uses unified EnquiryForm (formType="getStarted")
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
@@ -204,12 +205,20 @@ export default function Services() {
                 <div className="mt-12 text-center">
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <button 
-                      onClick={() => { setModalType('videoCall'); setShowEnquiryModal(true); }}
+                      onClick={() => { 
+                        if (currentService.id === 'home-demo') {
+                          setModalType('getStarted'); // Use getStarted for home demo
+                        } else if (currentService.id === 'career-planning') {
+                          setModalType('getStarted'); // Use getStarted for career planning
+                        } else {
+                          setModalType('videoCall'); // Use videoCall for online degree
+                        }
+                        setShowEnquiryModal(true); 
+                      }}
                       className="bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] px-8 py-4 rounded-full text-xl font-bold hover:from-[#00d4c4] hover:to-[#00ffe0] transform hover:scale-105 transition-all duration-300 shadow-2xl"
                     >
-                      Schedule Virtual Session
+                      {currentService.ctaButton}
                     </button>
-                    {/* Removed Learn More button as requested */}
                   </div>
                 </div>
               </div>
