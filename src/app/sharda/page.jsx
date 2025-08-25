@@ -19,7 +19,7 @@ const Sharda = () => {
       eligibility: "Passed the (10+2) examination from State Board / CBSE / NIOS / IGCSE / IB /ICSE recognized by the State or Central Government.",
       fees: "₹1,05,000",
       specialization: "General,",
-      image: "/bba.jpeg",
+      image: "images/bba.jpeg",
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
@@ -27,7 +27,7 @@ const Sharda = () => {
       eligibility: "Passed the (10+2) examination from State Board / CBSE / NIOS / IGCSE / IB /ICSE recognized by the State or Central Government.",
       fees: "₹1,05,000",
       specialization: "Computer Applications, IT, Cyber Security",
-      image: "/bca.jpeg",
+      image: "images/bca.jpeg",
     },
     {
       course: "Bachelor of Arts (Hons.)",
@@ -35,7 +35,7 @@ const Sharda = () => {
       eligibility: "10+2 Pass",
       fees: "₹105,000",
       specialization: " Political Science,",
-      image: "/ba.jpeg",
+      image: "images/ba.jpeg",
     },
   ];
 
@@ -46,7 +46,7 @@ const Sharda = () => {
       eligibility: "Passed Bachelor’s Degree of minimum 3 years duration.",
       fees: "₹1,00,000",
       specialization: " Finance, Healthcare, Human Resource, ",
-      image: "/mba.jpeg",
+      image: "images/mba.jpeg",
     },
       
     {
@@ -55,7 +55,7 @@ const Sharda = () => {
       eligibility: "Candidates must hold a BCA/Bachelor's in Computer Science Engineering oran equivalent degree, or a B.Sc./B.Com./B.A. with Mathematics at 10+2 orgraduation level (with bridge courses as needed).",
       fees: "₹1,00,000",
       specialization: "Computer Science and Information Technology, Data Science",
-      image: "/mca1.jpeg",
+      image: "images/mca1.jpeg",
     },
     {
       course: "Master of Commerce (M.Com)",
@@ -63,7 +63,7 @@ const Sharda = () => {
       eligibility: "Graduation in Commerce",
       fees: "₹50,000",
       specialization: "Master of commerce",
-      image: "/m.com.jpeg",
+      image: "images/m.com.jpeg",
     },
  
   ];
@@ -92,7 +92,7 @@ const Sharda = () => {
             
           </div>
           <div className="md:w-1/2">
-            <img src="/sharda.png" alt="Sharda University" className="w-full rounded-xl shadow-lg" />
+            <img src="images/sharda.png" alt="Sharda University" className="w-full rounded-xl shadow-lg" />
           </div>
         </div>
       </section>
@@ -164,7 +164,7 @@ const Sharda = () => {
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
         <div className="flex flex-wrap justify-center items-center gap-10 px-4">
           {["ugc", "aicte", "naac",  "nirf", "aiu"].map((logo, i) => (
-            <img key={i} src={`/${logo}.png`} alt={logo.toUpperCase()} className="h-16 object-contain" />
+            <img key={i} src={`images/${logo}.png`} alt={logo.toUpperCase()} className="h-16 object-contain" />
           ))}
         </div>
       </section>
@@ -175,7 +175,7 @@ const Sharda = () => {
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
-            <img src="/certificateshardaonline.jpg" alt="certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <img src="images/certificateshardaonline.jpg" alt="certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
           </div>
           <div className="flex-1 text-white">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">Online Degree from Sharda Online University</h2>
@@ -233,60 +233,60 @@ const Sharda = () => {
     {/* Logo Cards */}
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/company.png" alt="Company" className="h-12 object-contain" />
+        <img src="images/company.png" alt="Company" className="h-12 object-contain" />
       </div>
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/company1.png" alt="Microsoft" className="h-12 object-contain" />
+        <img src="images/company1.png" alt="Microsoft" className="h-12 object-contain" />
       </div>
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/company9.jpg" alt="Company 9" className="h-12 object-contain" />
+        <img src="images/company9.jpg" alt="Company 9" className="h-12 object-contain" />
       </div>
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/com10.png" alt="Company 10" className="h-12 object-contain" />
+        <img src="images/com10.png" alt="Company 10" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/companany4.png" alt="Company4" className="h-12 object-contain" />
+        <img src="images/companany4.png" alt="Company4" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/company6.png" alt="Company 6" className="h-12 object-contain" />
+        <img src="images/company6.png" alt="Company 6" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/companany5.png" alt="Companany5" className="h-12 object-contain" />
+        <img src="images/companany5.png" alt="Companany5" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/adove.png" alt="Adove" className="h-12 object-contain" />
+        <img src="images/adove.png" alt="Adove" className="h-12 object-contain" />
       </div>
             
 
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/3.webp" alt="Samsung3" className="h-12 object-contain" />
+        <img src="images/3.webp" alt="Samsung3" className="h-12 object-contain" />
       </div>
 
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/4.webp" alt="Samsung4" className="h-12 object-contain" />
+        <img src="images/4.webp" alt="Samsung4" className="h-12 object-contain" />
       </div>
 
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/5.webp" alt="Samsung5" className="h-12 object-contain" />
+        <img src="images/5.webp" alt="Samsung5" className="h-12 object-contain" />
       </div>
 
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/6.webp" alt="Samsung6" className="h-12 object-contain" />
+        <img src="images/6.webp" alt="Samsung6" className="h-12 object-contain" />
       </div>
 
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/7.webp" alt="Samsung7" className="h-12 object-contain" />
+        <img src="images/7.webp" alt="Samsung7" className="h-12 object-contain" />
       </div>
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/8.webp" alt="Samsung8" className="h-12 object-contain" />
-      </div>
-
-      <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/9.webp" alt="Samsung9" className="h-12 object-contain" />
+        <img src="images/8.webp" alt="Samsung8" className="h-12 object-contain" />
       </div>
 
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/samsung.png" alt="Samsung" className="h-12 object-contain" />
+        <img src="images/9.webp" alt="Samsung9" className="h-12 object-contain" />
+      </div>
+
+      <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
+        <img src="images/samsung.png" alt="Samsung" className="h-12 object-contain" />
       </div>
       {/* Add more cards here as needed */}
     </div>

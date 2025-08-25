@@ -25,7 +25,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'amity-university-online',
     name: 'Amity University Online',
-    logo: '/amity.png',
+            logo: '/images/amity.png',
     location: 'Noida, Uttar Pradesh',
     ranking: 'Top 10',
     established: '2005',
@@ -46,7 +46,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'manipal-university-online',
     name: 'Online Manipal University',
-    logo: '/manipal.png',
+            logo: '/images/manipal.png',
     location: 'Manipal, Karnataka',
     ranking: 'Top 5',
     established: '1953',
@@ -107,7 +107,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'nmims',
     name: 'NMIMS University',
-    logo: '/nmims.png',
+            logo: '/images/nmims.png',
     location: 'Mumbai, Maharashtra',
     established: '1981',
     fee: '₹0.94L - ₹2.20L',
@@ -127,7 +127,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'lovely-professional-university-online',
     name: 'Lovely Professional University',
-    logo: '/lpu.png',
+            logo: '/images/lpu.png',
     location: 'Jalandhar, Punjab',
     established: '2005',
     fee: '₹0.80L - ₹2.0L',
@@ -147,7 +147,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'university-of-petroleum-and-energy-studies-online',
     name: 'Upes Online',
-    logo: '/upes.png',
+            logo: '/images/upes.png',
     location: 'Dehradun, Uttarakhand',
     established: '2003',
     fee: '₹1.50L - ₹1.75L',
@@ -167,7 +167,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'dr-dy-patil-online',
     name: 'Dr. D Y Patil',
-    logo: '/dypatil.png',
+            logo: '/images/dypatil.png',
     location: 'Pune, Maharashtra',
     established: '2003',
     fee: '₹1.45L - ₹1.90L',
@@ -187,7 +187,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'sharda-university-online',
     name: 'Sharda University Online',
-    logo: '/sharda.png',
+            logo: '/images/sharda.png',
     location: 'Greater Noida, Uttar Pradesh',
     established: '2009',
     fee: '₹0.8L - ₹1.30L',
@@ -207,7 +207,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'jain-university-online',
     name: 'Jain University',
-    logo: '/jain.png',
+            logo: '/images/jain.png',
     location: 'Bengaluru, Karnataka',
     established: '1990',
     fee: '1.05L - ₹2.98L',
@@ -227,7 +227,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'chandigarh-university-online',
     name: 'Chandigarh University Online',
-    logo: '/chandigarh.jpg',
+            logo: '/images/chandigarh.jpg',
     location: 'Chandigarh, Punjab',
     established: '2012',
     fee: '0.75L - ₹1.58L',

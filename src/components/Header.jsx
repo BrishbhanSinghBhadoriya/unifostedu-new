@@ -19,20 +19,20 @@ const Header = () => {
   const dropdownRef = useRef(null);
 
   const universities = [
-    { name: "Lovely Professional University", link: "/lpu", logo: "/lpu.png" },
-    { name: "Online Manipal University", link: "/manipal", logo: "/manipal.png" },
-    { name: "Sikkim Manipal University", link: "/smu", logo: "/smu-uni.jpg" },
-    { name: "Uttaranchal University", link: "/uu", logo: "/uu-uni.webp" },
-    { name: "Amity University Online", link: "/amity", logo: "/amity.png" },
-    { name: "Chandigarh University Online", link: "/chandigarh", logo: "/chandigarh.jpg" },
-    { name: "Jain University", link: "/jain", logo: "/jain.png" },
-    { name: "Dr. D Y Patil", link: "/dypatil", logo: "/dypatil.png" },
-    { name: "OP Jindal University", link: "/opjindal", logo: "/opjindal.png" },
-    { name: "Shoolini University Online", link: "/shoolini", logo: "/shoolini.jpg" },
-    { name: "Vivekananda Global University Online", link: "/vgu", logo: "/vgu1.png" },
-    { name: "Upes Online", link: "/upes", logo: "/upes.png" },
-    { name: "Sharda University Online", link: "/sharda", logo: "/sharda.png" },
-    { name: "NMIMS University", link: "/nmims", logo: "/nmims.png" }
+    { name: "Lovely Professional University", link: "/lpu", logo: "/images/lpu.png" },
+    { name: "Online Manipal University", link: "/manipal", logo: "/images/manipal.png" },
+    { name: "Sikkim Manipal University", link: "/smu", logo: "/images/smu-uni.jpg" },
+    { name: "Uttaranchal University", link: "/uu", logo: "/images/uu-uni.webp" },
+    { name: "Amity University Online", link: "/amity", logo: "/images/amity.png" },
+    { name: "Chandigarh University Online", link: "/chandigarh", logo: "/images/chandigarh.jpg" },
+    { name: "Jain University", link: "/jain", logo: "/images/jain.png" },
+    { name: "Dr. D Y Patil", link: "/dypatil", logo: "/images/dypatil.png" },
+    { name: "OP Jindal University", link: "/opjindal", logo: "/images/opjindal.png" },
+    { name: "Shoolini University Online", link: "/shoolini", logo: "/images/shoolini.jpg" },
+    { name: "Vivekananda Global University Online", link: "/vgu", logo: "/images/vgu1.png" },
+    { name: "Upes Online", link: "/upes", logo: "/images/upes.png" },
+    { name: "Sharda University Online", link: "/sharda", logo: "/images/sharda.png" },
+    { name: "NMIMS University", link: "/nmims", logo: "/images/nmims.png" }
     
   ];
 
@@ -136,7 +136,7 @@ const Header = () => {
                   : 'bg-white/10 backdrop-blur-sm'
               }`}>
                 <img 
-                  src="/unilogo.png" 
+                  src="/images/uni.jpg" 
                   alt="Unifost Logo" 
                   className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" 
                 />
@@ -302,7 +302,7 @@ const Header = () => {
               {/* Top bar */}
               <div className="flex items-center justify-between mb-6 sm:mb-8">
                 <div className="flex items-center gap-3">
-                  <img src="/unilogo.png" alt="Unifost" className="h-8 w-auto" />
+                  <img src="/images/uni.jpg" alt="Unifost" className="h-8 w-auto" />
                   <span className="text-lg font-bold text-[#00ffe0]">Unifost</span>
                 </div>
                 <button

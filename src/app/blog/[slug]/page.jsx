@@ -106,3 +106,7 @@ export default async function BlogPage({ params }) {
     </div>
   );
 }
+
+export function generateStaticParams() {
+  return Object.keys(blogData).map((slug) => ({ slug }));
+}

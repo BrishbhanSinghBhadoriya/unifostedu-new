@@ -75,15 +75,15 @@ const features = [
 ];
 
 const colleges = [
-  { name: "Amity University Online", ranking: "NIRF-29", fee: "₹0.99L - ₹3.45L", logo: "/amity.png", rating: 4.8 },
-  { name: "Manipal University Online", ranking: "NIRF-73", fee: "0.99L - ₹1.75L", logo: "/manipal1.png", rating: 4.6 },
-  { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹0.80L - ₹2.0L", logo: "/lpulogo.png", rating: 4.1},
-  { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.50L - ₹1.75L", logo: "/upeslogo.png", rating: 4.4 },
-  { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹0.94L - ₹2.20L", logo: "/nmims.png", rating: 4.5 },
-  { name: "Sharda University Online", ranking: "NIRF-87", fee: "₹0.80L - ₹1.30L", logo: "/shardalogo.png", rating: 4.1 },
-  { name: "Dr. DY Patil Online", ranking: "NIRF-63", fee: "₹1.45L - ₹1.90L", logo: "/dypatillogo.png", rating: 4.4 },
-  { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.05L - ₹2.98L", logo: "/jainlogo.png", rating: 4.5 },
-  { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹0.75L - ₹1.58", logo: "/chandigarh.jpg", rating: 4.7 }
+      { name: "Amity University Online", ranking: "NIRF-29", fee: "₹0.99L - ₹3.45L", logo: "/images/amity.png", rating: 4.8 },
+    { name: "Manipal University Online", ranking: "NIRF-73", fee: "0.99L - ₹1.75L", logo: "/images/manipal1.png", rating: 4.6 },
+    { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹0.80L - ₹2.0L", logo: "/images/lpulogo.png", rating: 4.1},
+    { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.50L - ₹1.75L", logo: "/images/upeslogo.png", rating: 4.4 },
+    { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹0.94L - ₹2.20L", logo: "/images/nmims.png", rating: 4.5 },
+    { name: "Sharda University Online", ranking: "NIRF-87", fee: "₹0.80L - ₹1.30L", logo: "/images/shardalogo.png", rating: 4.1 },
+    { name: "Dr. DY Patil Online", ranking: "NIRF-63", fee: "₹1.45L - ₹1.90L", logo: "/images/dypatillogo.png", rating: 4.4 },
+    { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.05L - ₹2.98L", logo: "/images/jainlogo.png", rating: 4.5 },
+    { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹0.75L - ₹1.58", logo: "/images/chandigarh.jpg", rating: 4.7 }
 ];
 
 const cities = [
@@ -98,51 +98,11 @@ const cities = [
 ];
 
 const accreditationLogos = [
-  '/ugc.png', '/naac.png', '/nirf.png', '/aicte.png', '/wasc.png', '/aiu.png',
-  '/iacbe.png', '/aacsb.png', '/iqas.png', '/wes.png', '/unwto.png', '/nabh.png'
+  '/images/ugc.png', '/images/naac.png', '/images/nirf.png', '/images/aicte.png', '/images/wasc.png', '/images/aiu.png',
+  '/images/iacbe.png', '/images/aacsb.png', '/images/iqas.png', '/images/wes.png', '/images/unwto.png', '/images/nabh.png'
 ];
 
 // University logos for the slider
-const universityLogos = [
-  { name: "Amity University", logo: "/amitylogo.jpg" },
-  { name: "Manipal University", logo: "/manipallogo.jpg" },
-  { name: "Lovely Professional University", logo: "/lpulogo.png" },
-  { name: "UPES University", logo: "/upeslogo.png" },
-  { name: "NMIMS University", logo: "/nmimslogo.jpg" },
-  { name: "Sharda University", logo: "/shardalogo.png" },
-  { name: "DY Patil University", logo: "/dypatillogo.png" },
-  { name: "Jain University", logo: "/jainlogo.png" },
-  { name: "Chandigarh University", logo: "/cu-logo.png" },
-  { name: "Vivekananda Global University", logo: "/vgulogo.png" },
-  { name: "Shoolini University", logo: "/shoolinilogo.png" },
-  { name: "OP Jindal University", logo: "/opjindallogo.png" },
-  { name: "eCornell University", logo: "/ecornellogo.png" },
-  { name: "Edgewood University", logo: "/edgewoodlogo.png" },
-  { name: "Rushford University", logo: "/rushfordlogo.png" },
-  { name: "Deakin University", logo: "/deakinlogo.png" },
-  { name: "Golden Gate University", logo: "/goldengatelogo.png" },
-  { name: "IIM Nagpur", logo: "/iimnagpurlogo.png" },
-  { name: "IIM Ahmedabad", logo: "/iimalogo.png" },
-  { name: "IIM Udaipur", logo: "/iimulogo.png" },
-  { name: "IIM Ranchi", logo: "/iimrlogo.png" },
-  { name: "IIT Roorkee", logo: "/iitrlogo.png" },
-  { name: "IIT Guwahati", logo: "/iitglogo.png" },
-  { name: "IIM Calcutta", logo: "/iimclogo.png" },
-  { name: "IIM Bangalore", logo: "/iimlogo.png" },
-  { name: "Liverpool University", logo: "/liverpoollogo.png" },
-  { name: "IMT University", logo: "/imtlogo.png" },
-  { name: "IIT Delhi", logo: "/iitdlogo.png" },
-  { name: "Mundra University", logo: "/mundralogo.png" },
-  { name: "IIM Kozhikode", logo: "/iimklogo.png" },
-  { name: "IIIT Bangalore", logo: "/iiitblogo.png" },
-  { name: "Andhra University", logo: "/andhralogo.png" },
-  { name: "Kurukshetra University", logo: "/kurkshetralogo.jpg" },
-  { name: "Subharti University", logo: "/subhartilogo.jpg" },
-  { name: "DY Patil Mumbai", logo: "/dypatilmumbailogo.png" },
-  { name: "Amrita University", logo: "/amritalogo.png" }
-];
-
-// University Logo Slider Component with Framer Motion Auto-Scrolling
 const UniversityLogoSlider = () => {
   const [itemsToShow, setItemsToShow] = useState(6);
   const [isPaused, setIsPaused] = useState(false);

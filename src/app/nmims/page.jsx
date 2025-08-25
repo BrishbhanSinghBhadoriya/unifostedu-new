@@ -29,7 +29,7 @@ const Nmims = () => {
       eligibility: "10+2 from a recognized board with minimum 50% marks",
       fees: "₹1,50,000",
       specialization: "General Management, Digital Marketing, Finance, Human Resources",
-      image: "/bba.jpeg",
+      image: "images/bba.jpeg",
     },
     {
       course: "Bachelor of Commerce (B.Com)",
@@ -37,7 +37,7 @@ const Nmims = () => {
       eligibility: "10+2 with commerce stream and minimum 50% marks",
       fees: "₹1,20,000",
       specialization: "Accounting, Finance, Taxation, Banking",
-      image: "/bcom.jpeg",
+      image: "images/bcom.jpeg",
     },
     {
       course: "Bachelor of Arts (BA) Liberal Arts",
@@ -45,7 +45,7 @@ const Nmims = () => {
       eligibility: "10+2 in any stream with minimum 50% marks",
       fees: "₹1,30,000",
       specialization: "Psychology, Sociology, Economics, English Literature",
-      image: "/ba.jpeg",
+      image: "images/ba.jpeg",
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
@@ -53,7 +53,7 @@ const Nmims = () => {
       eligibility: "10+2 with Mathematics and minimum 50% marks",
       fees: "₹1,60,000",
       specialization: "Software Development, Data Science, Web Technologies",
-      image: "/bca.jpeg",
+      image: "images/bca.jpeg",
     }
   ];
 
@@ -64,7 +64,7 @@ const Nmims = () => {
       eligibility: "Graduation in any discipline with minimum 50% marks",
       fees: "₹1,44,000",
       specialization: "Finance, Marketing, Human Resources, Operations, Business Analytics, International Business, Digital Marketing, Supply Chain Management",
-      image: "/mba.jpeg",
+      image: "images/mba.jpeg",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -72,7 +72,7 @@ const Nmims = () => {
       eligibility: "BCA or B.Sc. in Computer Science with minimum 50% marks",
       fees: "₹1,35,000",
       specialization: "Software Engineering, Data Analytics, Cloud Computing, Cybersecurity",
-      image: "/mca1.jpeg",
+      image: "images/mca1.jpeg",
     },
     {
       course: "Master of Commerce (M.Com)",
@@ -80,7 +80,7 @@ const Nmims = () => {
       eligibility: "B.Com or related degree with minimum 50% marks",
       fees: "₹1,25,000",
       specialization: "Advanced Accounting, Financial Management, Taxation",
-      image: "/m.com.jpeg",
+      image: "images/m.com.jpeg",
     },
     {
       course: "Master of Science (M.Sc) Applied Finance",
@@ -88,7 +88,7 @@ const Nmims = () => {
       eligibility: "Bachelor's degree in Finance or related field with minimum 50% marks",
       fees: "₹1,20,000",
       specialization: "Investment Management, Risk Management, Financial Modeling",
-      image: "/m.com.jpeg",
+      image: "images/m.com.jpeg",
     },
     {
       course: "Master of Arts (MA) Journalism & Mass Communication",
@@ -96,7 +96,7 @@ const Nmims = () => {
       eligibility: "Graduation in any discipline with minimum 50% marks",
       fees: "₹1,40,000",
       specialization: "Digital Journalism, Public Relations, Advertising, Media Management",
-      image: "/ma1.jpeg",
+      image: "images/ma1.jpeg",
     }
   ];
 
@@ -128,7 +128,7 @@ const Nmims = () => {
             </div>
           </div>
           <div className="md:w-1/2">
-            <img src="/nmims.png" alt="NMIMS" className="rounded-xl shadow-2xl w-full" />
+            <img src="images/nmims.png" alt="NMIMS" className="rounded-xl shadow-2xl w-full" />
           </div>
         </div>
       </section>

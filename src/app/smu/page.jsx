@@ -51,14 +51,14 @@ const SMU = () => {
     duration: "3 Years",
     eligibility: "10+2 or equivalent",
     fees: "₹75,000",
-    image: "/ba.jpeg",
+    image: "images/ba.jpeg",
   },
   {
     course: "Bachelor of Commerce (B.Com)",
     duration: "3 Years",
     eligibility: "10+2 or equivalent",
     fees: "₹75,000",
-    image: "/bcom.jpeg",
+    image: "images/bcom.jpeg",
   },
 ];
 
@@ -68,28 +68,28 @@ const pgCourses = [
     duration: "2 Years",
     eligibility: "Graduation with minimum 50% marks",
     fees: "₹1,10,000",
-    image: "/mba.jpeg",
+    image: "images/mba.jpeg",
   },
   {
     course: "Master of Computer Applications (MCA)",
     duration: "2 Years",
     eligibility: "BBA or UG Degree with minimum 40% + 10th & 12th",
     fees: "₹98,000",
-    image: "/mca1.jpeg",
+    image: "images/mca1.jpeg",
   },
   {
     course: "Master of Arts (MA - English / Sociology / Political Science)",
     duration: "2 Years",
     eligibility: "Graduation in relevant stream",
     fees: "₹79,000",
-    image: "/ma1.jpeg",
+    image: "images/ma1.jpeg",
   },
   {
     course: "Master of Commerce (M.Com)",
     duration: "2 Years",
     eligibility: "Graduation in Commerce or equivalent",
     fees: "₹75,000",
-    image: "/bcom.jpeg",
+    image: "images/bcom.jpeg",
   },
 ];
 
@@ -115,7 +115,7 @@ const pgCourses = [
           </div>
           <div className="md:w-1/2">
             <img
-              src="/smu-uni.jpg" // You'll need to add this image
+              src="images/smu-uni.jpg" // You'll need to add this image
               alt="Sikkim Manipal University"
               className="w-full rounded-xl shadow-lg"
             />
@@ -211,9 +211,9 @@ const pgCourses = [
       <section className="bg-white py-12 px-4">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
         <div className="flex flex-wrap justify-center items-center gap-20">
-          <img src="/ugc.png" alt="UGC" className="h-16 object-contain" />
-          <img src="/aicte.png" alt="AICTE" className="h-16 object-contain" />
-          <img src="/naac.png" alt="NAAC" className="h-16 object-contain" />
+          <img src="images/ugc.png" alt="UGC" className="h-16 object-contain" />
+          <img src="images/aicte.png" alt="AICTE" className="h-16 object-contain" />
+          <img src="images/naac.png" alt="NAAC" className="h-16 object-contain" />
         </div>
       </section>
 
@@ -264,7 +264,7 @@ const pgCourses = [
       <section className="bg-[#002d5f] text-white py-16 px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2">
-            <img src="/smu.webp" alt="Certificate" className="rounded-lg shadow-lg w-full" />
+            <img src="images/smu.webp" alt="Certificate" className="rounded-lg shadow-lg w-full" />
           </div>
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">UGC-Entitled Online Degrees from SMU</h2>
@@ -288,7 +288,7 @@ const pgCourses = [
           <p className="text-xl text-gray-600">Top Hiring Partners of SMU</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {["/company.png", "/company1.png", "/company9.jpg", "/com10.png", "/companany4.png", "/company6.png", "/adove.png", "/samsung.png","/ey.png","/ibm.png","/hp.png"].map((src, i) => (
+          {["images/company.png", "images/company1.png", "images/company9.jpg", "images/com10.png", "images/companany4.png", "images/company6.png", "images/adove.png", "images/samsung.png","images/ey.png","images/ibm.png","images/hp.png"].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
               <img src={src} alt="Company" className="h-12 object-contain" />
             </div>

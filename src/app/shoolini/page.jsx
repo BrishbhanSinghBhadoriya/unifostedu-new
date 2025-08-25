@@ -48,7 +48,7 @@ const Shoolini = () => {
       eligibility: "10+2 pass with Commerce",
       fees: "12,500/Semester",
       specialization: "Accounting, Finance and Taxation",
-      image: "/bcom.jpg",
+      image: "images/bcom.jpg",
     },
     {
       course: "Bachelor of Business Administration (BBA)",
@@ -56,7 +56,7 @@ const Shoolini = () => {
       eligibility: "10+2 or equivalent from a recognized board",
       fees: "12,500/Semester",
       specialization: "HR, Marketing, Finance, Digital Marketing, Computer Science, Direct Selling",
-      image: "/shoolini-bba.jpg",
+      image: "images/shoolini-bba.jpg",
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
@@ -64,7 +64,7 @@ const Shoolini = () => {
       eligibility: "10+2 in any discipline with 40% marks in last qualifying examination. Reservation of seats as per government policies. ",
       fees: "12,500/Semester",
       specialization: "Machine Learning, Data Science, Cyber Secruity and Artificial Intelligence",
-      image: "/shoolini-bca.jpg",
+      image: "images/shoolini-bca.jpg",
     }
   ];
 
@@ -75,7 +75,7 @@ const Shoolini = () => {
       eligibility: "Passed Bachelor degree of minimum 3 years duration. Obtained atleast 50% marks.",
       fees: "27,500/Semester",
       specialization: " Marketing, HRM, Retail Management, Finance, International Business, Digital Marketing, Entrepreneurship, Business Analytics, Operations Management",
-      image: "/shoolini-mba.jpg",
+      image: "images/shoolini-mba.jpg",
     },
     {
       course: "Maters of Computer Applications (MCA)",
@@ -83,7 +83,7 @@ const Shoolini = () => {
       eligibility: "Graduation in Life Sciences",
       fees: "27,500/Semester",
       specialization: "Artificial Intelligence, Data Science, Full Stack Development",
-      image: "/shoolini-mca.jpg",
+      image: "images/shoolini-mca.jpg",
     }
     ,
     {
@@ -92,7 +92,7 @@ const Shoolini = () => {
       eligibility: "Bachelor's degree with any discipline with minimum of 40% marks. 60% marks in case of International Students in the qualifying examination.",
       fees: "10,500/Semester",
      
-      image: "/shoolini-ma.jpg",
+      image: "images/shoolini-ma.jpg",
     }
     
 
@@ -119,7 +119,7 @@ const Shoolini = () => {
             </p>
           </div>
           <motion.img
-            src="/shoolini.jpg"
+            src="images/shoolini.jpg"
             alt="Shoolini University"
             className="rounded-xl shadow-lg w-full h-auto"
             initial={{ opacity: 0, y: 50 }}
@@ -168,9 +168,9 @@ const Shoolini = () => {
       <section className="py-10 bg-white">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
         <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <img src="/ugc.png" alt="UGC" className="h-16 object-contain" />
-          <img src="/naac.png" alt="NAAC" className="h-16 object-contain" />
-          <img src="/wes.png" alt="WES Rankings" className="h-16 object-contain" />
+          <img src="images/ugc.png" alt="UGC" className="h-16 object-contain" />
+          <img src="images/naac.png" alt="NAAC" className="h-16 object-contain" />
+          <img src="images/wes.png" alt="WES Rankings" className="h-16 object-contain" />
          
         </div>
       </section>
@@ -198,7 +198,7 @@ const Shoolini = () => {
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
-            <img src="/shoolini-ccertificate.jpg" alt="Shoolini Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <img src="images/shoolini-ccertificate.jpg" alt="Shoolini Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
           </div>
           <div className="flex-1 text-white">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">Get Certified from Shoolini University</h2>
@@ -221,7 +221,7 @@ const Shoolini = () => {
           <p className="text-xl text-gray-600">Trusted by global companies</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {["/nestle.jpg", "/decathlon.jpg", "/icici.jpg", "/lt.jpg", "/hindustanunilever.jpg", "/lg.jpg"].map((src, i) => (
+          {["images/nestle.jpg", "images/decathlon.jpg", "images/icici.jpg", "images/lt.jpg", "images/hindustanunilever.jpg", "images/lg.jpg"].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
               <img src={src} alt="Recruiter" className="h-12 object-contain" />
             </div>
