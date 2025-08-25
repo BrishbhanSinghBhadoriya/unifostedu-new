@@ -88,14 +88,14 @@ const colleges = [
 ];
 
 const cities = [
-  { city: "Delhi", state: "Delhi", img: "/delhi.png", students: "25K+" },
-  { city: "Mumbai", state: "Maharashtra", img: "/mumbai.png", students: "22K+" },
-  { city: "Bangalore", state: "Karnataka", img: "/banglore.png", students: "20K+" },
-  { city: "Chennai", state: "Tamil Nadu", img: "/chennai.png", students: "18K+" },
-  { city: "Hyderabad", state: "Telangana", img: "/hyderabad.png", students: "16K+" },
-  { city: "Pune", state: "Maharashtra", img: "/pune.png", students: "15K+" },
-  { city: "Kolkata", state: "West Bengal", img: "/kolkata.png", students: "14K+" },
-  { city: "Ahmedabad", state: "Gujarat", img: "/ahemdabad.png", students: "12K+" }
+  { city: "Delhi", state: "Delhi", img: "/images/delhi.png", students: "25K+" },
+  { city: "Mumbai", state: "Maharashtra", img: "/images/mumbai.png", students: "22K+" },
+  { city: "Bangalore", state: "Karnataka", img: "/images/banglore.png", students: "20K+" },
+  { city: "Chennai", state: "Tamil Nadu", img: "/images/chennai.png", students: "18K+" },
+  { city: "Hyderabad", state: "Telangana", img: "/images/hyderabad.png", students: "16K+" },
+  { city: "Pune", state: "Maharashtra", img: "/images/pune.png", students: "15K+" },
+  { city: "Kolkata", state: "West Bengal", img: "/images/kolkata.png", students: "14K+" },
+  { city: "Ahmedabad", state: "Gujarat", img: "/images/ahemdabad.png", students: "12K+" }
 ];
 
 const accreditationLogos = [
