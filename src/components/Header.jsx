@@ -280,7 +280,27 @@ const Header = () => {
           </div>
 
           {/* Mobile Toggle */}
-          <div className="md:hidden ml-auto">
+          <div className="md:hidden ml-auto flex items-center gap-2">
+            <a
+              href="tel:+919354735410"
+              aria-label="Call us"
+              className={`p-2 rounded-lg transition-all duration-300 ${
+                scrolled ? 'bg-white/10 text-white' : 'bg-white/20 text-white'
+              }`}
+            >
+              <FaPhoneAlt className="text-lg" />
+            </a>
+            <a
+              href="https://wa.me/919354735410"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              className={`p-2 rounded-lg transition-all duration-300 ${
+                scrolled ? 'bg-white/10 text-white' : 'bg-white/20 text-white'
+              }`}
+            >
+              <FaComments className="text-lg" />
+            </a>
             <button
               aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
               onClick={() => setMobileMenuOpen((v) => !v)}
@@ -297,12 +317,12 @@ const Header = () => {
 
         {/* Mobile Menu - Full Screen Overlay */}
         {mobileMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-0 left-0 w-full h-full z-[9999] text-white bg-gradient-to-br from-[#001e3c] to-[#003b6c]">
-            <div className="h-full w-full flex flex-col p-4 sm:p-6">
+          <div className="md:hidden fixed inset-0 top-0 left-0 w-full h-screen z-[9999] text-white bg-gradient-to-br from-[#001e3c] to-[#003b6c] overflow-y-auto overscroll-contain" style={{ minHeight: '100dvh', maxHeight: '100svh', WebkitOverflowScrolling: 'touch' }}>
+            <div className="w-full flex flex-col p-4 sm:p-6 pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]" style={{ minHeight: '100%' }}>
               {/* Top bar */}
               <div className="flex items-center justify-between mb-6 sm:mb-8">
                 <div className="flex items-center gap-3">
-                  <img src="/images/uni.jpg" alt="Unifost" className="h-8 w-auto" />
+                  <img src="/uni.jpg" alt="Unifost" className="h-8 w-auto" />
                   <span className="text-lg font-bold text-[#00ffe0]">Unifost</span>
                 </div>
                 <button
