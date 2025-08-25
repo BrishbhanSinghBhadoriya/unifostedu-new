@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -238,7 +239,7 @@ const Landing = () => {
   useEffect(() => {
     const id = setInterval(() => {
       setSlide((s) => (s + 1) % heroSlides.length);
-    }, 5000);
+    }, 6000);
     return () => clearInterval(id);
   }, []);
 
@@ -250,33 +251,35 @@ const Landing = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-      {/* Enhanced Hero Section - Fully Responsive */}
+      {/* Hero Section - Professional, focused */}
       <section className="relative text-white overflow-hidden">
         <div className="relative w-full">
           {/* Slides - Responsive aspect ratio */}
-          <div className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[85vh] xl:h-[90vh] bg-gradient-to-br from-[#001e3c] to-[#003b6c]">
+          <div className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[85vh] xl:h-[90vh] bg-[#001e3c]">
             {heroSlides.map((s, idx) => (
               <motion.div
                 key={idx}
                 className={`absolute inset-0 transition-all duration-1000 ${idx === slide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
                 initial={{ opacity: 0, scale: 1.1 }}
-                animate={{ opacity: idx === slide ? 1 : 0, scale: idx === slide ? 1 : 1.1 }}
-                transition={{ duration: 1 }}
+                animate={{ opacity: idx === slide ? 1 : 0, scale: idx === slide ? 1 : 1.06 }}
+                transition={{ duration: 0.8 }}
               >
-                <img 
-                  src={s.src} 
-                  alt={s.alt} 
-                  className="w-full h-full object-cover" 
-                  style={{ objectPosition: 'center' }}
+                <Image 
+                  src={s.src}
+                  alt={s.alt}
+                  fill
+                  priority={idx === 0}
+                  sizes="100vw"
+                  className="object-cover"
                 />
                 {/* Enhanced Overlay - Responsive gradient */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c]/80 via-[#001e3c]/60 to-transparent md:from-[#001e3c]/70 md:via-[#001e3c]/50 md:to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c]/85 via-[#001e3c]/65 to-transparent" />
               </motion.div>
             ))}
           </div>
 
-          {/* Enhanced Content overlay - Fully responsive */}
-          <div className="pointer-events-none absolute inset-0 flex items-center">
+          {/* Content overlay - visible from sm and up */}
+          <div className="pointer-events-none absolute inset-0 hidden sm:flex items-center">
             <div className="pointer-events-auto text-left px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl mx-auto w-full">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
@@ -286,13 +289,13 @@ const Landing = () => {
               >
                 {/* Responsive Typography (professional, compact) */}
                 <div className="bg-transparent rounded-2xl p-4 sm:p-6 inline-block max-w-2xl">
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-3 leading-tight text-white">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-semibold mb-2 sm:mb-3 leading-tight text-white tracking-tight">
                     {heroSlides[slide].title}
                   </h1>
-                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-3 sm:mb-4 bg-gradient-to-r from-cyan-300 to-emerald-300 bg-clip-text text-transparent">
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium mb-3 sm:mb-4 text-cyan-200">
                     {heroSlides[slide].subtitle}
                   </h2>
-                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200/90 mb-5 sm:mb-6 leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-100/90 mb-5 sm:mb-6 leading-relaxed">
                     {heroSlides[slide].description}
                   </p>
                 </div>
@@ -301,12 +304,12 @@ const Landing = () => {
                 <div className="mt-3 sm:mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4">
                   <button 
                     onClick={() => openModal("getStarted")}
-                    className="bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] 
-                               w-full sm:w-auto px-4 sm:px-5 lg:px-6 py-3 sm:py-3.5 lg:py-4 rounded-full 
+                    className="bg-[#00d4c4] text-[#001e3c]
+                               w-full sm:w-auto px-5 lg:px-6 py-3.5 lg:py-4 rounded-full 
                                text-sm sm:text-base lg:text-lg font-semibold
-                               hover:from-[#00d4c4] hover:to-[#00ffe0]
-                               transform hover:scale-105 transition-all duration-300 
-                               shadow-md shadow-[#00ffe0]/30 flex items-center justify-center gap-2"
+                               hover:bg-[#00c0b1]
+                               transition-colors duration-200 
+                               shadow-md flex items-center justify-center gap-2"
                   >
                     <FaRocket className="text-sm sm:text-base lg:text-lg" />
                     <span className="hidden xs:inline">Get Started Today</span>
@@ -315,12 +318,11 @@ const Landing = () => {
 
                   <button 
                     onClick={() => openModal("videoCall")}
-                    className="w-full sm:w-auto px-4 sm:px-5 lg:px-6 py-3 sm:py-3.5 lg:py-4 rounded-full 
+                    className="w-full sm:w-auto px-5 lg:px-6 py-3.5 lg:py-4 rounded-full 
                                text-sm sm:text-base lg:text-lg font-semibold 
-                               bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-500 text-white 
-                               shadow-xl shadow-rose-500/30 ring-2 ring-white/30 
-                               hover:from-rose-500 hover:via-pink-500 hover:to-fuchsia-500 
-                               transform hover:scale-110 hover:-translate-y-0.5 transition-all duration-300 
+                               bg-white/10 text-white border border-white/20
+                               hover:bg-white/15 
+                               transition-colors duration-200 
                                flex items-center justify-center gap-2"
                   >
                     <FaVideo className="text-sm sm:text-base lg:text-lg" />
@@ -330,12 +332,11 @@ const Landing = () => {
 
                   <button 
                     onClick={() => openModal("homeDemo")}
-                    className="w-full sm:w-auto px-4 sm:px-5 lg:px-6 py-3 sm:py-3.5 lg:py-4 rounded-full 
+                    className="w-full sm:w-auto px-5 lg:px-6 py-3.5 lg:py-4 rounded-full 
                                text-sm sm:text-base lg:text-lg font-semibold 
-                               bg-gradient-to-r from-amber-400 via-orange-500 to-rose-500 text-white 
-                               shadow-xl shadow-orange-500/30 ring-2 ring-white/30 
-                               hover:from-rose-500 hover:via-orange-500 hover:to-amber-400 
-                               transform hover:scale-110 hover:-translate-y-0.5 transition-all duration-300 
+                               bg-white/10 text-white border border-white/20
+                               hover:bg-white/15 
+                               transition-colors duration-200 
                                flex items-center justify-center gap-2"
                   >
                     <FaMapMarkerAlt className="text-sm sm:text-base lg:text-lg" />
@@ -348,6 +349,39 @@ const Landing = () => {
             </div>
           </div>
 
+          {/* Mobile content band below slider */}
+          <div className="block sm:hidden bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white">
+            <div className="max-w-7xl mx-auto px-4 py-6">
+              <div className="max-w-2xl">
+                <h1 className="text-2xl font-semibold mb-1 tracking-tight">{heroSlides[slide].title}</h1>
+                <h2 className="text-base font-medium mb-2 text-cyan-200">{heroSlides[slide].subtitle}</h2>
+                <p className="text-sm text-white/90 mb-4">{heroSlides[slide].description}</p>
+              </div>
+              <div className="flex flex-col gap-3">
+                <button 
+                  onClick={() => openModal('getStarted')}
+                  className="bg-[#00d4c4] text-[#001e3c] w-full px-5 py-3.5 rounded-full text-base font-semibold hover:bg-[#00c0b1] transition-colors"
+                >
+                  Get Started Today
+                </button>
+                <div className="grid grid-cols-2 gap-3">
+                  <button 
+                    onClick={() => openModal('videoCall')}
+                    className="px-5 py-3.5 rounded-full text-base font-semibold bg-white/10 text-white border border-white/20 hover:bg-white/15 transition-colors"
+                  >
+                    Video Call
+                  </button>
+                  <button 
+                    onClick={() => openModal('homeDemo')}
+                    className="px-5 py-3.5 rounded-full text-base font-semibold bg-white/10 text-white border border-white/20 hover:bg-white/15 transition-colors"
+                  >
+                    Home Demo
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Enhanced Dots - Responsive positioning */}
           <div className="absolute inset-x-0 bottom-4 sm:bottom-6 md:bottom-8 flex items-center justify-center gap-2 sm:gap-3">
             {heroSlides.map((_, i) => (
@@ -356,7 +390,7 @@ const Landing = () => {
                 onClick={() => setSlide(i)}
                 className={`h-2 sm:h-3 w-2 sm:w-3 rounded-full transition-all duration-300 ${
                   i === slide 
-                    ? 'bg-[#00ffe0] w-6 sm:w-8 shadow-lg shadow-[#00ffe0]/50' 
+                    ? 'bg-[#00d4c4] w-6 sm:w-8' 
                     : 'bg-white/60 hover:bg-white/80'
                 }`}
                 aria-label={`Go to slide ${i + 1}`}
@@ -388,14 +422,14 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* Enhanced Programs Section - Responsive Grid */}
+      {/* Programs Section - Responsive Grid */}
       <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-10 sm:mb-14"
             data-aos="fade-up"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold tracking-tight text-[#001e3c] mb-2">
+            <h2 className="text-3xl sm:text-4xl md:text-4xl font-semibold tracking-tight text-[#001e3c] mb-2">
               Select the Best Programs
             </h2>
             <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-3 sm:mb-4"></div>
@@ -523,9 +557,10 @@ const Landing = () => {
      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
         <motion.div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#001e3c] mb-6">
-            🏆 Top Partner Universities 
+          <h2 className="text-4xl md:text-5xl font-semibold text-[#001e3c] mb-3">
+            Top Partner Universities
           </h2>
+          <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-4"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Choose from India's most prestigious online universities
           </p>
@@ -585,8 +620,8 @@ const Landing = () => {
             className="text-center mb-8 sm:mb-12"
             data-aos="fade-up"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#001e3c] mb-3 sm:mb-4">
-              🎓 Compare Online Universities
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#001e3c] mb-3 sm:mb-4">
+              Compare Online Universities
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
               Select up to 3 universities to compare fees, accreditation, placements and more
@@ -721,7 +756,7 @@ const Landing = () => {
           {/* Selection Help Text */}
           <div className="mt-8 text-center">
             <p className="text-sm text-gray-600">
-              💡 Select 2-3 universities to compare features side by side
+              Tip: Select 2-3 universities to compare features side by side
             </p>
           </div>
         </div>
@@ -734,7 +769,7 @@ const Landing = () => {
             className="text-center mb-8 sm:mb-10"
             data-aos="fade-up"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#001e3c] mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#001e3c] mb-3 sm:mb-4">
               Accreditation & Recognition
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
@@ -768,7 +803,7 @@ const Landing = () => {
             className="text-center mb-12 sm:mb-16"
             data-aos="fade-up"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#001e3c] mb-4 sm:mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#001e3c] mb-4 sm:mb-6">
               Why Choose <span className="text-[#00ffe0]">Unifost</span>?
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
@@ -800,9 +835,9 @@ const Landing = () => {
      
 
       {/* Study Cities */}
-      <section className="bg-gradient-to-br from-indigo-900 via-blue-900 to-sky-800 py-16 px-6 text-white overflow-hidden relative" data-aos="fade-up">
+      <section className="bg-[#08223a] py-16 px-6 text-white overflow-hidden relative" data-aos="fade-up">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 drop-shadow-lg">🏫 Study Cities Across India</h2>
+          <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">Study Cities Across India</h2>
           <p className="text-blue-100 text-lg max-w-2xl mx-auto mb-12">Explore top universities across India's major educational hubs.</p>
 
           <div className="overflow-hidden relative backdrop-blur-md rounded-2xl border border-white/20 p-6">
@@ -821,6 +856,63 @@ const Landing = () => {
                 ))
               )}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 sm:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div className="text-center mb-12" data-aos="fade-up">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#001e3c] mb-3">What Students Say</h2>
+            <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4]"></div>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[{
+              quote: 'Unifost helped me compare programs easily and pick the right MBA.',
+              name: 'Aarav Sharma',
+              subtitle: 'MBA Student, NMIMS Online'
+            }, {
+              quote: 'The counseling was spot-on. I saved time and money.',
+              name: 'Neha Gupta',
+              subtitle: 'BBA Student, Amity Online'
+            }, {
+              quote: 'Great experience from enquiry to enrollment. Highly recommended.',
+              name: 'Rohit Verma',
+              subtitle: 'MCA Student, Manipal Online'
+            }].map((t, i) => (
+              <motion.div key={i} className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay={i * 100}>
+                <p className="text-gray-700 mb-4 leading-relaxed">“{t.quote}”</p>
+                <div className="pt-4 border-t border-gray-100">
+                  <p className="text-[#001e3c] font-semibold">{t.name}</p>
+                  <p className="text-sm text-gray-500">{t.subtitle}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-14 bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight">Ready to find your program?</h3>
+            <p className="text-white/80 mt-2">Talk to our counselors and get a personalized shortlist.</p>
+          </div>
+          <div className="flex gap-3">
+            <button 
+              onClick={() => openModal('getStarted')} 
+              className="px-6 py-3 rounded-full bg-[#00d4c4] text-[#001e3c] font-semibold hover:bg-[#00c0b1] transition-colors"
+            >
+              Get Started
+            </button>
+            <button 
+              onClick={() => openModal('videoCall')} 
+              className="px-6 py-3 rounded-full border border-white/30 hover:bg-white/10 transition-colors"
+            >
+              Book a Call
+            </button>
           </div>
         </div>
       </section>
