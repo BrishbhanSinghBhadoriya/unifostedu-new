@@ -305,7 +305,7 @@ export default function About() {
               <div className="relative mb-8">
                 <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-[#00ffe0] to-[#00d4c4] p-2">
                   <img 
-                    src="/priyansh.jpg" 
+                    src="/images/priyansh.jpg" 
                     alt="Priyansh Mishra - Co-Founder & Director" 
                     className="w-full h-full rounded-full object-cover"
                   />
@@ -324,7 +324,7 @@ export default function About() {
               <div className="relative mb-8">
                 <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-[#00ffe0] to-[#00d4c4] p-2">
                   <img 
-                    src="/aman.jpg" 
+                    src="/images/aman.jpg" 
                     alt="Aman Pawar - Co-Founder & Director" 
                     className="w-full h-full rounded-full object-cover"
                   />

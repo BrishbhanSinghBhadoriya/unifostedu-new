@@ -77,13 +77,14 @@ const features = [
 const colleges = [
       { name: "Amity University Online", ranking: "NIRF-29", fee: "₹0.99L - ₹3.45L", logo: "/images/amity.png", rating: 4.8 },
     { name: "Manipal University Online", ranking: "NIRF-73", fee: "0.99L - ₹1.75L", logo: "/images/manipal1.png", rating: 4.6 },
-    { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹0.80L - ₹2.0L", logo: "/images/lpulogo.png", rating: 4.1},
-    { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.50L - ₹1.75L", logo: "/images/upeslogo.png", rating: 4.4 },
+    { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹0.80L - ₹2.0L", logo: "/images/lpu.png", rating: 4.1},
+    { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.50L - ₹1.75L", logo: "/images/upes.png", rating: 4.4 },
     { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹0.94L - ₹2.20L", logo: "/images/nmims.png", rating: 4.5 },
-    { name: "Sharda University Online", ranking: "NIRF-87", fee: "₹0.80L - ₹1.30L", logo: "/images/shardalogo.png", rating: 4.1 },
-    { name: "Dr. DY Patil Online", ranking: "NIRF-63", fee: "₹1.45L - ₹1.90L", logo: "/images/dypatillogo.png", rating: 4.4 },
-    { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.05L - ₹2.98L", logo: "/images/jainlogo.png", rating: 4.5 },
-    { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹0.75L - ₹1.58", logo: "/images/chandigarh.jpg", rating: 4.7 }
+    { name: "Sharda University Online", ranking: "NIRF-87", fee: "₹0.80L - ₹1.30L", logo: "/images/sharda.png", rating: 4.1 },
+    { name: "Dr. DY Patil Online", ranking: "NIRF-63", fee: "₹1.45L - ₹1.90L", logo: "/images/dypatil.png", rating: 4.4 },
+    { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.05L - ₹2.98L", logo: "/images/jain.png", rating: 4.5 },
+    { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹0.75L - ₹1.58", logo: "/images/chandigarh.jpg", rating: 4.7 },
+  
 ];
 
 const cities = [
@@ -576,7 +577,8 @@ const Landing = () => {
 </div>
       </section>
 
-      {/* Compare Online Universities - Responsive */}
+
+      {/* Compare Online Universities - Enhanced */}
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
@@ -591,56 +593,136 @@ const Landing = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {colleges.map((college, idx) => {
-              const slug = slugify(college.name);
-              const isSelected = selectedUniversities.includes(slug);
-              return (
-                <div key={idx} className={`rounded-2xl border ${isSelected ? 'border-[#00ffe0]' : 'border-gray-200'} bg-white shadow-sm hover:shadow-md transition-all`}>
-                  <div className="p-4 sm:p-5">
-                    <div className="flex items-start gap-4">
-                      <div className="h-14 w-14 sm:h-16 sm:w-16 rounded-lg bg-slate-50 border border-gray-100 flex items-center justify-center overflow-hidden">
-                        <img src={college.logo} alt={`${college.name} logo`} className="max-h-12 sm:max-h-14 w-auto object-contain" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center justify-between gap-2">
-                          <h3 className="text-sm sm:text-base font-semibold text-[#001e3c] leading-snug line-clamp-2">{college.name}</h3>
-                          <span className="inline-flex items-center gap-1 text-[11px] sm:text-xs text-gray-700"><FaStar className="text-yellow-400" /> {college.rating}</span>
-                        </div>
-                        <div className="mt-1.5 flex items-center gap-2">
-                          <Badge className="bg-[#00ffe0]/10 text-[#001e3c] ring-1 ring-[#00ffe0]/40 text-[10px] sm:text-[11px]">{college.ranking}</Badge>
-                          <span className="text-[11px] sm:text-xs text-gray-600"><span className="font-medium">Fees:</span> {college.fee}</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="mt-4 flex items-center justify-between">
-                      <a href={getUniversityHref(college.name)} className="text-[#003b6c] text-xs sm:text-sm font-semibold hover:underline">View details</a>
-                      <button
-                        onClick={() => toggleUniversity(college.name)}
-                        className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all ${isSelected ? 'bg-[#00ffe0] text-[#001e3c]' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
-                      >
-                        {isSelected ? 'Selected' : 'Select to compare'}
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-gray-700 text-sm sm:text-base font-medium">
-              Selected for compare: <span className="font-bold text-[#001e3c]">{selectedUniversities.length}</span> / 3
+          {/* Compare Controls - Enhanced */}
+          <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row items-center justify-between gap-4 bg-gradient-to-r from-blue-50 to-indigo-50 p-5 rounded-2xl border border-blue-100 shadow-sm">
+            <div className="flex items-center gap-4">
+              <div className="bg-white p-3 rounded-xl shadow-sm border border-blue-100">
+                <FaCompass className="text-2xl text-blue-600" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-[#001e3c]">Compare Universities</h3>
+                <p className="text-sm text-gray-600">
+                  Selected: <span className="font-bold text-blue-600">{selectedUniversities.length}</span>/3
+                  {selectedUniversities.length > 0 && (
+                    <span className="ml-2 text-green-600">
+                      ({selectedUniversities.length} selected)
+                    </span>
+                  )}
+                </p>
+              </div>
             </div>
             <button
               disabled={!canCompare}
               onClick={startCompare}
-              className={`px-6 sm:px-8 py-3 rounded-full font-bold flex items-center gap-2 transition-all text-sm sm:text-base ${canCompare ? 'bg-[#00ffe0] text-[#001e3c] hover:bg-[#00d4c4] shadow-lg' : 'bg-gray-200 text-gray-500 cursor-not-allowed'}`}
+              className={`px-6 sm:px-8 py-3 rounded-full font-bold flex items-center gap-2 transition-all text-sm sm:text-base ${
+                canCompare 
+                  ? 'bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] shadow-lg hover:shadow-xl transform hover:scale-105' 
+                  : 'bg-gray-200 text-gray-500 cursor-not-allowed'
+              }`}
             >
+              <FaArrowRight className={canCompare ? "group-hover:translate-x-1 transition-transform" : ""} />
               Compare Now
-              <FaArrowRight />
             </button>
+          </div>
+
+          {/* Enhanced University Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+            {colleges.map((college, idx) => {
+              const slug = slugify(college.name);
+              const isSelected = selectedUniversities.includes(slug);
+              
+              return (
+                <motion.div
+                  key={idx}
+                  whileHover={{ y: -5 }}
+                  className={`group relative rounded-2xl overflow-hidden transition-all duration-300 ${
+                    isSelected 
+                      ? 'ring-3 ring-[#00ffe0] shadow-xl border-[#00ffe0]' 
+                      : 'border border-gray-200 shadow-md hover:shadow-xl'
+                  }`}
+                >
+                  {/* Selection Indicator */}
+                  {isSelected && (
+                    <div className="absolute top-3 right-3 z-10">
+                      <div className="bg-[#00ffe0] text-[#001e3c] w-8 h-8 rounded-full flex items-center justify-center shadow-lg">
+                        <FaCheckCircle className="text-sm" />
+                      </div>
+                    </div>
+                  )}
+                  
+                  {/* Card Content */}
+                  <div className="bg-white p-5 sm:p-6">
+                    {/* University Header */}
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className={`flex-shrink-0 h-16 w-16 sm:h-20 sm:w-20 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-gray-100 flex items-center justify-center p-2 ${
+                        isSelected ? 'ring-2 ring-[#00ffe0]/30' : ''
+                      }`}>
+                        <img 
+                          src={college.logo} 
+                          alt={`${college.name} logo`} 
+                          className="max-h-10 sm:max-h-12 w-auto object-contain" 
+                        />
+                      </div>
+                      
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg font-bold text-[#001e3c] mb-1 line-clamp-2 leading-tight">
+                          {college.name}
+                        </h3>
+                        
+                        <div className="flex items-center gap-2 mb-2">
+                          <Badge className="bg-blue-100 text-blue-800 border-blue-200 text-xs font-medium">
+                            {college.ranking}
+                          </Badge>
+                          <div className="flex items-center gap-1 text-sm text-amber-600">
+                            <FaStar className="fill-amber-400" />
+                            <span className="font-semibold">{college.rating}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Fee Information */}
+                    <div className="bg-gray-50 rounded-lg p-3 mb-4 border border-gray-100">
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm font-medium text-gray-700">Approx. Fees:</span>
+                        <span className="text-sm font-bold text-[#001e3c]">{college.fee}</span>
+                      </div>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="flex items-center justify-between gap-3">
+                      <a 
+                        href={getUniversityHref(college.name)} 
+                        className="flex-1 text-center text-sm font-semibold text-blue-600 hover:text-blue-800 px-3 py-2 rounded-lg hover:bg-blue-50 transition-colors"
+                      >
+                        View Details
+                      </a>
+                      
+                      <button
+                        onClick={() => toggleUniversity(college.name)}
+                        className={`flex-1 px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                          isSelected 
+                            ? 'bg-[#00ffe0] text-[#001e3c] hover:bg-[#00d4c4]' 
+                            : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+                        }`}
+                      >
+                        {isSelected ? 'Selected' : 'Compare'}
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Hover Effect Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/5 group-hover:to-purple-500/5 transition-opacity rounded-2xl pointer-events-none" />
+                </motion.div>
+              );
+            })}
+          </div>
+
+          {/* Selection Help Text */}
+          <div className="mt-8 text-center">
+            <p className="text-sm text-gray-600">
+              💡 Select 2-3 universities to compare features side by side
+            </p>
           </div>
         </div>
       </section>
@@ -715,42 +797,31 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* Enhanced CTA Section - Responsive */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-[#001e3c] to-[#003b6c] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            data-aos="fade-up"
-            className="mb-8 sm:mb-12"
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
-              Ready to Start Your Journey?
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
-              Join thousands of students who have transformed their careers with Unifost
-            </p>
-          </motion.div>
-          
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <button 
-              onClick={() => openModal("getStarted")}
-              className="  bg-[#00ffe0] text-[#001e3c] cursor-pointer w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-bold hover:bg-[#00d4c4] transform hover:scale-105 transition-all duration-300 shadow-2xl flex items-center justify-center gap-2"
-            >
-              <FaRocket className="text-lg sm:text-xl" />
-              Get Started Today
-            </button>
-            <button 
-              onClick={() => openModal("videoCall")}
-              className="border-2 border-white text-white w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-bold hover:bg-white hover:text-[#001e3c] transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
-            >
-              <FaPhone className="text-lg sm:text-xl" />
-              Call Now
-            </button>
-          </motion.div>
+     
+
+      {/* Study Cities */}
+      <section className="bg-gradient-to-br from-indigo-900 via-blue-900 to-sky-800 py-16 px-6 text-white overflow-hidden relative" data-aos="fade-up">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 drop-shadow-lg">🏫 Study Cities Across India</h2>
+          <p className="text-blue-100 text-lg max-w-2xl mx-auto mb-12">Explore top universities across India's major educational hubs.</p>
+
+          <div className="overflow-hidden relative backdrop-blur-md rounded-2xl border border-white/20 p-6">
+            <div className="flex gap-10 animate-[scroll_30s_linear_infinite] whitespace-nowrap">
+              {[...Array(2)].flatMap((_, i) =>
+                cities.map((city, idx) => (
+                  <motion.div
+                    key={`city-${i}-${idx}`}
+                    whileHover={{ y: -6 }}
+                    className="min-w-[150px] flex flex-col items-center text-center bg-white/10 backdrop-blur-xl p-4 rounded-xl border border-white/20 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+                  >
+                    <img src={city.img} alt={city.city} className="w-16 h-16 object-contain mb-2 rounded-full border border-white/20 shadow" />
+                    <p className="text-white font-semibold text-sm">{city.city}</p>
+                    <p className="text-blue-200 text-xs">{city.state}</p>
+                  </motion.div>
+                ))
+              )}
+            </div>
+          </div>
         </div>
       </section>
 
