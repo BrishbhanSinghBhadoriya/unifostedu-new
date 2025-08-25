@@ -23,7 +23,7 @@ const Lpu = () => {
       eligibility: "10+2 Pass",
       fees: "₹1,50,000",
       specialization: "General",
-      image: "images/bba.jpeg",
+      image: "/images/bba.jpeg",
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
@@ -31,7 +31,7 @@ const Lpu = () => {
       eligibility: "10+2 Pass",
       fees: "₹ 1,50,000",
       specialization: "General",
-      image: "images/bca.jpeg",
+      image: "/images/bca.jpeg",
     },
     
     {
@@ -40,7 +40,7 @@ const Lpu = () => {
       eligibility: "10+2",
       fees: "₹ 1,20,000",
       specialization: "General",
-      image: "images/ma1.jpeg",
+      image: "/images/ma1.jpeg",
     },
   ];
 
@@ -51,7 +51,7 @@ const Lpu = () => {
       eligibility: "Graduation",
       fees: "₹ 2,00,000",
       specialization: "Human Resource Management, Finance, Marketing, Operations Management, Business Analytics, Digital Marketing, Data Science, Information Technology, International Business, Banking & Financial Services, Hospital & Healthcare Management, Logistics & Supply Chain Management",
-      image: "images/mba.jpeg",
+      image: "/images/mba.jpeg",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -59,7 +59,7 @@ const Lpu = () => {
       eligibility: "Graduation in BCA/B.Sc(IT) & equivalent degree with 50%",
       fees: "₹ 1,48,000",
       specialization: "Machine Learning & Artificial Intelligence (ML & AI), Data Science, Cybersecurity, Full Stack Web Development, Augmented Reality/Virtual Reality (AR/VR) & Game Development", 
-      image: "images/mca1.jpeg",
+      image: "/images/mca1.jpeg",
     },
     {
       course: "Master of Commerce (M.Com)",
@@ -67,7 +67,7 @@ const Lpu = () => {
       eligibility: "Graduation in Commerce",
       fees: "₹ 1,00,000",
       specialization: "General", 
-      image: "images/m.com.jpeg",
+      image: "/images/m.com.jpeg",
     },
 
     {
@@ -76,7 +76,7 @@ const Lpu = () => {
       eligibility: "Graduation",
       fees: "₹ 80,000",
       specialization: "English, History, Political Science, Sociology,",
-      image: "images/ma1.jpeg",
+      image: "/images/ma1.jpeg",
     },
 
     {
@@ -85,7 +85,7 @@ const Lpu = () => {
       eligibility: "Graduation",
       fees: "₹ 80,000",
       specialization: "Mathmatics, Economics",
-      image: "images/ma1.jpeg",
+      image: "/images/ma1.jpeg",
     },
   ];
 
@@ -116,7 +116,7 @@ const Lpu = () => {
             
           </div>
           <div className="md:w-1/2">
-            <img src="images/lpu.png" alt="Lovely Professional University" className="w-full rounded-xl shadow-lg" />
+            <img src="/images/lpu.png" alt="Lovely Professional University" className="w-full rounded-xl shadow-lg" />
           </div>
         </div>
       </section>

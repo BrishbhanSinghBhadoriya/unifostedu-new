@@ -118,7 +118,7 @@ const Manipal = () => {
           </div>
           <div className="md:w-1/2">
             <img
-              src="images/manipal.png"
+              src="/images/manipal.png"
               alt="Manipal University"
               className="w-full rounded-xl shadow-lg"
             />
