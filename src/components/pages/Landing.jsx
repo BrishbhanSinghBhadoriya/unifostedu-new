@@ -293,26 +293,39 @@ const Landing = () => {
       <section className="relative text-white overflow-hidden">
         <div className="relative w-full">
           {/* Slides - Responsive aspect ratio */}
-          <div className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[85vh] xl:h-[90vh] bg-gradient-to-br from-[#001e3c] to-[#003b6c]">
-            {heroSlides.map((s, idx) => (
-              <motion.div
-                key={idx}
-                className={`absolute inset-0 transition-all duration-1000 ${idx === slide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
-                initial={{ opacity: 0, scale: 1.1 }}
-                animate={{ opacity: idx === slide ? 1 : 0, scale: idx === slide ? 1 : 1.1 }}
-                transition={{ duration: 1 }}
-              >
-                <img 
-                  src={s.src} 
-                  alt={s.alt} 
-                  className="w-full h-full object-cover" 
-                  style={{ objectPosition: 'center' }}
-                />
-                {/* Enhanced Overlay - Responsive gradient */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c]/80 via-[#001e3c]/60 to-transparent md:from-[#001e3c]/70 md:via-[#001e3c]/50 md:to-transparent" />
-              </motion.div>
-            ))}
-          </div>
+          {/* Slides - Enhanced Responsive Hero Section */}
+<div className="relative w-full aspect-[16/9] md:h-[90vh] bg-gradient-to-br from-[#001e3c] to-[#003b6c] overflow-hidden">
+  {heroSlides.map((s, idx) => (
+    <motion.div
+      key={idx}
+      className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
+        idx === slide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
+      }`}
+      initial={{ opacity: 0, scale: 1.05 }}
+      animate={{
+        opacity: idx === slide ? 1 : 0,
+        scale: idx === slide ? 1 : 1.05,
+      }}
+      transition={{ duration: 1.2, ease: "easeInOut" }}
+    >
+      {/* Hero Image */}
+      <img
+        src={s.src}
+        alt={s.alt || `Slide ${idx + 1}`}
+        loading="lazy"
+        className="w-full h-full object-cover"
+        style={{ objectPosition: "center" }}
+      />
+
+      {/* Enhanced Overlay - smoother gradient & glow */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c]/85 via-[#001e3c]/60 to-transparent md:from-[#001e3c]/75 md:via-[#001e3c]/50 md:to-transparent" />
+
+      {/* Optional Glow Effect */}
+      <div className="absolute inset-0 bg-black/20 mix-blend-overlay pointer-events-none" />
+    </motion.div>
+  ))}
+</div>
+
 
           {/* Enhanced Content overlay - Fully responsive */}
           <div className="pointer-events-none absolute inset-0 flex items-center">
