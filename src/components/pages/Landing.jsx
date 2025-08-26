@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import WorkflowRoadmap from '@/components/pages/WorkflowRoadmap';
 import {
   FaBook, FaUniversity, FaGraduationCap, FaBriefcase, FaTimes,
   FaBookOpen, FaHome, FaVideo, FaArrowRight, FaStar, FaUsers, 
@@ -398,6 +399,15 @@ const Landing = () => {
             ))}
           </div>
         </div>
+      </section>
+      
+       
+      {/* Workflow Roadmap */}
+      <WorkflowRoadmap />
+
+      {/* Testimonials */}
+      <section className="py-16 sm:py-20 bg-white">
+        ...
       </section>
 
       {/* Stats Section - Responsive Grid */}
