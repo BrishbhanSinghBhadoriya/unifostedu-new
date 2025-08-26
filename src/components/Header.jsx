@@ -169,7 +169,7 @@ const Header = () => {
                 onClick={() => setMenuOpen(menuOpen === "explore" ? null : "explore")} 
                 className={`group flex items-center space-x-2 px-4 py-2 rounded-xl transition-all duration-300 text-white hover:bg-white/10 hover:text-[#00ffe0]`}>
                 <FaUniversity className="text-sm" />
-                <span className="font-semibold">Explore</span>
+                <span className="font-semibold">Universitys</span>
                 <FaChevronDown className={`text-xs transition-transform duration-300 ${menuOpen === "explore" ? 'rotate-180' : ''}`} />
               </button>
                 

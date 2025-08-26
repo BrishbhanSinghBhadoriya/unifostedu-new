@@ -77,7 +77,7 @@ const OPJindal = () => {
       image: "/images/op-masters1.png",
     },
     {
-      course: "MA in Teaching English to Speakers of Other Lnaguages(TESOL)",
+      course: "MA in Teaching English to Speakers of Other languages (TESOL)",
       duration: "12 Months(3 Trimester)",
       eligibility: "Bachelor’s degree from any recognized university with at least 50% marks Govt. Issued ID Proof (Passport for international applicants)",
       fees: "₹2,50,000/- ",
