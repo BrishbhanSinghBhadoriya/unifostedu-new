@@ -847,7 +847,7 @@ const courseData = {
     subtitle: 'Bachelor of Commerce',
     description: 'Build strong fundamentals in accounting, finance, taxation, and business with flexible UGC-approved online B.Com programs from top universities.',
     duration: '3 Years',
-    fee: '₹75,000',
+    fee: '₹75,000 - ₹3,90,000',
     eligibility: '10+2 in any stream (Commerce preferred)',
     features: [
       'Accounting, finance and business core',
@@ -862,41 +862,21 @@ const courseData = {
         location: 'Noida, Uttar Pradesh',
         rating: 4.5,
         image: '/images/amity.png',
-        specializations: ['Accounting & Finance', 'Banking & Insurance', 'Taxation'],
-        fee: '₹80K - ₹1.6L',
+        specializations: ['Hons', 'International Finance & Accounting'],
+        fee: '₹1,70,000 - ₹2,50,000',
         duration: '3 Years',
         accreditation: 'UGC Approved',
         features: ['Live Classes', 'Industry Faculty', 'Placement Support']
       },
-      {
-        name: 'LPU Online',
-        location: 'Punjab',
-        rating: 4.4,
-        image: '/images/lpu.png',
-        specializations: ['Accounting', 'Taxation', 'Finance'],
-        fee: '₹70K - ₹1.4L',
-        duration: '3 Years',
-        accreditation: 'UGC Approved',
-        features: ['Affordable', 'Curriculum Focus', 'Career Services']
-      },
-      {
-        name: 'Sharda University',
-        location: 'Greater Noida, Uttar Pradesh',
-        rating: 4.3,
-        image: '/images/sharda.png',
-        specializations: ['Accounting & Finance', 'Banking & Insurance'],
-        fee: '₹75K - ₹1.3L',
-        duration: '3 Years',
-        accreditation: 'UGC Approved',
-        features: ['Experienced Faculty', 'Industry Exposure', 'Counselling']
-      },
+    
+      
       {
         name: 'Manipal University',
         location: 'Jaipur, Rajasthan',
         rating: 4.4,
         image: '/images/manipal.png',
-        specializations: ['Accounting', 'Finance', 'Banking', 'Insurance', 'Taxation'],
-        fee: '₹80K - ₹1.5L',
+        specializations: ['General'],
+        fee: '₹99,000',
         duration: '3 Years',
         accreditation: 'UGC Approved',
         features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
@@ -906,8 +886,8 @@ const courseData = {
         location: 'Bangalore, Karnataka',
         rating: 4.3,
         image: '/images/jain.png',
-        specializations: ['Accounting', 'Finance', 'Banking', 'Insurance', 'Taxation'],
-        fee: '₹75K - ₹1.4L',
+        specializations: ['Online Bachelor of Commerce', 'Corporate Accounting'],
+        fee: '₹1,27,500',
         duration: '3 Years',
         accreditation: 'UGC Approved',
         features: ['Modern Curriculum', 'Industry Projects', 'Career Services']
@@ -917,8 +897,8 @@ const courseData = {
         location: 'Solan, Himachal Pradesh',
         rating: 4.1,
         image: '/images/shoolini.jpg',
-        specializations: ['Accounting', 'Finance', 'Banking', 'Insurance'],
-        fee: '₹65K - ₹1.2L',
+        specializations: ['Bachelor of Commerce(Hons)'],
+        fee: '₹75,000',
         duration: '3 Years',
         accreditation: 'UGC Approved',
         features: ['Research Focus', 'Industry Connect', 'Career Guidance']
@@ -934,46 +914,26 @@ const courseData = {
         accreditation: 'UGC Approved',
         features: ['Industry Connect', 'Research Focus', 'Career Services']
       },
-      {
-        name: 'Andhra University',
-        location: 'Visakhapatnam, Andhra Pradesh',
-        rating: 4.1,
-        image: '/images/andhra.webp',
-        specializations: ['Accounting', 'Finance', 'Banking', 'Insurance'],
-        fee: '₹65K - ₹1.3L',
-        duration: '3 Years',
-        accreditation: 'UGC Approved',
-        features: ['Quality Education', 'Industry Projects', 'Career Support']
-      },
+     
       {
         name: 'Kurukshetra University',
         location: 'Kurukshetra, Haryana',
         rating: 4.0,
         image: '/images/k-uni.jpg',
-        specializations: ['Accounting', 'Finance', 'Banking', 'Insurance'],
-        fee: '₹60K - ₹1.2L',
+        specializations: ['General'],
+        fee: '₹',
         duration: '3 Years',
         accreditation: 'UGC Approved',
         features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
       },
-      {
-        name: 'Manglayatan University',
-        location: 'Aligarh, Uttar Pradesh',
-        rating: 3.9,
-        image: '/images/man-uni.webp',
-        specializations: ['Accounting', 'Finance', 'Banking', 'Insurance'],
-        fee: '₹55K - ₹1.1L',
-        duration: '3 Years',
-        accreditation: 'UGC Approved',
-        features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
-      },
+     
       {
         name: 'Sikkim Manipal University',
         location: 'Gangtok, Sikkim',
         rating: 4.1,
         image: '/images/smu-uni.jpg',
-        specializations: ['Accounting', 'Finance', 'Banking', 'Insurance', 'Taxation'],
-        fee: '₹70K - ₹1.4L',
+        specializations: ['General'],
+        fee: '₹75,000',
         duration: '3 Years',
         accreditation: 'UGC Approved',
         features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
