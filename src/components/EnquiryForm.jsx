@@ -55,19 +55,18 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
   const schema = useMemo(() => {
     const base = {
       name: yup.string().trim().required('Name is required').min(2, 'Name must be at least 2 characters long'),
-      email: yup.string().trim().email('Please provide a valid email address').required('Email is required'),
-      // phone defaults to required; overridden as optional for videoCall below
+      email: yup.string().trim().email('Please provide a valid email address').optional(),
+      // phone is required by default
       phone: yup
         .string()
         .matches(/^\d{10}$/, { message: 'Enter 10 digit phone number', excludeEmptyString: true })
         .required('Phone number is required'),
-      // city is required for all form types
-      city: yup.string().trim().required('City is required'),
-      // university required across all three schemas
-      university: yup.string().trim().required('University is required'),
-      program: yup.string().trim().required('Program is required'),
+      // optional by default; required in specific form types
+      city: yup.string().trim().optional(),
+      university: yup.string().trim().optional(),
+      program: yup.string().trim().optional(),
       message: yup.string().trim(),
-      qualification: yup.string().trim().required('Qualification is required'),
+      qualification: yup.string().trim().optional(),
       otherQualification: yup.string().trim().when('qualification', {
         is: 'Other',
         then: (schema) => schema.required('Please specify your qualification'),
@@ -86,6 +85,9 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
       base.phone = yup.string().matches(/^\d{10}$/, { message: 'Enter 10 digit phone number', excludeEmptyString: true }).required('Phone number is required');
       // Qualification is required for videoCall
       base.qualification = yup.string().trim().required('Qualification is required');
+      base.city = yup.string().trim().required('City is required');
+      base.university = yup.string().trim().required('University is required');
+      base.program = yup.string().trim().required('Program is required');
     }
     if (formType === 'homeDemo') {
       base.preferredDate = yup.string().trim().required('Preferred date is required');
@@ -94,6 +96,9 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
       // phone remains required
       // Qualification is required for homeDemo
       base.qualification = yup.string().trim().required('Qualification is required');
+      base.city = yup.string().trim().required('City is required');
+      base.university = yup.string().trim().required('University is required');
+      base.program = yup.string().trim().required('Program is required');
     }
 
     return yup.object(base);
@@ -116,21 +121,22 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
       preferredTime: '',
       address: '',
     },
-    mode: 'onTouched',
+    mode: 'onSubmit',
+    reValidateMode: 'onBlur',
   });
 
   // Sync local select states into RHF values
   const onCityChange = (val) => {
     setCity(val);
-    setValue('city', val, { shouldValidate: true });
+    setValue('city', val, { shouldDirty: true, shouldTouch: true });
   };
   const onUniversityChange = (val) => {
     setSelectedUniversity(val);
-    setValue('university', val, { shouldValidate: true });
+    setValue('university', val, { shouldDirty: true, shouldTouch: true });
   };
   const onProgramChange = (val) => {
     setProgram(val);
-    setValue('program', val, { shouldValidate: true });
+    setValue('program', val, { shouldDirty: true, shouldTouch: true });
   };
 
   const onSubmit = async (values) => {
@@ -468,7 +474,6 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
 
       <Button 
         type="submit" 
-        onClick={handleSubmit(onSubmit)}
         disabled={loading} 
         className="w-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] font-bold relative z-[20002] py-3 sm:py-2.5 text-sm sm:text-base"
       >
