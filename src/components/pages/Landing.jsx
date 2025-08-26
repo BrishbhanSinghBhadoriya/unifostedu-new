@@ -40,7 +40,7 @@ const heroSlides = [
     description: "Access world-class education from anywhere, anytime"
   },
   { 
-    src: "/slider/banner-3.png", 
+    src: "/slider/slider-3.png", 
     alt: "Search • Compare • Choose • Succeed",
     title: "Smart Education Choices",
     subtitle: "Expert Guidance • Best Programs",
