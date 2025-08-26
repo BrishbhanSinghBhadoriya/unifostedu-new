@@ -2,38 +2,8 @@
 import React from 'react';
 // import { useNavigate } from 'react-router-dom';
 // import { Helmet } from 'react-helmet';
+import EnquireCard from '@/components/EnquireCard';
 import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck } from "react-icons/fa";
-
-const EnquireCard = ({ course, duration, fees, specialization, image }) => {
-//   const navigate = useNavigate();
-  const university = "DY Patil University";
-
-  const handleClick = () => {
-    // navigate(`/enquiry?university=${encodeURIComponent(university)}&course=${encodeURIComponent(course)}`);
-  };
-
-  return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition duration-300">
-      <img src={image} alt={course} className="h-40 w-full object-cover sm:h-48" />
-      <div className="p-4 flex-1 flex flex-col justify-between">
-        <div>
-          <h3 className="text-lg font-semibold text-gray-800 mb-2">{course}</h3>
-          <p className="text-sm text-gray-600 mb-1"><strong>Duration:</strong> {duration}</p>
-          <p className="text-sm text-gray-600"><strong>Fees:</strong> {fees}</p>
-           <p className="text-sm text-gray-600"><strong>Specialization,:</strong> {specialization}</p>
-        </div>
-        <div className="mt-4">
-          <button
-            onClick={handleClick}
-            className="bg-gradient-to-r from-blue-600 to-sky-500 text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition w-full"
-          >
-            Enquire Now
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 const Dypatil = () => {
   const ugCourses = [
@@ -43,7 +13,7 @@ const Dypatil = () => {
       fees: "₹1,45,400",
       eligibility: "10+2 Pass",
       specialization: "Finance Management , Retail Management, E-Commerce Management,Marketing Management,  Human Resource Management, It and System Management, Internatinal Business Management, Banking Financial Services and Insurance Management ",
-      image: "/bba.jpeg",
+      image: "/images/bba.jpeg",
     },
   
    
@@ -57,7 +27,7 @@ const Dypatil = () => {
       fees: "₹1,40,000",
       eligibility: "Graduation with 50% Marks",
        specialization: "General",
-      image: "/mca1.jpeg",
+      image: "/images/mca1.jpeg",
     },
     
 
@@ -68,7 +38,7 @@ const Dypatil = () => {
       fees: "1,89,400",
       specialization: "Human Resource Management, Marketing Management,Operation Management,Finance Management,IT Management,Business Analytics Management, Fintech Management, Project Management, Agribusiness Management, International Business Management, Digital Marketing Management,Logistics, Materials & Supply Chain ,Artificial Intelligence & Machine Learning,",
 
-      image: "/mba.jpeg",
+      image: "/images/mba.jpeg",
     },
   ];
 
@@ -94,7 +64,7 @@ const Dypatil = () => {
           </div>
           
           <div className="md:w-1/2">
-            <img src="/dypatil.png" alt="DY Patil University" className="w-full rounded-xl shadow-lg" />
+            <img src="/images/dypatil.png" alt="DY Patil University" className="w-full rounded-xl shadow-lg" />
           </div>
         </div>
       </section>
@@ -104,9 +74,9 @@ const Dypatil = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">UG Courses</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {ugCourses.map((item, index) => (
-              <EnquireCard key={index} {...item} />
-            ))}
+                          {ugCourses.map((item, index) => (
+                <EnquireCard key={index} {...item} universityName="Dr. DY Patil Online" />
+              ))}
           </div>
         </div>
       </section>
@@ -116,9 +86,9 @@ const Dypatil = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">PG Courses</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {pgCourses.map((item, index) => (
-              <EnquireCard key={index} {...item} />
-            ))}
+                          {pgCourses.map((item, index) => (
+                <EnquireCard key={index} {...item} universityName="Dr. DY Patil Online" />
+              ))}
           </div>
         </div>
       </section>
@@ -171,13 +141,13 @@ const Dypatil = () => {
       <section className="py-10 bg-white">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
         <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <img src="/ugc.png" alt="UGC" className="h-16 object-contain" />
-          <img src="/aicte.png" alt="AICTE" className="h-16 object-contain" />
-          
+          <img src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
+          <img src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
            
-           <img src="/naac.png" alt="NAAC" className="h-16 object-contain" />
-           <img src="/nirf.png" alt="NIRF" className="h-16 object-contain" />
-           <img src="/wes.png" alt="WES" className="h-16 object-contain" />
+           
+           <img src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
+           <img src="/images/nirf.png" alt="NIRF" className="h-16 object-contain" />
+           <img src="/images/wes.png" alt="WES" className="h-16 object-contain" />
             </div>
       </section>
 
@@ -186,7 +156,7 @@ const Dypatil = () => {
     {/* Certificate Image */}
     <div className="flex-1">
       <img
-        src="/dycertificates.webp"
+        src="/images/dycertificates.webp"
         alt="Dr. DY Patil"
         className="w-full max-w-md mx-auto rounded shadow-lg"
       />
@@ -230,51 +200,51 @@ const Dypatil = () => {
     {/* Logo Cards */}
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/3.webp" alt="Company" className="h-12 object-contain" />
+        <img src="/images/3.webp" alt="Company" className="h-12 object-contain" />
       </div>
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/4.webp" alt="Microsoft" className="h-12 object-contain" />
+        <img src="/images/4.webp" alt="Microsoft" className="h-12 object-contain" />
       </div>
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/5.webp" alt="Company 9" className="h-12 object-contain" />
+        <img src="/images/5.webp" alt="Company 9" className="h-12 object-contain" />
       </div>
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/6.webp" alt="Company 10" className="h-12 object-contain" />
+        <img src="/images/6.webp" alt="Company 10" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/7.webp" alt="Company4" className="h-12 object-contain" />
+        <img src="/images/7.webp" alt="Company4" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/8.webp" alt="Company 6" className="h-12 object-contain" />
+        <img src="/images/8.webp" alt="Company 6" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/9.webp" alt="Companany5" className="h-12 object-contain" />
+        <img src="/images/9.webp" alt="Companany5" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/company1.png" alt="Adove" className="h-12 object-contain" />
+        <img src="/images/company1.png" alt="Adove" className="h-12 object-contain" />
       </div>
             
 
       
 
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/company6.png" alt="Samsung4" className="h-12 object-contain" />
+        <img src="/images/company6.png" alt="Samsung4" className="h-12 object-contain" />
       </div>
 
       
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/nestle.jpg" alt="Samsung8" className="h-12 object-contain" />
+        <img src="/images/nestle.jpg" alt="Samsung8" className="h-12 object-contain" />
       </div>
 
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/microsoft.jpg" alt="Samsung9" className="h-12 object-contain" />
+        <img src="/images/microsoft.jpg" alt="Samsung9" className="h-12 object-contain" />
       </div>
 
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/icici.jpg" alt="Samsung" className="h-12 object-contain" />
+        <img src="/images/icici.jpg" alt="Samsung" className="h-12 object-contain" />
       </div>
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/hp.jpg" alt="Samsung2" className="h-12 object-contain" />
+        <img src="/images/hp.jpg" alt="Samsung2" className="h-12 object-contain" />
       </div>
       \
       {/* Add more cards here as needed */}

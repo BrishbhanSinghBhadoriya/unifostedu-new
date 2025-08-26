@@ -22,6 +22,9 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="icon" href="/uni.jpg?v=2" type="image/jpeg" />
+        <link rel="shortcut icon" href="/uni.jpg?v=2" type="image/jpeg" />
+        <link rel="apple-touch-icon" href="/uni.jpg?v=2" />
       </head>
       <body className={inter.className}>
         <Header />

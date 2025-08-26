@@ -1,14 +1,16 @@
+
 'use client';
 
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import ImageWithFallback from '@/components/ImageWithFallback';
-import { FaSearch, FaMapMarkerAlt, FaBook, FaStar, FaClock, FaMoneyBillWave, FaArrowRight } from 'react-icons/fa';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { FaSearch, FaMapMarkerAlt, FaBook, FaStar, FaClock, FaMoneyBillWave, FaArrowRight, FaEye, FaCheckCircle } from 'react-icons/fa';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import EnquiryForm from '@/components/EnquiryForm';
+import UniversityDetailsModal from '@/components/UniversityDetailsModal';
 
 function parseMinFeeLakhs(feeRange) {
   if (!feeRange) return null;
@@ -33,6 +35,30 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle })
   const [specializationFilter, setSpecializationFilter] = useState('All');
   const [sortBy, setSortBy] = useState('rating-desc');
   const [openIndex, setOpenIndex] = useState(null);
+  const [showDetailsModal, setShowDetailsModal] = useState(false);
+  const [selectedUniversity, setSelectedUniversity] = useState(null);
+  const [submittedUniversities, setSubmittedUniversities] = useState(new Set());
+
+  // Load submitted universities from localStorage on component mount
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem('submittedUniversities');
+      if (stored) {
+        setSubmittedUniversities(new Set(JSON.parse(stored)));
+      }
+    } catch (error) {
+      console.error('Error loading submitted universities from localStorage:', error);
+    }
+  }, []);
+
+  // Save submitted universities to localStorage whenever it changes
+  useEffect(() => {
+    try {
+      localStorage.setItem('submittedUniversities', JSON.stringify([...submittedUniversities]));
+    } catch (error) {
+      console.error('Error saving submitted universities to localStorage:', error);
+    }
+  }, [submittedUniversities]);
 
   const locations = useMemo(() => ['All', ...Array.from(new Set(universities.map((u) => u.location.split(',')[0])))], [universities]);
   const specializations = useMemo(
@@ -68,6 +94,21 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle })
 
     return list;
   }, [universities, searchTerm, locationFilter, specializationFilter, sortBy]);
+
+  const handleEnquirySubmitted = (universityIndex) => {
+    const university = filtered[universityIndex];
+    setSubmittedUniversities(prev => new Set([...prev, university.name]));
+    setOpenIndex(null);
+    
+    // Show university details modal
+    setSelectedUniversity(university);
+    setShowDetailsModal(true);
+  };
+
+  const handleViewDetails = (university) => {
+    setSelectedUniversity(university);
+    setShowDetailsModal(true);
+  };
 
   return (
     <div className="max-w-7xl mx-auto">
@@ -148,103 +189,132 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle })
 
       {/* Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {filtered.map((university, index) => (
-          <div key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#00ffe0] bg-white overflow-hidden">
-            <Card className="h-full border-0 shadow-none">
-              <div className="relative">
-                <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                  <ImageWithFallback src={university.image} alt={university.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        {filtered.map((university, index) => {
+          const hasSubmitted = submittedUniversities.has(university.name);
+          
+          return (
+            <div key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#00ffe0] bg-white overflow-hidden">
+              <Card className="h-full border-0 shadow-none">
+                <div className="relative">
+                  <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                    <ImageWithFallback src={university.image} alt={university.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  </div>
+                  <Badge className="absolute top-3 left-3 bg-blue-600 text-white border-0">
+                    <FaStar className="w-3 h-3 mr-1" />
+                    {university.rating}
+                  </Badge>
+                  {hasSubmitted && (
+                    <Badge className="absolute top-3 right-3 bg-green-600 text-white border-0">
+                      <FaCheckCircle className="w-3 h-3 mr-1" />
+                      Submitted
+                    </Badge>
+                  )}
                 </div>
-                <Badge className="absolute top-3 left-3 bg-blue-600 text-white border-0">
-                  <FaStar className="w-3 h-3 mr-1" />
-                  {university.rating}
-                </Badge>
-              </div>
 
-              <CardHeader className="pb-3">
-                <CardTitle className="text-lg font-bold text-gray-900 group-hover:text-[#001e3c] transition-colors">{university.name}</CardTitle>
-                <CardDescription className="flex items-center text-gray-600">
-                  <FaMapMarkerAlt className="w-4 h-4 mr-2 text-[#00ffe0]" />
-                  {university.location}
-                </CardDescription>
-              </CardHeader>
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-lg font-bold text-gray-900 group-hover:text-[#001e3c] transition-colors">{university.name}</CardTitle>
+                  <CardDescription className="flex items-center text-gray-600">
+                    <FaMapMarkerAlt className="w-4 h-4 mr-2 text-[#00ffe0]" />
+                    {university.location}
+                  </CardDescription>
+                </CardHeader>
 
-              <CardContent className="pb-4">
-                <div className="space-y-3">
-                  <div>
-                    <p className="text-sm font-medium text-gray-700 mb-2">Specializations:</p>
-                    <div className="space-y-1">
-                      {university.specializations.slice(0, 3).map((spec, i) => (
-                        <div key={i} className="flex items-center text-sm text-gray-600">
-                          <div className="w-2 h-2 bg-[#00ffe0] rounded-full mr-2"></div>
-                          {spec}
-                        </div>
-                      ))}
-                      {university.specializations.length > 3 && (
-                        <div className="text-sm text-[#00ffe0] font-medium">+{university.specializations.length - 3} more</div>
-                      )}
+                <CardContent className="pb-4">
+                  <div className="space-y-3">
+                    <div>
+                      <p className="text-sm font-medium text-gray-700 mb-2">Specializations:</p>
+                      <div className="space-y-1">
+                        {university.specializations.slice(0, 3).map((spec, i) => (
+                          <div key={i} className="flex items-center text-sm text-gray-600">
+                            <div className="w-2 h-2 bg-[#00ffe0] rounded-full mr-2"></div>
+                            {spec}
+                          </div>
+                        ))}
+                        {university.specializations.length > 3 && (
+                          <div className="text-sm text-[#00ffe0] font-medium">+{university.specializations.length - 3} more</div>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-3 pt-3 border-t border-gray-100">
+                      <div className="flex items-center text-sm text-gray-600">
+                        <FaClock className="w-4 h-4 mr-2 text-[#00ffe0]" />
+                        <span>{university.duration}</span>
+                      </div>
+                      <div className="flex items-center text-sm text-gray-600">
+                        <FaMoneyBillWave className="w-4 h-4 mr-2 text-[#00ffe0]" />
+                        <span>{university.fee}</span>
+                      </div>
+                    </div>
+
+                    <div className="pt-3 border-t border-gray-100">
+                      <div className="flex flex-wrap gap-1">
+                        {university.features.map((feature, fi) => (
+                          <Badge key={fi} variant="outline" className="text-xs">
+                            {feature}
+                          </Badge>
+                        ))}
+                      </div>
                     </div>
                   </div>
+                </CardContent>
 
-                  <div className="grid grid-cols-2 gap-3 pt-3 border-t border-gray-100">
-                    <div className="flex items-center text-sm text-gray-600">
-                      <FaClock className="w-4 h-4 mr-2 text-[#00ffe0]" />
-                      <span>{university.duration}</span>
-                    </div>
-                    <div className="flex items-center text-sm text-gray-600">
-                      <FaMoneyBillWave className="w-4 h-4 mr-2 text-[#00ffe0]" />
-                      <span>{university.fee}</span>
-                    </div>
-                  </div>
-
-                  <div className="pt-3 border-t border-gray-100">
-                    <div className="flex flex-wrap gap-1">
-                      {university.features.map((feature, fi) => (
-                        <Badge key={fi} variant="outline" className="text-xs">
-                          {feature}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-
-              <CardFooter className="pt-0">
-                <Button 
-                  className="w-full rounded-xl bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] font-semibold shadow-md hover:shadow-lg hover:from-[#00d4c4] hover:to-[#00ffe0] transition-all duration-300 flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00e6cc]"
-                  onClick={() => setOpenIndex(index)}
-                >
-                  Enquiry Now
-                  <FaArrowRight className="text-[#007a71]" />
-                </Button>
-                <Dialog open={openIndex === index} onOpenChange={(v) => setOpenIndex(v ? index : null)}>
-                  <DialogContent className="sm:max-w-[560px]">
-                    <DialogHeader>
-                      <DialogTitle>Enquiry for {university.name}</DialogTitle>
-                    </DialogHeader>
-                    <EnquiryForm 
-                      formType="getStarted"
-                      universityName={university.name}
-                      defaultProgram={(function mapCourse(title){
-                        const t = (title || '').toLowerCase();
-                        if (t.includes('mba')) return 'MBA';
-                        if (t.includes('mca')) return 'MCA';
-                        if (t.includes('bba')) return 'BBA';
-                        if (t.includes('m.com') || t.includes('mcom')) return 'MCOM';
-                        if (t.includes('b.com') || t.includes('bcom')) return 'BCOM';
-                        if (t.includes('ma ' ) || t === 'ma' || t.includes(' master of arts')) return 'MA';
-                        if (t.includes('ba ' ) || t === 'ba' || t.includes(' bachelor of arts')) return 'BA';
-                        return 'MBA';
-                      })(courseTitle)}
-                      onSubmitted={() => setOpenIndex(null)}
-                    />
-                  </DialogContent>
-                </Dialog>
-              </CardFooter>
-            </Card>
-          </div>
-        ))}
+                <CardFooter className="pt-0">
+                  {hasSubmitted ? (
+                    <Button 
+                      className="w-full rounded-xl bg-gradient-to-r from-[#00e6cc] to-[#00d4c4] text-white font-semibold shadow-md hover:shadow-lg hover:from-[#00d4c4] hover:to-[#00e6cc] transition-all duration-300 flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00e6cc]"
+                      onClick={() => handleViewDetails(university)}
+                    >
+                      <FaEye className="text-white" />
+                      View Details
+                    </Button>
+                  ) : (
+                    <Button 
+                      className="w-full rounded-xl bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] font-semibold shadow-md hover:shadow-lg hover:from-[#00d4c4] hover:to-[#00ffe0] transition-all duration-300 flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00e6cc]"
+                      onClick={() => setOpenIndex(index)}
+                    >
+                      Enquiry Now
+                      <FaArrowRight className="text-[#007a71]" />
+                    </Button>
+                  )}
+                  
+                  <Dialog open={openIndex === index} onOpenChange={(v) => setOpenIndex(v ? index : null)}>
+                    <DialogContent className="sm:max-w-[560px]">
+                      <DialogHeader>
+                        <DialogTitle>Enquiry for {university.name}</DialogTitle>
+                      </DialogHeader>
+                      <EnquiryForm 
+                        formType="getStarted"
+                        universityName={university.name}
+                        defaultProgram={(function mapCourse(title){
+                          const t = (title || '').toLowerCase();
+                          if (t.includes('mba')) return 'MBA';
+                          if (t.includes('mca')) return 'MCA';
+                          if (t.includes('bba')) return 'BBA';
+                          if (t.includes('m.com') || t.includes('mcom')) return 'MCOM';
+                          if (t.includes('b.com') || t.includes('bcom')) return 'BCOM';
+                          if (t.includes('ma ' ) || t === 'ma' || t.includes(' master of arts')) return 'MA';
+                          if (t.includes('ba ' ) || t === 'ba' || t.includes(' bachelor of arts')) return 'BA';
+                          return 'MBA';
+                        })(courseTitle)}
+                        onSubmitted={() => handleEnquirySubmitted(index)}
+                      />
+                    </DialogContent>
+                  </Dialog>
+                </CardFooter>
+              </Card>
+            </div>
+          );
+        })}
       </div>
+
+      {/* University Details Modal */}
+      <UniversityDetailsModal
+        university={selectedUniversity}
+        isOpen={showDetailsModal}
+        onClose={() => setShowDetailsModal(false)}
+        courseTitle={courseTitle}
+      />
     </div>
   );
 }

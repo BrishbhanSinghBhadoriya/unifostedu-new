@@ -167,3 +167,7 @@ export default async function UniversityPage({ params }) {
     </div>
   );
 }
+
+export function generateStaticParams() {
+  return Object.keys(universityData).map((slug) => ({ slug }));
+}

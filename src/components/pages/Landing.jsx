@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -61,88 +62,49 @@ const courses = [
 ];
 
 const stats = [
-  { number: "5K+", label: "Students Enrolled", icon: FaUsers, color: "from-blue-500 to-purple-600" },
-  { number: "25+", label: "Partner Universities", icon: FaUniversity, color: "from-green-500 to-teal-600" },
-  { number: "100%", label: "Success Rate", icon: FaAward, color: "from-orange-500 to-red-600" },
-  { number: "24/7", label: "Support Available", icon: FaHeadset, color: "from-purple-500 to-pink-600" }
+  { number: "5K+", label: "Students Enrolled", icon: FaUsers, color: "from-blue-500 to-teal-600" },
+  { number: "25+", label: "Partner Universities", icon: FaUniversity, color: "from-blue-500 to-teal-600" },
+  { number: "100%", label: "Success Rate", icon: FaAward, color: "from-blue-500 to-teal-600" },
+  { number: "24/7", label: "Support Available", icon: FaHeadset, color: "from-blue-500 to-teal-600" }
 ];
 
 const features = [
-  { title: "Expert Counseling", description: "Get personalized guidance from education experts", icon: FaUserTie, color: "from-blue-500 to-purple-600" },
-  { title: "Compare Programs", description: "Side-by-side comparison of courses and universities", icon: FaCompass, color: "from-green-500 to-teal-600" },
-  { title: "Flexible Learning", description: "Study at your own pace from anywhere", icon: FaGlobe, color: "from-orange-500 to-red-600" },
-  { title: "Career Support", description: "Get assistance with job placement and career guidance", icon: FaBriefcase, color: "from-purple-500 to-pink-600" }
+  { title: "Expert Counseling", description: "Get personalized guidance from education experts", icon: FaUserTie, color: "from-blue-500 to-teal-600" },
+  { title: "Compare Programs", description: "Side-by-side comparison of courses and universities", icon: FaCompass, color: "from-blue-500 to-teal-600" },
+  { title: "Flexible Learning", description: "Study at your own pace from anywhere", icon: FaGlobe, color: "from-blue-500 to-teal-600" },
+  { title: "Career Support", description: "Get assistance with job placement and career guidance", icon: FaBriefcase, color: "from-blue-500 to-teal-600" }
 ];
 
 const colleges = [
-  { name: "Amity University Online", ranking: "NIRF-29", fee: "₹0.99L - ₹3.45L", logo: "/amity.png", rating: 4.8 },
-  { name: "Manipal University Online", ranking: "NIRF-73", fee: "0.99L - ₹1.75L", logo: "/manipal1.png", rating: 4.6 },
-  { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹0.80L - ₹2.0L", logo: "/lpulogo.png", rating: 4.1},
-  { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.50L - ₹1.75L", logo: "/upeslogo.png", rating: 4.4 },
-  { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹0.94L - ₹2.20L", logo: "/nmims.png", rating: 4.5 },
-  { name: "Sharda University Online", ranking: "NIRF-87", fee: "₹0.80L - ₹1.30L", logo: "/shardalogo.png", rating: 4.1 },
-  { name: "Dr. DY Patil Online", ranking: "NIRF-63", fee: "₹1.45L - ₹1.90L", logo: "/dypatillogo.png", rating: 4.4 },
-  { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.05L - ₹2.98L", logo: "/jainlogo.png", rating: 4.5 },
-  { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹0.75L - ₹1.58", logo: "/chandigarh.jpg", rating: 4.7 }
+      { name: "Amity University Online", ranking: "NIRF-29", fee: "₹0.99L - ₹3.45L", logo: "/images/amity.png", rating: 4.8 },
+    { name: "Manipal University Online", ranking: "NIRF-73", fee: "0.99L - ₹1.75L", logo: "/images/manipal1.png", rating: 4.6 },
+    { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹0.80L - ₹2.0L", logo: "/images/lpu.png", rating: 4.1},
+    { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.50L - ₹1.75L", logo: "/images/upes.png", rating: 4.4 },
+    { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹0.94L - ₹2.20L", logo: "/images/nmims.png", rating: 4.5 },
+    { name: "Sharda University Online", ranking: "NIRF-87", fee: "₹0.80L - ₹1.30L", logo: "/images/sharda.png", rating: 4.1 },
+    { name: "Dr. DY Patil Online", ranking: "NIRF-63", fee: "₹1.45L - ₹1.90L", logo: "/images/dypatil.png", rating: 4.4 },
+    { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.05L - ₹2.98L", logo: "/images/jain.png", rating: 4.5 },
+    { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹0.75L - ₹1.58", logo: "/images/chandigarh.jpg", rating: 4.7 },
+  
 ];
 
 const cities = [
-  { city: "Delhi", state: "Delhi", img: "/delhi.png", students: "25K+" },
-  { city: "Mumbai", state: "Maharashtra", img: "/mumbai.png", students: "22K+" },
-  { city: "Bangalore", state: "Karnataka", img: "/banglore.png", students: "20K+" },
-  { city: "Chennai", state: "Tamil Nadu", img: "/chennai.png", students: "18K+" },
-  { city: "Hyderabad", state: "Telangana", img: "/hyderabad.png", students: "16K+" },
-  { city: "Pune", state: "Maharashtra", img: "/pune.png", students: "15K+" },
-  { city: "Kolkata", state: "West Bengal", img: "/kolkata.png", students: "14K+" },
-  { city: "Ahmedabad", state: "Gujarat", img: "/ahemdabad.png", students: "12K+" }
+  { city: "Delhi", state: "Delhi", img: "/images/delhi.png", students: "25K+" },
+  { city: "Mumbai", state: "Maharashtra", img: "/images/mumbai.png", students: "22K+" },
+  { city: "Bangalore", state: "Karnataka", img: "/images/banglore.png", students: "20K+" },
+  { city: "Chennai", state: "Tamil Nadu", img: "/images/chennai.png", students: "18K+" },
+  { city: "Hyderabad", state: "Telangana", img: "/images/hyderabad.png", students: "16K+" },
+  { city: "Pune", state: "Maharashtra", img: "/images/pune.png", students: "15K+" },
+  { city: "Kolkata", state: "West Bengal", img: "/images/kolkata.png", students: "14K+" },
+  { city: "Ahmedabad", state: "Gujarat", img: "/images/ahemdabad.png", students: "12K+" }
 ];
 
 const accreditationLogos = [
-  '/ugc.png', '/naac.png', '/nirf.png', '/aicte.png', '/wasc.png', '/aiu.png',
-  '/iacbe.png', '/aacsb.png', '/iqas.png', '/wes.png', '/unwto.png', '/nabh.png'
+  '/images/ugc.png', '/images/naac.png', '/images/nirf.png', '/images/aicte.png', '/images/wasc.png', '/images/aiu.png',
+  '/images/iacbe.png', '/images/aacsb.png', '/images/iqas.png', '/images/wes.png', '/images/unwto.png', '/images/nabh.png'
 ];
 
 // University logos for the slider
-const universityLogos = [
-  { name: "Amity University", logo: "/amitylogo.jpg" },
-  { name: "Manipal University", logo: "/manipallogo.jpg" },
-  { name: "Lovely Professional University", logo: "/lpulogo.png" },
-  { name: "UPES University", logo: "/upeslogo.png" },
-  { name: "NMIMS University", logo: "/nmimslogo.jpg" },
-  { name: "Sharda University", logo: "/shardalogo.png" },
-  { name: "DY Patil University", logo: "/dypatillogo.png" },
-  { name: "Jain University", logo: "/jainlogo.png" },
-  { name: "Chandigarh University", logo: "/cu-logo.png" },
-  { name: "Vivekananda Global University", logo: "/vgulogo.png" },
-  { name: "Shoolini University", logo: "/shoolinilogo.png" },
-  { name: "OP Jindal University", logo: "/opjindallogo.png" },
-  { name: "eCornell University", logo: "/ecornellogo.png" },
-  { name: "Edgewood University", logo: "/edgewoodlogo.png" },
-  { name: "Rushford University", logo: "/rushfordlogo.png" },
-  { name: "Deakin University", logo: "/deakinlogo.png" },
-  { name: "Golden Gate University", logo: "/goldengatelogo.png" },
-  { name: "IIM Nagpur", logo: "/iimnagpurlogo.png" },
-  { name: "IIM Ahmedabad", logo: "/iimalogo.png" },
-  { name: "IIM Udaipur", logo: "/iimulogo.png" },
-  { name: "IIM Ranchi", logo: "/iimrlogo.png" },
-  { name: "IIT Roorkee", logo: "/iitrlogo.png" },
-  { name: "IIT Guwahati", logo: "/iitglogo.png" },
-  { name: "IIM Calcutta", logo: "/iimclogo.png" },
-  { name: "IIM Bangalore", logo: "/iimlogo.png" },
-  { name: "Liverpool University", logo: "/liverpoollogo.png" },
-  { name: "IMT University", logo: "/imtlogo.png" },
-  { name: "IIT Delhi", logo: "/iitdlogo.png" },
-  { name: "Mundra University", logo: "/mundralogo.png" },
-  { name: "IIM Kozhikode", logo: "/iimklogo.png" },
-  { name: "IIIT Bangalore", logo: "/iiitblogo.png" },
-  { name: "Andhra University", logo: "/andhralogo.png" },
-  { name: "Kurukshetra University", logo: "/kurkshetralogo.jpg" },
-  { name: "Subharti University", logo: "/subhartilogo.jpg" },
-  { name: "DY Patil Mumbai", logo: "/dypatilmumbailogo.png" },
-  { name: "Amrita University", logo: "/amritalogo.png" }
-];
-
-// University Logo Slider Component with Framer Motion Auto-Scrolling
 const UniversityLogoSlider = () => {
   const [itemsToShow, setItemsToShow] = useState(6);
   const [isPaused, setIsPaused] = useState(false);
@@ -277,7 +239,7 @@ const Landing = () => {
   useEffect(() => {
     const id = setInterval(() => {
       setSlide((s) => (s + 1) % heroSlides.length);
-    }, 5000);
+    }, 6000);
     return () => clearInterval(id);
   }, []);
 
@@ -289,46 +251,35 @@ const Landing = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-      {/* Enhanced Hero Section - Fully Responsive */}
+      {/* Hero Section - Professional, focused */}
       <section className="relative text-white overflow-hidden">
         <div className="relative w-full">
           {/* Slides - Responsive aspect ratio */}
-          {/* Slides - Enhanced Responsive Hero Section */}
-<div className="relative w-full aspect-[16/9] md:h-[90vh] bg-gradient-to-br from-[#001e3c] to-[#003b6c] overflow-hidden">
-  {heroSlides.map((s, idx) => (
-    <motion.div
-      key={idx}
-      className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
-        idx === slide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
-      }`}
-      initial={{ opacity: 0, scale: 1.05 }}
-      animate={{
-        opacity: idx === slide ? 1 : 0,
-        scale: idx === slide ? 1 : 1.05,
-      }}
-      transition={{ duration: 1.2, ease: "easeInOut" }}
-    >
-      {/* Hero Image */}
-      <img
-        src={s.src}
-        alt={s.alt || `Slide ${idx + 1}`}
-        loading="lazy"
-        className="w-full h-full object-cover"
-        style={{ objectPosition: "center" }}
-      />
+          <div className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[85vh] xl:h-[90vh] bg-[#001e3c]">
+            {heroSlides.map((s, idx) => (
+              <motion.div
+                key={idx}
+                className={`absolute inset-0 transition-all duration-1000 ${idx === slide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
+                initial={{ opacity: 0, scale: 1.1 }}
+                animate={{ opacity: idx === slide ? 1 : 0, scale: idx === slide ? 1 : 1.06 }}
+                transition={{ duration: 0.8 }}
+              >
+                <Image 
+                  src={s.src}
+                  alt={s.alt}
+                  fill
+                  priority={idx === 0}
+                  sizes="100vw"
+                  className="object-cover"
+                />
+                {/* Enhanced Overlay - Responsive gradient */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c]/85 via-[#001e3c]/65 to-transparent" />
+              </motion.div>
+            ))}
+          </div>
 
-      {/* Enhanced Overlay - smoother gradient & glow */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c]/85 via-[#001e3c]/60 to-transparent md:from-[#001e3c]/75 md:via-[#001e3c]/50 md:to-transparent" />
-
-      {/* Optional Glow Effect */}
-      <div className="absolute inset-0 bg-black/20 mix-blend-overlay pointer-events-none" />
-    </motion.div>
-  ))}
-</div>
-
-
-          {/* Enhanced Content overlay - Fully responsive */}
-          <div className="pointer-events-none absolute inset-0 flex items-center">
+          {/* Content overlay - visible from sm and up */}
+          <div className="pointer-events-none absolute inset-0 hidden sm:flex items-center">
             <div className="pointer-events-auto text-left px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl mx-auto w-full">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
@@ -338,13 +289,13 @@ const Landing = () => {
               >
                 {/* Responsive Typography (professional, compact) */}
                 <div className="bg-transparent rounded-2xl p-4 sm:p-6 inline-block max-w-2xl">
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-3 leading-tight text-white">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-semibold mb-2 sm:mb-3 leading-tight text-white tracking-tight">
                     {heroSlides[slide].title}
                   </h1>
-                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-3 sm:mb-4 bg-gradient-to-r from-cyan-300 to-emerald-300 bg-clip-text text-transparent">
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium mb-3 sm:mb-4 text-cyan-200">
                     {heroSlides[slide].subtitle}
                   </h2>
-                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200/90 mb-5 sm:mb-6 leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-100/90 mb-5 sm:mb-6 leading-relaxed">
                     {heroSlides[slide].description}
                   </p>
                 </div>
@@ -353,12 +304,12 @@ const Landing = () => {
                 <div className="mt-3 sm:mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4">
                   <button 
                     onClick={() => openModal("getStarted")}
-                    className="bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] 
-                               w-full sm:w-auto px-4 sm:px-5 lg:px-6 py-3 sm:py-3.5 lg:py-4 rounded-full 
+                    className="bg-[#00d4c4] text-[#001e3c]
+                               w-full sm:w-auto px-5 lg:px-6 py-3.5 lg:py-4 rounded-full 
                                text-sm sm:text-base lg:text-lg font-semibold
-                               hover:from-[#00d4c4] hover:to-[#00ffe0]
-                               transform hover:scale-105 transition-all duration-300 
-                               shadow-md shadow-[#00ffe0]/30 flex items-center justify-center gap-2"
+                               hover:bg-[#00c0b1]
+                               transition-colors duration-200 
+                               shadow-md flex items-center justify-center gap-2"
                   >
                     <FaRocket className="text-sm sm:text-base lg:text-lg" />
                     <span className="hidden xs:inline">Get Started Today</span>
@@ -367,12 +318,11 @@ const Landing = () => {
 
                   <button 
                     onClick={() => openModal("videoCall")}
-                    className="w-full sm:w-auto px-4 sm:px-5 lg:px-6 py-3 sm:py-3.5 lg:py-4 rounded-full 
+                    className="w-full sm:w-auto px-5 lg:px-6 py-3.5 lg:py-4 rounded-full 
                                text-sm sm:text-base lg:text-lg font-semibold 
-                               bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-500 text-white 
-                               shadow-xl shadow-rose-500/30 ring-2 ring-white/30 
-                               hover:from-rose-500 hover:via-pink-500 hover:to-fuchsia-500 
-                               transform hover:scale-110 hover:-translate-y-0.5 transition-all duration-300 
+                               bg-white/10 text-white border border-white/20
+                               hover:bg-white/15 
+                               transition-colors duration-200 
                                flex items-center justify-center gap-2"
                   >
                     <FaVideo className="text-sm sm:text-base lg:text-lg" />
@@ -382,12 +332,11 @@ const Landing = () => {
 
                   <button 
                     onClick={() => openModal("homeDemo")}
-                    className="w-full sm:w-auto px-4 sm:px-5 lg:px-6 py-3 sm:py-3.5 lg:py-4 rounded-full 
+                    className="w-full sm:w-auto px-5 lg:px-6 py-3.5 lg:py-4 rounded-full 
                                text-sm sm:text-base lg:text-lg font-semibold 
-                               bg-gradient-to-r from-amber-400 via-orange-500 to-rose-500 text-white 
-                               shadow-xl shadow-orange-500/30 ring-2 ring-white/30 
-                               hover:from-rose-500 hover:via-orange-500 hover:to-amber-400 
-                               transform hover:scale-110 hover:-translate-y-0.5 transition-all duration-300 
+                               bg-white/10 text-white border border-white/20
+                               hover:bg-white/15 
+                               transition-colors duration-200 
                                flex items-center justify-center gap-2"
                   >
                     <FaMapMarkerAlt className="text-sm sm:text-base lg:text-lg" />
@@ -400,6 +349,39 @@ const Landing = () => {
             </div>
           </div>
 
+          {/* Mobile content band below slider */}
+          <div className="block sm:hidden bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white">
+            <div className="max-w-7xl mx-auto px-4 py-6">
+              <div className="max-w-2xl">
+                <h1 className="text-2xl font-semibold mb-1 tracking-tight">{heroSlides[slide].title}</h1>
+                <h2 className="text-base font-medium mb-2 text-cyan-200">{heroSlides[slide].subtitle}</h2>
+                <p className="text-sm text-white/90 mb-4">{heroSlides[slide].description}</p>
+              </div>
+              <div className="flex flex-col gap-3">
+                <button 
+                  onClick={() => openModal('getStarted')}
+                  className="bg-[#00d4c4] text-[#001e3c] w-full px-5 py-3.5 rounded-full text-base font-semibold hover:bg-[#00c0b1] transition-colors"
+                >
+                  Get Started Today
+                </button>
+                <div className="grid grid-cols-2 gap-3">
+                  <button 
+                    onClick={() => openModal('videoCall')}
+                    className="px-5 py-3.5 rounded-full text-base font-semibold bg-white/10 text-white border border-white/20 hover:bg-white/15 transition-colors"
+                  >
+                    Video Call
+                  </button>
+                  <button 
+                    onClick={() => openModal('homeDemo')}
+                    className="px-5 py-3.5 rounded-full text-base font-semibold bg-white/10 text-white border border-white/20 hover:bg-white/15 transition-colors"
+                  >
+                    Home Demo
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Enhanced Dots - Responsive positioning */}
           <div className="absolute inset-x-0 bottom-4 sm:bottom-6 md:bottom-8 flex items-center justify-center gap-2 sm:gap-3">
             {heroSlides.map((_, i) => (
@@ -408,7 +390,7 @@ const Landing = () => {
                 onClick={() => setSlide(i)}
                 className={`h-2 sm:h-3 w-2 sm:w-3 rounded-full transition-all duration-300 ${
                   i === slide 
-                    ? 'bg-[#00ffe0] w-6 sm:w-8 shadow-lg shadow-[#00ffe0]/50' 
+                    ? 'bg-[#00d4c4] w-6 sm:w-8' 
                     : 'bg-white/60 hover:bg-white/80'
                 }`}
                 aria-label={`Go to slide ${i + 1}`}
@@ -440,14 +422,14 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* Enhanced Programs Section - Responsive Grid */}
+      {/* Programs Section - Responsive Grid */}
       <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-10 sm:mb-14"
             data-aos="fade-up"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold tracking-tight text-[#001e3c] mb-2">
+            <h2 className="text-3xl sm:text-4xl md:text-4xl font-semibold tracking-tight text-[#001e3c] mb-2">
               Select the Best Programs
             </h2>
             <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-3 sm:mb-4"></div>
@@ -575,9 +557,10 @@ const Landing = () => {
      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
         <motion.div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#001e3c] mb-6">
-            🏆 Top Partner Universities 
+          <h2 className="text-4xl md:text-5xl font-semibold text-[#001e3c] mb-3">
+            Top Partner Universities
           </h2>
+          <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-4"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Choose from India's most prestigious online universities
           </p>
@@ -629,71 +612,152 @@ const Landing = () => {
 </div>
       </section>
 
-      {/* Compare Online Universities - Responsive */}
+
+      {/* Compare Online Universities - Enhanced */}
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-8 sm:mb-12"
             data-aos="fade-up"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#001e3c] mb-3 sm:mb-4">
-              🎓 Compare Online Universities
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#001e3c] mb-3 sm:mb-4">
+              Compare Online Universities
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
               Select up to 3 universities to compare fees, accreditation, placements and more
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {colleges.map((college, idx) => {
-              const slug = slugify(college.name);
-              const isSelected = selectedUniversities.includes(slug);
-              return (
-                <div key={idx} className={`rounded-2xl border ${isSelected ? 'border-[#00ffe0]' : 'border-gray-200'} bg-white shadow-sm hover:shadow-md transition-all`}>
-                  <div className="p-4 sm:p-5">
-                    <div className="flex items-start gap-4">
-                      <div className="h-14 w-14 sm:h-16 sm:w-16 rounded-lg bg-slate-50 border border-gray-100 flex items-center justify-center overflow-hidden">
-                        <img src={college.logo} alt={`${college.name} logo`} className="max-h-12 sm:max-h-14 w-auto object-contain" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center justify-between gap-2">
-                          <h3 className="text-sm sm:text-base font-semibold text-[#001e3c] leading-snug line-clamp-2">{college.name}</h3>
-                          <span className="inline-flex items-center gap-1 text-[11px] sm:text-xs text-gray-700"><FaStar className="text-yellow-400" /> {college.rating}</span>
-                        </div>
-                        <div className="mt-1.5 flex items-center gap-2">
-                          <Badge className="bg-[#00ffe0]/10 text-[#001e3c] ring-1 ring-[#00ffe0]/40 text-[10px] sm:text-[11px]">{college.ranking}</Badge>
-                          <span className="text-[11px] sm:text-xs text-gray-600"><span className="font-medium">Fees:</span> {college.fee}</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="mt-4 flex items-center justify-between">
-                      <a href={getUniversityHref(college.name)} className="text-[#003b6c] text-xs sm:text-sm font-semibold hover:underline">View details</a>
-                      <button
-                        onClick={() => toggleUniversity(college.name)}
-                        className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all ${isSelected ? 'bg-[#00ffe0] text-[#001e3c]' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
-                      >
-                        {isSelected ? 'Selected' : 'Select to compare'}
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-gray-700 text-sm sm:text-base font-medium">
-              Selected for compare: <span className="font-bold text-[#001e3c]">{selectedUniversities.length}</span> / 3
+          {/* Compare Controls - Enhanced */}
+          <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row items-center justify-between gap-4 bg-gradient-to-r from-blue-50 to-indigo-50 p-5 rounded-2xl border border-blue-100 shadow-sm">
+            <div className="flex items-center gap-4">
+              <div className="bg-white p-3 rounded-xl shadow-sm border border-blue-100">
+                <FaCompass className="text-2xl text-blue-600" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-[#001e3c]">Compare Universities</h3>
+                <p className="text-sm text-gray-600">
+                  Selected: <span className="font-bold text-blue-600">{selectedUniversities.length}</span>/3
+                  {selectedUniversities.length > 0 && (
+                    <span className="ml-2 text-green-600">
+                      ({selectedUniversities.length} selected)
+                    </span>
+                  )}
+                </p>
+              </div>
             </div>
             <button
               disabled={!canCompare}
               onClick={startCompare}
-              className={`px-6 sm:px-8 py-3 rounded-full font-bold flex items-center gap-2 transition-all text-sm sm:text-base ${canCompare ? 'bg-[#00ffe0] text-[#001e3c] hover:bg-[#00d4c4] shadow-lg' : 'bg-gray-200 text-gray-500 cursor-not-allowed'}`}
+              className={`px-6 sm:px-8 py-3 rounded-full font-bold flex items-center gap-2 transition-all text-sm sm:text-base ${
+                canCompare 
+                  ? 'bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] shadow-lg hover:shadow-xl transform hover:scale-105' 
+                  : 'bg-gray-200 text-gray-500 cursor-not-allowed'
+              }`}
             >
+              <FaArrowRight className={canCompare ? "group-hover:translate-x-1 transition-transform" : ""} />
               Compare Now
-              <FaArrowRight />
             </button>
+          </div>
+
+          {/* Enhanced University Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+            {colleges.map((college, idx) => {
+              const slug = slugify(college.name);
+              const isSelected = selectedUniversities.includes(slug);
+              
+              return (
+                <motion.div
+                  key={idx}
+                  whileHover={{ y: -5 }}
+                  className={`group relative rounded-2xl overflow-hidden transition-all duration-300 ${
+                    isSelected 
+                      ? 'ring-3 ring-[#00ffe0] shadow-xl border-[#00ffe0]' 
+                      : 'border border-gray-200 shadow-md hover:shadow-xl'
+                  }`}
+                >
+                  {/* Selection Indicator */}
+                  {isSelected && (
+                    <div className="absolute top-3 right-3 z-10">
+                      <div className="bg-[#00ffe0] text-[#001e3c] w-8 h-8 rounded-full flex items-center justify-center shadow-lg">
+                        <FaCheckCircle className="text-sm" />
+                      </div>
+                    </div>
+                  )}
+                  
+                  {/* Card Content */}
+                  <div className="bg-white p-5 sm:p-6">
+                    {/* University Header */}
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className={`flex-shrink-0 h-16 w-16 sm:h-20 sm:w-20 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-gray-100 flex items-center justify-center p-2 ${
+                        isSelected ? 'ring-2 ring-[#00ffe0]/30' : ''
+                      }`}>
+                        <img 
+                          src={college.logo} 
+                          alt={`${college.name} logo`} 
+                          className="max-h-10 sm:max-h-12 w-auto object-contain" 
+                        />
+                      </div>
+                      
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg font-bold text-[#001e3c] mb-1 line-clamp-2 leading-tight">
+                          {college.name}
+                        </h3>
+                        
+                        <div className="flex items-center gap-2 mb-2">
+                          <Badge className="bg-blue-100 text-blue-800 border-blue-200 text-xs font-medium">
+                            {college.ranking}
+                          </Badge>
+                          <div className="flex items-center gap-1 text-sm text-amber-600">
+                            <FaStar className="fill-amber-400" />
+                            <span className="font-semibold">{college.rating}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Fee Information */}
+                    <div className="bg-gray-50 rounded-lg p-3 mb-4 border border-gray-100">
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm font-medium text-gray-700">Approx. Fees:</span>
+                        <span className="text-sm font-bold text-[#001e3c]">{college.fee}</span>
+                      </div>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="flex items-center justify-between gap-3">
+                      <a 
+                        href={getUniversityHref(college.name)} 
+                        className="flex-1 text-center text-sm font-semibold text-blue-600 hover:text-blue-800 px-3 py-2 rounded-lg hover:bg-blue-50 transition-colors"
+                      >
+                        View Details
+                      </a>
+                      
+                      <button
+                        onClick={() => toggleUniversity(college.name)}
+                        className={`flex-1 px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                          isSelected 
+                            ? 'bg-[#00ffe0] text-[#001e3c] hover:bg-[#00d4c4]' 
+                            : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+                        }`}
+                      >
+                        {isSelected ? 'Selected' : 'Compare'}
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Hover Effect Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/5 group-hover:to-purple-500/5 transition-opacity rounded-2xl pointer-events-none" />
+                </motion.div>
+              );
+            })}
+          </div>
+
+          {/* Selection Help Text */}
+          <div className="mt-8 text-center">
+            <p className="text-sm text-gray-600">
+              Tip: Select 2-3 universities to compare features side by side
+            </p>
           </div>
         </div>
       </section>
@@ -705,7 +769,7 @@ const Landing = () => {
             className="text-center mb-8 sm:mb-10"
             data-aos="fade-up"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#001e3c] mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#001e3c] mb-3 sm:mb-4">
               Accreditation & Recognition
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
@@ -739,7 +803,7 @@ const Landing = () => {
             className="text-center mb-12 sm:mb-16"
             data-aos="fade-up"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#001e3c] mb-4 sm:mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#001e3c] mb-4 sm:mb-6">
               Why Choose <span className="text-[#00ffe0]">Unifost</span>?
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
@@ -768,49 +832,95 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* Enhanced CTA Section - Responsive */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-[#001e3c] to-[#003b6c] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            data-aos="fade-up"
-            className="mb-8 sm:mb-12"
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
-              Ready to Start Your Journey?
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
-              Join thousands of students who have transformed their careers with Unifost
-            </p>
+     
+
+      {/* Study Cities */}
+      <section className="bg-[#08223a] py-16 px-6 text-white overflow-hidden relative" data-aos="fade-up">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">Study Cities Across India</h2>
+          <p className="text-blue-100 text-lg max-w-2xl mx-auto mb-12">Explore top universities across India's major educational hubs.</p>
+
+          <div className="overflow-hidden relative backdrop-blur-md rounded-2xl border border-white/20 p-6">
+            <div className="flex gap-10 animate-[scroll_30s_linear_infinite] whitespace-nowrap">
+              {[...Array(2)].flatMap((_, i) =>
+                cities.map((city, idx) => (
+                  <motion.div
+                    key={`city-${i}-${idx}`}
+                    whileHover={{ y: -6 }}
+                    className="min-w-[150px] flex flex-col items-center text-center bg-white/10 backdrop-blur-xl p-4 rounded-xl border border-white/20 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+                  >
+                    <img src={city.img} alt={city.city} className="w-16 h-16 object-contain mb-2 rounded-full border border-white/20 shadow" />
+                    <p className="text-white font-semibold text-sm">{city.city}</p>
+                    <p className="text-blue-200 text-xs">{city.state}</p>
+                  </motion.div>
+                ))
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 sm:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div className="text-center mb-12" data-aos="fade-up">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#001e3c] mb-3">What Students Say</h2>
+            <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4]"></div>
           </motion.div>
-          
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[{
+              quote: 'Unifost helped me compare programs easily and pick the right MBA.',
+              name: 'Aarav Sharma',
+              subtitle: 'MBA Student, NMIMS Online'
+            }, {
+              quote: 'The counseling was spot-on. I saved time and money.',
+              name: 'Neha Gupta',
+              subtitle: 'BBA Student, Amity Online'
+            }, {
+              quote: 'Great experience from enquiry to enrollment. Highly recommended.',
+              name: 'Rohit Verma',
+              subtitle: 'MCA Student, Manipal Online'
+            }].map((t, i) => (
+              <motion.div key={i} className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay={i * 100}>
+                <p className="text-gray-700 mb-4 leading-relaxed">“{t.quote}”</p>
+                <div className="pt-4 border-t border-gray-100">
+                  <p className="text-[#001e3c] font-semibold">{t.name}</p>
+                  <p className="text-sm text-gray-500">{t.subtitle}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-14 bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight">Ready to find your program?</h3>
+            <p className="text-white/80 mt-2">Talk to our counselors and get a personalized shortlist.</p>
+          </div>
+          <div className="flex gap-3">
             <button 
-              onClick={() => openModal("getStarted")}
-              className="  bg-[#00ffe0] text-[#001e3c] cursor-pointer w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-bold hover:bg-[#00d4c4] transform hover:scale-105 transition-all duration-300 shadow-2xl flex items-center justify-center gap-2"
+              onClick={() => openModal('getStarted')} 
+              className="px-6 py-3 rounded-full bg-[#00d4c4] text-[#001e3c] font-semibold hover:bg-[#00c0b1] transition-colors"
             >
-              <FaRocket className="text-lg sm:text-xl" />
-              Get Started Today
+              Get Started
             </button>
             <button 
-              onClick={() => openModal("videoCall")}
-              className="border-2 border-white text-white w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-bold hover:bg-white hover:text-[#001e3c] transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
+              onClick={() => openModal('videoCall')} 
+              className="px-6 py-3 rounded-full border border-white/30 hover:bg-white/10 transition-colors"
             >
-              <FaPhone className="text-lg sm:text-xl" />
-              Call Now
+              Book a Call
             </button>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Unified Modal - Responsive */}
       {showEnquiryModal && (
         <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
-          <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10 p-4 sm:p-6 z-[30001]">
+          <DialogContent className="w-[95vw] max-w-lg md:max-w-xl  lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10 p-4 sm:p-6 z-[30001]">
             <DialogHeader>
               <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
                 {modalType === "getStarted" && "Get Started with Unifost"}

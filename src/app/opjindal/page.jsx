@@ -55,7 +55,7 @@ const OPJindal = () => {
       eligibility: "10+2 Pass, Applicants less than 50% marks in 10+2 will be required to appear for the Jindal Scholastic Aptitude Test (JSAT)",
       fees: "₹2,00,000 /-",
       specialization: "Finance, Marketing, Human Resources, Operation Management Supply Chain",
-      image: "/bba.jpeg",
+      image: "/images/bba.jpeg",
     },
     {
       course: "B.Sc in Psycology",
@@ -63,7 +63,7 @@ const OPJindal = () => {
       eligibility: "10+2 Pass, If less than 50%: Must clear JSAT (min 50%) or submit, SAT/ACT/LNAT-UK score or complete a JGU MOOC",
       fees: "₹3,00,000 /-",
       
-      image: "/op-psycology.png",
+      image: "/images/op-psycology.png",
     },
     
   ];
@@ -74,42 +74,42 @@ const OPJindal = () => {
       duration: "1 Years(4 terms)",
       eligibility: "A Bachelor’s degree, Active involvement as an entrepreneurial family member ",
       fees: "₹2,75,000/-",
-      image: "/op-masters1.png",
+      image: "/images/op-masters1.png",
     },
     {
       course: "MA in Teaching English to Speakers of Other Lnaguages(TESOL)",
       duration: "12 Months(3 Trimester)",
       eligibility: "Bachelor’s degree from any recognized university with at least 50% marks Govt. Issued ID Proof (Passport for international applicants)",
       fees: "₹2,50,000/- ",
-      image: "/op-masters2.png",
+      image: "/images/op-masters2.png",
     },
     {
       course: "M.Sc in Environmental chnage and Sustainability",
       duration: "12 Months(4 Terms)",
       eligibility: "Bachelor’s degree from any recognized university with at least 50% marks Govt. Issued ID Proof (Passport for international applicants)",
       fees: "₹2,50,000/-",
-      image: "/op-masters3.png",
+      image: "/images/op-masters3.png",
     },
     {
       course: "MA Public Policy",
       duration: "12-24 Months",
       eligibility: "An undergraduate degree in any discipline from any recognised university in India or abroad.",
       fees: "₹3,00,000/-",
-      image: "/op-masters4.png",
+      image: "/images/op-masters4.png",
     },
     {
       course: "MBA in Business Analytics",
       duration: "12-24 Months",
       eligibility: "The eligibility criteria for the online MBA in Business Analytics programme require a bachelor’s degree from a recognised university in India. A minimum of 50% marks in any discipline is required for graduation.",
       fees: "₹2,00,000/-",
-      image: "/op-masters5.png",
+      image: "/images/op-masters5.png",
     },
     {
       course: "MBA in Business Law",
       duration: "12 Months",
       eligibility: "Bachelor's degree in any discipline with a minimum 50% aggregate score from a recognized university.  ",
       fees: "₹3,00,000/-",
-      image: "/mba.jpeg",
+      image: "/images/mba.jpeg",
     },
     
   ];
@@ -135,7 +135,7 @@ const OPJindal = () => {
             </p>
           </div>
           <motion.img
-            src="/opjindal.png"
+            src="/images/opjindal.png"
             alt="OP Jindal University"
             className="rounded-xl shadow-lg w-full h-auto"
             initial={{ opacity: 0, y: 50 }}
@@ -195,9 +195,9 @@ const OPJindal = () => {
       <section className="py-10 bg-white">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
         <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <img src="/ugc.png" alt="UGC" className="h-16 object-contain" />
-          <img src="/naac.png" alt="NAAC" className="h-16 object-contain" />
-          <img src="/aicte.png" alt="AICTE" className="h-16 object-contain" />
+          <img src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
+          <img src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
+          <img src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
          
         </div>
       </section>
@@ -225,7 +225,7 @@ const OPJindal = () => {
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
-            <img src="/op-certificate.png" alt="OP Jindal Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <img src="/images/op-certificate.png" alt="OP Jindal Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
           </div>
           <div className="flex-1 text-white">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">Get Certified from OP Jindal University</h2>
@@ -250,30 +250,30 @@ const OPJindal = () => {
   </div>
   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
     {[
-      "/aditya-birla.png",
-      "/airtel.png",
-      "/aurobindo.png",
-      "/bajaj-allianz.png",
-      "/bharti-airtel.png",
-      "/bosch.png",
-      "/cipla.png",
-      "/coca-cola.png",
-      "/cyient.png",
-      "/diageo.png",
-      "/ey.png",
-      "/fedex.png",
-      "/hero.png",
-      "/himalaya.png",
-      "/hinduja.png",
-      "/icici.png",
-      "/iifl.png",
-      "/india-mart.png",
-      "/infosys.png",
-      "/maruti.png",
-      "/nestle.png",
-      "/oyo.png",
-      "/pepsico.png",
-      "/samsung.png",
+      "/images/aditya-birla.png",
+      "/images/airtel.png",
+      "/images/aurobindo.png",
+      "/images/bajaj-allianz.png",
+      "/images/bharti-airtel.png",
+      "/images/bosch.png",
+      "/images/cipla.png",
+      "/images/coca-cola.png",
+      "/images/cyient.png",
+      "/images/diageo.png",
+      "/images/ey.png",
+      "/images/fedex.png",
+      "/images/hero.png",
+      "/images/himalaya.png",
+      "/images/hinduja.png",
+      "/images/icici.png",
+      "/images/iifl.png",
+      "/images/india-mart.png",
+      "/images/infosys.png",
+      "/images/maruti.png",
+      "/images/nestle.png",
+      "/images/oyo.png",
+      "/images/pepsico.png",
+      "/images/samsung.png",
       
     ].map((src, i) => (
       <div

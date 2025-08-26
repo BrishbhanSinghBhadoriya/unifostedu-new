@@ -1,6 +1,9 @@
 'use client';
 
 import React from 'react';
+// import { useNavigate } from 'react-router-dom';
+// import { Helmet } from 'react-helmet';
+import EnquireCard from '@/components/EnquireCard';
 
 import {
   FaBookOpen,
@@ -13,38 +16,6 @@ import {
   FaClipboardCheck,
 } from "react-icons/fa";
 
-const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
-//  const navigate = useNavigate();
-  const university = "Jain University";
-
-  const handleClick = () => {
-//    navigate(`/enquiry?university=${encodeURIComponent(university)}&course=${encodeURIComponent(course)}`);
-  };
-
-  return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition duration-300">
-      <img src={image} alt={course} className="h-40 w-full object-cover sm:h-48" />
-      <div className="p-4 flex-1 flex flex-col justify-between">
-        <div>
-          <h3 className="text-lg font-semibold text-gray-800 mb-2">{course}</h3>
-          <p className="text-sm text-gray-600 mb-1"><strong>Duration:</strong> {duration}</p>
-          <p className="text-sm text-gray-600"><strong>Eligibility:</strong> {eligibility}</p>
-          {fees && <p className="text-sm text-gray-600"><strong>Fees:</strong> {fees}</p>}
-          {specialization && <p className="text-sm text-gray-600"><strong>Specialization:</strong> {specialization}</p>}
-        </div>
-        <div className="mt-4">
-          <button
-            onClick={handleClick}
-            className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-center block font-semibold hover:opacity-90 transition w-full"
-          >
-            Enquire Now
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const Jain = () => {
   const ugCourses = [
     {
@@ -53,7 +24,7 @@ const Jain = () => {
       eligibility: "10+2 Pass",
       fees: "1,95,000",
       specialization: "Online Bachelor of Business Administration, Digital Marketing, Healthcare Management, Data Science and Analytics",
-      image: "/bba.jpeg",
+      image: "/images/bba.jpeg",
     },
      {
       course: "Bachelor of Computer Applications (BCA)",
@@ -61,7 +32,7 @@ const Jain = () => {
       eligibility: "10+2 Pass",
       fees: "1,35,000 -1,65,000",
       specialization: "Computer Science and IT, Data Science and Analytics, Cyber Security, Artificial Intelligence, Cloud Computing",
-      image: "/bca.jpeg",
+      image: "/images/bca.jpeg",
     },
     {
       course: "Bachelor of Commerce (B.Com)",
@@ -69,7 +40,7 @@ const Jain = () => {
       eligibility: "10+2 Pass",
       fees : "1,27,500",
       specialization: "Online Bachelor of Commerce, Corporate Accounting",
-      image: "/bcom.jpeg",
+      image: "/images/bcom.jpeg",
     },
  
   ];
@@ -84,7 +55,7 @@ const Jain = () => {
       fees: "1,96,000 - 2,16,000 ",
       specialization: "Human Resource Management and Finance, Finance and Marketing,Marketing and Human Resource Management,Marketing and Business Analytics,Finance and Business Analytics, Human Resource and Business Analytics, Project Management, Retail Management and Quick Commerce, ,Artificial Intelligence  Banking and Finance, 15 other field,",
 
-      image: "/mba.jpeg",
+      image: "/images/mba.jpeg",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -93,7 +64,7 @@ const Jain = () => {
       fees: "1,60,000",
       specialization: "DevOps, Natural Language Processing & Large Language Models Development, Computer Science and IT, Data Analytics, Cyber Security, Full Stack Development, Cloud Computing, Data Science, Artificial Intelligence" , 
 
-      image: "/mca1.jpeg",
+      image: "/images/mca1.jpeg",
     },
     {
       course: "Master of Commerce (M.Com)",
@@ -101,7 +72,7 @@ const Jain = () => {
       eligibility: "Graduation in Commerce",
       fees: "1,10,000",
       specialization: "Accounting and Finance, Professional Accounting and Finance (Accredited by CPA, US)", 
-      image: "/m.com.jpeg",
+      image: "/images/m.com.jpeg",
     },
     {
       course: "Master of Arts (MA)",
@@ -109,7 +80,7 @@ const Jain = () => {
       eligibility: "Graduation",
       fees: "190,000",
       specialization: "Jainology in Comparative Religion and Philosophy, English, Economics, Public Policy",
-      image: "/ma1.jpeg",
+      image: "/images/ma1.jpeg",
     },
   ];
 
@@ -135,7 +106,7 @@ const Jain = () => {
             
           </div>
           <div className="md:w-1/2">
-            <img src="/jain.png" alt="Jain University" className="w-full rounded-xl shadow-lg" />
+            <img src="/images/jain.png" alt="Jain University" className="w-full rounded-xl shadow-lg" />
           </div>
         </div>
       </section>
@@ -156,9 +127,9 @@ const Jain = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">Undergraduate Courses</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {ugCourses.map((item, index) => (
-              <EnquireCard key={index} {...item} />
-            ))}
+                          {ugCourses.map((item, index) => (
+                <EnquireCard key={index} {...item} universityName="Jain University" />
+              ))}
           </div>
         </div>
       </section>
@@ -168,9 +139,9 @@ const Jain = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">Postgraduate Courses</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {pgCourses.map((item, index) => (
-              <EnquireCard key={index} {...item} />
-            ))}
+                          {pgCourses.map((item, index) => (
+                <EnquireCard key={index} {...item} universityName="Jain University" />
+              ))}
           </div>
         </div>
       </section>
@@ -235,16 +206,16 @@ const Jain = () => {
     Recognized & Accredited By
   </h2>
   <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-    <img src="/ugc.png" alt="UGC" className="h-16 object-contain" />
-    <img src="/aicte.png" alt="AICTE" className="h-16 object-contain" />
-    <img src="/naac.png" alt="NAAC" className="h-16 object-contain" />
-    <img src="/nirf.png" alt="NIRF" className="h-16 object-contain" />
-    <img src="/wes.png" alt="WES" className="h-16 object-contain" />
-    <img src="/aiu.png" alt="AIU" className="h-16 object-contain" />
-    <img src="/careers.webp" alt="CARRES" className="h-16 object-contain" />
-    <img src="/auap.webp" alt="AUAP" className="h-16 object-contain" />
-    <img src="/ksurf.webp" alt="KSURF" className="h-16 object-contain" />
-    <img src="/recogin.webp" alt="RECOGIN" className="h-16 object-contain" />
+    <img src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
+    <img src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
+    <img src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
+    <img src="/images/nirf.png" alt="NIRF" className="h-16 object-contain" />
+    <img src="/images/wes.png" alt="WES" className="h-16 object-contain" />
+    <img src="/images/aiu.png" alt="AIU" className="h-16 object-contain" />
+    <img src="/images/careers.webp" alt="CARRES" className="h-16 object-contain" />
+    <img src="/images/auap.webp" alt="AUAP" className="h-16 object-contain" />
+    <img src="/images/ksurf.webp" alt="KSURF" className="h-16 object-contain" />
+    <img src="/images/recogin.webp" alt="RECOGIN" className="h-16 object-contain" />
     
     
 
@@ -309,7 +280,7 @@ const Jain = () => {
     {/* Certificate Image */}
     <div className="flex-1">
       <img
-        src="/jainonlined.webp"
+        src="/images/jainonlined.webp"
         alt="Amity University Certificate"
         className="w-full max-w-md mx-auto rounded shadow-lg"
       />
@@ -351,60 +322,60 @@ const Jain = () => {
     {/* Logo Cards */}
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/company.png" alt="Company" className="h-12 object-contain" />
+        <img src="/images/company.png" alt="Company" className="h-12 object-contain" />
       </div>
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/company1.png" alt="Microsoft" className="h-12 object-contain" />
+        <img src="/images/company1.png" alt="Microsoft" className="h-12 object-contain" />
       </div>
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/company9.jpg" alt="Company 9" className="h-12 object-contain" />
+        <img src="/images/company9.jpg" alt="Company 9" className="h-12 object-contain" />
       </div>
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/com10.png" alt="Company 10" className="h-12 object-contain" />
+        <img src="/images/com10.png" alt="Company 10" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/companany4.png" alt="Company4" className="h-12 object-contain" />
+        <img src="/images/companany4.png" alt="Company4" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/company6.png" alt="Company 6" className="h-12 object-contain" />
+        <img src="/images/company6.png" alt="Company 6" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/companany5.png" alt="Companany5" className="h-12 object-contain" />
+        <img src="/images/companany5.png" alt="Companany5" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/adove.png" alt="Adove" className="h-12 object-contain" />
+        <img src="/images/adove.png" alt="Adove" className="h-12 object-contain" />
       </div>
             
 
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/3.webp" alt="Samsung3" className="h-12 object-contain" />
+        <img src="/images/3.webp" alt="Samsung3" className="h-12 object-contain" />
       </div>
 
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/4.webp" alt="Samsung4" className="h-12 object-contain" />
+        <img src="/images/4.webp" alt="Samsung4" className="h-12 object-contain" />
       </div>
 
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/5.webp" alt="Samsung5" className="h-12 object-contain" />
+        <img src="/images/5.webp" alt="Samsung5" className="h-12 object-contain" />
       </div>
 
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/6.webp" alt="Samsung6" className="h-12 object-contain" />
+        <img src="/images/6.webp" alt="Samsung6" className="h-12 object-contain" />
       </div>
 
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/7.webp" alt="Samsung7" className="h-12 object-contain" />
+        <img src="/images/7.webp" alt="Samsung7" className="h-12 object-contain" />
       </div>
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/8.webp" alt="Samsung8" className="h-12 object-contain" />
-      </div>
-
-      <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/9.webp" alt="Samsung9" className="h-12 object-contain" />
+        <img src="/images/8.webp" alt="Samsung8" className="h-12 object-contain" />
       </div>
 
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <img src="/samsung.png" alt="Samsung" className="h-12 object-contain" />
+        <img src="/images/9.webp" alt="Samsung9" className="h-12 object-contain" />
+      </div>
+
+      <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
+        <img src="/images/samsung.png" alt="Samsung" className="h-12 object-contain" />
       </div>
       {/* Add more cards here as needed */}
     </div>

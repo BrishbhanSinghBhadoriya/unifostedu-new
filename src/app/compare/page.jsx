@@ -25,7 +25,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'amity-university-online',
     name: 'Amity University Online',
-    logo: '/amitylogo.jpg',
+            logo: '/images/amity.png',
     location: 'Noida, Uttar Pradesh',
     ranking: 'Top 10',
     established: '2005',
@@ -45,8 +45,8 @@ const RAW_UNIVERSITIES = [
   },
   {
     key: 'manipal-university-online',
-    name: 'Manipal University Online',
-    logo: '/manipallogo.jpg',
+    name: 'Online Manipal University',
+            logo: '/images/manipal.png',
     location: 'Manipal, Karnataka',
     ranking: 'Top 5',
     established: '1953',
@@ -65,16 +65,56 @@ const RAW_UNIVERSITIES = [
     classType: 'Live + Self-paced',
   },
   {
+    key: 'sikkim-manipal-university',
+    name: 'Sikkim Manipal University',
+    logo: '/smu-uni.jpg',
+    location: 'Gangtok, Sikkim',
+    established: '1995',
+    fee: '₹0.90L - ₹1.80L',
+    courses: ['MBA', 'BBA', 'BCA', 'MCA', 'M.Com', 'B.Com'],
+    features: ['UGC recognized', 'NAAC A+ accreditation', 'Industry partnerships', 'Placement assistance'],
+    approvals: ['UGC', 'NAAC A+'],
+    rating: 4.3,
+    eligibility: 'Graduation in any stream',
+    nirfRank: 'N/A',
+    naacGrade: 'A+',
+    placementSupport: true,
+    wesApproved: true,
+    emiOption: true,
+    examMode: 'Online',
+    classType: 'Live + Self-paced',
+  },
+  {
+    key: 'uttaranchal-university',
+    name: 'Uttaranchal University',
+    logo: '/uu-uni.webp',
+    location: 'Dehradun, Uttarakhand',
+    established: '2002',
+    fee: '₹0.85L - ₹1.65L',
+    courses: ['MBA', 'BBA', 'BCA', 'MCA', 'M.Com', 'B.Com'],
+    features: ['UGC recognized', 'NAAC accreditation', 'Industry partnerships', 'Placement assistance'],
+    approvals: ['UGC', 'NAAC'],
+    rating: 4.2,
+    eligibility: 'Graduation in any stream',
+    nirfRank: 'N/A',
+    naacGrade: 'A',
+    placementSupport: true,
+    wesApproved: true,
+    emiOption: true,
+    examMode: 'Online',
+    classType: 'Live + Self-paced',
+  },
+  {
     key: 'nmims',
-    name: 'NMIMS',
-    logo: '/nmims.png',
+    name: 'NMIMS University',
+            logo: '/images/nmims.png',
     location: 'Mumbai, Maharashtra',
     established: '1981',
     fee: '₹0.94L - ₹2.20L',
-    courses: ['MBA', 'BBA', 'M.Com'],
-    features: ['Industry connect', 'Placement assistance', 'Quality education'],
+    courses: ['MBA', 'BBA', 'M.Com', 'MA', 'MCA'],
+    features: ['Industry connect', 'Placement assistance', 'Quality education', 'NAAC A+'],
     approvals: ['UGC', 'NAAC A+'],
-    rating: 4.5,
+    rating: 4.7,
     eligibility: '10+2,Graduation in any stream',
     nirfRank: 21,
     naacGrade: 'A+',
@@ -86,13 +126,13 @@ const RAW_UNIVERSITIES = [
   },
   {
     key: 'lovely-professional-university-online',
-    name: 'Lovely Professional University Online',
-    logo: '/lpu.png',
-    location: 'Jalandhar,Punjab',
+    name: 'Lovely Professional University',
+            logo: '/images/lpu.png',
+    location: 'Jalandhar, Punjab',
     established: '2005',
     fee: '₹0.80L - ₹2.0L',
     courses: ['MBA', 'BBA', 'MCA', 'BCA', 'M.Com', 'BA'],
-    features: ['Placement assistance', 'EMI option', 'WES approved'],
+    features: ['Placement assistance', 'EMI option', 'WES approved', 'NAAC A++'],
     approvals: ['UGC', 'NAAC A++'],
     rating: 4.1,
     eligibility: '10+2,Graduation in any stream',
@@ -106,13 +146,13 @@ const RAW_UNIVERSITIES = [
   },
   {
     key: 'university-of-petroleum-and-energy-studies-online',
-    name: 'University of Petroleum and Energy Studies Online',
-    logo: '/upes.png',
+    name: 'Upes Online',
+            logo: '/images/upes.png',
     location: 'Dehradun, Uttarakhand',
     established: '2003',
     fee: '₹1.50L - ₹1.75L',
     courses: ['MBA', 'BBA', 'MCA', 'BCA', 'M.Com'],
-    features: ['Placement support', 'Industry focused'],
+    features: ['Placement support', 'Industry focused', 'Energy sector expertise'],
     approvals: ['UGC', 'AICTE', 'NAAC'],
     rating: 4.4,
     eligibility: '10+2,Graduation in any stream',
@@ -126,13 +166,13 @@ const RAW_UNIVERSITIES = [
   },
   {
     key: 'dr-dy-patil-online',
-    name: 'Dr. DY Patil Online',
-    logo: '/dypatil.png',
+    name: 'Dr. D Y Patil',
+            logo: '/images/dypatil.png',
     location: 'Pune, Maharashtra',
     established: '2003',
     fee: '₹1.45L - ₹1.90L',
     courses: ['MBA', 'BBA', 'MCA', 'BCA', 'M.Com'],
-    features: ['Placement support', 'EMI options', 'WES approved'],
+    features: ['Placement support', 'EMI options', 'WES approved', 'Industry connect'],
     approvals: ['UGC', 'AICTE', 'NAAC'],
     rating: 4.4,
     eligibility: '10+2,Graduation in any stream',
@@ -147,7 +187,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'sharda-university-online',
     name: 'Sharda University Online',
-    logo: '/sharda.png',
+            logo: '/images/sharda.png',
     location: 'Greater Noida, Uttar Pradesh',
     established: '2009',
     fee: '₹0.8L - ₹1.30L',
@@ -166,13 +206,13 @@ const RAW_UNIVERSITIES = [
   },
   {
     key: 'jain-university-online',
-    name: 'Jain University Online',
-    logo: '/jain.png',
+    name: 'Jain University',
+            logo: '/images/jain.png',
     location: 'Bengaluru, Karnataka',
     established: '1990',
     fee: '1.05L - ₹2.98L',
     courses: ['MBA', 'BBA', 'MCA', 'BCA'],
-    features: ['Modern curriculum', 'Industry projects', 'Career services'],
+    features: ['Modern curriculum', 'Industry projects', 'Career services', 'NAAC A++'],
     approvals: ['UGC', 'NAAC A++'],
     rating: 4.5,
     eligibility: '10+2,Graduation in any stream',
@@ -187,17 +227,77 @@ const RAW_UNIVERSITIES = [
   {
     key: 'chandigarh-university-online',
     name: 'Chandigarh University Online',
-    logo: '/cu-online.png',
+            logo: '/images/chandigarh.jpg',
     location: 'Chandigarh, Punjab',
     established: '2012',
     fee: '0.75L - ₹1.58L',
     courses: ['MBA', 'BBA', 'MCA', 'BCA'],
-    features: ['Modern curriculum', 'Industry projects', 'Career services'],
+    features: ['Modern curriculum', 'Industry projects', 'Career services', 'NAAC A+'],
     approvals: ['UGC', 'NAAC A+'],
     rating: 4.2,
     eligibility: '10+2,Graduation in any stream',
     nirfRank: 36,
     naacGrade: 'A+',
+    placementSupport: true,
+    wesApproved: true,
+    emiOption: true,
+    examMode: 'Online',
+    classType: 'Live + Self-paced',
+  },
+  {
+    key: 'op-jindal-university',
+    name: 'OP Jindal University',
+    logo: '/opjindal.png',
+    location: 'Sonipat, Haryana',
+    established: '2009',
+    fee: '₹1.20L - ₹2.50L',
+    courses: ['MBA', 'BBA', 'BCA', 'MCA'],
+    features: ['Global perspective', 'Industry partnerships', 'Career services', 'International focus'],
+    approvals: ['UGC', 'NAAC'],
+    rating: 4.6,
+    eligibility: '10+2,Graduation in any stream',
+    nirfRank: 'N/A',
+    naacGrade: 'A',
+    placementSupport: true,
+    wesApproved: true,
+    emiOption: true,
+    examMode: 'Online',
+    classType: 'Live + Self-paced',
+  },
+  {
+    key: 'shoolini-university-online',
+    name: 'Shoolini University Online',
+    logo: '/shoolini.jpg',
+    location: 'Solan, Himachal Pradesh',
+    established: '2009',
+    fee: '₹0.90L - ₹1.80L',
+    courses: ['MBA', 'BBA', 'BCA', 'MCA', 'M.Com', 'B.Com'],
+    features: ['Research focus', 'Industry connect', 'Career guidance', 'NAAC A+'],
+    approvals: ['UGC', 'NAAC A+'],
+    rating: 4.2,
+    eligibility: '10+2,Graduation in any stream',
+    nirfRank: 'N/A',
+    naacGrade: 'A+',
+    placementSupport: true,
+    wesApproved: true,
+    emiOption: true,
+    examMode: 'Online',
+    classType: 'Live + Self-paced',
+  },
+  {
+    key: 'vivekananda-global-university-online',
+    name: 'Vivekananda Global University Online',
+    logo: '/vgu1.png',
+    location: 'Jaipur, Rajasthan',
+    established: '2012',
+    fee: '₹0.85L - ₹1.65L',
+    courses: ['MBA', 'BBA', 'BCA', 'MCA', 'M.Com', 'B.Com'],
+    features: ['Quality education', 'Research projects', 'Career support', 'Industry exposure'],
+    approvals: ['UGC', 'NAAC'],
+    rating: 4.1,
+    eligibility: '10+2,Graduation in any stream',
+    nirfRank: 'N/A',
+    naacGrade: 'A',
     placementSupport: true,
     wesApproved: true,
     emiOption: true,
@@ -227,6 +327,26 @@ function CompareContent() {
       ['narsee-monjee-institute-of-management-studies', 'nmims'],
       ['narsee-monjee', 'nmims'],
       ['nmims-online', 'nmims'],
+      ['sikkim-manipal', 'sikkim-manipal-university'],
+      ['smu', 'sikkim-manipal-university'],
+      ['uttaranchal', 'uttaranchal-university'],
+      ['uu', 'uttaranchal-university'],
+      ['op-jindal', 'op-jindal-university'],
+      ['jindal', 'op-jindal-university'],
+      ['shoolini', 'shoolini-university-online'],
+      ['vivekananda-global', 'vivekananda-global-university-online'],
+      ['vgu', 'vivekananda-global-university-online'],
+      ['lovely-professional', 'lovely-professional-university-online'],
+      ['lpu', 'lovely-professional-university-online'],
+      ['upes', 'university-of-petroleum-and-energy-studies-online'],
+      ['petroleum-energy', 'university-of-petroleum-and-energy-studies-online'],
+      ['dy-patil', 'dr-dy-patil-online'],
+      ['dypatil', 'dr-dy-patil-online'],
+      ['amity', 'amity-university-online'],
+      ['manipal', 'manipal-university-online'],
+      ['chandigarh', 'chandigarh-university-online'],
+      ['jain', 'jain-university-online'],
+      ['sharda', 'sharda-university-online'],
     ]);
 
     const list = [];
@@ -245,6 +365,9 @@ function CompareContent() {
     }
     return list;
   }, [selectedKeys]);
+
+  // Add this line to make selectedKeys available in the component
+  const selectedKeysArray = selectedKeys;
 
   useEffect(() => {
     if (selectedUniversities.length < 2) {
@@ -283,20 +406,86 @@ function CompareContent() {
 
       {enquiryDone && (
         <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <div className="mb-6 flex items-center justify-between">
-            <Button
-              variant="outline"
-              onClick={() => router.back()}
-              className="flex items-center gap-2 border-[#00ffe0] text-[#00ffe0] hover:bg-[#00ffe0] hover:text-[#001e3c]"
-            >
-              <FaArrowLeft /> Back
-            </Button>
-            <div className="text-right">
-              <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Compare Online Universities</h1>
-              <p className="text-gray-600">Selected: {selectedUniversities.length}</p>
-            </div>
-          </div>
+                     {/* Header */}
+           <div className="mb-6 flex items-center justify-between">
+             <Button
+               variant="outline"
+               onClick={() => router.back()}
+               className="flex items-center gap-2 border-[#00ffe0] text-[#00ffe0] hover:bg-[#00ffe0] hover:text-[#001e3c]"
+             >
+               <FaArrowLeft /> Back
+             </Button>
+             <div className="text-right">
+               <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Compare Online Universities</h1>
+               <p className="text-gray-600">Selected: {selectedUniversities.length} of {RAW_UNIVERSITIES.length} available</p>
+             </div>
+           </div>
+
+           {/* All Available Universities Section */}
+           <div className="mb-8">
+             <h2 className="text-xl font-bold text-gray-800 mb-4">Select Universities to Compare</h2>
+             <p className="text-gray-600 mb-4">Click on any university below to add it to your comparison. You can compare up to 4 universities at once.</p>
+             
+             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+               {RAW_UNIVERSITIES.map((university) => {
+                 const isSelected = selectedUniversities.some(u => u.key === university.key);
+                 return (
+                   <div
+                     key={university.key}
+                     onClick={() => {
+                       if (isSelected) {
+                         // Remove from selection
+                         const newKeys = selectedKeysArray.filter(k => k !== university.key);
+                         router.push(`/compare?u=${newKeys.join(',')}`);
+                       } else if (selectedUniversities.length < 4) {
+                         // Add to selection
+                         const newKeys = [...selectedKeysArray, university.key];
+                         router.push(`/compare?u=${newKeys.join(',')}`);
+                       }
+                     }}
+                     className={`p-4 rounded-lg border-2 cursor-pointer transition-all hover:shadow-md ${
+                       isSelected 
+                         ? 'border-[#00ffe0] bg-[#00ffe0]/10' 
+                         : 'border-gray-200 hover:border-[#00ffe0]/50'
+                     }`}
+                   >
+                     <div className="text-center">
+                       <div className="w-12 h-12 mx-auto mb-2 rounded-lg overflow-hidden">
+                         <img 
+                           src={university.logo} 
+                           alt={university.name} 
+                           className="w-full h-full object-contain"
+                         />
+                       </div>
+                       <h3 className="font-semibold text-sm text-gray-800 mb-1 line-clamp-2">
+                         {university.name}
+                       </h3>
+                       <div className="flex items-center justify-center gap-1 mb-2">
+                         <FaStar className="text-yellow-500 text-xs" />
+                         <span className="text-xs text-gray-600">{university.rating}</span>
+                       </div>
+                       <div className="text-xs text-gray-500 mb-2">{university.location}</div>
+                       <div className="text-xs font-medium text-gray-700">{university.fee}</div>
+                       {isSelected && (
+                         <div className="mt-2">
+                           <Badge className="bg-[#00ffe0] text-[#001e3c] text-xs">
+                             Selected
+                           </Badge>
+                         </div>
+                       )}
+                     </div>
+                   </div>
+                 );
+               })}
+             </div>
+             
+             <div className="mt-4 text-center">
+               <p className="text-sm text-gray-600">
+                 Currently showing {selectedUniversities.length} selected universities. 
+                 {selectedUniversities.length < 2 && ' Select at least 2 universities to compare.'}
+               </p>
+             </div>
+           </div>
 
           {/* Comparison Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

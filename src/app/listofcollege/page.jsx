@@ -4,7 +4,7 @@ import Link from 'next/link';
 const colleges = [
   {
     name: "Amity University Online",
-    logo: "/amitylogo.jpg",
+    logo: "/images/amitylogo.jpg",
     ranking: "Top 10",
     location: "Noida, UP",
     fee: "₹1.2L - ₹2.5L",
@@ -13,7 +13,7 @@ const colleges = [
   },
   {
     name: "Manipal University Online",
-    logo: "/manipallogo.jpg",
+    logo: "/images/manipallogo.jpg",
     ranking: "Top 5",
     location: "Manipal, Karnataka",
     fee: "₹1.5L - ₹3L",
@@ -22,7 +22,7 @@ const colleges = [
   },
   {
     name: "Lovely Professional University Online",
-    logo: "/lpulogo.png",
+    logo: "/images/lpulogo.png",
     ranking: "Top 20",
     location: "Phagwara, Punjab",
     fee: "₹90K - ₹2L",
@@ -31,7 +31,7 @@ const colleges = [
   },
   {
     name: "UPES Online",
-    logo: "/upeslogo.png",
+    logo: "/images/upeslogo.png",
     ranking: "Top 15",
     location: "Dehradun, Uttarakhand",
     fee: "₹1.8L - ₹3.2L",
@@ -40,7 +40,7 @@ const colleges = [
   },
   {
     name: "NMIMS Online",
-    logo: "/nmimslogo.jpg",
+    logo: "/images/nmimslogo.jpg",
     ranking: "Top 8",
     location: "Mumbai, Maharashtra",
     fee: "₹2L - ₹3.5L",
@@ -49,7 +49,7 @@ const colleges = [
   },
   {
     name: "Sharda University Online",
-    logo: "/shardalogo.png",
+    logo: "/images/shardalogo.png",
     ranking: "Top 30",
     location: "Greater Noida, UP",
     fee: "₹80K - ₹1.5L",
@@ -58,7 +58,7 @@ const colleges = [
   },
   {
     name: "DY Patil Online",
-    logo: "/dypatillogo.png",
+    logo: "/images/dypatillogo.png",
     ranking: "Top 25",
     location: "Navi Mumbai, Maharashtra",
     fee: "₹1.1L - ₹2.2L",
@@ -67,7 +67,7 @@ const colleges = [
   },
   {
     name: "Jain University Online",
-    logo: "/jainlogo.png",
+    logo: "/images/jainlogo.png",
     ranking: "Top 12",
     location: "Bangalore, Karnataka",
     fee: "₹1.3L - ₹2.6L",
@@ -76,7 +76,7 @@ const colleges = [
   },
   {
     name: "VGU Online",
-    logo: "/vgulogo.png",
+    logo: "/images/vgulogo.png",
     ranking: "Top 35",
     location: "Jaipur, Rajasthan",
     fee: "₹70K - ₹1.3L",
@@ -85,7 +85,7 @@ const colleges = [
   },
   {
     name: "Chandigarh University Online",
-    logo: "/chandigarh.jpg",
+    logo: "/images/chandigarh.jpg",
     ranking: "Top 18",
     location: "Chandigarh",
     fee: "₹1L - ₹2L",
@@ -94,7 +94,7 @@ const colleges = [
   },
   {
     name: "OP Jindal University",
-    logo: "/opjindal.png",
+    logo: "/images/opjindal.png",
     ranking: "Top 22",
     location: "Raigarh, Chhattisgarh",
     fee: "₹1.2L - ₹2.3L",
@@ -103,7 +103,7 @@ const colleges = [
   },
   {
     name: "Shoolini University Online",
-    logo: "/shoolini.jpg",
+    logo: "/images/shoolini.jpg",
     ranking: "Top 28",
     location: "Solan, Himachal Pradesh",
     fee: "₹75K - ₹1.4L",

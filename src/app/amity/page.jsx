@@ -12,38 +12,7 @@ import {
   FaClipboardCheck,
 } from "react-icons/fa";
 import { motion } from 'framer-motion';
-
-const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
-//   const navigate = useNavigate();
-   const university = "Amity University";
-
-   const handleClick = () => {
-//     navigate(`/enquiry?university=${encodeURIComponent(university)}&course=${encodeURIComponent(course)}`);
-  };
-
-  return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition duration-300">
-      <img src={image} alt={course} className="h-40 w-full object-cover sm:h-48" />
-      <div className="p-4 flex-1 flex flex-col justify-between">
-        <div>
-          <h3 className="text-lg font-semibold text-gray-800 mb-2">{course}</h3>
-          <p className="text-sm text-gray-600 mb-1"><strong>Duration:</strong> {duration}</p>
-          <p className="text-sm text-gray-600"><strong>Eligibility:</strong> {eligibility}</p>
-          {fees && <p className="text-sm text-gray-600"><strong>Fees:</strong> {fees}</p>}
-          {specialization && <p className="text-sm text-gray-600"><strong>Specialization:</strong> {specialization}</p>}
-        </div>
-        <div className="mt-4">
-          <button
-            onClick={handleClick}
-            className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-center block font-semibold hover:opacity-90 transition w-full"
-          >
-            Enquire Now
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
+import EnquireCard from '@/components/EnquireCard';
 
 const Amity = () => {
   const ugCourses = [
@@ -53,7 +22,7 @@ const Amity = () => {
       eligibility: "10+2 Pass",
       fees: "1,65,000- 2,25,000",
       specialization: "BBA (General,Data Analytics,   Travel And Tourism Management, Professional Certificate in Business Analytics) ",
-      image: "/bba.jpeg",
+      image: "/images/bba.jpeg",
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
@@ -61,7 +30,7 @@ const Amity = () => {
       eligibility: "10+2 Pass",
       fees: "1,50,000 - 2,25,000",
       specialization: " BCA, (General, Cloud  and Security, Software Engineering,  Data Science, Data Engineering(HCL Tech), Data Analytics,Software Engineering(HCL Tech))",
-      image: "/bca.jpeg",
+      image: "/images/bca.jpeg",
     },
     {
       course: "Bachelor of Commerce (B.Com)",
@@ -69,7 +38,7 @@ const Amity = () => {
       eligibility: "10+2 Pass",
       fees: "99,000 - 2,50,000",
       specialization: "B,Com(General, Hons,International Finance & Accounting",
-      image: "/bcom.jpeg",
+      image: "/images/bcom.jpeg",
     },
     {
       course: "Bachelor of Arts (BA)",
@@ -77,7 +46,7 @@ const Amity = () => {
       eligibility: "10+2 Pass",
       fees: "99,000 - 1,70,000",
       specialization: "BA(Genral, Jornalism and Mass Communication, Native Languages(Kannada,Malayalam, Tamil, Telugu), Psychology, English, Sociology, Political Science,Economics)",
-      image: "/ba.jpeg",
+      image: "/images/ba.jpeg",
     },
   ];
 
@@ -88,7 +57,7 @@ const Amity = () => {
       eligibility: "Graduation",
       fees: "1,99,000 - 2,99,000",
       specialization: "MBA(General,Information Technology Management, Dual Specilization, Human Resource Analytics, Data Science, Business Analytics, International Business Management, Digital Enterpreneurship, Digital Marketing Management,Enterpreneurship & Leadership Management,Finance & Accounting Management,Hospitality Management,Global Finance Market,Insurance Management,Marketing & Sales Management,Petroleum & Natural Gas,Producation and Operations Management,Retail Management )",
-      image: "/mba.jpeg",
+      image: "/images/mba.jpeg",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -96,7 +65,7 @@ const Amity = () => {
       eligibility: "Graduation in BCA/B.Sc(IT)",
       fees: "170,000- 2,50,000",
       specialization: "MCA(General, Cyber Security, Blockchain Technology , Machine Learning and Artificial Intelligence, Augmented Reality and Virtual Reality, Software Engineering,",
-      image: "/mca1.jpeg",
+      image: "/images/mca1.jpeg",
     },
     {
       course: "Master of Commerce (M.Com)",
@@ -104,7 +73,7 @@ const Amity = () => {
       eligibility: "Graduation in Commerce",
       fees: "1,20,000",
       specialization: "General, Financial Management, Financial Technology",
-      image: "/m.com.jpeg",
+      image: "/images/m.com.jpeg",
     },
     {
       course: "Master of Arts (MA)",
@@ -112,7 +81,7 @@ const Amity = () => {
       eligibility: "Graduation",
       fees: "1,30,000 - 2,50,000",
       specialization: " MA(Psychology, Journalism and Mass Communication, Public Policy& Governance,English, Sociology",
-      image: "/ma1.jpeg",
+      image: "/images/ma1.jpeg",
     },
      {
       course: "Master of Science (M.Sc)",
@@ -120,7 +89,7 @@ const Amity = () => {
       eligibility: "Graduation ",
       fees: "2,50,000",
       specialization: "Data Science",
-      image: "/m.com.jpeg",
+      image: "/images/m.com.jpeg",
     },
   ];
 
@@ -132,7 +101,7 @@ const Amity = () => {
       eligibility: "10+2 With minimum 50%",
       fees: "3,45,800",
       specialization: "BBA + MBA",
-      image: "/mba.jpeg",
+      image: "/images/mba.jpeg",
     },
     {
       course: "BCA+ MCA",
@@ -140,7 +109,7 @@ const Amity = () => {
       eligibility: "10+2 With minimum 50%",
       fees: "3,04,000",
       specialization: "BCA+ MCA",
-      image: "/mca1.jpeg",
+      image: "/images/mca1.jpeg",
     },
     {
       course: "B.Com + MBA",
@@ -148,7 +117,7 @@ const Amity = () => {
       eligibility: "10+2 With minimum 50%",
       fees: "2,83,100 - 3,05,000",
       specialization: "B.Com + MBA",
-      image: "/m.com.jpeg",
+      image: "/images/m.com.jpeg",
     },
 
   ] 
@@ -156,74 +125,74 @@ const Amity = () => {
    {
   const highlights = [
     {
-      img: "/wasc.png",
+      img: "images/wasc.png",
       title: "WASC Accreditation (USA)",
       description:
         "Amity Online is India's only university accredited by the Western Association of Schools and Colleges — a distinguished recognition of global academic excellence.",
     },
     {
-      img: "/wes.png",
+      img: "images/wes.png",
       title: "WES Recognition",
       description:
         "Degrees recognised by World Education Services (WES) Canada & USA, enabling smoother pathways for higher studies and global career mobility.",
     },
     {
-      img: "/qs.png",
+      img: "images/qs.png",
       title: "QS Ranked Online MBA",
       description:
         "Amity Online offers India's only Online MBA ranked by QS under Asia Pacific Top 10 - a global recognition for academic strength, learner outcomes, and digital innovation.",
     },
     {
-      img: "/qaa.png",
+      img: "images/qaa.png",
       title: "QAA (UK) Accreditation",
       description:
         "Accredited by the UK's Quality Assurance Agency (QAA), assuring students of globally benchmarked academic quality.",
     },
     {
-      img: "/the.webp",
+      img: "images/the.webp",
       title: "Times Higher Education Employability Rankings",
       description:
         "Amity University is ranked among the best globally for graduate employability and employer reputation by Times Higher Education.",
     },
     {
-      img: "/pan-india.png",
+      img: "images/pan-india.png",
       title: "Pan-India Campus Access & Offline Events",
       description:
         "Enjoy access to all Amity campuses for events like orientation, mid-year meetups, on-campus connect and convocation - blending digital convenience with real-world connection.",
     },
     {
-      img: "/amigo.png",
+      img: "images/amigo.png",
       title: "Amigo: Learning On-the-Go",
       description:
         "The Amigo app makes learning seamless and mobile — attend live classes, track progress, access materials, and more on your schedule.",
     },
     {
-      img: "/ai-tutor.png",
+      img: "images/ai-tutor.png",
       title: "Prof. Ami: Your AI-Powered Personal Tutor",
       description:
         "Meet Prof. Ami — your always-on, AI mentor for instant doubt-solving, personalised learning tips, and smart academic support.",
     },
 
     {
-      img: "/indu-Certi.png",
+      img: "images/indu-Certi.png",
       title: "Industry Certifications for Better Employability",
       description:
         "Gain an edge with in-demand certifications from top industry bodies and partners — integrated within your program to boost your skills and CV.",
     },
     {
-      img: "/internship.png",
+      img: "images/internship.png",
       title: "Internship Opportunities",
       description:
         "Access curated internships with leading companies through our corporate network, helping you gain real-world experience and stand out in the job market.",
     },
     {
-      img: "/ai-application.png",
+      img: "images/ai-application.png",
       title: "AI-Powered Career Discovery Platform",
       description:
         "From mock interviews and resume building to job search and easy-apply tools — our AI-powered platform ensures you’re career-ready from day one.",
     },
     {
-      img: "/people.png",
+      img: "images/people.png",
       title: "beSocial App for Campus Life",
       description:
         "Your virtual student hub — the beSocial app lets you network, join clubs, attend events, and be part of a vibrant, online-first community.",
@@ -254,7 +223,7 @@ const Amity = () => {
             
           </div>
           <motion.img
-            src="/amitypic.png"
+            src="/images/amitypic.png"
             alt="Amity University"
             className="rounded-xl shadow-lg w-full h-auto"
             initial={{ opacity: 0, y: 50 }}
@@ -271,7 +240,7 @@ const Amity = () => {
           <div className="max-w-7xl mx-auto">
             <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">{section.title}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-              {section.list.map((item, index) => <EnquireCard key={index} {...item} />)}
+              {section.list.map((item, index) => <EnquireCard key={index} {...item} universityName="Amity University Online" />)}
             </div>
           </div>
         </section>
@@ -314,21 +283,21 @@ const Amity = () => {
       <section className="py-10 bg-white">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
         <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <img src="/ugc.png" alt="UGC" className="h-16 object-contain" />
-          <img src="/aicte.png" alt="AICTE" className="h-16 object-contain" />
+          <img src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
+          <img src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
           
            
-           <img src="/naac.png" alt="NAAC" className="h-16 object-contain" />
-           <img src="/nirf.png" alt="NIRF" className="h-16 object-contain" />
-           <img src="/wes.png" alt="WES" className="h-16 object-contain" />
-           <img src="/aiu.png" alt="AIU" className="h-16 object-contain" />
-          <img src="/acu.png" alt="CARRES" className="h-16 object-contain" />
+           <img src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
+           <img src="/images/nirf.png" alt="NIRF" className="h-16 object-contain" />
+           <img src="/images/wes.png" alt="WES" className="h-16 object-contain" />
+           <img src="/images/aiu.png" alt="AIU" className="h-16 object-contain" />
+          <img src="/images/acu.png" alt="CARRES" className="h-16 object-contain" />
          
-         <img src="/unwto.png" alt="UNWTO" className="h-16 object-contain" />
-         <img src="/recogin.webp" alt="RECOGIN" className="h-16 object-contain" />
-         <img src="/10.webp" alt="11" className="h-16 object-contain" />
-           <img src="/qaa.png" alt="QAA" className="h-16 object-contain" />
-           <img src="/11.png" alt="11" className="h-16 object-contain" />
+         <img src="/images/unwto.png" alt="UNWTO" className="h-16 object-contain" />
+         <img src="/images/recogin.webp" alt="RECOGIN" className="h-16 object-contain" />
+         <img src="/images/10.webp" alt="11" className="h-16 object-contain" />
+           <img src="/images/qaa.png" alt="QAA" className="h-16 object-contain" />
+           <img src="/images/11.png" alt="11" className="h-16 object-contain" />
         </div>
       </section>
      <section className="py-12 bg-white">
@@ -377,7 +346,7 @@ const Amity = () => {
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
-            <img src="/amicri.jpeg" alt="Amity University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <img src="/images/amicri.jpeg" alt="Amity University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
           </div>
           <div className="flex-1 text-white">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">Online Degree from Amity Online University</h2>
@@ -400,7 +369,7 @@ const Amity = () => {
           <p className="text-xl text-gray-600">Top hiring partners at Amity Online</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {["/company.png", "/company1.png", "/company9.jpg", "/com10.png", "/companany4.png", "/company6.png", "/companany5.png", "/adove.png", "/samsung.png","/3.webp",  "/4.webp",  "/5.webp",  "/6.webp",  "/7.webp",  "/8.webp",  "/9.webp",].map((src, i) => (
+          {["images/company.png", "images/company1.png", "images/company9.jpg", "images/com10.png", "images/companany4.png", "images/company6.png", "images/companany5.png", "images/adove.png", "images/samsung.png","images/3.webp",  "images/4.webp",  "images/5.webp",  "images/6.webp",  "images/7.webp",  "images/8.webp",  "images/9.webp",].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
               <img src={src} alt="Company" className="h-12 object-contain" />
             </div>
