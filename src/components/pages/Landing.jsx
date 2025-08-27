@@ -125,17 +125,9 @@ const UniversityLogoSlider = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 640) {
-        setItemsToShow(2);
-      } else if (window.innerWidth < 768) {
-        setItemsToShow(3);
-      } else if (window.innerWidth < 1024) {
-        setItemsToShow(4);
-      } else if (window.innerWidth < 1280) {
-        setItemsToShow(5);
-      } else {
+      
         setItemsToShow(6);
-      }
+      
     };
 
     handleResize();
@@ -269,7 +261,7 @@ const Landing = () => {
       <section className="relative text-white overflow-hidden">
         <div className="relative w-full">
           {/* Slides - Responsive aspect ratio */}
-          <div className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[85vh] xl:h-[90vh] bg-[#001e3c]">
+          <div className="relative w-full h-[20vh] sm:h-[70vh] md:h-[80vh] lg:h-[85vh] xl:h-[90vh] bg-[#001e3c]">
             {heroSlides.map((s, idx) => (
               <motion.div
                 key={idx}
@@ -322,7 +314,7 @@ const Landing = () => {
                                w-full sm:w-auto px-5 lg:px-6 py-3.5 lg:py-4 rounded-full 
                                text-sm sm:text-base lg:text-lg font-semibold
                                hover:bg-[#00c0b1]
-                               transition-colors duration-200 
+                               transition-colors duration-200 cursor-pointer 
                                shadow-md flex items-center justify-center gap-2"
                   >
                     <FaRocket className="text-sm sm:text-base lg:text-lg" />
@@ -334,9 +326,10 @@ const Landing = () => {
                     onClick={() => openModal("videoCall")}
                     className="w-full sm:w-auto px-5 lg:px-6 py-3.5 lg:py-4 rounded-full 
                                text-sm sm:text-base lg:text-lg font-semibold 
-                               bg-white/10 text-white border border-white/20
-                               hover:bg-white/15 
-                               transition-colors duration-200 
+                               text-white bg-gradient-to-r from-slate-900 to-indigo-800
+                               hover:from-slate-950 hover:to-indigo-900
+                               shadow-md hover:shadow-lg ring-1 ring-white/10 cursor-pointer
+                               transition-all duration-200 
                                flex items-center justify-center gap-2"
                   >
                     <FaVideo className="text-sm sm:text-base lg:text-lg" />
@@ -348,9 +341,10 @@ const Landing = () => {
                     onClick={() => openModal("homeDemo")}
                     className="w-full sm:w-auto px-5 lg:px-6 py-3.5 lg:py-4 rounded-full 
                                text-sm sm:text-base lg:text-lg font-semibold 
-                               bg-white/10 text-white border border-white/20
-                               hover:bg-white/15 
-                               transition-colors duration-200 
+                               text-white bg-gradient-to-r from-indigo-600 to-cyan-600
+                               hover:from-indigo-700 hover:to-cyan-700
+                               shadow-md hover:shadow-lg ring-1 ring-white/10 cursor-pointer
+                               transition-all duration-200 
                                flex items-center justify-center gap-2"
                   >
                     <FaMapMarkerAlt className="text-sm sm:text-base lg:text-lg" />
@@ -381,13 +375,13 @@ const Landing = () => {
                 <div className="grid grid-cols-2 gap-3">
                   <button 
                     onClick={() => openModal('videoCall')}
-                    className="px-5 py-3.5 rounded-full text-base font-semibold bg-white/10 text-white border border-white/20 hover:bg-white/15 transition-colors"
+                    className="px-5 py-3.5 rounded-full text-base font-semibold text-white bg-gradient-to-r  hover:shadow-lg ring-1 ring-white/10 transition-all"
                   >
                     Video Call
                   </button>
                   <button 
                     onClick={() => openModal('homeDemo')}
-                    className="px-5 py-3.5 rounded-full text-base font-semibold bg-white/10 text-white border border-white/20 hover:bg-white/15 transition-colors"
+                    className="px-5 py-3.5 rounded-full text-base font-semibold text-white bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-700 hover:to-cyan-700 shadow-md hover:shadow-lg ring-1 ring-white/10 transition-all"
                   >
                     Home Demo
                   </button>
@@ -397,7 +391,7 @@ const Landing = () => {
           </div>
 
           {/* Enhanced Dots - Responsive positioning */}
-          <div className="absolute inset-x-0 bottom-4 sm:bottom-6 md:bottom-8 flex items-center justify-center gap-2 sm:gap-3">
+          <div className="absolute inset-x-0 bottom-0 md:bottom-4 sm:bottom-6 md:bottom-8 flex items-center justify-center gap-2 sm:gap-3">
             {heroSlides.map((_, i) => (
               <button
                 key={i}
@@ -467,7 +461,7 @@ const Landing = () => {
             </TabsList>
 
             <TabsContent value="all">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-6">
                 {courses.map((course, index) => (
                   <motion.a
                     key={index}
@@ -476,24 +470,27 @@ const Landing = () => {
                     data-aos="fade-up"
                     data-aos-delay={index * 100}
                   >
-                    <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-5 hover:-translate-y-1 transition-all duration-200 shadow-sm hover:shadow group cursor-pointer hover:bg-slate-50/60 hover:border-gray-300 ring-0 hover:ring-2 hover:ring-[#00ffe0]/20">
-                      <div className={`bg-gradient-to-br ${course.color} w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-3 sm:mb-4 ring-1 ring-black/5 shadow-sm group-hover:scale-105 transition-transform duration-200`}>
-                        <course.icon className="text-xl sm:text-2xl text-white" />
-                      </div>
-                      <Badge className="mb-2 sm:mb-3 bg-[#00ffe0]/10 text-[#001e3c] ring-1 ring-[#00ffe0]/40 text-[11px] sm:text-xs font-medium">
-                        {course.tag}
-                      </Badge>
-                      <h3 className="text-base sm:text-lg font-semibold text-[#001e3c] mb-1.5">{course.title}</h3>
-                      <p className="text-xs sm:text-[13px] text-gray-600 mb-3 sm:mb-3.5 leading-relaxed">{course.desc}</p>
-                      <div className="mt-2 pt-3 border-t border-gray-100 flex items-center justify-between text-[11px] sm:text-xs text-gray-600">
-                        <span className="flex items-center gap-1">
-                          <FaClock className="text-[#00ffe0]" />
-                          {course.duration}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <FaUsers className="text-[#00ffe0]" />
-                          {course.students}
-                        </span>
+                    <div className="relative rounded-xl cursor-pointer overflow-hidden">
+                      <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-indigo-600 to-cyan-600 transform translate-y-full group-hover:translate-y-0 opacity-90 transition-transform duration-700 ease-out"></div>
+                      <div className="relative z-10 bg-white rounded-xl border border-gray-200 p-4 sm:p-5 shadow-sm transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-indigo-200 group-hover:translate-y-[-4px] group-hover:scale-[1.01] group-hover:bg-transparent group-hover:border-transparent">
+                        <div className={`bg-gradient-to-br ${course.color} w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-3 sm:mb-4 ring-1 ring-black/5 shadow-sm group-hover:scale-110 transition-transform duration-300`}>
+                          <course.icon className="text-xl sm:text-2xl text-white" />
+                        </div>
+                        <Badge className="mb-2 sm:mb-3 bg-[#00ffe0]/10 text-[#001e3c] ring-1 ring-[#00ffe0]/40 text-[11px] sm:text-xs font-medium group-hover:bg-white/10 group-hover:text-white group-hover:ring-white/40">
+                          {course.tag}
+                        </Badge>
+                        <h3 className="text-base sm:text-lg font-semibold text-[#001e3c] mb-1.5 group-hover:text-white">{course.title}</h3>
+                        <p className="text-xs sm:text-[13px] text-gray-600 mb-3 sm:mb-3.5 leading-relaxed group-hover:text-white/90">{course.desc}</p>
+                        <div className="mt-2 pt-3 border-t border-gray-100 flex items-center justify-between text-[11px] sm:text-xs text-gray-600 group-hover:text-white/90 group-hover:border-white/20">
+                          <span className="flex items-center gap-1">
+                            <FaClock className="text-[#00ffe0]" />
+                            {course.duration}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <FaUsers className="text-[#00ffe0]" />
+                            {course.students}
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </motion.a>
@@ -502,7 +499,7 @@ const Landing = () => {
             </TabsContent>
 
             <TabsContent value="ug">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-6">
                 {courses.filter(c => c.students === "UG").map((course, index) => (
                   <motion.a
                     key={index}
@@ -511,24 +508,27 @@ const Landing = () => {
                     data-aos="fade-up"
                     data-aos-delay={index * 100}
                   >
-                    <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-5 hover:-translate-y-1 transition-all duration-200 shadow-sm hover:shadow group cursor-pointer hover:bg-slate-50/60 hover:border-gray-300 ring-0 hover:ring-2 hover:ring-[#00ffe0]/20">
-                      <div className={`bg-gradient-to-br ${course.color} w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-3 sm:mb-4 ring-1 ring-black/5 shadow-sm group-hover:scale-105 transition-transform duration-200`}>
-                        <course.icon className="text-xl sm:text-2xl text-white" />
-                      </div>
-                      <Badge className="mb-2 sm:mb-3 bg-[#00ffe0]/10 text-[#001e3c] ring-1 ring-[#00ffe0]/40 text-[11px] sm:text-xs font-medium">
-                        {course.tag}
-                      </Badge>
-                      <h3 className="text-base sm:text-lg font-semibold text-[#001e3c] mb-1.5">{course.title}</h3>
-                      <p className="text-xs sm:text-[13px] text-gray-600 mb-3 sm:mb-3.5 leading-relaxed">{course.desc}</p>
-                      <div className="mt-2 pt-3 border-t border-gray-100 flex items-center justify-between text-[11px] sm:text-xs text-gray-600">
-                        <span className="flex items-center gap-1">
-                          <FaClock className="text-[#00ffe0]" />
-                          {course.duration}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <FaUsers className="text-[#00ffe0]" />
-                          {course.students}
-                        </span>
+                    <div className="relative rounded-xl cursor-pointer overflow-hidden">
+                      <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-indigo-600 to-cyan-600 transform translate-y-full group-hover:translate-y-0 opacity-90 transition-transform duration-700 ease-out"></div>
+                      <div className="relative z-10 bg-white rounded-xl border border-gray-200 p-4 sm:p-5 shadow-sm transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-indigo-200 group-hover:translate-y-[-4px] group-hover:scale-[1.01] group-hover:bg-transparent group-hover:border-transparent">
+                        <div className={`bg-gradient-to-br ${course.color} w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-3 sm:mb-4 ring-1 ring-black/5 shadow-sm group-hover:scale-110 transition-transform duration-300`}>
+                          <course.icon className="text-xl sm:text-2xl text-white" />
+                        </div>
+                        <Badge className="mb-2 sm:mb-3 bg-[#00ffe0]/10 text-[#001e3c] ring-1 ring-[#00ffe0]/40 text-[11px] sm:text-xs font-medium group-hover:bg-white/10 group-hover:text-white group-hover:ring-white/40">
+                          {course.tag}
+                        </Badge>
+                        <h3 className="text-base sm:text-lg font-semibold text-[#001e3c] mb-1.5 group-hover:text-white">{course.title}</h3>
+                        <p className="text-xs sm:text-[13px] text-gray-600 mb-3 sm:mb-3.5 leading-relaxed group-hover:text-white/90">{course.desc}</p>
+                        <div className="mt-2 pt-3 border-t border-gray-100 flex items-center justify-between text-[11px] sm:text-xs text-gray-600 group-hover:text-white/90 group-hover:border-white/20">
+                          <span className="flex items-center gap-1">
+                            <FaClock className="text-[#00ffe0]" />
+                            {course.duration}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <FaUsers className="text-[#00ffe0]" />
+                            {course.students}
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </motion.a>
@@ -537,7 +537,7 @@ const Landing = () => {
             </TabsContent>
 
             <TabsContent value="pg">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-6">
                 {courses.filter(c => c.students === "PG").map((course, index) => (
                   <motion.a
                     key={index}
@@ -546,24 +546,27 @@ const Landing = () => {
                     data-aos="fade-up"
                     data-aos-delay={index * 100}
                   >
-                    <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-5 hover:-translate-y-1 transition-all duration-200 shadow-sm hover:shadow group cursor-pointer hover:bg-slate-50/60 hover:border-gray-300 ring-0 hover:ring-2 hover:ring-[#00ffe0]/20">
-                      <div className={`bg-gradient-to-br ${course.color} w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-3 sm:mb-4 ring-1 ring-black/5 shadow-sm group-hover:scale-105 transition-transform duration-200`}>
-                        <course.icon className="text-xl sm:text-2xl text-white" />
-                      </div>
-                      <Badge className="mb-2 sm:mb-3 bg-[#00ffe0]/10 text-[#001e3c] ring-1 ring-[#00ffe0]/40 text-[11px] sm:text-xs font-medium">
-                        {course.tag}
-                      </Badge>
-                      <h3 className="text-base sm:text-lg font-semibold text-[#001e3c] mb-1.5">{course.title}</h3>
-                      <p className="text-xs sm:text-[13px] text-gray-600 mb-3 sm:mb-3.5 leading-relaxed">{course.desc}</p>
-                      <div className="mt-2 pt-3 border-t border-gray-100 flex items-center justify-between text-[11px] sm:text-xs text-gray-600">
-                        <span className="flex items-center gap-1">
-                          <FaClock className="text-[#00ffe0]" />
-                          {course.duration}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <FaUsers className="text-[#00ffe0]" />
-                          {course.students}
-                        </span>
+                    <div className="relative rounded-xl cursor-pointer overflow-hidden">
+                      <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-indigo-600 to-cyan-600 transform translate-y-full group-hover:translate-y-0 opacity-90 transition-transform duration-700 ease-out"></div>
+                      <div className="relative z-10 bg-white rounded-xl border border-gray-200 p-4 sm:p-5 shadow-sm transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-indigo-200 group-hover:translate-y-[-4px] group-hover:scale-[1.01] group-hover:bg-transparent group-hover:border-transparent">
+                        <div className={`bg-gradient-to-br ${course.color} w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-3 sm:mb-4 ring-1 ring-black/5 shadow-sm group-hover:scale-110 transition-transform duration-300`}>
+                          <course.icon className="text-xl sm:text-2xl text-white" />
+                        </div>
+                        <Badge className="mb-2 sm:mb-3 bg-[#00ffe0]/10 text-[#001e3c] ring-1 ring-[#00ffe0]/40 text-[11px] sm:text-xs font-medium group-hover:bg-white/10 group-hover:text-white group-hover:ring-white/40">
+                          {course.tag}
+                        </Badge>
+                        <h3 className="text-base sm:text-lg font-semibold text-[#001e3c] mb-1.5 group-hover:text-white">{course.title}</h3>
+                        <p className="text-xs sm:text-[13px] text-gray-600 mb-3 sm:mb-3.5 leading-relaxed group-hover:text-white/90">{course.desc}</p>
+                        <div className="mt-2 pt-3 border-t border-gray-100 flex items-center justify-between text-[11px] sm:text-xs text-gray-600 group-hover:text-white/90 group-hover:border-white/20">
+                          <span className="flex items-center gap-1">
+                            <FaClock className="text-[#00ffe0]" />
+                            {course.duration}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <FaUsers className="text-[#00ffe0]" />
+                            {course.students}
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </motion.a>

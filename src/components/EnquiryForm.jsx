@@ -6,7 +6,7 @@ import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
-import { FaUser, FaPhone, FaEnvelope, FaGraduationCap, FaPaperPlane, FaUniversity, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaUser, FaPhone, FaEnvelope, FaGraduationCap, FaPaperPlane, FaUniversity, FaMapMarkerAlt, FaComments, FaWhatsapp } from 'react-icons/fa';
 import toast from 'react-hot-toast';
 import { enquiryAPI } from '@/lib/axios';
 import { useForm } from 'react-hook-form';
@@ -206,6 +206,30 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
       toast.error(errorMessage);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleWhatsAppConnect = () => {
+    const values = getValues();
+    const targetNumber = '919354735410';
+    const typeLabel = formType === 'videoCall' ? 'Video Call' : formType === 'homeDemo' ? 'Home Demo' : 'General Enquiry';
+    const composed = [
+      `Hello Unifost, I would like to connect with a counselor via WhatsApp.`,
+      `Type: ${typeLabel}`,
+      values.name ? `Name: ${values.name}` : null,
+      values.phone ? `Phone: ${values.phone}` : null,
+      (city || values.city) ? `City: ${city || values.city}` : null,
+      (selectedUniversity || values.university) ? `University: ${selectedUniversity || values.university}` : null,
+      (program || values.program) ? `Program: ${program || values.program}` : null,
+      values.preferredDate ? `Preferred Date: ${values.preferredDate}` : null,
+      values.preferredTime ? `Preferred Time: ${values.preferredTime}` : null,
+      values.address ? `Address: ${values.address}` : null,
+      values.message ? `Message: ${values.message}` : null,
+    ].filter(Boolean).join('%0A');
+
+    const url = `https://wa.me/${targetNumber}?text=${composed}`;
+    if (typeof window !== 'undefined') {
+      window.open(url, '_blank');
     }
   };
 
@@ -472,18 +496,29 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
         <p className="text-xs text-gray-500">We'll contact you within 24 hours.</p>
       </div>
 
-      <Button 
-        type="submit" 
-        disabled={loading} 
-        className="w-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] font-bold relative z-[20002] py-3 sm:py-2.5 text-sm sm:text-base"
-      >
-        <FaPaperPlane className="mr-2" />
-        {loading ? 'Submitting...' : 
-          formType === "homeDemo" ? 'Schedule Home Demo' :
-          formType === "videoCall" ? 'Book Video Call' :
-          'Submit Enquiry'
-        }
-      </Button>
+      <div className="flex flex-col sm:flex-row gap-3">
+        <Button 
+          type="submit" 
+          disabled={loading} 
+          className="flex-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] font-bold relative z-[20002] py-3 sm:py-2.5 text-sm sm:text-base"
+        >
+          <FaPaperPlane className="mr-2" />
+          {loading ? 'Submitting...' : 
+            formType === "homeDemo" ? 'Schedule Home Demo' :
+            formType === "videoCall" ? 'Book Video Call' :
+            'Submit Enquiry'
+          }
+        </Button>
+
+        <Button
+          type="button"
+          onClick={handleWhatsAppConnect}
+          className="flex-1 bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700 font-semibold py-3 sm:py-2.5 text-sm sm:text-base"
+        >
+          <FaWhatsapp className="mr-2" />
+          Connect Counselor
+        </Button>
+      </div>
     </form>
   );
 }

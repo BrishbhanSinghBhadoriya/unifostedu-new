@@ -6,7 +6,8 @@ import { useRouter } from 'next/navigation';
 import {
   FaEnvelope, FaPhoneAlt, FaComments, FaVideo, FaChevronDown, FaBars, FaTimes,
   FaSearch, FaGraduationCap, FaBookOpen, FaUniversity, FaRocket, FaHome, FaInfoCircle,
-  FaCog, FaUser, FaArrowRight
+  FaCog, FaUser, FaArrowRight,
+  FaWhatsapp
 } from 'react-icons/fa';
 
 const Header = () => {
@@ -173,10 +174,11 @@ const Header = () => {
                 <FaChevronDown className={`text-xs transition-transform duration-300 ${menuOpen === "explore" ? 'rotate-180' : ''}`} />
               </button>
                 
-              <div className={`absolute left-0 top-full mt-2 w-80 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 transition-all duration-300 transform origin-top ${
+              <div className={`absolute left-0 top-full mt-2 w-80 bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 overflow-hidden transition-all duration-300 transform origin-top ${
                 menuOpen === "explore" ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
               }`}>
-                <div className="p-4">
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/10 via-cyan-500/10 to-emerald-500/10 pointer-events-none"></div>
+                <div className="relative z-10 p-4">
                   <h3 className="text-[#001e3c] font-bold text-base mb-3 flex items-center">
                     <FaUniversity className="mr-2 text-[#00ffe0]" />
                     Partner Universities
@@ -184,7 +186,7 @@ const Header = () => {
                   <div className="grid grid-cols-1 gap-2 max-h-64 overflow-y-auto">
                     {universities.map((uni, idx) => (
                       <Link key={idx} href={uni.link} onClick={() => setMenuOpen(null)} 
-                            className="flex items-center space-x-3 p-3 rounded-xl hover:bg-[#001e3c] hover:text-white transition-all duration-300 group text-[#001e3c]">
+                            className="flex items-center space-x-3 p-3 rounded-xl transition-all duration-300 group text-[#001e3c] hover:text-white hover:shadow-lg hover:shadow-indigo-200 hover:translate-y-[-2px] bg-white/70 hover:bg-gradient-to-r hover:from-indigo-600 hover:to-cyan-600">
                         <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center overflow-hidden border border-gray-200">
                           <img src={uni.logo} alt={uni.name} className="w-full h-full object-contain" />
                         </div>
@@ -195,7 +197,7 @@ const Header = () => {
                   <div className="mt-3 pt-3 border-t border-gray-200">
                     <button 
                       onClick={() => { router.push('/listofcollege'); setMenuOpen(null); }} 
-                      className="w-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] py-2 px-4 rounded-xl font-semibold hover:from-[#00d4c4] hover:to-[#00ffe0] transform hover:scale-105 transition-all duration-300 text-sm">
+                      className="w-full bg-gradient-to-r from-indigo-600 to-cyan-600 text-white py-2 px-4 rounded-xl font-semibold hover:from-indigo-700 hover:to-cyan-700 transform hover:scale-105 transition-all duration-300 text-sm shadow-md hover:shadow-lg ring-1 ring-white/10">
                       View All Universities
                     </button>
                   </div>
@@ -261,7 +263,7 @@ const Header = () => {
               <FaPhoneAlt className="text-sm lg:text-base hover:drop-shadow-md hover:text-cyan-300" />
             </a>
             <a href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer" className="p-1 rounded-lg hover:bg-white/10 transition-all duration-300" title="WhatsApp">
-              <FaComments className="text-sm lg:text-base hover:drop-shadow-md hover:text-cyan-300" />
+              <FaWhatsapp className="text-sm lg:text-base hover:drop-shadow-md hover:text-cyan-300" />
             </a>
             <button onClick={() => router.push('/bookdemo')} className="p-1 rounded-lg hover:bg-white/10 transition-all duration-300" title="Book Demo">
               <FaVideo className="text-sm lg:text-base hover:drop-shadow-md hover:text-cyan-300" />
