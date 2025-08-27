@@ -120,17 +120,12 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="relative py-2.5">
             <div className="absolute inset-0 bg-gradient-to-r from-[#00ffe0]/20 via-transparent to-[#00d4c4]/20 blur-xl opacity-60 pointer-events-none" />
-            <div className="relative mx-auto inline-flex items-center gap-2 rounded-full px-3 sm:px-4 py-1.5 bg-white/10 backdrop-blur border border-white/15 shadow-sm">
-              <span aria-hidden className="absolute -left-1.5 -top-1.5 h-2 w-2 rounded-full bg-cyan-300 blur-[1px] animate-pulse" />
-              <span aria-hidden className="absolute -right-1.5 -bottom-1.5 h-2 w-2 rounded-full bg-emerald-300 blur-[1px] animate-pulse" />
-              <p className="relative text-center text-white text-[11px] sm:text-sm md:text-base lg:text-lg font-semibold tracking-tight leading-snug whitespace-normal break-words">
-                <span className="bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] bg-clip-text text-transparent font-extrabold">Upskill with UniFost</span>
-                <span className="mx-2 text-white/70">–</span>
-                <span className="text-white/90">Get, Set,</span>
-                <span className="ml-2 bg-gradient-to-r from-cyan-300 to-emerald-300 bg-clip-text text-transparent font-extrabold">Unifost</span>
-              </p>
-            </div>
-            <div className="mt-1 h-0.5 w-28 sm:w-36 md:w-40 mx-auto bg-gradient-to-r from-[#00ffe0] via-cyan-300 to-emerald-300 rounded-full opacity-80 animate-pulse" />
+            <p className="relative text-center text-white text-[11px] sm:text-sm md:text-base lg:text-lg font-semibold tracking-tight leading-snug whitespace-normal break-words">
+              <span className="bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] bg-clip-text text-transparent font-extrabold">Upskill with UniFost</span>
+              <span className="mx-2 text-white/70">–</span>
+              <span className="text-white/90">Get, Set,</span>
+              <span className="ml-2 bg-gradient-to-r from-cyan-300 to-emerald-300 bg-clip-text text-transparent font-extrabold">Unifost</span>
+            </p>
           </div>
         </div>
       </div>
