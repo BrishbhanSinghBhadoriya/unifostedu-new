@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { FaWhatsapp } from "react-icons/fa";
 import { useRouter } from 'next/navigation';
 import {
   FaEnvelope, FaPhoneAlt, FaComments, FaVideo, FaChevronDown, FaBars, FaTimes,
@@ -429,10 +430,9 @@ const Header = () => {
                     <FaPhoneAlt className="text-lg" />
                     <span>Call</span>
                   </a>
-                  <a href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer"
-                     className="flex flex-col items-center gap-2 p-3 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-xl text-[#001e3c] text-center font-bold text-sm hover:scale-105 transition">
-                    <FaComments className="text-lg" />
-                    <span>WhatsApp</span>
+                  <a  href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 p-3 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-xl text-[#001e3c] text-center font-bold text-sm hover:scale-105 transition">
+                  <FaWhatsapp className="text-lg text-green-600" />   {/* WhatsApp icon */}
+                   <span>WhatsApp</span>
                   </a>
                   <button onClick={() => { router.push('/bookdemo'); setMobileMenuOpen(false); }} 
                           className="flex flex-col items-center gap-2 p-3 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-xl text-[#001e3c] text-center font-bold text-sm hover:scale-105 transition">
