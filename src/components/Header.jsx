@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { FaWhatsapp } from "react-icons/fa";
 import { useRouter } from 'next/navigation';
 import {
   FaEnvelope, FaPhoneAlt, FaComments, FaVideo, FaChevronDown, FaBars, FaTimes,
@@ -29,6 +30,7 @@ const Header = () => {
     { name: "Jain University", link: "/jain", logo: "/images/jain.png" },
     { name: "Dr. D Y Patil", link: "/dypatil", logo: "/images/dypatil.png" },
     { name: "OP Jindal University", link: "/opjindal", logo: "/images/opjindal.png" },
+    { name: "kurukshetra University", link: "/ku", logo: "/images/ku.jpg" },
     { name: "Shoolini University Online", link: "/shoolini", logo: "/images/shoolini.jpg" },
     { name: "Vivekananda Global University Online", link: "/vgu", logo: "/images/vgu1.png" },
     { name: "Upes Online", link: "/upes", logo: "/images/upes.png" },
@@ -170,7 +172,7 @@ const Header = () => {
                 onClick={() => setMenuOpen(menuOpen === "explore" ? null : "explore")} 
                 className={`group flex items-center space-x-1 px-2 py-1 rounded-xl transition-all duration-300 text-white hover:bg-white/10 hover:text-[#00ffe0]`}>
                 <FaUniversity className="text-xs" />
-                <span className="font-semibold">Explore</span>
+                <span className="font-semibold">University</span>
                 <FaChevronDown className={`text-xs transition-transform duration-300 ${menuOpen === "explore" ? 'rotate-180' : ''}`} />
               </button>
                 
@@ -430,10 +432,9 @@ const Header = () => {
                     <FaPhoneAlt className="text-lg" />
                     <span>Call</span>
                   </a>
-                  <a href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer"
-                     className="flex flex-col items-center gap-2 p-3 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-xl text-[#001e3c] text-center font-bold text-sm hover:scale-105 transition">
-                    <FaComments className="text-lg" />
-                    <span>WhatsApp</span>
+                  <a  href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 p-3 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-xl text-[#001e3c] text-center font-bold text-sm hover:scale-105 transition">
+                  <FaWhatsapp className="text-lg text-green-600" />   {/* WhatsApp icon */}
+                   <span>WhatsApp</span>
                   </a>
                   <button onClick={() => { router.push('/bookdemo'); setMobileMenuOpen(false); }} 
                           className="flex flex-col items-center gap-2 p-3 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-xl text-[#001e3c] text-center font-bold text-sm hover:scale-105 transition">

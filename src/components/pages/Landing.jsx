@@ -79,14 +79,14 @@ const features = [
 
 const colleges = [
       { name: "Amity University Online", ranking: "NIRF-29", fee: "₹0.99L - ₹3.45L", logo: "/images/amity.png", rating: 4.8 },
-    { name: "Manipal University Online", ranking: "NIRF-73", fee: "0.99L - ₹1.75L", logo: "/images/manipal1.png", rating: 4.6 },
+    { name: "Manipal University Online", ranking: "NIRF-73", fee: "0.99L - ₹2.92L", logo: "/images/manipal1.png", rating: 4.6 },
     { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹0.80L - ₹2.0L", logo: "/images/lpu.png", rating: 4.1},
-    { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.50L - ₹1.75L", logo: "/images/upes.png", rating: 4.4 },
+    { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.50L - ₹2.20L", logo: "/images/upes.png", rating: 4.4 },
     { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹0.94L - ₹2.20L", logo: "/images/nmims.png", rating: 4.5 },
-    { name: "Sharda University Online", ranking: "NIRF-87", fee: "₹0.80L - ₹1.30L", logo: "/images/sharda.png", rating: 4.1 },
-    { name: "Dr. DY Patil Online", ranking: "NIRF-63", fee: "₹1.45L - ₹1.90L", logo: "/images/dypatil.png", rating: 4.4 },
-    { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.05L - ₹2.98L", logo: "/images/jain.png", rating: 4.5 },
-    { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹0.75L - ₹1.58", logo: "/images/chandigarh.jpg", rating: 4.7 },
+    { name: "Sharda University Online", ranking: "NIRF-87", fee: "₹1.05L - ₹1.60L", logo: "/images/sharda.png", rating: 4.1 },
+    { name: "Dr. DY Patil Online", ranking: "NIRF-63", fee: "₹1.40L - ₹1.90L", logo: "/images/dypatil.png", rating: 4.4 },
+    { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.30L - ₹2.16L", logo: "/images/jain.png", rating: 4.5 },
+    { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹1.0L - ₹2.10L", logo: "/images/chandigarh.jpg", rating: 4.7 },
   
 ];
 

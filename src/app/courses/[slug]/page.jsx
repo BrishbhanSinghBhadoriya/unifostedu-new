@@ -179,7 +179,7 @@ const courseData = {
         rating: 4.2,
         image: '/images/k-uni.jpg',
         specializations: ['Finance', 'Marketing', 'Human Resources', 'Information Technology Management', 'Business Analytics'],
-        fee: '₹1.0L - ₹2.2L',
+        fee: '₹98,545 - ₹1,19,845',
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
@@ -377,7 +377,7 @@ const courseData = {
         rating: 4.1,
         image: '/images/k-uni.jpg',
         specializations: ['Computer Science', 'Data Science', 'AI & ML', 'Software Engineering'],
-        fee: '₹80K - ₹1.6L',
+        fee: '₹76,667',
         duration: '3 Years',
         accreditation: 'UGC Approved',
         features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
@@ -562,7 +562,7 @@ const courseData = {
         rating: 4.1,
         image: '/images/k-uni.jpg',
         specializations: ['Business Administration', 'Finance', 'Marketing', 'Human Resources', 'Operations'],
-        fee: '₹60K - ₹1.3L',
+        fee: '₹72,661',
         duration: '3 Years',
         accreditation: 'UGC Approved',
         features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
@@ -921,7 +921,7 @@ const courseData = {
         rating: 4.0,
         image: '/images/k-uni.jpg',
         specializations: ['General'],
-        fee: '₹',
+        fee: '₹72,661',
         duration: '3 Years',
         accreditation: 'UGC Approved',
         features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
@@ -1222,7 +1222,7 @@ const courseData = {
         rating: 4.1,
         image: '/images/k-uni.jpg',
         specializations: ['Accounting', 'Finance', 'Economics', 'Banking'],
-        fee: '₹80K - ₹1.4L',
+        fee: '₹54,036',
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
@@ -1372,7 +1372,7 @@ const courseData = {
         rating: 4.0,
         image: '/images/k-uni.jpg',
         specializations: ['English', , 'Sociology', 'Economics'],
-        fee: '₹60K - ₹1.1L',
+        fee: '₹54,036',
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
