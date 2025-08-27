@@ -17,7 +17,7 @@ export default function Services() {
       subtitle: 'Virtual guidance for digital learning',
       icon: FaGraduationCap,
       color: 'from-blue-500 to-purple-600',
-      ctaButton: 'Schedule Video Call', // Added this property
+      ctaButton: 'Schedule Video Call',
       features: [
         'Connect with education experts virtually',
         'Find the perfect online program for your career goals',
@@ -39,7 +39,7 @@ export default function Services() {
       subtitle: 'Personalized in-home sessions',
       icon: FaHome,
       color: 'from-green-500 to-teal-600',
-      ctaButton: 'Book Home Demo', // Added this property
+      ctaButton: 'Book Home Demo',
       features: [
         'Personalized one-on-one sessions at your home',
         'Hands-on learning experience before commitment',
@@ -61,7 +61,7 @@ export default function Services() {
       subtitle: 'Strategic career roadmap',
       icon: FaRoute,
       color: 'from-orange-500 to-red-600',
-      ctaButton: 'Get Started Today', // Added this property
+      ctaButton: 'Get Started Today',
       features: [
         'Comprehensive career assessment and analysis',
         'Industry trend analysis and future predictions',
@@ -111,8 +111,8 @@ export default function Services() {
 
       {/* Services Overview */}
       <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[#001e3c] mb-6">
               OUR SERVICES
             </h2>
@@ -121,9 +121,9 @@ export default function Services() {
             </h3>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Select the service that best matches your educational needs
-          </p>
-        </div>
-        
+            </p>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service) => (
               <div
@@ -165,8 +165,8 @@ export default function Services() {
                 <h2 className="text-4xl md:text-5xl font-bold mb-4">{currentService.title}</h2>
                 <p className="text-xl text-white/90 max-w-2xl mx-auto">
                   {currentService.subtitle}
-            </p>
-          </div>
+                </p>
+              </div>
           
               {/* Service Content */}
               <div className="p-12">
@@ -207,11 +207,11 @@ export default function Services() {
                     <button 
                       onClick={() => { 
                         if (currentService.id === 'home-demo') {
-                          setModalType('getStarted'); // Use getStarted for home demo
+                          setModalType('homeDemo');
                         } else if (currentService.id === 'career-planning') {
-                          setModalType('getStarted'); // Use getStarted for career planning
+                          setModalType('getStarted');
                         } else {
-                          setModalType('videoCall'); // Use videoCall for online degree
+                          setModalType('videoCall');
                         }
                         setShowEnquiryModal(true); 
                       }}
@@ -294,18 +294,18 @@ export default function Services() {
       </section>
 
       {/* Enquiry Modal (Unified) */}
-      {showEnquiryModal && (
-        <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
-          <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10 p-4 sm:p-6 z-[30001]">
-            <DialogHeader>
-              <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
-                {modalType === 'videoCall' ? 'Book a Video Call' : 'Get Started with Unifost'}
-              </DialogTitle>
-            </DialogHeader>
-            <EnquiryForm onSubmitted={() => setShowEnquiryModal(false)} formType={modalType} />
-          </DialogContent>
-        </Dialog>
-      )}
+      <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal}>
+        <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10 p-4 sm:p-6 z-[30001] bg-white rounded-lg">
+          <DialogHeader>
+            <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
+              {modalType === 'videoCall' ? 'Book a Video Call' : 
+               modalType === 'homeDemo' ? 'Schedule Home Demo' : 
+               'Get Started with Unifost'}
+            </DialogTitle>
+          </DialogHeader>
+          <EnquiryForm onSubmitted={() => setShowEnquiryModal(false)} formType={modalType} />
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

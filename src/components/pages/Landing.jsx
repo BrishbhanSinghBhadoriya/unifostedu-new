@@ -153,7 +153,7 @@ const Landing = () => {
       'MSC Online': '/courses/msc-online',
       'BBA Online': '/courses/bba-online',
       'MCA Online': '/courses/mca-online',
-       'BCA Online': '/courses/bca-online',
+      'BCA Online': '/courses/bca-online',
       'M.Com Online': '/courses/mcom-online',
       'B.Com Online': '/courses/bcom-online',
       'MA Online': '/courses/ma-online',
