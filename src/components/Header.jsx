@@ -2,14 +2,18 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
 import { useRouter } from 'next/navigation';
 import {
   FaEnvelope, FaPhoneAlt, FaComments, FaVideo, FaChevronDown, FaBars, FaTimes,
   FaSearch, FaGraduationCap, FaBookOpen, FaUniversity, FaRocket, FaHome, FaInfoCircle,
   FaCog, FaUser, FaArrowRight,
-  FaWhatsapp
+  
 } from 'react-icons/fa';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import EnquiryForm from '@/components/EnquiryForm';
+
+
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(null);
@@ -19,6 +23,10 @@ const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const router = useRouter();
   const dropdownRef = useRef(null);
+  const [showEnquiryModal, setShowEnquiryModal] = useState(false);
+  
+  const [loading, setLoading] = useState(false);
+const [modalType, setModalType] = useState();
 
   const universities = [
     { name: "Lovely Professional University", link: "/lpu", logo: "/images/lpu.png" },
@@ -30,7 +38,7 @@ const Header = () => {
     { name: "Jain University", link: "/jain", logo: "/images/jain.png" },
     { name: "Dr. D Y Patil", link: "/dypatil", logo: "/images/dypatil.png" },
     { name: "OP Jindal University", link: "/opjindal", logo: "/images/opjindal.png" },
-    { name: "kurukshetra University", link: "/ku", logo: "/images/ku.jpg" },
+    { name: "Kurukshetra University", link: "/ku", logo: "/images/ku.jpg" },
     { name: "Shoolini University Online", link: "/shoolini", logo: "/images/shoolini.jpg" },
     { name: "Vivekananda Global University Online", link: "/vgu", logo: "/images/vgu1.png" },
     { name: "Upes Online", link: "/upes", logo: "/images/upes.png" },
@@ -114,6 +122,11 @@ const Header = () => {
     } else {
       setActiveDropdown(dropdown);
     }
+  };
+  
+  const openModal = (type) => {
+    setModalType(type);
+    setShowEnquiryModal(true);
   };
 
   return (
@@ -260,15 +273,15 @@ const Header = () => {
           </div>
 
           {/* Contact Icons - Made more compact */}
-          <div className="hidden md:flex gap-1 lg:gap-2 items-center text-[#00ffe0]">
+          <div className="hidden md:flex md:text-[4rem] gap-1 lg:gap-2 items-center text-[#00ffe0]">
             <a href="tel:+919354735410" className="p-1 rounded-lg hover:bg-white/10 transition-all duration-300" title="Call us">
-              <FaPhoneAlt className="text-sm lg:text-base hover:drop-shadow-md hover:text-cyan-300" />
+              <FaPhoneAlt className="text-[3rem] lg:text-2xl hover:drop-shadow-md hover:text-cyan-300" />
             </a>
             <a href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer" className="p-1 rounded-lg hover:bg-white/10 transition-all duration-300" title="WhatsApp">
-              <FaWhatsapp className="text-sm lg:text-base hover:drop-shadow-md hover:text-cyan-300" />
+              <FaWhatsappSquare className="text-[3rem] lg:text-2xl hover:drop-shadow-md hover:text-cyan-300" />
             </a>
-            <button onClick={() => router.push('/bookdemo')} className="p-1 rounded-lg hover:bg-white/10 transition-all duration-300" title="Book Demo">
-              <FaVideo className="text-sm lg:text-base hover:drop-shadow-md hover:text-cyan-300" />
+            <button onClick={() => openModal('videoCall')} className="p-1 rounded-lg hover:bg-white/10 transition-all duration-300" title="Book Demo">
+              <FaVideo className="text-[3rem] lg:text-2xl hover:drop-shadow-md hover:text-cyan-300" />
             </button>
           </div>
 
@@ -466,6 +479,21 @@ const Header = () => {
             </div>
           </div>
         )}
+      {/* Header-scoped Enquiry Modal */}
+      {showEnquiryModal && (
+        <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
+          <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10 p-4 sm:p-6 z-[30001]">
+            <DialogHeader>
+              <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
+                {modalType === 'videoCall' && 'Book a Video Call'}
+                {modalType === 'homeDemo' && 'Book a Home Demo'}
+                {modalType === 'getStarted' && 'Get Started with Unifost'}
+              </DialogTitle>
+            </DialogHeader>
+            <EnquiryForm onSubmitted={() => setShowEnquiryModal(false)} formType={modalType} />
+          </DialogContent>
+        </Dialog>
+      )}
       </div>
     </header>
   );
