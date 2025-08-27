@@ -159,18 +159,18 @@ const courseData = {
         accreditation: 'UGC Approved',
         features: ['Modern Curriculum', 'Industry Projects', 'Placement Assistance']
       },
-      {
-        name: 'Amrita University',
-        location: 'Coimbatore, Tamil Nadu',
-        NIRF: 'N/A',
-        rating: 4.5,
-        image: '/images/amrita.webp',
-        specializations: ['Finance', 'Marketing', 'Human Resources', 'Operations', 'Business Analytics', 'International Business'],
-        fee: '₹1.8L - ₹3.0L',
-        duration: '2 Years',
-        accreditation: 'UGC Approved',
-        features: ['Industry Connect', 'Research Focus', 'Career Services']
-      },
+      // {
+      //   name: 'Amrita University',
+      //   location: 'Coimbatore, Tamil Nadu',
+      //   NIRF: 'N/A',
+      //   rating: 4.5,
+      //   image: '/images/amrita.webp',
+      //   specializations: ['Finance', 'Marketing', 'Human Resources', 'Operations', 'Business Analytics', 'International Business'],
+      //   fee: '₹1.8L - ₹3.0L',
+      //   duration: '2 Years',
+      //   accreditation: 'UGC Approved',
+      //   features: ['Industry Connect', 'Research Focus', 'Career Services']
+      // },
      
       {
         name: 'Kurukshetra University',
@@ -184,18 +184,18 @@ const courseData = {
         accreditation: 'UGC Approved',
         features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
       },
-      {
-        name: 'Manglayatan University',
-        location: 'Aligarh, Uttar Pradesh',
-        NIRF: 'N/A',
-        rating: 4.1,
-        image: '/images/man-uni.webp',
-        specializations: ['Finance', 'Marketing', 'Human Resources', 'Operations', 'Business Analytics'],
-        fee: '₹90K - ₹2.0L',
-        duration: '2 Years',
-        accreditation: 'UGC Approved',
-        features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
-      },
+      // {
+      //   name: 'Manglayatan University',
+      //   location: 'Aligarh, Uttar Pradesh',
+      //   NIRF: 'N/A',
+      //   rating: 4.1,
+      //   image: '/images/man-uni.webp',
+      //   specializations: ['Finance', 'Marketing', 'Human Resources', 'Operations', 'Business Analytics'],
+      //   fee: '₹90K - ₹2.0L',
+      //   duration: '2 Years',
+      //   accreditation: 'UGC Approved',
+      //   features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
+      // },
       {
         name: 'Sikkim Manipal University',
         location: 'Gangtok, Sikkim',
@@ -357,18 +357,18 @@ const courseData = {
         accreditation: 'UGC Approved',
         features: ['Experienced Faculty', 'Industry Exposure', 'Career Guidance']
       },
-      {
-        name: 'Amrita University',
-        location: 'Coimbatore, Tamil Nadu',
-        NIRF: 'N/A',
-        rating: 4.4,
-        image: '/images/amrita.webp',
-        specializations: ['Computer Science', 'Data Science', 'AI & ML', 'Software Engineering', 'Cloud Computing'],
-        fee: '₹1.1L - ₹2.2L',
-        duration: '3 Years',
-        accreditation: 'UGC Approved',
-        features: ['Industry Connect', 'Research Focus', 'Career Services']
-      },
+      // {
+      //   name: 'Amrita University',
+      //   location: 'Coimbatore, Tamil Nadu',
+      //   NIRF: 'N/A',
+      //   rating: 4.4,
+      //   image: '/images/amrita.webp',
+      //   specializations: ['Computer Science', 'Data Science', 'AI & ML', 'Software Engineering', 'Cloud Computing'],
+      //   fee: '₹1.1L - ₹2.2L',
+      //   duration: '3 Years',
+      //   accreditation: 'UGC Approved',
+      //   features: ['Industry Connect', 'Research Focus', 'Career Services']
+      // },
       
       {
         name: 'Kurukshetra University',
@@ -382,18 +382,18 @@ const courseData = {
         accreditation: 'UGC Approved',
         features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
       },
-      {
-        name: 'Manglayatan University',
-        location: 'Aligarh, Uttar Pradesh',
-        NIRF: 'N/A',
-        rating: 4.0,
-        image: '/images/man-uni.webp',
-        specializations: ['Computer Science', 'Data Science', 'AI & ML', 'Software Engineering'],
-        fee: '₹1.1L - ₹1.5L',
-        duration: '3 Years',
-        accreditation: 'UGC Approved',
-        features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
-      },
+      // {
+      //   name: 'Manglayatan University',
+      //   location: 'Aligarh, Uttar Pradesh',
+      //   NIRF: 'N/A',
+      //   rating: 4.0,
+      //   image: '/images/man-uni.webp',
+      //   specializations: ['Computer Science', 'Data Science', 'AI & ML', 'Software Engineering'],
+      //   fee: '₹1.1L - ₹1.5L',
+      //   duration: '3 Years',
+      //   accreditation: 'UGC Approved',
+      //   features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
+      // },
       {
         name: 'Sikkim Manipal University',
         location: 'Gangtok, Sikkim',
@@ -425,7 +425,7 @@ const courseData = {
     subtitle: 'Bachelor of Business Administration',
     description: 'Compare India\'s leading UGC-approved BBA programs designed for aspiring business professionals.',
     duration: '3 Years',
-    fee: '₹1,05,000 - ₹2,25,000',
+    fee: '₹75,000 - ₹2,25,000',
     eligibility: '10+2 in any stream with 45% marks',
     features: [
       'Comprehensive business curriculum',
@@ -537,23 +537,23 @@ const courseData = {
         rating: 4.2,
         image: '/images/shoolini.jpg',
         specializations: ['HR', 'Marketing', 'Finance', 'Digital Marketing', 'Computer Science', 'Direct Selling'],
-        fee: '₹65K - ₹1.3L',
+        fee: '₹75,000',
         duration: '3 Years',
         accreditation: 'UGC Approved',
         features: ['Research Focus', 'Industry Connect', 'Career Guidance']
       },
-      {
-        name: 'Amrita University',
-        location: 'Coimbatore, Tamil Nadu',
-        NIRF: 'N/A',
-        rating: 4.4,
-        image: '/images/amrita.webp',
-        specializations: ['Business Administration', 'Finance', 'Marketing', 'Human Resources', 'International Business'],
-        fee: '₹85K - ₹1.8L',
-        duration: '3 Years',
-        accreditation: 'UGC Approved',
-        features: ['Industry Connect', 'Research Focus', 'Career Services']
-      },
+      // {
+      //   name: 'Amrita University',
+      //   location: 'Coimbatore, Tamil Nadu',
+      //   NIRF: 'N/A',
+      //   rating: 4.4,
+      //   image: '/images/amrita.webp',
+      //   specializations: ['Business Administration', 'Finance', 'Marketing', 'Human Resources', 'International Business'],
+      //   fee: '₹85K - ₹1.8L',
+      //   duration: '3 Years',
+      //   accreditation: 'UGC Approved',
+      //   features: ['Industry Connect', 'Research Focus', 'Career Services']
+      // },
      
       {
         name: 'Kurukshetra University',
@@ -567,18 +567,18 @@ const courseData = {
         accreditation: 'UGC Approved',
         features: ['Affordable Education', 'Quality Learning', 'Career Guidance']
       },
-      {
-        name: 'Manglayatan University',
-        location: 'Aligarh, Uttar Pradesh',
-        NIRF: 'N/A',
-        rating: 4.0,
-        image: '/images/man-uni.webp',
-        specializations: ['Business Administration', 'Finance', 'Marketing', 'Human Resources', 'Operations'],
-        fee: '₹55K - ₹1.2L',
-        duration: '3 Years',
-        accreditation: 'UGC Approved',
-        features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
-      },
+      // {
+      //   name: 'Manglayatan University',
+      //   location: 'Aligarh, Uttar Pradesh',
+      //   NIRF: 'N/A',
+      //   rating: 4.0,
+      //   image: '/images/man-uni.webp',
+      //   specializations: ['Business Administration', 'Finance', 'Marketing', 'Human Resources', 'Operations'],
+      //   fee: '₹55K - ₹1.2L',
+      //   duration: '3 Years',
+      //   accreditation: 'UGC Approved',
+      //   features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
+      // },
      
       {
         name: 'Uttaranchal University',
@@ -801,32 +801,32 @@ const courseData = {
       //   accreditation: 'UGC Approved',
       //   features: ['Experienced Faculty', 'Industry Exposure', 'Career Guidance']
       // },
-      {
-        name: 'Amrita University',
-        location: 'Coimbatore, Tamil Nadu',
-        NIRF: 'N/A',
-        rating: 4.3,
-        image: '/images/amrita.webp',
-        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Software Engineering', 'Cloud Computing'],
-        fee: '₹80K - ₹1.6L',
-        duration: '3 Years',
-        accreditation: 'UGC Approved',
-        features: ['Industry Connect', 'Research Focus', 'Career Services']
-      },
+      // {
+      //   name: 'Amrita University',
+      //   location: 'Coimbatore, Tamil Nadu',
+      //   NIRF: 'N/A',
+      //   rating: 4.3,
+      //   image: '/images/amrita.webp',
+      //   specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Software Engineering', 'Cloud Computing'],
+      //   fee: '₹80K - ₹1.6L',
+      //   duration: '3 Years',
+      //   accreditation: 'UGC Approved',
+      //   features: ['Industry Connect', 'Research Focus', 'Career Services']
+      // },
       
     
-      {
-        name: 'Manglayatan University',
-        location: 'Aligarh, Uttar Pradesh',
-        NIRF: 'N/A',
-        rating: 3.9,
-        image: '/images/man-uni.webp',
-        specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Software Engineering'],
-        fee: '₹1.0L - ₹1.1L',
-        duration: '3 Years',
-        accreditation: 'UGC Approved',
-        features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
-      },
+      // {
+      //   name: 'Manglayatan University',
+      //   location: 'Aligarh, Uttar Pradesh',
+      //   NIRF: 'N/A',
+      //   rating: 3.9,
+      //   image: '/images/man-uni.webp',
+      //   specializations: ['Computer Science', 'Data Science', 'AI/ML', 'Software Engineering'],
+      //   fee: '₹1.0L - ₹1.1L',
+      //   duration: '3 Years',
+      //   accreditation: 'UGC Approved',
+      //   features: ['Modern Curriculum', 'Industry Connect', 'Career Support']
+      // },
       
       {
         name: 'Uttaranchal University',
@@ -903,17 +903,17 @@ const courseData = {
         accreditation: 'UGC Approved',
         features: ['Research Focus', 'Industry Connect', 'Career Guidance']
       },
-      {
-        name: 'Amrita University',
-        location: 'Coimbatore, Tamil Nadu',
-        rating: 4.3,
-        image: '/images/amrita.webp',
-        specializations: ['Accounting', 'Finance', 'Banking', 'Insurance', 'Taxation'],
-        fee: '₹75K - ₹1.5L',
-        duration: '3 Years',
-        accreditation: 'UGC Approved',
-        features: ['Industry Connect', 'Research Focus', 'Career Services']
-      },
+      // {
+      //   name: 'Amrita University',
+      //   location: 'Coimbatore, Tamil Nadu',
+      //   rating: 4.3,
+      //   image: '/images/amrita.webp',
+      //   specializations: ['Accounting', 'Finance', 'Banking', 'Insurance', 'Taxation'],
+      //   fee: '₹75K - ₹1.5L',
+      //   duration: '3 Years',
+      //   accreditation: 'UGC Approved',
+      //   features: ['Industry Connect', 'Research Focus', 'Career Services']
+      // },
      
       {
         name: 'Kurukshetra University',
