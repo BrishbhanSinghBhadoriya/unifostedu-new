@@ -115,11 +115,24 @@ const Header = () => {
 
   return (
     <header className="w-full font-sans">
-      {/* Tagline - Responsive */}
-      <div className="bg-black py-2 px-4 text-center">
-        <p className="text-white text-sm sm:text-base lg:text-lg font-semibold italic">
-          <span className="text-[#00ffe0] font-bold">Unifost</span> – University <span className="text-[#00ffe0]">For</span> Students
-        </p>
+      {/* Tagline - Enhanced, professional, and non-overlapping */}
+      <div className="relative bg-[#071826]">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="relative py-2.5">
+            <div className="absolute inset-0 bg-gradient-to-r from-[#00ffe0]/20 via-transparent to-[#00d4c4]/20 blur-xl opacity-60 pointer-events-none" />
+            <div className="relative mx-auto inline-flex items-center gap-2 rounded-full px-3 sm:px-4 py-1.5 bg-white/10 backdrop-blur border border-white/15 shadow-sm">
+              <span aria-hidden className="absolute -left-1.5 -top-1.5 h-2 w-2 rounded-full bg-cyan-300 blur-[1px] animate-pulse" />
+              <span aria-hidden className="absolute -right-1.5 -bottom-1.5 h-2 w-2 rounded-full bg-emerald-300 blur-[1px] animate-pulse" />
+              <p className="relative text-center text-white text-[11px] sm:text-sm md:text-base lg:text-lg font-semibold tracking-tight leading-snug whitespace-normal break-words">
+                <span className="bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] bg-clip-text text-transparent font-extrabold">Upskill with UniFost</span>
+                <span className="mx-2 text-white/70">–</span>
+                <span className="text-white/90">Get, Set,</span>
+                <span className="ml-2 bg-gradient-to-r from-cyan-300 to-emerald-300 bg-clip-text text-transparent font-extrabold">Unifost</span>
+              </p>
+            </div>
+            <div className="mt-1 h-0.5 w-28 sm:w-36 md:w-40 mx-auto bg-gradient-to-r from-[#00ffe0] via-cyan-300 to-emerald-300 rounded-full opacity-80 animate-pulse" />
+          </div>
+        </div>
       </div>
 
       {/* Navbar */}
@@ -173,7 +186,7 @@ const Header = () => {
                 <FaChevronDown className={`text-xs transition-transform duration-300 ${menuOpen === "explore" ? 'rotate-180' : ''}`} />
               </button>
                 
-              <div className={`absolute left-0 top-full mt-2 w-80 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 transition-all duration-300 transform origin-top ${
+              <div className={`absolute left-0 top-full mt-2 w-80 bg-gradient-to-br from-cyan-50 to-blue-50 backdrop-blur-xl rounded-2xl shadow-2xl border border-cyan-100/60 transition-all duration-300 transform origin-top ${
                 menuOpen === "explore" ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
               }`}>
                 <div className="p-4">
@@ -184,11 +197,11 @@ const Header = () => {
                   <div className="grid grid-cols-1 gap-2 max-h-64 overflow-y-auto">
                     {universities.map((uni, idx) => (
                       <Link key={idx} href={uni.link} onClick={() => setMenuOpen(null)} 
-                            className="flex items-center space-x-3 p-3 rounded-xl hover:bg-[#001e3c] hover:text-white transition-all duration-300 group text-[#001e3c]">
+                            className="flex items-center space-x-3 p-3 rounded-xl transition-all duration-300 group text-[#001e3c] hover:bg-gradient-to-r hover:from-cyan-50 hover:to-teal-50">
                         <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center overflow-hidden border border-gray-200">
                           <img src={uni.logo} alt={uni.name} className="w-full h-full object-contain" />
                         </div>
-                        <span className="font-medium text-sm group-hover:text-white">{uni.name}</span>
+                        <span className="font-medium text-sm">{uni.name}</span>
                       </Link>
                     ))}
                   </div>
@@ -213,7 +226,7 @@ const Header = () => {
                 <FaChevronDown className={`text-xs transition-transform duration-300 ${menuOpen === "blogs" ? 'rotate-180' : ''}`} />
               </button>
                 
-              <div className={`absolute left-0 top-full mt-2 w-72 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 transition-all duration-300 transform origin-top ${
+              <div className={`absolute left-0 top-full mt-2 w-72 bg-gradient-to-br from-rose-50 to-amber-50 backdrop-blur-xl rounded-2xl shadow-2xl border border-rose-100/60 transition-all duration-300 transform origin-top ${
                 menuOpen === "blogs" ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
               }`}>
                 <div className="p-4">
@@ -224,7 +237,7 @@ const Header = () => {
                   <div className="space-y-2">
                     {blogPosts.map((blog, idx) => (
                       <Link key={idx} href={blog.path} onClick={() => setMenuOpen(null)}
-                            className="block p-3 rounded-xl hover:bg-[#001e3c] hover:text-white transition-all duration-300 text-[#001e3c] text-sm">
+                            className="block p-3 rounded-xl transition-all duration-300 text-[#001e3c] text-sm hover:bg-gradient-to-r hover:from-rose-50 hover:to-amber-50">
                         <span className="font-medium">{blog.title}</span>
                       </Link>
                     ))}
