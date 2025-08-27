@@ -113,7 +113,7 @@ const KU = () => {
           </h1>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             Explore undergraduate and postgraduate online degree programs from Kurukshetra University. 
-            Experience the perfect blend of tradition and innovation in education from one of Haryana's premier NAAC A+ accredited universities.
+            Experience the perfect blend of tradition and innovation in education from one of Haryana's premier NAAC A++ accredited universities.
           </p>
         </div>
       </section>
