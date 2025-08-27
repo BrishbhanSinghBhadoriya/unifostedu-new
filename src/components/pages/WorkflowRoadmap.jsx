@@ -79,7 +79,7 @@ const AnimatedCap = ({ start, delay = 0 }) => (
   </motion.div>
 );
 
-export default function WorkflowRoadmap() {
+export default function WorkflowRoadmap({ onGetStartedClick }) {
   const iconsRef = useRef([]);
 
   useEffect(() => {
@@ -114,7 +114,7 @@ export default function WorkflowRoadmap() {
         <div className="text-center mb-12 md:mb-16 lg:mb-20">
           <div className="relative inline-block">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-transparent to-emerald-400/20 blur-2xl opacity-60" />
-            <div className="relative bg-white/70 backdrop-blur-sm rounded-xl md:rounded-2xl px-4 md:px-6 py-3 md:py-4 border border-white/50 shadow-xl">
+            <div className="relative bg-white/70 mb-20 md:mb-10 backdrop-blur-sm rounded-xl md:rounded-2xl px-4 md:px-6 py-3 md:py-4 border border-white/50 shadow-xl">
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight">
                 <span className="bg-gradient-to-r from-cyan-600 to-emerald-600 bg-clip-text text-transparent">
                   Upskill with UniFost
@@ -176,23 +176,23 @@ export default function WorkflowRoadmap() {
             <AnimatedCap start={90} delay={22} />
 
             {/* Start Image - University Building */}
-            <div className="absolute left-[-4rem] sm:left-[-5rem] md:left-[-6rem] lg:left-[-7rem] bottom-32 sm:bottom-40 md:bottom-45 z-20">
+            <div className="absolute left-[-1.2rem] sm:left-[-5rem] md:left-[-6rem] lg:left-[-7rem] bottom-24 sm:bottom-40 md:bottom-40 z-20">
               <div className="relative">
                 <img 
                   src="/images/university.png" 
                   alt="University Start" 
-                  className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-30 lg:h-30 object-cover rounded-full"
+                  className="w-16 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 object-cover rounded-full"
                 />
               </div>
             </div>
 
             {/* Destination Image - Marshmallow Graduation */}
-            <div className="absolute right-[-4rem] sm:right-[-5rem] md:right-[-6rem] lg:right-[-7rem] bottom-32 sm:bottom-40 md:bottom-45 z-20">
+            <div className="absolute right-2 sm:right-[-5rem] md:right-[-6rem] lg:right-[-7rem] bottom-24 sm:bottom-40 md:bottom-40 z-20">
               <div className="relative">
                 <img 
                   src="/images/marshmallo1.jpg" 
                   alt="Graduation Success" 
-                  className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-30 lg:h-30 object-cover rounded-full"
+                  className="w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 object-cover rounded-full"
                 />
               </div>
             </div>
@@ -269,13 +269,14 @@ export default function WorkflowRoadmap() {
             className="relative inline-block"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-xl md:rounded-2xl blur-lg opacity-30" />
-            <a
-              href="#enroll"
-              className="relative inline-flex items-center justify-center gap-2 sm:gap-3 rounded-xl md:rounded-2xl px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 text-base sm:text-lg md:text-xl font-bold text-white bg-gradient-to-r from-cyan-600 to-emerald-600 hover:from-cyan-700 hover:to-emerald-700 shadow-2xl transform hover:scale-105 transition-all duration-300 border border-white/20"
+            <button
+
+              onClick={onGetStartedClick}
+              className="relative mt-20 inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-cyan-600 to-emerald-600 hover:from-cyan-700 hover:to-emerald-700 shadow-lg transform hover:scale-105 transition-all duration-300 border border-white/20"
             >
               <span>Start Your Journey Today</span>
-              <FaArrowRight className="text-xs sm:text-sm" />
-            </a>
+              <FaArrowRight className="text-xs" />
+            </button>
           </motion.div>
           
           <p className="mt-3 sm:mt-4 text-slate-600 text-xs sm:text-sm md:text-base">

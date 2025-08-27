@@ -416,12 +416,10 @@ const Landing = () => {
       
        
       {/* Workflow Roadmap */}
-      <WorkflowRoadmap />
+      <WorkflowRoadmap onGetStartedClick={() => openModal("getStarted")} />
 
       {/* Testimonials */}
-      <section className="py-16 sm:py-20 bg-white">
-        ...
-      </section>
+      
 
       {/* Stats Section - Responsive Grid */}
       <section className="py-12 sm:py-16 lg:py-20 bg-white">
