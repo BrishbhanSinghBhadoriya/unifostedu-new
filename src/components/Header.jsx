@@ -2,12 +2,18 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
 import { useRouter } from 'next/navigation';
 import {
   FaEnvelope, FaPhoneAlt, FaComments, FaVideo, FaChevronDown, FaBars, FaTimes,
   FaSearch, FaGraduationCap, FaBookOpen, FaUniversity, FaRocket, FaHome, FaInfoCircle,
-  FaCog, FaUser, FaArrowRight
+  FaCog, FaUser, FaArrowRight,
+  
 } from 'react-icons/fa';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import EnquiryForm from '@/components/EnquiryForm';
+
+
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(null);
@@ -17,6 +23,10 @@ const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const router = useRouter();
   const dropdownRef = useRef(null);
+  const [showEnquiryModal, setShowEnquiryModal] = useState(false);
+  
+  const [loading, setLoading] = useState(false);
+const [modalType, setModalType] = useState();
 
   const universities = [
     { name: "Lovely Professional University", link: "/lpu", logo: "/images/lpu.png" },
@@ -28,6 +38,7 @@ const Header = () => {
     { name: "Jain University", link: "/jain", logo: "/images/jain.png" },
     { name: "Dr. D Y Patil", link: "/dypatil", logo: "/images/dypatil.png" },
     { name: "OP Jindal University", link: "/opjindal", logo: "/images/opjindal.png" },
+    { name: "Kurukshetra University", link: "/ku", logo: "/images/ku.jpg" },
     { name: "Shoolini University Online", link: "/shoolini", logo: "/images/shoolini.jpg" },
     { name: "Vivekananda Global University Online", link: "/vgu", logo: "/images/vgu1.png" },
     { name: "Upes Online", link: "/upes", logo: "/images/upes.png" },
@@ -112,6 +123,11 @@ const Header = () => {
       setActiveDropdown(dropdown);
     }
   };
+  
+  const openModal = (type) => {
+    setModalType(type);
+    setShowEnquiryModal(true);
+  };
 
   return (
     <header className="w-full font-sans">
@@ -169,14 +185,15 @@ const Header = () => {
                 onClick={() => setMenuOpen(menuOpen === "explore" ? null : "explore")} 
                 className={`group flex items-center space-x-1 px-2 py-1 rounded-xl transition-all duration-300 text-white hover:bg-white/10 hover:text-[#00ffe0]`}>
                 <FaUniversity className="text-xs" />
-                <span className="font-semibold">Explore</span>
+                <span className="font-semibold">University</span>
                 <FaChevronDown className={`text-xs transition-transform duration-300 ${menuOpen === "explore" ? 'rotate-180' : ''}`} />
               </button>
                 
-              <div className={`absolute left-0 top-full mt-2 w-80 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 transition-all duration-300 transform origin-top ${
+              <div className={`absolute left-0 top-full mt-2 w-80 bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 overflow-hidden transition-all duration-300 transform origin-top ${
                 menuOpen === "explore" ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
               }`}>
-                <div className="p-4">
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/10 via-cyan-500/10 to-emerald-500/10 pointer-events-none"></div>
+                <div className="relative z-10 p-4">
                   <h3 className="text-[#001e3c] font-bold text-base mb-3 flex items-center">
                     <FaUniversity className="mr-2 text-[#00ffe0]" />
                     Partner Universities
@@ -184,7 +201,7 @@ const Header = () => {
                   <div className="grid grid-cols-1 gap-2 max-h-64 overflow-y-auto">
                     {universities.map((uni, idx) => (
                       <Link key={idx} href={uni.link} onClick={() => setMenuOpen(null)} 
-                            className="flex items-center space-x-3 p-3 rounded-xl hover:bg-[#001e3c] hover:text-white transition-all duration-300 group text-[#001e3c]">
+                            className="flex items-center space-x-3 p-3 rounded-xl transition-all duration-300 group text-[#001e3c] hover:text-white hover:shadow-lg hover:shadow-indigo-200 hover:translate-y-[-2px] bg-white/70 hover:bg-gradient-to-r hover:from-indigo-600 hover:to-cyan-600">
                         <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center overflow-hidden border border-gray-200">
                           <img src={uni.logo} alt={uni.name} className="w-full h-full object-contain" />
                         </div>
@@ -195,7 +212,7 @@ const Header = () => {
                   <div className="mt-3 pt-3 border-t border-gray-200">
                     <button 
                       onClick={() => { router.push('/listofcollege'); setMenuOpen(null); }} 
-                      className="w-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] py-2 px-4 rounded-xl font-semibold hover:from-[#00d4c4] hover:to-[#00ffe0] transform hover:scale-105 transition-all duration-300 text-sm">
+                      className="w-full bg-gradient-to-r from-indigo-600 to-cyan-600 text-white py-2 px-4 rounded-xl font-semibold hover:from-indigo-700 hover:to-cyan-700 transform hover:scale-105 transition-all duration-300 text-sm shadow-md hover:shadow-lg ring-1 ring-white/10">
                       View All Universities
                     </button>
                   </div>
@@ -256,15 +273,15 @@ const Header = () => {
           </div>
 
           {/* Contact Icons - Made more compact */}
-          <div className="hidden md:flex gap-1 lg:gap-2 items-center text-[#00ffe0]">
+          <div className="hidden md:flex md:text-[4rem] gap-1 lg:gap-2 items-center text-[#00ffe0]">
             <a href="tel:+919354735410" className="p-1 rounded-lg hover:bg-white/10 transition-all duration-300" title="Call us">
-              <FaPhoneAlt className="text-sm lg:text-base hover:drop-shadow-md hover:text-cyan-300" />
+              <FaPhoneAlt className="text-[3rem] lg:text-2xl hover:drop-shadow-md hover:text-cyan-300" />
             </a>
             <a href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer" className="p-1 rounded-lg hover:bg-white/10 transition-all duration-300" title="WhatsApp">
-              <FaComments className="text-sm lg:text-base hover:drop-shadow-md hover:text-cyan-300" />
+              <FaWhatsappSquare className="text-[3rem] lg:text-2xl hover:drop-shadow-md hover:text-cyan-300" />
             </a>
-            <button onClick={() => router.push('/bookdemo')} className="p-1 rounded-lg hover:bg-white/10 transition-all duration-300" title="Book Demo">
-              <FaVideo className="text-sm lg:text-base hover:drop-shadow-md hover:text-cyan-300" />
+            <button onClick={() => openModal('videoCall')} className="p-1 rounded-lg hover:bg-white/10 transition-all duration-300" title="Book Demo">
+              <FaVideo className="text-[3rem] lg:text-2xl hover:drop-shadow-md hover:text-cyan-300" />
             </button>
           </div>
 
@@ -428,10 +445,9 @@ const Header = () => {
                     <FaPhoneAlt className="text-lg" />
                     <span>Call</span>
                   </a>
-                  <a href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer"
-                     className="flex flex-col items-center gap-2 p-3 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-xl text-[#001e3c] text-center font-bold text-sm hover:scale-105 transition">
-                    <FaComments className="text-lg" />
-                    <span>WhatsApp</span>
+                  <a  href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 p-3 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-xl text-[#001e3c] text-center font-bold text-sm hover:scale-105 transition">
+                  <FaWhatsapp className="text-lg text-green-600" />   {/* WhatsApp icon */}
+                   <span>WhatsApp</span>
                   </a>
                   <button onClick={() => { router.push('/bookdemo'); setMobileMenuOpen(false); }} 
                           className="flex flex-col items-center gap-2 p-3 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-xl text-[#001e3c] text-center font-bold text-sm hover:scale-105 transition">
@@ -463,6 +479,21 @@ const Header = () => {
             </div>
           </div>
         )}
+      {/* Header-scoped Enquiry Modal */}
+      {showEnquiryModal && (
+        <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
+          <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10 p-4 sm:p-6 z-[30001]">
+            <DialogHeader>
+              <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
+                {modalType === 'videoCall' && 'Book a Video Call'}
+                {modalType === 'homeDemo' && 'Book a Home Demo'}
+                {modalType === 'getStarted' && 'Get Started with Unifost'}
+              </DialogTitle>
+            </DialogHeader>
+            <EnquiryForm onSubmitted={() => setShowEnquiryModal(false)} formType={modalType} />
+          </DialogContent>
+        </Dialog>
+      )}
       </div>
     </header>
   );

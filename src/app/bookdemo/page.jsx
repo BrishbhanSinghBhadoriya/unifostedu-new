@@ -14,6 +14,8 @@ export default function BookDemo() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [selectedUniversities, setSelectedUniversities] = useState([]);
+
 
   const handleChange = (e) => {
     setFormData(prev => ({
