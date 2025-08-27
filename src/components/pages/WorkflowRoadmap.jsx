@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { FaGraduationCap, FaArrowRight, FaCheckCircle } from 'react-icons/fa';
 
@@ -80,6 +80,27 @@ const AnimatedCap = ({ start, delay = 0 }) => (
 );
 
 export default function WorkflowRoadmap() {
+  const iconsRef = useRef([]);
+
+  useEffect(() => {
+    iconsRef.current.forEach((el, i) => {
+      if (!el) return;
+
+      gsap.to(el, {
+        duration: 15,
+        repeat: -1,
+        ease: 'linear',
+        motionPath: {
+          path: '#roadPath', // link to the SVG path
+          align: '#roadPath',
+          alignOrigin: [0.5, 0.5],
+          start: i * 0.2, // staggered start
+          end: 1 + i * 0.2,
+        },
+      });
+    });
+  }, []);
+
   return (
     <section className="py-12 md:py-16 lg:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
       {/* Background decorative elements */}
@@ -263,5 +284,7 @@ export default function WorkflowRoadmap() {
         </div>
       </div>
     </section>
+    
+
   );
 }

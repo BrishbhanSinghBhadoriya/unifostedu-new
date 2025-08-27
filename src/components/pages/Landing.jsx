@@ -16,6 +16,7 @@ import {
   FaPhone, FaEnvelope, FaWhatsapp, FaHeadset, FaLightbulb, FaTarget,
   FaCalendar, FaCalendarAlt, FaChevronLeft, FaChevronRight
 } from "react-icons/fa";
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -103,6 +104,18 @@ const cities = [
 const accreditationLogos = [
   '/images/ugc.png', '/images/naac.png', '/images/nirf.png', '/images/aicte.png', '/images/wasc.png', '/images/aiu.png',
   '/images/iacbe.png', '/images/aacsb.png', '/images/iqas.png', '/images/wes.png', '/images/unwto.png', '/images/nabh.png'
+];
+
+const universityLogos = [
+  { name: "Amity University", logo: "/images/amity.png" },
+  { name: "Manipal University", logo: "/images/manipal1.png" },
+  { name: "LPU Online", logo: "/images/lpu.png" },
+  { name: "UPES Online", logo: "/images/upes.png" },
+  { name: "NMIMS Online", logo: "/images/nmims.png" },
+  { name: "Sharda University", logo: "/images/sharda.png" },
+  { name: "DY Patil", logo: "/images/dypatil.png" },
+  { name: "Jain University", logo: "/images/jain.png" },
+  { name: "Chandigarh University", logo: "/images/chandigarh.jpg" }
 ];
 
 // University logos for the slider
