@@ -28,6 +28,7 @@ const Header = () => {
     { name: "Jain University", link: "/jain", logo: "/images/jain.png" },
     { name: "Dr. D Y Patil", link: "/dypatil", logo: "/images/dypatil.png" },
     { name: "OP Jindal University", link: "/opjindal", logo: "/images/opjindal.png" },
+    { name: "kurukshetra University", link: "/ku", logo: "/images/ku.jpg" },
     { name: "Shoolini University Online", link: "/shoolini", logo: "/images/shoolini.jpg" },
     { name: "Vivekananda Global University Online", link: "/vgu", logo: "/images/vgu1.png" },
     { name: "Upes Online", link: "/upes", logo: "/images/upes.png" },
