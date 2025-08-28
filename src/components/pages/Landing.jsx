@@ -10,7 +10,7 @@ import "aos/dist/aos.css";
 import WorkflowRoadmap from '@/components/pages/WorkflowRoadmap';
 import {
   FaBook, FaUniversity, FaGraduationCap, FaBriefcase, FaTimes,
-  FaBookOpen, FaHome, FaVideo, FaArrowRight, FaStar, FaUsers, 
+  FaBookOpen, FaHome, FaVideo, FaArrowRight, FaStar, FaUsers,
   FaClock, FaGlobe, FaUserTie, FaShieldAlt, FaComments, FaCompass,
   FaRocket, FaAward, FaCheckCircle, FaPlay, FaSearch, FaMapMarkerAlt,
   FaPhone, FaEnvelope, FaWhatsapp, FaHeadset, FaLightbulb, FaTarget,
@@ -23,7 +23,6 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import EnquiryForm from "@/components/EnquiryForm";
-import { FaArrowRight, FaAward, FaBook, FaBookOpen, FaBriefcase, FaClock, FaCompass, FaGlobe, FaGraduationCap, FaHeadset, FaHome, FaMapMarkerAlt, FaRocket, FaStar, FaUniversity, FaUsers, FaUserTie, FaVideo } from "react-icons/fa";
 
 // Enhanced data arrays
 const heroSlides = [
@@ -1046,38 +1045,6 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="text-center mb-12" data-aos="fade-up">
-            <h2 className="text-3xl sm:text-4xl font-semibold text-[#001e3c] mb-3">What Students Say</h2>
-            <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4]"></div>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[{
-              quote: 'Unifost helped me compare programs easily and pick the right MBA.',
-              name: 'Aarav Sharma',
-              subtitle: 'MBA Student, NMIMS Online'
-            }, {
-              quote: 'The counseling was spot-on. I saved time and money.',
-              name: 'Neha Gupta',
-              subtitle: 'BBA Student, Amity Online'
-            }, {
-              quote: 'Great experience from enquiry to enrollment. Highly recommended.',
-              name: 'Rohit Verma',
-              subtitle: 'MCA Student, Manipal Online'
-            }].map((t, i) => (
-              <motion.div key={i} className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay={i * 100}>
-                <p className="text-gray-700 mb-4 leading-relaxed">“{t.quote}”</p>
-                <div className="pt-4 border-t border-gray-100">
-                  <p className="text-[#001e3c] font-semibold">{t.name}</p>
-                  <p className="text-sm text-gray-500">{t.subtitle}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Final CTA */}
       <section className="py-14 bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white">
