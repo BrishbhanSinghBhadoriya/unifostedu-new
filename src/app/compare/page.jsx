@@ -437,7 +437,7 @@ function CompareContent() {
                          // Remove from selection
                          const newKeys = selectedKeysArray.filter(k => k !== university.key);
                          router.push(`/compare?u=${newKeys.join(',')}`);
-                       } else if (selectedUniversities.length < 4) {
+                       } else if (selectedUniversities.length < 3) {
                          // Add to selection
                          const newKeys = [...selectedKeysArray, university.key];
                          router.push(`/compare?u=${newKeys.join(',')}`);

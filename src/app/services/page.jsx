@@ -90,7 +90,7 @@ export default function Services() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50"> 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c] to-[#003b6c] opacity-90"></div>
@@ -119,6 +119,8 @@ export default function Services() {
 
       {/* Services Overview with Tabs */}
       <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[#001e3c] mb-6">
@@ -229,7 +231,11 @@ export default function Services() {
             ))}
           </Tabs>
         </div>
-      </section>
+
+     
+     </div>
+     </div>
+     </section>
 
       {/* Why Choose Our Services */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
@@ -319,5 +325,6 @@ export default function Services() {
         </Dialog>
       )}
     </div>
+   
   );
 }

@@ -8,6 +8,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import WorkflowRoadmap from '@/components/pages/WorkflowRoadmap';
+import {
+  FaBook, FaUniversity, FaGraduationCap, FaBriefcase, FaTimes,
+  FaBookOpen, FaHome, FaVideo, FaArrowRight, FaStar, FaUsers,
+  FaClock, FaGlobe, FaUserTie, FaShieldAlt, FaComments, FaCompass,
+  FaRocket, FaAward, FaCheckCircle, FaPlay, FaSearch, FaMapMarkerAlt,
+  FaPhone, FaEnvelope, FaWhatsapp, FaHeadset, FaLightbulb, FaTarget,
+  FaCalendar, FaCalendarAlt, FaChevronLeft, FaChevronRight,FaBalanceScaleLeft,
+} from "react-icons/fa";
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -15,7 +23,6 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import EnquiryForm from "@/components/EnquiryForm";
-import { FaArrowRight, FaAward, FaBook, FaBookOpen, FaBriefcase, FaClock, FaCompass, FaGlobe, FaGraduationCap, FaHeadset, FaHome, FaMapMarkerAlt, FaRocket, FaStar, FaUniversity, FaUsers, FaUserTie, FaVideo, FaCheckCircle } from "react-icons/fa";
 
 // Enhanced data arrays
 const heroSlides = [
@@ -213,7 +220,7 @@ const Landing = () => {
       'MSC Online': '/courses/msc-online',
       'BBA Online': '/courses/bba-online',
       'MCA Online': '/courses/mca-online',
-       'BCA Online': '/courses/bca-online',
+      'BCA Online': '/courses/bca-online',
       'M.Com Online': '/courses/mcom-online',
       'B.Com Online': '/courses/bcom-online',
       'MA Online': '/courses/ma-online',
@@ -658,213 +665,292 @@ const Landing = () => {
       </section>
 
       {/* Enhanced Universities Section */}
-     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
-       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
-        <motion.div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-4xl md:text-5xl font-semibold text-[#001e3c] mb-3">
-            Top Partner Universities
-          </h2>
-          <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-4"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose from India's most prestigious online universities
-          </p>
+<section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
+    <motion.div className="text-center mb-16" data-aos="fade-up">
+      <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] mb-3">
+        Top Partner Universities
+      </h2>
+      <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-4"></div>
+      <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+        Choose from India's most prestigious online universities
+      </p>
+    </motion.div>
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {colleges.map((college, index) => (
+        <motion.div
+          key={index}
+          className="group h-full"
+          data-aos="fade-up"
+          data-aos-delay={index * 100}
+        >
+          {/* Enhanced Card Wrapper with Blue Theme */}
+          <div className="relative rounded-2xl overflow-hidden border border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-100
+            shadow-lg group-hover:shadow-xl transition-all duration-500 hover:-translate-y-2 
+            h-full flex flex-col min-h-[420px]">
+            
+            {/* Decorative Corner Accents */}
+            <div className="absolute top-0 right-0 w-20 h-20 overflow-hidden">
+              <div className="absolute transform rotate-45 translate-x-10 -translate-y-10 bg-gradient-to-r from-blue-500/30 to-indigo-600/30 w-28 h-10"></div>
+            </div>
+            
+            {/* Hover Overlay */}
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 
+              bg-gradient-to-br from-blue-500/10 to-indigo-600/10"></div>
+
+            {/* Top Section */}
+            <div className="p-5 sm:p-6 relative z-[1]">
+              <div className="flex items-center justify-between">
+                <Badge className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white border-0 shadow-sm text-[11px] sm:text-xs font-medium px-2 py-1">
+                  {college.ranking}
+                </Badge>
+                <div className="flex items-center gap-1 bg-white/90 rounded-full py-1 px-2 shadow-sm">
+                  <FaStar className="text-yellow-400 text-sm" />
+                  <span className="text-sm font-medium text-gray-700">{college.rating}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Logo/Image area */}
+            <div className="px-5 sm:px-6 relative">
+              <div className="h-28 sm:h-32 w-full rounded-xl bg-white 
+                flex items-center justify-center overflow-hidden 
+                group-hover:shadow-lg transition-all duration-300
+                border border-blue-200 shadow-sm">
+                <img src={college.logo} alt={`${college.name} logo`} 
+                  className="max-h-20 sm:max-h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+              </div>
+              
+              {/* Decorative Element */}
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full opacity-80"></div>
+            </div>
+
+            {/* Content + Button */}
+            <div className="p-5 sm:p-6 relative z-[1] flex flex-col flex-grow">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 line-clamp-2 group-hover:text-gray-900 transition-colors">
+                {college.name}
+              </h3>
+              <div className="text-sm text-gray-600 mb-4 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span className="font-medium">Fees:</span> {college.fee}
+              </div>
+              
+              {/* Additional Info (if available) */}
+              {college.courses && (
+                <div className="mt-2 text-xs text-gray-500 flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 mr-1 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                  {college.courses}+ Courses
+                </div>
+              )}
+
+              {/* Button sticks to bottom */}
+              <div className="mt-auto pt-4">
+                <a href={getUniversityHref(college.name)} className="block w-full">
+                  <div className="w-full bg-gradient-to-r from-blue-600 to-indigo-700
+                    text-white py-3 px-4 rounded-xl font-semibold text-center 
+                    hover:from-blue-700 hover:to-indigo-800 transform hover:scale-[1.02] 
+                    transition-all duration-200 text-sm shadow-md hover:shadow-lg
+                    relative overflow-hidden group">
+                    <span className="relative z-10">Learn More</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-white/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
         </motion.div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-  {colleges.map((college, index) => (
-    <motion.div
-      key={index}
-      className="group"
+      ))}
+    </div>
+    
+    {/* View All Button */}
+    <div className="text-center mt-12">
+      <button className="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 
+        text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 
+        transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+        View All Universities
+      </button>
+    </div>
+  </div>
+</section>
+
+
+     {/* Compare Online Universities - Enhanced */}
+<section className="py-16 sm:py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.div 
+      className="text-center mb-8 sm:mb-12"
       data-aos="fade-up"
-      data-aos-delay={index * 100}
     >
-      <div className="relative rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-[#00ffe0]/10 to-[#00d4c4]/10"></div>
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a365d] mb-3 sm:mb-4">
+        Compare Online Universities
+      </h2>
+      <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-4"></div>
+      <p className="text-lg text-gray-700 max-w-3xl mx-auto px-4">
+        Select up to 3 universities to compare fees, accreditation, placements and more
+      </p>
+    </motion.div>
 
-        <div className="p-5 sm:p-6 relative z-[1]">
-          <div className="flex items-center justify-between">
-            <Badge className="bg-[#00ffe0]/10 text-[#001e3c] ring-1 ring-[#00ffe0]/40 text-[11px] sm:text-xs font-medium">{college.ranking}</Badge>
-            <div className="flex items-center gap-1">
-              <FaStar className="text-yellow-400 text-sm" />
-              <span className="text-sm font-medium text-gray-700">{college.rating}</span>
-            </div>
-          </div>
+    {/* Compare Controls - Enhanced */}
+    <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row items-center justify-between gap-4 bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-2xl border border-blue-200 shadow-lg">
+      <div className="flex items-center gap-4">
+        <div className="bg-gradient-to-r from-blue-500 to-indigo-600 p-3 rounded-xl shadow-md text-white">
+          <FaCompass className="text-2xl" />
         </div>
-
-        {/* Logo/Image area */}
-        <div className="px-5 sm:px-6">
-          <div className="h-28 sm:h-32 w-full rounded-xl border border-gray-100 bg-gradient-to-br from-slate-50 to-white flex items-center justify-center overflow-hidden ring-1 ring-black/5 group-hover:ring-[#00ffe0]/20 group-hover:border-[#00ffe0]/30 transition-all">
-            <img src={college.logo} alt={`${college.name} logo`} className="max-h-20 sm:max-h-24 w-auto object-contain" />
-          </div>
-        </div>
-
-        <div className="p-5 sm:p-6 relative z-[1]">
-          <h3 className="text-base sm:text-lg font-semibold text-[#001e3c] mb-2 line-clamp-2">{college.name}</h3>
-          <div className="text-sm text-gray-600 mb-4">
-            <span className="font-medium">Fees:</span> {college.fee}
-          </div>
-          <a href={getUniversityHref(college.name)} className="block w-full">
-            <div className="w-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] py-2.5 px-4 rounded-xl font-semibold text-center hover:from-[#00d4c4] hover:to-[#00ffe0] transform hover:scale-[1.02] transition-all duration-200 text-sm ring-1 ring-[#00ffe0]/40">
-              Learn More
-            </div>
-          </a>
+        <div>
+          <h3 className="text-xl font-bold text-[#1a365d]">Compare Universities</h3>
+          <p className="text-sm text-gray-700">
+            Selected: <span className="font-bold text-blue-600">{selectedUniversities.length}</span>/3
+            {selectedUniversities.length > 0 && (
+              <span className="ml-2 text-green-600 font-medium">
+                ({selectedUniversities.length} selected)
+              </span>
+            )}
+          </p>
         </div>
       </div>
-    </motion.div>
-  ))}
-</div>
-</div>
-      </section>
+      <button
+        disabled={!canCompare}
+        onClick={startCompare}
+        className={`group px-6 sm:px-8 py-3 rounded-full font-bold flex items-center gap-2 transition-all text-sm sm:text-base ${
+          canCompare 
+            ? 'bg-gradient-to-r from-blue-600 to-indigo-700 text-white hover:from-blue-700 hover:to-indigo-800 shadow-lg hover:shadow-xl transform hover:scale-105' 
+            : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+        }`}
+      >
+        <FaArrowRight className={canCompare ? "group-hover:translate-x-1 transition-transform" : ""} />
+        Compare Now
+      </button>
+    </div>
 
-
-      {/* Compare Online Universities - Enhanced */}
-      <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-8 sm:mb-12"
-            data-aos="fade-up"
+    {/* Enhanced University Cards Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {colleges.map((college, idx) => {
+        const slug = slugify(college.name);
+        const isSelected = selectedUniversities.includes(slug);
+        
+        return (
+          <motion.div
+            key={idx}
+            whileHover={{ y: -5 }}
+            className={`group relative rounded-2xl overflow-hidden transition-all duration-300 ${
+              isSelected 
+                ? 'ring-2 ring-blue-500 shadow-xl' 
+                : 'border border-blue-100 shadow-md hover:shadow-xl'
+            } bg-gradient-to-b from-white to-blue-50`}
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#001e3c] mb-3 sm:mb-4">
-              Compare Online Universities
-            </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-              Select up to 3 universities to compare fees, accreditation, placements and more
-            </p>
-          </motion.div>
-
-          {/* Compare Controls - Enhanced */}
-          <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row items-center justify-between gap-4 bg-gradient-to-r from-blue-50 to-indigo-50 p-5 rounded-2xl border border-blue-100 shadow-sm">
-            <div className="flex items-center gap-4">
-              <div className="bg-white p-3 rounded-xl shadow-sm border border-blue-100">
-                <FaCompass className="text-2xl text-blue-600" />
+            {/* Selection Indicator */}
+            {isSelected && (
+              <div className="absolute top-3 right-3 z-10">
+                <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg">
+                  <FaCheckCircle className="text-sm" />
+                </div>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold text-[#001e3c]">Compare Universities</h3>
-                <p className="text-sm text-gray-600">
-                  Selected: <span className="font-bold text-blue-600">{selectedUniversities.length}</span>/3
-                  {selectedUniversities.length > 0 && (
-                    <span className="ml-2 text-green-600">
-                      ({selectedUniversities.length} selected)
-                    </span>
-                  )}
-                </p>
-              </div>
+            )}
+            
+            {/* Decorative Corner */}
+            <div className="absolute top-0 right-0 w-16 h-16 overflow-hidden">
+              <div className="absolute transform rotate-45 translate-x-8 -translate-y-8 bg-gradient-to-r from-blue-500/20 to-indigo-600/20 w-20 h-8"></div>
             </div>
-            <button
-              disabled={!canCompare}
-              onClick={startCompare}
-              className={`px-6 sm:px-8 py-3 rounded-full font-bold flex items-center gap-2 transition-all text-sm sm:text-base ${
-                canCompare 
-                  ? 'bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] shadow-lg hover:shadow-xl transform hover:scale-105' 
-                  : 'bg-gray-200 text-gray-500 cursor-not-allowed'
-              }`}
-            >
-              <FaArrowRight className={canCompare ? "group-hover:translate-x-1 transition-transform" : ""} />
-              Compare Now
-            </button>
-          </div>
-
-          {/* Enhanced University Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-            {colleges.map((college, idx) => {
-              const slug = slugify(college.name);
-              const isSelected = selectedUniversities.includes(slug);
-              
-              return (
-                <motion.div
-                  key={idx}
-                  whileHover={{ y: -5 }}
-                  className={`group relative rounded-2xl overflow-hidden transition-all duration-300 ${
-                    isSelected 
-                      ? 'ring-3 ring-[#00ffe0] shadow-xl border-[#00ffe0]' 
-                      : 'border border-gray-200 shadow-md hover:shadow-xl'
-                  }`}
-                >
-                  {/* Selection Indicator */}
-                  {isSelected && (
-                    <div className="absolute top-3 right-3 z-10">
-                      <div className="bg-[#00ffe0] text-[#001e3c] w-8 h-8 rounded-full flex items-center justify-center shadow-lg">
-                        <FaCheckCircle className="text-sm" />
-                      </div>
-                    </div>
-                  )}
+            
+            {/* Card Content */}
+            <div className="p-5 sm:p-6">
+              {/* University Header */}
+              <div className="flex items-start gap-4 mb-4">
+                <div className={`flex-shrink-0 h-16 w-16 sm:h-20 sm:w-20 rounded-xl bg-white border border-blue-200 flex items-center justify-center p-2 ${
+                  isSelected ? 'ring-2 ring-blue-500/30' : ''
+                }`}>
+                  <img 
+                    src={college.logo} 
+                    alt={`${college.name} logo`} 
+                    className="max-h-10 sm:max-h-12 w-auto object-contain" 
+                  />
+                </div>
+                
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-bold text-[#1a365d] mb-1 line-clamp-2 leading-tight">
+                    {college.name}
+                  </h3>
                   
-                  {/* Card Content */}
-                  <div className="bg-white p-5 sm:p-6">
-                    {/* University Header */}
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className={`flex-shrink-0 h-16 w-16 sm:h-20 sm:w-20 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-gray-100 flex items-center justify-center p-2 ${
-                        isSelected ? 'ring-2 ring-[#00ffe0]/30' : ''
-                      }`}>
-                        <img 
-                          src={college.logo} 
-                          alt={`${college.name} logo`} 
-                          className="max-h-10 sm:max-h-12 w-auto object-contain" 
-                        />
-                      </div>
-                      
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-lg font-bold text-[#001e3c] mb-1 line-clamp-2 leading-tight">
-                          {college.name}
-                        </h3>
-                        
-                        <div className="flex items-center gap-2 mb-2">
-                          <Badge className="bg-blue-100 text-blue-800 border-blue-200 text-xs font-medium">
-                            {college.ranking}
-                          </Badge>
-                          <div className="flex items-center gap-1 text-sm text-amber-600">
-                            <FaStar className="fill-amber-400" />
-                            <span className="font-semibold">{college.rating}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Fee Information */}
-                    <div className="bg-gray-50 rounded-lg p-3 mb-4 border border-gray-100">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium text-gray-700">Approx. Fees:</span>
-                        <span className="text-sm font-bold text-[#001e3c]">{college.fee}</span>
-                      </div>
-                    </div>
-
-                    {/* Action Buttons */}
-                    <div className="flex items-center justify-between gap-3">
-                      <a 
-                        href={getUniversityHref(college.name)} 
-                        className="flex-1 text-center text-sm font-semibold text-blue-600 hover:text-blue-800 px-3 py-2 rounded-lg hover:bg-blue-50 transition-colors"
-                      >
-                        View Details
-                      </a>
-                      
-                      <button
-                        onClick={() => toggleUniversity(college.name)}
-                        className={`flex-1 px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                          isSelected 
-                            ? 'bg-[#00ffe0] text-[#001e3c] hover:bg-[#00d4c4]' 
-                            : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
-                        }`}
-                      >
-                        {isSelected ? 'Selected' : 'Compare'}
-                      </button>
+                  <div className="flex items-center gap-2 mb-2">
+                    <Badge className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white border-0 text-xs font-medium">
+                      {college.ranking}
+                    </Badge>
+                    <div className="flex items-center gap-1 text-sm text-amber-600">
+                      <FaStar className="fill-amber-400" />
+                      <span className="font-semibold">{college.rating}</span>
                     </div>
                   </div>
+                </div>
+              </div>
 
-                  {/* Hover Effect Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/5 group-hover:to-purple-500/5 transition-opacity rounded-2xl pointer-events-none" />
-                </motion.div>
-              );
-            })}
-          </div>
+              {/* Fee Information */}
+              <div className="bg-blue-100/50 rounded-lg p-3 mb-4 border border-blue-200">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-gray-700 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Approx. Fees:
+                  </span>
+                  <span className="text-sm font-bold text-blue-700">{college.fee}</span>
+                </div>
+              </div>
 
-          {/* Selection Help Text */}
-          <div className="mt-8 text-center">
-            <p className="text-sm text-gray-600">
-              Tip: Select 2-3 universities to compare features side by side
-            </p>
-          </div>
-        </div>
-      </section>
+              {/* Action Buttons */}
+              <div className="flex items-center justify-between gap-3">
+                <a 
+                  href={getUniversityHref(college.name)} 
+                  className="flex-1 text-center text-sm font-semibold text-blue-600 hover:text-blue-800 px-3 py-2 rounded-lg hover:bg-blue-100 transition-colors flex items-center justify-center"
+                >
+                  View Details
+                </a>
+                
+                <button
+                  onClick={() => toggleUniversity(college.name)}
+                  className={`flex-1 px-4 py-2 rounded-lg text-sm font-semibold transition-all flex items-center justify-center ${
+                    isSelected 
+                      ? 'bg-gradient-to-r from-blue-600 to-indigo-700 text-white hover:from-blue-700 hover:to-indigo-800' 
+                      : 'bg-blue-100 text-blue-800 hover:bg-blue-200'
+                  }`}
+                >
+                  {isSelected ? (
+                    <>
+                      <FaCheckCircle className="mr-1" />
+                      Selected
+                    </>
+                  ) : (
+                    <>
+                      <FaBalanceScaleLeft className="mr-1" />
+                      Compare
+                    </>
+                  )}
+                </button>
+              </div>
+            </div>
+
+            {/* Hover Effect Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-indigo-500/0 group-hover:from-blue-500/5 group-hover:to-indigo-500/5 transition-opacity rounded-2xl pointer-events-none" />
+          </motion.div>
+        );
+      })}
+    </div>
+
+    {/* Selection Help Text */}
+    <div className="mt-8 text-center">
+      <p className="text-sm text-gray-600 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Tip: Select 2-3 universities to compare features side by side
+      </p>
+    </div>
+  </div>
+</section>
      
       {/* Accreditation & Recognition - Responsive slider */}
       <section className="py-12 sm:py-16 bg-gradient-to-br from-slate-50 to-blue-50">
@@ -964,38 +1050,6 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="text-center mb-12" data-aos="fade-up">
-            <h2 className="text-3xl sm:text-4xl font-semibold text-[#001e3c] mb-3">What Students Say</h2>
-            <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4]"></div>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[{
-              quote: 'Unifost helped me compare programs easily and pick the right MBA.',
-              name: 'Aarav Sharma',
-              subtitle: 'MBA Student, NMIMS Online'
-            }, {
-              quote: 'The counseling was spot-on. I saved time and money.',
-              name: 'Neha Gupta',
-              subtitle: 'BBA Student, Amity Online'
-            }, {
-              quote: 'Great experience from enquiry to enrollment. Highly recommended.',
-              name: 'Rohit Verma',
-              subtitle: 'MCA Student, Manipal Online'
-            }].map((t, i) => (
-              <motion.div key={i} className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay={i * 100}>
-                <p className="text-gray-700 mb-4 leading-relaxed">“{t.quote}”</p>
-                <div className="pt-4 border-t border-gray-100">
-                  <p className="text-[#001e3c] font-semibold">{t.name}</p>
-                  <p className="text-sm text-gray-500">{t.subtitle}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Final CTA */}
       <section className="py-14 bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white">

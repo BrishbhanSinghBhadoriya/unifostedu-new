@@ -312,13 +312,20 @@ export default function About() {
       </div>
       <div className="bg-[#1e1e50]/70 p-8 rounded-2xl shadow-lg border border-white/10">
         <h3 className="text-3xl font-bold">PRIYANSH MISHRA</h3>
-        <p className="text-teal-400 font-semibold">Founder & Tech Veteran</p>
+        <p className="text-teal-400 font-semibold">Founder & Director</p>
         <p className="text-gray-200 mt-4">
           Priyansh Mishra, a visionary leader committed to revolutionizing education through innovation and accessibility, has poured his heart, energy, and vision into building UniFost with unwavering passion and dedication. With a background in educational technology and student psychology, he ensures UniFost remains student-centric.
         </p>
         <div className="flex space-x-4 mt-6">
-          <a href="#" className="text-teal-400 hover:text-white text-xl"><FaLinkedin /></a>
-          <a href="#" className="text-teal-400 hover:text-white text-xl"><FaFacebook /></a>
+          <a 
+  href="https://www.linkedin.com/in/priyansh-mishra-14b9ba2a0/" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="text-teal-400 hover:text-white text-xl"
+>
+  <FaLinkedin />
+</a>
+
         </div>
         <button className="mt-6 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] px-6 py-3 rounded-full font-semibold hover:scale-105 transform transition-all duration-300">
           Get in Touch
@@ -330,12 +337,20 @@ export default function About() {
     <div className="grid md:grid-cols-2 gap-12 items-center">
       <div className="order-2 md:order-1 bg-[#2e2e7e]/70 p-8 rounded-2xl shadow-lg border border-white/10">
         <h3 className="text-3xl font-bold">AMAN PAWAR</h3>
-        <p className="text-pink-400 font-semibold">Founder & Operations Head</p>
+        <p className="text-pink-400 font-semibold">Founder & Director</p>
         <p className="text-gray-200 mt-4">
           Aman Pawar is the driving force behind UniFost—blending vision with action, and passion with purpose. His tireless efforts and hands-on leadership have shaped a platform that puts students first. With expertise in business strategy and digital education, he bridges the gap between academia and industry needs.
         </p>
         <div className="flex space-x-4 mt-6">
-          <a href="#" className="text-pink-400 hover:text-white text-xl"><FaLinkedin /></a>
+        <a 
+  href="https://www.linkedin.com/in/aman-pawar-a59b57218/" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="text-pink-400 hover:text-white text-xl"
+>
+  <FaLinkedin />
+</a>
+
         </div>
         <button className="mt-6 bg-gradient-to-r from-pink-400 to-pink-300 text-[#001e3c] px-6 py-3 rounded-full font-semibold hover:scale-105 transform transition-all duration-300">
           Get in Touch
