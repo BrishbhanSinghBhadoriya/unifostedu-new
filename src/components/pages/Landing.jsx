@@ -8,14 +8,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import WorkflowRoadmap from '@/components/pages/WorkflowRoadmap';
-import {
-  FaBook, FaUniversity, FaGraduationCap, FaBriefcase, FaTimes,
-  FaBookOpen, FaHome, FaVideo, FaArrowRight, FaStar, FaUsers, 
-  FaClock, FaGlobe, FaUserTie, FaShieldAlt, FaComments, FaCompass,
-  FaRocket, FaAward, FaCheckCircle, FaPlay, FaSearch, FaMapMarkerAlt,
-  FaPhone, FaEnvelope, FaWhatsapp, FaHeadset, FaLightbulb, FaTarget,
-  FaCalendar, FaCalendarAlt, FaChevronLeft, FaChevronRight
-} from "react-icons/fa";
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -23,6 +15,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import EnquiryForm from "@/components/EnquiryForm";
+import { FaArrowRight, FaAward, FaBook, FaBookOpen, FaBriefcase, FaClock, FaCompass, FaGlobe, FaGraduationCap, FaHeadset, FaHome, FaMapMarkerAlt, FaRocket, FaStar, FaUniversity, FaUsers, FaUserTie, FaVideo } from "react-icons/fa";
 
 // Enhanced data arrays
 const heroSlides = [
@@ -46,7 +39,15 @@ const heroSlides = [
     title: "Smart Education Choices",
     subtitle: "Expert Guidance • Best Programs",
     description: "Get personalized counseling for your academic journey"
+  },
+  {
+    src: "/slider/slider-4.png",
+    alt: "Compare universities with Unifost",
+    title: "Ye College Ya Woh College?",
+    subtitle: "Compare on Unifost!",
+    description: "Compare fees, rankings, courses, and location — instantly"
   }
+
 ];
 
 const courses = [
@@ -166,7 +167,7 @@ const UniversityLogoSlider = () => {
                 <div className="h-24 w-full flex items-center justify-center px-2">
                   <img 
                     src={university.logo} 
-                    alt={university.name} 
+                    alt={`${university.name} logo`} 
                     className="max-h-14 max-w-full object-contain hover:scale-110 transition-transform duration-300"
                   />
                 </div>
@@ -272,7 +273,7 @@ const Landing = () => {
               >
                 <Image 
                   src={s.src}
-                  alt={s.alt}
+                  alt={`${s.title} – ${s.subtitle} | Online University Degree guidance`}
                   fill
                   priority={idx === 0}
                   sizes="100vw"
@@ -411,6 +412,80 @@ const Landing = () => {
        
       {/* Workflow Roadmap */}
       <WorkflowRoadmap onGetStartedClick={() => openModal("getStarted")} />
+
+      {/* Services - SEO-optimized with CTAs */}
+      <section className="py-14 sm:py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div className="text-center mb-10 sm:mb-14" data-aos="fade-up">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#001e3c] mb-2">
+              Career Counseling Online & Virtual Learning Guidance
+            </h2>
+            <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-3"></div>
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+              Best Career Planning Services with trusted EdTech Solutions in India
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+            {/* Video Call Counseling */}
+            <motion.div className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm" data-aos="fade-up">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-cyan-600 flex items-center justify-center">
+                  <FaVideo className="text-white text-xl" />
+                </div>
+                <h3 className="text-lg sm:text-xl font-semibold text-[#001e3c]">Video Call Counseling</h3>
+              </div>
+              <p className="text-gray-600 text-sm sm:text-base mb-5">
+                Virtual learning guidance to compare accredited Online University Degree options, fees, and placements.
+              </p>
+              <button onClick={() => openModal('videoCall')} className="w-full bg-[#00d4c4] text-[#001e3c] py-2.5 rounded-xl font-semibold hover:bg-[#00c0b1] transition-colors">
+                Book Your Free Counseling
+              </button>
+            </motion.div>
+
+            {/* Home Demo Counseling */}
+            <motion.div className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-cyan-600 flex items-center justify-center">
+                  <FaHome className="text-white text-xl" />
+                </div>
+                <h3 className="text-lg sm:text-xl font-semibold text-[#001e3c]">Home Demo Counseling</h3>
+              </div>
+              <p className="text-gray-600 text-sm sm:text-base mb-5">
+                Personalized in-home session for students and parents with trusted university comparisons and timelines.
+              </p>
+              <button onClick={() => openModal('homeDemo')} className="w-full bg-gradient-to-r from-indigo-600 to-cyan-600 text-white py-2.5 rounded-xl font-semibold hover:from-indigo-700 hover:to-cyan-700 transition-colors">
+                Schedule a Home Demo
+              </button>
+            </motion.div>
+
+            {/* Career Planning */}
+            <motion.div className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-cyan-600 flex items-center justify-center">
+                  <FaCompass className="text-white text-xl" />
+                </div>
+                <h3 className="text-lg sm:text-xl font-semibold text-[#001e3c]">Career Planning</h3>
+              </div>
+              <p className="text-gray-600 text-sm sm:text-base mb-5">
+                Strategic career roadmap aligned with in-demand skills and the best career planning services.
+              </p>
+              <button onClick={() => openModal('getStarted')} className="w-full bg-slate-900 text-white py-2.5 rounded-xl font-semibold hover:bg-black transition-colors">
+                Start Your Journey Today
+              </button>
+            </motion.div>
+          </div>
+
+          {/* Trust bar */}
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+            <div className="text-sm text-gray-600">
+              <span className="font-semibold text-[#001e3c]">UGC-DEB/AICTE/NAAC</span> accredited partners
+            </div>
+            <div className="text-sm text-gray-600">Transparent, unbiased guidance</div>
+            <div className="text-sm text-gray-600">Student-friendly support across India</div>
+          </div>
+        </div>
+      </section>
 
       {/* Testimonials */}
       
@@ -805,7 +880,7 @@ const Landing = () => {
             <div className="flex items-center gap-4 sm:gap-6 animate-[accreditScroll_25s_linear_infinite] will-change-transform">
               {[...accreditationLogos, ...accreditationLogos].map((logo, idx) => (
                 <div key={idx} className="min-w-[80px] sm:min-w-[100px] md:min-w-[140px] rounded-xl p-3 sm:p-4 bg-white shadow-sm border border-gray-100 flex items-center justify-center h-16 sm:h-20 md:h-24">
-                  <img src={logo} alt="Accreditation" className="max-h-10 sm:max-h-12 md:max-h-14 object-contain" />
+                  <img src={logo} alt="Accreditation and recognition logo" className="max-h-10 sm:max-h-12 md:max-h-14 object-contain" />
                 </div>
               ))}
             </div>
@@ -873,7 +948,7 @@ const Landing = () => {
                     whileHover={{ y: -6 }}
                     className="min-w-[150px] flex flex-col items-center text-center bg-white/10 backdrop-blur-xl p-4 rounded-xl border border-white/20 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
                   >
-                    <img src={city.img} alt={city.city} className="w-16 h-16 object-contain mb-2 rounded-full border border-white/20 shadow" />
+                    <img src={city.img} alt={`${city.city}, ${city.state} study city`} className="w-16 h-16 object-contain mb-2 rounded-full border border-white/20 shadow" />
                     <p className="text-white font-semibold text-sm">{city.city}</p>
                     <p className="text-blue-200 text-xs">{city.state}</p>
                   </motion.div>
