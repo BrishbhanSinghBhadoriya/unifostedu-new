@@ -95,10 +95,10 @@ const Manipal = () => {
 
   return (
     <>
-      {/* <Helmet>
+      
         <title>Manipal University Online - Courses, Fees & Admissions</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-      </Helmet> */}
+      
 
       {/* Intro Section */}
       <section className="py-16 bg-white px-6 font-[Inter]">

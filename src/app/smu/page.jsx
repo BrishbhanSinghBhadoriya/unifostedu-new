@@ -10,38 +10,40 @@ import {
   FaBuilding,
 } from 'react-icons/fa';
 
+import EnquireCard from '@/components/EnquireCard';
+
 // Reusable Enquire Button Component
-const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
-  const router = useRouter();  
-  const university = "Sikkim Manipal University";
+// const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
+//   const router = useRouter();  
+//   const university = "Sikkim Manipal University";
 
-  const handleClick = () => {
-     router.push(`/enquiry?university=${encodeURIComponent(university)}&course=${encodeURIComponent(course)}`);
-  };
+//   const handleClick = () => {
+//      router.push(`/enquiry?university=${encodeURIComponent(university)}&course=${encodeURIComponent(course)}`);
+//   };
 
-  return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition duration-300">
-      <img src={image} alt={course} className="h-40 w-full object-cover sm:h-48" />
-      <div className="p-4 flex-1 flex flex-col justify-between">
-        <div>
-          <h3 className="text-lg font-semibold text-gray-800 mb-2">{course}</h3>
-          <p className="text-sm text-gray-600 mb-1"><strong>Duration:</strong> {duration}</p>
-          <p className="text-sm text-gray-600"><strong>Eligibility:</strong> {eligibility}</p>
-          {fees && <p className="text-sm text-gray-600"><strong>Fees:</strong> {fees}</p>}
-          {specialization && <p className="text-sm text-gray-600"><strong>Specialization:</strong> {specialization}</p>}
-        </div>
-        <div className="mt-4">
-          <button
-            onClick={handleClick}
-            className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-center block font-semibold hover:opacity-90 transition w-full"
-          >
-            Enquire Now
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
+//   return (
+//     <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition duration-300">
+//       <img src={image} alt={course} className="h-40 w-full object-cover sm:h-48" />
+//       <div className="p-4 flex-1 flex flex-col justify-between">
+//         <div>
+//           <h3 className="text-lg font-semibold text-gray-800 mb-2">{course}</h3>
+//           <p className="text-sm text-gray-600 mb-1"><strong>Duration:</strong> {duration}</p>
+//           <p className="text-sm text-gray-600"><strong>Eligibility:</strong> {eligibility}</p>
+//           {fees && <p className="text-sm text-gray-600"><strong>Fees:</strong> {fees}</p>}
+//           {specialization && <p className="text-sm text-gray-600"><strong>Specialization:</strong> {specialization}</p>}
+//         </div>
+//         <div className="mt-4">
+//           <button
+//             onClick={handleClick}
+//             className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-center block font-semibold hover:opacity-90 transition w-full"
+//           >
+//             Enquire Now
+//           </button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
 const SMU = () => {
   // Using data from the smu.pdf file
@@ -95,6 +97,8 @@ const pgCourses = [
 
   return (
     <>
+
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
       {/* Intro Section */}
       <section className="py-16 bg-white px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">

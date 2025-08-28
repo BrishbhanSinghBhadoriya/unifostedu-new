@@ -15,39 +15,7 @@ import {
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 
-// Reusable EnquireCard component
-const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
-  const router = useRouter();
-  const university = "VGU University";
-
-  const handleClick = () => {
-    // For Next.js use router.push instead of navigate
-    router.push(`/enquiry?university=${encodeURIComponent(university)}&course=${encodeURIComponent(course)}`);
-  };
-
-  return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition duration-300">
-      <img src={image} alt={course} className="h-40 w-full object-cover sm:h-48" />
-      <div className="p-4 flex-1 flex flex-col justify-between">
-        <div>
-          <h3 className="text-lg font-semibold text-gray-800 mb-2">{course}</h3>
-          <p className="text-sm text-gray-600 mb-1"><strong>Duration:</strong> {duration}</p>
-          <p className="text-sm text-gray-600"><strong>Eligibility:</strong> {eligibility}</p>
-          {fees && <p className="text-sm text-gray-600"><strong>Fees:</strong> {fees}</p>}
-          {specialization && <p className="text-sm text-gray-600"><strong>Specialization:</strong> {specialization}</p>}
-        </div>
-        <div className="mt-4">
-          <button
-            onClick={handleClick}
-            className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-center block font-semibold hover:opacity-90 transition w-full"
-          >
-            Enquire Now
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
+import EnquireCard from '@/components/EnquireCard';
 
 const Vgu = () => {
   const ugCourses = [
@@ -124,10 +92,10 @@ const Vgu = () => {
 
   return (
     <>
-      {/* <Helmet>
+      
         <title>VGU University - Courses, Admissions, Enquiry</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-      </Helmet> */}
+      
 
       {/* Hero Section */}
       <section className="bg-white-100 py-16 px-6 font-[Inter]">
@@ -146,7 +114,7 @@ const Vgu = () => {
             
           </div>
           <motion.img
-            src="/images/vgu1.png"
+            src="/images/vgu-uni.webp"
             alt="VGU University"
             className="rounded-xl shadow-lg w-full h-auto"
             initial={{ opacity: 0, y: 50 }}

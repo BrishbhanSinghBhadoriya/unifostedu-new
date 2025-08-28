@@ -13,44 +13,44 @@ import {
   FaBookOpen,
   FaLaptop
 } from 'react-icons/fa';
-
+import EnquireCard from '@/components/EnquireCard';
 // Reusable Enquire Button Component
-const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
-  const router = useRouter();  
-  const university = "Uttaranchal University";
+// const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
+//   const router = useRouter();  
+//   const university = "Uttaranchal University";
 
-  const handleClick = () => {
-     router.push(`/enquiry?university=${encodeURIComponent(university)}&course=${encodeURIComponent(course)}`);
-  };
+//   const handleClick = () => {
+//      router.push(`/enquiry?university=${encodeURIComponent(university)}&course=${encodeURIComponent(course)}`);
+//   };
 
-  return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-      <img src={image} alt={course} className="h-48 w-full object-cover" />
-      <div className="p-5 flex-1 flex flex-col justify-between">
-        <div>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">{course}</h3>
-          <div className="flex items-center text-sm text-blue-600 mb-3">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <span>{duration}</span>
-          </div>
-          <p className="text-sm text-gray-600 mb-2"><strong className="text-gray-800">Eligibility:</strong> {eligibility}</p>
-          {fees && <p className="text-sm text-gray-600 mb-2"><strong className="text-gray-800">Fees:</strong> {fees}</p>}
-          {specialization && <p className="text-sm text-gray-600"><strong className="text-gray-800">Specialization:</strong> {specialization}</p>}
-        </div>
-        <div className="mt-5">
-          <button
-            onClick={handleClick}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg text-center block font-semibold hover:opacity-90 transition w-full shadow-md hover:shadow-lg"
-          >
-            Enquire Now
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
+//   return (
+//     <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+//       <img src={image} alt={course} className="h-48 w-full object-cover" />
+//       <div className="p-5 flex-1 flex flex-col justify-between">
+//         <div>
+//           <h3 className="text-xl font-bold text-gray-900 mb-3">{course}</h3>
+//           <div className="flex items-center text-sm text-blue-600 mb-3">
+//             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+//               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+//             </svg>
+//             <span>{duration}</span>
+//           </div>
+//           <p className="text-sm text-gray-600 mb-2"><strong className="text-gray-800">Eligibility:</strong> {eligibility}</p>
+//           {fees && <p className="text-sm text-gray-600 mb-2"><strong className="text-gray-800">Fees:</strong> {fees}</p>}
+//           {specialization && <p className="text-sm text-gray-600"><strong className="text-gray-800">Specialization:</strong> {specialization}</p>}
+//         </div>
+//         <div className="mt-5">
+//           <button
+//             onClick={handleClick}
+//             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg text-center block font-semibold hover:opacity-90 transition w-full shadow-md hover:shadow-lg"
+//           >
+//             Enquire Now
+//           </button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
 const UU = () => {
   // Using data from the uu.pdf file
@@ -106,6 +106,7 @@ const pgCourses = [
 ];
   return (
     <>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
       {/* Hero Section with Gradient Background */}
       <section className="py-16 bg-gradient-to-r from-blue-900 to-purple-800 text-white px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
