@@ -769,7 +769,11 @@ const Landing = () => {
     
     {/* View All Button */}
     <div className="text-center mt-12">
-      
+      <button className="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 
+        text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 
+        transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+        View All Universities
+      </button>
     </div>
   </div>
 </section>
