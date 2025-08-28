@@ -15,7 +15,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import EnquiryForm from "@/components/EnquiryForm";
-import { FaArrowRight, FaAward, FaBook, FaBookOpen, FaBriefcase, FaClock, FaCompass, FaGlobe, FaGraduationCap, FaHeadset, FaHome, FaMapMarkerAlt, FaRocket, FaStar, FaUniversity, FaUsers, FaUserTie, FaVideo } from "react-icons/fa";
+import { FaArrowRight, FaAward, FaBook, FaBookOpen, FaBriefcase, FaClock, FaCompass, FaGlobe, FaGraduationCap, FaHeadset, FaHome, FaMapMarkerAlt, FaRocket, FaStar, FaUniversity, FaUsers, FaUserTie, FaVideo, FaCheckCircle } from "react-icons/fa";
 
 // Enhanced data arrays
 const heroSlides = [
@@ -250,6 +250,8 @@ const Landing = () => {
     return () => clearInterval(id);
   }, []);
 
+
+
   // Function to open modal with specific type
   const openModal = (type) => {
     setModalType(type);
@@ -354,6 +356,9 @@ const Landing = () => {
                     <span className="sm:hidden">Demo</span>
                   </button>
                 </div>
+
+                {/* Auto-open Countdown Indicator */}
+              
               </motion.div>
             </div>
           </div>
@@ -1019,7 +1024,7 @@ const Landing = () => {
       {/* Unified Modal - Responsive */}
       {showEnquiryModal && (
         <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
-          <DialogContent className="w-[95vw] max-w-lg md:max-w-xl  lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10 p-4 sm:p-6 z-[30001]">
+          <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-2 lg:my-1 p-4 sm:p-6 z-[30001]">
             <DialogHeader>
               <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
                 {modalType === "getStarted" && "Get Started with Unifost"}

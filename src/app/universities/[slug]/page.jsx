@@ -50,7 +50,8 @@ const universityData = {
       'Research-driven approach',
       'Strong placement record'
     ]
-  }
+  },
+
 };
 
 function slugify(input) {
@@ -70,6 +71,15 @@ export default async function UniversityPage({ params }) {
   if (!university) {
     const all = Object.values(universityData);
     university = all.find((u) => slugify(u.name) === slug);
+  }
+
+  // Additional fallback: handle common slug variations
+  if (!university) {
+    if (slug === 'manipal-university-online') {
+      university = universityData['manipal'];
+    } else if (slug === 'amity-university-online') {
+      university = universityData['amity'];
+    }
   }
 
   if (!university) {
@@ -169,5 +179,20 @@ export default async function UniversityPage({ params }) {
 }
 
 export function generateStaticParams() {
-  return Object.keys(universityData).map((slug) => ({ slug }));
+  // Generate all possible slug variations for each university
+  const params = [];
+  
+  Object.keys(universityData).forEach((key) => {
+    // Add the direct key (e.g., 'manipal')
+    params.push({ slug: key });
+    
+    // Add the slugified name (e.g., 'manipal-university-online')
+    const university = universityData[key];
+    const slugifiedName = slugify(university.name);
+    if (slugifiedName !== key) {
+      params.push({ slug: slugifiedName });
+    }
+  });
+  
+  return params;
 }

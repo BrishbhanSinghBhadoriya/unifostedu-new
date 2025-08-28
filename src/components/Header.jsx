@@ -209,13 +209,7 @@ const [modalType, setModalType] = useState();
                       </Link>
                     ))}
                   </div>
-                  <div className="mt-3 pt-3 border-t border-gray-200">
-                    <button 
-                      onClick={() => { router.push('/listofcollege'); setMenuOpen(null); }} 
-                      className="w-full bg-gradient-to-r from-indigo-600 to-cyan-600 text-white py-2 px-4 rounded-xl font-semibold hover:from-indigo-700 hover:to-cyan-700 transform hover:scale-105 transition-all duration-300 text-sm shadow-md hover:shadow-lg ring-1 ring-white/10">
-                      View All Universities
-                    </button>
-                  </div>
+                 
                 </div>
               </div>
             </div>
