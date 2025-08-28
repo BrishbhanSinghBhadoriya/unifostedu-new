@@ -159,6 +159,18 @@ const courseData = {
         accreditation: 'UGC Approved',
         features: ['Modern Curriculum', 'Industry Projects', 'Placement Assistance']
       },
+       {
+        name: 'Sharda University',
+        location: 'Greater Noida, Uttar Pradesh',
+        NIRF: 'N/A',
+        rating: 4.2,
+        image: '/images/sharda.png',
+        specializations: ['Data Science & Analytics', 'Finance', 'Marketing', 'Human Resources Management', 'Sales and Marketing', 'Healthcare and Hospital Administration ', ],
+        fee: '₹1,00,000 - ₹1,60,000',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Experienced Faculty', 'Industry Exposure', 'Career Guidance']
+      },
       // {
       //   name: 'Amrita University',
       //   location: 'Coimbatore, Tamil Nadu',
@@ -207,6 +219,18 @@ const courseData = {
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+      },
+        {
+        name: 'VGU',
+        location: 'Jaipur, Rajasthan',
+        NIRF: 'N/A',
+        rating: 4.0,
+        image: '/images/vgu1.png',
+        specializations: ['Finance', 'Marketing', 'Human Resources', 'Operations', 'Business Analytics', 'Information Technology Management', 'Helthcare Management', 'Agribusiness Management', 'International Business'],
+        fee: '₹1,50,000 - 2,40,000',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Quality Education', 'Industry Projects', 'Career Support']
       },
       {
         name: 'Uttaranchal University',
