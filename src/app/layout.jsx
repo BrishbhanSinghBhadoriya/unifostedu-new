@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatbotWidget from "@/components/ChatbotWidget";
-import { Toaster } from "react-hot-toast";
+import { Toaster as SonnerToaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -110,33 +110,7 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Footer />
         <ChatbotWidget />
-        <Toaster 
-          position="top-center" 
-          toastOptions={{
-            duration: 4000,
-            style: {
-              background: '#363636',
-              color: '#fff',
-              fontSize: '14px',
-              padding: '12px 16px',
-              borderRadius: '8px',
-              maxWidth: '90vw',
-              wordBreak: 'break-word'
-            },
-            success: {
-              style: {
-                background: '#10b981',
-                color: '#fff',
-              },
-            },
-            error: {
-              style: {
-                background: '#ef4444',
-                color: '#fff',
-              },
-            },
-          }}
-        />
+        <SonnerToaster position="top-center" richColors expand={false} duration={3500} />
       </body>
     </html>
   );

@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect } from "react";
+import { toast } from "sonner";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp, FaArrowUp, FaUser, FaGraduationCap, FaUniversity } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
@@ -155,7 +156,7 @@ const Footer = () => {
       setTimeout(() => setSubmitted(false), 5000);
     } catch (error) {
       console.error("❌ Error submitting enquiry:", error);
-      alert("Something went wrong while submitting. Please try again.");
+      toast.error("Something went wrong while submitting. Please try again.");
     }
   };
 
@@ -163,9 +164,10 @@ const Footer = () => {
     e.preventDefault();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(newsletterEmail)) {
-      alert("Please enter a valid email address.");
+      toast.error("Please enter a valid email address.");
       return;
     }
+    toast.success("Subscribed successfully!");
     setNewsletterDone(true);
     setTimeout(() => setNewsletterDone(false), 4000);
     setNewsletterEmail("");

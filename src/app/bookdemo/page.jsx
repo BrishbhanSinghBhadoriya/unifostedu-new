@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { demoAPI } from '@/lib/axios';
+import { toast } from 'sonner';
 
 export default function BookDemo() {
   const [formData, setFormData] = useState({
@@ -41,7 +42,7 @@ export default function BookDemo() {
       });
     } catch (error) {
       console.error('Error submitting demo request:', error);
-      alert('Something went wrong. Please try again.');
+      toast.error('Something went wrong. Please try again.');
     } finally {
       setLoading(false);
     }
