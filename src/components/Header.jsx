@@ -12,6 +12,7 @@ import {
 } from 'react-icons/fa';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import EnquiryForm from '@/components/EnquiryForm';
+import { blogAPI } from '@/lib/axios';
 
 
 
@@ -47,13 +48,25 @@ const [modalType, setModalType] = useState();
     
   ];
 
-  const blogPosts = [
-    { title: "MBA: Online vs Distance", path: "/blog/mba-online-vs-distance" },
-    { title: "Best Online BBA 2025", path: "/blog/best-online-bba-2025" },
-    { title: "Manipal vs Amity Online MBA", path: "/blog/manipal-vs-amity-online-mba" },
-    { title: "LPU Online Review", path: "/blog/lpu-online-review" },
-    { title: "Jain UGC Approval", path: "/blog/jain-ugc-approval" }
-  ];
+  const [latestBlogs, setLatestBlogs] = useState([]);
+  const [blogsLoading, setBlogsLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        setBlogsLoading(true);
+        const res = await blogAPI.getAll();
+        const list = res?.data?.blogs || res?.data?.data?.blogs || [];
+        const sorted = [...list].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        setLatestBlogs(sorted.slice(0, 8));
+      } catch {
+        setLatestBlogs([]);
+      } finally {
+        setBlogsLoading(false);
+      }
+    };
+    fetchBlogs();
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -189,7 +202,7 @@ const [modalType, setModalType] = useState();
                 <FaChevronDown className={`text-xs transition-transform duration-300 ${menuOpen === "explore" ? 'rotate-180' : ''}`} />
               </button>
                 
-              <div className={`absolute left-0 top-full mt-2 w-80 bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 overflow-hidden transition-all duration-300 transform origin-top ${
+              <div className={`absolute left-0 top-full mt-2 w-[28rem] bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 overflow-hidden transition-all duration-300 transform origin-top ${
                 menuOpen === "explore" ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
               }`}>
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/10 via-cyan-500/10 to-emerald-500/10 pointer-events-none"></div>
@@ -198,14 +211,16 @@ const [modalType, setModalType] = useState();
                     <FaUniversity className="mr-2 text-[#00ffe0]" />
                     Partner Universities
                   </h3>
-                  <div className="grid grid-cols-1 gap-2 max-h-64 overflow-y-auto">
+                  <div className="grid grid-cols-2 gap-3 max-h-80 overflow-y-auto pr-1">
                     {universities.map((uni, idx) => (
                       <Link key={idx} href={uni.link} onClick={() => setMenuOpen(null)} 
-                            className="flex items-center space-x-3 p-3 rounded-xl transition-all duration-300 group text-[#001e3c] hover:text-white hover:shadow-lg hover:shadow-indigo-200 hover:translate-y-[-2px] bg-white/70 hover:bg-gradient-to-r hover:from-indigo-600 hover:to-cyan-600">
-                        <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center overflow-hidden border border-gray-200">
-                          <img src={uni.logo} alt={uni.name} className="w-full h-full object-contain" />
+                            className="group block rounded-xl overflow-hidden border border-gray-200 bg-white/80 hover:shadow-lg hover:shadow-indigo-100 hover:-translate-y-0.5 transition-all duration-300">
+                        <div className="w-full h-24 bg-white flex items-center justify-center overflow-hidden">
+                          <img src={uni.logo} alt={uni.name} className="max-h-full max-w-full object-contain" />
                         </div>
-                        <span className="font-medium text-sm group-hover:text-white">{uni.name}</span>
+                        <div className="px-3 py-2">
+                          <p className="text-sm font-semibold text-[#001e3c] group-hover:text-[#00ffe0] line-clamp-2">{uni.name}</p>
+                        </div>
                       </Link>
                     ))}
                   </div>
@@ -214,7 +229,7 @@ const [modalType, setModalType] = useState();
               </div>
             </div>
 
-            {/* Blogs Dropdown - Made more compact */}
+            {/* Blogs Dropdown - API-powered cards */}
             <div className="relative">
               <button
                 onClick={() => setMenuOpen(menuOpen === "blogs" ? null : "blogs")}
@@ -224,7 +239,7 @@ const [modalType, setModalType] = useState();
                 <FaChevronDown className={`text-xs transition-transform duration-300 ${menuOpen === "blogs" ? 'rotate-180' : ''}`} />
               </button>
                 
-              <div className={`absolute left-0 top-full mt-2 w-72 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 transition-all duration-300 transform origin-top ${
+              <div className={`absolute left-0 top-full mt-2 w-[28rem] bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 transition-all duration-300 transform origin-top ${
                 menuOpen === "blogs" ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
               }`}>
                 <div className="p-4">
@@ -232,13 +247,34 @@ const [modalType, setModalType] = useState();
                     <FaBookOpen className="mr-2 text-[#00ffe0]" />
                     Latest Articles
                   </h3>
-                  <div className="space-y-2">
-                    {blogPosts.map((blog, idx) => (
-                      <Link key={idx} href={blog.path} onClick={() => setMenuOpen(null)}
-                            className="block p-3 rounded-xl hover:bg-[#001e3c] hover:text-white transition-all duration-300 text-[#001e3c] text-sm">
-                        <span className="font-medium">{blog.title}</span>
-                      </Link>
-                    ))}
+                  <div className="grid grid-cols-2 gap-3 max-h-80 overflow-y-auto pr-1">
+                    {blogsLoading ? (
+                      [...Array(4)].map((_, i) => (
+                        <div key={i} className="rounded-xl border border-gray-200 bg-white/80 p-4">
+                          <div className="w-full h-20 bg-gray-200 rounded animate-pulse mb-3" />
+                          <div className="h-4 w-3/4 bg-gray-200 rounded animate-pulse" />
+                        </div>
+                      ))
+                    ) : latestBlogs.length === 0 ? (
+                      <div className="col-span-2 text-sm text-gray-600">No blogs available.</div>
+                    ) : (
+                      latestBlogs.map((b) => (
+                        <Link key={b._id || b.id} href={`/blog/${b.slug || (b._id || b.id)}`} onClick={() => setMenuOpen(null)}
+                              className="group block rounded-xl overflow-hidden border border-gray-200 bg-white/80 hover:shadow-lg hover:shadow-indigo-100 hover:-translate-y-0.5 transition-all duration-300">
+                          <div className="w-full h-24 bg-white flex items-center justify-center overflow-hidden">
+                            {b.thumbnail ? (
+                              <img src={b.thumbnail} alt={b.title} className="w-full h-full object-cover" />
+                            ) : (
+                              <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">No Image</div>
+                            )}
+                          </div>
+                          <div className="px-3 py-2">
+                            <p className="text-sm font-semibold text-[#001e3c] group-hover:text-[#00ffe0] line-clamp-2">{b.title}</p>
+                            <p className="text-[11px] text-gray-500 mt-1">{new Date(b.createdAt).toLocaleDateString()}</p>
+                          </div>
+                        </Link>
+                      ))
+                    )}
                   </div>
                   <div className="mt-3 pt-3 border-t border-gray-200">
                     <Link href="/blog/blog-page" onClick={() => setMenuOpen(null)}

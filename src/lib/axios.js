@@ -131,7 +131,7 @@ export const blogAPI = {
   update: (id, data) => {
     const token = getAdminTokenFromCookie();
     return axios.put(
-      `${API_BASE_URL}/api/v1/blog/update/${id}`,
+      `https://unifost-backend-ev0y.onrender.com/api/v1/blog/update/${id}`,
       data,
       {
         withCredentials: true,
@@ -145,7 +145,7 @@ export const blogAPI = {
   remove: (id) => {
     const token = getAdminTokenFromCookie();
     return axios.delete(
-      `${API_BASE_URL}/api/v1/blog/delete/${id}`,
+      `https://unifost-backend-ev0y.onrender.com/api/v1/blog/delete/${id}`,
       {
         withCredentials: true,
         headers: {
