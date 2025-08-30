@@ -62,6 +62,19 @@ const courseData = {
         accreditation: 'UGC Approved',
         features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
       },
+       {
+        name: 'Manipal Academy of Higher Education',
+        location: 'Manipal, Karnataka',
+        NIRF: 'Top 5',
+        rating: 4.6,
+        image: '/images/mahe-uni.webp',
+        specializations: ["Healthcare Management, Finance, Marketing, Operations Management, Pharmaceutical Management, Business Analytics Management, Logistics & Supply Chain Management, Data Science, Human Resource Management'"],
+        fee: '₹2,92,000 ',
+        
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+      },
       {
         name: 'NMIMS',
         location: 'Mumbai, Maharashtra',
@@ -322,6 +335,19 @@ const courseData = {
         accreditation: 'UGC Approved',
         features: ['Quality Education', 'Industry Projects', 'Career Support']
       },
+       {
+        name: 'Manipal Academy of Higher Education',
+        location: 'Manipal, Karnataka',
+        NIRF: 'Top 5',
+        rating: 4.6,
+        image: '/images/mahe-uni.webp',
+        specializations: ["AI & ML, Cloud Computing, Cyber Security, Full Stack Development"],
+        fee: '₹2,20,000 ',
+        
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+      },
       {
         name: 'Jain University',
         location: 'Bangalore, Karnataka',
@@ -470,6 +496,32 @@ const courseData = {
         specializations: ['Finance & Accounting, Digital Marketing, Enterepreneurship Management & Family Business, Human Resource Management,  Data Analytics, Retail & E-commerce Management'],
         fee: '₹1,35,000',
         duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+      },
+          {
+        name: 'Manipal Academy of Higher Education',
+        location: 'Manipal, Karnataka',
+        NIRF: 'Top 5',
+        rating: 4.6,
+        image: '/images/mahe-uni.webp',
+        specializations: ["Healthcare Management, Business Analytics, Financial Technology (FinTech), Marketing Management, Human Resource Management"],
+        fee: '₹1,80,000 ',
+        
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+      },
+           {
+        name: 'Manipal Academy of Higher Education',
+        location: 'Manipal, Karnataka',
+        NIRF: 'Top 5',
+        rating: 4.6,
+        image: '/images/mahe-uni.webp',
+        specializations: ["BBA Hons.(Healthcare Management, Business Analytics, Financial Technology (FinTech), Marketing Management, Human Resource Management)"],
+        fee: '₹2,40,000 ',
+        
+        duration: '4 Years',
         accreditation: 'UGC Approved',
         features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
       },
@@ -927,6 +979,19 @@ const courseData = {
         image: '/images/manipal.png',
         specializations: ['General'],
         fee: '₹99,000',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+      },
+           {
+        name: 'Manipal Academy of Higher Education',
+        location: 'Manipal, Karnataka',
+        NIRF: 'Top 5',
+        rating: 4.6,
+        image: '/images/mahe-uni.webp',
+        specializations: ["B Com(Professional)"],
+        fee: '₹2,94,000 ',
+        
         duration: '3 Years',
         accreditation: 'UGC Approved',
         features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
@@ -1701,6 +1766,19 @@ const courseData = {
           accreditation: 'UGC Approved',
           features: ['Quality Education', 'Research Projects', 'Career Support']
         },
+            {
+        name: 'Manipal Academy of Higher Education',
+        location: 'Manipal, Karnataka',
+        NIRF: 'Top 5',
+        rating: 4.6,
+        image: '/images/mahe-uni.webp',
+        specializations: ["Data Science, Business Analytics"],
+        fee: '₹2,80,000 ',
+        
+        duration: '2 Years',
+        accreditation: 'UGC Approved',
+        features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+      },
         // {
         //   name: 'DYPATIL University',
         //   location: 'Pune, Maharashtra',
