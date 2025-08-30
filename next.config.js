@@ -1,6 +1,6 @@
-/** @type {import('next').NextConfig} */
+/** @type {import('next').nextConfig} */
 const nextConfig = {
-  output: 'export',
+  // output: 'export', // Removed to allow dynamic routes and API calls
   images: { unoptimized: true },
   trailingSlash: true,
 };
