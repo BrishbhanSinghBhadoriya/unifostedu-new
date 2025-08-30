@@ -573,7 +573,7 @@ const Footer = () => {
               {[
                 { label: "Universities", value: "25+", color: "from-cyan-500 to-blue-500" },
                 { label: "Programs", value: "80+", color: "from-indigo-500 to-purple-500" },
-                { label: "Students Guided", value: "10K+", color: "from-emerald-500 to-teal-500" },
+                { label: "Students Guided", value: "5K+", color: "from-emerald-500 to-teal-500" },
               ].map((item, i) => (
                 <div key={i} className="relative overflow-hidden rounded-xl p-4 border border-white/10 bg-white/5">
                   <div className={`absolute -inset-8 blur-2xl opacity-20 bg-gradient-to-r ${item.color}`} />
