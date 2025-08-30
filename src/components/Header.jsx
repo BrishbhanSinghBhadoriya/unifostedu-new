@@ -29,11 +29,12 @@ const Header = () => {
 const [modalType, setModalType] = useState();
 
   const universities = [
+    { name: "Amity University Online", link: "/amity", logo: "/images/amity.png" },
     { name: "Lovely Professional University", link: "/lpu", logo: "/images/lpu.png" },
     { name: "Online Manipal University", link: "/manipal", logo: "/images/manipal.png" },
     { name: "Sikkim Manipal University", link: "/smu", logo: "/images/smu-uni.jpg" },
     { name: "Uttaranchal University", link: "/uu", logo: "/images/uu-uni.webp" },
-    { name: "Amity University Online", link: "/amity", logo: "/images/amity.png" },
+    ,
     { name: "Chandigarh University Online", link: "/chandigarh", logo: "/images/chandigarh.jpg" },
     { name: "Jain University", link: "/jain", logo: "/images/jain.png" },
     { name: "Dr. D Y Patil", link: "/dypatil", logo: "/images/dypatil.png" },

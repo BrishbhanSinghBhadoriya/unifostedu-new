@@ -14,35 +14,32 @@ import { useRouter } from 'next/navigation';
 import EnquireCard from '@/components/EnquireCard';
 
 const Manipal = () => {
-  const ugCourses = [
+ const ugCourses = [
     {
       course: "Bachelor of Business Administration (BBA)",
       duration: "3 Years",
       eligibility: "10+2 Minimum 40%",
       fees: "1,35,000",
-      specialization: " Bachelor of Business Administration, Digital Marketing, Healthcare Management, Data Science and Analytics, Finance and Accounting",
+      specialization: "Finance & Accounting, Digital Marketing, Enterepreneurship Management & Family Business, Human Resource Management,  Data Analytics, Retail & E-commerce Management",
       image: "/images/bba.jpeg",
     },
-     {
+    {
       course: "Bachelor of Computer Applications (BCA)",
       duration: "3 Years",
       eligibility: "10+2 Minimum 40%",
       fees: "1,35,000",
-      specialization: " Data Science and Analytics, Cyber Security, Cloud Computing",
+      specialization: "Data Science and Analytics, Cyber Security, Cloud Computing",
       image: "/images/bca.jpeg",
     },
     {
       course: "Bachelor of Commerce (B.Com)",
       duration: "3 Years",
       eligibility: "10+2 Minimum 40%",
-      fees : "99,000",
-      specialization: "Online Bachelor of Commerce, Corporate Accounting",
+      fees: "99,000",
+      specialization: "General",
       image: "/images/bcom.jpeg",
     },
- 
   ];
-
-  
 
   const pgCourses = [
     {
@@ -50,8 +47,7 @@ const Manipal = () => {
       duration: "2 Years",
       eligibility: "50% Graduation",
       fees: "1,75,000",
-      specialization: "Human Resource Management and Finance, Finance and Marketing,Marketing and Human Resource Management,Marketing and Business Analytics,Finance and Business Analytics, Human Resource and Business Analytics, Project Management, Retail Management and Quick Commerce, ,Artificial Intelligence  Banking and Finance, 15 other field,",
-
+      specialization: "Super/Dual(Human Resource Management and Finance, Finance and Marketing, Marketing and Human Resource Management, Marketing and Business Analytics, Finance and Business Analytics, Human Resource and Business Analytics, Project Management, Retail Management and Quick Commerce, Artificial Intelligence Banking and Finance, 15 other fields)",
       image: "/images/mba.jpeg",
     },
     {
@@ -59,8 +55,7 @@ const Manipal = () => {
       duration: "2 Years",
       eligibility: "50% Graduation",
       fees: "1,58,000",
-      specialization: "DevOps, Natural Language Processing & Large Language Models Development, Computer Science and IT, Data Analytics, Cyber Security, Full Stack Development, Cloud Computing, Data Science, Artificial Intelligence" , 
-
+      specialization: "AI & Data Science, Cyber Security, Cloud Computing, Comprehensive Emerging Technologies,AI & ML", 
       image: "/images/mca1.jpeg",
     },
     {
@@ -68,24 +63,16 @@ const Manipal = () => {
       duration: "2 Years",
       eligibility: "Graduation in Commerce",
       fees: "1,08,000",
-      specialization: "Accounting and Finance, Professional Accounting and Finance (Accredited by CPA, US)", 
+      specialization: "General", 
       image: "/images/m.com.jpeg",
     },
-    {
-      course: "Master of Science (M.Sc)",
-      duration: "2 Years",
-      eligibility: "Graduation ",
-      fees: "2,80,000",
-      specialization: "Data Science, Business Analytics",
-      image: "/images/m.com.jpeg",
-    },
-
+  
     {
       course: "Master of Arts (MA)",
       duration: "2 Years",
       eligibility: "Graduation",
-      fees: "1,40,000",
-      specialization: " MA( Journalism and Mass Communication, ",
+      fees: "80,000 - 1,40,000",
+      specialization: " Economics,MA (Journalism and Mass Communication)",
       image: "/images/ma1.jpeg",
     },
   ];

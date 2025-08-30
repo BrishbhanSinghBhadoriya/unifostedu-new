@@ -26,7 +26,7 @@ const Sharda = () => {
       duration: "3 Years",
       eligibility: "Passed the (10+2) examination from State Board / CBSE / NIOS / IGCSE / IB /ICSE recognized by the State or Central Government.",
       fees: "₹1,05,000",
-      specialization: "Computer Applications, IT, Cyber Security",
+      specialization: "General,",
       image: "/images/bca.jpeg",
     },
     {
@@ -44,8 +44,8 @@ const Sharda = () => {
       course: "Master of Business Administration (MBA)",
       duration: "2 Years",
       eligibility: "Passed Bachelor’s Degree of minimum 3 years duration.",
-      fees: "₹1,00,000",
-      specialization: " Finance, Healthcare, Human Resource, ",
+      fees: "₹1,00,000- ₹1,60,000",
+      specialization: ["Data Science and Analytics, Marketing, Healthcare and Hospital Administration, Human Resource Management, Sales and Marketing, Finance"],
       image: "/images/mba.jpeg",
     },
       

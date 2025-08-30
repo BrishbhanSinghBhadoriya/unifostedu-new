@@ -1,6 +1,6 @@
 'use client';
+import React, { useState } from "react";
 
-import React from 'react';
 // import { useNavigate } from 'react-router-dom';
 // import { Helmet } from 'react-helmet';
 import {
@@ -16,6 +16,8 @@ import {
 import EnquireCard from '@/components/EnquireCard';
 
 const Lpu = () => {
+  const [activeTab, setActiveTab] = useState('ug');
+  
   const ugCourses = [
     {
       course: "Bachelor of Business Administration (BBA)",
@@ -33,9 +35,8 @@ const Lpu = () => {
       specialization: "General",
       image: "/images/bca.jpeg",
     },
-    
     {
-      course: "Bachelor’s of Arts (BA)",
+      course: "Bachelor's of Arts (BA)",
       duration: "3 Years",
       eligibility: "10+2",
       fees: "₹ 1,20,000",
@@ -69,7 +70,6 @@ const Lpu = () => {
       specialization: "General", 
       image: "/images/m.com.jpeg",
     },
-
     {
       course: "Master of Arts (MA)",
       duration: "2 Years",
@@ -78,7 +78,6 @@ const Lpu = () => {
       specialization: "English, History, Political Science, Sociology,",
       image: "/images/ma1.jpeg",
     },
-
     {
       course: "Master of Science (M.Sc)",
       duration: "2 Years",
