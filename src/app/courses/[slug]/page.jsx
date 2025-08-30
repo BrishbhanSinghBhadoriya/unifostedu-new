@@ -70,7 +70,7 @@ const courseData = {
         image: '/images/nmims.png',
         specializations: ['Applied Finance', 'Business Administration', 'Business Analytics', 'Digital Marketing', 'Finance', 'Marketing', 'Operations', 'Human Resources'],
         fee: '₹1,96,000',
-        fee: '₹2.20L',
+        
         duration: '2 Years',
         accreditation: 'UGC Approved',
         features: ['Industry Connect', 'Placement Assistance', 'Quality Education']
@@ -484,6 +484,18 @@ const courseData = {
         duration: '3 Years',
         accreditation: 'UGC Approved',
         features: ['Quality Education', 'Industry Connect', 'Career Support']
+      },
+       {
+        name: 'NMIMS',
+        location: 'Mumbai, Maharashtra',
+        NIRF: '21',
+        rating: 4.7,
+        image: '/images/nmims.png',
+        specializations: ['General'],
+        fee: '₹1,45,000',
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Industry Connect', 'Placement Assistance', 'Quality Education']
       },
       {
         name: 'LPU Online',
@@ -975,6 +987,18 @@ const courseData = {
         duration: '3 Years',
         accreditation: 'UGC Approved',
         features: ['Expert Faculty', 'Career Services', 'Flexible Learning']
+      },
+       {
+        name: 'NMIMS',
+        location: 'Mumbai, Maharashtra',
+        NIRF: '21',
+        rating: 4.7,
+        image: '/images/nmims.png',
+        specializations: ['General'],
+        fee: '₹94,000',       
+        duration: '3 Years',
+        accreditation: 'UGC Approved',
+        features: ['Industry Connect', 'Placement Assistance', 'Quality Education']
       },
       // {
       //   name: 'Uttaranchal University',
