@@ -27,7 +27,7 @@ const Nmims = () => {
       course: "Bachelor of Business Administration (BBA)",
       duration: "3 Years",
       eligibility: "10+2 from a recognized board with minimum 50% marks",
-      fees: "₹1,50,000",
+      fees: "₹1,45,000",
       specialization: "General Management, Digital Marketing, Finance, Human Resources",
       image: "/images/bba.jpeg",
     },
@@ -35,26 +35,11 @@ const Nmims = () => {
       course: "Bachelor of Commerce (B.Com)",
       duration: "3 Years",
       eligibility: "10+2 with commerce stream and minimum 50% marks",
-      fees: "₹1,20,000",
+      fees: "₹94,000",
       specialization: "Accounting, Finance, Taxation, Banking",
       image: "/images/bcom.jpeg",
     },
-    {
-      course: "Bachelor of Arts (BA) Liberal Arts",
-      duration: "3 Years",
-      eligibility: "10+2 in any stream with minimum 50% marks",
-      fees: "₹1,30,000",
-      specialization: "Psychology, Sociology, Economics, English Literature",
-      image: "/images/ba.jpeg",
-    },
-    {
-      course: "Bachelor of Computer Applications (BCA)",
-      duration: "3 Years",
-      eligibility: "10+2 with Mathematics and minimum 50% marks",
-      fees: "₹1,60,000",
-      specialization: "Software Development, Data Science, Web Technologies",
-      image: "/images/bca.jpeg",
-    }
+  
   ];
 
   const pgCourses = [
@@ -69,36 +54,12 @@ const Nmims = () => {
     {
       course: "Master of Business Administration (WX)",
       duration: "2 Years",
-      eligibility: "BCA or B.Sc. in Computer Science with minimum 50% marks",
-      fees: "₹1,35,000",
-      specialization: "Software Engineering, Data Analytics, Cloud Computing, Cybersecurity",
+      eligibility: "Graduation with minimum 55% marks and 3 year Experince",
+      fees: "₹4,00,000",
+      specialization: "Applied Finance, Digital Marketing, Leadership & Strategy, Marketing, Operations & Suppyv Chain",
       image: "/images/mca1.jpeg",
     },
-    {
-      course: "Master of Commerce (M.Com)",
-      duration: "2 Years",
-      eligibility: "B.Com or related degree with minimum 50% marks",
-      fees: "₹1,25,000",
-      specialization: "Advanced Accounting, Financial Management, Taxation",
-      image: "/images/m.com.jpeg",
-    },
-    {
-      course: "Master of Science (M.Sc) Applied Finance",
-      duration: "2 Years",
-      eligibility: "Bachelor's degree in Finance or related field with minimum 50% marks",
-      fees: "₹1,20,000",
-      specialization: "Investment Management, Risk Management, Financial Modeling",
-      image: "/images/m.com.jpeg",
-    },
-    {
-      course: "Master of Arts (MA) Journalism & Mass Communication",
-      duration: "2 Years",
-      eligibility: "Graduation in any discipline with minimum 50% marks",
-      fees: "₹1,40,000",
-      specialization: "Digital Journalism, Public Relations, Advertising, Media Management",
-      image: "/images/ma1.jpeg",
-    }
-  ];
+  ]
 
   return (
     <>

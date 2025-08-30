@@ -16,15 +16,15 @@ const Shoolini = () => {
       course: "Bachelor of Commerce (B.Com)",
       duration: "3 Years",
       eligibility: "10+2 pass with Commerce",
-      fees: "12,500/Semester",
+      fees: "	₹75,000/-",
       specialization: "Accounting, Finance and Taxation",
       image: "/images/bcom.jpg",
     },
     {
       course: "Bachelor of Business Administration (BBA)",
       duration: "3 Years",
-      eligibility: "10+2 or equivalent from a recognized board",
-      fees: "12,500/Semester",
+      eligibility: "10+2 in any discipline with 40% marks in last qualifying examination",
+      fees: "(63,000/- + 27,000/-) = ₹90,000/-  [ ₹27,000/-(Only to be paid after Placement)]",
       specialization: "HR, Marketing, Finance, Digital Marketing, Computer Science, Direct Selling",
       image: "/images/shoolini-bba.jpg",
     },
@@ -32,7 +32,7 @@ const Shoolini = () => {
       course: "Bachelor of Computer Applications (BCA)",
       duration: "3 Years",
       eligibility: "10+2 in any discipline with 40% marks in last qualifying examination. Reservation of seats as per government policies. ",
-      fees: "12,500/Semester",
+      fees: "(63,000/- + 27,000/-) = ₹90,000/-  [ ₹27,000/-(Only to be paid after Placement)]",
       specialization: "Machine Learning, Data Science, Cyber Secruity and Artificial Intelligence",
       image: "/images/shoolini-bca.jpg",
     }
@@ -43,30 +43,34 @@ const Shoolini = () => {
       course: "Master of Business Administration (MBA)",
       duration: "2 Years",
       eligibility: "Passed Bachelor degree of minimum 3 years duration. Obtained atleast 50% marks.",
-      fees: "27,500/Semester",
-      specialization: " Marketing, HRM, Retail Management, Finance, International Business, Digital Marketing, Entrepreneurship, Business Analytics, Operations Management",
+      fees: "(98,000/- + 42,000/-) = ₹1,40,000/- [ ₹42,000/-(Only to be paid after Placement)]",
+      specialization: "Marketing Management, Operation & Supply Chain Management, Agri Business Management, Human Resource Management, IT Management, Biotechnology Management, Financial Management, Tourism Management, Food Technology Management, Digital Marketing, Real Estate Management, Pharma & Health Care Management,Retail Management,Direct Selling Management,Banking & Insurance,Data Science & Business Analytics",
       image: "/images/shoolini-mba.jpg",
     },
     {
-      course: "Maters of Computer Applications (MCA)",
+      course: "Executive MBA",
+      duration: "2 Years",
+      eligibility: "Passed Bachelor degree of minimum 3 years duration. Obtained atleast 50% marks.",
+      fees: "₹1,80,000/-",
+      specialization: "Marketing Management, Operation & Supply Chain Management, Agri Business Management, Human Resource Management, IT Management, Biotechnology Management, Financial Management, Tourism Management, Food Technology Management, Digital Marketing, Real Estate Management, Pharma & Health Care Management,Retail Management,Direct Selling Management,Banking & Insurance,Data Science & Business Analytics",
+      image: "/images/shoolini-mba.jpg",
+    },
+    {
+      course: "MSC in Data science ",
       duration: "2 Years",
       eligibility: "Graduation in Life Sciences",
-      fees: "27,500/Semester",
-      specialization: "Artificial Intelligence, Data Science, Full Stack Development",
+      fees: "₹1,20,000/-",
+      specialization: "Data Science",
       image: "/images/shoolini-mca.jpg",
-    }
-    ,
+    },
     {
-      course: "Master of Arts (M.A) in English",
+      course: "Master of Arts (M.A) ",
       duration: "2 Years",
       eligibility: "Bachelor's degree with any discipline with minimum of 40% marks. 60% marks in case of International Students in the qualifying examination.",
-      fees: "10,500/Semester",
-     
+      fees: "42,000-1,00,000",
+      specialization: "English Literature, journalism and Mass Communication",
       image: "/images/shoolini-ma.jpg",
     }
-    
-
-    
   ];
 
   return (

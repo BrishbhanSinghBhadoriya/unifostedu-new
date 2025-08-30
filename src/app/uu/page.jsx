@@ -14,14 +14,14 @@ import {
   FaLaptop
 } from 'react-icons/fa';
 import EnquireCard from '@/components/EnquireCard';
-// Reusable Enquire Button Component
-// const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
-//   const router = useRouter();  
-//   const university = "Uttaranchal University";
 
-//   const handleClick = () => {
-//      router.push(`/enquiry?university=${encodeURIComponent(university)}&course=${encodeURIComponent(course)}`);
-//   };
+  // const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
+  // const router = useRouter();  
+  // const university = "Uttaranchal University";
+
+  // const handleClick = () => {
+  //    router.push(`/enquiry?university=${encodeURIComponent(university)}&course=${encodeURIComponent(course)}`);
+  // };
 
 //   return (
 //     <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
@@ -60,6 +60,7 @@ const UU = () => {
     duration: "3 Years",
     eligibility: "10+2 pass from a recognized board",
     fees: "₹72,000",
+    specialization: "General",
     image: "/images/ba.jpeg",
   },
   {
@@ -67,6 +68,7 @@ const UU = () => {
     duration: "3 Years",
     eligibility: "10+2 pass from a recognized board",
     fees: "₹1,20,000",
+    specialization: "General",
     image: "/images/bba.jpg",
   },
   {
@@ -74,6 +76,7 @@ const UU = () => {
     duration: "3 Years",
     eligibility: "10+2 pass from a recognized board",
     fees: "₹1,20,000",
+    specialization: "General",
     image: "/images/bca.jpeg",
   },
 ];
@@ -85,6 +88,8 @@ const pgCourses = [
     eligibility:
       "Graduation in any field from a recognized university with a minimum of 40% marks in aggregate OR below 40% with eligibility test",
     fees: "₹1,40,000",
+    specialization:
+      "Marketing, Digital, Human Resource, Business Analytics, Finance, International Business, Information Technology Management, Logistics & Supply Chain Management",
     image: "/images/mba.jpeg",
   },
   {
@@ -93,6 +98,7 @@ const pgCourses = [
     eligibility:
       "Graduation in any field from a recognized university with relevant work experience (specific criteria may vary)",
     fees: "₹1,40,000",
+    specialization: "Business Analytics, HR Analytics, Finance Analytics,Banking and Finance",
     image: "/images/mca.jpeg",
   },
   {
@@ -101,9 +107,12 @@ const pgCourses = [
     eligibility:
       "Graduate in Computer Applications/CS/IT/Engineering with 50% marks (45% reserved) OR Graduate with Mathematics at 10+2 or graduation level. If not studied, must complete a bridge course.",
     fees: "₹1,20,000",
+    specialization: "General",
     image: "/images/mca1.jpeg",
   },
 ];
+
+
   return (
     <>
      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />

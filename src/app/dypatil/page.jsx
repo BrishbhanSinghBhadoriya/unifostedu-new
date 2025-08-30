@@ -12,7 +12,7 @@ const Dypatil = () => {
       duration: "3 Years",
       fees: "₹1,45,400",
       eligibility: "10+2 Pass",
-      specialization: "Finance Management , Retail Management, E-Commerce Management,Marketing Management,  Human Resource Management, It and System Management, Internatinal Business Management, Banking Financial Services and Insurance Management ",
+      specialization: "IT & System Management, International Business Management, Retail Management, Banking, Financial Services and Insurance Management, Shipping & Logistics Management, Marketing Management, Human Resource Management (HRM), Finance Management, E-commerce Management ",
       image: "/images/bba.jpeg",
     },
   
@@ -36,7 +36,7 @@ const Dypatil = () => {
       duration: "2 Years",
       eligibility: "Graduation",
       fees: "1,89,400",
-      specialization: "Human Resource Management, Marketing Management,Operation Management,Finance Management,IT Management,Business Analytics Management, Fintech Management, Project Management, Agribusiness Management, International Business Management, Digital Marketing Management,Logistics, Materials & Supply Chain ,Artificial Intelligence & Machine Learning,",
+      specialization: "Marketing Management, Human Resource Management, Finance Management, IT Management, Project Management, Operations Management, Hospital Administration & Healthcare Management, International Business Management, FinTech Management, Business Analytics Management, Artificial Intelligence & Machine Learning Management, Logistics, Materials & Supply Chain Management, Blockchain Management, Digital Marketing Management, Agri-Business Management",
 
       image: "/images/mba.jpeg",
     },

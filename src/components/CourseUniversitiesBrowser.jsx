@@ -62,7 +62,11 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle })
 
   const locations = useMemo(() => ['All', ...Array.from(new Set(universities.map((u) => u.location.split(',')[0])))], [universities]);
   const specializations = useMemo(
-    () => ['All', ...Array.from(new Set(universities.flatMap((u) => u.specializations)))],
+    () => ['All', ...Array.from(new Set(universities.flatMap((u) => {
+      // Ensure specializations is always an array
+      const specs = Array.isArray(u.specializations) ? u.specializations : [u.specializations];
+      return specs.filter(spec => spec && spec.trim()); // Filter out empty/null values
+    })))],
     [universities]
   );
 
@@ -78,7 +82,10 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle })
     }
     if (specializationFilter !== 'All') {
       const spec = specializationFilter.toLowerCase();
-      list = list.filter((u) => u.specializations.some((s) => s.toLowerCase().includes(spec)));
+      list = list.filter((u) => {
+        const specs = Array.isArray(u.specializations) ? u.specializations : [u.specializations];
+        return specs.some((s) => s && s.toLowerCase().includes(spec));
+      });
     }
 
     // Sorting
@@ -224,14 +231,14 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle })
                     <div>
                       <p className="text-sm font-medium text-gray-700 mb-2">Specializations:</p>
                       <div className="space-y-1">
-                        {university.specializations.slice(0, 3).map((spec, i) => (
+                        {(Array.isArray(university.specializations) ? university.specializations : [university.specializations]).slice(0, 3).map((spec, i) => (
                           <div key={i} className="flex items-center text-sm text-gray-600">
                             <div className="w-2 h-2 bg-[#00ffe0] rounded-full mr-2"></div>
                             {spec}
                           </div>
                         ))}
-                        {university.specializations.length > 3 && (
-                          <div className="text-sm text-[#00ffe0] font-medium">+{university.specializations.length - 3} more</div>
+                        {(Array.isArray(university.specializations) ? university.specializations : [university.specializations]).length > 3 && (
+                          <div className="text-sm text-[#00ffe0] font-medium">+{(Array.isArray(university.specializations) ? university.specializations : [university.specializations]).length - 3} more</div>
                         )}
                       </div>
                     </div>

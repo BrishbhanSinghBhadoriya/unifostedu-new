@@ -11,6 +11,8 @@ import {
 } from 'react-icons/fa';
 
 import EnquireCard from '@/components/EnquireCard';
+// import { s } from 'framer-motion/dist/types.d-Cjd591yU';
+//import { s } from 'framer-motion/dist/types.d-Cjd591yU';
 
 // Reusable Enquire Button Component
 // const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
@@ -53,6 +55,7 @@ const SMU = () => {
     duration: "3 Years",
     eligibility: "10+2 or equivalent",
     fees: "₹75,000",
+    specialization: "English + Sociology + Political Science",
     image: "/images/ba.jpeg",
   },
   {
@@ -60,6 +63,7 @@ const SMU = () => {
     duration: "3 Years",
     eligibility: "10+2 or equivalent",
     fees: "₹75,000",
+    specialization: "Genral",
     image: "/images/bcom.jpeg",
   },
 ];
@@ -70,20 +74,23 @@ const pgCourses = [
     duration: "2 Years",
     eligibility: "Graduation with minimum 50% marks",
     fees: "₹1,10,000",
+    specialization: "dual Specialization(Marketing, Finance, HR, systems, Operations and Supply Chain Management, Healthcare Management)",
     image: "/images/mba.jpeg",
   },
   {
     course: "Master of Computer Applications (MCA)",
     duration: "2 Years",
-    eligibility: "BBA or UG Degree with minimum 40% + 10th & 12th",
+    eligibility: "Graduation in minimum 50% marks",
     fees: "₹98,000",
+    specialization: "General",
     image: "/images/mca1.jpeg",
   },
   {
-    course: "Master of Arts (MA - English / Sociology / Political Science)",
+    course: "Master of Arts ",
     duration: "2 Years",
     eligibility: "Graduation in relevant stream",
-    fees: "₹79,000",
+    fees: "₹75,000",
+    specialization: "English / Sociology / Political Science",
     image: "/images/ma1.jpeg",
   },
   {
@@ -91,6 +98,7 @@ const pgCourses = [
     duration: "2 Years",
     eligibility: "Graduation in Commerce or equivalent",
     fees: "₹75,000",
+    specialization: "General",
     image: "/images/bcom.jpeg",
   },
 ];

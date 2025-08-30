@@ -30,11 +30,11 @@ const Header = () => {
 const [modalType, setModalType] = useState();
 
   const universities = [
+    { name: "Amity University Online", link: "/amity", logo: "/images/amity.png" },
     { name: "Lovely Professional University", link: "/lpu", logo: "/images/lpu.png" },
     { name: "Online Manipal University", link: "/manipal", logo: "/images/manipal.png" },
     { name: "Sikkim Manipal University", link: "/smu", logo: "/images/smu-uni.jpg" },
     { name: "Uttaranchal University", link: "/uu", logo: "/images/uu-uni.webp" },
-    { name: "Amity University Online", link: "/amity", logo: "/images/amity.png" },
     { name: "Chandigarh University Online", link: "/chandigarh", logo: "/images/chandigarh.jpg" },
     { name: "Jain University", link: "/jain", logo: "/images/jain.png" },
     { name: "Dr. D Y Patil", link: "/dypatil", logo: "/images/dypatil.png" },
@@ -45,7 +45,6 @@ const [modalType, setModalType] = useState();
     { name: "Upes Online", link: "/upes", logo: "/images/upes.png" },
     { name: "Sharda University Online", link: "/sharda", logo: "/images/sharda.png" },
     { name: "NMIMS University", link: "/nmims", logo: "/images/nmims.png" }
-    
   ];
 
   const [latestBlogs, setLatestBlogs] = useState([]);
@@ -445,8 +444,8 @@ const [modalType, setModalType] = useState();
                 <div className="space-y-3">
                   <h3 className="text-[#00ffe0] font-bold text-sm uppercase tracking-wider px-2">Latest Blogs</h3>
                   <div className="space-y-2">
-                    {blogPosts.slice(0, 3).map((blog, idx) => (
-                      <Link key={idx} href={blog.path} onClick={() => setMobileMenuOpen(false)}
+                    {latestBlogs.slice(0, 3).map((blog, idx) => (
+                      <Link key={idx} href={`/blog/${blog.slug || (blog._id || blog.id)}`} onClick={() => setMobileMenuOpen(false)}
                             className="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition text-white border border-white/10">
                         <div className="w-8 h-8 bg-gradient-to-br from-[#00ffe0] to-[#00d4c4] rounded-lg flex items-center justify-center">
                           <FaBookOpen className="text-[#001e3c] text-sm" />

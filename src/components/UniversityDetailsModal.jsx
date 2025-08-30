@@ -103,7 +103,7 @@ export default function UniversityDetailsModal({
           <div className="border-t border-gray-200 pt-6">
             <h3 className="text-xl font-bold text-gray-900 mb-4">Available Specializations</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {university.specializations.map((spec, index) => (
+              {(Array.isArray(university.specializations) ? university.specializations : [university.specializations]).map((spec, index) => (
                 <div key={index} className="flex items-center">
                   <div className="w-2 h-2 bg-[#00ffe0] rounded-full mr-3"></div>
                   <span className="text-gray-700">{spec}</span>
