@@ -9,6 +9,7 @@ import {
   FaShieldAlt, FaTools, FaStar, FaQuoteLeft, FaAward, FaGlobe, FaLinkedin, FaFacebook
 }from "react-icons/fa";
 import { motion } from 'framer-motion';
+import Head from 'next/head';
 
 export default function About() {
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
@@ -41,8 +42,126 @@ export default function About() {
     }
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "UniFost",
+    "url": "https://www.unifostedu.com",
+    "logo": "https://www.unifostedu.com/logo.png",
+    "description": "UniFost is redefining how students discover and access quality education through personalized guidance and innovative technology.",
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Priyansh Mishra",
+        "url": "https://www.linkedin.com/in/priyansh-mishra-14b9ba2a0/",
+        "image": "https://www.unifostedu.com/priyansh.jpg",
+        "jobTitle": "Co-Founder & Director"
+      },
+      {
+        "@type": "Person",
+        "name": "Aman Pawar",
+        "url": "https://www.linkedin.com/in/aman-pawar-a59b57218/",
+        "image": "https://www.unifostedu.com/aman.jpg",
+        "jobTitle": "Co-Founder & Director"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "India",
+      "addressRegion": "Maharashtra",
+      "addressLocality": "Pune",
+      "postalCode": "411001"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "telephone": "+91 9876543210",
+      "email": "info@unifostedu.com"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/unifost",
+      "https://www.facebook.com/unifostedu"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "ratingCount": "1000",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "areaServed": "India",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "UniFost Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Personalized Video Counseling",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Video Counseling",
+            "description": "One-on-one sessions with our expert counselors to help you make informed decisions about your education and career path."
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Home Demo Sessions",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Home Demo",
+            "description": "Experience learning firsthand with trial sessions conducted at your convenience before committing to any program."
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Certified Programs",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Certified Courses",
+            "description": "Access to industry-recognized certifications and courses that enhance your employability and skills."
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Online Degree Guidance",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Online Degree",
+            "description": "Comprehensive support for selecting and enrolling in accredited online degree programs from top institutions."
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "University Admissions",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "University Admissions",
+            "description": "Expert assistance in selecting and applying to traditional universities with high placement records."
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Skill Development",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Skill Development",
+            "description": "Specialized courses and workshops to bridge the gap between academic learning and industry requirements."
+          }
+        }
+      ]
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData)
+          }}
+        />
 
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
@@ -383,5 +502,6 @@ export default function About() {
       </Dialog>
 
     </div>
+    </>
   );
 }
