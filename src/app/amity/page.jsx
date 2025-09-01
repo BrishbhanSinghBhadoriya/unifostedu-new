@@ -287,7 +287,7 @@ const Amity = () => {
           <img src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
           
            
-           <img src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
+           {/* <img src="/images/naac.png" alt="NAAC" className="h-16 object-contain" /> */}
            <img src="/images/nirf.png" alt="NIRF" className="h-16 object-contain" />
            <img src="/images/wes.png" alt="WES" className="h-16 object-contain" />
            <img src="/images/aiu.png" alt="AIU" className="h-16 object-contain" />
