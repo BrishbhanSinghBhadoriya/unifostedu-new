@@ -2,113 +2,86 @@ import React from 'react';
 import Link from 'next/link';
 
 const colleges = [
-  {
+ {
     name: "Amity University Online",
     logo: "/images/amitylogo.jpg",
-    ranking: "Top 10",
+    ranking: "NIRF-29",
     location: "Noida, UP",
-    fee: "₹1.2L - ₹2.5L",
-    courses: ["MBA", "BBA", "BCA", "MCA"],
+    fee: "₹1.2L - ₹3.45L",
+    courses: ["MBA", "BBA", "BCA", "MCA", "more"],
     description: "One of India's leading private universities with comprehensive online programs."
   },
   {
     name: "Manipal University Online",
     logo: "/images/manipallogo.jpg",
-    ranking: "Top 5",
-    location: "Manipal, Karnataka",
-    fee: "₹1.5L - ₹3L",
-    courses: ["MBA", "BBA", "BCA", "MCA"],
+    ranking: "NIRF-73",
+    location: "Jaipur, Rajasthan",
+    fee: "₹1.5L - ₹2.92L",
+    courses: ["MBA", "BBA", "BCA", "MCA","more"],
     description: "Pioneer in online education with industry-aligned curriculum."
   },
   {
     name: "Lovely Professional University Online",
     logo: "/images/lpulogo.png",
-    ranking: "Top 20",
+    ranking: "NIRF-38",
     location: "Phagwara, Punjab",
-    fee: "₹90K - ₹2L",
-    courses: ["MBA", "BBA", "BCA", "MCA"],
+    fee: "₹80K - ₹2L",
+    courses: ["MBA", "BBA", "BCA", "MCA","more"],
     description: "Known for practical learning and strong industry connections."
   },
   {
-    name: "UPES Online",
+    name: "University of Petroleum and Energy Studies Online",
     logo: "/images/upeslogo.png",
-    ranking: "Top 15",
+    ranking: "NIRF-41",
     location: "Dehradun, Uttarakhand",
-    fee: "₹1.8L - ₹3.2L",
-    courses: ["MBA", "BBA", "BCA", "MCA"],
+    fee: "₹1.5L - ₹2.2L",
+    courses: ["MBA", "BBA", "BCA", "MCA","more"],
     description: "Specialized in energy and petroleum studies with online programs."
   },
   {
-    name: "NMIMS Online",
+    name: "Narsee Monjee Institute of Management Studies Online",
     logo: "/images/nmimslogo.jpg",
-    ranking: "Top 8",
+    ranking: "NIRF-21",
     location: "Mumbai, Maharashtra",
-    fee: "₹2L - ₹3.5L",
-    courses: ["MBA", "BBA", "BCA", "MCA"],
+    fee: "₹94K - ₹3.5L",
+    courses: ["MBA", "BBA", "BCom", "MBA (WX)",],
     description: "Premier management institute with comprehensive online offerings."
   },
   {
     name: "Sharda University Online",
     logo: "/images/shardalogo.png",
-    ranking: "Top 30",
+    ranking: "NIRF-87",
     location: "Greater Noida, UP",
     fee: "₹80K - ₹1.5L",
-    courses: ["MBA", "BBA", "BCA", "MCA"],
+    courses: ["MBA", "BBA", "BCA", "MCA","more"],
     description: "Affordable quality education with modern online infrastructure."
   },
   {
-    name: "DY Patil Online",
+    name: "Dr. DY Patil Online",
     logo: "/images/dypatillogo.png",
-    ranking: "Top 25",
+    ranking: "NIRF-63",
     location: "Navi Mumbai, Maharashtra",
-    fee: "₹1.1L - ₹2.2L",
-    courses: ["MBA", "BBA", "BCA", "MCA"],
+    fee: "₹1.4L - ₹1.9L",
+    courses: ["MBA", "BBA",  "MCA",],
     description: "Established university with diverse online program portfolio."
   },
   {
     name: "Jain University Online",
     logo: "/images/jainlogo.png",
-    ranking: "Top 12",
+    ranking: "NIRF-77",
     location: "Bangalore, Karnataka",
-    fee: "₹1.3L - ₹2.6L",
-    courses: ["MBA", "BBA", "BCA", "MCA"],
+    fee: "₹1.28L - ₹2.6L",
+    courses: ["MBA", "BBA", "BCA", "MCA","more"],
     description: "Innovative learning approaches with strong academic foundation."
-  },
-  {
-    name: "VGU Online",
-    logo: "/images/vgulogo.png",
-    ranking: "Top 35",
-    location: "Jaipur, Rajasthan",
-    fee: "₹70K - ₹1.3L",
-    courses: ["MBA", "BBA", "BCA", "MCA"],
-    description: "Emerging university with modern online education facilities."
   },
   {
     name: "Chandigarh University Online",
     logo: "/images/chandigarh.jpg",
-    ranking: "Top 18",
+    ranking: "NIRF-36",
     location: "Chandigarh",
     fee: "₹1L - ₹2L",
-    courses: ["MBA", "BBA", "BCA", "MCA"],
+    courses: ["MBA", "BBA", "BCA", "MCA","more"],
     description: "Northern India's prominent university with online programs."
-  },
-  {
-    name: "OP Jindal University",
-    logo: "/images/opjindal.png",
-    ranking: "Top 22",
-    location: "Raigarh, Chhattisgarh",
-    fee: "₹1.2L - ₹2.3L",
-    courses: ["MBA", "BBA", "BCA", "MCA"],
-    description: "Industry-focused education with practical learning approach."
-  },
-  {
-    name: "Shoolini University Online",
-    logo: "/images/shoolini.jpg",
-    ranking: "Top 28",
-    location: "Solan, Himachal Pradesh",
-    fee: "₹75K - ₹1.4L",
-    courses: ["MBA", "BBA", "BCA", "MCA"],
-    description: "Mountain university offering quality online education."
   }
 ];
 
