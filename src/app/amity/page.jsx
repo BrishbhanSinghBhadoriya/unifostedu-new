@@ -125,74 +125,74 @@ const Amity = () => {
    {
   const highlights = [
     {
-      img: "images/wasc.png",
+      img: "/images/wasc.png",
       title: "WASC Accreditation (USA)",
       description:
         "Amity Online is India's only university accredited by the Western Association of Schools and Colleges — a distinguished recognition of global academic excellence.",
     },
     {
-      img: "images/wes.png",
+      img: "/images/wes.png",
       title: "WES Recognition",
       description:
         "Degrees recognised by World Education Services (WES) Canada & USA, enabling smoother pathways for higher studies and global career mobility.",
     },
     {
-      img: "images/qs.png",
+      img: "/images/qs.png",
       title: "QS Ranked Online MBA",
       description:
         "Amity Online offers India's only Online MBA ranked by QS under Asia Pacific Top 10 - a global recognition for academic strength, learner outcomes, and digital innovation.",
     },
     {
-      img: "images/qaa.png",
+      img: "/images/qaa.png",
       title: "QAA (UK) Accreditation",
       description:
         "Accredited by the UK's Quality Assurance Agency (QAA), assuring students of globally benchmarked academic quality.",
     },
     {
-      img: "images/the.webp",
+      img: "/images/the.webp",
       title: "Times Higher Education Employability Rankings",
       description:
         "Amity University is ranked among the best globally for graduate employability and employer reputation by Times Higher Education.",
     },
     {
-      img: "images/pan-india.png",
+      img: "/images/pan-india.png",
       title: "Pan-India Campus Access & Offline Events",
       description:
         "Enjoy access to all Amity campuses for events like orientation, mid-year meetups, on-campus connect and convocation - blending digital convenience with real-world connection.",
     },
     {
-      img: "images/amigo.png",
+      img: "/images/amigo.png",
       title: "Amigo: Learning On-the-Go",
       description:
         "The Amigo app makes learning seamless and mobile — attend live classes, track progress, access materials, and more on your schedule.",
     },
     {
-      img: "images/ai-tutor.png",
+      img: "/images/ai-tutor.png",
       title: "Prof. Ami: Your AI-Powered Personal Tutor",
       description:
         "Meet Prof. Ami — your always-on, AI mentor for instant doubt-solving, personalised learning tips, and smart academic support.",
     },
 
     {
-      img: "images/indu-Certi.png",
+      img: "/images/indu-Certi.png",
       title: "Industry Certifications for Better Employability",
       description:
         "Gain an edge with in-demand certifications from top industry bodies and partners — integrated within your program to boost your skills and CV.",
     },
     {
-      img: "images/internship.png",
+      img: "/images/internship.png",
       title: "Internship Opportunities",
       description:
         "Access curated internships with leading companies through our corporate network, helping you gain real-world experience and stand out in the job market.",
     },
     {
-      img: "images/ai-application.png",
+      img: "/images/ai-application.png",
       title: "AI-Powered Career Discovery Platform",
       description:
         "From mock interviews and resume building to job search and easy-apply tools — our AI-powered platform ensures you’re career-ready from day one.",
     },
     {
-      img: "images/people.png",
+      img: "/images/people.png",
       title: "beSocial App for Campus Life",
       description:
         "Your virtual student hub — the beSocial app lets you network, join clubs, attend events, and be part of a vibrant, online-first community.",
@@ -369,7 +369,7 @@ const Amity = () => {
           <p className="text-xl text-gray-600">Top hiring partners at Amity Online</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {["images/company.png", "images/company1.png", "images/company9.jpg", "images/com10.png", "images/companany4.png", "images/company6.png", "images/companany5.png", "images/adove.png", "images/samsung.png","images/3.webp",  "images/4.webp",  "images/5.webp",  "images/6.webp",  "images/7.webp",  "images/8.webp",  "images/9.webp",].map((src, i) => (
+          {["/images/company.png", "/images/company1.png", "/images/company9.jpg", "/images/com10.png", "/images/companany4.png", "/images/company6.png", "/images/companany5.png", "/images/adove.png", "/images/samsung.png","/images/3.webp",  "/images/4.webp",  "/images/5.webp",  "/images/6.webp",  "/images/7.webp",  "/images/8.webp",  "/images/9.webp",].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
               <img src={src} alt="Company" className="h-12 object-contain" />
             </div>
@@ -378,7 +378,7 @@ const Amity = () => {
       </section>
     </>
   );
-};
+   }
 };
 
 export default Amity;

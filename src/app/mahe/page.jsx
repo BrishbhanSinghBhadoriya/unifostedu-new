@@ -77,7 +77,7 @@ const Manipal = () => {
   return (
     <>
       
-        <title>Manipal University Online - Courses, Fees & Admissions</title>
+        <title>Manipal Academy of Higher Education - Courses, Fees & Admissions</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
       
 
@@ -92,8 +92,8 @@ const Manipal = () => {
 
             <p className="text-gray-700 text-lg">
              Manipal Academy of Higher Education (MAHE) is synonymous with excellence in higher education. MAHE is one of India’s leading academic and research institutions with a NAAC A++ rating and prestigious Institution of Eminence (IoE) recognition. The institution has been offering world-class education across diverse streams since 1953. It is ranked #4 by NIRF and has a track of notable alumni like Satya Nadella, Vikas Khanna, and Dr Devi Prasad Shetty. The university offers various in-demand bachelor’s, master’s, and professional certification programs in the online mode to professionals across the world.
-              <br /><br />
-              Ranked among the top private universities in India, Manipal offers diverse programs in business and technology with strong academic support and vibrant digital learning.
+              
+
             </p>
           </div>
           <div className="md:w-1/2">
@@ -126,7 +126,7 @@ const Manipal = () => {
           <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">Postgraduate Courses</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {pgCourses.map((item, index) => (
-              <EnquireCard key={index} {...item} universityName="Manipal University Online" />
+              <EnquireCard key={index} {...item} universityName="Manipal Academy of Higher Educatione" />
             ))}
           </div>
         </div>
