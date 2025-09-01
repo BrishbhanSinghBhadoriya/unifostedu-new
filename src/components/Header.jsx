@@ -423,7 +423,7 @@ const [modalType, setModalType] = useState();
                 <div className="space-y-3">
                   <h3 className="text-[#00ffe0] font-bold text-sm uppercase tracking-wider px-2">Universities</h3>
                   <div className="space-y-2">
-                    {universities.slice(0, 6).map((uni, idx) => (
+                    {universities.slice(0, 16).map((uni, idx) => (
                       <Link key={idx} href={uni.link} onClick={() => setMobileMenuOpen(false)}
                             className="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition text-white border border-white/10">
                         <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center overflow-hidden">
@@ -433,11 +433,11 @@ const [modalType, setModalType] = useState();
                         <FaArrowRight className="text-[#00ffe0] text-xs" />
                       </Link>
                     ))}
-                    <Link href="/listofcollege" onClick={() => setMobileMenuOpen(false)}
+                    {/* <Link href="/listofcollege" onClick={() => setMobileMenuOpen(false)}
                           className="flex items-center justify-center gap-2 p-3 rounded-xl bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] font-bold hover:scale-105 transition">
                       <span>View All Universities</span>
                       <FaArrowRight />
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
 
