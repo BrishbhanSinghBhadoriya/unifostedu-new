@@ -8,7 +8,7 @@ import {
   FaBriefcase,
   FaClipboardCheck,
 } from "react-icons/fa";
-
+import Head from 'next/head';
 const KU = () => {
   const ugCourses = [
     {
@@ -83,7 +83,33 @@ const KU = () => {
   return (
     <>
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-      
+      <head>
+
+        <title>Kurukshetra University Online - UG & PG Courses in India</title>
+        <meta
+          name="description"
+          content="Explore online undergraduate (BBA, BCA, B.Com) and postgraduate (MBA, MCA, M.Com, MA) programs offered by Kurukshetra University Online, NAAC A++ accredited. Flexible and career-focused education in Haryana, India."
+        />
+        <meta
+          name="keywords"
+          content="Kurukshetra University Online, BBA Online, BCA Online, B.Com Online, MBA Online, MCA Online, M.Com Online, MA Online, NAAC A++ University, Online Degree Programs Haryana, Distance Learning, Online Courses India"
+        />
+        <meta name="author" content="Kurukshetra University Online" />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph / Social Media */}
+        <meta property="og:title" content="Kurukshetra University Online - UG & PG Courses in India" />
+        <meta property="og:description" content="Explore online undergraduate and postgraduate programs offered by Kurukshetra University Online, NAAC A++ accredited, Haryana, India." />
+        <meta property="og:image" content="/images/ku.jpg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.kurukshetrauniversityonline.com" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Kurukshetra University Online - UG & PG Courses in India" />
+        <meta name="twitter:description" content="Explore online undergraduate and postgraduate programs offered by Kurukshetra University Online, NAAC A++ accredited, Haryana, India." />
+        <meta name="twitter:image" content="/images/ku.jpg" />
+      </head>
       {/* Intro Section */}
       <section className="py-16 bg-white px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">

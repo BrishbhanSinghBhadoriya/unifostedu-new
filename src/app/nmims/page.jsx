@@ -20,7 +20,7 @@ import {
 } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
 import EnquireCard from '@/components/EnquireCard';
-
+import Head from 'next/head';
 const Nmims = () => {
   const ugCourses = [
     {
@@ -63,6 +63,29 @@ const Nmims = () => {
 
   return (
     <>
+      <Head>
+        <title>NMIMS Online Degrees | Accredited UG & PG Programs</title>
+        <meta name="description" content="NMIMS Global Online offers UGC-entitled, NAAC A++ accredited online programs including MBA, BBA, B.Com, and more. Flexible learning with global recognition." />
+        <meta name="keywords" content="NMIMS Online, NMIMS Global, Online MBA NMIMS, BBA Online NMIMS, B.Com Online, Distance MBA India, UGC approved online courses, NAAC A++ university" />
+        <meta name="author" content="NMIMS Global Online University" />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="NMIMS Online Degrees | Accredited UG & PG Programs" />
+        <meta property="og:description" content="UGC-Entitled & NAAC A++ accredited online courses from NMIMS Global. Learn anytime, anywhere with flexible UG & PG programs." />
+        <meta property="og:image" content="/images/nmims.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.onlinedegree.in/nmims" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="NMIMS Online Degrees | Accredited UG & PG Programs" />
+        <meta name="twitter:description" content="Study at NMIMS Global Online. UGC-approved & NAAC A++ accredited online UG & PG programs designed for working professionals." />
+        <meta name="twitter:image" content="/images/nmims.png" />
+
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+      </Head>
+
       {/* Hero Section */}
       <section className="py-16 px-6 font-[Inter] bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">

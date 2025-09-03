@@ -10,7 +10,7 @@ import {
   FaClipboardCheck,
 } from "react-icons/fa";
 import EnquireCard from '@/components/EnquireCard';
-
+import Head from 'next/head';
 const Sharda = () => {
   const ugCourses = [
     {
@@ -71,9 +71,10 @@ const Sharda = () => {
   return (
     <>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-        <title>Sharda University Online Programs | Fees & Admission</title>
-        <meta name="description" content="Explore online UG & PG programs from Sharda University. Check fees, eligibility, and enquire now." />
-    
+      <Head>
+  <title>Sharda University Online Programs | Fees & Admission</title>
+  <meta name="description" content="Explore online UG & PG programs from Sharda University. Check fees, eligibility, and enquire now." />
+</Head>
 
       {/* Intro Section */}
       <section className="py-16 bg-white px-6 font-[Inter]">

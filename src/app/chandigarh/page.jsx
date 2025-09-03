@@ -16,6 +16,7 @@ import {
 import { motion } from 'framer-motion';
 import EnquireCard from '@/components/EnquireCard';
 import Image from 'next/image';
+import Head from 'next/head';
 
 // const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
 //   //const navigate = useNavigate();
@@ -166,7 +167,11 @@ const Chandigarh = () => {
     <>
       
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-      
+      <Head>
+        <title>Chandigarh University Online Programs | Fees & Admission</title>
+        <meta name="description" content="Explore Chandigarh University Online UG & PG programs. Check fees, eligibility, admission process and enquire now." />
+        <meta name="keywords" content="Chandigarh University Online, CU Online, BBA Online, MBA Online, MCA Online, Data Science, Cloud Computing, Accredited Online Degrees" />
+      </Head>
 
       {/* Hero Section */}
       <section className="bg-white-100 py-16 px-6 font-[Inter]">

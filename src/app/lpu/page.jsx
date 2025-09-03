@@ -15,7 +15,7 @@ import {
   FaClipboardCheck,
 } from "react-icons/fa";
 import EnquireCard from '@/components/EnquireCard';
-
+import Head from 'next/head';
 const Lpu = () => {
   const [activeTab, setActiveTab] = useState('ug');
   
@@ -93,11 +93,33 @@ const Lpu = () => {
     <>
       
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-        <title>LPU Online Degrees | Lovely Professional University Courses</title>
+       <head>
+
+         <title>LPU Online Degrees | Lovely Professional University Courses</title>
         <meta
           name="description"
-          content="Explore LPU online programs. UGC-recognized degrees with NAAC A++ accreditation. Enquire now for BBA, BCA, MBA, MCA and more."
+          content="Explore LPU online programs. UGC-recognized degrees with NAAC A++ accreditation. Enquire now for BBA, BCA, MBA, MCA, M.Com, MA, and M.Sc courses."
         />
+        <meta
+          name="keywords"
+          content="LPU Online, Lovely Professional University Online, BBA Online, BCA Online, MBA Online, MCA Online, M.Com Online, MA Online, M.Sc Online, Distance Learning India, NAAC A++, UGC Recognized Online Degree, Flexible Online Education, Online Courses LPU"
+        />
+        <meta name="author" content="Lovely Professional University" />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph / Social Media */}
+        <meta property="og:title" content="LPU Online Degrees | Lovely Professional University Courses" />
+        <meta property="og:description" content="Explore online undergraduate and postgraduate programs offered by LPU Online, NAAC A++ accredited. Flexible and career-focused education." />
+        <meta property="og:image" content="/images/lpu.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.lpuonline.in" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="LPU Online Degrees | Lovely Professional University Courses" />
+        <meta name="twitter:description" content="Explore online undergraduate and postgraduate programs offered by LPU Online, NAAC A++ accredited. Flexible and career-focused education." />
+        <meta name="twitter:image" content="/images/lpu.png" />
+       </head>
       
 
       {/* Intro Section */}

@@ -12,6 +12,7 @@ import {
 } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
 import EnquireCard from '@/components/EnquireCard';
+import Head from 'next/head';
 
 const Manipal = () => {
  const ugCourses = [
@@ -83,10 +84,31 @@ const Manipal = () => {
   return (
     <>
       
-        <title>Manipal University Online - Courses, Fees & Admissions</title>
+        
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
       
+       <Head>
+        <title>Manipal University Online | Accredited Online Degrees</title>
+        <meta name="description" content="Explore globally recognized online programs from Manipal University Online. Flexible learning, expert mentorship, and career-focused degrees with UGC & AICTE approvals." />
+        <meta name="keywords" content="Manipal Online, Manipal University Jaipur, MUJ Online, BBA Online, BCA Online, B.Com Online, MBA Online, MCA Online, M.Com Online, MA Online, Online Degrees India, Distance Learning, UGC Approved, AICTE Approved" />
+        <meta name="author" content="Manipal University Online" />
+        <meta name="robots" content="index, follow" />
 
+        {/* Open Graph */}
+        <meta property="og:title" content="Manipal University Online | Accredited Online Degrees" />
+        <meta property="og:description" content="Globally recognized online undergraduate and postgraduate programs with flexible, industry-relevant learning." />
+        <meta property="og:image" content="/images/manipal.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.onlinedegree.in/manipal" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Manipal University Online | Accredited Online Degrees" />
+        <meta name="twitter:description" content="Enroll in UGC and AICTE approved online courses at Manipal University Jaipur. Learn with flexibility and global recognition." />
+        <meta name="twitter:image" content="/images/manipal.png" />
+
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+      </Head>
       {/* Intro Section */}
       <section className="py-16 bg-white px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">

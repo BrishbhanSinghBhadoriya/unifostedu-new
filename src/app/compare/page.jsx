@@ -19,6 +19,7 @@ import {
   FaTimes,
   FaArrowLeft,
 } from 'react-icons/fa';
+import Head from 'next/head';
 
 // ---------- DATA ----------
 const RAW_UNIVERSITIES = [
@@ -378,6 +379,8 @@ function CompareContent() {
   const noop = () => {};
 
   return (
+
+    
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12 md:mt-20 px-4 sm:px-6 lg:px-8">
              {/* Enquiry gating */}
                <Dialog open={!enquiryDone} onOpenChange={noop}>
