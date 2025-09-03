@@ -13,6 +13,7 @@ import {
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import EnquiryForm from '@/components/EnquiryForm';
 import { blogAPI } from '@/lib/axios';
+import Image from 'next/image';
 
 
 
@@ -164,11 +165,7 @@ const [modalType, setModalType] = useState();
                   ? 'bg-gradient-to-r from-[#001e3c] to-[#003b6c] shadow-lg' 
                   : 'bg-white/10 backdrop-blur-sm'
               }`}>
-                <img 
-                  src="/images/unilogo.png" 
-                  alt="Unifost Logo" 
-                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" 
-                />
+                <Image width={100} height={100} src="/images/unilogo.png" alt="Unifost Logo" className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
               </div>
               {!scrolled && (
                 <div className="absolute -inset-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-2xl blur opacity-10 group-hover:opacity-40 transition-opacity duration-500"></div>
@@ -216,7 +213,7 @@ const [modalType, setModalType] = useState();
                       <Link key={idx} href={uni.link} onClick={() => setMenuOpen(null)} 
                             className="group block rounded-xl overflow-hidden border border-gray-200 bg-white/80 hover:shadow-lg hover:shadow-indigo-100 hover:-translate-y-0.5 transition-all duration-300">
                         <div className="w-full h-24 bg-white flex items-center justify-center overflow-hidden">
-                          <img src={uni.logo} alt={uni.name} className="max-h-full max-w-full object-contain" />
+                          <Image width={100} height={100} src={uni.logo} alt={uni.name} className="max-h-full max-w-full object-contain" />
                         </div>
                         <div className="px-3 py-2">
                           <p className="text-sm font-semibold text-[#001e3c] group-hover:text-[#00ffe0] line-clamp-2">{uni.name}</p>
@@ -263,7 +260,7 @@ const [modalType, setModalType] = useState();
                               className="group block rounded-xl overflow-hidden border border-gray-200 bg-white/80 hover:shadow-lg hover:shadow-indigo-100 hover:-translate-y-0.5 transition-all duration-300">
                           <div className="w-full h-24 bg-white flex items-center justify-center overflow-hidden">
                             {b.thumbnail ? (
-                              <img src={b.thumbnail} alt={b.title} className="w-full h-full object-cover" />
+                              <Image width={100} height={100} src={b.thumbnail} alt={b.title} className="w-full h-full object-cover" />
                             ) : (
                               <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">No Image</div>
                             )}
@@ -369,7 +366,7 @@ const [modalType, setModalType] = useState();
               {/* Top bar */}
               <div className="flex items-center justify-between mb-6 sm:mb-8">
                 <div className="flex items-center gap-3">
-                  <img src="images/uni.jpg" alt="Unifost" className="h-8 w-auto" />
+                  <Image width={100} height={100} src="images/uni.jpg" alt="Unifost" className="h-8 w-auto" />
                   <span className="text-lg font-bold text-[#00ffe0]">Unifost</span>
                 </div>
                 <button
@@ -427,7 +424,7 @@ const [modalType, setModalType] = useState();
                       <Link key={idx} href={uni.link} onClick={() => setMobileMenuOpen(false)}
                             className="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition text-white border border-white/10">
                         <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center overflow-hidden">
-                          <img src={uni.logo} alt={uni.name} className="w-full h-full object-contain" />
+                          <Image width={100} height={100} src={uni.logo} alt={uni.name} className="w-full h-full object-contain" />
                         </div>
                         <span className="font-medium text-sm flex-1">{uni.name}</span>
                         <FaArrowRight className="text-[#00ffe0] text-xs" />

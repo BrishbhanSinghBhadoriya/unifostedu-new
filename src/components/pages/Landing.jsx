@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 import WorkflowRoadmap from '@/components/pages/WorkflowRoadmap';
 import {
   FaBook, FaUniversity, FaGraduationCap, FaBriefcase, FaTimes,
@@ -14,8 +15,9 @@ import {
   FaClock, FaGlobe, FaUserTie, FaShieldAlt, FaComments, FaCompass,
   FaRocket, FaAward, FaCheckCircle, FaPlay, FaSearch, FaMapMarkerAlt,
   FaPhone, FaEnvelope, FaWhatsapp, FaHeadset, FaLightbulb, FaTarget,
-  FaCalendar, FaCalendarAlt, FaChevronLeft, FaChevronRight,FaBalanceScaleLeft,
+  FaCalendar, FaCalendarAlt, FaChevronLeft, FaChevronRight, FaBalanceScaleLeft,
 } from "react-icons/fa";
+
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -26,22 +28,22 @@ import EnquiryForm from "@/components/EnquiryForm";
 
 // Enhanced data arrays
 const heroSlides = [
-{ 
-    src: "/slider/slider-1.png", 
+  {
+    src: "/slider/slider-1.png",
     alt: "Compare top online universities in India with Unifost",
     title: "Your Gateway to Success",
     subtitle: "Compare • Choose • Succeed",
     description: "Find the perfect online degree program from UGC-approved top universities in India"
   },
-  { 
-    src: "/slider/slider-2.png", 
+  {
+    src: "/slider/slider-2.png",
     alt: "Best platform for online universities and distance learning",
     title: "Transform Your Future",
     subtitle: "Online Education Excellence",
     description: "Access world-class online education from anywhere, anytime with Unifost"
   },
-  { 
-    src: "/slider/slider-3.png", 
+  {
+    src: "/slider/slider-3.png",
     alt: "Search and compare online MBA, BBA, MCA programs",
     title: "Smart Education Choices",
     subtitle: "Expert Guidance • Best Programs",
@@ -86,16 +88,16 @@ const features = [
 ];
 
 const colleges = [
-      { name: "Amity University Online", ranking: "NIRF-29", fee: "₹0.99L - ₹3.45L", logo: "/images/amity.png", rating: 4.8, features: "UGC-DEB Approved | NAAC A+| 100% Placement" },
-    { name: "Manipal University Online", ranking: "NIRF-73", fee: "0.99L - ₹2.92L", logo: "/images/manipal1.png", rating: 4.6, features: "NAAC A+"},
-    { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹0.80L - ₹2.0L", logo: "/images/lpu.png", rating: 4.1, features: "NAAC A++"},
-    { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.50L - ₹2.20L", logo: "/images/upes.png", rating: 4.4 ,features: "NAAC A"},
-    { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹0.94L - ₹4.0L", logo: "/images/nmims.png", rating: 4.5 ,features: "NAAC A++"},
-    { name: "Sharda University Online", ranking: "NIRF-87", fee: "₹1.05L - ₹1.60L", logo: "/images/sharda.png", rating: 4.1,features: "NAAC A+" },
-    { name: "Dr. DY Patil Online", ranking: "NIRF-63", fee: "₹1.40L - ₹1.90L", logo: "/images/dypatil.png", rating: 4.6, features: "NAAC A++" },
-    { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.30L - ₹2.16L", logo: "/images/jain.png", rating: 4.5, features: "NAAC A++" },
-    { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹1.0L - ₹2.10L", logo: "/images/chandigarh.jpg", rating: 4.7, features: "NAAC A+" },
-  
+  { name: "Amity University Online", ranking: "NIRF-29", fee: "₹0.99L - ₹3.45L", logo: "/images/amity.png", rating: 4.8, features: "UGC-DEB Approved | NAAC A+| 100% Placement" },
+  { name: "Manipal University Online", ranking: "NIRF-73", fee: "0.99L - ₹2.92L", logo: "/images/manipal1.png", rating: 4.6, features: "NAAC A+" },
+  { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹0.80L - ₹2.0L", logo: "/images/lpu.png", rating: 4.1, features: "NAAC A++" },
+  { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.50L - ₹2.20L", logo: "/images/upes.png", rating: 4.4, features: "NAAC A" },
+  { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹0.94L - ₹4.0L", logo: "/images/nmims.png", rating: 4.5, features: "NAAC A++" },
+  { name: "Sharda University Online", ranking: "NIRF-87", fee: "₹1.05L - ₹1.60L", logo: "/images/sharda.png", rating: 4.1, features: "NAAC A+" },
+  { name: "Dr. DY Patil Online", ranking: "NIRF-63", fee: "₹1.40L - ₹1.90L", logo: "/images/dypatil.png", rating: 4.6, features: "NAAC A++" },
+  { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.30L - ₹2.16L", logo: "/images/jain.png", rating: 4.5, features: "NAAC A++" },
+  { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹1.0L - ₹2.10L", logo: "/images/chandigarh.jpg", rating: 4.7, features: "NAAC A+" },
+
 ];
 
 const cities = [
@@ -133,9 +135,9 @@ const UniversityLogoSlider = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      
-        setItemsToShow(6);
-      
+
+      setItemsToShow(6);
+
     };
 
     handleResize();
@@ -147,17 +149,17 @@ const UniversityLogoSlider = () => {
 
     <section className="py-1 bg-white">
       <div className="max-w-7xl mx-auto px-1">
-        <div className="relative overflow-hidden" 
-             onMouseEnter={() => setIsPaused(true)}
-             onMouseLeave={() => setIsPaused(false)}>
-          
+        <div className="relative overflow-hidden"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}>
+
           {/* Auto-scrolling Marquee Container with Framer Motion */}
-          <motion.div 
+          <motion.div
             className="flex"
-            animate={{ 
+            animate={{
               x: [0, -100 * (universityLogos.length / itemsToShow) + "%"]
             }}
-            transition={{ 
+            transition={{
               ease: "linear",
               duration: 40,
               repeat: Infinity,
@@ -173,9 +175,9 @@ const UniversityLogoSlider = () => {
                 style={{ width: `${100 / itemsToShow}%` }}
               >
                 <div className="h-24 w-full flex items-center justify-center px-2">
-                  <Image 
-                    src={university.logo} 
-                    alt={`${university.name} logo`} 
+                  <Image
+                    src={university.logo}
+                    alt={`${university.name} logo`}
                     width={100}
                     height={100}
                     className="max-h-14 max-w-full object-contain hover:scale-110 transition-transform duration-300"
@@ -202,7 +204,7 @@ const Landing = () => {
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
   const [modalType, setModalType] = useState("getStarted");
   const [selectedUniversities, setSelectedUniversities] = useState([]);
-  
+
   const slugify = (name) => name.toLowerCase().replace(/\s+/g, '-');
   const toggleUniversity = (name) => {
     const slug = slugify(name);
@@ -250,7 +252,7 @@ const Landing = () => {
     if (n.includes('shoolini')) return '/shoolini';
     return '/listofcollege';
   };
-  
+
   // Hero slider
   const [slide, setSlide] = useState(0);
   useEffect(() => {
@@ -283,15 +285,17 @@ const Landing = () => {
                 animate={{ opacity: idx === slide ? 1 : 0, scale: idx === slide ? 1 : 1.06 }}
                 transition={{ duration: 0.8 }}
               >
-                <Image 
+                <Image
                   src={s.src}
                   alt={`${s.title} – ${s.subtitle} | Online University Degree guidance`}
                   fill
-                  priority={idx === 0}
                   sizes="100vw"
                   className="object-cover"
+                  
+                  priority={idx === 0}
+                  loading={idx === 0 ? "eager" : "lazy"}
                 />
-                {/* Enhanced Overlay - Responsive gradient */}
+
                 <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c]/85 via-[#001e3c]/65 to-transparent" />
               </motion.div>
             ))}
@@ -321,7 +325,7 @@ const Landing = () => {
 
                 {/* Responsive Button Layout */}
                 <div className="mt-3 sm:mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4">
-                  <button 
+                  <button
                     onClick={() => openModal("getStarted")}
                     className="bg-[#00d4c4] text-[#001e3c]
                                w-full sm:w-auto px-5 lg:px-6 py-3.5 lg:py-4 rounded-full 
@@ -335,7 +339,7 @@ const Landing = () => {
                     <span className="xs:hidden">Get Started</span>
                   </button>
 
-                  <button 
+                  <button
                     onClick={() => openModal("videoCall")}
                     className="w-full sm:w-auto px-5 lg:px-6 py-3.5 lg:py-4 rounded-full 
                                text-sm sm:text-base lg:text-lg font-semibold 
@@ -350,7 +354,7 @@ const Landing = () => {
                     <span className="sm:hidden">Video Call</span>
                   </button>
 
-                  <button 
+                  <button
                     onClick={() => openModal("homeDemo")}
                     className="w-full sm:w-auto px-5 lg:px-6 py-3.5 lg:py-4 rounded-full 
                                text-sm sm:text-base lg:text-lg font-semibold 
@@ -368,7 +372,7 @@ const Landing = () => {
                 </div>
 
                 {/* Auto-open Countdown Indicator */}
-              
+
               </motion.div>
             </div>
           </div>
@@ -382,20 +386,20 @@ const Landing = () => {
                 <p className="text-sm text-white/90 mb-4">{heroSlides[slide].description}</p>
               </div>
               <div className="flex flex-col gap-3">
-                <button 
+                <button
                   onClick={() => openModal('getStarted')}
                   className="bg-[#00d4c4] text-[#001e3c] w-full px-5 py-3.5 rounded-full text-base font-semibold hover:bg-[#00c0b1] transition-colors"
                 >
                   Get Started Today
                 </button>
                 <div className="grid grid-cols-2 gap-3">
-                  <button 
+                  <button
                     onClick={() => openModal('videoCall')}
                     className="px-5 py-3.5 rounded-full text-base font-semibold text-white bg-gradient-to-r  hover:shadow-lg ring-1 ring-white/10 transition-all"
                   >
                     Video Call
                   </button>
-                  <button 
+                  <button
                     onClick={() => openModal('homeDemo')}
                     className="px-5 py-3.5 rounded-full text-base font-semibold text-white bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-700 hover:to-cyan-700 shadow-md hover:shadow-lg ring-1 ring-white/10 transition-all"
                   >
@@ -412,19 +416,18 @@ const Landing = () => {
               <button
                 key={i}
                 onClick={() => setSlide(i)}
-                className={`h-2 sm:h-3 w-2 sm:w-3 rounded-full transition-all duration-300 ${
-                  i === slide 
-                    ? 'bg-[#00d4c4] w-6 sm:w-8' 
+                className={`h-2 sm:h-3 w-2 sm:w-3 rounded-full transition-all duration-300 ${i === slide
+                    ? 'bg-[#00d4c4] w-6 sm:w-8'
                     : 'bg-white/60 hover:bg-white/80'
-                }`}
+                  }`}
                 aria-label={`Go to slide ${i + 1}`}
               />
             ))}
           </div>
         </div>
       </section>
-      
-       
+
+
       {/* Workflow Roadmap */}
       <WorkflowRoadmap onGetStartedClick={() => openModal("getStarted")} />
 
@@ -503,7 +506,7 @@ const Landing = () => {
       </section>
 
       {/* Testimonials */}
-      
+
 
       {/* Stats Section - Responsive Grid */}
       <section className="py-12 sm:py-16 lg:py-20 bg-white">
@@ -530,7 +533,7 @@ const Landing = () => {
       {/* Programs Section - Responsive Grid */}
       <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-10 sm:mb-14"
             data-aos="fade-up"
           >
@@ -542,7 +545,7 @@ const Landing = () => {
               Explore curated online programs from leading universities.
             </p>
           </motion.div>
-          
+
           <Tabs defaultValue="all" className="w-full">
             <TabsList className="mx-auto mb-6 sm:mb-8 grid grid-cols-3 w-full max-w-md">
               <TabsTrigger value="all">All</TabsTrigger>
@@ -666,133 +669,133 @@ const Landing = () => {
           </Tabs>
         </div>
       </section>
-{/* Enhanced Universities Section */}
-<section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
-    <motion.div className="text-center mb-16" data-aos="fade-up">
-      <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] mb-3">
-        Top Partner Universities
-      </h2>
-      <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-4"></div>
-      <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-        Choose from India's most prestigious online universities
-      </p>
-    </motion.div>
-    
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {colleges.map((college, index) => (
-        <motion.div
-          key={index}
-          className="group h-full"
-          data-aos="fade-up"
-          data-aos-delay={index * 100}
-        >
-          {/* Enhanced Card Wrapper with Blue Theme */}
-          <div className="relative rounded-2xl overflow-hidden border border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-100
+      {/* Enhanced Universities Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div className="text-center mb-16" data-aos="fade-up">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] mb-3">
+              Top Partner Universities
+            </h2>
+            <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-4"></div>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Choose from India's most prestigious online universities
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {colleges.map((college, index) => (
+              <motion.div
+                key={index}
+                className="group h-full"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                {/* Enhanced Card Wrapper with Blue Theme */}
+                <div className="relative rounded-2xl overflow-hidden border border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-100
             shadow-lg group-hover:shadow-xl transition-all duration-500 hover:-translate-y-2 
             h-full flex flex-col min-h-[480px]">
-            
-            {/* Decorative Corner Accents */}
-            <div className="absolute top-0 right-0 w-20 h-20 overflow-hidden">
-              <div className="absolute transform rotate-45 translate-x-10 -translate-y-10 bg-gradient-to-r from-blue-500/30 to-indigo-600/30 w-28 h-10"></div>
-            </div>
-            
-            {/* Hover Overlay */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 
+
+                  {/* Decorative Corner Accents */}
+                  <div className="absolute top-0 right-0 w-20 h-20 overflow-hidden">
+                    <div className="absolute transform rotate-45 translate-x-10 -translate-y-10 bg-gradient-to-r from-blue-500/30 to-indigo-600/30 w-28 h-10"></div>
+                  </div>
+
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 
               bg-gradient-to-br from-blue-500/10 to-indigo-600/10"></div>
 
-            {/* Top Section */}
-            <div className="p-5 sm:p-6 relative z-[1]">
-              <div className="flex items-center justify-between">
-                <Badge className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white border-0 shadow-sm text-[11px] sm:text-xs font-medium px-2 py-1">
-                  {college.ranking}
-                </Badge>
-                <div className="flex items-center gap-1 bg-white/90 rounded-full py-1 px-2 shadow-sm">
-                  <FaStar className="text-yellow-400 text-sm" />
-                  <span className="text-sm font-medium text-gray-700">{college.rating}</span>
-                </div>
-              </div>
-            </div>
+                  {/* Top Section */}
+                  <div className="p-5 sm:p-6 relative z-[1]">
+                    <div className="flex items-center justify-between">
+                      <Badge className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white border-0 shadow-sm text-[11px] sm:text-xs font-medium px-2 py-1">
+                        {college.ranking}
+                      </Badge>
+                      <div className="flex items-center gap-1 bg-white/90 rounded-full py-1 px-2 shadow-sm">
+                        <FaStar className="text-yellow-400 text-sm" />
+                        <span className="text-sm font-medium text-gray-700">{college.rating}</span>
+                      </div>
+                    </div>
+                  </div>
 
-           {/* Logo/Image area - Updated */}
-{/* Logo/Image area - Enlarged */}
-{/* Logo/Image area - Full Size */}
-<div className="w-full">
-  <div className="h-52 w-full bg-white flex items-center justify-center overflow-hidden rounded-xl border border-blue-200 shadow-sm">
-    <Image 
-      src={college.logo} 
-      alt={`${college.name} logo`}
-      width={100}
-      height={100}
-      loading="lazy"
-      priority={college.isMain} 
-      className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105" 
-    />
-  </div>
-</div>
+                  {/* Logo/Image area - Updated */}
+                  {/* Logo/Image area - Enlarged */}
+                  {/* Logo/Image area - Full Size */}
+                  <div className="w-full">
+                    <div className="h-52 w-full bg-white flex items-center justify-center overflow-hidden rounded-xl border border-blue-200 shadow-sm">
+                      <Image
+                        src={college.logo}
+                        alt={`${college.name} logo`}
+                        width={100}
+                        height={100}
+                        loading="lazy"
+                        priority={college.isMain}
+                        className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
+                  </div>
 
 
 
-            {/* Content Area */}
-            <div className="p-5 sm:p-6 relative z-[1] flex flex-col flex-grow">
-              <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 line-clamp-2 group-hover:text-gray-900 transition-colors">
-                {college.name}
-              </h3>
-              
-              {/* Features List with Checkmarks */}
-              <div className="mb-4 space-y-2">
-                <div className="flex items-start gap-2">
-                  <FaCheckCircle className="text-green-500 mt-0.5 flex-shrink-0 text-sm" />
-                  <span className="text-xs text-gray-600">{college.features || "UGC-DEB Approved |"}</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <FaCheckCircle className="text-green-500 mt-0.5 flex-shrink-0 text-sm" />
-                  <span className="text-xs text-gray-600">100% Online Classes & Exams</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <FaCheckCircle className="text-green-500 mt-0.5 flex-shrink-0 text-sm" />
-                  <span className="text-xs text-gray-600">WES Recognized Degree</span>
-                </div>
-              </div>
-              
-              <div className="text-sm text-gray-600 mb-4 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span className="font-medium">Fees:</span> {college.fee}
-              </div>
-              
-              {/* Additional Info (if available) */}
-              {college.courses && (
-                <div className="mt-2 text-xs text-gray-500 flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 mr-1 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
-                  {college.courses}+ Courses
-                </div>
-              )}
+                  {/* Content Area */}
+                  <div className="p-5 sm:p-6 relative z-[1] flex flex-col flex-grow">
+                    <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 line-clamp-2 group-hover:text-gray-900 transition-colors">
+                      {college.name}
+                    </h3>
 
-              {/* Apply Now Button */}
-               {/* Button sticks to bottom */}
-              <div className="mt-auto pt-4">
-                <a href={getUniversityHref(college.name)} className="block w-full">
-                  <div className="w-full bg-gradient-to-r from-blue-600 to-indigo-700
+                    {/* Features List with Checkmarks */}
+                    <div className="mb-4 space-y-2">
+                      <div className="flex items-start gap-2">
+                        <FaCheckCircle className="text-green-500 mt-0.5 flex-shrink-0 text-sm" />
+                        <span className="text-xs text-gray-600">{college.features || "UGC-DEB Approved |"}</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <FaCheckCircle className="text-green-500 mt-0.5 flex-shrink-0 text-sm" />
+                        <span className="text-xs text-gray-600">100% Online Classes & Exams</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <FaCheckCircle className="text-green-500 mt-0.5 flex-shrink-0 text-sm" />
+                        <span className="text-xs text-gray-600">WES Recognized Degree</span>
+                      </div>
+                    </div>
+
+                    <div className="text-sm text-gray-600 mb-4 flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <span className="font-medium">Fees:</span> {college.fee}
+                    </div>
+
+                    {/* Additional Info (if available) */}
+                    {college.courses && (
+                      <div className="mt-2 text-xs text-gray-500 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 mr-1 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        {college.courses}+ Courses
+                      </div>
+                    )}
+
+                    {/* Apply Now Button */}
+                    {/* Button sticks to bottom */}
+                    <div className="mt-auto pt-4">
+                      <a href={getUniversityHref(college.name)} className="block w-full">
+                        <div className="w-full bg-gradient-to-r from-blue-600 to-indigo-700
                     text-white py-3 px-4 rounded-xl font-semibold text-center 
                     hover:from-blue-700 hover:to-indigo-800 transform hover:scale-[1.02] 
                     transition-all duration-200 text-sm shadow-md hover:shadow-lg
                     relative overflow-hidden group">
-                    <span className="relative z-10">Learn More</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-white/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                          <span className="relative z-10">Learn More</span>
+                          <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-white/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
-          </a>
-          </div>
-          </div>
-          </div>
-        </motion.div>
-      ))}
-    </div>
-    
-{/*     
+
+          {/*     
     <div className="text-center mt-12">
       <button  onClick={() => navigate("/listofcollege")} 
       className="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 
@@ -801,190 +804,186 @@ const Landing = () => {
         View All Universities
       </button> 
     </div> */}
-  </div>
-</section>
-
-
-     {/* Compare Online Universities - Enhanced */}
-<section className="py-16 sm:py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <motion.div 
-      className="text-center mb-8 sm:mb-12"
-      data-aos="fade-up"
-    >
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a365d] mb-3 sm:mb-4">
-        Compare Online Universities
-      </h2>
-      <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-4"></div>
-      <p className="text-lg text-gray-700 max-w-3xl mx-auto px-4">
-        Select up to 3 universities to compare fees, accreditation, placements and more
-      </p>
-    </motion.div>
-
-    {/* Compare Controls - Enhanced */}
-    <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row items-center justify-between gap-4 bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-2xl border border-blue-200 shadow-lg">
-      <div className="flex items-center gap-4">
-        <div className="bg-gradient-to-r from-blue-500 to-indigo-600 p-3 rounded-xl shadow-md text-white">
-          <FaCompass className="text-2xl" />
         </div>
-        <div>
-          <h3 className="text-xl font-bold text-[#1a365d]">Compare Universities</h3>
-          <p className="text-sm text-gray-700">
-            Selected: <span className="font-bold text-blue-600">{selectedUniversities.length}</span>/3
-            {selectedUniversities.length > 0 && (
-              <span className="ml-2 text-green-600 font-medium">
-                ({selectedUniversities.length} selected)
-              </span>
-            )}
-          </p>
-        </div>
-      </div>
-      <button
-        disabled={!canCompare}
-        onClick={startCompare}
-        className={`group px-6 sm:px-8 py-3 rounded-full font-bold flex items-center gap-2 transition-all text-sm sm:text-base ${
-          canCompare 
-            ? 'bg-gradient-to-r from-blue-600 to-indigo-700 text-white hover:from-blue-700 hover:to-indigo-800 shadow-lg hover:shadow-xl transform hover:scale-105' 
-            : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-        }`}
-      >
-        <FaArrowRight className={canCompare ? "group-hover:translate-x-1 transition-transform" : ""} />
-        Compare Now
-      </button>
-    </div>
+      </section>
 
-    {/* Enhanced University Cards Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {colleges.map((college, idx) => {
-        const slug = slugify(college.name);
-        const isSelected = selectedUniversities.includes(slug);
-        
-        return (
+
+      {/* Compare Online Universities - Enhanced */}
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            key={idx}
-            whileHover={{ y: -5 }}
-            className={`group relative rounded-2xl overflow-hidden transition-all duration-300 ${
-              isSelected 
-                ? 'ring-2 ring-blue-500 shadow-xl' 
-                : 'border border-blue-100 shadow-md hover:shadow-xl'
-            } bg-gradient-to-b from-white to-blue-50`}
+            className="text-center mb-8 sm:mb-12"
+            data-aos="fade-up"
           >
-            {/* Selection Indicator */}
-            {isSelected && (
-              <div className="absolute top-3 right-3 z-10">
-                <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg">
-                  <FaCheckCircle className="text-sm" />
-                </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a365d] mb-3 sm:mb-4">
+              Compare Online Universities
+            </h2>
+            <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-4"></div>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto px-4">
+              Select up to 3 universities to compare fees, accreditation, placements and more
+            </p>
+          </motion.div>
+
+          {/* Compare Controls - Enhanced */}
+          <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row items-center justify-between gap-4 bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-2xl border border-blue-200 shadow-lg">
+            <div className="flex items-center gap-4">
+              <div className="bg-gradient-to-r from-blue-500 to-indigo-600 p-3 rounded-xl shadow-md text-white">
+                <FaCompass className="text-2xl" />
               </div>
-            )}
-            
-            {/* Decorative Corner */}
-            <div className="absolute top-0 right-0 w-16 h-16 overflow-hidden">
-              <div className="absolute transform rotate-45 translate-x-8 -translate-y-8 bg-gradient-to-r from-blue-500/20 to-indigo-600/20 w-20 h-8"></div>
+              <div>
+                <h3 className="text-xl font-bold text-[#1a365d]">Compare Universities</h3>
+                <p className="text-sm text-gray-700">
+                  Selected: <span className="font-bold text-blue-600">{selectedUniversities.length}</span>/3
+                  {selectedUniversities.length > 0 && (
+                    <span className="ml-2 text-green-600 font-medium">
+                      ({selectedUniversities.length} selected)
+                    </span>
+                  )}
+                </p>
+              </div>
             </div>
-            
-            {/* Card Content */}
-            <div className="p-5 sm:p-6">
-              {/* University Header */}
-              <div className="flex items-start gap-4 mb-4">
-                <div className={`flex-shrink-0 h-16 w-16 sm:h-20 sm:w-20 rounded-xl bg-white border border-blue-200 flex items-center justify-center p-2 ${
-                  isSelected ? 'ring-2 ring-blue-500/30' : ''
-                }`}>
-                  <Image 
-                    src={college.logo} 
-                    alt={`${college.name} logo`} 
-                    width={100}
-                    height={100}
-                    loading="lazy"
-                    className="max-h-10 sm:max-h-12 w-auto object-contain" 
-                  />
-                </div>
-                
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-lg font-bold text-[#1a365d] mb-1 line-clamp-2 leading-tight">
-                    {college.name}
-                  </h3>
-                  
-                  <div className="flex items-center gap-2 mb-2">
-                    <Badge className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white border-0 text-xs font-medium">
-                      {college.ranking}
-                    </Badge>
-                    <div className="flex items-center gap-1 text-sm text-amber-600">
-                      <FaStar className="fill-amber-400" />
-                      <span className="font-semibold">{college.rating}</span>
+            <button
+              disabled={!canCompare}
+              onClick={startCompare}
+              className={`group px-6 sm:px-8 py-3 rounded-full font-bold flex items-center gap-2 transition-all text-sm sm:text-base ${canCompare
+                  ? 'bg-gradient-to-r from-blue-600 to-indigo-700 text-white hover:from-blue-700 hover:to-indigo-800 shadow-lg hover:shadow-xl transform hover:scale-105'
+                  : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                }`}
+            >
+              <FaArrowRight className={canCompare ? "group-hover:translate-x-1 transition-transform" : ""} />
+              Compare Now
+            </button>
+          </div>
+
+          {/* Enhanced University Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {colleges.map((college, idx) => {
+              const slug = slugify(college.name);
+              const isSelected = selectedUniversities.includes(slug);
+
+              return (
+                <motion.div
+                  key={idx}
+                  whileHover={{ y: -5 }}
+                  className={`group relative rounded-2xl overflow-hidden transition-all duration-300 ${isSelected
+                      ? 'ring-2 ring-blue-500 shadow-xl'
+                      : 'border border-blue-100 shadow-md hover:shadow-xl'
+                    } bg-gradient-to-b from-white to-blue-50`}
+                >
+                  {/* Selection Indicator */}
+                  {isSelected && (
+                    <div className="absolute top-3 right-3 z-10">
+                      <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg">
+                        <FaCheckCircle className="text-sm" />
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Decorative Corner */}
+                  <div className="absolute top-0 right-0 w-16 h-16 overflow-hidden">
+                    <div className="absolute transform rotate-45 translate-x-8 -translate-y-8 bg-gradient-to-r from-blue-500/20 to-indigo-600/20 w-20 h-8"></div>
+                  </div>
+
+                  {/* Card Content */}
+                  <div className="p-5 sm:p-6">
+                    {/* University Header */}
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className={`flex-shrink-0 h-16 w-16 sm:h-20 sm:w-20 rounded-xl bg-white border border-blue-200 flex items-center justify-center p-2 ${isSelected ? 'ring-2 ring-blue-500/30' : ''
+                        }`}>
+                        <Image
+                          src={college.logo}
+                          alt={`${college.name} logo`}
+                          width={100}
+                          height={100}
+                          loading="lazy"
+                          className="max-h-10 sm:max-h-12 w-auto object-contain"
+                        />
+                      </div>
+
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg font-bold text-[#1a365d] mb-1 line-clamp-2 leading-tight">
+                          {college.name}
+                        </h3>
+
+                        <div className="flex items-center gap-2 mb-2">
+                          <Badge className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white border-0 text-xs font-medium">
+                            {college.ranking}
+                          </Badge>
+                          <div className="flex items-center gap-1 text-sm text-amber-600">
+                            <FaStar className="fill-amber-400" />
+                            <span className="font-semibold">{college.rating}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Fee Information */}
+                    <div className="bg-blue-100/50 rounded-lg p-3 mb-4 border border-blue-200">
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm font-medium text-gray-700 flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                          Approx. Fees:
+                        </span>
+                        <span className="text-sm font-bold text-blue-700">{college.fee}</span>
+                      </div>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="flex items-center justify-between gap-3">
+                      <a
+                        href={getUniversityHref(college.name)}
+                        className="flex-1 text-center text-sm font-semibold text-blue-600 hover:text-blue-800 px-3 py-2 rounded-lg hover:bg-blue-100 transition-colors flex items-center justify-center"
+                      >
+                        View Details
+                      </a>
+
+                      <button
+                        onClick={() => toggleUniversity(college.name)}
+                        className={`flex-1 px-4 py-2 rounded-lg text-sm font-semibold transition-all flex items-center justify-center ${isSelected
+                            ? 'bg-gradient-to-r from-blue-600 to-indigo-700 text-white hover:from-blue-700 hover:to-indigo-800'
+                            : 'bg-blue-100 text-blue-800 hover:bg-blue-200'
+                          }`}
+                      >
+                        {isSelected ? (
+                          <>
+                            <FaCheckCircle className="mr-1" />
+                            Selected
+                          </>
+                        ) : (
+                          <>
+                            <FaBalanceScaleLeft className="mr-1" />
+                            Compare
+                          </>
+                        )}
+                      </button>
                     </div>
                   </div>
-                </div>
-              </div>
 
-              {/* Fee Information */}
-              <div className="bg-blue-100/50 rounded-lg p-3 mb-4 border border-blue-200">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-700 flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    Approx. Fees:
-                  </span>
-                  <span className="text-sm font-bold text-blue-700">{college.fee}</span>
-                </div>
-              </div>
+                  {/* Hover Effect Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-indigo-500/0 group-hover:from-blue-500/5 group-hover:to-indigo-500/5 transition-opacity rounded-2xl pointer-events-none" />
+                </motion.div>
+              );
+            })}
+          </div>
 
-              {/* Action Buttons */}
-              <div className="flex items-center justify-between gap-3">
-                <a 
-                  href={getUniversityHref(college.name)} 
-                  className="flex-1 text-center text-sm font-semibold text-blue-600 hover:text-blue-800 px-3 py-2 rounded-lg hover:bg-blue-100 transition-colors flex items-center justify-center"
-                >
-                  View Details
-                </a>
-                
-                <button
-                  onClick={() => toggleUniversity(college.name)}
-                  className={`flex-1 px-4 py-2 rounded-lg text-sm font-semibold transition-all flex items-center justify-center ${
-                    isSelected 
-                      ? 'bg-gradient-to-r from-blue-600 to-indigo-700 text-white hover:from-blue-700 hover:to-indigo-800' 
-                      : 'bg-blue-100 text-blue-800 hover:bg-blue-200'
-                  }`}
-                >
-                  {isSelected ? (
-                    <>
-                      <FaCheckCircle className="mr-1" />
-                      Selected
-                    </>
-                  ) : (
-                    <>
-                      <FaBalanceScaleLeft className="mr-1" />
-                      Compare
-                    </>
-                  )}
-                </button>
-              </div>
-            </div>
+          {/* Selection Help Text */}
+          <div className="mt-8 text-center">
+            <p className="text-sm text-gray-600 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Tip: Select 2-3 universities to compare features side by side
+            </p>
+          </div>
+        </div>
+      </section>
 
-            {/* Hover Effect Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-indigo-500/0 group-hover:from-blue-500/5 group-hover:to-indigo-500/5 transition-opacity rounded-2xl pointer-events-none" />
-          </motion.div>
-        );
-      })}
-    </div>
-
-    {/* Selection Help Text */}
-    <div className="mt-8 text-center">
-      <p className="text-sm text-gray-600 flex items-center justify-center">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        Tip: Select 2-3 universities to compare features side by side
-      </p>
-    </div>
-  </div>
-</section>
-     
       {/* Accreditation & Recognition - Responsive slider */}
       <section className="py-12 sm:py-16 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-8 sm:mb-10"
             data-aos="fade-up"
           >
@@ -1014,11 +1013,11 @@ const Landing = () => {
           `}</style>
         </div>
       </section>
-         
+
       {/* Features Section - Responsive */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-12 sm:mb-16"
             data-aos="fade-up"
           >
@@ -1029,7 +1028,7 @@ const Landing = () => {
               Experience the difference that personalized guidance makes in your educational journey
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -1051,7 +1050,7 @@ const Landing = () => {
         </div>
       </section>
 
-     
+
 
       {/* Study Cities */}
       <section className="bg-[#08223a] py-16 px-6 text-white overflow-hidden relative" data-aos="fade-up">
@@ -1069,7 +1068,7 @@ const Landing = () => {
                     className="min-w-[150px] flex flex-col items-center text-center bg-white/10 backdrop-blur-xl p-4 rounded-xl border border-white/20 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
                   >
                     <Image src={city.img} alt={`${city.city}, ${city.state} study city`} width={100}
-                    height={100} className="w-16 h-16 object-contain mb-2 rounded-full border border-white/20 shadow" />
+                      height={100} className="w-16 h-16 object-contain mb-2 rounded-full border border-white/20 shadow" />
                     <p className="text-white font-semibold text-sm">{city.city}</p>
                     <p className="text-blue-200 text-xs">{city.state}</p>
                   </motion.div>
@@ -1089,14 +1088,14 @@ const Landing = () => {
             <p className="text-white/80 mt-2">Talk to our counselors and get a personalized shortlist.</p>
           </div>
           <div className="flex gap-3">
-            <button 
-              onClick={() => openModal('getStarted')} 
+            <button
+              onClick={() => openModal('getStarted')}
               className="px-6 py-3 rounded-full bg-[#00d4c4] text-[#001e3c] font-semibold hover:bg-[#00c0b1] transition-colors"
             >
               Get Started
             </button>
-            <button 
-              onClick={() => openModal('videoCall')} 
+            <button
+              onClick={() => openModal('videoCall')}
               className="px-6 py-3 rounded-full border border-white/30 hover:bg-white/10 transition-colors"
             >
               Book a Call
@@ -1116,8 +1115,8 @@ const Landing = () => {
                 {modalType === "homeDemo" && "Book a Home Demo"}
               </DialogTitle>
             </DialogHeader>
-            <EnquiryForm 
-              onSubmitted={() => setShowEnquiryModal(false)} 
+            <EnquiryForm
+              onSubmitted={() => setShowEnquiryModal(false)}
               formType={modalType}
             />
           </DialogContent>

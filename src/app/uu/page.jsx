@@ -148,11 +148,7 @@ const pgCourses = [
             </div>
           </div>
           <div className="md:w-1/2">
-            <img
-              src="/images/uu-uni.webp" // You'll need to add this image
-              alt="UU University"
-              className="w-full rounded-xl shadow-2xl border-4 border-white"
-            />
+            <Image width={100} height={100} src="/images/uu-uni.webp" alt="UU University" className="w-full rounded-xl shadow-2xl border-4 border-white" />
           </div>
         </div>
       </section>
@@ -283,11 +279,7 @@ const pgCourses = [
             
             <div className="flex justify-center">
               <div className="relative">
-                <img 
-                  src="/learning-platform.png" 
-                  alt="Learning Platform" 
-                  className="rounded-xl shadow-2xl border-4 border-blue-700 max-w-full h-auto"
-                />
+                <Image width={100} height={100} src="/images/learning-platform.png" alt="Learning Platform" className="rounded-xl shadow-2xl border-4 border-blue-700 max-w-full h-auto" />
                 <div className="absolute -bottom-4 -right-4 bg-yellow-400 text-blue-900 font-bold py-2 px-4 rounded-lg shadow-lg">
                   Experience The Future of Learning
                 </div>
@@ -357,11 +349,8 @@ const pgCourses = [
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
           <div className="flex-1">
-            <img
-              src="/images/uu-certificate.png"
-              alt="UU University Certificate"
-              className="w-full max-w-md mx-auto rounded shadow-lg"
-            />
+            <Image width={100} height={100} src="/images/uu-certificate.png" alt="UU University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+             
           </div>
 
           <div className="flex-1 text-white">
@@ -453,28 +442,28 @@ const pgCourses = [
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <img src="/images/tcs.png" alt="Company" className="h-12 object-contain" />
+              <Image width={100} height={100} src="/images/tcs.png" alt="Company" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <img src="/images/lt.jpg" alt="Microsoft" className="h-12 object-contain" />
+              <Image width={100} height={100} src="/images/lt.jpg" alt="Microsoft" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <img src="/images/company9.jpg" alt="Company 9" className="h-12 object-contain" />
+              <Image width={100} height={100} src="/images/company9.jpg" alt="Company 9" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <img src="/images/com10.png" alt="Company 10" className="h-12 object-contain" />
+              <Image width={100} height={100} src="/images/com10.png" alt="Company 10" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <img src="/images/companany4.png" alt="Company4" className="h-12 object-contain" />
+              <Image width={100} height={100} src="/images/companany4.png" alt="Company4" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <img src="/images/sap.png" alt="Company 6" className="h-12 object-contain" />
+              <Image width={100} height={100} src="/images/sap.png" alt="Company 6" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <img src="/images/icici.png" alt="Companany5" className="h-12 object-contain" />
+              <Image width={100} height={100} src="/images/icici.png" alt="Companany5" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <img src="/images/adove.png" alt="Adove" className="h-12 object-contain" />
+              <Image width={100} height={100} src="/images/adove.png" alt="Adove" className="h-12 object-contain" />
             </div>
           </div>
         </div>

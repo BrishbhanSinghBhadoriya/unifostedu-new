@@ -174,11 +174,11 @@ const Vgu = () => {
       <section className="py-10 bg-white">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
         <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <img src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
-          <img src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
-          <img src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
-          <img src="/images/nirf.png" alt="NIRF" className="h-16 object-contain" />
-          <img src="/images/bci.png" alt="BCI" className="h-16 object-contain" />
+          <Image width={100} height={100} src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
+          <Image width={100} height={100} src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
+          <Image width={100} height={100} src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
+          <Image width={100} height={100} src="/images/nirf.png" alt="NIRF" className="h-16 object-contain" />
+          <Image width={100} height={100} src="/images/bci.png" alt="BCI" className="h-16 object-contain" />
           
         </div>
       </section>
@@ -206,7 +206,7 @@ const Vgu = () => {
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
-            <img src="/images/vgu-certificate.jpg" alt="VGU Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <Image width={100} height={100} src="/images/vgu-certificate.jpg" alt="VGU Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
           </div>
           <div className="flex-1 text-white">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">Degree from VGU University</h2>
@@ -231,7 +231,7 @@ const Vgu = () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {["/images/samsung.png", "/images/airtel.png", "/images/icici.png", "/images/nestle.png", "/images/tcs.png", "/images/pepsico.png"].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <img src={src} alt="Company" className="h-12 object-contain" />
+              <Image width={100} height={100} src={src} alt="Company" className="h-12 object-contain" />
             </div>
           ))}
         </div>

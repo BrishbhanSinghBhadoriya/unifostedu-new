@@ -91,11 +91,8 @@ export default async function UniversityPage({ params }) {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <div className="flex items-center mb-6">
-            <img 
-              src={university.logo} 
-              alt={`${university.name} logo`} 
-              className="w-20 h-20 object-contain rounded-lg mr-6"
-            />
+            <Image width={100} height={100} src={university.logo} alt={`${university.name} logo`} className="w-20 h-20 object-contain rounded-lg mr-6" />
+           
             <div>
               <h1 className="text-4xl font-bold text-gray-900">{university.name}</h1>
               <p className="text-xl text-gray-600">{university.description}</p>

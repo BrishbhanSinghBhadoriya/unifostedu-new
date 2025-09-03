@@ -103,11 +103,7 @@ export default function ListofCollege() {
             <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <div className="p-6">
                 <div className="flex items-center mb-4">
-                  <img 
-                    src={college.logo} 
-                    alt={`${college.name} logo`} 
-                    className="w-16 h-16 object-contain rounded-lg mr-4"
-                  />
+                  <Image width={100} height={100} src={college.logo} alt={`${college.name} logo`} className="w-16 h-16 object-contain rounded-lg mr-4" />
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">{college.name}</h3>
                     <p className="text-sm text-gray-600">{college.location}</p>

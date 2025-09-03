@@ -299,7 +299,6 @@ const Amity = () => {
           <Image src="/images/aicte.png" alt="AICTE" width={100} height={100} className="h-16 object-contain" />
           
            
-           {/* <img src="/images/naac.png" alt="NAAC" className="h-16 object-contain" /> */}
            <Image src="/images/nirf.png" alt="NIRF" width={100} height={100} className="h-16 object-contain" />
            <Image src="/images/wes.png" alt="WES" width={100} height={100} className="h-16 object-contain" />
            <Image src="/images/aiu.png" alt="AIU"width={100} height={100} className="h-16 object-contain" />

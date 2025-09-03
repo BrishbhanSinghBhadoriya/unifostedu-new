@@ -11,6 +11,7 @@ import { FaSearch, FaMapMarkerAlt, FaBook, FaStar, FaClock, FaMoneyBillWave, FaA
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import EnquiryForm from '@/components/EnquiryForm';
 import UniversityDetailsModal from '@/components/UniversityDetailsModal';
+import Image from 'next/image';
 
 function normalizeSpecializations(raw) {
   if (!raw) return [];
