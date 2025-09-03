@@ -86,7 +86,34 @@ const OPJindal = () => {
 
   return (
     <>
-   
+       <Head>
+        <title>OP Jindal University | Online & On-Campus Programs</title>
+        <meta
+          name="description"
+          content="OP Jindal University offers globally recognized UG & PG programs in Law, Business, Psychology, Public Policy, and more. Apply for online and on-campus programs."
+        />
+        <meta
+          name="keywords"
+          content="OP Jindal University, JGU Online, Jindal Global University, BBA, MBA, MA, MSc, Law Programs, Business Analytics, Public Policy, Distance Learning India"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="OP Jindal University | Online & On-Campus Programs" />
+        <meta
+          property="og:description"
+          content="Explore undergraduate and postgraduate programs from OP Jindal University. Globally recognized, NAAC accredited, and industry-ready education."
+        />
+        <meta property="og:image" content="/images/opjindal.webp" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.opjindal.edu" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="OP Jindal University | Online & On-Campus Programs" />
+        <meta
+          name="twitter:description"
+          content="Globally ranked OP Jindal University offers UG & PG courses in Business, Law, Psychology, and more. Apply now."
+        />
+        <meta name="twitter:image" content="/images/opjindal.webp" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
       
 

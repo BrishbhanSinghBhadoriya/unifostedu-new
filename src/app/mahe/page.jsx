@@ -12,7 +12,7 @@ import {
 } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
 import EnquireCard from '@/components/EnquireCard';
-
+import Head from 'next/head';
 const Manipal = () => {
  const ugCourses = [
     {
@@ -76,11 +76,28 @@ const Manipal = () => {
 
   return (
     <>
-      
-        <title>Manipal Academy of Higher Education - Courses, Fees & Admissions</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
       
+       <Head>
+        <title>Manipal Online Degrees | Manipal Academy of Higher Education Courses</title>
+        <meta name="description" content="Explore online programs from Manipal Academy of Higher Education (MAHE). NAAC A++ accredited, UGC recognized degrees. Enquire now for BBA, BBA Hons, B.Com, MBA, MCA, M.Sc courses." />
+        <meta name="keywords" content="Manipal Online, MAHE Online, BBA Online, BBA Hons Online, B.Com Online, MBA Online, MCA Online, M.Sc Online, Distance Learning India, NAAC A++, UGC Recognized Online Degree, Flexible Online Education, Online Courses MAHE" />
+        <meta name="author" content="Manipal Academy of Higher Education" />
+        <meta name="robots" content="index, follow" />
 
+        {/* Open Graph */}
+        <meta property="og:title" content="Manipal Online Degrees | Manipal Academy of Higher Education Courses" />
+        <meta property="og:description" content="Explore undergraduate and postgraduate online programs from MAHE, NAAC A++ accredited. Flexible and career-focused education." />
+        <meta property="og:image" content="/images/mahe-uni.webp" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.manipal.edu/online" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Manipal Online Degrees | Manipal Academy of Higher Education Courses" />
+        <meta name="twitter:description" content="Explore online undergraduate and postgraduate programs from MAHE, NAAC A++ accredited. Flexible and career-focused education." />
+        <meta name="twitter:image" content="/images/mahe-uni.webp" />
+      </Head>
       {/* Intro Section */}
       <section className="py-16 bg-white px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">

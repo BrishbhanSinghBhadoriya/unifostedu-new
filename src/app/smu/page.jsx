@@ -9,7 +9,7 @@ import {
   FaCertificate,
   FaBuilding,
 } from 'react-icons/fa';
-
+import Head from 'next/head';
 import EnquireCard from '@/components/EnquireCard';
 // import { s } from 'framer-motion/dist/types.d-Cjd591yU';
 //import { s } from 'framer-motion/dist/types.d-Cjd591yU';
@@ -106,7 +106,21 @@ const pgCourses = [
   return (
     <>
 
-     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />,
+      <Head>
+        <title>Sikkim Manipal University (SMU) Online | Courses, Fees & Admission</title>
+        <meta 
+          name="description" 
+          content="Sikkim Manipal University (SMU) offers UGC-recognized online UG & PG programs like MBA, MCA, B.Com, and BA. Explore fees, eligibility, admission process, and placement support." 
+        />
+        <meta 
+          name="keywords" 
+          content="Sikkim Manipal University Online, SMU MBA Online, SMU MCA, SMU Online Courses, SMU Admission, SMU Distance Learning, SMU Fees, Online BA, Online B.Com" 
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://unifostedu.com/smu" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+      </Head>
       {/* Intro Section */}
       <section className="py-16 bg-white px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">

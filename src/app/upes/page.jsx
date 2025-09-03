@@ -17,7 +17,7 @@ import {
 } from "react-icons/fa";
 
 import EnquireCard from '@/components/EnquireCard';
-
+import Head from 'next/head';
 const Upes = () => {
   const ugCourses = [
     {
@@ -64,11 +64,27 @@ const Upes = () => {
     <>
     
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+        <Head>
         <title>UPES University Online Courses | Admission, Fees & Enquiry</title>
         <meta
           name="description"
           content="Explore UPES online programs. Learn about fees, eligibility, and how to apply. Enquire now!"
         />
+        <meta
+          name="keywords"
+          content="UPES University Online, UPES MBA, UPES BBA, UPES BCA, UPES MCA, Online Programs, Admission, Fees"
+        />
+        <link rel="canonical" href="https://unifostedu.com/upes" />
+        <meta property="og:title" content="UPES University Online Courses" />
+        <meta
+          property="og:description"
+          content="Explore UPES online degree programs with fees, eligibility, and admission details."
+        />
+        <meta property="og:image" content="/images/upes.png" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+
  
 
       {/* Intro Section */}

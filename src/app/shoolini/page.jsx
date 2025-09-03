@@ -7,7 +7,7 @@ import {
   FaUserFriends, FaClipboardCheck
 } from "react-icons/fa";
 import { motion } from 'framer-motion';
-
+import Head from 'next/head';
 import EnquireCard from '@/components/EnquireCard';
 
 const Shoolini = () => {
@@ -77,7 +77,13 @@ const Shoolini = () => {
     <>
       
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-      
+        <Head>
+        <title>Shoolini University Online Programs | Fees, Courses & Admission</title>
+        <meta name="description" content="Explore UG & PG online programs at Shoolini University. Check eligibility, fees, placements & apply online." />
+        <meta name="keywords" content="Shoolini University Online, Shoolini MBA Online, Shoolini BBA Online, Shoolini BCA Online, Shoolini Online Courses, Shoolini Admission, Shoolini Fees" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+      </Head>
+
 
    { /* Hero Section */}
     <section className="bg-white-100 py-16 px-6 font-[Inter]">
