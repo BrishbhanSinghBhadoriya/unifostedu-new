@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import SEOOptimizer from '@/components/SEOOptimizer';
 import courseData from '@/data/courseData.json';
+import Head from 'next/head';
 
 
 import {

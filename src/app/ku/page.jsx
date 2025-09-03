@@ -9,6 +9,7 @@ import {
   FaClipboardCheck,
 } from "react-icons/fa";
 import Head from 'next/head';
+import Image from 'next/image';
 const KU = () => {
   const ugCourses = [
     {

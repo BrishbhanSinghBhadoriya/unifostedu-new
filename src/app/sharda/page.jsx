@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import EnquireCard from '@/components/EnquireCard';
 import Head from 'next/head';
+import Image from 'next/image';
 const Sharda = () => {
   const ugCourses = [
     {

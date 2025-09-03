@@ -16,7 +16,7 @@ import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import EnquireCard from '@/components/EnquireCard';
 import Head from 'next/head';
-
+import Image from 'next/image';
 const Vgu = () => {
   const ugCourses = [
      {
@@ -100,13 +100,13 @@ const Vgu = () => {
         <meta name="description" content="Vivekananda Global University (VGU), Jaipur offers top-ranked undergraduate and postgraduate programs in management, computer applications, arts, and sciences. Apply now for admissions, explore courses, and secure your future." />
         <meta name="keywords" content="VGU University, VGU Jaipur, Vivekananda Global University, BCA, BBA, BA, MBA, MCA, UG courses, PG courses, Admissions, Enquiry, Jaipur University" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://yourwebsite.com/vgu-university" />
+        <link rel="canonical" href="https://unifostedu.com/vgu-university" />
         {/* Open Graph / Social Media */}
         <meta property="og:title" content="VGU University Jaipur - Courses, Admissions & Enquiry" />
         <meta property="og:description" content="Explore UG & PG programs at Vivekananda Global University, Jaipur. Get admissions, course details, and career guidance." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourwebsite.com/vgu-university" />
-        <meta property="og:image" content="https://yourwebsite.com/images/vgu-uni.webp" />
+        <meta property="og:url" content="https://unifostedu.com/vgu-university" />
+        <meta property="og:image" content="https://unifostedu.com/images/vgu-uni.webp" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 

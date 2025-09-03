@@ -1,5 +1,5 @@
 import Landing from "@/components/pages/Landing";
-
+import Image from "next/image";
 export const metadata = {
   title: "Online University Degrees & Career Counseling | UNIFOST - India's Leading EdTech Platform",
   description: "Get UGC-approved online university degrees from top Indian universities including MBA, BBA, MCA, BCA, BCom, BA, and more. Expert career counseling, home demo sessions, and personalized guidance. Book your free counseling session today!",

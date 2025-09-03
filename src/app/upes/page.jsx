@@ -18,6 +18,7 @@ import {
 
 import EnquireCard from '@/components/EnquireCard';
 import Head from 'next/head';
+import Image from 'next/image';
 const Upes = () => {
   const ugCourses = [
     {

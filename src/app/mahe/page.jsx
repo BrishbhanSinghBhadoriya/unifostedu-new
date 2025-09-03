@@ -13,6 +13,7 @@ import {
 import { useRouter } from 'next/navigation';
 import EnquireCard from '@/components/EnquireCard';
 import Head from 'next/head';
+import Image from 'next/image';
 const Manipal = () => {
  const ugCourses = [
     {

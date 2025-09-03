@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { demoAPI } from '@/lib/axios';
 import { toast } from 'sonner';
-
+import Image from 'next/image';
 export default function BookDemo() {
   const [formData, setFormData] = useState({
     name: '',

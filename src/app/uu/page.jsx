@@ -14,6 +14,7 @@ import {
   FaLaptop
 } from 'react-icons/fa';
 import Head from 'next/head';
+import Image from 'next/image';
 import EnquireCard from '@/components/EnquireCard';
 
   // const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
@@ -126,7 +127,7 @@ const pgCourses = [
           name="keywords"
           content="Uttaranchal University Online, UU University, Online MBA, Online BBA, Online MCA, Online BCA, Executive MBA, Admission 2025, Fees, Distance Learning"
         />
-        <link rel="canonical" href="https://yourdomain.com/uttaranchal-university" />
+        <link rel="canonical" href="https://unifostedu.com/uttaranchal-university" />
         <meta property="og:title" content="Uttaranchal University Online | Admission 2025" />
         <meta
           property="og:description"

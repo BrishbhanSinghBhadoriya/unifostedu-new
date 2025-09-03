@@ -7,7 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import EnquiryForm from "@/components/EnquiryForm";
-
+import Image from 'next/image';
 export default function Services() {
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
   const [modalType, setModalType] = useState('getStarted');

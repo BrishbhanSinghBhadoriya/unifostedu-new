@@ -318,7 +318,7 @@ const Dypatil = () => {
         <Image src="/images/7.webp" width={100} height={100} loading="lazy"alt="Company4" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image src="/images/8.webp" alt="Company 6" className="h-12 object-contain" />
+        <Image src="/images/8.webp" width={100} height={100} loading="lazy" alt="Company 6" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
         <Image src="/images/9.webp" width={100} height={100} loading="lazy"alt="Companany5" className="h-12 object-contain" />
