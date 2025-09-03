@@ -428,5 +428,17 @@ export default async function CoursePage({ params }) {
 }
 
 export function generateStaticParams() {
-  return Object.keys(courseData).map((slug) => ({ slug }));
+  const extraSlugs = [
+    'msc-online',
+    'bba-online',
+    'bca-online',
+    'bcom-online',
+    'ba-online',
+    'bajmc-online',
+    'mcom-online',
+    'ma-online',
+    'majmc-online'
+  ];
+  const slugs = Array.from(new Set([...Object.keys(courseData), ...extraSlugs]));
+  return slugs.map((slug) => ({ slug }));
 }

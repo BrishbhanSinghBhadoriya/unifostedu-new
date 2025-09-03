@@ -12,6 +12,15 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import EnquiryForm from '@/components/EnquiryForm';
 import UniversityDetailsModal from '@/components/UniversityDetailsModal';
 
+function normalizeSpecializations(raw) {
+  if (!raw) return [];
+  const toArray = Array.isArray(raw) ? raw : [raw];
+  return toArray
+    .flatMap((item) => (typeof item === 'string' ? item.split(',') : [item]))
+    .map((s) => (typeof s === 'string' ? s.trim() : s))
+    .filter((s) => typeof s === 'string' && s.length > 0);
+}
+
 function parseMinFeeLakhs(feeRange) {
   if (!feeRange) return null;
   // Extract first number with optional decimal before 'L'
@@ -63,9 +72,7 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle })
   const locations = useMemo(() => ['All', ...Array.from(new Set(universities.map((u) => u.location.split(',')[0])))], [universities]);
   const specializations = useMemo(
     () => ['All', ...Array.from(new Set(universities.flatMap((u) => {
-      // Ensure specializations is always an array
-      const specs = Array.isArray(u.specializations) ? u.specializations : [u.specializations];
-      return specs.filter(spec => spec && spec.trim()); // Filter out empty/null values
+      return normalizeSpecializations(u.specializations);
     })))],
     [universities]
   );
@@ -83,7 +90,7 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle })
     if (specializationFilter !== 'All') {
       const spec = specializationFilter.toLowerCase();
       list = list.filter((u) => {
-        const specs = Array.isArray(u.specializations) ? u.specializations : [u.specializations];
+        const specs = normalizeSpecializations(u.specializations);
         return specs.some((s) => s && s.toLowerCase().includes(spec));
       });
     }
@@ -201,7 +208,7 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle })
           
           return (
             <div key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#00ffe0] bg-white overflow-hidden">
-              <Card className="h-full border-0 shadow-none">
+              <Card className="h-full border-0 shadow-none flex flex-col">
                 <div className="relative">
                   <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                     <ImageWithFallback src={university.image} alt={university.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
@@ -226,19 +233,25 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle })
                   </CardDescription>
                 </CardHeader>
 
-                <CardContent className="pb-4">
+                <CardContent className="pb-4 flex-1">
                   <div className="space-y-3">
                     <div>
                       <p className="text-sm font-medium text-gray-700 mb-2">Specializations:</p>
                       <div className="space-y-1">
-                        {(Array.isArray(university.specializations) ? university.specializations : [university.specializations]).slice(0, 3).map((spec, i) => (
+                        {normalizeSpecializations(university.specializations).slice(0, 5).map((spec, i) => (
                           <div key={i} className="flex items-center text-sm text-gray-600">
                             <div className="w-2 h-2 bg-[#00ffe0] rounded-full mr-2"></div>
                             {spec}
                           </div>
                         ))}
-                        {(Array.isArray(university.specializations) ? university.specializations : [university.specializations]).length > 3 && (
-                          <div className="text-sm text-[#00ffe0] font-medium">+{(Array.isArray(university.specializations) ? university.specializations : [university.specializations]).length - 3} more</div>
+                        {normalizeSpecializations(university.specializations).length > 5 && (
+                          <button
+                            type="button"
+                            onClick={() => handleViewDetails(university)}
+                            className="text-sm text-[#00ffe0] font-medium underline underline-offset-2 cursor-pointer"
+                          >
+                            View more
+                          </button>
                         )}
                       </div>
                     </div>
@@ -266,7 +279,7 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle })
                   </div>
                 </CardContent>
 
-                <CardFooter className="pt-0">
+                <CardFooter className="pt-0 mt-auto">
                   {hasSubmitted ? (
                     <Button 
                       className="w-full rounded-xl bg-gradient-to-r from-[#00e6cc] to-[#00d4c4] text-white font-semibold shadow-md hover:shadow-lg hover:from-[#00d4c4] hover:to-[#00e6cc] transition-all duration-300 flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00e6cc]"
