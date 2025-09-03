@@ -451,7 +451,7 @@ function CompareContent() {
                    >
                      <div className="text-center">
                        <div className="w-12 h-12 mx-auto mb-2 rounded-lg overflow-hidden">
-                         <img 
+                         <Ima 
                            src={university.logo} 
                            alt={university.name} 
                            className="w-full h-full object-contain"

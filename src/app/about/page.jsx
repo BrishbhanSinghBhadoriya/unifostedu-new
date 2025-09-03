@@ -9,7 +9,7 @@ import {
   FaShieldAlt, FaTools, FaStar, FaQuoteLeft, FaAward, FaGlobe, FaLinkedin, FaFacebook
 }from "react-icons/fa";
 import { motion } from 'framer-motion';
-import Head from 'next/head';
+import Image from 'next/image';
 
 export default function About() {
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
@@ -265,7 +265,7 @@ export default function About() {
             ].map((service, index) => (
               <div key={index} className="relative bg-white rounded-2xl overflow-hidden shadow-lg group hover:shadow-xl transition-all duration-500 border border-gray-100">
                 <div className="relative overflow-hidden h-48">
-                  <img src={service.image} alt={service.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+                  <Image width={100} height={100} src={service.image} alt={service.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="absolute top-4 right-4 bg-[#00ffe0] text-[#001e3c] p-3 rounded-full transform translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">{service.icon}</div>
                 </div>
@@ -420,9 +420,12 @@ export default function About() {
     {/* Founder 1 */}
     <div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
       <div className="relative">
-        <img 
+        <Image
           src="/images/priyansh.jpg" 
           alt="Priyansh Mishra" 
+          width={100}
+          height={100}
+
           className="rounded-2xl w-full object-cover shadow-lg"
         />
         <div className="absolute bottom-4 left-4 bg-gradient-to-br from-[#00ffe0] to-[#00d4c4] rounded-lg px-4 py-2 text-[#001e3c] font-bold shadow-lg">
@@ -476,9 +479,11 @@ export default function About() {
         </button>
       </div>
       <div className="relative order-1 md:order-2">
-        <img 
+        <Image
           src="/images/aman.jpg" 
           alt="Aman Pawar" 
+          width={100}
+          height={100}
           className="rounded-2xl w-full object-cover shadow-lg"
         />
         <div className="absolute bottom-4 right-4 bg-gradient-to-br from-pink-400 to-pink-300 rounded-lg px-4 py-2 text-[#001e3c] font-bold shadow-lg">

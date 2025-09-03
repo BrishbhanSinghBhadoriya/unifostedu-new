@@ -13,7 +13,8 @@ import {
 } from "react-icons/fa";
 import { motion } from 'framer-motion';
 import EnquireCard from '@/components/EnquireCard';
-
+import Image from 'next/image';
+import Head from 'next/head';
 const Amity = () => {
   const ugCourses = [
     {
@@ -205,14 +206,25 @@ const Amity = () => {
     <>
       
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-      
-
+         <Head>
+        <title>Amity University Online Programs | Fees & Admission</title>
+        <meta name="description" content="Explore online UG & PG programs from Amity University. Check fees, eligibility, specializations and enquire now." />
+        <meta name="keywords" content="Amity Online University, BBA Online, MBA Online, MCA Online, Accredited Online Degrees, Online Courses India, Distance Learning, Ivy League Collaboration" />
+        <meta name="robots" content="index, follow" />
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {/* Open Graph / Social Sharing */}
+        <meta property="og:title" content="Amity University Online Programs | Fees & Admission" />
+        <meta property="og:description" content="Explore online UG & PG programs from Amity University. Check fees, eligibility, specializations and enquire now." />
+        <meta property="og:image" content="/images/amitypic.png" />
+        <meta property="og:type" content="website" />
+      </Head>
       {/* Hero Section */}
       <section className="bg-white-100 py-16 px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4 leading-snug font-[Poppins]">
-              Build a great career with Amity University Online
+               Amity University Online
             </h1>
             <p> <span className="font-semibold text-gray-700">Private University in Noida, Uttar Pradesh, India.</span><br /><br/></p>
             <p className="text-gray-700 text-lg">
@@ -283,21 +295,21 @@ const Amity = () => {
       <section className="py-10 bg-white">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
         <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <img src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
-          <img src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
+          <Image src="/images/ugc.png" alt="UGC"  width={100} height={100} className="h-16 object-contain" />
+          <Image src="/images/aicte.png" alt="AICTE" width={100} height={100} className="h-16 object-contain" />
           
            
            {/* <img src="/images/naac.png" alt="NAAC" className="h-16 object-contain" /> */}
-           <img src="/images/nirf.png" alt="NIRF" className="h-16 object-contain" />
-           <img src="/images/wes.png" alt="WES" className="h-16 object-contain" />
-           <img src="/images/aiu.png" alt="AIU" className="h-16 object-contain" />
-          <img src="/images/acu.png" alt="CARRES" className="h-16 object-contain" />
+           <Image src="/images/nirf.png" alt="NIRF" width={100} height={100} className="h-16 object-contain" />
+           <Image src="/images/wes.png" alt="WES" width={100} height={100} className="h-16 object-contain" />
+           <Image src="/images/aiu.png" alt="AIU"width={100} height={100} className="h-16 object-contain" />
+          <Image src="/images/acu.png" alt="CARRES"width={100} height={100} className="h-16 object-contain" />
          
-         <img src="/images/unwto.png" alt="UNWTO" className="h-16 object-contain" />
-         <img src="/images/recogin.webp" alt="RECOGIN" className="h-16 object-contain" />
-         <img src="/images/10.webp" alt="11" className="h-16 object-contain" />
-           <img src="/images/qaa.png" alt="QAA" className="h-16 object-contain" />
-           <img src="/images/11.png" alt="11" className="h-16 object-contain" />
+         <Image src="/images/unwto.png" alt="UNWTO"width={100} height={100} className="h-16 object-contain" />
+         <Image src="/images/recogin.webp" alt="RECOGIN"width={100} height={100} className="h-16 object-contain" />
+         <Image src="/images/10.webp" alt="11"width={100} height={100} className="h-16 object-contain" />
+           <Image src="/images/qaa.png" alt="QAA" width={100} height={100}className="h-16 object-contain" />
+           <Image src="/images/11.png" alt="11" width={100} height={100}className="h-16 object-contain" />
         </div>
       </section>
      <section className="py-12 bg-white">
@@ -309,9 +321,11 @@ const Amity = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {highlights.map((item, idx) => (
             <div key={idx} className="text-center">
-              <img
+              <Image
                 src={item.img}
                 alt={item.title}
+                width={100}
+                height={100}
                 className="mx-auto mb-4 h-14 object-contain"
               />
               <h3 className="text-lg font-semibold text-gray-800 mb-2">
@@ -346,7 +360,7 @@ const Amity = () => {
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
-            <img src="/images/amicri.jpeg" alt="Amity University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <Image src="/images/amicri.jpeg" alt="Amity University Certificate" width={100} height={100} className="w-full max-w-md mx-auto rounded shadow-lg" />
           </div>
           <div className="flex-1 text-white">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">Online Degree from Amity Online University</h2>
@@ -371,7 +385,7 @@ const Amity = () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {["/images/company.png", "/images/company1.png", "/images/company9.jpg", "/images/com10.png", "/images/companany4.png", "/images/company6.png", "/images/companany5.png", "/images/adove.png", "/images/samsung.png","/images/3.webp",  "/images/4.webp",  "/images/5.webp",  "/images/6.webp",  "/images/7.webp",  "/images/8.webp",  "/images/9.webp",].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <img src={src} alt="Company" className="h-12 object-contain" />
+              <Image src={src} alt="Company" width={100} height={100} className="h-12 object-contain" />
             </div>
           ))}
         </div>

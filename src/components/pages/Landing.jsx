@@ -26,33 +26,33 @@ import EnquiryForm from "@/components/EnquiryForm";
 
 // Enhanced data arrays
 const heroSlides = [
-  { 
+{ 
     src: "/slider/slider-1.png", 
-    alt: "Compare before you decide",
+    alt: "Compare top online universities in India with Unifost",
     title: "Your Gateway to Success",
     subtitle: "Compare • Choose • Succeed",
-    description: "Find the perfect online degree program from top universities"
+    description: "Find the perfect online degree program from UGC-approved top universities in India"
   },
   { 
     src: "/slider/slider-2.png", 
-    alt: "Your One-Stop Platform for Online Universities",
+    alt: "Best platform for online universities and distance learning",
     title: "Transform Your Future",
     subtitle: "Online Education Excellence",
-    description: "Access world-class education from anywhere, anytime"
+    description: "Access world-class online education from anywhere, anytime with Unifost"
   },
   { 
     src: "/slider/slider-3.png", 
-    alt: "Search • Compare • Choose • Succeed",
+    alt: "Search and compare online MBA, BBA, MCA programs",
     title: "Smart Education Choices",
     subtitle: "Expert Guidance • Best Programs",
-    description: "Get personalized counseling for your academic journey"
+    description: "Get personalized counseling and find the best online degree for your career"
   },
   {
     src: "/slider/slider-4.png",
-    alt: "Compare universities with Unifost",
+    alt: "Compare universities fees, ranking, courses with Unifost",
     title: "Ye College Ya Woh College?",
     subtitle: "Compare on Unifost!",
-    description: "Compare fees, rankings, courses, and location — instantly"
+    description: "Compare fees, rankings, courses, and location instantly before deciding"
   }
 
 ];
@@ -144,6 +144,7 @@ const UniversityLogoSlider = () => {
   }, []);
 
   return (
+
     <section className="py-1 bg-white">
       <div className="max-w-7xl mx-auto px-1">
         <div className="relative overflow-hidden" 
@@ -172,9 +173,11 @@ const UniversityLogoSlider = () => {
                 style={{ width: `${100 / itemsToShow}%` }}
               >
                 <div className="h-24 w-full flex items-center justify-center px-2">
-                  <img 
+                  <Image 
                     src={university.logo} 
                     alt={`${university.name} logo`} 
+                    width={100}
+                    height={100}
                     className="max-h-14 max-w-full object-contain hover:scale-110 transition-transform duration-300"
                   />
                 </div>
@@ -716,9 +719,13 @@ const Landing = () => {
 {/* Logo/Image area - Full Size */}
 <div className="w-full">
   <div className="h-52 w-full bg-white flex items-center justify-center overflow-hidden rounded-xl border border-blue-200 shadow-sm">
-    <img 
+    <Image 
       src={college.logo} 
-      alt={`${college.name} logo`} 
+      alt={`${college.name} logo`}
+      width={100}
+      height={100}
+      loading="lazy"
+      priority={college.isMain} 
       className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105" 
     />
   </div>
@@ -883,9 +890,12 @@ const Landing = () => {
                 <div className={`flex-shrink-0 h-16 w-16 sm:h-20 sm:w-20 rounded-xl bg-white border border-blue-200 flex items-center justify-center p-2 ${
                   isSelected ? 'ring-2 ring-blue-500/30' : ''
                 }`}>
-                  <img 
+                  <Image 
                     src={college.logo} 
                     alt={`${college.name} logo`} 
+                    width={100}
+                    height={100}
+                    loading="lazy"
                     className="max-h-10 sm:max-h-12 w-auto object-contain" 
                   />
                 </div>
@@ -990,7 +1000,7 @@ const Landing = () => {
             <div className="flex items-center gap-4 sm:gap-6 animate-[accreditScroll_25s_linear_infinite] will-change-transform">
               {[...accreditationLogos, ...accreditationLogos].map((logo, idx) => (
                 <div key={idx} className="min-w-[80px] sm:min-w-[100px] md:min-w-[140px] rounded-xl p-3 sm:p-4 bg-white shadow-sm border border-gray-100 flex items-center justify-center h-16 sm:h-20 md:h-24">
-                  <img src={logo} alt="Accreditation and recognition logo" className="max-h-10 sm:max-h-12 md:max-h-14 object-contain" />
+                  <Image src={logo} alt="Accreditation and recognition logo" width={100} height={100} loading="lazy" className="max-h-10 sm:max-h-12 md:max-h-14 object-contain" />
                 </div>
               ))}
             </div>
@@ -1058,7 +1068,8 @@ const Landing = () => {
                     whileHover={{ y: -6 }}
                     className="min-w-[150px] flex flex-col items-center text-center bg-white/10 backdrop-blur-xl p-4 rounded-xl border border-white/20 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
                   >
-                    <img src={city.img} alt={`${city.city}, ${city.state} study city`} className="w-16 h-16 object-contain mb-2 rounded-full border border-white/20 shadow" />
+                    <Image src={city.img} alt={`${city.city}, ${city.state} study city`} width={100}
+                    height={100} className="w-16 h-16 object-contain mb-2 rounded-full border border-white/20 shadow" />
                     <p className="text-white font-semibold text-sm">{city.city}</p>
                     <p className="text-blue-200 text-xs">{city.state}</p>
                   </motion.div>

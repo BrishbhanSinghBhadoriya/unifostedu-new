@@ -15,6 +15,7 @@ import {
 } from "react-icons/fa";
 import { motion } from 'framer-motion';
 import EnquireCard from '@/components/EnquireCard';
+import Image from 'next/image';
 
 // const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
 //   //const navigate = useNavigate();
@@ -234,10 +235,10 @@ const Chandigarh = () => {
       <section className="py-10 bg-white">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
         <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <img src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
-          <img src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
-          <img src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
-          <img src="/images/wes.png" alt="KPMG" className="h-16 object-contain" />
+          <Image src="/images/ugc.png" alt="UGC" width={100} height={100} loading="lazy" className="h-16 object-contain" />
+          <Image src="/images/aicte.png" alt="AICTE" width={100} height={100} loading="lazy" className="h-16 object-contain" />
+          <Image src="/images/naac.png" alt="NAAC" width={100} height={100} loading="lazy" className="h-16 object-contain" />
+          <Image src="/images/wes.png" alt="KPMG" width={100} height={100} loading="lazy" className="h-16 object-contain" />
         </div>
       </section>
 
@@ -264,7 +265,7 @@ const Chandigarh = () => {
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
-            <img src="/images/certificate-cu.jpg" alt="Chandigarh University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <Image src="/images/certificate-cu.jpg" alt="Chandigarh University Certificate" width={100} height={100} loading="lazy" className="w-full max-w-md mx-auto rounded shadow-lg" />
           </div>
           <div className="flex-1 text-white">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">Earn Your Online Degree from Chandigarh University</h2>
@@ -289,7 +290,7 @@ const Chandigarh = () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {["/images/microsoft.jpg", "/images/ibm.png", "/images/flipkart.png", "/images/deloitte.png", "/images/amazon.png", "/images/sap.png", "/images/hp.png", "/images/samsung.png"].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <img src={src} alt="Company" className="h-12 object-contain" />
+              <Image src={src} alt="Company" width={100} height={100} loading="lazy" className="h-12 object-contain" />
             </div>
           ))}
         </div>
