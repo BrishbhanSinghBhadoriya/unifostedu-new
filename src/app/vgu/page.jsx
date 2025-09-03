@@ -14,8 +14,8 @@ import {
 } from "react-icons/fa";
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
+
 import EnquireCard from '@/components/EnquireCard';
-import Head from 'next/head';
 
 const Vgu = () => {
   const ugCourses = [
@@ -93,22 +93,9 @@ const Vgu = () => {
   return (
     <>
       
-        
+        <title>VGU University - Courses, Admissions, Enquiry</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-      <Head>
-        <title>VGU University Jaipur - Courses, Admissions & Enquiry</title>
-        <meta name="description" content="Vivekananda Global University (VGU), Jaipur offers top-ranked undergraduate and postgraduate programs in management, computer applications, arts, and sciences. Apply now for admissions, explore courses, and secure your future." />
-        <meta name="keywords" content="VGU University, VGU Jaipur, Vivekananda Global University, BCA, BBA, BA, MBA, MCA, UG courses, PG courses, Admissions, Enquiry, Jaipur University" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://yourwebsite.com/vgu-university" />
-        {/* Open Graph / Social Media */}
-        <meta property="og:title" content="VGU University Jaipur - Courses, Admissions & Enquiry" />
-        <meta property="og:description" content="Explore UG & PG programs at Vivekananda Global University, Jaipur. Get admissions, course details, and career guidance." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourwebsite.com/vgu-university" />
-        <meta property="og:image" content="https://yourwebsite.com/images/vgu-uni.webp" />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
+      
 
       {/* Hero Section */}
       <section className="bg-white-100 py-16 px-6 font-[Inter]">
@@ -244,7 +231,7 @@ const Vgu = () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {["/images/samsung.png", "/images/airtel.png", "/images/icici.png", "/images/nestle.png", "/images/tcs.png", "/images/pepsico.png"].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} src={src} alt="Company" className="h-12 object-contain" />
+              < src={src} alt="Company" className="h-12 object-contain" />
             </div>
           ))}
         </div>
