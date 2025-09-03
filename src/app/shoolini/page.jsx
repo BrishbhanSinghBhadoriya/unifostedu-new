@@ -9,6 +9,7 @@ import {
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import EnquireCard from '@/components/EnquireCard';
+import Image from 'next/image';
 
 const Shoolini = () => {
   const ugCourses = [
