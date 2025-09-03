@@ -18,6 +18,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
   const [program, setProgram] = useState(defaultProgram);
   const [selectedUniversity, setSelectedUniversity] = useState(universityName || '');
   const [city, setCity] = useState('');
+   const [customCity, setCustomCity] = useState("");
 
   const universities = [
     'Amity University Online',
@@ -49,7 +50,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
     'Delhi', 'Mumbai', 'Bangalore', 'Chennai', 'Hyderabad', 
     'Pune', 'Kolkata', 'Ahmedabad', 'Jaipur', 'Lucknow',
     'Chandigarh', 'Bhopal', 'Indore', 'Nagpur', 'Surat',
-    'Kochi', 'Coimbatore', 'Visakhapatnam', 'Patna', 'Bhubaneswar'
+    'Kochi', 'Coimbatore', 'Visakhapatnam', 'Patna', 'Bhubaneswar',
   ];
 
   const schema = useMemo(() => {
@@ -300,6 +301,24 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
                 <SelectItem value="other">Other (please specify in message)</SelectItem>
               </SelectContent>
             </Select>
+            {city === "other" && (
+  <div className="mt-2">
+    <Input
+      placeholder="Enter your city"
+      value={customCity}
+      onChange={(e) => {
+        setCustomCity(e.target.value);
+        setValue("city", e.target.value, { shouldDirty: true, shouldTouch: true });
+      }}
+      className="w-full"
+    />
+    {formState?.errors?.city && (
+      <p className="text-red-600 text-xs mt-1">
+        {formState.errors.city.message}
+      </p>
+    )}
+  </div>
+)}
             {formState.errors.city && (<p className="text-red-600 text-xs mt-1">{formState.errors.city.message}</p>)}
           </div>
         </div>

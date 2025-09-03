@@ -1,11 +1,20 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
 // import { Helmet } from 'react-helmet';
 import EnquireCard from '@/components/EnquireCard';
 import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck } from "react-icons/fa";
 
 const Dypatil = () => {
+   const [expandedItems, setExpandedItems] = useState({});
+  
+    const toggleExpanded = (type, index) => {
+      setExpandedItems(prev => ({
+        ...prev,
+        [`${type}-${index}`]: !prev[`${type}-${index}`]
+      }));
+    };
+  
   const ugCourses = [
     {
       course: "Bachelor of Business Administration (BBA)",
@@ -42,6 +51,83 @@ const Dypatil = () => {
     },
   ];
 
+
+
+   // Function to render expandable content
+    const renderExpandableContent = (content, type, index, limit = 80) => {
+      const isExpanded = expandedItems[`${type}-${index}`];
+      const shouldTruncate = content.length > limit;
+      const displayText = shouldTruncate && !isExpanded 
+        ? `${content.substring(0, limit)}...` 
+        : content;
+      
+      return (
+        <div>
+          <p className="mt-1 text-gray-700">
+            {displayText}
+            {shouldTruncate && (
+              <button 
+                onClick={() => toggleExpanded(type, index)}
+                className="text-blue-600 font-medium ml-1 flex items-center"
+              >
+                {isExpanded ? 'Show less' : 'More'} 
+                {isExpanded ? <FaChevronUp className="ml-1" size={12} /> : <FaChevronDown className="ml-1" size={12} />}
+              </button>
+            )}
+          </p>
+        </div>
+      );
+    };
+  
+
+      // Course Card Component
+  const CourseCard = ({ item, index, type }) => {
+    return (
+      <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
+        <div className="h-48 overflow-hidden">
+          <img 
+            src={item.image} 
+            alt={item.course} 
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+        
+        <div className="p-6 flex-grow flex flex-col">
+          <h4 className="text-xl font-bold text-gray-900 mb-3 font-[Poppins]">{item.course}</h4>
+          
+          <div className="space-y-3 mb-4 flex-grow">
+            <div className="flex items-start">
+              <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Duration</span>
+              <span className="ml-2 text-gray-700">{item.duration}</span>
+            </div>
+            
+            <div className="flex items-start">
+              <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Fees</span>
+              <span className="ml-2 text-gray-700">{item.fees}</span>
+            </div>
+            
+            <div>
+              <div className="flex">
+                <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Specialization</span>
+              </div>
+              {renderExpandableContent(item.specialization, `${type}-specialization`, index)}
+            </div>
+            
+            <div>
+              <div className="flex">
+                <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Eligibility</span>
+              </div>
+              {renderExpandableContent(item.eligibility, `${type}-eligibility`, index)}
+            </div>
+          </div>
+          
+          <button className="mt-4 bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300 w-full">
+            Enquire Now
+          </button>
+        </div>
+      </div>
+    );
+  };
   return (
     <>
       

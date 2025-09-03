@@ -86,15 +86,15 @@ const features = [
 ];
 
 const colleges = [
-      { name: "Amity University Online", ranking: "NIRF-29", fee: "₹0.99L - ₹3.45L", logo: "/images/amity.png", rating: 4.8 },
-    { name: "Manipal University Online", ranking: "NIRF-73", fee: "0.99L - ₹2.92L", logo: "/images/manipal1.png", rating: 4.6 },
-    { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹0.80L - ₹2.0L", logo: "/images/lpu.png", rating: 4.1},
-    { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.50L - ₹2.20L", logo: "/images/upes.png", rating: 4.4 },
-    { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹0.94L - ₹4.0L", logo: "/images/nmims.png", rating: 4.5 },
-    { name: "Sharda University Online", ranking: "NIRF-87", fee: "₹1.05L - ₹1.60L", logo: "/images/sharda.png", rating: 4.1 },
-    { name: "Dr. DY Patil Online", ranking: "NIRF-63", fee: "₹1.40L - ₹1.90L", logo: "/images/dypatil.png", rating: 4.4 },
-    { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.30L - ₹2.16L", logo: "/images/jain.png", rating: 4.5 },
-    { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹1.0L - ₹2.10L", logo: "/images/chandigarh.jpg", rating: 4.7 },
+      { name: "Amity University Online", ranking: "NIRF-29", fee: "₹0.99L - ₹3.45L", logo: "/images/amity.png", rating: 4.8, features: "UGC-DEB Approved | NAAC A+| 100% Placement" },
+    { name: "Manipal University Online", ranking: "NIRF-73", fee: "0.99L - ₹2.92L", logo: "/images/manipal1.png", rating: 4.6, features: "NAAC A+"},
+    { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹0.80L - ₹2.0L", logo: "/images/lpu.png", rating: 4.1, features: "NAAC A++"},
+    { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.50L - ₹2.20L", logo: "/images/upes.png", rating: 4.4 ,features: "NAAC A"},
+    { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹0.94L - ₹4.0L", logo: "/images/nmims.png", rating: 4.5 ,features: "NAAC A++"},
+    { name: "Sharda University Online", ranking: "NIRF-87", fee: "₹1.05L - ₹1.60L", logo: "/images/sharda.png", rating: 4.1,features: "NAAC A+" },
+    { name: "Dr. DY Patil Online", ranking: "NIRF-63", fee: "₹1.40L - ₹1.90L", logo: "/images/dypatil.png", rating: 4.6, features: "NAAC A++" },
+    { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.30L - ₹2.16L", logo: "/images/jain.png", rating: 4.5, features: "NAAC A++" },
+    { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹1.0L - ₹2.10L", logo: "/images/chandigarh.jpg", rating: 4.7, features: "NAAC A+" },
   
 ];
 
@@ -663,8 +663,7 @@ const Landing = () => {
           </Tabs>
         </div>
       </section>
-
-      {/* Enhanced Universities Section */}
+{/* Enhanced Universities Section */}
 <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
     <motion.div className="text-center mb-16" data-aos="fade-up">
@@ -688,7 +687,7 @@ const Landing = () => {
           {/* Enhanced Card Wrapper with Blue Theme */}
           <div className="relative rounded-2xl overflow-hidden border border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-100
             shadow-lg group-hover:shadow-xl transition-all duration-500 hover:-translate-y-2 
-            h-full flex flex-col min-h-[420px]">
+            h-full flex flex-col min-h-[480px]">
             
             {/* Decorative Corner Accents */}
             <div className="absolute top-0 right-0 w-20 h-20 overflow-hidden">
@@ -712,25 +711,43 @@ const Landing = () => {
               </div>
             </div>
 
-            {/* Logo/Image area */}
-            <div className="px-5 sm:px-6 relative">
-              <div className="h-28 sm:h-32 w-full rounded-xl bg-white 
-                flex items-center justify-center overflow-hidden 
-                group-hover:shadow-lg transition-all duration-300
-                border border-blue-200 shadow-sm">
-                <img src={college.logo} alt={`${college.name} logo`} 
-                  className="max-h-20 sm:max-h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
-              </div>
-              
-              {/* Decorative Element */}
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full opacity-80"></div>
-            </div>
+           {/* Logo/Image area - Updated */}
+{/* Logo/Image area - Enlarged */}
+{/* Logo/Image area - Full Size */}
+<div className="w-full">
+  <div className="h-52 w-full bg-white flex items-center justify-center overflow-hidden rounded-xl border border-blue-200 shadow-sm">
+    <img 
+      src={college.logo} 
+      alt={`${college.name} logo`} 
+      className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105" 
+    />
+  </div>
+</div>
 
-            {/* Content + Button */}
+
+
+            {/* Content Area */}
             <div className="p-5 sm:p-6 relative z-[1] flex flex-col flex-grow">
               <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 line-clamp-2 group-hover:text-gray-900 transition-colors">
                 {college.name}
               </h3>
+              
+              {/* Features List with Checkmarks */}
+              <div className="mb-4 space-y-2">
+                <div className="flex items-start gap-2">
+                  <FaCheckCircle className="text-green-500 mt-0.5 flex-shrink-0 text-sm" />
+                  <span className="text-xs text-gray-600">{college.features || "UGC-DEB Approved |"}</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <FaCheckCircle className="text-green-500 mt-0.5 flex-shrink-0 text-sm" />
+                  <span className="text-xs text-gray-600">100% Online Classes & Exams</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <FaCheckCircle className="text-green-500 mt-0.5 flex-shrink-0 text-sm" />
+                  <span className="text-xs text-gray-600">WES Recognized Degree</span>
+                </div>
+              </div>
+              
               <div className="text-sm text-gray-600 mb-4 flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -748,7 +765,8 @@ const Landing = () => {
                 </div>
               )}
 
-              {/* Button sticks to bottom */}
+              {/* Apply Now Button */}
+               {/* Button sticks to bottom */}
               <div className="mt-auto pt-4">
                 <a href={getUniversityHref(college.name)} className="block w-full">
                   <div className="w-full bg-gradient-to-r from-blue-600 to-indigo-700
@@ -758,23 +776,24 @@ const Landing = () => {
                     relative overflow-hidden group">
                     <span className="relative z-10">Learn More</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-white/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                  </div>
-                </a>
-              </div>
-            </div>
+          </div>
+          </a>
+          </div>
+          </div>
           </div>
         </motion.div>
       ))}
     </div>
     
-    {/* View All Button */}
+{/*     
     <div className="text-center mt-12">
-      <button className="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 
+      <button  onClick={() => navigate("/listofcollege")} 
+      className="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 
         text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 
         transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
         View All Universities
-      </button>
-    </div>
+      </button> 
+    </div> */}
   </div>
 </section>
 

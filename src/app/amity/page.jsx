@@ -45,7 +45,7 @@ const Amity = () => {
       duration: "3 Years",
       eligibility: "10+2 Pass",
       fees: "99,000 - 1,70,000",
-      specialization: "BA(Genral, Jornalism and Mass Communication, Native Languages(Kannada,Malayalam, Tamil, Telugu), Psychology, English, Sociology, Political Science,Economics)",
+      specialization: "BA(General, Journalism and Mass Communication, Native Languages(Kannada,Malayalam, Tamil, Telugu), Psychology, English, Sociology, Political Science,Economics)",
       image: "/images/ba.jpeg",
     },
   ];
@@ -56,7 +56,7 @@ const Amity = () => {
       duration: "2 Years",
       eligibility: "Graduation",
       fees: "1,99,000 - 2,99,000",
-      specialization: "MBA(General,Information Technology Management, Dual Specilization, Human Resource Analytics, Data Science, Business Analytics, International Business Management, Digital Enterpreneurship, Digital Marketing Management,Enterpreneurship & Leadership Management,Finance & Accounting Management,Hospitality Management,Global Finance Market,Insurance Management,Marketing & Sales Management,Petroleum & Natural Gas,Producation and Operations Management,Retail Management )",
+      specialization: "MBA(General,Information Technology Management, Dual Specialization, Human Resource Analytics, Data Science, Business Analytics, International Business Management, Digital Entrepreneurship, Digital Marketing Management,Entrepreneurship & Leadership Management,Finance & Accounting Management,Hospitality Management,Global Finance Market,Insurance Management,Marketing & Sales Management,Petroleum & Natural Gas,Producation and Operations Management,Retail Management )",
       image: "/images/mba.jpeg",
     },
     {
@@ -218,7 +218,7 @@ const Amity = () => {
             <p className="text-gray-700 text-lg">
              Amity University online offers student a globally recognised degree programs as well as certification courses to enhance and boost up the career for future aspect.<br />
               It is India's first university recognised by UGC for providing online degree programs by expert facility.<br />
-              It is mainly designed for working profressionals and students who want to persue a good degree but dur to some factors they couldn't complete the degree, Amity University has provided a great opportunity for them to complete their dream life and achieve whatever they want.
+              It is mainly designed for working professionals and students who want to persue a good degree but dur to some factors they couldn't complete the degree, Amity University has provided a great opportunity for them to complete their dream life and achieve whatever they want.
             </p>
             
           </div>
