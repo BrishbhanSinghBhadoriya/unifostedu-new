@@ -47,7 +47,7 @@ export default function About() {
     "@type": "Organization",
     "name": "UniFost",
     "url": "https://www.unifostedu.com",
-    "logo": "https://www.unifostedu.com/logo.png",
+    "logo": "https://www.unifostedu.com/images/uni.jpg",
     "description": "UniFost is redefining how students discover and access quality education through personalized guidance and innovative technology.",
     "founder": [
       {

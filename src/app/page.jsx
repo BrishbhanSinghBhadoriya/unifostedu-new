@@ -31,7 +31,7 @@ export const metadata = {
     siteName: "UNIFOST",
     images: [
       { 
-        url: "/uni.jpg",
+        url: "images/uni.jpg",
         width: 1200,
         height: 630,
         alt: "UNIFOST - Online University Degrees & Career Guidance Platform"
@@ -46,7 +46,7 @@ export const metadata = {
     creator: "@unifost",
     title: "Online University Degrees & Career Counseling | UNIFOST",
     description: "Get UGC-approved online university degrees from top Indian universities. Expert career counseling and guidance for your educational journey.",
-    images: ["/uni.jpg"],
+    images: ["images/uni.jpg"],
   },
   robots: {
     index: true,

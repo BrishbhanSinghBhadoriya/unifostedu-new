@@ -22,7 +22,7 @@ export const metadata = {
     siteName: "UNIFOST",
     images: [
       {
-        url: "/uni.jpg",
+        url: "images/uni.jpg",
         width: 1200,
         height: 630,
         alt: "UNIFOST - India's Leading EdTech Platform"
@@ -37,7 +37,7 @@ export const metadata = {
     creator: "@unifost",
     title: "About UNIFOST | India's Leading EdTech Platform",
     description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees and career counseling.",
-    images: ["/uni.jpg"],
+    images: ["images/uni.jpg"],
   },
   robots: {
     index: true,

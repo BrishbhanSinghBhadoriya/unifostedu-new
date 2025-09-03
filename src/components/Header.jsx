@@ -369,7 +369,7 @@ const [modalType, setModalType] = useState();
               {/* Top bar */}
               <div className="flex items-center justify-between mb-6 sm:mb-8">
                 <div className="flex items-center gap-3">
-                  <img src="/uni.jpg" alt="Unifost" className="h-8 w-auto" />
+                  <img src="images/uni.jpg" alt="Unifost" className="h-8 w-auto" />
                   <span className="text-lg font-bold text-[#00ffe0]">Unifost</span>
                 </div>
                 <button
