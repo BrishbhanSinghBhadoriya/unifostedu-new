@@ -372,7 +372,7 @@ const pgCourses = [
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
           <div className="flex-1">
             <Image width={100} height={100} src="/images/uu-certificate.png" alt="UU University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
-             
+            
           </div>
 
           <div className="flex-1 text-white">

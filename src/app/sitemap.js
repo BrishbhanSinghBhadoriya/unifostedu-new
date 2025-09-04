@@ -42,27 +42,9 @@ export default function sitemap() {
       priority: 0.9,
       breadcrumb: ['Home', 'Courses']
     },
-    {
-      url: `${baseUrl}/compare`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-      breadcrumb: ['Home', 'Compare']
-    },
-    {
-      url: `${baseUrl}/bookdemo`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-      breadcrumb: ['Home', 'Book Demo']
-    },
-    {
-      url: `${baseUrl}/search`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-      breadcrumb: ['Home', 'Search']
-    },
+    
+    
+    
     
     // Course pages - High Priority
     {
@@ -250,44 +232,8 @@ export default function sitemap() {
       breadcrumb: ['Home', 'Universities', 'Chandigarh University']
     },
     
-    // Service pages - Medium Priority
-    {
-      url: `${baseUrl}/services/video-call-counseling`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-      breadcrumb: ['Home', 'Services', 'Video Call Counseling']
-    },
-    {
-      url: `${baseUrl}/services/home-demo-counseling`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-      breadcrumb: ['Home', 'Services', 'Home Demo Counseling']
-    },
-    {
-      url: `${baseUrl}/services/career-planning`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-      breadcrumb: ['Home', 'Services', 'Career Planning']
-    },
     
-    // Legal and utility pages - Low Priority
-    {
-      url: `${baseUrl}/privacy`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly',
-      priority: 0.3,
-      breadcrumb: ['Home', 'Privacy Policy']
-    },
-    {
-      url: `${baseUrl}/dashboard`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.5,
-      breadcrumb: ['Home', 'Dashboard']
-    },
+    
   ];
 
   return staticRoutes;

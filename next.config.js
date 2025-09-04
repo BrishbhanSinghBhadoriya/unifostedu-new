@@ -1,9 +1,8 @@
 /** @type {import('next').nextConfig} */
 const nextConfig = {
   trailingSlash: true,
-   output: 'export', // Removed to allow dynamic routes and API calls
+   output: 'export',
   images: { unoptimized: true },
-  trailingSlash: true,
   compress: true,
   async headers() {
     return [
@@ -16,6 +15,26 @@ const nextConfig = {
           },
         ],
       },
+      // Cache Next.js build assets
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }
+        ]
+      },
+      // Cache public assets served from these folders
+      {
+        source: '/images/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }
+        ]
+      },
+      {
+        source: '/slider/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }
+        ]
+      }
     ]
   },
   

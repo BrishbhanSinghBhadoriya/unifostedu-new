@@ -14,6 +14,7 @@ import {
 } from "react-icons/fa";
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
+
 import EnquireCard from '@/components/EnquireCard';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -93,7 +94,7 @@ const Vgu = () => {
   return (
     <>
       
-        
+        <title>VGU University - Courses, Admissions, Enquiry</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
       <Head>
         <title>VGU University Jaipur - Courses, Admissions & Enquiry</title>

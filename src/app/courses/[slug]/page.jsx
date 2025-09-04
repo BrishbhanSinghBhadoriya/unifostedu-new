@@ -23,7 +23,6 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 import CourseUniversitiesBrowser from '@/components/CourseUniversitiesBrowser';
-import CourseNextSeo from '@/components/CourseNextSeo';
 
 // Generate metadata for course pages
 export async function generateMetadata({ params }) {
@@ -273,7 +272,6 @@ export default async function CoursePage({ params }) {
 
     return (
       <>
-        <CourseNextSeo slug={slug} />
         {/* Structured Data */}
         <script
           type="application/ld+json"
