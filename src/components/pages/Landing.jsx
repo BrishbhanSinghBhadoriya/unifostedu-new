@@ -779,17 +779,22 @@ const Landing = () => {
                     {/* Apply Now Button */}
                     {/* Button sticks to bottom */}
                     <div className="mt-auto pt-4">
-                      <a href={getUniversityHref(college.name)} className="block w-full">
-                        <div className="w-full bg-gradient-to-r from-blue-600 to-indigo-700
-                    text-white py-3 px-4 rounded-xl font-semibold text-center 
-                    hover:from-blue-700 hover:to-indigo-800 transform hover:scale-[1.02] 
-                    transition-all duration-200 text-sm shadow-md hover:shadow-lg
-                    relative overflow-hidden group">
-                          <span className="relative z-10">Learn More</span>
-                          <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-white/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                        </div>
-                      </a>
-                    </div>
+  <a href={getUniversityHref(college.name)} className="block w-full">
+    <div
+      className="w-full bg-gradient-to-r from-blue-600 to-indigo-700
+        text-white py-3 px-4 rounded-xl font-semibold text-center 
+        hover:from-blue-700 hover:to-indigo-800 transform hover:scale-[1.02] 
+        transition-all duration-200 text-sm shadow-md hover:shadow-lg
+        relative overflow-hidden group"
+    >
+      <span className="relative z-10">
+        {college.name} Details
+      </span>
+      <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-white/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+    </div>
+  </a>
+</div>
+
                   </div>
                 </div>
               </motion.div>

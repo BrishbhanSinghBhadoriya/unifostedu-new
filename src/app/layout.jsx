@@ -110,27 +110,9 @@ export const metadata = {
     "Chandigarh University",
     "OP Jindal University",
     "JMI University",
-    "JEE Main",
-    "JEE Advanced",
-    "NEET",
-    "CAT",
-    "GATE",
-    "Banking",
-    "Insurance",
-    "SSC",
-    "Railway",
-    "CTET",
-    "NDA",
-    "SSB",
-    "NTA",
-    "NIMCET",
-    "NTPC",
-    "NTPC",
-    "NTPC",
-    "NTPC",
-    "NTPC",
-    "NTPC",
-    "NTPC",
+    
+    
+   
     
   ],
   robots: {
