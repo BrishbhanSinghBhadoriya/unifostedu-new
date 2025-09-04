@@ -594,10 +594,10 @@ const Footer = () => {
            <div className="mt-12 pt-6 border-t border-gray-300">
   <div className="flex flex-col justify-center items-center gap-3 text-center">
     <div>
-      <p className="text-black text-xs">
+      <p className="text-white text-xs">
         © {new Date().getFullYear()} UNIFOST. All rights reserved.
       </p>
-      <p className="text-black text-xs mt-1">
+      <p className="text-white text-xs mt-1">
         Empowering education through technology
       </p>
     </div>
