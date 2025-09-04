@@ -21,6 +21,7 @@ import {
 import { useRouter } from 'next/navigation';
 import EnquireCard from '@/components/EnquireCard';
 import Head from 'next/head';
+import Image from 'next/image';
 const Nmims = () => {
   const ugCourses = [
     {
@@ -191,8 +192,8 @@ const Nmims = () => {
             {[
               {
                 icon: FaAward,
-                title: "UGC-Entitled & NAAC A+",
-                description: "Recognized by UGC and accredited with NAAC A+ grade"
+                title: "UGC-Entitled & NAAC A++",
+                description: "Recognized by UGC and accredited with NAAC A++ grade"
               },
               {
                 icon: FaUsers,
@@ -333,7 +334,33 @@ const Nmims = () => {
           <p className="text-xl text-gray-600">Top Hiring Partners of Nmims</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {["/company.png", "/company1.png", "/company9.jpg", "/com10.png", "/companany4.png", "/company6.png", "/companany5.png", "/adove.png", "/samsung.png"].map((src, i) => (
+          {[
+      "/images/aditya-birla.png",
+      "/images/airtel.png",
+      "/images/aurobindo.png",
+      "/images/bajaj-allianz.png",
+      "/images/bharti-airtel.png",
+      "/images/bosch.png",
+      "/images/cipla.png",
+      "/images/coca-cola.png",
+      "/images/cyient.png",
+      "/images/diageo.png",
+      "/images/ey.png",
+      "/images/fedex.png",
+      "/images/hero.png",
+      "/images/himalaya.png",
+      "/images/hinduja.png",
+      "/images/icici.png",
+      "/images/iifl.png",
+      "/images/india-mart.png",
+      "/images/infosys.png",
+      "/images/maruti.png",
+      "/images/nestle.png",
+      "/images/oyo.png",
+      "/images/pepsico.png",
+      "/images/samsung.png",
+      
+    ].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
               <Image width={100} height={100} src={src} alt="Company" className="h-12 object-contain" />
             </div>

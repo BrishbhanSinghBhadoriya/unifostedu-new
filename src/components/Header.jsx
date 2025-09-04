@@ -165,7 +165,7 @@ const [modalType, setModalType] = useState();
                   ? 'bg-gradient-to-r from-[#001e3c] to-[#003b6c] shadow-lg' 
                   : 'bg-white/10 backdrop-blur-sm'
               }`}>
-                <Image width={100} height={100} src="/images/unilogo.png" alt="Unifost Logo" className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
+                <Image width={100} height={100} src="/images/unilogo.webp" alt="Unifost Logo" className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
               </div>
               {!scrolled && (
                 <div className="absolute -inset-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-2xl blur opacity-10 group-hover:opacity-40 transition-opacity duration-500"></div>

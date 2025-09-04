@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from "react";
-import Image from 'next/image';
+// import Image from 'next/image';
 
 // import { useNavigate } from 'react-router-dom';
 // import { Helmet } from 'react-helmet';
@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa";
 import EnquireCard from '@/components/EnquireCard';
 import Head from 'next/head';
+import Image from 'next/image';
 const Lpu = () => {
   const [activeTab, setActiveTab] = useState('ug');
   

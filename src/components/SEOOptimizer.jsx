@@ -81,7 +81,7 @@ const SEOOptimizer = ({
         
         {/* Favicon and App Icons */}
         <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
         <link rel="manifest" href="/site.webmanifest" />
         
         {/* Structured Data */}

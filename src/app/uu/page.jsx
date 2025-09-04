@@ -13,6 +13,8 @@ import {
   FaBookOpen,
   FaLaptop
 } from 'react-icons/fa';
+import Head from 'next/head';
+import Image from 'next/image';
 import EnquireCard from '@/components/EnquireCard';
 
   // const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
@@ -115,6 +117,26 @@ const pgCourses = [
 
   return (
     <>
+       <Head>
+        <title>Uttaranchal University Online | Admission, Fees & Courses</title>
+        <meta
+          name="description"
+          content="Explore Uttaranchal University Online Programs - MBA, BBA, BCA, MCA, and more. Learn about fees, eligibility, admission process, and career opportunities."
+        />
+        <meta
+          name="keywords"
+          content="Uttaranchal University Online, UU University, Online MBA, Online BBA, Online MCA, Online BCA, Executive MBA, Admission 2025, Fees, Distance Learning"
+        />
+        <link rel="canonical" href="https://unifostedu.com/uttaranchal-university" />
+        <meta property="og:title" content="Uttaranchal University Online | Admission 2025" />
+        <meta
+          property="og:description"
+          content="Join Uttaranchal University Online for UGC-approved UG & PG programs. Admission open for MBA, MCA, BBA, BCA, and more."
+        />
+        <meta property="og:image" content="/images/uu-uni.webp" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
       {/* Hero Section with Gradient Background */}
       <section className="py-16 bg-gradient-to-r from-blue-900 to-purple-800 text-white px-6">
@@ -349,11 +371,8 @@ const pgCourses = [
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
           <div className="flex-1">
-            <
-              src="/images/uu-certificate.png"
-              alt="UU University Certificate"
-              className="w-full max-w-md mx-auto rounded shadow-lg"
-            />
+            <Image width={100} height={100} src="/images/uu-certificate.png" alt="UU University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            
           </div>
 
           <div className="flex-1 text-white">

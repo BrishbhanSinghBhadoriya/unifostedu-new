@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import EnquireCard from '@/components/EnquireCard';
 import {
   FaBookOpen,
@@ -10,6 +9,7 @@ import {
   FaClipboardCheck,
 } from "react-icons/fa";
 import Head from 'next/head';
+import Image from 'next/image';
 const KU = () => {
   const ugCourses = [
     {

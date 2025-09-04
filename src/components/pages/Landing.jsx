@@ -29,28 +29,28 @@ import EnquiryForm from "@/components/EnquiryForm";
 // Enhanced data arrays
 const heroSlides = [
   {
-    src: "/slider/slider-1.png",
+    src: "/slider/slider-1.webp",
     alt: "Compare top online universities in India with Unifost",
     title: "Your Gateway to Success",
     subtitle: "Compare • Choose • Succeed",
     description: "Find the perfect online degree program from UGC-approved top universities in India"
   },
   {
-    src: "/slider/slider-2.png",
+    src: "/slider/slider-2.webp",
     alt: "Best platform for online universities and distance learning",
     title: "Transform Your Future",
     subtitle: "Online Education Excellence",
     description: "Access world-class online education from anywhere, anytime with Unifost"
   },
   {
-    src: "/slider/slider-3.png",
+    src: "/slider/slider-3.webp",
     alt: "Search and compare online MBA, BBA, MCA programs",
     title: "Smart Education Choices",
     subtitle: "Expert Guidance • Best Programs",
     description: "Get personalized counseling and find the best online degree for your career"
   },
   {
-    src: "/slider/slider-4.png",
+    src: "/slider/slider-4.webp",
     alt: "Compare universities fees, ranking, courses with Unifost",
     title: "Ye College Ya Woh College?",
     subtitle: "Compare on Unifost!",
@@ -289,7 +289,7 @@ const Landing = () => {
                   src={s.src}
                   alt={`${s.title} – ${s.subtitle} | Online University Degree guidance`}
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
                   className="object-cover"
                   
                   priority={idx === 0}

@@ -20,6 +20,7 @@ import {
   FaArrowLeft,
 } from 'react-icons/fa';
 import Head from 'next/head';
+import Image from 'next/image';
 
 // ---------- DATA ----------
 const RAW_UNIVERSITIES = [

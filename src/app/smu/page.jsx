@@ -10,6 +10,7 @@ import {
   FaBuilding,
 } from 'react-icons/fa';
 import Head from 'next/head';
+import Image from 'next/image';
 import EnquireCard from '@/components/EnquireCard';
 // import { s } from 'framer-motion/dist/types.d-Cjd591yU';
 //import { s } from 'framer-motion/dist/types.d-Cjd591yU';
