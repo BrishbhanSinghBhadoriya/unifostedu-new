@@ -139,10 +139,10 @@ const Dypatil = () => {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
      
        <Head>
-        <title>DY Patil University Online - Online UG & PG Programs in India</title>
+        <title>DY Patil University Online </title>
         <meta 
           name="description" 
-          content="Join DY Patil University Online to pursue flexible UG and PG programs like BBA, MCA, and MBA. UGC-approved, NAAC A++ accredited, with career support and global recognition." 
+          content=" DY Patil University Online to pursue flexible UG and PG programs like BBA, MCA, and MBA. UGC-approved, NAAC A++ accredited, with career support and global recognition." 
         />
         <meta 
           name="keywords" 

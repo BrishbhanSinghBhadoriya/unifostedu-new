@@ -146,7 +146,7 @@ const UniversityLogoSlider = () => {
   }, []);
 
   return (
-
+      
     <section className="py-1 bg-white">
       <div className="max-w-7xl mx-auto px-1">
         <div className="relative overflow-hidden"

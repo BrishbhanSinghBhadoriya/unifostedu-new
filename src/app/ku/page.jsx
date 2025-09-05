@@ -86,7 +86,7 @@ const KU = () => {
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
       <head>
 
-        <title>Kurukshetra University Online - UG & PG Courses in India</title>
+        <title>Kurukshetra University Online </title>
         <meta
           name="description"
           content="Explore online undergraduate (BBA, BCA, B.Com) and postgraduate (MBA, MCA, M.Com, MA) programs offered by Kurukshetra University Online, NAAC A++ accredited. Flexible and career-focused education in Haryana, India."

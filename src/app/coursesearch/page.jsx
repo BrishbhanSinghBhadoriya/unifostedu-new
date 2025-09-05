@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+import Head from 'next/head';
 const courses = [
   { title: "MBA Online", desc: "Gain strategic skills from top universities", tag: "Popular" },
   { title: "MCA Online", desc: "Advance in tech with flexible learning", tag: "Top Rated" },
@@ -16,6 +16,14 @@ const courses = [
 
 export default function CourseSearch() {
   return (
+     <>
+      <Head>
+        <title>Search Online Courses | UniFost</title>
+        <meta name="description" content="Find the perfect online course from top universities. Explore MBA, MCA, BBA, BCA, and more with career-oriented learning." />
+        <meta name="keywords" content="Online Courses, MBA Online, MCA Online, BBA Online, BCA Online, UniFost, Study Online" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.unifost.com/courses" />
+      </Head>
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -60,5 +68,6 @@ export default function CourseSearch() {
         </div>
       </div>
     </div>
+    </>
   );
 }

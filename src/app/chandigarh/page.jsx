@@ -178,7 +178,7 @@ const Chandigarh = () => {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4 leading-snug font-[Poppins]">
-              Career with Chandigarh University Online
+              Chandigarh University Online
             </h1>
             <p> <span className="font-semibold text-gray-700"> Chandigarh, India.</span><br /><br/></p>
             <p className="text-gray-700 text-lg">

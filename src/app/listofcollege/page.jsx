@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-
+import Head from 'next/head';
 const colleges = [
  {
     name: "Amity University Online",
@@ -87,6 +87,30 @@ const colleges = [
 ];
 
 export default function ListofCollege() {
+     <Head>
+      <title>Top Online Colleges in India | Compare Fees, Courses & Rankings</title>
+      
+      <meta name="description" content="Explore top online colleges in India including Amity, Manipal, LPU, Chandigarh University, and more. Compare fees, courses, rankings, and choose the best online program for your career." />
+      
+      <meta name="keywords" content="Online colleges India, top online universities, Amity online, Manipal online, LPU online, Chandigarh University online, online courses India, distance learning, online degree programs, compare online colleges" />
+      
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Unifost" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      {/* Open Graph */}
+      <meta property="og:title" content="Top Online Colleges in India | Compare Fees, Courses & Rankings" />
+      <meta property="og:description" content="Discover and compare top online colleges in India including Amity, Manipal, LPU, Chandigarh University and more. Find the best online program for your career." />
+      <meta property="og:image" content="/images/college-banner.webp" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://unifostedu.com/listofcollege" />
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Top Online Colleges in India | Compare Fees, Courses & Rankings" />
+      <meta name="twitter:description" content="Explore and compare top online colleges in India including Amity, Manipal, LPU, Chandigarh University and more. Find your ideal online program today." />
+      <meta name="twitter:image" content="/images/college-banner.webp" />
+    </Head>
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

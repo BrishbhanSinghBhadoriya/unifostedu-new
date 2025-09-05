@@ -89,7 +89,7 @@ const Manipal = () => {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
       
        <Head>
-        <title>Manipal University Online | Accredited Online Degrees</title>
+        <title>Manipal University Online Jaipur, Rajasthan | Accredited Online Degrees</title>
         <meta name="description" content="Explore globally recognized online programs from Manipal University Online. Flexible learning, expert mentorship, and career-focused degrees with UGC & AICTE approvals." />
         <meta name="keywords" content="Manipal Online, Manipal University Jaipur, MUJ Online, BBA Online, BCA Online, B.Com Online, MBA Online, MCA Online, M.Com Online, MA Online, Online Degrees India, Distance Learning, UGC Approved, AICTE Approved" />
         <meta name="author" content="Manipal University Online" />

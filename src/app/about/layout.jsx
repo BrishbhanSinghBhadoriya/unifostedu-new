@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "About UNIFOST | India's Leading EdTech Platform for Online Education | Career Counseling",
+  title: "UNIFOST | India's Leading EdTech Platform for Online Education | Career Counseling",
   description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees, career counseling, and personalized guidance. Discover our mission to transform education.",
   keywords: [
     "About UNIFOST", 
