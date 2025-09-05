@@ -29,7 +29,7 @@ import EnquiryForm from "@/components/EnquiryForm";
 // Enhanced data arrays
 const heroSlides = [
   {
-    src: "/slider/slider-1.webp",
+    src: "/slider/slider-1.jpg",
     alt: "Compare top online universities in India with Unifost",
     title: "Your Gateway to Success",
     subtitle: "Compare • Choose • Succeed",
