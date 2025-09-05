@@ -271,7 +271,7 @@ const [modalType, setModalType] = useState();
                       )}
                     </div>
                     <div className="mt-3 pt-3 border-t border-gray-200">
-                      <Link href="/blog/blog-page" onClick={() => setMenuOpen(null)}
+                      <Link href="/search?query=blog" onClick={() => setMenuOpen(null)}
                             className="block w-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] py-2 px-4 rounded-xl font-semibold text-center hover:from-[#00d4c4] hover:to-[#00ffe0] transform hover:scale-105 transition-all duration-300 text-sm">
                         View All Blogs
                       </Link>
@@ -450,7 +450,7 @@ const [modalType, setModalType] = useState();
                         <FaArrowRight className="text-[#00ffe0] text-xs" />
                       </Link>
                     ))}
-                    <Link href="/blog/blog-page" onClick={() => setMobileMenuOpen(false)}
+                    <Link href="/search?query=blog" onClick={() => setMobileMenuOpen(false)}
                           className="flex items-center justify-center gap-2 p-3 rounded-xl bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] font-bold hover:scale-105 transition">
                       <span>View All Blogs</span>
                       <FaArrowRight />

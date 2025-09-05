@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 const universityData = {
   'amity': {
     name: 'Amity University Online',
-    logo: '/amitylogo.jpg',
+    logo: '/images/amitylogo.jpg',
     description: 'One of India\'s leading private universities with comprehensive online programs.',
     ranking: 'Top 10',
     location: 'Noida, Uttar Pradesh',
@@ -29,7 +29,7 @@ const universityData = {
   },
   'manipal': {
     name: 'Manipal University Online',
-    logo: '/manipallogo.jpg',
+    logo: '/images/manipallogo.jpg',
     description: 'Pioneer in online education with industry-aligned curriculum and global recognition.',
     ranking: 'Top 5',
     location: 'Manipal, Karnataka',

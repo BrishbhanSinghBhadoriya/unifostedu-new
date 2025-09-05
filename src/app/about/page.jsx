@@ -11,6 +11,17 @@ import {
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
+export const metadata = {
+  title: "About UNIFOST | India's Leading EdTech Platform for Online Education",
+  description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees, career counseling, and personalized guidance. Discover our mission to transform education.",
+  keywords: "About UNIFOST, EdTech Platform India, Online Education Company, Career Counseling Services, University Partner Network, Education Technology India, Online University Degrees, Student Guidance Platform, Educational Innovation India",
+  openGraph: {
+    title: "About UNIFOST | India's Leading EdTech Platform for Online Education",
+    description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees, career counseling, and personalized guidance.",
+    images: ["/images/uni.jpg"],
+  },
+};
+
 export default function About() {
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
   const [modalType, setModalType] = useState("getStarted");
@@ -46,22 +57,22 @@ export default function About() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "UniFost",
-    "url": "https://www.unifostedu.com",
-    "logo": "https://www.unifostedu.com/images/uni.jpg",
+    "url": "https://unifostedu.com",
+    "logo": "https://unifostedu.com/images/uni.jpg",
     "description": "UniFost is redefining how students discover and access quality education through personalized guidance and innovative technology.",
     "founder": [
       {
         "@type": "Person",
         "name": "Priyansh Mishra",
         "url": "https://www.linkedin.com/in/priyansh-mishra-14b9ba2a0/",
-        "image": "https://www.unifostedu.com/priyansh.jpg",
+        "image": "https://unifostedu.com/priyansh.jpg",
         "jobTitle": "Co-Founder & Director"
       },
       {
         "@type": "Person",
         "name": "Aman Pawar",
         "url": "https://www.linkedin.com/in/aman-pawar-a59b57218/",
-        "image": "https://www.unifostedu.com/aman.jpg",
+        "image": "https://unifostedu.com/aman.jpg",
         "jobTitle": "Co-Founder & Director"
       }
     ],

@@ -22,12 +22,12 @@ export const metadata = {
     "Higher Education Guidance India"
   ],
   alternates: {
-    canonical: "https://www.unifostedu.com",
+    canonical: "https://unifostedu.com",
   },
   openGraph: {
     title: "Online University Degrees in India | Free Career Counseling | UNIFOST",
     description: "Compare UGC-approved online degrees in India—MBA, BBA, MCA, BCA, BCom, BA & more. Get free career counseling, home demo sessions, and personalized guidance to choose the right university.",
-    url: "https://www.unifostedu.com",
+    url: "https://unifostedu.com",
     siteName: "UNIFOST",
     images: [
       { 

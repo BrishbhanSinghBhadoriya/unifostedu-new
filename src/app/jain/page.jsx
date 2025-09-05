@@ -17,6 +17,17 @@ import {
 } from "react-icons/fa";
 import Image from 'next/image';
 
+export const metadata = {
+  title: "Jain University Online - UG & PG Courses in India",
+  description: "Explore online undergraduate (BBA, BCA, B.Com) and postgraduate (MBA, MCA, M.Com, MA) programs offered by Jain University Online, a NAAC A++ accredited university in Bengaluru. Flexible, career-focused education for students and working professionals.",
+  keywords: "Jain University Online, BBA Online, BCA Online, B.Com Online, MBA Online, MCA Online, M.Com Online, MA Online, NAAC A++ University, Online Degree Programs India, Online Courses, Distance Learning",
+  openGraph: {
+    title: "Jain University Online - UG & PG Courses in India",
+    description: "Explore online undergraduate and postgraduate programs offered by Jain University Online, a NAAC A++ accredited university in Bengaluru.",
+    images: ["/images/jain.png"],
+  },
+};
+
 const Jain = () => {
   const ugCourses = [
     {
@@ -87,27 +98,6 @@ const Jain = () => {
 
   return (
     <>
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-       <title>Jain University Online - UG & PG Courses in India</title>
-        <meta name="description" content="Explore online undergraduate (BBA, BCA, B.Com) and postgraduate (MBA, MCA, M.Com, MA) programs offered by Jain University Online, a NAAC A++ accredited university in Bengaluru. Flexible, career-focused education for students and working professionals." />
-        <meta name="keywords" content="Jain University Online, BBA Online, BCA Online, B.Com Online, MBA Online, MCA Online, M.Com Online, MA Online, NAAC A++ University, Online Degree Programs India, Online Courses, Distance Learning" />
-        <meta name="author" content="Jain University Online" />
-        <meta name="robots" content="index, follow" />
-
-        {/* Open Graph / Social Media */}
-        <meta property="og:title" content="Jain University Online - UG & PG Courses in India" />
-        <meta property="og:description" content="Explore online undergraduate and postgraduate programs offered by Jain University Online, a NAAC A++ accredited university in Bengaluru." />
-        <meta property="og:image" content="/images/jain.png" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.jainuniversityonline.com" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Jain University Online - UG & PG Courses in India" />
-        <meta name="twitter:description" content="Explore online undergraduate and postgraduate programs offered by Jain University Online, a NAAC A++ accredited university in Bengaluru." />
-        <meta name="twitter:image" content="/images/jain.png" />
-        </head>
         {/* Intro Section */}
       {/* Intro Section */}
       <section className="py-16 bg-white px-6 font-[Inter]">

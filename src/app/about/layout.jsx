@@ -13,12 +13,12 @@ export const metadata = {
     "Educational Innovation India"
   ],
   alternates: {
-    canonical: "https://www.unifostedu.com/about",
+    canonical: "https://unifostedu.com/about",
   },
   openGraph: {
     title: "About UNIFOST | India's Leading EdTech Platform for Online Education",
     description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees, career counseling, and personalized guidance.",
-    url: "https://www.unifostedu.com/about",
+    url: "https://unifostedu.com/about",
     siteName: "UNIFOST",
     images: [
       {
