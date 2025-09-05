@@ -107,14 +107,14 @@ const Lpu = () => {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
        <head>
 
-         <title>LPU Online Degrees | Lovely Professional University Courses</title>
+         <title>Lovely Professional University Courses</title>
         <meta
           name="description"
           content="Explore LPU online programs. UGC-recognized degrees with NAAC A++ accreditation. Enquire now for BBA, BCA, MBA, MCA, M.Com, MA, and M.Sc courses."
         />
         <meta
           name="keywords"
-          content="LPU Online, Lovely Professional University Online, BBA Online, BCA Online, MBA Online, MCA Online, M.Com Online, MA Online, M.Sc Online, Distance Learning India, NAAC A++, UGC Recognized Online Degree, Flexible Online Education, Online Courses LPU"
+          content="LPU Online, Lovely Professional University Online, BBA Online, BCA Online, MBA Online, MCA Online, M.Com Online, MA Online, M.Sc Online, NAAC A++, UGC Recognized Online Degree, Flexible Online Education, Online Courses LPU"
         />
         <meta name="author" content="Lovely Professional University" />
         <meta name="robots" content="index, follow" />
@@ -139,7 +139,7 @@ const Lpu = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2">
             <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
-              Transform Your Career with LPU Online
+               Lovely Professional University Online
             </h1><br />
             <p> <span className="font-semibold text-gray-700">Private University in Jalandhar, Punjab, India.</span><br /><br/></p>
             <p className="text-gray-700 text-lg">

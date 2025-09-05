@@ -222,7 +222,7 @@ const Amity = () => {
          <Head>
         <title>Amity University Online Programs | Fees & Admission</title>
         <meta name="description" content="Explore online UG & PG programs from Amity University. Check fees, eligibility, specializations and enquire now." />
-        <meta name="keywords" content="Amity Online University, BBA Online, MBA Online, MCA Online, Accredited Online Degrees, Online Courses India, Distance Learning, Ivy League Collaboration" />
+        <meta name="keywords" content="Amity Online University, BBA Online, MBA Online, MCA Online, Accredited Online Degrees, Online Courses India, " />
         <meta name="robots" content="index, follow" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

@@ -1,8 +1,8 @@
 import Landing from "@/components/pages/Landing";
 import Image from "next/image";
 export const metadata = {
-  title: "Online University Degrees in India | Free Career Counseling | UNIFOST",
-  description: "Compare UGC-approved online degrees in India—MBA, BBA, MCA, BCA, BCom, BA & more. Get free career counseling, home demo sessions, and personalized guidance to choose the right university.",
+  title: " UNIFOST - India's Leading EdTech Platform",
+  description: "Get UGC-approved online university degrees from top Indian universities including MBA, BBA, MCA, BCA, BCom, BA, and more. Expert career counseling, home demo sessions, and personalized guidance. Book your free counseling session today!",
   keywords: [
     "Online University Degrees India",
     "Online MBA Programs India",

@@ -98,13 +98,34 @@ const Jain = () => {
 
   return (
     <>
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+       <title>Jain University Online</title>
+        <meta name="description" content="Explore online undergraduate (BBA, BCA, B.Com) and postgraduate (MBA, MCA, M.Com, MA) programs offered by Jain University Online, a NAAC A++ accredited university in Bengaluru. Flexible, career-focused education for students and working professionals." />
+        <meta name="keywords" content="Jain University Online, BBA Online, BCA Online, B.Com Online, MBA Online, MCA Online, M.Com Online, MA Online, NAAC A++ University, Online Degree Programs India, Online Courses, Distance Learning" />
+        <meta name="author" content="Jain University Online" />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph / Social Media */}
+        <meta property="og:title" content="Jain University Online - UG & PG Courses in India" />
+        <meta property="og:description" content="Explore online undergraduate and postgraduate programs offered by Jain University Online, a NAAC A++ accredited university in Bengaluru." />
+        <meta property="og:image" content="/images/jain.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.jainuniversityonline.com" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Jain University Online - UG & PG Courses in India" />
+        <meta name="twitter:description" content="Explore online undergraduate and postgraduate programs offered by Jain University Online, a NAAC A++ accredited university in Bengaluru." />
+        <meta name="twitter:image" content="/images/jain.png" />
+        </head>
         {/* Intro Section */}
       {/* Intro Section */}
       <section className="py-16 bg-white px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2">
             <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
-              Bring a Bright Future with Jain University Online
+              Jain University Online
             </h1><br />
             <p> <span className="font-semibold text-gray-700">Private University in Bengaluru, Karnataka, India.</span><br /><br/></p>
             <p className="text-gray-700 text-lg">
@@ -121,9 +142,9 @@ const Jain = () => {
       </section>
       <section className="py-16 bg-white px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-[#003b59] font-[Poppins] mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-[#003b59] font-[Poppins] mb-6">
             Jain University Online Courses
-          </h1>
+          </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             Explore undergraduate and postgraduate online degree programs from Jain University. Experience quality, flexibility, and career-focused education from one of India’s top NAAC A++ accredited universities.
           </p>
@@ -134,7 +155,7 @@ const Jain = () => {
       {/* UG Cards */}
       <section className="py-12 bg-white px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">Undergraduate Courses</h2>
+          <h3 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">Undergraduate Courses</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                           {ugCourses.map((item, index) => (
                 <EnquireCard key={index} {...item} universityName="Jain University" />
@@ -146,7 +167,7 @@ const Jain = () => {
       {/* PG Cards */}
       <section className="py-12 bg-white px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">Postgraduate Courses</h2>
+          <h3 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">Postgraduate Courses</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                           {pgCourses.map((item, index) => (
                 <EnquireCard key={index} {...item} universityName="Jain University" />
@@ -201,7 +222,7 @@ const Jain = () => {
     {/* Item 8 */}
     <div className="flex flex-col items-start text-left">
       <FaClipboardCheck className="text-blue-600 text-3xl mb-4" />
-      <h4 className="text-lg font-semibold text-gray-900 mb-2">Placement opportunities</h4>
+      <h2 className="text-lg font-semibold text-gray-900 mb-2">Placement opportunities</h2>
       <p className="text-gray-600 text-sm">
         Job interview prep, placement assistance & resume building for students to be job-ready
       </p>
@@ -211,9 +232,9 @@ const Jain = () => {
    
 
    <section className="py-10 bg-white">
-  <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">
+  <h3 className="text-2xl font-semibold text-center text-gray-800 mb-6">
     Recognized & Accredited By
-  </h2>
+  </h3>
   <div className="flex flex-wrap justify-center items-center gap-20 px-4">
     <Image width={100} height={100} src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
     <Image width={100} height={100} src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />

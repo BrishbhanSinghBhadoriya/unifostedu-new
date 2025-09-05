@@ -91,7 +91,7 @@ const Manipal = () => {
         <meta property="og:description" content="Explore undergraduate and postgraduate online programs from MAHE, NAAC A++ accredited. Flexible and career-focused education." />
         <meta property="og:image" content="/images/mahe-uni.webp" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.manipal.edu/online" />
+        <meta property="og:url" content="https://unifostedu.com/manipal" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />

@@ -46,7 +46,6 @@ export const metadata = {
     "Online PG Certificate Colleges in India",
     "Online PG Degree Colleges in India",
     "Online PG Diploma Colleges in India",
-    "Online PG Certificate Colleges in India",
     "Online PG Degree Colleges in India",
     "Online PG Diploma Colleges in India",
     "Online PG Certificate Colleges in India",
