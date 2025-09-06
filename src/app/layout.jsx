@@ -13,7 +13,6 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   metadataBase: new URL('https://unifostedu.com'),
-  title: "UNIFOST | Because The Right University Matters",
   description: "Unifost",
   keywords: [
     "Online University Degree",
