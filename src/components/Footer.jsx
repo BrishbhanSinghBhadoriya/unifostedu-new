@@ -510,7 +510,7 @@ const Footer = () => {
                           { href: "/about", label: "About" },
                           { href: "/services", label: "Services" },
                           { href: "/listofcollege", label: "Explore Colleges" },
-                          { href: "/blog/blog-page", label: "Blogs" }
+                          { href: "/search", label: "Blogs" }
                         ].map((link, index) => (
                           <li key={index}>
                             <a 

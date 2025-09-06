@@ -1,18 +1,27 @@
 RewriteEngine On
+
+# Force www to non-www redirect (canonical: https://unifostedu.com/)
 RewriteCond %{HTTP_HOST} ^www\.unifostedu\.com$ [NC]
 RewriteRule ^(.*)$ https://unifostedu.com/$1 [L,R=301]
 
-
-## University slug fixes
-# /universities/jain-university-online/ -> /jain/
+# University slug fixes - redirect broken university URLs to correct pages
 Redirect 301 /universities/jain-university-online/ https://unifostedu.com/jain/
+Redirect 301 /universities/lovely-professional-university-online/ https://unifostedu.com/lpu/
+Redirect 301 /universities/university-of-petroleum-and-energy-studies-online/ https://unifostedu.com/upes/
+Redirect 301 /universities/sharda-university-online/ https://unifostedu.com/sharda/
+Redirect 301 /universities/chandigarh-university-online/ https://unifostedu.com/chandigarh/
+Redirect 301 /universities/dr.-dy-patil-online/ https://unifostedu.com/dypatil/
+Redirect 301 /universities/narsee-monjee-institute-of-management-studies-online/ https://unifostedu.com/nmims/
+Redirect 301 /universities/amity-university-online/ https://unifostedu.com/amity/
+Redirect 301 /universities/manipal-university-online/ https://unifostedu.com/manipal/
 
-## Courses broken slugs
-# If m.com-online and b.com-online existed, send to /courses/
-Redirect 301 /courses/m.com-online/ https://unifostedu.com/courses/
-Redirect 301 /courses/b.com-online/ https://unifostedu.com/courses/
+## Courses broken slugs - redirect to correct course pages
+Redirect 301 /courses/m.com-online/ https://unifostedu.com/courses/mcom-online/
+Redirect 301 /courses/b.com-online/ https://unifostedu.com/courses/bcom-online/
 
-## Blog safe fallback
-# If an old blog listing path exists, send to /search or homepage
+## Blog safe fallback - redirect to search page
 Redirect 301 /blog/blog-page https://unifostedu.com/search/
+
+## Image redirects - redirect missing images to correct paths
+Redirect 301 /images/lpu.jpg https://unifostedu.com/images/lpu.png
 

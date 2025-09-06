@@ -9,16 +9,6 @@ import { Badge } from "@/components/ui/badge";
 import EnquiryForm from "@/components/EnquiryForm";
 import Image from 'next/image';
 
- const metadata = {
-  title: "Our Services | Career Counseling & Educational Guidance | UNIFOST",
-  description: "Discover UNIFOST's comprehensive educational services including video call counseling, home demo sessions, university guidance, and career planning. Get personalized support for your educational journey.",
-  keywords: "Career Counseling Services, Video Call Counseling, Home Demo Sessions, University Guidance, Educational Planning, Career Development, Student Support Services, Educational Consultation, Academic Guidance, Professional Development",
-  openGraph: {
-    title: "Our Services | Career Counseling & Educational Guidance | UNIFOST",
-    description: "Discover UNIFOST's comprehensive educational services including video call counseling, home demo sessions, university guidance, and career planning.",
-    images: ["/images/uni.jpg"],
-  },
-};
 
 export default function Services() {
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
@@ -102,18 +92,6 @@ export default function Services() {
   };
 
   return (
-<>
-    <head>
-  <title>Our Services | Unifost - Online Counseling, Career Planning & Guidance</title>
-  
-  <meta name="description" content="Discover Unifost services including video call counseling, home demo sessions, and career planning. Get expert guidance, flexible support, and personalized education solutions to achieve your goals." />
-  
-  <meta name="keywords" content="Unifost services, online counseling, video call counseling, home demo counseling, career planning, education guidance, student support, online programs, admission guidance, career counseling" />
-  
-  <meta name="robots" content="index, follow" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50"> 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -349,6 +327,5 @@ export default function Services() {
         </Dialog>
       )}
     </div>
-   </>
   );
 }
