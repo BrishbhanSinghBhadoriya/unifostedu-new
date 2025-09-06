@@ -12,7 +12,7 @@ const Breadcrumb = ({ items, showHome = true }) => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.unifostedu.com"
+        "item": "https://unifostedu.com"
       }] : []),
       ...items.map((item, index) => ({
         "@type": "ListItem",

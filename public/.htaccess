@@ -1,0 +1,18 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.unifostedu\.com$ [NC]
+RewriteRule ^(.*)$ https://unifostedu.com/$1 [L,R=301]
+
+
+## University slug fixes
+# /universities/jain-university-online/ -> /jain/
+Redirect 301 /universities/jain-university-online/ https://unifostedu.com/jain/
+
+## Courses broken slugs
+# If m.com-online and b.com-online existed, send to /courses/
+Redirect 301 /courses/m.com-online/ https://unifostedu.com/courses/
+Redirect 301 /courses/b.com-online/ https://unifostedu.com/courses/
+
+## Blog safe fallback
+# If an old blog listing path exists, send to /search or homepage
+Redirect 301 /blog/blog-page https://unifostedu.com/search/
+

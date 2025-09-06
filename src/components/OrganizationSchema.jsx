@@ -7,14 +7,14 @@ const OrganizationSchema = () => {
     "name": "UNIFOST",
     "alternateName": "UniFost",
     "description": "India's leading EdTech platform providing online university degrees, career counseling, and personalized guidance for students seeking quality education.",
-    "url": "https://www.unifostedu.com",
+    "url": "https://unifostedu.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.unifostedu.com/uni.jpg",
+      "url": "https://unifostedu.com/uni.jpg",
       "width": 512,
       "height": 512
     },
-    "image": "https://www.unifostedu.com/uni.jpg",
+    "image": "https://unifostedu.com/uni.jpg",
     "foundingDate": "2020",
     "foundingLocation": {
       "@type": "Place",
@@ -66,7 +66,7 @@ const OrganizationSchema = () => {
         "@type": "Person",
         "name": "Priyansh Mishra",
         "url": "https://www.linkedin.com/in/priyansh-mishra-14b9ba2a0/",
-        "image": "https://www.unifostedu.com/priyansh.jpg",
+        "image": "https://unifostedu.com/priyansh.jpg",
         "jobTitle": "Co-Founder & Director",
         "description": "Visionary leader committed to revolutionizing education through innovation and accessibility"
       },
@@ -74,7 +74,7 @@ const OrganizationSchema = () => {
         "@type": "Person",
         "name": "Aman Pawar",
         "url": "https://www.linkedin.com/in/aman-pawar-a59b57218/",
-        "image": "https://www.unifostedu.com/aman.jpg",
+        "image": "https://unifostedu.com/aman.jpg",
         "jobTitle": "Co-Founder & Director",
         "description": "Driving force behind UniFost blending vision with action and passion with purpose"
       }

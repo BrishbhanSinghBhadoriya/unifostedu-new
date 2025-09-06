@@ -7,7 +7,7 @@ export default function CourseNextSeo({ slug }) {
   const course = courseData[slug];
   if (!course) return null;
 
-  const siteUrl = 'https://www.unifostedu.com';
+  const siteUrl = 'https://unifostedu.com';
   const canonical = `${siteUrl}/courses/${slug}`;
 
   // Defaults if not present in JSON

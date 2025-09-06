@@ -31,29 +31,29 @@ const heroSlides = [
   {
     src: "/slider/slider-1.jpg",
     alt: "Compare top online universities in India with Unifost",
-    title: "Your Gateway to Success",
-    subtitle: "Compare • Choose • Succeed",
+    title: "Compare Online University Degrees in India",
+    subtitle: "UGC‑Approved | MBA • BBA • MCA • BCA • BCom • BA",
     description: "Find the perfect online degree program from UGC-approved top universities in India"
   },
   {
     src: "/slider/slider-2.webp",
     alt: "Best platform for online universities and distance learning",
-    title: "Transform Your Future",
-    subtitle: "Online Education Excellence",
+    title: "Free Career Counseling for Online Degrees",
+    subtitle: "Personalized Guidance • University Shortlisting • Application Help",
     description: "Access world-class online education from anywhere, anytime with Unifost"
   },
   {
     src: "/slider/slider-3.webp",
     alt: "Search and compare online MBA, BBA, MCA programs",
-    title: "Smart Education Choices",
-    subtitle: "Expert Guidance • Best Programs",
+    title: "Find the Best Online MBA, BBA, MCA & More",
+    subtitle: "Compare Fees, Rankings, Placements in Minutes",
     description: "Get personalized counseling and find the best online degree for your career"
   },
   {
     src: "/slider/slider-4.webp",
     alt: "Compare universities fees, ranking, courses with Unifost",
-    title: "Ye College Ya Woh College?",
-    subtitle: "Compare on Unifost!",
+    title: "Compare Universities: Fees, Rankings, Courses",
+    subtitle: "Make a Confident Choice with UNIFOST",
     description: "Compare fees, rankings, courses, and location instantly before deciding"
   }
 
@@ -294,6 +294,7 @@ const Landing = () => {
                   
                   priority={idx === 0}
                   loading={idx === 0 ? "eager" : "lazy"}
+                  decoding={idx === 0 ? "auto" : "async"}
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c]/85 via-[#001e3c]/65 to-transparent" />

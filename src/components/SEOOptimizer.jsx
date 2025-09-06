@@ -53,8 +53,8 @@ const SEOOptimizer = ({
         <meta property="og:title" content={fullTitle} />
         <meta property="og:description" content={fullDescription} />
         <meta property="og:type" content={ogType} />
-        <meta property="og:url" content={canonicalUrl || 'https://www.unifostedu.com'} />
-        <meta property="og:image" content={`https://www.unifostedu.com${ogImage}`} />
+        <meta property="og:url" content={canonicalUrl || 'https://unifostedu.com'} />
+        <meta property="og:image" content={`https://unifostedu.com${ogImage}`} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="UNIFOST" />
@@ -66,7 +66,7 @@ const SEOOptimizer = ({
         <meta name="twitter:creator" content="@unifost" />
         <meta name="twitter:title" content={fullTitle} />
         <meta name="twitter:description" content={fullDescription} />
-        <meta name="twitter:image" content={`https://www.unifostedu.com${ogImage}`} />
+        <meta name="twitter:image" content={`https://unifostedu.com${ogImage}`} />
         
         {/* Additional SEO Meta Tags */}
         <meta name="theme-color" content="#001e3c" />

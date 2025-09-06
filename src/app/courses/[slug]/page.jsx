@@ -133,12 +133,12 @@ export async function generateMetadata({ params }) {
     description: course.description,
     keywords: course.keywords,
     alternates: {
-      canonical: `https://www.unifostedu.com/courses/${slug}`,
+      canonical: `https://unifostedu.com/courses/${slug}`,
     },
     openGraph: {
       title: course.title,
       description: course.description,
-      url: `https://www.unifostedu.com/courses/${slug}`,
+      url: `https://unifostedu.com/courses/${slug}`,
       siteName: 'UNIFOST',
       images: [
         {
@@ -222,7 +222,7 @@ export default async function CoursePage({ params }) {
       provider: {
         '@type': 'Organization',
         name: 'UNIFOST',
-        url: 'https://www.unifostedu.com'
+        url: 'https://unifostedu.com'
       },
       coursePrerequisites: course.eligibility,
       educationalLevel: course.title.includes('Master') || course.title.includes('M') ? 'Postgraduate' : 'Undergraduate',

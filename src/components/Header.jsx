@@ -198,32 +198,31 @@ const [modalType, setModalType] = useState();
                 <span className="font-semibold">University</span>
                 <FaChevronDown className={`text-xs transition-transform duration-300 ${menuOpen === "explore" ? 'rotate-180' : ''}`} />
               </button>
-                
-              <div className={`absolute left-0 top-full mt-2 w-[28rem] bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 overflow-hidden transition-all duration-300 transform origin-top ${
-                menuOpen === "explore" ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
-              }`}>
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/10 via-cyan-500/10 to-emerald-500/10 pointer-events-none"></div>
-                <div className="relative z-10 p-4">
-                  <h3 className="text-[#001e3c] font-bold text-base mb-3 flex items-center">
-                    <FaUniversity className="mr-2 text-[#00ffe0]" />
-                    Partner Universities
-                  </h3>
-                  <div className="grid grid-cols-2 gap-3 max-h-80 overflow-y-auto pr-1">
-                    {universities.map((uni, idx) => (
-                      <Link key={idx} href={uni.link} onClick={() => setMenuOpen(null)} 
-                            className="group block rounded-xl overflow-hidden border border-gray-200 bg-white/80 hover:shadow-lg hover:shadow-indigo-100 hover:-translate-y-0.5 transition-all duration-300">
-                        <div className="w-full h-24 bg-white flex items-center justify-center overflow-hidden">
-                          <Image width={100} height={100} src={uni.logo} alt={uni.name} className="max-h-full max-w-full object-contain" />
-                        </div>
-                        <div className="px-3 py-2">
-                          <p className="text-sm font-semibold text-[#001e3c] group-hover:text-[#00ffe0] line-clamp-2">{uni.name}</p>
-                        </div>
-                      </Link>
-                    ))}
+              {menuOpen === "explore" && (
+                <div className={`absolute left-0 top-full mt-2 w-[28rem] bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 overflow-hidden transition-all duration-300 transform origin-top`}>
+                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/10 via-cyan-500/10 to-emerald-500/10 pointer-events-none"></div>
+                  <div className="relative z-10 p-4">
+                    <h3 className="text-[#001e3c] font-bold text-base mb-3 flex items-center">
+                      <FaUniversity className="mr-2 text-[#00ffe0]" />
+                      Partner Universities
+                    </h3>
+                    <div className="grid grid-cols-2 gap-3 max-h-80 overflow-y-auto pr-1">
+                      {universities.map((uni, idx) => (
+                        <Link key={idx} href={uni.link} onClick={() => setMenuOpen(null)} 
+                              className="group block rounded-xl overflow-hidden border border-gray-200 bg-white/80 hover:shadow-lg hover:shadow-indigo-100 hover:-translate-y-0.5 transition-all duration-300">
+                          <div className="w-full h-24 bg-white flex items-center justify-center overflow-hidden">
+                            <Image width={100} height={100} src={uni.logo} alt={uni.name} loading="lazy" decoding="async" className="max-h-full max-w-full object-contain" />
+                          </div>
+                          <div className="px-3 py-2">
+                            <p className="text-sm font-semibold text-[#001e3c] group-hover:text-[#00ffe0] line-clamp-2">{uni.name}</p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  
                   </div>
-                 
                 </div>
-              </div>
+              )}
             </div>
 
             {/* Blogs Dropdown - API-powered cards */}
@@ -235,52 +234,51 @@ const [modalType, setModalType] = useState();
                 <span className="font-semibold">Blogs</span>
                 <FaChevronDown className={`text-xs transition-transform duration-300 ${menuOpen === "blogs" ? 'rotate-180' : ''}`} />
               </button>
-                
-              <div className={`absolute left-0 top-full mt-2 w-[28rem] bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 transition-all duration-300 transform origin-top ${
-                menuOpen === "blogs" ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
-              }`}>
-                <div className="p-4">
-                  <h3 className="text-[#001e3c] font-bold text-base mb-3 flex items-center">
-                    <FaBookOpen className="mr-2 text-[#00ffe0]" />
-                    Latest Articles
-                  </h3>
-                  <div className="grid grid-cols-2 gap-3 max-h-80 overflow-y-auto pr-1">
-                    {blogsLoading ? (
-                      [...Array(4)].map((_, i) => (
-                        <div key={i} className="rounded-xl border border-gray-200 bg-white/80 p-4">
-                          <div className="w-full h-20 bg-gray-200 rounded animate-pulse mb-3" />
-                          <div className="h-4 w-3/4 bg-gray-200 rounded animate-pulse" />
-                        </div>
-                      ))
-                    ) : latestBlogs.length === 0 ? (
-                      <div className="col-span-2 text-sm text-gray-600">No blogs available.</div>
-                    ) : (
-                      latestBlogs.map((b) => (
-                        <Link key={b._id || b.id} href={`/blog/${b.slug || (b._id || b.id)}`} onClick={() => setMenuOpen(null)}
-                              className="group block rounded-xl overflow-hidden border border-gray-200 bg-white/80 hover:shadow-lg hover:shadow-indigo-100 hover:-translate-y-0.5 transition-all duration-300">
-                          <div className="w-full h-24 bg-white flex items-center justify-center overflow-hidden">
-                            {b.thumbnail ? (
-                              <Image width={100} height={100} src={b.thumbnail} alt={b.title} className="w-full h-full object-cover" />
-                            ) : (
-                              <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">No Image</div>
-                            )}
+              {menuOpen === "blogs" && (
+                <div className={`absolute left-0 top-full mt-2 w-[28rem] bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 transition-all duration-300 transform origin-top`}>
+                  <div className="p-4">
+                    <h3 className="text-[#001e3c] font-bold text-base mb-3 flex items-center">
+                      <FaBookOpen className="mr-2 text-[#00ffe0]" />
+                      Latest Articles
+                    </h3>
+                    <div className="grid grid-cols-2 gap-3 max-h-80 overflow-y-auto pr-1">
+                      {blogsLoading ? (
+                        [...Array(4)].map((_, i) => (
+                          <div key={i} className="rounded-xl border border-gray-200 bg-white/80 p-4">
+                            <div className="w-full h-20 bg-gray-200 rounded animate-pulse mb-3" />
+                            <div className="h-4 w-3/4 bg-gray-200 rounded animate-pulse" />
                           </div>
-                          <div className="px-3 py-2">
-                            <p className="text-sm font-semibold text-[#001e3c] group-hover:text-[#00ffe0] line-clamp-2">{b.title}</p>
-                            <p className="text-[11px] text-gray-500 mt-1">{new Date(b.createdAt).toLocaleDateString()}</p>
-                          </div>
-                        </Link>
-                      ))
-                    )}
-                  </div>
-                  <div className="mt-3 pt-3 border-t border-gray-200">
-                    <Link href="/blog/blog-page" onClick={() => setMenuOpen(null)}
-                          className="block w-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] py-2 px-4 rounded-xl font-semibold text-center hover:from-[#00d4c4] hover:to-[#00ffe0] transform hover:scale-105 transition-all duration-300 text-sm">
-                      View All Blogs
-                    </Link>
+                        ))
+                      ) : latestBlogs.length === 0 ? (
+                        <div className="col-span-2 text-sm text-gray-600">No blogs available.</div>
+                      ) : (
+                        latestBlogs.map((b) => (
+                          <Link key={b._id || b.id} href={`/blog/${b.slug || (b._id || b.id)}`} onClick={() => setMenuOpen(null)}
+                                className="group block rounded-xl overflow-hidden border border-gray-200 bg-white/80 hover:shadow-lg hover:shadow-indigo-100 hover:-translate-y-0.5 transition-all duration-300">
+                            <div className="w-full h-24 bg-white flex items-center justify-center overflow-hidden">
+                              {b.thumbnail ? (
+                                <Image width={100} height={100} src={b.thumbnail} alt={b.title} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                              ) : (
+                                <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">No Image</div>
+                              )}
+                            </div>
+                            <div className="px-3 py-2">
+                              <p className="text-sm font-semibold text-[#001e3c] group-hover:text-[#00ffe0] line-clamp-2">{b.title}</p>
+                              <p className="text-[11px] text-gray-500 mt-1">{new Date(b.createdAt).toLocaleDateString()}</p>
+                            </div>
+                          </Link>
+                        ))
+                      )}
+                    </div>
+                    <div className="mt-3 pt-3 border-t border-gray-200">
+                      <Link href="/search?query=blog" onClick={() => setMenuOpen(null)}
+                            className="block w-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] py-2 px-4 rounded-xl font-semibold text-center hover:from-[#00d4c4] hover:to-[#00ffe0] transform hover:scale-105 transition-all duration-300 text-sm">
+                        View All Blogs
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           </nav>
 
@@ -452,7 +450,7 @@ const [modalType, setModalType] = useState();
                         <FaArrowRight className="text-[#00ffe0] text-xs" />
                       </Link>
                     ))}
-                    <Link href="/blog/blog-page" onClick={() => setMobileMenuOpen(false)}
+                    <Link href="/search?query=blog" onClick={() => setMobileMenuOpen(false)}
                           className="flex items-center justify-center gap-2 p-3 rounded-xl bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] font-bold hover:scale-105 transition">
                       <span>View All Blogs</span>
                       <FaArrowRight />

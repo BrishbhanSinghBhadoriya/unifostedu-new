@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatbotWidget from "@/components/ChatbotWidget";
 import OrganizationSchema from "@/components/OrganizationSchema";
+import Canonical from "@/components/Canonical";
 import { Toaster as SonnerToaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -11,6 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 
 export const metadata = {
+  metadataBase: new URL('https://unifostedu.com'),
   title: "UNIFOST | Because The Right University Matters",
   description: "Unifost",
   keywords: [
@@ -165,10 +167,10 @@ export default function RootLayout({ children }) {
               '@context': 'https://schema.org',
               '@type': 'WebSite',
               name: 'Unifost',
-              url: 'https://www.unifost.com',
+              url: 'https://unifostedu.com',
               potentialAction: {
                 '@type': 'SearchAction',
-                target: (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.unifost.com') + '/search?q={search_term_string}',
+                target: (process.env.NEXT_PUBLIC_SITE_URL || 'https://unifostedu.com') + '/search?q={search_term_string}',
                 'query-input': 'required name=search_term_string'
               }
             })
@@ -199,6 +201,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={inter.className}>
+        <Canonical />
         <Header />
         <main>{children}</main>
         <Footer />

@@ -2,7 +2,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400; // 24 hours
 
 export default function sitemap() {
-  const baseUrl = "https://www.unifostedu.com";
+  const baseUrl = "https://unifostedu.com";
   const currentDate = new Date();
 
   const staticRoutes = [
