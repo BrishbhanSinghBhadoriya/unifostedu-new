@@ -3,7 +3,7 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-
+import Head from 'next/head';
 
 function SearchContent() {
   const searchParams = useSearchParams();
@@ -35,67 +35,95 @@ function SearchContent() {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
+      <Head>
+        <title>
+          {query 
+            ? `Search results for "${query}" | UniFost` 
+            : 'Search Courses & Universities | UniFost'}
+        </title>
+        <meta
+          name="description"
+          content={
+            query
+              ? `Find the best online courses and universities related to "${query}" at UniFost. Explore programs, details, and admission information.`
+              : 'Search and explore top online universities and courses. Discover MBA, BBA, and more programs with UniFost.'
+          }
+        />
+        <meta name="keywords" content="online courses, universities, MBA, BBA, UniFost, admission, distance learning" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={query ? `Search results for "${query}"` : 'Search Courses & Universities'} />
+        <meta
+          property="og:description"
+          content={
+            query
+              ? `Explore search results for "${query}" at UniFost and find details about top courses and universities.`
+              : 'Explore online universities and programs at UniFost. Get course details, admission info, and more.'
+          }
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://yourdomain.com/search?query=${query}`} />
+      </Head>
 
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Search <span className="text-[#00ffe0]">Results</span>
-          </h1>
-          {query && (
-            <p className="text-xl text-gray-600">
-              Results for: <span className="font-semibold">{query}</span>
-            </p>
-          )}
-        </div>
-
-        {loading ? (
-          <div className="text-center">
-            <p className="text-gray-600">Searching...</p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Search <span className="text-[#00ffe0]">Results</span>
+            </h1>
+            {query && (
+              <p className="text-xl text-gray-600">
+                Results for: <span className="font-semibold">{query}</span>
+              </p>
+            )}
           </div>
-        ) : searchResults.length > 0 ? (
-          <div className="space-y-6">
-            {searchResults.map((result, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{result.title}</h3>
-                    <p className="text-gray-600 mb-4">{result.description}</p>
-                    <span className="bg-[#00ffe0] text-[#001e3c] px-3 py-1 rounded-full text-sm font-semibold">
-                      {result.type}
-                    </span>
+
+          {loading ? (
+            <div className="text-center">
+              <p className="text-gray-600">Searching...</p>
+            </div>
+          ) : searchResults.length > 0 ? (
+            <div className="space-y-6">
+              {searchResults.map((result, index) => (
+                <div key={index} className="bg-white rounded-xl shadow-lg p-6">
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{result.title}</h3>
+                      <p className="text-gray-600 mb-4">{result.description}</p>
+                      <span className="bg-[#00ffe0] text-[#001e3c] px-3 py-1 rounded-full text-sm font-semibold">
+                        {result.type}
+                      </span>
+                    </div>
+                    <Link 
+                      href={`/${result.type === 'course' ? 'courses' : 'universities'}/${result.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="bg-[#001e3c] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#003b6c] transition-colors"
+                    >
+                      View Details
+                    </Link>
                   </div>
-                  <Link 
-                    href={`/${result.type === 'course' ? 'courses' : 'universities'}/${result.title.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="bg-[#001e3c] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#003b6c] transition-colors"
-                  >
-                    View Details
-                  </Link>
                 </div>
-              </div>
-            ))}
-          </div>
-        ) : query ? (
-          <div className="text-center">
-            <p className="text-gray-600 mb-6">No results found for {query}</p>
-            <p className="text-gray-500">Try searching with different keywords or browse our courses and universities.</p>
-          </div>
-        ) : (
-          <div className="text-center">
-            <p className="text-gray-600 mb-6">Enter a search query to find courses and universities.</p>
-          </div>
-        )}
+              ))}
+            </div>
+          ) : query ? (
+            <div className="text-center">
+              <p className="text-gray-600 mb-6">No results found for {query}</p>
+              <p className="text-gray-500">Try searching with different keywords or browse our courses and universities.</p>
+            </div>
+          ) : (
+            <div className="text-center">
+              <p className="text-gray-600 mb-6">Enter a search query to find courses and universities.</p>
+            </div>
+          )}
 
-        <div className="text-center mt-16">
-          <Link 
-            href="/"
-            className="bg-[#001e3c] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#003b6c] transition-colors"
-          >
-            Back to Home
-          </Link>
+          <div className="text-center mt-16">
+            <Link 
+              href="/"
+              className="bg-[#001e3c] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#003b6c] transition-colors"
+            >
+              Back to Home
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
     </Suspense>
   );
 }

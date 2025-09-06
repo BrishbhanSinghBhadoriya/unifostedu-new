@@ -313,7 +313,7 @@ const Landing = () => {
               >
                 {/* Responsive Typography (professional, compact) */}
                 <div className="bg-transparent rounded-2xl p-4 sm:p-6 inline-block max-w-2xl">
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-semibold mb-2 sm:mb-3 leading-tight text-white tracking-tight">
+                  <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-semibold mb-1 sm:mb-3 leading-tight text-white tracking-tight">
                     {heroSlides[slide].title}
                   </h1>
                   <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium mb-3 sm:mb-4 text-cyan-200">
@@ -381,11 +381,11 @@ const Landing = () => {
           {/* Mobile content band below slider */}
           <div className="block sm:hidden bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white">
             <div className="max-w-7xl mx-auto px-4 py-6">
-              <div className="max-w-2xl">
-                <h1 className="text-2xl font-semibold mb-1 tracking-tight">{heroSlides[slide].title}</h1>
+              {/* <div className="max-w-2xl">
+        
                 <h2 className="text-base font-medium mb-2 text-cyan-200">{heroSlides[slide].subtitle}</h2>
                 <p className="text-sm text-white/90 mb-4">{heroSlides[slide].description}</p>
-              </div>
+              </div> */}
               <div className="flex flex-col gap-3">
                 <button
                   onClick={() => openModal('getStarted')}
