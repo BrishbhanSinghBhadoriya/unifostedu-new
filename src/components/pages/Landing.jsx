@@ -25,36 +25,37 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import EnquiryForm from "@/components/EnquiryForm";
+import FAQ from "@/components/FAQ";
 
 // Enhanced data arrays
 const heroSlides = [
   {
     src: "/slider/slider-1.jpg",
-    alt: "Compare top online universities in India with Unifost",
-    title: "Compare Online University Degrees in India",
+    alt: "UGC-approved online university degrees with career counseling services",
+    title: "Online UGC-Approved University Degrees: Complete Career Counseling Guide ",
     subtitle: "UGC‑Approved | MBA • BBA • MCA • BCA • BCom • BA",
-    description: "Find the perfect online degree program from UGC-approved top universities in India"
+    description: "Discover the best UGC-approved online university degrees with expert career counseling to guide your educational journey"
   },
   {
     src: "/slider/slider-2.webp",
-    alt: "Best platform for online universities and distance learning",
-    title: "Free Career Counseling for Online Degrees",
+    alt: "Professional career counseling for online university degrees selection",
+    title: "Career Counseling for Online University Degrees: Expert Guidance",
     subtitle: "Personalized Guidance • University Shortlisting • Application Help",
-    description: "Access world-class online education from anywhere, anytime with Unifost"
+    description: "Get UGC-approved online university degrees with professional career counseling from education experts"
   },
   {
     src: "/slider/slider-3.webp",
-    alt: "Search and compare online MBA, BBA, MCA programs",
-    title: "Find the Best Online MBA, BBA, MCA & More",
+    alt: "UGC-approved online university degrees comparison and selection",
+    title: "UGC-Approved Online University Degrees: Top Programs & Universities",
     subtitle: "Compare Fees, Rankings, Placements in Minutes",
-    description: "Get personalized counseling and find the best online degree for your career"
+    description: "Find legitimate online university degrees with comprehensive career counseling and university comparison"
   },
   {
     src: "/slider/slider-4.webp",
-    alt: "Compare universities fees, ranking, courses with Unifost",
-    title: "Compare Universities: Fees, Rankings, Courses",
+    alt: "Online university degrees vs traditional campus comparison with career counseling",
+    title: "Online University Degrees vs Traditional Campus: Complete Comparison",
     subtitle: "Make a Confident Choice with UNIFOST",
-    description: "Compare fees, rankings, courses, and location instantly before deciding"
+    description: "Compare UGC-approved online university degrees with traditional programs and get expert career counseling"
   }
 
 ];
@@ -81,10 +82,10 @@ const stats = [
 ];
 
 const features = [
-  { title: "Expert Counseling", description: "Get personalized guidance from education experts", icon: FaUserTie, color: "from-blue-500 to-teal-600" },
-  { title: "Compare Programs", description: "Side-by-side comparison of courses and universities", icon: FaCompass, color: "from-blue-500 to-teal-600" },
-  { title: "Flexible Learning", description: "Study at your own pace from anywhere", icon: FaGlobe, color: "from-blue-500 to-teal-600" },
-  { title: "Career Support", description: "Get assistance with job placement and career guidance", icon: FaBriefcase, color: "from-blue-500 to-teal-600" }
+  { title: "Career Counseling for Online University Degrees", description: "Get personalized guidance from education experts for UGC-approved online university degrees", icon: FaUserTie, color: "from-blue-500 to-teal-600" },
+  { title: "Compare UGC-Approved Programs", description: "Side-by-side comparison of online university degrees and universities", icon: FaCompass, color: "from-blue-500 to-teal-600" },
+  { title: "Flexible Online Learning", description: "Study UGC-approved online university degrees at your own pace from anywhere", icon: FaGlobe, color: "from-blue-500 to-teal-600" },
+  { title: "Career Support & Guidance", description: "Get assistance with job placement and career counseling for online degrees", icon: FaBriefcase, color: "from-blue-500 to-teal-600" }
 ];
 
 const colleges = [
@@ -276,7 +277,7 @@ const Landing = () => {
       <section className="relative text-white overflow-hidden">
         <div className="relative w-full">
           {/* Slides - Responsive aspect ratio */}
-          <div className="relative w-full h-[20vh] sm:h-[70vh] md:h-[80vh] lg:h-[85vh] xl:h-[90vh] bg-[#001e3c]">
+          <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[85vh] bg-[#001e3c] overflow-hidden">
             {heroSlides.map((s, idx) => (
               <motion.div
                 key={idx}
@@ -290,14 +291,17 @@ const Landing = () => {
                   alt={`${s.title} – ${s.subtitle} | Online University Degree guidance`}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
-                  className="object-cover"
-                  
+                  className="object-cover object-center"
+                  style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center top'
+                  }}
                   priority={idx === 0}
                   loading={idx === 0 ? "eager" : "lazy"}
                   decoding={idx === 0 ? "auto" : "async"}
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c]/85 via-[#001e3c]/65 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c]/60 via-[#001e3c]/40 to-transparent sm:from-[#001e3c]/90 sm:via-[#001e3c]/75" />
               </motion.div>
             ))}
           </div>
@@ -378,48 +382,108 @@ const Landing = () => {
             </div>
           </div>
 
-          {/* Mobile content band below slider */}
-          <div className="block sm:hidden bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white">
-            <div className="max-w-7xl mx-auto px-4 py-6">
-              {/* <div className="max-w-2xl">
-        
-                <h2 className="text-base font-medium mb-2 text-cyan-200">{heroSlides[slide].subtitle}</h2>
-                <p className="text-sm text-white/90 mb-4">{heroSlides[slide].description}</p>
-              </div> */}
-              <div className="flex flex-col gap-3">
+          {/* Mobile content band below slider - Enhanced */}
+          <div className="block sm:hidden bg-gradient-to-br from-[#001e3c] via-[#003b6c] to-[#001e3c] text-white relative overflow-hidden">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-400/20 to-blue-400/20"></div>
+              <div className="absolute top-10 right-10 w-32 h-32 bg-cyan-400/10 rounded-full blur-xl"></div>
+              <div className="absolute bottom-10 left-10 w-24 h-24 bg-blue-400/10 rounded-full blur-lg"></div>
+            </div>
+            
+            <div className="relative max-w-7xl mx-auto px-4 py-8">
+              {/* Mobile Content */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center mb-6"
+              >
+                <h1 className="text-2xl font-bold text-white mb-3 leading-tight">
+                  {heroSlides[slide].title}
+                </h1>
+                <h2 className="text-lg font-medium mb-3 text-cyan-200">
+                  {heroSlides[slide].subtitle}
+                </h2>
+                <p className="text-sm text-white/90 mb-6 leading-relaxed px-2">
+                  {heroSlides[slide].description}
+                </p>
+              </motion.div>
+
+              {/* Mobile Buttons - Enhanced */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="space-y-4"
+              >
+                {/* Primary CTA Button */}
                 <button
                   onClick={() => openModal('getStarted')}
-                  className="bg-[#00d4c4] text-[#001e3c] w-full px-5 py-3.5 rounded-full text-base font-semibold hover:bg-[#00c0b1] transition-colors"
+                  className="w-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] 
+                           px-6 py-4 rounded-2xl text-base font-bold 
+                           hover:from-[#00d4c4] hover:to-[#00ffe0] 
+                           transform hover:scale-105 transition-all duration-300 
+                           shadow-lg hover:shadow-xl
+                           flex items-center justify-center gap-3"
                 >
-                  Get Started Today
+                  <FaRocket className="text-lg" />
+                  <span>Get Started Today</span>
                 </button>
+
+                {/* Secondary Buttons Grid */}
                 <div className="grid grid-cols-2 gap-3">
                   <button
                     onClick={() => openModal('videoCall')}
-                    className="px-5 py-3.5 rounded-full text-base font-semibold text-white bg-gradient-to-r  hover:shadow-lg ring-1 ring-white/10 transition-all"
+                    className="bg-white/15 backdrop-blur-sm text-white px-4 py-4 rounded-xl 
+                             text-sm font-semibold hover:bg-white/25 transition-all duration-300
+                             transform hover:scale-105 border border-white/20
+                             flex items-center justify-center gap-2"
                   >
-                    Video Call
+                    <FaVideo className="text-base" />
+                    <span>Video Call</span>
                   </button>
+                  
                   <button
                     onClick={() => openModal('homeDemo')}
-                    className="px-5 py-3.5 rounded-full text-base font-semibold text-white bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-700 hover:to-cyan-700 shadow-md hover:shadow-lg ring-1 ring-white/10 transition-all"
+                    className="bg-white/15 backdrop-blur-sm text-white px-4 py-4 rounded-xl 
+                             text-sm font-semibold hover:bg-white/25 transition-all duration-300
+                             transform hover:scale-105 border border-white/20
+                             flex items-center justify-center gap-2"
                   >
-                    Home Demo
+                    <FaMapMarkerAlt className="text-base" />
+                    <span>Home Demo</span>
                   </button>
                 </div>
-              </div>
+
+                {/* Trust Indicators */}
+                <div className="flex items-center justify-center gap-6 pt-4 text-xs text-white/70">
+                  <div className="flex items-center gap-1">
+                    <FaUsers className="text-cyan-400" />
+                    <span>5K+ Students</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <FaUniversity className="text-cyan-400" />
+                    <span>25+ Universities</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <FaAward className="text-cyan-400" />
+                    <span>UGC Approved</span>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
 
           {/* Enhanced Dots - Responsive positioning */}
-          <div className="absolute inset-x-0 bottom-0 md:bottom-4 sm:bottom-6 md:bottom-8 flex items-center justify-center gap-2 sm:gap-3">
+          <div className="absolute inset-x-0 bottom-1 sm:bottom-4 md:bottom-6 lg:bottom-8 flex items-center justify-center gap-2 sm:gap-3">
             {heroSlides.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setSlide(i)}
-                className={`h-2 sm:h-3 w-2 sm:w-3 rounded-full transition-all duration-300 ${i === slide
-                    ? 'bg-[#00d4c4] w-6 sm:w-8'
-                    : 'bg-white/60 hover:bg-white/80'
+                className={`h-3 sm:h-4 w-3 sm:w-4 rounded-full transition-all duration-300 ${i === slide
+                    ? 'bg-[#00ffe0] w-8 sm:w-10 scale-125 shadow-lg shadow-[#00ffe0]/50'
+                    : 'bg-white/60 hover:bg-white/80 hover:scale-110'
                   }`}
                 aria-label={`Go to slide ${i + 1}`}
               />
@@ -437,7 +501,7 @@ const Landing = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-10 sm:mb-14" data-aos="fade-up">
             <h2 className="text-3xl sm:text-4xl font-semibold text-[#001e3c] mb-2">
-              Career Counseling Online & Virtual Learning Guidance
+              Career Counseling for Online UGC-Approved University Degrees
             </h2>
             <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-3"></div>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
@@ -539,7 +603,7 @@ const Landing = () => {
             data-aos="fade-up"
           >
             <h2 className="text-3xl sm:text-4xl md:text-4xl font-semibold tracking-tight text-[#001e3c] mb-2">
-              Select the Best Programs
+              UGC-Approved Online University Degrees: Top Programs & Universities
             </h2>
             <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-3 sm:mb-4"></div>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
@@ -675,7 +739,7 @@ const Landing = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-16" data-aos="fade-up">
             <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] mb-3">
-              Top Partner Universities
+              UGC-Approved Online University Degrees: Partner Universities
             </h2>
             <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-4"></div>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
@@ -822,7 +886,7 @@ const Landing = () => {
             data-aos="fade-up"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a365d] mb-3 sm:mb-4">
-              Compare Online Universities
+              Online University Degrees vs Traditional Campus: Complete Comparison
             </h2>
             <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-4"></div>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto px-4">
@@ -994,7 +1058,7 @@ const Landing = () => {
             data-aos="fade-up"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#001e3c] mb-3 sm:mb-4">
-              Accreditation & Recognition
+              UGC-Approved Online University Degrees: Accreditation & Recognition
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
               We partner only with accredited and government-recognized institutions
@@ -1028,7 +1092,7 @@ const Landing = () => {
             data-aos="fade-up"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#001e3c] mb-4 sm:mb-6">
-              Why Choose <span className="text-[#00ffe0]">Unifost</span>?
+              Career Counseling Services: Your Path to Success
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Experience the difference that personalized guidance makes in your educational journey
@@ -1061,8 +1125,8 @@ const Landing = () => {
       {/* Study Cities */}
       <section className="bg-[#08223a] py-16 px-6 text-white overflow-hidden relative" data-aos="fade-up">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">Study Cities Across India</h2>
-          <p className="text-blue-100 text-lg max-w-2xl mx-auto mb-12">Explore top universities across India's major educational hubs.</p>
+          <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">UGC-Approved Online University Degrees: Study Cities Across India</h2>
+          <p className="text-blue-100 text-lg max-w-2xl mx-auto mb-12">Explore top universities offering online university degrees across India's major educational hubs with career counseling support.</p>
 
           <div className="overflow-hidden relative backdrop-blur-md rounded-2xl border border-white/20 p-6">
             <div className="flex gap-10 animate-[scroll_30s_linear_infinite] whitespace-nowrap">
@@ -1109,6 +1173,45 @@ const Landing = () => {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQ 
+        faqs={[
+          {
+            question: "Are online university degrees UGC-approved and recognized?",
+            answer: "Yes, all online university degrees we recommend are UGC-approved and fully recognized by the University Grants Commission. These degrees have the same value as traditional campus programs and are accepted by employers, government organizations, and for higher studies."
+          },
+          {
+            question: "How does career counseling help in choosing online university degrees?",
+            answer: "Our career counseling provides personalized guidance based on your career goals, academic background, and industry requirements. Our experts help you select UGC-approved programs that align with your professional aspirations, ensuring you make informed decisions about your education."
+          },
+          {
+            question: "What are the benefits of UGC-approved online university degrees?",
+            answer: "UGC-approved online university degrees offer the same value as campus programs with added benefits of flexibility, cost-effectiveness, comprehensive career counseling support, and the ability to study while working. They are fully recognized and accepted globally."
+          },
+          {
+            question: "How do I apply for online university degrees through UNIFOST?",
+            answer: "Applying is simple! Contact our career counselors who will guide you through the entire process - from university selection to application submission. We provide end-to-end support including document preparation, application assistance, and admission guidance."
+          },
+          {
+            question: "What courses are available in online university degrees?",
+            answer: "We offer a wide range of UGC-approved online courses including MBA, BBA, MCA, BCA, B.Com, M.Com, BA, MA, and specialized programs. All courses are from top-ranked universities with flexible learning options and career counseling support."
+          },
+          {
+            question: "Is there any difference between online and regular degrees?",
+            answer: "No, UGC-approved online degrees have the same value and recognition as regular degrees. The only difference is the mode of delivery - online degrees offer more flexibility and convenience while maintaining the same academic standards and curriculum."
+          },
+          {
+            question: "How much do online university degrees cost?",
+            answer: "Online university degrees are generally more cost-effective than traditional programs. Costs vary by university and program, typically ranging from ₹1-4 lakhs for complete programs. Our career counselors can help you compare costs and find the best value options."
+          },
+          {
+            question: "What support do you provide during the online degree program?",
+            answer: "We provide comprehensive support throughout your online degree journey including academic guidance, career counseling, placement assistance, networking opportunities, and 24/7 technical support. Our team ensures you have everything needed for success."
+          }
+        ]}
+        title="Frequently Asked Questions About Online University Degrees"
+      />
 
       {/* Unified Modal - Responsive */}
       {showEnquiryModal && (

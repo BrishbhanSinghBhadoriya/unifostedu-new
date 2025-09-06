@@ -9,20 +9,36 @@ import { Toaster as SonnerToaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
-
-
 export const metadata = {
   metadataBase: new URL('https://unifostedu.com'),
   description: "Unifost",
   keywords: [
+    // Primary Keywords
     "Online University Degree",
     "Career Counseling Online",
     "Virtual Learning Guidance",
     "Best Career Planning Services",
     "EdTech Solutions India",
+    
+    // Course Keywords
     "Online MBA India",
     "Online BBA",
     "Online MCA",
+    "Online BCA",
+    "Online BA",
+    "Online BCom",
+    "Online BSc",
+    "Online MSc",
+    "Online MA",
+    "Online MPhil",
+    "Online PhD",
+    "Online Diploma",
+    "Online Certificate",
+    "Online PG Diploma",
+    "Online PG Certificate",
+    "Online PG Degree",
+    
+    // College Keywords
     "Online MBA Colleges in India",
     "Online BBA Colleges in India",
     "Online MCA Colleges in India",
@@ -38,66 +54,8 @@ export const metadata = {
     "Online PG Diploma Colleges in India",
     "Online PG Certificate Colleges in India",
     "Online PG Degree Colleges in India",
-    "Online PG Diploma Colleges in India",
-    "Online PG Certificate Colleges in India",
-    "Online PG Degree Colleges in India",
-    "Online PG Diploma Colleges in India",
-    "Online PG Certificate Colleges in India",
-    "Online PG Degree Colleges in India",
-    "Online PG Diploma Colleges in India",
-    "Online PG Degree Colleges in India",
-    "Online PG Diploma Colleges in India",
-    "Online PG Certificate Colleges in India",
-    "Online PG Degree Colleges in India",
-    "Online PG Diploma Colleges in India",
-    "Online PG Certificate Colleges in India",
-    "Online PG Degree Colleges in India",
-    "Online PG Diploma Colleges in India",
-    "Online PG Certificate Colleges in India",
-    "Online PG Degree Colleges in India",
-    "Online PG Diploma Colleges in India",
-    "Online PG Certificate Colleges in India",
-    "Online PG Degree Colleges in India",
-    "Online PG Diploma Colleges in India",
-    "Online PG Certificate Colleges in India",
-    "Online PG Degree Colleges in India",
-    "Online PG Diploma Colleges in India",
-    "Online PG Certificate Colleges in India",
-    "Online PG Degree Colleges in India",
-    "Online PG Diploma Colleges in India",
-    "Online PG Certificate Colleges in India",
-    "Online PG Degree Colleges in India",
-    "Online PG Diploma Colleges in India",
-    "Online PG Certificate Colleges in India",
-    "Online PG Degree Colleges in India",
-    "Online PG Diploma Colleges in India",
-    "Online PG Certificate Colleges in India",
-    "Online PG Degree Colleges in India",
-    "Online PG Diploma Colleges in India",
-    "Online PG Certificate Colleges in India",
-    "UGC-DEB Accredited Universities",
-    "UGC-DEB Accredited Universities",
-    "Career Counseling Online",
-    "Virtual Learning Guidance",
-    "Best Career Planning Services",
-    "EdTech Solutions India",
-    "Online MBA India",
-    "Online BBA",
-    "Online MCA",
-    "Online BBA Colleges in India",
-    "Online MCA Colleges in India",
-    "Online BA Colleges in India",
-    "Online BCom Colleges in India",
-    "Online BSc Colleges in India",
-    "Online MSc Colleges in India",
-    "Online MA Colleges in India",
-    "Online MPhil Colleges in India",
-    "Online PhD Colleges in India",
-    "Online Diploma Colleges in India",
-    "Online Certificate Colleges in India",
-    "Online PG Diploma Colleges in India",
-    "Online PG Certificate Colleges in India",
-    "Online PG Degree Colleges in India",
+    
+    // University Keywords
     "Online Amity University",
     "Online Lovely Professional University",
     "Online Manipal University",
@@ -109,6 +67,9 @@ export const metadata = {
     "Online UPES University",
     "Online Chandigarh University",
     "Online OP Jindal University",
+    "Online JMI University",
+    
+    // Short University Keywords
     "Online Amity",
     "Online Manipal",
     "Online LPU",
@@ -120,11 +81,12 @@ export const metadata = {
     "Online UPES",
     "Online Chandigarh",
     "Online OP Jindal",
-    "Online JMI"
+    "Online JMI",
     
-    
-   
-    
+    // UGC Keywords
+    "UGC-DEB Accredited Universities",
+    "UGC Approved Online Courses",
+    "UGC Approved Distance Learning"
   ],
   robots: {
     index: true,

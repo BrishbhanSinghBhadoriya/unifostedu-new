@@ -3,7 +3,6 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import Head from 'next/head';
 
 function SearchContent() {
   const searchParams = useSearchParams();
@@ -35,34 +34,6 @@ function SearchContent() {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <Head>
-        <title>
-          {query 
-            ? `Search results for "${query}" | UniFost` 
-            : 'Search Courses & Universities | UniFost'}
-        </title>
-        <meta
-          name="description"
-          content={
-            query
-              ? `Find the best online courses and universities related to "${query}" at UniFost. Explore programs, details, and admission information.`
-              : 'Search and explore top online universities and courses. Discover MBA, BBA, and more programs with UniFost.'
-          }
-        />
-        <meta name="keywords" content="online courses, universities, MBA, BBA, UniFost, admission, distance learning" />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content={query ? `Search results for "${query}"` : 'Search Courses & Universities'} />
-        <meta
-          property="og:description"
-          content={
-            query
-              ? `Explore search results for "${query}" at UniFost and find details about top courses and universities.`
-              : 'Explore online universities and programs at UniFost. Get course details, admission info, and more.'
-          }
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://yourdomain.com/search?query=${query}`} />
-      </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -178,7 +178,8 @@ const [modalType, setModalType] = useState();
             {[
               { label: 'Home', path: '/', icon: FaHome },
               { label: 'About', path: '/about', icon: FaInfoCircle },
-              { label: 'Services', path: '/services', icon: FaCog }
+              { label: 'Services', path: '/services', icon: FaCog },
+              { label: 'Blog', path: '/blog', icon: FaBookOpen }
             ].map((link, i) => (
               <Link key={i}
                 href={link.path}
@@ -226,7 +227,7 @@ const [modalType, setModalType] = useState();
             </div>
 
             {/* Blogs Dropdown - API-powered cards */}
-            <div className="relative">
+            {/* <div className="relative">
               <button
                 onClick={() => setMenuOpen(menuOpen === "blogs" ? null : "blogs")}
                 className={`group flex items-center space-x-1 px-2 py-1 rounded-xl transition-all duration-300 text-white hover:bg-white/10 hover:text-[#00ffe0]`}>
@@ -270,16 +271,11 @@ const [modalType, setModalType] = useState();
                         ))
                       )}
                     </div>
-                    <div className="mt-3 pt-3 border-t border-gray-200">
-                      <Link href="/search?query=blog" onClick={() => setMenuOpen(null)}
-                            className="block w-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] py-2 px-4 rounded-xl font-semibold text-center hover:from-[#00d4c4] hover:to-[#00ffe0] transform hover:scale-105 transition-all duration-300 text-sm">
-                        View All Blogs
-                      </Link>
-                    </div>
+                    
                   </div>
                 </div>
               )}
-            </div>
+            </div> */}
           </nav>
 
           {/* Search - Made more compact */}
@@ -401,7 +397,8 @@ const [modalType, setModalType] = useState();
                   {[
                     { label: 'Home', path: '/', icon: FaHome },
                     { label: 'About', path: '/about', icon: FaInfoCircle },
-                    { label: 'Services', path: '/services', icon: FaCog }
+                    { label: 'Services', path: '/services', icon: FaCog },
+                    { label: 'Blog', path: '/blog', icon: FaBookOpen }
                   ].map((link, i) => (
                     <Link key={i} href={link.path} onClick={() => setMobileMenuOpen(false)}
                           className="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition text-white border border-white/10">
@@ -450,7 +447,7 @@ const [modalType, setModalType] = useState();
                         <FaArrowRight className="text-[#00ffe0] text-xs" />
                       </Link>
                     ))}
-                    <Link href="/search?query=blog" onClick={() => setMobileMenuOpen(false)}
+                    <Link href="/blog" onClick={() => setMobileMenuOpen(false)}
                           className="flex items-center justify-center gap-2 p-3 rounded-xl bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] font-bold hover:scale-105 transition">
                       <span>View All Blogs</span>
                       <FaArrowRight />

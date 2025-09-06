@@ -14,18 +14,7 @@ import {
 import { motion } from 'framer-motion';
 import EnquireCard from '@/components/EnquireCard';
 import Image from 'next/image';
-import Head from 'next/head';
 import AdmissionProcess from '@/components/AdmissionProcess'
- const metadata = {
-  title: "Amity University Online - UG & PG Courses in India",
-  description: "Explore online undergraduate and postgraduate programs offered by Amity University Online, a NAAC A+ accredited university. Flexible, career-focused education for students and working professionals.",
-  keywords: "Amity University Online, BBA Online, BCA Online, B.Com Online, MBA Online, MCA Online, M.Com Online, MA Online, NAAC A+ University, Online Degree Programs India, Online Courses, Distance Learning",
-  openGraph: {
-    title: "Amity University Online - UG & PG Courses in India",
-    description: "Explore online undergraduate and postgraduate programs offered by Amity University Online, a NAAC A+ accredited university.",
-    images: ["/images/amity.png"],
-  },
-};
 
 const Amity = () => {
   const ugCourses = [
@@ -216,39 +205,25 @@ const Amity = () => {
 
   return (
     <>
-      
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-         <Head>
-        <title>Amity University Online Programs | Fees & Admission</title>
-        <meta name="description" content="Explore online UG & PG programs from Amity University. Check fees, eligibility, specializations and enquire now." />
-        <meta name="keywords" content="Amity Online University, BBA Online, MBA Online, MCA Online, Accredited Online Degrees, Online Courses India, " />
-        <meta name="robots" content="index, follow" />
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* Open Graph / Social Sharing */}
-        <meta property="og:title" content="Amity University Online Programs | Fees & Admission" />
-        <meta property="og:description" content="Explore online UG & PG programs from Amity University. Check fees, eligibility, specializations and enquire now." />
-        <meta property="og:image" content="/images/amitypic.png" />
-        <meta property="og:type" content="website" />
-      </Head>
       {/* Hero Section */}
       <section className="bg-white-100 py-16 px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4 leading-snug font-[Poppins]">
-               Amity University Online
+               Online Amity University: Complete Guide to Courses & Admission 2024
             </h1>
             <p> <span className="font-semibold text-gray-700">Private University in Noida, Uttar Pradesh, India.</span><br /><br/></p>
             <p className="text-gray-700 text-lg">
-             Amity University online offers student a globally recognised degree programs as well as certification courses to enhance and boost up the career for future aspect.<br />
-              It is India's first university recognised by UGC for providing online degree programs by expert facility.<br />
-              It is mainly designed for working professionals and students who want to persue a good degree but dur to some factors they couldn't complete the degree, Amity University has provided a great opportunity for them to complete their dream life and achieve whatever they want.
+             Amity University online programs have revolutionized higher education in India, offering UGC-approved degrees with flexible learning options. Whether you're a working professional or a fresh graduate, online Amity University provides world-class education through innovative digital platforms.<br />
+              It is India's first university recognised by UGC for providing online degree programs by expert faculty.<br />
+              Online Amity University is mainly designed for working professionals and students who want to pursue a good degree but due to some factors they couldn't complete the degree. Amity University online has provided a great opportunity for them to complete their dream life and achieve whatever they want.
             </p>
             
           </div>
           <motion.img
             src="/images/amitypic.png"
-            alt="Amity University"
+            alt="Online Amity University campus with modern infrastructure and digital learning facilities"
             className="rounded-xl shadow-lg w-full h-auto"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -259,7 +234,7 @@ const Amity = () => {
       </section>
 
       {/* UG & PG Course Cards */}
-      {[{ title: "Undergraduate Courses", list: ugCourses }, { title: "Postgraduate Courses", list: pgCourses }, { title: "UG +PG", list: ug_pgCourses }].map((section, idx) => (
+      {[{ title: "Amity University Online Programs: MBA, BBA, MCA, BCA", list: ugCourses }, { title: "Online Amity University Fees: Complete Fee Structure", list: pgCourses }, { title: "Online Amity University Admission Requirements & Process", list: ug_pgCourses }].map((section, idx) => (
         <section key={idx} className="py-12 bg-white px-6 font-[Inter]">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">{section.title}</h2>
@@ -273,7 +248,7 @@ const Amity = () => {
       {/* Why Choose Amity */}
       <section className="py-12 px-4 bg-white">
         <div className="max-w-7xl mx-auto text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-900">Why Choose Amity Online?</h2>
+          <h2 className="text-3xl font-bold text-gray-900">Online Amity University vs Traditional Campus: Comparison</h2>
           <hr className="mt-4 border-gray-300 w-24 mx-auto" />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
@@ -305,7 +280,7 @@ const Amity = () => {
 
       {/* Accreditation */}
       <section className="py-10 bg-white">
-        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
+        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Amity Online University: UGC Approved Programs</h2>
         <div className="flex flex-wrap justify-center items-center gap-20 px-4">
           <Image src="/images/ugc.png" alt="UGC"  width={100} height={100} className="h-16 object-contain" />
           <Image src="/images/aicte.png" alt="AICTE" width={100} height={100} className="h-16 object-contain" />
@@ -326,7 +301,7 @@ const Amity = () => {
      <section className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-10 text-gray-800">
-         Highlights of Amity Online
+         Online Amity University: Student Reviews & Success Stories
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -359,8 +334,8 @@ const Amity = () => {
           </div>
           <div className="flex-1 text-white">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">Online Degree from Amity Online University</h2>
-            <p className="mb-6 text-lg">Amity Online offers daily live classes, career assistance, and hands-on LMS learning with Ivy League tie-ups.</p>
-            <h3 className="text-xl font-semibold mb-2">Benefits of Amity Online</h3>
+            <p className="mb-6 text-lg">Amity University online programs offer daily live classes, career assistance, and hands-on LMS learning with Ivy League tie-ups.</p>
+            <h3 className="text-xl font-semibold mb-2">Benefits of Online Amity University</h3>
             <ul className="list-disc list-inside space-y-2">
               <li>Daily LIVE Classes by International Faculty</li>
               <li>Career Assistance & Virtual Job Fairs</li>
@@ -374,13 +349,13 @@ const Amity = () => {
       {/* Companies */}
       <section className="py-12 bg-gray-100">
         <div className="max-w-6xl mx-auto px-4 text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-800">Our learners work at</h2>
-          <p className="text-xl text-gray-600">Top hiring partners at Amity Online</p>
+          <h2 className="text-3xl font-bold text-gray-800">Online Amity University: Career Opportunities</h2>
+          <p className="text-xl text-gray-600">Top hiring partners at Amity University online programs</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {["/images/company.png", "/images/company1.png", "/images/company9.jpg", "/images/com10.png", "/images/companany4.png", "/images/company6.png", "/images/companany5.png", "/images/adove.png", "/images/samsung.png","/images/3.webp",  "/images/4.webp",  "/images/5.webp",  "/images/6.webp",  "/images/7.webp",  "/images/8.webp",  "/images/9.webp",].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image src={src} alt="Company" width={100} height={100} className="h-12 object-contain" />
+              <Image src={src} alt="Top companies hiring Amity University online graduates" width={100} height={100} className="h-12 object-contain" />
             </div>
           ))}
         </div>

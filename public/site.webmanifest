@@ -12,12 +12,17 @@
   "categories": ["education", "productivity", "business"],
   "icons": [
     {
-      "src": "images/uni.jpg",
+      "src": "images/unilogo.png",
       "sizes": "192x192",
-      "type": "image/jpeg",
+      "type": "image/png",
       "purpose": "any maskable"
     },
-    
+    {
+      "src": "images/unilogo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
     {
       "src": "/favicon.ico",
       "sizes": "32x32",
@@ -41,7 +46,7 @@
       "url": "/coursesearch",
       "icons": [
         {
-          "src": "images/uni.jpg",
+          "src": "images/unilogo.png",
           "sizes": "96x96"
         }
       ]
@@ -53,7 +58,7 @@
       "url": "/bookdemo",
       "icons": [
         {
-          "src": "images/uni.jpg",
+          "src": "images/unilogo.png",
           "sizes": "96x96"
         }
       ]

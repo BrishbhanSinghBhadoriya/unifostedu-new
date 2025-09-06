@@ -1,32 +1,39 @@
 import Landing from "@/components/pages/Landing";
 import Image from "next/image";
 export const metadata = {
-  title: " UNIFOST - India's Leading EdTech Platform",
-  description: "Get UGC-approved online university degrees from top Indian universities including MBA, BBA, MCA, BCA, BCom, BA, and more. Expert career counseling, home demo sessions, and personalized guidance. Book your free counseling session today!",
+  title: "Online University Degrees India | UGC Approved | Career Counseling - UNIFOST",
+  description: "Compare UGC-approved online degrees from top universities. Get free career counseling for MBA, BBA, MCA courses. 5000+ students enrolled. Apply now!",
   keywords: [
-    "Online University Degrees India",
-    "Online MBA Programs India",
-    "Online BBA Courses India",
-    "Online MCA Programs India", 
-    "Online BCA Courses India",
-    "Online BCom Programs India",
-    "Online BA Courses India",
-    "UGC Approved Online Degrees",
-    "Career Counseling Services India",
-    "Educational Technology Platform",
-    "Distance Learning Programs India",
-    "Professional Development Courses",
-    "University Admission Guidance",
-    "Career Planning Services",
-    "Online Education Consultants",
-    "Higher Education Guidance India"
+    "online degrees India",
+    "UGC approved online courses",
+    "distance learning MBA",
+    "online university admission",
+    "career counseling India",
+    "best online MBA universities India",
+    "UGC approved distance learning courses",
+    "online degree career guidance",
+    "compare online universities India",
+    "distance education admission process",
+    "online university degrees",
+    "career counseling",
+    "UGC-approved",
+    "online education",
+    "university selection",
+    "education guidance",
+    "accredited programs",
+    "online degrees",
+    "MBA online",
+    "BBA online",
+    "MCA online",
+    "BCA online"
+    
   ],
   alternates: {
     canonical: "https://unifostedu.com",
   },
   openGraph: {
-    title: "Online University Degrees in India | Free Career Counseling | UNIFOST",
-    description: "Compare UGC-approved online degrees in India—MBA, BBA, MCA, BCA, BCom, BA & more. Get free career counseling, home demo sessions, and personalized guidance to choose the right university.",
+    title: "Online University Degrees India | UGC Approved | Career Counseling - UNIFOST",
+    description: "Compare UGC-approved online degrees from top universities. Get free career counseling for MBA, BBA, MCA courses. 5000+ students enrolled. Apply now!",
     url: "https://unifostedu.com",
     siteName: "UNIFOST",
     images: [
@@ -34,7 +41,7 @@ export const metadata = {
         url: "images/uni.jpg",
         width: 1200,
         height: 630,
-        alt: "UNIFOST - Online University Degrees & Career Guidance Platform"
+        alt: "Online university degrees India with UGC approved courses and career counseling services"
       }
     ],
     locale: "en_IN",
@@ -44,8 +51,8 @@ export const metadata = {
     card: "summary_large_image",
     site: "@unifost",
     creator: "@unifost",
-    title: "Online University Degrees in India | Free Career Counseling | UNIFOST",
-    description: "Compare UGC-approved online degrees in India—MBA, BBA, MCA, BCA, BCom, BA & more. Get free career counseling, home demo sessions, and personalized guidance to choose the right university.",
+    title: "Online University Degrees India | UGC Approved | Career Counseling - UNIFOST",
+    description: "Compare UGC-approved online degrees from top universities. Get free career counseling for MBA, BBA, MCA courses. 5000+ students enrolled.",
     images: ["images/uni.jpg"],
   },
   robots: {

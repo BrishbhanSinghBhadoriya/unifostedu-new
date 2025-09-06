@@ -1,10 +1,10 @@
 export const metadata = {
-  title: "Amity University Online - UG & PG Courses in India",
-  description: "Explore online undergraduate and postgraduate programs offered by Amity University Online, a NAAC A++ accredited university. Flexible and career-focused education for students and working professionals.",
-  keywords: "Amity University Online, BBA Online, BCA Online, MBA Online, MCA Online, M.Com Online, MA Online, NAAC A++ University, Online Degree Programs India, Online Courses, Distance Learning",
+  title: "Online Amity University: Courses, Fees & Admission 2024",
+  description: "Explore Amity University online programs, courses, fees, and admission details. Apply for MBA, BBA, MCA, BCA online degrees with UGC approval.",
+  keywords: "online amity, amity university online, online amity university, amity online programs, amity online courses, amity online mba, amity online bba, amity online mca, amity online bca, amity university fees, amity online admission",
   openGraph: {
-    title: "Amity University Online - UG & PG Courses in India",
-    description: "Explore online undergraduate and postgraduate programs offered by Amity University Online, a NAAC A++ accredited university.",
+    title: "Online Amity University: Courses, Fees & Admission 2024",
+    description: "Explore Amity University online programs, courses, fees, and admission details. Apply for MBA, BBA, MCA, BCA online degrees with UGC approval.",
     images: ["/images/amitylogo.jpg"],
   },
 };
