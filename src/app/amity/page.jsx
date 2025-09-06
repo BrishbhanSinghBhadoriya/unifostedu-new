@@ -15,9 +15,8 @@ import { motion } from 'framer-motion';
 import EnquireCard from '@/components/EnquireCard';
 import Image from 'next/image';
 import Head from 'next/head';
-import AdmissionProcess from '@/components/AdmissionProcess';
-
-export const metadata = {
+import AdmissionProcess from '@/components/AdmissionProcess'
+ const metadata = {
   title: "Amity University Online - UG & PG Courses in India",
   description: "Explore online undergraduate and postgraduate programs offered by Amity University Online, a NAAC A+ accredited university. Flexible, career-focused education for students and working professionals.",
   keywords: "Amity University Online, BBA Online, BCA Online, B.Com Online, MBA Online, MCA Online, M.Com Online, MA Online, NAAC A+ University, Online Degree Programs India, Online Courses, Distance Learning",
