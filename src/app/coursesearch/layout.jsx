@@ -7,6 +7,9 @@ export const metadata = {
     description: "Search and discover the best online degree programs from top universities. Find courses that match your career goals.",
     images: ["/images/uni.jpg"],
   },
+   alternates: {
+    canonical: "https://unifostedu.com/bookdemo",
+  },
 };
 
 export default function CourseSearchLayout({ children }) {

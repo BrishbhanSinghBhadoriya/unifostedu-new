@@ -31,27 +31,27 @@ const heroSlides = [
   {
     src: "/slider/slider-1.jpg",
     alt: "Compare top online universities in India with Unifost",
-    title: "Compare Online University Degrees in India",
+    title: "Compare Online University India",
     subtitle: "UGC‑Approved | MBA • BBA • MCA • BCA • BCom • BA",
     description: "Find the perfect online degree program from UGC-approved top universities in India"
   },
   {
     src: "/slider/slider-2.webp",
-    alt: "Best platform for online universities and distance learning",
+    alt: "Best platform for online universities",
     title: "Free Career Counseling for Online Degrees",
     subtitle: "Personalized Guidance • University Shortlisting • Application Help",
     description: "Access world-class online education from anywhere, anytime with Unifost"
   },
   {
     src: "/slider/slider-3.webp",
-    alt: "Search and compare online MBA, BBA, MCA programs",
+    alt: "Search and compare online degree's programs",
     title: "Find the Best Online MBA, BBA, MCA & More",
     subtitle: "Compare Fees, Rankings, Placements in Minutes",
     description: "Get personalized counseling and find the best online degree for your career"
   },
   {
     src: "/slider/slider-4.webp",
-    alt: "Compare universities fees, ranking, courses with Unifost",
+    alt: "Compare universities with Unifost",
     title: "Compare Universities: Fees, Rankings, Courses",
     subtitle: "Make a Confident Choice with UNIFOST",
     description: "Compare fees, rankings, courses, and location instantly before deciding"
@@ -985,6 +985,8 @@ const Landing = () => {
           </div>
         </div>
       </section>
+
+      
 
       {/* Accreditation & Recognition - Responsive slider */}
       <section className="py-12 sm:py-16 bg-gradient-to-br from-slate-50 to-blue-50">

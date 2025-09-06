@@ -70,6 +70,8 @@ const Nmims = () => {
         <meta name="keywords" content="NMIMS Online, NMIMS Global, Online MBA NMIMS, BBA Online NMIMS, B.Com Online, Distance MBA India, UGC approved online courses, NAAC A++ university" />
         <meta name="author" content="NMIMS Global Online University" />
         <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         <link rel="canonical" href="https://www.unifostedu.com/nmims" />
 
         {/* Open Graph */}
         <meta property="og:title" content="NMIMS Online Degrees | Accredited UG & PG Programs" />
@@ -126,28 +128,28 @@ const Nmims = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-full flex items-center justify-center mx-auto mb-4">
                 <FaUsers className="w-8 h-8 text-[#001e3c]" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Students</h3>
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">Students</h2>
               <p className="text-[#00ffe0] font-bold text-lg">1.25L+</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-full flex items-center justify-center mx-auto mb-4">
                 <FaGlobe className="w-8 h-8 text-[#001e3c]" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Cities</h3>
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">Cities</h2>
               <p className="text-[#00ffe0] font-bold text-lg">600+</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-full flex items-center justify-center mx-auto mb-4">
                 <FaAward className="w-8 h-8 text-[#001e3c]" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Accreditation</h3>
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">Accreditation</h2>
               <p className="text-[#00ffe0] font-bold text-lg">NAAC A++</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-full flex items-center justify-center mx-auto mb-4">
                 <FaStar className="w-8 h-8 text-[#001e3c]" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Rating</h3>
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">Rating</h2>
               <p className="text-[#00ffe0] font-bold text-lg">4.7/5</p>
             </div>
           </div>
@@ -157,9 +159,9 @@ const Nmims = () => {
       {/* Undergraduate Programs */}
       <section className="py-16 px-6 bg-gray-50 font-[Inter]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-[#001e3c] font-[Poppins] mb-12">
+          <h3 className="text-4xl font-bold text-center text-[#001e3c] font-[Poppins] mb-12">
             Undergraduate Programs
-          </h2>
+          </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {ugCourses.map((course, idx) => (
               <EnquireCard key={idx} {...course} universityName="NMIMS" />
@@ -171,9 +173,9 @@ const Nmims = () => {
       {/* Postgraduate Programs */}
       <section className="py-16 px-6 bg-white font-[Inter]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-[#001e3c] font-[Poppins] mb-12">
+          <h3 className="text-4xl font-bold text-center text-[#001e3c] font-[Poppins] mb-12">
             Postgraduate Programs
-          </h2>
+          </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {pgCourses.map((course, idx) => (
               <EnquireCard key={idx} {...course} universityName="NMIMS" />

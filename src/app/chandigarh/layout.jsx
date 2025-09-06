@@ -7,6 +7,9 @@ export const metadata = {
     description: "Explore online undergraduate and postgraduate programs offered by Chandigarh University Online, a NAAC A++ accredited university.",
     images: ["/images/chandigarh.png"],
   },
+  alternates: {
+    canonical: "https://unifostedu.com/cu",
+  },
 };
 
 export default function ChandigarhLayout({ children }) {

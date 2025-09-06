@@ -7,6 +7,9 @@ export const metadata = {
     description: "Explore online undergraduate and postgraduate programs offered by Manipal University Online, a NAAC A++ accredited university.",
     images: ["/images/manipallogo.jpg"],
   },
+  alternates: {
+    canonical: "https://unifostedu.com/manipal",
+  },
 };
 
 export default function ManipalLayout({ children }) {

@@ -51,6 +51,7 @@ function SearchContent() {
         />
         <meta name="keywords" content="online courses, universities, MBA, BBA, UniFost, admission, distance learning" />
         <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://unifostedu.com/search" />
         <meta property="og:title" content={query ? `Search results for "${query}"` : 'Search Courses & Universities'} />
         <meta
           property="og:description"
@@ -62,6 +63,7 @@ function SearchContent() {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://yourdomain.com/search?query=${query}`} />
+        
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-20">
@@ -87,7 +89,7 @@ function SearchContent() {
                 <div key={index} className="bg-white rounded-xl shadow-lg p-6">
                   <div className="flex items-start justify-between">
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{result.title}</h3>
+                      <h2 className="text-xl font-semibold text-gray-900 mb-2">{result.title}</h2>
                       <p className="text-gray-600 mb-4">{result.description}</p>
                       <span className="bg-[#00ffe0] text-[#001e3c] px-3 py-1 rounded-full text-sm font-semibold">
                         {result.type}

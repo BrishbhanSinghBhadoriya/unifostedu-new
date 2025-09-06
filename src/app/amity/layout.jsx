@@ -7,6 +7,9 @@ export const metadata = {
     description: "Explore online undergraduate and postgraduate programs offered by Amity University Online, a NAAC A++ accredited university.",
     images: ["/images/amitylogo.jpg"],
   },
+    alternates: {
+    canonical: "https://unifostedu.com/amity",
+  },
 };
 
 export default function AmityLayout({ children }) {

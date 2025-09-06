@@ -225,6 +225,8 @@ const Amity = () => {
         <meta name="robots" content="index, follow" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://www.unifostedu.com/amity" />
+
         {/* Open Graph / Social Sharing */}
         <meta property="og:title" content="Amity University Online Programs | Fees & Admission" />
         <meta property="og:description" content="Explore online UG & PG programs from Amity University. Check fees, eligibility, specializations and enquire now." />

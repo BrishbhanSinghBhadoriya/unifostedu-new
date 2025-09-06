@@ -7,6 +7,9 @@ export const metadata = {
     description: "Explore online undergraduate and postgraduate programs offered by UPES Online, a NAAC A++ accredited university.",
     images: ["/images/upes.png"],
   },
+    alternates: {
+    canonical: "https://unifostedu.com/upes",
+  },
 };
 
 export default function UPESLayout({ children }) {

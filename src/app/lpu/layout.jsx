@@ -7,6 +7,9 @@ export const metadata = {
     description: "Explore online undergraduate and postgraduate programs offered by LPU Online, NAAC A++ accredited. Flexible and career-focused education.",
     images: ["/images/lpu.png"],
   },
+    alternates: {
+    canonical: "https://unifostedu.com/lpu",
+  },
 };
 
 export default function LPULayout({ children }) {

@@ -7,6 +7,9 @@ export const metadata = {
     description: "Explore online undergraduate and postgraduate programs offered by Jain University Online, a NAAC A++ accredited university in Bengaluru.",
     images: ["/images/jain.png"],
   },
+  alternates: {
+    canonical: "https://unifostedu.com/jain",
+  },
 };
 
 export default function JainLayout({ children }) {

@@ -7,6 +7,9 @@ export const metadata = {
     description: "Explore our comprehensive list of top online universities and colleges. Find the best accredited institutions for your online degree programs.",
     images: ["/images/uni.jpg"],
   },
+    alternates: {
+    canonical: "https://unifostedu.com/listofcollege",
+  },
 };
 
 export default function ListOfCollegeLayout({ children }) {
