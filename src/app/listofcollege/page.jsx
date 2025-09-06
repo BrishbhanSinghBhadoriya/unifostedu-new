@@ -130,7 +130,7 @@ export default function ListofCollege() {
                 <div className="flex items-center mb-4">
                   <Image width={100} height={100} src={college.logo} alt={`${college.name} logo`} className="w-16 h-16 object-contain rounded-lg mr-4" />
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900">{college.name}</h3>
+                    <h2 className="text-lg font-semibold text-gray-900">{college.name}</h2>
                     <p className="text-sm text-gray-600">{college.location}</p>
                   </div>
                 </div>
@@ -145,7 +145,7 @@ export default function ListofCollege() {
                 <p className="text-gray-600 text-sm mb-4">{college.description}</p>
 
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-700 mb-2">Available Courses:</h4>
+                  <h3 className="text-sm font-semibold text-gray-700 mb-2">Available Courses:</h3>
                   <div className="flex flex-wrap gap-2">
                     {college.courses.map((course, courseIndex) => (
                       <span 

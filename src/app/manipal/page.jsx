@@ -94,7 +94,8 @@ const Manipal = () => {
         <meta name="keywords" content="Manipal Online, Manipal University Jaipur, MUJ Online, BBA Online, BCA Online, B.Com Online, MBA Online, MCA Online, M.Com Online, MA Online, Online Degrees India, Distance Learning, UGC Approved, AICTE Approved" />
         <meta name="author" content="Manipal University Online" />
         <meta name="robots" content="index, follow" />
-
+         <link rel="canonical" href="https://unifostedu.com/manipal" />
+         
         {/* Open Graph */}
         <meta property="og:title" content="Manipal University Online | Accredited Online Degrees" />
         <meta property="og:description" content="Globally recognized online undergraduate and postgraduate programs with flexible, industry-relevant learning." />

@@ -7,6 +7,9 @@ export const metadata = {
     description: "Explore online undergraduate and postgraduate programs offered by NMIMS Online, a NAAC A++ accredited university.",
     images: ["/images/nmims.png"],
   },
+    alternates: {
+    canonical: "https://unifostedu.com/nmims",
+  },
 };
 
 export default function NMIMSLayout({ children }) {

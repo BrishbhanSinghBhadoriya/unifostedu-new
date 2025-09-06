@@ -7,6 +7,9 @@ export const metadata = {
     description: "Book a free demo session with our education experts. Get personalized guidance for your online degree journey.",
     images: ["/images/uni.jpg"],
   },
+   alternates: {
+    canonical: "https://www.unifost.com/bookdemo",
+  },
 };
 
 export default function BookDemoLayout({ children }) {

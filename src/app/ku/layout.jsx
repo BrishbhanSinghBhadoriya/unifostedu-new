@@ -7,6 +7,9 @@ export const metadata = {
     description: "Explore online undergraduate and postgraduate programs offered by Kurukshetra University Online, NAAC A++ accredited, Haryana, India.",
     images: ["/images/ku.jpg"],
   },
+   alternates: {
+    canonical: "https://unifostedu.com/ku",
+  },
 };
 
 export default function KULayout({ children }) {

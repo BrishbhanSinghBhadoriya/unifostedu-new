@@ -7,6 +7,9 @@ export const metadata = {
     description: "Explore Amity University online programs, courses, fees, and admission details. Apply for MBA, BBA, MCA, BCA online degrees with UGC approval.",
     images: ["/images/amitylogo.jpg"],
   },
+    alternates: {
+    canonical: "https://unifostedu.com/amity",
+  },
 };
 
 export default function AmityLayout({ children }) {

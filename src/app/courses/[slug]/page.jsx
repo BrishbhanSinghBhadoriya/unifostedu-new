@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
   
   const courseData = {
     'mba-online': {
-      title: 'Online MBA Programs in India | Top Universities & Specializations | UNIFOST',
+      title: 'Online MBA Programs in India | Top Specializations | UNIFOST',
       description: 'Compare India\'s leading UGC-approved online MBA programs with flexible schedules and career-focused specializations. Get expert guidance for MBA admissions from top universities like Amity, Manipal, NMIMS, and more.',
       keywords: ['Online MBA India', 'Online MBA Programs', 'MBA Distance Learning', 'UGC Approved MBA', 'MBA Specializations', 'Online Business Administration', 'MBA Career Guidance'],
       courseType: 'Master of Business Administration',
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }) {
       level: 'Postgraduate'
     },
     'mca-online': {
-      title: 'Online MCA Programs in India | Computer Applications Master\'s Degree | UNIFOST',
+      title: 'Online MCA Programs in India | UNIFOST',
       description: 'Advance your tech career with industry-aligned online MCA programs from top Indian universities. Specializations in AI, Data Science, Cybersecurity, and more. Expert guidance for MCA admissions.',
       keywords: ['Online MCA India', 'Online MCA Programs', 'MCA Distance Learning', 'Computer Applications Master', 'MCA Specializations', 'Online Tech Education', 'MCA Career Guidance'],
       courseType: 'Master of Computer Applications',
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }) {
       level: 'Postgraduate'
     },
     'bba-online': {
-      title: 'Online BBA Programs in India | Bachelor of Business Administration | UNIFOST',
+      title: "Online BBA Programs in India | UNIFOST",
       description: 'Compare India\'s leading UGC-approved online BBA programs designed for aspiring business professionals. Get expert guidance for BBA admissions from top universities.',
       keywords: ['Online BBA India', 'Online BBA Programs', 'BBA Distance Learning', 'Bachelor Business Administration', 'BBA Specializations', 'Online Business Education', 'BBA Career Guidance'],
       courseType: 'Bachelor of Business Administration',
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }) {
       level: 'Undergraduate'
     },
     'bca-online': {
-      title: 'Online BCA Programs in India | Bachelor of Computer Applications | UNIFOST',
+      title: "Online BCA Programs in India | UNIFOST",
       description: 'Build a solid foundation in computer science, programming, and software development with flexible online BCA programs from top Indian universities.',
       keywords: ['Online BCA India', 'Online BCA Programs', 'BCA Distance Learning', 'Bachelor Computer Applications', 'BCA Specializations', 'Online Computer Science', 'BCA Career Guidance'],
       courseType: 'Bachelor of Computer Applications',
@@ -62,7 +62,7 @@ export async function generateMetadata({ params }) {
       level: 'Undergraduate'
     },
     'bcom-online': {
-      title: 'Online B.Com Programs in India | Bachelor of Commerce | UNIFOST',
+      title: 'Online B.Com Programs in India | UNIFOST',
       description: 'Build strong fundamentals in accounting, finance, taxation, and business with flexible UGC-approved online B.Com programs from top Indian universities.',
       keywords: ['Online BCom India', 'Online BCom Programs', 'BCom Distance Learning', 'Bachelor of Commerce', 'BCom Specializations', 'Online Commerce Education', 'BCom Career Guidance'],
       courseType: 'Bachelor of Commerce',
@@ -70,7 +70,7 @@ export async function generateMetadata({ params }) {
       level: 'Undergraduate'
     },
     'ba-online': {
-      title: 'Online BA Programs in India | Bachelor of Arts | UNIFOST',
+      title: 'Online BA Programs in India | UNIFOST',
       description: 'Build strong foundations in humanities and social sciences with flexible UGC-approved online BA programs from top Indian universities.',
       keywords: ['Online BA India', 'Online BA Programs', 'BA Distance Learning', 'Bachelor of Arts', 'BA Specializations', 'Online Humanities Education', 'BA Career Guidance'],
       courseType: 'Bachelor of Arts',
@@ -78,7 +78,7 @@ export async function generateMetadata({ params }) {
       level: 'Undergraduate'
     },
     'bajmc-online': {
-      title: 'Online BAJMC Programs in India | Journalism & Mass Communication | UNIFOST',
+      title: 'Online BA Journalism & Mass Communication| UNIFOST',
       description: 'Launch your media career with comprehensive online BAJMC covering journalism, digital media, PR, advertising, and production with hands-on projects.',
       keywords: ['Online BAJMC India', 'Online BAJMC Programs', 'BAJMC Distance Learning', 'Journalism Mass Communication', 'BAJMC Specializations', 'Online Media Education', 'BAJMC Career Guidance'],
       courseType: 'Bachelor of Arts in Journalism & Mass Communication',
@@ -86,7 +86,7 @@ export async function generateMetadata({ params }) {
       level: 'Undergraduate'
     },
     'mcom-online': {
-      title: 'Online M.Com Programs in India | Master of Commerce | UNIFOST',
+      title: 'Online M.Com Programs in India | UNIFOST',
       description: 'Deepen your expertise in commerce, accounting, and finance with flexible online M.Com programs from top Indian universities.',
       keywords: ['Online MCom India', 'Online MCom Programs', 'MCom Distance Learning', 'Master of Commerce', 'MCom Specializations', 'Online Commerce Master', 'MCom Career Guidance'],
       courseType: 'Master of Commerce',
@@ -94,7 +94,7 @@ export async function generateMetadata({ params }) {
       level: 'Postgraduate'
     },
     'ma-online': {
-      title: 'Online MA Programs in India | Master of Arts | UNIFOST',
+      title: 'Online MA Programs in India | UNIFOST',
       description: 'Explore humanities and social sciences with flexible online MA degrees from top Indian universities. Specializations in English, Psychology, Sociology, and more.',
       keywords: ['Online MA India', 'Online MA Programs', 'MA Distance Learning', 'Master of Arts', 'MA Specializations', 'Online Humanities Master', 'MA Career Guidance'],
       courseType: 'Master of Arts',
@@ -102,7 +102,7 @@ export async function generateMetadata({ params }) {
       level: 'Postgraduate'
     },
     'majmc-online': {
-      title: 'Online MAJMC Programs in India | Journalism & Mass Communication Master\'s | UNIFOST',
+      title: 'Online MA Journalism & Mass Communication | UNIFOST',
       description: 'Master journalism and mass communication with industry-focused curricula, practical projects, and expert mentorship from top online universities.',
       keywords: ['Online MAJMC India', 'Online MAJMC Programs', 'MAJMC Distance Learning', 'Journalism Mass Communication Master', 'MAJMC Specializations', 'Online Media Master', 'MAJMC Career Guidance'],
       courseType: 'Master of Arts in Journalism & Mass Communication',
@@ -110,7 +110,7 @@ export async function generateMetadata({ params }) {
       level: 'Postgraduate'
     },
     'msc-online': {
-      title: 'Online MSc Programs in India | Master of Science | UNIFOST',
+      title: 'Online MSc Programs in India | UNIFOST',
       description: 'Advance your scientific career with specialized online MSc programs in Computer Science, Data Science, Mathematics, and more from top Indian universities.',
       keywords: ['Online MSc India', 'Online MSc Programs', 'MSc Distance Learning', 'Master of Science', 'MSc Specializations', 'Online Science Master', 'MSc Career Guidance'],
       courseType: 'Master of Science',
@@ -317,14 +317,14 @@ export default async function CoursePage({ params }) {
                   <div className="w-16 h-16 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-full flex items-center justify-center mx-auto mb-4">
                     <FaClock className="w-8 h-8 text-[#001e3c]" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Duration</h3>
+                  <h2 className="text-xl font-semibold text-gray-900 mb-2">Duration</h2>
                   <p className="text-[#00ffe0] font-bold text-lg">{course.duration}</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-full flex items-center justify-center mx-auto mb-4">
                     <FaMoneyBillWave className="w-8 h-8 text-[#001e3c]" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Fee Range</h3>
+                  <h2 className="text-xl font-semibold text-gray-900 mb-2">Fee Range</h2>
                   <p className="text-[#00ffe0] font-bold text-lg">{course.fee}</p>
                 </div>
                 <div className="text-center">
@@ -334,7 +334,7 @@ export default async function CoursePage({ params }) {
                    <h3 className="text-xl font-semibold text-gray-900 mb-2">NIRF</h3>
                   <p className="text-[#00ffe0] font-bold text-lg">{course.NIRF}</p>
                 
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Eligibility</h3>
+                  <h2 className="text-xl font-semibold text-gray-900 mb-2">Eligibility</h2>
                   <p className="text-[#00ffe0] font-bold text-lg">{course.eligibility}</p>
                 </div>
               </div>
@@ -356,10 +356,10 @@ export default async function CoursePage({ params }) {
                 </Card>
 
                 <Card className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                  <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
                     <FaUniversity className="w-5 h-5 text-[#00ffe0] mr-2" />
                     Why Choose Online {course.title}?
-                  </h3>
+                  </h2>
                   <ul className="space-y-3">
                     <li className="flex items-center">
                       <span className="text-[#00ffe0] mr-3">✓</span>

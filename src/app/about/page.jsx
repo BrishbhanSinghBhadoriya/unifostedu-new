@@ -12,7 +12,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
  const metadata = {
-  title: "About UNIFOST | India's Leading EdTech Platform for Online Education",
+  title: "UNIFOST | Online Education & Career Counseling Platform",
   description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees, career counseling, and personalized guidance. Discover our mission to transform education.",
   keywords: "About UNIFOST, EdTech Platform India, Online Education Company, Career Counseling Services, University Partner Network, Education Technology India, Online University Degrees, Student Guidance Platform, Educational Innovation India",
   openGraph: {

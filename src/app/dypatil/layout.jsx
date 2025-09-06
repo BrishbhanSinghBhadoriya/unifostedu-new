@@ -7,6 +7,9 @@ export const metadata = {
     description: "Explore online undergraduate and postgraduate programs offered by Dr. DY Patil University Online, a NAAC A++ accredited university.",
     images: ["/images/dypatil.png"],
   },
+  alternates: {
+    canonical: "https://unifostedu.com/dypatil",
+  },
 };
 
 export default function DYPATILLayout({ children }) {
