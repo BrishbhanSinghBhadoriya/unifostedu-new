@@ -206,19 +206,6 @@ const Amity = () => {
   return (
     <>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-         <Head>
-        <title>Amity University Online Programs | Fees & Admission</title>
-        <meta name="description" content="Explore online UG & PG programs from Amity University. Check fees, eligibility, specializations and enquire now." />
-        <meta name="keywords" content="Amity Online University, BBA Online, MBA Online, MCA Online, Accredited Online Degrees, Online Courses India, " />
-        <meta name="robots" content="index, follow" />
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* Open Graph / Social Sharing */}
-        <meta property="og:title" content="Amity University Online Programs | Fees & Admission" />
-        <meta property="og:description" content="Explore online UG & PG programs from Amity University. Check fees, eligibility, specializations and enquire now." />
-        <meta property="og:image" content="/images/amitypic.png" />
-        <meta property="og:type" content="website" />
-      </Head>
       {/* Hero Section */}
       <section className="bg-white-100 py-16 px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
