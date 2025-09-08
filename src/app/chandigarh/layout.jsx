@@ -8,7 +8,7 @@ export const metadata = {
     images: ["/images/chandigarh.png"],
   },
   alternates: {
-    canonical: "https://unifostedu.com/cu",
+    canonical: "https://unifostedu.com/chandigarh",
   },
 };
 
