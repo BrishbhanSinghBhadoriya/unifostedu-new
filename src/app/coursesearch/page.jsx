@@ -42,7 +42,7 @@ export default function CourseSearch() {
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
             >
               <div className="flex justify-between items-start mb-4">
-                <h2 className="text-lg font-semibold text-gray-900">{course.title}</h2>
+                <h2 className="text-lg font-semibold text-gray-900">{course.title}</h2  >
                 <span className="bg-[#00ffe0] text-[#001e3c] px-2 py-1 rounded-full text-xs font-semibold">
                   {course.tag}
                 </span>
