@@ -16,7 +16,7 @@ export const metadata = {
     canonical: "https://unifostedu.com/about",
   },
   openGraph: {
-    title: "About UNIFOST | India's Leading EdTech Platform for Online Education",
+    title: "About UNIFOST | India’s Leading Online Education Platform",
     description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees, career counseling, and personalized guidance.",
     url: "https://unifostedu.com/about",
     siteName: "UNIFOST",
