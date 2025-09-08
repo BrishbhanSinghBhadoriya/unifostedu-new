@@ -103,7 +103,7 @@ export default function WorkflowRoadmap({ onGetStartedClick }) {
   }, []);
 
   return (
-    <section className="py-12 md:py-16 lg:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
+    <section className="mt-8 sm:mt-12 lg:mt-16 py-12 md:py-16 lg:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-60 md:w-80 h-60 md:h-80 bg-gradient-to-br from-cyan-200 to-blue-300 rounded-full opacity-20 blur-3xl" />

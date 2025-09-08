@@ -475,8 +475,8 @@ const Landing = () => {
             </div>
           </div>
 
-          {/* Enhanced Dots - Responsive positioning */}
-          <div className="absolute inset-x-0 bottom-1 sm:bottom-4 md:bottom-6 lg:bottom-8 flex items-center justify-center gap-2 sm:gap-3">
+          {/* Enhanced Dots - Hidden as requested */}
+          <div className="hidden absolute inset-x-0 bottom-1 sm:bottom-4 md:bottom-6 lg:bottom-8 flex items-center justify-center gap-2 sm:gap-3">
             {heroSlides.map((_, i) => (
               <button
                 key={i}

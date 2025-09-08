@@ -9,11 +9,10 @@ import { Toaster as SonnerToaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
-
-
 export const metadata = {
   metadataBase: new URL('https://unifostedu.com'),
-  description: "Unifost",
+  title: "UNIFOST - Online University Degrees & Career Counseling",
+  description: "UniFost is a premier EdTech platform helping students choose the right path through online education, expert counseling, and demo sessions.",
   keywords: [
     "Online University Degree",
     "Career Counseling Online",
@@ -73,8 +72,6 @@ export const metadata = {
     "Online PG Diploma Colleges in India",
     "Online PG Certificate Colleges in India",
     "Online PG Degree Colleges in India",
-    "Online PG Diploma Colleges in India",
-    "Online PG Certificate Colleges in India",
     "UGC-DEB Accredited Universities",
     "UGC-DEB Accredited Universities",
     "Career Counseling Online",
@@ -121,10 +118,6 @@ export const metadata = {
     "Online Chandigarh",
     "Online OP Jindal",
     "Online JMI"
-    
-    
-   
-    
   ],
   robots: {
     index: true,
@@ -160,15 +153,19 @@ export default function RootLayout({ children }) {
         
         {/* Favicon and app icons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.ico"  />
+        <link rel="icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
-        <link rel="icon" type="image/png" size  s="16x16" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico" />
+        
+        {/* Bookmark logo for social sharing and bookmarks */}
+        <link rel="icon"  href="/favicon.ico" />
+        
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
-        <meta name="msapplication-TileImage" content="/favicon.ico" />
+        <meta name="msapplication-TileImage" content="/bookmarklogo.png" />
         <meta name="theme-color" content="#001e3c" />
         
         {/* Organization Schema */}
