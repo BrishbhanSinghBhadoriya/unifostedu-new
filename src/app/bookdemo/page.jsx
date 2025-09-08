@@ -74,9 +74,9 @@ export default function BookDemo() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-20">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Book Your <span className="text-[#00ffe0]">Demo Session</span>
-          </h2>
+          </h1>
           <p className="text-xl text-gray-600">
             Experience online learning firsthand with a free demo session from our partner universities.
           </p>

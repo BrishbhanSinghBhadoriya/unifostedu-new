@@ -1,11 +1,15 @@
 export const metadata = {
-  title: "Search Courses & Universities | Find Your Perfect Online Degree | UNIFOST",
-  description: "Search and explore top online universities and courses. Discover MBA, BBA, MCA, BCA, and more programs with UNIFOST. Find the perfect online degree for your career goals.",
-  keywords: "Search Courses, Online Universities, MBA Online, BBA Online, MCA Online, BCA Online, Online Degree Search, University Search, Course Finder, Online Education Search",
+  title: "Top Online Courses & University| MBA,BBA,MCA & More| UNIFOST",
+  description: "Search and explore leading online universities and courses with UNIFOST. Discover programs like MBA, BBA, MCA, BCA, and more to find the perfect online degree to achieve your career goals.",
+  keywords: "Online Courses, University Search, MBA Online, BBA Online, MCA Online, BCA Online, Online Degree Finder, Educational Programs, Career-Oriented Courses",
   openGraph: {
-    title: "Search Courses & Universities | Find Your Perfect Online Degree | UNIFOST",
-    description: "Search and explore top online universities and courses. Discover MBA, BBA, MCA, BCA, and more programs with UNIFOST.",
+    title: "Top Online Courses & University| MBA,BBA,MCA & More| UNIFOST",
+    description: "Search and explore leading online universities and courses with UNIFOST. Find the ideal program for your career goals.",
     images: ["/images/uni.jpg"],
+    url: "https://unifostedu.com/search", 
+  },
+  alternates: {
+    canonical: "https://unifostedu.com/search", 
   },
 };
 
