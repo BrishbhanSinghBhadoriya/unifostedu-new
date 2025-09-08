@@ -120,9 +120,9 @@ const Lpu = () => {
 
       <section className="py-16 bg-white px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-[#003b59] font-[Poppins] mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-[#003b59] font-[Poppins] mb-6">
             LPU Online Degree Programs
-          </h1>
+          </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             Explore undergraduate and postgraduate online degree programs from LPU. Experience quality, flexibility, and career-focused education from one of India's top NAAC A++ accredited universities.
           </p>

@@ -203,9 +203,9 @@ const Footer = () => {
               <div className="lg:col-span-3 group">
                 <div className="h-full bg-white/5 backdrop-blur-xl p-6 rounded-2xl shadow-xl border border-white/10 hover:border-white/20 transition-all duration-300">
                   <div className="text-center mb-6">
-                    <h1 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent mb-3 tracking-tight">
+                    <p className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent mb-3 tracking-tight">
                       UNIFOST
-                    </h1>
+                    </p>
                     <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 mx-auto rounded-full"></div>
                   </div>
                   

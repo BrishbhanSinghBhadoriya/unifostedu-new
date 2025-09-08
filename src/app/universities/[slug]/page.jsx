@@ -86,8 +86,19 @@ export default async function UniversityPage({ params }) {
     notFound();
   }
 
+  // Build unique metadata for title and description
+  const pageTitle = `${university.name} | Online Programs, Fees, Admission & Highlights`;
+  const pageDescription = `${university.name}: Explore online programs (${university.courses.join(', ')}), fees ${university.fee}, NAAC/UGC status, location ${university.location}, established ${university.established}.`;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-20">
+      <head>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content={university.logo} />
+      </head>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <div className="flex items-center mb-6">
