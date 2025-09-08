@@ -23,7 +23,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription } from "@/components/ui/dialog";
 import EnquiryForm from "@/components/EnquiryForm";
 import FAQ from "@/components/FAQ";
 
@@ -277,31 +277,33 @@ const Landing = () => {
       <section className="relative text-white overflow-hidden">
         <div className="relative w-full">
           {/* Slides - Responsive aspect ratio */}
-          <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[85vh] bg-[#001e3c] overflow-hidden">
+          <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[85vh] min-h-[320px] bg-[#001e3c] overflow-hidden">
             {heroSlides.map((s, idx) => (
               <motion.div
                 key={idx}
-                className={`absolute inset-0 transition-all duration-1000 ${idx === slide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
+                className={`absolute inset-0 h-full transition-all duration-1000 ${idx === slide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
                 initial={{ opacity: 0, scale: 1.1 }}
                 animate={{ opacity: idx === slide ? 1 : 0, scale: idx === slide ? 1 : 1.06 }}
                 transition={{ duration: 0.8 }}
               >
-                <Image
-                  src={s.src}
-                  alt={`${s.title} – ${s.subtitle} | Online University Degree guidance`}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
-                  className="object-cover object-center"
-                  style={{
-                    objectFit: 'cover',
-                    objectPosition: 'center top'
-                  }}
-                  priority={idx === 0}
-                  loading={idx === 0 ? "eager" : "lazy"}
-                  decoding={idx === 0 ? "auto" : "async"}
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c]/60 via-[#001e3c]/40 to-transparent sm:from-[#001e3c]/90 sm:via-[#001e3c]/75" />
+                <div className="relative h-full w-full min-h-[320px]">
+                  <Image
+                    src={s.src}
+                    alt={`${s.title} – ${s.subtitle} | Online University Degree guidance`}
+                    width={1920}
+                    height={1080}
+                    sizes="100vw"
+                    className="absolute inset-0 h-full w-full object-cover object-center"
+                    style={{
+                      objectFit: 'cover',
+                      objectPosition: 'center top'
+                    }}
+                    priority={idx === 0}
+                    loading={idx === 0 ? "eager" : "lazy"}
+                    decoding={idx === 0 ? "auto" : "async"}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c]/60 via-[#001e3c]/40 to-transparent sm:from-[#001e3c]/90 sm:via-[#001e3c]/75" />
+                </div>
               </motion.div>
             ))}
           </div>
@@ -320,9 +322,9 @@ const Landing = () => {
                   <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-semibold mb-1 sm:mb-3 leading-tight text-white tracking-tight">
                     {heroSlides[slide].title}
                   </h1>
-                  <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium mb-3 sm:mb-4 text-cyan-200">
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium mb-3 sm:mb-4 text-cyan-200">
                     {heroSlides[slide].subtitle}
-                  </p>
+                  </h2>
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-100/90 mb-5 sm:mb-6 leading-relaxed">
                     {heroSlides[slide].description}
                   </p>
@@ -399,12 +401,12 @@ const Landing = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center mb-6"
               >
-                <h2 className="text-2xl font-bold text-white mb-3 leading-tight">
+                <h1 className="text-2xl font-bold text-white mb-3 leading-tight">
                   {heroSlides[slide].title}
-                </h2>
-                <p className="text-lg font-medium mb-3 text-cyan-200">
+                </h1>
+                <h2 className="text-lg font-medium mb-3 text-cyan-200">
                   {heroSlides[slide].subtitle}
-                </p>
+                </h2>
                 <p className="text-sm text-white/90 mb-6 leading-relaxed px-2">
                   {heroSlides[slide].description}
                 </p>
@@ -475,8 +477,8 @@ const Landing = () => {
             </div>
           </div>
 
-          {/* Enhanced Dots - Hidden as requested */}
-          <div className="hidden absolute inset-x-0 bottom-1 sm:bottom-4 md:bottom-6 lg:bottom-8 flex items-center justify-center gap-2 sm:gap-3">
+          {/* Enhanced Dots - Responsive positioning */}
+          <div className="absolute inset-x-0 bottom-1 sm:bottom-4 md:bottom-6 lg:bottom-8 flex items-center justify-center gap-2 sm:gap-3">
             {heroSlides.map((_, i) => (
               <button
                 key={i}
@@ -494,16 +496,15 @@ const Landing = () => {
 
 
       {/* Workflow Roadmap */}
-      <div>
       <WorkflowRoadmap onGetStartedClick={() => openModal("getStarted")} />
-</div>
+
       {/* Services - SEO-optimized with CTAs */}
       <section className="py-14 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-10 sm:mb-14" data-aos="fade-up">
-            <h3 className="text-3xl sm:text-4xl font-semibold text-[#001e3c] mb-2">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#001e3c] mb-2">
               Career Counseling for Online UGC-Approved University Degrees
-            </h3>
+            </h2>
             <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-3"></div>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
               Best Career Planning Services with trusted EdTech Solutions in India
@@ -603,9 +604,9 @@ const Landing = () => {
             className="text-center mb-10 sm:mb-14"
             data-aos="fade-up"
           >
-            <h3 className="text-3xl sm:text-4xl md:text-4xl font-semibold tracking-tight text-[#001e3c] mb-2">
+            <h2 className="text-3xl sm:text-4xl md:text-4xl font-semibold tracking-tight text-[#001e3c] mb-2">
               UGC-Approved Online University Degrees: Top Programs & Universities
-            </h3>
+            </h2>
             <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-3 sm:mb-4"></div>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
               Explore curated online programs from leading universities.
@@ -739,9 +740,9 @@ const Landing = () => {
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-16" data-aos="fade-up">
-            <h3 className="text-4xl md:text-5xl font-bold text-[#1a365d] mb-3">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] mb-3">
               UGC-Approved Online University Degrees: Partner Universities
-            </h3>
+            </h2>
             <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-4"></div>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Choose from India's most prestigious online universities
@@ -886,9 +887,9 @@ const Landing = () => {
             className="text-center mb-8 sm:mb-12"
             data-aos="fade-up"
           >
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a365d] mb-3 sm:mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a365d] mb-3 sm:mb-4">
               Online University Degrees vs Traditional Campus: Complete Comparison
-            </h3>
+            </h2>
             <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-4"></div>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto px-4">
               Select up to 3 universities to compare fees, accreditation, placements and more
@@ -1058,9 +1059,9 @@ const Landing = () => {
             className="text-center mb-8 sm:mb-10"
             data-aos="fade-up"
           >
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#001e3c] mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#001e3c] mb-3 sm:mb-4">
               UGC-Approved Online University Degrees: Accreditation & Recognition
-            </h3>
+            </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
               We partner only with accredited and government-recognized institutions
             </p>
@@ -1092,9 +1093,9 @@ const Landing = () => {
             className="text-center mb-12 sm:mb-16"
             data-aos="fade-up"
           >
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#001e3c] mb-4 sm:mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#001e3c] mb-4 sm:mb-6">
               Career Counseling Services: Your Path to Success
-            </h3>
+            </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Experience the difference that personalized guidance makes in your educational journey
             </p>
@@ -1126,7 +1127,7 @@ const Landing = () => {
       {/* Study Cities */}
       <section className="bg-[#08223a] py-16 px-6 text-white overflow-hidden relative" data-aos="fade-up">
         <div className="max-w-7xl mx-auto text-center">
-          <h3 className="text-4xl md:text-5xl font-semibold text-white mb-6">UGC-Approved Online University Degrees: Study Cities Across India</h3>
+          <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">UGC-Approved Online University Degrees: Study Cities Across India</h2>
           <p className="text-blue-100 text-lg max-w-2xl mx-auto mb-12">Explore top universities offering online university degrees across India's major educational hubs with career counseling support.</p>
 
           <div className="overflow-hidden relative backdrop-blur-md rounded-2xl border border-white/20 p-6">
@@ -1224,6 +1225,9 @@ const Landing = () => {
                 {modalType === "videoCall" && "Book a Video Call"}
                 {modalType === "homeDemo" && "Book a Home Demo"}
               </DialogTitle>
+              <DialogDescription className="sr-only">
+                Fill the enquiry form below to submit your request.
+              </DialogDescription>
             </DialogHeader>
             <EnquiryForm
               onSubmitted={() => setShowEnquiryModal(false)}

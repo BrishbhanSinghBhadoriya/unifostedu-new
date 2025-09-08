@@ -12,7 +12,6 @@ import {
 } from 'react-icons/fa';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import EnquiryForm from '@/components/EnquiryForm';
-import { blogAPI } from '@/lib/axios';
 import Image from 'next/image';
 
 
@@ -52,23 +51,7 @@ const [modalType, setModalType] = useState();
   const [latestBlogs, setLatestBlogs] = useState([]);
   const [blogsLoading, setBlogsLoading] = useState(false);
 
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        setBlogsLoading(true);
-        const res = await blogAPI.getAll();
-        const list = res?.data?.blogs || res?.data?.data?.blogs || [];
-        const sorted = [...list].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-        setLatestBlogs(sorted.slice(0, 8));
-      } catch {
-        setLatestBlogs([]);
-      } finally {
-        setBlogsLoading(false);
-      }
-    };
-    fetchBlogs();
-  }, []);
-
+  
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
