@@ -38,22 +38,22 @@ const heroSlides = [
   },
   {
     src: "/slider/slider-2.webp",
-    alt: "Best platform for online universities and distance learning",
-    title: "Free Career Counseling for Online Degrees",
+    alt: "Professional career counseling for online university degrees selection",
+    title: "Career Counseling for Online University Degrees: Expert Guidance",
     subtitle: "Personalized Guidance • University Shortlisting • Application Help",
     description: "Get UGC-approved online university degrees with professional career counseling from education experts"
   },
   {
     src: "/slider/slider-3.webp",
-    alt: "Search and compare online MBA, BBA, MCA programs",
-    title: "Find the Best Online MBA, BBA, MCA & More",
+    alt: "UGC-approved online university degrees comparison and selection",
+    title: "UGC-Approved Online University Degrees: Top Programs & Universities",
     subtitle: "Compare Fees, Rankings, Placements in Minutes",
     description: "Find legitimate online university degrees with comprehensive career counseling and university comparison"
   },
   {
     src: "/slider/slider-4.webp",
-    alt: "Compare universities fees, ranking, courses with Unifost",
-    title: "Compare Universities: Fees, Rankings, Courses",
+    alt: "Online university degrees vs traditional campus comparison with career counseling",
+    title: "Online University Degrees vs Traditional Campus: Complete Comparison",
     subtitle: "Make a Confident Choice with UNIFOST",
     description: "Compare UGC-approved online university degrees with traditional programs and get expert career counseling"
   }
@@ -1049,8 +1049,6 @@ const Landing = () => {
           </div>
         </div>
       </section>
-
-      
 
       {/* Accreditation & Recognition - Responsive slider */}
       <section className="py-12 sm:py-16 bg-gradient-to-br from-slate-50 to-blue-50">
