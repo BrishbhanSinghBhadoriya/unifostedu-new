@@ -254,7 +254,7 @@ const Lpu = () => {
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
           <div className="flex-1">
-            <Image width={100} height={100} src="/images/lpu.png" alt="LPU Online Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <Image width={100} height={100} src="/images/lpu-certificate.jpg" alt="LPU Online Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
           </div>
           <div className="flex-1 text-white">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">

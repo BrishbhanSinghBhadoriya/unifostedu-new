@@ -8,7 +8,7 @@ export const metadata = {
     images: ["/images/uni.jpg"],
   },
    alternates: {
-    canonical: "https://www.unifost.com/bookdemo",
+    canonical: "https://unifostedu.com/bookdemo",
   },
 };
 
