@@ -59,35 +59,7 @@ function slugify(input) {
   return input.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
-export async function generateMetadata({ params }) {
-  const { slug } = params;
-
-  let university = universityData[slug];
-  if (!university) {
-    const all = Object.values(universityData);
-    university = all.find((u) => slugify(u.name) === slug);
-  }
-  if (!university) return {};
-
-  const pageTitle = `${university.name} | Online Programs, Fees, Admission & Highlights`;
-  const pageDescription = `${university.name}: Explore online programs (${university.courses.join(
-    ', '
-  )}), fees ${university.fee}, NAAC/UGC status, location ${university.location}, established ${university.established}.`;
-
-  return {
-    title: pageTitle,
-    description: pageDescription,
-    alternates: {
-      canonical: `https://www.unifost.com/university/${slug}`,
-    },
-    openGraph: {
-      title: pageTitle,
-      description: pageDescription,
-      images: [university.logo],
-      url: `https://www.unifost.com/university/${slug}`,
-    },
-  };
-}
+// (metadata is generated below; keeping a single generateMetadata export)
 
 export default async function UniversityPage({ params }) {
   const { slug } = params;
@@ -234,14 +206,26 @@ export async function generateMetadata({ params }) {
     title: pageTitle,
     description: pageDescription,
     alternates: {
-      canonical: `https://www.unifost.com/university/${slug}`,
+      canonical: `https://unifostedu.com/universities/${slug}`,
     },
     openGraph: {
       title: pageTitle,
       description: pageDescription,
       images: [university.logo],
-      url: `https://www.unifost.com/university/${slug}`,
+      url: `https://unifostedu.com/universities/${slug}`,
     },
   };
+}
+
+// Provide static params for export builds
+export function generateStaticParams() {
+  const params = [];
+  Object.keys(universityData).forEach((key) => {
+    params.push({ slug: key });
+    const u = universityData[key];
+    const slugified = slugify(u.name);
+    if (slugified !== key) params.push({ slug: slugified });
+  });
+  return params;
 }
 
