@@ -299,8 +299,9 @@ const Landing = () => {
                       objectPosition: 'center top'
                     }}
                     priority={idx === 0}
-                    loading={idx === 0 ? "eager" : "lazy"}
-                    decoding={idx === 0 ? "auto" : "async"}
+                    loading="eager"
+                    decoding="auto"
+                    unoptimized={true}
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c]/60 via-[#001e3c]/40 to-transparent sm:from-[#001e3c]/90 sm:via-[#001e3c]/75" />
                 </div>
@@ -401,9 +402,9 @@ const Landing = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center mb-6"
               >
-                <h1 className="text-2xl font-bold text-white mb-3 leading-tight">
+                {/* <h1 className="text-2xl font-bold text-white mb-3 leading-tight">
                   {heroSlides[slide].title}
-                </h1>
+                </h1> */}
                 <h2 className="text-lg font-medium mb-3 text-cyan-200">
                   {heroSlides[slide].subtitle}
                 </h2>

@@ -62,18 +62,21 @@ function SearchContent() {
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          {/* ✅ Intro Section */}
-          {!query && (
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Find <span className="text-[#00ffe0]">Courses & Universities</span>
-              </h1>
+          {/* ✅ Always render an H1 */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              {query 
+                ? <>Search Results for <span className="text-[#00ffe0]">"{query}"</span></>
+                : <>Find <span className="text-[#00ffe0]">Courses & Universities</span></>
+              }
+            </h1>
+            {!query && (
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Search through our extensive database of online programs, including MBA, BBA, MCA, BCA, and more.
                 Compare universities, admission details, and program fees in one place.
               </p>
-            </div>
-          )}
+            )}
+          </div>
 
           {/* ✅ Search Results */}
           {loading ? (
@@ -116,44 +119,42 @@ function SearchContent() {
           )}
 
           {/* ✅ Related Searches / FAQs */}
-         {/* ✅ Related Searches / FAQs */}
-<div className="mt-20">
-  <h2 className="text-2xl font-bold mb-4">Popular Searches</h2>
-  <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 text-blue-700">
-    <li><Link href="/courses/mba-online">MBA Online</Link></li>
-    <li><Link href="/courses/mca-online">MCA Online</Link></li>
-    <li><Link href="/courses/bca-online">BCA Online</Link></li>
-    <li><Link href="/universities/amity-university">Amity University</Link></li>
-    <li><Link href="/universities/manipal-university-online">Manipal University Online</Link></li>
-  </ul>
-</div>
+          <div className="mt-20">
+            <h2 className="text-2xl font-bold mb-4">Popular Searches</h2>
+            <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 text-blue-700">
+              <li><Link href="/courses/mba-online">MBA Online</Link></li>
+              <li><Link href="/courses/mca-online">MCA Online</Link></li>
+              <li><Link href="/courses/bca-online">BCA Online</Link></li>
+              <li><Link href="/universities/amity-university">Amity University</Link></li>
+              <li><Link href="/universities/manipal-university-online">Manipal University Online</Link></li>
+            </ul>
+          </div>
 
-{/* ✅ SEO Descriptive Section */}
-<div className="mt-20 max-w-3xl mx-auto text-gray-700 leading-relaxed">
-  <h2 className="text-2xl font-bold mb-4">About UniFost Search</h2>
-  <p>
-    The UniFost course and university search tool is designed to help students and
-    professionals quickly explore accredited online programs. Our database includes
-    popular degrees such as MBA, BBA, MCA, and BCA, along with details about
-    universities like Amity, Manipal, and Jain. Each program listing highlights
-    admission requirements, course fees, and career prospects, making it easier for
-    you to compare options side by side.
-  </p>
-  <p className="mt-4">
-    Whether you are looking for a flexible MBA specialization in Finance, a career-
-    focused MCA in Data Science, or an affordable BBA program, UniFost provides
-    transparent information so you can make confident decisions. Our platform
-    emphasizes UGC-DEB approved universities to ensure that your chosen degree
-    carries both credibility and career value.
-  </p>
-  <p className="mt-4">
-    Use this page not only to search, but also to discover trending online degrees,
-    compare institutions, and explore the future of online education in India.
-    UniFost bridges the gap between students and top universities, guiding you
-    toward the right path for your professional growth.
-  </p>
-</div>
-
+          {/* ✅ SEO Descriptive Section */}
+          <div className="mt-20 max-w-3xl mx-auto text-gray-700 leading-relaxed">
+            <h2 className="text-2xl font-bold mb-4">About UniFost Search</h2>
+            <p>
+              The UniFost course and university search tool is designed to help students and
+              professionals quickly explore accredited online programs. Our database includes
+              popular degrees such as MBA, BBA, MCA, and BCA, along with details about
+              universities like Amity, Manipal, and Jain. Each program listing highlights
+              admission requirements, course fees, and career prospects, making it easier for
+              you to compare options side by side.
+            </p>
+            <p className="mt-4">
+              Whether you are looking for a flexible MBA specialization in Finance, a career-
+              focused MCA in Data Science, or an affordable BBA program, UniFost provides
+              transparent information so you can make confident decisions. Our platform
+              emphasizes UGC-DEB approved universities to ensure that your chosen degree
+              carries both credibility and career value.
+            </p>
+            <p className="mt-4">
+              Use this page not only to search, but also to discover trending online degrees,
+              compare institutions, and explore the future of online education in India.
+              UniFost bridges the gap between students and top universities, guiding you
+              toward the right path for your professional growth.
+            </p>
+          </div>
 
         </div>
       </div>

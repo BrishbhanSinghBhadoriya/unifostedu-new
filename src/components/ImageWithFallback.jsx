@@ -16,7 +16,17 @@ export default function ImageWithFallback({ src, alt, className }) {
   }
 
   return (
-    <Image width={100} height={100} src={src} alt={alt} className={className} onError={() => setHasError(true)} />
+    <Image 
+      width={500} 
+      height={300} 
+      src={src} 
+      alt={alt} 
+      className={className} 
+      onError={() => setHasError(true)}
+      unoptimized={true}
+      loading="eager"
+      decoding="auto"
+    />
   );
 }
 
