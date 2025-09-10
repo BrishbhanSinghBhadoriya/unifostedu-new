@@ -101,13 +101,17 @@ const Lpu = () => {
       <section className="py-16 bg-white px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2">
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
+            <h1 className="whitespace-nowrap  text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
                Lovely Professional University Online
             </h1><br />
             <p> <span className="font-semibold text-gray-700">Private University in Jalandhar, Punjab, India.</span><br /><br/></p>
             <p className="text-gray-700 text-lg">
-              Lovely Professional University (LPU) is a NAAC A++ accredited institution offering UGC-entitled online degree programs designed to provide flexible and quality education.<br /><br />
-              With over 30,000 students on campus and a strong focus on innovation, LPU Online brings the same academic excellence through its digital platform, making education accessible to learners across India.
+             Lovely Professional University (LPU) is a top-ranking university in India in various academic disciplines, ranked by NIRF. LPU Online is no different as it is one of the top online education providers in India.<br /><br />
+              
+             The university has various affiliations including recognition from University Grants Commission (UGC), All India Council for Technical Education (AICTE), and World Education Services (WES). The university has been ranked by NIRF, WURI, and The World University Rankings 2022. The quality of education this university provides is quite evident from its NAAC A++ grading.
+             <br /><br />
+            The university offers online UG and PG courses in the domains of Management, Computer Applications, Commerce, Arts, and Science. The curriculum for every course is industry oriente it has been designed by expert practitioners and experienced faculty. Apart from academic learning, the university conducts skilling classes conducted by a dedicated team of in-house professors.
+
             </p>
 
             

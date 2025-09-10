@@ -136,7 +136,7 @@ const [modalType, setModalType] = useState();
       </div>
 
       {/* Navbar */}
-      <div className={`bg-gradient-to-r from-[#001e3c] to-[#002e4d] text-white px-3 sm:px-4 py-3 sm:py-4 sticky top-0 z-50 backdrop-blur-md bg-opacity-70 shadow-md transition-all duration-300 ${
+      <div className={`bg-white text-gradient px-3 sm:px-4 py-3 sm:py-4 sticky top-0 z-50 backdrop-blur-md bg-opacity-70 shadow-md transition-all duration-300 ${
         scrolled ? 'py-2' : ''
       }`}>
         <div className="flex items-center justify-between w-full gap-3 sm:gap-4 lg:gap-6 flex-nowrap">
@@ -176,7 +176,7 @@ const [modalType, setModalType] = useState();
             <div className="relative">
               <button 
                 onClick={() => setMenuOpen(menuOpen === "explore" ? null : "explore")} 
-                className={`group flex items-center space-x-1 px-2 py-1 rounded-xl transition-all duration-300 text-white hover:bg-white/10 hover:text-[#00ffe0]`}>
+                className={`group flex items-center space-x-1 px-2 py-1 rounded-xl transition-all duration-300 text-black hover:bg-white/10 hover:text-[#00ffe0]`}>
                 <FaUniversity className="text-xs" />
                 <span className="font-semibold">University</span>
                 <FaChevronDown className={`text-xs transition-transform duration-300 ${menuOpen === "explore" ? 'rotate-180' : ''}`} />
@@ -212,7 +212,7 @@ const [modalType, setModalType] = useState();
             <div className="relative">
               <button
                 onClick={() => setMenuOpen(menuOpen === "blogs" ? null : "blogs")}
-                className={`group flex items-center space-x-1 px-2 py-1 rounded-xl transition-all duration-300 text-white hover:bg-white/10 hover:text-[#00ffe0]`}>
+                className={`group flex items-center space-x-1 px-2 py-1 rounded-xl transition-all duration-300 text-black hover:bg-white/10 hover:text-[#00ffe0]`}>
                 <FaBookOpen className="text-xs" />
                 <span className="font-semibold">Blogs</span>
                 <FaChevronDown className={`text-xs transition-transform duration-300 ${menuOpen === "blogs" ? 'rotate-180' : ''}`} />
@@ -275,7 +275,7 @@ const [modalType, setModalType] = useState();
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             />
-            <button onClick={handleSearch} className="text-sky-600 hover:text-sky-800 px-1">
+            <button onClick={handleSearch} className="text-black-600 hover:text-sky-800 px-1">
               <FaSearch className="text-xs" />
             </button>
           </div>
@@ -283,22 +283,22 @@ const [modalType, setModalType] = useState();
           {/* Contact Icons - Made more compact */}
           <div className="hidden md:flex md:text-[4rem] gap-1 lg:gap-2 items-center text-[#00ffe0]">
             <a href="tel:+919354735410" className="p-1 rounded-lg hover:bg-white/10 transition-all duration-300" title="Call us">
-              <FaPhoneAlt className="text-[3rem] lg:text-2xl hover:drop-shadow-md hover:text-cyan-300" />
+              <FaPhoneAlt className="text-[3rem] lg:text-2xl hover:drop-shadow-md hover:text-black-300" />
             </a>
             <a href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer" className="p-1 rounded-lg hover:bg-white/10 transition-all duration-300" title="WhatsApp">
-              <FaWhatsappSquare className="text-[3rem] lg:text-2xl hover:drop-shadow-md hover:text-cyan-300" />
+              <FaWhatsappSquare className="text-[3rem] lg:text-2xl hover:drop-shadow-md hover:text-black-300" />
             </a>
             <button onClick={() => openModal('videoCall')} className="p-1 rounded-lg hover:bg-white/10 transition-all duration-300" title="Book Demo">
-              <FaVideo className="text-[3rem] lg:text-2xl hover:drop-shadow-md hover:text-cyan-300" />
+              <FaVideo className="text-[3rem] lg:text-2xl hover:drop-shadow-md hover:text-black-300" />
             </button>
           </div>
 
           {/* Call/Email - Made more compact */}
           <div className="hidden lg:flex flex-col justify-center items-end text-xs ml-2">
-            <div className="flex items-center gap-1 text-[#e6faff] font-semibold">
-              <FaPhoneAlt className="text-[#00ffe0] text-xs" /> <span className="text-[#00ffe0]">+91 93547 35410</span>
+            <div className="flex items-center gap-1 text-black-600 font-semibold">
+              <FaPhoneAlt className="text-[#00ffe0] text-xs" /> <span className="text-black-600">+91 93547 35410</span>
             </div>
-            <div className="flex items-center gap-1 text-[#e6faff] font-semibold">
+            <div className="flex items-center gap-1 text-black-600 font-semibold">
               <FaEnvelope className="text-sky-400 text-xs" />
               <a href="mailto:info@unifostedu.com" className="underline hover:text-white text-xs">info@unifostedu.com</a>
             </div>
@@ -453,10 +453,8 @@ const [modalType, setModalType] = useState();
                     <FaPhoneAlt className="text-lg" />
                     <span>Call</span>
                   </a>
-                  <a  href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 p-3 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-xl text-[#001e3c] text-center font-bold text-sm hover:scale-105 transition">
-                  <FaWhatsapp className="text-lg text-green-600" />   {/* WhatsApp icon */}
-                   <span>WhatsApp</span>
-                  </a>
+                
+                 
                   <button onClick={() => { router.push('/bookdemo'); setMobileMenuOpen(false); }} 
                           className="flex flex-col items-center gap-2 p-3 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-xl text-[#001e3c] text-center font-bold text-sm hover:scale-105 transition">
                     <FaVideo className="text-lg" />
@@ -470,7 +468,7 @@ const [modalType, setModalType] = useState();
                     <FaPhoneAlt className="text-[#00ffe0] text-lg" />
                     <div>
                       <p className="text-xs text-white/70">Phone Number</p>
-                      <p className="font-semibold">+91 93547 35410</p>
+                      <p className="font-semibold">+91 7042867717</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 text-white">

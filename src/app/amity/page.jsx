@@ -211,7 +211,7 @@ const Amity = () => {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4 leading-snug font-[Poppins]">
-               Online Amity University: Complete Guide to Courses & Admission 2024
+               Online Amity University<p>(Courses,Fees,Admission Process)</p>
             </h1>
             <p> <span className="font-semibold text-gray-700">Private University in Noida, Uttar Pradesh, India.</span><br /><br/></p>
             <p className="text-gray-700 text-lg">

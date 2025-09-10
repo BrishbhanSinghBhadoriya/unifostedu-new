@@ -20,7 +20,7 @@ const targets = [
   'slider/slider-2.png',
   'slider/slider-3.png',
   'slider/slider-4.png',
-  'images/unilogo.png',
+  'images//favicon.ico',
   'images/university.png',
   'images/marshmallo1.jpg'
 ];
