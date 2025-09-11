@@ -140,7 +140,7 @@ const KU = () => {
             </p>
           </div>
           <div className="md:w-1/2">
-            <Image width={100} height={100} src="/images/ku.jpg" alt="Kurukshetra University" className="w-full rounded-xl shadow-lg" />
+            <Image width={100} height={100} loading='lazy' src="/images/ku.jpg" alt="Kurukshetra University" className="w-full rounded-xl shadow-lg" />
           </div>
         </div>
       </section>
@@ -229,10 +229,10 @@ const KU = () => {
           Recognized & Accredited By
         </h2>
         <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <Image width={100} height={100} src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/nirf.png" alt="NIRF" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/aiu.png" alt="AIU" className="h-16 object-contain" />
+          <Image width={100} height={100} loading='lazy' src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
+          <Image width={100} height={100} loading='lazy'src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
+          <Image width={100} height={100} loading='lazy'src="/images/nirf.png" alt="NIRF" className="h-16 object-contain" />
+          <Image width={100} height={100} loading='lazy'src="/images/aiu.png" alt="AIU" className="h-16 object-contain" />
         </div>
       </section>
 
@@ -279,7 +279,7 @@ const KU = () => {
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
           <div className="flex-1">
-            <Image width={100} height={100} src="/images/ku-certi.webp" alt="Kurukshetra University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <Image width={100} height={100} loading='lazy' src="/images/ku-certi.webp" alt="Kurukshetra University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
               
             
           </div>
@@ -315,16 +315,16 @@ const KU = () => {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} src="/images/company.png" alt="Company" className="h-12 object-contain" />
+              <Image width={100} height={100}loading="lazy" src="/images/company.png" alt="Company" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} src="/images/company1.png" alt="Microsoft" className="h-12 object-contain" />
+              <Image width={100} height={100}loading="lazy" src="/images/company1.png" alt="Microsoft" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} src="/images/company9.jpg" alt="Company 9" className="h-12 object-contain" />
+              <Image width={100} height={100}loading="lazy" src="/images/company9.jpg" alt="Company 9" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} src="/images/com10.png" alt="Company 10" className="h-12 object-contain" />
+              <Image width={100} height={100}loading="lazy" src="/images/com10.png" alt="Company 10" className="h-12 object-contain" />
             </div>
           </div>
         </div>

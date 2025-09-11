@@ -1,10 +1,10 @@
 RewriteEngine On
 
-# Force www to non-www redirect (canonical: https://unifostedu.com/)
+# Force www to non-www
 RewriteCond %{HTTP_HOST} ^www\.unifostedu\.com$ [NC]
 RewriteRule ^(.*)$ https://unifostedu.com/$1 [L,R=301]
 
-# University slug fixes - redirect broken university URLs to correct pages
+# University slug fixes
 Redirect 301 /universities/jain-university-online/ https://unifostedu.com/jain/
 Redirect 301 /universities/lovely-professional-university-online/ https://unifostedu.com/lpu/
 Redirect 301 /universities/university-of-petroleum-and-energy-studies-online/ https://unifostedu.com/upes/
@@ -15,13 +15,12 @@ Redirect 301 /universities/narsee-monjee-institute-of-management-studies-online/
 Redirect 301 /universities/amity-university-online/ https://unifostedu.com/amity/
 Redirect 301 /universities/manipal-university-online/ https://unifostedu.com/manipal/
 
-## Courses broken slugs - redirect to correct course pages
+# Courses broken slugs
 Redirect 301 /courses/m.com-online/ https://unifostedu.com/courses/mcom-online/
 Redirect 301 /courses/b.com-online/ https://unifostedu.com/courses/bcom-online/
 
-## Blog safe fallback - redirect to search page
+# Blog safe fallback
 Redirect 301 /blog/blog-page https://unifostedu.com/search/
 
-## Image redirects - redirect missing images to correct paths
+# Image redirects
 Redirect 301 /images/lpu.jpg https://unifostedu.com/images/lpu.png
-
