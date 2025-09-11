@@ -115,7 +115,7 @@ const Nmims = () => {
             </div>
           </div>
           <div className="md:w-1/2">
-            <Image width={100} height={100} src="/images/nmims.png" alt="NMIMS" className="rounded-xl shadow-2xl w-full" />
+            <Image width={100} height={100} loading="lazy" src="/images/nmims.png" alt="NMIMS" className="rounded-xl shadow-2xl w-full" />
           </div>
         </div>
       </section>
@@ -306,7 +306,7 @@ const Nmims = () => {
   <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
     {/* Certificate Image */}
     <div className="md:w-1/2">
-      <Image width={100} height={100} src="/images/nmims-certi.png" alt="NMIMS Certificate" className="rounded-lg shadow-lg w-full" />
+      <Image width={100} height={100} loading="lazy" src="/images/nmims-certi.png" alt="NMIMS Certificate" className="rounded-lg shadow-lg w-full" />
     </div>
 
     {/* Text Content */}
@@ -364,7 +364,7 @@ const Nmims = () => {
       
     ].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} src={src} alt="Company" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src={src} alt="Company" className="h-12 object-contain" />
             </div>
           ))}
         </div>

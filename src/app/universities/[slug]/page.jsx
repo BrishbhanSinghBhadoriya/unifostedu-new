@@ -82,6 +82,7 @@ export default async function UniversityPage({ params }) {
             <Image
               width={100}
               height={100}
+              loading="lazy"
               src={university.logo}
               alt={`${university.name} logo`}
               className="w-20 h-20 object-contain rounded-lg mr-6"

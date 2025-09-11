@@ -439,9 +439,13 @@ const UniversityLogoSlider = () => {
                   style={{ width: `${100 / itemsToShow}%` }}
                 >
                   <div className="h-24 w-full flex items-center justify-center px-2">
-                    <img
+                    <Image
                       src={university.logo}
                       alt={`${university.name} logo`}
+                      width={150}
+                      height={80}
+                      quality={70} // reduce size
+                      priority={false} 
                       className="max-h-14 max-w-full object-contain hover:scale-110 transition-transform duration-300"
                     />
                   </div>
@@ -562,7 +566,7 @@ const Landing = () => {
                   fill
                   priority={idx === 0}
                   sizes="100vw"
-                  className="object-contain"
+                  className="object-cover" 
                   style={{ objectPosition: "center" }}
                 />
                 {/* Enhanced Overlay - Responsive gradient */}

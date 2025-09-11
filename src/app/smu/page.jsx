@@ -141,7 +141,7 @@ const pgCourses = [
             </p>
           </div>
           <div className="md:w-1/2">
-            <Image width={100} height={100} src="/images/smu-uni.jpg" alt="Sikkim Manipal University" className="w-full rounded-xl shadow-lg" />
+            <Image width={100} height={100} loading="lazy" src="/images/smu-uni.jpg" alt="Sikkim Manipal University" className="w-full rounded-xl shadow-lg" />
               
           </div>
         </div>
@@ -235,9 +235,9 @@ const pgCourses = [
       <section className="bg-white py-12 px-4">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
         <div className="flex flex-wrap justify-center items-center gap-20">
-          <Image width={100} height={100} src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
         </div>
       </section>
 
@@ -288,7 +288,7 @@ const pgCourses = [
       <section className="bg-[#002d5f] text-white py-16 px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2">
-            <Image width={100} height={100} src="/images/smu.webp" alt="Certificate" className="rounded-lg shadow-lg w-full" />
+            <Image width={100} height={100} loading="lazy" src="/images/smu.webp" alt="Certificate" className="rounded-lg shadow-lg w-full" />
           </div>
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">UGC-Entitled Online Degrees from SMU</h2>
@@ -314,7 +314,7 @@ const pgCourses = [
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {["/images/company.png", "/images/company1.png", "/images/company9.jpg", "/images/com10.png", "/images/companany4.png", "/images/company6.png", "/images/adove.png", "/images/samsung.png","/images/ey.png","/images/ibm.png","/images/hp.png"].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} src={src} alt="Company" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src={src} alt="Company" className="h-12 object-contain" />
             </div>
           ))}
         </div>

@@ -31,7 +31,7 @@ const EnquireCard = ({
   return (
     <>
       <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition duration-300">
-        <Image width={100} height={100} src={image} alt={course} className="h-40 w-full object-cover sm:h-48" />
+        <Image width={100} height={100} loading="lazy" src={image} alt={course} className="h-40 w-full object-cover sm:h-48" />
         <div className="p-4 flex-1 flex flex-col justify-between">
           <div>
             <h3 className="text-lg font-semibold text-gray-800 mb-2">{course}</h3>

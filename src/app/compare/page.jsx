@@ -460,6 +460,7 @@ function CompareContent() {
                            alt={university.name} 
                            width={100}
                            height={100}
+                           loading='Lazy'
                            className="w-full h-full object-contain"
                          />
                        </div>
