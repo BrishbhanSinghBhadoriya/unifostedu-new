@@ -5,7 +5,7 @@ import Head from 'next/head';
 const colleges = [
  {
     name: "Amity University Online",
-    logo: "/images/amitylogo.jpg",
+    logo: "/images/amitylogo.webp",
     ranking: "NIRF-29",
     location: "Noida, UP",
     fee: "₹1.2L - ₹3.45L",
@@ -14,7 +14,7 @@ const colleges = [
   },
   {
     name: "Manipal University Online",
-    logo: "/images/manipallogo.jpg",
+    logo: "/images/manipallogo.webp",
     ranking: "NIRF-73",
     location: "Jaipur, Rajasthan",
     fee: "₹1.5L - ₹2.92L",
@@ -23,7 +23,7 @@ const colleges = [
   },
   {
     name: "Lovely Professional University Online",
-    logo: "/images/lpulogo.png",
+    logo: "/images/lpulogo.webp",
     ranking: "NIRF-38",
     location: "Phagwara, Punjab",
     fee: "₹80K - ₹2L",
@@ -32,7 +32,7 @@ const colleges = [
   },
   {
     name: "University of Petroleum and Energy Studies Online",
-    logo: "/images/upeslogo.png",
+    logo: "/images/upeslogo.webp",
     ranking: "NIRF-41",
     location: "Dehradun, Uttarakhand",
     fee: "₹1.5L - ₹2.2L",
@@ -41,7 +41,7 @@ const colleges = [
   },
   {
     name: "Narsee Monjee Institute of Management Studies Online",
-    logo: "/images/nmimslogo.jpg",
+    logo: "/images/nmimslogo.webp",
     ranking: "NIRF-21",
     location: "Mumbai, Maharashtra",
     fee: "₹94K - ₹3.5L",
@@ -50,7 +50,7 @@ const colleges = [
   },
   {
     name: "Sharda University Online",
-    logo: "/images/shardalogo.png",
+    logo: "/images/shardalogo.webp",
     ranking: "NIRF-87",
     location: "Greater Noida, UP",
     fee: "₹80K - ₹1.5L",
@@ -59,7 +59,7 @@ const colleges = [
   },
   {
     name: "Dr. DY Patil Online",
-    logo: "/images/dypatillogo.png",
+    logo: "/images/dypatillogo.webp",
     ranking: "NIRF-63",
     location: "Navi Mumbai, Maharashtra",
     fee: "₹1.4L - ₹1.9L",
@@ -68,7 +68,7 @@ const colleges = [
   },
   {
     name: "Jain University Online",
-    logo: "/images/jainlogo.png",
+    logo: "/images/jainlogo.webp",
     ranking: "NIRF-77",
     location: "Bangalore, Karnataka",
     fee: "₹1.28L - ₹2.6L",
@@ -77,7 +77,7 @@ const colleges = [
   },
   {
     name: "Chandigarh University Online",
-    logo: "/images/chandigarh.jpg",
+    logo: "/images/chandigarh.webp",
     ranking: "NIRF-36",
     location: "Chandigarh",
     fee: "₹1L - ₹2L",

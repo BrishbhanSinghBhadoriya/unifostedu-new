@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Sharda University Online - UG & PG Courses in India",
     description: "Explore online undergraduate and postgraduate programs offered by Sharda University Online, a NAAC A++ accredited university.",
-    images: ["/images/sharda.png"],
+    images: ["/images/sharda.webp"],
   },
   alternates: {
     canonical: "https://unifostedu.com/sharda",

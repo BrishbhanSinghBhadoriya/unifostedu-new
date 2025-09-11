@@ -26,7 +26,7 @@ const Vgu = () => {
       eligibility: "Passed 10+2 examination in any stream from a recognized Board ",
       fees: "₹1,32,000/-",
       specialization: "'Full-stack development, cybersecurity, and software project management'  'Al, machine learning, deep learning, and chatbot development'  'Data mining, analytics, R & Python, big data, visualization' 'Virtualization, cloud platforms, cryptography, ethical hacking' 'UX research, wireframing, usability testing, visual tools'  'DLT, smart contracts, blockchain architecture, Ethereum'",
-      image: "/images/bca.jpeg",
+      image: "/images/bca.webp",
     },
     {
       course: "Bachelore of Arts(BA)",
@@ -34,7 +34,7 @@ const Vgu = () => {
       eligibility: "10+2 in any stream",
       fees: "₹72,000/-",
       specialization: "'Economics + Public Policy + Computer Applications' 'Public Policy + English' 'English + History + Political Science' 'Computer Applications + Public Policy/IR' 'Political Science + International Relations + Public Policy' '51+ COMBINATIONS AVAILABLE'",
-      image: "/images/ba.jpg",
+      image: "/images/ba.webp",
     },
     {
       course: "Bachelor of Business Administration (BBA)",
@@ -42,7 +42,7 @@ const Vgu = () => {
       eligibility: "Passed 10+2 examination in any stream from a recognized Board.",
       fees: "₹1,32,000/-",
       specialization: "General, Digital Marketing, Retail Management, Fintech",
-      image: "/images/bba.jpeg",
+      image: "/images/bba.webp",
     },
    
   ];
@@ -54,7 +54,7 @@ const Vgu = () => {
       eligibility: "Graduation in any stream",
       fees: '₹1,50,000 - 2,40,000',
       specialization: ['Finance', 'Marketing', 'Human Resources', 'Operations', 'Business Analytics', 'Information Technology Management', 'Helthcare Management', 'Agribusiness Management', 'International Business'],
-      image: "/images/mba.jpeg",
+      image: "/images/mba.webp",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -62,7 +62,7 @@ const Vgu = () => {
       eligibility: "Bachelor's Degree from a recognised University." ,
       fees: "₹1,50,000/-",
       specialization: "Software Engineering & Development, Data Science & Analytics, Cyber Security, Cloud & Devops, web & App Development, Blockchain & Emerging Technologies, Database Management",
-      image: "/images/mca.jpeg",
+      image: "/images/mca.webp",
     },
      {
       course: "Master of Arts (English)",
@@ -70,7 +70,7 @@ const Vgu = () => {
       eligibility: "Bachelor's Degree from a recognised University.",
       fees: "₹72,000/-",
       specialization: "English",
-      image: "/images/ma.jpeg",
+      image: "/images/ma.webp",
     },
     {
       course: "Master of Science (Maths)",
@@ -78,7 +78,7 @@ const Vgu = () => {
       eligibility: "Graduates with BA / BSc degree with Mathematics as one of the three main subjects.",
       fees: "₹72,000/-",
       specialization: " Mathematics",
-      image: "/images/ma1.jpeg",
+      image: "/images/ma1.webp",
     },
     {
       course: "Master of Arts Journalism and Mass Communication (MAJMC)",
@@ -86,7 +86,7 @@ const Vgu = () => {
       eligibility: "Graduation in any stream",
       fees: "₹72,000/-",
       
-      image: "/images/ma1.jpeg",
+      image: "/images/ma1.webp",
     }
 
   ];
@@ -188,11 +188,11 @@ const Vgu = () => {
       <section className="py-10 bg-white">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
         <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <Image width={100} height={100} loading="lazy" src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/nirf.png" alt="NIRF" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/bci.png" alt="BCI" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/ugc.webp" alt="UGC" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/aicte.webp" alt="AICTE" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/naac.webp" alt="NAAC" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/nirf.webp" alt="NIRF" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/bci.webp" alt="BCI" className="h-16 object-contain" />
           
         </div>
       </section>
@@ -220,7 +220,7 @@ const Vgu = () => {
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
-            <Image width={100} height={100} loading="lazy" src="/images/vgu-certificate.jpg" alt="VGU Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <Image width={100} height={100} loading="lazy" src="/images/vgu-certificate.webp" alt="VGU Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
           </div>
           <div className="flex-1 text-white">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">Degree from VGU University</h2>
@@ -243,7 +243,7 @@ const Vgu = () => {
           <p className="text-xl text-gray-600">Top hiring partners of VGU</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {["/images/samsung.png", "/images/airtel.png", "/images/icici.png", "/images/nestle.png", "/images/tcs.png", "/images/pepsico.png"].map((src, i) => (
+          {["/images/samsung.webp", "/images/airtel.webp", "/images/icici.webp", "/images/nestle.webp", "/images/tcs.webp", "/images/pepsico.webp"].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
               <Image width={100} height={100} loading="lazy" src={src} alt="Company" className="h-12 object-contain" />
             </div>

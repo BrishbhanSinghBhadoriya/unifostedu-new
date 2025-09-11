@@ -25,7 +25,7 @@ const Jain = () => {
       eligibility: "10+2 Pass",
       fees: "1,95,000",
       specialization: "Online Bachelor of Business Administration, Digital Marketing, Healthcare Management, Data Science and Analytics",
-      image: "/images/bba.jpeg",
+      image: "/images/bba.webp",
     },
      {
       course: "Bachelor of Computer Applications (BCA)",
@@ -33,7 +33,7 @@ const Jain = () => {
       eligibility: "10+2 Pass",
       fees: "1,35,000 -1,65,000",
       specialization: "Computer Science and IT, Data Science and Analytics, Cyber Security, Artificial Intelligence, Cloud Computing",
-      image: "/images/bca.jpeg",
+      image: "/images/bca.webp",
     },
     {
       course: "Bachelor of Commerce (B.Com)",
@@ -41,7 +41,7 @@ const Jain = () => {
       eligibility: "10+2 Pass",
       fees : "1,27,500",
       specialization: "Online Bachelor of Commerce, Corporate Accounting",
-      image: "/images/bcom.jpeg",
+      image: "/images/bcom.webp",
     },
  
   ];
@@ -56,7 +56,7 @@ const Jain = () => {
       fees: "1,96,000 - 2,16,000 ",
       specialization: "Human Resource Management and Finance, Finance and Marketing, Marketing and Resource Management, Marketing and Business Analytics, Finance and Business Analytics, Human Resource and Business Analytics, Project Management, Retail Management and Quick Commerce, Information Technology Management, Healthcare Management, Supply Chain, Production and Operations Management, Business Intelligence and Analytics, Entrepreneurship and Venture Creation, International Finance, Data Science and Analytics, E-commerce, Artificial Intelligence and Human Resource Management, Digital Marketing, Banking and Finance, Technology Management, General Management, AI-Driven Marketing, AI-Driven Finance, AI-Driven Business Strategy, AI-Driven Human Resource Management,",
 
-      image: "/images/mba.jpeg",
+      image: "/images/mba.webp",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -65,7 +65,7 @@ const Jain = () => {
       fees: "1,60,000",
       specialization: "DevOps, Natural Language Processing & Large Language Models Development, Computer Science and IT, Data Analytics, Cyber Security, Full Stack Development, Cloud Computing, Data Science, Artificial Intelligence" , 
 
-      image: "/images/mca1.jpeg",
+      image: "/images/mca1.webp",
     },
     {
       course: "Master of Commerce (M.Com)",
@@ -73,7 +73,7 @@ const Jain = () => {
       eligibility: "Graduation in Commerce",
       fees: "1,10,000",
       specialization: "Accounting and Finance, Professional Accounting and Finance (Accredited by CPA, US)", 
-      image: "/images/m.com.jpeg",
+      image: "/images/m.com.webp",
     },
     {
       course: "Master of Arts (MA)",
@@ -81,7 +81,7 @@ const Jain = () => {
       eligibility: "Graduation",
       fees: "190,000",
       specialization: "Jainology in Comparative Religion and Philosophy, English, Economics, Public Policy",
-      image: "/images/ma1.jpeg",
+      image: "/images/ma1.webp",
     },
   ];
 
@@ -105,7 +105,7 @@ const Jain = () => {
             
           </div>
           <div className="md:w-1/2">
-            <Image width={100} height={100} loading="lazy" src="/images/jain.png" alt="Jain University" className="w-full rounded-xl shadow-lg" />
+            <Image width={100} height={100} loading="lazy" src="/images/jain.webp" alt="Jain University" className="w-full rounded-xl shadow-lg" />
           </div>
         </div>
       </section>
@@ -205,12 +205,12 @@ const Jain = () => {
     Recognized & Accredited By
   </h3>
   <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-    <Image width={100} height={100} loading="lazy" src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
-    <Image width={100} height={100} loading="lazy" src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
-    <Image width={100} height={100} loading="lazy" src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
-    <Image width={100} height={100} loading="lazy" src="/images/nirf.png" alt="NIRF" className="h-16 object-contain" />
-    <Image width={100} height={100} loading="lazy" src="/images/wes.png" alt="WES" className="h-16 object-contain" />
-    <Image width={100} height={100} loading="lazy" src="/images/aiu.png" alt="AIU" className="h-16 object-contain" />
+    <Image width={100} height={100} loading="lazy" src="/images/ugc.webp" alt="UGC" className="h-16 object-contain" />
+    <Image width={100} height={100} loading="lazy" src="/images/aicte.webp" alt="AICTE" className="h-16 object-contain" />
+    <Image width={100} height={100} loading="lazy" src="/images/naac.webp" alt="NAAC" className="h-16 object-contain" />
+    <Image width={100} height={100} loading="lazy" src="/images/nirf.webp" alt="NIRF" className="h-16 object-contain" />
+    <Image width={100} height={100} loading="lazy" src="/images/wes.webp" alt="WES" className="h-16 object-contain" />
+    <Image width={100} height={100} loading="lazy" src="/images/aiu.webp" alt="AIU" className="h-16 object-contain" />
     <Image width={100} height={100} loading="lazy" src="/images/careers.webp" alt="CARRES" className="h-16 object-contain" />
     <Image width={100} height={100} loading="lazy" src="/images/auap.webp" alt="AUAP" className="h-16 object-contain" />
     <Image width={100} height={100} loading="lazy" src="/images/ksurf.webp" alt="KSURF" className="h-16 object-contain" />
@@ -317,28 +317,28 @@ const Jain = () => {
     {/* Logo Cards */}
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image width={100} height={100} loading="lazy" src="/images/company.png" alt="Company" className="h-12 object-contain" />
+        <Image width={100} height={100} loading="lazy" src="/images/company.webp" alt="Company" className="h-12 object-contain" />
       </div>
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image width={100} height={100} loading="lazy" src="/images/company1.png" alt="Microsoft" className="h-12 object-contain" />
+        <Image width={100} height={100} loading="lazy" src="/images/company1.webp" alt="Microsoft" className="h-12 object-contain" />
       </div>
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image width={100} height={100} loading="lazy" src="/images/company9.jpg" alt="Company 9" className="h-12 object-contain" />
+        <Image width={100} height={100} loading="lazy" src="/images/company9.webp" alt="Company 9" className="h-12 object-contain" />
       </div>
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image width={100} height={100} loading="lazy" src="/images/com10.png" alt="Company 10" className="h-12 object-contain" />
+        <Image width={100} height={100} loading="lazy" src="/images/com10.webp" alt="Company 10" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image width={100} height={100} loading="lazy" src="/images/companany4.png" alt="Company4" className="h-12 object-contain" />
+        <Image width={100} height={100} loading="lazy" src="/images/companany4.webp" alt="Company4" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image width={100} height={100} loading="lazy" src="/images/company6.png" alt="Company 6" className="h-12 object-contain" />
+        <Image width={100} height={100} loading="lazy" src="/images/company6.webp" alt="Company 6" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image width={100} height={100} loading="lazy" src="/images/companany5.png" alt="Companany5" className="h-12 object-contain" />
+        <Image width={100} height={100} loading="lazy" src="/images/companany5.webp" alt="Companany5" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image width={100} height={100} loading="lazy" src="/images/adove.png" alt="Adove" className="h-12 object-contain" />
+        <Image width={100} height={100} loading="lazy" src="/images/adove.webp" alt="Adove" className="h-12 object-contain" />
       </div>
             
 
@@ -370,7 +370,7 @@ const Jain = () => {
       </div>
 
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image width={100} height={100} loading="lazy" src="/images/samsung.png" alt="Samsung" className="h-12 object-contain" />
+        <Image width={100} height={100} loading="lazy" src="/images/samsung.webp" alt="Samsung" className="h-12 object-contain" />
       </div>
       {/* Add more cards here as needed */}
     </div>

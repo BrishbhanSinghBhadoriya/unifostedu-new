@@ -30,22 +30,22 @@ const Header = () => {
 const [modalType, setModalType] = useState();
 
   const universities = [
-    { name: "Amity University Online", link: "/amity", logo: "/images/amity.png" },
-    { name: "Lovely Professional University", link: "/lpu", logo: "/images/lpu.png" },
-    { name: "Online Manipal University", link: "/manipal", logo: "/images/manipal.png" },
+    { name: "Amity University Online", link: "/amity", logo: "/images/amity.webp" },
+    { name: "Lovely Professional University", link: "/lpu", logo: "/images/lpu.webp" },
+    { name: "Online Manipal University", link: "/manipal", logo: "/images/manipal.webp" },
     { name: "Manipal Academy of Higher Education", link: "/mahe", logo: "/images/mahe-uni.webp" },
-     { name: "Sikkim Manipal University", link: "/smu", logo: "/images/smu-uni.jpg" },
+     { name: "Sikkim Manipal University", link: "/smu", logo: "/images/smu-uni.webp" },
     { name: "Uttaranchal University", link: "/uu", logo: "/images/uu-uni.webp" },
-    { name: "Chandigarh University Online", link: "/chandigarh", logo: "/images/chandigarh.jpg" },
-    { name: "Jain University", link: "/jain", logo: "/images/jain.png" },
-    { name: "Dr. D Y Patil", link: "/dypatil", logo: "/images/dypatil.png" },
-    { name: "OP Jindal University", link: "/opjindal", logo: "/images/opjindal.png" },
-    { name: "Kurukshetra University", link: "/ku", logo: "/images/ku.jpg" },
-    { name: "Shoolini University Online", link: "/shoolini", logo: "/images/shoolini.jpg" },
-    { name: "Vivekananda Global University Online", link: "/vgu", logo: "/images/vgu1.png" },
-    { name: "Upes Online", link: "/upes", logo: "/images/upes.png" },
-    { name: "Sharda University Online", link: "/sharda", logo: "/images/sharda.png" },
-    { name: "NMIMS University", link: "/nmims", logo: "/images/nmims.png" }
+    { name: "Chandigarh University Online", link: "/chandigarh", logo: "/images/chandigarh.webp" },
+    { name: "Jain University", link: "/jain", logo: "/images/jain.webp" },
+    { name: "Dr. D Y Patil", link: "/dypatil", logo: "/images/dypatil.webp" },
+    { name: "OP Jindal University", link: "/opjindal", logo: "/images/opjindal.webp" },
+    { name: "Kurukshetra University", link: "/ku", logo: "/images/ku.webp" },
+    { name: "Shoolini University Online", link: "/shoolini", logo: "/images/shoolini.webp" },
+    { name: "Vivekananda Global University Online", link: "/vgu", logo: "/images/vgu1.webp" },
+    { name: "Upes Online", link: "/upes", logo: "/images/upes.webp" },
+    { name: "Sharda University Online", link: "/sharda", logo: "/images/sharda.webp" },
+    { name: "NMIMS University", link: "/nmims", logo: "/images/nmims.webp" }
   ];
 
   const [latestBlogs, setLatestBlogs] = useState([]);
@@ -340,7 +340,7 @@ const [modalType, setModalType] = useState();
               {/* Top bar */}
               <div className="flex items-center justify-between mb-6 sm:mb-8">
                 <div className="flex items-center gap-3">
-                  <Image width={100} height={100} loading="lazy" src="images/uni.jpg" alt="Unifost" className="h-8 w-auto" />
+                  <Image width={100} height={100} loading="lazy" src="images/uni.webp" alt="Unifost" className="h-8 w-auto" />
                   <span className="text-lg font-bold text-[#00ffe0]">Unifost</span>
                 </div>
                 <button

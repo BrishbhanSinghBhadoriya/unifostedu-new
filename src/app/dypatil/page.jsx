@@ -23,7 +23,7 @@ const Dypatil = () => {
       fees: "₹1,45,400",
       eligibility: "10+2 Pass",
       specialization: "IT & System Management, International Business Management, Retail Management, Banking, Financial Services and Insurance Management, Shipping & Logistics Management, Marketing Management, Human Resource Management (HRM), Finance Management, E-commerce Management ",
-      image: "/images/bba.jpeg",
+      image: "/images/bba.webp",
     },
   
    
@@ -37,7 +37,7 @@ const Dypatil = () => {
       fees: "₹1,40,000",
       eligibility: "Graduation with 50% Marks",
        specialization: "General",
-      image: "/images/mca1.jpeg",
+      image: "/images/mca1.webp",
     },
     
 
@@ -48,7 +48,7 @@ const Dypatil = () => {
       fees: "1,89,400",
       specialization: "Marketing Management, Human Resource Management, Finance Management, IT Management, Project Management, Operations Management, Hospital Administration & Healthcare Management, International Business Management, FinTech Management, Business Analytics Management, Artificial Intelligence & Machine Learning Management, Logistics, Materials & Supply Chain Management, Blockchain Management, Digital Marketing Management, Agri-Business Management",
 
-      image: "/images/mba.jpeg",
+      image: "/images/mba.webp",
     },
   ];
 
@@ -167,7 +167,7 @@ const Dypatil = () => {
           </div>
           
           <div className="md:w-1/2">
-         < Image src="/images/dypatil.png" alt="DY Patil University" width={100} height={100} loading="lazy"
+         < Image src="/images/dypatil.webp" alt="DY Patil University" width={100} height={100} loading="lazy"
           className="w-full rounded-xl shadow-lg" />
           </div>
         </div>
@@ -245,12 +245,12 @@ const Dypatil = () => {
       <section className="py-10 bg-white">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
         <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <Image src="/images/ugc.png" alt="UGC" width={100} height={100} loading="lazy"
+          <Image src="/images/ugc.webp" alt="UGC" width={100} height={100} loading="lazy"
           className="h-16 object-contain" />
-          <Image src="/images/aicte.png" alt="AICTE" width={100} height={100} loading="lazy"className="h-16 object-contain" />
-          <Image src="/images/naac.png" alt="NAAC" width={100} height={100} loading="lazy"className="h-16 object-contain" />
-           <Image src="/images/nirf.png" alt="NIRF" width={100} height={100} loading="lazy" className="h-16 object-contain" />
-           <Image src="/images/wes.png" alt="WES" width={100} height={100} loading="lazy"className="h-16 object-contain" />
+          <Image src="/images/aicte.webp" alt="AICTE" width={100} height={100} loading="lazy"className="h-16 object-contain" />
+          <Image src="/images/naac.webp" alt="NAAC" width={100} height={100} loading="lazy"className="h-16 object-contain" />
+           <Image src="/images/nirf.webp" alt="NIRF" width={100} height={100} loading="lazy" className="h-16 object-contain" />
+           <Image src="/images/wes.webp" alt="WES" width={100} height={100} loading="lazy"className="h-16 object-contain" />
             </div>
       </section>
 
@@ -324,26 +324,26 @@ const Dypatil = () => {
         <Image src="/images/9.webp" width={100} height={100} loading="lazy"alt="Companany5" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image src="/images/company1.png" width={100} height={100} loading="lazy"alt="Adove" className="h-12 object-contain" />
+        <Image src="/images/company1.webp" width={100} height={100} loading="lazy"alt="Adove" className="h-12 object-contain" />
       </div>
 <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image src="/images/company6.png" width={100} height={100} loading="lazy"alt="Samsung4" className="h-12 object-contain" />
+        <Image src="/images/company6.webp" width={100} height={100} loading="lazy"alt="Samsung4" className="h-12 object-contain" />
       </div>
 
       
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image src="/images/nestle.jpg" width={100} height={100} loading="lazy"alt="Samsung8" className="h-12 object-contain" />
+        <Image src="/images/nestle.webp" width={100} height={100} loading="lazy"alt="Samsung8" className="h-12 object-contain" />
       </div>
 
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image src="/images/microsoft.jpg"width={100} height={100} loading="lazy" alt="Samsung9" className="h-12 object-contain" />
+        <Image src="/images/microsoft.webp"width={100} height={100} loading="lazy" alt="Samsung9" className="h-12 object-contain" />
       </div>
 
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image src="/images/icici.jpg" width={100} height={100} loading="lazy"alt="Samsung" className="h-12 object-contain" />
+        <Image src="/images/icici.webp" width={100} height={100} loading="lazy"alt="Samsung" className="h-12 object-contain" />
       </div>
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image src="/images/hp.jpg" width={100} height={100} loading="lazy"alt="Samsung2" className="h-12 object-contain" />
+        <Image src="/images/hp.webp" width={100} height={100} loading="lazy"alt="Samsung2" className="h-12 object-contain" />
       </div>
       \
       {/* Add more cards here as needed */}

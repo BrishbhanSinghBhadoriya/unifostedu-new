@@ -18,7 +18,7 @@ import Image from 'next/image';
   openGraph: {
     title: "About UNIFOST | India's Leading EdTech Platform for Online Education",
     description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees, career counseling, and personalized guidance.",
-    images: ["/images/uni.jpg"],
+    images: ["/images/uni.webp"],
   },
 };
 
@@ -58,21 +58,21 @@ export default function About() {
     "@type": "Organization",
     "name": "UniFost",
     "url": "https://unifostedu.com",
-    "logo": "https://unifostedu.com/images/uni.jpg",
+    "logo": "https://unifostedu.com/images/uni.webp",
     "description": "UniFost is redefining how students discover and access quality education through personalized guidance and innovative technology.",
     "founder": [
       {
         "@type": "Person",
         "name": "Priyansh Mishra",
         "url": "https://www.linkedin.com/in/priyansh-mishra-14b9ba2a0/",
-        "image": "https://unifostedu.com/priyansh.jpg",
+        "image": "https://unifostedu.com/priyansh.webp",
         "jobTitle": "Co-Founder & Director"
       },
       {
         "@type": "Person",
         "name": "Aman Pawar",
         "url": "https://www.linkedin.com/in/aman-pawar-a59b57218/",
-        "image": "https://unifostedu.com/aman.jpg",
+        "image": "https://unifostedu.com/aman.webp",
         "jobTitle": "Co-Founder & Director"
       }
     ],
@@ -267,12 +267,12 @@ export default function About() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[ 
-              { image: "/images/acard1.jpg", title: "Personalized Video Counseling", desc: "One-on-one sessions with our expert counselors to help you make informed decisions about your education and career path.", icon: <FaVideo className="text-2xl" /> },
-              { image: "/images/acard2.jpg", title: "Home Demo Sessions", desc: "Experience learning firsthand with trial sessions conducted at your convenience before committing to any program.", icon: <FaHome className="text-2xl" /> },
-              { image: "/images/acard3.jpg", title: "Certified Programs", desc: "Access to industry-recognized certifications and courses that enhance your employability and skills.", icon: <FaCertificate className="text-2xl" /> },
-              { image: "/images/acard4.jpg", title: "Online Degree Guidance", desc: "Comprehensive support for selecting and enrolling in accredited online degree programs from top institutions.", icon: <FaGraduationCap className="text-2xl" /> },
-              { image: "/images/acard5.jpg", title: "University Admissions", desc: "Expert assistance in selecting and applying to traditional universities with high placement records.", icon: <FaUniversity className="text-2xl" /> },
-              { image: "/images/acard6.jpg", title: "Skill Development", desc: "Specialized courses and workshops to bridge the gap between academic learning and industry requirements.", icon: <FaTools className="text-2xl" /> }
+              { image: "/images/acard1.webp", title: "Personalized Video Counseling", desc: "One-on-one sessions with our expert counselors to help you make informed decisions about your education and career path.", icon: <FaVideo className="text-2xl" /> },
+              { image: "/images/acard2.webp", title: "Home Demo Sessions", desc: "Experience learning firsthand with trial sessions conducted at your convenience before committing to any program.", icon: <FaHome className="text-2xl" /> },
+              { image: "/images/acard3.webp", title: "Certified Programs", desc: "Access to industry-recognized certifications and courses that enhance your employability and skills.", icon: <FaCertificate className="text-2xl" /> },
+              { image: "/images/acard4.webp", title: "Online Degree Guidance", desc: "Comprehensive support for selecting and enrolling in accredited online degree programs from top institutions.", icon: <FaGraduationCap className="text-2xl" /> },
+              { image: "/images/acard5.webp", title: "University Admissions", desc: "Expert assistance in selecting and applying to traditional universities with high placement records.", icon: <FaUniversity className="text-2xl" /> },
+              { image: "/images/acard6.webp", title: "Skill Development", desc: "Specialized courses and workshops to bridge the gap between academic learning and industry requirements.", icon: <FaTools className="text-2xl" /> }
             ].map((service, index) => (
               <div key={index} className="relative bg-white rounded-2xl overflow-hidden shadow-lg group hover:shadow-xl transition-all duration-500 border border-gray-100">
                 <div className="relative overflow-hidden h-48">
@@ -432,7 +432,7 @@ export default function About() {
     <div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
       <div className="relative">
         <Image
-          src="/images/priyansh.jpg" 
+          src="/images/priyansh.webp" 
           alt="Priyansh Mishra" 
           width={100}
           height={100}
@@ -491,7 +491,7 @@ export default function About() {
       </div>
       <div className="relative order-1 md:order-2">
         <Image
-          src="/images/aman.jpg" 
+          src="/images/aman.webp" 
           alt="Aman Pawar" 
           width={100}
           height={100}

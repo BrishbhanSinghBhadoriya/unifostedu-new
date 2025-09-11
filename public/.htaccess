@@ -23,4 +23,4 @@ Redirect 301 /courses/b.com-online/ https://unifostedu.com/courses/bcom-online/
 Redirect 301 /blog/blog-page https://unifostedu.com/search/
 
 # Image redirects
-Redirect 301 /images/lpu.jpg https://unifostedu.com/images/lpu.png
+Redirect 301 /images/lpu.webp https://unifostedu.com/images/lpu.webp

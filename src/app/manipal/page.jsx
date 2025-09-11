@@ -23,7 +23,7 @@ const Manipal = () => {
       eligibility: "10+2 Minimum 40%",
       fees: "1,35,000",
       specialization: "Finance & Accounting, Digital Marketing, Enterepreneurship Management & Family Business, Human Resource Management,  Data Analytics, Retail & E-commerce Management",
-      image: "/images/bba.jpeg",
+      image: "/images/bba.webp",
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
@@ -31,7 +31,7 @@ const Manipal = () => {
       eligibility: "10+2 Minimum 40%",
       fees: "1,35,000",
       specialization: "Data Science and Analytics, Cyber Security, Cloud Computing",
-      image: "/images/bca.jpeg",
+      image: "/images/bca.webp",
     },
     {
       course: "Bachelor of Commerce (B.Com)",
@@ -39,7 +39,7 @@ const Manipal = () => {
       eligibility: "10+2 Minimum 40%",
       fees: "99,000",
       specialization: "General",
-      image: "/images/bcom.jpeg",
+      image: "/images/bcom.webp",
     },
   ];
 
@@ -50,7 +50,7 @@ const Manipal = () => {
       eligibility: "50% Graduation",
       fees: "1,75,000",
       specialization: "Super/Dual(Human Resource Management and Finance, Finance and Marketing, Marketing and Human Resource Management, Marketing and Business Analytics, Finance and Business Analytics, Human Resource and Business Analytics, Project Management, Retail Management and Quick Commerce, Artificial Intelligence Banking and Finance, 15 other fields)",
-      image: "/images/mba.jpeg",
+      image: "/images/mba.webp",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -58,7 +58,7 @@ const Manipal = () => {
       eligibility: "50% Graduation",
       fees: "1,58,000",
       specialization: "AI & Data Science, Cyber Security, Cloud Computing, Comprehensive Emerging Technologies,AI & ML", 
-      image: "/images/mca1.jpeg",
+      image: "/images/mca1.webp",
     },
     {
       course: "Master of Commerce (M.Com)",
@@ -66,7 +66,7 @@ const Manipal = () => {
       eligibility: "Graduation in Commerce",
       fees: "1,08,000",
       specialization: "General", 
-      image: "/images/m.com.jpeg",
+      image: "/images/m.com.webp",
     },
   
     {
@@ -75,7 +75,7 @@ const Manipal = () => {
       eligibility: "Graduation",
       fees: "80,000 - 1,40,000",
       specialization: " Economics,MA (Journalism and Mass Communication)",
-      image: "/images/ma1.jpeg",
+      image: "/images/ma1.webp",
     },
   ];
 
@@ -99,7 +99,7 @@ const Manipal = () => {
         {/* Open Graph */}
         <meta property="og:title" content="Manipal University Online | Accredited Online Degrees" />
         <meta property="og:description" content="Globally recognized online undergraduate and postgraduate programs with flexible, industry-relevant learning." />
-        <meta property="og:image" content="/images/manipal.png" />
+        <meta property="og:image" content="/images/manipal.webp" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.onlinedegree.in/manipal" />
 
@@ -107,7 +107,7 @@ const Manipal = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Manipal University Online | Accredited Online Degrees" />
         <meta name="twitter:description" content="Enroll in UGC and AICTE approved online courses at Manipal University Jaipur. Learn with flexibility and global recognition." />
-        <meta name="twitter:image" content="/images/manipal.png" />
+        <meta name="twitter:image" content="/images/manipal.webp" />
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
@@ -130,7 +130,7 @@ const Manipal = () => {
           <div className="md:w-1/2 w-full">
             <div className="relative rounded-2xl p-[1.5px] bg-gradient-to-r from-blue-400/50 via-indigo-400/50 to-cyan-400/50 shadow-md">
               <div className="rounded-2xl bg-white overflow-hidden">
-                <Image width={100} height={100} src="/images/manipal.png" alt="Manipal University" className="w-full h-auto object-contain" />
+                <Image width={100} height={100} src="/images/manipal.webp" alt="Manipal University" className="w-full h-auto object-contain" />
               </div>
             </div>
           </div>
@@ -226,15 +226,15 @@ const Manipal = () => {
       <section className="bg-white py-12 px-4">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
         <div className="flex flex-wrap justify-center items-center gap-20">
-          <Image width={100} height={100} src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
+          <Image width={100} height={100} src="/images/ugc.webp" alt="UGC" className="h-16 object-contain" />
+          <Image width={100} height={100} src="/images/aicte.webp" alt="AICTE" className="h-16 object-contain" />
+          <Image width={100} height={100} src="/images/naac.webp" alt="NAAC" className="h-16 object-contain" />
           
          
-          <Image width={100} height={100} src="/images/aiu.png" alt="AIU" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/nba.png" alt="NBA" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/qs.png" alt="QS" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/acu.png" alt="ACU" className="h-16 object-contain" />
+          <Image width={100} height={100} src="/images/aiu.webp" alt="AIU" className="h-16 object-contain" />
+          <Image width={100} height={100} src="/images/nba.webp" alt="NBA" className="h-16 object-contain" />
+          <Image width={100} height={100} src="/images/qs.webp" alt="QS" className="h-16 object-contain" />
+          <Image width={100} height={100} src="/images/acu.webp" alt="ACU" className="h-16 object-contain" />
           
           
           
@@ -300,7 +300,7 @@ const Manipal = () => {
       <section className="bg-[#002d5f] text-white py-16 px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2">
-            <Image width={100} height={100} src="/images/muj-certi.jpeg" alt="Certificate" className="rounded-lg shadow-lg w-full" />
+            <Image width={100} height={100} src="/images/muj-certi.webp" alt="Certificate" className="rounded-lg shadow-lg w-full" />
           </div>
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Recognized Online Degree from Manipal University</h2>
@@ -325,7 +325,7 @@ const Manipal = () => {
           <p className="text-lg sm:text-xl text-gray-600">Top Hiring Partners of Manipal Online</p>
         </div>
         <div className="max-w-6xl mx-auto px-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
-          {["/images/company.png", "/images/company1.png", "/images/company9.jpg", "/images/com10.png", "/images/companany4.png", "/images/company6.png", "/images/companany5.png", "/images/adove.png", "/images/samsung.png"].map((src, i) => (
+          {["/images/company.webp", "/images/company1.webp", "/images/company9.webp", "/images/com10.webp", "/images/companany4.webp", "/images/company6.webp", "/images/companany5.webp", "/images/adove.webp", "/images/samsung.webp"].map((src, i) => (
             <div key={i} className="bg-white rounded-xl border border-slate-200 shadow-sm p-4 flex items-center justify-center hover:shadow-lg transition-all">
               <Image width={100} height={100} src={src} alt="Company" className="h-10 sm:h-12 object-contain" />
             </div>

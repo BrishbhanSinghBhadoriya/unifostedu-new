@@ -10,11 +10,11 @@ const OrganizationSchema = () => {
     "url": "https://unifostedu.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://unifostedu.com/uni.jpg",
+      "url": "https://unifostedu.com/uni.webp",
       "width": 512,
       "height": 512
     },
-    "image": "https://unifostedu.com/uni.jpg",
+    "image": "https://unifostedu.com/uni.webp",
     "foundingDate": "2020",
     "foundingLocation": {
       "@type": "Place",
@@ -66,7 +66,7 @@ const OrganizationSchema = () => {
         "@type": "Person",
         "name": "Priyansh Mishra",
         "url": "https://www.linkedin.com/in/priyansh-mishra-14b9ba2a0/",
-        "image": "https://unifostedu.com/priyansh.jpg",
+        "image": "https://unifostedu.com/priyansh.webp",
         "jobTitle": "Co-Founder & Director",
         "description": "Visionary leader committed to revolutionizing education through innovation and accessibility"
       },
@@ -74,7 +74,7 @@ const OrganizationSchema = () => {
         "@type": "Person",
         "name": "Aman Pawar",
         "url": "https://www.linkedin.com/in/aman-pawar-a59b57218/",
-        "image": "https://unifostedu.com/aman.jpg",
+        "image": "https://unifostedu.com/aman.webp",
         "jobTitle": "Co-Founder & Director",
         "description": "Driving force behind UniFost blending vision with action and passion with purpose"
       }

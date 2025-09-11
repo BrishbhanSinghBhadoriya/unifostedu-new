@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "List of Colleges | Top Online Universities | UNIFOST",
     description: "Explore our comprehensive list of top online universities and colleges. Find the best accredited institutions for your online degree programs.",
-    images: ["/images/uni.jpg"],
+    images: ["/images/uni.webp"],
   },
     alternates: {
     canonical: "https://unifostedu.com/listofcollege",

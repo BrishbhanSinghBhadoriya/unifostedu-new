@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "UPES Online - UG & PG Courses in India",
     description: "Explore online undergraduate and postgraduate programs offered by UPES Online, a NAAC A++ accredited university.",
-    images: ["/images/upes.png"],
+    images: ["/images/upes.webp"],
   },
     alternates: {
     canonical: "https://unifostedu.com/upes",

@@ -133,12 +133,12 @@ export const metadata = {
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
-    apple: '/apple-touch-icon.png', // सुनिश्चित करें कि यह फ़ाइल public/ फ़ोल्डर में है
+    apple: '/apple-touch-icon.webp', // सुनिश्चित करें कि यह फ़ाइल public/ फ़ोल्डर में है
     other: {
       rel: 'apple-touch-icon-precomposed',
-      url: '/apple-touch-icon-precomposed.png', // सुनिश्चित करें कि यह फ़ाइल public/ फ़ोल्डर में है
+      url: '/apple-touch-icon-precomposed.webp', // सुनिश्चित करें कि यह फ़ाइल public/ फ़ोल्डर में है
     },
-    apple: '/apple-touch-icon.png',
+    apple: '/apple-touch-icon.webp',
   },
   manifest: '/site.webmanifest',
   other: {

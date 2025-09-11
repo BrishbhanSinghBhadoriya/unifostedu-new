@@ -6,7 +6,7 @@ const SEOOptimizer = ({
   description, 
   keywords = [], 
   canonicalUrl, 
-  ogImage = '/uni.jpg',
+  ogImage = '/uni.webp',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData,

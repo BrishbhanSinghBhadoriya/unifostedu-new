@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Online Amity University: Courses, Fees & Admission 2024",
     description: "Explore Amity University online programs, courses, fees, and admission details. Apply for MBA, BBA, MCA, BCA online degrees with UGC approval.",
-    images: ["/images/amitylogo.jpg"],
+    images: ["/images/amitylogo.webp"],
   },
     alternates: {
     canonical: "https://unifostedu.com/amity",
