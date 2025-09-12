@@ -747,9 +747,9 @@ const Landing = () => {
                   >
                     <feature.icon className="text-xl sm:text-2xl text-white" />
                   </div>
-                  <h6 className="text-lg sm:text-xl font-bold text-[#001e3c] mb-3 sm:mb-4">
+                  <h2 className="text-lg sm:text-xl font-bold text-[#001e3c] mb-3 sm:mb-4">
                     {feature.title}
-                  </h6>
+                  </h2>
                   <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                     {feature.description}
                   </p>

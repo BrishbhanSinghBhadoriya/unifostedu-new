@@ -283,10 +283,11 @@ const [modalType, setModalType] = useState();
 
           {/* Contact Icons - Made more compact */}
           <div className="hidden md:flex gap-1 lg:gap-2 items-center text-[#00ffe0]">
-            <a href="tel:+919354735410" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us">
+            <a href="tel:+919354735410" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us"  aria-label="Email us at info@unifostedu.com">
+             
               <FaPhoneAlt className="text-xl" />
             </a>
-            <a href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="WhatsApp">
+            <a href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="WhatsApp" aria-label="WhatsApp">
               <FaWhatsappSquare className="text-xl" />
             </a>
             <button onClick={() => openModal('videoCall')} className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Book Demo">
@@ -301,7 +302,7 @@ const [modalType, setModalType] = useState();
             </div>
             <div className="flex items-center gap-1 text-black-600 font-semibold">
               <FaEnvelope className="text-sky-400 text-xs" />
-              <a href="mailto:info@unifostedu.com" className="underline hover:text-white text-xs">info@unifostedu.com</a>
+              <a href="mailto:info@unifostedu.com" className="underline hover:text-white text-xs">info@unifostedu.com  </a>
             </div>
           </div>
 
@@ -468,7 +469,7 @@ const [modalType, setModalType] = useState();
                     <FaEnvelope className="text-[#00ffe0] text-lg" />
                     <div>
                       <p className="text-xs text-white/70">Email Address</p>
-                      <a href="mailto:info@unifostedu.com" className="font-semibold hover:text-[#00ffe0] transition">
+                      <a href="mailto:info@unifostedu.com" className="font-semibold hover:text-[#00ffe0] transition" aria-label="Email us at info@unifostedu.com">
                         info@unifostedu.com
                       </a>
                     </div>
