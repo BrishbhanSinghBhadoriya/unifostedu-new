@@ -10,6 +10,7 @@ import {
 }from "react-icons/fa";
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { toast } from 'sonner';
 
  const metadata = {
   title: "UNIFOST | Online Education & Career Counseling Platform",
@@ -281,17 +282,26 @@ export default function About() {
                   <div className="absolute top-4 right-4 bg-[#00ffe0] text-[#001e3c] p-3 rounded-full transform translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">{service.icon}</div>
                 </div>
                 <div className="p-6 relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#00ffe0]/5 to-[#00d4c4]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-2xl"></div>
-                  <div className="relative z-10">
-                    <h3 className="text-xl font-bold text-[#001e3c] mb-3 group-hover:text-[#003b6c] transition-colors duration-300">{service.title}</h3>
-                    <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">{service.desc}</p>
-                    <div className="mt-6 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                      <button onClick={openGetStarted} className="flex items-center text-[#00d4c4] font-semibold hover:text-[#00ffe0] transition-colors duration-300">
-                        Learn more <span className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300">→</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
+  <div className="absolute inset-0 bg-gradient-to-br from-[#00ffe0]/5 to-[#00d4c4]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-2xl"></div>
+  <div className="relative z-10">
+    <h3 className="text-xl font-bold text-[#001e3c] mb-3 group-hover:text-[#003b6c] transition-colors duration-300">
+      {service.title}
+    </h3>
+    <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+      {service.desc}
+    </p>
+
+    {/* ✅ Button hamesha dikhega */}
+    <div className="mt-6">
+      <button onClick={openGetStarted} className="flex items-center text-[#00d4c4] font-semibold hover:text-[#00ffe0] transition-colors duration-300"
+        className="flex items-center text-white bg-[#00d4c4] px-4 py-2 rounded-lg font-semibold hover:bg-[#00ffe0] transition-colors duration-300"
+      >
+        Learn more <span className="ml-2">→</span>
+      </button>
+    </div>
+  </div>
+</div>
+
               </div>
             ))}
           </div>
@@ -428,43 +438,49 @@ export default function About() {
       </p>
     </div>
 
-    {/* Founder 1 */}
-    <div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
-      <div className="relative">
-        <Image
-          src="/images/priyansh.webp" 
-          alt="Priyansh Mishra" 
-          width={100}
-          height={100}
-          loading='lazy'
-          className="rounded-2xl w-full object-cover shadow-lg"
-        />
-        <div className="absolute bottom-4 left-4 bg-gradient-to-br from-[#00ffe0] to-[#00d4c4] rounded-lg px-4 py-2 text-[#001e3c] font-bold shadow-lg">
-          Co-Founder & Director
-        </div>
-      </div>
-      <div className="bg-[#1e1e50]/70 p-8 rounded-2xl shadow-lg border border-white/10">
-        <h3 className="text-3xl font-bold">PRIYANSH MISHRA</h3>
-        <p className="text-teal-400 font-semibold">Founder & Director</p>
-        <p className="text-gray-200 mt-4">
-          Priyansh Mishra, a visionary leader committed to revolutionizing education through innovation and accessibility, has poured his heart, energy, and vision into building UniFost with unwavering passion and dedication. With a background in educational technology and student psychology, he ensures UniFost remains student-centric.
-        </p>
-        <div className="flex space-x-4 mt-6">
-          <a 
-  href="https://www.linkedin.com/in/priyansh-mishra-14b9ba2a0/" 
-  target="_blank" 
-  rel="noopener noreferrer" 
-  className="text-teal-400 hover:text-white text-xl"
->
-  <FaLinkedin />
-</a>
-
-        </div>
-        <button className="mt-6 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] px-6 py-3 rounded-full font-semibold hover:scale-105 transform transition-all duration-300">
-          Get in Touch
-        </button>
-      </div>
+  {/* Founder 1 */}
+<div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
+  <div className="relative">
+    <Image
+      src="/images/priyansh.webp" 
+      alt="Priyansh Mishra" 
+      width={100}
+      height={100}
+      loading='lazy'
+      className="rounded-2xl w-full object-cover shadow-lg"
+    />
+    <div className="absolute bottom-4 left-4 bg-gradient-to-br from-[#00ffe0] to-[#00d4c4] rounded-lg px-4 py-2 text-[#001e3c] font-bold shadow-lg">
+      Co-Founder & Director
     </div>
+  </div>
+
+  {/* Name & Title - no box styling */}
+  <div>
+    <h3 className="text-3xl font-bold">PRIYANSH MISHRA</h3>
+    <p className="text-teal-400 font-semibold">Founder & Director</p>
+    <p className="text-2xl md:text-3xl font-semibold leading-relaxed tracking-wide bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent mt-6">
+  “Priyansh Mishra, a visionary leader committed to revolutionizing education through
+  innovation and accessibility, has poured his heart, energy, and vision into building
+  <span className="font-bold"> UniFost </span> with unwavering passion and dedication. 
+  With a background in educational technology and student psychology, he ensures UniFost 
+  remains student-centric.”
+</p>
+    <div className="flex space-x-4 mt-6">
+      <a 
+        href="https://www.linkedin.com/in/priyansh-mishra-14b9ba2a0/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="text-teal-400 hover:text-white text-xl"
+      >
+        <FaLinkedin />
+      </a>
+    </div>
+  </div>
+</div>
+
+{/* Paragraph - large, attractive text but NO box */}
+
+
 
     {/* Founder 2 */}
     <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -485,9 +501,9 @@ export default function About() {
 </a>
 
         </div>
-        <button className="mt-6 bg-gradient-to-r from-pink-400 to-pink-300 text-[#001e3c] px-6 py-3 rounded-full font-semibold hover:scale-105 transform transition-all duration-300">
+        {/* <button className="mt-6 bg-gradient-to-r from-pink-400 to-pink-300 text-[#001e3c] px-6 py-3 rounded-full font-semibold hover:scale-105 transform transition-all duration-300">
           Get in Touch
-        </button>
+        </button> */}
       </div>
       <div className="relative order-1 md:order-2">
         <Image
@@ -505,18 +521,55 @@ export default function About() {
     </div>
   </div>
 </section>
+        
+
+
+     <div className="w-full h-[400px] rounded-xl overflow-hidden shadow-lg">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.6832009747964!2d77.31252000920001!3d28.579274275592528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5d98ee6d3c5%3A0x34c5ea3d0f04f8a7!2sLogix%20Park!5e0!3m2!1sen!2sin!4v1757655392841!5m2!1sen!2sin"
+    width="1920"
+    height="820"
+    style={{ border: 0 }}   
+    allowFullScreen         
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+
 
       
 
       {/* Enquiry Modal */}
-      <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal}>
-        <DialogContent className="sm:max-w-lg">
-          <DialogHeader>
-            <DialogTitle>{modalType === "getStarted" ? "Get Started with Unifost" : "Schedule a Video Call"}</DialogTitle>
-          </DialogHeader>
-          <EnquiryForm type={modalType} />
-        </DialogContent>
-      </Dialog>
+   {/* Enquiry Modal */}
+<Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal}>
+  <DialogContent className="sm:max-w-lg">
+    <DialogHeader>
+      <DialogTitle>
+        {modalType === "getStarted" ? "Get Started with Unifost" : "Schedule a Video Call"}
+      </DialogTitle>
+    </DialogHeader>
+    
+    {/* Pass onSubmitted to close modal */}
+    <EnquiryForm 
+      type={modalType} 
+      onSubmitted={() => {
+        
+        setShowEnquiryModal(false);
+        toast.success("Our counselors will connect with you as soon as possible", {
+      style: {
+        fontSize: '25px',  
+        fontWeight: 'bold',
+        padding: '16px 24px',
+      },
+      icon: '✅',
+    });
+      }}
+    />
+  </DialogContent>
+</Dialog>
+
+
+
 
     </div>
     </>
