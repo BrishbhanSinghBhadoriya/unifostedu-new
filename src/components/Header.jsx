@@ -129,7 +129,7 @@ const [modalType, setModalType] = useState();
   return (
     <header className="w-full font-sans">
       {/* Tagline - Responsive */}
-      <div className="bg-gradient-to-r from-[#001e3c] via-[#05284f] to-[#003b6c] py-2 px-4 text-center">
+      <div className="bg-black py-2 px-4 text-center">
         <p className="text-white text-sm sm:text-base lg:text-lg font-semibold">
           <span className="bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] bg-clip-text text-transparent">Unifost</span> – University <span className="bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] bg-clip-text text-transparent">For</span> Students
         </p>
@@ -137,7 +137,7 @@ const [modalType, setModalType] = useState();
 
       {/* Navbar */}
       <div className={`px-3 sm:px-4 py-3 sm:py-4 sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'backdrop-blur-md bg-white/85 shadow-md py-2' : 'bg-white/75 backdrop-blur-md shadow-sm'
+        scrolled ? 'backdrop-blur-md bg-gradient-to-r from-[#001e3c] via-[#05284f] to-[#003b6c] shadow-md py-2' : 'bg-gradient-to-r from-[#001e3c] via-[#05284f] to-[#003b6c] backdrop-blur-md shadow-sm'
       }`}>
         <div className="flex items-center justify-between w-full gap-3 sm:gap-4 lg:gap-6 flex-nowrap">
           {/* Logo - Made smaller to fit everything in one line */}
@@ -165,7 +165,7 @@ const [modalType, setModalType] = useState();
             ].map((link, i) => (
               <Link key={i}
                 href={link.path}
-                className="relative group text-[#0b223f]/90 hover:text-[#0b223f] transition duration-300 px-3 py-2 rounded-xl flex items-center gap-2 hover:bg-slate-50"
+                className="relative group text-white hover:text-[#0b223f] transition duration-300 px-3 py-2 rounded-xl flex items-center gap-2 hover:bg-slate-50"
               >
                 <link.icon className="text-xs" />
                 <span className="font-semibold">{link.label}</span>
@@ -177,7 +177,7 @@ const [modalType, setModalType] = useState();
             <div className="relative">
               <button 
                 onClick={() => setMenuOpen(menuOpen === "explore" ? null : "explore")} 
-                className={`group flex items-center space-x-2 px-3 py-2 rounded-xl transition-all duration-300 text-[#0b223f] hover:bg-slate-50`}>
+                className={`group flex items-center space-x-2 px-3 py-2 rounded-xl transition-all duration-300 text-white hover:text-[#0b223f] transition duration-300 px-3 py-2 rounded-xl flex items-center gap-2 hover:bg-slate-50`}>
                 <FaUniversity className="text-xs" />
                 <span className="font-semibold">University</span>
                 <FaChevronDown className={`text-xs transition-transform duration-300 ${menuOpen === "explore" ? 'rotate-180' : ''}`} />
@@ -213,7 +213,7 @@ const [modalType, setModalType] = useState();
             <div className="relative">
               <button
                 onClick={() => setMenuOpen(menuOpen === "blogs" ? null : "blogs")}
-                className={`group flex items-center space-x-2 px-3 py-2 rounded-xl transition-all duration-300 text-[#0b223f] hover:bg-slate-50`}>
+                className={`group flex items-center space-x-2 px-3 py-2 rounded-xl transition-all duration-300 text-white hover:text-[#0b223f] transition duration-300 px-3 py-2 rounded-xl flex items-center gap-2 hover:bg-slate-50`}>
                 <FaBookOpen className="text-xs" />
                 <span className="font-semibold">Blogs</span>
                 <FaChevronDown className={`text-xs transition-transform duration-300 ${menuOpen === "blogs" ? 'rotate-180' : ''}`} />
@@ -276,7 +276,7 @@ const [modalType, setModalType] = useState();
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             />
-            <button onClick={handleSearch} className="text-black-600 hover:text-sky-800 px-1">
+            <button onClick={handleSearch} className="text-white-600 hover:text-sky-800 px-1">
               <FaSearch className="text-xs" />
             </button>
           </div>
@@ -297,12 +297,12 @@ const [modalType, setModalType] = useState();
 
           {/* Call/Email - Made more compact */}
           <div className="hidden lg:flex flex-col justify-center items-end text-xs ml-2">
-            <div className="flex items-center gap-1 text-black-600 font-semibold">
-              <FaPhoneAlt className="text-[#00ffe0] text-xs" /> <span className="text-black-600">+91 7042867717</span>
+            <div className="flex items-center gap-1 text-white-600 font-semibold">
+              <FaPhoneAlt className="text-[#00ffe0] text-xs" /> <span className="text-white">+91 7042867717</span>
             </div>
-            <div className="flex items-center gap-1 text-black-600 font-semibold">
+            <div className="flex items-center gap-1 text-white-600 font-semibold">
               <FaEnvelope className="text-sky-400 text-xs" />
-              <a href="mailto:info@unifostedu.com" className="underline hover:text-white text-xs">info@unifostedu.com  </a>
+              <a href="mailto:info@unifostedu.com" className=" text-white  ">info@unifostedu.com  </a>
             </div>
           </div>
 
