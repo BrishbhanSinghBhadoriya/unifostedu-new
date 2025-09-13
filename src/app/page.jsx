@@ -38,7 +38,7 @@ export const metadata = {
     siteName: "UNIFOST",
     images: [
       { 
-        url: "images/uni.jpg",
+        url: "images/uni.webp",
         width: 1200,
         height: 630,
         alt: "Online university degrees India with UGC approved courses and career counseling services"
@@ -53,7 +53,7 @@ export const metadata = {
     creator: "@unifost",
     title: "Top UGC Approved Online Degrees in India | UNIFOST",
     description: "Compare UGC-approved online degrees from top universities. Get free career counseling for MBA, BBA, MCA courses. 5000+ students enrolled.",
-    images: ["images/uni.jpg"],
+    images: ["images/uni.webp"],
   },
   robots: {
     index: true,

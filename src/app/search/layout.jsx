@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Top Online Courses & University| MBA,BBA,MCA & More| UNIFOST",
     description: "Search and explore leading online universities and courses with UNIFOST. Find the ideal program for your career goals.",
-    images: ["/images/uni.jpg"],
+    images: ["/images/uni.webp"],
     url: "https://unifostedu.com/search", 
   },
   alternates: {

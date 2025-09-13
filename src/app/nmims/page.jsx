@@ -30,7 +30,7 @@ const Nmims = () => {
       eligibility: "10+2 from a recognized board with minimum 50% marks",
       fees: "₹1,45,000",
       specialization: "General Management, Digital Marketing, Finance, Human Resources",
-      image: "/images/bba.jpeg",
+      image: "/images/bba.webp",
     },
     {
       course: "Bachelor of Commerce (B.Com)",
@@ -38,7 +38,7 @@ const Nmims = () => {
       eligibility: "10+2 with commerce stream and minimum 50% marks",
       fees: "₹94,000",
       specialization: "Accounting, Finance, Taxation, Banking",
-      image: "/images/bcom.jpeg",
+      image: "/images/bcom.webp",
     },
   
   ];
@@ -50,7 +50,7 @@ const Nmims = () => {
       eligibility: "Graduation in any discipline with minimum 50% marks",
       fees: "₹1,44,000",
       specialization: "Finance, Marketing, Human Resources, Operations, Business Analytics, International Business, Digital Marketing, Supply Chain Management",
-      image: "/images/mba.jpeg",
+      image: "/images/mba.webp",
     },
     {
       course: "Master of Business Administration (WX)",
@@ -58,7 +58,7 @@ const Nmims = () => {
       eligibility: "Graduation with minimum 55% marks and 3 year Experince",
       fees: "₹4,00,000",
       specialization: "Applied Finance, Digital Marketing, Leadership & Strategy, Marketing, Operations & Suppyv Chain",
-      image: "/images/mca1.jpeg",
+      image: "/images/mca1.webp",
     },
   ]
 
@@ -76,7 +76,7 @@ const Nmims = () => {
         {/* Open Graph */}
         <meta property="og:title" content="NMIMS Online Degrees | Accredited UG & PG Programs" />
         <meta property="og:description" content="UGC-Entitled & NAAC A++ accredited online courses from NMIMS Global. Learn anytime, anywhere with flexible UG & PG programs." />
-        <meta property="og:image" content="/images/nmims.png" />
+        <meta property="og:image" content="/images/nmims.webp" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.onlinedegree.in/nmims" />
 
@@ -84,7 +84,7 @@ const Nmims = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="NMIMS Online Degrees | Accredited UG & PG Programs" />
         <meta name="twitter:description" content="Study at NMIMS Global Online. UGC-approved & NAAC A++ accredited online UG & PG programs designed for working professionals." />
-        <meta name="twitter:image" content="/images/nmims.png" />
+        <meta name="twitter:image" content="/images/nmims.webp" />
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
@@ -115,7 +115,7 @@ const Nmims = () => {
             </div>
           </div>
           <div className="md:w-1/2">
-            <Image width={100} height={100} loading="lazy" src="/images/nmims.png" alt="NMIMS" className="rounded-xl shadow-2xl w-full" />
+            <Image width={100} height={100} loading="lazy" src="/images/nmims.webp" alt="NMIMS" className="rounded-xl shadow-2xl w-full" />
           </div>
         </div>
       </section>
@@ -306,7 +306,7 @@ const Nmims = () => {
   <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
     {/* Certificate Image */}
     <div className="md:w-1/2">
-      <Image width={100} height={100} loading="lazy" src="/images/nmims-certi.png" alt="NMIMS Certificate" className="rounded-lg shadow-lg w-full" />
+      <Image width={100} height={100} loading="lazy" src="/images/nmims-certi.webp" alt="NMIMS Certificate" className="rounded-lg shadow-lg w-full" />
     </div>
 
     {/* Text Content */}
@@ -337,30 +337,30 @@ const Nmims = () => {
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {[
-      "/images/aditya-birla.png",
-      "/images/airtel.png",
-      "/images/aurobindo.png",
-      "/images/bajaj-allianz.png",
-      "/images/bharti-airtel.png",
-      "/images/bosch.png",
-      "/images/cipla.png",
-      "/images/coca-cola.png",
-      "/images/cyient.png",
-      "/images/diageo.png",
-      "/images/ey.png",
-      "/images/fedex.png",
-      "/images/hero.png",
-      "/images/himalaya.png",
-      "/images/hinduja.png",
-      "/images/icici.png",
-      "/images/iifl.png",
-      "/images/india-mart.png",
-      "/images/infosys.png",
-      "/images/maruti.png",
-      "/images/nestle.png",
-      "/images/oyo.png",
-      "/images/pepsico.png",
-      "/images/samsung.png",
+      "/images/aditya-birla.webp",
+      "/images/airtel.webp",
+      "/images/aurobindo.webp",
+      "/images/bajaj-allianz.webp",
+      "/images/bharti-airtel.webp",
+      "/images/bosch.webp",
+      "/images/cipla.webp",
+      "/images/coca-cola.webp",
+      "/images/cyient.webp",
+      "/images/diageo.webp",
+      "/images/ey.webp",
+      "/images/fedex.webp",
+      "/images/hero.webp",
+      "/images/himalaya.webp",
+      "/images/hinduja.webp",
+      "/images/icici.webp",
+      "/images/iifl.webp",
+      "/images/india-mart.webp",
+      "/images/infosys.webp",
+      "/images/maruti.webp",
+      "/images/nestle.webp",
+      "/images/oyo.webp",
+      "/images/pepsico.webp",
+      "/images/samsung.webp",
       
     ].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">

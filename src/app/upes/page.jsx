@@ -27,7 +27,7 @@ const Upes = () => {
       eligibility: "10+2 Pass",
       fees: "₹1,50,000",
       specialization: "Operations Management, Financial Management, Human Resource Management, Marketing Management, BBA in Digital Business, BBA in Logistics and Supply Chain, BBA in International Business",
-      image: "/images/bba.jpeg",
+      image: "/images/bba.webp",
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
@@ -35,7 +35,7 @@ const Upes = () => {
       eligibility: "10+2 Pass",
       fees: "₹1,50,000",
       specialization: "Cloud Computing, Cyber Security, Data Analytics, New age Technology",
-      image: "/images/bca.jpeg",
+      image: "/images/bca.webp",
     },
     
   ];
@@ -48,7 +48,7 @@ const Upes = () => {
       fees: "₹2,20,000",
       specialization: "Oil & Gas Management, Power Management, Logistics & Supply Chain Management, Business Analytics, Finance, Marketing, Human Resource Management, Infrastructure Management, International Business, Marketing Management, Human Resource Management, Operations Management, Operations Management, Financial Management, Digital Business",
 
-      image: "/images/mba.jpeg",
+      image: "/images/mba.webp",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -56,7 +56,7 @@ const Upes = () => {
       eligibility: "Graduation in BCA/B.Sc(IT)",
       fees: "₹1,70,000",
       specialization: "Artificial Intelligence and Machine Learning, Cyber Security and Forensics, Data Science ", 
-      image: "/images/mca1.jpeg",
+      image: "/images/mca1.webp",
     },
     
   ];
@@ -81,7 +81,7 @@ const Upes = () => {
           property="og:description"
           content="Explore UPES online degree programs with fees, eligibility, and admission details."
         />
-        <meta property="og:image" content="/images/upes.png" />
+        <meta property="og:image" content="/images/upes.webp" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -104,7 +104,7 @@ const Upes = () => {
             
           </div>
           <div className="md:w-1/2">
-            <Image width={100} height={100} loading="lazy" src="/images/upes.png" alt="UPES University" className="w-full rounded-xl shadow-lg" />
+            <Image width={100} height={100} loading="lazy" src="/images/upes.webp" alt="UPES University" className="w-full rounded-xl shadow-lg" />
           </div>
         </div>
       </section>
@@ -196,11 +196,11 @@ const Upes = () => {
           Recognized & Accredited By
         </h2>
         <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <Image width={100} height={100} loading="lazy" src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/nirf.png" alt="NIRF" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/wes.png" alt="WES" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/ugc.webp" alt="UGC" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/aicte.webp" alt="AICTE" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/naac.webp" alt="NAAC" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/nirf.webp" alt="NIRF" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/wes.webp" alt="WES" className="h-16 object-contain" />
         </div>
       </section>
 
@@ -250,7 +250,7 @@ const Upes = () => {
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
           <div className="flex-1">
-            <Image width={100} height={100} loading="lazy" src="/images/upes-certificate.jpg" alt="UPES University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <Image width={100} height={100} loading="lazy" src="/images/upes-certificate.webp" alt="UPES University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
           </div>
 
           <div className="flex-1 text-white">
@@ -285,28 +285,28 @@ const Upes = () => {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/company.png" alt="Company" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/company.webp" alt="Company" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/company1.png" alt="Microsoft" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/company1.webp" alt="Microsoft" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/company9.jpg" alt="Company 9" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/company9.webp" alt="Company 9" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/com10.png" alt="Company 10" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/com10.webp" alt="Company 10" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/ibm.png" alt="Company4" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/ibm.webp" alt="Company4" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/company6.png" alt="Company 6" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/company6.webp" alt="Company 6" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/tcs.png" alt="Companany5" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/tcs.webp" alt="Companany5" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/adove.png" alt="Adove" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/adove.webp" alt="Adove" className="h-12 object-contain" />
             </div>
           </div>
         </div>

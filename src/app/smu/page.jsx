@@ -57,7 +57,7 @@ const SMU = () => {
     eligibility: "10+2 or equivalent",
     fees: "₹75,000",
     specialization: "English + Sociology + Political Science",
-    image: "/images/ba.jpeg",
+    image: "/images/ba.webp",
   },
   {
     course: "Bachelor of Commerce (B.Com)",
@@ -65,7 +65,7 @@ const SMU = () => {
     eligibility: "10+2 or equivalent",
     fees: "₹75,000",
     specialization: "Genral",
-    image: "/images/bcom.jpeg",
+    image: "/images/bcom.webp",
   },
 ];
 
@@ -76,7 +76,7 @@ const pgCourses = [
     eligibility: "Graduation with minimum 50% marks",
     fees: "₹1,10,000",
     specialization: "dual Specialization(Marketing, Finance, HR, systems, Operations and Supply Chain Management, Healthcare Management)",
-    image: "/images/mba.jpeg",
+    image: "/images/mba.webp",
   },
   {
     course: "Master of Computer Applications (MCA)",
@@ -84,7 +84,7 @@ const pgCourses = [
     eligibility: "Graduation in minimum 50% marks",
     fees: "₹98,000",
     specialization: "General",
-    image: "/images/mca1.jpeg",
+    image: "/images/mca1.webp",
   },
   {
     course: "Master of Arts ",
@@ -92,7 +92,7 @@ const pgCourses = [
     eligibility: "Graduation in relevant stream",
     fees: "₹75,000",
     specialization: "English / Sociology / Political Science",
-    image: "/images/ma1.jpeg",
+    image: "/images/ma1.webp",
   },
   {
     course: "Master of Commerce (M.Com)",
@@ -100,7 +100,7 @@ const pgCourses = [
     eligibility: "Graduation in Commerce or equivalent",
     fees: "₹75,000",
     specialization: "General",
-    image: "/images/bcom.jpeg",
+    image: "/images/bcom.webp",
   },
 ];
 
@@ -141,7 +141,7 @@ const pgCourses = [
             </p>
           </div>
           <div className="md:w-1/2">
-            <Image width={100} height={100} loading="lazy" src="/images/smu-uni.jpg" alt="Sikkim Manipal University" className="w-full rounded-xl shadow-lg" />
+            <Image width={100} height={100} loading="lazy" src="/images/smu-uni.webp" alt="Sikkim Manipal University" className="w-full rounded-xl shadow-lg" />
               
           </div>
         </div>
@@ -235,9 +235,9 @@ const pgCourses = [
       <section className="bg-white py-12 px-4">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
         <div className="flex flex-wrap justify-center items-center gap-20">
-          <Image width={100} height={100} loading="lazy" src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/ugc.webp" alt="UGC" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/aicte.webp" alt="AICTE" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/naac.webp" alt="NAAC" className="h-16 object-contain" />
         </div>
       </section>
 
@@ -312,7 +312,7 @@ const pgCourses = [
           <p className="text-xl text-gray-600">Top Hiring Partners of SMU</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {["/images/company.png", "/images/company1.png", "/images/company9.jpg", "/images/com10.png", "/images/companany4.png", "/images/company6.png", "/images/adove.png", "/images/samsung.png","/images/ey.png","/images/ibm.png","/images/hp.png"].map((src, i) => (
+          {["/images/company.webp", "/images/company1.webp", "/images/company9.webp", "/images/com10.webp", "/images/companany4.webp", "/images/company6.webp", "/images/adove.webp", "/images/samsung.webp","/images/ey.webp","/images/ibm.webp","/images/hp.webp"].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
               <Image width={100} height={100} loading="lazy" src={src} alt="Company" className="h-12 object-contain" />
             </div>

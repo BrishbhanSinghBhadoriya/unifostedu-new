@@ -22,7 +22,7 @@ const Manipal = () => {
       eligibility: "10+2 Minimum 50%",
       fees: "1,80,000",
       specialization: "Healthcare Management, Business Analytics, Financial Technology (FinTech), Marketing Management, Human Resource Management",
-      image: "/images/bba.jpeg",
+      image: "/images/bba.webp",
     },
      {
       course: "Bachelor of Business Administration (BBA)  Hons",
@@ -30,7 +30,7 @@ const Manipal = () => {
       eligibility: "10+2 Minimum 50%",
       fees: "2,40,000",
       specialization: "Healthcare Management, Business Analytics, Financial Technology (FinTech), Marketing Management, Human Resource Management",
-      image: "/images/bba.jpeg",
+      image: "/images/bba.webp",
     },
    
     {
@@ -39,7 +39,7 @@ const Manipal = () => {
       eligibility: "10+2 Minimum 50%",
       fees: " 2,94,000",
       specialization: "General",
-      image: "/images/bcom.jpeg",
+      image: "/images/bcom.webp",
     },
   ];
 
@@ -50,7 +50,7 @@ const Manipal = () => {
       eligibility: "50% Graduation",
       fees: "2,92,000",
       specialization: "Healthcare Management, Finance, Marketing, Operations Management, Pharmaceutical Management, Business Analytics Management, Logistics & Supply Chain Management, Data Science, Human Resource Management",
-      image: "/images/mba.jpeg",
+      image: "/images/mba.webp",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -58,7 +58,7 @@ const Manipal = () => {
       eligibility: "50% Graduation",
       fees: "2,20,000",
       specialization: "AI & ML, Cloud Computing, Cyber Security, Full Stack Development", 
-      image: "/images/mca1.jpeg",
+      image: "/images/mca1.webp",
     },
     {
       course: "Master of Science (M.Sc)",
@@ -66,7 +66,7 @@ const Manipal = () => {
       eligibility: "50% in Graduation",
       fees: "2,80,000",
       specialization: "Data Science, Business Analytics", 
-      image: "/images/m.com.jpeg",
+      image: "/images/m.com.webp",
     },
   
     
@@ -209,15 +209,15 @@ const Manipal = () => {
       <section className="bg-white py-12 px-4">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
         <div className="flex flex-wrap justify-center items-center gap-20">
-          <Image width={100} height={100} loading="lazy" src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/ugc.webp" alt="UGC" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/aicte.webp" alt="AICTE" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/naac.webp" alt="NAAC" className="h-16 object-contain" />
           
          
-          <Image width={100} height={100} loading="lazy" src="/images/aiu.png" alt="AIU" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/nba.png" alt="NBA" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/qs.png" alt="QS" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/acu.png" alt="ACU" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/aiu.webp" alt="AIU" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/nba.webp" alt="NBA" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/qs.webp" alt="QS" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/acu.webp" alt="ACU" className="h-16 object-contain" />
           
           
           
@@ -308,7 +308,7 @@ const Manipal = () => {
           <p className="text-xl text-gray-600">Top Hiring Partners of Manipal Online</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {["/images/company.png", "/images/company1.png", "/images/company9.jpg", "/images/com10.png", "/images/companany4.png", "/images/company6.png", "/images/companany5.png", "/images/adove.png", "/images/samsung.png"].map((src, i) => (
+          {["/images/company.webp", "/images/company1.webp", "/images/company9.webp", "/images/com10.webp", "/images/companany4.webp", "/images/company6.webp", "/images/companany5.webp", "/images/adove.webp", "/images/samsung.webp"].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
               <Image width={100} height={100} loading="lazy" src={src} alt="Company" className="h-12 object-contain" />
             </div>

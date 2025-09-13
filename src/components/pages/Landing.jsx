@@ -661,15 +661,7 @@ const Landing = () => {
           </div>
 
           {/* View All Button */}
-          <div className="text-center mt-12">
-            <button
-              className="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 
-        text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 
-        transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
-            >
-              View All Universities
-            </button>
-          </div>
+         
         </div>
       </section>
 
@@ -747,9 +739,9 @@ const Landing = () => {
                   >
                     <feature.icon className="text-xl sm:text-2xl text-white" />
                   </div>
-                  <h6 className="text-lg sm:text-xl font-bold text-[#001e3c] mb-3 sm:mb-4">
+                  <h2 className="text-lg sm:text-xl font-bold text-[#001e3c] mb-3 sm:mb-4">
                     {feature.title}
-                  </h6>
+                  </h2>
                   <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                     {feature.description}
                   </p>

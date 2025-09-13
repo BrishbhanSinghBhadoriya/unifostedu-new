@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Kurukshetra University Online - UG & PG Courses in India",
     description: "Explore online undergraduate and postgraduate programs offered by Kurukshetra University Online, NAAC A++ accredited, Haryana, India.",
-    images: ["/images/ku.jpg"],
+    images: ["/images/ku.webp"],
   },
    alternates: {
     canonical: "https://unifostedu.com/ku",

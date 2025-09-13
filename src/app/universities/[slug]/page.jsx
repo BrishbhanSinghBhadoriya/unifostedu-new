@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 const universityData = {
   amity: {
     name: 'Amity University Online',
-    logo: '/images/amitylogo.jpg',
+    logo: '/images/amitylogo.webp',
     description:
       'Amity University Online is recognized as one of the top private universities in India...',
     ranking: 'Top 10',
@@ -30,7 +30,7 @@ const universityData = {
   },
   manipal: {
     name: 'Manipal University Online',
-    logo: '/images/manipallogo.jpg',
+    logo: '/images/manipallogo.webp',
     description:
       'Manipal University Online is a pioneer in digital learning...',
     ranking: 'Top 5',

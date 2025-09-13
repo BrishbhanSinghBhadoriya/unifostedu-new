@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Jain University Online - UG & PG Courses in India",
     description: "Explore online undergraduate and postgraduate programs offered by Jain University Online, a NAAC A++ accredited university in Bengaluru.",
-    images: ["/images/jain.png"],
+    images: ["/images/jain.webp"],
   },
   alternates: {
     canonical: "https://unifostedu.com/jain",

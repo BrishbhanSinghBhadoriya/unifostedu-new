@@ -63,7 +63,7 @@ const UU = () => {
     eligibility: "10+2 pass from a recognized board",
     fees: "₹72,000",
     specialization: "General",
-    image: "/images/ba.jpeg",
+    image: "/images/ba.webp",
   },
   {
     course: "Bachelor of Business Administration (BBA)",
@@ -71,7 +71,7 @@ const UU = () => {
     eligibility: "10+2 pass from a recognized board",
     fees: "₹1,20,000",
     specialization: "General",
-    image: "/images/bba.jpg",
+    image: "/images/bba.webp",
   },
   {
     course: "Bachelor of Computer Applications (BCA)",
@@ -79,7 +79,7 @@ const UU = () => {
     eligibility: "10+2 pass from a recognized board",
     fees: "₹1,20,000",
     specialization: "General",
-    image: "/images/bca.jpeg",
+    image: "/images/bca.webp",
   },
 ];
 
@@ -92,7 +92,7 @@ const pgCourses = [
     fees: "₹1,40,000",
     specialization:
       "Marketing, Digital, Human Resource, Business Analytics, Finance, International Business, Information Technology Management, Logistics & Supply Chain Management",
-    image: "/images/mba.jpeg",
+    image: "/images/mba.webp",
   },
   {
     course: "Executive MBA",
@@ -101,7 +101,7 @@ const pgCourses = [
       "Graduation in any field from a recognized university with relevant work experience (specific criteria may vary)",
     fees: "₹1,40,000",
     specialization: "Business Analytics, HR Analytics, Finance Analytics,Banking and Finance",
-    image: "/images/mca.jpeg",
+    image: "/images/mca.webp",
   },
   {
     course: "Master of Computer Applications (MCA)",
@@ -110,7 +110,7 @@ const pgCourses = [
       "Graduate in Computer Applications/CS/IT/Engineering with 50% marks (45% reserved) OR Graduate with Mathematics at 10+2 or graduation level. If not studied, must complete a bridge course.",
     fees: "₹1,20,000",
     specialization: "General",
-    image: "/images/mca1.jpeg",
+    image: "/images/mca1.webp",
   },
 ];
 
@@ -301,7 +301,7 @@ const pgCourses = [
             
             <div className="flex justify-center">
               <div className="relative">
-                <Image width={100} height={100} loading="lazy" src="/images/learning-platform.png" alt="Learning Platform" className="rounded-xl shadow-2xl border-4 border-blue-700 max-w-full h-auto" />
+                <Image width={100} height={100} loading="lazy" src="/images/learning-platform.webp" alt="Learning Platform" className="rounded-xl shadow-2xl border-4 border-blue-700 max-w-full h-auto" />
                 <div className="absolute -bottom-4 -right-4 bg-yellow-400 text-blue-900 font-bold py-2 px-4 rounded-lg shadow-lg">
                   Experience The Future of Learning
                 </div>
@@ -371,7 +371,7 @@ const pgCourses = [
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
           <div className="flex-1">
-            <Image width={100} height={100} loading="lazy" src="/images/uu-certificate.png" alt="UU University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <Image width={100} height={100} loading="lazy" src="/images/uu-certificate.webp" alt="UU University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
             
           </div>
 
@@ -464,28 +464,28 @@ const pgCourses = [
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/tcs.png" alt="Company" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/tcs.webp" alt="Company" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/lt.jpg" alt="Microsoft" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/lt.webp" alt="Microsoft" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/company9.jpg" alt="Company 9" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/company9.webp" alt="Company 9" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/com10.png" alt="Company 10" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/com10.webp" alt="Company 10" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/companany4.png" alt="Company4" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/companany4.webp" alt="Company4" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/sap.png" alt="Company 6" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/sap.webp" alt="Company 6" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/icici.png" alt="Companany5" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/icici.webp" alt="Companany5" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/adove.png" alt="Adove" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/adove.webp" alt="Adove" className="h-12 object-contain" />
             </div>
           </div>
         </div>

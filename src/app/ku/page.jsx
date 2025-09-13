@@ -18,7 +18,7 @@ import Image from 'next/image';
   openGraph: {
     title: "Kurukshetra University Online - UG & PG Courses in India",
     description: "Explore online undergraduate and postgraduate programs offered by Kurukshetra University Online, NAAC A++ accredited, Haryana, India.",
-    images: ["/images/ku.jpg"],
+    images: ["/images/ku.webp"],
   },
 };
 
@@ -30,7 +30,7 @@ const KU = () => {
       eligibility: "10+2 Pass",
       fees: "₹72,661",
       specialization: "Business Administration",
-      image: "/images/bba.jpeg",
+      image: "/images/bba.webp",
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
@@ -38,7 +38,7 @@ const KU = () => {
       eligibility: "10+2 Pass",
       fees: "₹72,661",
       specialization: "Computer Applications",
-      image: "/images/bca.jpeg",
+      image: "/images/bca.webp",
     },
     {
       course: "Bachelor of Commerce (B.Com)",
@@ -46,7 +46,7 @@ const KU = () => {
       eligibility: "10+2 Pass",
       fees: "₹72,661",
       specialization: "Commerce",
-      image: "/images/bcom.jpeg",
+      image: "/images/bcom.webp",
     },
   ];
 
@@ -57,7 +57,7 @@ const KU = () => {
       eligibility: "Graduation",
       fees: "₹98,545",
       specialization: "General Management",
-      image: "/images/mba.jpeg",
+      image: "/images/mba.webp",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -65,7 +65,7 @@ const KU = () => {
       eligibility: "Graduation",
       fees: "₹76,667",
       specialization: "Computer Applications",
-      image: "/images/mca1.jpeg",
+      image: "/images/mca1.webp",
     },
     {
       course: "Master of Commerce (M.Com)",
@@ -73,7 +73,7 @@ const KU = () => {
       eligibility: "Graduation in Commerce",
       fees: "₹54,036",
       specialization: "Commerce",
-      image: "/images/m.com.jpeg",
+      image: "/images/m.com.webp",
     },
     {
       course: "Master of Arts (MA)",
@@ -81,7 +81,7 @@ const KU = () => {
       eligibility: "Graduation",
       fees: "₹72,661",
       specialization: "English, Journalism & Mass Communication, Political Science",
-      image: "/images/ma1.jpeg",
+      image: "/images/ma1.webp",
     },
     {
       course: "MBA (Specializations)",
@@ -89,7 +89,7 @@ const KU = () => {
       eligibility: "Graduation",
       fees: "₹119,845",
       specialization: "Finance Management, Information Technology Management, Human Resource Management, Marketing, Business Analytics",
-      image: "/images/mba.jpeg",
+      image: "/images/mba.webp",
     },
   ];
 
@@ -113,7 +113,7 @@ const KU = () => {
         {/* Open Graph / Social Media */}
         <meta property="og:title" content="Kurukshetra University Online - UG & PG Courses in India" />
         <meta property="og:description" content="Explore online undergraduate and postgraduate programs offered by Kurukshetra University Online, NAAC A++ accredited, Haryana, India." />
-        <meta property="og:image" content="/images/ku.jpg" />
+        <meta property="og:image" content="/images/ku.webp" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.kurukshetrauniversityonline.com" />
 
@@ -121,7 +121,7 @@ const KU = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Kurukshetra University Online - UG & PG Courses in India" />
         <meta name="twitter:description" content="Explore online undergraduate and postgraduate programs offered by Kurukshetra University Online, NAAC A++ accredited, Haryana, India." />
-        <meta name="twitter:image" content="/images/ku.jpg" />
+        <meta name="twitter:image" content="/images/ku.webp" />
       </head>
       {/* Intro Section */}
       <section className="py-16 bg-white px-6 font-[Inter]">
@@ -140,7 +140,7 @@ const KU = () => {
             </p>
           </div>
           <div className="md:w-1/2">
-            <Image width={100} height={100} loading='lazy' src="/images/ku.jpg" alt="Kurukshetra University" className="w-full rounded-xl shadow-lg" />
+            <Image width={100} height={100} loading='lazy' src="/images/ku.webp" alt="Kurukshetra University" className="w-full rounded-xl shadow-lg" />
           </div>
         </div>
       </section>
@@ -229,10 +229,10 @@ const KU = () => {
           Recognized & Accredited By
         </h2>
         <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <Image width={100} height={100} loading='lazy' src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading='lazy'src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading='lazy'src="/images/nirf.png" alt="NIRF" className="h-16 object-contain" />
-          <Image width={100} height={100} loading='lazy'src="/images/aiu.png" alt="AIU" className="h-16 object-contain" />
+          <Image width={100} height={100} loading='lazy' src="/images/ugc.webp" alt="UGC" className="h-16 object-contain" />
+          <Image width={100} height={100} loading='lazy'src="/images/naac.webp" alt="NAAC" className="h-16 object-contain" />
+          <Image width={100} height={100} loading='lazy'src="/images/nirf.webp" alt="NIRF" className="h-16 object-contain" />
+          <Image width={100} height={100} loading='lazy'src="/images/aiu.webp" alt="AIU" className="h-16 object-contain" />
         </div>
       </section>
 
@@ -315,16 +315,16 @@ const KU = () => {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100}loading="lazy" src="/images/company.png" alt="Company" className="h-12 object-contain" />
+              <Image width={100} height={100}loading="lazy" src="/images/company.webp" alt="Company" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100}loading="lazy" src="/images/company1.png" alt="Microsoft" className="h-12 object-contain" />
+              <Image width={100} height={100}loading="lazy" src="/images/company1.webp" alt="Microsoft" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100}loading="lazy" src="/images/company9.jpg" alt="Company 9" className="h-12 object-contain" />
+              <Image width={100} height={100}loading="lazy" src="/images/company9.webp" alt="Company 9" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100}loading="lazy" src="/images/com10.png" alt="Company 10" className="h-12 object-contain" />
+              <Image width={100} height={100}loading="lazy" src="/images/com10.webp" alt="Company 10" className="h-12 object-contain" />
             </div>
           </div>
         </div>
