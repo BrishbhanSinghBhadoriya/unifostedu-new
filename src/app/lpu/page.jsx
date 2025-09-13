@@ -101,19 +101,23 @@ const Lpu = () => {
       <section className="py-16 bg-white px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2">
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
+            <h1 className="whitespace-nowrap  text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
                Lovely Professional University Online
             </h1><br />
             <p> <span className="font-semibold text-gray-700">Private University in Jalandhar, Punjab, India.</span><br /><br/></p>
             <p className="text-gray-700 text-lg">
-              Lovely Professional University (LPU) is a NAAC A++ accredited institution offering UGC-entitled online degree programs designed to provide flexible and quality education.<br /><br />
-              With over 30,000 students on campus and a strong focus on innovation, LPU Online brings the same academic excellence through its digital platform, making education accessible to learners across India.
+             Lovely Professional University (LPU) is a top-ranking university in India in various academic disciplines, ranked by NIRF. LPU Online is no different as it is one of the top online education providers in India.<br /><br />
+              
+             The university has various affiliations including recognition from University Grants Commission (UGC), All India Council for Technical Education (AICTE), and World Education Services (WES). The university has been ranked by NIRF, WURI, and The World University Rankings 2022. The quality of education this university provides is quite evident from its NAAC A++ grading.
+             <br /><br />
+            The university offers online UG and PG courses in the domains of Management, Computer Applications, Commerce, Arts, and Science. The curriculum for every course is industry oriente it has been designed by expert practitioners and experienced faculty. Apart from academic learning, the university conducts skilling classes conducted by a dedicated team of in-house professors.
+
             </p>
 
             
           </div>
           <div className="md:w-1/2">
-            <Image width={100} height={100} src="/images/lpu.png" alt="Lovely Professional University" className="w-full rounded-xl shadow-lg" />
+            <Image width={100} height={100} loading="lazy" src="/images/lpu.png" alt="Lovely Professional University" className="w-full rounded-xl shadow-lg" />
           </div>
         </div>
       </section>
@@ -201,13 +205,13 @@ const Lpu = () => {
           Recognized & Accredited By
         </h2>
         <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <Image width={100} height={100}  src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/nirf.png" alt="NIRF" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/wes.png" alt="WES" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/aiu.png" alt="AIU" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/qs.png" alt="RECOGIN" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy"  src="/images/ugc.png" alt="UGC" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/aicte.png" alt="AICTE" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/naac.png" alt="NAAC" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/nirf.png" alt="NIRF" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/wes.png" alt="WES" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/aiu.png" alt="AIU" className="h-16 object-contain" />
+          <Image width={100} height={100} loading="lazy" src="/images/qs.png" alt="RECOGIN" className="h-16 object-contain" />
         </div>
       </section>
 
@@ -254,7 +258,7 @@ const Lpu = () => {
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
           <div className="flex-1">
-            <Image width={100} height={100} src="/images/lpu-certificate.jpg" alt="LPU Online Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <Image width={100} height={100} loading="lazy" src="/images/lpu-certificate.jpg" alt="LPU Online Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
           </div>
           <div className="flex-1 text-white">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">
@@ -287,28 +291,28 @@ const Lpu = () => {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} src="/images/company.png" alt="Company" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/company.png" alt="Company" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} src="/images/company1.png" alt="Microsoft" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/company1.png" alt="Microsoft" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} src="/images/company9.jpg" alt="Company 9" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/company9.jpg" alt="Company 9" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} src="/images/com10.png" alt="Company 10" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/com10.png" alt="Company 10" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} src="/images/companany4.png" alt="Company4" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/companany4.png" alt="Company4" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} src="/images/company6.png" alt="Company 6" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/company6.png" alt="Company 6" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} src="/images/companany5.png" alt="Companany5" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/companany5.png" alt="Companany5" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} src="/images/adove.png" alt="Adove" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/adove.png" alt="Adove" className="h-12 object-contain" />
             </div>
           </div>
         </div>

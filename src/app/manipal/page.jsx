@@ -112,23 +112,27 @@ const Manipal = () => {
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
       {/* Intro Section */}
-      <section className="py-16 bg-white px-6 font-[Inter]">
+      <section className="py-14 sm:py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2">
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#1a365d] leading-tight mb-4 font-[Poppins]">
               Say Hii to your future with Manipal University Online
             </h1><br />
-            <p> <span className="font-semibold text-gray-700">Private University in Jaipur, Rajasthan, India.</span><br /><br/></p>
+            <p> <span className="inline-block px-3 py-1 rounded-full bg-white text-[#1a365d] border border-blue-100 shadow-sm text-sm font-semibold">Private University in Jaipur, Rajasthan, India.</span><br /><br/></p>
 
-            <p className="text-gray-700 text-lg">
+            <p className="text-gray-700 text-lg leading-relaxed">
               Manipal University Online transforms careers with globally recognized online degrees delivered at your doorstep. With top-class accreditations and flexible learning, it offers quality education with personalized mentorship.
               It provides a unique blend of academic excellence and industry relevance, ensuring students are well-prepared for the future. 
               <br /><br />
               Ranked among the top private universities in India, Manipal offers diverse programs in business and technology with strong academic support and vibrant digital learning.
             </p>
           </div>
-          <div className="md:w-1/2">
-            <Image width={100} height={100} src="/images/manipal.png" alt="Manipal University" className="w-full rounded-xl shadow-lg" />
+          <div className="md:w-1/2 w-full">
+            <div className="relative rounded-2xl p-[1.5px] bg-gradient-to-r from-blue-400/50 via-indigo-400/50 to-cyan-400/50 shadow-md">
+              <div className="rounded-2xl bg-white overflow-hidden">
+                <Image width={100} height={100} src="/images/manipal.png" alt="Manipal University" className="w-full h-auto object-contain" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -161,12 +165,12 @@ const Manipal = () => {
 
       {/* Why Choose Section */}
      {/* Why Choose Manipal */}
-<section className="py-12 px-4 bg-white">
+<section className="py-14 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
   <div className="max-w-7xl mx-auto text-center mb-10">
-    <h2 className="text-3xl font-bold text-gray-900">Why Choose Manipal University Online?</h2>
-    <hr className="mt-4 border-gray-300 w-24 mx-auto" />
+    <h2 className="text-3xl sm:text-4xl font-bold text-[#1a365d]">Why Choose Manipal University Online?</h2>
+    <div className="mx-auto mt-4 h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4]"></div>
   </div>
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
     {[
       {
         icon: <FaGraduationCap />,
@@ -209,10 +213,10 @@ const Manipal = () => {
         text: "Access e-books, recorded classes, and online labs."
       }
     ].map((item, i) => (
-      <div key={i} className="flex flex-col items-start text-left">
-        <div className="text-blue-600 text-3xl mb-4">{item.icon}</div>
-        <h4 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h4>
-        <p className="text-gray-600 text-sm">{item.text}</p>
+      <div key={i} className="group bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300">
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white flex items-center justify-center text-2xl mb-4 shadow-sm">{item.icon}</div>
+        <h4 className="text-lg font-semibold text-[#1a365d] mb-2">{item.title}</h4>
+        <p className="text-gray-600 text-sm leading-relaxed">{item.text}</p>
       </div>
     ))}
   </div>
@@ -241,8 +245,8 @@ const Manipal = () => {
 
 
       {/* Admission Procedure */}
-      <section className="bg-gray-100 py-10 px-4">
-  <div className="max-w-7xl mx-auto bg-white shadow-md rounded-md p-6">
+      <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-12 px-4">
+  <div className="max-w-7xl mx-auto bg-white/90 backdrop-blur rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-md">
     
     {/* Centered Heading */}
     <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-900 mb-8">
@@ -273,19 +277,19 @@ const Manipal = () => {
         <div key={index} className="relative flex flex-col items-center">
           {/* Line connector */}
           {index !== 0 && (
-            <div className="absolute -left-1/2 top-5 w-full h-0.5 bg-blue-900 z-0"></div>
+            <div className="hidden md:block absolute -left-1/2 top-5 w-full h-0.5 bg-blue-900/40 z-0"></div>
           )}
 
           {/* Circle with border */}
-          <div className="z-10 w-6 h-6 rounded-full border-4 border-blue-900 bg-white flex items-center justify-center">
-            <div className="w-2.5 h-2.5 bg-blue-900 rounded-full"></div>
+          <div className="z-10 w-8 h-8 rounded-full border-4 border-blue-700 bg-white flex items-center justify-center shadow">
+            <div className="w-3 h-3 bg-blue-700 rounded-full"></div>
           </div>
 
           {/* Step label */}
-          <h4 className="mt-4 font-semibold text-lg">{item.step}</h4>
+          <h4 className="mt-4 font-semibold text-lg text-[#1a365d]">{item.step}</h4>
 
           {/* Description */}
-          <p className="mt-2 text-sm text-gray-700">{item.description}</p>
+          <p className="mt-2 text-sm text-gray-600 leading-relaxed">{item.description}</p>
         </div>
       ))}
     </div>
@@ -315,15 +319,15 @@ const Manipal = () => {
 
 
       {/* Hiring Partners */}
-      <section className="py-12 bg-gray-100">
-        <div className="max-w-6xl mx-auto px-4 text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-800">Our Students Work At</h2>
-          <p className="text-xl text-gray-600">Top Hiring Partners of Manipal Online</p>
+      <section className="py-14 bg-gradient-to-br from-slate-50 to-blue-50">
+        <div className="max-w-6xl mx-auto px-4 text-center mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1a365d]">Our Students Work At</h2>
+          <p className="text-lg sm:text-xl text-gray-600">Top Hiring Partners of Manipal Online</p>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        <div className="max-w-6xl mx-auto px-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
           {["/images/company.png", "/images/company1.png", "/images/company9.jpg", "/images/com10.png", "/images/companany4.png", "/images/company6.png", "/images/companany5.png", "/images/adove.png", "/images/samsung.png"].map((src, i) => (
-            <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} src={src} alt="Company" className="h-12 object-contain" />
+            <div key={i} className="bg-white rounded-xl border border-slate-200 shadow-sm p-4 flex items-center justify-center hover:shadow-lg transition-all">
+              <Image width={100} height={100} src={src} alt="Company" className="h-10 sm:h-12 object-contain" />
             </div>
           ))}
         </div>

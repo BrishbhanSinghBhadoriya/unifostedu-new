@@ -131,7 +131,18 @@ export const metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png', // सुनिश्चित करें कि यह फ़ाइल public/ फ़ोल्डर में है
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: '/apple-touch-icon-precomposed.png', // सुनिश्चित करें कि यह फ़ाइल public/ फ़ोल्डर में है
+    },
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/site.webmanifest',
+  other: {
+    'msapplication-config': '/browserconfig.xml',
   },
 };
 
@@ -151,22 +162,8 @@ export default function RootLayout({ children }) {
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
-        {/* Favicon and app icons */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico" />
-        
-        {/* Bookmark logo for social sharing and bookmarks */}
-        <link rel="icon"  href="/favicon.ico" />
-        
-        <link rel="manifest" href="/site.webmanifest" />
+
         <meta name="msapplication-config" content="/browserconfig.xml" />
-        <meta name="msapplication-TileImage" content="/bookmarklogo.png" />
         <meta name="theme-color" content="#001e3c" />
         
         {/* Organization Schema */}
