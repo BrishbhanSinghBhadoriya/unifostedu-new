@@ -178,16 +178,16 @@ export default function WorkflowRoadmap({ onGetStartedClick }) {
 
             {/* Start Image - University Building */}
             <div className="absolute left-[-1.2rem] sm:left-[-5rem] md:left-[-6rem] lg:left-[-7rem] bottom-24 sm:bottom-40 md:bottom-40 z-20">
-              <div className="relative">
+              {/* <div className="relative">
                 <Image width={100} height={100} loading="lazy" src="/images/university.webp" alt="University Start" className="w-16 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 object-cover rounded-full" />
-              </div>
+              </div> */}
             </div>
 
             {/* Destination Image - Marshmallow Graduation */}
             <div className="absolute right-2 sm:right-[-5rem] md:right-[-6rem] lg:right-[-7rem] bottom-24 sm:bottom-40 md:bottom-40 z-20">
-              <div className="relative">
+              {/* <div className="relative">
                 <Image width={100} height={100} loading="lazy" src="/images/marshmallo1.webp" alt="Graduation Success" className="w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 object-cover rounded-full" />
-              </div>
+              </div> */}
             </div>
           </div>
 

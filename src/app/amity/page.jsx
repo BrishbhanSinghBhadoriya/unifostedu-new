@@ -22,6 +22,7 @@ import {
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import AdmissionProcess from '@/components/AdmissionProcess';
+import AdmissionProcedure from '@/components/AdmissionProcedure';
 
 // Course Card Component
 const CourseCard = ({ course, duration, eligibility, fees, specialization, image, universityName }) => {
