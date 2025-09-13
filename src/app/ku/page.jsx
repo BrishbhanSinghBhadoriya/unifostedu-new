@@ -10,6 +10,9 @@ import {
 } from "react-icons/fa";
 import Head from 'next/head';
 import Image from 'next/image';
+import * as Tabs from '@radix-ui/react-tabs'
+import AdmissionProcedure from '@/components/AdmissionProcedure';
+
 
  const metadata = {
   title: "Kurukshetra University Online - UG & PG Courses in India",
@@ -92,6 +95,12 @@ const KU = () => {
       image: "/images/mba.webp",
     },
   ];
+ 
+  const allCourses = [
+    ...ugCourses.map(course => ({ ...course, type: "UG" })),
+    ...pgCourses.map(course => ({ ...course, type: "PG" })),
+    
+  ];
 
   return (
     <>
@@ -157,29 +166,53 @@ const KU = () => {
         </div>
       </section>
 
-      {/* UG Cards */}
-      <section className="py-12 bg-white px-6 font-[Inter]">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">Undergraduate Courses</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {ugCourses.map((item, index) => (
-              <EnquireCard key={index} {...item} universityName="Kurukshetra University" />
-            ))}
-          </div>
-        </div>
-      </section>
+<section className="py-12 px-6 bg-white font-[Inter]">
+  <h2 className="text-2xl font-bold text-center mb-6 text-[#003b59] font-[Poppins]">
+    Kurukshetra University Online Programs
+  </h2>
 
-      {/* PG Cards */}
-      <section className="py-12 bg-white px-6 font-[Inter]">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">Postgraduate Courses</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {pgCourses.map((item, index) => (
-              <EnquireCard key={index} {...item} universityName="Kurukshetra University" />
-            ))}
-          </div>
-        </div>
-      </section>
+    <Tabs.Root defaultValue="all" className="w-full">
+    <Tabs.List className="flex justify-center gap-4 mb-6">
+      <Tabs.Trigger value="all"   className="px-6 py-2 rounded-full bg-gray-200 text-gray-800 font-semibold 
+                   hover:bg-blue-600 hover:text-white transition-colors duration-300
+                   radix-state-active:bg-blue-600 radix-state-active:text-white">All</Tabs.Trigger>
+      <Tabs.Trigger value="ug"  className="px-6 py-2 rounded-full bg-gray-200 text-gray-800 font-semibold 
+                   hover:bg-blue-600 hover:text-white transition-colors duration-300
+                   radix-state-active:bg-blue-600 radix-state-active:text-white">UG</Tabs.Trigger>
+      <Tabs.Trigger value="pg"  className="px-6 py-2 rounded-full bg-gray-200 text-gray-800 font-semibold 
+                   hover:bg-blue-600 hover:text-white transition-colors duration-300
+                   radix-state-active:bg-blue-600 radix-state-active:text-white">PG</Tabs.Trigger>
+     
+    </Tabs.List>
+
+    {/* All Courses */}
+    <Tabs.Content value="all">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start">
+        {[...ugCourses, ...pgCourses,].map((course, idx) => (
+          <EnquireCard key={idx} {...course} universityName="Kurukshetra University Online" />
+        ))}
+      </div>
+    </Tabs.Content>
+
+    {/* UG Courses */}
+    <Tabs.Content value="ug">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start">
+        {ugCourses.map((course, idx) => (
+          <EnquireCard key={idx} {...course} universityName="Kurukshetra University Online" />
+        ))}
+      </div>
+    </Tabs.Content>
+
+    {/* PG Courses */}
+    <Tabs.Content value="pg">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start">
+        {pgCourses.map((course, idx) => (
+          <EnquireCard key={idx} {...course} universityName=" Kurukshetra University Online" />
+        ))}
+      </div>
+    </Tabs.Content>
+  </Tabs.Root>
+</section>
 
       <section className="py-12 px-4 bg-white">
         <div className="max-w-7xl mx-auto text-center mb-10">
@@ -235,46 +268,8 @@ const KU = () => {
           <Image width={100} height={100} loading='lazy'src="/images/aiu.webp" alt="AIU" className="h-16 object-contain" />
         </div>
       </section>
-
-      <section className="bg-gray-100 py-10 px-4">
-        <div className="max-w-7xl mx-auto bg-white shadow-md rounded-md p-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-900 mb-8">
-            Admission Process
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center relative">
-            {[
-              {
-                step: "Step 1",
-                description: "Fill the online application form on the university portal",
-              },
-              {
-                step: "Step 2",
-                description: "Upload required documents and pay the application fee",
-              },
-              {
-                step: "Step 3",
-                description: "Receive confirmation and student login credentials",
-              },
-              {
-                step: "Step 4",
-                description: "Complete fee payment and begin your classes",
-              },
-            ].map((item, index) => (
-              <div key={index} className="relative flex flex-col items-center">
-                {index !== 0 && (
-                  <div className="absolute -left-1/2 top-5 w-full h-0.5 bg-blue-900 z-0"></div>
-                )}
-                <div className="z-10 w-6 h-6 rounded-full border-4 border-blue-900 bg-white flex items-center justify-center">
-                  <div className="w-2.5 h-2.5 bg-blue-900 rounded-full"></div>
-                </div>
-                <h4 className="mt-4 font-semibold text-lg">{item.step}</h4>
-                <p className="mt-2 text-sm text-gray-700">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+   {/* Admission Procedure */}
+      <AdmissionProcedure />
 
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">

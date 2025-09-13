@@ -11,39 +11,88 @@ const EnquireCard = ({
   eligibility, 
   fees, 
   fee,
-  specialization, 
+  specialization = [],  
   image, 
   universityName 
 }) => {
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
+  const [showMore, setShowMore] = useState(false);
 
-  const handleEnquireClick = () => {
-    setIsEnquiryOpen(true);
-  };
-
-  const handleEnquirySubmitted = () => {
-    setIsEnquiryOpen(false);
-  };
+  const handleEnquireClick = () => setIsEnquiryOpen(true);
+  const handleEnquirySubmitted = () => setIsEnquiryOpen(false);
 
   // Handle both 'fees' and 'fee' properties
   const displayFees = fees || fee;
 
+  // Normalize specialization → always array
+  const specializationList = Array.isArray(specialization)
+    ? specialization
+    : specialization 
+      ? specialization.split(',').map(s => s.trim()) 
+      : [];
+
+  // Default: show only 1 specialization
+  const visibleSpecializations = showMore 
+    ? specializationList 
+    : specializationList.slice(0, 1);
+
   return (
     <>
       <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition duration-300">
-        <Image width={100} height={100} loading="lazy" src={image} alt={course} className="h-40 w-full object-cover sm:h-48" />
-        <div className="p-4 flex-1 flex flex-col justify-between">
+        {/* Image */}
+        <Image
+          width={100}
+          height={100}
+          loading="lazy"
+          src={image}
+          alt={course}
+          className="h-44 w-full object-cover sm:h-52"
+        />
+
+        {/* Content */}
+        <div className="p-4 flex flex-col flex-1">
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">{course}</h3>
-            <p className="text-sm text-gray-600 mb-1"><strong>Duration:</strong> {duration}</p>
-            <p className="text-sm text-gray-600"><strong>Eligibility:</strong> {eligibility}</p>
-            {displayFees && <p className="text-sm text-gray-600"><strong>Fees:</strong> {displayFees}</p>}
-            {specialization && <p className="text-sm text-gray-600"><strong>Specialization:</strong> {specialization}</p>}
+            <h3 className="text-lg font-bold text-gray-900 mb-2">{course}</h3>
+
+            <p className="text-sm text-gray-700 mb-1">
+              <span className="font-semibold">Duration:</span> {duration}
+            </p>
+            <p className="text-sm text-gray-700 mb-1">
+              <span className="font-semibold">Eligibility:</span> {eligibility}
+            </p>
+            {displayFees && (
+              <p className="text-sm text-gray-700 mb-1">
+                <span className="font-semibold">Fees:</span> {displayFees}
+              </p>
+            )}
+
+            {/* Specializations */}
+            {specializationList.length > 0 && (
+              <div className="text-sm text-gray-700 mt-2">
+                <span className="font-semibold">Specializations:</span>
+                <ul className="list-disc list-inside mt-1">
+                  {visibleSpecializations.map((spec, idx) => (
+                    <li key={idx}>{spec}</li>
+                  ))}
+                </ul>
+
+                {specializationList.length > 1 && (
+                  <button
+                    onClick={() => setShowMore(!showMore)}
+                    className="text-blue-600 mt-1 font-medium hover:underline"
+                  >
+                    {showMore ? 'See Less' : 'See More'}
+                  </button>
+                )}
+              </div>
+            )}
           </div>
-          <div className="mt-4">
+
+          {/* Enquire Button (Always at bottom) */}
+          <div className="mt-auto pt-4">
             <button
               onClick={handleEnquireClick}
-              className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-center block font-semibold hover:opacity-90 transition w-full"
+              className="w-full bg-gradient-to-r from-green-500 to-blue-600 text-white px-5 py-2.5 rounded-full font-semibold shadow hover:opacity-90 transition"
             >
               Enquire Now
             </button>
@@ -51,6 +100,7 @@ const EnquireCard = ({
         </div>
       </div>
 
+      {/* Enquiry Dialog */}
       <Dialog open={isEnquiryOpen} onOpenChange={setIsEnquiryOpen}>
         <DialogContent>
           <DialogHeader>

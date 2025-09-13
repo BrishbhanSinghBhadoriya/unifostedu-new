@@ -35,6 +35,8 @@ export default function AdmissionProcess({ steps = defaultSteps, title = 'Admiss
         </div>
       </div>
     </section>
+
+    
   );
 }
 

@@ -14,7 +14,9 @@ import {
 import { motion } from 'framer-motion';
 import EnquireCard from '@/components/EnquireCard';
 import Image from 'next/image';
-import AdmissionProcess from '@/components/AdmissionProcess'
+import AdmissionProcedure from '@/components/AdmissionProcedure';
+import * as Tabs from '@radix-ui/react-tabs';
+
 
 const Amity = () => {
   const ugCourses = [
@@ -39,7 +41,7 @@ const Amity = () => {
       duration: "3 Years",
       eligibility: "10+2 Pass",
       fees: "99,000 - 2,50,000",
-      specialization: "B,Com(General, Hons,International Finance & Accounting",
+      specialization: "B.Com(General, Hons,International Finance & Accounting",
       image: "/images/bcom.webp",
     },
     {
@@ -58,7 +60,7 @@ const Amity = () => {
       duration: "2 Years",
       eligibility: "Graduation",
       fees: "1,99,000 - 2,99,000",
-      specialization: "MBA(General,Information Technology Management, Dual Specialization, Human Resource Analytics, Data Science, Business Analytics, International Business Management, Digital Entrepreneurship, Digital Marketing Management,Entrepreneurship & Leadership Management,Finance & Accounting Management,Hospitality Management,Global Finance Market,Insurance Management,Marketing & Sales Management,Petroleum & Natural Gas,Producation and Operations Management,Retail Management )",
+      specialization:"MBA(General,Information Technology Management, Dual Specialization, Human Resource Analytics, Data Science, Business Analytics, International Business Management, Digital Entrepreneurship, Digital Marketing Management,Entrepreneurship & Leadership Management,Finance & Accounting Management,Hospitality Management,Global Finance Market,Insurance Management,Marketing & Sales Management,Petroleum & Natural Gas,Producation and Operations Management,Retail Management )",
       image: "/images/mba.webp",
     },
     {
@@ -123,6 +125,12 @@ const Amity = () => {
     },
 
   ] 
+
+   const allCourses = [
+    ...ugCourses.map(course => ({ ...course, type: "UG" })),
+    ...pgCourses.map(course => ({ ...course, type: "PG" })),
+    ...ug_pgCourses.map(course => ({ ...course, type: "UG+PG" })),
+  ];
   
    {
   const highlights = [
@@ -233,22 +241,71 @@ const Amity = () => {
         </div>
       </section>
 
-      {/* UG & PG Course Cards */}
-      {[{ title: "Amity University Online Programs: MBA, BBA, MCA, BCA", list: ugCourses }, { title: "Online Amity University Fees: Complete Fee Structure", list: pgCourses }, { title: "Online Amity University Admission Requirements & Process", list: ug_pgCourses }].map((section, idx) => (
-        <section key={idx} className="py-12 bg-white px-6 font-[Inter]">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">{section.title}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-              {section.list.map((item, index) => <EnquireCard key={index} {...item} universityName="Amity University Online" />)}
-            </div>
-          </div>
-        </section>
-      ))}
+     {/* Courses Section with Tabs */}
+<section className="py-12 px-6 bg-white font-[Inter]">
+  <h2 className="text-2xl font-bold text-center mb-6 text-[#003b59] font-[Poppins]">
+    Amity University Online Programs
+  </h2>
+
+    <Tabs.Root defaultValue="all" className="w-full">
+    <Tabs.List className="flex justify-center gap-4 mb-6">
+      <Tabs.Trigger value="all"   className="px-6 py-2 rounded-full bg-gray-200 text-gray-800 font-semibold 
+                   hover:bg-blue-600 hover:text-white transition-colors duration-300
+                   radix-state-active:bg-blue-600 radix-state-active:text-white">All</Tabs.Trigger>
+      <Tabs.Trigger value="ug"  className="px-6 py-2 rounded-full bg-gray-200 text-gray-800 font-semibold 
+                   hover:bg-blue-600 hover:text-white transition-colors duration-300
+                   radix-state-active:bg-blue-600 radix-state-active:text-white">UG</Tabs.Trigger>
+      <Tabs.Trigger value="pg"  className="px-6 py-2 rounded-full bg-gray-200 text-gray-800 font-semibold 
+                   hover:bg-blue-600 hover:text-white transition-colors duration-300
+                   radix-state-active:bg-blue-600 radix-state-active:text-white">PG</Tabs.Trigger>
+      <Tabs.Trigger value="ug+pg"  className="px-6 py-2 rounded-full bg-gray-200 text-gray-800 font-semibold 
+                   hover:bg-blue-600 hover:text-white transition-colors duration-300
+                   radix-state-active:bg-blue-600 radix-state-active:text-white">UG+PG</Tabs.Trigger>
+    </Tabs.List>
+
+    {/* All Courses */}
+    <Tabs.Content value="all">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start">
+        {[...ugCourses, ...pgCourses, ...ug_pgCourses].map((course, idx) => (
+          <EnquireCard key={idx} {...course} universityName="Amity University Online" />
+        ))}
+      </div>
+    </Tabs.Content>
+
+    {/* UG Courses */}
+    <Tabs.Content value="ug">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start">
+        {ugCourses.map((course, idx) => (
+          <EnquireCard key={idx} {...course} universityName="Amity University Online" />
+        ))}
+      </div>
+    </Tabs.Content>
+
+    {/* PG Courses */}
+    <Tabs.Content value="pg">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start">
+        {pgCourses.map((course, idx) => (
+          <EnquireCard key={idx} {...course} universityName="Amity University Online" />
+        ))}
+      </div>
+    </Tabs.Content>
+
+     {/* UG+PG Courses */}
+    <Tabs.Content value="ug+pg">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start">
+        {ug_pgCourses.map((course, idx) => (
+          <EnquireCard key={idx} {...course} universityName="Amity University Online" />
+        ))}
+      </div>
+    </Tabs.Content>
+  </Tabs.Root>
+</section>
+
 
       {/* Why Choose Amity */}
       <section className="py-12 px-4 bg-white">
         <div className="max-w-7xl mx-auto text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-900">Online Amity University vs Traditional Campus: Comparison</h2>
+          <h2 className="text-3xl font-bold text-gray-900">Why Choose Amity University Online </h2>
           <hr className="mt-4 border-gray-300 w-24 mx-auto" />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
@@ -280,7 +337,7 @@ const Amity = () => {
 
       {/* Accreditation */}
       <section className="py-10 bg-white">
-        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Amity Online University: UGC Approved Programs</h2>
+        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Amity Online University: Accreditation And Recognisition </h2>
         <div className="flex flex-wrap justify-center items-center gap-20 px-4">
           <Image src="/images/ugc.webp" alt="UGC"  width={100} height={100} loading='lazy' className="h-16 object-contain" />
           <Image src="/images/aicte.webp" alt="AICTE" width={100} height={100} loading='lazy'  className="h-16 object-contain" />
@@ -300,9 +357,7 @@ const Amity = () => {
       </section>
      <section className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-10 text-gray-800">
-         Online Amity University: Student Reviews & Success Stories
-        </h2>
+        
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {highlights.map((item, idx) => (
@@ -325,7 +380,8 @@ const Amity = () => {
       </div>
     </section>
       {/* Admission Process */}
-      <AdmissionProcess />
+     
+      <AdmissionProcedure />
 
       {/* Certificate + Benefits */}
       <section className="bg-[#003366] py-12 px-4">
@@ -354,7 +410,7 @@ const Amity = () => {
           <p className="text-xl text-gray-600">Top hiring partners at Amity University online programs</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {["/images/company.webp", "/images/company1.webp", "/images/company9.webp", "/images/com10.webp", "/images/companany4.webp", "/images/company6.webp", "/images/companany5.webp", "/images/adove.webp", "/images/samsungwebp","/images/3.webp",  "/images/4.webp",  "/images/5.webp",  "/images/6.webp",  "/images/7.webp",  "/images/8.webp",  "/images/9.webp",].map((src, i) => (
+          {["/images/company.webp", "/images/company1.webp", "/images/company9.webp", "/images/com10.webp", "/images/companany4.webp", "/images/company6.webp", "/images/companany5.webp", "/images/adove.webp", "/images/samsung.webp","/images/3.webp",  "/images/4.webp",  "/images/5.webp",  "/images/6.webp",  "/images/7.webp",  "/images/8.webp",  "/images/9.webp",].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
               <Image src={src} alt="Top companies hiring Amity University online graduates" width={100} height={100} loading='lazy' className="h-12 object-contain" />
             </div>

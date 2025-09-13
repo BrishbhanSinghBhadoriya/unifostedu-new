@@ -16,6 +16,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Head from 'next/head';
 import EnquireCard from '@/components/EnquireCard';
+import AdmissionProcedure from '@/components/AdmissionProcedure';
 
 const OPJindal = () => {
   const ugCourses = [
@@ -201,23 +202,8 @@ const OPJindal = () => {
       </section>
 
       {/* Admission Process */}
-      <section className="bg-gray-100 py-10 px-4">
-        <div className="max-w-7xl mx-auto bg-white shadow-md rounded-md p-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-900 mb-8">Admission Process</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center relative">
-            {["Register Online", "Fill Form", "Verify Documents", "Start Your Journey"].map((desc, index) => (
-              <div key={index} className="relative flex flex-col items-center">
-                {index !== 0 && <div className="absolute -left-1/2 top-5 w-full h-0.5 bg-blue-900 z-0"></div>}
-                <div className="z-10 w-6 h-6 rounded-full border-4 border-blue-900 bg-white flex items-center justify-center">
-                  <div className="w-2.5 h-2.5 bg-blue-900 rounded-full"></div>
-                </div>
-                <h4 className="mt-4 font-semibold text-lg">Step {index + 1}</h4>
-                <p className="mt-2 text-sm text-gray-700">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <AdmissionProcedure/> 
+
 
       {/* Certificate + Benefits */}
       <section className="bg-[#003366] py-12 px-4">

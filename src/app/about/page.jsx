@@ -456,20 +456,20 @@ export default function About() {
         <h3 className="text-3xl font-bold">PRIYANSH MISHRA</h3>
         <p className="text-teal-400 font-semibold">Founder & Director</p>
         <p className="text-lg md:text-2xl text-gray-100 mt-6 font-semibold leading-relaxed tracking-wide bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent">
-  “Priyansh Mishra, a visionary leader committed to revolutionizing education through
-  innovation and accessibility, has poured his heart, energy, and vision into building
-  <span className="font-bold"> UniFost </span> with unwavering passion and dedication. 
-  With a background in educational technology and student psychology, he ensures UniFost 
-  remains student-centric.”
-</p>
+         “Priyansh Mishra, a visionary leader committed to revolutionizing education through
+         innovation and accessibility, has poured his heart, energy, and vision into building
+         <span className="font-bold"> UniFost </span> with unwavering passion and dedication. 
+          With a background in educational technology and student psychology, he ensures UniFost 
+          remains student-centric.”
+       </p>
 
         <div className="flex space-x-4 mt-6">
           <a 
-  href="https://www.linkedin.com/in/priyansh-mishra-14b9ba2a0/" 
-  target="_blank" 
-  rel="noopener noreferrer" 
-  className="text-teal-400 hover:text-white text-xl"
->
+        href="https://www.linkedin.com/in/priyansh-mishra-14b9ba2a0/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="text-teal-400 hover:text-white text-xl"
+        >
   <FaLinkedin />
 </a>
 
@@ -480,15 +480,16 @@ export default function About() {
       </div>
     </div>
 
-    
+
     {/* Founder 2 */}
     <div className="grid md:grid-cols-2 gap-12 items-center">
       <div className="order-2 md:order-1 bg-[#2e2e7e]/70 p-8 rounded-2xl shadow-lg border border-white/10">
         <h3 className="text-3xl font-bold">AMAN PAWAR</h3>
         <p className="text-pink-400 font-semibold">Founder & Director</p>
-        <p className="text-gray-200 mt-4">
-          Aman Pawar is the driving force behind UniFost—blending vision with action, and passion with purpose. His tireless efforts and hands-on leadership have shaped a platform that puts students first. With expertise in business strategy and digital education, he bridges the gap between academia and industry needs.
-        </p>
+       <p className="text-lg md:text-2xl text-gray-100 mt-6 font-semibold leading-relaxed tracking-wide bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent">
+  "Aman Pawar is the driving force behind <span className="font-bold">UniFost</span>—blending vision with action, and passion with purpose. His tireless efforts and hands-on leadership have shaped a platform that puts students first. With expertise in business strategy and digital education, he bridges the gap between academia and industry needs.,,
+</p>
+
         <div className="flex space-x-4 mt-6">
         <a 
   href="https://www.linkedin.com/in/aman-pawar-a59b57218/" 
@@ -535,10 +536,6 @@ export default function About() {
   ></iframe>
 </div>
 
-
-      
-
-      {/* Enquiry Modal */}
    {/* Enquiry Modal */}
 <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal}>
   <DialogContent className="sm:max-w-lg">
