@@ -6,6 +6,7 @@ import EnquireCard from '@/components/EnquireCard';
 import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck } from "react-icons/fa";
 import Image from 'next/image';
 import Head from 'next/head';
+import AdmissionProcedure from '@/components/AdmissionProcedure';
 const Dypatil = () => {
    const [expandedItems, setExpandedItems] = useState({});
   
@@ -221,26 +222,9 @@ const Dypatil = () => {
       </section>
 
       {/* Admission Steps */}
-      <section className="bg-white py-12 px-6 font-[Inter]">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-blue-900 mb-10 font-[Poppins]">
-            Admission Procedure
-          </h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-left">
-            {[
-              "Apply online by filling out the application form.",
-              "Upload required academic documents.",
-              "Pay the program fee securely.",
-              "Receive confirmation and start learning!"
-            ].map((step, idx) => (
-              <div key={idx} className="bg-blue-50 p-6 rounded-lg shadow hover:shadow-md transition">
-                <h3 className="text-lg font-semibold mb-2 text-blue-800">Step {idx + 1}</h3>
-                <p className="text-sm text-gray-700">{step}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+     <AdmissionProcedure />
+
+      {/* Recognized & Accredited */}
 
       <section className="py-10 bg-white">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>

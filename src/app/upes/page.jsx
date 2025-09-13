@@ -19,6 +19,7 @@ import {
 import EnquireCard from '@/components/EnquireCard';
 import Head from 'next/head';
 import Image from 'next/image';
+import AdmissionProcedure from '@/components/AdmissionProcedure';
 const Upes = () => {
   const ugCourses = [
     {
@@ -205,47 +206,8 @@ const Upes = () => {
       </section>
 
       {/* Admission Process */}
-      <section className="bg-gray-100 py-10 px-4">
-        <div className="max-w-7xl mx-auto bg-white shadow-md rounded-md p-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-900 mb-8">
-            Admission Process
-          </h2>
+     <AdmissionProcedure/> 
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center relative">
-            {[
-              {
-                step: "Step 1",
-                description: "Fill the registration form and create unique login credentials",
-              },
-              {
-                step: "Step 2",
-                description: "Fill in your details and pay the application and semester fees",
-              },
-              {
-                step: "Step 3",
-                description: "Upload the necessary documents",
-              },
-              {
-                step: "Step 4",
-                description: "Submit the application form",
-              },
-            ].map((item, index) => (
-              <div key={index} className="relative flex flex-col items-center">
-                {index !== 0 && (
-                  <div className="absolute -left-1/2 top-5 w-full h-0.5 bg-blue-900 z-0"></div>
-                )}
-
-                <div className="z-10 w-6 h-6 rounded-full border-4 border-blue-900 bg-white flex items-center justify-center">
-                  <div className="w-2.5 h-2.5 bg-blue-900 rounded-full"></div>
-                </div>
-
-                <h4 className="mt-4 font-semibold text-lg">{item.step}</h4>
-                <p className="mt-2 text-sm text-gray-700">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">

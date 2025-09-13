@@ -22,6 +22,7 @@ import { useRouter } from 'next/navigation';
 import EnquireCard from '@/components/EnquireCard';
 import Head from 'next/head';
 import Image from 'next/image';
+import AdmissionProcedure from '@/components/AdmissionProcedure';
 const Nmims = () => {
   const ugCourses = [
     {
@@ -236,45 +237,7 @@ const Nmims = () => {
       </section>
 
       {/* Admission Process */}
-      <section className="py-16 px-6 bg-white font-[Inter]">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-[#001e3c] mb-12 font-[Poppins]">
-            Admission Process
-          </h2>
-          <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8">
-            {[
-              {
-                icon: FaFileAlt,
-                title: "Submit Application",
-                description: "Fill online application form with required details"
-              },
-              {
-                icon: FaCertificate,
-                title: "Upload Documents",
-                description: "Submit academic records and ID documents"
-              },
-              {
-                icon: FaGraduationCap,
-                title: "Pay Program Fee",
-                description: "Complete secure online payment"
-              },
-              {
-                icon: FaLaptop,
-                title: "Start Learning",
-                description: "Access LMS and begin your journey"
-              }
-            ].map((step, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <step.icon className="text-[#001e3c] text-2xl" />
-                </div>
-                <h3 className="text-lg font-semibold text-[#001e3c] mb-2">{step.title}</h3>
-                <p className="text-gray-600 text-sm">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+    <AdmissionProcedure/> 
 
       {/* Contact Section
       <section className="py-16 px-6 bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white">

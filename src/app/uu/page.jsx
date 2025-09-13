@@ -16,6 +16,7 @@ import {
 import Head from 'next/head';
 import Image from 'next/image';
 import EnquireCard from '@/components/EnquireCard';
+import AdmissionProcedure from '@/components/AdmissionProcedure';
 
   // const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
   // const router = useRouter();  
@@ -312,60 +313,8 @@ const pgCourses = [
       </section>
 
       {/* Admission Process */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Simple <span className="text-blue-700">Admission Process</span></h2>
-            <p className="text-xl text-gray-600">Get started on your educational journey in just a few steps</p>
-          </div>
-          
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-              {[
-                {
-                  step: "01",
-                  title: "Submit Application",
-                  description: "Fill out the online application form with your details"
-                },
-                {
-                  step: "02",
-                  title: "Document Verification",
-                  description: "Upload required documents for verification"
-                },
-                {
-                  step: "03",
-                  title: "Fee Payment",
-                  description: "Pay the application and program fees online"
-                },
-                {
-                  step: "04",
-                  title: "Start Learning",
-                  description: "Access your student portal and begin classes"
-                }
-              ].map((item, index) => (
-                <div key={index} className="text-center relative">
-                  {/* Connector line */}
-                  {index < 3 && (
-                    <div className="hidden md:block absolute top-10 left-3/4 w-1/2 h-1 bg-blue-200 z-0"></div>
-                  )}
-                  
-                  {/* Step circle */}
-                  <div className="relative z-10 w-20 h-20 mx-auto mb-5 rounded-full bg-blue-100 flex items-center justify-center border-4 border-white shadow-md">
-                    <span className="text-2xl font-bold text-blue-800">{item.step}</span>
-                  </div>
-                  
-                  <h4 className="font-bold text-lg text-gray-900 mb-2">{item.title}</h4>
-                  <p className="text-gray-600 text-sm">{item.description}</p>
-                </div>
-              ))}
-            </div>
-            
-            <div className="mt-12 text-center">
-              
-            </div>
-          </div>
-        </div>
-      </section>
+     <AdmissionProcedure />
+
 
       {/* Certificate Section */}
       <section className="bg-[#003366] py-12 px-4">
