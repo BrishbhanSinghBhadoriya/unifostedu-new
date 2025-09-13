@@ -148,7 +148,7 @@ const Amity = () => {
       eligibility: "10+2 Pass",
       fees: "₹1,65,000- ₹2,25,000",
       specialization: "BBA (General, Data Analytics, Travel And Tourism Management, Professional Certificate in Business Analytics)",
-      image: "/images/bba.jpeg",
+      image: "/images/bba.webp",
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
@@ -156,7 +156,7 @@ const Amity = () => {
       eligibility: "10+2 Pass",
       fees: "₹1,50,000 - ₹2,25,000",
       specialization: "BCA (General, Cloud and Security, Software Engineering, Data Science, Data Engineering(HCL Tech), Data Analytics, Software Engineering(HCL Tech))",
-      image: "/images/bca.jpeg",
+      image: "/images/bca.webp",
     },
     {
       course: "Bachelor of Commerce (B.Com)",
@@ -164,7 +164,7 @@ const Amity = () => {
       eligibility: "10+2 Pass",
       fees: "₹99,000 - ₹2,50,000",
       specialization: "B.Com (General, Hons, International Finance & Accounting)",
-      image: "/images/bcom.jpeg",
+      image: "/images/bcom.webp",
     },
     {
       course: "Bachelor of Arts (BA)",
@@ -172,7 +172,7 @@ const Amity = () => {
       eligibility: "10+2 Pass",
       fees: "₹99,000 - ₹1,70,000",
       specialization: "BA (General, Journalism and Mass Communication, Native Languages(Kannada,Malayalam, Tamil, Telugu), Psychology, English, Sociology, Political Science, Economics)",
-      image: "/images/ba.jpeg",
+      image: "/images/ba.webp",
     },
   ];
 
@@ -183,7 +183,7 @@ const Amity = () => {
       eligibility: "Graduation",
       fees: "₹1,99,000 - ₹2,99,000",
       specialization: "MBA (General, Information Technology Management, Dual Specialization, Human Resource Analytics, Data Science, Business Analytics, International Business Management, Digital Entrepreneurship, Digital Marketing Management, Entrepreneurship & Leadership Management, Finance & Accounting Management, Hospitality Management, Global Finance Market, Insurance Management, Marketing & Sales Management, Petroleum & Natural Gas, Production and Operations Management, Retail Management)",
-      image: "/images/mba.jpeg",
+      image: "/images/mba.webp",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -191,7 +191,7 @@ const Amity = () => {
       eligibility: "Graduation in BCA/B.Sc(IT)",
       fees: "₹170,000- ₹2,50,000",
       specialization: "MCA (General, Cyber Security, Blockchain Technology, Machine Learning and Artificial Intelligence, Augmented Reality and Virtual Reality, Software Engineering)",
-      image: "/images/mca1.jpeg",
+      image: "/images/mca1.webp",
     },
     {
       course: "Master of Commerce (M.Com)",
@@ -207,7 +207,7 @@ const Amity = () => {
       eligibility: "Graduation",
       fees: "₹1,30,000 - ₹2,50,000",
       specialization: "MA (Psychology, Journalism and Mass Communication, Public Policy & Governance, English, Sociology)",
-      image: "/images/ma1.jpeg",
+      image: "/images/ma1.webp",
     },
     {
       course: "Master of Science (M.Sc)",
@@ -234,7 +234,7 @@ const Amity = () => {
       eligibility: "10+2 With minimum 50%",
       fees: "₹3,04,000",
       specialization: "BCA + MCA",
-      image: "/images/mca1.jpeg",
+      image: "/images/mca1.webp",
     },
     {
       course: "B.Com + MBA",
@@ -444,7 +444,7 @@ const Amity = () => {
       {/* Image Container with Badges */}
       <div className="relative rounded-xl shadow-md overflow-hidden border border-gray-200">
         <Image
-          src="/images/amitypic.png"
+          src="/images/amitypic.webp"
           alt="Online Amity University campus with modern infrastructure and digital learning facilities"
           width={600}
           height={400}
@@ -669,12 +669,12 @@ const Amity = () => {
         
         <div className="space-y-4">
           {[
-            { src: "/images/ugc.png", alt: "UGC", name: "UGC" },
-            { src: "/images/aicte.png", alt: "AICTE", name: "AICTE" },
-            { src: "/images/nirf.png", alt: "NIRF", name: "NIRF" },
-            { src: "/images/wes.png", alt: "WES", name: "WES" },
-            { src: "/images/aiu.png", alt: "AIU", name: "AIU" },
-            { src: "/images/acu.png", alt: "ACU", name: "ACU" },
+            { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
+            { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
+            { src: "/images/nirf.webp", alt: "NIRF", name: "NIRF" },
+            { src: "/images/wes.webp", alt: "WES", name: "WES" },
+            { src: "/images/aiu.webp", alt: "AIU", name: "AIU" },
+            { src: "/images/acu.webp", alt: "ACU", name: "ACU" },
           ].map((item, index) => (
             <div 
               key={index}
@@ -700,10 +700,10 @@ const Amity = () => {
           </h4>
           <div className="grid grid-cols-2 gap-2">
             {[
-              { src: "/images/qs.png", alt: "QS Ranking", name: "QS" },
-              { src: "/images/wasc.png", alt: "WASC Accreditation", name: "WASC" },
+              { src: "/images/qs.webp", alt: "QS Ranking", name: "QS" },
+              { src: "/images/wasc.webp", alt: "WASC Accreditation", name: "WASC" },
               { src: "/images/the.webp", alt: "Times Higher Education", name: "THE" },
-              { src: "/images/qaa.png", alt: "QAA UK", name: "QAA UK" },
+              { src: "/images/qaa.webp", alt: "QAA UK", name: "QAA UK" },
             ].map((item, index) => (
               <div key={index} className="flex flex-col items-center p-2 bg-gray-50 rounded-md">
                 <div className="h-6 w-6 relative mb-1">
@@ -941,7 +941,7 @@ const Amity = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 to-purple-500 rounded-2xl blur-lg opacity-20"></div>
               <Image 
-                src="/images/amicri.jpeg" 
+                src="/images/amicri.webp" 
                 alt="Amity University Certificate" 
                 width={500} 
                 height={350} 
@@ -1000,9 +1000,9 @@ const Amity = () => {
             viewport={{ once: true }}
           >
             {[
-              "/images/company.png", "/images/company1.png", "/images/company9.jpg", 
-              "/images/com10.png", "/images/companany4.png", "/images/company6.png", 
-              "/images/companany5.png", "/images/adove.png", "/images/samsung.png",
+              "/images/company.webp", "/images/company1.webp", "/images/company9.webp", 
+              "/images/com10.webp", "/images/companany4.webp", "/images/company6.webp", 
+              "/images/companany5.webp", "/images/adove.webp", "/images/samsung.webp",
               "/images/3.webp", "/images/4.webp", "/images/5.webp", 
               "/images/6.webp", "/images/7.webp", "/images/8.webp", "/images/9.webp"
             ].map((src, i) => (
