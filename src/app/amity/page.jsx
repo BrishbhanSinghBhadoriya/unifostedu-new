@@ -1022,13 +1022,7 @@ const Amity = () => {
             ))}
           </motion.div>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {["/images/company.png", "/images/company1.png", "/images/company9.jpg", "/images/com10.png", "/images/companany4.png", "/images/company6.png", "/images/companany5.png", "/images/adove.png", "/images/samsung.png","/images/3.webp",  "/images/4.webp",  "/images/5.webp",  "/images/6.webp",  "/images/7.webp",  "/images/8.webp",  "/images/9.webp",].map((src, i) => (
-            <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image src={src} alt="Top companies hiring Amity University online graduates" width={100} height={100} className="h-12 object-contain" />
-            </div>
-          ))}
-        </div>
+        
       </section>
     </>
   );
