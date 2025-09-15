@@ -1,9 +1,20 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import EnquiryForm from '@/components/EnquiryForm';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { 
+  FaClock, 
+  FaGraduationCap, 
+  FaMoneyBillWave, 
+  FaChevronDown, 
+  FaChevronUp,
+  FaBookOpen,
+  FaStar,
+  FaArrowRight
+} from 'react-icons/fa';
 
 const EnquireCard = ({ 
   course, 
@@ -13,13 +24,18 @@ const EnquireCard = ({
   fee,
   specialization = [],  
   image, 
-  universityName 
+  universityName,
+  uniqueId 
 }) => {
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
   const [showMore, setShowMore] = useState(false);
 
-  const handleEnquireClick = () => setIsEnquiryOpen(true);
-  const handleEnquirySubmitted = () => setIsEnquiryOpen(false);
+  const handleEnquireClick = useCallback(() => setIsEnquiryOpen(true), []);
+  const handleEnquirySubmitted = useCallback(() => setIsEnquiryOpen(false), []);
+  
+  const handleShowMore = () => {
+    setShowMore(!showMore);
+  };
 
   // Handle both 'fees' and 'fee' properties
   const displayFees = fees || fee;
@@ -38,72 +54,132 @@ const EnquireCard = ({
 
   return (
     <>
-      <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition duration-300">
-        {/* Image */}
-        <Image
-          width={100}
-          height={100}
-          loading="lazy"
-          src={image}
-          alt={course}
-          className="h-44 w-full object-cover sm:h-52"
-        />
+      <motion.div 
+        className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-500 border border-gray-100 group h-full"
+        whileHover={{ y: -8, scale: 1.02 }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        {/* Image Container with Overlay */}
+        <div className="relative h-40 overflow-hidden">
+          <Image
+            width={400}
+            height={300}
+            loading="lazy"
+            src={image}
+            alt={course}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          
+          {/* University Badge */}
+          <div className="absolute top-4 left-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+            {universityName}
+          </div>
+          
+          {/* Popular Badge */}
+          <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1">
+            <FaStar className="text-xs" />
+            Popular
+          </div>
+        </div>
 
         {/* Content */}
-        <div className="p-4 flex flex-col">
-          <div>
-            <h3 className="text-lg font-bold text-gray-900 mb-2">{course}</h3>
+        <div className="p-4 flex flex-col ">
+          {/* Course Title */}
+          <div className="mb-3">
+            <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
+              {course}
+            </h3>
+          </div>
 
-            <p className="text-sm text-gray-700 mb-1">
-              <span className="font-semibold">Duration:</span> {duration}
-            </p>
-            <p className="text-sm text-gray-700 mb-1">
-              <span className="font-semibold">Eligibility:</span> {eligibility}
-            </p>
+          {/* Key Info Cards */}
+          <div className="grid grid-cols-1 gap-2 mb-3">
+            <div className="flex items-center bg-blue-50 p-2 rounded-lg">
+              <div className="bg-blue-100 p-1.5 rounded-md mr-2">
+                <FaClock className="text-blue-600 text-xs" />
+              </div>
+              <div>
+                <p className="text-xs text-gray-500 font-medium">Duration</p>
+                <p className="text-sm font-semibold text-gray-900">{duration}</p>
+              </div>
+            </div>
+            
+            <div className="flex items-center bg-green-50 p-2 rounded-lg">
+              <div className="bg-green-100 p-1.5 rounded-md mr-2">
+                <FaGraduationCap className="text-green-600 text-xs" />
+              </div>
+              <div>
+                <p className="text-xs text-gray-500 font-medium">Eligibility</p>
+                <p className="text-sm font-semibold text-gray-900 line-clamp-1">{eligibility}</p>
+              </div>
+            </div>
+            
             {displayFees && (
-              <p className="text-sm text-gray-700 mb-1">
-                <span className="font-semibold">Fees:</span> {displayFees}
-              </p>
-            )}
-
-            {/* Specializations */}
-            {specializationList.length > 0 && (
-              <div className="text-sm text-gray-700 mt-2">
-                <span className="font-semibold">Specializations:</span>
-             <ul
-             className={`list-disc list-inside mt-1 transition-all duration-300 ease-in-out ${
-                showMore ? "max-h-96" : "max-h-6 overflow-hidden"
-                   }`}
-                 >
-                 {specializationList.map((spec, idx) => (
-                     <li key={idx}>{spec}</li>
-                         ))}
-                     </ul>
-
-
-                {specializationList.length > 1 && (
-                  <button
-                    onClick={() => setShowMore(!showMore)}
-                    className="text-blue-600 mt-1 font-medium hover:underline"
-                  >
-                    {showMore ? 'See Less' : 'See More'}
-                  </button>
-                )}
+              <div className="flex items-center bg-purple-50 p-2 rounded-lg">
+                <div className="bg-purple-100 p-1.5 rounded-md mr-2">
+                  <FaMoneyBillWave className="text-purple-600 text-xs" />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-500 font-medium">Total Fees</p>
+                  <p className="text-sm font-semibold text-gray-900">{displayFees}</p>
+                </div>
               </div>
             )}
           </div>
 
-          {/* Enquire Button (Always at bottom) */}
-          <div className="mt-auto pt-4">
-            <button
+          {/* Specializations */}
+          {specializationList.length > 0 && (
+            <div className="mb-3">
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-xs font-semibold text-gray-700 flex items-center">
+                  <FaBookOpen className="mr-1 text-blue-600 text-xs" />
+                  Specializations
+                </span>
+                {specializationList.length > 1 && (
+                  <button
+                    onClick={handleShowMore}
+                    className="text-blue-600 text-xs font-medium hover:text-blue-800 transition-colors flex items-center gap-1"
+                  >
+                    {showMore ? 'Less' : 'More'}
+                    {showMore ? <FaChevronUp className="text-xs" /> : <FaChevronDown className="text-xs" />}
+                  </button>
+                )}
+              </div>
+              
+              <div className="bg-gray-50 rounded-lg p-2">
+                <div className="flex flex-wrap gap-1">
+                  {visibleSpecializations.map((spec, idx) => (
+                    <span 
+                      key={idx}
+                      className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded-full"
+                    >
+                      {spec}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Enquire Button */}
+          <div className="mt-auto pt-2">
+            <motion.button
               onClick={handleEnquireClick}
-              className="w-full bg-gradient-to-r from-green-500 to-blue-600 text-white px-5 py-2.5 rounded-full font-semibold shadow hover:opacity-90 transition"
+              className="w-full bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 text-white px-4 py-2.5 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 group/btn"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
-              Enquire Now
-            </button>
+              <span>Enquire Now</span>
+              <FaArrowRight className="text-sm group-hover/btn:translate-x-1 transition-transform duration-300" />
+            </motion.button>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Enquiry Dialog */}
       <Dialog open={isEnquiryOpen} onOpenChange={setIsEnquiryOpen}>

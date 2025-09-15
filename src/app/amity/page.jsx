@@ -11,140 +11,15 @@ import {
   FaClipboardCheck,
   FaGraduationCap,
   FaAward,
-  FaGlobe,
-  FaChevronDown,
-  FaChevronUp,
-  FaInfoCircle,
-  FaClock,
-  FaMoneyBillWave,
-  FaCertificate
+  FaGlobe
 } from "react-icons/fa";
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import EnquiryForm from '@/components/EnquiryForm';
 import AdmissionProcess from '@/components/AdmissionProcess';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import EnquireCard from '@/components/EnquireCard';
 
-// Course Card Component
-const CourseCard = ({ course, duration, eligibility, fees, specialization, image, universityName }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
-
-  const handleEnquireClick = () => setIsEnquiryOpen(true);
-  const handleEnquiryClose = () => setIsEnquiryOpen(false);
-
-  return (
-    <motion.div 
-      className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 h-full flex flex-col"
-      whileHover={{ y: -5 }}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-    >
-      <AnimatePresence>
-        {isEnquiryOpen && (
-          <Dialog open={isEnquiryOpen} onOpenChange={setIsEnquiryOpen}>
-            <DialogContent>
-              <DialogHeader>
-                <DialogTitle>Enquire About {course}</DialogTitle>
-              </DialogHeader>
-              <EnquiryForm
-                universityName={universityName}
-                defaultProgram={course}
-                onSubmitted={handleEnquiryClose}
-                formType="getStarted"
-              />
-            </DialogContent>
-          </Dialog>
-        )}
-      </AnimatePresence>
-
-        {/* Course Image */}
-        <div className="relative h-48 overflow-hidden">
-          <Image
-            src={image}
-            alt={course}
-            width={800}
-            height={600}
-            loading='lazy'
-          
-          />
-          <div className="absolute top-3 left-2 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-            {universityName}
-          </div>
-        </div>
-
-        {/* Course Content */}
-        <div className="p-6 flex-1 flex flex-col">
-          <h3 className="text-xl font-bold text-gray-900 mb-3 font-[Poppins] line-clamp-2">{course}</h3>
-          
-          {/* Key Info Icons */}
-          <div className="grid grid-cols-2 gap-3 mb-4">
-            <div className="flex items-center">
-              <div className="bg-blue-100 p-2 rounded-lg mr-2">
-                <FaClock className="text-blue-600 text-sm" />
-              </div>
-              <div>
-                <p className="text-xs text-gray-500">Duration</p>
-                <p className="text-sm font-medium text-gray-900">{duration}</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center">
-              <div className="bg-blue-100 p-2 rounded-lg mr-2">
-                <FaCertificate className="text-blue-600 text-sm" />
-              </div>
-              <div>
-                <p className="text-xs text-gray-500">Eligibility</p>
-                <p className="text-sm font-medium text-gray-900 line-clamp-1">{eligibility}</p>
-              </div>
-            </div>
-          </div>
-          
-          {/* Fees */}
-          <div className="mb-4 p-3 bg-blue-50 rounded-lg">
-            <div className="flex justify-between items-center">
-              <span className="text-sm font-medium text-gray-700">Total Fees</span>
-              <span className="text-lg font-bold text-blue-700">{fees}</span>
-            </div>
-          </div>
-
-          {/* Expandable Specialization */}
-          <div className="mt-auto">
-            <button 
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="flex items-center justify-between w-full text-left mb-2"
-            >
-              <span className="text-sm font-medium text-blue-600">Specializations Available</span>
-              {isExpanded ? <FaChevronUp className="text-blue-600" /> : <FaChevronDown className="text-blue-600" />}
-            </button>
-            
-            {isExpanded && (
-              <div className="bg-gray-50 p-3 rounded-lg mb-4">
-                <p className="text-sm text-gray-700">{specialization}</p>
-              </div>
-            )}
-            
-            <div className="flex gap-3">
-              <button 
-                onClick={handleEnquireClick}
-                className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors text-sm"
-              >
-                Apply Now
-              </button>
-            </div>
-          </div>
-        </div>
-    </motion.div>
-  );
-};
 
 // Section Header Component
 const SectionHeader = ({ icon: Icon, title, description }) => {
@@ -368,7 +243,7 @@ const Amity = () => {
       
 
 {/* Hero Section */}
-<section className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-12 px-6 font-[Inter] border-b border-gray-100">
+<section className="relative  py-12 px-6 font-[Inter] border-b border-gray-100">
   {/* Subtle background pattern */}
   <div className="absolute inset-0 opacity-5">
     <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48ZyBmaWxsPSJub25lIiBzdHJva2U9IiMwMDc3ZmYiIHN0cm9rZS13aWR0aD0iMC41Ij48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIxNSIvPjwvZz48L3N2Zz4=')]"></div>
@@ -458,7 +333,7 @@ const Amity = () => {
       
       {/* CTA Buttons */}
       <div className="flex flex-wrap gap-3 pt-2">
-        <button className="bg-blue-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-all flex items-center text-sm">
+        <button className="bg-gradient-to-r from-gray-800 to-purple-800 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-all flex items-center text-sm">
           <FaGraduationCap className="mr-2" />
           Explore Programs
         </button>
@@ -567,7 +442,7 @@ const Amity = () => {
       
       {/* Program Highlights */}
       <motion.div 
-        className="bg-gradient-to-r from-blue-600 to-purple-700 rounded-2xl p-8 text-white mb-12"
+        className="bg-gradient-to-r from-gray-800 to-purple-800 rounded-2xl p-8 text-white mb-12"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.7 }}
@@ -785,9 +660,9 @@ const Amity = () => {
             description="Comprehensive bachelor's degrees designed to build strong foundations for your career"
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
             {ugCourses.map((item, index) => (
-              <CourseCard key={index} {...item} universityName="Amity University Online" />
+              <EnquireCard key={`ug-${item.course}-${index}`} {...item} universityName="Amity University Online" uniqueId={`ug-${index}`} />
             ))}
           </div>
         </div>
@@ -804,7 +679,7 @@ const Amity = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {pgCourses.map((item, index) => (
-              <CourseCard key={index} {...item} universityName="Amity University Online" />
+              <EnquireCard key={`pg-${item.course}-${index}`} {...item} universityName="Amity University Online" uniqueId={`pg-${index}`} />
             ))}
           </div>
         </div>
@@ -821,7 +696,7 @@ const Amity = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {ug_pgCourses.map((item, index) => (
-              <CourseCard key={index} {...item} universityName="Amity University Online" />
+              <EnquireCard key={`integrated-${item.course}-${index}`} {...item} universityName="Amity University Online" uniqueId={`integrated-${index}`} />
             ))}
           </div>
         </div>
@@ -876,11 +751,11 @@ const Amity = () => {
 
       {/* Highlights/Features */}
       {/* Improved Amity University Advantages Section */}
-<section className="py-12 relative overflow-hidden bg-gradient-to-br from-blue-800 to-indigo-900">
+<section className="py-12 relative overflow-hidden ">
   {/* Subtle animated elements */}
   <div className="absolute inset-0 opacity-5">
-    <div className="absolute top-10 left-10 w-40 h-40 bg-blue-400 rounded-full filter blur-xl animate-pulse"></div>
-    <div className="absolute bottom-10 right-10 w-48 h-48 bg-indigo-500 rounded-full filter blur-xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
+    <div className="absolute top-10 left-10 w-40 h-40  rounded-full filter blur-xl animate-pulse"></div>
+    <div className="absolute bottom-10 right-10 w-48 h-48 rounded-full filter blur-xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
   </div>
 
   <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -965,7 +840,7 @@ const Amity = () => {
 </section>
 
       {/* Admission Process */}
-     
+    
       <AdmissionProcedure />
 
       {/* Certificate + Benefits */}
