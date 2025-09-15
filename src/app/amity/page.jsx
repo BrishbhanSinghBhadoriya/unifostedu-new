@@ -13,8 +13,9 @@ import {
   FaAward,
   FaGlobe
 } from "react-icons/fa";
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
+import EnquiryForm from '@/components/EnquiryForm';
 import AdmissionProcess from '@/components/AdmissionProcess';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 import EnquireCard from '@/components/EnquireCard';
@@ -355,8 +356,9 @@ const Amity = () => {
           alt="Online Amity University campus with modern infrastructure and digital learning facilities"
           width={600}
           height={400}
+          loading='lazy'
           className="w-full h-auto"
-          priority
+          
         />
         
         {/* Floating Badges */}
@@ -591,8 +593,10 @@ const Amity = () => {
                 <Image
                   src={item.src}
                   alt={item.alt}
-                  fill
-                  className="object-contain"
+                  width={100}
+                  height={100}
+                  loading='lazy'
+                 
                 />
               </div>
               <span className="text-sm font-medium text-gray-700">{item.name}</span>
@@ -617,8 +621,10 @@ const Amity = () => {
                   <Image
                     src={item.src}
                     alt={item.alt}
-                    fill
-                    className="object-contain"
+                    width={100}
+                    height={100}
+                    loading='lazy'
+                   
                   />
                 </div>
                 <span className="text-xs text-gray-600 text-center">{item.name}</span>
@@ -785,8 +791,10 @@ const Amity = () => {
                 <Image
                   src={item.img}
                   alt={item.title}
-                  fill
-                  className="object-contain brightness-0 invert"
+                  width={100}
+                  height={100}
+                  loading='lazy'
+                  
                 />
               </div>
             </div>
@@ -852,7 +860,8 @@ const Amity = () => {
                 alt="Amity University Certificate" 
                 width={500} 
                 height={350} 
-                className="relative rounded-xl shadow-xl w-full"
+                loading='lazy'
+               
               />
             </div>
           </motion.div>
@@ -923,8 +932,10 @@ const Amity = () => {
                   <Image
                     src={src}
                     alt="Top companies hiring Amity University online graduates"
-                    fill
-                    className="object-contain"
+                    width={100}
+                    height={100}
+                    loading='lazy'
+                 
                   />
                 </div>
               </motion.div>
