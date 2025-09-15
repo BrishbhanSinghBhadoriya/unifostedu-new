@@ -19,14 +19,25 @@ import {
   FaMoneyBillWave,
   FaCertificate
 } from "react-icons/fa";
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
+import EnquiryForm from '@/components/EnquiryForm';
 import AdmissionProcess from '@/components/AdmissionProcess';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 // Course Card Component
 const CourseCard = ({ course, duration, eligibility, fees, specialization, image, universityName }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
+
+  const handleEnquireClick = () => setIsEnquiryOpen(true);
+  const handleEnquiryClose = () => setIsEnquiryOpen(false);
 
   return (
     <motion.div 
@@ -37,78 +48,100 @@ const CourseCard = ({ course, duration, eligibility, fees, specialization, image
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
-      {/* Course Image */}
-      <div className="relative h-48 overflow-hidden">
-        <Image
-          src={image}
-          alt={course}
-          fill
-          className="object-cover transition-transform duration-500 hover:scale-105"
-        />
-        <div className="absolute top-4 left-4 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-          {universityName}
-        </div>
-      </div>
+      <AnimatePresence>
+        {isEnquiryOpen && (
+          <Dialog open={isEnquiryOpen} onOpenChange={setIsEnquiryOpen}>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>Enquire About {course}</DialogTitle>
+              </DialogHeader>
+              <EnquiryForm
+                universityName={universityName}
+                defaultProgram={course}
+                onSubmitted={handleEnquiryClose}
+                formType="getStarted"
+              />
+            </DialogContent>
+          </Dialog>
+        )}
+      </AnimatePresence>
 
-      {/* Course Content */}
-      <div className="p-6 flex-1 flex flex-col">
-        <h3 className="text-xl font-bold text-gray-900 mb-3 font-[Poppins] line-clamp-2">{course}</h3>
-        
-        {/* Key Info Icons */}
-        <div className="grid grid-cols-2 gap-3 mb-4">
-          <div className="flex items-center">
-            <div className="bg-blue-100 p-2 rounded-lg mr-2">
-              <FaClock className="text-blue-600 text-sm" />
-            </div>
-            <div>
-              <p className="text-xs text-gray-500">Duration</p>
-              <p className="text-sm font-medium text-gray-900">{duration}</p>
-            </div>
-          </div>
+        {/* Course Image */}
+        <div className="relative h-48 overflow-hidden">
+          <Image
+            src={image}
+            alt={course}
+            width={800}
+            height={600}
+            loading='lazy'
           
-          <div className="flex items-center">
-            <div className="bg-blue-100 p-2 rounded-lg mr-2">
-              <FaCertificate className="text-blue-600 text-sm" />
-            </div>
-            <div>
-              <p className="text-xs text-gray-500">Eligibility</p>
-              <p className="text-sm font-medium text-gray-900 line-clamp-1">{eligibility}</p>
-            </div>
-          </div>
-        </div>
-        
-        {/* Fees */}
-        <div className="mb-4 p-3 bg-blue-50 rounded-lg">
-          <div className="flex justify-between items-center">
-            <span className="text-sm font-medium text-gray-700">Total Fees</span>
-            <span className="text-lg font-bold text-blue-700">{fees}</span>
+          />
+          <div className="absolute top-3 left-2 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+            {universityName}
           </div>
         </div>
 
-        {/* Expandable Specialization */}
-        <div className="mt-auto">
-          <button 
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="flex items-center justify-between w-full text-left mb-2"
-          >
-            <span className="text-sm font-medium text-blue-600">Specializations Available</span>
-            {isExpanded ? <FaChevronUp className="text-blue-600" /> : <FaChevronDown className="text-blue-600" />}
-          </button>
+        {/* Course Content */}
+        <div className="p-6 flex-1 flex flex-col">
+          <h3 className="text-xl font-bold text-gray-900 mb-3 font-[Poppins] line-clamp-2">{course}</h3>
           
-          {isExpanded && (
-            <div className="bg-gray-50 p-3 rounded-lg mb-4">
-              <p className="text-sm text-gray-700">{specialization}</p>
+          {/* Key Info Icons */}
+          <div className="grid grid-cols-2 gap-3 mb-4">
+            <div className="flex items-center">
+              <div className="bg-blue-100 p-2 rounded-lg mr-2">
+                <FaClock className="text-blue-600 text-sm" />
+              </div>
+              <div>
+                <p className="text-xs text-gray-500">Duration</p>
+                <p className="text-sm font-medium text-gray-900">{duration}</p>
+              </div>
             </div>
-          )}
+            
+            <div className="flex items-center">
+              <div className="bg-blue-100 p-2 rounded-lg mr-2">
+                <FaCertificate className="text-blue-600 text-sm" />
+              </div>
+              <div>
+                <p className="text-xs text-gray-500">Eligibility</p>
+                <p className="text-sm font-medium text-gray-900 line-clamp-1">{eligibility}</p>
+              </div>
+            </div>
+          </div>
           
-          <div className="flex gap-3">
-            <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors text-sm">
-              Apply Now
+          {/* Fees */}
+          <div className="mb-4 p-3 bg-blue-50 rounded-lg">
+            <div className="flex justify-between items-center">
+              <span className="text-sm font-medium text-gray-700">Total Fees</span>
+              <span className="text-lg font-bold text-blue-700">{fees}</span>
+            </div>
+          </div>
+
+          {/* Expandable Specialization */}
+          <div className="mt-auto">
+            <button 
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="flex items-center justify-between w-full text-left mb-2"
+            >
+              <span className="text-sm font-medium text-blue-600">Specializations Available</span>
+              {isExpanded ? <FaChevronUp className="text-blue-600" /> : <FaChevronDown className="text-blue-600" />}
             </button>
             
+            {isExpanded && (
+              <div className="bg-gray-50 p-3 rounded-lg mb-4">
+                <p className="text-sm text-gray-700">{specialization}</p>
+              </div>
+            )}
+            
+            <div className="flex gap-3">
+              <button 
+                onClick={handleEnquireClick}
+                className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors text-sm"
+              >
+                Apply Now
+              </button>
+            </div>
           </div>
         </div>
-      </div>
     </motion.div>
   );
 };
@@ -448,8 +481,9 @@ const Amity = () => {
           alt="Online Amity University campus with modern infrastructure and digital learning facilities"
           width={600}
           height={400}
+          loading='lazy'
           className="w-full h-auto"
-          priority
+          
         />
         
         {/* Floating Badges */}
@@ -684,8 +718,10 @@ const Amity = () => {
                 <Image
                   src={item.src}
                   alt={item.alt}
-                  fill
-                  className="object-contain"
+                  width={100}
+                  height={100}
+                  loading='lazy'
+                 
                 />
               </div>
               <span className="text-sm font-medium text-gray-700">{item.name}</span>
@@ -710,8 +746,10 @@ const Amity = () => {
                   <Image
                     src={item.src}
                     alt={item.alt}
-                    fill
-                    className="object-contain"
+                    width={100}
+                    height={100}
+                    loading='lazy'
+                   
                   />
                 </div>
                 <span className="text-xs text-gray-600 text-center">{item.name}</span>
@@ -878,8 +916,10 @@ const Amity = () => {
                 <Image
                   src={item.img}
                   alt={item.title}
-                  fill
-                  className="object-contain brightness-0 invert"
+                  width={100}
+                  height={100}
+                  loading='lazy'
+                  
                 />
               </div>
             </div>
@@ -945,7 +985,8 @@ const Amity = () => {
                 alt="Amity University Certificate" 
                 width={500} 
                 height={350} 
-                className="relative rounded-xl shadow-xl w-full"
+                loading='lazy'
+               
               />
             </div>
           </motion.div>
@@ -1016,8 +1057,10 @@ const Amity = () => {
                   <Image
                     src={src}
                     alt="Top companies hiring Amity University online graduates"
-                    fill
-                    className="object-contain"
+                    width={100}
+                    height={100}
+                    loading='lazy'
+                 
                   />
                 </div>
               </motion.div>
