@@ -179,7 +179,7 @@ const Nmims = () => {
           <h3 className="text-4xl font-bold text-center text-[#001e3c] font-[Poppins] mb-12">
             Undergraduate Programs
           </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 items-start content-start">
             {ugCourses.map((course, idx) => (
               <EnquireCard key={idx} {...course} universityName="NMIMS" />
             ))}
@@ -193,7 +193,7 @@ const Nmims = () => {
           <h3 className="text-4xl font-bold text-center text-[#001e3c] font-[Poppins] mb-12">
             Postgraduate Programs
           </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 items-start content-start">
             {pgCourses.map((course, idx) => (
               <EnquireCard key={idx} {...course} universityName="NMIMS" />
             ))}

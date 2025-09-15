@@ -239,7 +239,7 @@ const Dypatil = () => {
       <section className="py-12 bg-white px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">UG Courses</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-start content-start">
                           {ugCourses.map((item, index) => (
                 <EnquireCard key={index} {...item} universityName="Dr. DY Patil Online" />
               ))}
@@ -251,7 +251,7 @@ const Dypatil = () => {
       <section className="py-12 bg-white px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">PG Courses</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-start content-start">
                           {pgCourses.map((item, index) => (
                 <EnquireCard key={index} {...item} universityName="Dr. DY Patil Online" />
               ))}

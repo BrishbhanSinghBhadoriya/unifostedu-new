@@ -55,7 +55,7 @@ const EnquireCard = ({
   return (
     <>
       <motion.div 
-        className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-500 border border-gray-100 group h-full"
+        className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-500 border border-gray-100 group"
         whileHover={{ y: -8, scale: 1.02 }}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

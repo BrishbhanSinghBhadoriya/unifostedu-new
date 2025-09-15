@@ -145,7 +145,7 @@ const Vgu = () => {
         <section key={idx} className="py-12 bg-white px-6 font-[Inter]">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">{section.title}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start content-start">
               {section.list.map((item, index) => <EnquireCard key={index} {...item} />)}
             </div>
           </div>

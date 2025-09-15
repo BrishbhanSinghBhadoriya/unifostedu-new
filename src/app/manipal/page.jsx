@@ -259,7 +259,7 @@ const Manipal = () => {
 
     {/* All Courses */}
     <Tabs.Content value="all">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start content-start">
         {[...ugCourses, ...pgCourses,].map((course, idx) => (
           <EnquireCard key={idx} {...course} universityName="Manipal University Online" />
         ))}
@@ -268,7 +268,7 @@ const Manipal = () => {
 
     {/* UG Courses */}
     <Tabs.Content value="ug">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start content-start">
         {ugCourses.map((course, idx) => (
           <EnquireCard key={idx} {...course} universityName="Manipal University Online" />
         ))}
@@ -277,7 +277,7 @@ const Manipal = () => {
 
     {/* PG Courses */}
     <Tabs.Content value="pg">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start content-start">
         {pgCourses.map((course, idx) => (
           <EnquireCard key={idx} {...course} universityName="Manipal University Online" />
         ))}

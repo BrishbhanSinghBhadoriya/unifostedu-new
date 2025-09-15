@@ -660,7 +660,7 @@ const Amity = () => {
             description="Comprehensive bachelor's degrees designed to build strong foundations for your career"
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start content-start">
             {ugCourses.map((item, index) => (
               <EnquireCard key={`ug-${item.course}-${index}`} {...item} universityName="Amity University Online" uniqueId={`ug-${index}`} />
             ))}
@@ -677,7 +677,7 @@ const Amity = () => {
             description="Advanced degrees to specialize and accelerate your professional growth"
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start content-start">
             {pgCourses.map((item, index) => (
               <EnquireCard key={`pg-${item.course}-${index}`} {...item} universityName="Amity University Online" uniqueId={`pg-${index}`} />
             ))}
