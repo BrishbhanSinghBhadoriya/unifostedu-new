@@ -1,7 +1,7 @@
 import Landing from "@/components/pages/Landing";
 import Image from "next/image";
 export const metadata = {
-  title: "UGC Approved Online Degrees in India | UNIFOST",
+  title: "UGC Approved Online University Degrees in India | UNIFOST",
   description: "Compare UGC-approved online degrees from top universities. Get free career counseling for MBA, BBA, MCA courses. 5000+ students enrolled. Apply now!",
   keywords: [
     "online degrees India",
@@ -32,7 +32,7 @@ export const metadata = {
     canonical: "https://unifostedu.com",
   },
   openGraph: {
-    title: "Online Degrees India | UGC Approval & Career Guide | UNIFOST",
+    title: "UGC Approved Online Degrees in India | UNIFOST",
     description: "Compare UGC-approved online degrees from top universities. Get free career counseling for MBA, BBA, MCA courses. 5000+ students enrolled. Apply now!",
     url: "https://unifostedu.com",
     siteName: "UNIFOST",
