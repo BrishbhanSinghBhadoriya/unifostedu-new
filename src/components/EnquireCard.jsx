@@ -50,7 +50,7 @@ const EnquireCard = ({
         />
 
         {/* Content */}
-        <div className="p-4 flex flex-col flex-1">
+        <div className="p-4 flex flex-col">
           <div>
             <h3 className="text-lg font-bold text-gray-900 mb-2">{course}</h3>
 
@@ -70,11 +70,16 @@ const EnquireCard = ({
             {specializationList.length > 0 && (
               <div className="text-sm text-gray-700 mt-2">
                 <span className="font-semibold">Specializations:</span>
-                <ul className="list-disc list-inside mt-1">
-                  {visibleSpecializations.map((spec, idx) => (
-                    <li key={idx}>{spec}</li>
-                  ))}
-                </ul>
+             <ul
+             className={`list-disc list-inside mt-1 transition-all duration-300 ease-in-out ${
+                showMore ? "max-h-96" : "max-h-6 overflow-hidden"
+                   }`}
+                 >
+                 {specializationList.map((spec, idx) => (
+                     <li key={idx}>{spec}</li>
+                         ))}
+                     </ul>
+
 
                 {specializationList.length > 1 && (
                   <button
