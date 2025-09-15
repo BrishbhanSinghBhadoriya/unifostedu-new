@@ -54,10 +54,10 @@ const Hero = ({ onOpenModal }) => {
                   initial={{ opacity: 0, y: 20 }} 
                   animate={{ opacity: 1, y: 0 }} 
                   transition={{ duration: 0.6, delay: 0.4 }}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-blue-200 text-blue-700 text-sm font-medium shadow-lg"
+                  className="inline-flex items-center mt-5 gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-blue-200 text-blue-700 text-sm font-medium shadow-lg"
                 >
-                  <FaAward className="text-yellow-500" />
-                  <span>Trusted by 50,000+ Students</span>
+                  <FaAward className="text-yellow-500 " />
+                  <span>Trusted by 5,000+ Students</span>
                 </motion.div>
 
                 {/* Main Headline */}

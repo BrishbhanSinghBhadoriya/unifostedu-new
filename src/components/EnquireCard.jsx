@@ -77,7 +77,7 @@ const EnquireCard = ({
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
           
           {/* University Badge */}
-          <div className="absolute top-4 left-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+          <div className="absolute top-4 left-4 bg-gradient-to-r from-gray-800 to-purple-800 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
             {universityName}
           </div>
           
@@ -170,7 +170,7 @@ const EnquireCard = ({
           <div className="mt-auto pt-2">
             <motion.button
               onClick={handleEnquireClick}
-              className="w-full bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 text-white px-4 py-2.5 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 group/btn"
+              className="w-full bg-gradient-to-r from-gray-800 to-purple-800 text-white px-4 py-2.5 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 group/btn"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >

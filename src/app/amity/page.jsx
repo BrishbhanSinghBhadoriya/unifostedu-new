@@ -263,7 +263,7 @@ const Amity = () => {
       </div>
       
       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight font-[Poppins]">
-        Online Amity <span className="text-blue-600">University</span>
+        Online Amity <span className="text-yellow-500">University</span>
       </h1>
       
       {/* Location and Basic Info */}
