@@ -1,6 +1,8 @@
 'use client';
 import React, { useState } from "react";
 // import Image from 'next/image';
+import HeroSection from "@/components/HeroSection";
+import AccreditationSection from "@/components/AccreditationSection";
 
 // import { useNavigate } from 'react-router-dom';
 // import { Helmet } from 'react-helmet';
@@ -96,43 +98,80 @@ const Lpu = () => {
     <>
       
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-      
-
-      {/* Intro Section */}
-      <section className="py-16 bg-white px-6 font-[Inter]">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <div className="md:w-1/2">
-            <h1 className="whitespace-nowrap  text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
-               Lovely Professional University Online
-            </h1><br />
-            <p> <span className="font-semibold text-gray-700">Private University in Jalandhar, Punjab, India.</span><br /><br/></p>
-            <p className="text-gray-700 text-lg">
-             Lovely Professional University (LPU) is a top-ranking university in India in various academic disciplines, ranked by NIRF. LPU Online is no different as it is one of the top online education providers in India.<br /><br />
+    <HeroSection
+  universityName="Lovely Professional University Online"
+  location="Jalandhar, Punjab, India"
+  type="Private University"
+  nirfRank="38"
+  rating="4.7/5"
+  description="NAAC A++ Accredited | One of India’s Largest Universities | 100% Online Programs"
+  description2="
+             Lovely Professional University (LPU) is a top-ranking university in India in various academic disciplines, ranked by NIRF. LPU Online is no different as it is one of the top online education providers in India
               
              The university has various affiliations including recognition from University Grants Commission (UGC), All India Council for Technical Education (AICTE), and World Education Services (WES). The university has been ranked by NIRF, WURI, and The World University Rankings 2022. The quality of education this university provides is quite evident from its NAAC A++ grading.
-             <br /><br />
-            The university offers online UG and PG courses in the domains of Management, Computer Applications, Commerce, Arts, and Science. The curriculum for every course is industry oriente it has been designed by expert practitioners and experienced faculty. Apart from academic learning, the university conducts skilling classes conducted by a dedicated team of in-house professors.
+             "
+  badgeText="UGC, AICTE, WES, NAAC A++ Recognized"
+  imgSrc="/images/lpu.webp"
+  imgAlt="Lovely Professional University Online Campus"
+  students="45K"
+  partners="700"
+  campus="Jalandhar Campus"
+  highlights={[
+    { icon: <FaBookOpen className="text-blue-600" />, text: "Flexible Learning" },
+    { icon: <FaUserTie className="text-blue-600" />, text: "Expert Faculty" },
+    { icon: <FaBriefcase className="text-blue-600" />, text: "Career Support" },
+    { icon: <FaClipboardCheck className="text-blue-600" />, text: "UGC Recognized Degrees" },
+  ]}
+/>  
+<div>
+      <AccreditationSection
+        title="Why Choose LPU Online?"
+        description="Access flexible learning, expert faculty, career support, and globally recognized degrees."
+        stats={[]} // No numerical stats in this section
+        benefits={[
+          {
+            title: "Flexible Learning",
+            description: "Access recorded lectures, live classes, and study materials anytime, anywhere.",
+            iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M4 19h16V5H4v14zm0 0v2h16v-2H4z"></path>
+                      </svg>`,
+          },
+          {
+            title: "Expert Faculty",
+            description: "Learn from experienced professors and industry experts.",
+            iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                      </svg>`,
+          },
+          {
+            title: "Career Support",
+            description: "Resume building, interview preparation, and placement assistance.",
+            iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M16 6V4H8v2H2v14h20V6h-6zM8 4h8v2H8V4zm12 16H4V8h16v12z"></path>
+                      </svg>`,
+          },
+          {
+            title: "UGC Recognized",
+            description: "Degrees equivalent to on-campus programs with global recognition.",
+            iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7h20L12 2zm0 2.18L18.9 7H5.1L12 4.18zM4 9v11h16V9H4zm2 2h12v7H6v-7z"></path>
+                      </svg>`,
+          },
+        ]}
+        accreditations={[
+          { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
+          { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
+          { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
+          { src: "/images/nirf.webp", alt: "NIRF", name: "NIRF" },
+          { src: "/images/wes.webp", alt: "WES", name: "WES" },
+          { src: "/images/aiu.webp", alt: "AIU", name: "AIU" },
+          { src: "/images/qs.webp", alt: "QS Ranking", name: "QS" },
+        ]}
+        internationalRecognition={[]}
+        successStories={[]}
+      />
+    </div>
 
-            </p>
-
-            
-          </div>
-          <div className="md:w-1/2">
-            <Image width={100} height={100} loading="lazy" src="/images/lpu.webp" alt="Lovely Professional University" className="w-full rounded-xl shadow-lg" />
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-white px-6 font-[Inter]">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold text-[#003b59] font-[Poppins] mb-6">
-            LPU Online Degree Programs
-          </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Explore undergraduate and postgraduate online degree programs from LPU. Experience quality, flexibility, and career-focused education from one of India's top NAAC A++ accredited universities.
-          </p>
-        </div>
-      </section>
 
       {/* UG Cards */}
       <section className="py-12 bg-white px-6 font-[Inter]">
@@ -160,63 +199,7 @@ const Lpu = () => {
         </div>
       </section>
 
-      <section className="py-12 px-4 bg-white">
-        <div className="max-w-7xl mx-auto text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-900">
-            Why Choose LPU Online?
-          </h2>
-          <hr className="mt-4 border-gray-300 w-24 mx-auto" />
-        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
-          <div className="flex flex-col items-start text-left">
-            <FaBookOpen className="text-blue-600 text-3xl mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Flexible Learning</h4>
-            <p className="text-gray-600 text-sm">
-              Access recorded lectures, live classes, and study materials anytime, anywhere
-            </p>
-          </div>
-
-          <div className="flex flex-col items-start text-left">
-            <FaUserTie className="text-blue-600 text-3xl mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Expert Faculty</h4>
-            <p className="text-gray-600 text-sm">
-              Learn from experienced professors and industry experts
-            </p>
-          </div>
-
-          <div className="flex flex-col items-start text-left">
-            <FaBriefcase className="text-blue-600 text-3xl mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Career Support</h4>
-            <p className="text-gray-600 text-sm">
-              Resume building, interview preparation, and placement assistance
-            </p>
-          </div>
-
-          <div className="flex flex-col items-start text-left">
-            <FaClipboardCheck className="text-blue-600 text-3xl mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">UGC Recognized</h4>
-            <p className="text-gray-600 text-sm">
-              Degrees equivalent to on-campus programs with global recognition
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-10 bg-white">
-        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">
-          Recognized & Accredited By
-        </h2>
-        <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <Image width={100} height={100} loading="lazy"  src="/images/ugc.webp" alt="UGC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/aicte.webp" alt="AICTE" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/naac.webp" alt="NAAC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/nirf.webp" alt="NIRF" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/wes.webp" alt="WES" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/aiu.webp" alt="AIU" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/qs.webp" alt="RECOGIN" className="h-16 object-contain" />
-        </div>
-      </section>
 
      {/*Admission Steps*/}
      <AdmissionProcedure />

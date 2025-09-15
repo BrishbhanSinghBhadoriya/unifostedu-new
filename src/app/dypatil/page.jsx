@@ -6,6 +6,8 @@ import EnquireCard from '@/components/EnquireCard';
 import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck } from "react-icons/fa";
 import Image from 'next/image';
 import Head from 'next/head';
+import HeroSection from '@/components/HeroSection';
+import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 const Dypatil = () => {
    const [expandedItems, setExpandedItems] = useState({});
@@ -152,27 +154,86 @@ const Dypatil = () => {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://unifostedu.com/dypatil/" />
       </Head>
-      {/* Intro Section */}
-      <section className="py-16 bg-white px-6 font-[Inter]">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <div className="md:w-1/2">
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
-             DY Patil University Online 
-            </h1>
-            <p> <span className="font-semibold text-gray-700">Private University in Pune, Maharasthtra, India.</span><br /><br/></p>
-            <br />
-            <p className="text-gray-700 text-lg">
-              DY Patil University offers flexible online degrees in collaboration with Harvard, aimed at career growth for students and professionals alike. Join to access expert faculty and 24/7 learning support.DY Patil University Online is recognized by the University Grants Commission (UGC) and the All India Council for Technical Education (AICTE). It's also accredited by NAAC with an A++ grade. We offer a range of undergraduate and postgraduate programs in fields like Business Administration, Computer Applications, and more. Our online platform provides flexibility for working professionals and students to learn at their own pace while receiving quality education from experienced faculty.  
-            </p>
-            
-          </div>
-          
-          <div className="md:w-1/2">
-         < Image src="/images/dypatil.webp" alt="DY Patil University" width={100} height={100} loading="lazy"
-          className="w-full rounded-xl shadow-lg" />
-          </div>
-        </div>
-      </section>
+    <HeroSection
+  universityName="DY Patil University Online"
+  location="Pune, Maharashtra, India"
+  type="Private University"
+  nirfRank="" // Add if available
+  rating="" // Add if available
+  description="NAAC A++ Accredited | UGC & AICTE Approved | Flexible Online Degrees"
+  description2={`
+    DY Patil University offers flexible online degrees in collaboration with Harvard, aimed at career growth 
+    for students and professionals alike. With expert faculty and 24/7 learning support, learners gain both 
+    academic knowledge and practical skills. 
+
+    DY Patil University Online is recognized by the University Grants Commission (UGC) and the All India Council 
+    for Technical Education (AICTE), and accredited by NAAC with an A++ grade. It offers a range of undergraduate 
+    and postgraduate programs in Business Administration, Computer Applications, and more. 
+
+    The online platform ensures flexibility for working professionals and students to learn at their own pace 
+    while receiving quality education from experienced faculty.
+  `}
+  badgeText="UGC | AICTE | NAAC A++ Recognized"
+  imgSrc="/images/dypatil.webp"
+  imgAlt="DY Patil University Online Campus"
+  students="—" // Replace with actual numbers
+  partners="—" // Replace with actual numbers
+  campus="Pune Campus"
+  highlights={[
+    { icon: <FaBookOpen className="text-blue-600" />, text: "Flexible Learning" },
+    { icon: <FaUserTie className="text-blue-600" />, text: "Expert Faculty" },
+    { icon: <FaBriefcase className="text-blue-600" />, text: "Career Growth" },
+    { icon: <FaClipboardCheck className="text-blue-600" />, text: "UGC & AICTE Recognized" },
+  ]}
+/>
+
+
+<div>
+  <AccreditationSection
+    title="Why Choose DY Patil Online?"
+    description="Recognized by UGC, NAAC A+, and AICTE. DY Patil offers flexible online learning with expert faculty, career services, and placement support."
+    stats={[]} // Currently no numerical stats
+    benefits={[
+      {
+        title: "UGC-Approved & Accredited",
+        description: "Recognized by UGC and accredited by NAAC A+.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 19h16V5H4v14zm0 0v2h16v-2H4z"></path>
+                  </svg>`,
+      },
+      {
+        title: "Experienced Faculty",
+        description: "Learn from top educators and industry experts.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                  </svg>`,
+      },
+      {
+        title: "Career Services",
+        description: "Internships, workshops & job readiness programs.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M16 6V4H8v2H2v14h20V6h-6zM8 4h8v2H8V4zm12 16H4V8h16v12z"></path>
+                  </svg>`,
+      },
+      {
+        title: "Placement Support",
+        description: "Placement help for your dream job.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7h20L12 2zm0 2.18L18.9 7H5.1L12 4.18zM4 9v11h16V9H4zm2 2h12v7H6v-7z"></path>
+                  </svg>`,
+      },
+    ]}
+    accreditations={[
+      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
+      { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
+      { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
+      { src: "/images/nirf.webp", alt: "NIRF", name: "NIRF" },
+      { src: "/images/wes.webp", alt: "WES", name: "WES" },
+    ]}
+    internationalRecognition={[]}
+    successStories={[]}
+  />
+</div>
 
       {/*  Courses */}
       <section className="py-12 bg-white px-6 font-[Inter]">
@@ -198,45 +259,11 @@ const Dypatil = () => {
         </div>
       </section>
 
-      {/* Why Choose */}
-      <section className="py-12 px-6 bg-gray-100 font-[Inter]">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-blue-900 mb-10 font-[Poppins]">
-            Why Choose DY Patil Online?
-          </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-            {[
-              { icon: <FaBookOpen />, title: "UGC-Approved & Accredited", desc: "Recognized by UGC and accredited by NAAC A+." },
-              { icon: <FaUserTie />, title: "Experienced Faculty", desc: "Learn from top educators and industry experts." },
-              { icon: <FaBriefcase />, title: "Career Services", desc: "Internships, workshops & job readiness programs." },
-              { icon: <FaClipboardCheck />, title: "Placement Support", desc: "Placement help for your dream job." }
-            ].map((item, index) => (
-              <div key={index} className="bg-white shadow rounded-lg p-6 flex flex-col items-start">
-                <div className="text-3xl text-blue-700 mb-4">{item.icon}</div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">{item.title}</h4>
-                <p className="text-sm text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Admission Steps */}
      <AdmissionProcedure />
 
-      {/* Recognized & Accredited */}
-
-      <section className="py-10 bg-white">
-        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
-        <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <Image src="/images/ugc.webp" alt="UGC" width={100} height={100} loading="lazy"
-          className="h-16 object-contain" />
-          <Image src="/images/aicte.webp" alt="AICTE" width={100} height={100} loading="lazy"className="h-16 object-contain" />
-          <Image src="/images/naac.webp" alt="NAAC" width={100} height={100} loading="lazy"className="h-16 object-contain" />
-           <Image src="/images/nirf.webp" alt="NIRF" width={100} height={100} loading="lazy" className="h-16 object-contain" />
-           <Image src="/images/wes.webp" alt="WES" width={100} height={100} loading="lazy"className="h-16 object-contain" />
-            </div>
-      </section>
+    
 
       <section className="bg-[#003366] py-12 px-4">
   <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">

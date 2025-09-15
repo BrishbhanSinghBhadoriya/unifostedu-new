@@ -10,10 +10,14 @@ import {
   FaCertificate,
   FaBuilding,
 } from 'react-icons/fa';
+import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck } from "react-icons/fa";
+
 import { useRouter } from 'next/navigation';
 import EnquireCard from '@/components/EnquireCard';
 import Head from 'next/head';
 import Image from 'next/image';
+import HeroSection from '@/components/HeroSection';
+import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 const Manipal = () => {
  const ugCourses = [
@@ -101,25 +105,112 @@ const Manipal = () => {
         <meta name="twitter:image" content="/images/mahe-uni.webp" />
       </Head>
       {/* Intro Section */}
-      <section className="py-16 bg-white px-6 font-[Inter]">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <div className="md:w-1/2">
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
-              Manipal Academy of Higher Education
-            </h1><br />
-            <p> <span className="font-semibold text-gray-700">Private university in Manipal, Karnataka, India.</span><br /><br/></p>
+<div>
+  <HeroSection
+    universityName="Manipal Academy of Higher Education (MAHE)"
+    location="Manipal, Karnataka, India"
+    type="Private University"
+    nirfRank="4"
+    rating="NAAC A++"
+    description="Institution of Eminence | NAAC A++ Accredited | Global Recognition | Excellence in Education since 1953"
+    description2={`
+      Manipal Academy of Higher Education (MAHE) is synonymous with excellence in higher education. 
+      Recognized as an Institution of Eminence (IoE) with NAAC A++ rating, MAHE has been a pioneer in delivering world-class education across diverse streams since 1953. 
+      Ranked #4 by NIRF, the university is home to a legacy of excellence and a network of notable alumni including Satya Nadella, Vikas Khanna, and Dr. Devi Prasad Shetty. 
+      MAHE offers a wide range of in-demand bachelor's, master's, and professional certification programs in online mode to learners worldwide.
+    `}
+    badgeText="Institution of Eminence | NAAC A++ Accredited"
+    imgSrc="/images/mahe-uni.webp"
+    imgAlt="Manipal Academy of Higher Education Campus"
+    students="35K+"   // Approximate/adjust as needed
+    partners="15+"    // Placeholder if no exact data
+    campus="Manipal Campus"
+    highlights={[
+      { icon: <FaBookOpen className="text-blue-600" />, text: "World-Class Curriculum" },
+      { icon: <FaUserTie className="text-blue-600" />, text: "Expert Faculty & Mentors" },
+      { icon: <FaBriefcase className="text-blue-600" />, text: "Career-Oriented Programs" },
+      { icon: <FaClipboardCheck className="text-blue-600" />, text: "Institution of Eminence (IoE)" },
+    ]}
+  />
+</div>
 
-            <p className="text-gray-700 text-lg">
-             Manipal Academy of Higher Education (MAHE) is synonymous with excellence in higher education. MAHE is one of India’s leading academic and research institutions with a NAAC A++ rating and prestigious Institution of Eminence (IoE) recognition. The institution has been offering world-class education across diverse streams since 1953. It is ranked #4 by NIRF and has a track of notable alumni like Satya Nadella, Vikas Khanna, and Dr Devi Prasad Shetty. The university offers various in-demand bachelor’s, master’s, and professional certification programs in the online mode to professionals across the world.
-              
-
-            </p>
-          </div>
-          <div className="md:w-1/2">
-            <Image width={100} height={100} loading="lazy" src="/images/mahe-uni.webp" alt="Mahe" className="w-full rounded-xl shadow-lg" />
-          </div>
-        </div>
-      </section>
+<div>
+  <AccreditationSection
+    title="Why Choose Manipal Academy of Higher Education?"
+    description="Manipal Academy of Higher Education (MAHE) offers globally recognized degrees, expert mentorship, career support, and a legacy of academic excellence with strong accreditation."
+    stats={[]} // No numerical stats
+    benefits={[
+      {
+        title: "Top-Ranked Private University",
+        description: "Recognized as one of India’s best private institutions.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l8 4v6c0 5-3.33 9.74-8 11-4.67-1.26-8-6-8-11V6l8-4z"/>
+                  </svg>`,
+      },
+      {
+        title: "Globally Recognized Degrees",
+        description: "Accredited programs accepted worldwide by top employers.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
+                  </svg>`,
+      },
+      {
+        title: "Flexible & Personalized Learning",
+        description: "Learn anytime, anywhere with tailored academic support.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16M4 18h16"/>
+                  </svg>`,
+      },
+      {
+        title: "Expert Faculty Mentorship",
+        description: "One-on-one guidance by experienced mentors & professors.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.7 0 8 1.34 8 4v4H4v-4c0-2.66 5.3-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z"/>
+                  </svg>`,
+      },
+      {
+        title: "UGC & AICTE Approved",
+        description: "Degrees entitled by UGC and recognized by AICTE.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l9 4.5v11L12 22l-9-4.5v-11L12 2z"/>
+                  </svg>`,
+      },
+      {
+        title: "Global Alumni Network",
+        description: "Join a network of learners from 50+ countries.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12a5 5 0 110-10 5 5 0 010 10zm-7 9c0-3 4-5 7-5s7 2 7 5v1H5v-1z"/>
+                  </svg>`,
+      },
+      {
+        title: "Career Support",
+        description: "Internships, placements, resume help, and interview prep.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6 22h12V6H6v16zM8 2h8v2H8V2z"/>
+                  </svg>`,
+      },
+      {
+        title: "Digital Resources",
+        description: "Access e-books, recorded classes, and online labs.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 4h16v16H4z"/>
+                  </svg>`,
+      },
+    ]}
+    accreditations={[
+      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
+      { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
+      { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
+      { src: "/images/aiu.webp", alt: "AIU", name: "AIU" },
+      { src: "/images/nba.webp", alt: "NBA", name: "NBA" },
+      { src: "/images/qs.webp", alt: "QS", name: "QS World Ranking" },
+      { src: "/images/acu.webp", alt: "ACU", name: "ACU" },
+    ]}
+    internationalRecognition={[]}
+    successStories={[]}
+  />
+</div>
 
       {/* Courses Offered */}
     
@@ -144,86 +235,6 @@ const Manipal = () => {
               <EnquireCard key={index} {...item} universityName="Manipal Academy of Higher Educatione" />
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Why Choose Section */}
-     {/* Why Choose Mahe */}
-<section className="py-12 px-4 bg-white">
-  <div className="max-w-7xl mx-auto text-center mb-10">
-    <h2 className="text-3xl font-bold text-gray-900">Why Choose Manipal Academy of Higher Education?</h2>
-    <hr className="mt-4 border-gray-300 w-24 mx-auto" />
-  </div>
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
-    {[
-      {
-        icon: <FaGraduationCap />,
-        title: "Top-Ranked Private University",
-        text: "Recognized as one of India’s best private institutions."
-      },
-      {
-        icon: <FaUniversity />,
-        title: "Globally Recognized Degrees",
-        text: "Accredited programs accepted worldwide by top employers."
-      },
-      {
-        icon: <FaFileAlt />,
-        title: "Flexible & Personalized Learning",
-        text: "Learn anytime, anywhere with tailored academic support."
-      },
-      {
-        icon: <FaCheckCircle />,
-        title: "Expert Faculty Mentorship",
-        text: "One-on-one guidance by experienced mentors & professors."
-      },
-      {
-        icon: <FaCertificate />,
-        title: "UGC & AICTE Approved",
-        text: "Degrees entitled by UGC and recognized by AICTE."
-      },
-      {
-        icon: <FaBuilding />,
-        title: "Global Alumni Network",
-        text: "Join a network of learners from 50+ countries."
-      },
-      {
-        icon: <FaCheckCircle />,
-        title: "Career Support",
-        text: "Internships, placements, resume help, and interview prep."
-      },
-      {
-        icon: <FaCheckCircle />,
-        title: "Digital Resources",
-        text: "Access e-books, recorded classes, and online labs."
-      }
-    ].map((item, i) => (
-      <div key={i} className="flex flex-col items-start text-left">
-        <div className="text-blue-600 text-3xl mb-4">{item.icon}</div>
-        <h4 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h4>
-        <p className="text-gray-600 text-sm">{item.text}</p>
-      </div>
-    ))}
-  </div>
-</section>
-
-       {/* Accreditation Logos */}
-      <section className="bg-white py-12 px-4">
-        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
-        <div className="flex flex-wrap justify-center items-center gap-20">
-          <Image width={100} height={100} loading="lazy" src="/images/ugc.webp" alt="UGC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/aicte.webp" alt="AICTE" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/naac.webp" alt="NAAC" className="h-16 object-contain" />
-          
-         
-          <Image width={100} height={100} loading="lazy" src="/images/aiu.webp" alt="AIU" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/nba.webp" alt="NBA" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/qs.webp" alt="QS" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/acu.webp" alt="ACU" className="h-16 object-contain" />
-          
-          
-          
-
-
         </div>
       </section>
 

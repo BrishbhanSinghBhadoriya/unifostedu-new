@@ -15,6 +15,8 @@ import {
   FaClipboardCheck,
 } from "react-icons/fa";
 import Image from 'next/image';
+import HeroSection from '@/components/HeroSection';
+import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 import * as Tabs from '@radix-ui/react-tabs'
 
@@ -96,37 +98,86 @@ const Jain = () => {
   return (
     <>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-        {/* Intro Section */}
-      {/* Intro Section */}
-      <section className="py-16 bg-white px-6 font-[Inter]">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <div className="md:w-1/2">
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
-              Jain University Online
-            </h1><br />
-            <p> <span className="font-semibold text-gray-700">Private University in Bengaluru, Karnataka, India.</span><br /><br/></p>
-            <p className="text-gray-700 text-lg">
-              Jain University Online is a part of NAAC A++ grade accreditation offering UGC-Entitled online degree programs intending to empower learners by providing the latest knowledge to help students effectively.<br /><br />
-              30 years of excellence in education field, Jain University is one of the top universities in India with a strong focus on quality education and building a great future ahead for students and working professionals.
-            </p>
+        <div>
+      <HeroSection
+        universityName="Jain University Online"
+        location="Bengaluru, Karnataka, India"
+        type="Private University"
+        nirfRank="77" // If not available, keep blank
+        rating="4.5" // If not available, keep blank
+        description="NAAC A++ Accredited | UGC Entitled Online Degree Programs | Empowering Learners with Latest Knowledge"
+        description2={`
+          Jain University Online is part of the NAAC A++ grade accredited institution offering online degree programs to empower learners. 
+          With 30 years of excellence in education, Jain University is one of India’s top universities with a strong focus on quality education 
+          and building a great future for students and working professionals.
+        `}
+        badgeText="NAAC A++ Accredited | UGC Entitled Online Degrees"
+        imgSrc="/images/jain.webp"
+        imgAlt="Jain University Online Campus"
+        students="30K+" // Approximate/replace as needed
+        partners="10+" // If no data, keep placeholder
+        campus="Bengaluru Campus"
+        highlights={[
+          { icon: <FaBookOpen className="text-blue-600" />, text: "Flexible Learning" },
+          { icon: <FaUserTie className="text-blue-600" />, text: "Expert Faculty" },
+          { icon: <FaBriefcase className="text-blue-600" />, text: "Career Support" },
+          { icon: <FaClipboardCheck className="text-blue-600" />, text: "UGC Entitled Degrees" },
+        ]}
+      />
+    </div>
+    
 
-            
-          </div>
-          <div className="md:w-1/2">
-            <Image width={100} height={100} loading="lazy" src="/images/jain.webp" alt="Jain University" className="w-full rounded-xl shadow-lg" />
-          </div>
-        </div>
-      </section>
-      <section className="py-16 bg-white px-6 font-[Inter]">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold text-[#003b59] font-[Poppins] mb-6">
-            Jain University Online Courses
-          </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Explore undergraduate and postgraduate online degree programs from Jain University. Experience quality, flexibility, and career-focused education from one of India’s top NAAC A++ accredited universities.
-          </p>
-        </div>
-      </section>
+    <div>
+  <AccreditationSection
+    title="Why Choose Jain Online?"
+    description="Explore diverse learning mediums, dedicated academic advisors, career services, and placement opportunities with Jain University Online."
+    stats={[]} // No numerical stats here
+    benefits={[
+      {
+        title: "Diverse Learning Mediums",
+        description: "E-books, printed & audio books, videos to cater your preferences & unique learning style.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>`,
+      },
+      {
+        title: "Dedicated Academic Advisor",
+        description: "Dedicated experts and advisors to guide you at every step of your professional career.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.67 0 8 1.34 8 4v4H4v-4c0-2.66 5.33-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z"></path>
+                  </svg>`,
+      },
+      {
+        title: "Career Services",
+        description: "Be job-ready with resume building workshops, internships & industry mentorship.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6 22h12V6H6v16zM8 2h8v2H8V2z"></path>
+                  </svg>`,
+      },
+      {
+        title: "Placement Opportunities",
+        description: "Job interview prep, placement assistance & resume building for students to be job-ready.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l9 4.5v11L12 22l-9-4.5v-11L12 2z"></path>
+                  </svg>`,
+      },
+    ]}
+    accreditations={[
+      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
+      { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
+      { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
+      { src: "/images/nirf.webp", alt: "NIRF", name: "NIRF" },
+      { src: "/images/wes.webp", alt: "WES", name: "WES" },
+      { src: "/images/aiu.webp", alt: "AIU", name: "AIU" },
+      { src: "/images/careers.webp", alt: "Careers", name: "Careers" },
+      { src: "/images/auap.webp", alt: "AUAP", name: "AUAP" },
+      { src: "/images/ksurf.webp", alt: "KSURF", name: "KSURF" },
+      { src: "/images/recogin.webp", alt: "Recognition", name: "Recognition" },
+    ]}
+    internationalRecognition={[]}
+    successStories={[]}
+  />
+</div>
 
 
    <section className="py-12 px-6 bg-white font-[Inter]">
@@ -177,81 +228,6 @@ const Jain = () => {
   </Tabs.Root>
 </section>
 
-     <section className="py-12 px-4 bg-white">
-  <div className="max-w-7xl mx-auto text-center mb-10">
-    <h2 className="text-3xl font-bold text-gray-900">
-      Why Choose Jain online?
-    </h2>
-    <hr className="mt-4 border-gray-300 w-24 mx-auto" />
-  </div>
-
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
-    {/* Item 1 */}
-    <div className="flex flex-col items-start text-left">
-      <FaBookOpen className="text-blue-600 text-3xl mb-4" />
-      <h4 className="text-lg font-semibold text-gray-900 mb-2">Diverse learning mediums</h4>
-      <p className="text-gray-600 text-sm">
-        E-books, printed & audio books, videos to cater your preferences & unique learning style
-      </p>
-    </div>
-
-    {/* Item 2 */}
-    <div className="flex flex-col items-start text-left">
-      <FaUserTie className="text-blue-600 text-3xl mb-4" />
-      <h4 className="text-lg font-semibold text-gray-900 mb-2">Dedicated Academic Advisor</h4>
-      <p className="text-gray-600 text-sm">
-        Dedicated experts and advisor to guide you at every step of your professional career
-      </p>
-    </div>
-
-   
-
-    {/* Item 4 */}
-    <div className="flex flex-col items-start text-left">
-      <FaBriefcase className="text-blue-600 text-3xl mb-4" />
-      <h4 className="text-lg font-semibold text-gray-900 mb-2">Career Services</h4>
-      <p className="text-gray-600 text-sm">
-        Be job-ready with resume building workshops, internships & industry mentorship
-      </p>
-    </div>
-
-   
-
-
-   
-
-    {/* Item 8 */}
-    <div className="flex flex-col items-start text-left">
-      <FaClipboardCheck className="text-blue-600 text-3xl mb-4" />
-      <h2 className="text-lg font-semibold text-gray-900 mb-2">Placement opportunities</h2>
-      <p className="text-gray-600 text-sm">
-        Job interview prep, placement assistance & resume building for students to be job-ready
-      </p>
-    </div>
-  </div>
-</section>
-   
-
-   <section className="py-10 bg-white">
-  <h3 className="text-2xl font-semibold text-center text-gray-800 mb-6">
-    Recognized & Accredited By
-  </h3>
-  <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-    <Image width={100} height={100} loading="lazy" src="/images/ugc.webp" alt="UGC" className="h-16 object-contain" />
-    <Image width={100} height={100} loading="lazy" src="/images/aicte.webp" alt="AICTE" className="h-16 object-contain" />
-    <Image width={100} height={100} loading="lazy" src="/images/naac.webp" alt="NAAC" className="h-16 object-contain" />
-    <Image width={100} height={100} loading="lazy" src="/images/nirf.webp" alt="NIRF" className="h-16 object-contain" />
-    <Image width={100} height={100} loading="lazy" src="/images/wes.webp" alt="WES" className="h-16 object-contain" />
-    <Image width={100} height={100} loading="lazy" src="/images/aiu.webp" alt="AIU" className="h-16 object-contain" />
-    <Image width={100} height={100} loading="lazy" src="/images/careers.webp" alt="CARRES" className="h-16 object-contain" />
-    <Image width={100} height={100} loading="lazy" src="/images/auap.webp" alt="AUAP" className="h-16 object-contain" />
-    <Image width={100} height={100} loading="lazy" src="/images/ksurf.webp" alt="KSURF" className="h-16 object-contain" />
-    <Image width={100} height={100} loading="lazy" src="/images/recogin.webp" alt="RECOGIN" className="h-16 object-contain" />
-    
-    
-
-  </div>
-</section>
 
 
 

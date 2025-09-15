@@ -16,6 +16,8 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Head from 'next/head';
 import EnquireCard from '@/components/EnquireCard';
+import HeroSection from '@/components/HeroSection';
+import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 
 const OPJindal = () => {
@@ -120,30 +122,104 @@ const OPJindal = () => {
       
 
       {/* Hero Section */}
-      <section className="bg-white-100 py-16 px-6 font-[Inter]">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4 leading-snug font-[Poppins]">
-               OP Jindal University
-            </h1>
-            <br />
-            <p> <span className="font-semibold text-gray-700"> Leading private university known for excellence in Law, Business, Engineering, and Public Policy in Sonipat, Haryana, India.</span><br /><br /></p>
-            <p className="text-gray-700 text-lg">
-              OP Jindal University offers globally recognized online degree which helps students to learn at there door step without any problems. 
-              O.P. Jindal Global University offers programmes in diverse fields such as Law, Business, Liberal Arts, Psychology, Economics, Media, Journalism, Architecture, Design, Banking, Finance, Environment, Public Policy, Public Health, Languages, and International Relations. Our courses are designed to meet students' academic and professional needs through interdisciplinary learning and practical application, preparing them for the global workforce. 
-            </p>
-          </div>
-          <motion.img
-            src="/images/opjindal.webp"
-            alt="OP Jindal University"
-            className="rounded-xl shadow-lg w-full h-auto"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-            viewport={{ once: true }}
-          />
-        </div>
-      </section>
+   <HeroSection
+  universityName="OP Jindal University"
+  location="Sonipat, Haryana, India"
+  type="Private University"
+  nirfRank="" // NIRF rank not provided
+  rating="" // Rating not provided
+  description="Leading private university known for excellence in Law, Business, Engineering, and Public Policy"
+  description2={`
+    OP Jindal University offers globally recognized online degrees, enabling students to learn at their doorstep without any problems. 
+    The university provides programs in diverse fields including Law, Business, Liberal Arts, Psychology, Economics, Media, Journalism, Architecture, Design, Banking, Finance, Environment, Public Policy, Public Health, Languages, and International Relations. 
+    Courses are designed to meet students' academic and professional needs through interdisciplinary learning and practical application, preparing them for the global workforce.
+  `}
+  badgeText="Globally Recognized | Interdisciplinary Learning | Practical Applications"
+  imgSrc="/images/opjindal.webp"
+  imgAlt="OP Jindal University Campus"
+  students="NA" // Replace with real data if available
+  partners="NA" // Replace with real data if available
+  campus="Sonipat Campus"
+  highlights={[
+    { icon: <FaBookOpen className="text-blue-600" />, text: "Interdisciplinary Programs" },
+    { icon: <FaUserTie className="text-blue-600" />, text: "Expert Faculty" },
+    { icon: <FaBriefcase className="text-blue-600" />, text: "Career-Oriented Courses" },
+    { icon: <FaClipboardCheck className="text-blue-600" />, text: "Global Recognition" },
+  ]}
+/>
+     
+     <div>
+  <AccreditationSection
+    title="Why Choose OP Jindal University?"
+    description="Blending innovative curriculum, expert faculty, tech-driven learning, and strong placements for holistic development."
+    stats={[]} // No numerical stats here
+    benefits={[
+      {
+        title: "Innovative Curriculum",
+        description: "Blends theory with practical exposure.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>`,
+      },
+      {
+        title: "Expert Faculty",
+        description: "Renowned academicians and industry leaders.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.67 0 8 1.34 8 4v4H4v-4c0-2.66 5.33-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z"></path>
+                  </svg>`,
+      },
+      {
+        title: "Tech-Driven Learning",
+        description: "Smart classrooms and advanced labs.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6 22h12V6H6v16zM8 2h8v2H8V2z"></path>
+                  </svg>`,
+      },
+      {
+        title: "Strong Placements",
+        description: "Top companies hire our graduates.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5v14"></path>
+                  </svg>`,
+      },
+      {
+        title: "Global Exposure",
+        description: "International exchange programs and collaborations.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l9 4.5v11L12 22l-9-4.5v-11L12 2z"></path>
+                  </svg>`,
+      },
+      {
+        title: "Modern Campus",
+        description: "State-of-the-art facilities for learning and living.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 4h16v16H4z"></path>
+                  </svg>`,
+      },
+      {
+        title: "Holistic Development",
+        description: "Focus on academics, sports, and culture.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"></circle>
+                  </svg>`,
+      },
+      {
+        title: "Industry Tie-ups",
+        description: "Collaborations for internships and projects.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l9 4.5v11L12 22l-9-4.5v-11L12 2z"></path>
+                  </svg>`,
+      },
+    ]}
+    accreditations={[
+      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
+      { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
+      { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
+    ]}
+    internationalRecognition={[]}
+    successStories={[]}
+  />
+</div>
 
       {/* UG & PG Course Cards */}
       {[{ title: "Undergraduate Courses", list: ugCourses }, { title: "Postgraduate Courses", list: pgCourses }].map((section, idx) => (
@@ -157,49 +233,7 @@ const OPJindal = () => {
         </section>
       ))}
 
-      {/* Why Choose Section */}
-      <section className="py-12 px-4 bg-white">
-        <div className="max-w-7xl mx-auto text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-900">Why Choose OP Jindal University?</h2>
-          <hr className="mt-4 border-gray-300 w-24 mx-auto" />
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
-          {[{
-            icon: <FaBookOpen />, title: "Innovative Curriculum", text: "Blends theory with practical exposure."
-          }, {
-            icon: <FaUserTie />, title: "Expert Faculty", text: "Renowned academicians and industry leaders."
-          }, {
-            icon: <FaRobot />, title: "Tech-Driven Learning", text: "Smart classrooms and advanced labs."
-          }, {
-            icon: <FaBriefcase />, title: "Strong Placements", text: "Top companies hire our graduates."
-          }, {
-            icon: <FaBook />, title: "Global Exposure", text: "International exchange programs and collaborations."
-          }, {
-            icon: <FaUniversity />, title: "Modern Campus", text: "State-of-the-art facilities for learning and living."
-          }, {
-            icon: <FaUserFriends />, title: "Holistic Development", text: "Focus on academics, sports, and culture."
-          }, {
-            icon: <FaClipboardCheck />, title: "Industry Tie-ups", text: "Collaborations for internships and projects."
-          }].map((item, i) => (
-            <div key={i} className="flex flex-col items-start text-left">
-              <div className="text-blue-600 text-3xl mb-4">{item.icon}</div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h4>
-              <p className="text-gray-600 text-sm">{item.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-       {/* Accreditation */}
-      <section className="py-10 bg-white">
-        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
-        <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <Image width={100} height={100} loading="lazy" src="/images/ugc.webp" alt="UGC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/naac.webp" alt="NAAC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/aicte.webp" alt="AICTE" className="h-16 object-contain" />
-         
-        </div>
-      </section>
+      
 
       {/* Admission Process */}
       <AdmissionProcedure/> 

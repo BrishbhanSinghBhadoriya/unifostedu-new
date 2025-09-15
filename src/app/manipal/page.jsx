@@ -10,12 +10,21 @@ import {
   FaCertificate,
   FaBuilding,
 } from 'react-icons/fa';
+import { 
+  FaBookOpen, 
+  FaUserTie, 
+  FaBriefcase, 
+  FaClipboardCheck 
+} from "react-icons/fa";
+
 import { useRouter } from 'next/navigation';
 import EnquireCard from '@/components/EnquireCard';
 import Head from 'next/head';
 import { motion } from "framer-motion";
 import Image from 'next/image';
 import * as Tabs from '@radix-ui/react-tabs';
+import HeroSection from '@/components/HeroSection';
+import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 
 
@@ -121,36 +130,111 @@ const Manipal = () => {
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
-      {/* Intro Section */}
-      <section className="py-16 bg-white px-6 font-[Inter]">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <div className="md:w-1/2">
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
-              Say Hii to your future with Manipal University Online
-            </h1><br />
-            <p> <span className="font-semibold text-gray-700">Private University in Jaipur, Rajasthan, India.</span><br /><br/></p>
+  <HeroSection
+  universityName="Manipal University Online"
+  location="Jaipur, Rajasthan, India"
+  type="Private University"
+  nirfRank="" // If available later, fill here
+  rating="4.6/5" // Approx, change if you have actual rating
+  description="UGC Entitled | Globally Recognized Online Degrees | Flexible Learning with Expert Mentorship"
+  description2={`
+    Manipal University Online transforms careers with globally recognized online degrees delivered at your doorstep. 
+    With top-class accreditations and flexible learning, it offers quality education with personalized mentorship. 
 
-            <p className="text-gray-700 text-lg">
-              Manipal University Online transforms careers with globally recognized online degrees delivered at your doorstep. With top-class accreditations and flexible learning, it offers quality education with personalized mentorship.
-              It provides a unique blend of academic excellence and industry relevance, ensuring students are well-prepared for the future. 
-              <br /><br />
-              Ranked among the top private universities in India, Manipal offers diverse programs in business and technology with strong academic support and vibrant digital learning.
-            </p>
-          </div>
-<<<<<<< HEAD
-          <div className="md:w-1/2">
-            <Image width={100} height={100} src="/images/manipal.png" alt="Manipal University" className="w-full rounded-xl shadow-lg" />
-=======
-          <div className="md:w-1/2 w-full">
-            <div className="relative rounded-2xl p-[1.5px] bg-gradient-to-r from-blue-400/50 via-indigo-400/50 to-cyan-400/50 shadow-md">
-              <div className="rounded-2xl bg-white overflow-hidden">
-                <Image width={100} height={100} src="/images/manipal.webp" alt="Manipal University" className="w-full h-auto object-contain" />
-              </div>
-            </div>
->>>>>>> 03e1ffb2fd5e8699171ec57be521395850aa2c27
-          </div>
-        </div>
-      </section>
+    It provides a unique blend of academic excellence and industry relevance, ensuring students are well-prepared 
+    for the future. Ranked among the top private universities in India, Manipal offers diverse programs in business 
+    and technology with strong academic support and vibrant digital learning.
+  `}
+  badgeText="UGC Entitled | NAAC Accredited | Globally Recognized"
+  imgSrc="/images/manipal.webp"
+  imgAlt="Manipal University Online Campus"
+  students="25K+" // Approx or actual if you have
+  partners="100+" // Placeholder, update with real data if available
+  campus="Manipal Jaipur Campus"
+  highlights={[
+    { icon: <FaBookOpen className="text-blue-600" />, text: "World-Class Curriculum" },
+    { icon: <FaUserTie className="text-blue-600" />, text: "Expert Faculty & Mentors" },
+    { icon: <FaBriefcase className="text-blue-600" />, text: "Career-Oriented Programs" },
+    { icon: <FaClipboardCheck className="text-blue-600" />, text: "UGC Entitled Degrees" },
+  ]}
+/>
+
+<div>
+  <AccreditationSection
+    title="Why Choose Manipal University Online?"
+    description="Manipal University Online offers globally recognized online degrees with flexible learning, expert mentorship, and strong career support to help you achieve your future goals."
+    stats={[]} // No numerical stats provided
+    benefits={[
+      {
+        title: "Top-Ranked Private University",
+        description: "Recognized as one of India’s best private institutions.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l9 4.5v11L12 22l-9-4.5v-11L12 2z"></path>
+                  </svg>`,
+      },
+      {
+        title: "Globally Recognized Degrees",
+        description: "Accredited programs accepted worldwide by top employers.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>`,
+      },
+      {
+        title: "Flexible & Personalized Learning",
+        description: "Learn anytime, anywhere with tailored academic support.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6 22h12V6H6v16zM8 2h8v2H8V2z"></path>
+                  </svg>`,
+      },
+      {
+        title: "Expert Faculty Mentorship",
+        description: "One-on-one guidance by experienced mentors & professors.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.67 0 8 1.34 8 4v4H4v-4c0-2.66 5.33-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z"></path>
+                  </svg>`,
+      },
+      {
+        title: "UGC & AICTE Approved",
+        description: "Degrees entitled by UGC and recognized by AICTE.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l9 4.5v11L12 22l-9-4.5v-11L12 2z"></path>
+                  </svg>`,
+      },
+      {
+        title: "Global Alumni Network",
+        description: "Join a network of learners from 50+ countries.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"></circle>
+                  </svg>`,
+      },
+      {
+        title: "Career Support",
+        description: "Internships, placements, resume help, and interview prep.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5v14"></path>
+                  </svg>`,
+      },
+      {
+        title: "Digital Resources",
+        description: "Access e-books, recorded classes, and online labs.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 4h16v16H4z"></path>
+                  </svg>`,
+      },
+    ]}
+    accreditations={[
+      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
+      { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
+      { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
+      { src: "/images/aiu.webp", alt: "AIU", name: "AIU" },
+      { src: "/images/nba.webp", alt: "NBA", name: "NBA" },
+      { src: "/images/qs.webp", alt: "QS", name: "QS World Ranking" },
+      { src: "/images/acu.webp", alt: "ACU", name: "Association of Commonwealth Universities (ACU)" },
+    ]}
+    internationalRecognition={[]} 
+    successStories={[]}
+/>
+</div>
 
       {/* Courses Offered */}
     
@@ -203,84 +287,7 @@ const Manipal = () => {
 </section>
 
       {/* Why Choose Section */}
-     {/* Why Choose Manipal */}
-<section className="py-12 px-4 bg-white">
-  <div className="max-w-7xl mx-auto text-center mb-10">
-    <h2 className="text-3xl font-bold text-gray-900">Why Choose Manipal University Online?</h2>
-    <hr className="mt-4 border-gray-300 w-24 mx-auto" />
-  </div>
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
-    {[
-      {
-        icon: <FaGraduationCap />,
-        title: "Top-Ranked Private University",
-        text: "Recognized as one of India’s best private institutions."
-      },
-      {
-        icon: <FaUniversity />,
-        title: "Globally Recognized Degrees",
-        text: "Accredited programs accepted worldwide by top employers."
-      },
-      {
-        icon: <FaFileAlt />,
-        title: "Flexible & Personalized Learning",
-        text: "Learn anytime, anywhere with tailored academic support."
-      },
-      {
-        icon: <FaCheckCircle />,
-        title: "Expert Faculty Mentorship",
-        text: "One-on-one guidance by experienced mentors & professors."
-      },
-      {
-        icon: <FaCertificate />,
-        title: "UGC & AICTE Approved",
-        text: "Degrees entitled by UGC and recognized by AICTE."
-      },
-      {
-        icon: <FaBuilding />,
-        title: "Global Alumni Network",
-        text: "Join a network of learners from 50+ countries."
-      },
-      {
-        icon: <FaCheckCircle />,
-        title: "Career Support",
-        text: "Internships, placements, resume help, and interview prep."
-      },
-      {
-        icon: <FaCheckCircle />,
-        title: "Digital Resources",
-        text: "Access e-books, recorded classes, and online labs."
-      }
-    ].map((item, i) => (
-      <div key={i} className="flex flex-col items-start text-left">
-        <div className="text-blue-600 text-3xl mb-4">{item.icon}</div>
-        <h4 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h4>
-        <p className="text-gray-600 text-sm">{item.text}</p>
-      </div>
-    ))}
-  </div>
-</section>
 
-       {/* Accreditation Logos */}
-      <section className="bg-white py-12 px-4">
-        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
-        <div className="flex flex-wrap justify-center items-center gap-20">
-          <Image width={100} height={100} src="/images/ugc.webp" alt="UGC" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/aicte.webp" alt="AICTE" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/naac.webp" alt="NAAC" className="h-16 object-contain" />
-          
-         
-          <Image width={100} height={100} src="/images/aiu.webp" alt="AIU" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/nba.webp" alt="NBA" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/qs.webp" alt="QS" className="h-16 object-contain" />
-          <Image width={100} height={100} src="/images/acu.webp" alt="ACU" className="h-16 object-contain" />
-          
-          
-          
-
-
-        </div>
-      </section>
 
 
    {/* Admission Procedure */}
@@ -316,17 +323,10 @@ const Manipal = () => {
           <h2 className="text-3xl font-bold text-gray-800">Our Students Work At</h2>
           <p className="text-xl text-gray-600">Top Hiring Partners of Manipal Online</p>
         </div>
-<<<<<<< HEAD
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {["/images/company.png", "/images/company1.png", "/images/company9.jpg", "/images/com10.png", "/images/companany4.png", "/images/company6.png", "/images/companany5.png", "/images/adove.png", "/images/samsung.png"].map((src, i) => (
+          {["/images/company.webp", "/images/company1.webp", "/images/company9.webp", "/images/com10.webp", "/images/companany4.webp", "/images/company6.webp", "/images/companany5.webp", "/images/adove.webp", "/images/samsung.webp"].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
               <Image width={100} height={100} src={src} alt="Company" className="h-12 object-contain" />
-=======
-        <div className="max-w-6xl mx-auto px-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
-          {["/images/company.webp", "/images/company1.webp", "/images/company9.webp", "/images/com10.webp", "/images/companany4.webp", "/images/company6.webp", "/images/companany5.webp", "/images/adove.webp", "/images/samsung.webp"].map((src, i) => (
-            <div key={i} className="bg-white rounded-xl border border-slate-200 shadow-sm p-4 flex items-center justify-center hover:shadow-lg transition-all">
-              <Image width={100} height={100} src={src} alt="Company" className="h-10 sm:h-12 object-contain" />
->>>>>>> 03e1ffb2fd5e8699171ec57be521395850aa2c27
             </div>
           ))}
         </div>

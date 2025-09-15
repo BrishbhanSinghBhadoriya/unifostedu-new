@@ -11,6 +11,8 @@ import {
 import Head from 'next/head';
 import Image from 'next/image';
 import * as Tabs from '@radix-ui/react-tabs'
+import HeroSection from '@/components/HeroSection';
+import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 
 
@@ -133,38 +135,86 @@ const KU = () => {
         <meta name="twitter:image" content="/images/ku.webp" />
       </head>
       {/* Intro Section */}
-      <section className="py-16 bg-white px-6 font-[Inter]">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <div className="md:w-1/2">
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
-              Shape Your Future with Kurukshetra University Online
-            </h1>
-            <br />
-            <p><span className="font-semibold text-gray-700">State University in Kurukshetra, Haryana, India.</span><br /><br /></p>
-            <p className="text-gray-700 text-lg">
-              Kurukshetra University Online offers UGC-entitled online degree programs with a legacy of academic excellence. 
-              Established in 1956, the university is named after the ancient land of Kurukshetra, renowned as the setting of the epic Mahabharata.
-              <br /><br />
-              With NAAC 'A++' grade accreditation, Kurukshetra University provides quality education that combines traditional values with modern learning approaches to help students build successful careers.
-            </p>
-          </div>
-          <div className="md:w-1/2">
-            <Image width={100} height={100} loading='lazy' src="/images/ku.webp" alt="Kurukshetra University" className="w-full rounded-xl shadow-lg" />
-          </div>
-        </div>
-      </section>
+    <div>
+  <HeroSection
+    universityName="Kurukshetra University Online"
+    location="Kurukshetra, Haryana, India"
+    type="State University"
+    nirfRank="" // If not available, keep blank
+    rating="NAAC A++"
+    description="UGC-entitled Online Degrees | Legacy of Academic Excellence | Established in 1956"
+    description2={`
+      Kurukshetra University Online offers UGC-entitled online degree programs with a legacy of academic excellence. 
+      Established in 1956, the university is named after the ancient land of Kurukshetra, renowned as the setting of the epic Mahabharata.
 
-      <section className="py-16 bg-white px-6 font-[Inter]">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold text-[#003b59] font-[Poppins] mb-6">
-            Kurukshetra University Online Courses
-          </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Explore undergraduate and postgraduate online degree programs from Kurukshetra University. 
-            Experience the perfect blend of tradition and innovation in education from one of Haryana's premier NAAC A++ accredited universities.
-          </p>
-        </div>
-      </section>
+      With NAAC 'A++' grade accreditation, Kurukshetra University provides quality education that combines traditional values 
+      with modern learning approaches to help students build successful careers.
+    `}
+    badgeText="UGC Entitled | NAAC A++ Accredited"
+    imgSrc="/images/ku.webp"
+    imgAlt="Kurukshetra University Online Campus"
+    students="—" // Replace with actual data if available
+    partners="—" // Replace with actual data if available
+    campus="Kurukshetra Campus"
+    highlights={[
+      { icon: <FaBookOpen className="text-blue-600" />, text: "Flexible Learning" },
+      { icon: <FaUserTie className="text-blue-600" />, text: "Expert Faculty" },
+      { icon: <FaBriefcase className="text-blue-600" />, text: "Career Support" },
+      { icon: <FaClipboardCheck className="text-blue-600" />, text: "UGC Entitled Degrees" },
+    ]}
+  />
+</div>
+
+<div>
+  <AccreditationSection
+    title="Why Choose Kurukshetra University Online?"
+    description="Access diverse learning resources, get faculty guidance, boost your employability, and benefit from placement assistance with Kurukshetra University Online."
+    stats={[]} // No stats for this section
+    benefits={[
+      {
+        title: "Diverse Learning Resources",
+        description:
+          "Access to e-books, video lectures, and interactive learning materials tailored to different learning styles.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>`,
+      },
+      {
+        title: "Expert Faculty Support",
+        description:
+          "Learn from experienced faculty members and receive personalized academic guidance throughout your program.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.67 0 8 1.34 8 4v4H4v-4c0-2.66 5.33-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z"></path>
+                  </svg>`,
+      },
+      {
+        title: "Career Development Services",
+        description:
+          "Enhance your employability with resume workshops, interview preparation, and career counseling.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6 22h12V6H6v16zM8 2h8v2H8V2z"></path>
+                  </svg>`,
+      },
+      {
+        title: "Placement Assistance",
+        description:
+          "Get support in connecting with potential employers through our placement cell and industry partnerships.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l9 4.5v11L12 22l-9-4.5v-11L12 2z"></path>
+                  </svg>`,
+      },
+    ]}
+    accreditations={[
+      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
+      { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
+      { src: "/images/nirf.webp", alt: "NIRF", name: "NIRF" },
+      { src: "/images/aiu.webp", alt: "AIU", name: "AIU" },
+    ]}
+    internationalRecognition={[]}
+    successStories={[]}
+  />
+</div>
+
 
 <section className="py-12 px-6 bg-white font-[Inter]">
   <h2 className="text-2xl font-bold text-center mb-6 text-[#003b59] font-[Poppins]">
@@ -214,60 +264,7 @@ const KU = () => {
   </Tabs.Root>
 </section>
 
-      <section className="py-12 px-4 bg-white">
-        <div className="max-w-7xl mx-auto text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-900">
-            Why Choose Kurukshetra University Online?
-          </h2>
-          <hr className="mt-4 border-gray-300 w-24 mx-auto" />
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
-          <div className="flex flex-col items-start text-left">
-            <FaBookOpen className="text-blue-600 text-3xl mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Diverse Learning Resources</h4>
-            <p className="text-gray-600 text-sm">
-              Access to e-books, video lectures, and interactive learning materials tailored to different learning styles
-            </p>
-          </div>
-
-          <div className="flex flex-col items-start text-left">
-            <FaUserTie className="text-blue-600 text-3xl mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Expert Faculty Support</h4>
-            <p className="text-gray-600 text-sm">
-              Learn from experienced faculty members and receive personalized academic guidance throughout your program
-            </p>
-          </div>
-
-          <div className="flex flex-col items-start text-left">
-            <FaBriefcase className="text-blue-600 text-3xl mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Career Development Services</h4>
-            <p className="text-gray-600 text-sm">
-              Enhance your employability with resume workshops, interview preparation, and career counseling
-            </p>
-          </div>
-
-          <div className="flex flex-col items-start text-left">
-            <FaClipboardCheck className="text-blue-600 text-3xl mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Placement Assistance</h4>
-            <p className="text-gray-600 text-sm">
-              Get support in connecting with potential employers through our placement cell and industry partnerships
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-10 bg-white">
-        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">
-          Recognized & Accredited By
-        </h2>
-        <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <Image width={100} height={100} loading='lazy' src="/images/ugc.webp" alt="UGC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading='lazy'src="/images/naac.webp" alt="NAAC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading='lazy'src="/images/nirf.webp" alt="NIRF" className="h-16 object-contain" />
-          <Image width={100} height={100} loading='lazy'src="/images/aiu.webp" alt="AIU" className="h-16 object-contain" />
-        </div>
-      </section>
+  
    {/* Admission Procedure */}
       <AdmissionProcedure />
 

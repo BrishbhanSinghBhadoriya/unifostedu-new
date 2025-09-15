@@ -22,6 +22,8 @@ import { useRouter } from 'next/navigation';
 import EnquireCard from '@/components/EnquireCard';
 import Head from 'next/head';
 import Image from 'next/image';
+import HeroSection from '@/components/HeroSection';
+import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 const Nmims = () => {
   const ugCourses = [
@@ -91,71 +93,85 @@ const Nmims = () => {
       </Head>
 
       {/* Hero Section */}
-      <section className="py-16 px-6 font-[Inter] bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <div className="md:w-1/2">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#001e3c] font-[Poppins] mb-6">
-              Welcome to NMIMS Global Online
-            </h1>
-            <p className="text-gray-700 text-lg leading-relaxed mb-6">
-              NMIMS Global is a premier education institute offering UGC-entitled and NAAC A++ accredited online programs with flexible learning, a vibrant student community, and personalized mentorship.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-2 text-[#001e3c] font-semibold">
-                <FaAward className="text-[#00ffe0] text-xl" />
-                <span>NAAC A++ Accredited</span>
-              </div>
-              <div className="flex items-center gap-2 text-[#001e3c] font-semibold">
-                <FaCertificate className="text-[#00ffe0] text-xl" />
-                <span>UGC Entitled</span>
-              </div>
-              <div className="flex items-center gap-2 text-[#001e3c] font-semibold">
-                <FaUsers className="text-[#00ffe0] text-xl" />
-                <span>1.25L+ Students</span>
-              </div>
-            </div>
-          </div>
-          <div className="md:w-1/2">
-            <Image width={100} height={100} loading="lazy" src="/images/nmims.webp" alt="NMIMS" className="rounded-xl shadow-2xl w-full" />
-          </div>
-        </div>
-      </section>
+      <div>
+  <HeroSection
+    universityName="NMIMS Global Online"
+    location="Mumbai, Maharashtra, India"
+    type="Deemed-to-be University"
+    nirfRank="" // NIRF rank not mentioned
+    rating="4.7/5"
+    description="UGC Entitled | NAAC A++ Accredited | Flexible Online Learning"
+    description2={`
+      NMIMS Global is a premier education institute offering UGC-entitled and NAAC A++ accredited online programs with 
+      flexible learning, a vibrant student community, and personalized mentorship. 
+      With 1.25L+ students across 600+ cities, NMIMS Global provides world-class education with industry-ready programs.
+    `}
+    badgeText="NAAC A++ Accredited | UGC Entitled"
+    imgSrc="/images/nmims.webp"
+    imgAlt="NMIMS Global Online Campus"
+    students="1.25L+"
+    partners="600+ Cities"
+    campus="Mumbai Campus"
+    highlights={[
+      { icon: <FaAward className="text-blue-600" />, text: "NAAC A++ Accredited" },
+      { icon: <FaCertificate className="text-blue-600" />, text: "UGC Entitled Degrees" },
+      { icon: <FaUsers className="text-blue-600" />, text: "1.25L+ Students" },
+      { icon: <FaStar className="text-blue-600" />, text: "4.7/5 Student Rating" },
+    ]}
+  />
+</div>
+
 
       {/* University Stats */}
-      <section className="py-12 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaUsers className="w-8 h-8 text-[#001e3c]" />
-              </div>
-              <h2 className="text-xl font-semibold text-gray-900 mb-2">Students</h2>
-              <p className="text-[#00ffe0] font-bold text-lg">1.25L+</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaGlobe className="w-8 h-8 text-[#001e3c]" />
-              </div>
-              <h2 className="text-xl font-semibold text-gray-900 mb-2">Cities</h2>
-              <p className="text-[#00ffe0] font-bold text-lg">600+</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaAward className="w-8 h-8 text-[#001e3c]" />
-              </div>
-              <h2 className="text-xl font-semibold text-gray-900 mb-2">Accreditation</h2>
-              <p className="text-[#00ffe0] font-bold text-lg">NAAC A++</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaStar className="w-8 h-8 text-[#001e3c]" />
-              </div>
-              <h2 className="text-xl font-semibold text-gray-900 mb-2">Rating</h2>
-              <p className="text-[#00ffe0] font-bold text-lg">4.7/5</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div>
+  <AccreditationSection
+    title="Why Choose NMIMS Global Online?"
+    description="NMIMS Global Online offers NAAC A++ accredited and UGC entitled online degree programs, trusted by 1.25L+ students across 600+ cities, with excellent student ratings."
+    stats={[]} // Already included inside benefits
+    benefits={[
+      {
+        title: "Students",
+        description: "Join a thriving community of over 1.25 lakh learners across India and abroad.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.67 0 8 1.34 8 4v4H4v-4c0-2.66 5.33-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z"></path>
+                  </svg>`,
+      },
+      {
+        title: "Cities",
+        description: "Access learning from 600+ cities with NMIMS Global’s digital reach.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M2 12h20M12 2v20"></path>
+                  </svg>`,
+      },
+      {
+        title: "Accreditation",
+        description: "Recognized with the highest NAAC A++ grade accreditation, ensuring global trust.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l9 4.5v11L12 22l-9-4.5v-11L12 2z"></path>
+                  </svg>`,
+      },
+      {
+        title: "Rating",
+        description: "Highly rated by students with an impressive 4.7/5 score.",
+        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                  </svg>`,
+      },
+    ]}
+    accreditations={[
+      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
+      { src: "/images/naac.webp", alt: "NAAC", name: "NAAC A++" },
+      { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
+      { src: "/images/aiu.webp", alt: "AIU", name: "AIU" },
+      { src: "/images/nba.webp", alt: "NBA", name: "NBA" },
+      { src: "/images/qs.webp", alt: "QS", name: "QS Ranking" },
+    ]}
+    internationalRecognition={[]}
+    successStories={[]}
+  />
+</div>
+
 
       {/* Undergraduate Programs */}
       <section className="py-16 px-6 bg-gray-50 font-[Inter]">

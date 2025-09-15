@@ -766,8 +766,8 @@ const Amity = () => {
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 font-[Poppins]">Amity Online Advantages</h2>
-      <p className="text-blue-100 max-w-2xl mx-auto">
+      <h2 className="text-3xl md:text-4xl font-bold text-black mb-3 font-[Poppins]">Amity Online Advantages</h2>
+      <p className="text-black-100 max-w-2xl mx-auto">
         Discover what makes Amity Online a leader in digital education
       </p>
     </motion.div>
@@ -801,10 +801,10 @@ const Amity = () => {
           </div>
           
           {/* Content */}
-          <h3 className="text-base font-semibold text-white mb-2 line-clamp-2">
+          <h3 className="text-base font-semibold text-black mb-2 line-clamp-2">
             {item.title}
           </h3>
-          <p className="text-blue-100 text-xs leading-tight line-clamp-3">
+          <p className="text-black-100 text-xs leading-tight line-clamp-3">
             {item.description}
           </p>
         </motion.div>
@@ -820,20 +820,20 @@ const Amity = () => {
       viewport={{ once: true }}
     >
       <div className="text-center">
-        <div className="text-2xl font-bold text-white">50K+</div>
-        <div className="text-blue-200 text-xs">Students</div>
+        <div className="text-2xl font-bold text-black">50K+</div>
+        <div className="text-black-200 text-xs">Students</div>
       </div>
       <div className="text-center">
-        <div className="text-2xl font-bold text-white">100+</div>
-        <div className="text-blue-200 text-xs">Programs</div>
+        <div className="text-2xl font-bold text-black">100+</div>
+        <div className="text-black-200 text-xs">Programs</div>
       </div>
       <div className="text-center">
-        <div className="text-2xl font-bold text-white">95%</div>
-        <div className="text-blue-200 text-xs">Satisfaction</div>
+        <div className="text-2xl font-bold text-black">95%</div>
+        <div className="text-black-200 text-xs">Satisfaction</div>
       </div>
       <div className="text-center">
-        <div className="text-2xl font-bold text-white">500+</div>
-        <div className="text-blue-200 text-xs">Partners</div>
+        <div className="text-2xl font-bold text-black">500+</div>
+        <div className="text-black-200 text-xs">Partners</div>
       </div>
     </motion.div>
   </div>
