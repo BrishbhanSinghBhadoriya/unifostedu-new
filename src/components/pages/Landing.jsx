@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import AOS from "aos";
@@ -412,10 +413,13 @@ const Landing = () => {
                         className={`flex-shrink-0 h-16 w-16 sm:h-20 sm:w-20 rounded-xl bg-white border border-blue-200 flex items-center justify-center p-2 ${
                           isSelected ? "ring-2 ring-blue-500/30" : ""
                         }`}
-                      >
-                        <img
+                        > 
+                          <Image
                           src={college.logo}
                           alt={`${college.name} logo`}
+                            width={80}
+                            height={80}
+                            loading="lazy"
                           className="max-h-10 sm:max-h-12 w-auto object-contain"
                         />
                       </div>
@@ -583,9 +587,12 @@ const Landing = () => {
                     <div
                       className="h-28 sm:h-32 w-full rounded-xl bg-white flex items-center justify-center overflow-hidden group-hover:shadow-lg transition-all duration-300 border border-blue-100 shadow-sm ring-1 ring-blue-50"
                     >
-                      <img
+                      <Image
                         src={college.logo}
                         alt={`${college.name} logo`}
+                        width={120}
+                        height={120}
+                        loading="lazy"
                         className="max-h-20 sm:max-h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
                       />
                     </div>
@@ -687,10 +694,13 @@ const Landing = () => {
                   <div
                     key={idx}
                     className="min-w-[80px] sm:min-w-[100px] md:min-w-[140px] rounded-xl p-3 sm:p-4 bg-white shadow-sm border border-gray-100 flex items-center justify-center h-16 sm:h-20 md:h-24"
-                  >
-                    <img
+                  > 
+                    <Image
                       src={logo}
                       alt="Accreditation and recognition logo"
+                      width={100}
+                      height={100}
+                      loading="lazy"
                       className="max-h-10 sm:max-h-12 md:max-h-14 object-contain"
                     />
                   </div>
@@ -774,9 +784,12 @@ const Landing = () => {
                     whileHover={{ y: -6 }}
                     className="min-w-[150px] flex flex-col items-center text-center bg-white/10 backdrop-blur-xl p-4 rounded-xl border border-white/20 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
                   >
-                    <img
+                    <Image
                       src={city.img}
                       alt={`${city.city}, ${city.state} study city`}
+                      width={80}
+                      height={80}
+                      loading="lazy"
                       className="w-16 h-16 object-contain mb-2 rounded-full border border-white/20 shadow"
                     />
                     <p className="text-white font-semibold text-sm">
