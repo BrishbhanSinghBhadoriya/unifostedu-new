@@ -677,7 +677,7 @@ const Landing = () => {
       {/* Accreditation & Recognition - Responsive slider */}
       <section className="py-12 sm:py-16 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="text-center mb-8 sm:mb-10" data-aos="fade-up">
+          <div className="text-center mb-8 sm:mb-10" data-aos="fade-up">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#001e3c] mb-3 sm:mb-4">
               Accreditation & Recognition
             </h2>
@@ -685,7 +685,7 @@ const Landing = () => {
               We partner only with accredited and government-recognized
               institutions
             </p>
-          </motion.div>
+          </div>
 
           <div className="relative overflow-hidden">
             <div className="flex items-center gap-4 sm:gap-6 animate-[accreditScroll_25s_linear_infinite] will-change-transform">
@@ -725,7 +725,7 @@ const Landing = () => {
       {/* Features Section - Responsive */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="text-center mb-12 sm:mb-16" data-aos="fade-up">
+          <div className="text-center mb-12 sm:mb-16" data-aos="fade-up">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#001e3c] mb-4 sm:mb-6">
               Why Choose <span className="text-[#00ffe0]">Unifost</span>?
             </h2>
@@ -733,11 +733,11 @@ const Landing = () => {
               Experience the difference that personalized guidance makes in your
               educational journey
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
                 className="group"
                 data-aos="fade-up"
@@ -756,7 +756,7 @@ const Landing = () => {
                     {feature.description}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

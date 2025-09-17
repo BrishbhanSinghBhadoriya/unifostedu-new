@@ -17,7 +17,7 @@ import EnquireCard from '@/components/EnquireCard';
 import HeroSection from '@/components/HeroSection';
 import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
-// import { s } from 'framer-motion/dist/types.d-Cjd591yU';
+
 //import { s } from 'framer-motion/dist/types.d-Cjd591yU';
 
 // Reusable Enquire Button Component
@@ -54,7 +54,7 @@ import AdmissionProcedure from '@/components/AdmissionProcedure';
 // };
 
 const SMU = () => {
-  // Using data from the smu.pdf file
+  
  const ugCourses = [
   {
     course: "Bachelor of Arts (BA)",

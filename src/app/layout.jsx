@@ -130,15 +130,16 @@ export const metadata = {
       'max-video-preview': -1,
     },
   },
+icons: {
+  icon: [{ url: '/favicon.ico' }, { url: '/icon.png', sizes: '32x32' }],
+  apple: [{ url: '/apple-icon.png', sizes: '180x180' }],
+},  // Add these lines for favicon
   icons: {
     icon: '/favicon.ico',
-    apple: '/apple-touch-icon.webp',
-    other: {
-      rel: 'apple-touch-icon-precomposed',
-      url: '/apple-touch-icon-precomposed.webp',
-    },
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
   },
-  manifest: '/site.webmanifest',
+  apple: '/apple-touch-icon.webp',
   other: {
     'msapplication-config': '/browserconfig.xml',
   },
