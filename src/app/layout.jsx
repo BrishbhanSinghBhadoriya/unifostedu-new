@@ -131,18 +131,8 @@ export const metadata = {
     },
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/apple-touch-icon.webp', // सुनिश्चित करें कि यह फ़ाइल public/ फ़ोल्डर में है
-    other: {
-      rel: 'apple-touch-icon-precomposed',
-      url: '/apple-touch-icon-precomposed.webp', // सुनिश्चित करें कि यह फ़ाइल public/ फ़ोल्डर में है
-    },
-    apple: '/apple-touch-icon.webp',
-  },
-  manifest: '/site.webmanifest',
-  other: {
-    'msapplication-config': '/browserconfig.xml',
+    icon: "/images/uni.webp",
+    type: "image/webp",
   },
 };
 
@@ -154,7 +144,6 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#001e3c" />
         <meta name="msapplication-TileColor" content="#001e3c" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="UNIFOST" />
         <meta name="application-name" content="UNIFOST" />
@@ -162,8 +151,22 @@ export default function RootLayout({ children }) {
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
+        
+        {/* Favicon and app icons */}
+        <link rel="icon" type="image/webp" href="/images/uni.webp" sizes="any" />
+        <link rel="icon" type="image/webp" href="/images/uni.webp" />
+        <link rel="shortcut icon" type="image/webp" href="/images/uni.webp" />
+        <link rel="apple-touch-icon" type="image/webp" href="/images/uni.webp" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/uni.webp" />
+        <link rel="icon" type="image/webp" sizes="32x32" href="/images/uni.webp" />
+        <link rel="icon" type="image/webp" sizes="16x16" href="/images/uni.webp" />
+        
+        {/* Bookmark logo for social sharing and bookmarks */}
+        <link rel="icon" type="image/webp" href="/images/uni.webp" />
+        
+        <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
+        <meta name="msapplication-TileImage" content="/bookmarklogo.png" />
         <meta name="theme-color" content="#001e3c" />
         
         {/* Organization Schema */}
