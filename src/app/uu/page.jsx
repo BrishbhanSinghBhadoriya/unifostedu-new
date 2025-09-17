@@ -16,7 +16,11 @@ import {
 import Head from 'next/head';
 import Image from 'next/image';
 import EnquireCard from '@/components/EnquireCard';
+import HeroSection from '@/components/HeroSection';
+import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
+import {  FaUserTie, FaBriefcase, FaClipboardCheck, } from "react-icons/fa";
+
 
   // const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
   // const router = useRouter();  
@@ -140,58 +144,97 @@ const pgCourses = [
       </Head>
      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
       {/* Hero Section with Gradient Background */}
-      <section className="py-16 bg-gradient-to-r from-blue-900 to-purple-800 text-white px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <div className="md:w-1/2">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Transform Your Future with <span className="text-yellow-300">UU University</span>
-            </h1>
-            
-            <div className="mb-6 p-4 bg-blue-800 rounded-lg border-l-4 border-yellow-400">
-              <p className="font-semibold">🎓 UGC Recognized Programs | 🌍 Global Learning Community | 💼 Industry-Relevant Curriculum</p>
-            </div>
+     <HeroSection
+  universityName="UU University Online"
+  location="Dehradun, Uttarakhand, India"
+  type="Private University"
+  nirfRank="100+" 
+  rating="4.1"
+  description="UGC Recognized Programs | Global Learning Community | Industry-Relevant Curriculum"
+  description2={`
+    UU University offers world-class online education designed for working professionals 
+    and students seeking flexible learning options. 
+    Our programs combine academic excellence with practical skills to prepare you for 
+    success in today's competitive job market.
+  `}
+  badgeText="100% Online Learning | Placement Assistance | Expert Faculty"
+  imgSrc="/images/uu-uni.webp"
+  imgAlt="UU University Campus"
+  students="50,000+"
+  partners="100+"
+  campus="Dehradun Campus"
+  highlights={[
+    { icon: <FaBookOpen className="text-blue-600" />, text: "Industry-Relevant Curriculum" },
+    { icon: <FaUserTie className="text-blue-600" />, text: "Expert Faculty" },
+    { icon: <FaBriefcase className="text-blue-600" />, text: "Placement Assistance" },
+    { icon: <FaClipboardCheck className="text-blue-600" />, text: "UGC Recognized Degrees" },
+  ]}
+/>
 
-            <p className="text-lg mb-6">
-              UU University offers world-class online education designed for working professionals and students seeking flexible learning options. Our programs combine academic excellence with practical skills to prepare you for success in today's competitive job market.
-            </p>
-            
-            <div className="flex flex-wrap gap-4">
-              <div className="flex items-center bg-blue-700 px-4 py-2 rounded-full">
-                <FaCheckCircle className="mr-2 text-green-300" />
-                <span>100% Online Learning</span>
-              </div>
-              <div className="flex items-center bg-blue-700 px-4 py-2 rounded-full">
-                <FaCheckCircle className="mr-2 text-green-300" />
-                <span>Placement Assistance</span>
-              </div>
-              <div className="flex items-center bg-blue-700 px-4 py-2 rounded-full">
-                <FaCheckCircle className="mr-2 text-green-300" />
-                <span>Expert Faculty</span>
-              </div>
-            </div>
-          </div>
-          <div className="md:w-1/2">
-            <Image width={100} height={100} loading="lazy" src="/images/uu-uni.webp" alt="UU University" className="w-full rounded-xl shadow-2xl border-4 border-white" />
-          </div>
-        </div>
-      </section>
+<div>
+  <AccreditationSection
+    title="Why Choose UU University?"
+    description="UU University offers globally recognized online degrees with expert faculty, flexible learning, cutting-edge digital platform, and comprehensive career support to help you succeed in the modern world."
+    stats={[
+      { number: "50,000+", label: "Students Enrolled" },
+      { number: "200+", label: "Expert Faculty" },
+      { number: "95%", label: "Satisfaction Rate" },
+      { number: "100+", label: "Corporate Partners" },
+    ]}
+    benefits={[
+      {
+        title: "Global Recognition",
+        description: "Our degrees are recognized worldwide, opening doors to international opportunities.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>`,
+      },
+      {
+        title: "Expert Faculty",
+        description: "Learn from industry veterans and academic experts with real-world experience.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.67 0 8 1.34 8 4v4H4v-4c0-2.66 5.33-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z"/></svg>`,
+      },
+      {
+        title: "Cutting-Edge Curriculum",
+        description: "Programs updated regularly to match latest industry trends and technologies.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>`,
+      },
+      {
+        title: "Flexible Learning",
+        description: "Study at your own pace with 24/7 access to learning materials and recorded lectures.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M6 22h12V6H6v16zM8 2h8v2H8V2z"/></svg>`,
+      },
+      {
+        title: "Placement Support",
+        description: "Resume building, interview prep, and job placement assistance.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg>`,
+      },
+      {
+        title: "Robust Alumni Network",
+        description: "Connect with a global alumni network across industries.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12a5 5 0 110-10 5 5 0 010 10zM2 20c0-5.33 9.33-8 10-8s10 2.67 10 8v2H2v-2z"/></svg>`,
+      },
+      {
+        title: "Advanced Digital Platform",
+        description: "Interactive live classes, doubt clearing sessions, online assessments, and mobile learning app.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16"/></svg>`,
+      },
+      {
+        title: "24/7 Resources",
+        description: "Access to e-books, recorded lectures, online labs, and peer collaboration anytime.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>`,
+      },
+    ]}
+    accreditations={[
+      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
+      { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
+      { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
+      { src: "/images/nirf.webp", alt: "NIRF", name: "NIRF" },
+      { src: "/images/wes.webp", alt: "WES", name: "World Education Services (WES)" },
+    ]}
+    internationalRecognition={[]}
+    successStories={[]}
+  />
+</div>
 
-      {/* Stats Section */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {[
-            { number: "50,000+", label: "Students Enrolled" },
-            { number: "200+", label: "Expert Faculty" },
-            { number: "95%", label: "Satisfaction Rate" },
-            { number: "100+", label: "Corporate Partners" },
-          ].map((stat, index) => (
-            <div key={index} className="p-6 bg-white rounded-xl shadow-md border border-gray-100">
-              <h3 className="text-3xl font-bold text-blue-800 mb-2">{stat.number}</h3>
-              <p className="text-gray-600">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* Courses Offered */}
       <section className="py-16 bg-white px-6">
