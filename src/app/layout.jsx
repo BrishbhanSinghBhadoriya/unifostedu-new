@@ -130,16 +130,17 @@ export const metadata = {
       'max-video-preview': -1,
     },
   },
-icons: {
-  icon: [{ url: '/favicon.ico' }, { url: '/icon.png', sizes: '32x32' }],
-  apple: [{ url: '/apple-icon.png', sizes: '180x180' }],
-},  // Add these lines for favicon
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
-    apple: '/favicon.ico',
+    apple: '/apple-touch-icon.webp', // सुनिश्चित करें कि यह फ़ाइल public/ फ़ोल्डर में है
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: '/apple-touch-icon-precomposed.webp', // सुनिश्चित करें कि यह फ़ाइल public/ फ़ोल्डर में है
+    },
+    apple: '/apple-touch-icon.webp',
   },
-  apple: '/apple-touch-icon.webp',
+  manifest: '/site.webmanifest',
   other: {
     'msapplication-config': '/browserconfig.xml',
   },
@@ -157,17 +158,7 @@ export default function RootLayout({ children }) {
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="UNIFOST" />
         <meta name="application-name" content="UNIFOST" />
-        <meta property="og:site_name" content="UNIFOST" />
-        <meta property="og:title" content="UNIFOST - Online University Degrees & Career Counseling" />
-        <meta property="og:description" content="UniFost is a premier EdTech platform helping students choose the right path through online education, expert counseling, and demo sessions." />
-        <meta property="og:url" content="https://unifostedu.com" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://unifostedu.com/logo.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="UNIFOST - Online University Degrees & Career Counseling" />
-        <meta name="twitter:description" content="UniFost is a premier EdTech platform helping students choose the right path through online education, expert counseling, and demo sessions." />
-        <meta name="twitter:image" content="https://unifostedu.com/logo.png" />
-
+        
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
