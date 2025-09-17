@@ -9,11 +9,15 @@ import {
   FaCertificate,
   FaBuilding,
 } from 'react-icons/fa';
+import { FaBookOpen, FaUserTie,  FaGlobe } from "react-icons/fa";
+
 import Head from 'next/head';
 import Image from 'next/image';
 import EnquireCard from '@/components/EnquireCard';
+import HeroSection from '@/components/HeroSection';
+import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
-// import { s } from 'framer-motion/dist/types.d-Cjd591yU';
+
 //import { s } from 'framer-motion/dist/types.d-Cjd591yU';
 
 // Reusable Enquire Button Component
@@ -50,7 +54,7 @@ import AdmissionProcedure from '@/components/AdmissionProcedure';
 // };
 
 const SMU = () => {
-  // Using data from the smu.pdf file
+  
  const ugCourses = [
   {
     course: "Bachelor of Arts (BA)",
@@ -124,30 +128,106 @@ const pgCourses = [
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
       </Head>
       {/* Intro Section */}
-      <section className="py-16 bg-white px-6 font-[Inter]">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <div className="md:w-1/2">
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
-              Advance Your Career with Sikkim Manipal University
-            </h1><br />
-            <p> <span className="font-semibold text-gray-700">Established University in Sikkim, India</span><br /><br/></p>
-
-            <p className="text-gray-700 text-lg">
-              Sikkim Manipal University offers industry-relevant online programs with UGC recognition. 
-              With a focus on flexible learning and career advancement, SMU provides quality education 
-              that fits your schedule while maintaining academic excellence.
-              <br /><br />
-              SMU's online degrees are designed to help working professionals upskill and advance in 
-              their careers without putting their lives on hold.
-            </p>
-          </div>
-          <div className="md:w-1/2">
-            <Image width={100} height={100} loading="lazy" src="/images/smu-uni.webp" alt="Sikkim Manipal University" className="w-full rounded-xl shadow-lg" />
-              
-          </div>
-        </div>
-      </section>
-
+    <HeroSection
+  universityName="Sikkim Manipal University Online"
+  location="Sikkim, India"
+  type="Private University"
+  nirfRank="NA" // Agar rank available ho to replace karein
+  rating="NA"  // Agar rating available ho to replace karein
+  description="Sikkim Manipal University offers industry-relevant online programs with UGC recognition. With a focus on flexible learning and career advancement, SMU provides quality education that fits your schedule while maintaining academic excellence."
+  description2={`
+    SMU's online degrees are designed to help working professionals upskill and 
+    advance in their careers without putting their lives on hold. 
+    With a wide variety of undergraduate and postgraduate programs, SMU ensures 
+    accessibility, flexibility, and career growth opportunities.
+  `}
+  badgeText="UGC Recognized | Flexible Learning | Career Advancement"
+  imgSrc="/images/smu-uni.webp"
+  imgAlt="Sikkim Manipal University"
+  students="NA" // Replace if real data available
+  partners="NA" // Replace if real data available
+  campus="Sikkim Campus"
+  highlights={[
+    { icon: <FaBookOpen className="text-blue-600" />, text: "Flexible Programs" },
+    { icon: <FaUserTie className="text-blue-600" />, text: "Career-Oriented" },
+    { icon: <FaGraduationCap className="text-blue-600" />, text: "Academic Excellence" },
+    { icon: <FaGlobe className="text-blue-600" />, text: "Global Recognition" },
+  ]}
+/>
+   
+    {/* Why Choose Section */}
+      <div>
+  <AccreditationSection
+    title="Why Choose Sikkim Manipal University?"
+    description="Sikkim Manipal University offers UGC-recognized online degrees with industry-relevant curriculum, flexible learning, career support, and a strong alumni network to help students succeed globally."
+    stats={[]} // If you want numbers (students, faculty count, etc.) later you can add
+    benefits={[
+      {
+        title: "UGC Recognized Degrees",
+        description: "All programs are recognized by the University Grants Commission.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l4 8H8l4-8zm0 12a4 4 0 110-8 4 4 0 010 8zm-6 6h12v-2H6v2z"/>
+                  </svg>`,
+      },
+      {
+        title: "Industry-Relevant Curriculum",
+        description: "Programs designed to meet current industry requirements.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 4h16v2H4zm0 6h16v2H4zm0 6h16v2H4z"/>
+                  </svg>`,
+      },
+      {
+        title: "Flexible Learning Options",
+        description: "Study at your own pace with online resources.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                  </svg>`,
+      },
+      {
+        title: "Expert Faculty",
+        description: "Learn from experienced professors and industry experts.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.7 0 8 1.34 8 4v4H4v-4c0-2.66 5.3-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z"/>
+                  </svg>`,
+      },
+      {
+        title: "Placement Assistance",
+        description: "Career support and placement opportunities.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6 22h12V6H6v16zM8 2h8v2H8V2z"/>
+                  </svg>`,
+      },
+      {
+        title: "Strong Alumni Network",
+        description: "Connect with professionals across industries.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12a5 5 0 110-10 5 5 0 010 10zM2 20c0-5.33 9.33-8 10-8s10 2.67 10 8v2H2v-2z"/>
+                  </svg>`,
+      },
+      {
+        title: "Digital Learning Platform",
+        description: "Access to comprehensive online learning resources.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 6h16v12H4V6z"/>
+                  </svg>`,
+      },
+      {
+        title: "Affordable Education",
+        description: "Quality education at competitive fee structures.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                  </svg>`,
+      },
+    ]}
+    accreditations={[
+      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
+      { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
+      { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
+    ]}
+    internationalRecognition={[]} 
+    successStories={[]} 
+  />
+</div>
       {/* Courses Offered */}
     
       {/* UG Cards */}
@@ -174,73 +254,8 @@ const pgCourses = [
         </div>
       </section>
 
-      {/* Why Choose Section */}
-      <section className="py-12 px-4 bg-white">
-        <div className="max-w-7xl mx-auto text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-900">Why Choose Sikkim Manipal University?</h2>
-          <hr className="mt-4 border-gray-300 w-24 mx-auto" />
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
-          {[
-            {
-              icon: <FaGraduationCap />,
-              title: "UGC Recognized Degrees",
-              text: "All programs are recognized by the University Grants Commission."
-            },
-            {
-              icon: <FaUniversity />,
-              title: "Industry-Relevant Curriculum",
-              text: "Programs designed to meet current industry requirements."
-            },
-            {
-              icon: <FaFileAlt />,
-              title: "Flexible Learning Options",
-              text: "Study at your own pace with online resources."
-            },
-            {
-              icon: <FaCheckCircle />,
-              title: "Expert Faculty",
-              text: "Learn from experienced professors and industry experts."
-            },
-            {
-              icon: <FaCertificate />,
-              title: "Placement Assistance",
-              text: "Career support and placement opportunities."
-            },
-            {
-              icon: <FaBuilding />,
-              title: "Strong Alumni Network",
-              text: "Connect with professionals across industries."
-            },
-            {
-              icon: <FaCheckCircle />,
-              title: "Digital Learning Platform",
-              text: "Access to comprehensive online learning resources."
-            },
-            {
-              icon: <FaCheckCircle />,
-              title: "Affordable Education",
-              text: "Quality education at competitive fee structures."
-            }
-          ].map((item, i) => (
-            <div key={i} className="flex flex-col items-start text-left">
-              <div className="text-blue-600 text-3xl mb-4">{item.icon}</div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h4>
-              <p className="text-gray-600 text-sm">{item.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+     
 
-      {/* Accreditation Logos */}
-      <section className="bg-white py-12 px-4">
-        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
-        <div className="flex flex-wrap justify-center items-center gap-20">
-          <Image width={100} height={100} loading="lazy" src="/images/ugc.webp" alt="UGC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/aicte.webp" alt="AICTE" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/naac.webp" alt="NAAC" className="h-16 object-contain" />
-        </div>
-      </section>
 
       {/* Admission Procedure */}
     <AdmissionProcedure/> 

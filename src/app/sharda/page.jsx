@@ -8,10 +8,14 @@ import {
   FaUserTie,
   FaBriefcase,
   FaClipboardCheck,
+  FaGlobe,
+  FaLaptopCode,
 } from "react-icons/fa";
 import EnquireCard from '@/components/EnquireCard';
 import Head from 'next/head';
 import Image from 'next/image';
+import HeroSection from '@/components/HeroSection';
+import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 const Sharda = () => {
   const ugCourses = [
@@ -79,26 +83,80 @@ const Sharda = () => {
 </Head>
 
       {/* Intro Section */}
-      <section className="py-16 bg-white px-6 font-[Inter]">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <div className="md:w-1/2">
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
-              Study Smarter with Sharda University Online
-            </h1>
-            <p> <span className="font-semibold text-gray-700">Private University in Greater Noida, Uttar Pradesh, India.</span><br /><br/></p>
-            <p className="text-gray-700 text-lg">
-              Sharda University Online is NAAC A+ accredited and offers globally recognized online degrees. Join learners from over 85 countries and experience academic excellence with dedicated career support and world-class faculty.
-            </p>
-            <p className="text-gray-700 text-lg">
-              Sharda University Online is a platform for distance and online education launched by Sharda University in 2023. It offers a variety of undergraduate and postgraduate courses, including online BA, MBA, MCA, BBA, and BCA programs. The platform emphasizes flexibility, accessibility, and affordability, allowing students to pursue their education while balancing work and other commitments. 
-            </p>
-            
-          </div>
-          <div className="md:w-1/2">
-            <Image width={100} height={100} loading="lazy" src="/images/sharda.webp" alt="Sharda University" className="w-full rounded-xl shadow-lg" />
-          </div>
-        </div>
-      </section>
+  <HeroSection
+  universityName="Shoolini University Online"
+  location="Solan, Himachal Pradesh, India"
+  type="Private University"
+  nirfRank="87" 
+  rating="4.1" 
+  description="Shoolini University is a top-ranked research-oriented university offering globally recognized programs in science, management, agriculture, and technology — with the flexibility of online and hybrid learning. It is ranked among the top 200 universities globally by QS and is known for its strong focus on research, innovation, and student success."
+  description2={`
+    Shoolini University is a leader in outcome-based higher education. 
+    Our online degree programs are designed to secure your future, first, and give your career a winning edge, 
+    be it through a great placement or selection in a leading international university. 
+    You only pay once your desired outcome is achieved.
+  `}
+  badgeText="QS Top 200 Globally | Research-Oriented | Outcome-Based Education"
+  imgSrc="/images/shoolini-uni.webp"
+  imgAlt="Shoolini University"
+  students="25K+" // 
+  partners="100+" //
+  campus="Solan Campus"
+  highlights={[
+    { icon: <FaBookOpen className="text-blue-600" />, text: "Research-Oriented Programs" },
+    { icon: <FaUserTie className="text-blue-600" />, text: "Experienced Faculty" },
+    { icon: <FaBriefcase className="text-blue-600" />, text: "Career-Oriented Learning" },
+    { icon: <FaGlobe className="text-blue-600" />, text: "QS Global Ranking" },
+  ]}
+/>
+
+      <div>
+  <AccreditationSection
+    title="Why Choose Sharda Online?"
+    description="Sharda University Online offers NAAC A+ accredited, globally recognized online degrees with expert faculty, interactive resources, career support, and placement opportunities."
+    stats={[]} // No numerical stats
+    benefits={[
+      {
+        title: "Interactive Learning",
+        description: "Flexible e-books, recorded lectures, audio books, and discussion forums.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16M4 18h16"/>
+                  </svg>`,
+      },
+      {
+        title: "Expert Faculty",
+        description: "Learn from experienced professionals and globally recognized professors.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.7 0 8 1.34 8 4v4H4v-4c0-2.66 5.3-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z"/>
+                  </svg>`,
+      },
+      {
+        title: "Career Focused",
+        description: "Resume building, internships, interview preparation, and job fairs.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6 22h12V6H6v16zM8 2h8v2H8V2z"/>
+                  </svg>`,
+      },
+      {
+        title: "Placement Support",
+        description: "Guaranteed placement assistance with top hiring partners across domains.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l9 4.5v11L12 22l-9-4.5v-11L12 2z"/>
+                  </svg>`,
+      },
+    ]}
+    accreditations={[
+      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
+      { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
+      { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
+      { src: "/images/nirf.webp", alt: "NIRF", name: "NIRF" },
+      { src: "/images/aiu.webp", alt: "AIU", name: "AIU" },
+    ]}
+    internationalRecognition={[]} 
+    successStories={[]} 
+  />
+</div>
+
 
       {/* Courses Offered */}
       <section className="py-12 bg-white px-6 font-[Inter]">
@@ -123,56 +181,7 @@ const Sharda = () => {
         </div>
       </section>
 
-      {/* Why Choose */}
-      <section className="py-12 px-4 bg-white">
-        <div className="max-w-7xl mx-auto text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-900">Why Choose Sharda Online?</h2>
-          <hr className="mt-4 border-gray-300 w-24 mx-auto" />
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
-          <div className="flex flex-col items-start text-left">
-            <FaBookOpen className="text-blue-600 text-3xl mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Interactive Learning</h4>
-            <p className="text-gray-600 text-sm">
-              Flexible e-books, recorded lectures, audio books, and discussion forums.
-            </p>
-          </div>
-          <div className="flex flex-col items-start text-left">
-            <FaUserTie className="text-blue-600 text-3xl mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Expert Faculty</h4>
-            <p className="text-gray-600 text-sm">
-              Learn from experienced professionals and globally recognized professors.
-            </p>
-          </div>
-          <div className="flex flex-col items-start text-left">
-            <FaBriefcase className="text-blue-600 text-3xl mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Career Focused</h4>
-            <p className="text-gray-600 text-sm">
-              Resume building, internships, interview preparation, and job fairs.
-            </p>
-          </div>
-          <div className="flex flex-col items-start text-left">
-            <FaClipboardCheck className="text-blue-600 text-3xl mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Placement Support</h4>
-            <p className="text-gray-600 text-sm">
-              Guaranteed placement assistance with top hiring partners across domains.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Recognized & Accredited */}
-      <section className="py-10 bg-white">
-        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
-        <div className="flex flex-wrap justify-center items-center gap-10 px-4">
-          {["ugc", "aicte", "naac",  "nirf", "aiu"].map((logo, i) => (
-            <Image width={100} height={100} loading="lazy" key={i} src={`/images/${logo}.webp`} alt={logo.toUpperCase()} className="h-16 object-contain" />
-          ))}
-        </div>
-      </section>
-
-
+    
       
       {/* Certificate + Benefits */}
       <section className="bg-[#003366] py-12 px-4">

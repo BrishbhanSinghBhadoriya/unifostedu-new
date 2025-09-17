@@ -3,13 +3,15 @@ import React from 'react';
 // import { useNavigate } from 'react-router-dom';
 // import { Helmet } from 'react-helmet';
 import {
-  FaBookOpen, FaUserTie, FaRobot, FaBriefcase, FaBook, FaUniversity,
+  FaBookOpen, FaUserTie, FaRobot, FaBriefcase, FaBook, FaUniversity,FaGraduationCap,FaGlobe,
   FaUserFriends, FaClipboardCheck
 } from "react-icons/fa";
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import EnquireCard from '@/components/EnquireCard';
 import Image from 'next/image';
+import HeroSection from '@/components/HeroSection';
+import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 
 const Shoolini = () => {
@@ -88,29 +90,77 @@ const Shoolini = () => {
 
 
    { /* Hero Section */}
-    <section className="bg-white-100 py-16 px-6 font-[Inter]">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-            <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4 leading-snug font-[Poppins]">
-              Make Your Future with Shoolini University Online
-            </h1>
-           <p> <span className="font-semibold text-gray-700"> Solan, Himachal Pradesh, India.</span><br /><br/></p>
-            <p className="text-gray-700 text-lg">
-              Shoolini University is a top-ranked research-oriented university offering globally recognized programs in science, management, agriculture, and technology — with the flexibility of online and hybrid learning. It is ranked among the top 200 universities globally by QS and is known for its strong focus on research, innovation, and student success. <br/>
-              Shoolini University is a leader in outcome based higher education. Our online degree programs are designed to secure your future, first, and give your career a winning edge, be it through a great placement or selection in a leading international university. You only pay once your desired outcome is achieved.
-            </p>
-          </div>
-          <motion.img
-            src="/images/shoolini-uni.webp"
-            alt="Shoolini University"
-            className="rounded-xl shadow-lg w-full h-auto"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-            viewport={{ once: true }}
-          />
-        </div>
-      </section>
+   <HeroSection
+  universityName="Shoolini University Online"
+  location="Solan, Himachal Pradesh, India"
+  type="Private University"
+  nirfRank="Top 200 (QS World Ranking)"
+  rating="4.3" // Approx rating, update if actual available
+  description="Research-Oriented Programs | Flexible Online & Hybrid Learning | Globally Recognized Degrees"
+  description2={`
+    Shoolini University is a top-ranked research-oriented university offering globally recognized programs in science, management, agriculture, and technology — with the flexibility of online and hybrid learning.
+    
+    Ranked among the top 200 universities globally by QS, Shoolini University focuses on research, innovation, and student success.
+    Our online degree programs are designed to secure your future, give your career a competitive edge, and ensure great placements or selection in leading international universities. You only pay once your desired outcome is achieved.
+  `}
+  badgeText="Flexible Learning | Research-Focused | Career-Oriented Programs"
+  imgSrc="/images/shoolini-uni.webp"
+  imgAlt="Shoolini University Campus"
+  students="20,000+" // Approx, update if actual data available
+  partners="50+" // Approx, update if actual data available
+  campus="Solan Campus"
+  highlights={[
+    { icon: <FaBookOpen className="text-blue-600" />, text: "Flexible Programs" },
+    { icon: <FaUserTie className="text-blue-600" />, text: "Career-Oriented" },
+    { icon: <FaGraduationCap className="text-blue-600" />, text: "Academic Excellence" },
+    { icon: <FaGlobe className="text-blue-600" />, text: "Global Recognition" },
+  ]}
+/>
+
+       <div>
+  <AccreditationSection
+    title="Why Choose Shoolini University?"
+    description="Shoolini University is one of India’s top innovators and patent filers, globally recognized for its research-driven education, experienced faculty, and career-oriented programs."
+    stats={[]} // No numerical stats
+    benefits={[
+      {
+        title: "Research-Driven Education",
+        description: "One of India’s top patent filers and innovators.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16M4 18h16"/>
+                  </svg>`,
+      },
+      {
+        title: "Experienced Faculty",
+        description: "Faculty with global experience and industry exposure.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M12 12c2.7 0 8 1.34 8 4v4H4v-4c0-2.66 5.3-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z"/>
+                  </svg>`,
+      },
+      {
+        title: "Global Rankings",
+        description: "Ranked among top universities globally by QS.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M12 2l8 4v6c0 5-3.33 9.74-8 11-4.67-1.26-8-6-8-11V6l8-4z"/>
+                  </svg>`,
+      },
+      {
+        title: "Career-Oriented Programs",
+        description: "Job-ready curriculum and live industry projects.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M6 22h12V6H6v16zM8 2h8v2H8V2z"/>
+                  </svg>`,
+      },
+    ]}
+    accreditations={[
+      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
+      { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
+      { src: "/images/wes.webp", alt: "WES Rankings", name: "WES Rankings" },
+    ]}
+    internationalRecognition={[]} 
+    successStories={[]} 
+  />
+</div>
 
       {/* UG & PG Courses */}
       {[{ title: "Undergraduate Courses", list: ugCourses }, { title: "Postgraduate Courses", list: pgCourses }].map((section, idx) => (
@@ -125,37 +175,7 @@ const Shoolini = () => {
       ))}
 
       {/* Why Choose Shoolini */}
-      <section className="py-12 px-4 bg-white">
-        <div className="max-w-7xl mx-auto text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-900">Why Choose Shoolini University?</h2>
-          <hr className="mt-4 border-gray-300 w-24 mx-auto" />
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
-          {[
-            { icon: <FaBookOpen />, title: "Research-Driven Education", text: "One of India’s top patent filers and innovators." },
-            { icon: <FaUserTie />, title: "Experienced Faculty", text: "Faculty with global experience and industry exposure." },
-            { icon: <FaUniversity />, title: "Global Rankings", text: "Ranked among top universities globally by QS." },
-            { icon: <FaBriefcase />, title: "Career-Oriented Programs", text: "Job-ready curriculum and live industry projects." }
-          ].map((item, i) => (
-            <div key={i} className="flex flex-col items-start text-left">
-              <div className="text-blue-600 text-3xl mb-4">{item.icon}</div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h4>
-              <p className="text-gray-600 text-sm">{item.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Accreditation */}
-      <section className="py-10 bg-white">
-        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
-        <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <Image width={100} height={100} loading="lazy" src="/images/ugc.webp" alt="UGC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/naac.webp" alt="NAAC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/wes.webp" alt="WES Rankings" className="h-16 object-contain" />
-         
-        </div>
-      </section>
+  
 
       {/* Admission Process */}
       <AdmissionProcedure/> 

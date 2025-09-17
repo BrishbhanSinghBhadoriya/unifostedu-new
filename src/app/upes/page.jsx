@@ -14,11 +14,15 @@ import {
   FaCheckCircle,
   FaFileAlt,
   FaGraduationCap,
+  FaAward,
+  FaGlobe,
 } from "react-icons/fa";
 
 import EnquireCard from '@/components/EnquireCard';
 import Head from 'next/head';
 import Image from 'next/image';
+import HeroSection from '@/components/HeroSection';
+import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 const Upes = () => {
   const ugCourses = [
@@ -90,25 +94,79 @@ const Upes = () => {
  
 
       {/* Intro Section */}
-      <section className="py-16 bg-white px-6 font-[Inter]">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <div className="md:w-1/2">
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
-              Build Your Future with UPES University Online
-            </h1><br />
-            <p> <span className="font-semibold text-gray-700">Private University in Dehradun, Uttrakhand, India.</span><br /><br/></p>
-            <p className="text-gray-700 text-lg">
-              UPES (University of Petroleum and Energy Studies) is a leading institution in India offering UGC-entitled online degree programs with a focus on energy, technology, and business domains.<br /><br />
-              Recognized for its industry-aligned curriculum, UPES provides students with cutting-edge knowledge and skills to excel in their careers. The university is known for its strong industry connections and focus on innovation.
-            </p>
+      <HeroSection
+  universityName="UPES University Online"
+  location="Dehradun, Uttarakhand, India"
+  type="Private University"
+  nirfRank="41" // Agar rank available ho to replace karein
+  rating="4.4"  // Agar rating available ho to replace karein
+  description="UPES (University of Petroleum and Energy Studies) is a leading institution in India offering UGC-entitled online degree programs with a focus on energy, technology, and business domains."
+  description2={`
+    Recognized for its industry-aligned curriculum, UPES provides students with 
+    cutting-edge knowledge and skills to excel in their careers. 
+    The university is known for its strong industry connections and focus on innovation. 
+    With online and flexible learning, UPES is shaping the future of higher education in India.
+  `}
+  badgeText="UGC Entitled | Industry-Aligned Curriculum | Innovation Focus"
+  imgSrc="/images/upes.webp"
+  imgAlt="UPES University"
+  students="25K+" // Replace if actual data available
+  partners="100+" // Replace if actual data available
+  campus="Dehradun Campus"
+  highlights={[
+    { icon: <FaBookOpen className="text-blue-600" />, text: "Specialized Programs" },
+    { icon: <FaUserTie className="text-blue-600" />, text: "Industry Connections" },
+    { icon: <FaGraduationCap className="text-blue-600" />, text: "Academic Excellence" },
+    { icon: <FaGlobe className="text-blue-600" />, text: "Global Recognition" },
+  ]}
+/>
 
-            
-          </div>
-          <div className="md:w-1/2">
-            <Image width={100} height={100} loading="lazy" src="/images/upes.webp" alt="UPES University" className="w-full rounded-xl shadow-lg" />
-          </div>
-        </div>
-      </section>
+ <div>
+  <AccreditationSection
+    title="Why Choose Sikkim Manipal University?"
+    description="Sikkim Manipal University offers UGC-recognized online degrees with industry-relevant curriculum, flexible learning, career support, and a strong alumni network to help students succeed globally."
+    stats={[]} 
+    benefits={[
+      {
+        title: "Industry-Aligned Curriculum",
+        description: "Programs designed in collaboration with industry experts to meet current market demands",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 4h16v2H4zm0 6h16v2H4zm0 6h16v2H4z"/>
+                  </svg>`,
+      },
+      {
+        title: "Dedicated Academic Advisor",
+        description: "Dedicated experts and advisor to guide you at every step of your professional career",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.7 0 8 1.34 8 4v4H4v-4c0-2.66 5.3-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z"/>
+                  </svg>`,
+      },
+      {
+        title: "Career Services",
+        description: "Be job-ready with resume building workshops, internships & industry mentorship",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6 22h12V6H6v16zM8 2h8v2H8V2z"/>
+                  </svg>`,
+      },
+      {
+        title: "Placement Opportunities",
+        description: "Job interview prep, placement assistance & resume building for students to be job-ready",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                  </svg>`,
+      },
+    ]}
+    accreditations={[
+      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
+      { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
+      { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
+      { src: "/images/nirf.webp", alt: "NIRF", name: "NIRF" },
+      { src: "/images/wes.webp", alt: "WES", name: "WES" },
+    ]}
+    internationalRecognition={[]} 
+    successStories={[]} 
+  />
+</div>
 
       <section className="py-16 bg-white px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto text-center">
@@ -145,65 +203,7 @@ const Upes = () => {
         </div>
       </section>
 
-      <section className="py-12 px-4 bg-white">
-        <div className="max-w-7xl mx-auto text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-900">
-            Why Choose UPES Online?
-          </h2>
-          <hr className="mt-4 border-gray-300 w-24 mx-auto" />
-        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
-          {/* Item 1 */}
-          <div className="flex flex-col items-start text-left">
-            <FaBookOpen className="text-blue-600 text-3xl mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Industry-Aligned Curriculum</h4>
-            <p className="text-gray-600 text-sm">
-              Programs designed in collaboration with industry experts to meet current market demands
-            </p>
-          </div>
-
-          {/* Item 2 */}
-          <div className="flex flex-col items-start text-left">
-            <FaUserTie className="text-blue-600 text-3xl mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Dedicated Academic Advisor</h4>
-            <p className="text-gray-600 text-sm">
-              Dedicated experts and advisor to guide you at every step of your professional career
-            </p>
-          </div>
-
-          {/* Item 3 */}
-          <div className="flex flex-col items-start text-left">
-            <FaBriefcase className="text-blue-600 text-3xl mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Career Services</h4>
-            <p className="text-gray-600 text-sm">
-              Be job-ready with resume building workshops, internships & industry mentorship
-            </p>
-          </div>
-
-          {/* Item 4 */}
-          <div className="flex flex-col items-start text-left">
-            <FaClipboardCheck className="text-blue-600 text-3xl mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Placement opportunities</h4>
-            <p className="text-gray-600 text-sm">
-              Job interview prep, placement assistance & resume building for students to be job-ready
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-10 bg-white">
-        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">
-          Recognized & Accredited By
-        </h2>
-        <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <Image width={100} height={100} loading="lazy" src="/images/ugc.webp" alt="UGC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/aicte.webp" alt="AICTE" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/naac.webp" alt="NAAC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/nirf.webp" alt="NIRF" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/wes.webp" alt="WES" className="h-16 object-contain" />
-        </div>
-      </section>
 
       {/* Admission Process */}
      <AdmissionProcedure/> 

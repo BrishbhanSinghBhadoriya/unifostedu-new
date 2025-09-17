@@ -6,6 +6,8 @@ export const heroSlides = [
   {
     src: "/slider/slider-1.webp",
     alt: "Compare before you decide",
+    width: 1200,
+    height: 800,
     title: "Your Gateway to Success",
     subtitle: "Compare • Choose • Succeed",
     description: "Find the perfect online degree program from India's top-ranked universities. Get expert guidance to make informed decisions for your academic future.",
@@ -13,6 +15,8 @@ export const heroSlides = [
   {
     src: "/slider/slider-2.webp",
     alt: "Your One-Stop Platform for Online Universities",
+    width: 1200,
+    height: 800,
     title: "Transform Your Future",
     subtitle: "Online Education Excellence",
     description: "Access world-class education from anywhere, anytime. Study with industry experts and get recognized degrees from UGC-approved universities.",
@@ -20,6 +24,8 @@ export const heroSlides = [
   {
     src: "/slider/slider-3.webp",
     alt: "Search • Compare • Choose • Succeed",
+    width: 1200,
+    height: 800,
     title: "Smart Education Choices",
     subtitle: "Expert Guidance • Best Programs",
     description: "Get personalized counseling from education experts. Compare courses, fees, and career prospects to choose the best program for your goals.",
@@ -27,6 +33,8 @@ export const heroSlides = [
   {
     src: "/slider/slider-4.webp",
     alt: "Compare universities with Unifost",
+    width: 1200,
+    height: 800,
     title: "Ye College Ya Woh College?",
     subtitle: "Compare on Unifost!",
     description: "Compare fees, rankings, courses, and location — instantly. Make data-driven decisions with our comprehensive university comparison tool.",

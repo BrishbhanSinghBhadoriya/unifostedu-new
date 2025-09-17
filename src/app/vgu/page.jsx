@@ -10,7 +10,8 @@ import {
   FaClipboardCheck,
   FaGlobe,
   FaLaptopCode,
-  FaUserFriends
+  FaUserFriends,
+  FaLightbulb
 } from "react-icons/fa";
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
@@ -18,6 +19,8 @@ import { useRouter } from 'next/navigation';
 import EnquireCard from '@/components/EnquireCard';
 import Head from 'next/head';
 import Image from 'next/image';
+import HeroSection from '@/components/HeroSection';
+import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 const Vgu = () => {
   const ugCourses = [
@@ -34,7 +37,7 @@ const Vgu = () => {
       duration: "3 Years",
       eligibility: "10+2 in any stream",
       fees: "₹72,000/-",
-      specialization: "'Economics + Public Policy + Computer Applications' 'Public Policy + English' 'English + History + Political Science' 'Computer Applications + Public Policy/IR' 'Political Science + International Relations + Public Policy' '51+ COMBINATIONS AVAILABLE'",
+      specialization: "Economics + Public Policy + Computer Applications, Public Policy + English, English + History + Political Science, Computer Applications + Public Policy/IR, Political Science + International Relations + Public Policy, 51+ COMBINATIONS AVAILABLE'",
       image: "/images/ba.webp",
     },
     {
@@ -113,32 +116,37 @@ const Vgu = () => {
       </Head>
 
       {/* Hero Section */}
-      <section className="bg-white-100 py-16 px-6 font-[Inter]">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4 leading-snug font-[Poppins]">
-              Build Your Future with VGU University
-            </h1>
-            <p> <span className="font-semibold text-gray-700">Private University in Jaipur, Rajasthan, India.</span><br /><br/></p>
-            <p className="text-gray-700 text-lg">
-              VGU (Vivekananda Global University), Jaipur, is a top-ranked private university offering world-class education,
-              modern infrastructure, and global learning opportunities for students across disciplines. It is recognized by UGC and AICTE, ensuring quality education and career growth.  
-              With a focus on innovation and research, VGU provides a vibrant campus life with state-of-the-art facilities, expert faculty, and strong industry connections. The university offers a wide range of undergraduate and postgraduate programs in fields like engineering, management, arts, and sciences.
-              VGU is committed to holistic development, equipping students with the skills and knowledge needed to  succeed in a competitive global job market.
-            </p>
-            
-          </div>
-          <motion.img
-            src="/images/vgu-uni.webp"
-            alt="VGU University"
-            className="rounded-xl shadow-lg w-full h-auto"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-            viewport={{ once: true }}
-          />
-        </div>
-      </section>
+     <HeroSection
+  universityName="Vivekananda Global University (VGU) Jaipur"
+  location="Jaipur, Rajasthan, India"
+  type="Private University"
+  nirfRank="100+" 
+  rating="4.2"  
+  description="Top-ranked UGC & AICTE recognized university in Jaipur offering world-class education, modern infrastructure, and global learning opportunities."
+  description2={`
+    Vivekananda Global University (VGU) is one of the leading private universities in Rajasthan, 
+    providing diverse undergraduate and postgraduate programs across engineering, management, 
+    arts, and sciences.  
+
+    With a strong focus on innovation, research, and holistic development, VGU equips students 
+    with the knowledge and skills to excel in a global job market. Recognized for its 
+    modern campus, expert faculty, and industry-driven curriculum, it ensures both academic 
+    and professional success. 
+  `}
+  badgeText="UGC & AICTE Recognized | Innovation Driven | Global Learning"
+  imgSrc="/images/vgu-uni.webp"
+  imgAlt="VGU University Campus"
+  students="25K+" // Actual number agar ho to update karein
+  partners="25+" // Update if real data available
+  campus="VGU Jaipur Campus"
+  highlights={[
+    { icon: <FaBookOpen className="text-blue-600" />, text: "Diverse Programs" },
+    { icon: <FaUserTie className="text-blue-600" />, text: "Expert Faculty & Mentorship" },
+    { icon: <FaGlobe className="text-blue-600" />, text: "Global Learning Opportunities" },
+    { icon: <FaLightbulb className="text-blue-600" />, text: "Innovation & Research Focus" },
+  ]}
+/>
+
 
       {/* UG & PG Course Cards */}
       {[{ title: "Undergraduate Courses", list: ugCourses }, { title: "Postgraduate Courses", list: pgCourses }].map((section, idx) => (
@@ -152,51 +160,64 @@ const Vgu = () => {
         </section>
       ))}
 
-      {/* Why Choose VGU */}
-      <section className="py-12 px-4 bg-white">
-        <div className="max-w-7xl mx-auto text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-900">Why Choose VGU?</h2>
-          <hr className="mt-4 border-gray-300 w-24 mx-auto" />
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
-          {[{
-            icon: <FaBookOpen />, title: "Modern Learning", text: "Smart classrooms, labs, and interactive sessions."
-          }, {
-            icon: <FaUserTie />, title: "Expert Faculty", text: "Highly qualified professors with industry experience."
-          }, {
-            icon: <FaUniversity />, title: "UGC Approved", text: "Recognized programs ensuring career growth."
-          }, {
-            icon: <FaBriefcase />, title: "Strong Placements", text: "Top companies recruiting VGU graduates."
-          }, {
-            icon: <FaGlobe />, title: "Global Exposure", text: "International tie-ups and student exchange programs."
-          }, {
-            icon: <FaLaptopCode />, title: "Industry Projects", text: "Hands-on learning through real-world projects."
-          }, {
-            icon: <FaUserFriends />, title: "Vibrant Campus Life", text: "Clubs, sports, and cultural activities."
-          }, {
-            icon: <FaClipboardCheck />, title: "Career Guidance", text: "Workshops, internships, and resume support."
-          }].map((item, i) => (
-            <div key={i} className="flex flex-col items-start text-left">
-              <div className="text-blue-600 text-3xl mb-4">{item.icon}</div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h4>
-              <p className="text-gray-600 text-sm">{item.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Accreditation */}
-      <section className="py-10 bg-white">
-        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
-        <div className="flex flex-wrap justify-center items-center gap-20 px-4">
-          <Image width={100} height={100} loading="lazy" src="/images/ugc.webp" alt="UGC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/aicte.webp" alt="AICTE" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/naac.webp" alt="NAAC" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/nirf.webp" alt="NIRF" className="h-16 object-contain" />
-          <Image width={100} height={100} loading="lazy" src="/images/bci.webp" alt="BCI" className="h-16 object-contain" />
-          
-        </div>
-      </section>
+   <div>
+  <AccreditationSection
+    title="Why Choose VGU University?"
+    description="Vivekananda Global University (VGU), Jaipur, is a top-ranked UGC & AICTE recognized private university offering modern learning, expert faculty, global exposure, strong placements, and vibrant campus life."
+    stats={[]} // Currently no numerical stats provided for VGU
+    benefits={[
+      {
+        title: "Modern Learning",
+        description: "Smart classrooms, labs, and interactive sessions for enhanced education.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>`,
+      },
+      {
+        title: "Expert Faculty",
+        description: "Highly qualified professors with academic excellence and industry experience.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.67 0 8 1.34 8 4v4H4v-4c0-2.66 5.33-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z"/></svg>`,
+      },
+      {
+        title: "UGC Approved",
+        description: "Recognized programs ensuring credibility and career growth.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>`,
+      },
+      {
+        title: "Strong Placements",
+        description: "Top companies recruit VGU graduates with competitive packages.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg>`,
+      },
+      {
+        title: "Global Exposure",
+        description: "International tie-ups, collaborations, and student exchange programs.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>`,
+      },
+      {
+        title: "Industry Projects",
+        description: "Hands-on learning through internships and real-world projects.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16"/></svg>`,
+      },
+      {
+        title: "Vibrant Campus Life",
+        description: "Student clubs, cultural activities, and sports for holistic growth.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12a5 5 0 110-10 5 5 0 010 10zM2 20c0-5.33 9.33-8 10-8s10 2.67 10 8v2H2v-2z"/></svg>`,
+      },
+      {
+        title: "Career Guidance",
+        description: "Workshops, internships, resume-building, and placement support.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M6 22h12V6H6v16zM8 2h8v2H8V2z"/></svg>`,
+      },
+    ]}
+    accreditations={[
+      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
+      { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
+      { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
+      { src: "/images/nirf.webp", alt: "NIRF", name: "NIRF" },
+      { src: "/images/bci.webp", alt: "BCI", name: "Bar Council of India (BCI)" },
+    ]}
+    internationalRecognition={[]}
+    successStories={[]}
+  />
+</div>
 
       {/* Admission Process */}
       <AdmissionProcedure />

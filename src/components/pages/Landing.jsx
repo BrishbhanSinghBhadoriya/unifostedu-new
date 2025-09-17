@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import AOS from "aos";
@@ -412,10 +413,13 @@ const Landing = () => {
                         className={`flex-shrink-0 h-16 w-16 sm:h-20 sm:w-20 rounded-xl bg-white border border-blue-200 flex items-center justify-center p-2 ${
                           isSelected ? "ring-2 ring-blue-500/30" : ""
                         }`}
-                      >
-                        <img
+                        > 
+                          <Image
                           src={college.logo}
                           alt={`${college.name} logo`}
+                            width={80}
+                            height={80}
+                            loading="lazy"
                           className="max-h-10 sm:max-h-12 w-auto object-contain"
                         />
                       </div>
@@ -583,9 +587,12 @@ const Landing = () => {
                     <div
                       className="h-28 sm:h-32 w-full rounded-xl bg-white flex items-center justify-center overflow-hidden group-hover:shadow-lg transition-all duration-300 border border-blue-100 shadow-sm ring-1 ring-blue-50"
                     >
-                      <img
+                      <Image
                         src={college.logo}
                         alt={`${college.name} logo`}
+                        width={120}
+                        height={120}
+                        loading="lazy"
                         className="max-h-20 sm:max-h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
                       />
                     </div>
@@ -670,7 +677,7 @@ const Landing = () => {
       {/* Accreditation & Recognition - Responsive slider */}
       <section className="py-12 sm:py-16 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="text-center mb-8 sm:mb-10" data-aos="fade-up">
+          <div className="text-center mb-8 sm:mb-10" data-aos="fade-up">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#001e3c] mb-3 sm:mb-4">
               Accreditation & Recognition
             </h2>
@@ -678,7 +685,7 @@ const Landing = () => {
               We partner only with accredited and government-recognized
               institutions
             </p>
-          </motion.div>
+          </div>
 
           <div className="relative overflow-hidden">
             <div className="flex items-center gap-4 sm:gap-6 animate-[accreditScroll_25s_linear_infinite] will-change-transform">
@@ -687,10 +694,13 @@ const Landing = () => {
                   <div
                     key={idx}
                     className="min-w-[80px] sm:min-w-[100px] md:min-w-[140px] rounded-xl p-3 sm:p-4 bg-white shadow-sm border border-gray-100 flex items-center justify-center h-16 sm:h-20 md:h-24"
-                  >
-                    <img
+                  > 
+                    <Image
                       src={logo}
                       alt="Accreditation and recognition logo"
+                      width={100}
+                      height={100}
+                      loading="lazy"
                       className="max-h-10 sm:max-h-12 md:max-h-14 object-contain"
                     />
                   </div>
@@ -715,7 +725,7 @@ const Landing = () => {
       {/* Features Section - Responsive */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="text-center mb-12 sm:mb-16" data-aos="fade-up">
+          <div className="text-center mb-12 sm:mb-16" data-aos="fade-up">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#001e3c] mb-4 sm:mb-6">
               Why Choose <span className="text-[#00ffe0]">Unifost</span>?
             </h2>
@@ -723,11 +733,11 @@ const Landing = () => {
               Experience the difference that personalized guidance makes in your
               educational journey
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
                 className="group"
                 data-aos="fade-up"
@@ -746,7 +756,7 @@ const Landing = () => {
                     {feature.description}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -774,9 +784,12 @@ const Landing = () => {
                     whileHover={{ y: -6 }}
                     className="min-w-[150px] flex flex-col items-center text-center bg-white/10 backdrop-blur-xl p-4 rounded-xl border border-white/20 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
                   >
-                    <img
+                    <Image
                       src={city.img}
                       alt={`${city.city}, ${city.state} study city`}
+                      width={80}
+                      height={80}
+                      loading="lazy"
                       className="w-16 h-16 object-contain mb-2 rounded-full border border-white/20 shadow"
                     />
                     <p className="text-white font-semibold text-sm">

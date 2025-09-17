@@ -147,7 +147,7 @@ const Hero = ({ onOpenModal }) => {
                   className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200 max-w-md mx-auto lg:mx-0"
                 >
                   {[
-                    { number: "50K+", label: "Students" },
+                    { number: "5K+", label: "Students" },
                     { number: "25+", label: "Universities" },
                     { number: "100%", label: "Success Rate" }
                   ].map((stat, index) => (
@@ -160,7 +160,7 @@ const Hero = ({ onOpenModal }) => {
               </motion.div>
 
               {/* Right Content - Visual Panel */}
-              <motion.div 
+              <div 
                 initial={{ opacity: 0, x: 50 }} 
                 animate={{ opacity: 1, x: 0 }} 
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -171,7 +171,7 @@ const Hero = ({ onOpenModal }) => {
                   {/* Slider Container */}
                   <div className="relative h-56 sm:h-64 md:h-72 lg:h-80 rounded-2xl overflow-hidden mb-6 bg-gray-100">
                     {heroSlides.map((s, idx) => (
-                      <motion.div
+                      <div
                         key={idx}
                         className={`absolute inset-0 transition-all duration-1000 ${idx === slide ? "opacity-100 scale-100" : "opacity-0 scale-105"}`}
                         initial={{ opacity: 0, scale: 1.1 }}
@@ -181,14 +181,16 @@ const Hero = ({ onOpenModal }) => {
                         <Image
                           src={s.src}
                           alt={`${s.title} – ${s.subtitle} | Online University Degree guidance`}
-                          fill
+                          width={s.width}
+                          height={s.height}
+                          loading={idx === 0 ? "eager" : "lazy"}
                           priority={idx === 0}
                           sizes="(max-width: 768px) 100vw, 50vw"
                           className="object-contain rounded-2xl"
                           style={{ objectPosition: "center" }}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
-                      </motion.div>
+                      </div>
                     ))}
                     
                     {/* Slide Indicators */}
@@ -234,7 +236,7 @@ const Hero = ({ onOpenModal }) => {
                 <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-green-400 to-teal-400 rounded-full flex items-center justify-center shadow-lg animate-pulse">
                   <FaUsers className="text-white text-xl" />
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>
