@@ -124,7 +124,7 @@ export default function sitemap() {
 
     // University pages - Highest Priority
     {
-      url: `${baseUrl}/amity`,
+      url: `${baseUrl}/Amity-University-Online`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 1.0,

@@ -237,7 +237,7 @@ const Jain = () => {
   <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
     {/* Certificate Image */}
     <div className="flex-1">
-      <Image width={100} height={100} loading='lazy' src="/images/jainonlined.webp" alt="Amity University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+      <Image width={100} height={100} loading='lazy' src="/images/jainonlined.webp" alt="Jain Online" className="w-full max-w-md mx-auto rounded shadow-lg" />
     </div>
 
     {/* Text Content */}
@@ -246,7 +246,7 @@ const Jain = () => {
         Online Degree from Jain Online University
       </h2>
       <p className="mb-6 text-lg leading-relaxed">
-        Jain Online provides amity plus services that has the benefits of e-lectures, counselling from academic advisors, career assistance, etc.
+        Jain Online provides many services that has the benefits of e-lectures, counselling from academic advisors, career assistance, etc.
       </p>
 
       <h3 className="text-xl font-semibold mb-2">Benefits of Jain Online</h3>

@@ -142,7 +142,7 @@ function SearchContent() {
             <h3 className='text-green-500 text-left mb-4'> Click it</h3>
       <ul className="flex flex-wrap gap-6 justify-center">
   {[
-    { name: 'Amity University', href: '/amity', img: '/images/amity.webp' },
+    { name: 'Amity University', href: '/Amity-University-Online', img: '/images/amity.webp' },
     { name: 'Manipal University Online', href: '/manipal', img: '/images/manipal.webp' },
     { name: 'NMIMS University', href: '/nmims', img: '/images/nmims.webp' },
     { name: 'Dr. D Y Patil University', href: '/dypatil', img: '/images/dypatil.webp' },

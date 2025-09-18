@@ -253,13 +253,13 @@ const Amity = () => {
   rating="4.8/5"
   description="India's Premier Private University | 100% Online Learning"
   description2={`
-    Amity University online programs have revolutionized higher education in India, offering UGC-approved degrees with flexible learning options. Whether you're a working professional or a fresh graduate, online Amity University provides world-class education through innovative digital platforms.
+    Amity University Online programs have revolutionized higher education in India, offering UGC-approved degrees with flexible learning options. Whether you're a working professional or a fresh graduate, online Amity University provides world-class education through innovative digital platforms.
     
-    We offer a wide range of undergraduate, postgraduate, and integrated courses in fields like Business Administration, Computer Applications, Commerce, Arts, and more. Our curriculum is designed in collaboration with industry experts to ensure relevance and employability.
+    Amity University Online offer a wide range of undergraduate, postgraduate, and integrated courses in fields like Business Administration, Computer Applications, Commerce, Arts, and more. Our curriculum is designed in collaboration with industry experts to ensure relevance and employability.
   `}
   badgeText="UGC Entitled Online Degrees"
   imgSrc="/images/amitypic.webp"
-  imgAlt="Online Amity University campus with modern infrastructure and digital learning facilities"
+  imgAlt="Amity University Online"
   students="50K+"
   partners="500+"
   campus="Noida Campus"

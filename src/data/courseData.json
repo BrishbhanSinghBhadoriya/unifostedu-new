@@ -462,7 +462,7 @@
     ],
     "universities": [
       {
-        "name": "Amity University",
+        "name": "AmityUniversity",
         "location": "Noida, Uttar Pradesh",
         "rating": 4.5,
         "image": "/images/amity.webp",

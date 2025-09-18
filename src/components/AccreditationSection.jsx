@@ -91,7 +91,7 @@ const AccreditationSection = ({
           <p className="mt-4">Our multiple accreditations demonstrate our commitment to maintaining these high standards across all our programs and services.</p>
         </div>
           {/* Success Stories */}
-          {successStories.length > 0 && (
+          {/* {successStories.length > 0 && (
             <motion.div
               className="mb-12"
               initial={{ opacity: 0 }}
@@ -116,7 +116,7 @@ const AccreditationSection = ({
                 ))}
               </div>
             </motion.div>
-          )}
+          )} */}
         </div>
        
         {/* Sidebar */}

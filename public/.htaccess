@@ -20,7 +20,7 @@ RewriteRule ^universities/sharda-university-online/?$ https://unifostedu.com/sha
 RewriteRule ^universities/chandigarh-university-online/?$ https://unifostedu.com/chandigarh/ [L,R=301]
 RewriteRule ^universities/dr\.-dy-patil-online/?$ https://unifostedu.com/dypatil/ [L,R=301]
 RewriteRule ^universities/narsee-monjee-institute-of-management-studies-online/?$ https://unifostedu.com/nmims/ [L,R=301]
-RewriteRule ^universities/amity-university-online/?$ https://unifostedu.com/amity/ [L,R=301]
+RewriteRule ^universities/amity-university-online/?$ https://unifostedu.com/Amity-University-online/ [L,R=301]
 RewriteRule ^universities/manipal-university-online/?$ https://unifostedu.com/manipal/ [L,R=301]
 
 # Courses broken slugs

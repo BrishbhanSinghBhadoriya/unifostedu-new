@@ -30,7 +30,7 @@ const Header = () => {
 const [modalType, setModalType] = useState();
 
   const universities = [
-    { name: "Amity University Online", link: "/amity", logo: "/images/amity.webp" },
+    { name: "Amity University Online", link: "/Amity-University-Online", logo: "/images/amity.webp" },
     { name: "Lovely Professional University", link: "/lpu", logo: "/images/lpu.webp" },
     { name: "Online Manipal University", link: "/manipal", logo: "/images/manipal.webp" },
     { name: "Manipal Academy of Higher Education", link: "/mahe", logo: "/images/mahe-uni.webp" },
@@ -90,7 +90,7 @@ const [modalType, setModalType] = useState();
       mba: '/mba-online', bba: '/bba-online', mca: '/mca-online', bca: '/bca-online', mcom: '/mcom-online', ba: '/ba-online'
     };
     const universityRoutes = {
-      amity: '/amity', manipal: '/manipal', upes: '/upes', lpu: '/lpu', sharda: '/sharda', vgu: '/vgu', nmims: '/nmims', jain: '/jain', dypatil: '/dypatil'
+      amity: '/Amity-University-Online', manipal: '/manipal', upes: '/upes', lpu: '/lpu', sharda: '/sharda', vgu: '/vgu', nmims: '/nmims', jain: '/jain', dypatil: '/dypatil'
     };
     for (const key in courseRoutes) {
       if (query.includes(key)) {

@@ -140,7 +140,7 @@ export const getCourseHref = (title) => {
 
 export const getUniversityHref = (name) => {
   const n = name.toLowerCase();
-  if (n.includes("amity")) return "/amity";
+  if (n.includes("amity")) return "/Amity-University-Online";
   if (n.includes("manipal")) return "/manipal";
   if (n.includes("lovely professional") || n.includes("lpu")) return "/lpu";
   if (n.includes("petroleum") || n.includes("upes")) return "/upes";
