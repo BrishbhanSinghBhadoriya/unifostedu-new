@@ -7,7 +7,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, } from '@/components/ui/dialog';
 import EnquiryForm from '@/components/EnquiryForm';
 import {
   FaUniversity,
@@ -384,7 +384,7 @@ function CompareContent() {
     
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12 md:mt-20 px-4 sm:px-6 lg:px-8">
              {/* Enquiry gating */}
-               <Dialog open={!enquiryDone} onOpenChange={noop}>
+               <Dialog open={!enquiryDone} onOpenChange={() => setEnquiryDone(true)}>
           <DialogContent
             className="w-[95vw] max-w-[560px] max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10"
             onInteractOutside={(e) => e.preventDefault()}
@@ -399,7 +399,7 @@ function CompareContent() {
            <div className="mt-4 px-4 sm:px-6 pb-4 flex flex-col sm:flex-row gap-3 justify-end">
              <Button
                variant="outline"
-               onClick={() => router.replace('/')}
+               onClick={() => setEnquiryDone(true)} 
                className="w-full sm:w-auto border-[#00ffe0] text-[#001e3c] hover:bg-[#00ffe0] hover:text-[#001e3c] py-2.5"
              >
                Cancel
@@ -460,7 +460,7 @@ function CompareContent() {
                            alt={university.name} 
                            width={100}
                            height={100}
-                           loading='Lazy'
+                           loading='lazy'
                            className="w-full h-full object-contain"
                          />
                        </div>

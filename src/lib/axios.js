@@ -53,19 +53,19 @@ export const demoAPI = {
 export const enquiryAPI = {
   videoCall: (data) =>
     axios.post(
-      "https://unifost-backend-ev0y.onrender.com/api/v1/videoCallEnquiry",
+      "http://65.1.3.30/api/v1/videoCallEnquiry",
       data,
       { headers: { "Content-Type": "application/json" } }
     ),
   homeDemo: (data) =>
     axios.post(
-      "https://unifost-backend-ev0y.onrender.com/api/v1/homeDemoEnquiry",
+      "http://65.1.3.30/api/v1/homeDemoEnquiry",
       data,
       { headers: { "Content-Type": "application/json" } }
     ),
   general: (data) =>
     axios.post(
-      "https://unifost-backend-ev0y.onrender.com/api/v1/enquiry",
+      "http://65.1.3.30/api/v1/enquiry",
       data,
       { headers: { "Content-Type": "application/json" } }
     ),

@@ -21,23 +21,23 @@ const OrganizationSchema = () => {
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "IN",
-        "addressRegion": "Maharashtra",
-        "addressLocality": "Pune",
-        "postalCode": "411001"
+        "addressRegion": "Uttar Pradesh",
+        "addressLocality": "Noida",
+        "postalCode": "201301"
       }
     },
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "IN",
-      "addressRegion": "Maharashtra",
-      "addressLocality": "Pune",
-      "postalCode": "411001"
+      "addressRegion": "Uttar Pradesh",
+      "addressLocality": "Noida",
+      "postalCode": "201301"
     },
     "contactPoint": [
       {
         "@type": "ContactPoint",
         "contactType": "customer service",
-        "telephone": "+91 9876543210",
+        "telephone": "+91 7042867717",
         "email": "info@unifostedu.com",
         "availableLanguage": ["English", "Hindi"],
         "hoursAvailable": {
@@ -50,15 +50,15 @@ const OrganizationSchema = () => {
             "Friday",
             "Saturday"
           ],
-          "opens": "09:00",
-          "closes": "18:00"
+          "opens": "10:00",
+          "closes": "19:00"
         }
       },
       {
         "@type": "ContactPoint",
         "contactType": "technical support",
-        "telephone": "+91 9876543211",
-        "email": "support@unifostedu.com"
+        "telephone": "+91 7042867717",
+        "email": "info@unifostedu.com"
       }
     ],
     "founder": [
@@ -81,7 +81,7 @@ const OrganizationSchema = () => {
     ],
     "employee": {
       "@type": "QuantitativeValue",
-      "value": "50+",
+      "value": "50",
       "unitText": "employees"
     },
     "numberOfEmployees": "50+",
@@ -151,21 +151,7 @@ const OrganizationSchema = () => {
       "worstRating": "1",
       "reviewCount": "500"
     },
-    "review": [
-      {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Student User"
-        },
-        "reviewBody": "Excellent guidance for online education programs. Highly recommended!"
-      }
-    ],
+  
     "knowsAbout": [
       "Online Education",
       "Career Counseling",

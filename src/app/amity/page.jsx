@@ -16,6 +16,8 @@ import {
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import EnquiryForm from '@/components/EnquiryForm';
+import HeroSection from '@/components/HeroSection';
+import Accreditations from '@/components/AccreditationSection';
 import AdmissionProcess from '@/components/AdmissionProcess';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 import EnquireCard from '@/components/EnquireCard';
@@ -243,410 +245,108 @@ const Amity = () => {
       
 
 {/* Hero Section */}
-<section className="relative  py-12 px-6 font-[Inter] border-b border-gray-100">
-  {/* Subtle background pattern */}
-  <div className="absolute inset-0 opacity-5">
-    <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48ZyBmaWxsPSJub25lIiBzdHJva2U9IiMwMDc3ZmYiIHN0cm9rZS13aWR0aD0iMC41Ij48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIxNSIvPjwvZz48L3N2Zz4=')]"></div>
-  </div>
-  
-  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative z-10">
-    <motion.div 
-      initial={{ opacity: 0, x: -30 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6 }}
-      className="space-y-5"
-    >
-      {/* University Badge */}
-      <div className="flex items-center gap-2 bg-white text-blue-700 px-4 py-2 rounded-full w-fit shadow-sm border border-blue-100">
-        <FaUniversity className="text-sm" />
-        <span className="text-sm font-medium">UGC Entitled Online Degrees</span>
-      </div>
-      
-      <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight font-[Poppins]">
-        Online Amity <span className="text-yellow-500">University</span>
-      </h1>
-      
-      {/* Location and Basic Info */}
-      <div className="flex items-center gap-3 text-gray-600">
-        <div className="flex items-center">
-          <svg className="w-4 h-4 mr-1 text-blue-600" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-          </svg>
-          <span className="text-sm">Noida, Uttar Pradesh, India</span>
-        </div>
-        <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
-        <div className="text-sm">Private University</div>
-      </div>
-      
-      {/* NIRF Ranking and Rating */}
-      <div className="flex flex-wrap items-center gap-3">
-        <div className="flex items-center bg-white px-3 py-1.5 rounded-full shadow-sm border border-blue-100">
-          <FaAward className="text-yellow-500 mr-1.5 text-sm" />
-          <span className="text-gray-700 font-semibold text-sm">NIRF Rank: 29</span>
-        </div>
-        <div className="flex items-center bg-white px-3 py-1.5 rounded-full shadow-sm border border-blue-100">
-          {[1, 2, 3, 4].map((star) => (
-            <svg
-              key={star}
-              className="w-3.5 h-3.5 text-yellow-400 fill-current mr-0.5"
-              viewBox="0 0 20 20"
-            >
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-          ))}
-          <span className="ml-1 text-gray-700 font-medium text-sm">4.8/5</span>
-        </div>
-      </div>
-
-      <p className="text-base font-medium text-gray-600">
-        India's Premier Private University | 100% Online Learning
-      </p>
-      
-      {/* Key Highlights with Icons */}
-      <div className="grid grid-cols-2 gap-3">
-        {[
-          { icon: <FaGlobe className="text-blue-600" />, text: "Global Accreditation" },
-          { icon: <FaUserTie className="text-blue-600" />, text: "Industry Curriculum" },
-          { icon: <FaClipboardCheck className="text-blue-600" />, text: "Placement Assistance" },
-          { icon: <FaRobot className="text-blue-600" />, text: "AI-Powered Learning" },
-        ].map((item, index) => (
-          <div key={index} className="flex items-center">
-            <div className="bg-blue-100 p-1.5 rounded-full mr-2">
-              {item.icon}
-            </div>
-            <span className="text-gray-700 text-xs">{item.text}</span>
-          </div>
-        ))}
-      </div>
-
-      <p className="text-gray-600 leading-relaxed text-sm">
-        Amity University online programs have revolutionized higher education in India, offering UGC-approved degrees with flexible learning options. Whether you're a working professional or a fresh graduate, online Amity University provides world-class education through innovative digital platforms.
-      <br/> We offer a wide range of undergraduate, postgraduate, and integrated courses in fields like Business Administration, Computer Applications, Commerce, Arts, and more. Our curriculum is designed in collaboration with industry experts to ensure relevance and employability.  
-      </p>
-      
-      <div className="bg-blue-50 border-l-4 border-blue-400 p-3 rounded-r">
-        <p className="text-blue-700 text-sm flex items-start">
-          <FaBookOpen className="mt-0.5 mr-2 text-blue-600 flex-shrink-0" />
-          <span>India's first university recognised by UGC for providing online degree programs by expert faculty.</span>
-        </p>
-      </div>
-      
-      {/* CTA Buttons */}
-      <div className="flex flex-wrap gap-3 pt-2">
-        <button className="bg-gradient-to-r from-gray-800 to-purple-800 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-all flex items-center text-sm">
-          <FaGraduationCap className="mr-2" />
-          Explore Programs
-        </button>
-        
-      </div>
-    </motion.div>
+<HeroSection
+  universityName="Amity University Online"
+  location="Noida, Uttar Pradesh, India"
+  type="Private University"
+  nirfRank="29"
+  rating="4.8/5"
+  description="India's Premier Private University | 100% Online Learning"
+  description2={`
+    Amity University online programs have revolutionized higher education in India, offering UGC-approved degrees with flexible learning options. Whether you're a working professional or a fresh graduate, online Amity University provides world-class education through innovative digital platforms.
     
-    <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6, delay: 0.1 }}
-      className="relative"
-    >
-      <div className="absolute -inset-3 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-2xl blur-md opacity-70"></div>
-      
-      {/* Image Container with Badges */}
-      <div className="relative rounded-xl shadow-md overflow-hidden border border-gray-200">
-        <Image
-          src="/images/amitypic.webp"
-          alt="Online Amity University campus with modern infrastructure and digital learning facilities"
-          width={600}
-          height={400}
-          loading='lazy'
-          className="w-full h-auto"
-          
-        />
-        
-        {/* Floating Badges */}
-        <div className="absolute -top-2 -right-2 bg-white rounded-md shadow-md p-2 w-20 h-20 flex flex-col items-center justify-center border border-gray-100">
-          <FaGraduationCap className="text-blue-600 text-xl mb-1" />
-          <span className="text-xs font-bold text-gray-800 text-center">50K+ Students</span>
-        </div>
-        
-        <div className="absolute -bottom-2 -left-2 bg-white rounded-md shadow-md p-2 w-20 h-20 flex flex-col items-center justify-center border border-gray-100">
-          <FaBriefcase className="text-blue-600 text-xl mb-1" />
-          <span className="text-xs font-bold text-gray-800 text-center">500+ Partners</span>
-        </div>
-        
-        {/* Location Badge */}
-        <div className="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1.5 flex items-center shadow-sm">
-          <svg className="w-3.5 h-3.5 mr-1.5 text-blue-600" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-          </svg>
-          <span className="text-xs font-medium text-gray-700">Noida Campus</span>
-        </div>
-      </div>
-    </motion.div>
-  </div>
-</section>
+    We offer a wide range of undergraduate, postgraduate, and integrated courses in fields like Business Administration, Computer Applications, Commerce, Arts, and more. Our curriculum is designed in collaboration with industry experts to ensure relevance and employability.
+  `}
+  badgeText="UGC Entitled Online Degrees"
+  imgSrc="/images/amitypic.webp"
+  imgAlt="Online Amity University campus with modern infrastructure and digital learning facilities"
+  students="50K+"
+  partners="500+"
+  campus="Noida Campus"
+  highlights={[
+    { icon: <FaGlobe className="text-blue-600" />, text: "Global Accreditation" },
+    { icon: <FaUserTie className="text-blue-600" />, text: "Industry Curriculum" },
+    { icon: <FaClipboardCheck className="text-blue-600" />, text: "Placement Assistance" },
+    { icon: <FaRobot className="text-blue-600" />, text: "AI-Powered Learning" },
+  ]}
+/>
+
 
 {/* Accreditation Badges with Enhanced Content */}
-<section className="py-12 bg-white">
-  <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-8">
-    {/* Enhanced Main Content */}
-    <div className="lg:w-3/4">
-      <motion.div 
-        className="text-center mb-10"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-      >
-        <h2 className="text-4xl font-bold text-gray-900 mb-4 font-[Poppins]">
-          Education with Global Recognition
-        </h2>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Our accredited programs open doors to international opportunities and ensure your qualifications are recognized worldwide.
-        </p>
-      </motion.div>
-      
-      {/* Stats and Value Proposition */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-        <motion.div 
-          className="bg-blue-50 p-6 rounded-xl text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          viewport={{ once: true }}
-        >
-          <div className="text-4xl font-bold text-blue-700 mb-2">95%</div>
-          <div className="text-gray-700">Employment Rate Within 6 Months</div>
-        </motion.div>
-        
-        <motion.div 
-          className="bg-green-50 p-6 rounded-xl text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          <div className="text-4xl font-bold text-green-700 mb-2">50+</div>
-          <div className="text-gray-700">Countries with Alumni Network</div>
-        </motion.div>
-        
-        <motion.div 
-          className="bg-purple-50 p-6 rounded-xl text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <div className="text-4xl font-bold text-purple-700 mb-2">10+</div>
-          <div className="text-gray-700">Industry Partnerships</div>
-        </motion.div>
-      </div>
-      
-      {/* Program Highlights */}
-      <motion.div 
-        className="bg-gradient-to-r from-gray-800 to-purple-800 rounded-2xl p-8 text-white mb-12"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.7 }}
-        viewport={{ once: true }}
-      >
-        <h3 className="text-2xl font-bold mb-6 font-[Poppins] text-center">Benefits of Our Accredited Programs</h3>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="flex items-start">
-            <div className="bg-white/20 p-2 rounded-lg mr-4 flex-shrink-0">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
-              </svg>
-            </div>
-            <div>
-              <h4 className="font-semibold text-lg mb-1">Global Mobility</h4>
-              <p className="text-sm opacity-90">Our degrees are recognized internationally, enabling you to pursue opportunities worldwide.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start">
-            <div className="bg-white/20 p-2 rounded-lg mr-4 flex-shrink-0">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-              </svg>
-            </div>
-            <div>
-              <h4 className="font-semibold text-lg mb-1">Quality Assurance</h4>
-              <p className="text-sm opacity-90">Rigorous accreditation processes ensure our programs meet the highest educational standards.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start">
-            <div className="bg-white/20 p-2 rounded-lg mr-4 flex-shrink-0">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-              </svg>
-            </div>
-            <div>
-              <h4 className="font-semibold text-lg mb-1">Industry Connections</h4>
-              <p className="text-sm opacity-90">Our partnerships with leading organizations provide valuable networking and career opportunities.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start">
-            <div className="bg-white/20 p-2 rounded-lg mr-4 flex-shrink-0">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-              </svg>
-            </div>
-            <div>
-              <h4 className="font-semibold text-lg mb-1">Career Advancement</h4>
-              <p className="text-sm opacity-90">Employers value accredited degrees, giving our graduates a competitive edge in the job market.</p>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-      
-      {/* Accreditation Value Explanation */}
-      <motion.div 
-        className="bg-gray-50 rounded-2xl p-8 mb-12"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.7, delay: 0.2 }}
-        viewport={{ once: true }}
-      >
-        <h3 className="text-2xl font-bold text-gray-900 mb-6 font-[Poppins] text-center">Why Accreditation Matters</h3>
-        <div className="prose prose-lg max-w-none text-gray-700">
-          <p>Accreditation serves as a vital quality assurance mechanism in higher education. It validates that an institution meets rigorous standards of excellence in:</p>
-          
-          <ul className="list-disc pl-5 mt-4 space-y-2">
-            <li><strong>Curriculum quality</strong> - Ensuring programs are relevant, current, and comprehensive</li>
-            <li><strong>Faculty qualifications</strong> - Maintaining high standards for teaching staff expertise</li>
-            <li><strong>Student support services</strong> - Providing adequate resources for student success</li>
-            <li><strong>Educational outcomes</strong> - Demonstrating measurable student learning and achievement</li>
-            <li><strong>Institutional integrity</strong> - Upholding ethical practices and financial stability</li>
-          </ul>
-          
-          <p className="mt-4">Our multiple accreditations demonstrate our commitment to maintaining these high standards across all our programs and services.</p>
-        </div>
-      </motion.div>
-      
-      {/* Student Success Stories */}
-      <motion.div 
-        className="mb-12"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.7, delay: 0.3 }}
-        viewport={{ once: true }}
-      >
-        <h3 className="text-2xl font-bold text-gray-900 mb-6 font-[Poppins] text-center">Success Stories</h3>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                <span className="text-blue-600 font-semibold">AS</span>
-              </div>
-              <div>
-                <h4 className="font-semibold">Aisha Sharma</h4>
-                
-              </div>
-            </div>
-            <p className="text-gray-700 italic">"The international recognition of my degree allowed me to secure a position with a leading tech firm in Singapore immediately after graduation."</p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                <span className="text-green-600 font-semibold">RM</span>
-              </div>
-              <div>
-                <h4 className="font-semibold">Rahul Mehta</h4>
-                
-              </div>
-            </div>
-            <p className="text-gray-700 italic">"The accreditation status of my program made the admission process to Stanford seamless. My credits transferred without any issues."</p>
-          </div>
-        </div>
-      </motion.div>
-    </div>
-    
-    {/* Vertical Accreditation Sidebar */}
-    <motion.div 
-      className="lg:w-1/4"
-      initial={{ opacity: 0, x: 30 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
-    >
-      <div className="bg-white rounded-xl shadow-md border border-gray-100 p-5 sticky top-24">
-        <h3 className="text-lg font-semibold text-gray-800 mb-4 text-center font-[Poppins] border-b border-gray-200 pb-3">
-          Accreditations & Recognitions
-        </h3>
-        
-        <div className="space-y-4">
-          {[
-            { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
-            { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
-            { src: "/images/nirf.webp", alt: "NIRF", name: "NIRF" },
-            { src: "/images/wes.webp", alt: "WES", name: "WES" },
-            { src: "/images/aiu.webp", alt: "AIU", name: "AIU" },
-            { src: "/images/acu.webp", alt: "ACU", name: "ACU" },
-          ].map((item, index) => (
-            <div 
-              key={index}
-              className="flex items-center p-3 rounded-lg transition-all duration-200 hover:bg-blue-50 border border-gray-100"
-            >
-              <div className="h-8 w-8 relative mr-3 flex-shrink-0">
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  width={100}
-                  height={100}
-                  loading='lazy'
-                 
-                />
-              </div>
-              <span className="text-sm font-medium text-gray-700">{item.name}</span>
-            </div>
-          ))}
-        </div>
-        
-        {/* International Recognition Section */}
-        <div className="mt-6 pt-4 border-t border-gray-200">
-          <h4 className="text-xs font-semibold text-gray-600 mb-3 uppercase tracking-wide text-center">
-            International Recognition
-          </h4>
-          <div className="grid grid-cols-2 gap-2">
-            {[
-              { src: "/images/qs.webp", alt: "QS Ranking", name: "QS" },
-              { src: "/images/wasc.webp", alt: "WASC Accreditation", name: "WASC" },
-              { src: "/images/the.webp", alt: "Times Higher Education", name: "THE" },
-              { src: "/images/qaa.webp", alt: "QAA UK", name: "QAA UK" },
-            ].map((item, index) => (
-              <div key={index} className="flex flex-col items-center p-2 bg-gray-50 rounded-md">
-                <div className="h-6 w-6 relative mb-1">
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    width={100}
-                    height={100}
-                    loading='lazy'
-                   
-                  />
-                </div>
-                <span className="text-xs text-gray-600 text-center">{item.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-        
-        {/* Trust Indicator */}
-        <div className="mt-6 pt-4 border-t border-gray-200 text-center">
-          <div className="flex items-center justify-center mb-2">
-            <svg className="w-5 h-5 text-yellow-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-            </svg>
-            <span className="text-sm font-medium text-gray-700">Trusted by 25,000+ Students</span>
-          </div>
-          <p className="text-xs text-gray-500">Our accreditations ensure quality education recognized globally</p>
-        </div>
-      </div>
-    </motion.div>
-  </div>
-</section>
+<div>
+  <AccreditationSection
+    title="Education with Global Recognition"
+    description="Our accredited programs open doors to international opportunities and ensure your qualifications are recognized worldwide."
+    stats={[
+      { value: "95%", label: "Employment Rate Within 6 Months", color: "text-blue-700", bg: "bg-blue-50" },
+      { value: "50+", label: "Countries with Alumni Network", color: "text-green-700", bg: "bg-green-50" },
+      { value: "10+", label: "Industry Partnerships", color: "text-purple-700", bg: "bg-purple-50" },
+    ]}
+    benefits={[
+      {
+        title: "Global Mobility",
+        description: "Our degrees are recognized internationally, enabling you to pursue opportunities worldwide.",
+        iconSvg: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                  </svg>`,
+      },
+      {
+        title: "Quality Assurance",
+        description: "Rigorous accreditation processes ensure our programs meet the highest educational standards.",
+        iconSvg: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                  </svg>`,
+      },
+      {
+        title: "Industry Connections",
+        description: "Our partnerships with leading organizations provide valuable networking and career opportunities.",
+        iconSvg: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                  </svg>`,
+      },
+      {
+        title: "Career Advancement",
+        description: "Employers value accredited degrees, giving our graduates a competitive edge in the job market.",
+        iconSvg: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>`,
+      },
+    ]}
+    accreditations={[
+      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
+      { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
+      { src: "/images/nirf.webp", alt: "NIRF", name: "NIRF" },
+      { src: "/images/wes.webp", alt: "WES", name: "WES" },
+      { src: "/images/aiu.webp", alt: "AIU", name: "AIU" },
+      { src: "/images/acu.webp", alt: "ACU", name: "ACU" },
+    ]}
+    internationalRecognition={[
+      { src: "/images/qs.webp", alt: "QS Ranking", name: "QS" },
+      { src: "/images/wasc.webp", alt: "WASC Accreditation", name: "WASC" },
+      { src: "/images/the.webp", alt: "Times Higher Education", name: "THE" },
+      { src: "/images/qaa.webp", alt: "QAA UK", name: "QAA UK" },
+    ]}
+    successStories={[
+      {
+        name: "Aisha Sharma",
+        initials: "AS",
+        color: "bg-blue-100 text-blue-600",
+        text: "The international recognition of my degree allowed me to secure a position with a leading tech firm in Singapore immediately after graduation.",
+      },
+      {
+        name: "Rahul Mehta",
+        initials: "RM",
+        color: "bg-green-100 text-green-600",
+        text: "The accreditation status of my program made the admission process to Stanford seamless. My credits transferred without any issues.",
+      },
+    ]}
+    trust={{
+      text: "Trusted by 25,000+ Students",
+      subtext: "Our accreditations ensure quality education recognized globally",
+    }}
+  />
+</div>
+
 
 
 
