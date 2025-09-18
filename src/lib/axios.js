@@ -6,10 +6,10 @@ const getAPIBaseURL = () => {
     const isLocal = window.location.hostname === "localhost";
     return isLocal
       ? "http://localhost:5001" // local backend
-      : "https://unifost-backend-ev0y.onrender.com"; // prod backend (provided)
+      : "https://api.unifostedu.com"; // prod backend (provided)
   }
   // Server-side fallback
-  return "https://unifost-backend-ev0y.onrender.com";
+  return "https://api.unifostedu.com";
 };
 
 const API_BASE_URL = getAPIBaseURL();
@@ -46,26 +46,26 @@ export const authAPI = {
 
 // 🧩 Demo/Enquiry API
 export const demoAPI = {
-  bookDemo: (data) => API.post("/api/enquiry/enquiry", data),
+  bookDemo: (data) => API.post("https://api.unifostedu.com/api/enquiry/enquiry", data),
 };
 
 // 🧩 Specific enquiries (absolute URLs as provided)
 export const enquiryAPI = {
   videoCall: (data) =>
     axios.post(
-      "http://65.1.3.30/api/v1/videoCallEnquiry",
+      "https://api.unifostedu.com/api/v1/videoCallEnquiry",
       data,
       { headers: { "Content-Type": "application/json" } }
     ),
   homeDemo: (data) =>
     axios.post(
-      "http://65.1.3.30/api/v1/homeDemoEnquiry",
+      "https://api.unifostedu.com/api/v1/homeDemoEnquiry",
       data,
       { headers: { "Content-Type": "application/json" } }
     ),
   general: (data) =>
     axios.post(
-      "http://65.1.3.30/api/v1/enquiry",
+      "https://api.unifostedu.com/api/v1/enquiry",
       data,
       { headers: { "Content-Type": "application/json" } }
     ),

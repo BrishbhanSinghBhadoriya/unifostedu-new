@@ -384,11 +384,12 @@ function CompareContent() {
     
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12 md:mt-20 px-4 sm:px-6 lg:px-8">
              {/* Enquiry gating */}
-               <Dialog open={!enquiryDone} onOpenChange={noop}>
+               <Dialog open={!enquiryDone} onOpenChange={(open) => {
+                 if (!open) setEnquiryDone(true);
+               }}>
           <DialogContent
             className="w-[95vw] max-w-[560px] max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10"
-            onInteractOutside={(e) => e.preventDefault()}
-            onEscapeKeyDown={(e) => e.preventDefault()}
+            
           >
            <DialogHeader className="px-4 sm:px-6">
              <DialogTitle className="text-lg sm:text-xl font-bold text-center">Quick Enquiry before Comparison</DialogTitle>
@@ -396,15 +397,7 @@ function CompareContent() {
            <div className="px-4 sm:px-6 pb-4">
              <EnquiryForm onSubmitted={() => setEnquiryDone(true)} />
            </div>
-           <div className="mt-4 px-4 sm:px-6 pb-4 flex flex-col sm:flex-row gap-3 justify-end">
-             <Button
-               variant="outline"
-               onClick={() => router.replace('/')}
-               className="w-full sm:w-auto border-[#00ffe0] text-[#001e3c] hover:bg-[#00ffe0] hover:text-[#001e3c] py-2.5"
-             >
-               Cancel
-             </Button>
-           </div>
+          
          </DialogContent>
        </Dialog>
 

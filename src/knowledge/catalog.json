@@ -1,0 +1,36 @@
+{
+  "title": "Unifost Catalog",
+  "description": "List of supported universities and courses for chatbot recommendations.",
+  "universities": [
+    { "key": "amity-university-online", "name": "Amity University Online" },
+    { "key": "manipal-university-online", "name": "Online Manipal University" },
+    { "key": "sikkim-manipal-university", "name": "Sikkim Manipal University" },
+    { "key": "uttaranchal-university", "name": "Uttaranchal University" },
+    { "key": "nmims", "name": "NMIMS University" },
+    { "key": "lovely-professional-university-online", "name": "Lovely Professional University" },
+    { "key": "university-of-petroleum-and-energy-studies-online", "name": "UPES Online" },
+    { "key": "dr-dy-patil-online", "name": "Dr. D Y Patil" },
+    { "key": "sharda-university-online", "name": "Sharda University Online" },
+    { "key": "jain-university", "name": "Jain University" },
+    { "key": "chandigarh-university-online", "name": "Chandigarh University Online" },
+    { "key": "op-jindal-university", "name": "OP Jindal University" },
+    { "key": "shoolini-university-online", "name": "Shoolini University Online" },
+    { "key": "vivekananda-global-university-online", "name": "Vivekananda Global University Online" }
+  ],
+  "courses": [
+    { "title": "MBA Online", "href": "/courses/mba-online" },
+    { "title": "MSC Online", "href": "/courses/msc-online" },
+    { "title": "BBA Online", "href": "/courses/bba-online" },
+    { "title": "MCA Online", "href": "/courses/mca-online" },
+    { "title": "BCA Online", "href": "/courses/bca-online" },
+    { "title": "M.Com Online", "href": "/courses/mcom-online" },
+    { "title": "B.Com Online", "href": "/courses/bcom-online" },
+    { "title": "MA Online", "href": "/courses/ma-online" },
+    { "title": "BA Online", "href": "/courses/ba-online" },
+    { "title": "MAJMC Online", "href": "/courses/majmc-online" },
+    { "title": "BAJMC Online", "href": "/courses/bajmc-online" }
+  ],
+  "cta": { "label": "Book Free Counseling", "href": "/bookdemo" }
+}
+
+

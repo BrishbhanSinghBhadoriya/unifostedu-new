@@ -27,8 +27,8 @@ const Hero = ({ onOpenModal }) => {
       <div className="absolute inset-0 overflow-hidden">
         {/* Animated background shapes */}
         <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-gradient-to-r from-teal-400/20 to-emerald-400/20 rounded-full blur-3xl animate-pulse delay-2000" />
+        <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-gradient-to-r from-teal-400/20 to-emerald-400/20 rounded-full blur-3xl animate-pulse" />
         
         {/* Grid pattern overlay */}
         <div className="absolute inset-0 opacity-40" style={{
@@ -46,14 +46,14 @@ const Hero = ({ onOpenModal }) => {
               <motion.div 
                 initial={{ opacity: 0, x: -50 }} 
                 animate={{ opacity: 1, x: 0 }} 
-                transition={{ duration: 0.8, delay: 0.2 }}
+                transition={{ duration: 0.8 }}
                 className="text-center lg:text-left space-y-8"
               >
                 {/* Trust Badge */}
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }} 
                   animate={{ opacity: 1, y: 0 }} 
-                  transition={{ duration: 0.6, delay: 0.4 }}
+                  transition={{ duration: 0.6 }}
                   className="inline-flex items-center mt-5 gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-blue-200 text-blue-700 text-sm font-medium shadow-lg"
                 >
                   <FaAward className="text-yellow-500 " />
@@ -65,7 +65,7 @@ const Hero = ({ onOpenModal }) => {
                   <motion.h1 
                     initial={{ opacity: 0, y: 30 }} 
                     animate={{ opacity: 1, y: 0 }} 
-                    transition={{ duration: 0.8, delay: 0.6 }}
+                    transition={{ duration: 0.8 }}
                     className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
                   >
                     <span className="text-gray-900">Your Gateway to</span>
@@ -78,7 +78,7 @@ const Hero = ({ onOpenModal }) => {
                   <motion.p 
                     initial={{ opacity: 0, y: 20 }} 
                     animate={{ opacity: 1, y: 0 }} 
-                    transition={{ duration: 0.8, delay: 0.8 }}
+                    transition={{ duration: 0.8 }}
                     className="text-xl sm:text-2xl text-gray-600 font-medium"
                   >
                     Compare, Choose & Succeed with India's Top Online Universities
@@ -89,7 +89,7 @@ const Hero = ({ onOpenModal }) => {
                 <motion.p 
                   initial={{ opacity: 0, y: 20 }} 
                   animate={{ opacity: 1, y: 0 }} 
-                  transition={{ duration: 0.8, delay: 1.0 }}
+                  transition={{ duration: 0.8 }}
                   className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0"
                 >
                   Get expert guidance to find the perfect online degree program from 25+ UGC-approved universities. 
@@ -100,7 +100,7 @@ const Hero = ({ onOpenModal }) => {
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }} 
                   animate={{ opacity: 1, y: 0 }} 
-                  transition={{ duration: 0.8, delay: 1.2 }}
+                  transition={{ duration: 0.8 }}
                   className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto lg:mx-0"
                 >
                   {[
@@ -119,7 +119,7 @@ const Hero = ({ onOpenModal }) => {
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }} 
                   animate={{ opacity: 1, y: 0 }} 
-                  transition={{ duration: 0.8, delay: 1.4 }}
+                  transition={{ duration: 0.8 }}
                   className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                 >
                   <button 
@@ -143,7 +143,7 @@ const Hero = ({ onOpenModal }) => {
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }} 
                   animate={{ opacity: 1, y: 0 }} 
-                  transition={{ duration: 0.8, delay: 1.6 }}
+                  transition={{ duration: 0.8 }}
                   className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200 max-w-md mx-auto lg:mx-0"
                 >
                   {[
@@ -163,7 +163,7 @@ const Hero = ({ onOpenModal }) => {
               <div 
                 initial={{ opacity: 0, x: 50 }} 
                 animate={{ opacity: 1, x: 0 }} 
-                transition={{ duration: 0.8, delay: 0.4 }}
+                transition={{ duration: 0.8 }}
                 className="relative"
               >
                 {/* Main Visual Container */}
@@ -245,7 +245,7 @@ const Hero = ({ onOpenModal }) => {
         <motion.div 
           initial={{ opacity: 0, y: 50 }} 
           animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8, delay: 1.8 }}
+          transition={{ duration: 0.8 }}
           className="bg-white/60 backdrop-blur-sm border-t border-white/20 py-8"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

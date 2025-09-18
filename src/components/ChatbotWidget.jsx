@@ -3,6 +3,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FaRobot, FaTimes, FaPaperPlane, FaSpinner } from "react-icons/fa";
 import axios from "axios";
+import { retrieveRelevantDocs } from "@/knowledge/siteContent";
+import catalog from "@/knowledge/catalog.json";
 
 const ChatbotWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,8 +36,32 @@ const ChatbotWidget = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("https://unifost-backend-ev0y.onrender.com/api/v1/openai/ask", {
-        prompt: prompt
+      const contextDocs = retrieveRelevantDocs(prompt, 4);
+
+      // If we have no matching context, reply without calling the API
+      if (contextDocs.length === 0) {
+        setMessages((prev) => [
+          ...prev,
+          {
+            from: "bot",
+            text:
+              "Maaf kijiye, is prashn ka jawab hamari website ke content me upalabdh nahi hai. Kripya apna sawal aur specific karein ya counselor se baat karein (Book a Video Call / Home Demo).",
+          },
+        ]);
+        return;
+      }
+
+      const instruction =
+        "You are Unifost website assistant. Answer strictly and only from the provided Context. If the answer is not explicitly present in the Context, say you don't have this information on the site and suggest contacting a counselor. Keep answers concise and helpful.";
+
+      const contextBlock =
+        "\n\nContext (from Unifost site):\n" +
+        contextDocs.map((d) => `- ${d.title}: ${d.text}`).join("\n");
+
+      const finalPrompt = `${instruction}\n\nQuestion: ${prompt}${contextBlock}`;
+
+      const response = await axios.post("https://api.unifostedu.com/api/v1/openai/ask", {
+        prompt: finalPrompt,
       }, {
         headers: {
           'Content-Type': 'application/json',
@@ -114,15 +140,24 @@ const ChatbotWidget = () => {
                 key={i}
                 className={`flex ${msg.from === "user" ? "justify-end" : "justify-start"}`}
               >
-                <div
-                  className={`max-w-[85%] p-3 rounded-2xl text-sm leading-relaxed ${
-                    msg.from === "user"
-                      ? "bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] font-medium"
-                      : "bg-white text-gray-800 border border-gray-200 shadow-sm"
-                  }`}
-                >
-                  {msg.text}
-                </div>
+                {msg.type === 'cta' ? (
+                  <a
+                    href={msg.href}
+                    className="inline-block max-w-[85%] px-4 py-2 rounded-full text-sm font-semibold bg-[#00d4c4] text-[#001e3c] hover:bg-[#00c0b1] border border-[#00cbb9] shadow-sm"
+                  >
+                    {msg.text}
+                  </a>
+                ) : (
+                  <div
+                    className={`max-w-[85%] p-3 rounded-2xl text-sm leading-relaxed ${
+                      msg.from === "user"
+                        ? "bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] font-medium"
+                        : "bg-white text-gray-800 border border-gray-200 shadow-sm"
+                    }`}
+                  >
+                    {msg.text}
+                  </div>
+                )}
               </div>
             ))}
             {loading && (
@@ -165,6 +200,37 @@ const ChatbotWidget = () => {
             <p className="text-xs text-gray-500 mt-2 text-center">
               Press Enter to send • Shift+Enter for new line
             </p>
+            {/* End Chat + Recommendations */}
+            <div className="mt-3 flex justify-center">
+              <button
+                type="button"
+                onClick={() => {
+                  const items = [
+                    {
+                      from: "bot",
+                      text: "Recommended Universities:",
+                    },
+                    ...catalog.universities.slice(0, 6).map((u) => ({
+                      from: "bot",
+                      text: `• ${u.name}`,
+                    })),
+                    {
+                      from: "bot",
+                      text: "Recommended Courses:",
+                    },
+                    ...catalog.courses.slice(0, 6).map((c) => ({
+                      from: "bot",
+                      text: `• ${c.title}`,
+                    })),
+                    catalog.cta ? { from: 'bot', type: 'cta', text: catalog.cta.label, href: catalog.cta.href } : null,
+                  ];
+                  setMessages((prev) => [...prev, ...items.filter(Boolean)]);
+                }}
+                className="text-xs text-[#001e3c] underline hover:no-underline"
+              >
+                End chat and show recommendations
+              </button>
+            </div>
           </form>
         </div>
       )}
