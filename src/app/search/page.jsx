@@ -4,6 +4,9 @@ import React, { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Head from 'next/head';
+import Image from 'next/image';
+import EnquiryForm from '@/components/EnquiryForm';
+import Hero from '@/components/pages/landing/Hero';
 
 function SearchContent() {
   const searchParams = useSearchParams();
@@ -11,23 +14,27 @@ function SearchContent() {
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  // ✅ Expanded dataset
+  
   const allResults = [
-    { type: 'course', title: 'MBA Online', description: 'Master of Business Administration program with specializations in Finance, HR, Marketing, and IT.' },
-    { type: 'course', title: 'BBA Online', description: 'Bachelor of Business Administration with flexible online modules.' },
-    { type: 'course', title: 'MCA Online', description: 'Master of Computer Applications with AI, Cloud, and Data Science electives.' },
-    { type: 'course', title: 'BCA Online', description: 'Bachelor of Computer Applications with industry-ready curriculum.' },
-    { type: 'university', title: 'Amity University', description: 'Leading private university offering online degrees approved by UGC-DEB.' },
-    { type: 'university', title: 'Manipal University Online', description: 'Renowned for its global online programs and industry partnerships.' },
-    { type: 'university', title: 'Jain University Online', description: 'NAAC A+ accredited online programs for UG and PG courses.' },
+ 
+    { type: 'course', title: 'MBA Online', description: 'Master of Business Administration program with specializations in Finance, HR, Marketing, and IT.', tag: "Popular" },
+    { type: 'course', title: 'MCA Online', description: 'Master of Computer Applications with AI, Cloud, and Data Science electives.', tag: "Top Rated" },
+    { type: 'course', title: 'M.Com Online', description: 'Deepen commerce expertise with advanced finance and accounting modules.', tag: "Best Value" },
+    { type: 'course', title: 'MA Online', description: 'Explore diverse arts and humanities specializations through flexible learning.', tag: "Literature" },
+    { type: 'course', title: 'MAJMC Online', description: 'Master journalism and mass communication skills for media careers.', tag: "Media" },
+    { type: 'course', title: 'BBA Online', description: 'Learn management fundamentals tailored for the digital business age.', tag: "Career Starter" },
+    { type: 'course', title: 'BCA Online', description: 'Build a career in software development with industry-ready curriculum.', tag: "Trending" },
+    { type: 'course', title: 'B.Com Online', description: 'Commerce foundation covering business, accounting, and finance basics.', tag: "Business" },
+    { type: 'course', title: 'BA Online', description: 'Liberal arts education offering a foundation for multiple career paths.', tag: "Arts" },
+    { type: 'course', title: 'BAJMC Online', description: 'Learn journalism and mass communication essentials for modern media.', tag: "Media" },
+  
   ];
 
   useEffect(() => {
     if (query) {
       performSearch(query);
     } else {
-      // ✅ Show default featured results
-      setSearchResults(allResults.slice(0, 5));
+      setSearchResults(allResults.slice(0, 15));
     }
   }, [query]);
 
@@ -42,6 +49,8 @@ function SearchContent() {
   };
 
   return (
+
+    
     <Suspense fallback={<div>Loading...</div>}>
       <Head>
         <title>
@@ -58,21 +67,24 @@ function SearchContent() {
           }
         />
       </Head>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-20">
+ 
+      <Hero />
+       <div className="bg-gray rounded-2xl shadow-md hover:shadow-xl transition-all p-6 
+             border-2 border-transparent hover:border-blue-500 
+             hover:shadow-blue-200  duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          {/* ✅ Always render an H1 */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          {/* ✅ Title */}
+          <div className="text-center mb-14">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
               {query 
-                ? <>Search Results for <span className="text-[#00ffe0]">"{query}"</span></>
-                : <>Find <span className="text-[#00ffe0]">Courses & Universities</span></>
+                ? <>Search Results for <span className="text-blue-600">"{query}"</span></>
+                : <>Find <span className="text-blue-600">Courses & Universities</span></>
               }
             </h1>
             {!query && (
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Search through our extensive database of online programs, including MBA, BBA, MCA, BCA, and more.
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                Explore our curated list of online programs like MBA, BBA, MCA, and BCA.
                 Compare universities, admission details, and program fees in one place.
               </p>
             )}
@@ -80,79 +92,112 @@ function SearchContent() {
 
           {/* ✅ Search Results */}
           {loading ? (
-            <p className="text-center text-gray-600">Searching...</p>
+            <p className="text-center text-gray-600 animate-pulse">Searching...</p>
           ) : searchResults.length > 0 ? (
-            <div className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-8">
               {searchResults.map((result, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg p-6">
-                  <div className="flex items-start justify-between">
+                <div 
+                  key={index} 
+                  className="bg-teal-100 rounded-2xl shadow-md  hover:shadow-xl transition-all p-6 border border-gray-100"
+                >
+                  <div className="flex flex-col justify-between h-full">
                     <div>
                       <h2 className="text-xl font-semibold text-gray-900 mb-2">{result.title}</h2>
                       <p className="text-gray-600 mb-4">{result.description}</p>
-                      <span className="bg-[#00ffe0] text-[#001e3c] px-3 py-1 rounded-full text-sm font-semibold">
+                      <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium capitalize">
                         {result.type}
                       </span>
                     </div>
-                    <Link 
-                      href={`/${result.type === 'course' ? 'courses' : 'universities'}/${result.title.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="bg-[#001e3c] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#003b6c] transition-colors"
-                    >
-                      View Details
-                    </Link>
+                    <div className="mt-6">
+                      <Link 
+                        href={`/${result.type === 'course' ? 'courses' : 'universities'}/${result.title.toLowerCase().replace(/\s+/g, '-')}`}
+                       className="inline-block text-center bg-blue-600 text-white px-6 py-2 rounded-full font-[Inter] shadow-md hover:bg-blue-700 hover:scale-105 transition-transform duration-300"
+
+                      >
+                        View Details
+                      </Link>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
           ) : (
-            <div className="text-center">
-              <p className="text-gray-600 mb-6">No results found for <strong>{query}</strong></p>
-              <p className="text-gray-500">Try searching with different keywords, or browse our featured programs below.</p>
-              <div className="mt-8">
+            <div className="text-center bg-blue p-10 rounded-2xl shadow-md">
+              <p className="text-gray-700 text-lg mb-4">😕 No results found for <strong>{query}</strong></p>
+              <p className="text-gray-500">Try different keywords, or explore featured programs below.</p>
+              <div className="mt-6 grid md:grid-cols-2 gap-4">
                 {allResults.slice(0, 4).map((item, idx) => (
-                  <div key={idx} className="bg-white rounded-lg shadow p-4 mb-4">
-                    <h3 className="font-semibold">{item.title}</h3>
-                    <p className="text-sm text-gray-500">{item.description}</p>
+                  <div key={idx} className="bg-gray-50 rounded-xl shadow p-4 hover:shadow-md transition">
+                    <h3 className="font-semibold text-gray-800">{item.title}</h3>
+                    <p className="text-sm text-gray-500 mt-1">{item.description}</p>
                   </div>
                 ))}
               </div>
             </div>
           )}
 
-          {/* ✅ Related Searches / FAQs */}
+          {/* ✅ Popular Searches */}
           <div className="mt-20">
-            <h2 className="text-2xl font-bold mb-4">Popular Searches</h2>
-            <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 text-blue-700">
-              <li><Link href="/courses/mba-online">MBA Online</Link></li>
-              <li><Link href="/courses/mca-online">MCA Online</Link></li>
-              <li><Link href="/courses/bca-online">BCA Online</Link></li>
-              <li><Link href="/universities/amity-university">Amity University</Link></li>
-              <li><Link href="/universities/manipal-university-online">Manipal University Online</Link></li>
-            </ul>
+            <h2 className="text-2xl font-bold mb-6 text-gray-900">Popular University</h2>
+            <h3 className='text-green-500 text-left mb-4'> Click it</h3>
+      <ul className="flex flex-wrap gap-6 justify-center">
+  {[
+    { name: 'Amity University', href: '/amity', img: '/images/amity.webp' },
+    { name: 'Manipal University Online', href: '/manipal', img: '/images/manipal.webp' },
+    { name: 'NMIMS University', href: '/nmims', img: '/images/nmims.webp' },
+    { name: 'Dr. D Y Patil University', href: '/dypatil', img: '/images/dypatil.webp' },
+    { name: 'Jain University', href: '/jain', img: '/images/jain.webp' },
+    { name: 'Lovely Professional University', href: '/lpu', img: '/images/lpu.webp' },
+    { name: 'Manipal Academy of Higher Education', href: '/mahe', img: '/images/mahe-uni.webp' },
+    { name: 'Sharda University', href: '/sharda', img: '/images/sharda.webp' },
+    { name: 'Shoolini University', href: '/shoolini', img: '/images/shoolini.webp' },
+    { name: 'Sikkim Manipal University', href: '/smu', img: '/images/smu-uni.webp' },
+    { name: 'UPES University', href: '/upes', img: '/images/upes.webp' },
+    { name: 'Uttaranchal University', href: '/uu', img: '/images/uu-uni.webp' },
+    { name: 'VGU University', href: '/vgu', img: '/images/vgu1.webp' },
+    { name: 'Kurukshetra University', href: '/ku', img: '/images/ku.webp' },
+    { name: 'OP Jindal University', href: '/opjindal', img: '/images/opjindal.webp' },
+    { name: 'Chandigarh University', href: '/chandigarh', img: '/images/chandigarh.webp' },
+  ].map((university, idx) => (
+    <li key={idx} className="w-70 h-60">
+      <Link 
+        href={university.href} 
+        className="relative w-full h-full block rounded-xl overflow-hidden shadow-lg group"
+      >
+        <Image 
+          src={university.img} 
+          alt={university.name} 
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+          <span className="text-white font-bold text-lg text-center px-2">
+            {university.name}
+          </span>
+        </div>
+      </Link>
+    </li>
+  ))}
+</ul>
+
+
           </div>
 
-          {/* ✅ SEO Descriptive Section */}
-          <div className="mt-20 max-w-3xl mx-auto text-gray-700 leading-relaxed">
-            <h2 className="text-2xl font-bold mb-4">About UniFost Search</h2>
+          {/* ✅ SEO Info */}
+          <div className="mt-20 max-w-3xl mx-auto text-gray-700 leading-relaxed bg-white p-8 rounded-2xl shadow-md">
+            <h2 className="text-2xl font-bold mb-4 text-gray-900">About UniFost Search</h2>
             <p>
-              The UniFost course and university search tool is designed to help students and
-              professionals quickly explore accredited online programs. Our database includes
-              popular degrees such as MBA, BBA, MCA, and BCA, along with details about
-              universities like Amity, Manipal, and Jain. Each program listing highlights
-              admission requirements, course fees, and career prospects, making it easier for
-              you to compare options side by side.
+              The UniFost course and university search tool helps students and professionals
+              quickly explore accredited online programs. Our database includes MBA, BBA, MCA,
+              and BCA, along with top universities like Amity, Manipal, and Jain.
             </p>
             <p className="mt-4">
-              Whether you are looking for a flexible MBA specialization in Finance, a career-
-              focused MCA in Data Science, or an affordable BBA program, UniFost provides
-              transparent information so you can make confident decisions. Our platform
-              emphasizes UGC-DEB approved universities to ensure that your chosen degree
-              carries both credibility and career value.
+              Whether you’re seeking a Finance MBA, Data Science MCA, or affordable BBA, UniFost
+              ensures transparency and credibility with UGC-DEB approved universities.
             </p>
             <p className="mt-4">
-              Use this page not only to search, but also to discover trending online degrees,
-              compare institutions, and explore the future of online education in India.
-              UniFost bridges the gap between students and top universities, guiding you
-              toward the right path for your professional growth.
+              Discover trending online degrees, compare institutions, and shape your career path
+              with confidence using UniFost’s trusted platform.
             </p>
           </div>
 

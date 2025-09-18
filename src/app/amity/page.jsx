@@ -17,7 +17,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import EnquiryForm from '@/components/EnquiryForm';
 import HeroSection from '@/components/HeroSection';
-import Accreditations from '@/components/AccreditationSection';
+import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcess from '@/components/AdmissionProcess';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 import EnquireCard from '@/components/EnquireCard';

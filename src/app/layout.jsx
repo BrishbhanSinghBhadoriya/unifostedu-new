@@ -133,7 +133,7 @@ export const metadata = {
     },
   },
   icons: {
-    icon: "/images/uni.webp",
+    icon: "/images/uni.png",
     type: "image/webp",
   },
 };
@@ -156,16 +156,16 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Favicon and app icons */}
-        <link rel="icon" type="image/webp" href="/images/uni.webp" sizes="any" />
-        <link rel="icon" type="image/webp" href="/images/uni.webp" />
-        <link rel="shortcut icon" type="image/webp" href="/images/uni.webp" />
-        <link rel="apple-touch-icon" type="image/webp" href="/images/uni.webp" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/uni.webp" />
-        <link rel="icon" type="image/webp" sizes="32x32" href="/images/uni.webp" />
-        <link rel="icon" type="image/webp" sizes="16x16" href="/images/uni.webp" />
-          
+        <link rel="icon" type="image/webp" href="/images/uni.png" sizes="any" />
+        <link rel="icon" type="image/webp" href="/images/uni.png" />
+        <link rel="shortcut icon" type="image/webp" href="/images/uni.png" />
+        <link rel="apple-touch-icon" type="image/webp" href="/images/uni.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/uni.png" />
+        <link rel="icon" type="image/webp" sizes="32x32" href="/images/uni.png" />
+        <link rel="icon" type="image/webp" sizes="16x16" href="/images/uni.png" />
+        
         {/* Bookmark logo for social sharing and bookmarks */}
-        <link rel="icon" type="image/webp" href="/images/uni.webp" />
+        <link rel="icon" type="image/webp" href="/images/uni.png" />
         
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-config" content="/browserconfig.xml" />

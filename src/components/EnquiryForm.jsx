@@ -7,13 +7,13 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { FaUser, FaPhone, FaEnvelope, FaGraduationCap, FaPaperPlane, FaUniversity, FaMapMarkerAlt, FaComments, FaWhatsapp } from 'react-icons/fa';
-import toast from 'react-hot-toast';
+import { toast } from 'sonner';
 import { enquiryAPI } from '@/lib/axios';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 
-export default function EnquiryForm({ universityName, defaultProgram = 'MBA', onSubmitted, formType = "general" }) {
+export default function EnquiryForm({ universityName, defaultProgram = 'MBA', onSubmitted, formType = "general", autoCloseOnSuccess = true }) {
   const [loading, setLoading] = useState(false);
   const [program, setProgram] = useState(defaultProgram);
   const [selectedUniversity, setSelectedUniversity] = useState(universityName || '');
@@ -186,7 +186,11 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
         await enquiryAPI.general(requestBody);
         toast.success('Enquiry submitted successfully!');
       }
-      onSubmitted && onSubmitted();
+      if (autoCloseOnSuccess && onSubmitted) {
+        setTimeout(() => {
+          onSubmitted();
+        }, 800);
+      }
     } catch (err) {
       const data = err?.response?.data;
       const parsedMessage =
