@@ -11,10 +11,13 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   metadataBase: new URL('https://unifostedu.com'),
-  title: "UNIFOST - Online University Degrees & Career Counseling",
-  description: "UniFost is a premier EdTech platform helping students choose the right path through online education, expert counseling, and demo sessions.",
-  applicationName: "UNIFOST",
-  appleMobileWebAppTitle: "UNIFOST",
+  title: {
+    default: "Unifost - Online University Degrees & Career Counseling",
+    template: "%s | Unifost"
+  },
+  description: "Unifost is India's leading EdTech platform providing UGC-approved online university degrees and expert career counseling services.",
+  applicationName: "Unifost",
+  appleMobileWebAppTitle: "Unifost",
   keywords: [
     "Online University Degree",
     "Career Counseling Online",
@@ -133,8 +136,35 @@ export const metadata = {
     },
   },
   icons: {
-    icon: "/images/uni.png",
-    type: "image/webp",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" }
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+  openGraph: {
+    title: "Unifost - Online University Degrees & Career Counseling",
+    description: "Unifost is India's leading EdTech platform providing UGC-approved online university degrees and expert career counseling services.",
+    url: "https://unifostedu.com",
+    siteName: "Unifost",
+    images: [
+      {
+        url: "/favicon.ico",
+        width: 1200,
+        height: 630,
+        alt: "Unifost - Online University Degrees",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Unifost - Online University Degrees & Career Counseling",
+    description: "Unifost is India's leading EdTech platform providing UGC-approved online university degrees and expert career counseling services.",
+    images: ["/favicon.ico"],
   },
 };
 
@@ -147,8 +177,33 @@ export default function RootLayout({ children }) {
         <meta name="msapplication-TileColor" content="#001e3c" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="UNIFOST" />
-        <meta name="application-name" content="UNIFOST" />
+        <meta name="apple-mobile-web-app-title" content="Unifost" />
+        <meta name="application-name" content="Unifost" />
+        
+        {/* Additional meta tags for better search results */}
+        <meta name="author" content="Unifost" />
+        <meta name="publisher" content="Unifost" />
+        <meta name="copyright" content="Unifost" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        
+        {/* Open Graph meta tags */}
+        <meta property="og:title" content="Unifost - Online University Degrees & Career Counseling" />
+        <meta property="og:description" content="Unifost is India's leading EdTech platform providing UGC-approved online university degrees and expert career counseling services." />
+        <meta property="og:url" content="https://unifostedu.com" />
+        <meta property="og:site_name" content="Unifost" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_IN" />
+        <meta property="og:image" content="https://unifostedu.com/favicon.ico" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Unifost - Online University Degrees" />
+        
+        {/* Twitter Card meta tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Unifost - Online University Degrees & Career Counseling" />
+        <meta name="twitter:description" content="Unifost is India's leading EdTech platform providing UGC-approved online university degrees and expert career counseling services." />
+        <meta name="twitter:image" content="https://unifostedu.com/favicon.ico" />
+        <meta name="twitter:image:alt" content="Unifost - Online University Degrees" />
 
         
         {/* Preconnect to external domains for performance */}
@@ -156,16 +211,14 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Favicon and app icons */}
-        <link rel="icon" type="image/webp" href="/images/uni.png" sizes="any" />
-        <link rel="icon" type="image/webp" href="/images/uni.png" />
-        <link rel="shortcut icon" type="image/webp" href="/images/uni.png" />
-        <link rel="apple-touch-icon" type="image/webp" href="/images/uni.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/uni.png" />
-        <link rel="icon" type="image/webp" sizes="32x32" href="/images/uni.png" />
-        <link rel="icon" type="image/webp" sizes="16x16" href="/images/uni.png" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico" />
         
         {/* Bookmark logo for social sharing and bookmarks */}
-        <link rel="icon" type="image/webp" href="/images/uni.png" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
@@ -182,7 +235,7 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'EducationalOrganization',
-              'name': 'UNIFOST',
+              'name': 'Unifost',
               'url': 'https://unifostedu.com',
               'description': 'Online university degrees and career counseling platform in India',
               'address': {
@@ -213,7 +266,9 @@ export default function RootLayout({ children }) {
               '@context': 'https://schema.org',
               '@type': 'WebSite',
               name: 'Unifost',
+              alternateName: 'Unifost Education',
               url: 'https://unifostedu.com',
+              description: 'India\'s leading EdTech platform providing UGC-approved online university degrees and expert career counseling services.',
               potentialAction: {
                 '@type': 'SearchAction',
                 target: (process.env.NEXT_PUBLIC_SITE_URL || 'https://unifostedu.com') + '/search?q={search_term_string}',

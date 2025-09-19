@@ -170,7 +170,7 @@ const EnquireCard = ({
           <div className="mt-auto pt-2">
             <motion.button
               onClick={handleEnquireClick}
-              className="w-full bg-gradient-to-r from-gray-800 to-purple-800 text-white px-4 py-2.5 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 group/btn"
+              className="w-full bg-gradient-to-r from-gray-800 to-purple-800 text-white px-4 py-2.5 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 group/btn cursor-pointer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >

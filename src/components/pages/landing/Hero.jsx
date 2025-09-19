@@ -124,15 +124,15 @@ const Hero = ({ onOpenModal }) => {
                 >
                   <button 
                     onClick={() => onOpenModal("getStarted")} 
-                    className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
+                    className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <span>Start Your Journey</span>
-                    <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                    <FaArrowRight className="group-hover:translate-x-1 transition-transform " />
                   </button>
                   
                   <button 
                     onClick={() => onOpenModal("videoCall")} 
-                    className="group px-8 py-4 bg-white text-gray-700 font-semibold rounded-xl border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
+                    className="group px-8 py-4 bg-white text-gray-700 font-semibold rounded-xl border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <FaPlay className="text-blue-600" />
                     <span>Watch Demo</span>
@@ -246,10 +246,10 @@ const Hero = ({ onOpenModal }) => {
           initial={{ opacity: 0, y: 50 }} 
           animate={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.8 }}
-          className="bg-white/60 backdrop-blur-sm border-t border-white/20 py-8"
+          className="bg-white/60 backdrop-blur-sm border-t border-white/20 py-8 "
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  ">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6  ">
               {[
                 { 
                   icon: FaMapMarkerAlt, 
@@ -276,9 +276,9 @@ const Hero = ({ onOpenModal }) => {
                   aria-label={item.title}
                   className={`${
                     item.title === "Get Counseling"
-                      ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-transparent"
-                      : "bg-white text-gray-800 border-gray-300"
-                  } w-full inline-flex items-center justify-between gap-3 sm:gap-4 px-4 sm:px-5 py-3 rounded-full border shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400`}
+                      ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-transparent cursor-pointer"
+                      : "bg-white text-gray-800 border-gray-300 cursor-pointer"
+                  } w-full inline-flex items-center justify-between gap-3 sm:gap-4 px-4 sm:px-5 py-3 rounded-full border shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 cursor-pointer`}
                 >
                   <span className="inline-flex items-center gap-3">
                     <span className={`${

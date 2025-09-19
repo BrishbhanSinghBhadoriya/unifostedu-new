@@ -5,6 +5,7 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 import Hero from "@/components/pages/landing/Hero";
 import Landing from "@/components/pages/Landing";
+import { useState } from "react";
 
 const courses = [
   { title: "MBA Online", desc: "Gain strategic skills from top universities", tag: "Popular" },
@@ -19,10 +20,18 @@ const courses = [
   { title: "BAJMC Online", desc: "Journalism and mass communication basics", tag: "Media" },
 ];
 
+
 export default function CourseSearch() {
+  const [showEnquiryModal, setShowEnquiryModal] = useState(false);
+  const [modalType, setModalType] = useState("getStarted");
+const openModal = (type) => {
+  setModalType(type);
+  setShowEnquiryModal(true);
+};
+
   return (
     <>
-     <Hero/> 
+      <Hero onOpenModal={openModal} />
       <Head>
         <title>Search Online Courses | UniFost</title>
         <meta
@@ -40,7 +49,6 @@ export default function CourseSearch() {
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-blue-100 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* ✅ Title with animation */}
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: -40 }}

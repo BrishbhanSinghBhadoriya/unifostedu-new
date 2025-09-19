@@ -122,7 +122,7 @@ const Landing = () => {
 
   const getUniversityHref = (name) => {
     const n = name.toLowerCase();
-    if (n.includes("amity")) return "/Amity-university-Online";
+    if (n.includes("amity")) return "/Amity-University-Online";
     if (n.includes("manipal")) return "/manipal";
     if (n.includes("lovely professional") || n.includes("lpu")) return "/lpu";
     if (n.includes("petroleum") || n.includes("upes")) return "/upes";
@@ -141,6 +141,7 @@ const Landing = () => {
 
   // Function to open modal with specific type
   const openModal = (type) => {
+    
     setModalType(type);
     setShowEnquiryModal(true);
   };
@@ -647,7 +648,7 @@ const Landing = () => {
 
                     {/* Button sticks to bottom */}
                     <div className="mt-auto pt-4">
-                      <a
+                      <Link
                         href={getUniversityHref(college.name)}
                         className="block w-full"
                       >
@@ -658,7 +659,7 @@ const Landing = () => {
                           <div className="absolute inset-0 bg-white/10" />
                           <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-120%] group-hover:translate-x-[120%] transition-transform duration-700" />
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   </div>
@@ -890,7 +891,7 @@ const Landing = () => {
               </p>
               <button
                 onClick={() => openModal("getStarted")}
-                className="w-full bg-slate-900 text-white py-2.5 rounded-xl font-semibold hover:bg-black transition-colors"
+                className="w-full bg-slate-900 text-white py-2.5 rounded-xl font-semibold hover:bg-black transition-colors cursor-pointer "
               >
                 Start Your Journey Today
               </button>

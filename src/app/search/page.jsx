@@ -184,7 +184,7 @@ function SearchContent() {
           </div>
 
           {/* ✅ SEO Info */}
-          <div className="mt-20 max-w-3xl mx-auto text-gray-700 leading-relaxed bg-white p-8 rounded-2xl shadow-md">
+          <div className="mt-20 md:max-w-7xl max-w-3xl mx-auto text-gray-700 leading-relaxed bg-white p-8 rounded-2xl shadow-md ">
             <h2 className="text-2xl font-bold mb-4 text-gray-900">About UniFost Search</h2>
             <p>
               The UniFost course and university search tool helps students and professionals
