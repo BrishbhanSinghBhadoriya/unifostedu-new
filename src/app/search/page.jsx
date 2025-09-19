@@ -7,16 +7,21 @@ import Head from 'next/head';
 import Image from 'next/image';
 import EnquiryForm from '@/components/EnquiryForm';
 import Hero from '@/components/pages/landing/Hero';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
-function SearchContent() {
+/* ------------------ CHILD ------------------ */
+function SearchContent({ onOpenModal }) {
   const searchParams = useSearchParams();
   const query = searchParams.get('query') || '';
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  
   const allResults = [
- 
     { type: 'course', title: 'MBA Online', description: 'Master of Business Administration program with specializations in Finance, HR, Marketing, and IT.', tag: "Popular" },
     { type: 'course', title: 'MCA Online', description: 'Master of Computer Applications with AI, Cloud, and Data Science electives.', tag: "Top Rated" },
     { type: 'course', title: 'M.Com Online', description: 'Deepen commerce expertise with advanced finance and accounting modules.', tag: "Best Value" },
@@ -27,7 +32,6 @@ function SearchContent() {
     { type: 'course', title: 'B.Com Online', description: 'Commerce foundation covering business, accounting, and finance basics.', tag: "Business" },
     { type: 'course', title: 'BA Online', description: 'Liberal arts education offering a foundation for multiple career paths.', tag: "Arts" },
     { type: 'course', title: 'BAJMC Online', description: 'Learn journalism and mass communication essentials for modern media.', tag: "Media" },
-  
   ];
 
   useEffect(() => {
@@ -49,13 +53,11 @@ function SearchContent() {
   };
 
   return (
-
-    
-    <Suspense fallback={<div>Loading...</div>}>
+    <>
       <Head>
         <title>
-          {query 
-            ? `Search results for "${query}" | UniFost` 
+          {query
+            ? `Search results for "${query}" | UniFost`
             : 'Search Online Courses & Universities | UniFost'}
         </title>
         <meta
@@ -67,9 +69,9 @@ function SearchContent() {
           }
         />
       </Head>
- 
-      <Hero />
-       <div className="bg-gray rounded-2xl shadow-md hover:shadow-xl transition-all p-6 
+
+      <Hero onOpenModal={onOpenModal} />
+      <div className="bg-gray rounded-2xl shadow-md hover:shadow-xl transition-all p-6 
              border-2 border-transparent hover:border-blue-500 
              hover:shadow-blue-200  duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -77,7 +79,7 @@ function SearchContent() {
           {/* ✅ Title */}
           <div className="text-center mb-14">
             <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
-              {query 
+              {query
                 ? <>Search Results for <span className="text-blue-600">"{query}"</span></>
                 : <>Find <span className="text-blue-600">Courses & Universities</span></>
               }
@@ -96,8 +98,8 @@ function SearchContent() {
           ) : searchResults.length > 0 ? (
             <div className="grid md:grid-cols-2 gap-8">
               {searchResults.map((result, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="bg-teal-100 rounded-2xl shadow-md  hover:shadow-xl transition-all p-6 border border-gray-100"
                 >
                   <div className="flex flex-col justify-between h-full">
@@ -108,14 +110,20 @@ function SearchContent() {
                         {result.type}
                       </span>
                     </div>
-                    <div className="mt-6">
-                      <Link 
+                    <div className="mt-6 flex gap-3">
+                      <Link
                         href={`/${result.type === 'course' ? 'courses' : 'universities'}/${result.title.toLowerCase().replace(/\s+/g, '-')}`}
-                       className="inline-block text-center bg-blue-600 text-white px-6 py-2 rounded-full font-[Inter] shadow-md hover:bg-blue-700 hover:scale-105 transition-transform duration-300"
-
+                        className="inline-block text-center bg-blue-600 text-white px-6 py-2 rounded-full font-[Inter] shadow-md hover:bg-blue-700 hover:scale-105 transition-transform duration-300"
                       >
                         View Details
                       </Link>
+                      {/* 👇 Modal Trigger */}
+                      <button
+                        onClick={() => onOpenModal("getStarted")}
+                        className="inline-block bg-green-600 text-white px-6 py-2 rounded-full shadow-md hover:bg-green-700 hover:scale-105 transition-transform duration-300"
+                      >
+                        Enquiry
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -125,92 +133,45 @@ function SearchContent() {
             <div className="text-center bg-blue p-10 rounded-2xl shadow-md">
               <p className="text-gray-700 text-lg mb-4">😕 No results found for <strong>{query}</strong></p>
               <p className="text-gray-500">Try different keywords, or explore featured programs below.</p>
-              <div className="mt-6 grid md:grid-cols-2 gap-4">
-                {allResults.slice(0, 4).map((item, idx) => (
-                  <div key={idx} className="bg-gray-50 rounded-xl shadow p-4 hover:shadow-md transition">
-                    <h3 className="font-semibold text-gray-800">{item.title}</h3>
-                    <p className="text-sm text-gray-500 mt-1">{item.description}</p>
-                  </div>
-                ))}
-              </div>
             </div>
           )}
 
-          {/* ✅ Popular Searches */}
-          <div className="mt-20">
-            <h2 className="text-2xl font-bold mb-6 text-gray-900">Popular University</h2>
-            <h3 className='text-green-500 text-left mb-4'> Click it</h3>
-      <ul className="flex flex-wrap gap-6 justify-center">
-  {[
-    { name: 'Amity University', href: '/Amity-University-Online', img: '/images/amity.webp' },
-    { name: 'Manipal University Online', href: '/manipal', img: '/images/manipal.webp' },
-    { name: 'NMIMS University', href: '/nmims', img: '/images/nmims.webp' },
-    { name: 'Dr. D Y Patil University', href: '/dypatil', img: '/images/dypatil.webp' },
-    { name: 'Jain University', href: '/jain', img: '/images/jain.webp' },
-    { name: 'Lovely Professional University', href: '/lpu', img: '/images/lpu.webp' },
-    { name: 'Manipal Academy of Higher Education', href: '/mahe', img: '/images/mahe-uni.webp' },
-    { name: 'Sharda University', href: '/sharda', img: '/images/sharda.webp' },
-    { name: 'Shoolini University', href: '/shoolini', img: '/images/shoolini.webp' },
-    { name: 'Sikkim Manipal University', href: '/smu', img: '/images/smu-uni.webp' },
-    { name: 'UPES University', href: '/upes', img: '/images/upes.webp' },
-    { name: 'Uttaranchal University', href: '/uu', img: '/images/uu-uni.webp' },
-    { name: 'VGU University', href: '/vgu', img: '/images/vgu1.webp' },
-    { name: 'Kurukshetra University', href: '/ku', img: '/images/ku.webp' },
-    { name: 'OP Jindal University', href: '/opjindal', img: '/images/opjindal.webp' },
-    { name: 'Chandigarh University', href: '/chandigarh', img: '/images/chandigarh.webp' },
-  ].map((university, idx) => (
-    <li key={idx} className="w-70 h-60">
-      <Link 
-        href={university.href} 
-        className="relative w-full h-full block rounded-xl overflow-hidden shadow-lg group"
-      >
-        <Image 
-          src={university.img} 
-          alt={university.name} 
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-          <span className="text-white font-bold text-lg text-center px-2">
-            {university.name}
-          </span>
-        </div>
-      </Link>
-    </li>
-  ))}
-</ul>
-
-
-          </div>
-
-          {/* ✅ SEO Info */}
-          <div className="mt-20 max-w-3xl mx-auto text-gray-700 leading-relaxed bg-white p-8 rounded-2xl shadow-md">
-            <h2 className="text-2xl font-bold mb-4 text-gray-900">About UniFost Search</h2>
-            <p>
-              The UniFost course and university search tool helps students and professionals
-              quickly explore accredited online programs. Our database includes MBA, BBA, MCA,
-              and BCA, along with top universities like Amity, Manipal, and Jain.
-            </p>
-            <p className="mt-4">
-              Whether you’re seeking a Finance MBA, Data Science MCA, or affordable BBA, UniFost
-              ensures transparency and credibility with UGC-DEB approved universities.
-            </p>
-            <p className="mt-4">
-              Discover trending online degrees, compare institutions, and shape your career path
-              with confidence using UniFost’s trusted platform.
-            </p>
-          </div>
-
         </div>
       </div>
-    </Suspense>
+    </>
   );
 }
 
+/* ------------------ PARENT ------------------ */
 export default function Search() {
+  const [showEnquiryModal, setShowEnquiryModal] = useState(false);
+  const [modalType, setModalType] = useState(null);
+
+  const handleOpenModal = (type) => {
+    setModalType(type);
+    setShowEnquiryModal(true);
+  };
+
   return (
     <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
-      <SearchContent />
+      <SearchContent onOpenModal={handleOpenModal} />
+
+      {/* ✅ Enquiry Modal */}
+      <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
+        <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 p-4 sm:p-6 z-[30001]">
+          <DialogHeader>
+            <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
+              {modalType === "getStarted" && "Get Started with Unifost"}
+              {modalType === "videoCall" && "Book a Video Call"}
+              {modalType === "homeDemo" && "Book a Home Demo"}
+            </DialogTitle>
+          </DialogHeader>
+          <EnquiryForm
+            onSubmitted={() => setShowEnquiryModal(false)}
+            formType={modalType}
+          />
+        </DialogContent>
+      </Dialog>
     </Suspense>
   );
 }

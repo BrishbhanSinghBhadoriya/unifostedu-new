@@ -1,10 +1,20 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import Hero from "@/components/pages/landing/Hero";
-import Landing from "@/components/pages/Landing";
+import EnquiryForm from "@/components/EnquiryForm";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
+
 
 const courses = [
   { title: "MBA Online", desc: "Gain strategic skills from top universities", tag: "Popular" },
@@ -20,9 +30,19 @@ const courses = [
 ];
 
 export default function CourseSearch() {
+  const router = useRouter();
+  const [showEnquiryModal, setShowEnquiryModal] = useState(false);
+  const [modalType, setModalType] = useState("getStarted");
+
+  const openModal = (type) => {
+    setModalType(type);
+    setShowEnquiryModal(true);
+  };
+
   return (
     <>
-     <Hero/> 
+      <Hero onOpenModal={openModal} />
+
       <Head>
         <title>Search Online Courses | UniFost</title>
         <meta
@@ -39,8 +59,7 @@ export default function CourseSearch() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-blue-100 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* ✅ Title with animation */}
+          {/* Title */}
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: -40 }}
@@ -55,14 +74,12 @@ export default function CourseSearch() {
             </p>
           </motion.div>
 
-          {/* ✅ Animated Course Cards */}
+          {/* Course Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {courses.map((course, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 
-                           hover:shadow-2xl hover:border-blue-300 hover:scale-[1.03] 
-                           transition-all duration-300 flex flex-col justify-between"
+                className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-2xl hover:border-blue-300 hover:scale-[1.03] transition-all duration-300 flex flex-col justify-between"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -77,12 +94,9 @@ export default function CourseSearch() {
                   </div>
                   <p className="text-gray-600 mb-6">{course.desc}</p>
                 </div>
-
                 <Link
                   href={`/courses/${course.title.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="w-full text-center bg-blue-600 text-white py-2 rounded-full 
-                             font-semibold shadow-md hover:bg-blue-700 hover:scale-105 
-                             transition-transform duration-300"
+                  className="w-full text-center bg-blue-600 text-white py-2 rounded-full font-semibold shadow-md hover:bg-blue-700 hover:scale-105 transition-transform duration-300"
                 >
                   Learn More →
                 </Link>
@@ -90,7 +104,7 @@ export default function CourseSearch() {
             ))}
           </div>
 
-          {/* ✅ Back Button */}
+          {/* Back Button */}
           <motion.div
             className="text-center mt-20"
             initial={{ opacity: 0, y: 40 }}
@@ -99,13 +113,28 @@ export default function CourseSearch() {
           >
             <Link
               href="/"
-              className="bg-[#001e3c] text-white px-10 py-3 rounded-full font-bold 
-                         shadow-lg hover:bg-[#003b6c] hover:scale-105 
-                         transition-transform duration-300"
+              className="bg-[#001e3c] text-white px-10 py-3 rounded-full font-bold shadow-lg hover:bg-[#003b6c] hover:scale-105 transition-transform duration-300"
             >
               ← Back to Home
             </Link>
           </motion.div>
+
+          
+          <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
+            <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-2 lg:my-1 p-4 sm:p-6 z-[30001]">
+              <DialogHeader>
+                <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
+                  {modalType === "getStarted" && "Get Started with Unifost"}
+                  {modalType === "videoCall" && "Book a Video Call"}
+                  {modalType === "homeDemo" && "Book a Home Demo"}
+                </DialogTitle>
+              </DialogHeader>
+              <EnquiryForm
+                onSubmitted={() => setShowEnquiryModal(false)}
+                formType={modalType}
+              />
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </>

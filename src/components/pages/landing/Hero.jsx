@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { FaRocket, FaVideo, FaMapMarkerAlt, FaGraduationCap, FaUsers, FaAward, FaCheckCircle, FaPlay, FaArrowRight } from "react-icons/fa";
 import { heroSlides } from "./data";
 
@@ -170,28 +170,27 @@ const Hero = ({ onOpenModal }) => {
                 <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-4 shadow-2xl border border-white/20">
                   {/* Slider Container */}
                   <div className="relative h-56 sm:h-64 md:h-72 lg:h-80 rounded-2xl overflow-hidden mb-6 bg-gray-100">
-                    {heroSlides.map((s, idx) => (
-                      <div
-                        key={idx}
-                        className={`absolute inset-0 transition-all duration-1000 ${idx === slide ? "opacity-100 scale-100" : "opacity-0 scale-105"}`}
-                        initial={{ opacity: 0, scale: 1.1 }}
-                        animate={{ opacity: idx === slide ? 1 : 0, scale: idx === slide ? 1 : 1.06 }}
-                        transition={{ duration: 0.8 }}
+                    <AnimatePresence initial={false}>
+                      <motion.div
+                        key={slide}
+                        className="absolute inset-0"
+                        initial={{ opacity: 0, scale: 1.05 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 1.05 }}
+                        transition={{ duration: 0.8, ease: "easeInOut" }}
                       >
                         <Image
-                          src={s.src}
-                          alt={`${s.title} – ${s.subtitle} | Online University Degree guidance`}
-                          width={s.width}
-                          height={s.height}
-                          loading={idx === 0 ? "eager" : "lazy"}
-                          priority={idx === 0}
+                          fill
+                          src={heroSlides[slide].src}
+                          alt={`${heroSlides[slide].title} – ${heroSlides[slide].subtitle} | Online University Degree guidance`}
+                          loading={slide === 0 ? "eager" : "lazy"}
+                          priority={slide === 0}
                           sizes="(max-width: 768px) 100vw, 50vw"
-                          className="object-contain rounded-2xl"
-                          style={{ objectPosition: "center" }}
+                          className="object-contain rounded-2xl object-center"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
-                      </div>
-                    ))}
+                      </motion.div>
+                    </AnimatePresence>
                     
                     {/* Slide Indicators */}
                     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
@@ -305,5 +304,3 @@ const Hero = ({ onOpenModal }) => {
 };
 
 export default Hero;
-
-
