@@ -1,22 +1,7 @@
 'use client';
 import React from 'react';
-// import { useNavigate } from 'react-router-dom';
-//import { Helmet } from 'react-helmet';
-import {
-  FaCheckCircle,
-  FaFileAlt,
-  FaGraduationCap,
-  FaUniversity,
-  FaCertificate,
-  FaBuilding,
-} from 'react-icons/fa';
-import { 
-  FaBookOpen, 
-  FaUserTie, 
-  FaBriefcase, 
-  FaClipboardCheck 
-} from "react-icons/fa";
-
+import {FaCheckCircle, FaFileAlt, FaGraduationCap, FaUniversity, FaCertificate, FaBuilding,} from 'react-icons/fa';
+import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck } from "react-icons/fa";
 import { useRouter } from 'next/navigation';
 import EnquireCard from '@/components/EnquireCard';
 import Head from 'next/head';
@@ -38,6 +23,7 @@ const Manipal = () => {
       fees: "1,35,000",
       specialization: "Finance & Accounting, Digital Marketing, Enterepreneurship Management & Family Business, Human Resource Management,  Data Analytics, Retail & E-commerce Management",
       image: "/images/bba.webp",
+      alt: "Bachelor of Business Administration (BBA) in Manipal Online",
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
@@ -46,6 +32,7 @@ const Manipal = () => {
       fees: "1,35,000",
       specialization: "Data Science and Analytics, Cyber Security, Cloud Computing",
       image: "/images/bca.webp",
+      alt: "Bachelor of Computer Applications (BCA) in Manipal Online",
     },
     {
       course: "Bachelor of Commerce (B.Com)",
@@ -54,6 +41,7 @@ const Manipal = () => {
       fees: "99,000",
       specialization: "General",
       image: "/images/bcom.webp",
+      alt: "Bachelor of Commerce (B.Com) in Manipal Online",
     },
   ];
 
@@ -65,6 +53,7 @@ const Manipal = () => {
       fees: "1,75,000",
       specialization: "Super/Dual(Human Resource Management and Finance, Finance and Marketing, Marketing and Human Resource Management, Marketing and Business Analytics, Finance and Business Analytics, Human Resource and Business Analytics, Project Management, Retail Management and Quick Commerce, Artificial Intelligence Banking and Finance, 15 other fields)",
       image: "/images/mba.webp",
+      alt: "Master of Business Administration (MBA) in Manipal Online",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -73,6 +62,7 @@ const Manipal = () => {
       fees: "1,58,000",
       specialization: "AI & Data Science, Cyber Security, Cloud Computing, Comprehensive Emerging Technologies,AI & ML", 
       image: "/images/mca1.webp",
+      alt: "Master of Computer Applications (MCA) in Manipal Online",
     },
     {
       course: "Master of Commerce (M.Com)",
@@ -81,6 +71,7 @@ const Manipal = () => {
       fees: "1,08,000",
       specialization: "General", 
       image: "/images/m.com.webp",
+      alt: "Master of Commerce (M.Com) in Manipal Online",
     },
   
     {
@@ -90,6 +81,7 @@ const Manipal = () => {
       fees: "80,000 - 1,40,000",
       specialization: " Economics,MA (Journalism and Mass Communication)",
       image: "/images/ma1.webp",
+      alt: "Master of Arts (MA) in Manipal Online",
     },
   ];
 
@@ -110,7 +102,7 @@ const Manipal = () => {
        <Head>
         <title>Manipal University Online Jaipur, Rajasthan | Accredited Online Degrees</title>
         <meta name="description" content="Explore globally recognized online programs from Manipal University Online. Flexible learning, expert mentorship, and career-focused degrees with UGC & AICTE approvals." />
-        <meta name="keywords" content="Manipal Online, Manipal University Jaipur, MUJ Online, BBA Online, BCA Online, B.Com Online, MBA Online, MCA Online, M.Com Online, MA Online, Online Degrees India, Distance Learning, UGC Approved, AICTE Approved" />
+        <meta name="keywords" content="Manipal Online, Manipal University Jaipur, MUJ Online, BBA in muj Online, BCA in muj Online, B.Com in muj Online, MBA in muj Online, MCA in muj Online, M.Com in muj Online, MA in muj Online, Manipal Online, Online Degrees India, Distance Learning, UGC Approved, AICTE Approved" />
         <meta name="author" content="Manipal University Online" />
         <meta name="robots" content="index, follow" />
          <link rel="canonical" href="https://unifostedu.com/manipal" />

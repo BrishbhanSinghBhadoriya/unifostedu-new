@@ -1,4 +1,4 @@
-// src/app/uu/layout.jsx
+
 
 export const metadata = {
   title: "Uttaranchal University Online | UG & PG Courses, Fees & Admission - UNIFOST",

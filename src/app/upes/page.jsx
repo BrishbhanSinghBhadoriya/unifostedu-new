@@ -1,7 +1,5 @@
 'use client';
 import React from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import { Helmet } from 'react-helmet';
 import {
   FaBookOpen,
   FaUserTie,
@@ -33,6 +31,7 @@ const Upes = () => {
       fees: "₹1,50,000",
       specialization: "Operations Management, Financial Management, Human Resource Management, Marketing Management, BBA in Digital Business, BBA in Logistics and Supply Chain, BBA in International Business",
       image: "/images/bba.webp",
+      alt: "BBA from UPES University Online",
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
@@ -41,6 +40,7 @@ const Upes = () => {
       fees: "₹1,50,000",
       specialization: "Cloud Computing, Cyber Security, Data Analytics, New age Technology",
       image: "/images/bca.webp",
+      alt: "BCA from UPES University Online",
     },
     
   ];
@@ -54,6 +54,7 @@ const Upes = () => {
       specialization: "Oil & Gas Management, Power Management, Logistics & Supply Chain Management, Business Analytics, Finance, Marketing, Human Resource Management, Infrastructure Management, International Business, Marketing Management, Human Resource Management, Operations Management, Operations Management, Financial Management, Digital Business",
 
       image: "/images/mba.webp",
+      alt: "MBA from UPES University Online",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -62,6 +63,7 @@ const Upes = () => {
       fees: "₹1,70,000",
       specialization: "Artificial Intelligence and Machine Learning, Cyber Security and Forensics, Data Science ", 
       image: "/images/mca1.webp",
+      alt: "MCA from UPES University Online",
     },
     
   ];
@@ -98,8 +100,8 @@ const Upes = () => {
   universityName="UPES University Online"
   location="Dehradun, Uttarakhand, India"
   type="Private University"
-  nirfRank="41" // Agar rank available ho to replace karein
-  rating="4.4"  // Agar rating available ho to replace karein
+  nirfRank="41" 
+  rating="4.4"  
   description="UPES (University of Petroleum and Energy Studies) is a leading institution in India offering UGC-entitled online degree programs with a focus on energy, technology, and business domains."
   description2={`
     Recognized for its industry-aligned curriculum, UPES provides students with 
@@ -110,8 +112,8 @@ const Upes = () => {
   badgeText="UGC Entitled | Industry-Aligned Curriculum | Innovation Focus"
   imgSrc="/images/upes.webp"
   imgAlt="UPES University"
-  students="25K+" // Replace if actual data available
-  partners="100+" // Replace if actual data available
+  students="25K+" 
+  partners="100+" 
   campus="Dehradun Campus"
   highlights={[
     { icon: <FaBookOpen className="text-blue-600" />, text: "Specialized Programs" },
@@ -174,7 +176,7 @@ const Upes = () => {
             UPES University Online Courses
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Explore undergraduate and postgraduate online degree programs from UPES University. Experience quality, flexibility, and career-focused education from one of India's top universities in energy and technology domains.
+            UPES University Explore undergraduate and postgraduate online degree programs . Experience quality, flexibility, and career-focused education from one of India's top universities in energy and technology domains.
           </p>
         </div>
       </section>
@@ -220,7 +222,7 @@ const Upes = () => {
               Online Degree from UPES University
             </h2>
             <p className="mb-6 text-lg leading-relaxed">
-              UPES Online provides comprehensive services including e-lectures, counseling from academic advisors, career assistance, and more to help students succeed in their professional journeys.
+              UPES University Online provides comprehensive services including e-lectures, counseling from academic advisors, career assistance, and more to help students succeed in their professional journeys.
             </p>
 
             <h3 className="text-xl font-semibold mb-2">Benefits of UPES Online</h3>

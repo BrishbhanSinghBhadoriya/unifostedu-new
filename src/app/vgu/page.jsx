@@ -136,8 +136,8 @@ const Vgu = () => {
   badgeText="UGC & AICTE Recognized | Innovation Driven | Global Learning"
   imgSrc="/images/vgu-uni.webp"
   imgAlt="VGU University Campus"
-  students="25K+" // Actual number agar ho to update karein
-  partners="25+" // Update if real data available
+  students="25K+" 
+  partners="25+" 
   campus="VGU Jaipur Campus"
   highlights={[
     { icon: <FaBookOpen className="text-blue-600" />, text: "Diverse Programs" },
@@ -146,21 +146,9 @@ const Vgu = () => {
     { icon: <FaLightbulb className="text-blue-600" />, text: "Innovation & Research Focus" },
   ]}
 />
+     
 
-
-      {/* UG & PG Course Cards */}
-      {[{ title: "Undergraduate Courses", list: ugCourses }, { title: "Postgraduate Courses", list: pgCourses }].map((section, idx) => (
-        <section key={idx} className="py-12 bg-white px-6 font-[Inter]">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">{section.title}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start content-start">
-              {section.list.map((item, index) => <EnquireCard key={index} {...item} />)}
-            </div>
-          </div>
-        </section>
-      ))}
-
-   <div>
+        <div>
   <AccreditationSection
     title="Why Choose VGU University?"
     description="Vivekananda Global University (VGU), Jaipur, is a top-ranked UGC & AICTE recognized private university offering modern learning, expert faculty, global exposure, strong placements, and vibrant campus life."
@@ -169,7 +157,12 @@ const Vgu = () => {
       {
         title: "Modern Learning",
         description: "Smart classrooms, labs, and interactive sessions for enhanced education.",
-        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>`,
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" 
+  class="w-6 h-6" fill="none" viewBox="0 0 24 24" 
+  stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+</svg>`
+
       },
       {
         title: "Expert Faculty",
@@ -184,7 +177,12 @@ const Vgu = () => {
       {
         title: "Strong Placements",
         description: "Top companies recruit VGU graduates with competitive packages.",
-        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg>`,
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" 
+  class="w-6 h-6" fill="none" viewBox="0 0 24 24" 
+  stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5v14"/>
+</svg>`
+
       },
       {
         title: "Global Exposure",
@@ -218,6 +216,20 @@ const Vgu = () => {
     successStories={[]}
   />
 </div>
+
+      {/* UG & PG Course Cards */}
+      {[{ title: "Undergraduate Courses", list: ugCourses }, { title: "Postgraduate Courses", list: pgCourses }].map((section, idx) => (
+        <section key={idx} className="py-12 bg-white px-6 font-[Inter]">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">{section.title}</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start content-start">
+              {section.list.map((item, index) => <EnquireCard key={index} {...item} />)}
+            </div>
+          </div>
+        </section>
+      ))}
+
+
 
       {/* Admission Process */}
       <AdmissionProcedure />

@@ -18,40 +18,7 @@ import HeroSection from '@/components/HeroSection';
 import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 
-//import { s } from 'framer-motion/dist/types.d-Cjd591yU';
 
-// Reusable Enquire Button Component
-// const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
-//   const router = useRouter();  
-//   const university = "Sikkim Manipal University";
-
-//   const handleClick = () => {
-//      router.push(`/enquiry?university=${encodeURIComponent(university)}&course=${encodeURIComponent(course)}`);
-//   };
-
-//   return (
-//     <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition duration-300">
-//       <img src={image} alt={course} className="h-40 w-full object-cover sm:h-48" />
-//       <div className="p-4 flex-1 flex flex-col justify-between">
-//         <div>
-//           <h3 className="text-lg font-semibold text-gray-800 mb-2">{course}</h3>
-//           <p className="text-sm text-gray-600 mb-1"><strong>Duration:</strong> {duration}</p>
-//           <p className="text-sm text-gray-600"><strong>Eligibility:</strong> {eligibility}</p>
-//           {fees && <p className="text-sm text-gray-600"><strong>Fees:</strong> {fees}</p>}
-//           {specialization && <p className="text-sm text-gray-600"><strong>Specialization:</strong> {specialization}</p>}
-//         </div>
-//         <div className="mt-4">
-//           <button
-//             onClick={handleClick}
-//             className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-center block font-semibold hover:opacity-90 transition w-full"
-//           >
-//             Enquire Now
-//           </button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
 
 const SMU = () => {
   
@@ -63,6 +30,7 @@ const SMU = () => {
     fees: "₹75,000",
     specialization: "English + Sociology + Political Science",
     image: "/images/ba.webp",
+    alt: "Bachelor of Arts (BA) in SMU Online",
   },
   {
     course: "Bachelor of Commerce (B.Com)",
@@ -71,6 +39,7 @@ const SMU = () => {
     fees: "₹75,000",
     specialization: "Genral",
     image: "/images/bcom.webp",
+    alt: "Bachelor of Commerce (B.Com) in SMU Online",
   },
 ];
 
@@ -82,6 +51,7 @@ const pgCourses = [
     fees: "₹1,10,000",
     specialization: "dual Specialization(Marketing, Finance, HR, systems, Operations and Supply Chain Management, Healthcare Management)",
     image: "/images/mba.webp",
+    alt: "Master of Business Administration (MBA) in SMU Online",
   },
   {
     course: "Master of Computer Applications (MCA)",
@@ -90,6 +60,7 @@ const pgCourses = [
     fees: "₹98,000",
     specialization: "General",
     image: "/images/mca1.webp",
+    alt: "Master of Computer Applications (MCA) in SMU Online",
   },
   {
     course: "Master of Arts ",
@@ -98,6 +69,7 @@ const pgCourses = [
     fees: "₹75,000",
     specialization: "English / Sociology / Political Science",
     image: "/images/ma1.webp",
+    alt: "Master of Arts (M.A.) in SMU Online",
   },
   {
     course: "Master of Commerce (M.Com)",
@@ -106,6 +78,7 @@ const pgCourses = [
     fees: "₹75,000",
     specialization: "General",
     image: "/images/bcom.webp",
+    alt: "Master of Commerce (M.Com) in SMU Online",
   },
 ];
 
@@ -117,7 +90,7 @@ const pgCourses = [
         <title>Sikkim Manipal University (SMU) Online | Courses, Fees & Admission</title>
         <meta 
           name="description" 
-          content="Sikkim Manipal University (SMU) offers UGC-recognized online UG & PG programs like MBA, MCA, B.Com, and BA. Explore fees, eligibility, admission process, and placement support." 
+          content="Sikkim Manipal University (SMU) offers UGC-recognized online UG & PG programs like MBA in SMU, MCA in SMU, B.Com in SMU, and BA in SMU, and BA in SMU. Explore fees, eligibility, admission process, and placement support." 
         />
         <meta 
           name="keywords" 
@@ -132,8 +105,8 @@ const pgCourses = [
   universityName="Sikkim Manipal University Online"
   location="Sikkim, India"
   type="Private University"
-  nirfRank="NA" // Agar rank available ho to replace karein
-  rating="NA"  // Agar rating available ho to replace karein
+  nirfRank="100+" // Agar rank available ho to replace karein
+  rating="4.3"  // Agar rating available ho to replace karein
   description="Sikkim Manipal University offers industry-relevant online programs with UGC recognition. With a focus on flexible learning and career advancement, SMU provides quality education that fits your schedule while maintaining academic excellence."
   description2={`
     SMU's online degrees are designed to help working professionals upskill and 
@@ -144,8 +117,8 @@ const pgCourses = [
   badgeText="UGC Recognized | Flexible Learning | Career Advancement"
   imgSrc="/images/smu-uni.webp"
   imgAlt="Sikkim Manipal University"
-  students="NA" // Replace if real data available
-  partners="NA" // Replace if real data available
+  students="25K+" 
+  partners="200+" 
   campus="Sikkim Campus"
   highlights={[
     { icon: <FaBookOpen className="text-blue-600" />, text: "Flexible Programs" },
@@ -160,7 +133,7 @@ const pgCourses = [
   <AccreditationSection
     title="Why Choose Sikkim Manipal University?"
     description="Sikkim Manipal University offers UGC-recognized online degrees with industry-relevant curriculum, flexible learning, career support, and a strong alumni network to help students succeed globally."
-    stats={[]} // If you want numbers (students, faculty count, etc.) later you can add
+    stats={[]} 
     benefits={[
       {
         title: "UGC Recognized Degrees",

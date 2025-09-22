@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Shoolini University Online Programs | UG & PG Courses, Fees & Admission - UNIFOST",
   description:
-    "Explore undergraduate and postgraduate online programs at Shoolini University, Solan. Check eligibility, fees, placements, global rankings & admission process. Enquire now.",
+    "Shoolini University Online undergraduate and postgraduate online programs. Check eligibility, fees, placements, global rankings & admission process. Enquire now.",
   keywords: [
     "Shoolini University Online",
     "Shoolini Online MBA",

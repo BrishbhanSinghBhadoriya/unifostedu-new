@@ -21,37 +21,7 @@ import HeroSection from '@/components/HeroSection';
 import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 
-// const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
-//   //const navigate = useNavigate();
-//   const university = "Chandigarh University";
 
-//   const handleClick = () => {
-// //    navigate(`/enquiry?university=${encodeURIComponent(university)}&course=${encodeURIComponent(course)}`);
-//   };
-
-//   return (
-//     <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition duration-300">
-//       <img src={image} alt={course} className="h-40 w-full object-cover sm:h-48" />
-//       <div className="p-4 flex-1 flex flex-col justify-between">
-//         <div>
-//           <h3 className="text-lg font-semibold text-gray-800 mb-2">{course}</h3>
-//           <p className="text-sm text-gray-600 mb-1"><strong>Duration:</strong> {duration}</p>
-//           <p className="text-sm text-gray-600"><strong>Eligibility:</strong> {eligibility}</p>
-//           {fees && <p className="text-sm text-gray-600"><strong>Fees:</strong> {fees}</p>}
-//           {specialization && <p className="text-sm text-gray-600"><strong>Specialization:</strong> {specialization}</p>}
-//         </div>
-//         <div className="mt-4">
-//           <button
-//             onClick={handleClick}
-//             className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-center block font-semibold hover:opacity-90 transition w-full"
-//           >
-//             Enquire Now
-//           </button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
 
 const Chandigarh = () => {
  const ugCourses = [
@@ -62,6 +32,7 @@ const Chandigarh = () => {
     fees: "1,66,668/-",
     specialization: "Journalism, Media Studies",
     image: "/images/ba-jmc.webp",
+    alt: "BA-JMC in Chandigarh University Online",
   },
   {
     course: "Bachelor of Business Administration - Business Analytics (BBA - KPMG)",
@@ -70,6 +41,7 @@ const Chandigarh = () => {
     fees: "1,60,000/-",
     specialization: "Business Analytics with KPMG,",
     image: "/images/bba.webp",
+    alt: "BBA - KPMG in Chandigarh University Online", 
   },
   {
     course: "Bachelor of Business Administration (BBA)",
@@ -78,6 +50,7 @@ const Chandigarh = () => {
     fees: "1,68,000/-",
     specialization: "Marketing, HR, Enterpreneurship, Digital Marketing, Fin-Tech,etc",
     image: "/images/bba.webp",
+    alt: "BBA in Chandigarh University Online",
   },
   {
     course: "Bachelor of Computer Applications (BCA)",
@@ -86,6 +59,7 @@ const Chandigarh = () => {
     fees: "1,70,000/-",
     specialization: "IT & Systems",
     image: "/images/bca.webp",
+    alt: "BCA in Chandigarh University Online",
   },
   
 ];
@@ -99,6 +73,7 @@ const Chandigarh = () => {
     fees: "2,00,000/-",
     specialization: "Business Analytics with KPMG",
     image: "/images/mba.webp",
+    alt: "MBA - KPMG in Chandigarh University Online",
   },
   {
     course: "Master of Business Administration (MBA)",
@@ -107,6 +82,7 @@ const Chandigarh = () => {
     fees: "2,10,668/-",
     specialization: "Finance, Marketing, HR, IT, HR, Operations, International Business, Digital Marketing, Fin-Tech, etc.",
     image: "/images/bba.webp",
+    alt: "MBA - KPMG in Chandigarh University Online",
   },
   {
     course: "Master of Computer Applications - AI & ML",
@@ -115,6 +91,7 @@ const Chandigarh = () => {
     fees: "1,40,000/-",
     specialization: "Artificial Intelligence, Machine Learning, Data Analytics, Cloud Computing, Full Stack Development",
     image: "/images/mca.webp",
+    alt: "M.C.A. AI & ML in Chandigarh University Online",
   },
   {
     course: "Master of Science - Data Science",
@@ -123,6 +100,7 @@ const Chandigarh = () => {
     fees: "1,46,668/-",
     specialization: "Full Stack, Web Development",
     image: "/images/mca.webp",
+    alt: "M.Sc. Data Science in Chandigarh University Online",
   },
   {
     course: "Master of Computer Applications - Cloud Computing (AWS Academy)",
@@ -131,6 +109,7 @@ const Chandigarh = () => {
     fees: "1,40,000/-",
     specialization: "Cloud Infrastructure, AWS, Data Analytics, DevOps, Full Stack Development",
     image: "/images/mca.webp",
+    alt: "M.C.A. Cloud Computing  in Chandigarh University Online",
   },
   {
     course: "Master of Computer Applications - Data Analytics",
@@ -139,6 +118,7 @@ const Chandigarh = () => {
     fees: "1,40,000/-",
     specialization: "Big Data, Data Mining",
     image: "/images/mca1.webp",
+    alt: "M.C.A. Data Analytics  in Chandigarh University Online",
   },
   {
     course: "Master of Computer Applications (MCA)",
@@ -147,6 +127,7 @@ const Chandigarh = () => {
     fees: "1,40,000/-",
     specialization: "General IT, Software Development",
     image: "/images/mca.webp",
+    alt: "M.C.A in Chandigarh University Online",
   },
   {
     course: "Master of Science (Mathematics)",
@@ -155,6 +136,7 @@ const Chandigarh = () => {
     fees: "1,00,000/-",
     specialization: "Pure Mathematics, Applied Mathematics",
     image: "/images/mba.webp",
+    alt: "M.Sc in Chandigarh University Online",
   },
   {
     course: "Master of Arts (MA)",
@@ -163,6 +145,7 @@ const Chandigarh = () => {
     fees: "1,00,000/-",
     specialization: "Psychology, English, Economics",
     image: "/images/ma1.webp",
+    alt: "MA in Chandigarh University Online",
   },
 ];
 
@@ -172,7 +155,7 @@ const Chandigarh = () => {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
       <Head>
         <title>Chandigarh University Online Programs | Fees & Admission</title>
-        <meta name="description" content="Explore Chandigarh University Online UG & PG programs. Check fees, eligibility, admission process and enquire now." />
+        <meta name="description" content="Chandigarh University Online UG & PG programs. Check fees, eligibility, admission process and enquire now." />
         <meta name="keywords" content="Chandigarh University Online, CU Online, BBA Online, MBA Online, MCA Online, Data Science, Cloud Computing, Accredited Online Degrees" />
       </Head>
 
@@ -188,14 +171,14 @@ const Chandigarh = () => {
         With a flexible learning environment, expert faculty, and modern LMS, it enables working professionals and students to elevate their 
         careers while learning from anywhere. 
 
-        This has become a top choice for those seeking quality education in India, with a focus on practical skills and career readiness. 
+        Chandigarh University Online has become a top choice for those seeking quality education in India, with a focus on practical skills and career readiness. 
         We are committed to providing a transformative learning experience that prepares students for success in the global job market.
       `}
       badgeText="UGC Entitled | NAAC Accredited"
       imgSrc="/images/chandigarh.webp"
       imgAlt="Chandigarh University Online Campus"
-      students="—20K+" // Replace with actual data
-      partners="10+" // Replace with actual data
+      students="—20K+" 
+      partners="10+" 
       campus="Chandigarh Campus"
       highlights={[
         { icon: <FaBookOpen className="text-blue-600" />, text: "Flexible Learning" },
@@ -209,7 +192,7 @@ const Chandigarh = () => {
   <AccreditationSection
     title="Why Choose Chandigarh University Online?"
     description="Learn flexibly with expert mentorship, AI-driven LMS, and career support — all with globally recognized UGC-entitled degrees."
-    stats={[]} // No numerical stats
+    stats={[]} 
     benefits={[
       {
         title: "Flexible Learning",
@@ -314,8 +297,8 @@ const Chandigarh = () => {
           </div>
           <div className="flex-1 text-white">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">Earn Your Online Degree from Chandigarh University</h2>
-            <p className="mb-6 text-lg">Enhance your career with daily live classes, skill-based training, and global recognition.</p>
-            <h3 className="text-xl font-semibold mb-2">Benefits of Chandigarh Online</h3>
+            <p className="mb-6 text-lg">Chandigarh University Online Enhance your career with daily live classes, skill-based training, and global recognition.</p>
+            <h3 className="text-xl font-semibold mb-2">Benefits of Chandigarh University Online</h3>
             <ul className="list-disc list-inside space-y-2">
               <li>Interactive Live & Recorded Sessions</li>
               <li>Personalized Career Support</li>

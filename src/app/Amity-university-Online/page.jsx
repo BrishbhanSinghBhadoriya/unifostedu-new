@@ -59,6 +59,7 @@ const Amity = () => {
       fees: "₹1,65,000- ₹2,25,000",
       specialization: "BBA (General, Data Analytics, Travel And Tourism Management, Professional Certificate in Business Analytics)",
       image: "/images/bba.webp",
+      alt: "BBA from amity online university",
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
@@ -67,6 +68,7 @@ const Amity = () => {
       fees: "₹1,50,000 - ₹2,25,000",
       specialization: "BCA (General, Cloud and Security, Software Engineering, Data Science, Data Engineering(HCL Tech), Data Analytics, Software Engineering(HCL Tech))",
       image: "/images/bca.webp",
+      alt: "BCA from amity online university",
     },
     {
       course: "Bachelor of Commerce (B.Com)",
@@ -75,6 +77,7 @@ const Amity = () => {
       fees: "₹99,000 - ₹2,50,000",
       specialization: "B.Com (General, Hons, International Finance & Accounting)",
       image: "/images/bcom.webp",
+      alt: "B.Com from amity online university",
     },
     {
       course: "Bachelor of Arts (BA)",
@@ -83,6 +86,8 @@ const Amity = () => {
       fees: "₹99,000 - ₹1,70,000",
       specialization: "BA (General, Journalism and Mass Communication, Native Languages(Kannada,Malayalam, Tamil, Telugu), Psychology, English, Sociology, Political Science, Economics)",
       image: "/images/ba.webp",
+      alt: "BA from amity online university",
+    
     },
   ];
 
@@ -94,6 +99,7 @@ const Amity = () => {
       fees: "₹1,99,000 - ₹2,99,000",
       specialization: "MBA (General, Information Technology Management, Dual Specialization, Human Resource Analytics, Data Science, Business Analytics, International Business Management, Digital Entrepreneurship, Digital Marketing Management, Entrepreneurship & Leadership Management, Finance & Accounting Management, Hospitality Management, Global Finance Market, Insurance Management, Marketing & Sales Management, Petroleum & Natural Gas, Production and Operations Management, Retail Management)",
       image: "/images/mba.webp",
+      alt: "MBA from amity online university",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -102,6 +108,7 @@ const Amity = () => {
       fees: "₹170,000- ₹2,50,000",
       specialization: "MCA (General, Cyber Security, Blockchain Technology, Machine Learning and Artificial Intelligence, Augmented Reality and Virtual Reality, Software Engineering)",
       image: "/images/mca1.webp",
+      alt: "MCA from amity online university",
     },
     {
       course: "Master of Commerce (M.Com)",
@@ -110,6 +117,7 @@ const Amity = () => {
       fees: "₹1,20,000",
       specialization: "General, Financial Management, Financial Technology",
       image: "/images/m.com.webp",
+      alt: "M.Com from amity online university",
     },
     {
       course: "Master of Arts (MA)",
@@ -118,6 +126,7 @@ const Amity = () => {
       fees: "₹1,30,000 - ₹2,50,000",
       specialization: "MA (Psychology, Journalism and Mass Communication, Public Policy & Governance, English, Sociology)",
       image: "/images/ma1.webp",
+      alt: "MA from amity online university",
     },
     {
       course: "Master of Science (M.Sc)",
@@ -126,6 +135,7 @@ const Amity = () => {
       fees: "₹2,50,000",
       specialization: "Data Science",
       image: "/images/m.com.webp",
+      alt: "M.Sc from amity online university",
     },
   ];
 
@@ -137,6 +147,7 @@ const Amity = () => {
       fees: "₹3,45,800",
       specialization: "BBA + MBA",
       image: "/images/mba.webp",
+      alt: "BBA + MBA from amity online university",
     },
     {
       course: "BCA + MCA",
@@ -145,6 +156,7 @@ const Amity = () => {
       fees: "₹3,04,000",
       specialization: "BCA + MCA",
       image: "/images/mca1.webp",
+      alt: "BCA + MCA from amity online university",
     },
     {
       course: "B.Com + MBA",
@@ -153,6 +165,7 @@ const Amity = () => {
       fees: "₹2,83,100 - ₹3,05,000",
       specialization: "B.Com + MBA",
       image: "/images/m.com.webp",
+      alt: "B.Com + MBA from amity online university",
     },
   ];
 
@@ -160,61 +173,73 @@ const Amity = () => {
   const highlights = [
     {
       img: "/images/wasc.webp",
+      alt: "WASC Accreditation",
       title: "WASC Accreditation (USA)",
       description: "Amity Online is India's only university accredited by the Western Association of Schools and Colleges — a distinguished recognition of global academic excellence.",
     },
     {
       img: "/images/wes.webp",
+      alt: "WES Recognition",
       title: "WES Recognition",
       description: "Degrees recognised by World Education Services (WES) Canada & USA, enabling smoother pathways for higher studies and global career mobility.",
     },
     {
       img: "/images/qs.webp",
+      alt: "QS Ranked Online MBA",
       title: "QS Ranked Online MBA",
       description: "Amity Online offers India's only Online MBA ranked by QS under Asia Pacific Top 10 - a global recognition for academic strength, learner outcomes, and digital innovation.",
     },
     {
       img: "/images/qaa.webp",
+      alt: "QAA (UK) Accreditation",
       title: "QAA (UK) Accreditation",
       description: "Accredited by the UK's Quality Assurance Agency (QAA), assuring students of globally benchmarked academic quality.",
     },
     {
       img: "/images/the.webp",
+      alt: "Times Higher Education",
       title: "Times Higher Education Employability Rankings",
       description: "Amity University is ranked among the best globally for graduate employability and employer reputation by Times Higher Education.",
     },
     {
       img: "/images/pan-india.webp",
+      alt: "Pan-India Campus Access",
       title: "Pan-India Campus Access & Offline Events",
       description: "Enjoy access to all Amity campuses for events like orientation, mid-year meetups, on-campus connect and convocation - blending digital convenience with real-world connection.",
     },
     {
       img: "/images/amigo.webp",
+      alt: "Amigo Learning",
       title: "Amigo: Learning On-the-Go",
       description: "The Amigo app makes learning seamless and mobile — attend live classes, track progress, access materials, and more on your schedule.",
     },
     {
       img: "/images/ai-tutor.webp",
+      alt: "Prof. Ami: Your AI-Powered Personal Tutor",
       title: "Prof. Ami: Your AI-Powered Personal Tutor",
       description: "Meet Prof. Ami — your always-on, AI mentor for instant doubt-solving, personalised learning tips, and smart academic support.",
     },
     {
       img: "/images/indu-Certi.webp",
+      alt: "Industry Certifications for Better Employability",
       title: "Industry Certifications for Better Employability",
       description: "Gain an edge with in-demand certifications from top industry bodies and partners — integrated within your program to boost your skills and CV.",
     },
     {
       img: "/images/internship.webp",
+      alt: "Internship Opportunities",
       title: "Internship Opportunities",
       description: "Access curated internships with leading companies through our corporate network, helping you gain real-world experience and stand out in the job market.",
     },
     {
       img: "/images/ai-application.webp",
+      alt: "AI-Powered Career Discovery Platform",
       title: "AI-Powered Career Discovery Platform",
       description: "From mock interviews and resume building to job search and easy-apply tools — our AI-powered platform ensures you're career-ready from day one.",
     },
     {
       img: "/images/people.webp",
+      alt: "BeSocial App for Campus Life",
       title: "beSocial App for Campus Life",
       description: "Your virtual student hub — the beSocial app lets you network, join clubs, attend events, and be part of a vibrant, online-first community.",
     },

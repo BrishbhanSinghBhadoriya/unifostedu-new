@@ -34,6 +34,7 @@ const Nmims = () => {
       fees: "₹1,45,000",
       specialization: "General Management, Digital Marketing, Finance, Human Resources",
       image: "/images/bba.webp",
+      alt: "Bachelor of Business Administration (BBA) in NMIMS Online",
     },
     {
       course: "Bachelor of Commerce (B.Com)",
@@ -42,6 +43,7 @@ const Nmims = () => {
       fees: "₹94,000",
       specialization: "Accounting, Finance, Taxation, Banking",
       image: "/images/bcom.webp",
+      alt: "Bachelor of Commerce (B.Com) in NMIMS Online",
     },
   
   ];
@@ -54,6 +56,7 @@ const Nmims = () => {
       fees: "₹1,44,000",
       specialization: "Finance, Marketing, Human Resources, Operations, Business Analytics, International Business, Digital Marketing, Supply Chain Management",
       image: "/images/mba.webp",
+      alt: "Master of Business Administration (MBA) in NMIMS Online",
     },
     {
       course: "Master of Business Administration (WX)",
@@ -62,6 +65,7 @@ const Nmims = () => {
       fees: "₹4,00,000",
       specialization: "Applied Finance, Digital Marketing, Leadership & Strategy, Marketing, Operations & Suppyv Chain",
       image: "/images/mca1.webp",
+      alt: "Master of Business Administration (WX) in NMIMS Online",
     },
   ]
 
@@ -70,7 +74,7 @@ const Nmims = () => {
       <Head>
         <title>NMIMS Online Degrees | Accredited UG & PG Programs</title>
         <meta name="description" content="NMIMS Global Online offers UGC-entitled, NAAC A++ accredited online programs including MBA, BBA, B.Com, and more. Flexible learning with global recognition." />
-        <meta name="keywords" content="NMIMS Online, NMIMS Global, Online MBA NMIMS, BBA Online NMIMS, B.Com Online, Distance MBA India, UGC approved online courses, NAAC A++ university" />
+        <meta name="keywords" content="NMIMS Online, NMIMS Global, Online MBA in NMIMS online, BBA Online NMIMS, B.Com in NMIMS Online,  UGC approved online courses, NAAC A++ university" />
         <meta name="author" content="NMIMS Global Online University" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -98,11 +102,11 @@ const Nmims = () => {
     universityName="NMIMS Global Online"
     location="Mumbai, Maharashtra, India"
     type="Deemed-to-be University"
-    nirfRank="" // NIRF rank not mentioned
+    nirfRank="24" 
     rating="4.7/5"
     description="UGC Entitled | NAAC A++ Accredited | Flexible Online Learning"
     description2={`
-      NMIMS Global is a premier education institute offering UGC-entitled and NAAC A++ accredited online programs with 
+      NMIMS(SVKM's Narsee Monjee Institute of Management Studies) Global is a premier education institute offering UGC-entitled and NAAC A++ accredited online programs with 
       flexible learning, a vibrant student community, and personalized mentorship. 
       With 1.25L+ students across 600+ cities, NMIMS Global provides world-class education with industry-ready programs.
     `}
@@ -110,7 +114,7 @@ const Nmims = () => {
     imgSrc="/images/nmims.webp"
     imgAlt="NMIMS Global Online Campus"
     students="1.25L+"
-    partners="600+ Cities"
+    partners="200+"
     campus="Mumbai Campus"
     highlights={[
       { icon: <FaAward className="text-blue-600" />, text: "NAAC A++ Accredited" },
@@ -127,7 +131,7 @@ const Nmims = () => {
   <AccreditationSection
     title="Why Choose NMIMS Global Online?"
     description="NMIMS Global Online offers NAAC A++ accredited and UGC entitled online degree programs, trusted by 1.25L+ students across 600+ cities, with excellent student ratings."
-    stats={[]} // Already included inside benefits
+    stats={[]} 
     benefits={[
       {
         title: "Students",
@@ -255,31 +259,7 @@ const Nmims = () => {
       {/* Admission Process */}
     <AdmissionProcedure/> 
 
-      {/* Contact Section
-      <section className="py-16 px-6 bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            Ready to Start Your NMIMS Journey?
-          </h2>
-          <p className="text-xl text-gray-200 mb-8">
-            Get personalized guidance and book a free demo session with our education experts
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              className="bg-[#00ffe0] text-[#001e3c] hover:bg-[#00e6cc] px-8 py-3 text-lg font-semibold rounded-lg transition-colors"
-              onClick={() => window.location.href = '/bookdemo'}
-            >
-              Book Free Demo
-            </button>
-            <button 
-              className="border-[#00ffe0] text-[#00ffe0] hover:bg-[#00ffe0] hover:text-[#001e3c] px-8 py-3 text-lg font-semibold rounded-lg border-2 transition-colors"
-              onClick={() => window.location.href = '/coursesearch'}
-            >
-              Explore More Courses
-            </button>
-          </div>
-        </div>
-      </section> */}
+      
       {/* Certificate Section - NMIMS */}
 <section className="bg-[#7b1fa2] text-white py-16 px-6 font-[Inter]">
   <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
