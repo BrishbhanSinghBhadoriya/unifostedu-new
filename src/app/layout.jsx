@@ -139,7 +139,8 @@ export const metadata = {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" }
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/uni.webp.48x48.png", sizes: "48x48", type: "image/png" }
     ],
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
@@ -203,6 +204,10 @@ export default function RootLayout({ children }) {
         <meta name="twitter:title" content="Unifost - Online University Degrees & Career Counseling" />
         <meta name="twitter:description" content="Unifost is India's leading EdTech platform providing UGC-approved online university degrees and expert career counseling services." />
         <meta name="twitter:image" content="https://unifostedu.com/favicon.ico" />
+
+        {/* SERP favicon sizes */}
+        <link rel="icon" type="image/png" sizes="48x48" href="/uni.webp.48x48.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-32x32.png" />
         <meta name="twitter:image:alt" content="Unifost - Online University Degrees" />
 
         
@@ -271,7 +276,7 @@ export default function RootLayout({ children }) {
               description: 'India\'s leading EdTech platform providing UGC-approved online university degrees and expert career counseling services.',
               potentialAction: {
                 '@type': 'SearchAction',
-                target: (process.env.NEXT_PUBLIC_SITE_URL || 'https://unifostedu.com') + '/search?q={search_term_string}',
+                target: (process.env.NEXT_PUBLIC_SITE_URL || 'https://unifostedu.com') + '/search?query={search_term_string}',
                 'query-input': 'required name=search_term_string'
               }
             })
@@ -297,6 +302,51 @@ export default function RootLayout({ children }) {
                 '@type': 'Audience',
                 audienceType: ['Students', 'Working Professionals', 'Parents']
               }
+            })
+          }}
+        />
+        {/* Organization schema with logo for brand recognition */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Unifost',
+              alternateName: ['UNIFOST', 'UniFost'],
+              url: 'https://unifostedu.com',
+              logo: 'https://unifostedu.com/uni.webp.48x48.png',
+              sameAs: [
+                'https://www.linkedin.com/company/unifost',
+                'https://www.facebook.com/unifost',
+                'https://www.instagram.com/unifost'
+              ]
+            })
+          }}
+        />
+        {/* SiteNavigationElement to help Google understand primary links */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'SiteNavigationElement',
+              name: [
+                'Courses',
+                'Course Search',
+                'Compare Universities',
+                'Universities',
+                'Services',
+                'About'
+              ],
+              url: [
+                'https://unifostedu.com/courses',
+                'https://unifostedu.com/search',
+                'https://unifostedu.com/compare',
+                'https://unifostedu.com/listofcollege',
+                'https://unifostedu.com/services',
+                'https://unifostedu.com/about'
+              ]
             })
           }}
         />

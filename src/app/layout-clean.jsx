@@ -178,7 +178,7 @@ export default function RootLayout({ children }) {
               url: 'https://unifostedu.com',
               potentialAction: {
                 '@type': 'SearchAction',
-                target: (process.env.NEXT_PUBLIC_SITE_URL || 'https://unifostedu.com') + '/search?q={search_term_string}',
+                target: (process.env.NEXT_PUBLIC_SITE_URL || 'https://unifostedu.com') + '/search?query={search_term_string}',
                 'query-input': 'required name=search_term_string'
               }
             })

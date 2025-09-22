@@ -10,11 +10,11 @@ const OrganizationSchema = () => {
     "url": "https://unifostedu.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://unifostedu.com/uni.webp",
+      "url": "https://unifostedu.com/favicon.ico",
       "width": 512,
       "height": 512
     },
-    "image": "https://unifostedu.com/uni.webp",
+    "image": "https://unifostedu.com/favicon.ico",
     "foundingDate": "2020",
     "foundingLocation": {
       "@type": "Place",
