@@ -23,6 +23,7 @@ const Shoolini = () => {
       fees: "	₹75,000/-",
       specialization: "Accounting, Finance and Taxation",
       image: "/images/bcom.webp",
+      alt: "Bachelor of Commerce at Shoolini University",
     },
     {
       course: "Bachelor of Business Administration (BBA)",
@@ -31,6 +32,7 @@ const Shoolini = () => {
       fees: "(63,000/- + 27,000/-) = ₹90,000/-  [ ₹27,000/-(Only to be paid after Placement)]",
       specialization: "HR, Marketing, Finance, Digital Marketing, Computer Science, Direct Selling",
       image: "/images/shoolini-bba.webp",
+      alt: "Bachelor of Business Administration at Shoolini University",
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
@@ -39,6 +41,7 @@ const Shoolini = () => {
       fees: "(63,000/- + 27,000/-) = ₹90,000/-  [ ₹27,000/-(Only to be paid after Placement)]",
       specialization: "Machine Learning, Data Science, Cyber Secruity and Artificial Intelligence",
       image: "/images/shoolini-bca.webp",
+      alt: "Bachelor of Computer Applications at Shoolini University",
     }
   ];
 
@@ -50,6 +53,7 @@ const Shoolini = () => {
       fees: "(98,000/- + 42,000/-) = ₹1,40,000/- [ ₹42,000/-(Only to be paid after Placement)]",
       specialization: "Marketing Management, Operation & Supply Chain Management, Agri Business Management, Human Resource Management, IT Management, Biotechnology Management, Financial Management, Tourism Management, Food Technology Management, Digital Marketing, Real Estate Management, Pharma & Health Care Management,Retail Management,Direct Selling Management,Banking & Insurance,Data Science & Business Analytics",
       image: "/images/shoolini-mba.webp",
+      alt: "Master of Business Administration at Shoolini University",
     },
     {
       course: "Executive MBA",
@@ -58,6 +62,7 @@ const Shoolini = () => {
       fees: "₹1,80,000/-",
       specialization: "Marketing Management, Operation & Supply Chain Management, Agri Business Management, Human Resource Management, IT Management, Biotechnology Management, Financial Management, Tourism Management, Food Technology Management, Digital Marketing, Real Estate Management, Pharma & Health Care Management,Retail Management,Direct Selling Management,Banking & Insurance,Data Science & Business Analytics",
       image: "/images/shoolini-mba.webp",
+      alt: "Executive MBA at Shoolini University",
     },
     {
       course: "MSC in Data science ",
@@ -66,6 +71,7 @@ const Shoolini = () => {
       fees: "₹1,20,000/-",
       specialization: "Data Science",
       image: "/images/shoolini-mca.webp",
+      alt: "Master of Science in Data Science at Shoolini University",
     },
     {
       course: "Master of Arts (M.A) ",
@@ -74,6 +80,7 @@ const Shoolini = () => {
       fees: "42,000-1,00,000",
       specialization: "English Literature, journalism and Mass Communication",
       image: "/images/shoolini-ma.webp",
+      alt: "Master of Arts in shoolini University",
     }
   ];
 
@@ -94,8 +101,8 @@ const Shoolini = () => {
   universityName="Shoolini University Online"
   location="Solan, Himachal Pradesh, India"
   type="Private University"
-  nirfRank="Top 200 (QS World Ranking)"
-  rating="4.3" // Approx rating, update if actual available
+  nirfRank="Top 200 "
+  rating="4.3"
   description="Research-Oriented Programs | Flexible Online & Hybrid Learning | Globally Recognized Degrees"
   description2={`
     Shoolini University is a top-ranked research-oriented university offering globally recognized programs in science, management, agriculture, and technology — with the flexibility of online and hybrid learning.
@@ -106,8 +113,8 @@ const Shoolini = () => {
   badgeText="Flexible Learning | Research-Focused | Career-Oriented Programs"
   imgSrc="/images/shoolini-uni.webp"
   imgAlt="Shoolini University Campus"
-  students="20,000+" // Approx, update if actual data available
-  partners="50+" // Approx, update if actual data available
+  students="20K+" 
+  partners="50+"
   campus="Solan Campus"
   highlights={[
     { icon: <FaBookOpen className="text-blue-600" />, text: "Flexible Programs" },

@@ -27,6 +27,7 @@ const Dypatil = () => {
       eligibility: "10+2 Pass",
       specialization: "IT & System Management, International Business Management, Retail Management, Banking, Financial Services and Insurance Management, Shipping & Logistics Management, Marketing Management, Human Resource Management (HRM), Finance Management, E-commerce Management ",
       image: "/images/bba.webp",
+      alt: "Bachelor of Business Administration (BBA) in Dy Patil ",
     },
   
    
@@ -41,6 +42,7 @@ const Dypatil = () => {
       eligibility: "Graduation with 50% Marks",
        specialization: "General",
       image: "/images/mca1.webp",
+      alt: "Master of Computer Applications (MCA) in Dy Patil ",
     },
     
 
@@ -52,6 +54,7 @@ const Dypatil = () => {
       specialization: "Marketing Management, Human Resource Management, Finance Management, IT Management, Project Management, Operations Management, Hospital Administration & Healthcare Management, International Business Management, FinTech Management, Business Analytics Management, Artificial Intelligence & Machine Learning Management, Logistics, Materials & Supply Chain Management, Blockchain Management, Digital Marketing Management, Agri-Business Management",
 
       image: "/images/mba.webp",
+      alt: "Master of Business Administration (MBA) in Dy Patil ",
     },
   ];
 
@@ -158,11 +161,11 @@ const Dypatil = () => {
   universityName="DY Patil University Online"
   location="Pune, Maharashtra, India"
   type="Private University"
-  nirfRank="" // Add if available
-  rating="" // Add if available
+  nirfRank="100+" 
+  rating="4.3" 
   description="NAAC A++ Accredited | UGC & AICTE Approved | Flexible Online Degrees"
   description2={`
-    DY Patil University offers flexible online degrees in collaboration with Harvard, aimed at career growth 
+    DY Patil University Online offers flexible online degrees in collaboration with Harvard, aimed at career growth 
     for students and professionals alike. With expert faculty and 24/7 learning support, learners gain both 
     academic knowledge and practical skills. 
 
@@ -170,14 +173,14 @@ const Dypatil = () => {
     for Technical Education (AICTE), and accredited by NAAC with an A++ grade. It offers a range of undergraduate 
     and postgraduate programs in Business Administration, Computer Applications, and more. 
 
-    The online platform ensures flexibility for working professionals and students to learn at their own pace 
+    DY Patil University Online provide online platform ensures flexibility for working professionals and students to learn at their own pace 
     while receiving quality education from experienced faculty.
   `}
   badgeText="UGC | AICTE | NAAC A++ Recognized"
   imgSrc="/images/dypatil.webp"
   imgAlt="DY Patil University Online Campus"
-  students="—" // Replace with actual numbers
-  partners="—" // Replace with actual numbers
+  students="20K+" 
+  partners="100+" 
   campus="Pune Campus"
   highlights={[
     { icon: <FaBookOpen className="text-blue-600" />, text: "Flexible Learning" },

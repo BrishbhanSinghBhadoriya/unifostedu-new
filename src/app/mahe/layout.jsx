@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Manipal Academy of Higher Education Online Degrees | MAHE UG & PG Courses - UNIFOST",
   description:
-    "Explore online undergraduate and postgraduate programs from Manipal Academy of Higher Education (MAHE), a NAAC A++ accredited Institution of Eminence. Enquire now for BBA, BBA Hons, B.Com, MBA, MCA, and M.Sc courses.",
+    "Manipal Academy of Higher Education Online Degrees  Explore undergraduate and postgraduate programs from Manipal Academy of Higher Education (MAHE), a NAAC A++ accredited Institution of Eminence. Enquire now for BBA, BBA Hons, B.Com, MBA, MCA, and M.Sc courses.",
   keywords: [
     "Manipal Online",
     "MAHE Online",
@@ -9,12 +9,12 @@ export const metadata = {
     "Manipal Academy of Higher Education",
     "Mahe UG & PG Courses",
     "mahe university",
-    "BBA Online",
-    "BBA Hons Online",
-    "B.Com Online",
-    "MBA Online",
-    "MCA Online",
-    "M.Sc Online",
+    "BBA in mahe Online",
+    "BBA Hons in mahe Online",
+    "B.Com in mahe Online",
+    "MBA in mahe Online",
+    "MCA in mahe Online",
+    "M.Sc in mahe Online",
     "UGC Recognized Online Degree",
     "NAAC A++ University",
     "Distance Learning India",

@@ -140,7 +140,7 @@ const KU = () => {
     universityName="Kurukshetra University Online"
     location="Kurukshetra, Haryana, India"
     type="State University"
-    nirfRank="" // If not available, keep blank
+    nirfRank="100+" // If not available, keep blank
     rating="NAAC A++"
     description="UGC-entitled Online Degrees | Legacy of Academic Excellence | Established in 1956"
     description2={`
@@ -153,8 +153,8 @@ const KU = () => {
     badgeText="UGC Entitled | NAAC A++ Accredited"
     imgSrc="/images/ku.webp"
     imgAlt="Kurukshetra University Online Campus"
-    students="—" // Replace with actual data if available
-    partners="—" // Replace with actual data if available
+    students="25K+"
+    partners="100+"  
     campus="Kurukshetra Campus"
     highlights={[
       { icon: <FaBookOpen className="text-blue-600" />, text: "Flexible Learning" },
@@ -302,7 +302,7 @@ const KU = () => {
               Our Alumni Work At
             </h2>
             <p className="text-xl text-gray-600 mt-2">
-              Reputed organizations where KU graduates have built successful careers
+              Reputed organizations where Kurukshetra University Online graduates have built successful careers
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">

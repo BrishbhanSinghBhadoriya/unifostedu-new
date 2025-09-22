@@ -29,7 +29,9 @@ const Jain = () => {
       fees: "1,95,000",
       specialization: "Online Bachelor of Business Administration, Digital Marketing, Healthcare Management, Data Science and Analytics",
       image: "/images/bba.webp",
+      alt: "Bachelor of Business Administration (BBA) in Jain University Online",
     },
+    
      {
       course: "Bachelor of Computer Applications (BCA)",
       duration: "3 Years",
@@ -37,6 +39,7 @@ const Jain = () => {
       fees: "1,35,000 -1,65,000",
       specialization: "Computer Science and IT, Data Science and Analytics, Cyber Security, Artificial Intelligence, Cloud Computing",
       image: "/images/bca.webp",
+      alt: "Bachelor of Computer Applications (BCA) in Jain University Online",
     },
     {
       course: "Bachelor of Commerce (B.Com)",
@@ -45,6 +48,7 @@ const Jain = () => {
       fees : "1,27,500",
       specialization: "Online Bachelor of Commerce, Corporate Accounting",
       image: "/images/bcom.webp",
+      alt: "Bachelor of Commerce (B.Com) in Jain University Online",
     },
  
   ];
@@ -58,8 +62,8 @@ const Jain = () => {
       eligibility: "Graduation",
       fees: "1,96,000 - 2,16,000 ",
       specialization: "Human Resource Management and Finance, Finance and Marketing, Marketing and Resource Management, Marketing and Business Analytics, Finance and Business Analytics, Human Resource and Business Analytics, Project Management, Retail Management and Quick Commerce, Information Technology Management, Healthcare Management, Supply Chain, Production and Operations Management, Business Intelligence and Analytics, Entrepreneurship and Venture Creation, International Finance, Data Science and Analytics, E-commerce, Artificial Intelligence and Human Resource Management, Digital Marketing, Banking and Finance, Technology Management, General Management, AI-Driven Marketing, AI-Driven Finance, AI-Driven Business Strategy, AI-Driven Human Resource Management,",
-
       image: "/images/mba.webp",
+      alt: "Master of Business Administration (MBA) in Jain University Online",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -67,8 +71,8 @@ const Jain = () => {
       eligibility: "Graduation in BCA/B.Sc(IT)",
       fees: "1,60,000",
       specialization: "DevOps, Natural Language Processing & Large Language Models Development, Computer Science and IT, Data Analytics, Cyber Security, Full Stack Development, Cloud Computing, Data Science, Artificial Intelligence" , 
-
       image: "/images/mca1.webp",
+      alt: "Master of Computer Applications (MCA) in Jain University Online",
     },
     {
       course: "Master of Commerce (M.Com)",
@@ -77,6 +81,7 @@ const Jain = () => {
       fees: "1,10,000",
       specialization: "Accounting and Finance, Professional Accounting and Finance (Accredited by CPA, US)", 
       image: "/images/m.com.webp",
+      alt: "Master of Commerce (M.Com) in Jain University Online",
     },
     {
       course: "Master of Arts (MA)",
@@ -85,6 +90,7 @@ const Jain = () => {
       fees: "190,000",
       specialization: "Jainology in Comparative Religion and Philosophy, English, Economics, Public Policy",
       image: "/images/ma1.webp",
+      alt: "Master of Arts (MA) in Jain University Online",
     },
   ];
 
@@ -103,8 +109,8 @@ const Jain = () => {
         universityName="Jain University Online"
         location="Bengaluru, Karnataka, India"
         type="Private University"
-        nirfRank="77" // If not available, keep blank
-        rating="4.5" // If not available, keep blank
+        nirfRank="77" 
+        rating="4.5" 
         description="NAAC A++ Accredited | UGC Entitled Online Degree Programs | Empowering Learners with Latest Knowledge"
         description2={`
           Jain University Online is part of the NAAC A++ grade accredited institution offering online degree programs to empower learners. 
@@ -114,8 +120,8 @@ const Jain = () => {
         badgeText="NAAC A++ Accredited | UGC Entitled Online Degrees"
         imgSrc="/images/jain.webp"
         imgAlt="Jain University Online Campus"
-        students="30K+" // Approximate/replace as needed
-        partners="10+" // If no data, keep placeholder
+        students="30K+"
+        partners="10+" 
         campus="Bengaluru Campus"
         highlights={[
           { icon: <FaBookOpen className="text-blue-600" />, text: "Flexible Learning" },
@@ -129,7 +135,7 @@ const Jain = () => {
 
     <div>
   <AccreditationSection
-    title="Why Choose Jain Online?"
+    title="Why Choose Jain University Online?"
     description="Explore diverse learning mediums, dedicated academic advisors, career services, and placement opportunities with Jain University Online."
     stats={[]} // No numerical stats here
     benefits={[
@@ -243,13 +249,13 @@ const Jain = () => {
     {/* Text Content */}
     <div className="flex-1 text-white">
       <h2 className="text-3xl md:text-4xl font-semibold mb-4">
-        Online Degree from Jain Online University
+        Online Degree from Jain University Online
       </h2>
       <p className="mb-6 text-lg leading-relaxed">
-        Jain Online provides many services that has the benefits of e-lectures, counselling from academic advisors, career assistance, etc.
+        Jain University Online provides many services that has the benefits of e-lectures, counselling from academic advisors, career assistance, etc.
       </p>
 
-      <h3 className="text-xl font-semibold mb-2">Benefits of Jain Online</h3>
+      <h3 className="text-xl font-semibold mb-2">Benefits of Jain University Online</h3>
       <ul className="list-disc list-inside space-y-2 text-base">
         <li>Daily LIVE Classes by Faculty of International Repute</li>
         <li>Career Assistance & Exclusive Virtual Job Fairs</li>
@@ -331,7 +337,6 @@ const Jain = () => {
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
         <Image width={100} height={100} loading="lazy" src="/images/samsung.webp" alt="Samsung" className="h-12 object-contain" />
       </div>
-      {/* Add more cards here as needed */}
     </div>
   </div>
 </section>

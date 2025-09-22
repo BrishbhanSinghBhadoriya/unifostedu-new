@@ -26,6 +26,7 @@ const Sharda = () => {
       fees: "₹1,05,000",
       specialization: "General,",
       image: "/images/bba.webp",
+      alt: "Bachelor of Business Administration (BBA) in Sharda Online",
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
@@ -34,6 +35,7 @@ const Sharda = () => {
       fees: "₹1,05,000",
       specialization: "General,",
       image: "/images/bca.webp",
+      alt: "Bachelor of Computer Applications (BCA) in Sharda Online",
     },
     {
       course: "Bachelor of Arts (Hons.)",
@@ -42,6 +44,7 @@ const Sharda = () => {
       fees: "₹105,000",
       specialization: " Political Science,",
       image: "/images/ba.webp",
+      alt: "Bachelor of Arts (Hons.) in Sharda Online",
     },
   ];
 
@@ -53,6 +56,7 @@ const Sharda = () => {
       fees: "₹1,00,000- ₹1,60,000",
       specialization: ["Data Science and Analytics, Marketing, Healthcare and Hospital Administration, Human Resource Management, Sales and Marketing, Finance"],
       image: "/images/mba.webp",
+      alt: "Master of Business Administration (MBA) in Sharda Online",
     },
       
     {
@@ -62,6 +66,7 @@ const Sharda = () => {
       fees: "₹1,00,000",
       specialization: "Computer Science and Information Technology, Data Science",
       image: "/images/mca1.webp",
+      alt: "Master of Computer Applications (MCA) in Sharda Online",
     },
     {
       course: "Master of Commerce (M.Com)",
@@ -70,6 +75,7 @@ const Sharda = () => {
       fees: "₹50,000",
       specialization: "Master of commerce",
       image: "/images/m.com.webp",
+      alt: "Master of Commerce (M.Com) in Sharda Online",
     },
  
   ];
@@ -84,44 +90,46 @@ const Sharda = () => {
 
       {/* Intro Section */}
   <HeroSection
-  universityName="Shoolini University Online"
-  location="Solan, Himachal Pradesh, India"
+  universityName="Sharda University Online"
+  location="Greater Noida, Uttar Pradesh, India"
   type="Private University"
-  nirfRank="87" 
-  rating="4.1" 
-  description="Shoolini University is a top-ranked research-oriented university offering globally recognized programs in science, management, agriculture, and technology — with the flexibility of online and hybrid learning. It is ranked among the top 200 universities globally by QS and is known for its strong focus on research, innovation, and student success."
+  nirfRank="NAAC A+"
+  rating="4.3"
+  description="Sharda University Online is NAAC A+ accredited and offers globally recognized online degrees. Join learners from over 85 countries and experience academic excellence with dedicated career support and world-class faculty."
   description2={`
-    Shoolini University is a leader in outcome-based higher education. 
-    Our online degree programs are designed to secure your future, first, and give your career a winning edge, 
-    be it through a great placement or selection in a leading international university. 
-    You only pay once your desired outcome is achieved.
+    Sharda University Online is a platform for distance and online education launched by Sharda University in 2023. 
+    It offers a variety of undergraduate and postgraduate courses, including online BA, MBA, MCA, BBA, and BCA programs. 
+    The platform emphasizes flexibility, accessibility, and affordability, allowing students to pursue their education while balancing work and other commitments.
   `}
-  badgeText="QS Top 200 Globally | Research-Oriented | Outcome-Based Education"
-  imgSrc="/images/shoolini-uni.webp"
-  imgAlt="Shoolini University"
-  students="25K+" // 
-  partners="100+" //
-  campus="Solan Campus"
+  badgeText="NAAC A+ Accredited | Global Recognition | Flexible Online Learning"
+  imgSrc="/images/sharda.webp"
+  imgAlt="Sharda University"
+  students="85+ Countries"
+  partners="200+"
+  campus="Greater Noida Campus"
   highlights={[
-    { icon: <FaBookOpen className="text-blue-600" />, text: "Research-Oriented Programs" },
-    { icon: <FaUserTie className="text-blue-600" />, text: "Experienced Faculty" },
-    { icon: <FaBriefcase className="text-blue-600" />, text: "Career-Oriented Learning" },
-    { icon: <FaGlobe className="text-blue-600" />, text: "QS Global Ranking" },
+    { icon: <FaBookOpen className="text-blue-600" />, text: "World-Class Curriculum" },
+    { icon: <FaUserTie className="text-blue-600" />, text: "Expert Faculty & Mentors" },
+    { icon: <FaBriefcase className="text-blue-600" />, text: "Career-Oriented Programs" },
+    { icon: <FaGlobe className="text-blue-600" />, text: "Global Student Community" },
   ]}
 />
+
 
       <div>
   <AccreditationSection
     title="Why Choose Sharda Online?"
     description="Sharda University Online offers NAAC A+ accredited, globally recognized online degrees with expert faculty, interactive resources, career support, and placement opportunities."
-    stats={[]} // No numerical stats
+    stats={[]} 
     benefits={[
       {
         title: "Interactive Learning",
         description: "Flexible e-books, recorded lectures, audio books, and discussion forums.",
-        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M4 6h16M4 12h16M4 18h16"/>
-                  </svg>`,
+      iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" 
+  class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+</svg>`
+
       },
       {
         title: "Expert Faculty",

@@ -145,7 +145,7 @@ const pgCourses = [
      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
       {/* Hero Section with Gradient Background */}
      <HeroSection
-  universityName="UU University Online"
+  universityName="Uttaranchal University Online"
   location="Dehradun, Uttarakhand, India"
   type="Private University"
   nirfRank="100+" 
@@ -159,7 +159,7 @@ const pgCourses = [
   `}
   badgeText="100% Online Learning | Placement Assistance | Expert Faculty"
   imgSrc="/images/uu-uni.webp"
-  imgAlt="UU University Campus"
+  imgAlt="Uttaranchal University Campus"
   students="50,000+"
   partners="100+"
   campus="Dehradun Campus"
@@ -173,13 +173,13 @@ const pgCourses = [
 
 <div>
   <AccreditationSection
-    title="Why Choose UU University?"
+    title="Why Choose Uttaranchal University?"
     description="UU University offers globally recognized online degrees with expert faculty, flexible learning, cutting-edge digital platform, and comprehensive career support to help you succeed in the modern world."
     stats={[
-      { number: "50,000+", label: "Students Enrolled" },
-      { number: "200+", label: "Expert Faculty" },
-      { number: "95%", label: "Satisfaction Rate" },
-      { number: "100+", label: "Corporate Partners" },
+      // { number: "50,000+", label: "Students Enrolled" },
+      // { number: "200+", label: "Expert Faculty" },
+      // { number: "95%", label: "Satisfaction Rate" },
+      // { number: "100+", label: "Corporate Partners" },
     ]}
     benefits={[
       {
@@ -195,7 +195,12 @@ const pgCourses = [
       {
         title: "Cutting-Edge Curriculum",
         description: "Programs updated regularly to match latest industry trends and technologies.",
-        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>`,
+      iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" 
+  class="w-6 h-6" fill="none" viewBox="0 0 24 24" 
+  stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+</svg>`
+
       },
       {
         title: "Flexible Learning",
@@ -205,7 +210,12 @@ const pgCourses = [
       {
         title: "Placement Support",
         description: "Resume building, interview prep, and job placement assistance.",
-        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg>`,
+     iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" 
+  class="w-6 h-6" fill="none" viewBox="0 0 24 24" 
+  stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+</svg>`
+
       },
       {
         title: "Robust Alumni Network",
@@ -269,7 +279,7 @@ const pgCourses = [
       {/* Why Choose Section */}
       <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose <span className="text-blue-700">UU University</span>?</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose <span className="text-blue-700">Uttaranchal University</span>?</h2>
           <p className="text-xl text-gray-600">Discover the advantages of learning with us</p>
           <div className="w-24 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
         </div>
@@ -392,55 +402,7 @@ const pgCourses = [
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our <span className="text-blue-700">Students Say</span></h2>
-            <p className="text-xl text-gray-600">Hear from our successful alumni</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Priya Sharma",
-                course: "MBA Graduate",
-                text: "The flexibility of UU's online MBA allowed me to balance my job and studies. The curriculum was practical and immediately applicable to my work."
-                
-              },
-              {
-                name: "Rahul Verma",
-                course: "BCA Student",
-                text: "The faculty support and learning resources are exceptional. I've gained valuable skills that helped me secure an internship at a tech company."
-                
-              },
-              {
-                name: "Anjali Patel",
-                course: "Executive MBA",
-                text: "As a working professional, the Executive MBA program was perfect for upgrading my skills without taking a career break. Highly recommended!"
-                
-              }
-            ].map((testimonial, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-xl border border-gray-200">
-                <div className="flex items-center mb-4">
-                  
-                  <div>
-                    <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                    <p className="text-blue-600 text-sm">{testimonial.course}</p>
-                  </div>
-                </div>
-                <p className="text-gray-600 italic">"{testimonial.text}"</p>
-                <div className="flex mt-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+ 
 
       {/* Companies Section */}
       <section className="py-12 bg-gray-100">

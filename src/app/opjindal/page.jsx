@@ -1,7 +1,5 @@
 'use client';
 import React from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import { Helmet } from 'react-helmet';
 import {
   FaBookOpen,
   FaUserTie,
@@ -30,14 +28,16 @@ const OPJindal = () => {
       fees: "₹2,00,000 /-",
       specialization: "Finance, Marketing, Human Resources, Operation Management Supply Chain",
       image: "/images/bba.webp",
+      alt: "BBA in OP Jindal University",
     },
     {
       course: "B.Sc in Psycology",
       duration: "3 Years",
       eligibility: "10+2 Pass, If less than 50%: Must clear JSAT (min 50%) or submit, SAT/ACT/LNAT-UK score or complete a JGU MOOC",
+      specialization: "Psychology",
       fees: "₹3,00,000 /-",
-      
       image: "/images/op-psycology.webp",
+      alt: "B.Sc in Psycology in OP Jindal University",
     },
     
   ];
@@ -49,6 +49,8 @@ const OPJindal = () => {
       eligibility: "A Bachelor’s degree, Active involvement as an entrepreneurial family member ",
       fees: "₹2,75,000/-",
       image: "/images/op-masters1.webp",
+      alt: "Master in Enterpreneurship and Family Business in OP Jindal University",
+
     },
     {
       course: "MA in Teaching English to Speakers of Other languages (TESOL)",
@@ -56,6 +58,7 @@ const OPJindal = () => {
       eligibility: "Bachelor’s degree from any recognized university with at least 50% marks Govt. Issued ID Proof (Passport for international applicants)",
       fees: "₹2,50,000/- ",
       image: "/images/op-masters2.webp",
+      alt: "MA in Teaching English to Speakers of Other languages (TESOL) in OP Jindal University",
     },
     {
       course: "M.Sc in Environmental chnage and Sustainability",
@@ -63,6 +66,7 @@ const OPJindal = () => {
       eligibility: "Bachelor’s degree from any recognized university with at least 50% marks Govt. Issued ID Proof (Passport for international applicants)",
       fees: "₹2,50,000/-",
       image: "/images/op-masters3.webp",
+      alt: "M.Sc in Environmental chnage and Sustainability in OP Jindal University",
     },
     {
       course: "MA Public Policy",
@@ -70,6 +74,7 @@ const OPJindal = () => {
       eligibility: "An undergraduate degree in any discipline from any recognised university in India or abroad.",
       fees: "₹3,00,000/-",
       image: "/images/op-masters4.webp",
+      alt: "MA Public Policy in OP Jindal University",
     },
     {
       course: "MBA in Business Analytics",
@@ -77,6 +82,7 @@ const OPJindal = () => {
       eligibility: "The eligibility criteria for the online MBA in Business Analytics programme require a bachelor’s degree from a recognised university in India. A minimum of 50% marks in any discipline is required for graduation.",
       fees: "₹2,00,000/-",
       image: "/images/op-masters5.webp",
+      alt: "MBA in Business Analytics in OP Jindal University",
     },
     {
       course: "MBA in Business Law",
@@ -84,6 +90,7 @@ const OPJindal = () => {
       eligibility: "Bachelor's degree in any discipline with a minimum 50% aggregate score from a recognized university.  ",
       fees: "₹3,00,000/-",
       image: "/images/mba.webp",
+      alt: "MBA in Business Law in OP Jindal University",
     },
     
   ];
@@ -126,9 +133,9 @@ const OPJindal = () => {
   universityName="OP Jindal University"
   location="Sonipat, Haryana, India"
   type="Private University"
-  nirfRank="" // NIRF rank not provided
-  rating="" // Rating not provided
-  description="Leading private university known for excellence in Law, Business, Engineering, and Public Policy"
+  nirfRank="100+" 
+  rating="4.4" 
+  description="OP Jindal University Leading private university known for excellence in Law, Business, Engineering, and Public Policy"
   description2={`
     OP Jindal University offers globally recognized online degrees, enabling students to learn at their doorstep without any problems. 
     The university provides programs in diverse fields including Law, Business, Liberal Arts, Psychology, Economics, Media, Journalism, Architecture, Design, Banking, Finance, Environment, Public Policy, Public Health, Languages, and International Relations. 
@@ -137,8 +144,8 @@ const OPJindal = () => {
   badgeText="Globally Recognized | Interdisciplinary Learning | Practical Applications"
   imgSrc="/images/opjindal.webp"
   imgAlt="OP Jindal University Campus"
-  students="NA" // Replace with real data if available
-  partners="NA" // Replace with real data if available
+  students="25K+" 
+  partners="100+" 
   campus="Sonipat Campus"
   highlights={[
     { icon: <FaBookOpen className="text-blue-600" />, text: "Interdisciplinary Programs" },
@@ -152,7 +159,7 @@ const OPJindal = () => {
   <AccreditationSection
     title="Why Choose OP Jindal University?"
     description="Blending innovative curriculum, expert faculty, tech-driven learning, and strong placements for holistic development."
-    stats={[]} // No numerical stats here
+    stats={[]} 
     benefits={[
       {
         title: "Innovative Curriculum",

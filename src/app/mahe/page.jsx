@@ -1,16 +1,7 @@
 import React from "react";
-// import { useNavigate } from 'react-router-dom';
-//import { Helmet } from 'react-helmet';
-import {
-  FaCheckCircle,
-  FaFileAlt,
-  FaGraduationCap,
-  FaUniversity,
-  FaCertificate,
-  FaBuilding,
-} from 'react-icons/fa';
-import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck } from "react-icons/fa";
 
+import { FaCheckCircle, FaFileAlt, FaGraduationCap, FaUniversity, FaCertificate, FaBuilding } from 'react-icons/fa';
+import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck } from "react-icons/fa";
 import EnquireCard from '@/components/EnquireCard';
 import Image from 'next/image';
 import HeroSection from '@/components/HeroSection';
@@ -20,7 +11,7 @@ import AdmissionProcedure from '@/components/AdmissionProcedure';
 export const metadata = {
   title: "Manipal Online Degrees | MAHE Courses",
   description: "Explore online programs from Manipal Academy of Higher Education (MAHE). NAAC A++ accredited, UGC recognized degrees. Enquire now for BBA, BBA Hons, B.Com, MBA, MCA, M.Sc courses.",
-  keywords: "Manipal Online, MAHE Online, BBA Online, BBA Hons Online, B.Com Online, MBA Online, MCA Online, M.Sc Online, Distance Learning India, NAAC A++, UGC Recognized Online Degree, Flexible Online Education, Online Courses MAHE",
+  keywords: "Manipal Online, MAHE Online, BBA in mahe Online, BBA in mahe Hons Online, B.Com in mahe Online, MBA in mahe Online, MCA in mahe Online, M.Sc in mahe Online, Manipal Online, Distance Learning India, NAAC A++, UGC Recognized Online Degree, Flexible Online Education, Online Courses MAHE",
   author: "Manipal Academy of Higher Education",
   robots: "index, follow",
   openGraph: {
@@ -47,6 +38,7 @@ const Manipal = () => {
       fees: "1,80,000",
       specialization: "Healthcare Management, Business Analytics, Financial Technology (FinTech), Marketing Management, Human Resource Management",
       image: "/images/bba.webp",
+      alt: "Bachelor of Business Administration (BBA) in MAHE Online",
     },
      {
       course: "Bachelor of Business Administration (BBA)  Hons",
@@ -55,6 +47,7 @@ const Manipal = () => {
       fees: "2,40,000",
       specialization: "Healthcare Management, Business Analytics, Financial Technology (FinTech), Marketing Management, Human Resource Management",
       image: "/images/bba.webp",
+      alt: "Bachelor of Business Administration (BBA) Hons in MAHE Online",
     },
    
     {
@@ -64,6 +57,7 @@ const Manipal = () => {
       fees: " 2,94,000",
       specialization: "General",
       image: "/images/bcom.webp",
+      alt: "Bachelor of Commerce (Professional) in MAHE Online",
     },
   ];
 
@@ -75,6 +69,7 @@ const Manipal = () => {
       fees: "2,92,000",
       specialization: "Healthcare Management, Finance, Marketing, Operations Management, Pharmaceutical Management, Business Analytics Management, Logistics & Supply Chain Management, Data Science, Human Resource Management",
       image: "/images/mba.webp",
+      alt: "Master of Business Administration (MBA) in MAHE Online",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -83,6 +78,7 @@ const Manipal = () => {
       fees: "2,20,000",
       specialization: "AI & ML, Cloud Computing, Cyber Security, Full Stack Development", 
       image: "/images/mca1.webp",
+      alt: "Master of Computer Applications (MCA) in MAHE Online",
     },
     {
       course: "Master of Science (M.Sc)",
@@ -91,6 +87,7 @@ const Manipal = () => {
       fees: "2,80,000",
       specialization: "Data Science, Business Analytics", 
       image: "/images/m.com.webp",
+      alt: "Master of Science (M.Sc) in MAHE Online",
     },
   
     
@@ -119,8 +116,8 @@ const Manipal = () => {
     badgeText="Institution of Eminence | NAAC A++ Accredited"
     imgSrc="/images/mahe-uni.webp"
     imgAlt="Manipal Academy of Higher Education Campus"
-    students="35K+"   // Approximate/adjust as needed
-    partners="15+"    // Placeholder if no exact data
+    students="35K+"   
+    partners="15+"    
     campus="Manipal Campus"
     highlights={[
       { icon: <FaBookOpen className="text-blue-600" />, text: "World-Class Curriculum" },

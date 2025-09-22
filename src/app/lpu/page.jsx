@@ -32,6 +32,7 @@ const Lpu = () => {
       fees: "₹1,50,000",
       specialization: "General",
       image: "/images/bba.webp",
+      alt: "Bachelor of Business Administration (BBA) in LPU Online",
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
@@ -40,6 +41,7 @@ const Lpu = () => {
       fees: "₹ 1,50,000",
       specialization: "General",
       image: "/images/bca.webp",
+      alt: "Bachelor of Computer Applications (BCA) in LPU Online",
     },
     {
       course: "Bachelor's of Arts (BA)",
@@ -48,6 +50,7 @@ const Lpu = () => {
       fees: "₹ 1,20,000",
       specialization: "General",
       image: "/images/ma1.webp",
+      alt: "Bachelor's of Arts (BA) in LPU Online",
     },
   ];
 
@@ -59,6 +62,7 @@ const Lpu = () => {
       fees: "₹ 2,00,000",
       specialization: "Human Resource Management, Finance, Marketing, Operations Management, Business Analytics, Digital Marketing, Data Science, Information Technology, International Business, Banking & Financial Services, Hospital & Healthcare Management, Logistics & Supply Chain Management",
       image: "/images/mba.webp",
+      alt: "Master of Business Administration (MBA) in LPU Online",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -67,6 +71,7 @@ const Lpu = () => {
       fees: "₹ 1,48,000",
       specialization: "Machine Learning & Artificial Intelligence (ML & AI), Data Science, Cybersecurity, Full Stack Web Development, Augmented Reality/Virtual Reality (AR/VR) & Game Development", 
       image: "/images/mca1.webp",
+      alt: "Master of Computer Applications (MCA) in LPU Online",
     },
     {
       course: "Master of Commerce (M.Com)",
@@ -75,6 +80,7 @@ const Lpu = () => {
       fees: "₹ 1,00,000",
       specialization: "General", 
       image: "/images/m.com.webp",
+      alt: "Master of Commerce (M.Com) in LPU Online",
     },
     {
       course: "Master of Arts (MA)",
@@ -83,6 +89,7 @@ const Lpu = () => {
       fees: "₹ 80,000",
       specialization: "English, History, Political Science, Sociology,",
       image: "/images/ma1.webp",
+      alt: "Master of Arts (MA) in LPU Online",
     },
     {
       course: "Master of Science (M.Sc)",
@@ -91,6 +98,7 @@ const Lpu = () => {
       fees: "₹ 80,000",
       specialization: "Mathmatics, Economics",
       image: "/images/ma1.webp",
+      alt: "Master of Science (M.Sc) in LPU Online",
     },
   ];
 
@@ -106,7 +114,7 @@ const Lpu = () => {
   rating="4.7/5"
   description="NAAC A++ Accredited | One of India’s Largest Universities | 100% Online Programs"
   description2="
-             Lovely Professional University (LPU) is a top-ranking university in India in various academic disciplines, ranked by NIRF. LPU Online is no different as it is one of the top online education providers in India
+             Lovely Professional University (LPU) is a top-ranking university in India in various academic disciplines, ranked by NIRF. Lovely Professional University Online is no different as it is one of the top online education providers in India
               
              The university has various affiliations including recognition from University Grants Commission (UGC), All India Council for Technical Education (AICTE), and World Education Services (WES). The university has been ranked by NIRF, WURI, and The World University Rankings 2022. The quality of education this university provides is quite evident from its NAAC A++ grading.
              "
@@ -125,9 +133,9 @@ const Lpu = () => {
 />  
 <div>
       <AccreditationSection
-        title="Why Choose LPU Online?"
+        title="Why Choose Lovely Professional University Online?"
         description="Access flexible learning, expert faculty, career support, and globally recognized degrees."
-        stats={[]} // No numerical stats in this section
+        stats={[]} 
         benefits={[
           {
             title: "Flexible Learning",
@@ -212,10 +220,10 @@ const Lpu = () => {
           </div>
           <div className="flex-1 text-white">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">
-              Online Degree from LPU
+              Online Degree from Lovely Professional University
             </h2>
             <p className="mb-6 text-lg leading-relaxed">
-              LPU Online provides comprehensive services including live classes, recorded lectures, 
+              Lovely Online provides comprehensive services including live classes, recorded lectures, 
               academic counseling, and career support to help students succeed in their professional journeys.
             </p>
             <h3 className="text-xl font-semibold mb-2">Benefits of LPU Online</h3>
