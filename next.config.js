@@ -1,11 +1,11 @@
 /** @type {import('next').nextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
+  reactStrictMode: true,
+  poweredByHeader: false,
+  compress: true,
   images: {
     unoptimized: true,
   },
-  compress: true,
   async redirects() {
     return [
       {
