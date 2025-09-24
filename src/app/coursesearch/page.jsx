@@ -55,7 +55,7 @@ export default function CourseSearch() {
           content="Online Courses, MBA Online, MCA Online, BBA Online, BCA Online, UniFost, Study Online"
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.unifost.com/courses" />
+        <link rel="canonical" href="https://www.unifostedu.com/courses" />
       </Head>
 
       {/* Unique Hero Section - Different from Search Page */}

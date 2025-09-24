@@ -11,6 +11,7 @@ import {
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { toast } from 'sonner';
+import Breadcrumb from '@/components/Breadcrumb';
 
  const metadata = {
   title: "UNIFOST | Online Education & Career Counseling Platform|Unifost",
@@ -181,16 +182,16 @@ export default function About() {
         <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight">
               About <span className="text-[#00ffe0]">Unifost</span>
             </h1>
             <div className="w-24 h-1 bg-[#00ffe0] mx-auto mb-8"></div>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">
+            <h2 className="text-3xl md:text-5xl font-semibold md:font-bold text-white mb-8 leading-snug">
               Transforming <span className="text-[#00ffe0]">Education</span><br />
               One Student at a Time
             </h2>
             <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto mb-12 leading-relaxed">
-              UniFost is redefining how students discover and access quality education through personalized guidance and innovative technology.
+              UniFost helps students discover and access quality education with personalized guidance and modern technology.
             </p>
             <button onClick={openGetStarted} className="bg-[#00ffe0] cursor-pointer text-[#001e3c] px-8 py-4 rounded-full text-xl font-semibold hover:bg-[#00d4c4] transform hover:scale-105 transition-all duration-300 shadow-2xl group">
               Get Started Today
@@ -293,7 +294,8 @@ export default function About() {
 
     {/* ✅ Button hamesha dikhega */}
     <div className="mt-6">
-      <button onClick={openGetStarted} className="flex items-center text-[#00d4c4] font-semibold hover:text-[#00ffe0] transition-colors duration-300"
+      <button
+        onClick={openGetStarted}
         className="flex items-center text-white bg-[#00d4c4] px-4 py-2 rounded-lg font-semibold hover:bg-[#00ffe0] transition-colors duration-300"
       >
         Learn more <span className="ml-2">→</span>
@@ -487,7 +489,7 @@ export default function About() {
         <h3 className="text-3xl font-bold">AMAN PAWAR</h3>
         <p className="text-pink-400 font-semibold">Founder & Director</p>
        <p className="text-lg md:text-2xl text-gray-100 mt-6 font-semibold leading-relaxed tracking-wide bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent">
-  "Aman Pawar is the driving force behind <span className="font-bold">UniFost</span>—blending vision with action, and passion with purpose. His tireless efforts and hands-on leadership have shaped a platform that puts students first. With expertise in business strategy and digital education, he bridges the gap between academia and industry needs.,,
+  “Aman Pawar is the driving force behind <span className="font-bold">UniFost</span>—blending vision with action, and passion with purpose. His tireless efforts and hands-on leadership have shaped a platform that puts students first. With expertise in business strategy and digital education, he bridges the gap between academia and industry needs.”
 </p>
 
         <div className="flex space-x-4 mt-6">
@@ -524,45 +526,59 @@ export default function About() {
         
 
 
-     <div className="w-full h-[400px] rounded-xl overflow-hidden shadow-lg">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.6832009747964!2d77.31252000920001!3d28.579274275592528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5d98ee6d3c5%3A0x34c5ea3d0f04f8a7!2sLogix%20Park!5e0!3m2!1sen!2sin!4v1757655392841!5m2!1sen!2sin"
-    width="1920"
-    height="820"
-    style={{ border: 0 }}   
-    allowFullScreen         
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  ></iframe>
+     <div className="w-full rounded-xl overflow-hidden shadow-lg">
+  <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.6832009747964!2d77.31252000920001!3d28.579274275592528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5d98ee6d3c5%3A0x34c5ea3d0f04f8a7!2sLogix%20Park!5e0!3m2!1sen!2sin!4v1757655392841!5m2!1sen!2sin"
+      style={{ border: 0 }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      className="absolute inset-0 w-full h-full"
+    ></iframe>
+  </div>
 </div>
 
-   {/* Enquiry Modal */}
-<Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal}>
-  <DialogContent className="sm:max-w-lg">
+{/* Enquiry Modal */}
+<Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
+  <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-6 md:my-12 p-4 sm:p-6">
     <DialogHeader>
-      <DialogTitle>
+      <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
         {modalType === "getStarted" ? "Get Started with Unifost" : "Schedule a Video Call"}
       </DialogTitle>
     </DialogHeader>
-    
-    {/* Pass onSubmitted to close modal */}
     <EnquiryForm 
-      type={modalType} 
+      formType={modalType}
       onSubmitted={() => {
-        
         setShowEnquiryModal(false);
         toast.success("Our counselors will connect with you as soon as possible", {
-      style: {
-        fontSize: '25px',  
-        fontWeight: 'bold',
-        padding: '16px 24px',
-      },
-      icon: '✅',
-    });
+          style: {
+            fontSize: '25px',
+            fontWeight: 'bold',
+            padding: '16px 24px',
+          },
+          icon: '✅',
+        });
       }}
     />
   </DialogContent>
 </Dialog>
+
+{/* Closing CTA Section */}
+<section className="py-20 bg-gradient-to-br from-[#001e3c] to-[#003b6c] text-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 className="text-3xl md:text-5xl font-bold mb-4">Ready to take the next step?</h2>
+    <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-8">
+      Talk to our expert counselors and get a personalized roadmap for your goals.
+    </p>
+    <button
+      onClick={openGetStarted}
+      className="bg-[#00ffe0] cursor-pointer text-[#001e3c] px-8 py-4 rounded-full text-lg md:text-xl font-semibold hover:bg-[#00d4c4] transform hover:scale-105 transition-all duration-300 shadow-2xl"
+    >
+      Talk to a Counselor
+    </button>
+  </div>
+</section>
 
 
 

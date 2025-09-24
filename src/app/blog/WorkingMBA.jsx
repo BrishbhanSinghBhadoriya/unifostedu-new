@@ -9,16 +9,16 @@ const WorkingMBA = () => {
         <title>Can I Do MBA While Working? Here's How | UniFost Blog</title>
         <meta name="description" content="Learn how to successfully pursue an MBA while working full-time. Explore flexible MBA formats, tips, and tools for working professionals." />
         <meta name="keywords" content="MBA while working, Online MBA, Working professionals MBA, Flexible MBA, Part-time MBA India, UniFost Blog" />
-        <link rel="canonical" href="https://www.unifost.com/blog/mba-while-working" />
+        <link rel="canonical" href="https://www.unifostedu.com/blog/mba-while-working" />
         <meta property="og:title" content="Can I Do MBA While Working? Here's How" />
         <meta property="og:description" content="Explore flexible MBA options and tips to manage work and studies together." />
-        <meta property="og:image" content="https://www.unifost.com/images/blogs/mba-while-working.jpg" />
-        <meta property="og:url" content="https://www.unifost.com/blog/mba-while-working" />
+        <meta property="og:image" content="https://www.unifostedu.com/images/blogs/mba-while-working.jpg" />
+        <meta property="og:url" content="https://www.unifostedu.com/blog/mba-while-working" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Can I Do MBA While Working? Here's How" />
         <meta name="twitter:description" content="Explore flexible MBA options and tips to manage work and studies together." />
-        <meta name="twitter:image" content="https://www.unifost.com/images/blogs/mba-while-working.jpg" />
+        <meta name="twitter:image" content="https://www.unifostedu.com/images/blogs/mba-while-working.jpg" />
       </Helmet>
 
       <div className="flex flex-col md:flex-row gap-10">

@@ -68,10 +68,10 @@ const Hero = ({ onOpenModal }) => {
                     transition={{ duration: 0.1 }}
                     className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
                   >
-                    <span className="text-gray-900">Your Gateway to</span>
+                    <span className="text-gray-900">Welcome to Unifost – Your Gateway to</span>
                     <br />
                     <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                      Academic Excellence
+                      UGC-Approved Online Degrees
                     </span>
                   </motion.h1>
                   
@@ -92,8 +92,8 @@ const Hero = ({ onOpenModal }) => {
                   transition={{ duration: 0.8 }}
                   className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0"
                 >
-                  Get expert guidance to find the perfect online degree program from 25+ UGC-approved universities. 
-                  Compare courses, fees, and rankings to make informed decisions for your future.
+                  At UnifostEdu.com, we are committed to offering UGC-approved online university degrees across India. 
+                  Whether you search for Unifost or UnifostEdu, you're at the official platform for quality digital education.
                 </motion.p>
 
                 {/* Key Features */}

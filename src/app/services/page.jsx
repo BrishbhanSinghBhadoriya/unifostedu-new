@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import EnquiryForm from "@/components/EnquiryForm";
 import Image from 'next/image';
+import Breadcrumb from '@/components/Breadcrumb';
 
 
 export default function Services() {
@@ -91,10 +92,14 @@ export default function Services() {
     setShowEnquiryModal(true);
   };
 
-  return (
+  const breadcrumbItems = [
+    { name: 'Services', url: '/services' }
+  ];
 
-    
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50"> 
+  return (
+    <>
+      <Breadcrumb items={breadcrumbItems} />
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50"> 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c] to-[#003b6c] opacity-90"></div>
@@ -329,5 +334,6 @@ export default function Services() {
         </Dialog>
       )}
     </div>
+    </>
   );
 }

@@ -12,13 +12,17 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   metadataBase: new URL('https://unifostedu.com'),
   title: {
-    default: "Unifost - Online University Degrees & Career Counseling",
+    default: "Unifost | UGC Approved Online University Degrees in India",
     template: "%s | Unifost"
   },
-  description: "Unifost is India's leading EdTech platform providing UGC-approved online university degrees and expert career counseling services.",
+  description: "UnifostEdu.com – The official platform for UGC-approved online university degrees in India. Explore top courses, apply easily, and transform your career.",
   applicationName: "Unifost",
   appleMobileWebAppTitle: "Unifost",
   keywords: [
+    "Unifost",
+    "UnifostEdu",
+    "UGC online degrees",
+    "Unifost Education Platform",
     "Online University Degree",
     "Career Counseling Online",
     "Virtual Learning Guidance",
@@ -146,8 +150,8 @@ export const metadata = {
     apple: "/favicon.ico",
   },
   openGraph: {
-    title: "Unifost - Online University Degrees & Career Counseling",
-    description: "Unifost is India's leading EdTech platform providing UGC-approved online university degrees and expert career counseling services.",
+    title: "Unifost | UGC Approved Online University Degrees in India",
+    description: "UnifostEdu.com – The official platform for UGC-approved online university degrees in India. Explore top courses, apply easily, and transform your career.",
     url: "https://unifostedu.com",
     siteName: "Unifost",
     images: [
@@ -163,8 +167,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Unifost - Online University Degrees & Career Counseling",
-    description: "Unifost is India's leading EdTech platform providing UGC-approved online university degrees and expert career counseling services.",
+    title: "Unifost | UGC Approved Online University Degrees in India",
+    description: "UnifostEdu.com – The official platform for UGC-approved online university degrees in India. Explore top courses, apply easily, and transform your career.",
     images: ["/favicon.ico"],
   },
 };
@@ -188,8 +192,8 @@ export default function RootLayout({ children }) {
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         
         {/* Open Graph meta tags */}
-        <meta property="og:title" content="Unifost - Online University Degrees & Career Counseling" />
-        <meta property="og:description" content="Unifost is India's leading EdTech platform providing UGC-approved online university degrees and expert career counseling services." />
+        <meta property="og:title" content="Unifost | UGC Approved Online University Degrees in India" />
+        <meta property="og:description" content="Unifostedu.com – The official platform for UGC-approved online university degrees in India. Explore top courses, apply easily, and transform your career." />
         <meta property="og:url" content="https://unifostedu.com" />
         <meta property="og:site_name" content="Unifost" />
         <meta property="og:type" content="website" />
@@ -201,8 +205,8 @@ export default function RootLayout({ children }) {
         
         {/* Twitter Card meta tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Unifost - Online University Degrees & Career Counseling" />
-        <meta name="twitter:description" content="Unifost is India's leading EdTech platform providing UGC-approved online university degrees and expert career counseling services." />
+        <meta name="twitter:title" content="Unifost | UGC Approved Online University Degrees in India" />
+        <meta name="twitter:description" content="UnifostEdu.com – The official platform for UGC-approved online university degrees in India. Explore top courses, apply easily, and transform your career." />
         <meta name="twitter:image" content="https://unifostedu.com/favicon.ico" />
 
         {/* SERP favicon sizes */}
@@ -313,7 +317,7 @@ export default function RootLayout({ children }) {
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'Unifost',
-              alternateName: ['UNIFOST', 'UniFost'],
+              alternateName: ['UnifostEdu', 'UNIFOST', 'UniFost'],
               url: 'https://unifostedu.com',
               logo: 'https://unifostedu.com/uni.webp.48x48.png',
               sameAs: [

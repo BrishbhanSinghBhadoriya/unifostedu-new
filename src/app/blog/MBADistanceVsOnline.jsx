@@ -9,16 +9,16 @@ const MBADistanceVsOnline = () => {
         <title>MBA Online vs. Distance: What’s the Difference? | UniFost Blog</title>
         <meta name="description" content="Understand the key differences between Online MBA and Distance MBA programs in India. Learn about their value, recognition, flexibility, and career impact." />
         <meta name="keywords" content="MBA Online, Distance MBA, Online vs Distance MBA, Online Education India, UniFost Blog" />
-        <link rel="canonical" href="https://www.unifost.com/blog/mba-online-vs-distance" />
+        <link rel="canonical" href="https://www.unifostedu.com/blog/mba-online-vs-distance" />
         <meta property="og:title" content="MBA Online vs. Distance: What’s the Difference?" />
         <meta property="og:description" content="Explore how Online MBA differs from Distance MBA in terms of format, flexibility, and recognition." />
-        <meta property="og:image" content="https://www.unifost.com/images/blogs/mba-online-vs-distance.jpg" />
-        <meta property="og:url" content="https://www.unifost.com/blog/mba-online-vs-distance" />
+        <meta property="og:image" content="https://www.unifostedu.com/images/blogs/mba-online-vs-distance.jpg" />
+        <meta property="og:url" content="https://www.unifostedu.com/blog/mba-online-vs-distance" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="MBA Online vs. Distance: What’s the Difference?" />
         <meta name="twitter:description" content="Explore how Online MBA differs from Distance MBA in terms of format, flexibility, and recognition." />
-        <meta name="twitter:image" content="https://www.unifost.com/images/blogs/mba-online-vs-distance.jpg" />
+        <meta name="twitter:image" content="https://www.unifostedu.com/images/blogs/mba-online-vs-distance.jpg" />
       </Helmet>
 
       <div className="flex flex-col md:flex-row gap-10 items-start">

@@ -384,11 +384,14 @@ function CompareContent() {
     
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12 md:mt-20 px-4 sm:px-6 lg:px-8">
              {/* Enquiry gating */}
-               <Dialog open={!enquiryDone} onOpenChange={(open) => {
-                 if (!open) setEnquiryDone(true);
-               }}>
+              <Dialog open={!enquiryDone} onOpenChange={(open) => {
+                if (!open) {
+                  // Redirect to home when the enquiry modal is closed via cross/overlay
+                  router.replace('/');
+                }
+              }}>
           <DialogContent
-            className="w-[95vw] max-w-[560px] max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10"
+            className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-6 md:my-12 p-4 sm:p-6"
             
           >
            <DialogHeader className="px-4 sm:px-6">

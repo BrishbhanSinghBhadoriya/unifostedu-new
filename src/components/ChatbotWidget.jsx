@@ -45,7 +45,7 @@ const ChatbotWidget = () => {
           {
             from: "bot",
             text:
-              "Maaf kijiye, is prashn ka jawab hamari website ke content me upalabdh nahi hai. Kripya apna sawal aur specific karein ya counselor se baat karein (Book a Video Call / Home Demo).",
+              "Sorry, the answer to this question is not available on our website. Please make your question more specific or speak with a counselor (Book a Video Call / Home Demo).",
           },
         ]);
         return;

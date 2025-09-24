@@ -1,0 +1,2 @@
+# Redirect from unifost.com to unifostedu.com
+unifost.com/* https://unifostedu.com/:splat 301!

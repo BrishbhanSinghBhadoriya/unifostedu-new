@@ -9,16 +9,16 @@ const JainUGCApproval = () => {
         <title>Is Jain Online University UGC Approved? | UniFost Blog</title>
         <meta name="description" content="Wondering if Jain Online University is UGC approved? Explore its accreditations, recognitions, and what it means for your degree value and career." />
         <meta name="keywords" content="Jain University Online, UGC approved online universities, NAAC A+ University, Jain online degree value" />
-        <link rel="canonical" href="https://www.unifost.com/blog/jain-online-ugc-approved" />
+        <link rel="canonical" href="https://www.unifostedu.com/blog/jain-online-ugc-approved" />
         <meta property="og:title" content="Is Jain Online University UGC Approved?" />
         <meta property="og:description" content="Explore if Jain Online University is UGC approved and understand its accreditations, recognition, and what it means for students." />
-        <meta property="og:image" content="https://www.unifost.com/images/blogs/jain-online-ugc.jpg" />
-        <meta property="og:url" content="https://www.unifost.com/blog/jain-online-ugc-approved" />
+        <meta property="og:image" content="https://www.unifostedu.com/images/blogs/jain-online-ugc.jpg" />
+        <meta property="og:url" content="https://www.unifostedu.com/blog/jain-online-ugc-approved" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Is Jain Online University UGC Approved?" />
         <meta name="twitter:description" content="Explore if Jain Online University is UGC approved and understand its accreditations, recognition, and what it means for students." />
-        <meta name="twitter:image" content="https://www.unifost.com/images/blogs/jain-online-ugc.jpg" />
+        <meta name="twitter:image" content="https://www.unifostedu.com/images/blogs/jain-online-ugc.jpg" />
       </Helmet>
 
       <div className="flex flex-col md:flex-row gap-10">

@@ -46,7 +46,12 @@ export const authAPI = {
 
 // 🧩 Demo/Enquiry API
 export const demoAPI = {
-  bookDemo: (data) => API.post("https://api.unifostedu.com/api/enquiry/enquiry", data),
+  bookDemo: (data) =>
+    axios.post(
+      "https://api.unifostedu.com/api/v1/enquiry",
+      data,
+      { headers: { "Content-Type": "application/json" } }
+    ),
 };
 
 // 🧩 Specific enquiries (absolute URLs as provided)

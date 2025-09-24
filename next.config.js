@@ -6,6 +6,21 @@ const nextConfig = {
     unoptimized: true,
   },
   compress: true,
+  async redirects() {
+    return [
+      {
+        source: '/(.*)',
+        has: [
+          {
+            type: 'host',
+            value: 'unifostedu.com',
+          },
+        ],
+        destination: 'https://unifostedu.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

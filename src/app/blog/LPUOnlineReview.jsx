@@ -9,16 +9,16 @@ const LPUOnlineReview = () => {
         <title>LPU Online MBA Review – Pros, Cons, and Admission Process | UniFost</title>
         <meta name="description" content="Get a detailed review of LPU Online MBA: Explore its pros, cons, fees, faculty, placement, and how to apply. Read before you choose!" />
         <meta name="keywords" content="LPU Online MBA Review, LPU Online Pros and Cons, LPU Online Admission Process, LPU Online MBA, UniFost Blog" />
-        <link rel="canonical" href="https://www.unifost.com/blog/lpu-online-review" />
+        <link rel="canonical" href="https://www.unifostedu.com/blog/lpu-online-review" />
         <meta property="og:title" content="LPU Online MBA Review – Pros, Cons, and Admission Process" />
         <meta property="og:description" content="Get a detailed review of LPU Online MBA: Explore its pros, cons, fees, faculty, placement, and how to apply. Read before you choose!" />
-        <meta property="og:image" content="https://www.unifost.com/images/blogs/lpu-online-review.jpg" />
-        <meta property="og:url" content="https://www.unifost.com/blog/lpu-online-review" />
+        <meta property="og:image" content="https://www.unifostedu.com/images/blogs/lpu-online-review.jpg" />
+        <meta property="og:url" content="https://www.unifostedu.com/blog/lpu-online-review" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="LPU Online MBA Review – Pros, Cons, and Admission Process" />
         <meta name="twitter:description" content="Get a detailed review of LPU Online MBA: Explore its pros, cons, fees, faculty, placement, and how to apply. Read before you choose!" />
-        <meta name="twitter:image" content="https://www.unifost.com/images/blogs/lpu-online-review.jpg" />
+        <meta name="twitter:image" content="https://www.unifostedu.com/images/blogs/lpu-online-review.jpg" />
       </Helmet>
 
       <div className="flex flex-col md:flex-row gap-10">

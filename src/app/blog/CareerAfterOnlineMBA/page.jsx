@@ -11,16 +11,16 @@ const CareerAfterOnlineMBA = () => {
         <title>Career Opportunities After Online MBA | UniFost Blog</title>
         <meta name="description" content="Explore top career paths after completing an Online MBA in India. Learn about job roles, salaries, industries, and how to maximize your ROI." />
         <meta name="keywords" content="Online MBA Careers, MBA Jobs India, Post MBA Opportunities, Career After Online MBA, UniFost Blog" />
-        <link rel="canonical" href="https://www.unifost.com/blog/career-after-online-mba" />
+        <link rel="canonical" href="https://www.unifostedu.com/blog/career-after-online-mba" />
         <meta property="og:title" content="Career Opportunities After Online MBA" />
         <meta property="og:description" content="Explore career options available after an Online MBA including marketing, finance, HR, operations and more." />
-        <meta property="og:image" content="https://www.unifost.com/images/blogs/career-after-online-mba.webp" />
-        <meta property="og:url" content="https://www.unifost.com/blog/career-after-online-mba" />
+        <meta property="og:image" content="https://www.unifostedu.com/images/blogs/career-after-online-mba.webp" />
+        <meta property="og:url" content="https://www.unifostedu.com/blog/career-after-online-mba" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Career Opportunities After Online MBA" />
         <meta name="twitter:description" content="Explore job options post Online MBA, top industries, salary expectations and tips to boost your career." />
-        <meta name="twitter:image" content="https://www.unifost.com/images/blogs/career-after-online-mba.webp" />
+        <meta name="twitter:image" content="https://www.unifostedu.com/images/blogs/career-after-online-mba.webp" />
       
 
       <div className="flex flex-col md:flex-row gap-10">

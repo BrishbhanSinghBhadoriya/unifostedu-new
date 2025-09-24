@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
   title: "Educational Blog | Online University Degrees & Career Guidance - UNIFOST",
@@ -23,6 +24,10 @@ export const metadata = {
 };
 
 const BlogPage = () => {
+  const breadcrumbItems = [
+    { name: 'Blog', url: '/blog' }
+  ];
+
   const blogPosts = [
     {
       id: 1,
@@ -97,7 +102,9 @@ const BlogPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <Breadcrumb items={breadcrumbItems} />
+      <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#001e3c] to-[#003b6c] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -210,6 +217,7 @@ const BlogPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

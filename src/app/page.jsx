@@ -1,9 +1,13 @@
 import Landing from "@/components/pages/Landing";
 import Image from "next/image";
 export const metadata = {
-  title: "UGC Approved Online University Degrees in India | UNIFOST",
-  description: "Compare UGC-approved online degrees from top universities. Get free career counseling for MBA, BBA, MCA courses. 5000+ students enrolled. Apply now!",
+  title: "Unifost | UGC Approved Online University Degrees in India",
+  description: "UnifostEdu.com – The official platform for UGC-approved online university degrees in India. Explore top courses, apply easily, and transform your career.",
   keywords: [
+    "Unifost",
+    "UnifostEdu",
+    "UGC online degrees",
+    "Unifost Education Platform",
     "online degrees India",
     "UGC approved online courses",
     "distance learning MBA",
@@ -26,16 +30,15 @@ export const metadata = {
     "BBA online",
     "MCA online",
     "BCA online"
-    
   ],
   alternates: {
     canonical: "https://unifostedu.com",
   },
   openGraph: {
-    title: "UGC Approved Online Degrees in India | UNIFOST",
-    description: "Compare UGC-approved online degrees from top universities. Get free career counseling for MBA, BBA, MCA courses. 5000+ students enrolled. Apply now!",
+    title: "Unifost | UGC Approved Online University Degrees in India",
+    description: "UnifostEdu.com – The official platform for UGC-approved online university degrees in India. Explore top courses, apply easily, and transform your career.",
     url: "https://unifostedu.com",
-    siteName: "UNIFOST",
+    siteName: "Unifost",
     images: [
       { 
         url: "/favicon.ico",
@@ -69,5 +72,29 @@ export const metadata = {
 };
 
 export default function Home() {
-  return <Landing />;
+  return (
+    <>
+      {/* Organization Schema for Unifost Brand */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Unifost",
+            "url": "https://unifostedu.com",
+            "alternateName": "UnifostEdu",
+            "sameAs": [
+              "https://www.linkedin.com/company/unifost",
+              "https://www.instagram.com/unifost_edu/",
+              "https://twitter.com/unifost"
+            ],
+            "logo": "https://unifostedu.com/uni.webp.48x48.png",
+            "description": "UnifostEdu.com – The official platform for UGC-approved online university degrees in India. Explore top courses, apply easily, and transform your career."
+          })
+        }}
+      />
+      <Landing />
+    </>
+  );
 }

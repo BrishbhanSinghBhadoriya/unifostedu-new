@@ -9,16 +9,16 @@ const ChooseOnlineUniversity = () => {
         <title>How to Choose the University for Online Courses | UniFost Blog</title>
         <meta name="description" content="Learn the key factors to consider when choosing the best university for online education in India. Make informed decisions for your future." />
         <meta name="keywords" content="Choose Online University, Online Courses India, UGC Approved Universities, Best Online Learning Platforms, UniFost Blog" />
-        <link rel="canonical" href="https://www.unifost.com/blog/how-to-choose-university-for-online-courses" />
+        <link rel="canonical" href="https://www.unifostedu.com/blog/how-to-choose-university-for-online-courses" />
         <meta property="og:title" content="How to Choose the University for Online Courses" />
         <meta property="og:description" content="A comprehensive guide to help students select the right university for online learning in India." />
-        <meta property="og:image" content="https://www.unifost.com/images/blogs/choose-online-university.jpg" />
-        <meta property="og:url" content="https://www.unifost.com/blog/how-to-choose-university-for-online-courses" />
+        <meta property="og:image" content="https://www.unifostedu.com/images/blogs/choose-online-university.jpg" />
+        <meta property="og:url" content="https://www.unifostedu.com/blog/how-to-choose-university-for-online-courses" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="How to Choose the University for Online Courses" />
         <meta name="twitter:description" content="Explore how to pick the best UGC-approved online university with strong placement, support, and quality." />
-        <meta name="twitter:image" content="https://www.unifost.com/images/blogs/choose-online-university.jpg" />
+        <meta name="twitter:image" content="https://www.unifostedu.com/images/blogs/choose-online-university.jpg" />
       </Helmet>
 
       <div className="flex flex-col md:flex-row gap-10">

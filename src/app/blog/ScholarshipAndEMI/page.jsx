@@ -11,16 +11,16 @@ const ScholarshipAndEMI = () => {
         <title>Scholarship and EMI Options for Online Degrees | UniFost Blog</title>
         <meta name="description" content="Learn about available scholarship and EMI financing options for online degrees in India. Discover how to make higher education affordable and accessible." />
         <meta name="keywords" content="Scholarship for Online Degree, EMI Options Online Education, Affordable Online Degrees, Finance Online Courses India, UniFost Blog" />
-        <link rel="canonical" href="https://www.unifost.com/blog/scholarship-emi-options-online-degrees" />
+        <link rel="canonical" href="https://www.unifostedu.com/blog/scholarship-emi-options-online-degrees" />
         <meta property="og:title" content="Scholarship and EMI Options for Online Degrees" />
         <meta property="og:description" content="Explore various scholarships and flexible EMI options to pursue your online degree without financial burden." />
-        <meta property="og:image" content="https://www.unifost.com/images/blogs/scholarship-emi.webp" />
-        <meta property="og:url" content="https://www.unifost.com/blog/scholarship-emi-options-online-degrees" />
+        <meta property="og:image" content="https://www.unifostedu.com/images/blogs/scholarship-emi.webp" />
+        <meta property="og:url" content="https://www.unifostedu.com/blog/scholarship-emi-options-online-degrees" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Scholarship and EMI Options for Online Degrees" />
         <meta name="twitter:description" content="Explore various scholarships and flexible EMI options to pursue your online degree without financial burden." />
-        <meta name="twitter:image" content="https://www.unifost.com/images/blogs/scholarship-emi.webp" />
+        <meta name="twitter:image" content="https://www.unifostedu.com/images/blogs/scholarship-emi.webp" />
       
 
       <div className="flex flex-col md:flex-row gap-10">

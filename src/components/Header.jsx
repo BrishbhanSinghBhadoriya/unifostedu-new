@@ -163,7 +163,10 @@ const [modalType, setModalType] = useState();
             {[
               { label: 'Home', path: '/', icon: FaHome },
               { label: 'About', path: '/about', icon: FaInfoCircle },
-              { label: 'Services', path: '/services', icon: FaCog }
+              { label: 'Courses', path: '/coursesearch', icon: FaGraduationCap },
+              { label: 'Universities', path: '/listofcollege', icon: FaUniversity },
+              { label: 'Services', path: '/services', icon: FaCog },
+              { label: 'Blog', path: '/blog', icon: FaBookOpen }
             ].map((link, i) => (
               <Link key={i}
                 href={link.path}
@@ -338,7 +341,10 @@ const [modalType, setModalType] = useState();
                   {[
                     { label: 'Home', path: '/', icon: FaHome },
                     { label: 'About', path: '/about', icon: FaInfoCircle },
-                    { label: 'Services', path: '/services', icon: FaCog }
+                    { label: 'Courses', path: '/coursesearch', icon: FaGraduationCap },
+                    { label: 'Universities', path: '/listofcollege', icon: FaUniversity },
+                    { label: 'Services', path: '/services', icon: FaCog },
+                    { label: 'Blog', path: '/blog', icon: FaBookOpen }
                   ].map((link, i) => (
                     <Link key={i} href={link.path} onClick={() => setMobileMenuOpen(false)}
                           className="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition text-white border border-white/10">
