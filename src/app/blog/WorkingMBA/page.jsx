@@ -1,25 +1,25 @@
 // File: src/pages/blogs/WorkingMBA.jsx
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
+import Image from 'next/image';
 
 const WorkingMBA = () => {
   return (
     <main className="max-w-6xl mx-auto px-5 py-12 font-sans text-gray-800 leading-relaxed">
-      <Helmet>
         <title>Can I Do MBA While Working? Here's How | UniFost Blog</title>
         <meta name="description" content="Learn how to successfully pursue an MBA while working full-time. Explore flexible MBA formats, tips, and tools for working professionals." />
         <meta name="keywords" content="MBA while working, Online MBA, Working professionals MBA, Flexible MBA, Part-time MBA India, UniFost Blog" />
         <link rel="canonical" href="https://www.unifost.com/blog/mba-while-working" />
         <meta property="og:title" content="Can I Do MBA While Working? Here's How" />
         <meta property="og:description" content="Explore flexible MBA options and tips to manage work and studies together." />
-        <meta property="og:image" content="https://www.unifost.com/images/blogs/mba-while-working.jpg" />
+        <meta property="og:image" content="https://www.unifost.com/images/blogs/mba-while-working.webp" />
         <meta property="og:url" content="https://www.unifost.com/blog/mba-while-working" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Can I Do MBA While Working? Here's How" />
         <meta name="twitter:description" content="Explore flexible MBA options and tips to manage work and studies together." />
-        <meta name="twitter:image" content="https://www.unifost.com/images/blogs/mba-while-working.jpg" />
-      </Helmet>
+        <meta name="twitter:image" content="https://www.unifost.com/images/blogs/mba-while-working.webp" />
+      
 
       <div className="flex flex-col md:flex-row gap-10">
         <article className="prose prose-lg max-w-none flex-1">
@@ -70,7 +70,7 @@ const WorkingMBA = () => {
         {/* Sidebar (Optional: You can add related blogs/images here later) */}
         <aside className="w-full md:w-[40%] flex flex-col gap-6">
           <img
-            src="/b8.png"
+            src="/images/b8.webp"
             alt="Working Professionals MBA"
             className="rounded-xl w-full object-cover shadow-md"
           />
@@ -79,7 +79,7 @@ const WorkingMBA = () => {
             <h2 className="text-xl font-semibold mb-4 text-blue-900">You may also like</h2>
             <div className="grid gap-4">
               <a href="/blog/scholarship-emi-options-online-degrees" className="block bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                <img src="/b5.png" alt="Scholarship and EMI" className="h-32 w-full object-cover" />
+                <img src="/images/b5.webp" alt="Scholarship and EMI" className="h-32 w-full object-cover" />
                 <div className="p-3">
                   <h3 className="font-bold text-blue-800 text-md">Scholarship & EMI Options</h3>
                   <p className="text-sm text-gray-600 mt-1">Make your MBA affordable with smart financing options.</p>
@@ -87,7 +87,7 @@ const WorkingMBA = () => {
               </a>
 
               <a href="/blog/lpu-online-review" className="block bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                <img src="/b4.png" alt="LPU Review" className="h-32 w-full object-cover" />
+                <img src="/images/b4.webp" alt="LPU Review" className="h-32 w-full object-cover" />
                 <div className="p-3">
                   <h3 className="font-bold text-blue-800 text-md">LPU Online MBA Review</h3>
                   <p className="text-sm text-gray-600 mt-1">Pros, cons, fees, and placement insights.</p>

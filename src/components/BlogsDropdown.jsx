@@ -7,14 +7,16 @@ import { FaBookOpen, FaChevronDown } from "react-icons/fa";
 const blogs = [
   { title: "Scholarship And EMI ", link: "/blog/ScholarshipAndEMI" },
   { title: "Career After Online MBA", link: "/blog/CareerAfterOnlineMBA" },
-  { title: "Career After Online BCA Degree", link: "/blog/career-opportunities-after-online-bca-degree" },
-  { title: "How to Choose the Right Online University", link: "/blog/how-to-choose-right-online-university" },
-  { title: "Online Degrees in Delhi 2024", link: "/blog/online-degrees-delhi-top-universities-2024" },
-  { title: "Distance Learning vs Online Learning", link: "/blog/distance-learning-vs-online-learning-differences" },
+  { title: "Choose Online University", link: "/blog/ChooseOnlineUniversity" },
+  { title: "Jain UGC Approval", link: "/blog/JainUGCApproval" },
+  { title: "LPU Online Review", link: "/blog/LPUOnlineReview" },
   { title: "Best Online BBA Programs for 2025", link: "/blog/BestOnlineBBA2025" },
-  { title: "Why Choose an Online MCA?", link: "/blog/why-choose-online-mca" },
-  { title: "Career Benefits of an Online M.Com Degree", link: "/blog/career-benefits-of-online-mcom" },
-  { title: "Top UGC Approved Universities for Online Education", link: "/blog/top-ugc-approved-universities" },
+  { title: "Manipal VS Amity Online MBA ", link: "/blog/ManipalVsAmityOnlineMBA" },
+  { title: "MBA Online Vs Distance", link: "/blog/MBADistanceVsOnline" },
+  { title: "Working Profesinal MBA", link: "/blog/WorkingMBA" },
+  { title: "Unifost provided ", link: "/blog/UnifostSpecial" },
+  { title: " Special Blog", link: "/blog/SpecialBlog"},
+   //{ title: "See More-->", link: "/blog/SpecialBlog" },
 ];
 
 const BlogsDropdown = ({ menuOpen, setMenuOpen }) => {

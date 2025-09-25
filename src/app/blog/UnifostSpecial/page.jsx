@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
 import Image from 'next/image';
 
 export const metadata = {
@@ -28,7 +29,7 @@ const BlogPage = () => {
       id: 1,
       title: "Top 10 Online MBA Universities in India 2024: Complete Guide",
       excerpt: "Discover the best UGC-approved online MBA programs in India. Compare fees, rankings, placements, and admission requirements for top universities.",
-      image: "/images/blog/mba-guide.webp",
+      image: "/images/b7.webp",
       category: "MBA Guide",
       readTime: "8 min read",
       date: "2024-01-15",
@@ -38,7 +39,7 @@ const BlogPage = () => {
       id: 2,
       title: "UGC Approved vs Regular Degrees: Complete Comparison Guide",
       excerpt: "Understand the difference between UGC-approved and regular degrees. Learn why accreditation matters for your career and higher studies.",
-      image: "/images/blog/ugc-guide.webp",
+      image: "/images/b6.webp",
       category: "Accreditation",
       readTime: "6 min read",
       date: "2024-01-12",
@@ -48,7 +49,7 @@ const BlogPage = () => {
       id: 3,
       title: "Career Opportunities After Online BCA Degree: Job Prospects & Salary",
       excerpt: "Explore career opportunities, job roles, and salary expectations after completing an online BCA degree. Get insights from industry experts.",
-      image: "/images/blog/bca-career.webp",
+      image: "/images/b5.webp",
       category: "Career Guidance",
       readTime: "7 min read",
       date: "2024-01-10",
@@ -58,7 +59,7 @@ const BlogPage = () => {
       id: 4,
       title: "How to Choose the Right Online University: 10 Essential Factors",
       excerpt: "Learn how to select the perfect online university for your career goals. Compare accreditation, faculty, placement records, and more.",
-      image: "/images/blog/university-selection.webp",
+      image: "/images/b4.webp",
       category: "University Selection",
       readTime: "9 min read",
       date: "2024-01-08",
@@ -68,7 +69,7 @@ const BlogPage = () => {
       id: 5,
       title: "Online Degrees in Delhi: Top Universities & Courses 2024",
       excerpt: "Complete guide to online degrees available in Delhi. Compare top universities, courses, fees, and admission processes.",
-      image: "/images/blog/delhi-online.webp",
+      image: "/images/b2.webp",
       category: "City Guide",
       readTime: "5 min read",
       date: "2024-01-05",
@@ -78,7 +79,7 @@ const BlogPage = () => {
       id: 6,
       title: "Distance Learning vs Online Learning: Key Differences Explained",
       excerpt: "Understand the differences between distance learning and online learning. Choose the right mode of education for your needs.",
-      image: "/images/blog/distance-vs-online.webp",
+      image: "/images/b3.webp",
       category: "Education Mode",
       readTime: "6 min read",
       date: "2024-01-03",

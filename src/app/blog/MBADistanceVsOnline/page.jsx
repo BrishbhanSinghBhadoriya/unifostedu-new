@@ -1,25 +1,27 @@
 // File: src/pages/blogs/MBADistanceVsOnline.jsx
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
+import Image from 'next/image';
+
 
 const MBADistanceVsOnline = () => {
   return (
     <main className="max-w-6xl mx-auto px-4 py-12 text-gray-800">
-      <Helmet>
+      
         <title>MBA Online vs. Distance: What’s the Difference? | UniFost Blog</title>
         <meta name="description" content="Understand the key differences between Online MBA and Distance MBA programs in India. Learn about their value, recognition, flexibility, and career impact." />
         <meta name="keywords" content="MBA Online, Distance MBA, Online vs Distance MBA, Online Education India, UniFost Blog" />
         <link rel="canonical" href="https://www.unifost.com/blog/mba-online-vs-distance" />
         <meta property="og:title" content="MBA Online vs. Distance: What’s the Difference?" />
         <meta property="og:description" content="Explore how Online MBA differs from Distance MBA in terms of format, flexibility, and recognition." />
-        <meta property="og:image" content="https://www.unifost.com/images/blogs/mba-online-vs-distance.jpg" />
+        <meta property="og:image" content="https://www.unifost.com/images/blogs/mba-online-vs-distance.webp" />
         <meta property="og:url" content="https://www.unifost.com/blog/mba-online-vs-distance" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="MBA Online vs. Distance: What’s the Difference?" />
         <meta name="twitter:description" content="Explore how Online MBA differs from Distance MBA in terms of format, flexibility, and recognition." />
-        <meta name="twitter:image" content="https://www.unifost.com/images/blogs/mba-online-vs-distance.jpg" />
-      </Helmet>
+        <meta name="twitter:image" content="https://www.unifost.com/images/blogs/mba-online-vs-distance.webp" />
+    
 
       <div className="flex flex-col md:flex-row gap-10 items-start">
         {/* Main Article */}
@@ -109,7 +111,7 @@ const MBADistanceVsOnline = () => {
         {/* Right Sidebar */}
         <aside className="w-full md:w-[40%] space-y-6">
           <img
-            src="/b1.png"
+            src="/images/b1.webp"
             alt="Online MBA vs Distance MBA"
             className="rounded-xl w-full object-cover shadow-md"
           />
@@ -121,7 +123,7 @@ const MBADistanceVsOnline = () => {
                 href="/blog/top-ugc-approved-online-mba-universities"
                 className="group bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden"
               >
-                <img src="/b2.png" alt="Top UGC-Approved Online MBA Universities" className="h-32 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="/images/b2.webp" alt="Top UGC-Approved Online MBA Universities" className="h-32 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-3">
                   <h3 className="font-bold text-blue-800 text-md">Best BBA Programs in 2025</h3>
                   <p className="text-sm text-gray-600 mt-1">Top NAAC-rated universities offering online BBA.</p>
@@ -132,7 +134,7 @@ const MBADistanceVsOnline = () => {
                 href="/blog/how-to-choose-best-online-course"
                 className="group bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden"
               >
-                <img src="/b3.png" alt="Choose Best Online Course" className="h-32 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="/images/b3.webp" alt="Choose Best Online Course" className="h-32 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-3">
                   <h3 className="font-bold text-blue-800 text-md">Choosing the Best Online Course</h3>
                   <p className="text-sm text-gray-600 mt-1">Match your goals with the right online course.</p>
@@ -143,7 +145,7 @@ const MBADistanceVsOnline = () => {
                 href="/blog/lpu-online-review"
                 className="group bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden"
               >
-                <img src="/b4.png" alt="LPU Review" className="h-32 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="/images/b4.webp" alt="LPU Review" className="h-32 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-3">
                   <h3 className="font-bold text-blue-800 text-md">LPU Online: Review & Admission</h3>
                   <p className="text-sm text-gray-600 mt-1">Pros, cons & full admission process explained.</p>

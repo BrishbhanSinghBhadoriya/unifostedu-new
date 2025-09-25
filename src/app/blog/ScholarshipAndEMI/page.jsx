@@ -2,6 +2,7 @@
 import React from 'react';
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 
 const ScholarshipAndEMI = () => {
@@ -110,9 +111,17 @@ const ScholarshipAndEMI = () => {
                   <p className="text-sm text-gray-600 mt-1">Compare flexibility, support, and ROI.</p>
                 </div>
               </a>
+              
             </div>
           </section>
         </aside>
+      </div>
+       <div className="flex justify-center mt-12">
+        <Link href="/">
+          <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition">
+            more Information
+          </button>
+        </Link>
       </div>
     </main>
   );
