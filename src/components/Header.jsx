@@ -31,7 +31,7 @@ const Header = () => {
 const [modalType, setModalType] = useState();
 
   const universities = [
-    { name: "Amity University Online", link: "/Amity-University-Online", logo: "/images/amity.webp" },
+    { name: "Amity University Online", link: "/Amity-university-Online", logo: "/images/amity.webp" },
     { name: "Lovely Professional University", link: "/lpu", logo: "/images/lpu.webp" },
     { name: "Online Manipal University", link: "/manipal", logo: "/images/manipal.webp" },
     { name: "Manipal Academy of Higher Education", link: "/mahe", logo: "/images/mahe-uni.webp" },

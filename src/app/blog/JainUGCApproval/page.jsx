@@ -1,25 +1,27 @@
 // File: src/pages/blogs/JainUGCApproval.jsx
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from "next/link";
 
 const JainUGCApproval = () => {
   return (
     <main className="max-w-6xl mx-auto px-4 py-12 text-gray-800">
-      <Helmet>
+      
         <title>Is Jain Online University UGC Approved? | UniFost Blog</title>
         <meta name="description" content="Wondering if Jain Online University is UGC approved? Explore its accreditations, recognitions, and what it means for your degree value and career." />
         <meta name="keywords" content="Jain University Online, UGC approved online universities, NAAC A+ University, Jain online degree value" />
         <link rel="canonical" href="https://www.unifostedu.com/blog/jain-online-ugc-approved" />
         <meta property="og:title" content="Is Jain Online University UGC Approved?" />
         <meta property="og:description" content="Explore if Jain Online University is UGC approved and understand its accreditations, recognition, and what it means for students." />
-        <meta property="og:image" content="https://www.unifostedu.com/images/blogs/jain-online-ugc.jpg" />
-        <meta property="og:url" content="https://www.unifostedu.com/blog/jain-online-ugc-approved" />
+        <meta property="og:image" content="https://www.unifost.com/images/blogs/jain-online-ugc.webp" />
+        <meta property="og:url" content="https://www.unifost.com/blog/jain-online-ugc-approved" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Is Jain Online University UGC Approved?" />
         <meta name="twitter:description" content="Explore if Jain Online University is UGC approved and understand its accreditations, recognition, and what it means for students." />
-        <meta name="twitter:image" content="https://www.unifostedu.com/images/blogs/jain-online-ugc.jpg" />
-      </Helmet>
+        <meta name="twitter:image" content="https://www.unifost.com/images/blogs/jain-online-ugc.webp" />
+      
 
       <div className="flex flex-col md:flex-row gap-10">
         {/* Main Content */}
@@ -88,7 +90,7 @@ const JainUGCApproval = () => {
         {/* Sidebar */}
         <aside className="w-full md:w-[38%] space-y-6">
           <img
-            src="/b5.png"
+            src="/images/b5.webp"
             alt="Jain Online UGC Approval"
             className="rounded-xl w-full object-cover shadow-md"
           />
@@ -97,7 +99,7 @@ const JainUGCApproval = () => {
             <h2 className="text-xl font-semibold text-blue-900 mb-4">You Might Also Like</h2>
             <div className="grid gap-5">
               <a href="/blog/mba-online-vs-distance" className="group bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
-                <img src="/b1.png" alt="MBA Online vs Distance" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="/images/b1.webp" alt="MBA Online vs Distance" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h3 className="font-bold text-blue-800 text-lg">Online vs Distance MBA</h3>
                   <p className="text-sm text-gray-600 mt-1">Compare flexibility, recognition & ROI.</p>
@@ -105,13 +107,20 @@ const JainUGCApproval = () => {
               </a>
 
               <a href="/blog/lpu-online-review" className="group bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
-                <img src="/b4.png" alt="LPU Online Review" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="/images/b4.webp" alt="jain Online Review" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h3 className="font-bold text-blue-800 text-lg">LPU Online Review</h3>
                   <p className="text-sm text-gray-600 mt-1">Understand pros, cons, and admissions process.</p>
                 </div>
               </a>
             </div>
+                <div className="flex justify-center mt-12 ">
+        <Link href="/jain">
+          <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition cursor-pointer">
+            more Information about Jain 
+          </button>
+        </Link>
+      </div>
           </section>
         </aside>
       </div>

@@ -88,7 +88,7 @@ export default function CourseLayout({ children }) {
             "@type": "EducationalOrganization",
             name: "UNIFOST",
             url: "https://unifostedu.com",
-            logo: "https://unifostedu.com/images/logo.png",
+            logo: "https://unifostedu.com/images/logo.webp",
             sameAs: [
               "https://www.facebook.com/unifost",
               "https://twitter.com/unifost",

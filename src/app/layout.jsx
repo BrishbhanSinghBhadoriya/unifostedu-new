@@ -142,9 +142,9 @@ export const metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/uni.webp.48x48.png", sizes: "48x48", type: "image/png" }
+      { url: "/favicon-32x32.webp", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.webp", sizes: "16x16", type: "image/png" },
+      { url: "/uni.webp.48x48.webp", sizes: "48x48", type: "image/png" }
     ],
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
@@ -210,8 +210,8 @@ export default function RootLayout({ children }) {
         <meta name="twitter:image" content="https://unifostedu.com/favicon.ico" />
 
         {/* SERP favicon sizes */}
-        <link rel="icon" type="image/png" sizes="48x48" href="/uni.webp.48x48.png" />
-        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/uni.webp.48x48.webp" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-32x32.webp" />
         <meta name="twitter:image:alt" content="Unifost - Online University Degrees" />
 
         
@@ -222,8 +222,8 @@ export default function RootLayout({ children }) {
         {/* Favicon and app icons */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.webp" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.webp" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico" />
         
         {/* Bookmark logo for social sharing and bookmarks */}
@@ -231,7 +231,7 @@ export default function RootLayout({ children }) {
         
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
-        <meta name="msapplication-TileImage" content="/bookmarklogo.png" />
+        <meta name="msapplication-TileImage" content="/bookmarklogo.webp" />
         <meta name="theme-color" content="#001e3c" />
         
         {/* Organization Schema */}
@@ -319,7 +319,7 @@ export default function RootLayout({ children }) {
               name: 'Unifost',
               alternateName: ['UnifostEdu', 'UNIFOST', 'UniFost'],
               url: 'https://unifostedu.com',
-              logo: 'https://unifostedu.com/uni.webp.48x48.png',
+              logo: 'https://unifostedu.com/uni.webp.48x48.webp',
               sameAs: [
                 'https://www.linkedin.com/company/unifost',
                 'https://www.facebook.com/unifost',

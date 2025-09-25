@@ -1,13 +1,14 @@
-import React, {useEffect} from "react";
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import React from "react";
+import Head from "next/head";
+import Image from "next/image";
+
 
 const blogs = [
   {
     title: "MBA Online vs. Distance: What’s the Difference?",
     slug: "mba-online-vs-distance",
     category: "Course Guide",
-    image: "/b1.png",
+    image: "/images/b1.webp",
     date: "June 2025",
     readTime: "5 min read",
     description:
@@ -17,7 +18,7 @@ const blogs = [
     title: "Best Online BBA Programs in India for 2025",
     slug: "best-online-bba-2025",
     category: "Course Guide",
-    image: "/b2.png",
+    image: "/images/b2.webp",
     date: "June 2025",
     readTime: "6 min read",
     description:
@@ -27,7 +28,7 @@ const blogs = [
     title: "Which is better: Manipal vs. Amity Online MBA?",
     slug: "manipal-vs-amity-online-mba",
     category: "University Reviews",
-    image: "/b3.png",
+    image: "/images/b3.webp",
     date: "May 2025",
     readTime: "4 min read",
     description:
@@ -37,7 +38,7 @@ const blogs = [
     title: "LPU Online Review – Pros and Cons, and Admissions Process",
     slug: "lpu-online-review",
     category: "University Reviews",
-    image: "/b4.png",
+    image: "/images/b4.webp",
     date: "May 2025",
     readTime: "5 min read",
     description:
@@ -47,7 +48,7 @@ const blogs = [
     title: "Is Jain Online University UGC Approved?",
     slug: "jain-ugc-approval",
     category: "University Reviews",
-    image: "/b5.png",
+    image: "/images/b5.webp",
     date: "May 2025",
     readTime: "5 min read",
     description:
@@ -57,7 +58,7 @@ const blogs = [
     title: "How to Choose the University for Online Courses",
     slug: "choose-online-university-guide",
     category: "Student Help Guides",
-    image: "/b6.png",
+    image: "/images/b6.webp",
     date: "June 2025",
     readTime: "7 min read",
     description:
@@ -67,7 +68,7 @@ const blogs = [
     title: "Scholarship and EMI Options for Online Degrees",
     slug: "online-degree-financing-options",
     category: "Student Help Guides",
-    image: "/b7.png",
+    image: "/images/b7.webp",
     date: "May 2025",
     readTime: "4 min read",
     description:
@@ -77,7 +78,7 @@ const blogs = [
     title: "Can I Do MBA While Working? Here's How",
     slug: "mba-while-working-guide",
     category: "Career & Outcomes",
-    image: "/b8.png",
+    image: "/images/b8.webp",
     date: "April 2025",
     readTime: "5 min read",
     description:
@@ -87,7 +88,7 @@ const blogs = [
     title: "Career Opportunities After Online MBA",
     slug: "career-after-online-mba",
     category: "Career & Outcomes",
-    image: "/b9.png",
+    image: "/images/b9.webp",
     date: "May 2025",
     readTime: "5 min read",
     description:
@@ -96,13 +97,11 @@ const blogs = [
 ];
 
 const BlogsPage = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+   [];
 
   return (
     <>
-      <Helmet>
+      
         <title>Unifost Blog – Online Courses, Career Advice, University Reviews</title>
         <meta
           name="description"
@@ -110,7 +109,7 @@ const BlogsPage = () => {
         />
         <meta name="keywords" content="Unifost blog, online MBA, university reviews, online degrees India, education guide" />
         <link rel="canonical" href="https://yourdomain.com/blog" />
-      </Helmet>
+      
 
       <main className="max-w-7xl mx-auto px-4 py-12 bg-green-50 min-h-screen">
         <h1 className="text-4xl font-bold mb-2 text-gray-800 text-center">
@@ -157,7 +156,7 @@ const BlogsPage = () => {
                   </span>
 
                   <h2 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-700 transition duration-200">
-                    <Link to={`/blog/${blog.slug}`}>{blog.title}</Link>
+                    
                   </h2>
 
                   <p className="text-sm text-gray-600 leading-relaxed">
