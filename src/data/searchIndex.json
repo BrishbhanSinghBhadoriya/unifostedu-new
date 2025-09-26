@@ -1,0 +1,15 @@
+[
+  { "title": "Amity University Online", "type": "university", "href": "/amity" },
+  { "title": "Manipal University Online", "type": "university", "href": "/manipal" },
+  { "title": "Jain University Online", "type": "university", "href": "/jain" },
+  { "title": "NMIMS University Online", "type": "university", "href": "/nmims" },
+  { "title": "Chandigarh University Online", "type": "university", "href": "/chandigarh" },
+  { "title": "Lovely Professional University Online", "type": "university", "href": "/lpu" },
+
+  { "title": "MBA (Master of Business Administration)", "type": "course", "href": "/courses/mba-online" },
+  { "title": "MCA (Master of Computer Applications)", "type": "course", "href": "/courses/mca-online" },
+  { "title": "BBA (Bachelor of Business Administration)", "type": "course", "href": "/courses/bba-online" },
+  { "title": "BCA (Bachelor of Computer Applications)", "type": "course", "href": "/courses/bca-online" },
+  { "title": "B.Com (Bachelor of Commerce)", "type": "course", "href": "/courses/bcom-online" },
+  { "title": "MA (Master of Arts)", "type": "course", "href": "/courses/ma-online" }
+]
