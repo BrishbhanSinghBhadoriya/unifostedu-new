@@ -135,7 +135,7 @@ const [modalType, setModalType] = useState();
   };
 
   // Hide header on Amity page AFTER all hooks are declared to preserve hook order
-  if (pathname === '/amity-online') {
+  if (pathname === '/amity-online'||'/manipal') {
     return null;
   }
 

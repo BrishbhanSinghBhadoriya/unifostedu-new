@@ -10,6 +10,7 @@ import EnquiryForm from '@/components/EnquiryForm';
 import Head from 'next/head';
 import Image from 'next/image';
 import * as Tabs from '@radix-ui/react-tabs';
+import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 
 const Manipal = () => {
 
@@ -205,12 +206,10 @@ const Manipal = () => {
 
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
   const [modalType, setModalType] = useState('getStarted');
+  const [openModal, setOpenModal] = useState(null);
 
-  const openEnquiryModal = (type = 'getStarted') => {
-    setModalType(type);
-    setShowEnquiryModal(true);
-  };
 
+  
 
   return (
     <>
@@ -225,6 +224,7 @@ const Manipal = () => {
         <meta name="author" content="Manipal University Online" />
         <meta name="robots" content="index, follow" /> 
          <link rel="canonical" href="https://unifostedu.com/manipal" />
+         <link href="https://fonts.cdnfonts.com/css/queens" rel="stylesheet" />
          
         {/* Open Graph */}
         <meta property="og:title" content="Manipal University Online | Accredited Online Degrees" />
@@ -241,6 +241,10 @@ const Manipal = () => {
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
+      <style jsx>{`
+        .queens { font-family: 'Queens', serif; }
+      `}</style>
+      <div className="queens">
       
          
       
@@ -264,7 +268,7 @@ const Manipal = () => {
             📞 +91-7042867717
           </a>
           <button 
-            onClick={() => openEnquiryModal()}
+            onClick={() => setOpenModal({ type: 'apply' })}
             className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-2 rounded-full transition cursor-pointer"
           >
             Apply Now
@@ -294,7 +298,7 @@ const Manipal = () => {
 
     <div className="relative z-10 max-w-7xl mx-auto px-4 py-10 md:py-16 grid md:grid-cols-2 gap-8 items-center">
       <div className="font-baskervville text-3xl text-black md:text-5xl font-extrabold leading-tight">
-        <h1 className="text-3xl md:text-5xl font-extrabold leading-tight">
+        <h1 className=" font-queens text-3xl md:text-5xl font-extrabold leading-tight">
           NAAC A+ Accredited
           <span className="block">Online Degrees from</span>
           <span className="block text-[#ff7a36] mt-2">Manipal University Jaipur (MUJ)</span>
@@ -314,57 +318,8 @@ const Manipal = () => {
         </div>
       </div>
 
-      {/* Right sticky form */}
-      <div className="font-baskervville text-black bg-white rounded-2xl p-5 md:p-6 shadow-2xl">
-        <h2 className="text-xl font-bold">Join <span className="text-[#ff7a36]">50,000+ Learners</span> Across India</h2>
-        <div className="flex items-center gap-4 text-sm text-gray-700 mt-2">
-          <div className="flex items-center gap-2"><FaGraduationCap className="text-lg text-indigo-500" /> Easy financing options</div>
-          <div className="flex items-center gap-2"><FaMoneyBillWave className="text-lg text-yellow-500" /> Attractive scholarships</div>
-        </div>
-        <p className="text-gray-600 mt-3">Take the Step Toward 360 Degree of Success</p>
-        <form onSubmit={(e)=>{e.preventDefault(); alert('Submitted');}} className="mt-4 space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Full name <span className="text-red-500">*</span></label>
-            <input required type="text" placeholder="Enter your full name" className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff7a36]" />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Email address <span className="text-red-500">*</span></label>
-            <input required type="email" placeholder="Enter your email" className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff7a36]" />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-black-700">Mobile number <span className="text-red-500">*</span></label>
-            <input required type="tel" placeholder="Enter your mobile number" className="mt-1 w-full rounded-md border border-black-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff7a36]" />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-black-700">Course <span className="text-red-500">*</span></label>
-            <select required className="mt-1 w-full rounded-md border border-black-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff7a36]">
-              <option value="">Select course*</option>
-              <optgroup label="Manipal University Jaipur (MUJ)">
-                <option>MBA</option>
-                <option>MCA</option>
-                <option>M.Com</option>
-                <option>MA in Economics</option>
-                <option>BBA</option>
-                <option>BCA</option>
-                <option>B.Com</option>
-              </optgroup>
-            </select>
-          </div>
-          <label className="flex items-start gap-2 text-xs text-gray-600"><input defaultChecked type="checkbox" className="mt-1" /> I authorize contact via Email, SMS, WhatsApp, and voice call. This consent overrides DNC/NDNC.</label>
-          <button 
-            type="button" 
-            onClick={() => openEnquiryModal()}
-            className="w-full bg-[#ff7a36] hover:bg-[#ff6a1d] text-white font-semibold py-2.5 rounded-md"
-          >Enroll Now</button>
-        </form>
-        <div className="mt-4 flex items-center justify-between bg-gray-50 rounded-md p-3">
-          <div className="text-sm"><span className="font-semibold">Application Closes in</span> <span className="ml-2">Today 11:59 PM</span></div>
-          <div className="text-right">
-            <div className="text-2xl font-extrabold text-[#ff7a36]">95%</div>
-            <div className="text-xs text-gray-600 -mt-1">Of Seats Filled</div>
-          </div>
-        </div>
-      </div>
+      
+      
     </div>
   </section>
 
@@ -391,6 +346,7 @@ const Manipal = () => {
           </div>
         </div>
       </section>
+      </div>
 
       {/* Rankings & Accreditations grid (compact) */}
       <section className="py-12">
@@ -808,6 +764,18 @@ const Manipal = () => {
             </div>
           ))}
         </div>
+        {openModal && (
+          <ApplyEnquiryModal
+            open={!!openModal}
+            onOpenChange={(v) => !v && setOpenModal(null)}
+            title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
+            subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
+            imageSrc="/images/online-manipal-form.webp"
+            universityName="Manipal University Online"
+            defaultProgram="MBA"
+            formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
+          />
+        )}
       </section>
       </>
   );
