@@ -4,11 +4,13 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import EnquireCard from '@/components/EnquireCard';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
-import { 
+import { FaAward, FaGraduationCap, FaGlobe } from 'react-icons/fa';
+ import { 
   GraduationCap, 
   Users, 
   Globe, 
@@ -38,6 +40,131 @@ const inter = Inter({
 
 
 const AmityLandingPage = () => {
+    const ugCourses = [
+    {
+      course: "Bachelor of Business Administration (BBA)",
+      duration: "3 Years",
+      eligibility: "10+2 Pass",
+      fees: "₹1,65,000- ₹2,25,000",
+      specialization: "BBA (General, Data Analytics, Travel And Tourism Management, Professional Certificate in Business Analytics)",
+      image: "/images/bba.webp",
+      alt: "BBA from amity online university",
+    },
+    {
+      course: "Bachelor of Computer Applications (BCA)",
+      duration: "3 Years",
+      eligibility: "10+2 Pass",
+      fees: "₹1,50,000 - ₹2,25,000",
+      specialization: "BCA (General, Cloud and Security, Software Engineering, Data Science, Data Engineering(HCL Tech), Data Analytics, Software Engineering(HCL Tech))",
+      image: "/images/bca.webp",
+      alt: "BCA from amity online university",
+    },
+    {
+      course: "Bachelor of Commerce (B.Com)",
+      duration: "3 Years",
+      eligibility: "10+2 Pass",
+      fees: "₹99,000 - ₹2,50,000",
+      specialization: "B.Com (General, Hons, International Finance & Accounting)",
+      image: "/images/bcom.webp",
+      alt: "B.Com from amity online university",
+    },
+    {
+      course: "Bachelor of Arts (BA)",
+      duration: "3 Years",
+      eligibility: "10+2 Pass",
+      fees: "₹99,000 - ₹1,70,000",
+      specialization: "BA (General, Journalism and Mass Communication, Native Languages(Kannada,Malayalam, Tamil, Telugu), Psychology, English, Sociology, Political Science, Economics)",
+      image: "/images/ba.webp",
+      alt: "BA from amity online university",
+    
+    },
+  ];
+
+  const pgCourses = [
+    {
+      course: "Master of Business Administration (MBA)",
+      duration: "2 Years",
+      eligibility: "Graduation",
+      fees: "₹1,99,000 - ₹2,99,000",
+      specialization: "MBA (General, Information Technology Management, Dual Specialization, Human Resource Analytics, Data Science, Business Analytics, International Business Management, Digital Entrepreneurship, Digital Marketing Management, Entrepreneurship & Leadership Management, Finance & Accounting Management, Hospitality Management, Global Finance Market, Insurance Management, Marketing & Sales Management, Petroleum & Natural Gas, Production and Operations Management, Retail Management)",
+      image: "/images/mba.webp",
+      alt: "MBA from amity online university",
+    },
+    {
+      course: "Master of Computer Applications (MCA)",
+      duration: "2 Years",
+      eligibility: "Graduation in BCA/B.Sc(IT)",
+      fees: "₹170,000- ₹2,50,000",
+      specialization: "MCA (General, Cyber Security, Blockchain Technology, Machine Learning and Artificial Intelligence, Augmented Reality and Virtual Reality, Software Engineering)",
+      image: "/images/mca1.webp",
+      alt: "MCA from amity online university",
+    },
+    {
+      course: "Master of Commerce (M.Com)",
+      duration: "2 Years",
+      eligibility: "Graduation in Commerce",
+      fees: "₹1,20,000",
+      specialization: "General, Financial Management, Financial Technology",
+      image: "/images/m.com.webp",
+      alt: "M.Com from amity online university",
+    },
+    {
+      course: "Master of Arts (MA)",
+      duration: "2 Years",
+      eligibility: "Graduation",
+      fees: "₹1,30,000 - ₹2,50,000",
+      specialization: "MA (Psychology, Journalism and Mass Communication, Public Policy & Governance, English, Sociology)",
+      image: "/images/ma1.webp",
+      alt: "MA from amity online university",
+    },
+    {
+      course: "Master of Science (M.Sc)",
+      duration: "2 Years",
+      eligibility: "Graduation",
+      fees: "₹2,50,000",
+      specialization: "Data Science",
+      image: "/images/m.com.webp",
+      alt: "M.Sc from amity online university",
+    },
+  ];
+
+  const ug_pgCourses = [
+    {
+      course: "BBA + MBA",
+      duration: "4.5-5 Years",
+      eligibility: "10+2 With minimum 50%",
+      fees: "₹3,45,800",
+      specialization: "BBA + MBA",
+      image: "/images/mba.webp",
+      alt: "BBA + MBA from amity online university",
+    },
+    {
+      course: "BCA + MCA",
+      duration: "4.5-5 Years",
+      eligibility: "10+2 With minimum 50%",
+      fees: "₹3,04,000",
+      specialization: "BCA + MCA",
+      image: "/images/mca1.webp",
+      alt: "BCA + MCA from amity online university",
+    },
+    {
+      course: "B.Com + MBA",
+      duration: "4.5-5 Years",
+      eligibility: "10+2 With minimum 50%",
+      fees: "₹2,83,100 - ₹3,05,000",
+      specialization: "B.Com + MBA",
+      image: "/images/m.com.webp",
+      alt: "B.Com + MBA from amity online university",
+    },
+  ];
+
+const SectionHeader = ({ icon: Icon, title, description }) => (
+  <div className="text-center mb-12">
+    <Icon className="mx-auto text-4xl text-orange-500 mb-4" />
+    <h2 className="text-3xl font-bold mb-2">{title}</h2>
+    <p className="text-gray-600">{description}</p>
+  </div>
+);
   const [formData, setFormData] = useState({
     fullName: '',
     phoneNumber: '',
@@ -125,6 +252,8 @@ const AmityLandingPage = () => {
     { program: 'MCA', count: '8 Specializations', color: 'bg-purple-50 border-purple-200 text-purple-800',image:'/images/mcaSpecialization.webp' },
     { program: 'BCA', count: '6 Specializations', color: 'bg-orange-50 border-orange-200 text-orange-800',image:'/images/bcaSpecialization.webp' }
   ];
+
+  const [activeTab, setActiveTab] = useState('ug');
 
   return (
     <div className="min-h-screen bg-white">
@@ -310,6 +439,78 @@ const AmityLandingPage = () => {
     </div>
   </div>
 </section>
+
+      {/* Courses Section with Tabs */}
+      <section className="py-16 bg-gray-50 px-6 font-[Inter]">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-8">
+           <h2 className="text-4xl font-extralight tracking-wide mb-2">
+      Explore Our Programs
+    </h2>
+            <p className="text-black-600">Find the perfect course to launch or advance your career.</p>
+          </div>
+
+          {/* Tab Buttons */}
+          <div className="flex justify-center mb-12 space-x-3 md:space-x-6 bg-white p-4 md:p-6 rounded-full shadow-xl max-w-2xl mx-auto">
+            <button
+              onClick={() => setActiveTab('ug')}
+              className={`px-4 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold rounded-full transition-all duration-300 ${activeTab === 'ug' ? 'bg-blue-600 text-white shadow-lg' : 'text-gray-600 hover:bg-gray-100'}`}
+            >
+              Undergraduate
+            </button>
+            <button
+              onClick={() => setActiveTab('pg')}
+              className={`px-4 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold rounded-full transition-all duration-300 ${activeTab === 'pg' ? 'bg-blue-600 text-white shadow-lg' : 'text-gray-600 hover:bg-gray-100'}`}
+            >
+              Postgraduate
+            </button>
+            <button
+              onClick={() => setActiveTab('integrated')}
+              className={`px-4 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold rounded-full transition-all duration-300 ${activeTab === 'integrated' ? 'bg-blue-600 text-white shadow-lg' : 'text-gray-600 hover:bg-gray-100'}`}
+            >
+              Integrated
+            </button>
+          </div>
+
+          {/* Tab Content */}
+          <div>
+            {activeTab === 'ug' && (
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+                <div className="flex overflow-x-auto gap-6 scrollbar-hide pb-4">
+                  {ugCourses.map((item, index) => (
+                    <div key={`ug-${item.course}-${index}`} className="min-w-[280px] flex-shrink-0">
+                      <EnquireCard {...item} universityName="Amity University Online" uniqueId={`ug-${index}`} />
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+            {activeTab === 'pg' && (
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+                <div className="flex overflow-x-auto gap-6 scrollbar-hide pb-4">
+                  {pgCourses.map((item, index) => (
+                    <div key={`pg-${item.course}-${index}`} className="min-w-[280px] flex-shrink-0">
+                      <EnquireCard {...item} universityName="Amity University Online" uniqueId={`pg-${index}`} />
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+            {activeTab === 'integrated' && (
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+                <div className="flex overflow-x-auto gap-6 scrollbar-hide pb-4">
+                  {ug_pgCourses.map((item, index) => (
+                    <div key={`integrated-${item.course}-${index}`} className="min-w-[280px] flex-shrink-0">
+                      <EnquireCard {...item} universityName="Amity University Online" uniqueId={`integrated-${index}`} />
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </div>
+        </div>
+      </section>
+
 
       {/* Enquiry Form Section */}
       {/* <section className="py-16 bg-gray-50">
