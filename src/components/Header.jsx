@@ -163,10 +163,10 @@ const [modalType, setModalType] = useState();
             {[
               { label: 'Home', path: '/', icon: FaHome },
               { label: 'About', path: '/about', icon: FaInfoCircle },
-              { label: 'Courses', path: '/coursesearch', icon: FaGraduationCap },
-              { label: 'Universities', path: '/listofcollege', icon: FaUniversity },
+             // { label: 'Courses', path: '/coursesearch', icon: FaGraduationCap },
+             // { label: 'Universities', path: '/listofcollege', icon: FaUniversity },
               { label: 'Services', path: '/services', icon: FaCog },
-              { label: 'Blog', path: '/blog', icon: FaBookOpen }
+           //   { label: 'Blog', path: '/blog', icon: FaBookOpen }
             ].map((link, i) => (
               <Link key={i}
                 href={link.path}

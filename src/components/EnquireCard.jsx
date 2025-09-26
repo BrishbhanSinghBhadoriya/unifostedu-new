@@ -77,9 +77,10 @@ const EnquireCard = ({
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
           
           {/* University Badge */}
-          <div className="absolute top-4 left-4 bg-gradient-to-r from-gray-800 to-purple-800 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+           <div className="absolute bottom-1 left-1 bg-gradient-to-r from-gray-800 to-purple-800 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
             {universityName}
-          </div>
+           </div>
+
           
           {/* Popular Badge */}
           <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1">
