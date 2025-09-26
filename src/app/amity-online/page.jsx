@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import AdmissionProcedure from '@/components/AdmissionProcedure';
 import EnquireCard from '@/components/EnquireCard';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -727,66 +726,155 @@ const fadeIn = {
 
 
       {/* Partnership Section */}
-      <section className="py-12 md:py-16 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4">
-              Strategic Partnership with Hockey India
-            </h2>
-            <p className="text-blue-100 text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto">
-              Empowering hockey players with quality education and special scholarships
-            </p>
-            <Button 
-              size="lg"
-              className="bg-yellow-400 text-gray-900 hover:bg-yellow-300 px-6 md:px-8 py-3 text-base md:text-lg"
-            >
-              Learn More
-              <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2" />
-            </Button>
-          </motion.div>
-        </div>
-      </section>
+    <section className="py-12 md:py-16 bg-white text-black">
+  <div className="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    
+    {/* Left Side - Image */}
+    <motion.div
+      initial={{ opacity: 0, x: -30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="flex justify-center"
+    >
+      <Image
+        src="/images/hockey.webp"
+        alt="Hockey Partnership"
+        width={900}
+        height={500}
+        className="rounded-xl shadow-lg object-cover"
+      />
+    </motion.div>
 
-      {/* Final CTA Section */}
-      <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
-        <div className="max-w-4xl mx-auto text-center px-4 md:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 md:mb-6">
-              Ready to Transform Your Future?
-            </h2>
-            <p className="text-lg md:text-xl text-blue-100 mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed">
-              Take the first step towards your dream career. Join thousands of successful graduates who chose Amity for their educational journey.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-              <Button 
-                size="lg"
-                className="bg-yellow-400 text-gray-900 hover:bg-yellow-300 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-semibold"
-              >
-                Apply Now
-                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2" />
-              </Button>
-              <Button 
-                size="lg"
-                variant="outline" 
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg"
-              >
-                Download Brochure
-              </Button>
-            </div>
-          </motion.div>
+    {/* Right Side - Content */}
+    <motion.div
+      initial={{ opacity: 0, x: 30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-left"
+    >
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+        Strategic Partnership with Hockey India
+      </h2>
+      <p className="text-black text-base md:text-lg mb-6">
+        Online Manipal University has collaborated with Hockey India to empower
+        players with world-class education and exclusive benefits:
+      </p>
+
+      {/* Bullet Points */}
+      <ul className="space-y-3 text-black text-sm md:text-base">
+        <li className="flex items-start">
+          <ArrowRight className="w-5 h-5 text-yellow-400 mr-2 mt-0.5" />
+          Special scholarships for hockey athletes across India.
+        </li>
+        <li className="flex items-start">
+          <ArrowRight className="w-5 h-5 text-black mr-2 mt-0.5" />
+          Flexible online learning to balance sports & academics.
+        </li>
+        <li className="flex items-start">
+          <ArrowRight className="w-5 h-5 text-black mr-2 mt-0.5" />
+          Recognition from UGC & NAAC ensures credibility of the degree.
+        </li>
+      </ul>
+
+      {/* CTA Button */}
+      <div className="mt-6">
+      
+      </div>
+    </motion.div>
+  </div>
+</section>
+<div>
+  <section className="relative py-20 bg-white">
+    {/* Decorative Blobs */}
+    <div className="absolute -top-20 -left-20 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
+    <div className="absolute -bottom-32 -right-32 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
+
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* Section Header */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="text-center mb-16"
+      >
+        <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+          Admission Procedure
+        </h2>
+        <div className="w-24 h-1 bg-yellow-500 mx-auto mb-8 rounded-full"></div>
+        <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          A simple, transparent, and student-friendly admission process
+          designed to help you begin your learning journey smoothly.
+        </p>
+      </motion.div>
+
+      {/* 4-Step Process */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="mt-20 bg-white p-10 rounded-3xl shadow-xl border border-gray-200"
+      >
+        <h3 className="text-3xl md:text-4xl font-bold text-black mb-12 text-center">
+          Easy 4-Step Admission Process
+        </h3>
+
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 relative">
+          {/* Connecting Line */}
+          <div className="hidden md:block absolute top-28 left-[10%] right-[10%] h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 z-0 rounded-full"></div>
+
+          {[
+            {
+              number: "01",
+              title: "Application Form",
+              desc: "Fill the online application form on the university portal.",
+            },
+            {
+              number: "02",
+              title: "Documents & Fee",
+              desc: "Upload required documents and pay the application fee.",
+            },
+            {
+              number: "03",
+              title: "Confirmation",
+              desc: "Receive confirmation and student login credentials.",
+            },
+            {
+              number: "04",
+              title: "Enrollment",
+              desc: "Complete fee payment and begin your classes.",
+            },
+          ].map((step, index) => (
+            <motion.div
+              key={index}
+              className="text-center relative z-10"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.3 }}
+            >
+              <div className="bg-gradient-to-br from-yellow-400 to-yellow-500 w-28 h-28 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center mx-auto mb-6 text-white shadow-2xl">
+                <span className="text-3xl md:text-4xl font-bold">{step.number}</span>
+                <span className="text-xs md:text-sm uppercase font-semibold mt-1">Step</span>
+              </div>
+              <h4 className="text-lg md:text-xl font-bold text-black mb-2">
+                {step.title}
+              </h4>
+              <p className="text-gray-700 text-sm md:text-base">{step.desc}</p>
+            </motion.div>
+          ))}
         </div>
-      </section>
-      <AdmissionProcedure />
+      </motion.div>
+    </div>
+  </section>
+</div>
+
+
+
+      
       {/* Certificate + Benefits */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 px-6">
@@ -860,7 +948,7 @@ const fadeIn = {
           >
             {[
               "/images/company.webp", "/images/company1.webp", "/images/company9.webp", 
-              "/images/com10.webp", "/images/companany4.webp", "/images/company6.webp", 
+              "/images/com10.webp", "/images/companany4.webp", 
               "/images/companany5.webp", "/images/adove.webp", "/images/samsung.webp",
               "/images/3.webp", "/images/4.webp", "/images/5.webp", 
               "/images/6.webp", "/images/7.webp", "/images/8.webp", "/images/9.webp"
