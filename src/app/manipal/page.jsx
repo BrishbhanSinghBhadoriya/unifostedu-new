@@ -490,6 +490,130 @@ const Manipal = () => {
   </Tabs.Root>
 </section>
 
+     {/*360 section*/}
+
+  
+  
+    <section
+      className="min-h-screen w-full flex flex-col justify-center items-center px-6 py-12"
+      style={{
+        backgroundColor: "darksalmon",
+        fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+      }}
+    >
+      {/* Container */}
+      <div className="max-w-6xl w-full bg-darksalmon rounded-xl shadow-lg overflow-hidden">
+        {/* Header */}
+        <div className="bg-darksalmon text-black text-center p-8">
+          <h1 className="text-4xl md:text-5xl font-bold mb-3 tracking-wide">
+            Unlock The 360° Advantage
+          </h1>
+          <p className="text-base md:text-lg opacity-90 max-w-3xl mx-auto leading-relaxed">
+            Experience comprehensive benefits designed to support your
+            educational journey and career growth
+          </p>
+        </div>
+
+        {/* Advantages */}
+        <div className="flex flex-wrap p-8">
+          {/* Left column */}
+          <div className="flex-1 min-w-[300px] p-4">
+            <div className="flex items-start mb-6">
+              <div className="bg-[#f0f5ff] w-14 h-14 rounded-full flex items-center justify-center mr-4">
+                <span className="text-2xl text-[#2a5298]">🎓</span>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-[#1e3c72] mb-1">
+                  Globally recognized Prestigious Degree
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Earn a degree that holds value worldwide and opens doors to
+                  international opportunities.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start">
+              <div className="bg-[#f0f5ff] w-14 h-14 rounded-full flex items-center justify-center mr-4">
+                <span className="text-2xl text-[#2a5298]">📚</span>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-[#1e3c72] mb-1">
+                  Industry relevant curriculum
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Learn skills that are directly applicable to current industry
+                  demands and future trends.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right column */}
+          <div className="flex-1 min-w-[300px] p-4">
+            <div className="flex items-start mb-6">
+              <div className="bg-[#f0f5ff] w-14 h-14 rounded-full flex items-center justify-center mr-4">
+                <span className="text-2xl text-[#2a5298]">💼</span>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-[#1e3c72] mb-1">
+                  100% placement assistance
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Get comprehensive support in finding the right job
+                  opportunities after completing your program.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start">
+               <div className="bg-[#f0f5ff] w-14 h-14 rounded-full flex items-center justify-center mr-4">
+                <span className="text-2xl text-[#2a5298]">🔄</span>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-[#1e3c72] mb-1">
+                  Easy Financing Options
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Flexible payment plans to make quality education accessible to
+                  everyone.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Financing & Scholarship */}
+        <div className="bg-gray-50 border-t border-gray-200 flex flex-wrap items-center p-8">
+          <div className="flex-1 min-w-[300px] pr-6 mb-6 md:mb-0">
+            <h2 className="text-2xl font-semibold text-[#1e3c72] mb-3">
+              Avail easy financing options
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              With our no-cost EMIs, we let your learning take the spotlight
+              without the stress of financing. Our flexible payment plans are
+              designed to support your educational goals without financial
+              burden.
+            </p>
+          </div>
+
+          <div className="flex-1 min-w-[300px] bg-[#eef4ff] p-6 rounded-lg">
+            <h3 className="text-xl font-semibold text-[#1e3c72] mb-3">
+              Get attractive scholarships
+            </h3>
+            <p className="text-gray-700 leading-relaxed">
+              Exclusive scholarships designed for defense personnel, government
+              employees, differently-abled people & meritorious students. We
+              believe in rewarding talent and supporting diverse learners.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+
+
+
       {/* Why Choose Section */}
 
       <section className="py-16 bg-gray-50">
