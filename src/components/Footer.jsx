@@ -1,10 +1,12 @@
 'use client';
 import React, { useState, useEffect } from "react";
 import { toast } from "sonner";
+import { usePathname } from 'next/navigation';
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp, FaArrowUp, FaUser, FaGraduationCap, FaUniversity } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
+  const pathname = usePathname();
   const [showHiringInfo, setShowHiringInfo] = useState(false);
   const [showContactInfo, setShowContactInfo] = useState(false);
   const [formData, setFormData] = useState({
@@ -21,6 +23,11 @@ const Footer = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [newsletterDone, setNewsletterDone] = useState(false);
+
+  // Hide footer on Amity page
+  if (pathname === '/amity') {
+    return null;
+  }
 
   // Mock search params functionality
   useEffect(() => {

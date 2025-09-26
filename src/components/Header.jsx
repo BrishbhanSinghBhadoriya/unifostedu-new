@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import {
   FaEnvelope, FaPhoneAlt, FaComments, FaVideo, FaChevronDown, FaBars, FaTimes,
   FaSearch, FaGraduationCap, FaBookOpen, FaUniversity, FaRocket, FaHome, FaInfoCircle,
@@ -24,11 +24,17 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const router = useRouter();
+  const pathname = usePathname();
   const dropdownRef = useRef(null);
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
   
   const [loading, setLoading] = useState(false);
 const [modalType, setModalType] = useState();
+
+  // Hide header on Amity page
+  if (pathname === '/amity') {
+    return null;
+  }
 
   const universities = [
     { name: "Amity University Online", link: "/Amity-university-Online", logo: "/images/amity.webp" },

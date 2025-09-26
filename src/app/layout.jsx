@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Inter, Baskervville } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,6 +8,11 @@ import Canonical from "@/components/Canonical";
 import { Toaster as SonnerToaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
+const baskervville = Baskervville({ 
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-baskervville"
+});
 
 export const metadata = {
   metadataBase: new URL('https://unifostedu.com'),
@@ -355,7 +360,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} ${baskervville.variable}`}>
         <Canonical />
         <Header />
         <main>{children}</main>

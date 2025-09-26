@@ -76,23 +76,14 @@ const EnquireCard = ({
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
           
-          {/* University Badge */}
-          <div className="absolute top-4 left-4 bg-gradient-to-r from-gray-800 to-purple-800 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
-            {universityName}
-          </div>
           
-          {/* Popular Badge */}
-          <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1">
-            <FaStar className="text-xs" />
-            Popular
-          </div>
         </div>
 
         {/* Content */}
         <div className="p-4 flex flex-col ">
           {/* Course Title */}
           <div className="mb-3">
-            <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
+            <h3 className="font-baskervville text-lg font-bold text-gray-900 mb-2 line-clamp-2 transition-colors duration-300">
               {course}
             </h3>
           </div>
@@ -156,7 +147,7 @@ const EnquireCard = ({
                   {visibleSpecializations.map((spec, idx) => (
                     <span 
                       key={idx}
-                      className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded-full"
+                      className=" inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded-full"
                     >
                       {spec}
                     </span>
@@ -170,7 +161,7 @@ const EnquireCard = ({
           <div className="mt-auto pt-2">
             <motion.button
               onClick={handleEnquireClick}
-              className="w-full bg-gradient-to-r from-gray-800 to-purple-800 text-white px-4 py-2.5 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 group/btn cursor-pointer"
+              className="w-full bg-[#1a325d] text-white px-4 py-2.5 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 group/btn cursor-pointer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >

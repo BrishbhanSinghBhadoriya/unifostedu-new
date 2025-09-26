@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { FaAward, FaGraduationCap, FaGlobe } from 'react-icons/fa';
  import { 
   GraduationCap, 
@@ -47,7 +48,7 @@ const AmityLandingPage = () => {
       eligibility: "10+2 Pass",
       fees: "₹1,65,000- ₹2,25,000",
       specialization: "BBA (General, Data Analytics, Travel And Tourism Management, Professional Certificate in Business Analytics)",
-      image: "/images/bba.webp",
+      image: "/images/bba-online-image.webp",
       alt: "BBA from amity online university",
     },
     {
@@ -56,7 +57,7 @@ const AmityLandingPage = () => {
       eligibility: "10+2 Pass",
       fees: "₹1,50,000 - ₹2,25,000",
       specialization: "BCA (General, Cloud and Security, Software Engineering, Data Science, Data Engineering(HCL Tech), Data Analytics, Software Engineering(HCL Tech))",
-      image: "/images/bca.webp",
+      image: "/images/bca-online-image.webp",
       alt: "BCA from amity online university",
     },
     {
@@ -65,7 +66,7 @@ const AmityLandingPage = () => {
       eligibility: "10+2 Pass",
       fees: "₹99,000 - ₹2,50,000",
       specialization: "B.Com (General, Hons, International Finance & Accounting)",
-      image: "/images/bcom.webp",
+      image: "/images/bcom-online-image.webp",
       alt: "B.Com from amity online university",
     },
     {
@@ -87,7 +88,7 @@ const AmityLandingPage = () => {
       eligibility: "Graduation",
       fees: "₹1,99,000 - ₹2,99,000",
       specialization: "MBA (General, Information Technology Management, Dual Specialization, Human Resource Analytics, Data Science, Business Analytics, International Business Management, Digital Entrepreneurship, Digital Marketing Management, Entrepreneurship & Leadership Management, Finance & Accounting Management, Hospitality Management, Global Finance Market, Insurance Management, Marketing & Sales Management, Petroleum & Natural Gas, Production and Operations Management, Retail Management)",
-      image: "/images/mba.webp",
+      image: "/images/mba-online-image.webp",
       alt: "MBA from amity online university",
     },
     {
@@ -96,7 +97,7 @@ const AmityLandingPage = () => {
       eligibility: "Graduation in BCA/B.Sc(IT)",
       fees: "₹170,000- ₹2,50,000",
       specialization: "MCA (General, Cyber Security, Blockchain Technology, Machine Learning and Artificial Intelligence, Augmented Reality and Virtual Reality, Software Engineering)",
-      image: "/images/mca1.webp",
+      image: "/images/mca-online-image.webp",
       alt: "MCA from amity online university",
     },
     {
@@ -105,7 +106,7 @@ const AmityLandingPage = () => {
       eligibility: "Graduation in Commerce",
       fees: "₹1,20,000",
       specialization: "General, Financial Management, Financial Technology",
-      image: "/images/m.com.webp",
+      image: "/images/mcom-online-image.webp",
       alt: "M.Com from amity online university",
     },
     {
@@ -123,7 +124,7 @@ const AmityLandingPage = () => {
       eligibility: "Graduation",
       fees: "₹2,50,000",
       specialization: "Data Science",
-      image: "/images/m.com.webp",
+      image: "/images/mcom-online-image.webp",
       alt: "M.Sc from amity online university",
     },
   ];
@@ -135,7 +136,7 @@ const AmityLandingPage = () => {
       eligibility: "10+2 With minimum 50%",
       fees: "₹3,45,800",
       specialization: "BBA + MBA",
-      image: "/images/mba.webp",
+      image: "/images/mba-online-image.webp",
       alt: "BBA + MBA from amity online university",
     },
     {
@@ -144,7 +145,7 @@ const AmityLandingPage = () => {
       eligibility: "10+2 With minimum 50%",
       fees: "₹3,04,000",
       specialization: "BCA + MCA",
-      image: "/images/mca1.webp",
+      image: "/images/mca-online-image.webp",
       alt: "BCA + MCA from amity online university",
     },
     {
@@ -153,7 +154,7 @@ const AmityLandingPage = () => {
       eligibility: "10+2 With minimum 50%",
       fees: "₹2,83,100 - ₹3,05,000",
       specialization: "B.Com + MBA",
-      image: "/images/m.com.webp",
+      image: "/images/mcom-online-image.webp",
       alt: "B.Com + MBA from amity online university",
     },
   ];
@@ -173,7 +174,7 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
     state: ''
   });
 
-  const handleInputChange = () => {
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -181,14 +182,14 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
     }));
   };
 
-  const handleSelectChange = () => {
+  const handleSelectChange = (name, value) => {
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
     // Add form submission logic here
@@ -253,7 +254,6 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
     { program: 'BCA', count: '6 Specializations', color: 'bg-orange-50 border-orange-200 text-orange-800',image:'/images/bcaSpecialization.webp' }
   ];
 
-  const [activeTab, setActiveTab] = useState('ug');
 
   return (
     <div className="min-h-screen bg-white">
@@ -286,228 +286,265 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
       </motion.header>
 
       {/* Notification Bar */}
-      <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 py-3">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+      <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 py-2 md:py-3">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 text-center">
           <motion.p 
-            className="font-semibold flex items-center justify-center space-x-2"
+            className="font-semibold flex flex-col sm:flex-row items-center justify-center space-x-0 sm:space-x-2 space-y-1 sm:space-y-0 text-sm md:text-base"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            <CheckCircle className="w-5 h-5" />
-            <span>July 2025 Admissions Open • Scholarships up to 25% Available • Limited Time Offer</span>
+            <div className="flex items-center space-x-2">
+              <CheckCircle className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
+              <span className="text-xs sm:text-sm md:text-base">July 2025 Admissions Open</span>
+            </div>
+            <span className="hidden sm:inline">•</span>
+            <span className="text-xs sm:text-sm md:text-base">Scholarships up to 25% Available</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="text-xs sm:text-sm md:text-base">Limited Time Offer</span>
           </motion.p>
         </div>
       </div>
-      <div className="w-full flex justify-center mt-6">
-      <div className="relative w-full max-w-xl">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
-        <input
-          type="text"
-          placeholder="Search program..."
-          className="w-full bg-white/90 pl-10 pr-4 py-3 rounded-2xl border border-gray-300 focus:outline-none text-gray-700"
-        />
-      </div>
-    </div>
-
+      
+      {/* Search Section */}
+      
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden mt-10">
-  <div className="max-w-7xl mx-auto px-6 py-8 lg:py-24">
-    <div className="flex flex-wrap items-center gap-12">
-      {/* Left Content */}
-      <div className={`flex-1 min-w-[300px] ${inter.className}`}>
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          {/* Badge */}
-          <Badge className="mb-6 font-semibold px-4 py-2 border border-gray-300 bg-white flex items-center gap-2">
-            <Image
-              src="/images/UGC_India_Logo_9d01833e1b.svg"
-              alt="UGC Approved"
-              width={30}
-              height={30}
+      <section className="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden mb-10">
+      <div className="w-full flex justify-center mt-4 md:mt-6 px-4">
+        <div className="relative w-full max-w-sm sm:max-w-md md:max-w-xl">
+          <div className="relative group">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-600 w-5 h-5 md:w-6 md:h-6 group-hover:text-blue-600 transition-colors duration-300 z-10" />
+            <input
+              type="text"
+              placeholder="Search program..."
+              className="w-full bg-white/95 backdrop-blur-sm pl-12 md:pl-14 pr-4 py-3 md:py-4 rounded-2xl border-2  text-gray-700 text-sm md:text-base placeholder-gray-400 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:border-blue-300"
             />
-            <span className="text-gray-500">UGC Approved</span>
-          </Badge>
-
-          {/* Heading */}
-          <h1
-            className={`${playfair.className} text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6`}
-          >
-            India&apos;s Leading
-            <span className="block text-transparent bg-clip-text bg-yellow-600">
-              Online University
-            </span>
-          </h1>
-
-          {/* Description */}
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl leading-relaxed">
-            Transform your career with industry-relevant programs designed by experts.{" "}
-            <span className="font-semibold">Join 1.6 lakh+</span> professionals
-            who chose Amity for their educational journey.
-          </p>
-
-          {/* Program Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-      {specializations.map((item, index) => (
-        <motion.div
-          key={index}
-          className="rounded-xl overflow-hidden shadow-lg bg-white cursor-pointer"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: index * 0.1 }}
-          whileHover={{ scale: 1.05 }}
-        >
-          {/* Image */}
-          <div className="h-40 w-full">
-            <img
-              src={item.image}
-              alt={item.program}
-              className="h-full w-full object-cover"
-            />
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
           </div>
+        </div>
+      </div>
 
-          {/* Text Section */}
-          <div className="bg-[#0d1b4c] text-white py-3 text-center">
-            <div className="font-bold text-lg">{item.program}</div>
-            <div className="text-sm opacity-90">{item.count}</div>
-          </div>
-        </motion.div>
-      ))}
-    </div>
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <Button
-              size="lg"
-              className="bg-yellow-400 hover:bg-yellow-300 px-8 py-4 text-lg"
-            >
-              Apply Now
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-gray-300 hover:border-blue-400 px-8 py-4 text-lg"
-            >
-              <Play className="w-5 h-5 mr-2" />
-              Watch Video
-            </Button>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat, index) => (
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-8 lg:py-16 xl:py-24">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+            {/* Left Content */}
+            <div className={`flex-1 w-full lg:min-w-[300px] ${inter.className} order-2 lg:order-1`}>
               <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
               >
-                <stat.icon className="w-8 h-8 mx-auto mb-2 text-blue-600" />
-                <div className="text-2xl font-bold text-gray-900">
-                  {stat.number}
-                </div>
-                <div className="text-sm text-gray-600">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
+                {/* Badge */}
+                <Badge className="mb-4 md:mb-6 font-semibold px-3 md:px-4 py-2 border border-gray-300 bg-white flex items-center gap-2 w-fit">
+                  <Image
+                    src="/images/UGC_India_Logo_9d01833e1b.svg"
+                    alt="UGC Approved"
+                    width={24}
+                    height={24}
+                    className="md:w-[30px] md:h-[30px] rounded-full"
+                  />
+                  <span className="text-gray-500 text-sm md:text-base">UGC Approved</span>
+                </Badge>
 
-      {/* Right Content - Image */}
-      <div className="flex-1 min-w-[250px] max-w-[400px]">
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <div className="relative w-full h-64 sm:h-80 md:h-[520px] lg:h-[680px]">
-            <Image
-              src="/images/girlImage.webp"
-              alt="Amity Campus"
-              fill
-              className="object-contain"
-              priority
-            />
+                {/* Heading */}
+                <h1
+                  className={`${playfair.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4 md:mb-6`}
+                >
+                  India&apos;s Leading
+                  <span className="block text-transparent bg-clip-text bg-yellow-600">
+                    Online University
+                  </span>
+                </h1>
+
+                {/* Description */}
+                <p className="text-lg md:text-xl text-gray-600 mb-6 md:mb-8 max-w-2xl leading-relaxed">
+                  Transform your career with industry-relevant programs designed by experts.{" "}
+                  <span className="font-semibold">Join 1.6 lakh+</span> professionals
+                  who chose Amity for their educational journey.
+                </p>
+
+                {/* Program Cards */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-6 md:mb-8">
+                  {specializations.map((item, index) => (
+                    <motion.div
+                      key={index}
+                      className="rounded-xl overflow-hidden shadow-lg bg-white cursor-pointer"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      {/* Image */}
+                      <div className="h-24 sm:h-32 md:h-40 w-full">
+                        <img
+                          src={item.image}
+                          alt={item.program}
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+
+                      {/* Text Section */}
+                      <div className="bg-[#0d1b4c] text-white py-2 md:py-3 text-center">
+                        <div className="font-bold text-sm md:text-lg">{item.program}</div>
+                        <div className="text-xs md:text-sm opacity-90">{item.count}</div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* CTA Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-6 md:mb-8">
+                  <Button
+                    size="lg"
+                    className="bg-yellow-400 hover:bg-yellow-500 text-black cursor-pointer px-6 md:px-9 py-3 md:py-6 text-base md:text-lg rounded-full"
+                  >
+                    Apply Now
+                    <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2" />
+                  </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className=" cursor-pointer border-2 border-gray-300 hover:border-blue-400 px-6 md:px-9 py-3 md:py-6 text-base md:text-lg rounded-full"
+                  >
+                    <ArrowRight className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                    Enquire Now
+                  </Button>
+                </div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 md:mt-30">
+                  {stats.map((stat, index) => (
+                    <motion.div
+                      key={index}
+                      className="text-center"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                    >
+                      <stat.icon className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-yellow-500" />
+                      <div className="text-lg md:text-2xl font-bold text-gray-900">
+                        {stat.number}
+                      </div>
+                      <div className="text-xs md:text-sm text-gray-600">{stat.label}</div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Right Content - Image */}
+            <div className="flex-1 w-full lg:min-w-[250px] lg:max-w-[400px] order-1 lg:order-2">
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="flex justify-center lg:justify-end"
+              >
+                <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg h-64 sm:h-80 md:h-96 lg:h-[520px] xl:h-[680px]">
+                  <Image
+                    src="/images/girlImage.webp"
+                    alt="Amity Campus"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+              </motion.div>
+            </div>
           </div>
-        </motion.div>
-      </div>
-    </div>
-  </div>
-</section>
+        </div>
+      </section>
 
       {/* Courses Section with Tabs */}
-      <section className="py-16 bg-gray-50 px-6 font-[Inter]">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-8">
-           <h2 className="text-4xl font-extralight tracking-wide mb-2">
-      Explore Our Programs
-    </h2>
-            <p className="text-black-600">Find the perfect course to launch or advance your career.</p>
+      <section className="py-12 md:py-16 bg-white px-4 md:px-6 font-[Inter] relative">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-blue-50/30"></div>
+        <div className="absolute inset-0 opacity-40" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f3f4f6' fill-opacity='0.3'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-3xl md:text-4xl font-extralight tracking-wide mb-2">
+              Explore Our Programs
+            </h2>
+            <p className="text-gray-600 text-base md:text-lg">Find the perfect course to launch or advance your career.</p>
           </div>
 
-          {/* Tab Buttons */}
-          <div className="flex justify-center mb-12 space-x-3 md:space-x-6 bg-white p-4 md:p-6 rounded-full shadow-xl max-w-2xl mx-auto">
-            <button
-              onClick={() => setActiveTab('ug')}
-              className={`px-4 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold rounded-full transition-all duration-300 ${activeTab === 'ug' ? 'bg-blue-600 text-white shadow-lg' : 'text-gray-600 hover:bg-gray-100'}`}
-            >
-              Undergraduate
-            </button>
-            <button
-              onClick={() => setActiveTab('pg')}
-              className={`px-4 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold rounded-full transition-all duration-300 ${activeTab === 'pg' ? 'bg-blue-600 text-white shadow-lg' : 'text-gray-600 hover:bg-gray-100'}`}
-            >
-              Postgraduate
-            </button>
-            <button
-              onClick={() => setActiveTab('integrated')}
-              className={`px-4 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold rounded-full transition-all duration-300 ${activeTab === 'integrated' ? 'bg-blue-600 text-white shadow-lg' : 'text-gray-600 hover:bg-gray-100'}`}
-            >
-              Integrated
-            </button>
-          </div>
+          {/* Shadcn Tabs */}
+          <Tabs defaultValue="ug" className="w-full">
+            <div className="flex justify-center mb-8 md:mb-12">
+              <TabsList className="grid w-full max-w-md md:max-w-2xl grid-cols-3 bg-white p-5 rounded-full ">
+                <TabsTrigger 
+                  value="ug" 
+                  className="px-3 md:px-6 py-2 md:py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300 data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:shadow-lg hover:bg-gray-50 data-[state=inactive]:text-gray-600"
+                >
+                  Undergraduate
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="pg" 
+                  className="px-3 md:px-6 py-2 md:py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300 data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:shadow-lg hover:bg-gray-50 data-[state=inactive]:text-gray-600"
+                >
+                  Postgraduate
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="integrated" 
+                  className="px-3 md:px-6 py-2 md:py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300 data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:shadow-lg hover:bg-gray-50 data-[state=inactive]:text-gray-600"
+                >
+                  Integrated
+                </TabsTrigger>
+              </TabsList>
+            </div>
 
-          {/* Tab Content */}
-          <div>
-            {activeTab === 'ug' && (
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-                <div className="flex overflow-x-auto gap-6 scrollbar-hide pb-4">
+            {/* Tab Content */}
+            <TabsContent value="ug" className="mt-6">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }} 
+                animate={{ opacity: 1, y: 0 }} 
+                transition={{ duration: 0.5 }}
+              >
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
                   {ugCourses.map((item, index) => (
-                    <div key={`ug-${item.course}-${index}`} className="min-w-[280px] flex-shrink-0">
+                    <div key={`ug-${item.course}-${index}`} className="w-full">
                       <EnquireCard {...item} universityName="Amity University Online" uniqueId={`ug-${index}`} />
                     </div>
                   ))}
                 </div>
               </motion.div>
-            )}
-            {activeTab === 'pg' && (
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-                <div className="flex overflow-x-auto gap-6 scrollbar-hide pb-4">
+            </TabsContent>
+
+            <TabsContent value="pg" className="mt-6">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }} 
+                animate={{ opacity: 1, y: 0 }} 
+                transition={{ duration: 0.5 }}
+              >
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
                   {pgCourses.map((item, index) => (
-                    <div key={`pg-${item.course}-${index}`} className="min-w-[280px] flex-shrink-0">
+                    <div key={`pg-${item.course}-${index}`} className="w-full">
                       <EnquireCard {...item} universityName="Amity University Online" uniqueId={`pg-${index}`} />
                     </div>
                   ))}
                 </div>
               </motion.div>
-            )}
-            {activeTab === 'integrated' && (
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-                <div className="flex overflow-x-auto gap-6 scrollbar-hide pb-4">
+            </TabsContent>
+
+            <TabsContent value="integrated" className="mt-6">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }} 
+                animate={{ opacity: 1, y: 0 }} 
+                transition={{ duration: 0.5 }}
+              >
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
                   {ug_pgCourses.map((item, index) => (
-                    <div key={`integrated-${item.course}-${index}`} className="min-w-[280px] flex-shrink-0">
+                    <div key={`integrated-${item.course}-${index}`} className="w-full">
                       <EnquireCard {...item} universityName="Amity University Online" uniqueId={`integrated-${index}`} />
                     </div>
                   ))}
                 </div>
               </motion.div>
-            )}
-          </div>
+            </TabsContent>
+          </Tabs>
         </div>
       </section>
 
@@ -578,24 +615,24 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
       </section> */}
 
       {/* Features Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-12 md:py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Amity University Online?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               Experience world-class education with cutting-edge technology and industry-relevant curriculum
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -606,14 +643,14 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
                 whileHover={{ y: -5 }}
               >
                 <Card className="h-full hover:shadow-lg transition-all duration-300 border-0 shadow-sm">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <feature.icon className="w-8 h-8 text-blue-600" />
+                  <CardContent className="p-4 md:p-6 text-center">
+                    <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
+                      <feature.icon className="w-6 h-6 md:w-8 md:h-8 text-blue-600" />
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                    <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-2 md:mb-3">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
                       {feature.description}
                     </p>
                   </CardContent>
@@ -625,58 +662,58 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
       </section>
 
       {/* Partnership Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+      <section className="py-12 md:py-16 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4">
               Strategic Partnership with Hockey India
             </h2>
-            <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-blue-100 text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto">
               Empowering hockey players with quality education and special scholarships
             </p>
             <Button 
               size="lg"
-              className="bg-yellow-400 text-gray-900 hover:bg-yellow-300 px-8 py-3"
+              className="bg-yellow-400 text-gray-900 hover:bg-yellow-300 px-6 md:px-8 py-3 text-base md:text-lg"
             >
               Learn More
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2" />
             </Button>
           </motion.div>
         </div>
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
-        <div className="max-w-4xl mx-auto text-center px-6">
+      <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
+        <div className="max-w-4xl mx-auto text-center px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 md:mb-6">
               Ready to Transform Your Future?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-blue-100 mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed">
               Take the first step towards your dream career. Join thousands of successful graduates who chose Amity for their educational journey.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
               <Button 
                 size="lg"
-                className="bg-yellow-400 text-gray-900 hover:bg-yellow-300 px-8 py-4 text-lg font-semibold"
+                className="bg-yellow-400 text-gray-900 hover:bg-yellow-300 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-semibold"
               >
                 Apply Now
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2" />
               </Button>
               <Button 
                 size="lg"
                 variant="outline" 
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg"
               >
                 Download Brochure
               </Button>
@@ -686,22 +723,22 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
+      <footer className="bg-gray-900 text-white py-8 md:py-12">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div className="sm:col-span-2 lg:col-span-1">
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-[122px] h-10 relative">
+                <div className="w-[100px] md:w-[122px] h-8 md:h-10 relative">
                   <Image src="/amity.svg" alt="Amity University Online" fill className="object-contain" />
                 </div>
               </div>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400 text-sm leading-relaxed">
                 Transforming lives through quality education and innovation.
               </p>
             </div>
             
             <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
+              <h4 className="font-semibold mb-3 md:mb-4 text-base md:text-lg">Quick Links</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li><a href="#" className="hover:text-white transition-colors">Programs</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Admissions</a></li>
@@ -711,25 +748,25 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
             </div>
             
             <div>
-              <h4 className="font-semibold mb-4">Contact Info</h4>
+              <h4 className="font-semibold mb-3 md:mb-4 text-base md:text-lg">Contact Info</h4>
               <div className="space-y-2 text-sm text-gray-400">
                 <div className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4" />
+                  <Phone className="w-4 h-4 flex-shrink-0" />
                   <span>1800-200-8040</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Mail className="w-4 h-4" />
-                  <span>info@amityonline.com</span>
+                  <Mail className="w-4 h-4 flex-shrink-0" />
+                  <span className="break-all">info@amityonline.com</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4" />
+                  <MapPin className="w-4 h-4 flex-shrink-0" />
                   <span>Noida, India</span>
                 </div>
               </div>
             </div>
           </div>
           
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+          <div className="border-t border-gray-800 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-xs md:text-sm text-gray-400">
             <p>&copy; 2025 Amity University Online. All rights reserved.</p>
           </div>
         </div>
