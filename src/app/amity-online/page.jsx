@@ -313,7 +313,7 @@ const fadeIn = {
       {/* Notification Bar */}
       <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 py-2 md:py-3">
         <div className="max-w-7xl mx-auto px-4 md:px-6 text-center">
-          <motion.p 
+          <motion.div 
             className="font-semibold flex flex-col sm:flex-row items-center justify-center space-x-0 sm:space-x-2 space-y-1 sm:space-y-0 text-sm md:text-base"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -327,7 +327,7 @@ const fadeIn = {
             <span className="text-xs sm:text-sm md:text-base">Scholarships up to 25% Available</span>
             <span className="hidden sm:inline">•</span>
             <span className="text-xs sm:text-sm md:text-base">Limited Time Offer</span>
-          </motion.p>
+          </motion.div>
         </div>
       </div>
       

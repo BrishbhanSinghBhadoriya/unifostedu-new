@@ -29,15 +29,11 @@ const Header = () => {
   const pathname = usePathname();
   const dropdownRef = useRef(null);
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
-  
-  const [loading, setLoading] = useState(false);
+ const [loading, setLoading] = useState(false);
 const [modalType, setModalType] = useState();
 
   // Hide header on Amity page
-  if (pathname === '/amity-online' || pathname === '/manipal') {
-    return null;
-  }
-
+  
   const universities = [
     { name: "Amity University Online", link: "/amity-online", logo: "/images/amity.webp" },
     { name: "Lovely Professional University", link: "/lpu", logo: "/images/lpu.webp" },
@@ -57,7 +53,8 @@ const [modalType, setModalType] = useState();
     { name: "NMIMS University", link: "/nmims", logo: "/images/nmims.webp" }
   ];
 
-  // Build suggestion list: static JSON + dynamic courses from courseData + dynamic universities
+ 
+  
   const suggestions = useMemo(() => {
     const fromJson = (searchIndex || []).map(i => ({ title: i.title, type: i.type, href: i.href }));
     const fromCourses = Object.keys(courseData || {}).map((slug) => ({
@@ -74,9 +71,12 @@ const [modalType, setModalType] = useState();
     });
     return Array.from(map.values());
   }, [universities]);
+  
+
 
   const [latestBlogs, setLatestBlogs] = useState([]);
   const [blogsLoading, setBlogsLoading] = useState(false);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -127,12 +127,15 @@ const [modalType, setModalType] = useState();
       setActiveDropdown(dropdown);
     }
   };
+
   
   const openModal = (type) => {
     setModalType(type);
     setShowEnquiryModal(true);
   };
-  if (pathname === '/amity-online'||'/manipal') {
+
+  // Hide header on Amity page AFTER all hooks are declared to preserve hook order
+  if (pathname === '/amity-online') {
     return null;
   }
 
