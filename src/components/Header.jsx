@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
 import { FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
 import { useRouter, usePathname } from 'next/navigation';
@@ -14,6 +14,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import EnquiryForm from '@/components/EnquiryForm';
 import BlogsDropdown from '@/components/BlogsDropdown';
 import Image from 'next/image';
+import searchIndex from '@/data/searchIndex.json';
+import courseData from '@/data/courseData.json';
 
 
 
@@ -32,12 +34,12 @@ const Header = () => {
 const [modalType, setModalType] = useState();
 
   // Hide header on Amity page
-  if (pathname === '/amity') {
+  if (pathname === '/amity-online') {
     return null;
   }
 
   const universities = [
-    { name: "Amity University Online", link: "/Amity-university-Online", logo: "/images/amity.webp" },
+    { name: "Amity University Online", link: "/amity-online", logo: "/images/amity.webp" },
     { name: "Lovely Professional University", link: "/lpu", logo: "/images/lpu.webp" },
     { name: "Online Manipal University", link: "/manipal", logo: "/images/manipal.webp" },
     { name: "Manipal Academy of Higher Education", link: "/mahe", logo: "/images/mahe-uni.webp" },
@@ -55,11 +57,27 @@ const [modalType, setModalType] = useState();
     { name: "NMIMS University", link: "/nmims", logo: "/images/nmims.webp" }
   ];
 
+  // Build suggestion list: static JSON + dynamic courses from courseData + dynamic universities
+  const suggestions = useMemo(() => {
+    const fromJson = (searchIndex || []).map(i => ({ title: i.title, type: i.type, href: i.href }));
+    const fromCourses = Object.keys(courseData || {}).map((slug) => ({
+      title: courseData[slug]?.title || slug,
+      type: 'course',
+      href: `/courses/${slug}`
+    }));
+    const fromUniversities = universities.map(u => ({ title: u.name, type: 'university', href: u.link }));
+
+    // Deduplicate by href
+    const map = new Map();
+    [...fromJson, ...fromCourses, ...fromUniversities].forEach(item => {
+      if (!map.has(item.href)) map.set(item.href, item);
+    });
+    return Array.from(map.values());
+  }, [universities]);
+
   const [latestBlogs, setLatestBlogs] = useState([]);
   const [blogsLoading, setBlogsLoading] = useState(false);
 
-  
-  
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -92,33 +110,14 @@ const [modalType, setModalType] = useState();
     };
   }, [mobileMenuOpen]);
 
-  const handleSearch = () => {
-    const query = searchQuery.trim().toLowerCase();
-    const courseRoutes = {
-      mba: '/mba-online', bba: '/bba-online', mca: '/mca-online', bca: '/bca-online', mcom: '/mcom-online', ba: '/ba-online'
-    };
-    const universityRoutes = {
-      amity: '/Amity-University-Online', manipal: '/manipal', upes: '/upes', lpu: '/lpu', sharda: '/sharda', vgu: '/vgu', nmims: '/nmims', jain: '/jain', dypatil: '/dypatil'
-    };
-    for (const key in courseRoutes) {
-      if (query.includes(key)) {
-        router.push(courseRoutes[key]); 
-        setMenuOpen(null); 
-        setMobileMenuOpen(false);
-        return;
-      }
-    }
-    for (const key in universityRoutes) {
-      if (query.includes(key)) {
-        router.push(universityRoutes[key]); 
-        setMenuOpen(null); 
-        setMobileMenuOpen(false);
-        return;
-      }
-    }
-    router.push(`/search?query=${encodeURIComponent(query)}`); 
-        setMenuOpen(null); 
-        setMobileMenuOpen(false);
+  const filtered = useMemo(() => {
+    const q = (searchQuery || '').toLowerCase();
+    return suggestions.filter(item => item.title.toLowerCase().includes(q)).slice(0, 10);
+  }, [searchQuery, suggestions]);
+
+  const handleSuggestionClick = (href) => {
+    router.push(href);
+    setSearchQuery('');
   };
 
   const toggleDropdown = (dropdown) => {
@@ -169,10 +168,9 @@ const [modalType, setModalType] = useState();
             {[
               { label: 'Home', path: '/', icon: FaHome },
               { label: 'About', path: '/about', icon: FaInfoCircle },
-             // { label: 'Courses', path: '/coursesearch', icon: FaGraduationCap },
-             // { label: 'Universities', path: '/listofcollege', icon: FaUniversity },
+              
+              
               { label: 'Services', path: '/services', icon: FaCog },
-           //   { label: 'Blog', path: '/blog', icon: FaBookOpen }
             ].map((link, i) => (
               <Link key={i}
                 href={link.path}
@@ -227,19 +225,31 @@ const [modalType, setModalType] = useState();
              </div>
           </nav>
 
-          {/* Search - Made more compact */}
-          <div className="hidden sm:flex items-center bg-white/90 backdrop-blur rounded-full px-2 sm:px-3 py-1 shadow-md flex-1 max-w-xs mx-2 lg:mx-3 ring-1 ring-slate-200">
-            <input
-              type="text"
-              placeholder="Search courses, universities..."
-              className="outline-none text-black px-2 py-1 w-full text-xs"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-            />
-            <button onClick={handleSearch} className="text-white-600 hover:text-sky-800 px-1">
-              <FaSearch className="text-xs" />
-            </button>
+          {/* Search with suggestions (click to redirect) */}
+          <div className="hidden sm:block relative flex-1 max-w-sm mx-2 lg:mx-3">
+            <div className="flex items-center bg-white/95 backdrop-blur rounded-full px-3 py-1.5 shadow-md ring-1 ring-slate-200">
+              <FaSearch className="text-slate-500 text-xs" />
+              <input
+                type="text"
+                placeholder="Search courses, universities..."
+                className="outline-none text-black px-2 py-1 w-full text-xs"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+            {searchQuery && (
+              <div className="absolute mt-2 w-full bg-white rounded-xl shadow-2xl border border-slate-200 z-[9999] max-h-80 overflow-auto">
+                {filtered.map((item, idx) => (
+                  <button key={idx} onClick={() => handleSuggestionClick(item.href)} className="block w-full text-left px-3 py-2 hover:bg-slate-50">
+                    <div className="text-sm font-medium text-slate-900">{item.title}</div>
+                    <div className="text-xs text-slate-500 capitalize">{item.type}</div>
+                  </button>
+                ))}
+                {filtered.length === 0 && (
+                  <div className="px-3 py-3 text-sm text-slate-500">No results found</div>
+                )}
+              </div>
+            )}
           </div>
 
           {/* Contact Icons - Made more compact */}
@@ -331,11 +341,21 @@ const [modalType, setModalType] = useState();
                     className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/70 outline-none focus:border-[#00ffe0] transition"
                     value={searchQuery} 
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    onKeyDown={(e) => e.key === "Enter" && handleSearch()} 
                   />
-                  <button onClick={handleSearch} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white p-1">
-                    <FaSearch className="text-lg" />
-                  </button>
+                  {/* Suggestions */}
+                  {searchQuery && (
+                    <div className="absolute mt-2 w-full bg-white rounded-xl shadow-2xl border border-slate-200 z-[9999] max-h-72 overflow-auto text-slate-900">
+                      {filtered.map((item, idx) => (
+                        <button key={idx} onClick={() => handleSuggestionClick(item.href)} className="block w-full text-left px-3 py-2 hover:bg-slate-50">
+                          <div className="text-sm font-medium">{item.title}</div>
+                          <div className="text-xs text-slate-500 capitalize">{item.type}</div>
+                        </button>
+                      ))}
+                      {filtered.length === 0 && (
+                        <div className="px-3 py-3 text-sm text-slate-500">No results found</div>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -344,7 +364,7 @@ const [modalType, setModalType] = useState();
                 {/* Main Navigation */}
                 <div className="space-y-3">
                   <h3 className="text-[#00ffe0] font-bold text-sm uppercase tracking-wider px-2">Main Menu</h3>
-                  {[
+                  {[ 
                     { label: 'Home', path: '/', icon: FaHome },
                     { label: 'About', path: '/about', icon: FaInfoCircle },
                     { label: 'Courses', path: '/coursesearch', icon: FaGraduationCap },
@@ -377,11 +397,6 @@ const [modalType, setModalType] = useState();
                         <FaArrowRight className="text-[#00ffe0] text-xs" />
                       </Link>
                     ))}
-                    {/* <Link href="/listofcollege" onClick={() => setMobileMenuOpen(false)}
-                          className="flex items-center justify-center gap-2 p-3 rounded-xl bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] font-bold hover:scale-105 transition">
-                      <span>View All Universities</span>
-                      <FaArrowRight />
-                    </Link> */}
                   </div>
                 </div>
 

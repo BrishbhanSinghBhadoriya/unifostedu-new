@@ -27,6 +27,7 @@ import { FaAward, FaGraduationCap, FaGlobe } from 'react-icons/fa';
   Search
 } from 'lucide-react';
 import { Inter, Playfair_Display } from "next/font/google";
+import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -41,6 +42,7 @@ const inter = Inter({
 
 
 const AmityLandingPage = () => {
+  const [openModal, setOpenModal] = useState(null);
     const ugCourses = [
     {
       course: "Bachelor of Business Administration (BBA)",
@@ -66,7 +68,7 @@ const AmityLandingPage = () => {
       eligibility: "10+2 Pass",
       fees: "₹99,000 - ₹2,50,000",
       specialization: "B.Com (General, Hons, International Finance & Accounting)",
-      image: "/images/bcom-online-image.webp",
+      image: "/images/bcom.webp",
       alt: "B.Com from amity online university",
     },
     {
@@ -274,9 +276,10 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
             <div className="flex items-center space-x-4">
               <Button variant="outline" className="hidden md:flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>1800-200-8040</span>
+                <span>7042867717</span>
               </Button>
-              <Button className="bg-yellow-400 text-black border border-black ">
+              <Button onClick={() => setOpenModal({ type: 'enquiry' })}
+ className="bg-yellow-400 text-black border border-black ">
                 Enquire Now
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -306,26 +309,12 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
         </div>
       </div>
       
-      {/* Search Section */}
+      
       
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden mb-10">
-      <div className="w-full flex justify-center mt-4 md:mt-6 px-4">
-        <div className="relative w-full max-w-sm sm:max-w-md md:max-w-xl">
-          <div className="relative group">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-600 w-5 h-5 md:w-6 md:h-6 group-hover:text-blue-600 transition-colors duration-300 z-10" />
-            <input
-              type="text"
-              placeholder="Search program..."
-              className="w-full bg-white/95 backdrop-blur-sm pl-12 md:pl-14 pr-4 py-3 md:py-4 rounded-2xl border-2  text-gray-700 text-sm md:text-base placeholder-gray-400 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:border-blue-300"
-            />
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-          </div>
-        </div>
-      </div>
-
-        <div className="max-w-7xl mx-auto px-4 md:px-6 py-8 lg:py-16 xl:py-24">
+      <section className="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden ">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-6 lg:py-12 xl:py-16">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             {/* Left Content */}
             <div className={`flex-1 w-full lg:min-w-[300px] ${inter.className} order-2 lg:order-1`}>
@@ -335,7 +324,7 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
                 transition={{ duration: 0.8 }}
               >
                 {/* Badge */}
-                <Badge className="mb-4 md:mb-6 font-semibold px-3 md:px-4 py-2 border border-gray-300 bg-white flex items-center gap-2 w-fit">
+                <Badge className="mb-3 md:mb-4 font-semibold px-3 md:px-4 py-2 border border-gray-300 bg-white flex items-center gap-2 w-fit">
                   <Image
                     src="/images/UGC_India_Logo_9d01833e1b.svg"
                     alt="UGC Approved"
@@ -348,7 +337,7 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
 
                 {/* Heading */}
                 <h1
-                  className={`${playfair.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4 md:mb-6`}
+                  className={`${playfair.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-2 md:mb-3`}
                 >
                   India&apos;s Leading
                   <span className="block text-transparent bg-clip-text bg-yellow-600">
@@ -357,7 +346,7 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
                 </h1>
 
                 {/* Description */}
-                <p className="text-lg md:text-xl text-gray-600 mb-6 md:mb-8 max-w-2xl leading-relaxed">
+                <p className="text-lg md:text-xl text-gray-600 mb-5 md:mb-6 max-w-2xl leading-relaxed">
                   Transform your career with industry-relevant programs designed by experts.{" "}
                   <span className="font-semibold">Join 1.6 lakh+</span> professionals
                   who chose Amity for their educational journey.
@@ -397,6 +386,7 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
                   <Button
                     size="lg"
                     className="bg-yellow-400 hover:bg-yellow-500 text-black cursor-pointer px-6 md:px-9 py-3 md:py-6 text-base md:text-lg rounded-full"
+                    onClick={() => setOpenModal({ type: 'apply' })}
                   >
                     Apply Now
                     <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2" />
@@ -405,6 +395,7 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
                     size="lg"
                     variant="outline"
                     className=" cursor-pointer border-2 border-gray-300 hover:border-blue-400 px-6 md:px-9 py-3 md:py-6 text-base md:text-lg rounded-full"
+                    onClick={() => setOpenModal({ type: 'enquiry' })}
                   >
                     <ArrowRight className="w-4 h-4 md:w-5 md:h-5 mr-2" />
                     Enquire Now
@@ -771,6 +762,19 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
           </div>
         </div>
       </footer>
+      {/* Apply / Enquiry Modal */}
+      {openModal && (
+        <ApplyEnquiryModal
+          open={!!openModal}
+          onOpenChange={(v) => !v && setOpenModal(null)}
+          title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
+          subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
+          imageSrc="/images/amityForm.webp"
+          universityName="Amity University Online"
+          defaultProgram="MBA"
+          formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
+        />
+      )}
     </div>
   );
 };

@@ -25,7 +25,7 @@ const Footer = () => {
   const [newsletterDone, setNewsletterDone] = useState(false);
 
   // Hide footer on Amity page
-  if (pathname === '/amity') {
+  if (pathname === '/amity-online') {
     return null;
   }
 

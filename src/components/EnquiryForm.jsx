@@ -18,6 +18,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
   const [program, setProgram] = useState(defaultProgram);
   const [selectedUniversity, setSelectedUniversity] = useState(universityName || '');
   const [city, setCity] = useState('');
+  const isAmity = (selectedUniversity || universityName || '').toLowerCase().includes('amity');
 
   const universities = [
     'Amity University Online',
