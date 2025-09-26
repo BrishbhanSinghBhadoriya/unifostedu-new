@@ -8,6 +8,7 @@
   font-family: var(--font-baskervville), serif;
 }
 
+
 /* Custom responsive utilities for better mobile experience */
 @layer utilities {
   /* Extra small screen breakpoint */

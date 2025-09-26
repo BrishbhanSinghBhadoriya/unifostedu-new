@@ -32,7 +32,7 @@ const Header = () => {
 const [modalType, setModalType] = useState();
 
   // Hide header on Amity page
-  if (pathname === '/amity') {
+  if (pathname === '/amity' || pathname === '/manipal') {
     return null;
   }
 
