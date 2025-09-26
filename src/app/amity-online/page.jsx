@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import AdmissionProcedure from '@/components/AdmissionProcedure';
 import EnquireCard from '@/components/EnquireCard';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -11,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { FaAward, FaGraduationCap, FaGlobe } from 'react-icons/fa';
+import AccreditationSection from '@/components/AccreditationSection';
  import { 
   GraduationCap, 
   Users, 
@@ -26,6 +28,8 @@ import { FaAward, FaGraduationCap, FaGlobe } from 'react-icons/fa';
   Play,
   Search
 } from 'lucide-react';
+import { FaBookOpen,  FaBook, FaUniversity, FaUserFriends, FaClipboardCheck,  FaUserTie, FaRobot, FaBriefcase } from "react-icons/fa";
+
 import { Inter, Playfair_Display } from "next/font/google";
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 
@@ -224,6 +228,7 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
     { number: '200+', label: 'Corporate Partners', icon: Globe }
   ];
 
+
   const features = [
     {
       icon: GraduationCap,
@@ -255,6 +260,23 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
     { program: 'MCA', count: '8 Specializations', color: 'bg-purple-50 border-purple-200 text-purple-800',image:'/images/mcaSpecialization.webp' },
     { program: 'BCA', count: '6 Specializations', color: 'bg-orange-50 border-orange-200 text-orange-800',image:'/images/bcaSpecialization.webp' }
   ];
+const fadeIn = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 },
+    viewport: { once: true }
+  };
+  const staggerChildren = {
+    initial: { opacity: 0 },
+    whileInView: { 
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    },
+    viewport: { once: true }
+  };
+
 
 
   return (
@@ -539,72 +561,80 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
         </div>
       </section>
 
-
-      {/* Enquiry Form Section */}
-      {/* <section className="py-16 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-6">
-          <Card className="shadow-lg border-0">
-            <CardContent className="p-8">
-              <div className="text-center mb-6">
-                <h2 className="text-3xl font-bold text-gray-900 mb-2">Connect With Our Experts</h2>
-                <p className="text-gray-600">Get personalized guidance for admissions, courses and scholarships</p>
-              </div>
-
-              <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="md:col-span-1">
-                  <Label htmlFor="fullName">Full Name *</Label>
-                  <Input id="fullName" name="fullName" value={formData.fullName} onChange={handleInputChange} placeholder="Enter your full name" className="mt-1" required />
-                </div>
-                <div className="md:col-span-1">
-                  <Label htmlFor="phoneNumber">Phone Number *</Label>
-                  <div className="flex mt-1">
-                    <select className="px-3 py-2 border border-gray-300 rounded-l-md border-r-0 bg-white text-sm">
-                      <option value="+91">+91</option>
-                      <option value="+1">+1</option>
-                      <option value="+44">+44</option>
-                    </select>
-                    <Input id="phoneNumber" name="phoneNumber" value={formData.phoneNumber} onChange={handleInputChange} placeholder="Enter phone number" className="rounded-l-none" required />
-                  </div>
-                </div>
-                <div className="md:col-span-1">
-                  <Label htmlFor="email">Email Address *</Label>
-                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} placeholder="Enter your email" className="mt-1" required />
-                </div>
-                <div className="md:col-span-1">
-                  <Label htmlFor="course">Select Course *</Label>
-                  <Select onValueChange={(value) => handleSelectChange('course', value)}>
-                    <SelectTrigger className="mt-1">
-                      <SelectValue placeholder="Choose your program" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {courses.map((course, index) => (
-                        <SelectItem key={index} value={course}>{course}</SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div className="md:col-span-2">
-                  <Label htmlFor="state">Select State *</Label>
-                  <Select onValueChange={(value) => handleSelectChange('state', value)}>
-                    <SelectTrigger className="mt-1">
-                      <SelectValue placeholder="Choose your state" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {states.map((state, index) => (
-                        <SelectItem key={index} value={state}>{state}</SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div className="md:col-span-2">
-                  <Button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 py-3 text-lg font-semibold">Submit</Button>
-                </div>
-              </form>
-            </CardContent>
-          </Card>
-        </div>
-      </section> */}
-
+    
+<div>
+  <AccreditationSection
+    title="Education with Global Recognition"
+    description="Our accredited programs open doors to international opportunities and ensure your qualifications are recognized worldwide."
+    stats={[
+      { value: "95%", label: "Employment Rate Within 6 Months", color: "text-blue-700", bg: "bg-blue-50" },
+      { value: "50+", label: "Countries with Alumni Network", color: "text-green-700", bg: "bg-green-50" },
+      { value: "10+", label: "Industry Partnerships", color: "text-purple-700", bg: "bg-purple-50" },
+    ]}
+    benefits={[
+      {
+        title: "Global Mobility",
+        description: "Our degrees are recognized internationally, enabling you to pursue opportunities worldwide.",
+        iconSvg: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                  </svg>`,
+      },
+      {
+        title: "Quality Assurance",
+        description: "Rigorous accreditation processes ensure our programs meet the highest educational standards.",
+        iconSvg: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                  </svg>`,
+      },
+      {
+        title: "Industry Connections",
+        description: "Our partnerships with leading organizations provide valuable networking and career opportunities.",
+        iconSvg: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                  </svg>`,
+      },
+      {
+        title: "Career Advancement",
+        description: "Employers value accredited degrees, giving our graduates a competitive edge in the job market.",
+        iconSvg: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>`,
+      },
+    ]}
+    accreditations={[
+      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
+      { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
+      { src: "/images/nirf.webp", alt: "NIRF", name: "NIRF" },
+      { src: "/images/wes.webp", alt: "WES", name: "WES" },
+      { src: "/images/aiu.webp", alt: "AIU", name: "AIU" },
+      { src: "/images/acu.webp", alt: "ACU", name: "ACU" },
+    ]}
+    internationalRecognition={[
+      { src: "/images/qs.webp", alt: "QS Ranking", name: "QS" },
+      { src: "/images/wasc.webp", alt: "WASC Accreditation", name: "WASC" },
+      { src: "/images/the.webp", alt: "Times Higher Education", name: "THE" },
+      { src: "/images/qaa.webp", alt: "QAA UK", name: "QAA UK" },
+    ]}
+    successStories={[
+      {
+        name: "Aisha Sharma",
+        initials: "AS",
+        color: "bg-blue-100 text-blue-600",
+        text: "The international recognition of my degree allowed me to secure a position with a leading tech firm in Singapore immediately after graduation.",
+      },
+      {
+        name: "Rahul Mehta",
+        initials: "RM",
+        color: "bg-green-100 text-green-600",
+        text: "The accreditation status of my program made the admission process to Stanford seamless. My credits transferred without any issues.",
+      },
+    ]}
+    trust={{
+      text: "Trusted by 25,000+ Students",
+      subtext: "Our accreditations ensure quality education recognized globally",
+    }}
+  />
+</div>
       {/* Features Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
@@ -651,6 +681,50 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
           </div>
         </div>
       </section>
+       <section className="py-16 bg-white px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            {...fadeIn}
+          >
+            {/* <h2 className="text-3xl font-bold text-gray-900 mb-4 font-[Poppins]">Why Choose Amity Online University?</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">Experience the perfect blend of academic excellence and digital innovation</p> */}
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10"
+            variants={staggerChildren}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+          >
+            {[
+              { icon: <FaBookOpen className="text-2xl" />, title: "Diverse learning mediums", text: "E-books, printed & audio books, videos to suit all styles." },
+              { icon: <FaUserTie className="text-2xl" />, title: "Dedicated Academic Advisor", text: "Experts to guide every step of your career." },
+              { icon: <FaRobot className="text-2xl" />, title: "AI-Professor AMI", text: "Powered by ChatGPT-4 for better learning." },
+              { icon: <FaBriefcase className="text-2xl" />, title: "Career Services", text: "Workshops, internships, resume support." },
+              { icon: <FaBook className="text-2xl" />, title: "Doorstep delivery", text: "Only online university delivering physical books." },
+              { icon: <FaUniversity className="text-2xl" />, title: "Metaverse Campus", text: "Explore campus in metaverse." },
+              { icon: <FaUserFriends className="text-2xl" />, title: "Offline Experiences", text: "On-campus orientation and peer bonding." },
+              { icon: <FaClipboardCheck className="text-2xl" />, title: "Placement Opportunities", text: "Resume prep and interview assistance." },
+            ].map((item, i) => (
+              <motion.div 
+                key={i} 
+                className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-100"
+                whileHover={{ y: -5 }}
+                variants={fadeIn}
+              >
+                <div className="text-blue-600 bg-blue-50 p-4 rounded-full mb-5">
+                  {item.icon}
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900 mb-3">{item.title}</h4>
+                <p className="text-gray-600 text-sm leading-relaxed">{item.text}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
 
       {/* Partnership Section */}
       <section className="py-12 md:py-16 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
@@ -709,6 +783,124 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
                 Download Brochure
               </Button>
             </div>
+          </motion.div>
+        </div>
+      </section>
+      <AdmissionProcedure />
+      {/* Certificate + Benefits */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 px-6">
+          <motion.div 
+            className="flex-1"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 to-purple-500 rounded-2xl blur-lg opacity-20"></div>
+              <Image 
+                src="/images/amicri.webp" 
+                alt="Amity University Certificate" 
+                width={500} 
+                height={350} 
+                loading='lazy'
+               
+              />
+            </div>
+          </motion.div>
+          <motion.div 
+            className="flex-1"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-[Poppins]">Globally Recognized Online Degree</h2>
+            <p className="mb-6 text-gray-600 text-lg">Amity University online programs offer daily live classes, career assistance, and hands-on LMS learning with Ivy League tie-ups.</p>
+            
+            <h3 className="text-xl font-semibold text-gray-900 mb-4 border-l-4 border-blue-600 pl-3">Benefits of Online Amity University</h3>
+            <ul className="space-y-3">
+              {[
+                "Daily LIVE Classes by International Faculty",
+                "Career Assistance & Virtual Job Fairs",
+                "International Collaboration with Ivy League",
+                "Immersive Learning via World-Class LMS",
+                "Industry-Relevant Curriculum",
+                "Flexible Learning Schedule"
+              ].map((item, index) => (
+                <li key={index} className="flex items-start">
+                  <div className="bg-blue-100 p-1 rounded-full mr-3 mt-1">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  </div>
+                  <span className="text-gray-700">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
+      </section>
+  {/* Hiring Partners */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div 
+            className="text-center mb-12"
+            {...fadeIn}
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 font-[Poppins]">Our Hiring Partners</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">Top companies that recruit Amity Online University graduates</p>
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
+            variants={staggerChildren}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+          >
+            {[
+              "/images/company.webp", "/images/company1.webp", "/images/company9.webp", 
+              "/images/com10.webp", "/images/companany4.webp", "/images/company6.webp", 
+              "/images/companany5.webp", "/images/adove.webp", "/images/samsung.webp",
+              "/images/3.webp", "/images/4.webp", "/images/5.webp", 
+              "/images/6.webp", "/images/7.webp", "/images/8.webp", "/images/9.webp"
+            ].map((src, i) => (
+              <motion.div 
+                key={i} 
+                className="bg-white shadow-sm rounded-lg p-4 flex items-center justify-center h-24 hover:shadow-md transition-all border border-gray-100"
+                whileHover={{ y: -5, scale: 1.05 }}
+                variants={fadeIn}
+              >
+                <div className="relative w-full h-12">
+                  <Image
+                    src={src}
+                    alt="Top companies hiring Amity University online graduates"
+                    width={100}
+                    height={100}
+                    loading='lazy'
+                 
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-blue-900 text-white">
+        <div className="max-w-5xl mx-auto text-center px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-[Poppins]">Begin Your Educational Journey with Amity Online</h2>
+            <p className="text-blue-100 text-lg mb-8 max-w-3xl mx-auto">
+              Join thousands of students who have transformed their careers with Amity University's UGC-entitled online degrees
+            </p>
+            
           </motion.div>
         </div>
       </section>

@@ -96,6 +96,73 @@ const Manipal = () => {
       alt: "Master of Arts (MA) in Manipal Online",
     },
   ];
+    
+
+ const faqData = [
+  {
+    question: "Is Manipal University Jaipur recognized by UGC and NAAC?",
+    answer:
+      "Yes, Manipal University Jaipur (MUJ) is recognized by the University Grants Commission (UGC) and accredited by NAAC. Choosing an online program from Manipal Online University ensures you receive a credible and globally recognized degree. MUJ’s accreditation guarantees that your online Manipal University degree meets high academic standards and is accepted by employers and educational institutions worldwide.",
+  },
+  {
+    question: "What online programs are offered by Manipal University Jaipur?",
+    answer:
+      "Manipal Online University offers a wide range of online programs at MUJ, including Management, MBA, BBA, Computer Science, Data Science, BCA, MCA, and professional certificate courses. By enrolling in online courses from Manipal University Jaipur, students can access flexible learning schedules while earning a degree from a top-ranked university.",
+  },
+  {
+    question: "Are online degrees from Manipal University Jaipur valid for government jobs?",
+    answer:
+      "Yes, online degrees from Manipal University Jaipur, approved by UGC-DEB, are valid for government jobs, competitive exams like UPSC, and higher education. Studying at Manipal Online University ensures your MUJ online degree is recognized by government authorities and other educational institutions.",
+  },
+  {
+    question: "What is the admission process for online courses?",
+    answer:
+      "The admission process at Manipal Online University is simple and fully online. Prospective students can apply for MUJ online programs by filling out the application form, submitting the required documents, and completing the fee payment. Online Manipal University admissions are designed to be hassle-free, making it easy to enroll in programs from anywhere in India or abroad.",
+  },
+  {
+    question: "How much are the fees for online courses at Manipal University Jaipur?",
+    answer:
+      "Fees for online programs at Manipal University Jaipur vary depending on the course. MUJ provides flexible payment options and no-cost EMI plans for online Manipal University students. By choosing an online Manipal University program, students can pursue quality education without financial stress.",
+  },
+  {
+    question: "Does Manipal University Jaipur provide placement assistance?",
+    answer:
+      "Yes, Manipal Online University offers dedicated placement assistance to students of online programs at MUJ. Graduates from online Manipal University courses receive career guidance, networking opportunities, and support to find the right job in their respective fields. Choosing MUJ ensures strong career support even for online learners.",
+  },
+  {
+    question: "What is the duration of online programs?",
+    answer:
+      "The duration of online programs at Manipal University Jaipur depends on the specific course. Most undergraduate online Manipal University programs run for 3–4 years, while postgraduate online MUJ programs range from 1–2 years. Studying at Manipal Online University provides flexibility to complete your degree while managing other commitments.",
+  },
+  {
+    question: "Are the online degrees internationally recognized?",
+    answer:
+      "Yes, online degrees from Manipal University Jaipur are internationally recognized. Select online programs from Manipal Online University are WES-accredited, adding global value to your MUJ degree. Choosing online Manipal University ensures your degree holds weight for international job opportunities and higher studies abroad.",
+  },
+  {
+    question: "Can working professionals pursue online courses?",
+    answer:
+      "Absolutely! Online programs from Manipal University Jaipur are designed for working professionals. MUJ’s flexible schedule allows online Manipal University students to learn at their own pace without interrupting their careers. Enrolling in online Manipal University courses is ideal for career growth and skill enhancement while working.",
+  },
+  {
+    question: "What is the difference between online and regular courses at Manipal University Jaipur?",
+    answer:
+      "Online Manipal University programs provide the same accredited degree as regular MUJ courses. The key difference is flexibility—students can access lectures, assignments, and live sessions digitally. Choosing an online program at Manipal University Jaipur offers quality education and the same global recognition without the need to attend a physical campus.",
+  },
+  {
+    question: "Does the university offer scholarships for online programs?",
+    answer:
+      "Yes, Manipal Online University offers exclusive scholarships for meritorious students, defense personnel, government employees, and differently-abled learners. By enrolling in online programs at MUJ, students can avail financial support while earning a recognized degree from Manipal University Jaipur.",
+  },
+  {
+    question: "Is technical support provided for online students?",
+    answer:
+      "Yes, Manipal Online University provides dedicated technical support to online MUJ students. From accessing course materials to attending live sessions, online Manipal University ensures a smooth learning experience. Support is available for all online Manipal University programs, making it convenient and reliable for students.",
+  },
+];
+
+
+
 
   const testimonials = [
     {
@@ -127,6 +194,14 @@ const Manipal = () => {
       text: "With over 2 years of work experience in accounting, I wanted to pursue an online M.Com degree to boost my career further and get a higher salary. Thanks to Online Manipal, I’m able to manage my work life and academic through flexible live classes and recorded sessions which are available on the portal."
     }
   ];
+  
+
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    if (openIndex === index) setOpenIndex(null);
+    else setOpenIndex(index);
+  };
 
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
   const [modalType, setModalType] = useState('getStarted');
@@ -173,7 +248,7 @@ const Manipal = () => {
         {/* Left Logo */}
         <div className="flex items-center gap-2">
           <img src="/images/manipallogo.jpg" alt="Logo" className="h-10 w-auto" />
-          <h1 className="text-3xl md:text-5xl font-extrabold">
+          <h1 className="font-baskervville text-3xl md:text-5xl font-extrabold">
           <span className="text-[#ff7a36] bold">Online</span>{" "}
           <span className="text-gray-800 bold">Manipal</span>
           </h1>
@@ -218,7 +293,7 @@ const Manipal = () => {
 
 
     <div className="relative z-10 max-w-7xl mx-auto px-4 py-10 md:py-16 grid md:grid-cols-2 gap-8 items-center">
-      <div className="text-white">
+      <div className="font-baskervville text-3xl text-black md:text-5xl font-extrabold leading-tight">
         <h1 className="text-3xl md:text-5xl font-extrabold leading-tight">
           NAAC A+ Accredited
           <span className="block">Online Degrees from</span>
@@ -231,7 +306,7 @@ const Manipal = () => {
             { src: '/images/ugc.webp', label: 'UGC\nEntitled' },
             { src: '/images/qs.webp', label: 'Global Recognition' },
           ].map((item, i) => (
-            <div key={i} className="bg-white/5 rounded-xl p-4 backdrop-blur text-center">
+            <div key={i} className=" rounded-xl p-4  text-center text-white">
               <Image src={item.src} alt="rank" width={80} height={80} className="mx-auto h-16 w-auto object-contain" />
               <p className="text-sm mt-2 whitespace-pre-line">{item.label}</p>
             </div>
@@ -240,7 +315,7 @@ const Manipal = () => {
       </div>
 
       {/* Right sticky form */}
-      <div className="bg-white rounded-2xl p-5 md:p-6 shadow-2xl">
+      <div className="font-baskervville text-black bg-white rounded-2xl p-5 md:p-6 shadow-2xl">
         <h2 className="text-xl font-bold">Join <span className="text-[#ff7a36]">50,000+ Learners</span> Across India</h2>
         <div className="flex items-center gap-4 text-sm text-gray-700 mt-2">
           <div className="flex items-center gap-2"><FaGraduationCap className="text-lg text-indigo-500" /> Easy financing options</div>
@@ -257,12 +332,12 @@ const Manipal = () => {
             <input required type="email" placeholder="Enter your email" className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff7a36]" />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Mobile number <span className="text-red-500">*</span></label>
-            <input required type="tel" placeholder="Enter your mobile number" className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff7a36]" />
+            <label className="block text-sm font-medium text-black-700">Mobile number <span className="text-red-500">*</span></label>
+            <input required type="tel" placeholder="Enter your mobile number" className="mt-1 w-full rounded-md border border-black-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff7a36]" />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Course <span className="text-red-500">*</span></label>
-            <select required className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff7a36]">
+            <label className="block text-sm font-medium text-black-700">Course <span className="text-red-500">*</span></label>
+            <select required className="mt-1 w-full rounded-md border border-black-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff7a36]">
               <option value="">Select course*</option>
               <optgroup label="Manipal University Jaipur (MUJ)">
                 <option>MBA</option>
@@ -382,7 +457,8 @@ const Manipal = () => {
 <div>
   <AccreditationSection
     title="Why Choose Manipal University Online?"
-    description="Manipal University Online offers globally recognized online degrees with flexible learning, expert mentorship, and strong career support to help you achieve your future goals."
+    description="Manipal University Online offers globally recognized online degrees with flexible learning, expert mentorship, and strong career support to help you achieve your future goals.You should choose Manipal University Online for a prestigious degree with flexible, affordable learning, access to a global Manipal alumni network, a diverse online community, specialized courses, and the benefit of internationally recognized qualifications. Online Manipal's programs are designed for working professionals and aspiring students to acquire in-demand skills from a highly-ranked institution.  
+"
     stats={[]} // No numerical stats provided
     benefits={[
       {
@@ -425,6 +501,7 @@ const Manipal = () => {
         description: "Access e-books, recorded classes, and online labs.",
         iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V6h5.17l2 2H20v10z"></path></svg>`
       },
+      <h4>Manipal University Online ensures the highest standards of education through accreditations from reputed bodies like UGC and NAAC, guaranteeing the quality and credibility of your degree. These accreditations make your online degree widely accepted by employers and other educational institutions, enhancing its value for career opportunities and further studies. UGC-DEB approval is particularly essential for pursuing government jobs and appearing for competitive exams such as UPSC. Additionally, international recognition, like WES accreditation, adds significant global value to your qualification. With an accredited degree from Manipal University Online, you gain stronger career prospects, increased earning potential, and a solid foundation for growth in a competitive professional environment.</h4>
     ]}
     accreditations={[
       { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
@@ -689,7 +766,34 @@ const Manipal = () => {
           </div>
         </div>
       </section>
+       
 
+        <section className="max-w-6xl mx-auto my-12 p-6 bg-white rounded-xl shadow-lg font-sans">
+      <h2 className="text-3xl md:text-4xl font-semibold text-[#1e3c72] mb-8 text-center">
+        Frequently Asked Questions – Manipal University Jaipur
+      </h2>
+      <div className="space-y-4">
+        {faqData.map((faq, index) => (
+          <div
+            key={index}
+            className="border border-gray-200 rounded-lg overflow-hidden"
+          >
+            <button
+              onClick={() => toggleFAQ(index)}
+              className="w-full text-left px-5 py-4 bg-gray-50 hover:bg-gray-100 flex justify-between items-center font-medium text-gray-800 transition-colors duration-200"
+            >
+              <span>{faq.question}</span>
+              <span className="text-xl font-bold">{openIndex === index ? "−" : "+"}</span>
+            </button>
+            {openIndex === index && (
+              <div className="px-5 py-4 text-gray-700 bg-white animate-[fadeIn_0.3s_ease-in-out]">
+                {faq.answer}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
 
       {/* Hiring Partners */}
       <section className="py-12 bg-gray-100">
@@ -698,7 +802,7 @@ const Manipal = () => {
           <p className="text-lg text-gray-600 mt-2">Top Hiring Partners of Manipal Online</p>
         </div>
         <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
-          {["/images/company.webp", "/images/company1.webp", "/images/company9.webp", "/images/com10.webp", "/images/companany4.webp", "/images/company6.webp", "/images/companany5.webp", "/images/adove.webp", "/images/samsung.webp", "/images/ey.webp", "/images/ibm.webp", "/images/hp.webp"].map((src, i) => (
+          {["/images/company.webp", "/images/company1.webp", "/images/company9.webp", "/images/com10.webp", "/images/companany4.webp", "/images/company6.webp", "/images/companany5.webp", "/images/adove.webp", "/images/samsung.webp", "/images/ey.webp", "/images/ibm.webp", "/images/hp.webp", "/images/tata.png", "/images/apple.jpg","/images/hero.webp"].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
               <Image width={100} height={100} src={src} alt="Company" className="h-12 object-contain" />
             </div>

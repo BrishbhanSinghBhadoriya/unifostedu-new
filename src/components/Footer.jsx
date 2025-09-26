@@ -180,7 +180,7 @@ const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  if (pathname === '/amity-online') {
+  if (pathname === '/amity-online'||'/manipal') {
     return null;
   }
 
