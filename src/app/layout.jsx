@@ -20,7 +20,7 @@ export const metadata = {
     default: "Unifost | UGC Approved Online University Degrees in India",
     template: "%s | Unifost"
   },
-  description: "UnifostEdu.com – The official platform for UGC-approved online university degrees in India. Explore top courses, apply easily, and transform your career.",
+  description: "Unifostedu.com – The official platform for UGC-approved online university degrees in India. Explore top courses, apply easily, and transform your career.",
   applicationName: "Unifost",
   appleMobileWebAppTitle: "Unifost",
   keywords: [
@@ -147,21 +147,21 @@ export const metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon-32x32.webp", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16x16.webp", sizes: "16x16", type: "image/png" },
-      { url: "/uni.webp.48x48.webp", sizes: "48x48", type: "image/png" }
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/uni.webp.48x48.png", sizes: "48x48", type: "image/png" }
     ],
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
   },
   openGraph: {
     title: "Unifost | UGC Approved Online University Degrees in India",
-    description: "UnifostEdu.com – The official platform for UGC-approved online university degrees in India. Explore top courses, apply easily, and transform your career.",
+    description: "Unifostedu.com – The official platform for UGC-approved online university degrees in India. Explore top courses, apply easily, and transform your career.",
     url: "https://unifostedu.com",
     siteName: "Unifost",
     images: [
       {
-        url: "/favicon.ico",
+        url: "/uni.webp",
         width: 1200,
         height: 630,
         alt: "Unifost - Online University Degrees",
@@ -173,8 +173,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Unifost | UGC Approved Online University Degrees in India",
-    description: "UnifostEdu.com – The official platform for UGC-approved online university degrees in India. Explore top courses, apply easily, and transform your career.",
-    images: ["/favicon.ico"],
+    description: "Unifostedu.com – The official platform for UGC-approved online university degrees in India. Explore top courses, apply easily, and transform your career.",
+    images: ["/uni.webp"],
   },
 };
 
@@ -203,7 +203,7 @@ export default function RootLayout({ children }) {
         <meta property="og:site_name" content="Unifost" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_IN" />
-        <meta property="og:image" content="https://unifostedu.com/favicon.ico" />
+        <meta property="og:image" content="https://unifostedu.com/uni.webp" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Unifost - Online University Degrees" />
@@ -211,12 +211,12 @@ export default function RootLayout({ children }) {
         {/* Twitter Card meta tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Unifost | UGC Approved Online University Degrees in India" />
-        <meta name="twitter:description" content="UnifostEdu.com – The official platform for UGC-approved online university degrees in India. Explore top courses, apply easily, and transform your career." />
-        <meta name="twitter:image" content="https://unifostedu.com/favicon.ico" />
+        <meta name="twitter:description" content="Unifostedu.com – The official platform for UGC-approved online university degrees in India. Explore top courses, apply easily, and transform your career." />
+        <meta name="twitter:image" content="https://unifostedu.com/uni.webp" />
 
         {/* SERP favicon sizes */}
-        <link rel="icon" type="image/png" sizes="48x48" href="/uni.webp.48x48.webp" />
-        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-32x32.webp" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/uni.webp.48x48.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <meta name="twitter:image:alt" content="Unifost - Online University Degrees" />
 
         
@@ -227,8 +227,8 @@ export default function RootLayout({ children }) {
         {/* Favicon and app icons */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.webp" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.webp" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico" />
         
         {/* Bookmark logo for social sharing and bookmarks */}
@@ -236,7 +236,7 @@ export default function RootLayout({ children }) {
         
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
-        <meta name="msapplication-TileImage" content="/bookmarklogo.webp" />
+        <meta name="msapplication-TileImage" content="/uni.webp" />
         <meta name="theme-color" content="#001e3c" />
         
         {/* Organization Schema */}

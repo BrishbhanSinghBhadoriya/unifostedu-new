@@ -25,10 +25,7 @@ const Footer = () => {
   const [newsletterDone, setNewsletterDone] = useState(false);
 
   // Hide footer on Amity page
-  if (pathname === '/amity-online') {
-    return null;
-  }
-
+  
   // Mock search params functionality
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -183,6 +180,10 @@ const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+  if (pathname === '/amity-online') {
+    return null;
+  }
+
 
   return (
     <>

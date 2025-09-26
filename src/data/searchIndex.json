@@ -11,5 +11,11 @@
   { "title": "BBA (Bachelor of Business Administration)", "type": "course", "href": "/courses/bba-online" },
   { "title": "BCA (Bachelor of Computer Applications)", "type": "course", "href": "/courses/bca-online" },
   { "title": "B.Com (Bachelor of Commerce)", "type": "course", "href": "/courses/bcom-online" },
-  { "title": "MA (Master of Arts)", "type": "course", "href": "/courses/ma-online" }
+  { "title": "MA (Master of Arts)", "type": "course", "href": "/courses/ma-online" },
+
+  { "title": "About Unifost", "type": "page", "href": "/about" },
+  { "title": "About UniFost", "type": "page", "href": "/about" },
+  { "title": "Unifost About Page", "type": "page", "href": "/about" },
+  { "title": "UNIFOST Company", "type": "page", "href": "/about" },
+  { "title": "What is Unifost?", "type": "page", "href": "/about" }
 ]

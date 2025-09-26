@@ -34,10 +34,7 @@ const Header = () => {
 const [modalType, setModalType] = useState();
 
   // Hide header on Amity page
-  if (pathname === '/amity-online') {
-    return null;
-  }
-
+  
   const universities = [
     { name: "Amity University Online", link: "/amity-online", logo: "/images/amity.webp" },
     { name: "Lovely Professional University", link: "/lpu", logo: "/images/lpu.webp" },
@@ -132,6 +129,9 @@ const [modalType, setModalType] = useState();
     setModalType(type);
     setShowEnquiryModal(true);
   };
+  if (pathname === '/amity-online') {
+    return null;
+  }
 
   return (
     <header className="w-full font-sans">
