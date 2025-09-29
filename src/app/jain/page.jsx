@@ -28,6 +28,7 @@ import Image from 'next/image';
 import HeroSection from '@/components/HeroSection';
 import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
+import EnquireCard from '@/components/EnquireCard';
 import * as Tabs from '@radix-ui/react-tabs'
 
 const Jain = () => {
