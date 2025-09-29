@@ -13,19 +13,19 @@ import Image from 'next/image';
 import { toast } from 'sonner';
 import Breadcrumb from '@/components/Breadcrumb';
 
-export const metadata = {
-  title: "UNIFOST | Online Education & Career Counseling Platform|Unifost",
-  description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees, career counseling, and personalized guidance. Discover our mission to transform education.",
-  keywords: "About UNIFOST, EdTech Platform India, Online Education Company, Career Counseling Services, University Partner Network, Education Technology India, Online University Degrees, Student Guidance Platform, Educational Innovation India",
-  openGraph: {
-    title: "About UNIFOST | India's Leading EdTech Platform for Online Education",
-    description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees, career counseling, and personalized guidance.",
-    images: ["/images/uni.webp"],
-  },
-  alternates: {
-    canonical: "https://unifostedu.com/about",
-  },
-};
+// export const metadata = {
+//   title: "UNIFOST | Online Education & Career Counseling Platform|Unifost",
+//   description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees, career counseling, and personalized guidance. Discover our mission to transform education.",
+//   keywords: "About UNIFOST, EdTech Platform India, Online Education Company, Career Counseling Services, University Partner Network, Education Technology India, Online University Degrees, Student Guidance Platform, Educational Innovation India",
+//   openGraph: {
+//     title: "About UNIFOST | India's Leading EdTech Platform for Online Education",
+//     description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees, career counseling, and personalized guidance.",
+//     images: ["/images/uni.webp"],
+//   },
+//   alternates: {
+//     canonical: "https://unifostedu.com/about",
+//   },
+// };
 
 export default function About() {
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);

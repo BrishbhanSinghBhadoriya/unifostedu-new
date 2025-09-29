@@ -297,7 +297,7 @@ const fadeIn = {
             <div className="flex items-center space-x-4">
               <Button variant="outline" className="hidden md:flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>7042867717</span>
+                <span>+91 7042867717</span>
               </Button>
               <Button onClick={() => setOpenModal({ type: 'enquiry' })}
  className="bg-yellow-400 text-black border border-black ">
@@ -468,97 +468,121 @@ const fadeIn = {
       </section>
 
       {/* Courses Section with Tabs */}
-      <section className="py-12 md:py-16 bg-white px-4 md:px-6 font-[Inter] relative">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-blue-50/30"></div>
-        <div className="absolute inset-0 opacity-40" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f3f4f6' fill-opacity='0.3'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-        }}></div>
-        
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-3xl md:text-4xl font-extralight tracking-wide mb-2">
-              Explore Our Programs
-            </h2>
-            <p className="text-gray-600 text-base md:text-lg">Find the perfect course to launch or advance your career.</p>
+    <section className="py-12 md:py-16 bg-white px-4 md:px-6 font-[Inter] relative">
+  {/* Background Pattern */}
+  <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-blue-50/30"></div>
+  <div
+    className="absolute inset-0 opacity-40"
+    style={{
+      backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f3f4f6' fill-opacity='0.3'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+    }}
+  ></div>
+
+  <div className="max-w-7xl mx-auto relative z-10">
+   <div className="bg-yellow-400 text-center mb-8 md:mb-12 p-6 rounded-lg">
+  <h2 className="text-3xl md:text-4xl font-extralight tracking-wide mb-2 text-black">
+    Explore Our Programs
+  </h2>
+  <p className="text-black text-base md:text-lg">
+    Find the perfect course to launch or advance your career.
+  </p>
+</div>
+
+
+    {/* Shadcn Tabs */}
+    <Tabs defaultValue="ug" className="w-full">
+      <div className="flex justify-center mb-8 md:mb-12">
+        <TabsList className="grid w-full max-w-md md:max-w-2xl grid-cols-3 bg-white p-5 rounded-full">
+          <TabsTrigger
+            value="ug"
+            className="px-3 md:px-6 py-2 md:py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300
+                       data-[state=active]:bg-[#001F3F] data-[state=active]:text-white data-[state=active]:shadow-lg
+                       hover:bg-gray-50 data-[state=inactive]:text-gray-600"
+          >
+            Undergraduate
+          </TabsTrigger>
+          <TabsTrigger
+            value="pg"
+            className="px-3 md:px-6 py-2 md:py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300
+                       data-[state=active]:bg-[#001F3F] data-[state=active]:text-white data-[state=active]:shadow-lg
+                       hover:bg-gray-50 data-[state=inactive]:text-gray-600"
+          >
+            Postgraduate
+          </TabsTrigger>
+          <TabsTrigger
+            value="integrated"
+            className="px-3 md:px-6 py-2 md:py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300
+                       data-[state=active]:bg-[#001F3F] data-[state=active]:text-white data-[state=active]:shadow-lg
+                       hover:bg-gray-50 data-[state=inactive]:text-gray-600"
+          >
+            Integrated
+          </TabsTrigger>
+        </TabsList>
+      </div>
+
+      {/* Tab Content */}
+      <TabsContent value="ug" className="mt-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+            {ugCourses.map((item, index) => (
+              <div key={`ug-${item.course}-${index}`} className="w-full">
+                <EnquireCard
+                  {...item}
+                  universityName="Amity University Online"
+                  uniqueId={`ug-${index}`}
+                />
+              </div>
+            ))}
           </div>
+        </motion.div>
+      </TabsContent>
 
-          {/* Shadcn Tabs */}
-          <Tabs defaultValue="ug" className="w-full">
-            <div className="flex justify-center mb-8 md:mb-12">
-              <TabsList className="grid w-full max-w-md md:max-w-2xl grid-cols-3 bg-white p-5 rounded-full ">
-                <TabsTrigger 
-                  value="ug" 
-                  className="px-3 md:px-6 py-2 md:py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300 data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:shadow-lg hover:bg-gray-50 data-[state=inactive]:text-gray-600"
-                >
-                  Undergraduate
-                </TabsTrigger>
-                <TabsTrigger 
-                  value="pg" 
-                  className="px-3 md:px-6 py-2 md:py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300 data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:shadow-lg hover:bg-gray-50 data-[state=inactive]:text-gray-600"
-                >
-                  Postgraduate
-                </TabsTrigger>
-                <TabsTrigger 
-                  value="integrated" 
-                  className="px-3 md:px-6 py-2 md:py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300 data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:shadow-lg hover:bg-gray-50 data-[state=inactive]:text-gray-600"
-                >
-                  Integrated
-                </TabsTrigger>
-              </TabsList>
-            </div>
+      <TabsContent value="pg" className="mt-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+            {pgCourses.map((item, index) => (
+              <div key={`pg-${item.course}-${index}`} className="w-full">
+                <EnquireCard
+                  {...item}
+                  universityName="Amity University Online"
+                  uniqueId={`pg-${index}`}
+                />
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </TabsContent>
 
-            {/* Tab Content */}
-            <TabsContent value="ug" className="mt-6">
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }} 
-                animate={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.5 }}
-              >
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
-                  {ugCourses.map((item, index) => (
-                    <div key={`ug-${item.course}-${index}`} className="w-full">
-                      <EnquireCard {...item} universityName="Amity University Online" uniqueId={`ug-${index}`} />
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            </TabsContent>
-
-            <TabsContent value="pg" className="mt-6">
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }} 
-                animate={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.5 }}
-              >
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
-                  {pgCourses.map((item, index) => (
-                    <div key={`pg-${item.course}-${index}`} className="w-full">
-                      <EnquireCard {...item} universityName="Amity University Online" uniqueId={`pg-${index}`} />
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            </TabsContent>
-
-            <TabsContent value="integrated" className="mt-6">
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }} 
-                animate={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.5 }}
-              >
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
-                  {ug_pgCourses.map((item, index) => (
-                    <div key={`integrated-${item.course}-${index}`} className="w-full">
-                      <EnquireCard {...item} universityName="Amity University Online" uniqueId={`integrated-${index}`} />
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            </TabsContent>
-          </Tabs>
-        </div>
-      </section>
+      <TabsContent value="integrated" className="mt-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+            {ug_pgCourses.map((item, index) => (
+              <div key={`integrated-${item.course}-${index}`} className="w-full">
+                <EnquireCard
+                  {...item}
+                  universityName="Amity University Online"
+                  uniqueId={`integrated-${index}`}
+                />
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </TabsContent>
+    </Tabs>
+  </div>
+</section>
 
     
 <div>
@@ -1015,6 +1039,11 @@ const fadeIn = {
                 <li><a href="#" className="hover:text-white transition-colors">Admissions</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Scholarships</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Career Services</a></li>
+                <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
+                <li><a href="/" className="hover:text-white transition-colors">Home</a></li>
+                <li><a href="/services" className="hover:text-white transition-colors">services</a></li>
+                <li><a href="/listofcollege" className="hover:text-white transition-colors">Explore Colleges</a></li>
+              
               </ul>
             </div>
             
@@ -1023,11 +1052,11 @@ const fadeIn = {
               <div className="space-y-2 text-sm text-gray-400">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4 flex-shrink-0" />
-                  <span>1800-200-8040</span>
+                  <span>+91 7042867717</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4 flex-shrink-0" />
-                  <span className="break-all">info@amityonline.com</span>
+                  <span className="break-all">info@unifostedu.com</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-4 h-4 flex-shrink-0" />
@@ -1038,7 +1067,7 @@ const fadeIn = {
           </div>
           
           <div className="border-t border-gray-800 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-xs md:text-sm text-gray-400">
-            <p>&copy; 2025 Amity University Online. All rights reserved.</p>
+            <p>&copy; 2025 UNIFOST. All rights reserved.</p>
           </div>
         </div>
       </footer>
