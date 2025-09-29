@@ -8,10 +8,15 @@ import {
   FaUserTie,
   FaBriefcase,
   FaClipboardCheck,
+  FaGlobe,
+  FaLaptopCode,
 } from "react-icons/fa";
 import EnquireCard from '@/components/EnquireCard';
 import Head from 'next/head';
 import Image from 'next/image';
+import HeroSection from '@/components/HeroSection';
+import AccreditationSection from '@/components/AccreditationSection';
+import AdmissionProcedure from '@/components/AdmissionProcedure';
 const Sharda = () => {
   const ugCourses = [
     {
@@ -20,7 +25,8 @@ const Sharda = () => {
       eligibility: "Passed the (10+2) examination from State Board / CBSE / NIOS / IGCSE / IB /ICSE recognized by the State or Central Government.",
       fees: "₹1,05,000",
       specialization: "General,",
-      image: "/images/bba.jpeg",
+      image: "/images/bba.webp",
+      alt: "Bachelor of Business Administration (BBA) in Sharda Online",
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
@@ -28,7 +34,8 @@ const Sharda = () => {
       eligibility: "Passed the (10+2) examination from State Board / CBSE / NIOS / IGCSE / IB /ICSE recognized by the State or Central Government.",
       fees: "₹1,05,000",
       specialization: "General,",
-      image: "/images/bca.jpeg",
+      image: "/images/bca.webp",
+      alt: "Bachelor of Computer Applications (BCA) in Sharda Online",
     },
     {
       course: "Bachelor of Arts (Hons.)",
@@ -36,7 +43,8 @@ const Sharda = () => {
       eligibility: "10+2 Pass",
       fees: "₹105,000",
       specialization: " Political Science,",
-      image: "/images/ba.jpeg",
+      image: "/images/ba.webp",
+      alt: "Bachelor of Arts (Hons.) in Sharda Online",
     },
   ];
 
@@ -47,7 +55,8 @@ const Sharda = () => {
       eligibility: "Passed Bachelor’s Degree of minimum 3 years duration.",
       fees: "₹1,00,000- ₹1,60,000",
       specialization: ["Data Science and Analytics, Marketing, Healthcare and Hospital Administration, Human Resource Management, Sales and Marketing, Finance"],
-      image: "/images/mba.jpeg",
+      image: "/images/mba.webp",
+      alt: "Master of Business Administration (MBA) in Sharda Online",
     },
       
     {
@@ -56,7 +65,8 @@ const Sharda = () => {
       eligibility: "Candidates must hold a BCA/Bachelor's in Computer Science Engineering oran equivalent degree, or a B.Sc./B.Com./B.A. with Mathematics at 10+2 orgraduation level (with bridge courses as needed).",
       fees: "₹1,00,000",
       specialization: "Computer Science and Information Technology, Data Science",
-      image: "/images/mca1.jpeg",
+      image: "/images/mca1.webp",
+      alt: "Master of Computer Applications (MCA) in Sharda Online",
     },
     {
       course: "Master of Commerce (M.Com)",
@@ -64,7 +74,8 @@ const Sharda = () => {
       eligibility: "Graduation in Commerce",
       fees: "₹50,000",
       specialization: "Master of commerce",
-      image: "/images/m.com.jpeg",
+      image: "/images/m.com.webp",
+      alt: "Master of Commerce (M.Com) in Sharda Online",
     },
  
   ];
@@ -78,32 +89,88 @@ const Sharda = () => {
 </Head>
 
       {/* Intro Section */}
-      <section className="py-16 bg-white px-6 font-[Inter]">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <div className="md:w-1/2">
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 font-[Poppins]">
-              Study Smarter with Sharda University Online
-            </h1>
-            <p> <span className="font-semibold text-gray-700">Private University in Greater Noida, Uttar Pradesh, India.</span><br /><br/></p>
-            <p className="text-gray-700 text-lg">
-              Sharda University Online is NAAC A+ accredited and offers globally recognized online degrees. Join learners from over 85 countries and experience academic excellence with dedicated career support and world-class faculty.
-            </p>
-            <p className="text-gray-700 text-lg">
-              Sharda University Online is a platform for distance and online education launched by Sharda University in 2023. It offers a variety of undergraduate and postgraduate courses, including online BA, MBA, MCA, BBA, and BCA programs. The platform emphasizes flexibility, accessibility, and affordability, allowing students to pursue their education while balancing work and other commitments. 
-            </p>
-            
-          </div>
-          <div className="md:w-1/2">
-            <Image width={100} height={100} loading="lazy" src="/images/sharda.png" alt="Sharda University" className="w-full rounded-xl shadow-lg" />
-          </div>
-        </div>
-      </section>
+  <HeroSection
+  universityName="Sharda University Online"
+  location="Greater Noida, Uttar Pradesh, India"
+  type="Private University"
+  nirfRank="NAAC A+"
+  rating="4.3"
+  description="Sharda University Online is NAAC A+ accredited and offers globally recognized online degrees. Join learners from over 85 countries and experience academic excellence with dedicated career support and world-class faculty."
+  description2={`
+    Sharda University Online is a platform for distance and online education launched by Sharda University in 2023. 
+    It offers a variety of undergraduate and postgraduate courses, including online BA, MBA, MCA, BBA, and BCA programs. 
+    The platform emphasizes flexibility, accessibility, and affordability, allowing students to pursue their education while balancing work and other commitments.
+  `}
+  badgeText="NAAC A+ Accredited | Global Recognition | Flexible Online Learning"
+  imgSrc="/images/sharda.webp"
+  imgAlt="Sharda University"
+  students="85+ Countries"
+  partners="200+"
+  campus="Greater Noida Campus"
+  highlights={[
+    { icon: <FaBookOpen className="text-blue-600" />, text: "World-Class Curriculum" },
+    { icon: <FaUserTie className="text-blue-600" />, text: "Expert Faculty & Mentors" },
+    { icon: <FaBriefcase className="text-blue-600" />, text: "Career-Oriented Programs" },
+    { icon: <FaGlobe className="text-blue-600" />, text: "Global Student Community" },
+  ]}
+/>
+
+
+      <div>
+  <AccreditationSection
+    title="Why Choose Sharda Online?"
+    description="Sharda University Online offers NAAC A+ accredited, globally recognized online degrees with expert faculty, interactive resources, career support, and placement opportunities."
+    stats={[]} 
+    benefits={[
+      {
+        title: "Interactive Learning",
+        description: "Flexible e-books, recorded lectures, audio books, and discussion forums.",
+      iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" 
+  class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+</svg>`
+
+      },
+      {
+        title: "Expert Faculty",
+        description: "Learn from experienced professionals and globally recognized professors.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.7 0 8 1.34 8 4v4H4v-4c0-2.66 5.3-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z"/>
+                  </svg>`,
+      },
+      {
+        title: "Career Focused",
+        description: "Resume building, internships, interview preparation, and job fairs.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6 22h12V6H6v16zM8 2h8v2H8V2z"/>
+                  </svg>`,
+      },
+      {
+        title: "Placement Support",
+        description: "Guaranteed placement assistance with top hiring partners across domains.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l9 4.5v11L12 22l-9-4.5v-11L12 2z"/>
+                  </svg>`,
+      },
+    ]}
+    accreditations={[
+      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
+      { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
+      { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
+      { src: "/images/nirf.webp", alt: "NIRF", name: "NIRF" },
+      { src: "/images/aiu.webp", alt: "AIU", name: "AIU" },
+    ]}
+    internationalRecognition={[]} 
+    successStories={[]} 
+  />
+</div>
+
 
       {/* Courses Offered */}
       <section className="py-12 bg-white px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">Undergraduate Courses</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start content-start">
             {ugCourses.map((item, index) => (
               <EnquireCard key={index} {...item} universityName="Sharda University" />
             ))}
@@ -114,7 +181,7 @@ const Sharda = () => {
       <section className="py-12 bg-white px-6 font-[Inter]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">Postgraduate Courses</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start content-start">
             {pgCourses.map((item, index) => (
               <EnquireCard key={index} {...item} universityName="Sharda University" />
             ))}
@@ -122,62 +189,13 @@ const Sharda = () => {
         </div>
       </section>
 
-      {/* Why Choose */}
-      <section className="py-12 px-4 bg-white">
-        <div className="max-w-7xl mx-auto text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-900">Why Choose Sharda Online?</h2>
-          <hr className="mt-4 border-gray-300 w-24 mx-auto" />
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
-          <div className="flex flex-col items-start text-left">
-            <FaBookOpen className="text-blue-600 text-3xl mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Interactive Learning</h4>
-            <p className="text-gray-600 text-sm">
-              Flexible e-books, recorded lectures, audio books, and discussion forums.
-            </p>
-          </div>
-          <div className="flex flex-col items-start text-left">
-            <FaUserTie className="text-blue-600 text-3xl mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Expert Faculty</h4>
-            <p className="text-gray-600 text-sm">
-              Learn from experienced professionals and globally recognized professors.
-            </p>
-          </div>
-          <div className="flex flex-col items-start text-left">
-            <FaBriefcase className="text-blue-600 text-3xl mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Career Focused</h4>
-            <p className="text-gray-600 text-sm">
-              Resume building, internships, interview preparation, and job fairs.
-            </p>
-          </div>
-          <div className="flex flex-col items-start text-left">
-            <FaClipboardCheck className="text-blue-600 text-3xl mb-4" />
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Placement Support</h4>
-            <p className="text-gray-600 text-sm">
-              Guaranteed placement assistance with top hiring partners across domains.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Recognized & Accredited */}
-      <section className="py-10 bg-white">
-        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Recognized & Accredited By</h2>
-        <div className="flex flex-wrap justify-center items-center gap-10 px-4">
-          {["ugc", "aicte", "naac",  "nirf", "aiu"].map((logo, i) => (
-            <Image width={100} height={100} loading="lazy" key={i} src={`/images/${logo}.png`} alt={logo.toUpperCase()} className="h-16 object-contain" />
-          ))}
-        </div>
-      </section>
-
-
+    
       
       {/* Certificate + Benefits */}
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
-            <Image width={100} height={100} loading="lazy" src="/images/certificateshardaonline.jpg" alt="certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <Image width={100} height={100} loading="lazy" src="/images/certificateshardaonline.webp" alt="certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
           </div>
           <div className="flex-1 text-white">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">Online Degree from Sharda Online University</h2>
@@ -194,30 +212,9 @@ const Sharda = () => {
       </section>
 
       {/* Admission Process */}
-      <section className="bg-gray-100 py-10 px-4">
-        <div className="max-w-7xl mx-auto bg-white shadow-md rounded-md p-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-900 mb-8">Admission Process</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center relative">
-            {[
-              "Fill the online application form",
-              "Upload necessary documents",
-              "Pay semester/application fee",
-              "Start your online learning journey",
-            ].map((desc, i) => (
-              <div key={i} className="relative flex flex-col items-center">
-                {i !== 0 && (
-                  <div className="absolute -left-1/2 top-5 w-full h-0.5 bg-blue-900 z-0"></div>
-                )}
-                <div className="z-10 w-6 h-6 rounded-full border-4 border-blue-900 bg-white flex items-center justify-center">
-                  <div className="w-2.5 h-2.5 bg-blue-900 rounded-full"></div>
-                </div>
-                <h4 className="mt-4 font-semibold text-lg">Step {i + 1}</h4>
-                <p className="mt-2 text-sm text-gray-700">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <AdmissionProcedure/> 
+
+      {/* Hiring Companies */}
 
 
       <section className="py-12 bg-gray-100">
@@ -235,28 +232,28 @@ const Sharda = () => {
     {/* Logo Cards */}
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image width={100} height={100} loading="lazy" src="/images/company.png" alt="Company" className="h-12 object-contain" />
+        <Image width={100} height={100} loading="lazy" src="/images/company.webp" alt="Company" className="h-12 object-contain" />
       </div>
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image width={100} height={100} loading="lazy" src="/images/company1.png" alt="Microsoft" className="h-12 object-contain" />
+        <Image width={100} height={100} loading="lazy" src="/images/company1.webp" alt="Microsoft" className="h-12 object-contain" />
       </div>
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image width={100} height={100} loading="lazy" src="/images/company9.jpg" alt="Company 9" className="h-12 object-contain" />
+        <Image width={100} height={100} loading="lazy" src="/images/company9.webp" alt="Company 9" className="h-12 object-contain" />
       </div>
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image width={100} height={100} loading="lazy" src="/images/com10.png" alt="Company 10" className="h-12 object-contain" />
+        <Image width={100} height={100} loading="lazy" src="/images/com10.webp" alt="Company 10" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image width={100} height={100} loading="lazy" src="/images/companany4.png" alt="Company4" className="h-12 object-contain" />
+        <Image width={100} height={100} loading="lazy" src="/images/companany4.webp" alt="Company4" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image width={100} height={100} loading="lazy" src="/images/company6.png" alt="Company 6" className="h-12 object-contain" />
+        <Image width={100} height={100} loading="lazy" src="/images/company6.webp" alt="Company 6" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image width={100} height={100} loading="lazy" src="/images/companany5.png" alt="Companany5" className="h-12 object-contain" />
+        <Image width={100} height={100} loading="lazy" src="/images/companany5.webp" alt="Companany5" className="h-12 object-contain" />
       </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image width={100} height={100} loading="lazy" src="/images/adove.png" alt="Adove" className="h-12 object-contain" />
+        <Image width={100} height={100} loading="lazy" src="/images/adove.webp" alt="Adove" className="h-12 object-contain" />
       </div>
             
 
@@ -288,7 +285,7 @@ const Sharda = () => {
       </div>
 
       <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-        <Image width={100} height={100} loading="lazy" src="/images/samsung.png" alt="Samsung" className="h-12 object-contain" />
+        <Image width={100} height={100} loading="lazy" src="/images/samsung.webp" alt="Samsung" className="h-12 object-contain" />
       </div>
       {/* Add more cards here as needed */}
     </div>

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { FaRocket, FaVideo, FaMapMarkerAlt, FaGraduationCap, FaUsers, FaAward, FaCheckCircle, FaPlay, FaArrowRight } from "react-icons/fa";
 import { heroSlides } from "./data";
 
@@ -27,8 +27,8 @@ const Hero = ({ onOpenModal }) => {
       <div className="absolute inset-0 overflow-hidden">
         {/* Animated background shapes */}
         <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-gradient-to-r from-teal-400/20 to-emerald-400/20 rounded-full blur-3xl animate-pulse delay-2000" />
+        <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-gradient-to-r from-teal-400/20 to-emerald-400/20 rounded-full blur-3xl animate-pulse" />
         
         {/* Grid pattern overlay */}
         <div className="absolute inset-0 opacity-40" style={{
@@ -46,18 +46,18 @@ const Hero = ({ onOpenModal }) => {
               <motion.div 
                 initial={{ opacity: 0, x: -50 }} 
                 animate={{ opacity: 1, x: 0 }} 
-                transition={{ duration: 0.8, delay: 0.2 }}
+                transition={{ duration: 0.1 }}
                 className="text-center lg:text-left space-y-8"
               >
                 {/* Trust Badge */}
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }} 
                   animate={{ opacity: 1, y: 0 }} 
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-blue-200 text-blue-700 text-sm font-medium shadow-lg"
+                  transition={{ duration: 0.1 }}
+                  className="inline-flex items-center mt-5 gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-blue-200 text-blue-700 text-sm font-medium shadow-lg"
                 >
-                  <FaAward className="text-yellow-500" />
-                  <span>Trusted by 50,000+ Students</span>
+                  <FaAward className="text-yellow-500 " />
+                  <span>Trusted by 5,000+ Students</span>
                 </motion.div>
 
                 {/* Main Headline */}
@@ -65,7 +65,7 @@ const Hero = ({ onOpenModal }) => {
                   <motion.h1 
                     initial={{ opacity: 0, y: 30 }} 
                     animate={{ opacity: 1, y: 0 }} 
-                    transition={{ duration: 0.8, delay: 0.6 }}
+                    transition={{ duration: 0.1 }}
                     className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
                   >
                     <span className="text-gray-900">Your Gateway to</span>
@@ -78,7 +78,7 @@ const Hero = ({ onOpenModal }) => {
                   <motion.p 
                     initial={{ opacity: 0, y: 20 }} 
                     animate={{ opacity: 1, y: 0 }} 
-                    transition={{ duration: 0.8, delay: 0.8 }}
+                    transition={{ duration: 0.1 }}
                     className="text-xl sm:text-2xl text-gray-600 font-medium"
                   >
                     Compare, Choose & Succeed with India's Top Online Universities
@@ -89,18 +89,17 @@ const Hero = ({ onOpenModal }) => {
                 <motion.p 
                   initial={{ opacity: 0, y: 20 }} 
                   animate={{ opacity: 1, y: 0 }} 
-                  transition={{ duration: 0.8, delay: 1.0 }}
+                  transition={{ duration: 0.8 }}
                   className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0"
                 >
-                  Get expert guidance to find the perfect online degree program from 25+ UGC-approved universities. 
-                  Compare courses, fees, and rankings to make informed decisions for your future.
+                 Get expert guidance to find the perfect online degree program from 25+ UGC-approved universities. Compare courses, fees, and rankings to make informed decisions for your future.
                 </motion.p>
 
                 {/* Key Features */}
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }} 
                   animate={{ opacity: 1, y: 0 }} 
-                  transition={{ duration: 0.8, delay: 1.2 }}
+                  transition={{ duration: 0.8 }}
                   className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto lg:mx-0"
                 >
                   {[
@@ -119,20 +118,20 @@ const Hero = ({ onOpenModal }) => {
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }} 
                   animate={{ opacity: 1, y: 0 }} 
-                  transition={{ duration: 0.8, delay: 1.4 }}
+                  transition={{ duration: 0.8 }}
                   className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                 >
                   <button 
                     onClick={() => onOpenModal("getStarted")} 
-                    className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
+                    className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <span>Start Your Journey</span>
-                    <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                    <FaArrowRight className="group-hover:translate-x-1 transition-transform " />
                   </button>
                   
                   <button 
                     onClick={() => onOpenModal("videoCall")} 
-                    className="group px-8 py-4 bg-white text-gray-700 font-semibold rounded-xl border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
+                    className="group px-8 py-4 bg-white text-gray-700 font-semibold rounded-xl border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <FaPlay className="text-blue-600" />
                     <span>Watch Demo</span>
@@ -143,11 +142,11 @@ const Hero = ({ onOpenModal }) => {
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }} 
                   animate={{ opacity: 1, y: 0 }} 
-                  transition={{ duration: 0.8, delay: 1.6 }}
+                  transition={{ duration: 0.8 }}
                   className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200 max-w-md mx-auto lg:mx-0"
                 >
                   {[
-                    { number: "50K+", label: "Students" },
+                    { number: "5K+", label: "Students" },
                     { number: "25+", label: "Universities" },
                     { number: "100%", label: "Success Rate" }
                   ].map((stat, index) => (
@@ -160,36 +159,37 @@ const Hero = ({ onOpenModal }) => {
               </motion.div>
 
               {/* Right Content - Visual Panel */}
-              <motion.div 
+              <div 
                 initial={{ opacity: 0, x: 50 }} 
                 animate={{ opacity: 1, x: 0 }} 
-                transition={{ duration: 0.8, delay: 0.4 }}
+                transition={{ duration: 0.8 }}
                 className="relative"
               >
                 {/* Main Visual Container */}
                 <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-4 shadow-2xl border border-white/20">
                   {/* Slider Container */}
                   <div className="relative h-56 sm:h-64 md:h-72 lg:h-80 rounded-2xl overflow-hidden mb-6 bg-gray-100">
-                    {heroSlides.map((s, idx) => (
+                    <AnimatePresence initial={false}>
                       <motion.div
-                        key={idx}
-                        className={`absolute inset-0 transition-all duration-1000 ${idx === slide ? "opacity-100 scale-100" : "opacity-0 scale-105"}`}
-                        initial={{ opacity: 0, scale: 1.1 }}
-                        animate={{ opacity: idx === slide ? 1 : 0, scale: idx === slide ? 1 : 1.06 }}
-                        transition={{ duration: 0.8 }}
+                        key={slide}
+                        className="absolute inset-0"
+                        initial={{ opacity: 0, scale: 1.05 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 1.05 }}
+                        transition={{ duration: 0.8, ease: "easeInOut" }}
                       >
                         <Image
-                          src={s.src}
-                          alt={`${s.title} – ${s.subtitle} | Online University Degree guidance`}
                           fill
-                          priority={idx === 0}
+                          src={heroSlides[slide].src}
+                          alt={`${heroSlides[slide].title} – ${heroSlides[slide].subtitle} | Online University Degree guidance`}
+                          loading={slide === 0 ? "eager" : "lazy"}
+                          priority={slide === 0}
                           sizes="(max-width: 768px) 100vw, 50vw"
-                          className="object-contain rounded-2xl"
-                          style={{ objectPosition: "center" }}
+                          className="object-contain rounded-2xl object-center"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
                       </motion.div>
-                    ))}
+                    </AnimatePresence>
                     
                     {/* Slide Indicators */}
                     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
@@ -234,7 +234,7 @@ const Hero = ({ onOpenModal }) => {
                 <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-green-400 to-teal-400 rounded-full flex items-center justify-center shadow-lg animate-pulse">
                   <FaUsers className="text-white text-xl" />
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>
@@ -243,11 +243,11 @@ const Hero = ({ onOpenModal }) => {
         <motion.div 
           initial={{ opacity: 0, y: 50 }} 
           animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8, delay: 1.8 }}
-          className="bg-white/60 backdrop-blur-sm border-t border-white/20 py-8"
+          transition={{ duration: 0.8 }}
+          className="bg-white/60 backdrop-blur-sm border-t border-white/20 py-8 "
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  ">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6  ">
               {[
                 { 
                   icon: FaMapMarkerAlt, 
@@ -274,9 +274,9 @@ const Hero = ({ onOpenModal }) => {
                   aria-label={item.title}
                   className={`${
                     item.title === "Get Counseling"
-                      ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-transparent"
-                      : "bg-white text-gray-800 border-gray-300"
-                  } w-full inline-flex items-center justify-between gap-3 sm:gap-4 px-4 sm:px-5 py-3 rounded-full border shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400`}
+                      ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-transparent cursor-pointer"
+                      : "bg-white text-gray-800 border-gray-300 cursor-pointer"
+                  } w-full inline-flex items-center justify-between gap-3 sm:gap-4 px-4 sm:px-5 py-3 rounded-full border shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 cursor-pointer`}
                 >
                   <span className="inline-flex items-center gap-3">
                     <span className={`${
@@ -303,5 +303,3 @@ const Hero = ({ onOpenModal }) => {
 };
 
 export default Hero;
-
-

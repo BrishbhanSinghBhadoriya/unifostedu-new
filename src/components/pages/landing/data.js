@@ -4,8 +4,10 @@ import { FaBook, FaUniversity, FaGraduationCap, FaBriefcase, FaBookOpen, FaUsers
 
 export const heroSlides = [
   {
-    src: "/slider/slider-1.jpg",
+    src: "/slider/slider-1.webp",
     alt: "Compare before you decide",
+    width: 1200,
+    height: 800,
     title: "Your Gateway to Success",
     subtitle: "Compare • Choose • Succeed",
     description: "Find the perfect online degree program from India's top-ranked universities. Get expert guidance to make informed decisions for your academic future.",
@@ -13,6 +15,8 @@ export const heroSlides = [
   {
     src: "/slider/slider-2.webp",
     alt: "Your One-Stop Platform for Online Universities",
+    width: 1200,
+    height: 800,
     title: "Transform Your Future",
     subtitle: "Online Education Excellence",
     description: "Access world-class education from anywhere, anytime. Study with industry experts and get recognized degrees from UGC-approved universities.",
@@ -20,6 +24,8 @@ export const heroSlides = [
   {
     src: "/slider/slider-3.webp",
     alt: "Search • Compare • Choose • Succeed",
+    width: 1200,
+    height: 800,
     title: "Smart Education Choices",
     subtitle: "Expert Guidance • Best Programs",
     description: "Get personalized counseling from education experts. Compare courses, fees, and career prospects to choose the best program for your goals.",
@@ -27,6 +33,8 @@ export const heroSlides = [
   {
     src: "/slider/slider-4.webp",
     alt: "Compare universities with Unifost",
+    width: 1200,
+    height: 800,
     title: "Ye College Ya Woh College?",
     subtitle: "Compare on Unifost!",
     description: "Compare fees, rankings, courses, and location — instantly. Make data-driven decisions with our comprehensive university comparison tool.",
@@ -62,53 +70,53 @@ export const features = [
 ];
 
 export const colleges = [
-  { name: "Amity University Online", ranking: "NIRF-29", fee: "₹0.99L - ₹3.45L", logo: "/images/amity.png", rating: 4.8 },
-  { name: "Manipal University Online", ranking: "NIRF-73", fee: "0.99L - ₹2.92L", logo: "/images/manipal1.png", rating: 4.6 },
-  { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹0.80L - ₹2.0L", logo: "/images/lpu.png", rating: 4.1 },
-  { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.50L - ₹2.20L", logo: "/images/upes.png", rating: 4.4 },
-  { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹0.94L - ₹4.0L", logo: "/images/nmims.png", rating: 4.5 },
-  { name: "Sharda University Online", ranking: "NIRF-87", fee: "₹1.05L - ₹1.60L", logo: "/images/sharda.png", rating: 4.1 },
-  { name: "Dr. DY Patil Online", ranking: "NIRF-63", fee: "₹1.40L - ₹1.90L", logo: "/images/dypatil.png", rating: 4.4 },
-  { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.30L - ₹2.16L", logo: "/images/jain.png", rating: 4.5 },
-  { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹1.0L - ₹2.10L", logo: "/images/chandigarh.jpg", rating: 4.7 },
+  { name: "Amity University Online", ranking: "NIRF-29", fee: "₹0.99L - ₹3.45L", logo: "/images/amity.webp", rating: 4.8 },
+  { name: "Manipal University Online", ranking: "NIRF-73", fee: "0.99L - ₹2.92L", logo: "/images/manipal1.webp", rating: 4.6 },
+  { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹0.80L - ₹2.0L", logo: "/images/lpu.webp", rating: 4.1 },
+  { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.50L - ₹2.20L", logo: "/images/upes.webp", rating: 4.4 },
+  { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹0.94L - ₹4.0L", logo: "/images/nmims.webp", rating: 4.5 },
+  { name: "Sharda University Online", ranking: "NIRF-87", fee: "₹1.05L - ₹1.60L", logo: "/images/sharda.webp", rating: 4.1 },
+  { name: "Dr. DY Patil Online", ranking: "NIRF-63", fee: "₹1.40L - ₹1.90L", logo: "/images/dypatil.webp", rating: 4.4 },
+  { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.30L - ₹2.16L", logo: "/images/jain.webp", rating: 4.5 },
+  { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹1.0L - ₹2.10L", logo: "/images/chandigarh.webp", rating: 4.7 },
 ];
 
 export const cities = [
-  { city: "Delhi", state: "Delhi", img: "/images/delhi.png", students: "25K+" },
-  { city: "Mumbai", state: "Maharashtra", img: "/images/mumbai.png", students: "22K+" },
-  { city: "Bangalore", state: "Karnataka", img: "/images/banglore.png", students: "20K+" },
-  { city: "Chennai", state: "Tamil Nadu", img: "/images/chennai.png", students: "18K+" },
-  { city: "Hyderabad", state: "Telangana", img: "/images/hyderabad.png", students: "16K+" },
-  { city: "Pune", state: "Maharashtra", img: "/images/pune.png", students: "15K+" },
-  { city: "Kolkata", state: "West Bengal", img: "/images/kolkata.png", students: "14K+" },
-  { city: "Ahmedabad", state: "Gujarat", img: "/images/ahemdabad.png", students: "12K+" },
+  { city: "Delhi", state: "Delhi", img: "/images/delhi.webp", students: "25K+" },
+  { city: "Mumbai", state: "Maharashtra", img: "/images/mumbai.webp", students: "22K+" },
+  { city: "Bangalore", state: "Karnataka", img: "/images/banglore.webp", students: "20K+" },
+  { city: "Chennai", state: "Tamil Nadu", img: "/images/chennai.webp", students: "18K+" },
+  { city: "Hyderabad", state: "Telangana", img: "/images/hyderabad.webp", students: "16K+" },
+  { city: "Pune", state: "Maharashtra", img: "/images/pune.webp", students: "15K+" },
+  { city: "Kolkata", state: "West Bengal", img: "/images/kolkata.webp", students: "14K+" },
+  { city: "Ahmedabad", state: "Gujarat", img: "/images/ahemdabad.webp", students: "12K+" },
 ];
 
 export const accreditationLogos = [
-  "/images/ugc.png",
-  "/images/naac.png",
-  "/images/nirf.png",
-  "/images/aicte.png",
-  "/images/wasc.png",
-  "/images/aiu.png",
-  "/images/iacbe.png",
-  "/images/aacsb.png",
-  "/images/iqas.png",
-  "/images/wes.png",
-  "/images/unwto.png",
-  "/images/nabh.png",
+  "/images/ugc.webp",
+  "/images/naac.webp",
+  "/images/nirf.webp",
+  "/images/aicte.webp",
+  "/images/wasc.webp",
+  "/images/aiu.webp",
+  "/images/iacbe.webp",
+  "/images/aacsb.webp",
+  "/images/iqas.webp",
+  "/images/wes.webp",
+  "/images/unwto.webp",
+  "/images/nabh.webp",
 ];
 
 export const universityLogos = [
-  { name: "Amity University", logo: "/images/amity.png" },
-  { name: "Manipal University", logo: "/images/manipal1.png" },
-  { name: "LPU Online", logo: "/images/lpu.png" },
-  { name: "UPES Online", logo: "/images/upes.png" },
-  { name: "NMIMS Online", logo: "/images/nmims.png" },
-  { name: "Sharda University", logo: "/images/sharda.png" },
-  { name: "DY Patil", logo: "/images/dypatil.png" },
-  { name: "Jain University", logo: "/images/jain.png" },
-  { name: "Chandigarh University", logo: "/images/chandigarh.jpg" },
+  { name: "Amity University", logo: "/images/amity.webp" },
+  { name: "Manipal University", logo: "/images/manipal1.webp" },
+  { name: "LPU Online", logo: "/images/lpu.webp" },
+  { name: "UPES Online", logo: "/images/upes.webp" },
+  { name: "NMIMS Online", logo: "/images/nmims.webp" },
+  { name: "Sharda University", logo: "/images/sharda.webp" },
+  { name: "DY Patil", logo: "/images/dypatil.webp" },
+  { name: "Jain University", logo: "/images/jain.webp" },
+  { name: "Chandigarh University", logo: "/images/chandigarh.webp" },
 ];
 
 export const slugify = (name) => name.toLowerCase().replace(/\s+/g, "-");
@@ -132,7 +140,7 @@ export const getCourseHref = (title) => {
 
 export const getUniversityHref = (name) => {
   const n = name.toLowerCase();
-  if (n.includes("amity")) return "/amity";
+  if (n.includes("amity")) return "/Amity-University-Online";
   if (n.includes("manipal")) return "/manipal";
   if (n.includes("lovely professional") || n.includes("lpu")) return "/lpu";
   if (n.includes("petroleum") || n.includes("upes")) return "/upes";

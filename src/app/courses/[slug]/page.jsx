@@ -142,7 +142,7 @@ export async function generateMetadata({ params }) {
       siteName: 'UNIFOST',
       images: [
         {
-          url: 'images/uni.jpg',
+          url: 'images/uni.webp',
           width: 1200,
           height: 630,
           alt: `${course.courseType} - Online Programs in India`
@@ -157,7 +157,7 @@ export async function generateMetadata({ params }) {
       creator: '@unifost',
       title: course.title,
       description: course.description,
-      images: ['images/uni.jpg'],
+      images: ['images/uni.webp'],
     },
     robots: {
       index: true,

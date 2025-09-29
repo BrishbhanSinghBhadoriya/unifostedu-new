@@ -13,7 +13,7 @@ export default function CourseNextSeo({ slug }) {
   // Defaults if not present in JSON
   const seoTitle = course.metaTitle || `Online ${course.title} in India | UGC Approved Universities`;
   const seoDescription = course.metaDescription || course.description;
-  const ogImageUrl = course.ogImage || `${siteUrl}/images/uni.jpg`;
+  const ogImageUrl = course.ogImage || `${siteUrl}/images/uni.webp`;
 
   return (
     <NextSeo

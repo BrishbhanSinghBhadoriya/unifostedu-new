@@ -10,15 +10,20 @@ import {
 }from "react-icons/fa";
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { toast } from 'sonner';
+import Breadcrumb from '@/components/Breadcrumb';
 
- const metadata = {
-  title: "UNIFOST | Online Education & Career Counseling Platform",
+export const metadata = {
+  title: "UNIFOST | Online Education & Career Counseling Platform|Unifost",
   description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees, career counseling, and personalized guidance. Discover our mission to transform education.",
   keywords: "About UNIFOST, EdTech Platform India, Online Education Company, Career Counseling Services, University Partner Network, Education Technology India, Online University Degrees, Student Guidance Platform, Educational Innovation India",
   openGraph: {
     title: "About UNIFOST | India's Leading EdTech Platform for Online Education",
     description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees, career counseling, and personalized guidance.",
-    images: ["/images/uni.jpg"],
+    images: ["/images/uni.webp"],
+  },
+  alternates: {
+    canonical: "https://unifostedu.com/about",
   },
 };
 
@@ -58,21 +63,21 @@ export default function About() {
     "@type": "Organization",
     "name": "UniFost",
     "url": "https://unifostedu.com",
-    "logo": "https://unifostedu.com/images/uni.jpg",
+    "logo": "https://unifostedu.com/images/uni.webp",
     "description": "UniFost is redefining how students discover and access quality education through personalized guidance and innovative technology.",
     "founder": [
       {
         "@type": "Person",
         "name": "Priyansh Mishra",
         "url": "https://www.linkedin.com/in/priyansh-mishra-14b9ba2a0/",
-        "image": "https://unifostedu.com/priyansh.jpg",
+        "image": "https://unifostedu.com/priyansh.webp",
         "jobTitle": "Co-Founder & Director"
       },
       {
         "@type": "Person",
         "name": "Aman Pawar",
         "url": "https://www.linkedin.com/in/aman-pawar-a59b57218/",
-        "image": "https://unifostedu.com/aman.jpg",
+        "image": "https://unifostedu.com/aman.webp",
         "jobTitle": "Co-Founder & Director"
       }
     ],
@@ -180,16 +185,16 @@ export default function About() {
         <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight">
               About <span className="text-[#00ffe0]">Unifost</span>
             </h1>
             <div className="w-24 h-1 bg-[#00ffe0] mx-auto mb-8"></div>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">
+            <h2 className="text-3xl md:text-5xl font-semibold md:font-bold text-white mb-8 leading-snug">
               Transforming <span className="text-[#00ffe0]">Education</span><br />
               One Student at a Time
             </h2>
             <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto mb-12 leading-relaxed">
-              UniFost is redefining how students discover and access quality education through personalized guidance and innovative technology.
+              UniFost helps students discover and access quality education with personalized guidance and modern technology.
             </p>
             <button onClick={openGetStarted} className="bg-[#00ffe0] cursor-pointer text-[#001e3c] px-8 py-4 rounded-full text-xl font-semibold hover:bg-[#00d4c4] transform hover:scale-105 transition-all duration-300 shadow-2xl group">
               Get Started Today
@@ -267,12 +272,12 @@ export default function About() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[ 
-              { image: "/images/acard1.jpg", title: "Personalized Video Counseling", desc: "One-on-one sessions with our expert counselors to help you make informed decisions about your education and career path.", icon: <FaVideo className="text-2xl" /> },
-              { image: "/images/acard2.jpg", title: "Home Demo Sessions", desc: "Experience learning firsthand with trial sessions conducted at your convenience before committing to any program.", icon: <FaHome className="text-2xl" /> },
-              { image: "/images/acard3.jpg", title: "Certified Programs", desc: "Access to industry-recognized certifications and courses that enhance your employability and skills.", icon: <FaCertificate className="text-2xl" /> },
-              { image: "/images/acard4.jpg", title: "Online Degree Guidance", desc: "Comprehensive support for selecting and enrolling in accredited online degree programs from top institutions.", icon: <FaGraduationCap className="text-2xl" /> },
-              { image: "/images/acard5.jpg", title: "University Admissions", desc: "Expert assistance in selecting and applying to traditional universities with high placement records.", icon: <FaUniversity className="text-2xl" /> },
-              { image: "/images/acard6.jpg", title: "Skill Development", desc: "Specialized courses and workshops to bridge the gap between academic learning and industry requirements.", icon: <FaTools className="text-2xl" /> }
+              { image: "/images/acard1.webp", title: "Personalized Video Counseling", desc: "One-on-one sessions with our expert counselors to help you make informed decisions about your education and career path.", icon: <FaVideo className="text-2xl" /> },
+              { image: "/images/acard2.webp", title: "Home Demo Sessions", desc: "Experience learning firsthand with trial sessions conducted at your convenience before committing to any program.", icon: <FaHome className="text-2xl" /> },
+              { image: "/images/acard3.webp", title: "Certified Programs", desc: "Access to industry-recognized certifications and courses that enhance your employability and skills.", icon: <FaCertificate className="text-2xl" /> },
+              { image: "/images/acard4.webp", title: "Online Degree Guidance", desc: "Comprehensive support for selecting and enrolling in accredited online degree programs from top institutions.", icon: <FaGraduationCap className="text-2xl" /> },
+              { image: "/images/acard5.webp", title: "University Admissions", desc: "Expert assistance in selecting and applying to traditional universities with high placement records.", icon: <FaUniversity className="text-2xl" /> },
+              { image: "/images/acard6.webp", title: "Skill Development", desc: "Specialized courses and workshops to bridge the gap between academic learning and industry requirements.", icon: <FaTools className="text-2xl" /> }
             ].map((service, index) => (
               <div key={index} className="relative bg-white rounded-2xl overflow-hidden shadow-lg group hover:shadow-xl transition-all duration-500 border border-gray-100">
                 <div className="relative overflow-hidden h-48">
@@ -281,17 +286,27 @@ export default function About() {
                   <div className="absolute top-4 right-4 bg-[#00ffe0] text-[#001e3c] p-3 rounded-full transform translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">{service.icon}</div>
                 </div>
                 <div className="p-6 relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#00ffe0]/5 to-[#00d4c4]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-2xl"></div>
-                  <div className="relative z-10">
-                    <h3 className="text-xl font-bold text-[#001e3c] mb-3 group-hover:text-[#003b6c] transition-colors duration-300">{service.title}</h3>
-                    <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">{service.desc}</p>
-                    <div className="mt-6 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                      <button onClick={openGetStarted} className="flex items-center text-[#00d4c4] font-semibold hover:text-[#00ffe0] transition-colors duration-300">
-                        Learn more <span className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300">→</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
+  <div className="absolute inset-0 bg-gradient-to-br from-[#00ffe0]/5 to-[#00d4c4]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-2xl"></div>
+  <div className="relative z-10">
+    <h3 className="text-xl font-bold text-[#001e3c] mb-3 group-hover:text-[#003b6c] transition-colors duration-300">
+      {service.title}
+    </h3>
+    <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+      {service.desc}
+    </p>
+
+    {/* ✅ Button hamesha dikhega */}
+    <div className="mt-6">
+      <button
+        onClick={openGetStarted}
+        className="flex items-center text-white bg-[#00d4c4] px-4 py-2 rounded-lg font-semibold hover:bg-[#00ffe0] transition-colors duration-300"
+      >
+        Learn more <span className="ml-2">→</span>
+      </button>
+    </div>
+  </div>
+</div>
+
               </div>
             ))}
           </div>
@@ -427,12 +442,15 @@ export default function About() {
         The driving force behind UniFost's mission to transform education
       </p>
     </div>
-
-    {/* Founder 1 */}
+  {/* Founder 1 */}
     <div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
       <div className="relative">
         <Image
+<<<<<<< HEAD
           src="/images/priyansh1.jpg" 
+=======
+          src="/images/priyansh.webp" 
+>>>>>>> 886539d0e17c1f18cf25e9983d345d4bee432e28
           alt="Priyansh Mishra" 
           width={100}
           height={100}
@@ -446,34 +464,41 @@ export default function About() {
       <div className="bg-[#1e1e50]/70 p-8 rounded-2xl shadow-lg border border-white/10">
         <h3 className="text-3xl font-bold">PRIYANSH MISHRA</h3>
         <p className="text-teal-400 font-semibold">Founder & Director</p>
-        <p className="text-gray-200 mt-4">
-          Priyansh Mishra, a visionary leader committed to revolutionizing education through innovation and accessibility, has poured his heart, energy, and vision into building UniFost with unwavering passion and dedication. With a background in educational technology and student psychology, he ensures UniFost remains student-centric.
-        </p>
+        <p className="text-lg md:text-2xl text-gray-100 mt-6 font-semibold leading-relaxed tracking-wide bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent">
+         “Priyansh Mishra, a visionary leader committed to revolutionizing education through
+         innovation and accessibility, has poured his heart, energy, and vision into building
+         <span className="font-bold"> UniFost </span> with unwavering passion and dedication. 
+          With a background in educational technology and student psychology, he ensures UniFost 
+          remains student-centric.”
+       </p>
+
         <div className="flex space-x-4 mt-6">
           <a 
-  href="https://www.linkedin.com/in/priyansh-mishra-14b9ba2a0/" 
-  target="_blank" 
-  rel="noopener noreferrer" 
-  className="text-teal-400 hover:text-white text-xl"
->
+        href="https://www.linkedin.com/in/priyansh-mishra-14b9ba2a0/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="text-teal-400 hover:text-white text-xl"
+        >
   <FaLinkedin />
 </a>
 
         </div>
-        <button className="mt-6 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] px-6 py-3 rounded-full font-semibold hover:scale-105 transform transition-all duration-300">
+        {/* <button className="mt-6 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] px-6 py-3 rounded-full font-semibold hover:scale-105 transform transition-all duration-300">
           Get in Touch
-        </button>
+        </button> */}
       </div>
     </div>
+
 
     {/* Founder 2 */}
     <div className="grid md:grid-cols-2 gap-12 items-center">
       <div className="order-2 md:order-1 bg-[#2e2e7e]/70 p-8 rounded-2xl shadow-lg border border-white/10">
         <h3 className="text-3xl font-bold">AMAN PAWAR</h3>
         <p className="text-pink-400 font-semibold">Founder & Director</p>
-        <p className="text-gray-200 mt-4">
-          Aman Pawar is the driving force behind UniFost—blending vision with action, and passion with purpose. His tireless efforts and hands-on leadership have shaped a platform that puts students first. With expertise in business strategy and digital education, he bridges the gap between academia and industry needs.
-        </p>
+       <p className="text-lg md:text-2xl text-gray-100 mt-6 font-semibold leading-relaxed tracking-wide bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent">
+  “Aman Pawar is the driving force behind <span className="font-bold">UniFost</span>—blending vision with action, and passion with purpose. His tireless efforts and hands-on leadership have shaped a platform that puts students first. With expertise in business strategy and digital education, he bridges the gap between academia and industry needs.”
+</p>
+
         <div className="flex space-x-4 mt-6">
         <a 
   href="https://www.linkedin.com/in/aman-pawar-a59b57218/" 
@@ -485,13 +510,13 @@ export default function About() {
 </a>
 
         </div>
-        <button className="mt-6 bg-gradient-to-r from-pink-400 to-pink-300 text-[#001e3c] px-6 py-3 rounded-full font-semibold hover:scale-105 transform transition-all duration-300">
+        {/* <button className="mt-6 bg-gradient-to-r from-pink-400 to-pink-300 text-[#001e3c] px-6 py-3 rounded-full font-semibold hover:scale-105 transform transition-all duration-300">
           Get in Touch
-        </button>
+        </button> */}
       </div>
       <div className="relative order-1 md:order-2">
         <Image
-          src="/images/aman.jpg" 
+          src="/images/aman.webp" 
           alt="Aman Pawar" 
           width={100}
           height={100}
@@ -505,18 +530,65 @@ export default function About() {
     </div>
   </div>
 </section>
+        
 
-      
 
-      {/* Enquiry Modal */}
-      <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal}>
-        <DialogContent className="sm:max-w-lg">
-          <DialogHeader>
-            <DialogTitle>{modalType === "getStarted" ? "Get Started with Unifost" : "Schedule a Video Call"}</DialogTitle>
-          </DialogHeader>
-          <EnquiryForm type={modalType} />
-        </DialogContent>
-      </Dialog>
+     <div className="w-full rounded-xl overflow-hidden shadow-lg">
+  <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.6832009747964!2d77.31252000920001!3d28.579274275592528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5d98ee6d3c5%3A0x34c5ea3d0f04f8a7!2sLogix%20Park!5e0!3m2!1sen!2sin!4v1757655392841!5m2!1sen!2sin"
+      style={{ border: 0 }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      className="absolute inset-0 w-full h-full"
+    ></iframe>
+  </div>
+</div>
+
+{/* Enquiry Modal */}
+<Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
+  <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-6 md:my-12 p-4 sm:p-6">
+    <DialogHeader>
+      <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
+        {modalType === "getStarted" ? "Get Started with Unifost" : "Schedule a Video Call"}
+      </DialogTitle>
+    </DialogHeader>
+    <EnquiryForm 
+      formType={modalType}
+      onSubmitted={() => {
+        setShowEnquiryModal(false);
+        toast.success("Our counselors will connect with you as soon as possible", {
+          style: {
+            fontSize: '25px',
+            fontWeight: 'bold',
+            padding: '16px 24px',
+          },
+          icon: '✅',
+        });
+      }}
+    />
+  </DialogContent>
+</Dialog>
+
+{/* Closing CTA Section */}
+<section className="py-20 bg-gradient-to-br from-[#001e3c] to-[#003b6c] text-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 className="text-3xl md:text-5xl font-bold mb-4">Ready to take the next step?</h2>
+    <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-8">
+      Talk to our expert counselors and get a personalized roadmap for your goals.
+    </p>
+    <button
+      onClick={openGetStarted}
+      className="bg-[#00ffe0] cursor-pointer text-[#001e3c] px-8 py-4 rounded-full text-lg md:text-xl font-semibold hover:bg-[#00d4c4] transform hover:scale-105 transition-all duration-300 shadow-2xl"
+    >
+      Talk to a Counselor
+    </button>
+  </div>
+</section>
+
+
+
 
     </div>
     </>

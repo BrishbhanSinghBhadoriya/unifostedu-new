@@ -1,9 +1,20 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import EnquiryForm from '@/components/EnquiryForm';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { 
+  FaClock, 
+  FaGraduationCap, 
+  FaMoneyBillWave, 
+  FaChevronDown, 
+  FaChevronUp,
+  FaBookOpen,
+  FaStar,
+  FaArrowRight
+} from 'react-icons/fa';
 
 const EnquireCard = ({ 
   course, 
@@ -11,46 +22,157 @@ const EnquireCard = ({
   eligibility, 
   fees, 
   fee,
-  specialization, 
+  specialization = [],  
   image, 
-  universityName 
+  universityName,
+  uniqueId 
 }) => {
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
+  const [showMore, setShowMore] = useState(false);
 
-  const handleEnquireClick = () => {
-    setIsEnquiryOpen(true);
-  };
-
-  const handleEnquirySubmitted = () => {
-    setIsEnquiryOpen(false);
+  const handleEnquireClick = useCallback(() => setIsEnquiryOpen(true), []);
+  const handleEnquirySubmitted = useCallback(() => setIsEnquiryOpen(false), []);
+  
+  const handleShowMore = () => {
+    setShowMore(!showMore);
   };
 
   // Handle both 'fees' and 'fee' properties
   const displayFees = fees || fee;
 
+  // Normalize specialization → always array
+  const specializationList = Array.isArray(specialization)
+    ? specialization
+    : specialization 
+      ? specialization.split(',').map(s => s.trim()) 
+      : [];
+
+  // Default: show only 1 specialization
+  const visibleSpecializations = showMore 
+    ? specializationList 
+    : specializationList.slice(0, 1);
+
   return (
     <>
-      <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition duration-300">
-        <Image width={100} height={100} loading="lazy" src={image} alt={course} className="h-40 w-full object-cover sm:h-48" />
-        <div className="p-4 flex-1 flex flex-col justify-between">
-          <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">{course}</h3>
-            <p className="text-sm text-gray-600 mb-1"><strong>Duration:</strong> {duration}</p>
-            <p className="text-sm text-gray-600"><strong>Eligibility:</strong> {eligibility}</p>
-            {displayFees && <p className="text-sm text-gray-600"><strong>Fees:</strong> {displayFees}</p>}
-            {specialization && <p className="text-sm text-gray-600"><strong>Specialization:</strong> {specialization}</p>}
+      <motion.div 
+        className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-500 border border-gray-100 group"
+        whileHover={{ y: -8, scale: 1.02 }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        {/* Image Container with Overlay */}
+        <div className="relative h-40 overflow-hidden">
+          <Image
+            width={400}
+            height={300}
+            loading="lazy"
+            src={image}
+            alt={course}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          
+          
+        </div>
+
+        {/* Content */}
+        <div className="p-4 flex flex-col ">
+          {/* Course Title */}
+          <div className="mb-3">
+            <h3 className="font-baskervville text-lg font-bold text-gray-900 mb-2 line-clamp-2 transition-colors duration-300">
+              {course}
+            </h3>
           </div>
-          <div className="mt-4">
-            <button
+
+          {/* Key Info Cards */}
+          <div className="grid grid-cols-1 gap-2 mb-3">
+            <div className="flex items-center bg-blue-50 p-2 rounded-lg">
+              <div className="bg-blue-100 p-1.5 rounded-md mr-2">
+                <FaClock className="text-blue-600 text-xs" />
+              </div>
+              <div>
+                <p className="text-xs text-gray-500 font-medium">Duration</p>
+                <p className="text-sm font-semibold text-gray-900">{duration}</p>
+              </div>
+            </div>
+            
+            <div className="flex items-center bg-green-50 p-2 rounded-lg">
+              <div className="bg-green-100 p-1.5 rounded-md mr-2">
+                <FaGraduationCap className="text-green-600 text-xs" />
+              </div>
+              <div>
+                <p className="text-xs text-gray-500 font-medium">Eligibility</p>
+                <p className="text-sm font-semibold text-gray-900 line-clamp-1">{eligibility}</p>
+              </div>
+            </div>
+            
+            {displayFees && (
+              <div className="flex items-center bg-purple-50 p-2 rounded-lg">
+                <div className="bg-purple-100 p-1.5 rounded-md mr-2">
+                  <FaMoneyBillWave className="text-purple-600 text-xs" />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-500 font-medium">Total Fees</p>
+                  <p className="text-sm font-semibold text-gray-900">{displayFees}</p>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Specializations */}
+          {specializationList.length > 0 && (
+            <div className="mb-3">
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-xs font-semibold text-gray-700 flex items-center">
+                  <FaBookOpen className="mr-1 text-blue-600 text-xs" />
+                  Specializations
+                </span>
+                {specializationList.length > 1 && (
+                  <button
+                    onClick={handleShowMore}
+                    className="text-blue-600 text-xs font-medium hover:text-blue-800 transition-colors flex items-center gap-1"
+                  >
+                    {showMore ? 'Less' : 'More'}
+                    {showMore ? <FaChevronUp className="text-xs" /> : <FaChevronDown className="text-xs" />}
+                  </button>
+                )}
+              </div>
+              
+              <div className="bg-gray-50 rounded-lg p-2">
+                <div className="flex flex-wrap gap-1">
+                  {visibleSpecializations.map((spec, idx) => (
+                    <span 
+                      key={idx}
+                      className=" inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded-full"
+                    >
+                      {spec}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Enquire Button */}
+          <div className="mt-auto pt-2">
+            <motion.button
               onClick={handleEnquireClick}
-              className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-center block font-semibold hover:opacity-90 transition w-full"
+              className="w-full bg-[#1a325d] text-white px-4 py-2.5 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 group/btn cursor-pointer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
-              Enquire Now
-            </button>
+              <span>Enquire Now</span>
+              <FaArrowRight className="text-sm group-hover/btn:translate-x-1 transition-transform duration-300" />
+            </motion.button>
           </div>
         </div>
-      </div>
+      </motion.div>
 
+      {/* Enquiry Dialog */}
       <Dialog open={isEnquiryOpen} onOpenChange={setIsEnquiryOpen}>
         <DialogContent>
           <DialogHeader>

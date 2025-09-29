@@ -7,7 +7,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, } from '@/components/ui/dialog';
 import EnquiryForm from '@/components/EnquiryForm';
 import {
   FaUniversity,
@@ -27,7 +27,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'amity-university-online',
     name: 'Amity University Online',
-    logo: '/images/amity.png',
+    logo: '/images/amity.webp',
     location: 'Noida, Uttar Pradesh',
 
     established: '2005',
@@ -48,7 +48,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'manipal-university-online',
     name: 'Online Manipal University',
-    logo: '/images/manipal.png',
+    logo: '/images/manipal.webp',
     location: 'jaipur, Rajastan',
     
     established: '1953',
@@ -69,7 +69,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'sikkim-manipal-university',
     name: 'Sikkim Manipal University',
-    logo: '/images/smu-uni.jpg',
+    logo: '/images/smu-uni.webp',
     location: 'Gangtok, Sikkim',
     established: '1995',
     fee: '₹0.75L - ₹1.10L',
@@ -109,7 +109,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'nmims',
     name: 'NMIMS University',
-    logo: '/images/nmims.png',
+    logo: '/images/nmims.webp',
     location: 'Mumbai, Maharashtra',
     established: '1981',
     fee: '₹0.94L - ₹4.0L',
@@ -129,7 +129,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'lovely-professional-university-online',
     name: 'Lovely Professional University',
-    logo: '/images/lpu.png',
+    logo: '/images/lpu.webp',
     location: 'Jalandhar, Punjab',
     established: '2005',
     fee: '₹0.80L - ₹2.0L',
@@ -149,7 +149,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'university-of-petroleum-and-energy-studies-online',
     name: 'Upes Online',
-    logo: '/images/upes.png',
+    logo: '/images/upes.webp',
     location: 'Dehradun, Uttarakhand',
     established: '2003',
     fee: '₹1.50L - ₹2,20L',
@@ -169,7 +169,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'dr-dy-patil-online',
     name: 'Dr. D Y Patil',
-    logo: '/images/dypatil.png',
+    logo: '/images/dypatil.webp',
     location: 'Pune, Maharashtra',
     established: '2003',
     fee: '₹1.40L - ₹1.90L',
@@ -189,7 +189,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'sharda-university-online',
     name: 'Sharda University Online',
-    logo: '/images/sharda.png',
+    logo: '/images/sharda.webp',
     location: 'Greater Noida, Uttar Pradesh',
     established: '2009',
     fee: '₹1.05L - ₹1.60L',
@@ -209,7 +209,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'jain-university-online',
     name: 'Jain University',
-    logo: '/images/jain.png',
+    logo: '/images/jain.webp',
     location: 'Bengaluru, Karnataka',
     established: '1990',
     fee: '1.30L - ₹2.16L',
@@ -229,7 +229,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'chandigarh-university-online',
     name: 'Chandigarh University Online',
-    logo: '/images/chandigarh.jpg',
+    logo: '/images/chandigarh.webp',
     location: 'Chandigarh, Punjab',
     established: '2012',
     fee: '₹1.0L - ₹2.10L',
@@ -249,7 +249,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'op-jindal-university',
     name: 'OP Jindal University',
-    logo: '/images/opjindal.png',
+    logo: '/images/opjindal.webp',
     location: 'Sonipat, Haryana',
     established: '2009',
     fee: '₹2.0L - ₹3.0L',
@@ -269,7 +269,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'shoolini-university-online',
     name: 'Shoolini University Online',
-    logo: '/images/shoolini.jpg',
+    logo: '/images/shoolini.webp',
     location: 'Solan, Himachal Pradesh',
     established: '2009',
     fee: '₹0.75L - ₹1.40L',
@@ -289,7 +289,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'vivekananda-global-university-online',
     name: 'Vivekananda Global University Online',
-    logo: '/images/vgu1.png',
+    logo: '/images/vgu1.webp',
     location: 'Jaipur, Rajasthan',
     established: '2012',
     fee: '₹0.72L - ₹2.40L',
@@ -384,11 +384,15 @@ function CompareContent() {
     
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12 md:mt-20 px-4 sm:px-6 lg:px-8">
              {/* Enquiry gating */}
-               <Dialog open={!enquiryDone} onOpenChange={noop}>
+              <Dialog open={!enquiryDone} onOpenChange={(open) => {
+                if (!open) {
+                  // Redirect to home when the enquiry modal is closed via cross/overlay
+                  router.replace('/');
+                }
+              }}>
           <DialogContent
-            className="w-[95vw] max-w-[560px] max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10"
-            onInteractOutside={(e) => e.preventDefault()}
-            onEscapeKeyDown={(e) => e.preventDefault()}
+            className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-6 md:my-12 p-4 sm:p-6"
+            
           >
            <DialogHeader className="px-4 sm:px-6">
              <DialogTitle className="text-lg sm:text-xl font-bold text-center">Quick Enquiry before Comparison</DialogTitle>
@@ -396,15 +400,7 @@ function CompareContent() {
            <div className="px-4 sm:px-6 pb-4">
              <EnquiryForm onSubmitted={() => setEnquiryDone(true)} />
            </div>
-           <div className="mt-4 px-4 sm:px-6 pb-4 flex flex-col sm:flex-row gap-3 justify-end">
-             <Button
-               variant="outline"
-               onClick={() => router.replace('/')}
-               className="w-full sm:w-auto border-[#00ffe0] text-[#001e3c] hover:bg-[#00ffe0] hover:text-[#001e3c] py-2.5"
-             >
-               Cancel
-             </Button>
-           </div>
+          
          </DialogContent>
        </Dialog>
 
@@ -460,7 +456,7 @@ function CompareContent() {
                            alt={university.name} 
                            width={100}
                            height={100}
-                           loading='Lazy'
+                           loading='lazy'
                            className="w-full h-full object-contain"
                          />
                        </div>

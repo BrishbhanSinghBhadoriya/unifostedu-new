@@ -5,7 +5,8 @@ export const metadata = {
   openGraph: {
     title: "Our Services | Career Counseling & Educational Guidance | UNIFOST",
     description: "Discover UNIFOST's comprehensive educational services including video call counseling, home demo sessions, university guidance, and career planning.",
-    images: ["/images/uni.jpg"],
+    siteName: "UNIFOST",
+    images: ["/images/uni.webp"],
     url: "https://unifostedu.com/services",
   },
   alternates: {
@@ -16,4 +17,3 @@ export const metadata = {
 export default function ServicesLayout({ children }) {
   return children;
 }
-

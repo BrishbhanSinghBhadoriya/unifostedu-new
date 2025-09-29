@@ -16,13 +16,13 @@ export const metadata = {
     canonical: "https://unifostedu.com/about",
   },
   openGraph: {
-    title: "About UNIFOST | India’s Leading Online Education Platform",
+    title: "About UNIFOST | India’s Leading Online Education Platform |Unifost",
     description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees, career counseling, and personalized guidance.",
     url: "https://unifostedu.com/about",
     siteName: "UNIFOST",
     images: [
       {
-        url: "images/uni.jpg",
+        url: "images/uni.webp",
         width: 1200,
         height: 630,
         alt: "UNIFOST - India's Leading EdTech Platform"
@@ -37,7 +37,7 @@ export const metadata = {
     creator: "@unifost",
     title: "About UNIFOST | India's Leading EdTech Platform",
     description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees and career counseling.",
-    images: ["images/uni.jpg"],
+    images: ["images/uni.webp"],
   },
   robots: {
     index: true,

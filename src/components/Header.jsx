@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
 import { FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import {
   FaEnvelope, FaPhoneAlt, FaComments, FaVideo, FaChevronDown, FaBars, FaTimes,
   FaSearch, FaGraduationCap, FaBookOpen, FaUniversity, FaRocket, FaHome, FaInfoCircle,
@@ -12,7 +12,10 @@ import {
 } from 'react-icons/fa';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import EnquiryForm from '@/components/EnquiryForm';
+import BlogsDropdown from '@/components/BlogsDropdown';
 import Image from 'next/image';
+import searchIndex from '@/data/searchIndex.json';
+import courseData from '@/data/courseData.json';
 
 
 
@@ -23,35 +26,58 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const router = useRouter();
+  const pathname = usePathname();
   const dropdownRef = useRef(null);
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
-  
-  const [loading, setLoading] = useState(false);
+ const [loading, setLoading] = useState(false);
 const [modalType, setModalType] = useState();
 
+  // Hide header on Amity page
+  
   const universities = [
-    { name: "Amity University Online", link: "/amity", logo: "/images/amity.png" },
-    { name: "Lovely Professional University", link: "/lpu", logo: "/images/lpu.png" },
-    { name: "Online Manipal University", link: "/manipal", logo: "/images/manipal.png" },
+    { name: "Amity University Online", link: "/amity-online", logo: "/images/amity.webp" },
+    { name: "Lovely Professional University", link: "/lpu", logo: "/images/lpu.webp" },
+    { name: "Online Manipal University", link: "/manipal", logo: "/images/manipal.webp" },
     { name: "Manipal Academy of Higher Education", link: "/mahe", logo: "/images/mahe-uni.webp" },
-     { name: "Sikkim Manipal University", link: "/smu", logo: "/images/smu-uni.jpg" },
+     { name: "Sikkim Manipal University", link: "/smu", logo: "/images/smu-uni.webp" },
     { name: "Uttaranchal University", link: "/uu", logo: "/images/uu-uni.webp" },
-    { name: "Chandigarh University Online", link: "/chandigarh", logo: "/images/chandigarh.jpg" },
-    { name: "Jain University", link: "/jain", logo: "/images/jain.png" },
-    { name: "Dr. D Y Patil", link: "/dypatil", logo: "/images/dypatil.png" },
-    { name: "OP Jindal University", link: "/opjindal", logo: "/images/opjindal.png" },
-    { name: "Kurukshetra University", link: "/ku", logo: "/images/ku.jpg" },
-    { name: "Shoolini University Online", link: "/shoolini", logo: "/images/shoolini.jpg" },
-    { name: "Vivekananda Global University Online", link: "/vgu", logo: "/images/vgu1.png" },
-    { name: "Upes Online", link: "/upes", logo: "/images/upes.png" },
-    { name: "Sharda University Online", link: "/sharda", logo: "/images/sharda.png" },
-    { name: "NMIMS University", link: "/nmims", logo: "/images/nmims.png" }
+    { name: "Chandigarh University Online", link: "/chandigarh", logo: "/images/chandigarh.webp" },
+    { name: "Jain University", link: "/jain", logo: "/images/jain.webp" },
+    { name: "Dr. D Y Patil", link: "/dypatil", logo: "/images/dypatil.webp" },
+    { name: "OP Jindal University", link: "/opjindal", logo: "/images/opjindal.webp" },
+    { name: "Kurukshetra University", link: "/ku", logo: "/images/ku.webp" },
+    { name: "Shoolini University Online", link: "/shoolini", logo: "/images/shoolini.webp" },
+    { name: "Vivekananda Global University Online", link: "/vgu", logo: "/images/vgu1.webp" },
+    { name: "Upes Online", link: "/upes", logo: "/images/upes.webp" },
+    { name: "Sharda University Online", link: "/sharda", logo: "/images/sharda.webp" },
+    { name: "NMIMS University", link: "/nmims", logo: "/images/nmims.webp" }
   ];
+
+ 
+  
+  const suggestions = useMemo(() => {
+    const fromJson = (searchIndex || []).map(i => ({ title: i.title, type: i.type, href: i.href }));
+    const fromCourses = Object.keys(courseData || {}).map((slug) => ({
+      title: courseData[slug]?.title || slug,
+      type: 'course',
+      href: `/courses/${slug}`
+    }));
+    const fromUniversities = universities.map(u => ({ title: u.name, type: 'university', href: u.link }));
+
+    // Deduplicate by href
+    const map = new Map();
+    [...fromJson, ...fromCourses, ...fromUniversities].forEach(item => {
+      if (!map.has(item.href)) map.set(item.href, item);
+    });
+    return Array.from(map.values());
+  }, [universities]);
+  
+
 
   const [latestBlogs, setLatestBlogs] = useState([]);
   const [blogsLoading, setBlogsLoading] = useState(false);
-
   
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -84,33 +110,14 @@ const [modalType, setModalType] = useState();
     };
   }, [mobileMenuOpen]);
 
-  const handleSearch = () => {
-    const query = searchQuery.trim().toLowerCase();
-    const courseRoutes = {
-      mba: '/mba-online', bba: '/bba-online', mca: '/mca-online', bca: '/bca-online', mcom: '/mcom-online', ba: '/ba-online'
-    };
-    const universityRoutes = {
-      amity: '/amity', manipal: '/manipal', upes: '/upes', lpu: '/lpu', sharda: '/sharda', vgu: '/vgu', nmims: '/nmims', jain: '/jain', dypatil: '/dypatil'
-    };
-    for (const key in courseRoutes) {
-      if (query.includes(key)) {
-        router.push(courseRoutes[key]); 
-        setMenuOpen(null); 
-        setMobileMenuOpen(false);
-        return;
-      }
-    }
-    for (const key in universityRoutes) {
-      if (query.includes(key)) {
-        router.push(universityRoutes[key]); 
-        setMenuOpen(null); 
-        setMobileMenuOpen(false);
-        return;
-      }
-    }
-    router.push(`/search?query=${encodeURIComponent(query)}`); 
-        setMenuOpen(null); 
-        setMobileMenuOpen(false);
+  const filtered = useMemo(() => {
+    const q = (searchQuery || '').toLowerCase();
+    return suggestions.filter(item => item.title.toLowerCase().includes(q)).slice(0, 10);
+  }, [searchQuery, suggestions]);
+
+  const handleSuggestionClick = (href) => {
+    router.push(href);
+    setSearchQuery('');
   };
 
   const toggleDropdown = (dropdown) => {
@@ -120,16 +127,22 @@ const [modalType, setModalType] = useState();
       setActiveDropdown(dropdown);
     }
   };
+
   
   const openModal = (type) => {
     setModalType(type);
     setShowEnquiryModal(true);
   };
 
+  // Hide header on Amity page AFTER all hooks are declared to preserve hook order
+  if (pathname === '/amity-online'||'/manipal') {
+    return null;
+  }
+
   return (
     <header className="w-full font-sans">
       {/* Tagline - Responsive */}
-      <div className="bg-gradient-to-r from-[#001e3c] via-[#05284f] to-[#003b6c] py-2 px-4 text-center">
+      <div className="bg-black py-2 px-4 text-center">
         <p className="text-white text-sm sm:text-base lg:text-lg font-semibold">
           <span className="bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] bg-clip-text text-transparent">Unifost</span> – University <span className="bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] bg-clip-text text-transparent">For</span> Students
         </p>
@@ -137,7 +150,7 @@ const [modalType, setModalType] = useState();
 
       {/* Navbar */}
       <div className={`px-3 sm:px-4 py-3 sm:py-4 sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'backdrop-blur-md bg-white/85 shadow-md py-2' : 'bg-white/75 backdrop-blur-md shadow-sm'
+        scrolled ? 'backdrop-blur-md bg-gradient-to-r from-[#001e3c] via-[#05284f] to-[#003b6c] shadow-md py-2' : 'bg-gradient-to-r from-[#001e3c] via-[#05284f] to-[#003b6c] backdrop-blur-md shadow-sm'
       }`}>
         <div className="flex items-center justify-between w-full gap-3 sm:gap-4 lg:gap-6 flex-nowrap">
           {/* Logo - Made smaller to fit everything in one line */}
@@ -148,7 +161,7 @@ const [modalType, setModalType] = useState();
                   ? 'bg-gradient-to-r from-[#001e3c] to-[#003b6c] shadow-lg' 
                   : 'bg-white/10 backdrop-blur-sm'
               }`}>
-                <Image width={100} height={100} loading="lazy" src="/images/unilogo.webp" alt="Unifost Logo" className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
+                <Image width={100} height={100} src="/images/unilogo.webp" alt="Unifost Logo" className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
               </div>
               {!scrolled && (
                 <div className="absolute -inset-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-2xl blur opacity-10 group-hover:opacity-40 transition-opacity duration-500"></div>
@@ -161,11 +174,13 @@ const [modalType, setModalType] = useState();
             {[
               { label: 'Home', path: '/', icon: FaHome },
               { label: 'About', path: '/about', icon: FaInfoCircle },
-              { label: 'Services', path: '/services', icon: FaCog }
+              
+              
+              { label: 'Services', path: '/services', icon: FaCog },
             ].map((link, i) => (
               <Link key={i}
                 href={link.path}
-                className="relative group text-[#0b223f]/90 hover:text-[#0b223f] transition duration-300 px-3 py-2 rounded-xl flex items-center gap-2 hover:bg-slate-50"
+                className="relative group text-white hover:text-[#0b223f] transition duration-300 px-3 py-2 rounded-xl flex items-center gap-2 hover:bg-slate-50"
               >
                 <link.icon className="text-xs" />
                 <span className="font-semibold">{link.label}</span>
@@ -177,7 +192,7 @@ const [modalType, setModalType] = useState();
             <div className="relative">
               <button 
                 onClick={() => setMenuOpen(menuOpen === "explore" ? null : "explore")} 
-                className={`group flex items-center space-x-2 px-3 py-2 rounded-xl transition-all duration-300 text-[#0b223f] hover:bg-slate-50`}>
+                className={`group flex items-center space-x-2 px-3 py-2 rounded-xl transition-all duration-300 text-white hover:text-[#0b223f] transition duration-300 px-3 py-2 rounded-xl flex items-center gap-2 hover:bg-slate-50`}>
                 <FaUniversity className="text-xs" />
                 <span className="font-semibold">University</span>
                 <FaChevronDown className={`text-xs transition-transform duration-300 ${menuOpen === "explore" ? 'rotate-180' : ''}`} />
@@ -195,7 +210,7 @@ const [modalType, setModalType] = useState();
                         <Link key={idx} href={uni.link} onClick={() => setMenuOpen(null)} 
                               className="group block rounded-xl overflow-hidden border border-slate-200 bg-white/85 hover:shadow-lg hover:shadow-indigo-100 hover:-translate-y-0.5 transition-all duration-200">
                           <div className="w-full h-24 bg-white flex items-center justify-center overflow-hidden">
-                            <Image width={100} height={100} loading="lazy" src={uni.logo} alt={uni.name} loading="lazy" decoding="async" className="max-h-full max-w-full object-contain" />
+                            <Image width={100} height={100} src={uni.logo} alt={uni.name} loading="lazy" decoding="async" className="max-h-full max-w-full object-contain" />
                           </div>
                           <div className="px-3 py-2">
                             <p className="text-sm font-semibold text-[#001e3c] group-hover:text-[#00ffe0] line-clamp-2">{uni.name}</p>
@@ -211,82 +226,45 @@ const [modalType, setModalType] = useState();
 
             {/* Blogs Dropdown - API-powered cards */}
             <div className="relative">
-              <button
-                onClick={() => setMenuOpen(menuOpen === "blogs" ? null : "blogs")}
-                className={`group flex items-center space-x-2 px-3 py-2 rounded-xl transition-all duration-300 text-[#0b223f] hover:bg-slate-50`}>
-                <FaBookOpen className="text-xs" />
-                <span className="font-semibold">Blogs</span>
-                <FaChevronDown className={`text-xs transition-transform duration-300 ${menuOpen === "blogs" ? 'rotate-180' : ''}`} />
-              </button>
-              {menuOpen === "blogs" && (
-                <div className={`absolute left-0 top-full mt-2 w-[28rem] bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-slate-200/70 transition-all duration-200 transform origin-top`}>
-                  <div className="p-4">
-                    <h3 className="text-[#001e3c] font-bold text-base mb-3 flex items-center">
-                      <FaBookOpen className="mr-2 text-[#00ffe0]" />
-                      Latest Articles
-                    </h3>
-                    <div className="grid grid-cols-2 gap-3 max-h-80 overflow-y-auto pr-1">
-                      {blogsLoading ? (
-                        [...Array(4)].map((_, i) => (
-                          <div key={i} className="rounded-xl border border-gray-200 bg-white/80 p-4">
-                            <div className="w-full h-20 bg-gray-200 rounded animate-pulse mb-3" />
-                            <div className="h-4 w-3/4 bg-gray-200 rounded animate-pulse" />
-                          </div>
-                        ))
-                      ) : latestBlogs.length === 0 ? (
-                        <div className="col-span-2 text-sm text-gray-600">No blogs available.</div>
-                      ) : (
-                        latestBlogs.map((b) => (
-                          <Link key={b._id || b.id} href={`/blog/${b.slug || (b._id || b.id)}`} onClick={() => setMenuOpen(null)}
-                                className="group block rounded-xl overflow-hidden border border-slate-200 bg-white/85 hover:shadow-lg hover:shadow-indigo-100 hover:-translate-y-0.5 transition-all duration-200">
-                            <div className="w-full h-24 bg-white flex items-center justify-center overflow-hidden">
-                              {b.thumbnail ? (
-                                <Image width={100} height={100} loading="lazy" src={b.thumbnail} alt={b.title} loading="lazy" decoding="async" className="w-full h-full object-cover" />
-                              ) : (
-                                <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">No Image</div>
-                              )}
-                            </div>
-                            <div className="px-3 py-2">
-                              <p className="text-sm font-semibold text-[#001e3c] group-hover:text-[#00ffe0] line-clamp-2">{b.title}</p>
-                              <p className="text-[11px] text-gray-500 mt-1">{new Date(b.createdAt).toLocaleDateString()}</p>
-                            </div>
-                          </Link>
-                        ))
-                      )}
-                    </div>
-                    <div className="mt-3 pt-3 border-t border-gray-200">
-                      <Link href="/blog" onClick={() => setMenuOpen(null)}
-                            className="block w-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] py-2 px-4 rounded-xl font-semibold text-center hover:from-[#00d4c4] hover:to-[#00ffe0] transform hover:scale-105 transition-all duration-300 text-sm">
-                        View All Blogs
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
+             
+             <BlogsDropdown menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+             </div>
           </nav>
 
-          {/* Search - Made more compact */}
-          <div className="hidden sm:flex items-center bg-white/90 backdrop-blur rounded-full px-2 sm:px-3 py-1 shadow-md flex-1 max-w-xs mx-2 lg:mx-3 ring-1 ring-slate-200">
-            <input
-              type="text"
-              placeholder="Search courses, universities..."
-              className="outline-none text-black px-2 py-1 w-full text-xs"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-            />
-            <button onClick={handleSearch} className="text-black-600 hover:text-sky-800 px-1">
-              <FaSearch className="text-xs" />
-            </button>
+          {/* Search with suggestions (click to redirect) */}
+          <div className="hidden sm:block relative flex-1 max-w-sm mx-2 lg:mx-3">
+            <div className="flex items-center bg-white/95 backdrop-blur rounded-full px-3 py-1.5 shadow-md ring-1 ring-slate-200">
+              <FaSearch className="text-slate-500 text-xs" />
+              <input
+                type="text"
+                placeholder="Search courses, universities..."
+                className="outline-none text-black px-2 py-1 w-full text-xs"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+            {searchQuery && (
+              <div className="absolute mt-2 w-full bg-white rounded-xl shadow-2xl border border-slate-200 z-[9999] max-h-80 overflow-auto">
+                {filtered.map((item, idx) => (
+                  <button key={idx} onClick={() => handleSuggestionClick(item.href)} className="block w-full text-left px-3 py-2 hover:bg-slate-50">
+                    <div className="text-sm font-medium text-slate-900">{item.title}</div>
+                    <div className="text-xs text-slate-500 capitalize">{item.type}</div>
+                  </button>
+                ))}
+                {filtered.length === 0 && (
+                  <div className="px-3 py-3 text-sm text-slate-500">No results found</div>
+                )}
+              </div>
+            )}
           </div>
 
           {/* Contact Icons - Made more compact */}
           <div className="hidden md:flex gap-1 lg:gap-2 items-center text-[#00ffe0]">
-            <a href="tel:+919354735410" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us">
+            <a href="tel:+919354735410" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us"  aria-label="Email us at info@unifostedu.com">
+             
               <FaPhoneAlt className="text-xl" />
             </a>
-            <a href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="WhatsApp">
+            <a href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="WhatsApp" aria-label="WhatsApp">
               <FaWhatsappSquare className="text-xl" />
             </a>
             <button onClick={() => openModal('videoCall')} className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Book Demo">
@@ -296,12 +274,12 @@ const [modalType, setModalType] = useState();
 
           {/* Call/Email - Made more compact */}
           <div className="hidden lg:flex flex-col justify-center items-end text-xs ml-2">
-            <div className="flex items-center gap-1 text-black-600 font-semibold">
-              <FaPhoneAlt className="text-[#00ffe0] text-xs" /> <span className="text-black-600">+91 7042867717</span>
+            <div className="flex items-center gap-1 text-white-600 font-semibold">
+              <FaPhoneAlt className="text-[#00ffe0] text-xs" /> <span className="text-white">+91 7042867717</span>
             </div>
-            <div className="flex items-center gap-1 text-black-600 font-semibold">
+            <div className="flex items-center gap-1 text-white-600 font-semibold">
               <FaEnvelope className="text-sky-400 text-xs" />
-              <a href="mailto:info@unifostedu.com" className="underline hover:text-white text-xs">info@unifostedu.com</a>
+              <a href="mailto:info@unifostedu.com" className=" text-white  ">info@unifostedu.com  </a>
             </div>
           </div>
 
@@ -310,7 +288,9 @@ const [modalType, setModalType] = useState();
             <a
               href="tel:+919354735410"
               aria-label="Call us"
-              className="p-2 rounded-lg bg-white text-[#001e3c] border border-slate-200 shadow-sm hover:bg-slate-50 transition-all duration-300"
+              className={`p-2 rounded-lg transition-all duration-300 ${
+                scrolled ? 'bg-white/10 text-white' : 'bg-white/20 text-white'
+              }`}
             >
               <FaPhoneAlt className="text-base" />
             </a>
@@ -319,14 +299,20 @@ const [modalType, setModalType] = useState();
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
-              className="p-2 rounded-lg bg-white text-[#001e3c] border border-slate-200 shadow-sm hover:bg-slate-50 transition-all duration-300"
+              className={`p-2 rounded-lg transition-all duration-300 ${
+                scrolled ? 'bg-white/10 text-white' : 'bg-white/20 text-white'
+              }`}
             >
               <FaComments className="text-base" />
             </a>
             <button
               aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
               onClick={() => setMobileMenuOpen((v) => !v)}
-              className="p-2 sm:p-2 rounded-xl bg-white text-[#001e3c] border border-slate-200 shadow-sm hover:bg-slate-50 transition-all duration-300"
+              className={`p-2 sm:p-2 rounded-xl border transition-all duration-300 ${
+                scrolled
+                  ? 'bg-white/10 border-white/20 text-white hover:bg-white/20'
+                  : 'bg-white/20 border-white/20 text-white hover:bg-white/30'
+              }`}
             >
               {mobileMenuOpen ? <FaTimes className="text-lg" /> : <FaBars className="text-lg" />}
             </button>
@@ -340,7 +326,7 @@ const [modalType, setModalType] = useState();
               {/* Top bar */}
               <div className="flex items-center justify-between mb-6 sm:mb-8">
                 <div className="flex items-center gap-3">
-                  <Image width={100} height={100} loading="lazy" src="images/uni.jpg" alt="Unifost" className="h-8 w-auto" />
+                  <Image width={100} height={100} loading="lazy" src="images/uni.webp" alt="Unifost" className="h-8 w-auto" />
                   <span className="text-lg font-bold text-[#00ffe0]">Unifost</span>
                 </div>
                 <button
@@ -361,11 +347,21 @@ const [modalType, setModalType] = useState();
                     className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/70 outline-none focus:border-[#00ffe0] transition"
                     value={searchQuery} 
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    onKeyDown={(e) => e.key === "Enter" && handleSearch()} 
                   />
-                  <button onClick={handleSearch} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white p-1">
-                    <FaSearch className="text-lg" />
-                  </button>
+                  {/* Suggestions */}
+                  {searchQuery && (
+                    <div className="absolute mt-2 w-full bg-white rounded-xl shadow-2xl border border-slate-200 z-[9999] max-h-72 overflow-auto text-slate-900">
+                      {filtered.map((item, idx) => (
+                        <button key={idx} onClick={() => handleSuggestionClick(item.href)} className="block w-full text-left px-3 py-2 hover:bg-slate-50">
+                          <div className="text-sm font-medium">{item.title}</div>
+                          <div className="text-xs text-slate-500 capitalize">{item.type}</div>
+                        </button>
+                      ))}
+                      {filtered.length === 0 && (
+                        <div className="px-3 py-3 text-sm text-slate-500">No results found</div>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -374,10 +370,13 @@ const [modalType, setModalType] = useState();
                 {/* Main Navigation */}
                 <div className="space-y-3">
                   <h3 className="text-[#00ffe0] font-bold text-sm uppercase tracking-wider px-2">Main Menu</h3>
-                  {[
+                  {[ 
                     { label: 'Home', path: '/', icon: FaHome },
                     { label: 'About', path: '/about', icon: FaInfoCircle },
-                    { label: 'Services', path: '/services', icon: FaCog }
+                    { label: 'Courses', path: '/coursesearch', icon: FaGraduationCap },
+                    { label: 'Universities', path: '/listofcollege', icon: FaUniversity },
+                    { label: 'Services', path: '/services', icon: FaCog },
+                    { label: 'Blog', path: '/blog', icon: FaBookOpen }
                   ].map((link, i) => (
                     <Link key={i} href={link.path} onClick={() => setMobileMenuOpen(false)}
                           className="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition text-white border border-white/10">
@@ -398,17 +397,12 @@ const [modalType, setModalType] = useState();
                       <Link key={idx} href={uni.link} onClick={() => setMobileMenuOpen(false)}
                             className="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition text-white border border-white/10">
                         <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center overflow-hidden">
-                          <Image width={100} height={100} loading="lazy" src={uni.logo} alt={uni.name} className="w-full h-full object-contain" />
+                          <Image width={100} height={100} src={uni.logo} alt={uni.name} className="w-full h-full object-contain" />
                         </div>
                         <span className="font-medium text-sm flex-1">{uni.name}</span>
                         <FaArrowRight className="text-[#00ffe0] text-xs" />
                       </Link>
                     ))}
-                    {/* <Link href="/listofcollege" onClick={() => setMobileMenuOpen(false)}
-                          className="flex items-center justify-center gap-2 p-3 rounded-xl bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] font-bold hover:scale-105 transition">
-                      <span>View All Universities</span>
-                      <FaArrowRight />
-                    </Link> */}
                   </div>
                 </div>
 
@@ -468,7 +462,7 @@ const [modalType, setModalType] = useState();
                     <FaEnvelope className="text-[#00ffe0] text-lg" />
                     <div>
                       <p className="text-xs text-white/70">Email Address</p>
-                      <a href="mailto:info@unifostedu.com" className="font-semibold hover:text-[#00ffe0] transition">
+                      <a href="mailto:info@unifostedu.com" className="font-semibold hover:text-[#00ffe0] transition" aria-label="Email us at info@unifostedu.com">
                         info@unifostedu.com
                       </a>
                     </div>

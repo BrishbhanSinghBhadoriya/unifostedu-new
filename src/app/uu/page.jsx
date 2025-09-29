@@ -16,6 +16,11 @@ import {
 import Head from 'next/head';
 import Image from 'next/image';
 import EnquireCard from '@/components/EnquireCard';
+import HeroSection from '@/components/HeroSection';
+import AccreditationSection from '@/components/AccreditationSection';
+import AdmissionProcedure from '@/components/AdmissionProcedure';
+import {  FaUserTie, FaBriefcase, FaClipboardCheck, } from "react-icons/fa";
+
 
   // const EnquireCard = ({ course, duration, eligibility, fees, specialization, image }) => {
   // const router = useRouter();  
@@ -63,7 +68,7 @@ const UU = () => {
     eligibility: "10+2 pass from a recognized board",
     fees: "₹72,000",
     specialization: "General",
-    image: "/images/ba.jpeg",
+    image: "/images/ba.webp",
   },
   {
     course: "Bachelor of Business Administration (BBA)",
@@ -71,7 +76,7 @@ const UU = () => {
     eligibility: "10+2 pass from a recognized board",
     fees: "₹1,20,000",
     specialization: "General",
-    image: "/images/bba.jpg",
+    image: "/images/bba.webp",
   },
   {
     course: "Bachelor of Computer Applications (BCA)",
@@ -79,7 +84,7 @@ const UU = () => {
     eligibility: "10+2 pass from a recognized board",
     fees: "₹1,20,000",
     specialization: "General",
-    image: "/images/bca.jpeg",
+    image: "/images/bca.webp",
   },
 ];
 
@@ -92,7 +97,7 @@ const pgCourses = [
     fees: "₹1,40,000",
     specialization:
       "Marketing, Digital, Human Resource, Business Analytics, Finance, International Business, Information Technology Management, Logistics & Supply Chain Management",
-    image: "/images/mba.jpeg",
+    image: "/images/mba.webp",
   },
   {
     course: "Executive MBA",
@@ -101,7 +106,7 @@ const pgCourses = [
       "Graduation in any field from a recognized university with relevant work experience (specific criteria may vary)",
     fees: "₹1,40,000",
     specialization: "Business Analytics, HR Analytics, Finance Analytics,Banking and Finance",
-    image: "/images/mca.jpeg",
+    image: "/images/mca.webp",
   },
   {
     course: "Master of Computer Applications (MCA)",
@@ -110,7 +115,7 @@ const pgCourses = [
       "Graduate in Computer Applications/CS/IT/Engineering with 50% marks (45% reserved) OR Graduate with Mathematics at 10+2 or graduation level. If not studied, must complete a bridge course.",
     fees: "₹1,20,000",
     specialization: "General",
-    image: "/images/mca1.jpeg",
+    image: "/images/mca1.webp",
   },
 ];
 
@@ -139,58 +144,107 @@ const pgCourses = [
       </Head>
      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
       {/* Hero Section with Gradient Background */}
-      <section className="py-16 bg-gradient-to-r from-blue-900 to-purple-800 text-white px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <div className="md:w-1/2">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Transform Your Future with <span className="text-yellow-300">UU University</span>
-            </h1>
-            
-            <div className="mb-6 p-4 bg-blue-800 rounded-lg border-l-4 border-yellow-400">
-              <p className="font-semibold">🎓 UGC Recognized Programs | 🌍 Global Learning Community | 💼 Industry-Relevant Curriculum</p>
-            </div>
+     <HeroSection
+  universityName="Uttaranchal University Online"
+  location="Dehradun, Uttarakhand, India"
+  type="Private University"
+  nirfRank="100+" 
+  rating="4.1"
+  description="UGC Recognized Programs | Global Learning Community | Industry-Relevant Curriculum"
+  description2={`
+    UU University offers world-class online education designed for working professionals 
+    and students seeking flexible learning options. 
+    Our programs combine academic excellence with practical skills to prepare you for 
+    success in today's competitive job market.
+  `}
+  badgeText="100% Online Learning | Placement Assistance | Expert Faculty"
+  imgSrc="/images/uu-uni.webp"
+  imgAlt="Uttaranchal University Campus"
+  students="50,000+"
+  partners="100+"
+  campus="Dehradun Campus"
+  highlights={[
+    { icon: <FaBookOpen className="text-blue-600" />, text: "Industry-Relevant Curriculum" },
+    { icon: <FaUserTie className="text-blue-600" />, text: "Expert Faculty" },
+    { icon: <FaBriefcase className="text-blue-600" />, text: "Placement Assistance" },
+    { icon: <FaClipboardCheck className="text-blue-600" />, text: "UGC Recognized Degrees" },
+  ]}
+/>
 
-            <p className="text-lg mb-6">
-              UU University offers world-class online education designed for working professionals and students seeking flexible learning options. Our programs combine academic excellence with practical skills to prepare you for success in today's competitive job market.
-            </p>
-            
-            <div className="flex flex-wrap gap-4">
-              <div className="flex items-center bg-blue-700 px-4 py-2 rounded-full">
-                <FaCheckCircle className="mr-2 text-green-300" />
-                <span>100% Online Learning</span>
-              </div>
-              <div className="flex items-center bg-blue-700 px-4 py-2 rounded-full">
-                <FaCheckCircle className="mr-2 text-green-300" />
-                <span>Placement Assistance</span>
-              </div>
-              <div className="flex items-center bg-blue-700 px-4 py-2 rounded-full">
-                <FaCheckCircle className="mr-2 text-green-300" />
-                <span>Expert Faculty</span>
-              </div>
-            </div>
-          </div>
-          <div className="md:w-1/2">
-            <Image width={100} height={100} loading="lazy" src="/images/uu-uni.webp" alt="UU University" className="w-full rounded-xl shadow-2xl border-4 border-white" />
-          </div>
-        </div>
-      </section>
+<div>
+  <AccreditationSection
+    title="Why Choose Uttaranchal University?"
+    description="UU University offers globally recognized online degrees with expert faculty, flexible learning, cutting-edge digital platform, and comprehensive career support to help you succeed in the modern world."
+    stats={[
+      // { number: "50,000+", label: "Students Enrolled" },
+      // { number: "200+", label: "Expert Faculty" },
+      // { number: "95%", label: "Satisfaction Rate" },
+      // { number: "100+", label: "Corporate Partners" },
+    ]}
+    benefits={[
+      {
+        title: "Global Recognition",
+        description: "Our degrees are recognized worldwide, opening doors to international opportunities.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>`,
+      },
+      {
+        title: "Expert Faculty",
+        description: "Learn from industry veterans and academic experts with real-world experience.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.67 0 8 1.34 8 4v4H4v-4c0-2.66 5.33-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z"/></svg>`,
+      },
+      {
+        title: "Cutting-Edge Curriculum",
+        description: "Programs updated regularly to match latest industry trends and technologies.",
+      iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" 
+  class="w-6 h-6" fill="none" viewBox="0 0 24 24" 
+  stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+</svg>`
 
-      {/* Stats Section */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {[
-            { number: "50,000+", label: "Students Enrolled" },
-            { number: "200+", label: "Expert Faculty" },
-            { number: "95%", label: "Satisfaction Rate" },
-            { number: "100+", label: "Corporate Partners" },
-          ].map((stat, index) => (
-            <div key={index} className="p-6 bg-white rounded-xl shadow-md border border-gray-100">
-              <h3 className="text-3xl font-bold text-blue-800 mb-2">{stat.number}</h3>
-              <p className="text-gray-600">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      },
+      {
+        title: "Flexible Learning",
+        description: "Study at your own pace with 24/7 access to learning materials and recorded lectures.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M6 22h12V6H6v16zM8 2h8v2H8V2z"/></svg>`,
+      },
+      {
+        title: "Placement Support",
+        description: "Resume building, interview prep, and job placement assistance.",
+     iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" 
+  class="w-6 h-6" fill="none" viewBox="0 0 24 24" 
+  stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+</svg>`
+
+      },
+      {
+        title: "Robust Alumni Network",
+        description: "Connect with a global alumni network across industries.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12a5 5 0 110-10 5 5 0 010 10zM2 20c0-5.33 9.33-8 10-8s10 2.67 10 8v2H2v-2z"/></svg>`,
+      },
+      {
+        title: "Advanced Digital Platform",
+        description: "Interactive live classes, doubt clearing sessions, online assessments, and mobile learning app.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16"/></svg>`,
+      },
+      {
+        title: "24/7 Resources",
+        description: "Access to e-books, recorded lectures, online labs, and peer collaboration anytime.",
+        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>`,
+      },
+    ]}
+    accreditations={[
+      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
+      { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
+      { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
+      { src: "/images/nirf.webp", alt: "NIRF", name: "NIRF" },
+      { src: "/images/wes.webp", alt: "WES", name: "World Education Services (WES)" },
+    ]}
+    internationalRecognition={[]}
+    successStories={[]}
+  />
+</div>
+
 
       {/* Courses Offered */}
       <section className="py-16 bg-white px-6">
@@ -225,7 +279,7 @@ const pgCourses = [
       {/* Why Choose Section */}
       <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose <span className="text-blue-700">UU University</span>?</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose <span className="text-blue-700">Uttaranchal University</span>?</h2>
           <p className="text-xl text-gray-600">Discover the advantages of learning with us</p>
           <div className="w-24 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
         </div>
@@ -301,7 +355,7 @@ const pgCourses = [
             
             <div className="flex justify-center">
               <div className="relative">
-                <Image width={100} height={100} loading="lazy" src="/images/learning-platform.png" alt="Learning Platform" className="rounded-xl shadow-2xl border-4 border-blue-700 max-w-full h-auto" />
+                <Image width={100} height={100} loading="lazy" src="/images/learning-platform.webp" alt="Learning Platform" className="rounded-xl shadow-2xl border-4 border-blue-700 max-w-full h-auto" />
                 <div className="absolute -bottom-4 -right-4 bg-yellow-400 text-blue-900 font-bold py-2 px-4 rounded-lg shadow-lg">
                   Experience The Future of Learning
                 </div>
@@ -312,66 +366,14 @@ const pgCourses = [
       </section>
 
       {/* Admission Process */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Simple <span className="text-blue-700">Admission Process</span></h2>
-            <p className="text-xl text-gray-600">Get started on your educational journey in just a few steps</p>
-          </div>
-          
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-              {[
-                {
-                  step: "01",
-                  title: "Submit Application",
-                  description: "Fill out the online application form with your details"
-                },
-                {
-                  step: "02",
-                  title: "Document Verification",
-                  description: "Upload required documents for verification"
-                },
-                {
-                  step: "03",
-                  title: "Fee Payment",
-                  description: "Pay the application and program fees online"
-                },
-                {
-                  step: "04",
-                  title: "Start Learning",
-                  description: "Access your student portal and begin classes"
-                }
-              ].map((item, index) => (
-                <div key={index} className="text-center relative">
-                  {/* Connector line */}
-                  {index < 3 && (
-                    <div className="hidden md:block absolute top-10 left-3/4 w-1/2 h-1 bg-blue-200 z-0"></div>
-                  )}
-                  
-                  {/* Step circle */}
-                  <div className="relative z-10 w-20 h-20 mx-auto mb-5 rounded-full bg-blue-100 flex items-center justify-center border-4 border-white shadow-md">
-                    <span className="text-2xl font-bold text-blue-800">{item.step}</span>
-                  </div>
-                  
-                  <h4 className="font-bold text-lg text-gray-900 mb-2">{item.title}</h4>
-                  <p className="text-gray-600 text-sm">{item.description}</p>
-                </div>
-              ))}
-            </div>
-            
-            <div className="mt-12 text-center">
-              
-            </div>
-          </div>
-        </div>
-      </section>
+     <AdmissionProcedure />
+
 
       {/* Certificate Section */}
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
           <div className="flex-1">
-            <Image width={100} height={100} loading="lazy" src="/images/uu-certificate.png" alt="UU University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <Image width={100} height={100} loading="lazy" src="/images/uu-certificate.webp" alt="UU University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
             
           </div>
 
@@ -400,55 +402,7 @@ const pgCourses = [
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our <span className="text-blue-700">Students Say</span></h2>
-            <p className="text-xl text-gray-600">Hear from our successful alumni</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Priya Sharma",
-                course: "MBA Graduate",
-                text: "The flexibility of UU's online MBA allowed me to balance my job and studies. The curriculum was practical and immediately applicable to my work."
-                
-              },
-              {
-                name: "Rahul Verma",
-                course: "BCA Student",
-                text: "The faculty support and learning resources are exceptional. I've gained valuable skills that helped me secure an internship at a tech company."
-                
-              },
-              {
-                name: "Anjali Patel",
-                course: "Executive MBA",
-                text: "As a working professional, the Executive MBA program was perfect for upgrading my skills without taking a career break. Highly recommended!"
-                
-              }
-            ].map((testimonial, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-xl border border-gray-200">
-                <div className="flex items-center mb-4">
-                  
-                  <div>
-                    <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                    <p className="text-blue-600 text-sm">{testimonial.course}</p>
-                  </div>
-                </div>
-                <p className="text-gray-600 italic">"{testimonial.text}"</p>
-                <div className="flex mt-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+ 
 
       {/* Companies Section */}
       <section className="py-12 bg-gray-100">
@@ -464,28 +418,28 @@ const pgCourses = [
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/tcs.png" alt="Company" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/tcs.webp" alt="Company" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/lt.jpg" alt="Microsoft" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/lt.webp" alt="Microsoft" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/company9.jpg" alt="Company 9" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/company9.webp" alt="Company 9" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/com10.png" alt="Company 10" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/com10.webp" alt="Company 10" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/companany4.png" alt="Company4" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/companany4.webp" alt="Company4" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/sap.png" alt="Company 6" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/sap.webp" alt="Company 6" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/icici.png" alt="Companany5" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/icici.webp" alt="Companany5" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/adove.png" alt="Adove" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="/images/adove.webp" alt="Adove" className="h-12 object-contain" />
             </div>
           </div>
         </div>
