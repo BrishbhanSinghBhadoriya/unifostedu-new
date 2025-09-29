@@ -262,7 +262,7 @@ const Manipal = () => {
         {/* Right Side */}
         <div className="flex items-center gap-4">
           <a
-            href="tel:+917304000444"
+            href="tel:+917042867717"
             className="flex items-center gap-2 text-gray-700 font-medium"
           > 
             📞 +91-7042867717
