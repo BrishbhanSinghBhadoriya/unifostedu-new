@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
   
   const courseData = {
     'mba-online': {
-      title: 'Online MBA Programs in India | Top Specializations | UNIFOST',
+      title: 'Online MBA Programs in India | Top Specializations|',
       description: 'Compare India\'s leading UGC-approved online MBA programs with flexible schedules and career-focused specializations. Get expert guidance for MBA admissions from top universities like Amity, Manipal, NMIMS, and more.',
       keywords: ['Online MBA India', 'Online MBA Programs', 'MBA Distance Learning', 'UGC Approved MBA', 'MBA Specializations', 'Online Business Administration', 'MBA Career Guidance'],
       courseType: 'Master of Business Administration',
@@ -102,7 +102,7 @@ export async function generateMetadata({ params }) {
       level: 'Postgraduate'
     },
     'majmc-online': {
-      title: 'Online MA Journalism & Mass Communication | UNIFOST',
+      title: 'Online MA Journalism & Mass Communication|UNIFOST',
       description: 'Master journalism and mass communication with industry-focused curricula, practical projects, and expert mentorship from top online universities.',
       keywords: ['Online MAJMC India', 'Online MAJMC Programs', 'MAJMC Distance Learning', 'Journalism Mass Communication Master', 'MAJMC Specializations', 'Online Media Master', 'MAJMC Career Guidance'],
       courseType: 'Master of Arts in Journalism & Mass Communication',

@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Lovely Professional University Online(LPU) Online Degrees | Lovely Professional University Courses",
+  title: "LPU Online | UG and PG Courses in India",
   description: "Lovely Professional University Online(LPU) Explore online programs. UGC-recognized degrees with NAAC A++ accreditation. Enquire now for BBA, BCA, MBA, MCA, M.Com, MA, and M.Sc courses.",
   keywords: "LPU Online, Lovely Professional University Online, BBA in LPU Online, BCA in LPU Online, MBA in LPU Online, MCA in LPU Online, M.Com in LPU Online, MA in LPU Online, M.Sc in LPU Online, NAAC A++, UGC Recognized Online Degree, Flexible Online Education, Online Courses LPU",
   openGraph: {

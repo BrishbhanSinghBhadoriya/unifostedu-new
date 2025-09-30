@@ -35,17 +35,17 @@ const [modalType, setModalType] = useState();
   // Hide header on Amity page
   
   const universities = [
-    { name: "Amity University Online", link: "/amity-online", logo: "/images/amity.webp" },
+    { name: "Amity University Online", link: "/amityonline", logo: "/images/amity.webp" },
     { name: "Lovely Professional University", link: "/lpu", logo: "/images/lpu.webp" },
-    { name: "Online Manipal University", link: "/manipal", logo: "/images/manipal.webp" },
+    { name: "Online Manipal University", link: "/", logo: "/images/manipal.webp" },
     { name: "Manipal Academy of Higher Education", link: "/mahe", logo: "/images/mahe-uni.webp" },
      { name: "Sikkim Manipal University", link: "/smu", logo: "/images/smu-uni.webp" },
     { name: "Uttaranchal University", link: "/uu", logo: "/images/uu-uni.webp" },
-    { name: "Chandigarh University Online", link: "/chandigarh", logo: "/images/chandigarh.webp" },
+    { name: "Chandigarh University Online", link: "/cuOnline", logo: "/images/chandigarh.webp" },
     { name: "Jain University", link: "/jain", logo: "/images/jain.webp" },
     { name: "Dr. D Y Patil", link: "/dypatil", logo: "/images/dypatil.webp" },
     { name: "OP Jindal University", link: "/opjindal", logo: "/images/opjindal.webp" },
-    { name: "Kurukshetra University", link: "/ku", logo: "/images/ku.webp" },
+    { name: "Kurukshetra University", link: "/kurukshetraOnline", logo: "/images/ku.webp" },
     { name: "Shoolini University Online", link: "/shoolini", logo: "/images/shoolini.webp" },
     { name: "Vivekananda Global University Online", link: "/vgu", logo: "/images/vgu1.webp" },
     { name: "Upes Online", link: "/upes", logo: "/images/upes.webp" },
@@ -135,7 +135,7 @@ const [modalType, setModalType] = useState();
   };
 
   // Hide header on Amity page AFTER all hooks are declared to preserve hook order
-  if (pathname === '/amity-online') {
+  if (pathname === '/amityonline') {
     return null;
   }
   if (pathname === '/manipal') {
@@ -144,7 +144,10 @@ const [modalType, setModalType] = useState();
    if (pathname === '/lpuOnline') {
     return null;
   }
- if (pathname === '/chandigarhOnlineUniversity') {
+ if (pathname === '/cuOnline') {
+    return null;
+  }
+   if (pathname === '/kurukshetraOnline') {
     return null;
   }
   return (

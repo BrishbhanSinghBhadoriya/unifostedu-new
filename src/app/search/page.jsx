@@ -52,51 +52,43 @@ function SearchContent({ onOpenModal }) {
     setLoading(false);
   };
 
+  // Define proper page title and H1 content
+  const getPageTitle = () => {
+    return query 
+      ? `Search results for "${query}" | UniFost`
+      : 'Search Online Courses & Universities | UniFost';
+  };
+
+  const getH1Content = () => {
+    return query 
+      ? `Search Results for "${query}"`
+      : 'Find Your Perfect Online Courses & Universities';
+  };
+
+  const getPageDescription = () => {
+    return query
+      ? `Find online courses and universities related to "${query}". Compare MBA, BBA, MCA, BCA, and more programs with UniFost.`
+      : 'Explore top online universities and courses. Discover MBA, BBA, MCA, BCA, and other online degrees for your career goals.';
+  };
+
   return (
     <>
       <Head>
-        <title>
-          {query
-            ? `Search results for "${query}" | UniFost`
-            : 'Search Online Courses & Universities | UniFost'}
-        </title>
-        <meta
-          name="description"
-          content={
-            query
-              ? `Find online courses and universities related to "${query}". Compare MBA, BBA, MCA, BCA, and more programs with UniFost.`
-              : 'Explore top online universities and courses. Discover MBA, BBA, MCA, BCA, and other online degrees for your career goals.'
-          }
-        />
+        <title>{getPageTitle()}</title>
+        <meta name="description" content={getPageDescription()} />
       </Head>
 
-      {/* <Hero onOpenModal={onOpenModal} /> */}
-      
-      {/* Professional Hero Section */}
+      {/* Professional Hero Section with PROPER H1 */}
       <div className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-20 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23e0e7ff%22%20fill-opacity%3D%220.3%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            {/* Main Title */}
+            {/* PROPER H1 - Always present and descriptive */}
             <div className="mb-8">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-                {query ? (
-                  <>
-                    Search Results for{' '}
-                    <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                      "{query}"
-                    </span>
-                  </>
-                ) : (
-                  <>
-                    Find Your Perfect{' '}
-                    <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                      Courses & Universities
-                    </span>
-                  </>
-                )}
+                {getH1Content()}
               </h1>
             </div>
 
@@ -144,7 +136,7 @@ function SearchContent({ onOpenModal }) {
         </div>
       </div>
 
-      {/* Main Content */}
+      {/* Rest of your component remains exactly the same */}
       <div className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
