@@ -36,7 +36,7 @@ const [modalType, setModalType] = useState();
   
   const universities = [
     { name: "Amity University Online", link: "/amityonline", logo: "/images/amity.webp" },
-    { name: "Lovely Professional University", link: "/lpu", logo: "/images/lpu.webp" },
+    { name: "Lovely Professional University", link: "/lpuOnline", logo: "/images/lpu.webp" },
     { name: "Online Manipal University", link: "/", logo: "/images/manipal.webp" },
     { name: "Manipal Academy of Higher Education", link: "/mahe", logo: "/images/mahe-uni.webp" },
      { name: "Sikkim Manipal University", link: "/smu", logo: "/images/smu-uni.webp" },
@@ -45,7 +45,7 @@ const [modalType, setModalType] = useState();
     { name: "Jain University", link: "/jain", logo: "/images/jain.webp" },
     { name: "Dr. D Y Patil", link: "/dypatil", logo: "/images/dypatil.webp" },
     { name: "OP Jindal University", link: "/opjindal", logo: "/images/opjindal.webp" },
-    { name: "Kurukshetra University", link: "/kurukshetraOnline", logo: "/images/ku.webp" },
+    { name: "Kurukshetra University", link: "/kuOnline", logo: "/images/ku.webp" },
     { name: "Shoolini University Online", link: "/shoolini", logo: "/images/shoolini.webp" },
     { name: "Vivekananda Global University Online", link: "/vgu", logo: "/images/vgu1.webp" },
     { name: "Upes Online", link: "/upes", logo: "/images/upes.webp" },
@@ -147,7 +147,7 @@ const [modalType, setModalType] = useState();
  if (pathname === '/cuOnline') {
     return null;
   }
-   if (pathname === '/kurukshetraOnline') {
+   if (pathname === '/kuOnline') {
     return null;
   }
   return (
