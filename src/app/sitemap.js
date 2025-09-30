@@ -124,7 +124,7 @@ export default function sitemap() {
 
     // University pages - Highest Priority
     {
-      url: `${baseUrl}/amity-online`,
+      url: `${baseUrl}/Amity-University-Online`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 1.0,
@@ -159,7 +159,7 @@ export default function sitemap() {
       breadcrumb: ['Home', 'Universities', 'Jain University']
     },
     {
-      url: `${baseUrl}/lpu`,
+      url: `${baseUrl}/lpuOnline`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 1.0,
@@ -208,7 +208,7 @@ export default function sitemap() {
       breadcrumb: ['Home', 'Universities', 'VGU University']
     },
     {
-      url: `${baseUrl}/ku`,
+      url: `${baseUrl}/kuOnline`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 1.0,
@@ -222,7 +222,7 @@ export default function sitemap() {
       breadcrumb: ['Home', 'Universities', 'OP Jindal University']
     },
     {
-      url: `${baseUrl}/chandigarh`,
+      url: `${baseUrl}/cuonline`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 1.0,

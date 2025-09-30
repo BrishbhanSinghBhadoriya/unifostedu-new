@@ -320,10 +320,10 @@ const fadeIn = {
           >
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
-              <span className="text-xs sm:text-sm md:text-base">July 2025 Admissions Open</span>
+              <span className="text-xs sm:text-sm md:text-base">August 2025 Admissions Open</span>
             </div>
             <span className="hidden sm:inline">•</span>
-            <span className="text-xs sm:text-sm md:text-base">Scholarships up to 25% Available</span>
+            <span className="text-xs sm:text-sm md:text-base">Scholarships up to 15% Available</span>
             <span className="hidden sm:inline">•</span>
             <span className="text-xs sm:text-sm md:text-base">Limited Time Offer</span>
           </motion.div>
@@ -782,7 +782,7 @@ const fadeIn = {
         Strategic Partnership with Hockey India
       </h2>
       <p className="text-black text-base md:text-lg mb-6">
-        Online Manipal University has collaborated with Hockey India to empower
+        Online Amity University has collaborated with Hockey India to empower
         players with world-class education and exclusive benefits:
       </p>
 
