@@ -16,6 +16,8 @@ import BlogsDropdown from '@/components/BlogsDropdown';
 import Image from 'next/image';
 import searchIndex from '@/data/searchIndex.json';
 import courseData from '@/data/courseData.json';
+// import { usePathname } from "next/navigation";
+
 
 
 
@@ -135,22 +137,23 @@ const [modalType, setModalType] = useState();
   };
 
   // Hide header on Amity page AFTER all hooks are declared to preserve hook order
-  if (pathname === '/Amity-University-Online') {
-    return null;
-  }
-  if (pathname === '/manipal') {
-    return null;
-  }
-   if (pathname === '/lpu-online') {
-    return null;
-  }
- if (pathname === '/cuonline') {
-    return null;
-  }
-   if (pathname === '/ku-online') {
-    return null;
-  }
+      const [showHeader, setShowHeader] = useState(true);
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    const hideHeaderRoutes = [
+      "/Amity-University-Online/",
+      "/lpu-online/",
+      "/manipal/",
+      "/cuonline/",
+      "/ku-online/"
+    ];
+    setShowHeader(!hideHeaderRoutes.includes(path));
+    
+  }, [pathname]);
+
   return (
+    (showHeader &&
     <header className="w-full font-sans">
       {/* Tagline - Responsive */}
       <div className="bg-black py-2 px-4 text-center">
@@ -500,6 +503,8 @@ const [modalType, setModalType] = useState();
       )}
       </div>
     </header>
+    )
+    
   );
 };
 
