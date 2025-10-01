@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
 import { FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import {
   FaEnvelope, FaPhoneAlt, FaComments, FaVideo, FaChevronDown, FaBars, FaTimes,
   FaSearch, FaGraduationCap, FaBookOpen, FaUniversity, FaRocket, FaHome, FaInfoCircle,
@@ -26,7 +26,7 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const router = useRouter();
-  const pathname = usePathname();
+  const [currentPath, setCurrentPath] = useState('');
   const dropdownRef = useRef(null);
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
  const [loading, setLoading] = useState(false);
@@ -37,7 +37,7 @@ const [modalType, setModalType] = useState();
   const universities = [
     { name: "Amity University Online", link: "/Amity-University-Online", logo: "/images/amity.webp" },
     { name: "Lovely Professional University", link: "/lpu-online", logo: "/images/lpu.webp" },
-    { name: "Online Manipal University", link: "/", logo: "/images/manipal.webp" },
+    { name: "Online Manipal University", link: "/manipal", logo: "/images/manipal.webp" },
     { name: "Manipal Academy of Higher Education", link: "/mahe", logo: "/images/mahe-uni.webp" },
      { name: "Sikkim Manipal University", link: "/smu", logo: "/images/smu-uni.webp" },
     { name: "Uttaranchal University", link: "/uu", logo: "/images/uu-uni.webp" },
@@ -84,6 +84,21 @@ const [modalType, setModalType] = useState();
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Get current path for static export
+  useEffect(() => {
+    setCurrentPath(window.location.pathname);
+  }, []);
+
+  // Listen for route changes
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setCurrentPath(window.location.pathname);
+    };
+    
+    window.addEventListener('popstate', handleRouteChange);
+    return () => window.removeEventListener('popstate', handleRouteChange);
   }, []);
 
   useEffect(() => {
@@ -134,20 +149,26 @@ const [modalType, setModalType] = useState();
     setShowEnquiryModal(true);
   };
 
-  // Hide header on Amity page AFTER all hooks are declared to preserve hook order
-  if (pathname === '/Amity-University-Online') {
-    return null;
-  }
-  if (pathname === '/manipal') {
-    return null;
-  }
-   if (pathname === '/lpu-online') {
-    return null;
-  }
- if (pathname === '/cuonline') {
-    return null;
-  }
-   if (pathname === '/ku-online') {
+  // Hide header on specific pages AFTER all hooks are declared to preserve hook order
+  console.log('Current path:', currentPath); // Debug log
+  const shouldHideHeader = currentPath && (
+    currentPath === '/Amity-University-Online' || 
+    currentPath === '/Amity-University-Online/' ||
+    currentPath === '/manipal' || 
+    currentPath === '/manipal/' ||
+    currentPath === '/lpu-online' || 
+    currentPath === '/lpu-online/' ||
+    currentPath === '/lpuonline' || 
+    currentPath === '/lpuonline/' ||
+    currentPath === '/cuonline' || 
+    currentPath === '/cuonline/' ||
+    currentPath === '/ku-online' || 
+    currentPath === '/ku-online/' ||
+    currentPath === '/kuonline' || 
+    currentPath === '/kuonline/'
+  );
+
+  if (shouldHideHeader) {
     return null;
   }
   return (

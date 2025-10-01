@@ -1,12 +1,26 @@
-/** @type {import('next').NextConfig} */
+/** @type {import('next').nextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
   images: {
-    unoptimized: true, // kyunki static export me Next Image optimization nahi chalega
+    unoptimized: true,
   },
-  output: 'export', // ye add karo static HTML export ke liye
+  async redirects() {
+    return [
+      {
+        source: '/(.*)',
+        has: [
+          {
+            type: 'host',
+            value: 'unifostedu.com',
+          },
+        ],
+        destination: 'https://unifostedu.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
