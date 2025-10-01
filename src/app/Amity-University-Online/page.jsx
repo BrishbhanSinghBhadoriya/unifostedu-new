@@ -164,6 +164,81 @@ const AmityLandingPage = () => {
     },
   ];
 
+  
+const faqData = [
+  {
+    question: "What courses does Amity University Online offer?",
+    answer: `Amity University Online offers a wide range of courses including undergraduate, postgraduate, diploma, and certification programs. These courses span disciplines like Management, IT & Computer Science, Engineering, Education, Media & Communication, and more. The courses are designed for working professionals, students, and anyone looking to advance their career through flexible online learning.`
+  },
+  {
+    question: "What is the admission process for Amity University Online?",
+    answer: `The admission process at Amity University Online is simple and fully digital. Prospective students need to fill the online application form on the official website, submit the required documents such as academic certificates, and pay the application fee. After verification, eligible candidates receive an admission confirmation and can start their online learning journey.`
+  },
+  {
+    question: "Is Amity University Online recognized and accredited?",
+    answer: `Yes, Amity University Online is recognized by UGC-DEB (University Grants Commission - Distance Education Bureau) and holds multiple accreditations for its programs. The university ensures high-quality education standards, industry-relevant curriculum, and global recognition for its online degrees.`
+  },
+  {
+    question: "What is the fee structure for Amity University Online courses?",
+    answer: `The fee structure varies depending on the course and program. For undergraduate programs, fees typically range from INR 50,000 to INR 1,50,000. Postgraduate programs may range from INR 75,000 to INR 2,50,000. The university also offers installment options to make education more accessible.`
+  },
+  {
+    question: "What is the duration of online courses at Amity University?",
+    answer: `The duration of online courses varies depending on the program. Undergraduate programs generally take 3-4 years, while postgraduate programs are 1-2 years. Short-term certification and diploma courses may last a few months to a year. Flexible learning options allow students to balance studies with professional commitments.`
+  },
+  {
+    question: "Does Amity University Online provide placement assistance?",
+    answer: `Yes, Amity University Online provides placement assistance through industry tie-ups and career support services. Students get access to virtual career fairs, interview preparation sessions, internships, and guidance from experienced mentors. This ensures that students can build a strong professional network and secure relevant job opportunities.`
+  },
+  {
+    question: "Are the online degrees from Amity University globally recognized?",
+    answer: `Absolutely. Amity University Online degrees are recognized internationally and provide opportunities for higher studies and employment abroad. The curriculum aligns with global standards, ensuring students acquire skills that are relevant and valued worldwide.`
+  },
+
+   {
+    question: "What courses does Amity University Online offer?",
+    answer: `Amity University Online provides a wide variety of programs to cater to students, working professionals, and lifelong learners. Popular courses include 
+      BBA (Bachelor of Business Administration), MBA (Master of Business Administration), B.Tech (Information Technology, Computer Science), M.Tech (Computer Science, Data Science), BCA, MCA, B.Sc, M.Sc, Diploma in Digital Marketing, PG Diploma in Cyber Security, Journalism & Mass Communication, and certifications in AI, Blockchain, and Business Analytics. 
+      Each course is designed with industry-aligned curriculum, flexible online delivery, and interactive learning tools to ensure students gain practical knowledge alongside theoretical understanding. The programs are globally recognized and UGC-DEB approved, making them ideal for career advancement and higher education prospects.`
+  },
+  {
+    question: "What is the admission process for Amity University Online?",
+    answer: `The admission process is completely online, designed for convenience. Applicants must fill out the online application form on the official website, upload scanned academic documents, and pay the nominal application fee. Once submitted, the application is verified by the admission team. Selected candidates receive an admission offer, and upon acceptance, students gain access to the online learning portal. Some courses may require a brief interview or eligibility check. The process is quick, transparent, and accessible from anywhere in India or abroad.`
+  },
+  {
+    question: "Is Amity University Online recognized and accredited?",
+    answer: `Yes. Amity University Online is recognized by the University Grants Commission – Distance Education Bureau (UGC-DEB) and is accredited by various national and international bodies. The programs follow high-quality education standards and maintain academic rigor equivalent to on-campus courses. Students earn degrees that are globally recognized, allowing for international career opportunities or higher studies. The university’s recognition ensures that students’ qualifications are valid for professional and academic purposes across India and worldwide.`
+  },
+  {
+    question: "What is the fee structure for Amity University Online courses?",
+    answer: `The fee structure depends on the program type. Undergraduate programs such as BBA, BCA, and B.Sc range between INR 50,000 to INR 1,50,000 for the complete course. Postgraduate programs such as MBA, MCA, and M.Sc range between INR 75,000 to INR 2,50,000. Short-term diploma and certification courses usually cost between INR 10,000 to INR 50,000. Flexible installment plans are offered, and scholarships may be available for eligible students. The fees include access to online resources, learning modules, assessments, and faculty support.`
+  },
+  {
+    question: "What is the duration of online courses at Amity University?",
+    answer: `The duration varies by program. Undergraduate programs like BBA, BCA, and B.Sc generally take 3-4 years, while postgraduate programs such as MBA, MCA, and M.Sc are 1-2 years. Diploma and certification courses usually range from 3 months to 1 year. Online courses are designed with flexible schedules to accommodate working professionals. Students can access recorded lectures, live sessions, and interactive content, allowing them to complete courses at their own pace without compromising quality or learning outcomes.`
+  },
+  {
+    question: "Does Amity University Online provide placement assistance?",
+    answer: `Yes, Amity University Online provides dedicated placement support. Students get access to virtual career fairs, internships, resume-building workshops, and mock interviews. Industry tie-ups help students secure jobs in reputed companies across sectors such as IT, Finance, Marketing, Data Analytics, and Management. Faculty mentors guide students in career planning and skill development. Alumni networks and job portals provide additional opportunities for placement, ensuring graduates are well-prepared to enter the professional world with confidence.`
+  },
+  {
+    question: "Are online degrees from Amity University globally recognized?",
+    answer: `Absolutely. Amity University Online degrees follow international standards and are recognized worldwide. Graduates can pursue higher education abroad, apply for global jobs, or participate in research opportunities. Programs are structured to meet global industry demands, integrating practical projects, case studies, and international perspectives. This global recognition ensures that students’ qualifications are valuable for career progression, cross-border employment, and academic growth.`
+  },
+  {
+    question: "What is the eligibility criteria for Amity University Online courses?",
+    answer: `Eligibility varies by program. For undergraduate courses like BBA or BCA, students must have completed 10+2 or equivalent from a recognized board. For postgraduate courses like MBA, MCA, or M.Sc, a bachelor’s degree in the relevant discipline is required. Some specialized programs may require work experience, prerequisite certifications, or qualifying exams. Amity University Online emphasizes inclusivity and provides guidance for students from diverse educational backgrounds to choose the right course aligned with their career goals.`
+  },
+  {
+    question: "Does Amity University Online offer short-term certificate programs?",
+    answer: `Yes. Amity University Online offers multiple short-term certificate programs designed for skill enhancement and career growth. Popular certifications include Digital Marketing, Artificial Intelligence, Data Analytics, Blockchain, Cyber Security, Project Management, Business Analytics, and Leadership programs. These programs are flexible, affordable, and industry-relevant, allowing students to upskill quickly and enhance employability. Certificates are recognized by industry partners and provide practical knowledge along with theoretical insights.`
+  },
+  {
+    question: "Can working professionals pursue courses at Amity University Online?",
+    answer: `Absolutely. Amity University Online is specifically designed to cater to working professionals. Courses are delivered online with flexible schedules, live interactive sessions, recorded lectures, and 24/7 access to learning materials. Professionals can balance their work commitments while acquiring new skills or degrees. The programs are designed to provide practical knowledge that can be applied in the workplace, enhancing both career growth and skill development without disrupting daily routines.`
+  }
+];
+
 const SectionHeader = ({ icon: Icon, title, description }) => (
   <div className="text-center mb-12">
     <Icon className="mx-auto text-4xl text-orange-500 mb-4" />
@@ -275,8 +350,13 @@ const fadeIn = {
     },
     viewport: { once: true }
   };
+   
 
+    const [openIndex, setOpenIndex] = useState(null);
 
+   const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+   };
 
   return (
     <div className="min-h-screen bg-white">
@@ -1016,6 +1096,48 @@ const fadeIn = {
           </motion.div>
         </div>
       </section>
+
+          <section className="max-w-6xl mx-auto py-16 px-4">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+        Frequently Asked Questions about Amity University Online
+      </h2>
+
+      <div className="space-y-4">
+        {faqData.map((faq, index) => (
+          <div key={index} className="border border-gray-200 rounded-xl p-4">
+            <button
+              className="w-full text-left flex justify-between items-center font-semibold text-lg sm:text-xl"
+              onClick={() => toggleFAQ(index)}
+            >
+              {faq.question}
+              <span className="ml-2 text-indigo-500">{openIndex === index ? "-" : "+"}</span>
+            </button>
+            {openIndex === index && (
+              <p className="mt-3 text-gray-700 text-sm sm:text-base">{faq.answer}</p>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* JSON-LD for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqData.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })
+        }}
+      />
+    </section>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 md:py-12">

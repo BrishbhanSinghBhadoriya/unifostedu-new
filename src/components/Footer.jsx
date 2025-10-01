@@ -180,7 +180,14 @@ const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  if (pathname === '/Amity-University-Online'||'/manipal') {
+  const hideFooterRoutes = [
+    "/Amity-University-Online/",
+    "/manipal/",
+    "/lpu-online",
+    "/ku-online/",
+    "/cuonline/"
+  ];
+  if (hideFooterRoutes.includes(pathname)) {
     return null;
   }
 

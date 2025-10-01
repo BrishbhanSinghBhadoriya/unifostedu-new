@@ -16,6 +16,8 @@ import BlogsDropdown from '@/components/BlogsDropdown';
 import Image from 'next/image';
 import searchIndex from '@/data/searchIndex.json';
 import courseData from '@/data/courseData.json';
+// import { usePathname } from "next/navigation";
+
 
 
 
@@ -149,29 +151,25 @@ const [modalType, setModalType] = useState();
     setShowEnquiryModal(true);
   };
 
-  // Hide header on specific pages AFTER all hooks are declared to preserve hook order
-  console.log('Current path:', currentPath); // Debug log
-  const shouldHideHeader = currentPath && (
-    currentPath === '/Amity-University-Online' || 
-    currentPath === '/Amity-University-Online/' ||
-    currentPath === '/manipal' || 
-    currentPath === '/manipal/' ||
-    currentPath === '/lpu-online' || 
-    currentPath === '/lpu-online/' ||
-    currentPath === '/lpuonline' || 
-    currentPath === '/lpuonline/' ||
-    currentPath === '/cuonline' || 
-    currentPath === '/cuonline/' ||
-    currentPath === '/ku-online' || 
-    currentPath === '/ku-online/' ||
-    currentPath === '/kuonline' || 
-    currentPath === '/kuonline/'
-  );
+  // Hide header on Amity page AFTER all hooks are declared to preserve hook order
+      const [showHeader, setShowHeader] = useState(true);
 
-  if (shouldHideHeader) {
-    return null;
-  }
+  useEffect(() => {
+    const path = window.location.pathname;
+    const hideHeaderRoutes = [
+      "/Amity-University-Online/",
+      "/lpu-online/",
+      "/manipal/",
+      "/cuonline/",
+      "/ku-online/",
+      "/bookdemo/"
+    ];
+    setShowHeader(!hideHeaderRoutes.includes(path));
+    
+  }, [pathname]);
+
   return (
+    (showHeader &&
     <header className="w-full font-sans">
       {/* Tagline - Responsive */}
       <div className="bg-black py-2 px-4 text-center">
@@ -521,6 +519,8 @@ const [modalType, setModalType] = useState();
       )}
       </div>
     </header>
+    )
+    
   );
 };
 
