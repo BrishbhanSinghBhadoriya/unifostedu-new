@@ -146,7 +146,8 @@ const [modalType, setModalType] = useState();
       "/lpu-online/",
       "/manipal/",
       "/cuonline/",
-      "/ku-online/"
+      "/ku-online/",
+      "/bookdemo/"
     ];
     setShowHeader(!hideHeaderRoutes.includes(path));
     
