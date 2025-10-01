@@ -492,6 +492,18 @@ export default function LpuOnlinePage() {
                      </div>
                    </div>
                  </div>
+                  {openModal && (
+                                     <ApplyEnquiryModal
+                                       open={!!openModal}
+                                       onOpenChange={(v) => !v && setOpenModal(null)}
+                                       title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
+                                       subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
+                                       imageSrc="/images/lpu2.png"
+                                       universityName="Lovely Professional University Online"
+                                       defaultProgram="MBA"
+                                       formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
+                                     />
+                                   )}
                </section>
           {/* <button
             onClick={nextSlide}
