@@ -8,7 +8,7 @@ export const metadata = {
     images: ["/images/ku.webp"],
   },
    alternates: {
-    canonical: "https://unifostedu.com/ku",
+    canonical: "https://unifostedu.com/ku-online",
   },
 };
 

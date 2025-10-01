@@ -6,6 +6,7 @@ import ChatbotWidget from "@/components/ChatbotWidget";
 import OrganizationSchema from "@/components/OrganizationSchema";
 import Canonical from "@/components/Canonical";
 import { Toaster as SonnerToaster } from "sonner";
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ["latin"] });
 const baskervville = Baskervville({ 
@@ -359,6 +360,17 @@ export default function RootLayout({ children }) {
             })
           }}
         />
+        {/* Google tag (gtag.js) */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-17612528759" strategy="afterInteractive" />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);} 
+            gtag('js', new Date());
+
+            gtag('config', 'AW-17612528759');
+          `}
+        </Script>
       </head>
       <body className={`${inter.className} ${baskervville.variable}`}>
         <Canonical />

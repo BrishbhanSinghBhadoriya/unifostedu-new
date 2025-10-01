@@ -8,7 +8,7 @@ export const metadata = {
     images: ["/images/lpu.webp"],
   },
     alternates: {
-    canonical: "https://unifostedu.com/lpu",
+    canonical: "https://unifostedu.com/lpu-online",
   },
 };
 

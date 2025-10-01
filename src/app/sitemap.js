@@ -159,7 +159,7 @@ export default function sitemap() {
       breadcrumb: ['Home', 'Universities', 'Jain University']
     },
     {
-      url: `${baseUrl}/lpuOnline`,
+      url: `${baseUrl}/lpu-online`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 1.0,
@@ -208,7 +208,7 @@ export default function sitemap() {
       breadcrumb: ['Home', 'Universities', 'VGU University']
     },
     {
-      url: `${baseUrl}/kuOnline`,
+      url: `${baseUrl}/ku-online`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 1.0,
