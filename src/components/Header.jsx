@@ -141,7 +141,18 @@ const [modalType, setModalType] = useState();
   if (pathname === '/manipal') {
     return null;
   }
-
+   if (pathname === '/lpuOnline') {
+    return null;
+  }
+ if (pathname === '/chandigarhOnlineUniversity') {
+    return null;
+  }
+  if (pathname === '/dypatil') {
+    return null;
+  }
+  if (pathname === '/jain') {
+    return null;
+  }
   return (
     <header className="w-full font-sans">
       {/* Tagline - Responsive */}

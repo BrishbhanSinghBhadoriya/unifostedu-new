@@ -446,11 +446,7 @@ export default function About() {
     <div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
       <div className="relative">
         <Image
-<<<<<<< HEAD
-          src="/images/priyansh1.jpg" 
-=======
-          src="/images/priyansh.webp" 
->>>>>>> 886539d0e17c1f18cf25e9983d345d4bee432e28
+          src="/images/priyansh.jpg" 
           alt="Priyansh Mishra" 
           width={100}
           height={100}
