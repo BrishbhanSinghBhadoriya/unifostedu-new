@@ -147,7 +147,10 @@ const [modalType, setModalType] = useState();
       "/manipal/",
       "/cuonline/",
       "/ku-online/",
-      "/bookdemo/"
+      "/bookdemo/",
+      "/jain/",
+      "/dypatil/",
+      
     ];
     setShowHeader(!hideHeaderRoutes.includes(path));
     
