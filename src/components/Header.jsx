@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
 import { FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import {
   FaEnvelope, FaPhoneAlt, FaComments, FaVideo, FaChevronDown, FaBars, FaTimes,
   FaSearch, FaGraduationCap, FaBookOpen, FaUniversity, FaRocket, FaHome, FaInfoCircle,
@@ -28,7 +28,7 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const router = useRouter();
-  const [currentPath, setCurrentPath] = useState('');
+  const pathname = usePathname();
   const dropdownRef = useRef(null);
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
  const [loading, setLoading] = useState(false);
@@ -86,21 +86,6 @@ const [modalType, setModalType] = useState();
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Get current path for static export
-  useEffect(() => {
-    setCurrentPath(window.location.pathname);
-  }, []);
-
-  // Listen for route changes
-  useEffect(() => {
-    const handleRouteChange = () => {
-      setCurrentPath(window.location.pathname);
-    };
-    
-    window.addEventListener('popstate', handleRouteChange);
-    return () => window.removeEventListener('popstate', handleRouteChange);
   }, []);
 
   useEffect(() => {

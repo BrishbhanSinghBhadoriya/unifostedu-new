@@ -3,6 +3,7 @@ import React, { useState } from "react";
 // import Image from 'next/image';
 import HeroSection from "@/components/HeroSection";
 import AccreditationSection from "@/components/AccreditationSection";
+import EnquireCard from "@/components/EnquireCard";
 
 // import { useNavigate } from 'react-router-dom';
 // import { Helmet } from 'react-helmet';
@@ -15,16 +16,142 @@ import {
   FaUniversity,
   FaUserFriends,
   FaClipboardCheck,
+  FaGraduationCap,
+  FaAward,
+  FaGlobe,
+  FaChevronDown,
+  FaChevronUp,
+  FaInfoCircle,
+  FaClock,
+  FaMoneyBillWave,
+  FaCertificate,
+  FaChalkboardTeacher,
+  FaLaptopCode,
+  FaChartLine,
+  FaQuoteLeft // <-- Add this line
 } from "react-icons/fa";
-import EnquireCard from '@/components/EnquireCard';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import AdmissionProcedure from "@/components/AdmissionProcedure";
 
+// Course Card Component
+const CourseCard = ({ course, duration, eligibility, fees, specialization, image, universityName }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <motion.div 
+      className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 h-full flex flex-col"
+      whileHover={{ y: -5 }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
+      {/* Course Image */}
+      <div className="relative h-48 overflow-hidden">
+        <Image
+          src={image}
+          alt={course}
+          fill
+          className="object-cover transition-transform duration-500 hover:scale-105"
+        />
+        <div className="absolute top-4 left-4 bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+          {universityName}
+        </div>
+      </div>
+
+      {/* Course Content */}
+      <div className="p-6 flex-1 flex flex-col">
+        <h3 className="text-xl font-bold text-gray-900 mb-3 font-[Poppins] line-clamp-2">{course}</h3>
+        
+        {/* Key Info Icons */}
+        <div className="grid grid-cols-2 gap-3 mb-4">
+          <div className="flex items-center">
+            <div className="bg-red-100 p-2 rounded-lg mr-2">
+              <FaClock className="text-red-600 text-sm" />
+            </div>
+            <div>
+              <p className="text-xs text-gray-500">Duration</p>
+              <p className="text-sm font-medium text-gray-900">{duration}</p>
+            </div>
+          </div>
+          
+          <div className="flex items-center">
+            <div className="bg-red-100 p-2 rounded-lg mr-2">
+              <FaCertificate className="text-red-600 text-sm" />
+            </div>
+            <div>
+              <p className="text-xs text-gray-500">Eligibility</p>
+              <p className="text-sm font-medium text-gray-900 line-clamp-1">{eligibility}</p>
+            </div>
+          </div>
+        </div>
+        
+        {/* Fees */}
+        <div className="mb-4 p-3 bg-red-50 rounded-lg">
+          <div className="flex justify-between items-center">
+            <span className="text-sm font-medium text-gray-700">Total Fees</span>
+            <span className="text-lg font-bold text-red-700">{fees}</span>
+          </div>
+        </div>
+
+        {/* Expandable Specialization */}
+        <div className="mt-auto">
+          <button 
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="flex items-center justify-between w-full text-left mb-2"
+          >
+            <span className="text-sm font-medium text-red-600">Specializations Available</span>
+            {isExpanded ? <FaChevronUp className="text-red-600" /> : <FaChevronDown className="text-red-600" />}
+          </button>
+          
+          {isExpanded && (
+            <div className="bg-gray-50 p-3 rounded-lg mb-4">
+              <p className="text-sm text-gray-700">{specialization}</p>
+            </div>
+          )}
+          
+          <div className="flex gap-3">
+            <button className="flex-1 bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-4 rounded-lg transition-colors text-sm">
+              Apply Now
+            </button>
+            
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
+// Section Header Component
+const SectionHeader = ({ icon: Icon, title, description }) => {
+  const fadeIn = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 },
+    viewport: { once: true }
+  };
+
+  return (
+    <motion.div 
+      className="text-center mb-12"
+      {...fadeIn}
+    >
+      <div className="inline-flex items-center justify-center mb-4">
+        <div className="w-12 h-0.5 bg-red-600 mr-3"></div>
+        <div className="text-red-600 text-xl">
+          <Icon />
+        </div>
+        <div className="w-12 h-0.5 bg-red-600 ml-3"></div>
+      </div>
+      <h2 className="text-3xl font-bold text-gray-900 mb-4 font-[Poppins]">{title}</h2>
+      <p className="text-gray-600 max-w-3xl mx-auto">{description}</p>
+    </motion.div>
+  );
+};
 
 const Lpu = () => {
-  const [activeTab, setActiveTab] = useState('ug');
-  
-  const ugCourses = [
+    const ugCourses = [
     {
       course: "Bachelor of Business Administration (BBA)",
       duration: "3 Years",
@@ -100,10 +227,72 @@ const Lpu = () => {
       image: "/images/ma1.webp",
       alt: "Master of Science (M.Sc) in LPU Online",
     },
+  ]; 
+  
+  const highlights = [
+    {
+      img: "/images/naac.png",
+      title: "NAAC A++ Grade Accreditation",
+      description: "LPU is accredited with A++ grade by NAAC, the highest accreditation for educational institutions.",
+    },
+    {
+      img: "/images/nirf.png",
+      title: "NIRF Ranking 2023",
+      description: "Ranked 38th among universities in India by NIRF 2023, demonstrating academic excellence.",
+    },
+    {
+      img: "/images/qs.png",
+      title: "QS World University Rankings",
+      description: "Ranked among top universities in QS World University Rankings and QS Asia University Rankings.",
+    },
+    {
+      img: "/images/aricent.png",
+      title: "Industry Partnerships",
+      description: "Collaborations with 500+ leading companies including Microsoft, Google, Amazon, and IBM.",
+    },
+    {
+      img: "/images/placement.png",
+      title: "Placement Record",
+      description: "1000+ companies visited campus with highest package of ₹ 3 Crore per annum.",
+    },
+    {
+      img: "/images/global.png",
+      title: "Global Opportunities",
+      description: "MoUs with 200+ foreign universities for student exchange and collaborative programs.",
+    },
+    {
+      img: "/images/online-learning.png",
+      title: "Interactive Learning Platform",
+      description: "State-of-the-art LMS with live classes, recorded lectures, and interactive sessions.",
+    },
+    {
+      img: "/images/industry.png",
+      title: "Industry-Relevant Curriculum",
+      description: "Curriculum designed in consultation with industry experts to ensure employability.",
+    },
   ];
+
+  const fadeIn = {
+    initial: { opacity: 0, y: 50 },
+    whileInView: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 },
+    viewport: { once: true }
+  };
+
+  const staggerChildren = {
+    initial: { opacity: 0 },
+    whileInView: { 
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    },
+    viewport: { once: true }
+  };
 
   return (
     <>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
     <HeroSection
