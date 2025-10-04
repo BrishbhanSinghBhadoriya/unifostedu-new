@@ -24,7 +24,6 @@ import {
 } from "react-icons/fa";
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-<<<<<<< HEAD
 import AdmissionProcess from '@/components/AdmissionProcess';
 
 // Course Card Component
@@ -142,14 +141,6 @@ const SectionHeader = ({ icon: Icon, title, description }) => {
     </motion.div>
   );
 };
-=======
-import Head from 'next/head';
-import HeroSection from '@/components/HeroSection';
-import AccreditationSection from '@/components/AccreditationSection';
-import AdmissionProcedure from '@/components/AdmissionProcedure';
-
-
->>>>>>> 886539d0e17c1f18cf25e9983d345d4bee432e28
 
 const Chandigarh = () => {
    const ugCourses = [
@@ -341,7 +332,6 @@ const Chandigarh = () => {
     <>
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-100 py-12 px-6 font-[Inter] border-b border-gray-100">
         <div className="absolute inset-0 opacity-5">
@@ -745,144 +735,6 @@ const Chandigarh = () => {
           </div>
         </div>
       </section>
-=======
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-      <Head>
-        <title>Chandigarh University Online Programs | Fees & Admission</title>
-        <meta name="description" content="Chandigarh University Online UG & PG programs. Check fees, eligibility, admission process and enquire now." />
-        <meta name="keywords" content="Chandigarh University Online, CU Online, BBA Online, MBA Online, MCA Online, Data Science, Cloud Computing, Accredited Online Degrees" />
-      </Head>
-
-      <HeroSection
-      universityName="Chandigarh University Online"
-      location="Chandigarh, India"
-      type="Private University"
-      nirfRank="" // Add if available
-      rating="4.3" // Add if available
-      description="UGC-entitled degrees | Industry-Oriented Programs | Flexible Learning"
-      description2={`
-        Chandigarh University Online offers UGC-entitled degrees and industry-oriented programs to help learners achieve global recognition. 
-        With a flexible learning environment, expert faculty, and modern LMS, it enables working professionals and students to elevate their 
-        careers while learning from anywhere. 
-
-        Chandigarh University Online has become a top choice for those seeking quality education in India, with a focus on practical skills and career readiness. 
-        We are committed to providing a transformative learning experience that prepares students for success in the global job market.
-      `}
-      badgeText="UGC Entitled | NAAC Accredited"
-      imgSrc="/images/chandigarh.webp"
-      imgAlt="Chandigarh University Online Campus"
-      students="—20K+" 
-      partners="10+" 
-      campus="Chandigarh Campus"
-      highlights={[
-        { icon: <FaBookOpen className="text-blue-600" />, text: "Flexible Learning" },
-        { icon: <FaUserTie className="text-blue-600" />, text: "Expert Faculty" },
-        { icon: <FaBriefcase className="text-blue-600" />, text: "Career Readiness" },
-        { icon: <FaClipboardCheck className="text-blue-600" />, text: "UGC Recognized Degrees" },
-      ]}
-    />
-
-    <div>
-  <AccreditationSection
-    title="Why Choose Chandigarh University Online?"
-    description="Learn flexibly with expert mentorship, AI-driven LMS, and career support — all with globally recognized UGC-entitled degrees."
-    stats={[]} 
-    benefits={[
-      {
-        title: "Flexible Learning",
-        description: "Self-paced learning with recorded and live sessions.",
-        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M4 19h16V5H4v14zm0 0v2h16v-2H4z"></path>
-                  </svg>`,
-      },
-      {
-        title: "Expert Mentorship",
-        description: "Faculty with global exposure and corporate experience.",
-        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
-                  </svg>`,
-      },
-      {
-        title: "AI-driven LMS",
-        description: "Smart Learning Management System with analytics.",
-        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 3.53 2.61 6.43 6 6.92V18h2v-2.08c3.39-.49 6-3.39 6-6.92 0-3.87-3.13-7-7-7z"></path>
-                  </svg>`,
-      },
-      {
-        title: "Career Support",
-        description: "Placement assistance, mock interviews & resume building.",
-        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M16 6V4H8v2H2v14h20V6h-6zM8 4h8v2H8V4zm12 16H4V8h16v12z"></path>
-                  </svg>`,
-      },
-      {
-        title: "Industry-ready Curriculum",
-        description: "Courses designed with input from top companies.",
-        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"></path>
-                  </svg>`,
-      },
-      {
-        title: "UGC-Entitled Degrees",
-        description: "Recognized degrees with global value.",
-        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2L2 7h20L12 2zm0 2.18L18.9 7H5.1L12 4.18zM4 9v11h16V9H4zm2 2h12v7H6v-7z"></path>
-                  </svg>`,
-      },
-      {
-        title: "Global Alumni Network",
-        description: "Connect and grow with professionals worldwide.",
-        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 
-                    1.34-3 3 1.34 3 3 3zm-8 0c1.66 
-                    0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 
-                    8s1.34 3 3 3zm0 2c-2.67 
-                    0-8 1.34-8 4v2h8v-2c0-1.1.9-2 
-                    2-2h2c1.1 0 2 .9 2 2v2h8v-2c0-2.66-5.33-4-8-4H8z"></path>
-                  </svg>`,
-      },
-      {
-        title: "Affordable Fees",
-        description: "Top-quality education at budget-friendly cost.",
-        iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 
-                    9 12 5.16-1.26 9-6.45 
-                    9-12V5l-9-4zm0 2.18L18.9 
-                    7H5.1L12 3.18zM12 21c-4.42-1.13-8-5.25-8-10V7.43l8 
-                    3.56 8-3.56V11c0 4.75-3.58 8.87-8 10z"></path>
-                  </svg>`,
-      },
-    ]}
-    accreditations={[
-      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
-      { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
-      { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
-      { src: "/images/wes.webp", alt: "WES", name: "WES" },
-    ]}
-    internationalRecognition={[]}
-    successStories={[]}
-  />
-</div>
-
-
-      {/* UG & PG Courses */}
-      {[{ title: "Undergraduate Courses", list: ugCourses }, { title: "Postgraduate Courses", list: pgCourses }].map((section, idx) => (
-        <section key={idx} className="py-12 bg-white px-6 font-[Inter]">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">{section.title}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start content-start">
-              {section.list.map((item, index) => <EnquireCard key={index} {...item} />)}
-            </div>
-          </div>
-        </section>
-      ))}
-
-    
-
-      {/* Admission Process */}
-      <AdmissionProcedure/>
->>>>>>> 886539d0e17c1f18cf25e9983d345d4bee432e28
 
       {/* PG Courses Section */}
       <section className="py-16 bg-white px-6 font-[Inter]">

@@ -150,7 +150,10 @@ const [modalType, setModalType] = useState();
       "/bookdemo/",
       "/jain/",
       "/dypatil/",
+<<<<<<< HEAD
       
+=======
+>>>>>>> 5845fa282dae98a60f1a71351d57eb8aaac18987
     ];
     setShowHeader(!hideHeaderRoutes.includes(path));
     
