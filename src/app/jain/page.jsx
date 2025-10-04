@@ -1,4 +1,3 @@
-
 'use client';
 import React, { useState } from 'react';
 import {
@@ -42,7 +41,11 @@ const Jain = () => {
     const [showEnquiryModal, setShowEnquiryModal] = useState(false);
     const [modalType, setModalType] = useState('');
     const [openModal, setOpenModal] = useState(null);
+    const [openFaqIndex, setOpenFaqIndex] = useState(null);
     
+    const toggleFaq = (index) => {
+      setOpenFaqIndex(openFaqIndex === index ? null : index);
+    };
     
     const rankings = [
     {
@@ -320,6 +323,49 @@ const Jain = () => {
       image: "/images/ma1.webp",
       alt: "Master of Arts (MA) in Jain University Online",
     },
+  ];
+
+  const faqData = [
+    {
+      question: "Is Jain University Online UGC approved?",
+      answer: "Yes, Jain University Online is recognized by the University Grants Commission (UGC) and all its online programs are valid and accredited under the UGC guidelines for online education."
+    },
+    {
+      question: "What is the duration of the online MBA program?",
+      answer: "The online MBA program at Jain University is a 2-year program divided into 4 semesters, offering flexibility for working professionals to complete their degree."
+    },
+    {
+      question: "Are the online degrees equivalent to on-campus degrees?",
+      answer: "Yes, the online degrees awarded by Jain University Online are equivalent to their on-campus counterparts and hold the same value. The degree certificate does not mention 'online' mode of study."
+    },
+    {
+      question: "What specializations are available in the online MBA?",
+      answer: "Jain University offers multiple specializations including Human Resource Management, Finance, Marketing, Business Analytics, Information Technology Management, Healthcare Management, Digital Marketing, Artificial Intelligence, and many more emerging fields."
+    },
+    {
+      question: "Is there any placement assistance for online students?",
+      answer: "Yes, Jain University provides comprehensive career support including placement assistance, virtual job fairs, resume building workshops, interview preparation, and access to 2,000+ hiring partners."
+    },
+    {
+      question: "What is the eligibility criteria for the online MBA?",
+      answer: "Candidates must have a bachelor's degree from a recognized university with minimum 50% marks. Work experience is preferred but not mandatory for admission."
+    },
+    {
+      question: "Are there any EMI options available?",
+      answer: "Yes, Jain University offers zero-cost EMI options through various financial partners to make education affordable for students."
+    },
+    {
+      question: "How are the online classes conducted?",
+      answer: "Classes are conducted through live interactive sessions, recorded lectures, virtual learning platforms, and include regular assessments, assignments, and doubt-clearing sessions with faculty."
+    },
+    {
+      question: "What is the fee structure for online programs?",
+      answer: "Fee structure varies by program. For example, MBA ranges from ₹1,96,000 to ₹2,16,000, BBA is ₹1,95,000, and BCA ranges from ₹1,35,000 to ₹1,65,000 for the entire program duration."
+    },
+    {
+      question: "Is there any scholarship available?",
+      answer: "Yes, Jain University offers various scholarships based on academic merit, sports achievements, and for economically disadvantaged students. Specific details can be obtained from the admissions team."
+    }
   ];
 
     const allCourses = [
@@ -949,21 +995,94 @@ const Jain = () => {
           </div>
         </div>
       </div>
-      {openModal && (
-                <ApplyEnquiryModal
-                  open={!!openModal}
-                  onOpenChange={(v) => !v && setOpenModal(null)}
-                  title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
-                  subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-                  imageSrc="/images/jain.png"
-                  universityName="Jain University Online"
-                  defaultProgram="MBA"
-                  formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
-                />
-              )}
     </section>
 
+    {/* FAQ Section */}
+    <section className="py-16 bg-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-[Poppins]">
+            Frequently Asked Questions
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#001C54] to-[#b91c1c] mx-auto mb-6 rounded-full"></div>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Find answers to common questions about Jain University Online programs, admissions, and more.
+          </p>
+        </motion.div>
 
+        {/* FAQ Items */}
+        <div className="space-y-4">
+          {faqData.map((faq, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            >
+              <button
+                className="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-[#001C54] focus:ring-opacity-20 rounded-lg"
+                onClick={() => toggleFaq(index)}
+              >
+                <span className="text-lg font-semibold text-gray-900 pr-4 font-[Inter]">
+                  {faq.question}
+                </span>
+                <motion.div
+                  animate={{ rotate: openFaqIndex === index ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="flex-shrink-0"
+                >
+                  <FaChevronDown 
+                    className={`text-[#001C54] transition-colors ${
+                      openFaqIndex === index ? 'text-[#b91c1c]' : ''
+                    }`}
+                    size={16}
+                  />
+                </motion.div>
+              </button>
+              <motion.div
+                initial={false}
+                animate={{ 
+                  height: openFaqIndex === index ? 'auto' : 0,
+                  opacity: openFaqIndex === index ? 1 : 0
+                }}
+                transition={{ duration: 0.3 }}
+                className="overflow-hidden"
+              >
+                <div className="px-6 pb-4">
+                  <p className="text-gray-600 leading-relaxed font-[Inter]">
+                    {faq.answer}
+                  </p>
+                </div>
+              </motion.div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Additional CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-center mt-12"
+        >
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            
+           
+          </div>
+        </motion.div>
+      </div>
+    </section>
 
       <section className="bg-[#0d2c6c] text-white py-10 px-6">
       <div className="max-w-7xl mx-auto">
@@ -1006,6 +1125,19 @@ const Jain = () => {
         </div>
       </div>
     </section>
+
+    {openModal && (
+      <ApplyEnquiryModal
+        open={!!openModal}
+        onOpenChange={(v) => !v && setOpenModal(null)}
+        title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
+        subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
+        imageSrc="/images/jain.png"
+        universityName="Jain University Online"
+        defaultProgram="MBA"
+        formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
+      />
+    )}
     </div>
     </>
   );
