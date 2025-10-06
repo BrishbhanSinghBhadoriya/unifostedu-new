@@ -185,7 +185,10 @@ const Footer = () => {
     "/manipal/",
     "/lpu-online",
     "/ku-online/",
-    "/cuonline/"
+    "/mahe-online/",
+    "/smu/",
+    "/cuonline/",
+    "/sharda/"
   ];
   if (hideFooterRoutes.includes(pathname)) {
     return null;

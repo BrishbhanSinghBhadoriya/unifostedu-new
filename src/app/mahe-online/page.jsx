@@ -14,30 +14,41 @@ import * as Tabs from '@radix-ui/react-tabs';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import Script from 'next/script';
 
-const SMU = () => {
+const Manipal = () => {
 
  const ugCourses = [
     {
-      course: "Bachelor of Arts (BA)",
+      course: "Bachelor of Business Administration (BBA)",
       duration: "3 Years",
-      eligibility: "10+2 or equivalent",
-      fees: "₹75,000",
-      specialization: "English + Sociology + Political Science",
-      image: "/images/ba.webp",
-      university: "Sikkim Manipal University",
-      universityShort: "SMU",
-      alt: "Bachelor of Arts (BA) in SMU Online",
+      eligibility: "10+2 Minimum 40%",
+      fees: "1,35,000",
+      specialization: "Finance & Accounting, Digital Marketing, Enterepreneurship Management & Family Business, Human Resource Management,  Data Analytics, Retail & E-commerce Management",
+      image: "/images/bba-online-image.webp",
+      university: "Manipal Academy of Higher Education(MAHE))",
+      universityShort: "MAHE",
+      alt: "Bachelor of Business Administration (BBA) in Manipal Online",
+    },
+    {
+      course: "Bachelor of Computer Applications (BCA)",
+      duration: "3 Years",
+      eligibility: "10+2 Minimum 40%",
+      fees: "1,35,000",
+      specialization: "Data Science and Analytics, Cyber Security, Cloud Computing",
+      image: "/images/manipal-online-mca.png",
+      university: "Manipal Academy of Higher Education(MAHE))",
+      universityShort: "MAHE",
+      alt: "Bachelor of Computer Applications (BCA) in Manipal Online",
     },
     {
       course: "Bachelor of Commerce (B.Com)",
       duration: "3 Years",
-      eligibility: "10+2 or equivalent",
-      fees: "₹75,000",
+      eligibility: "10+2 Minimum 40%",
+      fees: "99,000",
       specialization: "General",
-      image: "/images/bcom.webp",
-      university: "Sikkim Manipal University",
-      universityShort: "SMU",
-      alt: "Bachelor of Commerce (B.Com) in SMU Online",
+      image: "/images/bcom-online-image.webp",
+      university: "Manipal Academy of Higher Education(MAHE))",
+      universityShort: "MAHE",
+      alt: "Bachelor of Commerce (B.Com) in Manipal Online",
     },
   ];
 
@@ -45,137 +56,141 @@ const SMU = () => {
     {
       course: "Master of Business Administration (MBA)",
       duration: "2 Years",
-      eligibility: "Graduation with minimum 50% marks",
-      fees: "₹1,10,000",
-      specialization: "Dual Specialization (Marketing, Finance, HR, Systems, Operations and Supply Chain Management, Healthcare Management)",
-      image: "/images/mba.webp",
-      university: "Sikkim Manipal University",
-      universityShort: "SMU",
-      alt: "Master of Business Administration (MBA) in SMU Online",
+      eligibility: "50% Graduation",
+      fees: "1,75,000",
+      specialization: "Super/Dual(Human Resource Management and Finance, Finance and Marketing, Marketing and Human Resource Management, Marketing and Business Analytics, Finance and Business Analytics, Human Resource and Business Analytics, Project Management, Retail Management and Quick Commerce, Artificial Intelligence Banking and Finance, 15 other fields)",
+      image: "/images/mba-online-image.webp",
+      university: "Manipal Academy of Higher Education(MAHE))",
+      universityShort: "MAHE",
+      alt: "Master of Business Administration (MBA) in Manipal Online",
     },
     {
       course: "Master of Computer Applications (MCA)",
       duration: "2 Years",
-      eligibility: "Graduation with minimum 50% marks",
-      fees: "₹98,000",
-      specialization: "General",
+      eligibility: "50% Graduation",
+      fees: "1,58,000",
+      specialization: "AI & Data Science, Cyber Security, Cloud Computing, Comprehensive Emerging Technologies,AI & ML", 
       image: "/images/mca1.webp",
-      university: "Sikkim Manipal University",
-      universityShort: "SMU",
-      alt: "Master of Computer Applications (MCA) in SMU Online",
-    },
-    {
-      course: "Master of Arts (MA)",
-      duration: "2 Years",
-      eligibility: "Graduation in relevant stream",
-      fees: "₹75,000",
-      specialization: "English / Sociology / Political Science",
-      image: "/images/ma1.webp",
-      university: "Sikkim Manipal University",
-      universityShort: "SMU",
-      alt: "Master of Arts (M.A.) in SMU Online",
+      university: "Manipal Academy of Higher Education(MAHE))",
+      universityShort: "MAHE",
+      alt: "Master of Computer Applications (MCA) in Manipal Online",
     },
     {
       course: "Master of Commerce (M.Com)",
       duration: "2 Years",
-      eligibility: "Graduation in Commerce or equivalent",
-      fees: "₹75,000",
-      specialization: "General",
-      image: "/images/bcom.webp",
-      university: "Sikkim Manipal University",
-      universityShort: "SMU",
-      alt: "Master of Commerce (M.Com) in SMU Online",
+      eligibility: "Graduation in Commerce",
+      fees: "1,08,000",
+      specialization: "General", 
+      image: "/images/m.com.webp",
+      university: "Manipal Academy of Higher Education(MAHE))",
+      universityShort: "MAHE",
+      alt: "Master of Commerce (M.Com) in Manipal Online",
+    },
+  
+    {
+      course: "Master of Arts (MA)",
+      duration: "2 Years",
+      eligibility: "Graduation",
+      fees: "80,000 - 1,40,000",
+      specialization: " Economics,MA (Journalism and Mass Communication)",
+      image: "/images/ma1.webp",
+      university: "Manipal Academy of Higher Education(MAHE))",
+      universityShort: "MAHE",
+      alt: "Master of Arts (MA) in Manipal Online",
     },
   ];
     
 
  const faqData = [
   {
-    question: "Is Sikkim Manipal University recognized by UGC?",
+    question: "Is Manipal Academy of Higher Education(MAHE)) recognized by UGC and NAAC?",
     answer:
-      "Yes, Sikkim Manipal University (SMU) is recognized by the University Grants Commission (UGC) and approved by the Distance Education Bureau (UGC-DEB). All online programs offered by SMU are UGC-entitled and hold the same value as regular degrees.",
+      "Yes, Manipal Academy of Higher Education(MAHE)) (MAHE) is recognized by the University Grants Commission (UGC) and accredited by NAAC. Choosing an online program from Manipal Online University ensures you receive a credible and globally recognized degree. MAHE's accreditation guarantees that your online Manipal University degree meets high academic standards and is accepted by employers and educational institutions worldwide.",
   },
   {
-    question: "What online programs are offered by Sikkim Manipal University?",
+    question: "What online programs are offered by Manipal Academy of Higher Education(MAHE))?",
     answer:
-      "SMU offers a wide range of online undergraduate and postgraduate programs including MBA, MCA, B.Com, B.A., M.Com, and M.A. in various specializations. These programs are designed to provide flexibility while maintaining academic rigor.",
+      "Manipal Online University offers a wide range of online programs at MAHE, including Management, MBA, BBA, Computer Science, Data Science, BCA, MCA, and professional certificate courses. By enrolling in online courses from Manipal Academy of Higher Education(MAHE)), students can access flexible learning schedules while earning a degree from a top-ranked university.",
   },
   {
-    question: "Are online degrees from SMU valid for government jobs?",
+    question: "Are online degrees from Manipal Academy of Higher Education(MAHE)) valid for government jobs?",
     answer:
-      "Yes, online degrees from Sikkim Manipal University are valid for government jobs, competitive exams, and higher education. Being UGC-DEB approved, these degrees are recognized by government authorities and private organizations across India.",
+      "Yes, online degrees from Manipal Academy of Higher Education(MAHE)), approved by UGC-DEB, are valid for government jobs, competitive exams like UPSC, and higher education. Studying at Manipal Online University ensures your MAHE online degree is recognized by government authorities and other educational institutions.",
   },
   {
-    question: "What is the admission process for SMU online courses?",
+    question: "What is the admission process for online courses?",
     answer:
-      "The admission process at SMU Online is completely online and straightforward. Candidates need to fill out the application form, submit required documents, and pay the application fee. The entire process can be completed from the comfort of your home.",
+      "The admission process at Manipal Online University is simple and fully online. Prospective students can apply for MAHE online programs by filling out the application form, submitting the required documents, and completing the fee payment. Online Manipal University admissions are designed to be hassle-free, making it easy to enroll in programs from anywhere in India or abroad.",
   },
   {
-    question: "How much are the fees for online courses at SMU?",
+    question: "How much are the fees for online courses at Manipal Academy of Higher Education(MAHE))?",
     answer:
-      "Fees for online programs at Sikkim Manipal University are affordable and vary by program. Undergraduate programs start from ₹75,000 while postgraduate programs range from ₹75,000 to ₹1,10,000 for the entire duration.",
+      "Fees for online programs at Manipal Academy of Higher Education(MAHE)) vary depending on the course. MAHE provides flexible payment options and no-cost EMI plans for online Manipal University students. By choosing an online Manipal University program, students can pursue quality education without financial stress.",
   },
   {
-    question: "Does SMU provide placement assistance?",
+    question: "Does Manipal Academy of Higher Education(MAHE)) provide placement assistance?",
     answer:
-      "Yes, Sikkim Manipal University offers comprehensive placement assistance to online students. This includes career counseling, resume building, interview preparation, and access to job opportunities through their placement cell.",
+      "Yes, Manipal Online University offers dedicated placement assistance to students of online programs at MAHE. Graduates from online Manipal University courses receive career guidance, networking opportunities, and support to find the right job in their respective fields. Choosing MAHE ensures strong career support even for online learners.",
   },
   {
     question: "What is the duration of online programs?",
     answer:
-      "Undergraduate programs at SMU Online typically span 3 years, while postgraduate programs have a duration of 2 years. The flexible learning approach allows students to complete programs at their own pace within the maximum time limit.",
+      "The duration of online programs at Manipal Academy of Higher Education(MAHE)) depends on the specific course. Most undergraduate online Manipal University programs run for 3–4 years, while postgraduate online MAHE programs range from 1–2 years. Studying at Manipal Online University provides flexibility to complete your degree while managing other commitments.",
   },
   {
     question: "Are the online degrees internationally recognized?",
     answer:
-      "Yes, degrees from Sikkim Manipal University are recognized globally. SMU has a strong international presence and its degrees are accepted by employers and educational institutions worldwide.",
+      "Yes, online degrees from Manipal Academy of Higher Education(MAHE)) are internationally recognized. Select online programs from Manipal Online University are WES-accredited, adding global value to your MAHE degree. Choosing online Manipal University ensures your degree holds weight for international job opportunities and higher studies abroad.",
   },
   {
     question: "Can working professionals pursue online courses?",
     answer:
-      "Absolutely! SMU Online programs are specifically designed for working professionals. The flexible schedule, recorded lectures, and online resources allow professionals to balance work and studies effectively.",
+      "Absolutely! Online programs from Manipal Academy of Higher Education(MAHE)) are designed for working professionals. MAHE's flexible schedule allows online Manipal University students to learn at their own pace without interrupting their careers. Enrolling in online Manipal University courses is ideal for career growth and skill enhancement while working.",
   },
   {
-    question: "What is the difference between online and regular courses at SMU?",
+    question: "What is the difference between online and regular courses at Manipal Academy of Higher Education(MAHE))?",
     answer:
-      "SMU Online programs provide the same UGC-entitled degree as regular programs. The key difference is the delivery mode - online programs offer flexibility while maintaining the same curriculum, faculty standards, and evaluation methods.",
+      "Online Manipal University programs provide the same accredited degree as regular MAHE courses. The key difference is flexibility—students can access lectures, assignments, and live sessions digitally. Choosing an online program at Manipal Academy of Higher Education(MAHE)) offers quality education and the same global recognition without the need to attend a physical campus.",
   },
   {
     question: "Does the university offer scholarships for online programs?",
     answer:
-      "Yes, Sikkim Manipal University offers various scholarships and financial aid options for deserving students. These include merit-based scholarships and special schemes for defense personnel and differently-abled students.",
+      "Yes, Manipal Online University offers exclusive scholarships for meritorious students, defense personnel, government employees, and differently-abled learners. By enrolling in online programs at MAHE, students can avail financial support while earning a recognized degree from Manipal Academy of Higher Education(MAHE)).",
   },
   {
     question: "Is technical support provided for online students?",
     answer:
-      "Yes, SMU provides dedicated technical support to online students. From accessing the learning management system to attending live sessions, comprehensive support is available to ensure a smooth learning experience.",
+      "Yes, Manipal Online University provides dedicated technical support to online MAHE students. From accessing course materials to attending live sessions, online Manipal University ensures a smooth learning experience. Support is available for all online Manipal University programs, making it convenient and reliable for students.",
   },
 ];
 
+
+
+
   const testimonials = [
     {
-      name: "Priya Sharma",
-      course: "MBA",
-      university: "SMU",
-      text: "The online MBA program at SMU helped me transition from a technical role to a management position. The flexible schedule allowed me to continue working while upgrading my skills."
-    },
-    {
-      name: "Rahul Verma",
+      name: "Mohit Kumar",
       course: "MCA",
-      university: "SMU",
-      text: "As a working professional in IT, SMU's MCA program provided me with the latest technical knowledge without disrupting my career. The faculty support was exceptional."
+      university: "MAHE",
+      text: "I always wanted to pursue my higher education dream without quitting my job, and MAHE has made it possible for me through their online degrees. My online MCA degree has given me wings to fly and chase my career aspirations."
     },
     {
-      name: "Anita Patel",
+      name: "Rajeev ",
       course: "B.Com",
-      university: "SMU",
-      text: "Pursuing B.Com from SMU Online was the best decision. The affordable fees and quality education helped me build a strong foundation in commerce while managing my family responsibilities."
+      university: "MAHE",
+      text: "Funding my undergraduate degree and my younger brother's education has been possible only because of Manipal Academy of Higher Education(MAHE))'s affordable online B.Com degree. Thanks to Online Manipal, I'm able to manage my work and academics. I believe this online degree will help me become personally and financially independent."
     },
     {
-      name: "Deepak Singh",
-      course: "MA Political Science",
-      university: "SMU",
-      text: "The MA program at SMU provided me with deep insights into political science. The online resources and faculty guidance were instrumental in my academic growth."
+      name: "Sohil",
+      course: "MBA",
+      university: "MAHE",
+      text: "As a working professional, I wanted to enhance my domain knowledge and move to managerial roles. I found Manipal Academy of Higher Education(MAHE))'s online MBA program as the right opportunity to climb up my career ladder. The program has helped me build new skills required to thrive in the industry."
+    },
+    {
+      name: "Akshansh",
+      course: "M.Com",
+      university: "MAHE",
+      text: "With over 2 years of work experience in accounting, I wanted to pursue an online M.Com degree to boost my career further and get a higher salary. Thanks to Online Manipal, I'm able to manage my work life and academic through flexible live classes and recorded sessions which are available on the portal."
     }
   ];
   
@@ -198,26 +213,26 @@ const SMU = () => {
   return (
     <>
       <Head>
-        <title>Sikkim Manipal University Online | UGC Approved UG & PG Courses - UNIFOST</title>
-        <meta name="description" content="Explore UGC-recognized online programs from Sikkim Manipal University. Flexible learning, expert mentorship, and career-focused degrees with UGC & AICTE approvals." />
-        <meta name="keywords" content="SMU Online, Sikkim Manipal University, SMU Distance Learning, MBA in SMU Online, MCA in SMU Online, B.Com in SMU Online, BA in SMU Online, M.Com in SMU Online, MA in SMU Online, Online Degrees India, UGC Approved, AICTE Approved" />
-        <meta name="author" content="Sikkim Manipal University Online" />
+        <title> "Manipal Academy of Higher Education Online Degrees | MAHE UG & PG Courses - UNIFOST",</title>
+        <meta name="description" content="Explore globally recognized online programs from Manipal Academy of Higher Education Online. Flexible learning, expert mentorship, and career-focused degrees with UGC & AICTE approvals." />
+        <meta name="keywords" content="Manipal Online, Manipal Academy of Higher Education(MAHE)), MAHE Online, BBA in MAHE Online, BCA in MAHE Online, B.Com in MAHE Online, MBA in MAHE Online, MCA in MAHE Online, M.Com in MAHE Online, MA in MAHE Online, Manipal Online, Online Degrees India, Distance Learning, UGC Approved, AICTE Approved" />
+        <meta name="author" content="Manipal Academy of Higher Education Online Degrees" />
         <meta name="robots" content="index, follow" /> 
-        <link rel="canonical" href="https://unifostedu.com/smu" />
+        <link rel="canonical" href="https://unifostedu.com/manipal" />
         <link href="https://fonts.cdnfonts.com/css/queens" rel="stylesheet" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Sikkim Manipal University Online | UGC Approved Online Degrees" />
-        <meta property="og:description" content="UGC-recognized online undergraduate and postgraduate programs with flexible, industry-relevant learning from Sikkim Manipal University." />
-        <meta property="og:image" content="/images/smu-uni.webp" />
+        <meta property="og:title" content="Manipal Academy of Higher Education Online Degrees | Accredited Online Degrees" />
+        <meta property="og:description" content="Globally recognized online undergraduate and postgraduate programs with flexible, industry-relevant learning." />
+        <meta property="og:image" content="/images/manipal.webp" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.onlinedegree.in/smu" />
+        <meta property="og:url" content="https://www.onlinedegree.in/manipal" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sikkim Manipal University Online | UGC Approved Online Degrees" />
-        <meta name="twitter:description" content="Enroll in UGC and AICTE approved online courses at Sikkim Manipal University. Learn with flexibility and global recognition." />
-        <meta name="twitter:image" content="/images/smu-uni.webp" />
+        <meta name="twitter:title" content="Manipal Academy of Higher Education Online | Accredited Online Degrees" />
+        <meta name="twitter:description" content="Enroll in UGC and AICTE approved online courses at Manipal Academy of Higher Education. Learn with flexibility and global recognition." />
+        <meta name="twitter:image" content="/images/manipal.webp" />
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
@@ -234,13 +249,13 @@ const SMU = () => {
               {/* Left Logo */}
               <div className="flex items-center gap-2 lg:gap-4">
                 <img 
-                  src="/images/manipallogo.webp" 
-                  alt="SMU Logo" 
+                  src="/images/manipallogo.jpg" 
+                  alt="Mahe Logo" 
                   className="h-8 w-auto sm:h-10 lg:h-12" 
                 />
                 <h1 className="font-queens text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold">
-                  <span className="text-[#e63946]">Online</span>{" "}
-                  <span className="text-gray-800">SMU</span>
+                  <span className="text-[#ff7a36]">Online</span>{" "}
+                  <span className="text-gray-800">Manipal</span>
                 </h1>
               </div>
 
@@ -249,7 +264,7 @@ const SMU = () => {
                 {/* Phone - Hidden on small screens */}
                 <a
                   href="tel:+917042867717"
-                  className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-red-600 transition-colors"
+                  className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-orange-600 transition-colors"
                 > 
                   <span className="text-lg">📞</span>
                   <span className="hidden lg:inline">+91-7042867717</span>
@@ -259,7 +274,7 @@ const SMU = () => {
                 {/* Mobile Phone Icon */}
                 <a
                   href="tel:+917042867717"
-                  className="sm:hidden flex items-center justify-center w-10 h-10 bg-red-100 rounded-full text-red-600 hover:bg-red-200 transition-colors"
+                  className="sm:hidden flex items-center justify-center w-10 h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
                 >
                   📞
                 </a>
@@ -267,7 +282,7 @@ const SMU = () => {
                 {/* Apply Button */}
                 <button 
                   onClick={() => setOpenModal({ type: 'apply' })}
-                  className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25 text-sm sm:text-base"
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base"
                 >
                   <span className="hidden sm:inline">Apply Now</span>
                   <span className="sm:hidden">Apply</span>
@@ -278,16 +293,10 @@ const SMU = () => {
         </header>
 
         {/* Premium Hero Section */}
-        <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
-          {/* Background Image */}
-          <div className="absolute inset-0 bg-[url('/images/smu-uni.webp')] bg-cover bg-center opacity-200"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-blue-900/70 to-purple-900/80"></div>
-
-          {/* Animated Background Elements */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-red-500/10 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          </div>
+        <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+          {/* Animated Background */}
+          <div className="absolute inset-0 bg-[url('/images/mahe-uni.webp')] bg-cover bg-center opacity-200"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-blue-900/70 to-indigo-900/80"></div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -296,24 +305,21 @@ const SMU = () => {
                 {/* Accreditation Badge */}
                 <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-4 py-2">
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-medium">UGC Approved • AICTE Recognized</span>
+                  <span className="text-sm font-medium">NAAC A+ Accredited • UGC Approved</span>
                 </div>
 
                 {/* Main Heading */}
                 <div className="space-y-6">
                   <h1 className="font-queens text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                     <span className="block text-white">Transform Your</span>
-                    <span className="block bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+                    <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
                       Career with
                     </span>
-                    <span className="block text-white">Sikkim Manipal</span>
-                    <span className="block text-red-400 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-normal mt-1 sm:mt-2">
-                      University (SMU)
-                    </span>
+                    <span className="block text-white">Manipal Academy of Higher Education</span>
                   </h1>
                   
                   <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl">
-                    Earn UGC-recognized online degrees with flexible learning, expert mentorship, and career-focused programs from one of India's premier universities.
+                    Earn globally recognized degrees from Manipal Academy of Higher Education with 100% online learning and placement assistance.
                   </p>
                 </div>
 
@@ -322,7 +328,7 @@ const SMU = () => {
                   {[
                     { icon: '🎓', text: 'UGC Entitled Degrees' },
                     { icon: '💼', text: 'Placement Support' },
-                    { icon: '💰', text: 'Affordable Fees' },
+                    { icon: '💰', text: 'Easy EMI Options' },
                     { icon: '🌍', text: 'Global Recognition' }
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
@@ -336,7 +342,7 @@ const SMU = () => {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button 
                     onClick={() => setOpenModal({ type: 'apply' })}
-                    className="group bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-red-500/30 flex items-center justify-center gap-3"
+                    className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-orange-500/30 flex items-center justify-center gap-3"
                   >
                     <span>Apply Now</span>
                     <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -356,17 +362,17 @@ const SMU = () => {
               {/* Right Content - Stats Card */}
               <div className="lg:pl-8">
                 <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 space-y-6">
-                  <h3 className="text-2xl font-bold text-white text-center">Why Choose SMU Online?</h3>
+                  <h3 className="text-2xl font-bold text-white text-center">Why Choose Manipal Academy of Higher Education Online?</h3>
                   
                   <div className="grid grid-cols-2 gap-6">
                     {[
-                      { number: '25+', label: 'Years Excellence' },
-                      { number: '50K+', label: 'Students' },
-                      { number: '90%', label: 'Satisfaction Rate' },
-                      { number: '150+', label: 'Hiring Partners' }
+                      { number: '50+', label: 'Countries' },
+                      { number: '100K+', label: 'Students' },
+                      { number: '93%', label: 'Positive ROI' },
+                      { number: '200+', label: 'Hiring Partners' }
                     ].map((stat, i) => (
                       <div key={i} className="text-center">
-                        <div className="text-3xl font-bold text-red-400">{stat.number}</div>
+                        <div className="text-3xl font-bold text-orange-400">{stat.number}</div>
                         <div className="text-gray-300 text-sm mt-1">{stat.label}</div>
                       </div>
                     ))}
@@ -376,7 +382,7 @@ const SMU = () => {
                   <div className="pt-6 border-t border-white/20">
                     <h4 className="text-white font-semibold mb-4 text-center">Popular Programs</h4>
                     <div className="flex flex-wrap justify-center gap-2">
-                      {['Online MBA', 'MCA', 'B.Com', 'B.A.', 'M.Com', 'M.A.'].map((program, i) => (
+                      {['Online MBA', 'BBA', 'MCA', 'BCA', 'M.Com', 'B.Com'].map((program, i) => (
                         <span key={i} className="bg-white/5 hover:bg-white/10 border border-white/10 rounded-full px-4 py-2 text-white text-sm transition-all duration-300 cursor-pointer hover:scale-105">
                           {program}
                         </span>
@@ -408,23 +414,23 @@ const SMU = () => {
                 },
                 {
                   icon: '🏆',
-                  title: 'UGC Approved',
+                  title: 'NAAC A+ Accredited',
                   description: 'Globally recognized degrees with UGC entitlement'
                 },
                 {
                   icon: '💼',
                   title: 'Career Support',
-                  description: 'Comprehensive placement assistance and career guidance'
+                  description: '100% placement assistance and career guidance'
                 },
                 {
                   icon: '💰',
-                  title: 'Affordable Education',
-                  description: 'Quality education at competitive fee structures'
+                  title: 'Easy Financing',
+                  description: 'No-cost EMI options and scholarships available'
                 }
               ].map((feature, i) => (
                 <div key={i} className="group text-center">
                   <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
-                    <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                       <span className="text-2xl">{feature.icon}</span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
@@ -441,23 +447,23 @@ const SMU = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
-                Recognitions & <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">Accreditations</span>
+                Rankings & <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Accreditations</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Recognized by leading accreditation bodies and regulatory authorities in India
+                Recognized by leading accreditation bodies and ranked among India's top universities
               </p>
             </div>
             
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
               {[
-                { img: '/images/ugc.webp', title: 'UGC Approved Online Degrees' },
-                { img: '/images/aicte.webp', title: 'AICTE Recognized Programs' },
-                { img: '/images/naac.webp', title: 'NAAC Accredited University' },
-                { img: '/images/nirf.webp', title: 'Ranked Among Top Universities' },
-                { img: '/images/IIRF.png', title: 'Top private university in North East' },
-                { img: '/images/aiu.webp', title: 'Member of AIU' },
-                { img: '/images/wes.webp', title: 'Internationally Recognized' },
-                { img: '/images/The-Week.png', title: 'Amongst Top 10 Multidisciplinary Universities in East Zone' },
+                { img: '/images/naac.webp', title: 'NAAC A+ Accredited University' },
+                { img: '/images/ugc.webp', title: 'UGC-entitled Online Degrees' },
+                { img: '/images/nirf.webp', title: "Amongst India's top 60 Universities in 2025" },
+                { img: '/images/aicte.webp', title: 'AICTE Norms Compliant' },
+                { img: '/images/wes.webp', title: 'Globally Recognized Online Degrees' },
+                { img: '/images/acu.webp', title: 'Member of ACU' },
+                { img: '/images/icas.webp', title: 'ICAS Canada' },
+                { img: '/images/iqas.webp', title: 'IQAS' },
               ].map((item, i)=>(
                 <div key={i} className="group">
                   <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
@@ -471,7 +477,7 @@ const SMU = () => {
                       />
                     </div>
                     <div className="px-4 py-5">
-                      <p className="text-sm font-medium text-gray-800 text-center leading-tight group-hover:text-red-600 transition-colors duration-300">
+                      <p className="text-sm font-medium text-gray-800 text-center leading-tight group-hover:text-orange-600 transition-colors duration-300">
                         {item.title}
                       </p>
                     </div>
@@ -482,7 +488,7 @@ const SMU = () => {
           </div>
         </section>
 
-        {/* Why Choose Sikkim Manipal University */}
+        {/* Why Choose Manipal Academy of Higher Education */}
         <section className="relative py-20 bg-[#0B0B10] text-white overflow-hidden">
           {/* Subtle grid pattern */}
           <div className="pointer-events-none absolute inset-0 opacity-[0.08]" style={{backgroundImage:"linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)", backgroundSize:"40px 40px"}} />
@@ -491,10 +497,10 @@ const SMU = () => {
             {/* Stats Row */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 mb-14">
               {[
-                {value:'25+', label:'Years of academic\nexcellence and trust'},
-                {value:'50k+', label:'Successful alumni\nacross the globe'},
-                {value:'90%', label:'Student satisfaction\nand success rate'},
-                {value:'150+', label:'Corporate partners for\nplacements and internships'}
+                {value:'60+', label:'Countries and 2000+ towns &\ncities- our students span the globe'},
+                {value:'100k+', label:'Learners have been empowered through Online Manipal'},
+                {value:'93%', label:'Of students say their online degree has a positive ROI'},
+                {value:'81%', label:'Of students find online is better than or equal to on-campus learning'}
               ].map((s, i) => (
                 <div key={i} className="text-left">
                   <div className="font-queens text-5xl sm:text-6xl md:text-7xl leading-none">{s.value}</div>
@@ -504,53 +510,53 @@ const SMU = () => {
             </div>
 
             {/* Heading */}
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-center">Why Students Choose SMU</h3>
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-center">Why Students Choose Us</h3>
 
             {/* Feature Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
               {/* Card 1 */}
               <div className="bg-white text-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center mb-4">
+                <div className="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center mb-4">
                   <span className="text-2xl">🏅</span>
                 </div>
-                <h4 className="text-xl font-semibold mb-2">UGC Approved Degrees</h4>
-                <p className="text-gray-600 text-sm">Graduate with UGC-entitled degrees that are recognized by employers and institutions nationwide.</p>
+                <h4 className="text-xl font-semibold mb-2">Degree from top ranked Manipal universities</h4>
+                <p className="text-gray-600 text-sm">Graduate with UGC-entitled, NAAC A+ accredited degrees trusted by employers.</p>
               </div>
 
               {/* Card 2 */}
               <div className="bg-white text-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4">
-                  <span className="text-2xl">💻</span>
+                <div className="w-14 h-14 rounded-full bg-sky-100 flex items-center justify-center mb-4">
+                  <span className="text-2xl font-bold">C</span>
                 </div>
-                <h4 className="text-xl font-semibold mb-2">Advanced Learning Platform</h4>
-                <p className="text-gray-600 text-sm">Access comprehensive study materials, recorded lectures, and interactive sessions online.</p>
+                <h4 className="text-xl font-semibold mb-2">Exclusive Coursera access</h4>
+                <p className="text-gray-600 text-sm">Free access to 10K+ courses and professional certificates from global partners.</p>
               </div>
 
               {/* Card 3 */}
               <div className="bg-white text-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mb-4">
-                  <span className="text-2xl">👨‍🏫</span>
+                <div className="w-14 h-14 rounded-full bg-pink-100 flex items-center justify-center mb-4">
+                  <span className="text-2xl">🎓</span>
                 </div>
-                <h4 className="text-xl font-semibold mb-2">Expert Faculty</h4>
-                <p className="text-gray-600 text-sm">Learn from experienced professors and industry experts with decades of teaching experience.</p>
+                <h4 className="text-xl font-semibold mb-2">Scholarships up to 30%</h4>
+                <p className="text-gray-600 text-sm">Avail scholarships under merit, defense, alumni, and other categories.</p>
               </div>
 
               {/* Card 4 */}
               <div className="bg-white text-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center mb-4">
-                  <span className="text-2xl">💼</span>
+                <div className="w-14 h-14 rounded-full bg-lime-100 flex items-center justify-center mb-4">
+                  <span className="text-2xl">💳</span>
                 </div>
-                <h4 className="text-xl font-semibold mb-2">Career Services</h4>
-                <p className="text-gray-600 text-sm">Comprehensive placement support including resume building and interview preparation.</p>
+                <h4 className="text-xl font-semibold mb-2">Easy financing options</h4>
+                <p className="text-gray-600 text-sm">Improved affordability with flexible financing and no-cost EMIs.</p>
               </div>
 
               {/* Card 5 */}
               <div className="bg-white text-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-14 h-14 rounded-full bg-purple-100 flex items-center justify-center mb-4">
-                  <span className="text-2xl">🌍</span>
+                <div className="w-14 h-14 rounded-full bg-rose-100 flex items-center justify-center mb-4">
+                  <span className="text-2xl">🎓</span>
                 </div>
-                <h4 className="text-xl font-semibold mb-2">Global Alumni Network</h4>
-                <p className="text-gray-600 text-sm">Join a network of 50,000+ alumni working in top companies across the world.</p>
+                <h4 className="text-xl font-semibold mb-2">Manipal alumni status</h4>
+                <p className="text-gray-600 text-sm">Become part of a 200,000+ strong global alumni network.</p>
               </div>
             </div>
           </div>
@@ -561,7 +567,7 @@ const SMU = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
-                Explore <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">Online Programs</span>
+                Explore <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Online Programs</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Choose from industry-relevant programs designed for working professionals and fresh graduates
@@ -582,8 +588,8 @@ const SMU = () => {
                       value={tab.value}
                       className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
                         activeTab === tab.value
-                          ? 'bg-gradient-to-r from-red-500 to-red-600 text-white shadow-lg'
-                          : 'text-gray-700 hover:text-red-600 hover:bg-white'
+                          ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg'
+                          : 'text-gray-700 hover:text-orange-600 hover:bg-white'
                       }`}
                     >
                       {tab.label}
@@ -609,7 +615,7 @@ const SMU = () => {
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                           <div className="absolute bottom-4 left-4">
-                            <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                               {course.universityShort}
                             </span>
                           </div>
@@ -630,13 +636,13 @@ const SMU = () => {
                             </div>
                             <div className="flex items-center gap-2 text-gray-600">
                               <span>💰</span>
-                              <span className="text-sm">{course.fees}</span>
+                              <span className="text-sm">₹{course.fees}</span>
                             </div>
                           </div>
 
                           <button 
                             onClick={() => setOpenModal({ type: 'apply', program: course.course })}
-                            className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
+                            className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
                           >
                             Apply Now
                           </button>
@@ -651,42 +657,42 @@ const SMU = () => {
         </section>
 
         {/* Modern 360 Advantage */}
-        <section className="relative py-20 bg-gradient-to-br from-red-50 via-white to-blue-50">
-          <div className="pointer-events-none absolute inset-0" style={{background:"radial-gradient(1200px 300px at 10% -10%, rgba(230,57,70,.09), transparent), radial-gradient(1200px 300px at 90% 110%, rgba(59,130,246,.08), transparent)"}} />
+        <section className="relative py-20 bg-gradient-to-br from-orange-50 via-white to-blue-50">
+          <div className="pointer-events-none absolute inset-0" style={{background:"radial-gradient(1200px 300px at 10% -10%, rgba(255,122,54,.09), transparent), radial-gradient(1200px 300px at 90% 110%, rgba(59,130,246,.08), transparent)"}} />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
-              <h2 className="text-4xl lg:text-5xl font-queens font-bold text-gray-900">Unlock The SMU Advantage</h2>
+              <h2 className="text-4xl lg:text-5xl font-queens font-bold text-gray-900">Unlock The 360° Advantage</h2>
               <p className="text-xl text-gray-600 mt-4 max-w-3xl mx-auto">Comprehensive benefits designed to support your learning journey and career growth.</p>
             </div>
 
             {/* Benefits grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[{
-                icon:'🎓', title:'UGC Approved Degrees', desc:'Degrees recognized by University Grants Commission with nationwide acceptance.'
+                icon:'🎓', title:'Prestigious Degree', desc:'Globally recognized degree that opens doors worldwide.'
               },{
-                icon:'📚', title:'Industry-Relevant Curriculum', desc:'Programs designed to meet current industry requirements and trends.'
+                icon:'📚', title:'Industry-Relevant Curriculum', desc:'Learn in-demand skills aligned with market needs.'
               },{
-                icon:'💼', title:'Placement Assistance', desc:'Comprehensive career support and placement opportunities.'
+                icon:'💼', title:'Placement Assistance', desc:'End-to-end support with internships and jobs.'
               },{
-                icon:'💰', title:'Affordable Education', desc:'Quality education at competitive and affordable fee structures.'
+                icon:'💳', title:'Easy Financing', desc:'Affordable no-cost EMI options for all learners.'
               }].map((b,i)=>(
                 <div key={i} className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-red-500 to-red-600 text-white flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">{b.icon}</div>
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 text-white flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">{b.icon}</div>
                   <h3 className="text-2xl font-semibold text-gray-900 mb-3">{b.title}</h3>
                   <p className="text-gray-600">{b.desc}</p>
                 </div>
               ))}
             </div>
 
-            {/* Financing + Support */}
+            {/* Financing + Scholarships */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
-              <div className="rounded-2xl p-8 bg-gradient-to-br from-red-500 to-red-600 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                <h3 className="text-3xl font-bold mb-4">Easy Financing Options</h3>
-                <p className="text-red-100 text-lg">Flexible payment plans and EMI options to make quality education accessible to everyone.</p>
+              <div className="rounded-2xl p-8 bg-gradient-to-br from-orange-500 to-orange-600 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                <h3 className="text-3xl font-bold mb-4">Avail easy financing options</h3>
+                <p className="text-orange-100 text-lg">With our no-cost EMIs, we let your learning take the spotlight without the stress of financing.</p>
               </div>
               <div className="rounded-2xl p-8 bg-gradient-to-br from-blue-600 to-indigo-600 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                <h3 className="text-3xl font-bold mb-4">Dedicated Student Support</h3>
-                <p className="text-blue-100 text-lg">24/7 academic and technical support to ensure smooth learning experience.</p>
+                <h3 className="text-3xl font-bold mb-4">Get attractive scholarships</h3>
+                <p className="text-blue-100 text-lg">Exclusive scholarships for defense personnel, govt. employees, differently-abled & meritorious students.</p>
               </div>
             </div>
           </div>
@@ -695,145 +701,150 @@ const SMU = () => {
         {/* Why Choose Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-16 font-queens">SMU Online Advantages</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-16 font-queens">Online Manipal Advantages</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                 <FaStar className="text-yellow-500 text-4xl mb-6" />
-                <h3 className="text-2xl font-semibold mb-4">Flexible Learning Schedule</h3>
-                <p className="text-gray-600 text-lg">Balance your education with personal and professional commitments through our flexible online learning platform.</p>
+                <h3 className="text-2xl font-semibold mb-4">Flexible & Convenient Schedule</h3>
+                <p className="text-gray-600 text-lg">Balance your academic pursuits with personal and professional commitments by learning anywhere and at any time, as per your convenience.</p>
               </div>
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                 <FaCertificate className="text-blue-500 text-4xl mb-6" />
-                <h3 className="text-2xl font-semibold mb-4">UGC Recognized Degrees</h3>
-                <p className="text-gray-600 text-lg">All online degrees are UGC-entitled and hold the same value as regular on-campus degrees.</p>
+                <h3 className="text-2xl font-semibold mb-4">At Par with On-Campus Degrees</h3>
+                <p className="text-gray-600 text-lg">Access UGC-entitled online degrees that are at par with on-campus degrees and accepted for govt. or corporate jobs and higher education.</p>
               </div>
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                 <FaUsers className="text-green-500 text-4xl mb-6" />
-                <h3 className="text-2xl font-semibold mb-4">Experienced Faculty</h3>
-                <p className="text-gray-600 text-lg">Learn from highly qualified faculty members with extensive academic and industry experience.</p>
+                <h3 className="text-2xl font-semibold mb-4">Experienced Faculty & Mentors</h3>
+                <p className="text-gray-600 text-lg">Acquire quality education and guidance from esteemed faculty and mentors who share their expertise and practical knowledge.</p>
               </div>
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                 <FaBuilding className="text-purple-500 text-4xl mb-6" />
-                <h3 className="text-2xl font-semibold mb-4">Strong Alumni Network</h3>
-                <p className="text-gray-600 text-lg">Join a network of 50,000+ successful alumni working in top companies across various industries.</p>
+                <h3 className="text-2xl font-semibold mb-4">Prestigious Manipal Alumni Network</h3>
+                <p className="text-gray-600 text-lg">Be a part of the prestigious Manipal alumni network to build connections and to gain easy access to a wide range of career opportunities.</p>
               </div>
             </div>
           </div>
         </section>
+       <section>
 
-        {/* Admission Procedure */}
-        <section className="relative py-20 bg-white">
-          {/* Decorative Blobs */}
-          <div className="absolute -top-20 -left-20 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-32 -right-32 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
-      
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            {/* Section Header */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-                Admission Procedure
-              </h2>
-              <div className="w-24 h-1 bg-red-500 mx-auto mb-8 rounded-full"></div>
-              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                A simple, transparent, and student-friendly admission process
-                designed to help you begin your learning journey smoothly.
-              </p>
-            </motion.div>
-      
-            {/* 4-Step Process */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="mt-20 bg-white p-10 rounded-3xl shadow-xl border border-gray-200"
-            >
-              <h3 className="text-3xl md:text-4xl font-bold text-black mb-12 text-center">
-                Easy 4-Step Admission Process
-              </h3>
-      
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-10 relative">
-                {/* Connecting Line */}
-                <div className="hidden md:block absolute top-28 left-[10%] right-[10%] h-1 bg-gradient-to-r from-red-400 to-red-500 z-0 rounded-full"></div>
-      
-                {[
-                  {
-                    number: "01",
-                    title: "Application Form",
-                    desc: "Fill the online application form on the university portal.",
-                  },
-                  {
-                    number: "02",
-                    title: "Documents & Fee",
-                    desc: "Upload required documents and pay the application fee.",
-                  },
-                  {
-                    number: "03",
-                    title: "Confirmation",
-                    desc: "Receive confirmation and student login credentials.",
-                  },
-                  {
-                    number: "04",
-                    title: "Enrollment",
-                    desc: "Complete fee payment and begin your classes.",
-                  },
-                ].map((step, index) => (
-                  <motion.div
-                    key={index}
-                    className="text-center relative z-10"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.3 }}
-                  >
-                    <div className="bg-gradient-to-br from-red-400 to-red-500 w-28 h-28 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center mx-auto mb-6 text-white shadow-2xl">
-                      <span className="text-3xl md:text-4xl font-bold">{step.number}</span>
-                      <span className="text-xs md:text-sm uppercase font-semibold mt-1">Step</span>
-                    </div>
-                    <h4 className="text-lg md:text-xl font-bold text-black mb-2">
-                      {step.title}
-                    </h4>
-                    <p className="text-gray-700 text-sm md:text-base">{step.desc}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
+         <div>
+           <section className="relative py-20 bg-white">
+             {/* Decorative Blobs */}
+             <div className="absolute -top-20 -left-20 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
+             <div className="absolute -bottom-32 -right-32 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
+         
+             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+               {/* Section Header */}
+               <motion.div
+                 initial={{ opacity: 0, y: 30 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true }}
+                 transition={{ duration: 0.8 }}
+                 className="text-center mb-16"
+               >
+                 <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+                   Admission Procedure
+                 </h2>
+                 <div className="w-24 h-1 bg-orange-500 mx-auto mb-8 rounded-full"></div>
+                 <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+                   A simple, transparent, and student-friendly admission process
+                   designed to help you begin your learning journey smoothly.
+                 </p>
+               </motion.div>
+         
+               {/* 4-Step Process */}
+               <motion.div
+                 initial={{ opacity: 0, y: 30 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true }}
+                 transition={{ duration: 0.8 }}
+                 className="mt-20 bg-white p-10 rounded-3xl shadow-xl border border-gray-200"
+               >
+                 <h3 className="text-3xl md:text-4xl font-bold text-black mb-12 text-center">
+                   Easy 4-Step Admission Process
+                 </h3>
+         
+                 <div className="grid grid-cols-1 md:grid-cols-4 gap-10 relative">
+                   {/* Connecting Line */}
+                   <div className="hidden md:block absolute top-28 left-[10%] right-[10%] h-1 bg-gradient-to-r from-orange-400 to-orange-500 z-0 rounded-full"></div>
+         
+                   {[
+                     {
+                       number: "01",
+                       title: "Application Form",
+                       desc: "Fill the online application form on the university portal.",
+                     },
+                     {
+                       number: "02",
+                       title: "Documents & Fee",
+                       desc: "Upload required documents and pay the application fee.",
+                     },
+                     {
+                       number: "03",
+                       title: "Confirmation",
+                       desc: "Receive confirmation and student login credentials.",
+                     },
+                     {
+                       number: "04",
+                       title: "Enrollment",
+                       desc: "Complete fee payment and begin your classes.",
+                     },
+                   ].map((step, index) => (
+                     <motion.div
+                       key={index}
+                       className="text-center relative z-10"
+                       initial={{ opacity: 0, y: 30 }}
+                       whileInView={{ opacity: 1, y: 0 }}
+                       viewport={{ once: true }}
+                       transition={{ duration: 0.6, delay: index * 0.3 }}
+                     >
+                       <div className="bg-gradient-to-br from-orange-400 to-orange-500 w-28 h-28 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center mx-auto mb-6 text-white shadow-2xl">
+                         <span className="text-3xl md:text-4xl font-bold">{step.number}</span>
+                         <span className="text-xs md:text-sm uppercase font-semibold mt-1">Step</span>
+                       </div>
+                       <h4 className="text-lg md:text-xl font-bold text-black mb-2">
+                         {step.title}
+                       </h4>
+                       <p className="text-gray-700 text-sm md:text-base">{step.desc}</p>
+                     </motion.div>
+                   ))}
+                 </div>
+               </motion.div>
+             </div>
+           </section>
+         </div>
+
+          </section>
+         
 
         {/* Certificate Section */}
         <section className="bg-[#002d5f] text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center gap-12">
             <div className="md:w-1/2">
-              <Image width={600} height={400} src="/images/smu.webp" alt="Certificate" className="rounded-2xl shadow-2xl w-full" />
+              <Image width={600} height={400} src="/images/MAHE-certi.webp" alt="Certificate" className="rounded-2xl shadow-2xl w-full" />
             </div>
             <div className="md:w-1/2">
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6">UGC-Entitled Online Degree from Sikkim Manipal University</h2>
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6">Recognized Online Degree from Manipal Academy of Higher Education</h2>
               <p className="mb-8 text-xl">
-                Earn a recognized degree that holds the same value as a regular degree, with the flexibility to learn from anywhere at your own pace.
+                Learn at your pace, guided by experts, with a UGC-entitled degree that is accepted globally across industries and sectors.
               </p>
               <ul className="space-y-4 text-lg">
                 <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                  UGC Recognized Online Degrees
+                  <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                  UGC & AICTE Recognized Degrees
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                  Learn from Industry Experts
+                  <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                  Daily Live & Recorded Classes
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                  Comprehensive Study Material
+                  <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                  Global Collaborations with Ivy-League Institutions
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                  Dedicated Student Support
+                  <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                  100% Placement & Internship Support
                 </li>
               </ul>
             </div>
@@ -845,10 +856,10 @@ const SMU = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
-                Success <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">Stories</span>
+                Success <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Stories</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Hear from our alumni who have transformed their careers with SMU Online
+                Hear from our alumni who have transformed their careers with Manipal Online
               </p>
             </div>
 
@@ -859,7 +870,7 @@ const SMU = () => {
                     <div className="flex items-start gap-6">
                       {/* Avatar */}
                       <div className="flex-shrink-0">
-                        <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
                           {testimonial.name.split(' ').map(n => n[0]).join('')}
                         </div>
                       </div>
@@ -867,7 +878,7 @@ const SMU = () => {
                       {/* Content */}
                       <div className="flex-1">
                         <div className="mb-4">
-                          <svg className="w-8 h-8 text-red-500 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-8 h-8 text-orange-500 mb-4" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
                           </svg>
                           <p className="text-gray-700 text-lg leading-relaxed italic">
@@ -877,7 +888,7 @@ const SMU = () => {
                         
                         <div className="border-t border-gray-100 pt-4">
                           <h4 className="font-bold text-gray-900 text-xl">{testimonial.name}</h4>
-                          <p className="text-red-600 font-semibold text-lg">
+                          <p className="text-orange-600 font-semibold text-lg">
                             {testimonial.course}, {testimonial.university}
                           </p>
                         </div>
@@ -895,10 +906,10 @@ const SMU = () => {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
-                Frequently Asked <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">Questions</span>
+                Frequently Asked <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Questions</span>
               </h2>
               <p className="text-xl text-gray-600">
-                Everything you need to know about Sikkim Manipal University Online Programs
+                Everything you need to know about Manipal Academy of Higher Education Online Programs
               </p>
             </div>
             
@@ -910,10 +921,10 @@ const SMU = () => {
                 >
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className="w-full text-left px-8 py-6 bg-gradient-to-r from-gray-50 to-gray-100 hover:from-red-50 hover:to-red-100 flex justify-between items-center font-semibold text-gray-800 transition-all duration-300 group-hover:text-red-700 text-lg"
+                    className="w-full text-left px-8 py-6 bg-gradient-to-r from-gray-50 to-gray-100 hover:from-orange-50 hover:to-orange-100 flex justify-between items-center font-semibold text-gray-800 transition-all duration-300 group-hover:text-orange-700 text-lg"
                   >
                     <span className="pr-8">{faq.question}</span>
-                    <div className="flex-shrink-0 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:bg-red-500 group-hover:text-white transition-all duration-300">
+                    <div className="flex-shrink-0 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
                       <span className="text-xl font-bold">{openIndex === index ? "−" : "+"}</span>
                     </div>
                   </button>
@@ -933,7 +944,7 @@ const SMU = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
-                Our Students Work At <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">Top Companies</span>
+                Our Students Work At <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Top Companies</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Join the ranks of successful graduates working at leading organizations worldwide
@@ -960,15 +971,15 @@ const SMU = () => {
             
             {/* Final CTA */}
             <div className="text-center mt-16">
-              <div className="bg-gradient-to-r from-red-500 to-red-600 rounded-3xl p-12 text-white max-w-4xl mx-auto hover:shadow-2xl transition-all duration-300">
+              <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-3xl p-12 text-white max-w-4xl mx-auto hover:shadow-2xl transition-all duration-300">
                 <h3 className="text-4xl lg:text-5xl font-bold mb-6">Ready to Join Them?</h3>
-                <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
-                  Start your journey with Sikkim Manipal University Online and unlock endless career opportunities
+                <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+                  Start your journey with Manipal Academy of Higher Education Online and unlock endless career opportunities
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
                   <button 
                     onClick={() => setOpenModal({ type: 'apply' })}
-                    className="bg-white text-red-600 font-semibold px-12 py-4 rounded-full hover:bg-red-50 transition-all duration-300 transform hover:scale-105 shadow-2xl text-lg"
+                    className="bg-white text-orange-600 font-semibold px-12 py-4 rounded-full hover:bg-orange-50 transition-all duration-300 transform hover:scale-105 shadow-2xl text-lg"
                   >
                     Apply Now
                   </button>
@@ -990,7 +1001,7 @@ const SMU = () => {
               title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
               subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
               imageSrc="/images/online-manipal-form.webp"
-              universityName="Sikkim Manipal University"
+              universityName="Manipal Academy of Higher Education"
               defaultProgram="MBA"
               formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
             />
@@ -1004,17 +1015,17 @@ const SMU = () => {
               {/* Brand */}
               <div className="lg:col-span-1">
                 <div className="flex items-center gap-4 mb-6">
-                  <img src="/images/manipallogo.webp" alt="SMU" className="h-12 w-auto" />
-                  <span className="font-queens text-2xl text-white">Online SMU</span>
+                  <img src="/images/manipallogo.jpg" alt="Manipal" className="h-12 w-auto" />
+                  <span className="font-queens text-2xl text-white">Online Manipal</span>
                 </div>
                 <p className="text-gray-400 leading-relaxed mb-6">
-                  UGC-entitled online degrees from Sikkim Manipal University designed for modern learners seeking career advancement.
+                  UGC-entitled, NAAC A+ accredited online degrees designed for modern learners seeking career advancement.
                 </p>
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-red-500 transition-colors cursor-pointer">
+                  <div className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-orange-500 transition-colors cursor-pointer">
                     <span className="text-lg">📞</span>
                   </div>
-                  <div className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-red-500 transition-colors cursor-pointer">
+                  <div className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-orange-500 transition-colors cursor-pointer">
                     <span className="text-lg">💬</span>
                   </div>
                 </div>
@@ -1024,9 +1035,9 @@ const SMU = () => {
               <div>
                 <h4 className="text-white font-bold text-lg mb-6">Programs</h4>
                 <ul className="space-y-3">
-                  {['Online MBA', 'MCA', 'B.Com', 'B.A.', 'M.Com', 'M.A.'].map((program, i) => (
+                  {['Online MBA', 'BBA', 'MCA', 'BCA', 'M.Com', 'B.Com', 'MA JMC'].map((program, i) => (
                     <li key={i}>
-                      <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">
+                      <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">
                         {program}
                       </a>
                     </li>
@@ -1040,7 +1051,7 @@ const SMU = () => {
                 <ul className="space-y-3">
                   {['Admissions', 'Scholarships', 'Placements', 'FAQs', 'Contact Us'].map((item, i) => (
                     <li key={i}>
-                      <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">
+                      <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">
                         {item}
                       </a>
                     </li>
@@ -1053,7 +1064,7 @@ const SMU = () => {
                 <h4 className="text-white font-bold text-lg mb-6">Get Started</h4>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
                       <span className="text-white">📞</span>
                     </div>
                     <div>
@@ -1064,7 +1075,7 @@ const SMU = () => {
                   
                   <button 
                     onClick={() => setOpenModal({ type: 'apply' })}
-                    className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
+                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
                   >
                     Apply Now
                   </button>
@@ -1075,7 +1086,7 @@ const SMU = () => {
             {/* Bottom */}
             <div className="pt-8 text-center">
               <p className="text-gray-500 text-sm">
-                © {new Date().getFullYear()} Sikkim Manipal University Online. All rights reserved.
+                © {new Date().getFullYear()} Manipal Academy of Higher Education Online. All rights reserved.
               </p>
             </div>
           </div>
@@ -1085,4 +1096,4 @@ const SMU = () => {
   );
 };
 
-export default SMU;
+export default Manipal;
