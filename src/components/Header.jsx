@@ -1,5 +1,4 @@
-'use client';
-import { usePathname } from "next/navigation"; 
+'use client'; 
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
 import { FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
@@ -144,6 +143,7 @@ const [modalType, setModalType] = useState();
       "/cuonline/",
       "/ku-online/",
       "/bookdemo/",
+      "/smu/",
       "/jain/",
       "/dypatil/",
       

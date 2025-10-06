@@ -24,7 +24,6 @@ const Footer = () => {
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [newsletterDone, setNewsletterDone] = useState(false);
 
-  // Hide footer on Amity page
   
   // Mock search params functionality
   useEffect(() => {
@@ -186,8 +185,9 @@ const Footer = () => {
     "/lpu-online",
     "/ku-online/",
     "/cuonline/",
+    "/smu/",
     "/jain/",
-    "/dypatil/",
+    "/dypatil/"
     
 
   ];

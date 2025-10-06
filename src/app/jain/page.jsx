@@ -483,9 +483,9 @@ const Jain = () => {
                 <h5 className="font-[calibri] text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-900 leading-tight">
                   Uplift your Career with
                 </h5>
-                <h3 className="font-[Calibri] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight">
+                <h1 className="font-[Calibri] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight">
                   Jain University Online
-                </h3>
+                </h1>
               </div>
                 
               <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed max-w-2xl">
