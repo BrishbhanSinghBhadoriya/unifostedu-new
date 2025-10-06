@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
 import { FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter} from 'next/navigation';
 import {
   FaEnvelope, FaPhoneAlt, FaComments, FaVideo, FaChevronDown, FaBars, FaTimes,
   FaSearch, FaGraduationCap, FaBookOpen, FaUniversity, FaRocket, FaHome, FaInfoCircle,
@@ -146,6 +146,7 @@ const [modalType, setModalType] = useState();
       "/bookdemo/",
       "/jain/",
       "/dypatil/",
+      "/mahe-online/"
       
     ];
     setShowHeader(!hideHeaderRoutes.includes(path));
