@@ -134,7 +134,7 @@ const Hero = ({ onOpenModal }) => {
                     className="group px-8 py-4 bg-white text-gray-700 font-semibold rounded-xl border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <FaPlay className="text-blue-600" />
-                    <span>Watch Demo</span>
+                    <span>Book Home Demo</span>
                   </button>
                 </motion.div>
 
