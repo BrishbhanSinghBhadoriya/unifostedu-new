@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
 import { FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
-import { useRouter} from 'next/navigation';
+import { usePathname, useRouter} from 'next/navigation';
 import {
   FaEnvelope, FaPhoneAlt, FaComments, FaVideo, FaChevronDown, FaBars, FaTimes,
   FaSearch, FaGraduationCap, FaBookOpen, FaUniversity, FaRocket, FaHome, FaInfoCircle,
