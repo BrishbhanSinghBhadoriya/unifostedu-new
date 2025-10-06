@@ -166,6 +166,33 @@ const AmityLandingPage = () => {
 
   
 const faqData = [
+  
+   {
+      question: "What is the admission process for Amity Online Programs?",
+      answer:
+        "The admission process is completely online. Students need to visit the official Amity Online website or UNIFOST platform, fill out the application form, upload required documents, and pay the registration fee. Once verified, admission confirmation is shared via email.",
+    },
+    {
+      question: "What is the eligibility for UG and PG programs?",
+      answer:
+        "For UG courses, students must have passed 10+2 from a recognized board. For PG courses, candidates must hold a bachelor’s degree in a relevant field from a recognized university.",
+    },
+    {
+      question: "Is there any entrance exam required?",
+      answer:
+        "No, there is no entrance examination for online programs. Admission is merit-based and depends on your previous academic qualifications.",
+    },
+    {
+      question: "How are the online classes conducted?",
+      answer:
+        "Amity Online conducts classes through its Learning Management System (LMS) with live interactive sessions, recorded lectures, digital study materials, and continuous assessments.",
+    },
+    {
+      question: "Are Amity Online degrees UGC approved?",
+      answer:
+        "Yes, Amity University Online is recognized by UGC and approved by AICTE. The online degrees are equivalent to regular degrees as per UGC guidelines.",
+    },
+
   {
     question: "What courses does Amity University Online offer?",
     answer: `Amity University Online offers a wide range of courses including undergraduate, postgraduate, diploma, and certification programs. These courses span disciplines like Management, IT & Computer Science, Engineering, Education, Media & Communication, and more. The courses are designed for working professionals, students, and anyone looking to advance their career through flexible online learning.`
@@ -221,6 +248,7 @@ const faqData = [
     question: "Does Amity University Online provide placement assistance?",
     answer: `Yes, Amity University Online provides dedicated placement support. Students get access to virtual career fairs, internships, resume-building workshops, and mock interviews. Industry tie-ups help students secure jobs in reputed companies across sectors such as IT, Finance, Marketing, Data Analytics, and Management. Faculty mentors guide students in career planning and skill development. Alumni networks and job portals provide additional opportunities for placement, ensuring graduates are well-prepared to enter the professional world with confidence.`
   },
+
   {
     question: "Are online degrees from Amity University globally recognized?",
     answer: `Absolutely. Amity University Online degrees follow international standards and are recognized worldwide. Graduates can pursue higher education abroad, apply for global jobs, or participate in research opportunities. Programs are structured to meet global industry demands, integrating practical projects, case studies, and international perspectives. This global recognition ensures that students’ qualifications are valuable for career progression, cross-border employment, and academic growth.`
@@ -547,6 +575,251 @@ const fadeIn = {
         </div>
       </section>
 
+
+
+       <section className="bg-gray-50 py-12 px-6 md:px-20">
+      <div className="max-w-5xl mx-auto text-gray-800 leading-relaxed">
+        {/* Main Title */}
+        <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-2 md:mb-3">
+          About Amity University
+        </h2>
+
+        {/* Overview */}
+        <p className="text-black-700 mb-8">
+          Amity University is a leading Indian private university accredited by
+          NAAC (Grade A) and recognized by the UGC, offering over 300 programs
+          across 29 campuses in India and internationally. Its key offerings
+          include advanced infrastructure with digital libraries, interactive
+          classrooms, hi-tech labs, a strong focus on industry-aligned
+          education, and extensive leadership and professional development
+          programs. Amity fosters student success through opportunities for
+          innovation and research, encouraging them to become globally
+          competitive and socially responsible professionals.
+        </p>
+
+        {/* Accreditation & Recognitions */}
+        <h3 className="text-2xl font-semibold mt-10 mb-4">
+          Accreditation & Recognitions
+        </h3>
+        <ul className="list-disc ml-6 space-y-2">
+          <li>
+            <strong>NAAC A+ Grade:</strong> The university holds the highest
+            Grade A rating from the National Assessment and Accreditation
+            Council (NAAC).
+          </li>
+          <li>
+            <strong>UGC Recognized:</strong> Amity University is
+            government-recognized and approved by the University Grants
+            Commission (UGC).
+          </li>
+          <li>
+            <strong>Global Accreditations:</strong> Accredited by international
+            organizations like ACBSP (USA) for management degrees.
+          </li>
+          <li>
+            <strong>QS & THE Rankings:</strong> Ranked among the top 3%
+            universities globally by QS and Times Higher Education (THE).
+          </li>
+        </ul>
+
+        {/* Courses & Programs */}
+        <h3 className="text-2xl font-semibold mt-10 mb-4">
+          Courses & Programs
+        </h3>
+        <ul className="list-disc ml-6 space-y-2">
+          <li>
+            Offers over 300 undergraduate and postgraduate programs across
+            various disciplines.
+          </li>
+          <li>
+            Programs available at school, bachelor's, master's, and doctoral
+            levels.
+          </li>
+          <li>
+            Provides comprehensive online education through{" "}
+            <strong>Amity Online</strong>, offering flexible and rewarding
+            learning experiences.
+          </li>
+        </ul>
+
+        {/* Learning Experience */}
+        <h3 className="text-2xl font-semibold mt-10 mb-4">
+          Learning Experience
+        </h3>
+        <ul className="list-disc ml-6 space-y-2">
+          <li>
+            <strong>Industry-Oriented Teaching:</strong> Curriculum designed in
+            collaboration with industry experts to create market-ready
+            professionals.
+          </li>
+          <li>
+            <strong>Innovation & Research:</strong> Students are encouraged to
+            participate in research and innovation initiatives.
+          </li>
+          <li>
+            <strong>Leadership & Personal Development:</strong> Programs to
+            enhance communication, teamwork, and decision-making abilities.
+          </li>
+          <li>
+            <strong>Value-Added Courses:</strong> Includes foreign language and
+            professional training modules.
+          </li>
+        </ul>
+
+        {/* Facilities */}
+        <h3 className="text-2xl font-semibold mt-10 mb-4">Facilities</h3>
+        <ul className="list-disc ml-6 space-y-2">
+          <li>
+            <strong>Modern Infrastructure:</strong> Equipped with advanced
+            facilities for effective learning.
+          </li>
+          <li>
+            <strong>Digital Classrooms & Libraries:</strong> Interactive virtual
+            classrooms, high-speed internet, and extensive e-libraries.
+          </li>
+          <li>
+            <strong>Hi-Tech Labs:</strong> Advanced labs for practical,
+            hands-on education.
+          </li>
+          <li>
+            <strong>Amphitheatre-Style Classrooms:</strong> Air-conditioned
+            learning spaces for a comfortable academic environment.
+          </li>
+        </ul>
+
+        {/* Achievements */}
+        <h3 className="text-2xl font-semibold mt-10 mb-4">Achievements</h3>
+        <ul className="list-disc ml-6 space-y-2">
+          <li>
+            <strong>Student Success:</strong> Amity students excel in national
+            exams like UPSC and GATE and have earned global recognition.
+          </li>
+          <li>
+            <strong>Entrepreneurship:</strong> Alumni have founded successful
+            startups, including Forbes 30 Under 30 awardees.
+          </li>
+          <li>
+            <strong>Global Impact:</strong> Students have gained opportunities
+            at top global organizations such as NASA’s Jet Propulsion
+            Laboratory.
+          </li>
+        </ul>
+
+        <section className="bg-white py-16 px-6 md:px-20">
+  <div className="max-w-7xl mx-auto text-gray-800">
+    <h2 className="text-3xl font-bold text-center mb-10">
+      🎓 Amity University – Online Courses Overview
+    </h2>
+
+    {/* Undergraduate Courses */}
+    <h3 className="text-2xl font-semibold mb-4 border-b-2 border-yellow-400 pb-2">
+      Undergraduate (UG) Courses
+    </h3>
+    <div className="overflow-x-auto mb-12">
+      <table className="min-w-full border border-gray-300">
+        <thead className="bg-yellow-100 text-gray-900">
+          <tr>
+            <th className="border border-gray-300 px-4 py-2 text-left">Course</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Duration</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Eligibility</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Fees</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Specializations</th>
+          </tr>
+        </thead>
+        <tbody>
+          {ugCourses.map((course, index) => (
+            <tr
+              key={index}
+              className="hover:bg-yellow-50 transition duration-200 ease-in-out"
+            >
+              <td className="border border-gray-300 px-4 py-3 font-semibold">
+                {course.course}
+              </td>
+              <td className="border border-gray-300 px-4 py-3">{course.duration}</td>
+              <td className="border border-gray-300 px-4 py-3">{course.eligibility}</td>
+              <td className="border border-gray-300 px-4 py-3">{course.fees}</td>
+              <td className="border border-gray-300 px-4 py-3">{course.specialization}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    {/* Postgraduate Courses */}
+    <h3 className="text-2xl font-semibold mb-4 border-b-2 border-yellow-400 pb-2">
+      Postgraduate (PG) Courses
+    </h3>
+    <div className="overflow-x-auto mb-12">
+      <table className="min-w-full border border-gray-300">
+        <thead className="bg-yellow-100 text-gray-900">
+          <tr>
+            <th className="border border-gray-300 px-4 py-2 text-left">Course</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Duration</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Eligibility</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Fees</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Specializations</th>
+          </tr>
+        </thead>
+        <tbody>
+          {pgCourses.map((course, index) => (
+            <tr
+              key={index}
+              className="hover:bg-yellow-50 transition duration-200 ease-in-out"
+            >
+              <td className="border border-gray-300 px-4 py-3 font-semibold">
+                {course.course}
+              </td>
+              <td className="border border-gray-300 px-4 py-3">{course.duration}</td>
+              <td className="border border-gray-300 px-4 py-3">{course.eligibility}</td>
+              <td className="border border-gray-300 px-4 py-3">{course.fees}</td>
+              <td className="border border-gray-300 px-4 py-3">{course.specialization}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    {/* Integrated Courses */}
+    <h3 className="text-2xl font-semibold mb-4 border-b-2 border-yellow-400 pb-2">
+      Integrated (UG + PG) Courses
+    </h3>
+    <div className="overflow-x-auto">
+      <table className="min-w-full border border-gray-300">
+        <thead className="bg-yellow-100 text-gray-900">
+          <tr>
+            <th className="border border-gray-300 px-4 py-2 text-left">Course</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Duration</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Eligibility</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Fees</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Specializations</th>
+          </tr>
+        </thead>
+        <tbody>
+          {ug_pgCourses.map((course, index) => (
+            <tr
+              key={index}
+              className="hover:bg-yellow-50 transition duration-200 ease-in-out"
+            >
+              <td className="border border-gray-300 px-4 py-3 font-semibold">
+                {course.course}
+              </td>
+              <td className="border border-gray-300 px-4 py-3">{course.duration}</td>
+              <td className="border border-gray-300 px-4 py-3">{course.eligibility}</td>
+              <td className="border border-gray-300 px-4 py-3">{course.fees}</td>
+              <td className="border border-gray-300 px-4 py-3">{course.specialization}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+       
+      </div>
+    </section>
+
+
       {/* Courses Section with Tabs */}
     <section className="py-12 md:py-16 bg-white px-4 md:px-6 font-[Inter] relative">
   {/* Background Pattern */}
@@ -768,10 +1041,10 @@ const fadeIn = {
               >
                 <Card className="h-full hover:shadow-lg transition-all duration-300 border-0 shadow-sm">
                   <CardContent className="p-4 md:p-6 text-center">
-                    <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
+                    <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mx-auto mb-1 md:mb-1">
                       <feature.icon className="w-6 h-6 md:w-8 md:h-8 text-blue-600" />
                     </div>
-                    <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-2 md:mb-3">
+                    <h3 className="text-base md:text-lg font-semibold text-gray-900  md:mb-1">
                       {feature.title}
                     </h3>
                     <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
@@ -787,15 +1060,13 @@ const fadeIn = {
        <section className="py-16 bg-white px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-1"
             {...fadeIn}
           >
-            {/* <h2 className="text-3xl font-bold text-gray-900 mb-4 font-[Poppins]">Why Choose Amity Online University?</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">Experience the perfect blend of academic excellence and digital innovation</p> */}
           </motion.div>
           
           <motion.div 
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
             variants={staggerChildren}
             initial="initial"
             whileInView="whileInView"
