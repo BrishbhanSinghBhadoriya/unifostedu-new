@@ -124,7 +124,7 @@ const Landing = () => {
     const n = name.toLowerCase();
     if (n.includes("amity")) return "/Amity-University-Online";
     if (n.includes("manipal")) return "/manipal";
-    if (n.includes("lovely professional") || n.includes("lpu")) return "/lpu";
+    if (n.includes("lovely professional") || n.includes("lpu")) return "/lpu-online";
     if (n.includes("petroleum") || n.includes("upes")) return "/upes";
     if (n.includes("narsee monjee") || n.includes("nmims")) return "/nmims";
     if (n.includes("sharda")) return "/sharda";

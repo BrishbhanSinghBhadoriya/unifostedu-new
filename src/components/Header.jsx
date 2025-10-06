@@ -1,5 +1,5 @@
 'use client';
-
+import { usePathname } from "next/navigation"; 
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
 import { FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
@@ -16,10 +16,6 @@ import BlogsDropdown from '@/components/BlogsDropdown';
 import Image from 'next/image';
 import searchIndex from '@/data/searchIndex.json';
 import courseData from '@/data/courseData.json';
-// import { usePathname } from "next/navigation";
-
-
-
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(null);
@@ -40,7 +36,7 @@ const [modalType, setModalType] = useState();
     { name: "Amity University Online", link: "/Amity-University-Online", logo: "/images/amity.webp" },
     { name: "Lovely Professional University", link: "/lpu-online", logo: "/images/lpu.webp" },
     { name: "Online Manipal University", link: "/manipal", logo: "/images/manipal.webp" },
-    { name: "Manipal Academy of Higher Education", link: "/mahe", logo: "/images/mahe-uni.webp" },
+    { name: "Manipal Academy of Higher Education", link: "/mahe-online", logo: "/images/mahe-uni.webp" },
      { name: "Sikkim Manipal University", link: "/smu", logo: "/images/smu-uni.webp" },
     { name: "Uttaranchal University", link: "/uu", logo: "/images/uu-uni.webp" },
     { name: "Chandigarh University Online", link: "/cuonline", logo: "/images/chandigarh.webp" },
@@ -173,7 +169,7 @@ const [modalType, setModalType] = useState();
         <div className="flex items-center justify-between w-full gap-3 sm:gap-4 lg:gap-6 flex-nowrap">
           {/* Logo - Made smaller to fit everything in one line */}
           <Link href="/" className="flex-shrink-0 group">
-            <div className="relative">
+           <div className="relative">
               <div className={`w-24 h-10 sm:w-28 sm:h-12 rounded-2xl p-1 transition-all duration-500 ${
                 scrolled 
                   ? 'bg-gradient-to-r from-[#001e3c] to-[#003b6c] shadow-lg' 

@@ -39,7 +39,7 @@ export const metadata = {
     type: "website",
   },
   alternates: {
-    canonical: "https://unifostedu.com/mahe",
+    canonical: "https://unifostedu.com/mahe-online",
   },
   twitter: {
     card: "summary_large_image",

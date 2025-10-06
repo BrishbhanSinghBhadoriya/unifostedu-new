@@ -340,7 +340,7 @@ const Manipal = () => {
 
           {/* Main Heading */}
           <div className="space-y-3 sm:space-y-4">
-            <h1 className="font-queens text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+            <h2 className="font-queens text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
               <span className="block text-white">Transform Your</span>
               <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
                 Future with
@@ -349,7 +349,7 @@ const Manipal = () => {
               <span className="block text-orange-400 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-normal mt-1 sm:mt-2">
                 Jaipur (MUJ)
               </span>
-            </h1>
+            </h2>
             
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl">
               Globally recognized online degrees with flexible learning, expert mentorship, and career-focused programs.
