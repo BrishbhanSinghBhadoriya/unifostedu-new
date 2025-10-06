@@ -1044,7 +1044,7 @@ const fadeIn = {
                     <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mx-auto mb-1 md:mb-1">
                       <feature.icon className="w-6 h-6 md:w-8 md:h-8 text-blue-600" />
                     </div>
-                    <h3 className="text-base md:text-lg font-semibold text-gray-900  md:mb-3">
+                    <h3 className="text-base md:text-lg font-semibold text-gray-900  md:mb-1">
                       {feature.title}
                     </h3>
                     <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
