@@ -286,7 +286,7 @@ const LpuOnline = () => {
         </header>
 
         {/* Premium Hero Section */}
-       <section className="relative w-full h-[500px] md:h-[500px] lg:h-[600px] mt-[0px] mb-[10px]">
+       <section id="hero" className="relative w-full h-[500px] md:h-[500px] lg:h-[600px] mt-[0px] mb-[10px]">
   {/* Background Image */}
   <Image
     src="/images/lpu3.webp"
@@ -480,7 +480,7 @@ const LpuOnline = () => {
         </section>
 
         {/* Why Choose Lovely Professional University */}
-        <section className="relative py-20 bg-[#0B0B10] text-white overflow-hidden">
+        <section id="About" className="relative py-20 bg-[#0B0B10] text-white overflow-hidden">
           {/* Subtle grid pattern */}
           <div className="pointer-events-none absolute inset-0 opacity-[0.08]" style={{backgroundImage:"linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)", backgroundSize:"40px 40px"}} />
 
@@ -648,7 +648,7 @@ const LpuOnline = () => {
         </section>
 
         {/* Lpu Advantage */}
-        <section className="relative py-20 bg-gradient-to-br from-orange-50 via-white to-blue-50">
+        <section id="Scholarship" className="relative py-20 bg-gradient-to-br from-orange-50 via-white to-blue-50">
           <div className="pointer-events-none absolute inset-0" style={{background:"radial-gradient(1200px 300px at 10% -10%, rgba(228,0,43,.09), transparent), radial-gradient(1200px 300px at 90% 110%, rgba(59,130,246,.08), transparent)"}} />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
@@ -1079,7 +1079,7 @@ const LpuOnline = () => {
               <div>
                 <h4 className="text-white font-bold text-lg mb-6">Programs</h4>
                 <ul className="space-y-3">
-                  {['Online MBA', 'BBA', 'MCA', 'BCA', 'M.Com', 'B.Com', 'BA'].map((program, i) => (
+                  {['BBA Finance-LPU Online','BBA Marketing-LPU Online','BBA Human Resources-LPU Online','BCA Data Science-LPU Online', 'BCA Cyber Security-LPU Online','B.Com Accounting & Finance-LPU Online','MBA HR-LPU Online', 'MBA Data Science-LPU Online', 'MCA Full Stack-LPU Online', 'M.Com Accounting-LPU Online'].map((program, i) => (
                     <li key={i}>
                       <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">
                         {program}
@@ -1089,19 +1089,24 @@ const LpuOnline = () => {
                 </ul>
               </div>
 
-              {/* Support */}
-              <div>
-                <h4 className="text-white font-bold text-lg mb-6">Support</h4>
-                <ul className="space-y-3">
-                  {['Admissions', 'Scholarships', 'Placements', 'FAQs', 'Contact Us'].map((item, i) => (
-                    <li key={i}>
-                      <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">
-                        {item}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {/* Support */}   
+                 <div>
+              <h4 className="font-semibold mb-3 md:mb-4 text-base md:text-lg">Quick Links</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="#Courses" className="hover:text-white transition-colors">Programs</a></li>
+                <li><a href="#Admission" className="hover:text-white transition-colors">Admissions</a></li>
+                <li><a href="#Scholarship" className="hover:text-white transition-colors">Scholarships</a></li>
+                <li><a href="#Partners" className="hover:text-white transition-colors">Career Services</a></li>
+                <li><a href="#About" className="hover:text-white transition-colors">About Us</a></li>
+                <li><a href="#HeroSection" className="hover:text-white transition-colors">Home</a></li>
+                <li><a href="#Faq" className="hover:text-white transition-colors">FAQs</a></li>
+                <li><a href="#Partners" className="hover:text-white transition-colors">Partners</a></li>
+                {/* <li><a href="/services" className="hover:text-white transition-colors">services</a></li>
+                <li><a href="/listofcollege" className="hover:text-white transition-colors">Explore Colleges</a></li>
+               */}
+              </ul>
+            </div>
+
 
               {/* Contact CTA */}
               <div>
