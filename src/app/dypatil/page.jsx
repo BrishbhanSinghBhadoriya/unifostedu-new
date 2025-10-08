@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 // import { useNavigate } from 'react-router-dom';
 // import { Helmet } from 'react-helmet';
 import EnquireCard from '@/components/EnquireCard';
@@ -64,6 +64,20 @@ const Dypatil = () => {
       alt: "Master of Business Administration (MBA) in Dy Patil ",
     },
   ];
+
+
+   useEffect(() => {
+         
+   
+         const timer= setTimeout(()=>{
+          setOpenModal(true)
+         },3000)
+         return () => clearTimeout(timer);
+   
+          
+   },[])
+   
+
 
   const faqData = [
     {

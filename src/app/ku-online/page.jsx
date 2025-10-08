@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import EnquireCard from '@/components/EnquireCard';
 import {
   FaBookOpen,
@@ -171,7 +171,18 @@ const KU = () => {
       ]
     }
   ];
-
+   
+  useEffect(() => {
+        
+  
+        const timer= setTimeout(()=>{
+         setOpenModal(true)
+        },3000)
+        return () => clearTimeout(timer);
+  
+         
+  },[])
+  
   const faqs = [
     {
       question: "What is Kurukshetra University Online?",

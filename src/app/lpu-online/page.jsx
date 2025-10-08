@@ -101,6 +101,7 @@ const LpuOnline = () => {
     },
   ];
     
+  
 
  const faqData = [
   {
@@ -202,6 +203,17 @@ const LpuOnline = () => {
   const [modalType, setModalType] = useState('getStarted');
   const [openModal, setOpenModal] = useState(null);
   const [activeTab, setActiveTab] = useState('all');
+  useEffect(() => {
+      
+
+    const timer= setTimeout(()=>{
+     setOpenModal(true)
+    },3000)
+    return () => clearTimeout(timer);
+
+     
+},[])
+
 
 
   

@@ -429,19 +429,21 @@ export default function RootLayout({ children }) {
           `}
         </Script>
       </head>
-      <body className={`${inter.className} ${baskervville.variable}`}>
-        <Canonical />
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <ChatbotWidget />
-        <SonnerToaster
-          position="top-center"
-          richColors
-          expand={false}
-          duration={3500}
-        />
-      </body>
+      <body
+  className={`${inter.className} ${baskervville.variable} overflow-x-hidden`}
+>
+  <Canonical />
+  <Header />
+  <main>{children}</main>
+  <Footer />
+  <ChatbotWidget />
+  <SonnerToaster
+    position="top-center"
+    richColors
+    expand={false}
+    duration={3500}
+  />
+</body>
     </html>
   );
 }

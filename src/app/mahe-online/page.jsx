@@ -100,6 +100,18 @@ const Manipal = () => {
     },
   ];
     
+    
+  useEffect(() => {
+        
+  
+        const timer= setTimeout(()=>{
+         setOpenModal(true)
+        },3000)
+        return () => clearTimeout(timer);
+  
+         
+  },[])
+  
 
  const faqData = [
   {
@@ -243,7 +255,7 @@ const Manipal = () => {
       
       <div className="queens">
         {/* Professional Responsive Header */}
-        <header className="w-full bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 sticky top-0 z-50">
+        <header className="w-full bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 sticky top-0 z-50 overflow-x-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16 lg:h-20">
               {/* Left Logo */}

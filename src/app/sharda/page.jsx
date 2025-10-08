@@ -88,6 +88,19 @@ const UniversityPage = () => {
       alt: "Master of Computer Applications (MCA)",
     },
   ];
+
+   useEffect(() => {
+         
+   
+         const timer= setTimeout(()=>{
+          setOpenModal(true)
+         },3000)
+         return () => clearTimeout(timer);
+   
+          
+   },[])
+   
+
 const faqData = [
   {
     question: "Is Sharda University Online approved by UGC?",

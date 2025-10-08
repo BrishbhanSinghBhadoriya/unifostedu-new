@@ -141,12 +141,13 @@ const [modalType, setModalType] = useState();
       "/lpu-online/",
       "/manipal/",
       "/cuonline/",
+      "/mahe-online/",
       "/ku-online/",
       "/bookdemo/",
       "/smu/",
       "/jain/",
       "/dypatil/",
-      "/mahe-online/"
+      "/sharda/",
       
     ];
     setShowHeader(!hideHeaderRoutes.includes(path));
@@ -391,7 +392,7 @@ const [modalType, setModalType] = useState();
                     { label: 'Courses', path: '/coursesearch', icon: FaGraduationCap },
                     { label: 'Universities', path: '/listofcollege', icon: FaUniversity },
                     { label: 'Services', path: '/services', icon: FaCog },
-                    { label: 'Blog', path: '/blog', icon: FaBookOpen }
+                  //  { label: 'Blog', path: '/blog', icon: FaBookOpen }
                   ].map((link, i) => (
                     <Link key={i} href={link.path} onClick={() => setMobileMenuOpen(false)}
                           className="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition text-white border border-white/10">
@@ -423,7 +424,7 @@ const [modalType, setModalType] = useState();
 
                 {/* Blog Posts */}
                 <div className="space-y-3">
-                  <h3 className="text-[#00ffe0] font-bold text-sm uppercase tracking-wider px-2">Latest Blogs</h3>
+
                   <div className="space-y-2">
                     {latestBlogs.slice(0, 3).map((blog, idx) => (
                       <Link key={idx} href={`/blog/${blog.slug || (blog._id || blog.id)}`} onClick={() => setMobileMenuOpen(false)}
@@ -435,11 +436,7 @@ const [modalType, setModalType] = useState();
                         <FaArrowRight className="text-[#00ffe0] text-xs" />
                       </Link>
                     ))}
-                    <Link href="/blog" onClick={() => setMobileMenuOpen(false)}
-                          className="flex items-center justify-center gap-2 p-3 rounded-xl bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] font-bold hover:scale-105 transition">
-                      <span>View All Blogs</span>
-                      <FaArrowRight />
-                    </Link>
+                    
                   </div>
                 </div>
               </div>

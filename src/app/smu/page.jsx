@@ -89,6 +89,18 @@ const SMU = () => {
   ];
     
 
+   useEffect(() => {
+         
+   
+         const timer= setTimeout(()=>{
+          setOpenModal(true)
+         },3000)
+         return () => clearTimeout(timer);
+   
+          
+   },[])
+   
+
  const faqData = [
   {
     question: "Is Sikkim Manipal University recognized by UGC?",

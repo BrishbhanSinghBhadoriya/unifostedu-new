@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Image from "next/image";
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -134,6 +134,8 @@ export default function ChandigarhPage() {
     },
   ];
 
+
+
   const courses = activeCategory === "PG" ? pgCourses : ugCourses;
   const itemsPerSlide = 3;
 
@@ -217,7 +219,19 @@ export default function ChandigarhPage() {
       ]
     }
   ];
+  
 
+   useEffect(() => {
+         
+   
+         const timer= setTimeout(()=>{
+          setOpenModal(true)
+         },3000)
+         return () => clearTimeout(timer);
+   
+          
+   },[])
+   
   const faqs = [
   {
     question: "What is Chandigarh University Online?",
