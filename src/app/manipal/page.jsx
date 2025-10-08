@@ -99,7 +99,14 @@ const Manipal = () => {
     },
   ];
     
-
+const [showStickyCTA, setShowStickyCTA] = useState(false);
+useEffect(() => {
+    const handleScroll = () => {
+      setShowStickyCTA(window.scrollY > 800);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
  const faqData = [
   {
     question: "Is Manipal University Jaipur recognized by UGC and NAAC?",
@@ -209,7 +216,9 @@ const Manipal = () => {
   const [modalType, setModalType] = useState('getStarted');
   const [openModal, setOpenModal] = useState(null);
   const [activeTab, setActiveTab] = useState('all');
+  
 
+  
 
   
 
@@ -242,6 +251,71 @@ const Manipal = () => {
         <meta name="twitter:image" content="/images/manipal.webp" />
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+        {/* Organization Schema */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Manipal University Jaipur Online",
+      "alternateName": "Online Manipal",
+      "url": "https://unifostedu.com/manipal",
+      "logo": "https://unifostedu.com/images/manipallogo.jpg",
+      "description": "UGC-entitled online degrees from NAAC A+ accredited Manipal University Jaipur",
+      "telephone": "+91-7042867717",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Jaipur",
+        "addressRegion": "Rajasthan",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://www.facebook.com/manipalonline",
+        "https://www.linkedin.com/school/manipal-university-jaipur"
+      ]
+    })}
+  </script>
+
+  {/* FAQ Schema */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqData.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    })}
+  </script>
+
+  {/* Course Schema */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Online MBA from Manipal University Jaipur",
+      "description": "UGC-approved online MBA with 21+ specializations",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Manipal University Jaipur",
+        "sameAs": "https://unifostedu.com/manipal"
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "online",
+        "duration": "P2Y",
+        "courseFee": {
+          "@type": "PriceSpecification",
+          "price": "175000",
+          "priceCurrency": "INR"
+        }
+      }
+    })}
+  </script>
       </Head>
       <style jsx>{`
         .queens { font-family: 'Queens', serif; }
@@ -251,7 +325,7 @@ const Manipal = () => {
          
       
       {/* Professional Responsive Header */}
-      <header className="w-full bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 sticky top-0 z-50">
+      <header className="w-full fixed top-0 left-0 bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Left Logo */}
@@ -751,6 +825,273 @@ const Manipal = () => {
         </div>
       </section>
 
+      {/* About Manipal Section  */}
+<section className="py-16 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 className="text-4xl font-bold mb-6">
+          About <span className="text-orange-600">Manipal University Jaipur</span>
+        </h2>
+        <div className="prose prose-lg text-gray-700 space-y-4">
+          <p>
+            Manipal University Jaipur (MUJ) is a premier institution offering globally recognized online degrees through Online Manipal. 
+            Established in 2011, MUJ has quickly become one of India's leading universities with NAAC A+ accreditation and UGC approval.
+          </p>
+          <p>
+            With over 100,000+ learners worldwide, Manipal Online delivers industry-relevant education through flexible learning models. 
+            Our online programs in MBA, BBA, MCA, BCA, M.Com, B.Com, and MA are designed for working professionals who want to upskill 
+            without career breaks.
+          </p>
+          <p>
+            Manipal University Jaipur's online degrees are WES-accredited and accepted globally for employment and higher education. 
+            Students benefit from live classes, recorded sessions, expert faculty, placement assistance, and membership in the 
+            200,000+ strong Manipal alumni network spanning 50+ countries.
+          </p>
+        </div>
+      </div>
+      <div>
+        <img src="/images/manipal.webp" alt="Manipal University Jaipur Campus" className="rounded-2xl shadow-2xl" />
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Program Benefits Section */}
+<section className="py-16 bg-gradient-to-br from-orange-50 to-blue-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-4xl font-bold text-center mb-12">
+      Why Choose <span className="text-orange-600">Online Manipal University Programs?</span>
+    </h2>
+    
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="bg-white rounded-xl p-6 shadow-lg">
+        <h3 className="text-xl font-bold mb-3 text-gray-900">UGC-Entitled Online Degrees</h3>
+        <p className="text-gray-600">
+          All Manipal University Jaipur online programs are UGC-DEB approved and equivalent to regular degrees. 
+          Valid for government jobs, competitive exams like UPSC, SSC, and higher education in India and abroad.
+        </p>
+      </div>
+      
+      <div className="bg-white rounded-xl p-6 shadow-lg">
+        <h3 className="text-xl font-bold mb-3 text-gray-900">Flexible Learning Model</h3>
+        <p className="text-gray-600">
+          Study anytime, anywhere with Manipal Online's hybrid learning approach. Access live interactive classes, 
+          recorded lectures, digital study materials, and LMS platform 24/7 from desktop or mobile devices.
+        </p>
+      </div>
+      
+      <div className="bg-white rounded-xl p-6 shadow-lg">
+        <h3 className="text-xl font-bold mb-3 text-gray-900">Industry-Relevant Curriculum</h3>
+        <p className="text-gray-600">
+          MUJ online courses feature updated curriculum aligned with industry demands. Learn practical skills in 
+          emerging areas like Data Science, AI, Digital Marketing, Cloud Computing, and Business Analytics.
+        </p>
+      </div>
+      
+      <div className="bg-white rounded-xl p-6 shadow-lg">
+        <h3 className="text-xl font-bold mb-3 text-gray-900">Expert Faculty & Mentorship</h3>
+        <p className="text-gray-600">
+          Learn from experienced professors and industry experts at Manipal University Jaipur. Benefit from 
+          personalized mentorship, doubt-clearing sessions, and career guidance throughout your program.
+        </p>
+      </div>
+      
+      <div className="bg-white rounded-xl p-6 shadow-lg">
+        <h3 className="text-xl font-bold mb-3 text-gray-900">100% Placement Assistance</h3>
+        <p className="text-gray-600">
+          Get dedicated placement support from Manipal Online's career services team. Access job opportunities, 
+          resume building workshops, interview preparation, and connections with 2000+ hiring partners.
+        </p>
+      </div>
+      
+      <div className="bg-white rounded-xl p-6 shadow-lg">
+        <h3 className="text-xl font-bold mb-3 text-gray-900">Global Alumni Network</h3>
+        <p className="text-gray-600">
+          Join the prestigious Manipal alumni community of 200,000+ graduates across 50+ countries. Leverage 
+          networking opportunities, mentorship programs, and alumni chapters worldwide for career growth.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Eligibility & Admission Section */}
+<section id='Admission' className="py-16 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-4xl font-bold text-center mb-12">
+      Eligibility & <span className="text-orange-600">Admission Process</span>
+    </h2>
+    
+    <div className="grid lg:grid-cols-2 gap-12">
+      <div>
+        <h3 className="text-2xl font-bold mb-6">Eligibility Criteria for MUJ Online Programs</h3>
+        
+        <div className="space-y-6">
+          <div className="border-l-4 border-orange-500 pl-4">
+            <h4 className="font-bold text-lg mb-2">Undergraduate Programs (BBA, BCA, B.Com)</h4>
+            <ul className="list-disc list-inside text-gray-700 space-y-1">
+              <li>10+2 or equivalent from recognized board</li>
+              <li>Minimum 40% aggregate marks</li>
+              <li>Age: No upper age limit</li>
+              <li>Open for all streams (Science, Commerce, Arts)</li>
+            </ul>
+          </div>
+          
+          <div className="border-l-4 border-blue-500 pl-4">
+            <h4 className="font-bold text-lg mb-2">Postgraduate Programs (MBA, MCA, M.Com, MA)</h4>
+            <ul className="list-disc list-inside text-gray-700 space-y-1">
+              <li>Bachelor's degree from UGC-recognized university</li>
+              <li>Minimum 50% aggregate marks (45% for reserved categories)</li>
+              <li>MCA requires Mathematics/Statistics in 10+2 or graduation</li>
+              <li>Working professionals and fresh graduates both eligible</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <h3 className="text-2xl font-bold mb-6">Simple Admission Process</h3>
+        
+        <div className="space-y-4">
+          <div className="flex gap-4 items-start">
+            <div className="flex-shrink-0 w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">1</div>
+            <div>
+              <h4 className="font-bold mb-1">Fill Application Form</h4>
+              <p className="text-gray-600">Complete online application with basic details and program preference</p>
+            </div>
+          </div>
+          
+          <div className="flex gap-4 items-start">
+            <div className="flex-shrink-0 w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">2</div>
+            <div>
+              <h4 className="font-bold mb-1">Document Verification</h4>
+              <p className="text-gray-600">Upload educational certificates, ID proof, and photographs for verification</p>
+            </div>
+          </div>
+          
+          <div className="flex gap-4 items-start">
+            <div className="flex-shrink-0 w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">3</div>
+            <div>
+              <h4 className="font-bold mb-1">Fee Payment</h4>
+              <p className="text-gray-600">Pay admission fee online with flexible EMI options available</p>
+            </div>
+          </div>
+          
+          <div className="flex gap-4 items-start">
+            <div className="flex-shrink-0 w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">4</div>
+            <div>
+              <h4 className="font-bold mb-1">Enrollment Confirmation</h4>
+              <p className="text-gray-600">Receive admission confirmation and access to LMS portal within 48 hours</p>
+            </div>
+          </div>
+        </div>
+        
+        <button 
+          onClick={() => setOpenModal({ type: 'apply' })}
+          className="mt-6 w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold py-4 rounded-xl hover:shadow-lg transition-all"
+        >
+          Start Your Application Now
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Fee Structure Section */}
+<section id='Fees' className="py-16 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-4xl font-bold text-center mb-4">
+      Affordable <span className="text-orange-600">Fee Structure</span>
+    </h2>
+    <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+      Manipal University Jaipur offers competitive fee structure with flexible payment options and no-cost EMI 
+      facilities. Scholarships available up to 30% for eligible students.
+    </p>
+    
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Add fee cards for each program */}
+      <div className="bg-white rounded-xl p-6 shadow-lg border-t-4 border-orange-500">
+        <h3 className="text-xl font-bold mb-2">BBA Online</h3>
+        <div className="text-3xl font-bold text-orange-600 mb-4">₹1,35,000</div>
+        <ul className="text-gray-600 space-y-2 text-sm">
+          <li>✓ Total program fee for 3 years</li>
+          <li>✓ No-cost EMI starting ₹3,750/month</li>
+          <li>✓ All study materials included</li>
+          <li>✓ Exam fee included</li>
+        </ul>
+      </div>
+      
+      <div className="bg-white rounded-xl p-6 shadow-lg border-t-4 border-orange-500">
+        <h3 className="text-xl font-bold mb-2">BCA Online</h3>
+        <div className="text-3xl font-bold text-orange-600 mb-4">₹1,35,000</div>
+        <ul className="text-gray-600 space-y-2 text-sm">
+          <li>✓ Total program fee for 3 years</li>
+          <li>✓ No-cost EMI starting ₹3,750/month</li>
+          <li>✓ All study materials included</li>
+          <li>✓ Exam fee included</li>
+        </ul>
+      </div>
+
+      <div className="bg-white rounded-xl p-6 shadow-lg border-t-4 border-orange-500">
+        <h3 className="text-xl font-bold mb-2">B.Com Online</h3>
+        <div className="text-3xl font-bold text-orange-600 mb-4">₹99,000</div>
+        <ul className="text-gray-600 space-y-2 text-sm">
+          <li>✓ Total program fee for 3 years</li>
+          <li>✓ No-cost EMI starting ₹/month</li>
+          <li>✓ All study materials included</li>
+          <li>✓ Exam fee included</li>
+        </ul>
+      </div>
+
+      <div className="bg-white rounded-xl p-6 shadow-lg border-t-4 border-orange-500">
+        <h3 className="text-xl font-bold mb-2">MBA Online</h3>
+        <div className="text-3xl font-bold text-orange-600 mb-4">₹1,75,000</div>
+        <ul className="text-gray-600 space-y-2 text-sm">
+          <li>✓ Total program fee for 2 years</li>
+          <li>✓ No-cost EMI starting ₹/month</li>
+          <li>✓ All study materials included</li>
+          <li>✓ Exam fee included</li>
+        </ul>
+      </div>
+
+      <div className="bg-white rounded-xl p-6 shadow-lg border-t-4 border-orange-500">
+        <h3 className="text-xl font-bold mb-2">MCA Online</h3>
+        <div className="text-3xl font-bold text-orange-600 mb-4">₹1,58,000</div>
+        <ul className="text-gray-600 space-y-2 text-sm">
+          <li>✓ Total program fee for 2 years</li>
+          <li>✓ No-cost EMI starting ₹/month</li>
+          <li>✓ All study materials included</li>
+          <li>✓ Exam fee included</li>
+        </ul>
+      </div>
+
+      <div className="bg-white rounded-xl p-6 shadow-lg border-t-4 border-orange-500">
+        <h3 className="text-xl font-bold mb-2">M.Com Online</h3>
+        <div className="text-3xl font-bold text-orange-600 mb-4">₹1,08,000</div>
+        <ul className="text-gray-600 space-y-2 text-sm">
+          <li>✓ Total program fee for 2 years</li>
+          <li>✓ No-cost EMI starting ₹/month</li>
+          <li>✓ All study materials included</li>
+          <li>✓ Exam fee included</li>
+        </ul>
+      </div>
+      
+
+      <div className="bg-white rounded-xl p-6 shadow-lg border-t-4 border-orange-500">
+        <h3 className="text-xl font-bold mb-2">MA Online</h3>
+        <div className="text-3xl font-bold text-orange-600 mb-4">₹80,000-₹1,40,000</div>
+        <ul className="text-gray-600 space-y-2 text-sm">
+          <li>✓ Total program fee for 3 years</li>
+          <li>✓ No-cost EMI starting ₹/month</li>
+          <li>✓ All study materials included</li>
+          <li>✓ Exam fee included</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
    {/* Admission Procedure */}
 
    <AdmissionProcedure />
@@ -776,7 +1117,73 @@ const Manipal = () => {
           </div>
         </div>
       </section>
+      
+       
+    {/*  Add Location-Based Section (for local SEO) */}
+<section className="py-16 bg-gradient-to-br from-blue-50 to-orange-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl font-bold text-center mb-12">
+      Online Manipal Programs <span className="text-orange-600">Available Across India</span>
+    </h2>
+    
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      {[
+        'Delhi NCR', 'Mumbai', 'Bangalore', 'Hyderabad', 
+        'Chennai', 'Kolkata', 'Pune', 'Ahmedabad',
+        'Jaipur', 'Lucknow', 'Chandigarh', 'Indore'
+      ].map(city => (
+        <div key={city} className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all text-center">
+          <div className="text-2xl mb-2">📍</div>
+          <h3 className="font-bold text-sm">{city}</h3>
+          <p className="text-xs text-gray-600">Online Programs</p>
+        </div>
+      ))}
+    </div>
+    
+    <p className="text-center mt-8 text-gray-600 max-w-3xl mx-auto">
+      Manipal University Jaipur's online programs are accessible from anywhere in India. 
+      Students from Delhi, Mumbai, Bangalore, and 2000+ cities trust MUJ for quality online education.
+    </p>
+  </div>
+</section>
 
+
+      {/*  Add Quick Comparison Table */}
+<section id='QuickComparison' className="py-16 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl font-bold text-center mb-12">
+      <span className="text-orange-600">Online vs Regular</span> Degree Comparison
+    </h2>
+    
+    <div className="overflow-x-auto">
+      <table className="w-full border-collapse">
+        <thead>
+          <tr className="bg-orange-500 text-white">
+            <th className="p-4 text-left">Feature</th>
+            <th className="p-4 text-center">Online Manipal</th>
+            <th className="p-4 text-center">Regular Campus</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ['UGC Recognition', '✅ Yes', '✅ Yes'],
+            ['Degree Validity', '✅ Same as Campus', '✅ Valid'],
+            ['Flexibility', '✅ Study Anytime', '❌ Fixed Schedule'],
+            ['Location', '✅ From Anywhere', '❌ Campus Only'],
+            ['Cost', '✅ More Affordable', '❌ Higher Fees'],
+            ['Placement Support', '✅ 100% Assistance', '✅ Available']
+          ].map(([feature, online, regular], i) => (
+            <tr key={i} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+              <td className="p-4 font-semibold">{feature}</td>
+              <td className="p-4 text-center">{online}</td>
+              <td className="p-4 text-center">{regular}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
       {/* Professional Testimonials Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -825,7 +1232,7 @@ const Manipal = () => {
        
 
         {/* Professional FAQ Section */}
-        <section className="py-12 sm:py-16 lg:py-20 bg-white">
+        <section id='Faq' className="py-12 sm:py-16 lg:py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-queens">
@@ -949,10 +1356,13 @@ const Manipal = () => {
             <div>
               <h4 className="text-white font-semibold mb-3">Resources</h4>
               <ul className="space-y-2 text-sm">
-                <li>Admissions</li>
-                <li>Scholarships</li>
-                <li>Placements</li>
-                <li>FAQs</li>
+                 <li><a href="#Admission" className="hover:text-white transition-colors">Admissions</a></li>
+                 <li><a href="#" className="hover:text-white transition-colors">Scholarships</a></li>
+                 <li><a href="#" className="hover:text-white transition-colors">Placements</a></li>
+                 <li><a href="#Faq" className="hover:text-white transition-colors">FAQs</a></li>
+                 <li><a href="#QuickComparison" className="hover:text-white transition-colors">Quick Comparison</a></li>
+                 <li><a href="#Fees" className="hover:text-white transition-colors">Fees Structure</a></li>
+              
               </ul>
             </div>
             <div className="col-span-2 lg:col-span-1">
@@ -962,6 +1372,63 @@ const Manipal = () => {
               <button onClick={() => setOpenModal({ type: 'apply' })} className="mt-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm">Apply Now</button>
             </div>
           </div>
+          {/* Popular Programs & Specializations - MUJ */}
+<div className="border-t border-gray-700 pt-8 mb-8">
+  <h4 className="text-lg font-semibold mb-4 text-white text-center">
+    Popular Programs & Specializations – Manipal University Jaipur (MUJ)
+  </h4>
+
+  <div className="flex flex-wrap justify-center gap-2">
+    {[
+      // UG Courses
+      "BBA General - MUJ Online",
+      "BBA Finance & Accounting - MUJ Online",
+      "BBA Digital Marketing - MUJ Online",
+      "BBA Entrepreneurship & Family Business - MUJ Online",
+      "BBA Human Resource Management - MUJ Online",
+      "BBA Data Analytics - MUJ Online",
+      "BBA Retail & E-commerce Management - MUJ Online",
+
+      "BCA General - MUJ Online",
+      "BCA Data Science & Analytics - MUJ Online",
+      "BCA Cyber Security - MUJ Online",
+      "BCA Cloud Computing - MUJ Online",
+
+      "B.Com General - MUJ Online",
+
+      // PG Courses
+      "MBA General - MUJ Online",
+      "MBA HR & Finance - MUJ Online",
+      "MBA Finance & Marketing - MUJ Online",
+      "MBA Marketing & HR - MUJ Online",
+      "MBA Marketing & Business Analytics - MUJ Online",
+      "MBA Finance & Business Analytics - MUJ Online",
+      "MBA Project Management - MUJ Online",
+      "MBA Retail Management & Quick Commerce - MUJ Online",
+      "MBA Artificial Intelligence in Banking & Finance - MUJ Online",
+
+      "MCA AI & Data Science - MUJ Online",
+      "MCA Cyber Security - MUJ Online",
+      "MCA Cloud Computing - MUJ Online",
+      "MCA Comprehensive Emerging Technologies - MUJ Online",
+      "MCA Artificial Intelligence & Machine Learning - MUJ Online",
+
+      "M.Com General - MUJ Online",
+
+      "MA Economics - MUJ Online",
+      "MA Journalism & Mass Communication - MUJ Online"
+    ].map((keyword, index) => (
+      <span
+        key={index}
+        className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs hover:bg-gray-700 hover:text-white transition-colors cursor-default"
+        title={keyword}
+      >
+        {keyword.length > 25 ? `${keyword.substring(0, 25)}...` : keyword}
+      </span>
+    ))}
+  </div>
+</div>
+
           <div className="py-6 text-center text-xs text-gray-500">© {new Date().getFullYear()} Manipal University Online. All rights reserved.</div>
         </div>
       </footer>
@@ -971,5 +1438,4 @@ const Manipal = () => {
 
 export default Manipal;
 
-// Footer
-// Keeping footer simple here; for reuse move to a shared component later
+
