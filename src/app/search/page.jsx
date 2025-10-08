@@ -85,11 +85,11 @@ function SearchContent({ onOpenModal }) {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            {/* PROPER H1 - Always present and descriptive */}
+            
             <div className="mb-8">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
                 {getH1Content()}
-              </h1>
+              </h2>
             </div>
 
             {/* Subtitle */}
@@ -236,9 +236,9 @@ function SearchContent({ onOpenModal }) {
           {/* Enhanced Popular Universities Section */}
           <div className="mt-24">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Top <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Universities</span>
-              </h2>
+              </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                 Explore India's leading universities offering world-class online education programs
               </p>
@@ -258,16 +258,16 @@ function SearchContent({ onOpenModal }) {
                 { name: 'Dr. D Y Patil University', href: '/dypatil', img: '/images/dypatil.webp', rating: '4.6' },
                 { name: 'Jain University', href: '/jain', img: '/images/jain.webp', rating: '4.5' },
                 { name: 'Lovely Professional University', href: '/lpu', img: '/images/lpu.webp', rating: '4.4' },
-                { name: 'Manipal Academy of Higher Education', href: '/mahe', img: '/images/mahe-uni.webp', rating: '4.8' },
+                { name: 'Manipal Academy of Higher Education', href: '/mahe-online', img: '/images/mahe-uni.webp', rating: '4.8' },
                 { name: 'Sharda University', href: '/sharda', img: '/images/sharda.webp', rating: '4.3' },
                 { name: 'Shoolini University', href: '/shoolini', img: '/images/shoolini.webp', rating: '4.2' },
                 { name: 'Sikkim Manipal University', href: '/smu', img: '/images/smu-uni.webp', rating: '4.5' },
                 { name: 'UPES University', href: '/upes', img: '/images/upes.webp', rating: '4.7' },
                 { name: 'Uttaranchal University', href: '/uu', img: '/images/uu-uni.webp', rating: '4.1' },
                 { name: 'VGU University', href: '/vgu', img: '/images/vgu1.webp', rating: '4.0' },
-                { name: 'Kurukshetra University', href: '/ku', img: '/images/ku.webp', rating: '4.3' },
+                { name: 'Kurukshetra University', href: '/ku-online', img: '/images/ku.webp', rating: '4.3' },
                 { name: 'OP Jindal University', href: '/opjindal', img: '/images/opjindal.webp', rating: '4.6' },
-                { name: 'Chandigarh University', href: '/chandigarh', img: '/images/chandigarh.webp', rating: '4.4' },
+                { name: 'Chandigarh University', href: '/cuonline', img: '/images/chandigarh.webp', rating: '4.4' },
               ].map((university, idx) => (
                 <div key={idx} className="group">
                   <Link 

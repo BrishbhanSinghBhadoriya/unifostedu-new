@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
@@ -296,6 +296,16 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
       [name]: value
     }));
   };
+  useEffect(() => {
+      
+
+       setTimeout(()=>{
+       setOpenModal(true)
+      },3000)
+      return () => clearTimeout(timer);
+
+       
+},[])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -387,6 +397,7 @@ const fadeIn = {
    };
 
   return (
+   <div style={{ overflowX: "hidden" }}>
     <div className="min-h-screen bg-white">
       {/* Header */}
       <motion.header 
@@ -442,7 +453,7 @@ const fadeIn = {
       
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden ">
+      <section id='HeroSection' className="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden ">
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-6 lg:py-12 xl:py-16">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             {/* Left Content */}
@@ -576,248 +587,6 @@ const fadeIn = {
       </section>
 
 
-
-       <section className="bg-gray-50 py-12 px-6 md:px-20">
-      <div className="max-w-5xl mx-auto text-gray-800 leading-relaxed">
-        {/* Main Title */}
-        <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-2 md:mb-3">
-          About Amity University
-        </h2>
-
-        {/* Overview */}
-        <p className="text-black-700 mb-8">
-          Amity University is a leading Indian private university accredited by
-          NAAC (Grade A) and recognized by the UGC, offering over 300 programs
-          across 29 campuses in India and internationally. Its key offerings
-          include advanced infrastructure with digital libraries, interactive
-          classrooms, hi-tech labs, a strong focus on industry-aligned
-          education, and extensive leadership and professional development
-          programs. Amity fosters student success through opportunities for
-          innovation and research, encouraging them to become globally
-          competitive and socially responsible professionals.
-        </p>
-
-        {/* Accreditation & Recognitions */}
-        <h3 className="text-2xl font-semibold mt-10 mb-4">
-          Accreditation & Recognitions
-        </h3>
-        <ul className="list-disc ml-6 space-y-2">
-          <li>
-            <strong>NAAC A+ Grade:</strong> The university holds the highest
-            Grade A rating from the National Assessment and Accreditation
-            Council (NAAC).
-          </li>
-          <li>
-            <strong>UGC Recognized:</strong> Amity University is
-            government-recognized and approved by the University Grants
-            Commission (UGC).
-          </li>
-          <li>
-            <strong>Global Accreditations:</strong> Accredited by international
-            organizations like ACBSP (USA) for management degrees.
-          </li>
-          <li>
-            <strong>QS & THE Rankings:</strong> Ranked among the top 3%
-            universities globally by QS and Times Higher Education (THE).
-          </li>
-        </ul>
-
-        {/* Courses & Programs */}
-        <h3 className="text-2xl font-semibold mt-10 mb-4">
-          Courses & Programs
-        </h3>
-        <ul className="list-disc ml-6 space-y-2">
-          <li>
-            Offers over 300 undergraduate and postgraduate programs across
-            various disciplines.
-          </li>
-          <li>
-            Programs available at school, bachelor's, master's, and doctoral
-            levels.
-          </li>
-          <li>
-            Provides comprehensive online education through{" "}
-            <strong>Amity Online</strong>, offering flexible and rewarding
-            learning experiences.
-          </li>
-        </ul>
-
-        {/* Learning Experience */}
-        <h3 className="text-2xl font-semibold mt-10 mb-4">
-          Learning Experience
-        </h3>
-        <ul className="list-disc ml-6 space-y-2">
-          <li>
-            <strong>Industry-Oriented Teaching:</strong> Curriculum designed in
-            collaboration with industry experts to create market-ready
-            professionals.
-          </li>
-          <li>
-            <strong>Innovation & Research:</strong> Students are encouraged to
-            participate in research and innovation initiatives.
-          </li>
-          <li>
-            <strong>Leadership & Personal Development:</strong> Programs to
-            enhance communication, teamwork, and decision-making abilities.
-          </li>
-          <li>
-            <strong>Value-Added Courses:</strong> Includes foreign language and
-            professional training modules.
-          </li>
-        </ul>
-
-        {/* Facilities */}
-        <h3 className="text-2xl font-semibold mt-10 mb-4">Facilities</h3>
-        <ul className="list-disc ml-6 space-y-2">
-          <li>
-            <strong>Modern Infrastructure:</strong> Equipped with advanced
-            facilities for effective learning.
-          </li>
-          <li>
-            <strong>Digital Classrooms & Libraries:</strong> Interactive virtual
-            classrooms, high-speed internet, and extensive e-libraries.
-          </li>
-          <li>
-            <strong>Hi-Tech Labs:</strong> Advanced labs for practical,
-            hands-on education.
-          </li>
-          <li>
-            <strong>Amphitheatre-Style Classrooms:</strong> Air-conditioned
-            learning spaces for a comfortable academic environment.
-          </li>
-        </ul>
-
-        {/* Achievements */}
-        <h3 className="text-2xl font-semibold mt-10 mb-4">Achievements</h3>
-        <ul className="list-disc ml-6 space-y-2">
-          <li>
-            <strong>Student Success:</strong> Amity students excel in national
-            exams like UPSC and GATE and have earned global recognition.
-          </li>
-          <li>
-            <strong>Entrepreneurship:</strong> Alumni have founded successful
-            startups, including Forbes 30 Under 30 awardees.
-          </li>
-          <li>
-            <strong>Global Impact:</strong> Students have gained opportunities
-            at top global organizations such as NASA’s Jet Propulsion
-            Laboratory.
-          </li>
-        </ul>
-
-        <section className="bg-white py-16 px-6 md:px-20">
-  <div className="max-w-7xl mx-auto text-gray-800">
-    <h2 className="text-3xl font-bold text-center mb-10">
-      🎓 Amity University – Online Courses Overview
-    </h2>
-
-    {/* Undergraduate Courses */}
-    <h3 className="text-2xl font-semibold mb-4 border-b-2 border-yellow-400 pb-2">
-      Undergraduate (UG) Courses
-    </h3>
-    <div className="overflow-x-auto mb-12">
-      <table className="min-w-full border border-gray-300">
-        <thead className="bg-yellow-100 text-gray-900">
-          <tr>
-            <th className="border border-gray-300 px-4 py-2 text-left">Course</th>
-            <th className="border border-gray-300 px-4 py-2 text-left">Duration</th>
-            <th className="border border-gray-300 px-4 py-2 text-left">Eligibility</th>
-            <th className="border border-gray-300 px-4 py-2 text-left">Fees</th>
-            <th className="border border-gray-300 px-4 py-2 text-left">Specializations</th>
-          </tr>
-        </thead>
-        <tbody>
-          {ugCourses.map((course, index) => (
-            <tr
-              key={index}
-              className="hover:bg-yellow-50 transition duration-200 ease-in-out"
-            >
-              <td className="border border-gray-300 px-4 py-3 font-semibold">
-                {course.course}
-              </td>
-              <td className="border border-gray-300 px-4 py-3">{course.duration}</td>
-              <td className="border border-gray-300 px-4 py-3">{course.eligibility}</td>
-              <td className="border border-gray-300 px-4 py-3">{course.fees}</td>
-              <td className="border border-gray-300 px-4 py-3">{course.specialization}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-
-    {/* Postgraduate Courses */}
-    <h3 className="text-2xl font-semibold mb-4 border-b-2 border-yellow-400 pb-2">
-      Postgraduate (PG) Courses
-    </h3>
-    <div className="overflow-x-auto mb-12">
-      <table className="min-w-full border border-gray-300">
-        <thead className="bg-yellow-100 text-gray-900">
-          <tr>
-            <th className="border border-gray-300 px-4 py-2 text-left">Course</th>
-            <th className="border border-gray-300 px-4 py-2 text-left">Duration</th>
-            <th className="border border-gray-300 px-4 py-2 text-left">Eligibility</th>
-            <th className="border border-gray-300 px-4 py-2 text-left">Fees</th>
-            <th className="border border-gray-300 px-4 py-2 text-left">Specializations</th>
-          </tr>
-        </thead>
-        <tbody>
-          {pgCourses.map((course, index) => (
-            <tr
-              key={index}
-              className="hover:bg-yellow-50 transition duration-200 ease-in-out"
-            >
-              <td className="border border-gray-300 px-4 py-3 font-semibold">
-                {course.course}
-              </td>
-              <td className="border border-gray-300 px-4 py-3">{course.duration}</td>
-              <td className="border border-gray-300 px-4 py-3">{course.eligibility}</td>
-              <td className="border border-gray-300 px-4 py-3">{course.fees}</td>
-              <td className="border border-gray-300 px-4 py-3">{course.specialization}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-
-    {/* Integrated Courses */}
-    <h3 className="text-2xl font-semibold mb-4 border-b-2 border-yellow-400 pb-2">
-      Integrated (UG + PG) Courses
-    </h3>
-    <div className="overflow-x-auto">
-      <table className="min-w-full border border-gray-300">
-        <thead className="bg-yellow-100 text-gray-900">
-          <tr>
-            <th className="border border-gray-300 px-4 py-2 text-left">Course</th>
-            <th className="border border-gray-300 px-4 py-2 text-left">Duration</th>
-            <th className="border border-gray-300 px-4 py-2 text-left">Eligibility</th>
-            <th className="border border-gray-300 px-4 py-2 text-left">Fees</th>
-            <th className="border border-gray-300 px-4 py-2 text-left">Specializations</th>
-          </tr>
-        </thead>
-        <tbody>
-          {ug_pgCourses.map((course, index) => (
-            <tr
-              key={index}
-              className="hover:bg-yellow-50 transition duration-200 ease-in-out"
-            >
-              <td className="border border-gray-300 px-4 py-3 font-semibold">
-                {course.course}
-              </td>
-              <td className="border border-gray-300 px-4 py-3">{course.duration}</td>
-              <td className="border border-gray-300 px-4 py-3">{course.eligibility}</td>
-              <td className="border border-gray-300 px-4 py-3">{course.fees}</td>
-              <td className="border border-gray-300 px-4 py-3">{course.specialization}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-       
-      </div>
-    </section>
 
 
       {/* Courses Section with Tabs */}
@@ -1011,6 +780,254 @@ const fadeIn = {
     }}
   />
 </div>
+
+
+
+
+       <section id='AboutAmity' className="bg-gray-50 py-12 px-6 md:px-20">
+      <div className="max-w-5xl mx-auto text-gray-800 leading-relaxed">
+        {/* Main Title */}
+        <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-2 md:mb-3">
+          About Amity University
+        </h2>
+
+        {/* Overview */}
+        <p className="text-black-700 mb-8">
+          Amity University is a leading Indian private university accredited by
+          NAAC (Grade A) and recognized by the UGC, offering over 300 programs
+          across 29 campuses in India and internationally. Its key offerings
+          include advanced infrastructure with digital libraries, interactive
+          classrooms, hi-tech labs, a strong focus on industry-aligned
+          education, and extensive leadership and professional development
+          programs. Amity fosters student success through opportunities for
+          innovation and research, encouraging them to become globally
+          competitive and socially responsible professionals.
+        </p>
+
+        {/* Accreditation & Recognitions */}
+        <h3 className="text-2xl font-semibold mt-10 mb-4">
+          Accreditation & Recognitions
+        </h3>
+        <ul className="list-disc ml-6 space-y-2">
+          <li>
+            <strong>NAAC A+ Grade:</strong> The university holds the highest
+            Grade A rating from the National Assessment and Accreditation
+            Council (NAAC).
+          </li>
+          <li>
+            <strong>UGC Recognized:</strong> Amity University is
+            government-recognized and approved by the University Grants
+            Commission (UGC).
+          </li>
+          <li>
+            <strong>Global Accreditations:</strong> Accredited by international
+            organizations like ACBSP (USA) for management degrees.
+          </li>
+          <li>
+            <strong>QS & THE Rankings:</strong> Ranked among the top 3%
+            universities globally by QS and Times Higher Education (THE).
+          </li>
+        </ul>
+
+        {/* Courses & Programs */}
+        <h3 className="text-2xl font-semibold mt-10 mb-4">
+          Courses & Programs
+        </h3>
+        <ul className="list-disc ml-6 space-y-2">
+          <li>
+            Offers over 300 undergraduate and postgraduate programs across
+            various disciplines.
+          </li>
+          <li>
+            Programs available at school, bachelor's, master's, and doctoral
+            levels.
+          </li>
+          <li>
+            Provides comprehensive online education through{" "}
+            <strong>Amity Online</strong>, offering flexible and rewarding
+            learning experiences.
+          </li>
+        </ul>
+
+        {/* Learning Experience */}
+        <h3 className="text-2xl font-semibold mt-10 mb-4">
+          Learning Experience
+        </h3>
+        <ul className="list-disc ml-6 space-y-2">
+          <li>
+            <strong>Industry-Oriented Teaching:</strong> Curriculum designed in
+            collaboration with industry experts to create market-ready
+            professionals.
+          </li>
+          <li>
+            <strong>Innovation & Research:</strong> Students are encouraged to
+            participate in research and innovation initiatives.
+          </li>
+          <li>
+            <strong>Leadership & Personal Development:</strong> Programs to
+            enhance communication, teamwork, and decision-making abilities.
+          </li>
+          <li>
+            <strong>Value-Added Courses:</strong> Includes foreign language and
+            professional training modules.
+          </li>
+        </ul>
+
+        {/* Facilities */}
+        <h3 className="text-2xl font-semibold mt-10 mb-4">Facilities</h3>
+        <ul className="list-disc ml-6 space-y-2">
+          <li>
+            <strong>Modern Infrastructure:</strong> Equipped with advanced
+            facilities for effective learning.
+          </li>
+          <li>
+            <strong>Digital Classrooms & Libraries:</strong> Interactive virtual
+            classrooms, high-speed internet, and extensive e-libraries.
+          </li>
+          <li>
+            <strong>Hi-Tech Labs:</strong> Advanced labs for practical,
+            hands-on education.
+          </li>
+          <li>
+            <strong>Amphitheatre-Style Classrooms:</strong> Air-conditioned
+            learning spaces for a comfortable academic environment.
+          </li>
+        </ul>
+
+        {/* Achievements */}
+        <h3 className="text-2xl font-semibold mt-10 mb-4">Achievements</h3>
+        <ul className="list-disc ml-6 space-y-2">
+          <li>
+            <strong>Student Success:</strong> Amity students excel in national
+            exams like UPSC and GATE and have earned global recognition.
+          </li>
+          <li>
+            <strong>Entrepreneurship:</strong> Alumni have founded successful
+            startups, including Forbes 30 Under 30 awardees.
+          </li>
+          <li>
+            <strong>Global Impact:</strong> Students have gained opportunities
+            at top global organizations such as NASA’s Jet Propulsion
+            Laboratory.
+          </li>
+        </ul>
+
+        <section id='Courses' className="bg-white py-16 px-6 md:px-20">
+  <div className="max-w-7xl mx-auto text-gray-800">
+    <h2 className="text-3xl font-bold text-center mb-10">
+      🎓 Amity University – Online Courses Overview
+    </h2>
+
+    {/* Undergraduate Courses */}
+    <h3 className="text-2xl font-semibold mb-4 border-b-2 border-yellow-400 pb-2">
+      Undergraduate (UG) Courses
+    </h3>
+    <div className="overflow-x-auto mb-12">
+      <table className="min-w-full border border-gray-300">
+        <thead className="bg-yellow-100 text-gray-900">
+          <tr>
+            <th className="border border-gray-300 px-4 py-2 text-left">Course</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Duration</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Eligibility</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Fees</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Specializations</th>
+          </tr>
+        </thead>
+        <tbody>
+          {ugCourses.map((course, index) => (
+            <tr
+              key={index}
+              className="hover:bg-yellow-50 transition duration-200 ease-in-out"
+            >
+              <td className="border border-gray-300 px-4 py-3 font-semibold">
+                {course.course}
+              </td>
+              <td className="border border-gray-300 px-4 py-3">{course.duration}</td>
+              <td className="border border-gray-300 px-4 py-3">{course.eligibility}</td>
+              <td className="border border-gray-300 px-4 py-3">{course.fees}</td>
+              <td className="border border-gray-300 px-4 py-3">{course.specialization}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    {/* Postgraduate Courses */}
+    <h3 className="text-2xl font-semibold mb-4 border-b-2 border-yellow-400 pb-2">
+      Postgraduate (PG) Courses
+    </h3>
+    <div className="overflow-x-auto mb-12">
+      <table className="min-w-full border border-gray-300">
+        <thead className="bg-yellow-100 text-gray-900">
+          <tr>
+            <th className="border border-gray-300 px-4 py-2 text-left">Course</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Duration</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Eligibility</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Fees</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Specializations</th>
+          </tr>
+        </thead>
+        <tbody>
+          {pgCourses.map((course, index) => (
+            <tr
+              key={index}
+              className="hover:bg-yellow-50 transition duration-200 ease-in-out"
+            >
+              <td className="border border-gray-300 px-4 py-3 font-semibold">
+                {course.course}
+              </td>
+              <td className="border border-gray-300 px-4 py-3">{course.duration}</td>
+              <td className="border border-gray-300 px-4 py-3">{course.eligibility}</td>
+              <td className="border border-gray-300 px-4 py-3">{course.fees}</td>
+              <td className="border border-gray-300 px-4 py-3">{course.specialization}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    {/* Integrated Courses */}
+    <h3 className="text-2xl font-semibold mb-4 border-b-2 border-yellow-400 pb-2">
+      Integrated (UG + PG) Courses
+    </h3>
+    <div className="overflow-x-auto">
+      <table className="min-w-full border border-gray-300">
+        <thead className="bg-yellow-100 text-gray-900">
+          <tr>
+            <th className="border border-gray-300 px-4 py-2 text-left">Course</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Duration</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Eligibility</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Fees</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Specializations</th>
+          </tr>
+        </thead>
+        <tbody>
+          {ug_pgCourses.map((course, index) => (
+            <tr
+              key={index}
+              className="hover:bg-yellow-50 transition duration-200 ease-in-out"
+            >
+              <td className="border border-gray-300 px-4 py-3 font-semibold">
+                {course.course}
+              </td>
+              <td className="border border-gray-300 px-4 py-3">{course.duration}</td>
+              <td className="border border-gray-300 px-4 py-3">{course.eligibility}</td>
+              <td className="border border-gray-300 px-4 py-3">{course.fees}</td>
+              <td className="border border-gray-300 px-4 py-3">{course.specialization}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+       
+      </div>
+    </section>
+
+
+
       {/* Features Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
@@ -1163,7 +1180,87 @@ const fadeIn = {
 
 
 <div>
-  <section className="relative py-20 bg-white">
+ <section id='Scholarship' className="bg-white py-12 px-6 md:px-20">
+  <div className="max-w-5xl mx-auto text-gray-800">
+    <h2 className="text-3xl font-bold text-center mb-10">
+      🎓 Amity Online Scholarship & Fee Concession Details
+    </h2>
+
+    {/* Scholarship Table */}
+    <h3 className="text-2xl font-semibold mb-4">Scholarship Categories</h3>
+    <div className="overflow-x-auto mb-8">
+      <table className="min-w-full border border-gray-300">
+        <thead className="bg-yellow-100 text-gray-900">
+          <tr>
+            <th className="border border-gray-300 px-4 py-2 text-left">Select Category</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Scholarship Credit</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Eligibility Criteria</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="hover:bg-yellow-50 transition duration-200">
+            <td className="border border-gray-300 px-4 py-3">Divyaang (for Persons with Special Needs)</td>
+            <td className="border border-gray-300 px-4 py-3">20%</td>
+            <td className="border border-gray-300 px-4 py-3">Valid certificate of disability as per government norms.</td>
+          </tr>
+          <tr className="hover:bg-yellow-50 transition duration-200">
+            <td className="border border-gray-300 px-4 py-3">Defence Personnel</td>
+            <td className="border border-gray-300 px-4 py-3">20%</td>
+            <td className="border border-gray-300 px-4 py-3">Minimum 2 years of service in the defence forces with a valid Identity Card number.</td>
+          </tr>
+          <tr className="hover:bg-yellow-50 transition duration-200">
+            <td className="border border-gray-300 px-4 py-3">Amity University Alumni</td>
+            <td className="border border-gray-300 px-4 py-3">20%</td>
+            <td className="border border-gray-300 px-4 py-3">Amity University UG/PG alumni.</td>
+          </tr>
+          <tr className="hover:bg-yellow-50 transition duration-200">
+            <td className="border border-gray-300 px-4 py-3">Merit-Based</td>
+            <td className="border border-gray-300 px-4 py-3">20%</td>
+            <td className="border border-gray-300 px-4 py-3">Academic excellence with minimum 85% aggregate in the previous qualification.</td>
+          </tr>
+          <tr className="hover:bg-yellow-50 transition duration-200">
+            <td className="border border-gray-300 px-4 py-3">Sports Scholarship (CHAMPS)</td>
+            <td className="border border-gray-300 px-4 py-3">30% – 100%</td>
+            <td className="border border-gray-300 px-4 py-3">State, national, or international-level sportspersons with valid sports federation affiliation.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    {/* Other Fee Concessions Table */}
+    <h3 className="text-2xl font-semibold mb-4">💰 Other Fee Concessions</h3>
+    <div className="overflow-x-auto mb-6">
+      <table className="min-w-full border border-gray-300">
+        <thead className="bg-yellow-100 text-gray-900">
+          <tr>
+            <th className="border border-gray-300 px-4 py-2 text-left">Concession Type</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Discount</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Eligibility Criteria</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="hover:bg-yellow-50 transition duration-200">
+            <td className="border border-gray-300 px-4 py-3">On Full Fee Payment</td>
+            <td className="border border-gray-300 px-4 py-3">8% – 12%</td>
+            <td className="border border-gray-300 px-4 py-3">Upon upfront payment of the full program fee.</td>
+          </tr>
+          <tr className="hover:bg-yellow-50 transition duration-200">
+            <td className="border border-gray-300 px-4 py-3">On Annual Fee Payment</td>
+            <td className="border border-gray-300 px-4 py-3">5%</td>
+            <td className="border border-gray-300 px-4 py-3">Upon upfront payment of the annual program fee.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    {/* Note */}
+    <p className="text-gray-600 mt-4 text-sm">
+      🔍 <strong>Note:</strong> Scholarship approval is subject to verification of documents.
+    </p>
+  </div>
+</section>
+
+  <section id='Admission' className="relative py-20 bg-white">
     {/* Decorative Blobs */}
     <div className="absolute -top-20 -left-20 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
     <div className="absolute -bottom-32 -right-32 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
@@ -1306,7 +1403,7 @@ const fadeIn = {
         </div>
       </section>
   {/* Hiring Partners */}
-      <section className="py-16 bg-gray-50">
+      <section id='Company' className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div 
             className="text-center mb-12"
@@ -1419,7 +1516,7 @@ const fadeIn = {
             <div className="sm:col-span-2 lg:col-span-1">
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-[100px] md:w-[122px] h-8 md:h-10 relative">
-                  <Image src="/amity.svg" alt="Amity University Online" fill className="object-contain" />
+                  <Image src="/amity.svg" alt="Amity University Online" fill className="bg-white object-contain" />
                 </div>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed">
@@ -1430,15 +1527,15 @@ const fadeIn = {
             <div>
               <h4 className="font-semibold mb-3 md:mb-4 text-base md:text-lg">Quick Links</h4>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Programs</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Admissions</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Scholarships</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Career Services</a></li>
-                <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="/" className="hover:text-white transition-colors">Home</a></li>
-                <li><a href="/services" className="hover:text-white transition-colors">services</a></li>
+                <li><a href="#Courses" className="hover:text-white transition-colors">Programs</a></li>
+                <li><a href="#Admission" className="hover:text-white transition-colors">Admissions</a></li>
+                <li><a href="#Scholarship" className="hover:text-white transition-colors">Scholarships</a></li>
+                <li><a href="#Company" className="hover:text-white transition-colors">Career Services</a></li>
+                <li><a href="#AboutAmity" className="hover:text-white transition-colors">About Us</a></li>
+                <li><a href="#HeroSection" className="hover:text-white transition-colors">Home</a></li>
+                {/* <li><a href="/services" className="hover:text-white transition-colors">services</a></li>
                 <li><a href="/listofcollege" className="hover:text-white transition-colors">Explore Colleges</a></li>
-              
+               */}
               </ul>
             </div>
             
@@ -1460,9 +1557,59 @@ const fadeIn = {
               </div>
             </div>
           </div>
-          
+          {/* Keywords Section */}
+<div className="border-t border-gray-700 pt-8 mb-8">
+  <h4 className="text-lg font-semibold mb-4 text-white text-center">
+    Popular Programs & Specializations - Amity University Online
+  </h4>
+  <div className="flex flex-wrap justify-center gap-2">
+    {[
+  "BBA General - Amity Online", 
+  "BBA Data Analytics - Amity Online", 
+  "BBA Travel & Tourism Management - Amity Online", 
+  "BBA Business Analytics - Amity Online",
+  "BCA General - Amity Online", 
+  "BCA Cloud & Security - Amity Online", 
+  "BCA Software Engineering - Amity Online", 
+  "BCA Data Science - Amity Online",
+  "B.Com General - Amity Online", 
+  "B.Com Hons - Amity Online", 
+  "B.Com International Finance & Accounting - Amity Online",
+  "BA Journalism & Mass Communication - Amity Online", 
+  "BA Psychology - Amity Online", 
+  "BA English - Amity Online", 
+  "BA Sociology - Amity Online", 
+  "BA Political Science - Amity Online", 
+  "BA Economics - Amity Online", 
+  "BA Native Languages - Amity Online",
+  "MBA General - Amity Online", 
+  "MBA HR Analytics - Amity Online", 
+  "MBA Data Science - Amity Online", 
+  "MBA Digital Marketing - Amity Online",
+  "MBA International Business - Amity Online", 
+  "MBA Finance & Accounting - Amity Online", 
+  "MBA Operations Management - Amity Online",
+  "MCA Cyber Security - Amity Online", 
+  "MCA Blockchain Technology - Amity Online", 
+  "MCA Artificial Intelligence - Amity Online",
+  "M.Sc Data Science - Amity Online", 
+  "M.Com Financial Management - Amity Online", 
+  "MA Public Policy & Governance - Amity Online"
+]
+.map((keyword, index) => (
+      <span 
+        key={index}
+        className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs hover:bg-gray-700 hover:text-white transition-colors cursor-default"
+        title={keyword}
+      >
+        {keyword.length > 25 ? `${keyword.substring(0, 25)}...` : keyword}
+      </span>
+    ))}
+  </div>
+</div>
+
           <div className="border-t border-gray-800 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-xs md:text-sm text-gray-400">
-            <p>&copy; 2025 UNIFOST. All rights reserved.</p>
+            <p>&copy; 2025 . All rights reserved.</p>
           </div>
         </div>
       </footer>
@@ -1480,6 +1627,7 @@ const fadeIn = {
         />
       )}
     </div>
+   </div>  
   );
 };
 
