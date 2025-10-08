@@ -42,12 +42,95 @@ const Hero = ({ onOpenModal }) => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               
+              {/* Mobile: Show slider first, then content. Desktop: Show content first, then slider */}
+              
+              {/* Mobile Slider - Show first on mobile */}
+              <div className="block lg:hidden order-1">
+                {/* Right Content - Visual Panel for Mobile */}
+                <div 
+                  initial={{ opacity: 0, x: 50 }} 
+                  animate={{ opacity: 1, x: 0 }} 
+                  transition={{ duration: 0.8 }}
+                  className="relative mb-8"
+                >
+                  {/* Main Visual Container */}
+                  <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-4 shadow-2xl border border-white/20">
+                    {/* Slider Container */}
+                    <div className="relative h-56 sm:h-64 md:h-72 lg:h-80 rounded-2xl overflow-hidden mb-6 bg-gray-100">
+                      <AnimatePresence initial={false}>
+                        <motion.div
+                          key={slide}
+                          className="absolute inset-0"
+                          initial={{ opacity: 0, scale: 1.05 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 1.05 }}
+                          transition={{ duration: 0.8, ease: "easeInOut" }}
+                        >
+                          <Image
+                            fill
+                            src={heroSlides[slide].src}
+                            alt={`${heroSlides[slide].title} – ${heroSlides[slide].subtitle} | Online University Degree guidance`}
+                            loading={slide === 0 ? "eager" : "lazy"}
+                            priority={slide === 0}
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            className="object-contain rounded-2xl object-center"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
+                        </motion.div>
+                      </AnimatePresence>
+                      
+                      {/* Slide Indicators */}
+                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                        {heroSlides.map((_, i) => (
+                          <button 
+                            key={i} 
+                            onClick={() => setSlide(i)} 
+                            className={`h-2 w-2 rounded-full transition-all duration-300 ${
+                              i === slide ? "bg-white w-8" : "bg-white/60 hover:bg-white/80"
+                            }`} 
+                            aria-label={`Go to slide ${i + 1}`} 
+                          />
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Content Cards */}
+                    <div className="space-y-4">
+                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-xl border border-blue-100">
+                        <h3 className="font-semibold text-gray-900 mb-2">{heroSlides[slide].title}</h3>
+                        <p className="text-sm text-gray-600">{heroSlides[slide].description}</p>
+                      </div>
+                      
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="bg-green-50 p-3 rounded-lg border border-green-100 text-center">
+                          <div className="text-green-600 font-bold text-lg">UGC</div>
+                          <div className="text-xs text-green-700">Approved</div>
+                        </div>
+                        <div className="bg-purple-50 p-3 rounded-lg border border-purple-100 text-center">
+                          <div className="text-purple-600 font-bold text-lg">24/7</div>
+                          <div className="text-xs text-purple-700">Support</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Floating Elements */}
+                  <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center shadow-lg animate-bounce">
+                    <FaGraduationCap className="text-white text-2xl" />
+                  </div>
+                  
+                  <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-green-400 to-teal-400 rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                    <FaUsers className="text-white text-xl" />
+                  </div>
+                </div>
+              </div>
+
               {/* Left Content */}
               <motion.div 
                 initial={{ opacity: 0, x: -50 }} 
                 animate={{ opacity: 1, x: 0 }} 
                 transition={{ duration: 0.1 }}
-                className="text-center lg:text-left space-y-8"
+                className="text-center lg:text-left space-y-8 order-2 lg:order-none"
               >
                 {/* Trust Badge */}
                 <motion.div 
@@ -158,12 +241,12 @@ const Hero = ({ onOpenModal }) => {
                 </motion.div>
               </motion.div>
 
-              {/* Right Content - Visual Panel */}
+              {/* Right Content - Visual Panel - Desktop Only */}
               <div 
                 initial={{ opacity: 0, x: 50 }} 
                 animate={{ opacity: 1, x: 0 }} 
                 transition={{ duration: 0.8 }}
-                className="relative"
+                className="relative hidden lg:block lg:order-2"
               >
                 {/* Main Visual Container */}
                 <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-4 shadow-2xl border border-white/20">

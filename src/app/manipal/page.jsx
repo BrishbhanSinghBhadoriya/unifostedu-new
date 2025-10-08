@@ -406,7 +406,7 @@ useEffect(() => {
         {/* Left Content */}
         <div className="text-white space-y-6 sm:space-y-8 order-2 lg:order-1">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-orange-500/20 backdrop-blur-sm border border-orange-500/30 rounded-full px-3 py-2 sm:px-4 sm:py-2 text-orange-300 text-xs sm:text-sm font-medium">
+          <div className="inline-flex items-center gap-2 bg-orange-500/20 backdrop-blur-sm border border-orange-500/30 rounded-full px-3 py-2 sm:px-4 sm:py-2 text-orange-300 text-xs sm:text-sm font-medium md:mt-0 mt-10">
             <span className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></span>
             <span className="hidden sm:inline">NAAC A+ Accredited University</span>
             <span className="sm:hidden">NAAC A+ Accredited</span>

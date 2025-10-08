@@ -299,7 +299,7 @@ const SectionHeader = ({ icon: Icon, title, description }) => (
   useEffect(() => {
       
 
-       setTimeout(()=>{
+    const timer=setTimeout(()=>{
        setOpenModal(true)
       },3000)
       return () => clearTimeout(timer);
