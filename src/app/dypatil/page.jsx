@@ -252,59 +252,71 @@ const Dypatil = () => {
       </Head>
 
       {/* Fixed Header */}
-      <header className="fixed top-0 left-0 right-0 flex justify-between items-center px-6 py-3 bg-white shadow-lg z-50">
-        {/* Left Logo */}
-        <div className="flex items-center space-x-4">
-          <img
-            src="/images/dpulogo.png"
-            alt="DPU Logo"
-            className="h-16 w-auto"
-          />
+      <header className="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 flex-wrap gap-2">
+            {/* Left Logo */}
+            <div className="flex items-center min-w-0">
+              <img
+                src="/images/dpulogo.png"
+                alt="DPU Logo"
+                className="h-10 sm:h-12 md:h-16 w-auto max-w-full"
+              />
+            </div>
+
+            {/* Right Side */}
+            <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
+              {/* Apply Now Button */}
+              <button 
+                onClick={() => {
+                  setOpenModal('apply');
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm"
+              >
+                Apply Now
+              </button>
+
+              {/* Accreditation icons - hide on small screens to prevent overflow */}
+              <img src="/images/ugc.webp" alt="UGC Logo" className="hidden sm:block h-8 sm:h-10 w-auto" />
+              <img src="/images/aicte.webp" alt="AICTE Logo" className="hidden sm:block h-9 sm:h-12 w-auto" />
+
+              {/* Call button (text on >=sm, icon on mobile) */}
+              <a
+                href="tel:+917042867717"
+                className="hidden sm:inline-flex items-center bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-4 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm"
+              >
+                +91-7042867717
+              </a>
+              <a
+                href="tel:+917042867717"
+                className="sm:hidden inline-flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white"
+                aria-label="Call"
+              >
+                📞
+              </a>
+            </div>
+          </div>
         </div>
 
-        {/* Right Side */}
-        <div className="flex items-center space-x-6">
-          {/* Apply Now Button */}
-          <button 
-            onClick={() => {
-              setOpenModal('apply');
-              setShowEnquiryModal(true);
-              setModalType('apply');
-            }}
-            className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity"
-          >
-            Apply Now
-          </button>
-          
-          {/* Enquiry Modal */}
-          {showEnquiryModal && (
-            <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
-              <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10 p-4 sm:p-6 z-[50001]">
-                <DialogHeader>
-                  <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
-                    Get Started with Dr. DY Patil University
-                  </DialogTitle>
-                </DialogHeader>
-                <EnquiryForm onSubmitted={() => setShowEnquiryModal(false)} formType={modalType} universityName="Dr. DY Patil University" />
-              </DialogContent>
-            </Dialog>
-          )}
-
-          <img src="/images/ugc.webp" alt="UGC Logo" className="h-12 w-auto" />
-          <img src="/images/aicte.webp" alt="AICTE Logo" className="h-14 w-auto" />
-
-          {/* Call button */}
-          <a
-            href="tel:+919071029441"
-            className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity"
-          >
-            +91-7042867717
-          </a>
-        </div>
+        {/* Enquiry Modal */}
+        {showEnquiryModal && (
+          <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
+            <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10 p-4 sm:p-6 z-[50001]">
+              <DialogHeader>
+                <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
+                  Get Started with Dr. DY Patil University
+                </DialogTitle>
+              </DialogHeader>
+              <EnquiryForm onSubmitted={() => setShowEnquiryModal(false)} formType={modalType} universityName="Dr. DY Patil University" />
+            </DialogContent>
+          </Dialog>
+        )}
       </header>
 
       {/* Add padding to account for fixed header */}
-      <div className="pt-24">
+      <div className="pt-24 overflow-x-hidden">
         
         {/* Banner */}
         <div
@@ -318,7 +330,7 @@ const Dypatil = () => {
           {/* Dark Overlay with Gradient for Better Text Visibility */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
           
-          <div className="max-w-7xl mx-auto w-full px-6 relative z-10">
+          <div className="max-w-7xl mx-auto w-full px-6 relative z-10 overflow-x-hidden">
             {/* Left Content */}
             <div className="text-white max-w-lg">
               <p className="text-lg sm:text-xl font-medium drop-shadow-lg">

@@ -404,35 +404,34 @@ const Jain = () => {
       {/* Fixed Header */}
       <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-md z-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-16 flex-wrap gap-2">
             {/* Logo - Left Side */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink min-w-0">
               <Image 
                 src="/images/jain-logo[1].png" 
                 alt="Jain University Online Logo" 
-                width={320} 
-                height={260} 
-                className="object-contain"
+                width={240} 
+                height={80} 
+                className="object-contain max-w-full h-auto"
               />
             </div>
 
             {/* Contact Options - Right Side */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
               {/* Phone Number */}
-              <div className="flex items-center gap-2 bg-gradient-to-r from-[#001C54] to-[#b91c1c] text-white rounded-full px-4 py-2 shadow-lg hover:shadow-xl transition-all duration-300">
+              <a href="tel:+917042867717" className="hidden sm:flex items-center gap-2 bg-gradient-to-r from-[#001C54] to-[#b91c1c] text-white rounded-full px-4 py-2 shadow-lg hover:shadow-xl transition-all duration-300">
                 <FaPhone className="text-white text-sm" />
-                <a 
-                  href="tel:+917042867717" 
-                  className="text-white font-semibold text-sm hover:text-gray-100 transition-colors whitespace-nowrap"
-                >
-                  +91 70428 67717
-                </a>
-              </div>
+                <span className="font-semibold text-sm whitespace-nowrap">+91 70428 67717</span>
+              </a>
+              {/* Compact Call Icon on Mobile */}
+              <a href="tel:+917042867717" className="sm:hidden inline-flex items-center justify-center w-9 h-9 rounded-full bg-[#001C54] text-white">
+                <FaPhone className="text-sm" />
+              </a>
 
               {/* Apply Now Button */}
               <button 
                 onClick={() => setOpenModal('apply')}
-                className="bg-gradient-to-r from-[#001C54] to-[#b91c1c] hover:from-[#b91c1c] hover:to-[#991b1b] text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25 text-sm whitespace-nowrap"
+                className="bg-gradient-to-r from-[#001C54] to-[#b91c1c] hover:from-[#b91c1c] hover:to-[#991b1b] text-white font-semibold px-4 sm:px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25 text-sm whitespace-nowrap"
               >
                 Apply Now
               </button>
@@ -442,10 +441,10 @@ const Jain = () => {
       </header>
 
       {/* Add padding to the top of the first section to account for fixed header */}
-      <div className="pt-16">
+      <div className="pt-16 overflow-x-hidden">
 
       {/* Modern Hero Section - Optimized Spacing */}
-      <section className="relative min-h-screen overflow-hidden">
+      <section className="relative min-h-screen overflow-hidden pt-16 lg:pt-20">
         {/* Background Pattern - Enhanced Yellow Shade */}
         <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-200 opacity-90"></div>
         
@@ -467,7 +466,7 @@ const Jain = () => {
         </div>
 
         {/* Main Content - Perfectly Centered */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-screen flex items-center justify-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-screen flex items-center justify-center overflow-x-hidden">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center w-full">
             {/* Left Content - Optimized Spacing */}
             <div className="text-gray-900 space-y-4 sm:space-y-6 order-2 lg:order-1">
@@ -549,18 +548,18 @@ const Jain = () => {
             </div>
 
             {/* Right Content - Student Image with Yellow Background */}
-            <div className="lg:pl-6 xl:pl-12 order-1 lg:order-2">
+            <div className="lg:pl-6 xl:pl-12 order-1 lg:order-2 w-full">
               <div className="relative">
                 {/* Yellow Background Container - Perfectly Sized */}
-                <div className="bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-300 rounded-1xl shadow-1xl p-4 w-full h-[400px] sm:h-[500px] lg:h-[550px] flex items-center justify-center">
+                <div className="bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-300 rounded-1xl shadow-1xl p-4 w-full h-[400px] sm:h-[500px] lg:h-[550px] flex items-center justify-center overflow-hidden">
                   {/* Student Image - Perfectly Centered */}
-                  <div className="relative w-full h-full flex items-center justify-center">
+                  <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
                     <Image 
                       src="/images/jainimg.png" 
                       alt="Jain University Online Student" 
                       width={500}
                       height={600}
-                      className="w-full h-full object-contain rounded-lg"
+                      className="w-full h-full max-w-full object-contain rounded-lg"
                       priority
                     />
                   </div>
@@ -1100,7 +1099,7 @@ const Jain = () => {
             <img
               src="/images/jain1.png"
               alt="Jain University"
-              className="rounded-lg shadow-lg"
+              className="w-full h-auto rounded-lg shadow-lg"
             />
           </div>
 
