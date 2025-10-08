@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import {
   FaBookOpen,
   FaUserTie,
@@ -325,6 +325,18 @@ const Jain = () => {
     },
   ];
 
+useEffect(() => {
+      
+
+      const timer= setTimeout(()=>{
+       setOpenModal(true)
+      },3000)
+      return () => clearTimeout(timer);
+
+       
+},[])
+
+    
   const faqData = [
     {
       question: "Is Jain University Online UGC approved?",

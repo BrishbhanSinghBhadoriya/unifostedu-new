@@ -169,6 +169,16 @@ useEffect(() => {
       "Yes, Manipal Online University provides dedicated technical support to online MUJ students. From accessing course materials to attending live sessions, online Manipal University ensures a smooth learning experience. Support is available for all online Manipal University programs, making it convenient and reliable for students.",
   },
 ];
+useEffect(() => {
+      
+
+      const timer= setTimeout(()=>{
+       setOpenModal(true)
+      },3000)
+      return () => clearTimeout(timer);
+
+       
+},[])
 
 
 

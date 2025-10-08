@@ -180,14 +180,17 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   const hideFooterRoutes = [
-    "/Amity-University-Online/",
-    "/manipal/",
-    "/lpu-online/",
-    "/ku-online/",
-    "/cuonline/",
-    "/smu/",
-    "/jain/",
-    "/dypatil/"
+  "/Amity-University-Online/",
+      "/lpu-online/",
+      "/manipal/",
+      "/cuonline/",
+      "/mahe-online/",
+      "/ku-online/",
+      "/bookdemo/",
+      "/smu/",
+      "/jain/",
+      "/dypatil/",
+      "/sharda/",
     
 
   ];
