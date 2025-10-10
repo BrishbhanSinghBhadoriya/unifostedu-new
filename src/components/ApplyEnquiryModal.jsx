@@ -10,6 +10,10 @@ export default function ApplyEnquiryModal({
   title = 'Start Your Application',
   subtitle,
   imageSrc = '/images/amityForm.webp',
+
+
+
+  
   universityName,
   defaultProgram = 'MBA',
   formType = 'general',
@@ -36,6 +40,7 @@ export default function ApplyEnquiryModal({
               defaultProgram={defaultProgram}
               formType={formType}
               autoCloseOnSuccess={true}
+              onSubmitted={() => onOpenChange(false)}
             />
           </div>
         </div>

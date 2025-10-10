@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
-import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck, FaStar, FaCertificate, FaBuilding, FaUsers, FaPhone, FaWhatsapp } from "react-icons/fa";
+import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck, FaStar, FaCertificate, FaBuilding, FaUsers, FaPhone, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 import { FaLaptop, FaBook, FaGraduationCap, FaIndustry, FaUserCircle, FaUniversity, FaMoneyBillWave } from "react-icons/fa";
 import EnquireCard from '@/components/EnquireCard';
 import AccreditationSection from '@/components/AccreditationSection';
@@ -522,8 +522,8 @@ useEffect(() => {
             </div>
           </div>
 
-          {/* Accreditation Cards - Bottom */}
-          <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 w-full px-4">
+         {/* // Accreditation Cards - Bottom */}
+          {/* <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 w-full px-4">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -531,24 +531,24 @@ useEffect(() => {
               className="flex flex-wrap justify-center gap-3 sm:gap-6 bg-white/90 backdrop-blur-sm px-4 sm:px-8 py-4 sm:py-6 rounded-2xl shadow-2xl border border-white/50 max-w-4xl mx-auto"
             >
               {/* Card 1 */}
-              <div className="flex flex-col items-center text-center">
+              {/* <div className="flex flex-col items-center text-center">
                 <img src="/images/naac.webp" alt="NAAC A+ Accredited" className="h-12 sm:h-16 w-12 sm:w-16 object-contain mb-2" />
                 <p className="text-xs sm:text-sm font-bold text-gray-800">NAAC A+</p>
-              </div>
+              </div> */}
 
               {/* Card 2 */}
-              <div className="flex flex-col items-center text-center">
+              {/* <div className="flex flex-col items-center text-center">
                 <img src="/images/ugc.webp" alt="UGC Approved" className="h-12 sm:h-16 w-12 sm:w-16 object-contain mb-2" />
                 <p className="text-xs sm:text-sm font-bold text-gray-800">UGC Approved</p>
-              </div>
+              </div> */}
 
               {/* Card 3 */}
-              <div className="flex flex-col items-center text-center">
+              {/* <div className="flex flex-col items-center text-center">
                 <img src="/images/qs.webp" alt="Global Recognition" className="h-12 sm:h-16 w-12 sm:w-16 object-contain mb-2" />
                 <p className="text-xs sm:text-sm font-bold text-gray-800">Global Recognition</p>
               </div>
             </motion.div>
-          </div>
+          </div> */} 
 
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
@@ -925,7 +925,7 @@ useEffect(() => {
 
       {/* Why Choose Section */}
 
-      <section className="py-16 bg-gray-50">
+      <section id='About' className="py-16 bg-gray-50">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Online Manipal Advantages</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -1398,7 +1398,7 @@ useEffect(() => {
         </section>
 
       {/* Professional Hiring Partners Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-100 to-gray-200">
+      <section id='Placement' className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-100 to-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-queens">
@@ -1515,7 +1515,7 @@ useEffect(() => {
                   <h4 className="text-white font-bold mb-4 text-lg">Programs</h4>
                   <ul className="space-y-3 text-sm">
                     {['MBA', 'BBA', 'MCA', 'BCA', 'M.Com', 'B.Com', 'MAJMC'].map((program, i) => (
-                      <li key={i} className="hover:text-orange-400 transition-colors cursor-pointer">
+                      <li key={i} onClick = {() => setOpenModal({ type: 'apply',})} className="hover:text-orange-400 transition-colors cursor-pointer">
                         {program}
                       </li>
                     ))}
@@ -1535,8 +1535,8 @@ useEffect(() => {
                   <ul className="space-y-3 text-sm">
                     {[
                       { name: 'Admissions', href: '#Admission' },
-                      { name: 'Scholarships', href: '#' },
-                      { name: 'Placements', href: '#' },
+                      { name: 'About', href: '#About' },
+                      { name: 'Placements', href: '#Placement' },
                       { name: 'FAQs', href: '#Faq' },
                       { name: 'Quick Comparison', href: '#QuickComparison' },
                       { name: 'Fees Structure', href: '#Fees' }
@@ -1563,16 +1563,20 @@ useEffect(() => {
                   <h4 className="text-white font-bold mb-4 text-lg">Contact Us</h4>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
-                        <span className="text-orange-400">📞</span>
-                      </div>
+                      
+                      <a href="tel:+917042867717" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us"  aria-label="Email us at info@unifostedu.com">
+                                   
+                                   <span className="text-orange-400">📞</span>
+                                  </a>
                       <span className="text-sm">+91-7042867717</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
                         <span className="text-orange-400">✉️</span>
                       </div>
+                      <a href="mailto:info@unifostedu.com" className='p-2 rounded-lg hover:bg-slate-100 transition-all duration-200' title='Email us' aria-label='Email us at info@unifostedu.com'>
                       <span className="text-sm">info@unifostedu.com</span>
+                      </a>
                     </div>
                   </div>
                   
@@ -1633,7 +1637,7 @@ useEffect(() => {
                   "MA Journalism & Mass Communication - MUJ Online"
                 ].map((keyword, index) => (
                   <span
-                    key={index}
+                    key={index} onClick = {() => setOpenModal({ type: 'apply',})}
                     className="bg-white/10 backdrop-blur-sm text-gray-300 px-3 py-2 rounded-full text-xs sm:text-sm hover:bg-orange-500 hover:text-white transition-all duration-300 cursor-pointer border border-white/20 hover:border-orange-500"
                     title={keyword}
                   >
@@ -1663,5 +1667,3 @@ useEffect(() => {
 
 
 export default Manipal;
-
-
