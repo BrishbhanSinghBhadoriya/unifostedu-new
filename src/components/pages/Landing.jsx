@@ -5,12 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import WorkflowRoadmap from "@/components/pages/WorkflowRoadmap";
+import dynamic from "next/dynamic";
 import Hero from "./landing/Hero";
-import UniversityLogoSlider from "./landing/UniversityLogoSlider";
-import Stats from "./landing/Stats";
+const WorkflowRoadmap = dynamic(() => import("@/components/pages/WorkflowRoadmap"));
+const UniversityLogoSlider = dynamic(() => import("./landing/UniversityLogoSlider"));
+const Stats = dynamic(() => import("./landing/Stats"));
 import { courses, features, colleges, cities, accreditationLogos } from "./landing/data.js";
 import { slugify, getCourseHref, getUniversityHref } from "./landing/data.js";
 import {
@@ -75,15 +74,23 @@ import FAQ from "../FAQ";
 
 const Landing = () => {
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
+    let disposed = false;
+    (async () => {
+      const AOS = (await import("aos")).default;
+      await import("aos/dist/aos.css");
+      if (!disposed) {
+        AOS.init({ duration: 1000, once: true });
+      }
+    })();
+    return () => { disposed = true; };
   }, []);
 
   const router = useRouter();
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
   const [modalType, setModalType] = useState("getStarted");
+  const [showAllCourses, setShowAllCourses] = useState(false);
+  const [showAllCollegesGrid, setShowAllCollegesGrid] = useState(false);
+  const [showAllPartners, setShowAllPartners] = useState(false);
   const [selectedUniversities, setSelectedUniversities] = useState([]);
   
   const slugify = (name) => name.toLowerCase().replace(/\s+/g, "-");
@@ -181,7 +188,7 @@ const Landing = () => {
 
             <TabsContent value="all">
               <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-6">
-                {courses.map((course, index) => (
+                {(showAllCourses ? courses : courses.slice(0, 10)).map((course, index) => (
                   <motion.a
                     key={index}
                     href={getCourseHref(course.title)}
@@ -221,6 +228,16 @@ const Landing = () => {
                   </motion.a>
                 ))}
               </div>
+              {!showAllCourses && (
+                <div className="mt-6 flex justify-center">
+                  <button
+                    onClick={() => setShowAllCourses(true)}
+                    className="px-5 py-2 rounded-full bg-[#00d4c4] text-[#001e3c] font-semibold hover:bg-[#00c0b1] transition-colors"
+                  >
+                    Show more programs
+                  </button>
+                </div>
+              )}
             </TabsContent>
 
             <TabsContent value="ug">
@@ -349,7 +366,7 @@ const Landing = () => {
                   </span>
                   /3
             {selectedUniversities.length > 0 && (
-              <span className="ml-2 text-green-600 font-medium">
+                  <span className="ml-2 text-green-800 font-medium">
                 ({selectedUniversities.length} selected)
               </span>
             )}
@@ -378,7 +395,7 @@ const Landing = () => {
 
     {/* Enhanced University Cards Grid */}
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {colleges.map((college, idx) => {
+      {(showAllCollegesGrid ? colleges : colleges.slice(0, 9)).map((college, idx) => {
         const slug = slugify(college.name);
         const isSelected = selectedUniversities.includes(slug);
         
@@ -508,6 +525,16 @@ const Landing = () => {
         );
       })}
     </div>
+    {!showAllCollegesGrid && (
+      <div className="mt-6 flex justify-center">
+        <button
+          onClick={() => setShowAllCollegesGrid(true)}
+          className="px-5 py-2 rounded-full bg-[#00d4c4] text-[#001e3c] font-semibold hover:bg-[#00c0b1] transition-colors"
+        >
+          Show more universities
+        </button>
+      </div>
+    )}
 
     {/* Selection Help Text */}
     <div className="mt-8 text-center">
@@ -546,7 +573,7 @@ const Landing = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {colleges.map((college, index) => (
+            {(showAllPartners ? colleges : colleges.slice(0, 8)).map((college, index) => (
           <motion.div 
                 key={index}
                 className="group h-full"
@@ -654,8 +681,10 @@ const Landing = () => {
                       >
                         <div
                           className="w-full bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-3 px-4 rounded-xl font-semibold text-center hover:from-blue-700 hover:to-indigo-800 transform hover:scale-[1.02] transition-all duration-200 text-sm shadow-md hover:shadow-xl relative overflow-hidden"
+                          aria-label={`Learn more about ${college.name}`}
+                          title={`Learn more about ${college.name}`}
                         >
-                          <span className="relative z-10">Learn More</span>
+                          <span className="relative z-10">Learn more about {college.name}</span>
                           <div className="absolute inset-0 bg-white/10" />
                           <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-120%] group-hover:translate-x-[120%] transition-transform duration-700" />
                         </div>
@@ -667,9 +696,16 @@ const Landing = () => {
               </motion.div>
             ))}
           </div>
-
-          {/* View All Button */}
-         
+          {!showAllPartners && (
+            <div className="mt-6 flex justify-center">
+              <button
+                onClick={() => setShowAllPartners(true)}
+                className="px-5 py-2 rounded-full bg-[#00d4c4] text-[#001e3c] font-semibold hover:bg-[#00c0b1] transition-colors"
+              >
+                View all partners
+              </button>
+            </div>
+          )}
         </div>
       </section>
 

@@ -2,7 +2,8 @@ import { Inter, Baskervville } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ChatbotWidget from "@/components/ChatbotWidget";
+import dynamic from 'next/dynamic';
+const ChatbotWidget = dynamic(() => import('@/components/ChatbotWidget'), { loading: () => null });
 import OrganizationSchema from "@/components/OrganizationSchema";
 import Canonical from "@/components/Canonical";
 import { Toaster as SonnerToaster } from "sonner";
@@ -417,9 +418,9 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
-        {/* Google tag (gtag.js) */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-17612528759" strategy="afterInteractive" />
-        <Script id="gtag-init" strategy="afterInteractive">
+        {/* Google tag (gtag.js) - load lazily to reduce main-thread work */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-17612528759" strategy="lazyOnload" />
+        <Script id="gtag-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);} 

@@ -8,6 +8,7 @@ import { heroSlides } from "./data";
 
 const Hero = ({ onOpenModal }) => {
   const [slide, setSlide] = useState(0);
+  const [isFirstRender, setIsFirstRender] = useState(true);
   const scrollToId = (id) => {
     if (typeof window === "undefined") return;
     const el = document.getElementById(id);
@@ -17,6 +18,7 @@ const Hero = ({ onOpenModal }) => {
   };
 
   useEffect(() => {
+    setIsFirstRender(false);
     const id = setInterval(() => setSlide((s) => (s + 1) % heroSlides.length), 6000);
     return () => clearInterval(id);
   }, []);
@@ -57,38 +59,56 @@ const Hero = ({ onOpenModal }) => {
                   <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-4 shadow-2xl border border-white/20">
                     {/* Slider Container */}
                     <div className="relative h-56 sm:h-64 md:h-72 lg:h-80 rounded-2xl overflow-hidden mb-6 bg-gray-100">
-                      <AnimatePresence initial={false}>
-                        <motion.div
-                          key={slide}
-                          className="absolute inset-0"
-                          initial={{ opacity: 0, scale: 1.05 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          exit={{ opacity: 0, scale: 1.05 }}
-                          transition={{ duration: 0.8, ease: "easeInOut" }}
-                        >
+                      {isFirstRender && slide === 0 ? (
+                        <>
                           <Image
                             fill
                             src={heroSlides[slide].src}
                             alt={`${heroSlides[slide].title} – ${heroSlides[slide].subtitle} | Online University Degree guidance`}
-                            loading={slide === 0 ? "eager" : "lazy"}
-                            priority={slide === 0}
+                            loading="eager"
+                            priority
+                            fetchPriority="high"
                             sizes="(max-width: 768px) 100vw, 50vw"
                             className="object-contain rounded-2xl object-center"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
-                        </motion.div>
-                      </AnimatePresence>
+                        </>
+                      ) : (
+                        <AnimatePresence initial={false}>
+                          <motion.div
+                            key={slide}
+                            className="absolute inset-0"
+                            initial={{ opacity: 0, scale: 1.01 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 1.01 }}
+                            transition={{ duration: 0.2, ease: "easeOut" }}
+                          >
+                            <Image
+                              fill
+                              src={heroSlides[slide].src}
+                              alt={`${heroSlides[slide].title} – ${heroSlides[slide].subtitle} | Online University Degree guidance`}
+                              loading={slide === 0 ? "eager" : "lazy"}
+                              priority={slide === 0}
+                              fetchPriority={slide === 0 ? "high" : undefined}
+                              sizes="(max-width: 768px) 100vw, 50vw"
+                              className="object-contain rounded-2xl object-center"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
+                          </motion.div>
+                        </AnimatePresence>
+                      )}
                       
                       {/* Slide Indicators */}
-                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
                         {heroSlides.map((_, i) => (
                           <button 
                             key={i} 
                             onClick={() => setSlide(i)} 
-                            className={`h-2 w-2 rounded-full transition-all duration-300 ${
+                            className={`h-4 w-4 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 ${
                               i === slide ? "bg-white w-8" : "bg-white/60 hover:bg-white/80"
                             }`} 
                             aria-label={`Go to slide ${i + 1}`} 
+                            aria-pressed={i === slide}
                           />
                         ))}
                       </div>
@@ -102,9 +122,9 @@ const Hero = ({ onOpenModal }) => {
                       </div>
                       
                       <div className="grid grid-cols-2 gap-3">
-                        <div className="bg-green-50 p-3 rounded-lg border border-green-100 text-center">
-                          <div className="text-green-600 font-bold text-lg">UGC</div>
-                          <div className="text-xs text-green-700">Approved</div>
+                        <div className="bg-green-100 p-3 rounded-lg border border-green-300 text-center">
+                          <div className="text-green-800 font-bold text-lg">UGC</div>
+                          <div className="text-xs text-green-900">Approved</div>
                         </div>
                         <div className="bg-purple-50 p-3 rounded-lg border border-purple-100 text-center">
                           <div className="text-purple-600 font-bold text-lg">24/7</div>
@@ -252,38 +272,56 @@ const Hero = ({ onOpenModal }) => {
                 <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-4 shadow-2xl border border-white/20">
                   {/* Slider Container */}
                   <div className="relative h-56 sm:h-64 md:h-72 lg:h-80 rounded-2xl overflow-hidden mb-6 bg-gray-100">
-                    <AnimatePresence initial={false}>
-                      <motion.div
-                        key={slide}
-                        className="absolute inset-0"
-                        initial={{ opacity: 0, scale: 1.05 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 1.05 }}
-                        transition={{ duration: 0.8, ease: "easeInOut" }}
-                      >
+                    {isFirstRender && slide === 0 ? (
+                      <>
                         <Image
                           fill
                           src={heroSlides[slide].src}
                           alt={`${heroSlides[slide].title} – ${heroSlides[slide].subtitle} | Online University Degree guidance`}
-                          loading={slide === 0 ? "eager" : "lazy"}
-                          priority={slide === 0}
+                          loading="eager"
+                          priority
+                          fetchPriority="high"
                           sizes="(max-width: 768px) 100vw, 50vw"
                           className="object-contain rounded-2xl object-center"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
-                      </motion.div>
-                    </AnimatePresence>
+                      </>
+                    ) : (
+                      <AnimatePresence initial={false}>
+                        <motion.div
+                          key={slide}
+                          className="absolute inset-0"
+                          initial={{ opacity: 0, scale: 1.01 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 1.01 }}
+                          transition={{ duration: 0.2, ease: "easeOut" }}
+                        >
+                          <Image
+                            fill
+                            src={heroSlides[slide].src}
+                            alt={`${heroSlides[slide].title} – ${heroSlides[slide].subtitle} | Online University Degree guidance`}
+                            loading={slide === 0 ? "eager" : "lazy"}
+                            priority={slide === 0}
+                            fetchPriority={slide === 0 ? "high" : undefined}
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            className="object-contain rounded-2xl object-center"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
+                        </motion.div>
+                      </AnimatePresence>
+                    )}
                     
                     {/* Slide Indicators */}
-                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
                       {heroSlides.map((_, i) => (
                         <button 
                           key={i} 
                           onClick={() => setSlide(i)} 
-                          className={`h-2 w-2 rounded-full transition-all duration-300 ${
+                          className={`h-4 w-4 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 ${
                             i === slide ? "bg-white w-8" : "bg-white/60 hover:bg-white/80"
                           }`} 
                           aria-label={`Go to slide ${i + 1}`} 
+                          aria-pressed={i === slide}
                         />
                       ))}
                     </div>
@@ -297,9 +335,9 @@ const Hero = ({ onOpenModal }) => {
                     </div>
                     
                     <div className="grid grid-cols-2 gap-3">
-                      <div className="bg-green-50 p-3 rounded-lg border border-green-100 text-center">
-                        <div className="text-green-600 font-bold text-lg">UGC</div>
-                        <div className="text-xs text-green-700">Approved</div>
+                      <div className="bg-green-100 p-3 rounded-lg border border-green-300 text-center">
+                        <div className="text-green-800 font-bold text-lg">UGC</div>
+                        <div className="text-xs text-green-900">Approved</div>
                       </div>
                       <div className="bg-purple-50 p-3 rounded-lg border border-purple-100 text-center">
                         <div className="text-purple-600 font-bold text-lg">24/7</div>

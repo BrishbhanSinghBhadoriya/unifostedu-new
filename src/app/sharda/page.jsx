@@ -13,7 +13,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import * as Tabs from '@radix-ui/react-tabs';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
-import Script from 'next/script';
 
 const UniversityPage = () => {
   // University data - you can replace this with your actual data

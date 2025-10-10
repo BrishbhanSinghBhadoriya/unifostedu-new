@@ -393,9 +393,11 @@ const Footer = () => {
                           {errors.phone && <p className="text-red-400 text-xs mt-1">{errors.phone}</p>}
                         </div>
                         <div className="relative">
+                          <label htmlFor="footer-city" className="sr-only">Select City</label>
                           <FaMapMarkerAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
                           <select
                             name="city"
+                            id="footer-city"
                             value={formData.city}
                             onChange={handleChange}
                             className={`w-full pl-10 pr-3 py-2.5 appearance-none rounded-xl bg-white/90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-md hover:shadow-lg text-sm ${errors.city ? 'ring-2 ring-red-400' : ''}`}
@@ -430,9 +432,11 @@ const Footer = () => {
                       {/* Row 3: University and Program */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div className="relative">
+                          <label htmlFor="footer-university" className="sr-only">Select University</label>
                           <FaUniversity className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
                           <select
                             name="university"
+                            id="footer-university"
                             value={formData.university}
                             onChange={handleChange}
                             className={`w-full pl-10 pr-3 py-2.5 appearance-none rounded-xl bg-white/90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-md hover:shadow-lg text-sm ${errors.university ? 'ring-2 ring-red-400' : ''}`}
@@ -455,9 +459,11 @@ const Footer = () => {
                           {errors.university && <p className="text-red-400 text-xs mt-1">{errors.university}</p>}
                         </div>
                         <div className="relative">
+                          <label htmlFor="footer-program" className="sr-only">Select Program</label>
                           <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
                           <select
                             name="program"
+                            id="footer-program"
                             value={formData.program}
                             onChange={handleChange}
                             className={`w-full pl-10 pr-3 py-2.5 appearance-none rounded-xl bg-white/90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-md hover:shadow-lg text-sm ${errors.program ? 'ring-2 ring-red-400' : ''}`}
@@ -480,9 +486,11 @@ const Footer = () => {
 
                       {/* Row 4: Highest Qualification */}
                       <div className="relative">
+                        <label htmlFor="footer-qualification" className="sr-only">Select Highest Qualification</label>
                         <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
                         <select
                           name="qualification"
+                          id="footer-qualification"
                           value={formData.qualification}
                           onChange={handleChange}
                           className={`w-full pl-10 pr-3 py-2.5 appearance-none rounded-xl bg-white/90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-md hover:shadow-lg text-sm ${errors.qualification ? 'ring-2 ring-red-400' : ''}`}
@@ -628,11 +636,11 @@ const Footer = () => {
                 
                 <div className="flex items-center gap-3">
                   <div className="flex gap-2">
-                    <a href="mailto:info@unifostedu.com" className="relative p-2.5 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group">
+                    <a href="mailto:info@unifostedu.com" className="relative p-2.5 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group" aria-label="Email us at info@unifostedu.com" title="Email us at info@unifostedu.com">
                       <span className="absolute inset-0 rounded-full bg-cyan-400/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
                       <FaEnvelope className="relative text-cyan-400 group-hover:text-white transition-colors text-sm" />
                     </a>
-                    <a href="https://wa.me/919354735410" className="relative p-2.5 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group">
+                    <a href="https://wa.me/919354735410" className="relative p-2.5 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group" aria-label="Chat with us on WhatsApp at +91 93547 35410" title="WhatsApp: +91 93547 35410">
                       <span className="absolute inset-0 rounded-full bg-green-400/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
                       <FaWhatsapp className="relative text-green-400 group-hover:text-white transition-colors text-sm" />
                     </a>
