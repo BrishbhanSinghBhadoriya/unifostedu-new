@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import { Helmet } from 'react-helmet';
+import { useState } from 'react';
 import {
   FaBookOpen, FaUserTie, FaRobot, FaBriefcase, FaBook, FaUniversity,FaGraduationCap,FaGlobe,
   FaUserFriends, FaClipboardCheck
@@ -13,8 +12,11 @@ import Image from 'next/image';
 import HeroSection from '@/components/HeroSection';
 import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
+import { Button } from '@/components/ui/button';
+import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 
 const Shoolini = () => {
+const [openModal, setOpenModal] = useState(null);
   const ugCourses = [
     {
       course: "Bachelor of Commerce (B.Com)",
@@ -94,11 +96,133 @@ const Shoolini = () => {
         <meta name="keywords" content="Shoolini University Online, Shoolini MBA Online, Shoolini BBA Online, Shoolini BCA Online, Shoolini Online Courses, Shoolini Admission, Shoolini Fees" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
       </Head>
+        
+         <style jsx>{`
+    .roboto { 
+      font-family: 'Roboto', sans-serif; 
+    }
+    * { 
+      box-sizing: border-box; 
+    }
+    body { 
+      overflow-x: hidden; 
+    }
+  `}</style>
+         <div className="roboto overflow-x-hidden">
+        <header className="w-full bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 sticky top-0 z-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between h-16 lg:h-20">
+              {/* Left Logo */}
+              <div className="flex items-center gap-2 lg:gap-4">
+                <img 
+                  src="/images/logo_shoolini.webp" 
+                  alt="Logo_shoolini" 
+                  className="h-12 w-50 sm:h-10 lg:h-12" 
+                />
+               
+              </div>
 
+              {/* Right Side - Responsive */}
+              <div className="flex items-center gap-2 sm:gap-4">
+                {/* Phone - Hidden on small screens */}
+                <a
+                  href="tel:+917042867717"
+                  className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-orange-600 transition-colors"
+                > 
+                  <span className="text-lg">📞</span>
+                  <span className="hidden lg:inline">+91-7042867717</span>
+                  <span className="lg:hidden">Call Now</span>
+                </a>
+                
+                {/* Mobile Phone Icon */}
+                <a
+                  href="tel:+917042867717"
+                  className="sm:hidden flex items-center justify-center w-10 h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
+                >
+                  📞
+                </a>
+                
+                {/* Apply Button */}
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-black-500/25 text-sm sm:text-base"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
 
-   { /* Hero Section */}
+        <section id="hero" className="relative w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] overflow-hidden">
+  {/* Background Image with Gradient Overlay */}
+  <div className="absolute inset-0">
+    <Image
+      src="/images/shoolini_banner.png"
+      alt="Shoolini University Campus"
+      fill
+      className="object-cover object-center"
+      priority
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+  </div>
+
+  {/* Content Container */}
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+    <div className="flex flex-col lg:flex-row items-center justify-between h-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px]">
+
+      {/* Left Content */}
+      <div className="flex-1 max-w-2xl lg:max-w-3xl text-white py-8 sm:py-12 lg:py-24 w-full">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="space-y-4 sm:space-y-6"
+        >
+          {/* Main Heading */}
+         
+
+         
+
+          {/* Badge Text */}
+          <div className="flex flex-wrap gap-2 sm:gap-4 mt-4">
+            {["Flexible Learning", "Research-Focused", "Career-Oriented Programs"].map((text, idx) => (
+              <div key={idx} className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1 sm:py-2 border border-white/30">
+                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-400 rounded-full"></div>
+                <span className="text-xs sm:text-sm font-medium">{text}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
+            <Button
+              size="lg"
+              className="bg-red-500 hover:from-blue-600 hover:to-green-500 text-white font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
+            onClick={() =>{setOpenModal({type:'apply'})}}>
+              Apply Now
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-white-500 text-black  hover:border-white hover:bg-white text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full backdrop-blur-sm transition-all duration-300 w-full sm:w-auto "
+               onClick={() =>{setOpenModal({type:'Enquire Now'})}} >
+              Enquire Now
+            </Button>
+          </div>
+        </motion.div>
+      </div>
+
+    
+    </div>
+  </div>
+</section>
+
+   { /* About Shoolini University Hero Section */}
    <HeroSection
-  universityName="Shoolini University Online"
+  universityName=" About Shoolini University Online"
   location="Solan, Himachal Pradesh, India"
   type="Private University"
   nirfRank="Top 200 "
@@ -220,8 +344,22 @@ const Shoolini = () => {
               <Image width={100} height={100} loading="lazy" src={src} alt="Recruiter" className="h-12 object-contain" />
             </div>
           ))}
+          
         </div>
       </section>
+       {openModal && (
+              <ApplyEnquiryModal
+                open={!!openModal}
+                onOpenChange={(v) => !v && setOpenModal(null)}
+                title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
+                subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
+                imageSrc="/images/shoolini_form1.png"
+                universityName="Shoolini Online University"
+                defaultProgram="MBA"
+                formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
+              />
+            )}
+       </div>
     </>
   );
 };

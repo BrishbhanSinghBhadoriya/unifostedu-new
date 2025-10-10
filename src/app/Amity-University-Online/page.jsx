@@ -401,7 +401,7 @@ const fadeIn = {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <motion.header 
-        className="bg-white shadow-sm sticky top-0 z-50"
+        className="bg-white shadow-sm fixed top-0 left-0 w-full z-50"
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
@@ -429,7 +429,7 @@ const fadeIn = {
       </motion.header>
 
       {/* Notification Bar */}
-      <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 py-2 md:py-3">
+      <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 py-2 md:py-3 mt-[72px] md:mt-[80px]">
         <div className="max-w-7xl mx-auto px-4 md:px-6 text-center">
           <motion.div 
             className="font-semibold flex flex-col sm:flex-row items-center justify-center space-x-0 sm:space-x-2 space-y-1 sm:space-y-0 text-sm md:text-base"
@@ -1599,8 +1599,9 @@ const fadeIn = {
 .map((keyword, index) => (
       <span 
         key={index}
-        className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs hover:bg-gray-700 hover:text-white transition-colors cursor-default"
-        title={keyword}
+        className="bg-gray-800 cursor-pointer text-gray-300 px-3 py-1 rounded-full text-xs hover:bg-gray-700 hover:text-white transition-colors cursor-default"
+        title={keyword} 
+        onClick={() =>{setOpenModal({type:'apply'})}}
       >
         {keyword.length > 25 ? `${keyword.substring(0, 25)}...` : keyword}
       </span>

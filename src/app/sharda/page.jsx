@@ -14,7 +14,8 @@ import Image from 'next/image';
 import * as Tabs from '@radix-ui/react-tabs';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import Script from 'next/script';
-
+import { Laptop, MessageSquare, Users, Clock } from "lucide-react";
+import Link from "next/link";
 const UniversityPage = () => {
   // University data - you can replace this with your actual data
   const universityData = {
@@ -33,8 +34,8 @@ const UniversityPage = () => {
       course: "Bachelor of Business Administration (BBA)",
       duration: "3 Years",
       eligibility: "10+2 Minimum 40%",
-      fees: "1,35,000",
-      specialization: "Finance, Marketing, HR, Entrepreneurship",
+      fees: "1,05,000",
+      specialization: "General",
       image: "/images/bba-online-image.webp",
       university: universityData.name,
       universityShort: universityData.shortName,
@@ -44,23 +45,23 @@ const UniversityPage = () => {
       course: "Bachelor of Computer Applications (BCA)",
       duration: "3 Years",
       eligibility: "10+2 Minimum 40%",
-      fees: "1,35,000",
-      specialization: "Data Science, Cyber Security, Cloud Computing",
+      fees: "1,05,000",
+      specialization: "General",
       image: "/images/bca-online-image.webp",
       university: universityData.name,
       universityShort: universityData.shortName,
       alt: "Bachelor of Computer Applications (BCA)",
     },
     {
-      course: "Bachelor of Commerce (B.Com)",
+      course: "Bachelor of Art(Hons.) (BA)",
       duration: "3 Years",
       eligibility: "10+2 Minimum 40%",
-      fees: "99,000",
-      specialization: "General",
+      fees: "1,05,000",
+      specialization: "Political Science,",
       image: "/images/bcom-online-image.webp",
       university: universityData.name,
       universityShort: universityData.shortName,
-      alt: "Bachelor of Commerce (B.Com)",
+      alt: "Bachelor of Art (BA)",
     },
   ];
 
@@ -69,8 +70,8 @@ const UniversityPage = () => {
       course: "Master of Business Administration (MBA)",
       duration: "2 Years",
       eligibility: "50% Graduation",
-      fees: "1,75,000",
-      specialization: "Finance, Marketing, HR, Business Analytics",
+      fees: "1,00,000",
+      specialization: "Finance,Sales And Marketing, Human Resources Management,Data Science And Business Analytics, HelthCare And Hospital Management",
       image: "/images/mba-online-image.webp",
       university: universityData.name,
       universityShort: universityData.shortName,
@@ -80,9 +81,20 @@ const UniversityPage = () => {
       course: "Master of Computer Applications (MCA)",
       duration: "2 Years",
       eligibility: "50% Graduation",
-      fees: "1,58,000",
-      specialization: "AI & Data Science, Cyber Security, Cloud Computing",
+      fees: "1,00,000",
+      specialization: "Data Science, Computer Science And Information Technology",
       image: "/images/mca-online-image.webp",
+      university: universityData.name,
+      universityShort: universityData.shortName,
+      alt: "Master of Computer Applications (MCA)",
+    },
+      {
+      course: "Master of Commerce (M.Com) ",
+      duration: "2 Years",
+      eligibility: "50% Graduation",
+      fees: "50,000",
+      specialization: "Public Accounting",
+      image: "/images/mcom-online-image.webp",
       university: universityData.name,
       universityShort: universityData.shortName,
       alt: "Master of Computer Applications (MCA)",
@@ -101,60 +113,112 @@ const UniversityPage = () => {
    },[])
    
 
-const faqData = [
-  {
-    question: "Is Sharda University Online approved by UGC?",
-    answer: "Yes, Sharda University Online is recognized by the University Grants Commission (UGC) and approved by the Distance Education Bureau (DEB). All degrees offered through online mode are valid, recognized, and carry the same weightage as regular on-campus programs."
-  },
-  {
-    question: "Is Sharda University Online NAAC accredited?",
-    answer: "Yes, Sharda University has been accredited with NAAC A+ grade, ensuring high-quality education and academic standards in its online degree programs."
-  },
-  {
-    question: "Are online degrees from Sharda University valid for government jobs and higher studies?",
-    answer: "Absolutely. Online degrees from Sharda University are valid for government jobs, competitive exams such as UPSC, SSC, Banking, and also accepted for higher education including MBA, PhD, or international studies."
-  },
-  {
-    question: "What are the popular online courses offered by Sharda University?",
-    answer: "Sharda University Online offers Undergraduate and Postgraduate programs including BBA, BCA, B.Com, MBA, MCA and several professional certificate courses. Specializations include Marketing, HR, Finance, Entrepreneurship, Business Analytics, AI, Data Science, Cyber Security, and Cloud Computing."
-  },
-  {
-    question: "What is the eligibility criteria for admission?",
-    answer: "For UG programs like BBA, BCA, and B.Com, a 10+2 pass with at least 40% marks is required. For PG programs like MBA and MCA, a bachelor's degree with at least 50% marks is mandatory."
-  },
-  {
-    question: "What is the fee structure of Sharda University Online programs?",
-    answer: "Fees vary depending on the program. For example, BBA and BCA cost ₹1,35,000 (total), B.Com is ₹99,000, MBA is ₹1,75,000, and MCA is ₹1,58,000. Easy EMI and installment options are available for students."
-  },
-  {
-    question: "Does Sharda University Online offer placement assistance?",
-    answer: "Yes, Sharda University Online provides 100% placement assistance, career counseling, resume building, interview preparation, and access to top recruiters through its strong industry network."
-  },
-  {
-    question: "Can I pursue Sharda University Online courses while working?",
-    answer: "Yes, all programs are designed to be flexible for working professionals and fresh graduates. You can attend live lectures or access recorded sessions at your convenience."
-  },
-  {
-    question: "Is there any financial support or EMI option available?",
-    answer: "Yes, Sharda University Online offers no-cost EMI, scholarships, and installment facilities to make education affordable for all students."
-  },
-  {
-    question: "What is the admission procedure for Sharda University Online?",
-    answer: "The process is simple: (1) Fill out the online application form, (2) Upload required documents (marksheets, ID proof), (3) Pay the registration fee, (4) Confirm admission with counseling and course selection, (5) Receive your enrollment confirmation and start learning."
-  },
-  {
-    question: "Are Sharda University Online degrees accepted internationally?",
-    answer: "Yes, Sharda University Online degrees are globally recognized and accepted by employers and universities across multiple countries, making it easier for students to pursue international opportunities."
-  },
-  {
-    question: "How do online classes take place at Sharda University?",
-    answer: "The university follows a blended learning approach with live virtual classes, recorded video lectures, e-study materials, discussion forums, and mentorship support. Students can study anytime and from anywhere."
-  },
-  {
-    question: "Can I download the Sharda University Online brochure?",
-    answer: "Yes, you can download the official brochure from the university website or request it via the enquiry form. The brochure contains detailed program structure, fee details, career prospects, and faculty information."
-  }
-];
+ const faqData = [
+    {
+      question: "Is Sharda University Online approved by UGC and recognized for online degrees?",
+      answer: `
+      Yes. Sharda University Online is officially recognized by the University Grants Commission (UGC) and approved by the Distance Education Bureau (DEB), which means all degrees offered through online mode are fully valid and carry the same recognition as regular on-campus degrees. 
+      The university holds a prestigious NAAC A+ accreditation and is ranked 86th in the NIRF 2025 university ranking list. Sharda Online also has the QS I-GAUGE E-LEAD certification for excellence in digital learning — ensuring credibility, academic quality, and national recognition.
+      Employers and government bodies across India accept Sharda Online degrees for higher education and job applications.`
+    },
+    {
+      question: "Is Sharda University Online good for working professionals?",
+      answer: `
+      Absolutely. Sharda University Online is designed specifically for working professionals and fresh graduates who wish to continue learning while managing their careers or personal schedules. 
+      The university provides flexible study options through its advanced Learning Management System (LMS), allowing students to attend live sessions or watch recorded lectures at their convenience. 
+      Course materials, assignments, and quizzes are accessible 24/7, which means professionals can study at their own pace without disturbing their work-life balance. 
+      Additionally, dedicated academic mentors and placement teams guide students throughout their journey — from skill building to final job placements.`
+    },
+    {
+      question: "What are the top online courses offered by Sharda University?",
+      answer: `
+      Sharda University Online offers a wide range of undergraduate and postgraduate degree programs that are industry-oriented and career-focused. Popular online courses include:
+      - **Online BBA (Bachelor of Business Administration):** Ideal for those aiming to build management and entrepreneurship skills.
+      - **Online BCA (Bachelor of Computer Applications):** Perfect for students interested in IT, data science, or software development.
+      - **Online BA(hons.) (Bachelor of Art):** Students pursuing this program develop strong analytical, research, and communication skills that prepare them for careers in civil services, public policy, journalism, law, and academia. B.A. in Political Science also serves as an excellent foundation for UPSC and other competitive exams, as it enhances knowledge of current affairs and government structures.
+      - **Online MBA (Master of Business Administration):** Offers specializations in Marketing, Finance, HR, and Business Analytics.
+      - **Online MCA (Master of Computer Applications):** Designed for graduates aiming to pursue careers in AI, Data Science, Cloud Computing, or Cyber Security.
+      - **Online M.Com (Master of Commerce)(Public Accounting)
+      All online programs are developed by experienced faculty members and reviewed regularly to match current industry standards.`
+    },
+    {
+      question: "What is the admission process for Sharda University Online 2025?",
+      answer: `
+      The admission process for Sharda University Online is simple and fully digital:
+      1️⃣ Visit the official Sharda University website (www.sharda.ac.in or online.sharda.ac.in).  
+      2️⃣ Fill out the online application form with personal and academic details.  
+      3️⃣ Pay the registration fee — ₹1,500 for male and ₹1,000 for female candidates.  
+      4️⃣ Appear for the Sharda University Admission Test (SUAT), an online aptitude-based exam.  
+      5️⃣ Shortlisted students may be invited for an online counseling session or personal interview (for some programs).  
+      6️⃣ After approval, students receive their enrollment number and can begin classes on the LMS platform.
+      
+      The process is transparent, quick, and student-friendly, allowing learners to apply from any location in India or abroad.`
+    },
+    {
+      question: "What is the fee structure for Sharda University Online courses?",
+      answer: `
+      The online degree fee structure at Sharda University is affordable compared to other private universities, and easy EMI options are also available.  
+      - **Online BBA:** ₹1,05,000 total (can be paid semester-wise).  
+      - **Online BCA:** ₹1,05,000 total.  
+      - **Online BA(hons.):** ₹1,05,000 total.  
+      - **Online MBA:** ₹1,00,000 total (₹25,000 per semester).  
+      - **Online MCA:** ₹1,00,000 total.
+      - **Online M.Com:** ₹50,000 total.
+      Students can pay fees in flexible installments or avail zero-cost EMI plans through finance partners. Sharda University also provides scholarships for meritorious students, which can reduce tuition costs significantly.`
+    },
+    {
+      question: "What kind of placement assistance does Sharda University Online offer?",
+      answer: `
+      Sharda University Online provides complete placement support to all enrolled students through its Career Development Cell (CDC). The university has tie-ups with top national and international companies for internships and full-time job placements.  
+      Placement services include:
+      - Resume writing and LinkedIn profile optimization.  
+      - Soft skill and communication workshops.  
+      - Mock interviews and aptitude preparation.  
+      - Career counseling and mentorship programs.  
+      - Job fairs and industry networking sessions.  
+      
+      Students have been successfully placed in reputed organizations across IT, finance, marketing, and management domains.`
+    },
+    {
+      question: "Does Sharda University Online offer scholarships or EMI options?",
+      answer: `
+      Yes. Sharda University offers a wide range of merit-based and need-based scholarships for students enrolling in online programs.  
+      Scholarships are awarded based on academic performance in previous exams, SUAT scores, or other qualifying criteria.  
+      Some students may receive partial or full tuition fee waivers. To retain the scholarship, maintaining a minimum CGPA (like 8.0) and required attendance is mandatory.  
+      Additionally, students can choose to pay through **no-cost EMI** or flexible monthly installments, making education accessible to everyone.`
+    },
+    {
+      question: "How does the online learning system (LMS) of Sharda University work?",
+      answer: `
+      Sharda University uses a world-class Learning Management System (LMS) that acts as a complete digital classroom. Students can:
+      - Attend live interactive classes with faculty.  
+      - Access recorded lectures anytime.  
+      - Participate in group discussions and quizzes.  
+      - Submit assignments and projects online.  
+      - Download e-books and study materials from the digital library.  
+      
+      The LMS also supports performance tracking, progress reports, and feedback systems to ensure that every learner receives a personalized learning experience.`
+    },
+  
+    {
+      question: "Are online degrees from Sharda University valid internationally?",
+      answer: `
+      Yes. Sharda University Online degrees are globally recognized. The university has partnerships and collaborations with academic institutions and corporations across more than 95 countries.  
+      Graduates have successfully used their Sharda degrees to pursue higher education and career opportunities abroad. The UGC and NAAC A+ accreditation further ensure international credibility and acceptance.`
+    },
+    {
+      question: "Why should I choose Sharda University Online over other online universities?",
+      answer: `
+      Sharda University stands out among India’s top online universities because of its strong academic reputation, diverse student community, and quality digital learning infrastructure.  
+      - **Accredited Excellence:** NAAC A+, NIRF Rank 86, UGC-Entitled.  
+      - **Global Learning:** Students from 95+ countries.  
+      - **Career-Focused:** Industry-relevant curriculum and expert faculty.  
+      - **Affordability:** Flexible payment, EMI, and scholarship options.  
+      - **Reputation:** Part of Sharda Group — a trusted name in education since 2009.
+      
+      This combination of quality, affordability, and employability makes Sharda University Online a top choice for modern learners.`
+    }
+  ];
 
 
   const testimonials = [
@@ -208,12 +272,25 @@ const faqData = [
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
 
-         <style jsx>{`
-        .queens { font-family: 'Queens', serif; }
-      `}</style>
-      <div className="queens">
+     <style jsx>{`
+  .queens {
+    font-family: 'Queens', serif;
+  }
+
+  .poppins {
+    font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  section {
+    padding: 40px;
+  }
+`}</style>
+
+
+<div className="poppins overflow-x-hidden">
         {/* Header */}
-        <header className="w-full bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 sticky top-0 z-50">
+        <div className="queens overflow-x-hidden">
+        <header className="w-full bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 fixed top-0 left-0 z-50 ">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16 lg:h-20">
               {/* Logo */}
@@ -223,10 +300,10 @@ const faqData = [
                   alt={`${universityData.name} Logo`} 
                   className="h-8 w-auto sm:h-10 lg:h-12" 
                 />
-                 <h1 className="font-queens text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold">
+                 {/* <h1 className="font-queens text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold">
                   <span style={{ color: universityData.themeColor }}>Online</span>{" "}
                   <span className="text-gray-800">{universityData.shortName}</span>
-                </h1>
+                </h1> */}
               </div>
 
               {/* Contact & Apply */}
@@ -258,9 +335,11 @@ const faqData = [
             </div>
           </div>
         </header>
-
+      </div>
         {/* Hero Section */}
-        <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+          <div className="queens overflow-x-hidden">
+         <section className="relative min-h-screen overflow-x-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+         <div className="absolute inset-0 overflow-x-auto no-scrollbar">
           <div className="absolute inset-0 bg-[url('/images/sharda.webp')] bg-cover bg-center opacity-200"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-blue-900/70 to-indigo-900/80"></div>
 
@@ -348,7 +427,7 @@ const faqData = [
                   <div className="pt-6 border-t border-white/20">
                     <h4 className="text-white font-semibold mb-4 text-center">Popular Programs</h4>
                     <div className="flex flex-wrap justify-center gap-2">
-                      {['Online MBA', 'BBA', 'MCA', 'BCA', 'M.Com', 'B.Com'].map((program, i) => (
+                      {['Online MBA', 'BBA', 'MCA', 'BCA', 'M.Com', 'BA'].map((program, i) => (
                         <span key={i} className="bg-white/5 hover:bg-white/10 border border-white/10 rounded-full px-4 py-2 text-white text-sm transition-all duration-300 cursor-pointer hover:scale-105">
                           {program}
                         </span>
@@ -358,9 +437,10 @@ const faqData = [
                 </div>
               </div>
             </div>
+         </div>
           </div>
         </section>
-
+        </div>
         {/* Features Section */}
         <section className="py-16 bg-gradient-to-r from-slate-50 to-blue-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -389,7 +469,7 @@ const faqData = [
               ].map((feature, i) => (
                 <div key={i} className="group text-center">
                   <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
-                    <div className="w-20 h-20 bg-gradient-to-br from-[#f7188b] to-[#ec027c] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                       <span className="text-2xl">{feature.icon}</span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
@@ -400,7 +480,69 @@ const faqData = [
             </div>
           </div>
         </section>
+        
 
+        <section className="bg-gray-50 py-16 px-6 md:px-12 lg:px-20">
+      <div className="max-w-12xl mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+          Our <span className="text-blue-600">Technology</span>
+        </h2>
+        <p className="text-gray-600 text-lg mb-12">
+          At UniFost, we leverage cutting-edge technology to create an engaging
+          and interactive online learning experience for every student.
+        </p>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Card 1 */}
+          <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+            <Laptop className="mx-auto text-blue-600 mb-4" size={40} />
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              Advanced LMS
+            </h3>
+            <p className="text-gray-600 text-sm">
+              State-of-the-art Learning Management System (LMS) offering a
+              near face-to-face, immersive learning experience.
+            </p>
+          </div>
+
+          {/* Card 2 */}
+          <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+            <MessageSquare className="mx-auto text-blue-600 mb-4" size={40} />
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              Smart Communication
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Easily resolve all queries with our built-in chat and messaging
+              feature for instant mentor support.
+            </p>
+          </div>
+
+          {/* Card 3 */}
+          <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+            <Users className="mx-auto text-blue-600 mb-4" size={40} />
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              Community Learning
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Join online forums and peer groups to collaborate and share ideas
+              through diverse discussions.
+            </p>
+          </div>
+
+          {/* Card 4 */}
+          <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+            <Clock className="mx-auto text-blue-600 mb-4" size={40} />
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              Anytime Access
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Get instant and convenient access to all learning materials
+              anytime, anywhere at your own pace.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
         {/* Courses Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -494,8 +636,173 @@ const faqData = [
             </Tabs.Root>
           </div>
         </section>
+              
 
+              <section className="bg-white py-16 px-6 md:px-20">
+  <div className="max-w-7xl mx-auto text-gray-900">
+    {/* Section Header */}
+    <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
+      🎓 Sharda Online – Learn from Anywhere
+    </h2>
+    <p className="text-center text-gray-700 mb-12 text-lg md:text-xl">
+      Launched in <span className="font-semibold">2023</span> by Sharda University, 
+      Sharda Online is a modern digital learning platform providing undergraduate and postgraduate programs for students seeking flexibility and quality education.
+    </p>
+             <section id="Courses" className="bg-white py-16 px-6 md:px-20">
+      <div className="max-w-7xl mx-auto text-gray-800">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          🎓 Sharda Online – Courses Overview
+        </h2>
 
+        {/* Undergraduate Courses */}
+        <h3 className="text-2xl font-semibold mb-4 border-b-2 border-blue-600 pb-2">
+          Undergraduate (UG) Courses
+        </h3>
+        <div className="overflow-x-auto mb-12">
+          <table className="min-w-full border border-gray-300">
+            <thead className="bg-blue-100 text-gray-900">
+              <tr>
+                <th className="border border-gray-300 px-4 py-2 text-left">Course</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Duration</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Eligibility</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Fees (₹)</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Specializations</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ugCourses.map((course, index) => (
+                <tr
+                  key={index}
+                  className="hover:bg-blue-50 transition duration-200 ease-in-out"
+                >
+                  <td className="border border-gray-300 px-4 py-3 font-semibold">
+                    {course.course}
+                  </td>
+                  <td className="border border-gray-300 px-4 py-3">{course.duration}</td>
+                  <td className="border border-gray-300 px-4 py-3">{course.eligibility}</td>
+                  <td className="border border-gray-300 px-4 py-3">{course.fees}</td>
+                  <td className="border border-gray-300 px-4 py-3">{course.specialization}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Postgraduate Courses */}
+        <h3 className="text-2xl font-semibold mb-4 border-b-2 border-blue-600 pb-2">
+          Postgraduate (PG) Courses
+        </h3>
+        <div className="overflow-x-auto">
+          <table className="min-w-full border border-gray-300">
+            <thead className="bg-blue-100 text-gray-900">
+              <tr>
+                <th className="border border-gray-300 px-4 py-2 text-left">Course</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Duration</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Eligibility</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Fees (₹)</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Specializations</th>
+              </tr>
+            </thead>
+            <tbody>
+              {pgCourses.map((course, index) => (
+                <tr
+                  key={index}
+                  className="hover:bg-blue-50 transition duration-200 ease-in-out"
+                >
+                  <td className="border border-gray-300 px-4 py-3 font-semibold">
+                    {course.course}
+                  </td>
+                  <td className="border border-gray-300 px-4 py-3">{course.duration}</td>
+                  <td className="border border-gray-300 px-4 py-3">{course.eligibility}</td>
+                  <td className="border border-gray-300 px-4 py-3">{course.fees}</td>
+                  <td className="border border-gray-300 px-4 py-3">{course.specialization}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section> 
+    {/* Undergraduate Courses */}
+    <div className="mb-12">
+      <h3 className="text-2xl font-semibold mb-4 border-b-2 border-blue-600 pb-2">
+        Undergraduate Programs (UG)
+      </h3>
+      <ul className="list-disc list-inside space-y-3 text-gray-700">
+        <li><span className="font-semibold">BA in Political Science:</span> Gain a strong foundation in political theories, governance, and international relations. Ideal for careers in government, public policy, research, and administration.</li>
+        <li><span className="font-semibold">BBA (Bachelor of Business Administration):</span> Focus on business management principles with specializations such as Finance, Marketing, HR, and Entrepreneurship.</li>
+        <li><span className="font-semibold">BCA (Bachelor of Computer Applications):</span> Build expertise in software development, data science, cyber security, and cloud computing.</li>
+      </ul>
+    </div>
+
+    {/* Postgraduate Courses */}
+    <div className="mb-12">
+      <h3 className="text-2xl font-semibold mb-4 border-b-2 border-blue-600 pb-2">
+        Postgraduate Programs (PG)
+      </h3>
+      <ul className="list-disc list-inside space-y-3 text-gray-700">
+        <li><span className="font-semibold">MBA (Master of Business Administration):</span> Specializations include Human Resource Management, Marketing Management, Finance, and Healthcare & Hospital Management.</li>
+        <li><span className="font-semibold">MCA (Master of Computer Applications):</span> Focus on advanced computing, AI, data science, and emerging technologies.</li>
+        <li><span className="font-semibold">M.Com (Master of Commerce) in Public Accounting:</span> Gain expertise in accounting, taxation, auditing, and financial management for careers in corporate finance and accounting.</li>
+      </ul>
+    </div>
+
+    {/* Why Choose Sharda Online */}
+    <div className="bg-blue-50 rounded-lg p-6 md:p-10">
+      <h3 className="text-2xl font-semibold mb-4 border-b-2 border-blue-600 pb-2">
+        Why Choose Sharda Online?
+      </h3>
+      <ul className="list-disc list-inside space-y-3 text-gray-700">
+        <li>State-of-the-art Learning Management System (LMS) for an immersive learning experience.</li>
+        <li>Interactive online forums and peer discussions for diverse perspectives.</li>
+        <li>Industry-relevant curriculum designed by expert faculty.</li>
+        <li>Placement assistance and global recognition from Sharda University.</li>
+        <li>Flexible learning, allowing students to study anytime, anywhere.</li>
+      </ul>
+    </div>
+
+    <p className="mt-8 text-center text-gray-700 text-lg">
+      Sharda Online empowers students to advance their careers, gain new skills, and pursue higher education with a globally recognized degree from anywhere in the world.
+    </p>
+  </div>
+</section>
+
+                  {/*  Add Quick Comparison Table */}
+<section id='QuickComparison' className="py-16 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl font-bold text-center mb-12">
+      <span className="text-[#f7188b]">Online vs Regular</span> Degree Comparison
+    </h2>
+    
+    <div className="overflow-x-auto">
+      <table className="w-full border-collapse">
+        <thead>
+          <tr className="bg-gradient-to-r from-[#f7188b] to-[#ec027c] text-white">
+            <th className="p-4 text-left">Feature</th>
+            <th className="p-4 text-center">Sharda Online University</th>
+            <th className="p-4 text-center">Regular Campus</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ['UGC Recognition', '✅ Yes', '✅ Yes'],
+            ['Degree Validity', '✅ Same as Campus', '✅ Valid'],
+            ['Flexibility', '✅ Study Anytime', '❌ Fixed Schedule'],
+            ['Location', '✅ From Anywhere', '❌ Campus Only'],
+            ['Cost', '✅ More Affordable', '❌ Higher Fees'],
+            ['Placement Support', '✅ 100% Assistance', '✅ Available']
+          ].map(([feature, online, regular], i) => (
+            <tr key={i} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+              <td className="p-4 font-semibold">{feature}</td>
+              <td className="p-4 text-center">{online}</td>
+              <td className="p-4 text-center">{regular}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+        </div>
+      </section>
 
           <section>
        
@@ -591,7 +898,7 @@ const faqData = [
 
 
               {/* Certificate + Benefits */}
-                    <section className="bg-[#003366] py-12 px-4">
+                    <section className="bg-[#003366] py-8 px-4 overflow-hidden">
                       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
                         <div className="flex-1">
                           <Image width={100} height={100} loading="lazy" src="/images/certificateshardaonline.webp" alt="certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
@@ -608,7 +915,84 @@ const faqData = [
                           </ul>
                         </div>
                       </div>
-                    </section>   
+                    </section>
+
+                    
+                      <section id="Courses" className="bg-white py-16 px-6 md:px-20">
+      <div className="max-w-7xl mx-auto text-gray-800">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          🎓 Sharda Online – Courses Overview
+        </h2>
+
+        {/* Undergraduate Courses */}
+        <h3 className="text-2xl font-semibold mb-4 border-b-2 border-blue-600 pb-2">
+          Undergraduate (UG) Courses
+        </h3>
+        <div className="overflow-x-auto mb-12">
+          <table className="min-w-full border border-gray-300">
+            <thead className="bg-blue-100 text-gray-900">
+              <tr>
+                <th className="border border-gray-300 px-4 py-2 text-left">Course</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Duration</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Eligibility</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Fees (₹)</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Specializations</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ugCourses.map((course, index) => (
+                <tr
+                  key={index}
+                  className="hover:bg-blue-50 transition duration-200 ease-in-out"
+                >
+                  <td className="border border-gray-300 px-4 py-3 font-semibold">
+                    {course.course}
+                  </td>
+                  <td className="border border-gray-300 px-4 py-3">{course.duration}</td>
+                  <td className="border border-gray-300 px-4 py-3">{course.eligibility}</td>
+                  <td className="border border-gray-300 px-4 py-3">{course.fees}</td>
+                  <td className="border border-gray-300 px-4 py-3">{course.specialization}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Postgraduate Courses */}
+        <h3 className="text-2xl font-semibold mb-4 border-b-2 border-blue-600 pb-2">
+          Postgraduate (PG) Courses
+        </h3>
+        <div className="overflow-x-auto">
+          <table className="min-w-full border border-gray-300">
+            <thead className="bg-blue-100 text-gray-900">
+              <tr>
+                <th className="border border-gray-300 px-4 py-2 text-left">Course</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Duration</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Eligibility</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Fees (₹)</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Specializations</th>
+              </tr>
+            </thead>
+            <tbody>
+              {pgCourses.map((course, index) => (
+                <tr
+                  key={index}
+                  className="hover:bg-blue-50 transition duration-200 ease-in-out"
+                >
+                  <td className="border border-gray-300 px-4 py-3 font-semibold">
+                    {course.course}
+                  </td>
+                  <td className="border border-gray-300 px-4 py-3">{course.duration}</td>
+                  <td className="border border-gray-300 px-4 py-3">{course.eligibility}</td>
+                  <td className="border border-gray-300 px-4 py-3">{course.fees}</td>
+                  <td className="border border-gray-300 px-4 py-3">{course.specialization}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>   
 
         {/* Testimonials Section */}
         <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -802,7 +1186,7 @@ const faqData = [
         </section>
 
         {/* Footer */}
-        <footer className="bg-gradient-to-br from-gray-900 to-slate-900 text-gray-300 pt-20 pb-8">
+        <footer className="bg-gradient-to-br from-gray-900 to-slate-900 text-gray-300 pt-20 pb-8 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-12 border-b border-gray-700">
               {/* Brand */}
@@ -822,9 +1206,9 @@ const faqData = [
                 <ul className="space-y-3">
                   {['Online MBA', 'BBA', 'MCA', 'BCA', 'M.Com', 'B.Com'].map((program, i) => (
                     <li key={i}>
-                      <a href="#" className="text-gray-400 hover:text-[#f7188b] transition-colors">
+                      <button onClick={() => setOpenModal({ type: 'apply' })} className="text-gray-400 hover:text-[#f7188b] transition-colors">
                         {program}
-                      </a>
+                      </button>
                     </li>
                   ))}
                 </ul>
@@ -836,9 +1220,9 @@ const faqData = [
                 <ul className="space-y-3">
                   {['Admissions', 'Scholarships', 'Placements', 'FAQs', 'Contact Us'].map((item, i) => (
                     <li key={i}>
-                      <a href="#" className="text-gray-400 hover:text-[#f7188b] transition-colors">
+                      <Link href="#" className="text-gray-400 hover:text-[#f7188b] transition-colors">
                         {item}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -890,6 +1274,7 @@ const faqData = [
             formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
           />
         )}
+        
       </div>
     </>
   );
