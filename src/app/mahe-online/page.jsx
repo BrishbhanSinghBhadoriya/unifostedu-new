@@ -255,7 +255,7 @@ const Manipal = () => {
       
       <div className="queens overflow-hidden">
         {/* Professional Responsive Header */}
-        <header className="w-full bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 sticky top-0 z-50 overflow-x-hidden">
+        <header className="w-full bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 fixed top-0 z-50 overflow-x-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16 lg:h-20">
               {/* Left Logo */}
@@ -1049,7 +1049,7 @@ const Manipal = () => {
                 <ul className="space-y-3">
                   {['Online MBA', 'BBA', 'MCA', 'BCA', 'M.Com', 'B.Com', 'MA JMC'].map((program, i) => (
                     <li key={i}>
-                      <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">
+                      <a onClick={() => setOpenModal ({ type: 'apply' })} className="text-gray-400 hover:text-orange-400 transition-colors cursor pointer">
                         {program}
                       </a>
                     </li>
@@ -1094,6 +1094,68 @@ const Manipal = () => {
                 </div>
               </div>
             </div>
+                               {/* Popular Programs Section */}
+                                  <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.4 }}
+                                    viewport={{ once: true }}
+                                    className="border-t border-white/10 pt-8 mb-8"
+                                  >
+                                    <h4 className="text-lg font-bold mb-6 text-white text-center">
+                                      Popular Programs & Specializations –Manipal Academy of Higher Education Online(MAHE) "  
+                                    </h4>
+                      
+                                    <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+                                      {[
+                                         "BBA Finance & Accounting - MAHE Online",
+                                         "BBA Digital Marketing - MAHE Online",
+                                         "BBA Enterepreneurship Management & Family Business - MAHE Online",
+                                         "BBA Human Resource Management - MAHE Online",
+                                         "BBA Data Analytics - MAHE Online",
+                                         "BBA Retail & E-commerce Management - MAHE Online",
+
+                                         "BCA Data Science and Analytics - MAHE Online",
+                                         "BCA Cyber Security - MAHE Online",
+                                         "BCA Cloud Computing - MAHE Online",
+
+                                         "B.Com General - MAHE Online",
+
+                                         "MBA Human Resource Management and Finance - MAHE Online",
+                                         "MBA Finance and Marketing - MAHE Online",
+                                         "MBA Marketing and Human Resource Management - MAHE Online",
+                                         "MBA Marketing and Business Analytics - MAHE Online",
+                                         "MBA Finance and Business Analytics - MAHE Online",
+                                         "MBA Human Resource and Business Analytics - MAHE Online",
+                                         "MBA Project Management - MAHE Online",
+                                         "MBA Retail Management and Quick Commerce - MAHE Online",
+                                         "MBA Artificial Intelligence Banking and Finance - MAHE Online",
+                                         "MBA Other Fields (15+) - MAHE Online",
+
+                                         "MCA AI & Data Science - MAHE Online",
+                                        "MCA Cyber Security - MAHE Online",
+                                          "MCA Cloud Computing - MAHE Online",
+                                        "MCA Comprehensive Emerging Technologies - MAHE Online",
+                                        "MCA AI & ML - MAHE Online",
+
+                                         "M.Com General - MAHE Online",
+
+                                         "MA Economics - MAHE Online",
+                                         "MA Journalism and Mass Communication - MAHE Online"
+                                         ]
+
+                                    .map((keyword, index) => (
+                                        <span
+                                          key={index} onClick = {() => setOpenModal({ type: 'apply',})}
+                                          className="bg-white/10 backdrop-blur-sm text-gray-300 px-3 py-2 rounded-full text-xs sm:text-sm hover:bg-[#821812] hover:text-white transition-all duration-300 cursor-pointer border border-white/20 hover:border-orange-500"
+                                          title={keyword}
+                                        >
+                                          {keyword.length > 25 ? `${keyword.substring(0, 25)}...` : keyword}
+                                        </span>
+                                      ))}
+                                    </div>
+                                  </motion.div>
+                      
 
             {/* Bottom */}
             <div className="pt-8 text-center">

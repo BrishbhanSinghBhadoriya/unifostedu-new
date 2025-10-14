@@ -5,7 +5,7 @@ import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck, FaStar, FaCertifi
 import { FaLaptop, FaBook, FaGraduationCap, FaIndustry, FaUserCircle, FaUniversity, FaMoneyBillWave } from "react-icons/fa";
 import EnquireCard from '@/components/EnquireCard';
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Type } from "lucide-react";
 import AccreditationSection from "@/components/AccreditationSection";
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
@@ -1309,7 +1309,7 @@ const LpuOnline = () => {
                 <div className="grid grid-cols-1 gap-2 sm:gap-3">
                   {['BBA Finance', 'BBA Marketing', 'BBA Human Resources', 'BCA Data Science', 'BCA Cyber Security', 'B.Com Accounting & Finance', 'MBA HR', 'MBA Data Science', 'MCA Full Stack', 'M.Com Accounting'].map((program, i) => (
                     <div key={i} className="group">
-                      <a href="#" className="text-gray-400 hover:text-orange-400 transition-all duration-300 flex items-center gap-2 group-hover:translate-x-2">
+                      <a onClick = {() => setOpenModal({ type: 'apply',})} className="text-gray-400 hover:text-orange-400 transition-all duration-300 flex items-center gap-2 group-hover:translate-x-2 cursor-pointer">
                         <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         <span className="text-xs sm:text-sm">{program}</span>
                       </a>

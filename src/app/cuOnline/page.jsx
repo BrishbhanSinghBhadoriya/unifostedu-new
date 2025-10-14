@@ -815,6 +815,85 @@ export default function ChandigarhPage() {
 
        
       </div>
+        {/* Popular Programs Section */}
+                                        <motion.div
+                                          initial={{ opacity: 0, y: 20 }}
+                                          whileInView={{ opacity: 1, y: 0 }}
+                                          transition={{ duration: 0.6, delay: 0.4 }}
+                                          viewport={{ once: true }}
+                                          className="border-t border-white/10 pt-8 mb-8"
+                                        >
+                                          <h4 className="text-lg font-bold mb-6 text-white text-center">
+                                            Popular Programs & Specializations –Manipal Academy of Higher Education Online(MAHE) "  
+                                          </h4>
+                            
+                                          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+                                            {[
+  "BA Journalism - CU Online",
+  "BA Media Studies - CU Online",
+
+  "BBA Business Analytics (KPMG) - CU Online",
+  "BBA Marketing - CU Online",
+  "BBA HR - CU Online",
+  "BBA Entrepreneurship - CU Online",
+  "BBA Digital Marketing - CU Online",
+  "BBA Fin-Tech - CU Online",
+
+  "BCA IT & Systems - CU Online",
+
+  "MBA Business Analytics (KPMG) - CU Online",
+  "MBA Finance - CU Online",
+  "MBA Marketing - CU Online",
+  "MBA HR - CU Online",
+  "MBA IT - CU Online",
+  "MBA Operations - CU Online",
+  "MBA International Business - CU Online",
+  "MBA Digital Marketing - CU Online",
+  "MBA Fin-Tech - CU Online",
+
+  "MCA AI - CU Online",
+  "MCA ML - CU Online",
+  "MCA Data Analytics - CU Online",
+  "MCA Cloud Computing - CU Online",
+  "MCA Full Stack - CU Online",
+
+  "M.Sc Data Science - CU Online",
+  "M.Sc Full Stack - CU Online",
+  "M.Sc Web Development - CU Online",
+
+  "MCA Cloud Computing (AWS Academy) - CU Online",
+  "MCA AWS - CU Online",
+  "MCA DevOps - CU Online",
+
+  "MCA Data Analytics - CU Online",
+  "MCA Big Data - CU Online",
+  "MCA Data Mining - CU Online",
+
+  "MCA General IT - CU Online",
+  "MCA Software Development - CU Online",
+
+  "M.Sc Mathematics - CU Online",
+  "M.Sc Pure Math - CU Online",
+  "M.Sc Applied Math - CU Online",
+
+  "MA Psychology - CU Online",
+  "MA English - CU Online",
+  "MA Economics - CU Online"
+]
+
+      
+                                          .map((keyword, index) => (
+                                              <span
+                                                key={index} onClick = {() => setOpenModal({ type: 'apply',})}
+                                                className="bg-white/10 backdrop-blur-sm text-gray-300 px-3 py-2 rounded-full text-xs sm:text-sm hover:bg-[#821812] hover:text-white transition-all duration-300 cursor-pointer border border-white/20 hover:border-orange-500"
+                                                title={keyword}
+                                              >
+                                                {keyword.length > 25 ? `${keyword.substring(0, 25)}...` : keyword}
+                                              </span>
+                                            ))}
+                                          </div>
+                                        </motion.div>
+                            
 
       {/* Bottom Note */}
       <div className="text-center text-sm text-gray-400 mt-6 border-t border-gray-700 pt-4">
