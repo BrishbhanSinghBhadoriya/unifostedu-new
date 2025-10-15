@@ -43,7 +43,122 @@ export default function sitemap() {
       breadcrumb: ['Home', 'Courses']
     },
 
-    // Course pages - Highest Priority
+    // University pages - Highest Priority (placed before courses for SEO)
+    {
+      url: `${baseUrl}/Amity-University-Online`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 1.0,
+      breadcrumb: ['Home', 'Universities', 'Amity University']
+    },
+    
+    {
+      url: `${baseUrl}/manipal`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 1.0,
+      breadcrumb: ['Home', 'Universities', 'Manipal University']
+    },
+    {
+      url: `${baseUrl}/nmims`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 1.0,
+      breadcrumb: ['Home', 'Universities', 'NMIMS University']
+    },
+    {
+      url: `${baseUrl}/dypatil`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 1.0,
+      breadcrumb: ['Home', 'Universities', 'Dr. D Y Patil University']
+    },
+    {
+      url: `${baseUrl}/jain`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 1.0,
+      breadcrumb: ['Home', 'Universities', 'Jain University']
+    },
+    {
+      url: `${baseUrl}/lpu-online`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 1.0,
+      breadcrumb: ['Home', 'Universities', 'Lovely Professional University']
+    },
+    {
+      url: `${baseUrl}/sharda`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 1.0,
+      breadcrumb: ['Home', 'Universities', 'Sharda University']
+    },
+    {
+      url: `${baseUrl}/shoolini`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 1.0,
+      breadcrumb: ['Home', 'Universities', 'Shoolini University']
+    },
+    {
+      url: `${baseUrl}/smu`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 1.0,
+      breadcrumb: ['Home', 'Universities', 'Sikkim Manipal University']
+    },
+    {
+      url: `${baseUrl}/upes`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 1.0,
+      breadcrumb: ['Home', 'Universities', 'UPES University']
+    },
+    {
+      url: `${baseUrl}/uu`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 1.0,
+      breadcrumb: ['Home', 'Universities', 'Uttaranchal University']
+    },
+    {
+      url: `${baseUrl}/vgu`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 1.0,
+      breadcrumb: ['Home', 'Universities', 'VGU University']
+    },
+    {
+      url: `${baseUrl}/ku-online`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 1.0,
+      breadcrumb: ['Home', 'Universities', 'Kurukshetra University']
+    },
+    {
+      url: `${baseUrl}/opjindal`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 1.0,
+      breadcrumb: ['Home', 'Universities', 'OP Jindal University']
+    },
+    {
+      url: `${baseUrl}/cuonline`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 1.0,
+      breadcrumb: ['Home', 'Universities', 'Chandigarh University']
+    },
+    {
+      url: `${baseUrl}/mahe-online`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 1.0,
+      breadcrumb: ['Home', 'Universities', 'MAHE Online']
+    },
+
+    // Course pages - High Priority
     {
       url: `${baseUrl}/courses/mba-online`,
       lastModified: currentDate,

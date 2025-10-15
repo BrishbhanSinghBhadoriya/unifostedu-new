@@ -10,7 +10,8 @@ const colleges = [
     location: "Noida, UP",
     fee: "₹1.2L - ₹3.45L",
     courses: ["MBA", "BBA", "BCA", "MCA", "more"],
-    description: "One of India's leading private universities with comprehensive online programs."
+    description: "One of India's leading private universities with comprehensive online programs.",
+    link: "/Amity-University-Online"
   },
   {
     name: "Manipal University Online",
@@ -19,7 +20,8 @@ const colleges = [
     location: "Jaipur, Rajasthan",
     fee: "₹1.5L - ₹2.92L",
     courses: ["MBA", "BBA", "BCA", "MCA","more"],
-    description: "Pioneer in online education with industry-aligned curriculum."
+    description: "Pioneer in online education with industry-aligned curriculum.",
+    link: "/manipal"
   },
   {
     name: "Lovely Professional University Online",
@@ -28,7 +30,8 @@ const colleges = [
     location: "Phagwara, Punjab",
     fee: "₹80K - ₹2L",
     courses: ["MBA", "BBA", "BCA", "MCA","more"],
-    description: "Known for practical learning and strong industry connections."
+    description: "Known for practical learning and strong industry connections.",
+    link: "/lpu-online"
   },
   {
     name: "University of Petroleum and Energy Studies Online",
@@ -37,7 +40,8 @@ const colleges = [
     location: "Dehradun, Uttarakhand",
     fee: "₹1.5L - ₹2.2L",
     courses: ["MBA", "BBA", "BCA", "MCA","more"],
-    description: "Specialized in energy and petroleum studies with online programs."
+    description: "Specialized in energy and petroleum studies with online programs.",
+    link: "/upes"
   },
   {
     name: "Narsee Monjee Institute of Management Studies Online",
@@ -46,7 +50,8 @@ const colleges = [
     location: "Mumbai, Maharashtra",
     fee: "₹94K - ₹3.5L",
     courses: ["MBA", "BBA", "BCom", "MBA (WX)",],
-    description: "Premier management institute with comprehensive online offerings."
+    description: "Premier management institute with comprehensive online offerings.",
+    link: "/nmims"
   },
   {
     name: "Sharda University Online",
@@ -55,7 +60,8 @@ const colleges = [
     location: "Greater Noida, UP",
     fee: "₹80K - ₹1.5L",
     courses: ["MBA", "BBA", "BCA", "MCA","more"],
-    description: "Affordable quality education with modern online infrastructure."
+    description: "Affordable quality education with modern online infrastructure.",
+    link: "/sharda"
   },
   {
     name: "Dr. DY Patil Online",
@@ -64,7 +70,8 @@ const colleges = [
     location: "Navi Mumbai, Maharashtra",
     fee: "₹1.4L - ₹1.9L",
     courses: ["MBA", "BBA",  "MCA",],
-    description: "Established university with diverse online program portfolio."
+    description: "Established university with diverse online program portfolio.",
+    link: "/dypatil"
   },
   {
     name: "Jain University Online",
@@ -73,7 +80,8 @@ const colleges = [
     location: "Bangalore, Karnataka",
     fee: "₹1.28L - ₹2.6L",
     courses: ["MBA", "BBA", "BCA", "MCA","more"],
-    description: "Innovative learning approaches with strong academic foundation."
+    description: "Innovative learning approaches with strong academic foundation.",
+    link: "/jain"
   },
   {
     name: "Chandigarh University Online",
@@ -82,7 +90,8 @@ const colleges = [
     location: "Chandigarh",
     fee: "₹1L - ₹2L",
     courses: ["MBA", "BBA", "BCA", "MCA","more"],
-    description: "Northern India's prominent university with online programs."
+    description: "Northern India's prominent university with online programs.",
+    link: "/cuonline"
   }
 ];
 
@@ -159,7 +168,7 @@ export default function ListofCollege() {
                 </div>
 
                 <Link 
-                  href={`/universities/${college.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  href={college.link}
                   className="block w-full bg-[#00ffe0] text-[#001e3c] text-center py-2 px-4 rounded-lg font-semibold hover:bg-[#00e6cc] transition-colors"
                 >
                   View Details

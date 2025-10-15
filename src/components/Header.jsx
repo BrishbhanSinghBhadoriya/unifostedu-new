@@ -11,7 +11,8 @@ import {
 } from 'react-icons/fa';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import EnquiryForm from '@/components/EnquiryForm';
-import BlogsDropdown from '@/components/BlogsDropdown';
+import dynamic from 'next/dynamic';
+const BlogsDropdown = dynamic(() => import('@/components/BlogsDropdown'), { loading: () => null });
 import Image from 'next/image';
 import searchIndex from '@/data/searchIndex.json';
 import courseData from '@/data/courseData.json';
@@ -183,7 +184,7 @@ const [modalType, setModalType] = useState();
                   ? 'bg-gradient-to-r from-[#001e3c] to-[#003b6c] shadow-lg' 
                   : 'bg-white/10 backdrop-blur-sm'
               }`}>
-                <Image width={100} height={100} src="/images/unilogo.webp" alt="Unifost Logo" className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
+                <Image width={100} height={100} src="/images/unilogo.webp" alt="Unifost Logo" sizes="100px" quality={80} className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
               </div>
               {!scrolled && (
                 <div className="absolute -inset-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-2xl blur opacity-10 group-hover:opacity-40 transition-opacity duration-500"></div>
@@ -232,7 +233,7 @@ const [modalType, setModalType] = useState();
                         <Link key={idx} href={uni.link} onClick={() => setMenuOpen(null)} 
                               className="group block rounded-xl overflow-hidden border border-slate-200 bg-white/85 hover:shadow-lg hover:shadow-indigo-100 hover:-translate-y-0.5 transition-all duration-200">
                           <div className="w-full h-24 bg-white flex items-center justify-center overflow-hidden">
-                            <Image width={100} height={100} src={uni.logo} alt={uni.name} loading="lazy" decoding="async" className="max-h-full max-w-full object-contain" />
+                            <Image width={100} height={100} src={uni.logo} alt={uni.name} loading="lazy" decoding="async" sizes="100px" quality={70} className="max-h-full max-w-full object-contain" />
                           </div>
                           <div className="px-3 py-2">
                             <p className="text-sm font-semibold text-[#001e3c] group-hover:text-[#00ffe0] line-clamp-2">{uni.name}</p>

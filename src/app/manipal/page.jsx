@@ -12,9 +12,9 @@ import Head from 'next/head';
 import Image from 'next/image';
 import * as Tabs from '@radix-ui/react-tabs';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
-import Script from 'next/script';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import LazySection from '@/components/LazySection';
 
 const Manipal = () => {
 
@@ -559,6 +559,7 @@ useEffect(() => {
         </section>
 
   {/* Enhanced Statistics Section */}
+  <LazySection>
   <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-orange-50 via-white to-yellow-50">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <motion.div
@@ -629,9 +630,11 @@ useEffect(() => {
         ))}
       </div>
   </div>
-</section>
+  </section>
+  </LazySection>
 
       {/* Professional Rankings & Accreditations Section */}
+      <LazySection>
       <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
@@ -676,6 +679,7 @@ useEffect(() => {
           </div>
         </div>
       </section>
+      </LazySection>
 
       {/* Unlock 360 Advantage */}
       
@@ -804,7 +808,7 @@ useEffect(() => {
                   transition={{ duration: 0.5 }}
                   className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8"
                 >
-                  {[...ugCourses, ...pgCourses,].map((course, idx) => (
+                  {([...ugCourses, ...pgCourses].slice(0, 8)).map((course, idx) => (
                     <motion.div
                       key={idx}
                       initial={{ opacity: 0, y: 50 }}
@@ -816,6 +820,11 @@ useEffect(() => {
                     </motion.div>
                   ))}
                 </motion.div>
+                <div className="mt-6 flex justify-center">
+                  <Button size="lg" variant="outline" onClick={() => setActiveTab('ug')} className="border-2">
+                    Show more programs
+                  </Button>
+                </div>
               </Tabs.Content>
 
               {/* UG Courses */}
