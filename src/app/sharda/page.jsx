@@ -866,7 +866,51 @@ const faqData = [
                 </div>
               </div>
             </div>
+                 
 
+ {/* Popular Programs Section */}
+                                  <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.4 }}
+                                    viewport={{ once: true }}
+                                    className="border-t border-white/10 pt-8 mb-8"
+                                  >
+                                    <h4 className="text-lg font-bold mb-6 text-white text-center">
+                                      Popular Programs & Specializations –Manipal Academy of Higher Education Online(MAHE) "  
+                                    </h4>
+                      
+                                    <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+                                      {[
+                                     "BBA General - Sharda Online",
+                                      "BCA General - Sharda Online",
+                                      "BA Political Science - Sharda Online",
+
+                                     "MBA Finance - Sharda Online",
+                                     "MBA Sales And Marketing - Sharda Online",
+                                      "MBA Human Resources Management - Sharda Online",
+                                    "MBA Data Science And Business Analytics - Sharda Online",
+                                    "MBA HelthCare And Hospital Management - Sharda Online",
+
+                                    "MCA Data Science - Sharda Online",
+                                     "MCA Computer Science And Information Technology - Sharda Online",
+
+                                    "M.Com Public Accounting - Sharda Online"
+                                 ]
+
+
+                                    .map((keyword, index) => (
+                                        <span
+                                          key={index} onClick = {() => setOpenModal({ type: 'apply',})}
+                                          className="bg-white/10 backdrop-blur-sm text-gray-300 px-3 py-2 rounded-full text-xs sm:text-sm hover:bg-[#821812] hover:text-white transition-all duration-300 cursor-pointer border border-white/20 hover:border-orange-500"
+                                          title={keyword}
+                                        >
+                                          {keyword.length > 25 ? `${keyword.substring(0, 25)}...` : keyword}
+                                        </span>
+                                      ))}
+                                    </div>
+                                  </motion.div>
+                                       
             {/* Bottom */}
             <div className="pt-8 text-center">
               <p className="text-gray-500 text-sm">

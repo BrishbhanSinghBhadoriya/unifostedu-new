@@ -908,7 +908,7 @@ const Dypatil = () => {
                 "Online MBA in Logistics Management", "Online MBA in Supply Chain Management", "Online MBA in Blockchain Management",
                 "Online MBA in Digital Marketing", "Online MBA in Agribusiness Management", "Online MBA in Marketing Management"
               ].map((keyword, index) => (
-                <span 
+                <span onClick={()=>(setOpenModal('apply'))}
                   key={index}
                   className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs hover:bg-gray-700 hover:text-white transition-colors cursor-default"
                   title={keyword}

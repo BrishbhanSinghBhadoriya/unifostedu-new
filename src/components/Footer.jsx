@@ -191,8 +191,12 @@ const Footer = () => {
       "/jain/",
       "/dypatil/",
       "/sharda/",
-    
-
+      "/upes/",
+      "/vgu/",
+      "/shoolini/",
+      "/opjindal/",
+      "/nmims/",
+      "/uu/"
   ];
   if (hideFooterRoutes.includes(pathname)) {
     return null;

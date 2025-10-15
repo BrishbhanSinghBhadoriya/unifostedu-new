@@ -6,6 +6,7 @@ import { FaUniversity, FaAward, FaGlobe, FaUserTie, FaClipboardCheck, FaRobot, F
 
 const HeroSection = ({
   universityName,
+  universityNameClass,  // ✅ YE PROP ADD KIYA
   highlightColor = "text-yellow-500",
   location,
   type,
@@ -42,8 +43,11 @@ const HeroSection = ({
             <span className="text-sm font-medium">{badgeText}</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight font-[Poppins]">
-        <span className={highlightColor}>{universityName}</span>
+          {/* ✅ YAHAN PE CHANGE KIYA - universityNameClass prop use kiya */}
+          <h1 className="text-3xl md:text-4xl font-bold leading-tight font-[Poppins]">
+            <span className={universityNameClass || highlightColor}>
+              {universityName}
+            </span>
           </h1>
 
           {/* Location and Basic Info */}

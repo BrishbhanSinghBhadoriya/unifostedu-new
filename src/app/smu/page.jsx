@@ -237,9 +237,9 @@ const SMU = () => {
         .queens { font-family: 'Queens', serif; }
       `}</style>
       
-      <div className="queens">
+      <div className="queens overflow-x-hidden">
         {/* Professional Responsive Header */}
-        <header className="w-full bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 sticky top-0 z-50">
+         <header className="w-full bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 fixed top-0 left-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16 lg:h-20">
               {/* Left Logo */}
@@ -1037,7 +1037,7 @@ const SMU = () => {
                 <ul className="space-y-3">
                   {['Online MBA', 'MCA', 'B.Com', 'B.A.', 'M.Com', 'M.A.'].map((program, i) => (
                     <li key={i}>
-                      <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">
+                      <a onClick={() => setOpenModal({ type: 'enquary' })} className="text-gray-400 hover:text-red-400 transition-colors cursor-pointer">
                         {program}
                       </a>
                     </li>
@@ -1082,7 +1082,41 @@ const SMU = () => {
                 </div>
               </div>
             </div>
-
+              {/* Popular Programs Section */}
+                          <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                            viewport={{ once: true }}
+                            className="border-t border-white/10 pt-8 mb-8"
+                          >
+                            <h4 className="text-lg font-bold mb-6 text-white text-center">
+                              Popular Programs & Specializations – NMIMS Global Online
+                            </h4>
+              
+                            <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+                              {[
+                                "BA English + Sociology + Political Science - SMU Online",
+                                "B.Com General - SMU Online",
+                                "MBA Dual Specialization (Marketing, Finance, HR, Systems, Operations and Supply Chain Management, Healthcare Management) - SMU Online",
+                                "MCA General - SMU Online",
+                                "MA English / Sociology / Political Science - SMU Online",
+                                "M.Com General - SMU Online"
+                                ]
+                            .map((keyword, index) => (
+                                <span
+                                  key={index}
+                                  onClick={() => setOpenModal({ type: 'apply' })}
+                                  className="bg-white/10 backdrop-blur-sm text-gray-300 px-3 py-2 rounded-full text-xs sm:text-sm hover:bg-[#7b1fa2] hover:text-white transition-all duration-300 cursor-pointer border border-white/20 hover:border-purple-500"
+                                  title={keyword}
+                                >
+                                  {keyword.length > 30 ? `${keyword.substring(0, 30)}...` : keyword}
+                                </span>
+                              ))}
+                            </div>
+                          </motion.div>
+              
+                         
             {/* Bottom */}
             <div className="pt-8 text-center">
               <p className="text-gray-500 text-sm">

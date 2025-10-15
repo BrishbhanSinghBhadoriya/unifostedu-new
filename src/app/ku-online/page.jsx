@@ -309,7 +309,7 @@ const KU = () => {
         <meta name="twitter:image" content="/images/ku.webp" />
       </Head>
 
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 overflow-hidden">
         {/* Header */}
         <header className="bg-white shadow-md fixed top-0 w-full z-20">
           <div className="max-w-7xl mx-auto p-2 flex justify-between items-center">
@@ -836,15 +836,15 @@ const KU = () => {
               <h3 className="text-white font-bold mb-4">IMPORTANT LINKS</h3>
               <div className="grid grid-cols-2 gap-2 text-sm">
                 <ul className="space-y-2">
-                  <li><a href="#" className="hover:text-blue-400">Home</a></li>
-                  <li><a href="#" className="hover:text-blue-400">About Us</a></li>
-                  <li><a href="#" className="hover:text-blue-400">Programs</a></li>
-                  <li><a href="#" className="hover:text-blue-400">Admissions</a></li>
-                  <li><a href="#" className="hover:text-blue-400">UGC-DEB Approval</a></li>
+                  <li><a href="#Home" className="hover:text-blue-400">Home</a></li>
+                  <li><a href="#About Us" className="hover:text-blue-400">About Us</a></li>
+                  <li><a href="#Courses" className="hover:text-blue-400">Programs</a></li>
+                  <li><a href="#Admission" className="hover:text-blue-400">Admissions</a></li>
+                  <li><a href="#Aggredation" className="hover:text-blue-400">UGC-DEB Approval</a></li>
                 </ul>
                 <ul className="space-y-2">
                   <li><a href="#" className="hover:text-blue-400">Student Portal</a></li>
-                  <li><a href="#" className="hover:text-blue-400">FAQs</a></li>
+                  <li><a href="#faq" className="hover:text-blue-400">FAQs</a></li>
                   <li><a href="#" className="hover:text-blue-400">Contact Us</a></li>
                   <li><a href="#" className="hover:text-blue-400">Mandatory Disclosure</a></li>
                   <li><a href="#" className="hover:text-blue-400">Public Notice</a></li>
@@ -892,7 +892,39 @@ const KU = () => {
               </div>
             </div>
           </div>
+               <div className="border-t border-gray-700 pt-8 mb- 8">
+            <h4 className="text-lg font-semibold mb-4 text-white text-center">Popular Programs & Specializations</h4>
+            <div className="flex flex-wrap justify-center gap-2 cursor-pointer">
+              {[
+  "BBA Business Administration - KU Online",
+  "BCA Computer Applications - KU Online",
+  "B.Com Commerce - KU Online",
 
+  "MBA General Management - KU Online",
+  "MCA Computer Applications - KU Online",
+  "M.Com Commerce - KU Online",
+  "MA English - KU Online",
+  "MA Journalism - KU Online",
+  "MA Mass Communication - KU Online",
+  "MA Political Science - KU Online",
+
+  "MBA Finance Management - KU Online",
+  "MBA Information Technology Management - KU Online",
+  "MBA Human Resource Management - KU Online",
+  "MBA Marketing - KU Online",
+  "MBA Business Analytics - KU Online"
+]
+.map((keyword, index) => (
+                <span onClick={()=>(setOpenModal('apply'))}
+                  key={index}
+                  className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs hover:bg-gray-700 hover:text-white transition-colors cursor-pointer"
+                  title={keyword}
+                >
+                  {keyword.length > 25 ? `${keyword.substring(0, 25)}...` : keyword}
+                </span>
+              ))}
+            </div>
+          </div>
           {/* Bottom Note */}
           <div className="text-center text-sm text-gray-400 mt-6 border-t border-gray-700 pt-4">
             All rights reserved | Kurukshetra University Online

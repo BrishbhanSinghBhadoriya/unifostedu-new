@@ -148,6 +148,12 @@ const [modalType, setModalType] = useState();
       "/jain/",
       "/dypatil/",
       "/sharda/",
+      "/shoolini/",
+      "/vgu/",
+      "/upes/",
+      "/opjindal/",
+      "/nmims/",
+      "/uu/",
       
     ];
     setShowHeader(!hideHeaderRoutes.includes(path));
