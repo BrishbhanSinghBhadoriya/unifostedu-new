@@ -143,7 +143,6 @@ const [modalType, setModalType] = useState();
       "/cuonline/",
       "/mahe-online/",
       "/ku-online/",
-      "/bookdemo/",
       "/smu/",
       "/jain/",
       "/dypatil/",

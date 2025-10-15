@@ -941,24 +941,13 @@ const fadeIn = {
 
 
        <section id='AboutAmity' className="bg-gray-50 py-12 px-6 md:px-20">
-      <div className="max-w-5xl mx-auto text-gray-800 leading-relaxed">
+      <div className="max-w-9xl mx-auto text-gray-800 leading-relaxed">
         {/* Main Title */}
         <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-2 md:mb-3">
           About Amity University
         </h2>
 
-        {/* Overview */}
-        <p className="text-black-700 mb-8">
-          Amity University is a leading Indian private university accredited by
-          NAAC (Grade A) and recognized by the UGC, offering over 300 programs
-          across 29 campuses in India and internationally. Its key offerings
-          include advanced infrastructure with digital libraries, interactive
-          classrooms, hi-tech labs, a strong focus on industry-aligned
-          education, and extensive leadership and professional development
-          programs. Amity fosters student success through opportunities for
-          innovation and research, encouraging them to become globally
-          competitive and socially responsible professionals.
-        </p>
+        
 
         {/* Accreditation & Recognitions */}
         <h3 className="text-2xl font-semibold mt-10 mb-4">
@@ -1069,7 +1058,7 @@ const fadeIn = {
         </ul>
 
         <section id='Courses' className="bg-white py-16 px-6 md:px-20">
-  <div className="max-w-7xl mx-auto text-gray-800">
+  <div className=" mx-auto text-gray-800">
     <h2 className="text-3xl font-bold text-center mb-10">
       🎓 Amity University – Online Courses Overview
     </h2>
