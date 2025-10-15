@@ -13,19 +13,7 @@ import Image from 'next/image';
 import { toast } from 'sonner';
 import Breadcrumb from '@/components/Breadcrumb';
 
-// export const metadata = {
-//   title: "UNIFOST | Online Education & Career Counseling Platform|Unifost",
-//   description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees, career counseling, and personalized guidance. Discover our mission to transform education.",
-//   keywords: "About UNIFOST, EdTech Platform India, Online Education Company, Career Counseling Services, University Partner Network, Education Technology India, Online University Degrees, Student Guidance Platform, Educational Innovation India",
-//   openGraph: {
-//     title: "About UNIFOST | India's Leading EdTech Platform for Online Education",
-//     description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees, career counseling, and personalized guidance.",
-//     images: ["/images/uni.webp"],
-//   },
-//   alternates: {
-//     canonical: "https://unifostedu.com/about",
-//   },
-// };
+
 
 export default function About() {
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
@@ -182,7 +170,7 @@ export default function About() {
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c] to-[#003b6c] opacity-95"></div>
-        <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('/images/uni.webp')] opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight">

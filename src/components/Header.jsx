@@ -254,7 +254,7 @@ const [modalType, setModalType] = useState();
           </nav>
 
           {/* Search with suggestions (click to redirect) */}
-          <div className="hidden sm:block relative flex-1 max-w-sm mx-2 lg:mx-3">
+          <div className="relative flex-1 max-w-sm mx-2 lg:mx-3">
             <div className="flex items-center bg-white/95 backdrop-blur rounded-full px-3 py-1.5 shadow-md ring-1 ring-slate-200">
               <FaSearch className="text-slate-500 text-xs" />
               <input
@@ -281,7 +281,7 @@ const [modalType, setModalType] = useState();
           </div>
 
           {/* Contact Icons - Made more compact */}
-          <div className="hidden md:flex gap-1 lg:gap-2 items-center text-[#00ffe0]">
+          <div className="hidden sm:flex gap-1 lg:gap-2 items-center text-[#00ffe0]">
             <a href="tel:+919354735410" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us"  aria-label="Email us at info@unifostedu.com">
              
               <FaPhoneAlt className="text-xl" />
@@ -295,7 +295,7 @@ const [modalType, setModalType] = useState();
           </div>
 
           {/* Call/Email - Made more compact */}
-          <div className="hidden lg:flex flex-col justify-center items-end text-xs ml-2">
+          <div className="hidden md:flex flex-col justify-center items-end text-xs ml-2">
             <div className="flex items-center gap-1 text-white-600 font-semibold">
               <FaPhoneAlt className="text-[#00ffe0] text-xs" /> <span className="text-white">+91 7042867717</span>
             </div>
@@ -348,7 +348,7 @@ const [modalType, setModalType] = useState();
               <div className="pb-8"> {/* Added padding-bottom here */}
               <div className="flex items-center justify-between mb-6 sm:mb-8">
                 <div className="flex items-center gap-3">
-                  <Image width={100} height={100} loading="lazy" src="images/uni.webp" alt="Unifost" className="h-8 w-auto" />
+                  <Image width={100} height={100} loading="lazy" src="/images/uni.webp" alt="Unifost" className="h-8 w-auto" />
                   <span className="text-lg font-bold text-[#00ffe0]">Unifost</span>
                 </div>
                 <button
