@@ -589,6 +589,162 @@ const fadeIn = {
 
 
 
+      {/* About Amity University Online Section */}
+      <section className="py-12 md:py-16 bg-gradient-to-br from-blue-50 via-white to-purple-50 px-4 md:px-6 font-[Inter] relative">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-40"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f3f4f6' fill-opacity='0.3'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        ></div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className={`${playfair.className} text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6`}>
+              About Amity University Online
+            </h2>
+            <div className="w-24 h-1 bg-yellow-500 mx-auto mb-8 rounded-full"></div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Leading Online Education in India</h3>
+                <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                  Amity University Online is India's one of the recognised UGC-approved online university, which offers high-class online degree programs designed for learners, working professionals, and entrepreneurs who aim to enhance their skills and advance their careers in the future.
+                </p>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  It is ranked among the best online universities in India, Amity Online offers globally recognized online MBA in India 2025, online BBA, online MCA, online M.Com, online BA, and online BCA programs are designed to deliver the best online courses for their excellence with flexibility.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission & Vision</h3>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  Our mission and vision are to make quality online education in India that can be accessible to all — whether someone is searching for the best online MBA in India, top online MBA for working professionals, or affordable online degree programs with industry relevance and flexible for everyone.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Right Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Digital Learning Ecosystem</h3>
+                <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                  Amity Online provides feature of digital learning ecosystem with the help of AI driven tools, live online classes, recorded lectures, personalized mentorship, and career support.
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <span className="text-gray-700">AI-Driven Tools</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <span className="text-gray-700">Live Classes</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <span className="text-gray-700">Recorded Lectures</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <span className="text-gray-700">Career Support</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Pan-India Recognition</h3>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  Students from cities such as Delhi, Mumbai, Bangalore, Chennai, Hyderabad, and Kolkata choose Amity University Online because it offers recognized online degrees in India which is accepted by employers throughout the world.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Bottom Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mt-12"
+          >
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-2xl text-white">
+              <h3 className="text-2xl font-bold mb-4">Comprehensive Program Offerings</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="text-lg font-semibold mb-3">MBA Program Excellence</h4>
+                  <p className="text-blue-100 leading-relaxed">
+                    Amity Online's MBA program in India is designed in such a way for both fresh graduates and working professionals seeking online MBA in India for career growth. Our AICTE and UGC-approved online MBA courses specialize in HR, Finance, Marketing, Analytics, International Business, and Digital Marketing — which makes Amity one of the best universities for online education in India.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold mb-3">Diverse Degree Programs</h4>
+                  <p className="text-blue-100 leading-relaxed">
+                    Not only MBA, Amity University Online offers a range of online undergraduate and postgraduate degrees such as online BBA, online M.Com, online MA, online MCA, and online BCA. Every program is designed and emphasize real-world learning, practical exposure, and interactive course delivery, which are aligned with NEP 2020 online education goals.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Final CTA Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="mt-12 text-center"
+          >
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Amity Online?</h3>
+              <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                Amity Online stands out among various top online universities in India 2025 because of its strong global collaborations, placement support, and advanced learning technologies, which they use in their courses. If you're pursuing an online MBA in Delhi, online degree in Mumbai, or distance education in India, you will gain academic experiences from one of the India's most reputed universities, which will make you job-ready and give you confidence to excel in your academics and build your great future.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button
+                  size="lg"
+                  className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-3 text-lg rounded-full"
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                >
+                  Apply Now
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-gray-300 hover:border-blue-400 px-8 py-3 text-lg rounded-full"
+                  onClick={() => setOpenModal({ type: 'enquiry' })}
+                >
+                  <ArrowRight className="w-5 h-5 mr-2" />
+                  Enquire Now
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Courses Section with Tabs */}
     <section className="py-12 md:py-16 bg-white px-4 md:px-6 font-[Inter] relative">
   {/* Background Pattern */}

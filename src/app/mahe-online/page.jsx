@@ -252,7 +252,7 @@ const Manipal = () => {
         .queens { font-family: 'Queens', serif; }
       `}</style>
       
-      <div className="queens overflow-hidden">
+      <div className="queens">
         {/* Professional Responsive Header */}
         <header className="w-full bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 sticky top-0 z-50 overflow-x-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -304,7 +304,7 @@ const Manipal = () => {
         </header>
 
         {/* Premium Hero Section */}
-        <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 ">
+        <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
           {/* Animated Background */}
           <div className="absolute inset-0 bg-[url('/images/mahe-uni.webp')] bg-cover bg-center opacity-200"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-blue-900/70 to-indigo-900/80"></div>
@@ -833,7 +833,7 @@ const Manipal = () => {
         <section className="bg-[#002d5f] text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center gap-12">
             <div className="md:w-1/2">
-              <Image width={600} height={400} src="/images/mahe-certi.webp" alt="Certificate" className="rounded-2xl shadow-2xl w-full" />
+              <Image width={600} height={400} src="/images/MAHE-certi.webp" alt="Certificate" className="rounded-2xl shadow-2xl w-full" />
             </div>
             <div className="md:w-1/2">
               <h2 className="text-4xl lg:text-5xl font-bold mb-6">Recognized Online Degree from Manipal Academy of Higher Education</h2>
