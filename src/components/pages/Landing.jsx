@@ -88,9 +88,6 @@ const Landing = () => {
   const router = useRouter();
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
   const [modalType, setModalType] = useState("getStarted");
-  const [showAllCourses, setShowAllCourses] = useState(false);
-  const [showAllCollegesGrid, setShowAllCollegesGrid] = useState(false);
-  const [showAllPartners, setShowAllPartners] = useState(false);
   const [selectedUniversities, setSelectedUniversities] = useState([]);
   
   const slugify = (name) => name.toLowerCase().replace(/\s+/g, "-");
@@ -188,7 +185,7 @@ const Landing = () => {
 
             <TabsContent value="all">
               <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-6">
-                {(showAllCourses ? courses : courses.slice(0, 10)).map((course, index) => (
+                {courses.map((course, index) => (
                   <motion.a
                     key={index}
                     href={getCourseHref(course.title)}
@@ -228,16 +225,6 @@ const Landing = () => {
                   </motion.a>
                 ))}
               </div>
-              {!showAllCourses && (
-                <div className="mt-6 flex justify-center">
-                  <button
-                    onClick={() => setShowAllCourses(true)}
-                    className="px-5 py-2 rounded-full bg-[#00d4c4] text-[#001e3c] font-semibold hover:bg-[#00c0b1] transition-colors"
-                  >
-                    Show more programs
-                  </button>
-                </div>
-              )}
             </TabsContent>
 
             <TabsContent value="ug">
@@ -395,7 +382,7 @@ const Landing = () => {
 
     {/* Enhanced University Cards Grid */}
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {(showAllCollegesGrid ? colleges : colleges.slice(0, 9)).map((college, idx) => {
+      {colleges.map((college, idx) => {
         const slug = slugify(college.name);
         const isSelected = selectedUniversities.includes(slug);
         
@@ -525,16 +512,6 @@ const Landing = () => {
         );
       })}
     </div>
-    {!showAllCollegesGrid && (
-      <div className="mt-6 flex justify-center">
-        <button
-          onClick={() => setShowAllCollegesGrid(true)}
-          className="px-5 py-2 rounded-full bg-[#00d4c4] text-[#001e3c] font-semibold hover:bg-[#00c0b1] transition-colors"
-        >
-          Show more universities
-        </button>
-      </div>
-    )}
 
     {/* Selection Help Text */}
     <div className="mt-8 text-center">
@@ -573,7 +550,7 @@ const Landing = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {(showAllPartners ? colleges : colleges.slice(0, 8)).map((college, index) => (
+            {colleges.map((college, index) => (
           <motion.div 
                 key={index}
                 className="group h-full"
@@ -681,10 +658,8 @@ const Landing = () => {
                       >
                         <div
                           className="w-full bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-3 px-4 rounded-xl font-semibold text-center hover:from-blue-700 hover:to-indigo-800 transform hover:scale-[1.02] transition-all duration-200 text-sm shadow-md hover:shadow-xl relative overflow-hidden"
-                          aria-label={`Learn more about ${college.name}`}
-                          title={`Learn more about ${college.name}`}
                         >
-                          <span className="relative z-10">Learn more about {college.name}</span>
+                          <span className="relative z-10">Learn More</span>
                           <div className="absolute inset-0 bg-white/10" />
                           <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-120%] group-hover:translate-x-[120%] transition-transform duration-700" />
                         </div>
@@ -696,16 +671,9 @@ const Landing = () => {
               </motion.div>
             ))}
           </div>
-          {!showAllPartners && (
-            <div className="mt-6 flex justify-center">
-              <button
-                onClick={() => setShowAllPartners(true)}
-                className="px-5 py-2 rounded-full bg-[#00d4c4] text-[#001e3c] font-semibold hover:bg-[#00c0b1] transition-colors"
-              >
-                View all partners
-              </button>
-            </div>
-          )}
+
+          {/* View All Button */}
+         
         </div>
       </section>
 

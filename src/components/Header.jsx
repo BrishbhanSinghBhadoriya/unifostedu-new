@@ -11,8 +11,7 @@ import {
 } from 'react-icons/fa';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import EnquiryForm from '@/components/EnquiryForm';
-import dynamic from 'next/dynamic';
-const BlogsDropdown = dynamic(() => import('@/components/BlogsDropdown'), { loading: () => null });
+import BlogsDropdown from '@/components/BlogsDropdown';
 import Image from 'next/image';
 import searchIndex from '@/data/searchIndex.json';
 import courseData from '@/data/courseData.json';
@@ -144,7 +143,6 @@ const [modalType, setModalType] = useState();
       "/cuonline/",
       "/mahe-online/",
       "/ku-online/",
-      "/bookdemo/",
       "/smu/",
       "/jain/",
       "/dypatil/",
@@ -287,7 +285,7 @@ const [modalType, setModalType] = useState();
              
               <FaPhoneAlt className="text-xl" />
             </a>
-            <a href="https://wa.me/917042867717" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="WhatsApp" aria-label="WhatsApp">
+            <a href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="WhatsApp" aria-label="WhatsApp">
               <FaWhatsappSquare className="text-xl" />
             </a>
             <button onClick={() => openModal('videoCall')} className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Book Demo">
@@ -346,7 +344,7 @@ const [modalType, setModalType] = useState();
         {mobileMenuOpen && (
           <div className="md:hidden fixed inset-0 top-0 left-0 w-full h-screen z-[9999] text-white bg-gradient-to-br from-[#001e3c] to-[#003b6c] overflow-y-auto overscroll-contain" style={{ minHeight: '100dvh', maxHeight: '100svh', WebkitOverflowScrolling: 'touch' }}>
             <div className="w-full flex flex-col p-4 sm:p-6 pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]" style={{ minHeight: '100%' }}>
-              <div className="pb-8"> {/* Added padding-bottom here */}
+              {/* Top bar */}
               <div className="flex items-center justify-between mb-6 sm:mb-8">
                 <div className="flex items-center gap-3">
                   <Image width={100} height={100} loading="lazy" src="/images/uni.webp" alt="Unifost" className="h-8 w-auto" />
@@ -462,7 +460,7 @@ const [modalType, setModalType] = useState();
                 
                  
                   <button onClick={() => { router.push('/bookdemo'); setMobileMenuOpen(false); }} 
-                          className="flex flex-col items-center gap-2 p-2 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-xl text-[#001e3c] text-center font-bold text-sm hover:scale-105 transition">
+                          className="flex flex-col items-center gap-2 p-3 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-xl text-[#001e3c] text-center font-bold text-sm hover:scale-105 transition">
                     <FaVideo className="text-lg" />
                     <span>Demo</span>
                   </button>
@@ -487,7 +485,6 @@ const [modalType, setModalType] = useState();
                     </div>
                   </div>
                 </div>
-              </div>
               </div>
             </div>
           </div>
