@@ -557,7 +557,138 @@ useEffect(() => {
             </div>
           </div>
         </section>
+       {/* Introduction Section - Detailed Overview */}
+<section className="py-16 sm:py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+        Welcome to <span className="text-orange-600">Manipal University Jaipur Online</span>
+      </h2>
+      <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        Where the legacy of Manipal meets the potential of digital learning. Searching for the <strong>best online MBA programs in India</strong>? 
+        You've found a platform designed for your better future with <strong>affordable online MBA India</strong> programs accessible to every learner.
+      </p>
+    </div>
 
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">For Every Learner</h3>
+        <div className="space-y-4">
+          <div className="flex items-start gap-3">
+            <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <span className="text-orange-600 text-sm">✓</span>
+            </div>
+            <p className="text-gray-700">
+              <strong>Fresh Graduates:</strong> Exploring <strong>online MBA in India for freshers</strong> to kickstart your career
+            </p>
+          </div>
+          <div className="flex items-start gap-3">
+            <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <span className="text-orange-600 text-sm">✓</span>
+            </div>
+            <p className="text-gray-700">
+              <strong>Working Professionals:</strong> Looking for <strong>executive MBA online India</strong> to accelerate your career growth
+            </p>
+          </div>
+          <div className="flex items-start gap-3">
+            <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <span className="text-orange-600 text-sm">✓</span>
+            </div>
+            <p className="text-gray-700">
+              <strong>Location Flexible:</strong> Whether in <strong>Mumbai, Bangalore, Chennai</strong>, or anywhere across India
+            </p>
+          </div>
+          <div className="flex items-start gap-3">
+            <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <span className="text-orange-600 text-sm">✓</span>
+            </div>
+            <p className="text-gray-700">
+              <strong>No Entrance Exam:</strong> Seeking flexibility with <strong>online MBA without entrance exam</strong> options
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-gradient-to-br from-orange-50 to-blue-50 rounded-2xl p-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Academic Portfolio</h3>
+        <div className="space-y-4">
+          <div>
+            <h4 className="font-bold text-gray-900 mb-2">📊 Business & Management</h4>
+            <p className="text-sm text-gray-600">
+              Top <strong>online MBA programs in India</strong> with 21+ specializations. Perfect blend of academic excellence and real-world relevance.
+            </p>
+          </div>
+          <div>
+            <h4 className="font-bold text-gray-900 mb-2">💻 Technology & Data Science</h4>
+            <p className="text-sm text-gray-600">
+              <strong>Online data science course India</strong> and <strong>AI & ML certification India</strong> for high-growth tech careers.
+            </p>
+          </div>
+          <div>
+            <h4 className="font-bold text-gray-900 mb-2">🎨 Digital Skills & Marketing</h4>
+            <p className="text-sm text-gray-600">
+              <strong>Digital marketing certification online</strong> and <strong>web development certificates</strong> for creative professionals.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-6 flex gap-3">
+          <button 
+            onClick={() => setOpenModal({ type: 'enquiry' })}
+            className="flex-1 bg-orange-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-sm"
+          >
+            Download Brochure
+          </button>
+          <button 
+            onClick={() => setOpenModal({ type: 'apply' })}
+            className="flex-1 border-2 border-orange-600 text-orange-600 px-4 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors text-sm"
+          >
+            Free Counseling
+          </button>
+        </div>
+      </div>
+    </div>
+
+    {/* Why Choose Section */}
+    <div className="mt-16 bg-gray-50 rounded-2xl p-8">
+      <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
+        Why Choose Manipal University Jaipur Online?
+      </h3>
+      
+      <div className="grid md:grid-cols-3 gap-6">
+        <div className="bg-white p-6 rounded-xl shadow-sm">
+          <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+            <span className="text-2xl">🏆</span>
+          </div>
+          <h4 className="font-bold text-gray-900 mb-2">Legacy of Trust</h4>
+          <p className="text-sm text-gray-600">
+            <strong>UGC-entitled</strong> degrees among <strong>top 10 online universities India</strong>. Your search for <strong>recognized online universities India</strong> ends here.
+          </p>
+        </div>
+
+        <div className="bg-white p-6 rounded-xl shadow-sm">
+          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+            <span className="text-2xl">📚</span>
+          </div>
+          <h4 className="font-bold text-gray-900 mb-2">Real-World Learning</h4>
+          <p className="text-sm text-gray-600">
+            Application-oriented pedagogy with live projects and case studies. Not just content delivery, but practical skill development.
+          </p>
+        </div>
+
+        <div className="bg-white p-6 rounded-xl shadow-sm">
+          <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+            <span className="text-2xl">🎯</span>
+          </div>
+          <h4 className="font-bold text-gray-900 mb-2">Comprehensive Support</h4>
+          <p className="text-sm text-gray-600">
+            <strong>Free university counseling India</strong>, career guidance, and admission support. Book free counseling anytime.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   {/* Enhanced Statistics Section */}
   <LazySection>
   <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-orange-50 via-white to-yellow-50">
@@ -1515,7 +1646,7 @@ useEffect(() => {
                   <h4 className="text-white font-bold mb-4 text-lg">Programs</h4>
                   <ul className="space-y-3 text-sm">
                     {['MBA', 'BBA', 'MCA', 'BCA', 'M.Com', 'B.Com', 'MAJMC'].map((program, i) => (
-                      <li key={i} className="hover:text-orange-400 transition-colors cursor-pointer">
+                      <li onClick={() => setOpenModal({ type: 'apply' })} key={i} className="hover:text-orange-400 transition-colors cursor-pointer">
                         {program}
                       </li>
                     ))}
@@ -1633,9 +1764,12 @@ useEffect(() => {
                   "MA Journalism & Mass Communication - MUJ Online"
                 ].map((keyword, index) => (
                   <span
-                    key={index}
+                    key={index} 
                     className="bg-white/10 backdrop-blur-sm text-gray-300 px-3 py-2 rounded-full text-xs sm:text-sm hover:bg-orange-500 hover:text-white transition-all duration-300 cursor-pointer border border-white/20 hover:border-orange-500"
                     title={keyword}
+                    onClick={() => {
+                          setOpenModal({ type: "apply" });
+                        }}
                   >
                     {keyword.length > 25 ? `${keyword.substring(0, 25)}...` : keyword}
                   </span>
@@ -1656,6 +1790,26 @@ useEffect(() => {
             </motion.div>
           </div>
         </footer>
+        {openModal && (
+                    <ApplyEnquiryModal
+                      open={!!openModal}
+                      onOpenChange={(v) => !v && setOpenModal(null)}
+                      title={
+                        openModal.type === "apply"
+                          ? "Start Your Application"
+                          : "Enquire Now"
+                      }
+                      subtitle={
+                        openModal.type === "apply"
+                          ? "Fill the quick form to begin your admission process"
+                          : "Share your details and our counselor will reach out"
+                      }
+                      imageSrc="/images/online-manipal-form.webp"
+                      universityName="Manipal University Jaipur (muj)"
+                      defaultProgram="MBA"
+                      formType={openModal.type === "apply" ? "getStarted" : "general"}
+                    />
+                  )}
         </div>
     </>
   );
