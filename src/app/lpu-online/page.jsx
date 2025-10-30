@@ -1,8 +1,7 @@
 'use client';
-import { motion } from "framer-motion";
-import * as Tabs from "@radix-ui/react-tabs";
+import { motion, AnimatePresence } from "framer-motion";
 import React, { useState, useEffect } from 'react';
-import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck, FaStar, FaCertificate, FaBuilding, FaUsers, FaPhone, FaWhatsapp, FaLaptop, FaBook, FaGraduationCap, FaIndustry, FaUserCircle, FaUniversity, FaMoneyBillWave, FaRupeeSign, FaChalkboardTeacher } from "react-icons/fa";
+import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck, FaStar, FaCertificate, FaBuilding, FaUsers, FaPhone, FaWhatsapp, FaLaptop, FaBook, FaGraduationCap, FaIndustry, FaUserCircle, FaUniversity, FaMoneyBillWave, FaRupeeSign, FaChalkboardTeacher, FaBars, FaTimes } from "react-icons/fa";
 import EnquireCard from '@/components/EnquireCard';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -10,6 +9,7 @@ import AccreditationSection from "@/components/AccreditationSection";
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import EnquiryForm from '@/components/EnquiryForm';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Head from 'next/head';
 import Image from 'next/image';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
@@ -20,6 +20,44 @@ import { AiOutlineSchedule } from "react-icons/ai";
 import { ChevronDown } from "lucide-react";
 
 const LpuOnline = () => {
+
+  // Introduction content
+  const introductionContent = {
+    title: "About LPU Online: Redefining Education for India 2025",
+    description: `In the dynamic landscape of modern education, LPU Online stands as a beacon of innovation and accessibility. As the digital arm of Lovely Professional University, one of India's largest and most renowned educational institutions, LPU Online is dedicated to delivering high-quality, UGC-entitled degrees to students and working professionals across the country and beyond. The mission of LPU Online is to break down geographical and financial barriers, making world-class education not just a dream, but an achievable reality for everyone. Whether you are searching for the best online MBA in India, a cutting-edge online data science course, or a practical digital marketing certification online, LPU Online provides a robust, flexible, and recognized platform to propel your career forward in 2025 and the future.`,
+    pillars: `The ecosystem at LPU Online is built on three core pillars: Quality, Flexibility, and Recognition. Every online degree and certificate in web development is crafted by industry experts and seasoned academics, ensuring the curriculum is not only theoretically sound but also pragmatically aligned with the demands of the global job market. The learning experience is powered by a state-of-the-art Learning Management System (LMS). This intuitive platform provides students with 24/7 access to engaging video lectures, e-books, interactive assignments, and virtual labs, creating a truly immersive online and distance learning environment. This makes LPU Online a premier choice among the top online universities in India for those who need to balance their education with personal and professional commitments.`
+  };
+
+  const whyChooseLPU = {
+    title: "Why Choose LPU Online? Your Gateway to a Brighter Future",
+    description: `When you compare online universities in India, LPU Online consistently emerges as a top contender. But what exactly sets it apart? The decision to choose LPU Online is an investment in a future-proof career, supported by a multitude of compelling benefits designed for the aspirants of 2025.`,
+    reasons: [
+      {
+        title: "UGC-Entitled and Nationally Recognized Degrees",
+        description: `The foremost concern for any student considering online courses is validity. Rest assured, every online degree offered by LPU Online is fully entitled by the University Grants Commission (UGC). This national recognition means your qualification, be it an online MBA in India or a B.Com, will be valued by employers, government bodies, and other educational institutions across India. This crucial factor places LPU Online high on the list of recognized online universities in India, giving you the confidence that your investment is secure and your credential is powerful.`
+      },
+      {
+        title: "A Curriculum Designed for the Real World",
+        description: `The academic programs at LPU Online are not created in an ivory tower. They are meticulously designed in consultation with industry leaders to ensure relevance. For instance, the online data science course India incorporates the latest tools and programming languages like Python and R, while the digital marketing certification online covers everything from SEO and SEM to social media analytics and content marketing. Similarly, the ai and ml certification India delves into machine learning algorithms and AI applications that are revolutionizing industries. This focus on practical, employable skills ensures that graduates are job-ready from day one.`
+      },
+      {
+        title: "Unmatched Flexibility for Working Professionals and Freshers",
+        description: `The core of online education is flexibility, and LPU Online has perfected this art. The platform is a boon for working professionals who aspire to upskill or earn a higher degree like an executive MBA online India without pausing their careers. There are no fixed class timings; you can access your lectures, complete assignments, and prepare for exams according to your own schedule, whether you are in Delhi, Mumbai, Bangalore, or Chennai. This flexibility also extends to freshers who may be preparing for other competitive exams or pursuing personal interests alongside their degree.`
+      },
+      {
+        title: "Affordable Education with Transparent Fee Structure",
+        description: `LPU Online is committed to making quality education affordable. When you compare course fees online for similar programs offered by other best online universities in India, you will find that LPU Online offers exceptional value. The fees structure is transparent, with no hidden costs, making an affordable online MBA India a reality for thousands of students. This commitment to affordability ensures that financial constraints do not hinder talent and ambition.`
+      },
+      {
+        title: "Learn from the Best in the Business",
+        description: `The faculty at LPU Online comprises a blend of seasoned academicians and industry veterans who bring a wealth of knowledge and real-world experience into the virtual classroom. Their expertise ensures that the learning is not just about passing exams but about understanding concepts and their practical applications. This high-quality instruction is a consistent highlight in positive LPU online courses reviews and is a critical component of the university's success.`
+      },
+      {
+        title: "Simplified Admission Process",
+        description: `The admission process at LPU Online is streamlined and user-friendly. It is often a key differentiator for those looking for an online MBA without entrance exam, as the process is generally based on academic merit. Prospective students can easily initiate their journey by filling out an online application. To help with this decision, the university offers the opportunity to book free counseling for courses or talk to education expert online, providing clarity and guidance at every step. You can also download course guide or university info pack download to have all the information at your fingertips.`
+      }
+    ]
+  };
 
  const ugCourses = [
     {
@@ -205,12 +243,23 @@ const LpuOnline = () => {
   const [modalType, setModalType] = useState('getStarted');
   const [openModal, setOpenModal] = useState(null);
   const [activeTab, setActiveTab] = useState('all');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const timer= setTimeout(()=>{
      setOpenModal(true)
     },3000)
     return () => clearTimeout(timer);
+  },[])
+
+  // Prevent scrolling when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => document.body.style.overflow = 'unset';
   },[])
 
   return (
@@ -247,54 +296,10 @@ const LpuOnline = () => {
         * { box-sizing: border-box; }
         body { overflow-x: hidden; } // This can be moved to a global stylesheet
       `}</style>
-         {/* Professional Responsive Header */}
-        <header className="w-full fixed bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 z-50 ">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16 lg:h-20">
-              {/* Left Logo */}
-              <div className="flex items-center gap-2 lg:gap-4">
-                <img 
-                  src="/images/LPU-Online-Logo.svg" 
-                  alt="LPU Online Logo" 
-                  className="h-8 w-auto sm:h-10 lg:h-12" 
-                />
-                
-              </div>
-
-              {/* Right Side - Responsive */}
-              <div className="flex items-center gap-2 sm:gap-4">
-                {/* Phone - Hidden on small screens */}
-                <a
-                  href="tel:+917042867717"
-                  className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-orange-600 transition-colors"
-                > 
-                  <span className="text-lg">📞</span>
-                  <span className="hidden lg:inline">+91-7042867717</span>
-                  <span className="lg:hidden">Call Now</span>
-                </a>
-                
-                {/* Mobile Phone Icon */}
-                <a
-                  href="tel:+917042867717"
-                  className="sm:hidden flex items-center justify-center w-10 h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
-                >
-                  📞
-                </a>
-                
-                {/* Apply Button */}
-                <button 
-                  onClick={() => setOpenModal({ type: 'apply' })}
-                  className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base"
-                >
-                  <span className="hidden sm:inline">Apply Now</span>
-                  <span className="sm:hidden">Apply</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </header>
+        
       <div className="max-w-screen-2xl mx-auto flex">
-        <aside className="sticky hidden lg:flex flex-col top-14 w-64 h-[calc(100vh-2rem)] px-4 py-8 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40 ">
+        {/* Desktop Sidebar */}
+        <aside className="fixed hidden lg:flex flex-col top-20 w-64 h-[calc(100vh-5rem)] px-4 py-8 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40 ">
             <h3 className="text-lg font-bold mb-6 text-indigo-800 border-b-2 border-indigo-200 pb-2 cursor-pointer">Page Contents</h3>
             <ul className="space-y-3 cursor-pointer">
                 {[
@@ -325,10 +330,111 @@ const LpuOnline = () => {
                 ))}
             </ul>
         </aside>
-        <main className="flex-1 min-w-0 lg:pl-8">
-          <div className="overflow-x-hidden">
-      
-     
+        <main className="flex-1 min-w-0 lg:pl-72">
+          <div className="overflow-x-hidden pt-16 lg:pt-20">
+            {/* Professional Responsive Header */}
+            <header className="w-full fixed bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 top-0 left-0 right-0 z-50">
+              <div className="max-w-screen-2xl mx-auto px-2 sm:px-4 lg:px-8">
+                <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
+                  {/* Left Logo */}
+                  <div className="flex items-center gap-1 sm:gap-2 lg:gap-4">
+                    <img 
+                      src="/images/LPU-Online-Logo.svg" 
+                      alt="LPU Online Logo" 
+                      className="h-6 w-auto sm:h-8 lg:h-12" 
+                    />
+                  </div>
+
+                  {/* Right Side - Responsive */}
+                  <div className="flex items-center gap-1 sm:gap-2 lg:gap-4">
+                    {/* Mobile Menu Button */}
+                    <button
+                      onClick={() => setIsMobileMenuOpen(true)}
+                      aria-label="Open menu"
+                      className="lg:hidden p-2 border rounded-md hover:bg-gray-100 transition-colors"
+                    >
+                      <FaBars className="w-5 h-5 text-gray-700" />
+                    </button>
+
+                    {/* Phone - Hidden on small screens */}
+                    <a
+                      href="tel:+917042867717"
+                      className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-orange-600 transition-colors"
+                    > 
+                      <FaPhone className="text-orange-500" />
+                      <span className="hidden lg:inline">+91-7042867717</span>
+                    </a>
+                    
+                    {/* Apply Button */}
+                    <button 
+                      onClick={() => setOpenModal({ type: 'apply' })}
+                      className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base"
+                    >
+                      <span className="hidden sm:inline">Apply Now</span>
+                      <span className="sm:hidden">Apply</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </header>
+
+            {/* Mobile Sidebar */}
+            <AnimatePresence>
+              {isMobileMenuOpen && (
+                <>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[999] lg:hidden"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  />
+                  <motion.aside
+                    initial={{ x: "-100%" }}
+                    animate={{ x: 0 }}
+                    exit={{ x: "-100%" }}
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    className="fixed top-0 left-0 w-[85vw] sm:w-80 h-full bg-white border-r shadow-2xl z-[1000] p-6 flex flex-col overflow-y-auto will-change-transform lg:hidden"
+                  >
+                    <div className="flex items-center justify-between mb-8">
+                      <h3 className="text-xl font-bold text-orange-600">Page Contents</h3>
+                      <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-full hover:bg-gray-100">
+                        <FaTimes className="w-5 h-5 text-gray-600" />
+                      </button>
+                    </div>
+                    <ul className="space-y-4">
+                      {[
+                          { id: "introduction", label: "Introduction" },
+                          { id: "campus-tour", label: "Campus Tour" },
+                          { id: "courses", label: "Explore Online Courses" },
+                          { id: "highlights", label: "Key Highlights" },
+                          { id: "admission-dates", label: "Admission Dates" },
+                          { id: "fees", label: "Fees Structure" },
+                          { id: "admission-process", label: "Admission Process" },
+                          { id: "sessions", label: "Upcoming Session" },
+                          { id: "placement-partners", label: "Placement Partners" },
+                          { id: "faq", label: "Student Reviews & FAQ" },
+                          { id: "conclusion", label: "Conclusion" }
+                      ].map((item) => (
+                        <li key={item.id}>
+                          <button
+                            onClick={() => {
+                              const section = document.getElementById(item.id);
+                              if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                              setIsMobileMenuOpen(false);
+                            }}
+                            className="text-gray-700 hover:text-orange-600 font-semibold text-base transition-colors duration-200 w-full text-left py-2"
+                          >
+                            {item.label}
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.aside>
+                </>
+              )}
+            </AnimatePresence>
 
         {/* Premium Hero Section */}
         <section id="introduction" className="relative w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] overflow-hidden">
@@ -346,29 +452,29 @@ const LpuOnline = () => {
           </div>
 
           {/* Content Container */}
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full ">
             <div className="flex flex-col lg:flex-row items-center justify-between h-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px]">
               
               {/* Left Content */}
-              <div className="flex-1 max-w-2xl lg:max-w-3xl text-white py-8 sm:py-12 lg:py-24 w-full">
+              <div className="flex-1 max-w-2xl lg:max-w-3xl text-white py-6 sm:py-8 lg:py-24 w-full px-4 sm:px-0">
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="space-y-4 sm:space-y-6"
+                  className="space-y-3 sm:space-y-6"
                 >
                   {/* University Badge */}
-                  <div className="inline-flex items-center gap-2 sm:gap-3 bg-white/20 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 border border-white/30">
+                  <div className="inline-flex items-center gap-1 sm:gap-3 bg-white/20 backdrop-blur-sm rounded-full px-3 sm:px-6 py-1.5 sm:py-3 border border-white/30">
                     <img 
                       src="/images/LPU-Online-Logo.svg" 
                       alt="LPU Logo" 
-                      className="h-6 sm:h-8 w-auto" 
+                      className="h-5 sm:h-8 w-auto" 
                     />
-                    <span className="text-sm sm:text-lg font-semibold">Lovely Professional University</span>
+                    <span className="text-xs sm:text-lg font-semibold">Lovely Professional University</span>
                   </div>
 
                   {/* Main Heading */}
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-shadow-md">
+                  <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-shadow-lg">
                     <span className="block">Transform Your</span>
                     <span className="block text-[#ff6900] font-semibold">
                       Future with LPU Online
@@ -376,7 +482,7 @@ const LpuOnline = () => {
                   </h1>
 
                   {/* Subtitle */}
-                  <p className="text-lg sm:text-xl md:text-2xl text-gray-200 leading-relaxed max-w-2xl text-shadow-sm">
+                  <p className="text-base sm:text-xl md:text-2xl text-gray-200 leading-relaxed max-w-2xl text-shadow">
                     UGC-approved online degrees with NAAC A++ accreditation. 
                     Flexible learning, expert mentorship, and global recognition.
                   </p>
@@ -455,17 +561,21 @@ const LpuOnline = () => {
           
 
         {/* About Section / Campus Tour */}
-        <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white ">
-           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-                    About <span className="text-orange-500">LPU Online</span>
-                  </h2>
-           <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-                    In the dynamic landscape of modern education, LPU Online stands as a beacon of innovation and accessibility. As the digital arm of Lovely Professional University, one of India's largest and most renowned educational institutions, LPU Online is dedicated to delivering high-quality, UGC-entitled degrees to students and working professionals across the country and beyond. The mission of LPU Online is to break down geographical and financial barriers, making world-class education not just a dream, but an achievable reality for everyone. Whether you are searching for the best online MBA in India, a cutting-edge online data science course, or a practical digital marketing certification online, LPU Online provides a robust, flexible, and recognized platform to propel your career forward in 2025 and the future.
-                    The ecosystem at LPU Online is built on three core pillars: Quality, Flexibility, and Recognition. Every online degree and certificate in web development is crafted by industry experts and seasoned academics, ensuring the curriculum is not only theoretically sound but also pragmatically aligned with the demands of the global job market. The learning experience is powered by a state-of-the-art Learning Management System (LMS). This intuitive platform provides students with 24/7 access to engaging video lectures, e-books, interactive assignments, and virtual labs, creating a truly immersive online and distance learning environment. This makes LPU Online a premier choice among the top online universities in India for those who need to balance their education with personal and professional commitments
-           </p>
-           <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-                    LPU Online offers UGC-entitled online degree programs from Lovely Professional University, providing various undergraduate and postgraduate options in fields like business, commerce, and computer applications.
-                  </p>
+        <section id="campus-tour" className="py-8 sm:py-12 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-6 text-center">
+              About <span className="text-orange-500">LPU Online</span>
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed mb-4 sm:mb-6">
+              In the dynamic landscape of modern education, LPU Online stands as a beacon of innovation and accessibility. As the digital arm of Lovely Professional University, one of India's largest and most renowned educational institutions, LPU Online is dedicated to delivering high-quality, UGC-entitled degrees to students and working professionals across the country and beyond. The mission of LPU Online is to break down geographical and financial barriers, making world-class education not just a dream, but an achievable reality for everyone. Whether you are searching for the best online MBA in India, a cutting-edge online data science course, or a practical digital marketing certification online, LPU Online provides a robust, flexible, and recognized platform to propel your career forward in 2025 and the future.
+            </p>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed mb-4 sm:mb-6">
+              The ecosystem at LPU Online is built on three core pillars: Quality, Flexibility, and Recognition. Every online degree and certificate in web development is crafted by industry experts and seasoned academics, ensuring the curriculum is not only theoretically sound but also pragmatically aligned with the demands of the global job market. The learning experience is powered by a state-of-the-art Learning Management System (LMS). This intuitive platform provides students with 24/7 access to engaging video lectures, e-books, interactive assignments, and virtual labs, creating a truly immersive online and distance learning environment. This makes LPU Online a premier choice among the top online universities in India for those who need to balance their education with personal and professional commitments.
+            </p>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed">
+              LPU Online offers UGC-entitled online degree programs from Lovely Professional University, providing various undergraduate and postgraduate options in fields like business, commerce, and computer applications.
+            </p>
+          </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           
@@ -476,7 +586,7 @@ const LpuOnline = () => {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
                 className="space-y-6 lg:space-y-8"
-              >
+              > 
                 <div id="campus-tour">
                  
                   
@@ -484,7 +594,7 @@ const LpuOnline = () => {
                 </div>
 
                 {/* Key Features Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
                   {[
                     { icon: FaCertificate, title: "UGC & NAAC Recognized", desc: "Globally recognized degrees" },
                     { icon: FaLaptop, title: "Advanced LMS Platform", desc: "Interactive learning system" },
@@ -493,30 +603,30 @@ const LpuOnline = () => {
                     { icon: FaClipboardCheck, title: "AI Proctored Exams", desc: "Secure online assessments" },
                     { icon: FaBriefcase, title: "Placement Support", desc: "Career assistance" }
                   ].map((feature, index) => (
-                    <div key={index} className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
-                      <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                        <feature.icon className="w-5 h-5 sm:w-6 sm:h-6 text-orange-600" />
+                    <div key={index} className="flex items-start gap-2 sm:gap-3 md:gap-4 p-2 sm:p-3 md:p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                      <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                        <feature.icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-orange-600" />
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">{feature.title}</h4>
-                        <p className="text-xs sm:text-sm text-gray-600">{feature.desc}</p>
+                      <div className="min-w-0 flex-1">
+                        <h4 className="font-semibold text-gray-900 mb-0.5 sm:mb-1 text-xs sm:text-sm md:text-base truncate">{feature.title}</h4>
+                        <p className="text-xs md:text-sm text-gray-600">{feature.desc}</p>
                       </div>
                     </div>
                   ))}
                 </div>
 
                 {/* Recognitions */}
-                <div className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-2xl p-4 sm:p-6 border border-orange-100">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4 flex items-center gap-2">
-                    <FaStar className="text-orange-500" />
+                <div className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-2xl p-3 sm:p-4 md:p-6 border border-orange-100">
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4 flex items-center gap-1.5 sm:gap-2">
+                    <FaStar className="text-orange-500 w-4 h-4 sm:w-5 sm:h-5" />
                     Recognitions & Accreditations
                   </h3>
-                  <div className="flex flex-wrap gap-2 sm:gap-4">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2 md:gap-4">
                     {['UGC Approval by DEB', 'NAAC A++ Accreditation', 'WES Recognition (Canada & USA)'].map((recognition, index) => (
-                      <div key={index} className="flex items-center gap-2 bg-white rounded-full px-3 sm:px-4 py-1 sm:py-2 shadow-sm">
-                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-orange-500 rounded-full"></div>
-                        <span className="text-xs sm:text-sm font-medium text-gray-700">{recognition}</span>
-        </div>
+                      <div key={index} className="flex items-center gap-1.5 sm:gap-2 bg-white rounded-full px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 shadow-sm">
+                        <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 md:w-2 md:h-2 bg-orange-500 rounded-full"></div>
+                        <span className="text-xs md:text-sm font-medium text-gray-700">{recognition}</span>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -528,15 +638,15 @@ const LpuOnline = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="space-y-4 sm:space-y-6"
+                className="space-y-3 sm:space-y-4 md:space-y-6 mt-4 sm:mt-0"
               >
-                <div className="relative group">
+                <div className="relative group overflow-hidden rounded-xl sm:rounded-2xl">
                   <Image
-    src="/images/lpu.webp" 
-    alt="LPU Online Campus"
+                    src="/images/lpu.webp" 
+                    alt="LPU Online Campus"
                     width={600}
                     height={400}
-                    className="w-full h-auto rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 group-hover:scale-105"
+                    className="w-full h-auto rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl group-hover:shadow-xl transition-all duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
                 </div>
@@ -572,7 +682,7 @@ const LpuOnline = () => {
               className="text-center mb-12 sm:mb-16"
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-                Why Choose <span className="text-orange-500">LPU Online</span>? 
+                Why Choose <span className="text-orange-500">LPU Online?</span> 
               </h2>
 
               <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
@@ -695,7 +805,7 @@ const LpuOnline = () => {
         </section>
 
         {/* Professional Rankings & Accorangeitations Section */}
-        <section id="accreditations" className="py-16 bg-white">
+        <section id="accreditations" className="py-16 bg-white ">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
@@ -832,16 +942,16 @@ const LpuOnline = () => {
               </p>
             </motion.div>
 
-            <Tabs.Root value={activeTab} onValueChange={setActiveTab} className="space-y-8 sm:space-y-12">
+            <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-8 sm:space-y-12">
               {/* Enhanced Tab Buttons */}
               <div className="flex justify-center">
-                <Tabs.List className="inline-flex bg-white/80 backdrop-blur-sm rounded-2xl p-1 sm:p-2 shadow-xl border border-gray-200">
+                <TabsList className="inline-flex bg-white/80 backdrop-blur-sm rounded-2xl p-1 sm:p-2 shadow-xl border border-gray-200">
                   {[
                     { value: 'all', label: 'All Programs' },
                     { value: 'ug', label: 'Undergraduate' },
                     { value: 'pg', label: 'Postgraduate' }
-                  ].map((tab) => (
-                    <Tabs.Trigger
+                  ].map((tab) => ( 
+                    <TabsTrigger
                       key={tab.value}
                       value={tab.value}
                       className={`px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-xl font-semibold transition-all duration-300 text-sm sm:text-base ${
@@ -849,15 +959,16 @@ const LpuOnline = () => {
                           ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg transform scale-105'
                           : 'text-gray-700 hover:text-orange-600 hover:bg-orange-50'
                       }`}
+                      data-state-active="true"
                     >
                       {tab.label}
-                    </Tabs.Trigger>
+                    </TabsTrigger>
                   ))}
-                </Tabs.List>
+                </TabsList>
               </div>
 
               {/* Course Grid */}
-              <Tabs.Content value={activeTab} className="outline-none">
+              <TabsContent value={activeTab} className="outline-none">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                   {(activeTab === 'all' ? [...ugCourses, ...pgCourses] : 
                     activeTab === 'ug' ? ugCourses : pgCourses).map((course, idx) => (
@@ -937,8 +1048,8 @@ const LpuOnline = () => {
                     </motion.div>
                   ))}
                 </div>
-              </Tabs.Content>
-            </Tabs.Root>
+              </TabsContent>
+            </Tabs>
             
     <p className="text-lg sm:text-xl text-gray-700 leading-relaxed space-y-4">
   <span className="font-bold text-black mx-1">LPU Online</span> boasts a diverse and industry-relevant portfolio designed for 
@@ -1270,9 +1381,9 @@ const LpuOnline = () => {
     </article>
 
     {/* ===== About LPU Online ===== */}
-    <article id="sessions" className="bg-gray-50 border-l-4 border-gray-500 p-6 rounded-xl mb-10 shadow-md">
-      <h3 className="text-2xl font-semibold text-gray-800 mb-3">About LPU Online Programs</h3>
-      <ul className="list-disc pl-5 text-gray-700 space-y-2">
+    <article id="sessions" className="bg-gray-50 border-l-4 border-gray-500 p-4 sm:p-6 rounded-xl mb-6 sm:mb-10 shadow-md">
+      <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2 sm:mb-3">About LPU Online Programs</h3>
+      <ul className="list-disc pl-4 sm:pl-5 text-sm sm:text-base text-gray-700 space-y-1 sm:space-y-2">
         <li><strong>UGC Approved:</strong> All programs are UGC-entitled and recognized nationwide.</li>
         <li><strong>Flexible Learning:</strong> Study at your own pace with recorded lectures and e-books.</li>
         <li><strong>Batch Schedule:</strong> New sessions typically start in <strong>January</strong> and <strong>July</strong> each year.</li>
@@ -1285,30 +1396,30 @@ const LpuOnline = () => {
 </section> 
 
         {/* Certificate Section */}
-        <section className="bg-[#002d5f] text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center gap-12">
-            <div className="md:w-1/2">
-              <Image width={600} height={400} src="/images/lpu-certificate.webp" alt="Certificate" className="rounded-2xl shadow-2xl w-full" />
+        <section className="bg-[#002d5f] text-white py-10 sm:py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center gap-6 sm:gap-12">
+            <div className="w-full md:w-1/2">
+              <Image width={600} height={400} src="/images/lpu-certificate.webp" alt="Certificate" className="rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl w-full" />
             </div>
             <div className="md:w-1/2">
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6">Recognized Online Degree from Lovely Professional University </h2>
-              <p className="mb-8 text-xl">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-6">Recognized Online Degree from Lovely Professional University </h2>
+              <p className="mb-4 sm:mb-8 text-base sm:text-lg md:text-xl">
                 Learn at your pace, guided by experts, with a UGC-entitled degree that is accepted globally across industries and sectors.
               </p>
-              <ul className="space-y-4 text-lg">
-                <li className="flex items-center gap-3">
+              <ul className="space-y-2 sm:space-y-4 text-sm sm:text-base md:text-lg">
+                <li className="flex items-center gap-2 sm:gap-3">
                   <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
                   UGC & AICTE Recognized Degrees
                 </li>
-                <li className="flex items-center gap-3">
+                <li className="flex items-center gap-2 sm:gap-3">
                   <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
                   Daily Live & Recorded Classes
                 </li>
-                <li className="flex items-center gap-3">
+                <li className="flex items-center gap-2 sm:gap-3">
                   <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
                   Global Collaborations with Industry Partners
                 </li>
-                <li className="flex items-center gap-3">
+                <li className="flex items-center gap-2 sm:gap-3">
                   <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
                   100% Placement & Internship Support
                 </li>
@@ -1370,7 +1481,7 @@ const LpuOnline = () => {
         </section>
 
         {/* Professional FAQ Section */}
-        <section id="faq" className="py-20 bg-white"> 
+        <section id="faq" className="py-20 bg-white "> 
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
@@ -1408,7 +1519,7 @@ const LpuOnline = () => {
         </section>
 
         {/* Professional Hiring Partners Section */} 
-        <section id="placement-partners" className="py-20 bg-gradient-to-br from-gray-100 to-gray-200">
+        <section id="placement-partners" className="py-20 bg-gradient-to-br from-gray-100 to-gray-200 ">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
@@ -1477,7 +1588,7 @@ const LpuOnline = () => {
         </section>
 
         {/* Premium Footer */}
-        <footer id="footer" className="bg-gradient-to-br from-gray-900 via-slate-900 to-black text-gray-300 pt-12 sm:pt-16 lg:pt-20 pb-6 sm:pb-8 relative overflow-hidden"> 
+        <footer id="footer" className="bg-gradient-to-br from-gray-900 via-slate-900 to-black text-gray-300 pt-12 sm:pt-16 lg:pt-20 pb-6 sm:pb-8 relative overflow-hidden "> 
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-5">
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-orange-500/10 to-transparent"></div>
