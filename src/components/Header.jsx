@@ -281,11 +281,11 @@ const [modalType, setModalType] = useState();
 
           {/* Contact Icons - Made more compact */}
           <div className="hidden sm:flex gap-1 lg:gap-2 items-center text-[#00ffe0]">
-            <a href="tel:+919354735410" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us"  aria-label="Email us at info@unifostedu.com">
+            <a href="tel:+917042646766" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us"  aria-label="Email us at info@unifostedu.com">
              
               <FaPhoneAlt className="text-xl" />
             </a>
-            <a href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="WhatsApp" aria-label="WhatsApp">
+            <a href="https://wa.me/917042646766" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="WhatsApp" aria-label="WhatsApp">
               <FaWhatsappSquare className="text-xl" />
             </a>
             <button onClick={() => openModal('videoCall')} className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Book Demo">
@@ -307,7 +307,7 @@ const [modalType, setModalType] = useState();
           {/* Mobile Toggle */}
           <div className="md:hidden ml-auto flex items-center gap-2">
             <a
-              href="tel:+919354735410"
+              href="tel:+917042646766"
               aria-label="Call us"
               className={`p-2 rounded-lg transition-all duration-300 ${
                 scrolled ? 'bg-white/10 text-white' : 'bg-white/20 text-white'
@@ -316,7 +316,7 @@ const [modalType, setModalType] = useState();
               <FaPhoneAlt className="text-base" />
             </a>
             <a
-              href="https://wa.me/919354735410"
+              href="https://wa.me/917042646766"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
@@ -452,7 +452,7 @@ const [modalType, setModalType] = useState();
                 
                 {/* Contact Buttons */}
                 <div className="grid grid-cols-3 gap-3">
-                  <a href="tel:+919354735410" 
+                  <a href="tel:+917042646766" 
                      className="flex flex-col items-center gap-2 p-3 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-xl text-[#001e3c] text-center font-bold text-sm hover:scale-105 transition">
                     <FaPhoneAlt className="text-lg" />
                     <span>Call</span>

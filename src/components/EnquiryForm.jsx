@@ -216,7 +216,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
 
   const handleWhatsAppConnect = () => {
     const values = getValues();
-    const targetNumber = '919354735410';
+    const targetNumber = '917042646766';
     const typeLabel = formType === 'videoCall' ? 'Video Call' : formType === 'homeDemo' ? 'Home Demo' : 'General Enquiry';
     const composed = [
       `Hello Unifost, I would like to connect with a counselor via WhatsApp.`,

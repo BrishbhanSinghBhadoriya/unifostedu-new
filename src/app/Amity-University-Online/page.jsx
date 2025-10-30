@@ -118,7 +118,7 @@ const AmityLandingPage = () => {
       eligibility: "Graduation",
       fees: "₹1,99,000 - ₹2,99,000",
       specialization:
-        "MBA (General, Information Technology Management, Dual Specialization, Human Resource Analytics, Data Science, Business Analytics, International Business Management, Digital Entrepreneurship, Digital Marketing Management, Entrepreneurship & Leadership Management, Finance & Accounting Management, Hospitality Management, Global Finance Market, Insurance Management, Marketing & Sales Management, Petroleum & Natural Gas, Production and Operations Management, Retail Management)",
+        "MBA (General, Information Technology Management, Dual Specialization, Human Resource Analytics, Data Science, Business Analytics, International Business Management,Hospital Management, Digital Entrepreneurship, Digital Marketing Management, Entrepreneurship & Leadership Management, Finance & Accounting Management, Hospitality Management, Global Finance Market, Insurance Management, Marketing & Sales Management, Petroleum & Natural Gas, Production and Operations Management, Retail Management)",
       image: "/images/mba-online-image.webp",
       alt: "MBA from amity online university",
     },
@@ -464,19 +464,19 @@ const AmityLandingPage = () => {
   const specializations = [
     {
       program: "MBA",
-      count: "18 Specializations",
+      count: "18+ Specializations",
       color: "bg-blue-50 border-blue-200 text-blue-800",
       image: "/images/mbaSpecialization.webp",
     },
     {
       program: "BBA",
-      count: "12 Specializations",
+      count: "2 Specializations",
       color: "bg-green-50 border-green-200 text-green-800",
       image: "/images/bbaSpecialization.webp",
     },
     {
       program: "MCA",
-      count: "8 Specializations",
+      count: "5+ Specializations",
       color: "bg-purple-50 border-purple-200 text-purple-800",
       image: "/images/mcaSpecialization.webp",
     },
@@ -588,7 +588,7 @@ const AmityLandingPage = () => {
 
       <div className="max-w-screen-2xl mx-auto flex">
           {/* Left Sidebar */}
-        <aside className="fixed hidden lg:flex flex-col top-24 w-64 h-[calc(100vh-6rem)] px-4 py-8 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40">
+        <aside className="fixed hidden lg:flex flex-col top-24 w-64 h-[calc(100vh-6rem)] px-4 py-8 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40 ">
           <h3 className="text-lg font-bold mb-6 text-indigo-800 border-b-2 border-indigo-200 pb-2 cursor-pointer">
               Page Contents
             </h3>
@@ -599,11 +599,11 @@ const AmityLandingPage = () => {
                 { id: "Courses", label: "Explore Courses" },
                 { id: "highlights", label: "Key Highlights" },
                 { id: "Scholarship", label: "Scholarships" },
-                { id: "Admission", label: "Admission Process" },
-                { id: "sessions", label: "Upcoming Sessions" },
-                { id: "record", label: "Placement Record" },
-                { id: "Company", label: "Hiring Partners" },
-                { id: "faqs", label: "FAQs" },
+                { id: "AdmissionProcedure", label: "Admission Process" },
+                { id: "UpcomingSessions", label: "Upcoming Sessions" },
+                { id: "PlacementRecord", label: "Placement Record" },
+                { id: "HiringPartners", label: "Hiring Partners" },
+                { id: "FAQs", label: "FAQs" },
               ].map((item) => (
                 <li key={item.id}>
                   <button
@@ -651,11 +651,11 @@ const AmityLandingPage = () => {
                     { id: "Courses", label: "Explore Courses" },
                     { id: "highlights", label: "Key Highlights" },
                     { id: "Scholarship", label: "Scholarships" },
-                    { id: "Admission", label: "Admission Process" },
-                    { id: "sessions", label: "Upcoming Sessions" },
-                    { id: "record", label: "Placement Record" },
-                    { id: "Company", label: "Hiring Partners" },
-                    { id: "faqs", label: "FAQs" },
+                    { id: "AdmissionProcedure", label: "Admission Process" },
+                    { id: "UpcomingSessions", label: "Upcoming Sessions" },
+                    { id: "PlacementRecord", label: "Placement Record" },
+                    { id: "HiringPartners", label: "Hiring Partners" },
+                    { id: "FAQs", label: "FAQs" },
                   ].map((item) => (
                     <li key={item.id}>
                       <button
@@ -664,7 +664,7 @@ const AmityLandingPage = () => {
                           if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
                           setIsMobileMenuOpen(false);
                         }}
-                        className="text-gray-700 hover:text-indigo-600 font-semibold text-base transition-colors duration-200 w-full text-left"
+                        className="text-gray-700 hover:text-indigo-600 font-semibold text-base transition-colors duration-200 w-full text-left cursor-pointer"
                       >
                         {item.label}
                       </button>
@@ -1786,7 +1786,7 @@ const AmityLandingPage = () => {
             </section>
 
             {/* Partnership Section */}
-            <section
+            <section id="HiringPartners"
               id="Company"
               className="py-12 md:py-16 bg-white text-black"
             >
@@ -1849,7 +1849,7 @@ const AmityLandingPage = () => {
             </section>
 
             <div id="record">
-              <div>
+              <div >
                 <section
                   id="Scholarship"
                   className="bg-white py-12 px-6 md:px-20"
@@ -1997,7 +1997,7 @@ const AmityLandingPage = () => {
                   </div>
                 </section>
 
-                <section id="Admission" className="relative py-20 bg-white">
+            <section id="AdmissionProcedure" className="relative py-20 bg-white">
                   {/* Decorative Blobs */}
                   <div className="absolute -top-20 -left-20 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
                   <div className="absolute -bottom-32 -right-32 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
@@ -2025,7 +2025,7 @@ const AmityLandingPage = () => {
                         their academic or professional schedule.
                       </p>
 
-                      <div className="bg-gray-50 p-6 rounded-xl shadow-sm mt-6 max-w-3xl mx-auto">
+                      <div  className="bg-gray-50 p-6 rounded-xl shadow-sm mt-6 max-w-3xl mx-auto">
                         <h4 className="text-xl font-semibold text-gray-900 mb-4">
                           📅 Important Admission Dates
                         </h4>
@@ -2126,7 +2126,7 @@ const AmityLandingPage = () => {
                   </div>
                 </section>
               </div>
-              <section className="bg-gradient-to-br from-indigo-50 to-white py-16 px-6 md:px-12">
+              <section id="UpcomingSessions" className="bg-gradient-to-br from-indigo-50 to-white py-16 px-6 md:px-12">
                 <div className="max-w-5xl mx-auto text-center">
                   {/* Title Section */}
                   <motion.h2
@@ -2289,7 +2289,7 @@ const AmityLandingPage = () => {
               </div>
             </section>
             {/* Hiring Partners */}
-            <section className="py-16 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative font-[Inter]">
+            <section id="PlacementRecord" className="py-16 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative font-[Inter]">
               {/* Background Pattern */}
               <div
                 className="absolute inset-0 opacity-40"
@@ -2378,7 +2378,7 @@ const AmityLandingPage = () => {
                 </motion.p>
               </div>
             </section>
-            <section id="Company" className="py-16 bg-gray-50">
+            <section id="HiringPartners" className="py-16 bg-gray-50">
               <div className="max-w-7xl mx-auto px-6">
                 <motion.div className="text-center mb-12" {...fadeIn}>
                   <h2 className="text-3xl font-bold text-gray-900 mb-4 font-[Poppins]">
@@ -2455,7 +2455,7 @@ const AmityLandingPage = () => {
               </div>
             </section>
 
-            <section id="faqs" className="max-w-6xl mx-auto py-16 px-4">
+            <section id="FAQs" className="max-w-6xl mx-auto py-16 px-4">
               <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
                 Frequently Asked Questions about Amity University Online
               </h2>

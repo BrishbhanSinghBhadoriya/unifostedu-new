@@ -25,7 +25,7 @@ import {
   FaPhone,
   FaWhatsapp
 } from "react-icons/fa";
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Head from 'next/head';
 import HeroSection from '@/components/HeroSection';
@@ -42,6 +42,7 @@ const Jain = () => {
     const [modalType, setModalType] = useState('');
     const [openModal, setOpenModal] = useState(null);
     const [openFaqIndex, setOpenFaqIndex] = useState(null);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     
     const toggleFaq = (index) => {
       setOpenFaqIndex(openFaqIndex === index ? null : index);
@@ -416,7 +417,7 @@ useEffect(() => {
       {/* Fixed Header */}
       <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-md z-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16 flex-wrap gap-2">
+          <div className="flex justify-between items-center h-16 gap-2 flex-nowrap">
             {/* Logo - Left Side */}
             <div className="flex-shrink min-w-0">
               <Image 
@@ -424,26 +425,32 @@ useEffect(() => {
                 alt="Jain University Online Logo" 
                 width={240} 
                 height={80} 
-                className="object-contain max-w-full h-auto"
+                className="object-contain max-w-full h-auto w-40 sm:w-56"
               />
             </div>
 
-            {/* Contact Options - Right Side */}
+            {/* Contact + Menu - Right Side (kept on single line) */}
             <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
+              {/* Mobile Menu Button */}
+              <button
+                onClick={() => setIsMobileMenuOpen(true)}
+                aria-label="Open menu"
+                aria-expanded={isMobileMenuOpen}
+                className="inline-flex items-center p-2 rounded-md border hover:bg-gray-50"
+              >
+                Menu
+              </button>
+            
               {/* Phone Number */}
               <a href="tel:+917042867717" className="hidden sm:flex items-center gap-2 bg-gradient-to-r from-[#001C54] to-[#b91c1c] text-white rounded-full px-4 py-2 shadow-lg hover:shadow-xl transition-all duration-300">
                 <FaPhone className="text-white text-sm" />
                 <span className="font-semibold text-sm whitespace-nowrap">+91 70428 67717</span>
               </a>
-              {/* Compact Call Icon on Mobile */}
-              <a href="tel:+917042867717" className="sm:hidden inline-flex items-center justify-center w-9 h-9 rounded-full bg-[#001C54] text-white">
-                <FaPhone className="text-sm" />
-              </a>
 
               {/* Apply Now Button */}
               <button 
                 onClick={() => setOpenModal('apply')}
-                className="bg-gradient-to-r from-[#001C54] to-[#b91c1c] hover:from-[#b91c1c] hover:to-[#991b1b] text-white font-semibold px-4 sm:px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25 text-sm whitespace-nowrap"
+                className="bg-gradient-to-r from-[#001C54] to-[#b91c1c] hover:from-[#b91c1c] hover:to-[#991b1b] text-white font-semibold px-3 sm:px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25 text-sm whitespace-nowrap"
               >
                 Apply Now
               </button>
@@ -453,10 +460,94 @@ useEffect(() => {
       </header>
 
       {/* Add padding to the top of the first section to account for fixed header */}
-      <div className="pt-16 overflow-x-hidden">
+      <div className="pt-16 overflow-x-hidden break-words hyphens-auto lg:ml-64">
+
+      {/* Desktop Sidebar */}
+      <aside className="fixed hidden lg:flex flex-col top-16 left-0 w-64 h-[calc(100vh-4rem)] px-4 py-6 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40">
+        <h3 className="text-lg font-bold mb-5 text-[#001C54] border-b-2 border-gray-200 pb-2 cursor-pointer">
+          Page Contents
+        </h3>
+        <ul className="space-y-3 cursor-pointer text-sm">
+          {[
+            { id: "HeroSection", label: "Hero" },
+            { id: "Introduction", label: "Introduction" },
+            { id: "Rankings", label: "Rankings" },
+            { id: "Programs", label: "Explore Courses" },
+            { id: "KeyHighlights", label: "Key Highlights" },
+            { id: "Eligibility", label: "Eligibility" },
+            { id: "Admission", label: "Admission Process" },
+            { id: "Companies", label: "Placement Partners" },
+            { id: "Faq", label: "FAQs" },
+          ].map((item) => (
+            <li
+              key={item.id}
+              className="text-gray-600 hover:text-[#001C54] transition-colors duration-200 py-1 px-2 rounded hover:bg-gray-50"
+              onClick={() => {
+                const element = document.getElementById(item.id);
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }}
+            >
+              {item.label}
+            </li>
+          ))}
+        </ul>
+      </aside>
+
+      {/* Mobile Sidebar */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-black/40 backdrop-blur-[1px] z-40 lg:hidden"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+            <motion.aside
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              className="fixed top-0 left-0 w-[85vw] sm:w-72 h-full bg-white border-r shadow-xl z-50 p-6 flex flex-col overflow-y-auto will-change-transform lg:hidden"
+            >
+              <h3 className="text-xl font-bold mb-6 text-[#001C54]">Page Contents</h3>
+              <ul className="space-y-4">
+                {[
+                  { id: "HeroSection", label: "Hero" },
+                  { id: "Introduction", label: "Introduction" },
+                  { id: "Rankings", label: "Rankings" },
+                  { id: "Programs", label: "Explore Courses" },
+                  { id: "KeyHighlights", label: "Key Highlights" },
+                  { id: "Eligibility", label: "Eligibility" },
+                  { id: "Admission", label: "Admission Process" },
+                  { id: "Companies", label: "Placement Partners" },
+                  { id: "Faq", label: "FAQs" },
+                ].map((item) => (
+                  <li key={item.id}>
+                    <button
+                      onClick={() => {
+                        const section = document.getElementById(item.id);
+                        if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className="text-gray-700 hover:text-[#001C54] font-semibold text-base transition-colors duration-200 w-full text-left"
+                    >
+                      {item.label}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </motion.aside>
+          </>
+        )}
+      </AnimatePresence>
 
       {/* Modern Hero Section - Optimized Spacing */}
-      <section className="relative min-h-screen overflow-hidden pt-16 lg:pt-20">
+      <section id="HeroSection" className="relative min-h-screen overflow-hidden pt-16 lg:pt-20">
         {/* Background Pattern - Enhanced Yellow Shade */}
         <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-200 opacity-90"></div>
         
@@ -465,7 +556,8 @@ useEffect(() => {
           <Image 
             src="/images/jain.webp"
             alt="Watermark Background"
-            fill
+            width={800}
+            height={600}
             className="object-cover"
             priority
           />
@@ -473,8 +565,8 @@ useEffect(() => {
         
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-yellow-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-orange-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div className="absolute -top-40 -right-40 w-80 h-60 bg-indigo-500/15 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-rose-500/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
         {/* Main Content - Perfectly Centered */}
@@ -482,21 +574,17 @@ useEffect(() => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center w-full">
             {/* Left Content - Optimized Spacing */}
             <div className="text-gray-900 space-y-4 sm:space-y-6 order-2 lg:order-1">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-3 py-2 text-gray-800 text-xs sm:text-sm font-medium">
-                <span className="w-2 h-2 bg-yellow-600 rounded-full animate-pulse"></span>
-                <span className="hidden sm:inline">NAAC A++ Accredited University</span>
-                <span className="sm:hidden">NAAC A++ Accredited</span>
-              </div>
+              
+              
 
               {/* Main Heading - Perfectly Balanced */}
               <div className="space-y-3 sm:space-y-4">
-                <h5 className="font-[calibri] text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-900 leading-tight">
+                <h5 className="font-[calibri] text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-800 leading-tight">
                   Uplift your Career with
                 </h5>
                 </div>
                 <div>
-                <h1 className="font-[Calibri] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight">
+                <h1 className="font-[Calibri] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-[#001C54] to-[#b91c1c] bg-clip-text text-transparent leading-tight">
                   Jain University Online
                 </h1>
               </div>
@@ -527,7 +615,7 @@ useEffect(() => {
                 <div className="flex flex-col sm:flex-row gap-3">
                   <button 
                     onClick={() => setOpenModal('apply')}
-                    className="bg-gradient-to-r from-[#001C54] to-[#b91c1c] hover:from-[#b91c1c] hover:to-[#991b1b] cursor-pointer text-white font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25 text-sm sm:text-base"
+                    className="bg-gradient-to-r from-[#001C54] to-[#b91c1c] hover:from-[#0b2b77] hover:to-[#991b1b] cursor-pointer text-white font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-full transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-red-500/20 text-sm sm:text-base"
                   >
                     Apply Now
                   </button>
@@ -541,7 +629,7 @@ useEffect(() => {
                       alt="NAAC A++" 
                       width={70} 
                       height={70} 
-                      className="h-14 w-auto object-contain"
+                      className="h-14 w-auto object-contain drop-shadow"
                     />
                     <p className="text-gray-700 text-xs font-medium mt-1">NAAC A++</p>
                   </div>
@@ -551,7 +639,7 @@ useEffect(() => {
                       alt="UGC" 
                       width={70} 
                       height={70} 
-                      className="h-14 w-auto object-contain"
+                      className="h-14 w-auto object-contain drop-shadow"
                     />
                     <p className="text-gray-700 text-xs font-medium mt-1">UGC</p>
                   </div>
@@ -593,8 +681,308 @@ useEffect(() => {
         </div>
       </section>
 
+      {/* Introduction - Text Section */}
+      <section id="Introduction" className="py-12 sm:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Jain University Online – Empowering Future Leaders with World-Class Online Degrees</h2>
+          <p className="text-gray-700 mb-4">Jain University Online, also known as jain university online, is India’s leading UGC-approved online degree institution dedicated to delivering flexible, career-oriented higher education for learners across the world. As one of the most reputable universities in India, jain university online offers a wide portfolio of undergraduate and postgraduate programs such as online MBA Jain University, online BBA Jain University, online BCA Jain University, and online MCA Jain University designed to empower students with industry-relevant knowledge, practical skills, and global learning exposure.</p>
+          <p className="text-gray-700 mb-4">The vision of Jain University Online is to provide anytime, anywhere learning that builds a strong foundation for a successful career. With world-class faculty, advanced e-learning systems, and government approvals, Jain University Online stands among the most preferred institutions for online higher education and distance education Jain University programs.</p>
+          <p className="text-gray-700 mb-4">Every program at Jain University Online—including Online MBA Jain University, Online Degrees Jain University, and distance education Jain University programs—follows a future-ready curriculum aligned with modern market needs. Students are mentored by leading academic experts and industry professionals, ensuring real-world learning outcomes. Whether you're a working professional aiming to upskill or a recent school graduate planning to build a strong career path, Jain University Online provides complete flexibility through online live sessions, recorded classes, interactive digital platforms, virtual labs, and continuous academic support.</p>
+          <p className="text-gray-700 mb-4">Being a fully UGC-approved online degree provider, Jain University Online ensures that every qualification earned through its programs holds equal weightage to traditional on-campus degrees. The online degrees offered by Jain University Online are recognized for higher studies, government jobs, corporate careers, and global employment opportunities.</p>
+          <div className="mt-4">
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Popular Programs</h3>
+            <ul className="list-disc list-inside text-gray-700 space-y-1">
+              <li>Online MBA Jain University – Designed for leadership roles</li>
+              <li>Online BBA Jain University – Business foundation for future managers</li>
+              <li>Online BCA Jain University – Trending IT skills in applications</li>
+              <li>Online MCA Jain University – Advanced computing and software development</li>
+            </ul>
+          </div>
+          <p className="text-gray-700 mt-4">Programs also include B.Com, MA, M.Com, and professional certifications in Digital Marketing, Data Science, FinTech, Entrepreneurship, AI, and more. Students gain placement guidance, networking, internship support, and career development services—making Online MBA Jain University and Online Degrees Jain University highly sought-after for upskilling, promotions, and career switches.</p>
+          <p className="text-gray-700 mt-4">By blending flexibility, affordability, and global learning standards, Jain University Online transforms distance learning into a complete digital campus experience.</p>
+        </div>
+      </section>
+
+      {/* Why Choose Jain University Online */}
+      <section id="WhyChoose" className="py-12 sm:py-16 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Why Choose Jain University Online?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[{
+              title: 'UGC and NAAC Accredited',
+              desc: 'UGC-approved with prestigious NAAC accreditation. Global recognition across job markets.'
+            }, {
+              title: 'Flexible Learning for Working Professionals',
+              desc: 'Live classes, recorded lectures, mobile access, and self-paced study without career interruption.'
+            }, {
+              title: 'Industry-Aligned Curriculum',
+              desc: 'Programs designed with industry experts in IT, Finance, Marketing, Analytics, and more.'
+            }, {
+              title: 'Affordable Fee Structure',
+              desc: 'Accessible education model with options for diverse backgrounds and EMI support.'
+            }, {
+              title: 'Placement and Career Support',
+              desc: 'Job readiness training, resume building, mock interviews, and placement drives.'
+            }, {
+              title: 'Expert Faculty and Mentorship',
+              desc: 'Experienced professors and corporate trainers, with personalized mentoring.'
+            }, {
+              title: 'Global Learning Experience',
+              desc: 'Collaborative online cohorts with global exposure and peer learning.'
+            }, {
+              title: 'Recognized for Govt and Private Jobs',
+              desc: 'Degrees carry full equivalence to traditional campus degrees.'
+            }].map((item, idx) => (
+              <div key={idx} className="bg-white rounded-xl p-6 shadow-sm border">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
+                <p className="text-gray-700 text-sm sm:text-base">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Programs Offered Table */}
+      <section id="ProgramsOffered" className="py-12 sm:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Programs Offered by Jain University Online</h2>
+          <div className="bg-white rounded-xl shadow-sm border overflow-x-auto">
+            <table className="w-full text-left min-w-[640px]">
+              <thead className="bg-gray-100 text-gray-900">
+                <tr>
+                  <th className="px-4 py-3 font-semibold">Program</th>
+                  <th className="px-4 py-3 font-semibold">Duration</th>
+                  <th className="px-4 py-3 font-semibold">Eligibility</th>
+                  <th className="px-4 py-3 font-semibold">Category</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y">
+                <tr>
+                  <td className="px-4 py-3">Online MBA Jain University</td>
+                  <td className="px-4 py-3">2 Years</td>
+                  <td className="px-4 py-3">Graduation</td>
+                  <td className="px-4 py-3">Management</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3">Online BBA Jain University</td>
+                  <td className="px-4 py-3">3 Years</td>
+                  <td className="px-4 py-3">12th Pass</td>
+                  <td className="px-4 py-3">Business Administration</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3">Online BCA Jain University</td>
+                  <td className="px-4 py-3">3 Years</td>
+                  <td className="px-4 py-3">12th Pass</td>
+                  <td className="px-4 py-3">Computer Applications</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3">Online MCA Jain University</td>
+                  <td className="px-4 py-3">2 Years</td>
+                  <td className="px-4 py-3">Graduation (preferably BCA/CS)</td>
+                  <td className="px-4 py-3">IT & Software</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Campus Tour */}
+      <section id="CampusTour" className="py-12 sm:py-16 bg-gradient-to-br from-blue-50 to-yellow-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Campus Tour (Virtual Learning Experience)</h2>
+          <p className="text-gray-700 mb-6">Though fully online, Jain University Online recreates a vibrant campus environment through:</p>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {['Live & recorded interactive online classes','Digital library with e-books, journals & global resources','Discussion forums & peer learning communities','Virtual labs for IT and technology programs','Industry webinars, workshops & expert mentorship','Career guidance and placement support'].map((point, i) => (
+              <li key={i} className="bg-white rounded-xl p-4 shadow-sm border text-gray-700">✅ {point}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Explore Courses */}
+      <section id="ExploreCourses" className="py-12 sm:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Explore Online Courses at Jain University Online</h2>
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Undergraduate Online Degrees</h3>
+            <ul className="list-disc list-inside text-gray-700 space-y-1">
+              <li><span className="font-semibold">Online BBA Jain University</span> – Learn business fundamentals, leadership, marketing, finance, and strategy.</li>
+              <li><span className="font-semibold">Online BCA Jain University</span> – Build expertise in programming, web/app development, networking, and databases.</li>
+              <li><span className="font-semibold">Online B.Com Jain University</span> – Develop analytical and communication skills with flexible subject options.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Postgraduate Online Degrees</h3>
+            <p className="text-gray-700 mb-2"><span className="font-semibold">Online MBA Jain University</span> – Flagship degree with specializations: Marketing, Finance, HR, Logistics & Supply Chain, Systems & Ops, Business Analytics, and more.</p>
+            <ul className="list-disc list-inside text-gray-700 space-y-1">
+              <li><span className="font-semibold">Online MCA Jain University</span> – Focused on AI, cloud, full‑stack, and data science skills.</li>
+              <li><span className="font-semibold">Online M.Com Jain University</span> – Financial analytics, taxation, banking & corporate finance.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Skill & Career Certifications (Add-On)</h3>
+            <ul className="flex flex-wrap gap-2 text-gray-800">
+              {['Digital Marketing','Project Management','Data Science & AI','Cybersecurity','Business Analytics'].map((c, i) => (
+                <li key={i} className="bg-gray-100 rounded-full px-3 py-1 border">{c}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Admission Dates */}
+      <section id="AdmissionDates" className="py-12 sm:py-16 bg-gradient-to-br from-yellow-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Admission Dates for UG & PG Online Degrees</h2>
+          <p className="text-gray-700 mb-6">Admission Open for 2025–2026 Academic Session</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { program: 'Online MBA Jain University', status: 'Open' },
+              { program: 'Online MCA Jain University', status: 'Open' },
+              { program: 'Online M.Com Jain University', status: 'Open' },
+              { program: 'Online MA Jain University', status: 'Open' },
+              { program: 'Online BBA Jain University', status: 'Open' },
+              { program: 'Online BCA Jain University', status: 'Open' },
+              { program: 'Online B.Com Jain University', status: 'Open' }
+            ].map((item, idx) => (
+              <div key={idx} className="bg-white rounded-xl p-6 shadow-sm border">
+                <h3 className="text-lg font-semibold text-gray-900">{item.program}</h3>
+                <p className="text-green-600 font-medium mt-1">✅ {item.status}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-gray-700 mt-6">Early applicants may receive scholarship benefits and counseling support for program selection.</p>
+        </div>
+      </section>
+
+      {/* Fees Structure */}
+      <section id="Fees" className="py-12 sm:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Fees Structure – Online Degrees Jain University</h2>
+          <div className="bg-white rounded-xl shadow-sm border overflow-x-auto">
+            <table className="w-full min-w-[640px]">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th className="px-4 py-3 text-left font-semibold">Program</th>
+            
+                  <th className="px-4 py-3 text-left font-semibold">Payment Mode</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y">
+                {['Online MBA Jain University','Online MCA Jain University','Online M.Com Jain University','Online BBA Jain University','Online BCA Jain University','Online B.Com Jain University'].map((name, idx) => (
+                
+                <tr key={idx}>
+                    <td className="px-4 py-3">{name}</td>
+                   
+                    <td className="px-4 py-3">Semester/EMI</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-4 text-gray-700">
+            <p className="font-semibold mb-2">Scholarships Available:</p>
+            <p>✅ Working professionals ✅ Defense personnel ✅ Merit-based students ✅ Financial assistance options</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Eligibility Criteria */}
+      <section id="EligibilityCriteria" className="py-12 sm:py-16 bg-gradient-to-br from-white to-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Eligibility Criteria</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-xl p-6 shadow-sm border">
+              <h3 className="text-lg font-semibold mb-2">UG Courses (BBA, BCA, B.Com)</h3>
+              <ul className="list-disc list-inside text-gray-700 space-y-1">
+                <li>10+2 from a recognized board</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-sm border">
+              <h3 className="text-lg font-semibold mb-2">PG Courses (MBA, MCA, M.Com., MA)</h3>
+              <ul className="list-disc list-inside text-gray-700 space-y-1">
+                <li>Bachelor’s degree with minimum required marks</li>
+                <li>Work experience recommended (for MBA)</li>
+              </ul>
+            </div>
+          </div>
+          <p className="text-gray-700 mt-4">Programs are open to Indian & International students.</p>
+        </div>
+      </section>
+
+      {/* Sessions */}
+      <section id="Sessions" className="py-12 sm:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Ongoing Sessions & Academic Calendar</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {['January','April','July','October'].map((month, i) => (
+              <div key={i} className="bg-gray-50 rounded-xl p-4 border text-center">
+                <p className="text-lg font-semibold text-gray-900">{month} Intake</p>
+                <p className="text-green-700 mt-1">✅ Flexible entry</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Placement Record */}
+      <section id="PlacementRecord" className="py-12 sm:py-16 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Placement Record</h2>
+          <ul className="list-disc list-inside text-gray-700 space-y-1">
+            <li>Strong average placement rate across programs</li>
+            <li>Highest outcomes in Online MBA and Online MCA</li>
+            <li>Career services: resume building, mock interviews, placement drives, industry mentors</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Student Reviews */}
+      <section id="StudentReviews" className="py-12 sm:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Student Reviews</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[{name:'Rahul (Online BCA)', text:'Fantastic online learning environment with excellent digital content and quick support.'},{name:'Divya (Online MBA)', text:'Best choice for working professionals! I studied while working full-time and still succeeded.'},{name:'Prakash (Online BBA)', text:'Quality education, recognized degree, and strong placement help — worth it!'}].map((r, i) => (
+              <div key={i} className="bg-gray-50 rounded-xl p-6 border shadow-sm">
+                <p className="text-gray-800">“{r.text}”</p>
+                <p className="text-sm text-gray-600 mt-3">— {r.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews & Rankings */}
+      <section id="JainReviews" className="py-12 sm:py-16 bg-gradient-to-br from-white to-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Jain Reviews & Rankings</h2>
+          <ul className="list-disc list-inside text-gray-700 space-y-1">
+            <li>NAAC A+ Accreditation ✅</li>
+            <li>Ranked among top online universities in India ✅</li>
+            <li>Strong academic reputation & global recognition ✅</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Conclusion */}
+      <section id="Conclusion" className="py-12 sm:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-800">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Conclusion</h2>
+          <p>Jain University Online is shaping future-ready graduates with flexible, affordable, globally recognized online degrees. Whether you select an Online MBA Jain University, Online BCA Jain University, or any other course — you receive quality learning, expert support, and strong career advantages.</p>
+          <ul className="list-disc list-inside mt-4">
+            <li>Upgrade your career with UGC approved online degree programs</li>
+            <li>Study anytime, anywhere — without interrupting your job</li>
+            <li>Unlock global opportunities with a respected Jain University Online qualification</li>
+          </ul>
+          <div className="mt-6">
+            <button onClick={() => setOpenModal('apply')} className="bg-gradient-to-r from-[#001C54] to-[#b91c1c] text-white px-6 py-3 rounded-full shadow hover:opacity-90 transition">Apply Now</button>
+          </div>
+        </div>
+      </section>
+
       {/* Statistics Section */}
-      <section className="bg-[#001C54] text-white py-6 px-4">
+      <section id="KeyHighlights" className="bg-[#001C54] text-white py-6 px-4">
         <div className="max-w-7xl mx-auto relative">
           {/* Horizontal Dotted Line - Top */}
           <div className="border-dotted border-t-[1px] border-white/30 w-full absolute top-3 sm:hidden"></div>
@@ -632,7 +1020,7 @@ useEffect(() => {
       </section>
 
 
-     <section className="py-16 bg-gray-50">
+     <section id="Rankings" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
          {/* Heading with Lines */}
         <div className="flex items-center justify-center mb-12">
@@ -684,7 +1072,7 @@ useEffect(() => {
             title: "Diverse Learning Mediums",
             description: "E-books, printed & audio books, videos to cater your preferences & unique learning style.",
             iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path d="M16 6V4H8v2H2v14h20V6h-6zM8 4h8v2H8V4zm12 16H4V8h16v12z"></path>
                     </svg>`,
           },
           {
@@ -726,7 +1114,7 @@ useEffect(() => {
       />
     </div>
 
-    <section className="py-12 px-6 bg-white font-[Inter]">
+    <section id="Programs" className="py-12 px-6 bg-white font-[Inter]">
       <h2 className="text-2xl font-bold text-center mb-6 text-[#003b59] font-[Poppins]">
         Jain University Online Programs
       </h2>
@@ -795,7 +1183,7 @@ useEffect(() => {
 
     {/* Admission process */}
     <div>
-      <section className="relative py-20 bg-white">
+      <section id="Admission" className="relative py-20 bg-white">
         {/* Decorative Blobs */}
         <div className="absolute -top-20 -left-20 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-32 -right-32 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
@@ -883,7 +1271,7 @@ useEffect(() => {
 
     
 
-    <section className="bg-[#003366] py-12 px-4">
+    <section id="Eligibility" className="bg-[#003366] py-12 px-4">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
         {/* Certificate Image */}
         <div className="flex-1">
@@ -939,7 +1327,7 @@ useEffect(() => {
     </section>
 
     {/* Hiring Partners Section */}
-    <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
+    <section id="Companies" className="py-16 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div 
           className="text-center mb-12"
