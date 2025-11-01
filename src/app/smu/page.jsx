@@ -1,5 +1,5 @@
 'use client';
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import React, { useState, useEffect } from 'react';
 import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck, FaStar, FaCertificate, FaBuilding, FaUsers, FaPhone, FaWhatsapp } from "react-icons/fa";
 import { FaLaptop, FaBook, FaGraduationCap, FaIndustry, FaUserCircle, FaUniversity, FaMoneyBillWave } from "react-icons/fa";
@@ -7,6 +7,7 @@ import EnquireCard from '@/components/EnquireCard';
 import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import EnquiryForm from '@/components/EnquiryForm';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -202,6 +203,7 @@ const SMU = () => {
   const [modalType, setModalType] = useState('getStarted');
   const [openModal, setOpenModal] = useState(null);
   const [activeTab, setActiveTab] = useState('all');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 
   
@@ -238,65 +240,178 @@ const SMU = () => {
       `}</style>
       
       <div className="queens overflow-x-hidden">
-        {/* Professional Responsive Header */}
-         <header className="w-full bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 fixed top-0 left-0 z-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16 lg:h-20">
-              {/* Left Logo */}
-              <div className="flex items-center gap-2 lg:gap-4">
-                <img 
-                  src="/images/manipallogo.webp" 
-                  alt="SMU Logo" 
-                  className="h-8 w-auto sm:h-10 lg:h-12" 
-                />
-                <h1 className="font-queens text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold">
-                  <span className="text-[#e63946]">Online</span>{" "}
-                  <span className="text-gray-800">SMU</span>
-                </h1>
-              </div>
+        {/* Header */}
+       <header className="w-full fixed bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 top-0 left-0 z-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center justify-between h-16 lg:h-20">
+      {/* Left Logo */}
+      <div className="flex items-center gap-2 lg:gap-4">
+        <img
+          src="/images/manipallogo.webp"
+          alt="SMU Logo"
+          className="h-8 w-auto sm:h-10 lg:h-12"
+        />
+        <h1 className="font-queens text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold">
+          <span className="text-[#f26722]">Online</span>{" "}
+          <span className="text-gray-800">SMU</span>
+        </h1>
+      </div>
 
-              {/* Right Side - Responsive */}
-              <div className="flex items-center gap-2 sm:gap-4">
-                {/* Phone - Hidden on small screens */}
-                <a
-                  href="tel:+917042867717"
-                  className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-red-600 transition-colors"
-                > 
-                  <span className="text-lg">📞</span>
-                  <span className="hidden lg:inline">+91-7042867717</span>
-                  <span className="lg:hidden">Call Now</span>
-                </a>
-                
-                {/* Mobile Phone Icon */}
-                <a
-                  href="tel:+917042867717"
-                  className="sm:hidden flex items-center justify-center w-10 h-10 bg-red-100 rounded-full text-red-600 hover:bg-red-200 transition-colors"
-                >
-                  📞
-                </a>
-                
-                {/* Apply Button */}
-                <button 
-                  onClick={() => setOpenModal({ type: 'apply' })}
-                  className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25 text-sm sm:text-base"
-                >
-                  <span className="hidden sm:inline">Apply Now</span>
-                  <span className="sm:hidden">Apply</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </header>
+      {/* Right Side */}
+      <div className="flex items-center gap-2 sm:gap-4">
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setIsMobileMenuOpen(true)}
+          aria-label="Open menu"
+                  className="lg:hidden p-2 border rounded-md hover:bg-gray-100 transition-colors cursor-pointer"
+        >
+          <FaBars className="w-5 h-5 text-gray-700" />
+        </button>
 
-        {/* Premium Hero Section */}
-        <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
+        {/* Phone (Desktop) */}
+        <a
+          href="tel:+917042867717"
+          className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-[#f26722] transition-colors"
+        >
+           <FaPhone className="text-orange-500 rotate-90" />
+          <span className="hidden lg:inline">+91-7042867717</span>
+          <span className="lg:hidden">Call Now</span>
+        </a>
+
+        {/* Phone (Mobile) */}
+        <a
+          href="tel:+917042867717"
+          className="sm:hidden flex items-center justify-center w-10 h-10 bg-[#f26722]/10 rounded-full text-[#f26722] hover:bg-[#f26722]/20 transition-colors cursor-pointer"
+        >
+          📞
+        </a>
+
+        {/* Apply Button */}
+        <button
+          onClick={() => setOpenModal({ type: "apply" })}
+          className="bg-[#f26722] hover:bg-orange-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
+        >
+          <span className="hidden sm:inline">Apply Now</span>
+
+          <span className="sm:hidden">Apply</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+        <div className="max-w-screen-2xl mx-auto flex ">
+          {/* Desktop Sidebar */}
+        <aside className="fixed hidden lg:flex flex-col top-20 w-64 h-[calc(100vh-5rem)] px-4 py-8 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40">
+              <h3 className="text-lg font-bold mb-6 text-orange-600 border-b-2 border-orange-200 pb-2">Page Contents</h3>
+              <ul className="space-y-3 cursor-pointer">
+                  {[
+                     
+               { id: "introduction", label: "Introduction" },
+               { id: "campus-tour", label: "Campus Tour (Images, Videos)" },
+               { id: "explore-courses", label: "Explore Online Courses" },
+               { id: "key-highlights", label: "Key Highlights" },
+               { id: "dates and session", label: "Admission Dates for UG & PG Programs" },
+               { id: "explore-courses", label: "Fee Structure" },
+               { id: "admission-process", label: "Admission Process" },
+               { id: "dates and session", label: "Details of Upcoming & Ongoing Sessions" },
+               { id: "placement-partners", label: "Placement Partners" },
+               { id: "placement-record", label: "Placement Record" },
+               { id: "student-review", label: "Student Reviews" },
+               { id: "faqs", label: "FAQs" },
+               { id: "reviews", label: "Sikkim Manipal University Reviews" },
+               { id: "conclusion", label: "Conclusion" }
+
+
+
+                  ].map((item) => (
+                      <li key={item.id}>
+                          <button
+                              onClick={() => {
+                                  const section = document.getElementById(item.id);
+                                  if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
+                              }}
+                            className="text-gray-700 hover:text-orange-600 font-semibold text-base transition-colors duration-200 w-full text-left py-2 cursor-pointer"
+                          >
+                              {item.label}
+                          </button>
+                      </li>
+                  ))}
+              </ul>
+          </aside>
+
+          <main className="flex-1 min-w-0 lg:pl-64 ">
+            <div className="overflow-x-hidden pt-0">
+       
+                   {/* Mobile Sidebar */}
+                   <AnimatePresence>
+                     {isMobileMenuOpen && (
+                       <>
+                         <motion.div
+                           initial={{ opacity: 0 }}
+                           animate={{ opacity: 1 }}
+                           exit={{ opacity: 0 }}
+                           transition={{ duration: 0.3 }}
+                           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[999] lg:hidden"
+                           onClick={() => setIsMobileMenuOpen(false)}
+                         />
+                         <motion.aside
+                           initial={{ x: "-100%" }}
+                           animate={{ x: 0 }}
+                           exit={{ x: "-100%" }}
+                           transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                           className="fixed top-0 left-0 w-[85vw] sm:w-80 h-full bg-white border-r shadow-2xl z-[1000] p-6 flex flex-col overflow-y-auto will-change-transform lg:hidden"
+                         >
+                           <div className="flex items-center justify-between mb-8">
+                             <h3 className="text-xl font-bold text-orange-600">Page Contents</h3>
+                             <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-full hover:bg-gray-100">
+                               <FaTimes className="w-5 h-5 text-gray-600" />
+                             </button>
+                           </div>
+                           <ul className="space-y-4">
+                              {[
+                              { id: "introduction", label: "Introduction" },
+                              { id: "campus-tour", label: "Campus Tour (Images, Videos)" },
+                              { id: "explore-courses", label: "Explore Online Courses" },
+                              { id: "key-highlights", label: "Key Highlights" },
+                              { id: "dates and session", label: "Admission Dates for UG & PG Programs" },
+                              { id: "fees", label: "Fee Structure" },
+                              { id: "admission-process", label: "Admission Process" },
+                              { id: "dates and session", label: "Details of Upcoming & Ongoing Sessions" },
+                              { id: "placement-partners", label: "Placement Partners" },
+                              { id: "placement-record", label: "Placement Record" },
+                              { id: "student-review", label: "Student Reviews" },
+                              { id: "faqs", label: "FAQs" },
+                              { id: "reviews", label: "Sikkim Manipal University Reviews" },
+                              { id: "conclusion", label: "Conclusion" }
+                             ].map((item) => (
+                               <li key={item.id}>
+                                 <button
+                                   onClick={() => {
+                                     const section = document.getElementById(item.id);
+                                     if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                     setIsMobileMenuOpen(false);
+                                   }}
+                                   className="text-gray-700 hover:text-orange-600 font-semibold text-base transition-colors duration-200 w-full text-left py-2"
+                                 >
+                                   {item.label}
+                                 </button>
+                               </li>
+                             ))}
+                           </ul>
+                         </motion.aside>
+                       </>
+                     )}
+                   </AnimatePresence>
+        {/* Hero Section */}
+        <section id="introduction" className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 ">
           {/* Background Image */}
           <div className="absolute inset-0 bg-[url('/images/smu-uni.webp')] bg-cover bg-center opacity-200"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-blue-900/70 to-purple-900/80"></div>
 
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-red-500/10 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#f26722]/10 rounded-full blur-3xl animate-pulse"></div>
             <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
           </div>
 
@@ -314,11 +429,11 @@ const SMU = () => {
                 <div className="space-y-6">
                   <h1 className="font-queens text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                     <span className="block text-white">Transform Your</span>
-                    <span className="block bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+                    <span className="block bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text text-transparent">
                       Career with
                     </span>
                     <span className="block text-white">Sikkim Manipal</span>
-                    <span className="block text-red-400 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-normal mt-1 sm:mt-2">
+                    <span className="block text-orange-400 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-normal mt-1 sm:mt-2">
                       University (SMU)
                     </span>
                   </h1>
@@ -347,7 +462,7 @@ const SMU = () => {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button 
                     onClick={() => setOpenModal({ type: 'apply' })}
-                    className="group bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-red-500/30 flex items-center justify-center gap-3"
+                    className="group bg-gradient-to-r from-orange-500 to-[#f26722] hover:from-[#f26722] hover:to-orange-600 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-orange-500/30 flex items-center justify-center gap-3"
                   >
                     <span>Apply Now</span>
                     <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -363,7 +478,7 @@ const SMU = () => {
                   </button>
                 </div>
               </div>
-
+  
               {/* Right Content - Stats Card */}
               <div className="lg:pl-8">
                 <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 space-y-6">
@@ -377,7 +492,7 @@ const SMU = () => {
                       { number: '150+', label: 'Hiring Partners' }
                     ].map((stat, i) => (
                       <div key={i} className="text-center">
-                        <div className="text-3xl font-bold text-red-400">{stat.number}</div>
+                        <div className="text-3xl font-bold text-orange-400">{stat.number}</div>
                         <div className="text-gray-300 text-sm mt-1">{stat.label}</div>
                       </div>
                     ))}
@@ -387,7 +502,7 @@ const SMU = () => {
                   <div className="pt-6 border-t border-white/20">
                     <h4 className="text-white font-semibold mb-4 text-center">Popular Programs</h4>
                     <div className="flex flex-wrap justify-center gap-2">
-                      {['Online MBA', 'MCA', 'B.Com', 'B.A.', 'M.Com', 'M.A.'].map((program, i) => (
+                      {['Online MBA', 'MCA', 'B.Com', 'B.A.', 'M.Com', 'M.A.'].map((program, i) => ( 
                         <span key={i} className="bg-white/5 hover:bg-white/10 border border-white/10 rounded-full px-4 py-2 text-white text-sm transition-all duration-300 cursor-pointer hover:scale-105">
                           {program}
                         </span>
@@ -406,6 +521,160 @@ const SMU = () => {
             </div>
           </div>
         </section>
+        <section  className="bg-white py-16 px-6 md:px-16 lg:px-24">
+  <div className="max-w-5xl mx-auto">
+    {/* Heading */}
+    <h2 className="text-3xl md:text-4xl font-bold text-black-700 mb-3">
+      About Sikkim Manipal University Online (SMU Online)
+    </h2>
+    <div className="w-90 h-1 bg-black-500 rounded-full mb-8"></div>
+
+    {/* Content */}
+    <div className="space-y-6 text-gray-700 text-lg leading-relaxed text-justify">
+      <p>
+        <strong>Sikkim Manipal University Online (SMU Online)</strong> is one of India’s
+        leading UGC-approved online universities, offering high-quality degree programs
+        that blend academic excellence with digital innovation. Established under the
+        prestigious Sikkim Manipal University legacy, SMU Online has become a trusted name
+        in distance and online learning across India.
+      </p>
+
+      <p>
+        As a pioneer in online higher education, SMU Online empowers learners to pursue
+        globally recognized degrees while maintaining a balance between personal and
+        professional goals. With a strong focus on accessibility, affordability, and
+        academic quality, it delivers education that transcends geographical barriers.
+      </p>
+
+      <p>
+        The university offers a wide range of UGC-entitled online programs such as
+        <strong> Online MBA, MCA, BBA, BCA,</strong> and <strong>BA</strong>, catering to
+        the diverse needs of students and working professionals. Each program is crafted
+        to meet evolving industry standards and ensure learners are job-ready upon
+        graduation.
+      </p>
+
+      <p>
+        Guided by the philosophy of{" "}
+        <span className="italic">“Learning Anytime, Anywhere”</span>, SMU Online integrates
+        live classes, interactive e-learning modules, AI-proctored assessments, and
+        personalized academic support through an advanced Learning Management System (LMS).
+      </p>
+
+      <p>
+        Recognized by <strong>UGC-DEB</strong> and accredited with <strong>NAAC A+</strong>,
+        SMU Online maintains rigorous academic standards and a future-ready curriculum.
+        Its commitment to quality, digital innovation, and student success places it among
+        India’s top online universities.
+      </p>
+
+      <p>
+        SMU Online represents <strong>credibility, flexibility,</strong> and
+        <strong> innovation</strong> — empowering learners to build careers with confidence
+        through career-focused online degrees.
+      </p>
+
+      <p>
+        The faculty comprises experienced academicians and industry professionals who
+        blend theory with real-world insights. The{" "}
+        <strong>Learning Management System (LMS)</strong> ensures smooth access to
+        lectures, study materials, and interactive forums — replicating traditional
+        classroom engagement online.
+      </p>
+
+      <p>
+        From admission to graduation, every learner receives continuous support through
+        academic mentorship, personalized counseling, and placement guidance, ensuring a
+        holistic and rewarding educational journey.
+      </p>
+
+      <p>
+        With over two decades of excellence in distance education, SMU Online continues to
+        redefine online higher education. Thousands of graduates have advanced their
+        careers through its UGC-approved programs, enjoying recognition equal to
+        on-campus degrees.
+      </p>
+
+      <p>
+        SMU Online bridges the gap between technology and education — fostering{" "}
+        <strong>global professionals</strong> ready to lead in a dynamic, digital-first
+        world.
+      </p>
+    </div>
+  </div>
+</section>
+
+        <section id="campus-tour" className="bg-gray-50 py-16 px-6 md:px-16 lg:px-24">
+  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    {/* Left Content */}
+    <div>
+      <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+        Campus Tour – Virtual Learning Experience
+      </h2>
+
+      <div className="space-y-6 text-gray-700 text-lg leading-relaxed text-justify">
+        <p>
+          While <strong>Sikkim Manipal University Online (SMU Online)</strong> operates in
+          the digital space, it preserves the vibrancy and engagement of a real university
+          environment through immersive virtual experiences.
+        </p>
+
+        <p>
+          The <strong>SMU Online Virtual Campus Tour</strong> enables prospective learners
+          to explore key aspects of the digital campus, including:
+        </p>
+
+        <ul className="list-disc list-inside space-y-3 text-gray-700">
+          <li>
+            Interactive digital classrooms equipped with state-of-the-art technology for
+            seamless learning.
+          </li>
+          <li>
+            Recorded lectures and live sessions conducted by experienced faculty members
+            and industry professionals.
+          </li>
+          <li>
+            Access to online laboratories, extensive e-libraries, and academic research
+            databases to support innovation and study.
+          </li>
+          <li>
+            Engaging video tours of the Sikkim campus, nestled amid the Himalayan
+            landscape, reflecting a perfect blend of nature and technology.
+          </li>
+        </ul>
+
+        <p>
+          Learners can also view faculty introduction videos, webinar recordings, and
+          orientation modules that simplify the transition into the world of online
+          education. The virtual campus platform replicates the sense of belonging,
+          academic rigor, and interaction found in traditional university life — ensuring
+          students feel truly connected to a reputed academic institution.
+        </p>
+      </div>
+    </div>
+
+    {/* Right Images */}
+    <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <img
+        src="/images/smu-uni.webp"
+        alt="SMU Virtual Classroom"
+        className="rounded-2xl shadow-lg w-full h-auto object-cover"
+      />
+      <img
+        src="/images/smu-class.webp"
+        alt="SMU Library"
+        className="rounded-2xl shadow-lg w-full h-auto object-cover"
+      />
+      <img
+        src="/images/smu-campus.webp"
+        alt="SMU Online Interaction"
+        className="rounded-2xl shadow-lg w-full h-auto object-cover sm:col-span-2"
+      />
+    </div>
+  </div>
+</section>
+
+
 
         {/* Enhanced Statistics Section */}
         <section className="py-16 bg-gradient-to-r from-slate-50 to-blue-50">
@@ -435,7 +704,7 @@ const SMU = () => {
               ].map((feature, i) => (
                 <div key={i} className="group text-center">
                   <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
-                    <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-[#f26722] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                       <span className="text-2xl">{feature.icon}</span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
@@ -448,11 +717,11 @@ const SMU = () => {
         </section>
 
         {/* Professional Rankings & Accreditations Section */}
-        <section className="py-16 bg-white">
+        <section id="recognitions" className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
-                Recognitions & <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">Accreditations</span>
+                Recognitions & <span className="bg-gradient-to-r from-orange-500 to-[#f26722] bg-clip-text text-transparent">Accreditations</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Recognized by leading accreditation bodies and regulatory authorities in India
@@ -483,7 +752,7 @@ const SMU = () => {
                     </div>
                     <div className="px-4 py-5">
                       <p className="text-sm font-medium text-gray-800 text-center leading-tight group-hover:text-red-600 transition-colors duration-300">
-                        {item.title}
+                        {item.title} 
                       </p>
                     </div>
                   </div>
@@ -492,6 +761,116 @@ const SMU = () => {
             </div>
           </div>
         </section>
+         <section id="dates and session" className="bg-gray-50 py-16 px-6 md:px-16 lg:px-24">
+  <div className="max-w-6xl mx-auto space-y-16">
+    {/* Admission Dates Section */}
+    <div>
+      <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
+        Admission Dates for Various UG & PG Programs
+      </h2>
+      <p className="text-gray-700 text-lg leading-relaxed mb-6">
+        <strong>Sikkim Manipal University Online Admission Schedule 2025–26</strong>
+      </p>
+
+      <div className="grid md:grid-cols-2 gap-10">
+        {/* January 2026 Intake */}
+        <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-100">
+          <h3 className="text-2xl font-semibold text-black mb-4">
+            January 2026 Intake
+          </h3>
+          <ul className="space-y-2 text-gray-700 text-lg">
+            <li>• Application Opens: <strong>1st November 2025</strong></li>
+            <li>• Last Date to Apply: <strong>Closing Soon</strong></li>
+            <li>• Batch Commences: <strong>Open soon</strong></li>
+          </ul>
+        </div>
+
+        {/* July 2026 Intake */}
+        <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-100">
+          <h3 className="text-2xl font-semibold text-black mb-4">
+            July 2026 Intake
+          </h3>
+          <ul className="space-y-2 text-gray-700 text-lg">
+            <li>• Application Opens: <strong>Not Display</strong></li>
+            <li>• Last Date to Apply: <strong>Not Display</strong></li>
+            <li>• Batch Commences: <strong>Not Display</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <p className="text-gray-700 text-lg leading-relaxed mt-8">
+        Admissions are conducted on a <strong>first-come, first-served basis</strong> and depend on eligibility criteria.
+        Students are encouraged to apply early for their preferred intake. The
+        <strong> SMU Online admission portal </strong> offers real-time application tracking and dedicated counselor support throughout the process.
+      </p>
+    </div>
+
+    {/* Fee Structure Section */}
+    <div>
+      <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
+        Fee Structure 2025–26
+      </h2>
+      <div className="overflow-x-auto">
+        <table className="min-w-full border border-gray-200 bg-white rounded-2xl shadow-md">
+          <thead className="bg-gray-100 text-gray-800 text-lg font-semibold">
+            <tr>
+              <th className="py-3 px-6 text-left">Program</th>
+              <th className="py-3 px-6 text-left">Duration</th>
+              <th className="py-3 px-6 text-left">Total Fee (INR)</th>
+              <th className="py-3 px-6 text-left">Installment Option</th>
+            </tr>
+          </thead>
+          <tbody className="text-gray-700 text-lg">
+            
+          
+            <tr className="border-t">
+              <td className="py-3 px-6">Online BA</td>
+              <td className="py-3 px-6">3 Years</td>
+              <td className="py-3 px-6">₹75,000 </td>
+              <td className="py-3 px-6">Available</td>
+            </tr>
+             <tr className="border-t">
+              <td className="py-3 px-6">Online BCom</td>
+              <td className="py-3 px-6">3 Years</td>
+              <td className="py-3 px-6">₹75,000</td>
+              <td className="py-3 px-6">Available</td>
+            </tr>
+            <tr className="border-t">
+              <td className="py-3 px-6">Online MBA</td>
+              <td className="py-3 px-6">2 Years</td>
+              <td className="py-3 px-6">₹1,10,000</td>
+              <td className="py-3 px-6">Available</td>
+            </tr>
+             <tr className="border-t">
+              <td className="py-3 px-6">Online MCom</td>
+              <td className="py-3 px-6">2 Years</td>
+              <td className="py-3 px-6">₹75,000</td>
+              <td className="py-3 px-6">Available</td>
+            </tr>
+            <tr className="border-t">
+              <td className="py-3 px-6">Online MCA</td>
+              <td className="py-3 px-6">2 Years</td>
+              <td className="py-3 px-6">₹98,000 </td>
+              <td className="py-3 px-6">Available</td>
+            </tr>
+            <tr className="border-t">
+              <td className="py-3 px-6">Online MA</td>
+              <td className="py-3 px-6">2 Years</td>
+              <td className="py-3 px-6">₹75,000 </td>
+              <td className="py-3 px-6">Available</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p className="text-gray-700 text-lg leading-relaxed mt-8">
+        <strong>Sikkim Manipal University Online</strong> provides flexible financial options including
+        <strong> EMI facilities, scholarships,</strong> and <strong>early-bird discounts</strong>.
+        The transparent fee policy ensures students have a clear understanding of their total educational investment.
+      </p>
+    </div>
+  </div>
+</section>
 
         {/* Why Choose Sikkim Manipal University */}
         <section className="relative py-20 bg-[#0B0B10] text-white overflow-hidden">
@@ -521,7 +900,7 @@ const SMU = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
               {/* Card 1 */}
               <div className="bg-white text-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center mb-4">
+                <div className="w-14 h-14 rounded-full bg-orange-100 flex items-center justify-center mb-4">
                   <span className="text-2xl">🏅</span>
                 </div>
                 <h4 className="text-xl font-semibold mb-2">UGC Approved Degrees</h4>
@@ -568,11 +947,11 @@ const SMU = () => {
         </section>
 
         {/* Enhanced Courses Section */}
-        <section className="py-20 bg-white">
+        <section id="explore-courses" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
-                Explore <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">Online Programs</span>
+                Explore <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Online Programs</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Choose from industry-relevant programs designed for working professionals and fresh graduates
@@ -591,11 +970,11 @@ const SMU = () => {
                     <Tabs.Trigger
                       key={tab.value}
                       value={tab.value}
-                      className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
-                        activeTab === tab.value
-                          ? 'bg-gradient-to-r from-red-500 to-red-600 text-white shadow-lg'
-                          : 'text-gray-700 hover:text-red-600 hover:bg-white'
-                      }`}
+                      className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 cursor-pointer ${ 
+                        activeTab === tab.value 
+                          ? 'bg-gradient-to-r from-orange-500 to-[#f26722] text-white shadow-lg' 
+                          : 'text-gray-700 hover:text-[#f26722] hover:bg-white' 
+                      }`} 
                     >
                       {tab.label}
                     </Tabs.Trigger>
@@ -620,7 +999,7 @@ const SMU = () => {
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                           <div className="absolute bottom-4 left-4">
-                            <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            <span className="bg-[#f26722] text-white px-3 py-1 rounded-full text-sm font-semibold">
                               {course.universityShort}
                             </span>
                           </div>
@@ -647,7 +1026,7 @@ const SMU = () => {
 
                           <button 
                             onClick={() => setOpenModal({ type: 'apply', program: course.course })}
-                            className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
+                            className="w-full bg-gradient-to-r from-orange-500 to-[#f26722] hover:from-[#f26722] hover:to-orange-600 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
                           >
                             Apply Now
                           </button>
@@ -660,10 +1039,113 @@ const SMU = () => {
             </Tabs.Root>
           </div>
         </section>
+          <section id="fees" className="bg-gray-50 py-16 px-6 lg:px-20">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Heading */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            Explore Online Courses
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Sikkim Manipal University Online offers a comprehensive portfolio of
+            UGC-entitled online degree programs, enabling learners to pursue
+            higher education from anywhere, at any time.
+          </p>
+        </div>
 
+        {/* Undergraduate Programs */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-semibold text-orange-700 mb-6">
+            Undergraduate Online Programs
+          </h3>
+
+          <div className="space-y-8">
+            <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+              <h4 className="text-xl font-semibold text-gray-800 mb-2">
+                1. Online Bachelor of Business Administration (BBA)
+              </h4>
+              <p className="text-gray-600 leading-relaxed">
+                The SMU Online BBA program provides foundational knowledge in
+                business management, marketing, human resources, and finance. It
+                equips students with analytical and leadership skills essential
+                for managerial success.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+              <h4 className="text-xl font-semibold text-gray-800 mb-2">
+                2. Online Bachelor of Computer Applications (BCA)
+              </h4>
+              <p className="text-gray-600 leading-relaxed">
+                Aimed at aspiring IT professionals, the Online BCA program focuses
+                on computer fundamentals, programming languages, web development,
+                and database management — preparing students for careers in
+                software development and IT support.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+              <h4 className="text-xl font-semibold text-gray-800 mb-2">
+                3. Online Bachelor of Arts (BA)
+              </h4>
+              <p className="text-gray-600 leading-relaxed">
+                The Online BA program nurtures critical thinking and communication
+                skills through diverse specializations in humanities and social
+                sciences, offering holistic intellectual development.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Postgraduate Programs */}
+        <div>
+          <h3 className="text-2xl font-semibold text-orange-700 mb-6">
+            Postgraduate Online Programs
+          </h3>
+
+          <div className="space-y-8">
+            <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+              <h4 className="text-xl font-semibold text-gray-800 mb-2">
+                1. Online Master of Business Administration (MBA)
+              </h4>
+              <p className="text-gray-600 leading-relaxed">
+                The flagship Online MBA from Sikkim Manipal University is among
+                the top online MBA programs in India. Designed for working
+                professionals, it offers specializations in Marketing, HR,
+                Finance, Data Analytics, and Operations Management. Students
+                benefit from practical case studies, live projects, and
+                mentor-driven learning experiences.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+              <h4 className="text-xl font-semibold text-gray-800 mb-2">
+                2. Online Master of Computer Applications (MCA)
+              </h4>
+              <p className="text-gray-600 leading-relaxed">
+                The Online MCA program prepares learners for advanced IT careers
+                in artificial intelligence, data analytics, and software
+                engineering. The curriculum emphasizes both technical depth and
+                managerial perspective.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Summary */}
+        <div className="mt-12 text-center">
+          <p className="text-gray-700 max-w-4xl mx-auto text-lg leading-relaxed">
+            Every online course at SMU Online integrates experiential learning,
+            real-world application, and continuous assessment. Learners can
+            personalize their academic journey through flexible schedules,
+            ensuring the best blend of professional and personal balance.
+          </p>
+        </div>
+      </div>
+    </section>
         {/* Modern 360 Advantage */}
         <section className="relative py-20 bg-gradient-to-br from-red-50 via-white to-blue-50">
-          <div className="pointer-events-none absolute inset-0" style={{background:"radial-gradient(1200px 300px at 10% -10%, rgba(230,57,70,.09), transparent), radial-gradient(1200px 300px at 90% 110%, rgba(59,130,246,.08), transparent)"}} />
+          <div className="pointer-events-none absolute inset-0" style={{background:"radial-gradient(1200px 300px at 10% -10%, rgba(242,103,34,.09), transparent), radial-gradient(1200px 300px at 90% 110%, rgba(59,130,246,.08), transparent)"}} />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
               <h2 className="text-4xl lg:text-5xl font-queens font-bold text-gray-900">Unlock The SMU Advantage</h2>
@@ -683,7 +1165,7 @@ const SMU = () => {
               }].map((b,i)=>(
                 <div key={i} className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                   <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-red-500 to-red-600 text-white flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">{b.icon}</div>
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">{b.title}</h3>
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">{b.title}</h3> 
                   <p className="text-gray-600">{b.desc}</p>
                 </div>
               ))}
@@ -691,9 +1173,9 @@ const SMU = () => {
 
             {/* Financing + Support */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
-              <div className="rounded-2xl p-8 bg-gradient-to-br from-red-500 to-red-600 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="rounded-2xl p-8 bg-gradient-to-br from-orange-500 to-[#f26722] text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                 <h3 className="text-3xl font-bold mb-4">Easy Financing Options</h3>
-                <p className="text-red-100 text-lg">Flexible payment plans and EMI options to make quality education accessible to everyone.</p>
+                <p className="text-orange-100 text-lg">Flexible payment plans and EMI options to make quality education accessible to everyone.</p>
               </div>
               <div className="rounded-2xl p-8 bg-gradient-to-br from-blue-600 to-indigo-600 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                 <h3 className="text-3xl font-bold mb-4">Dedicated Student Support</h3>
@@ -702,7 +1184,141 @@ const SMU = () => {
             </div>
           </div>
         </section>
+          
+    <section className="bg-gray-50 py-16 px-6 md:px-20 text-gray-800 leading-relaxed">
+      <div className="max-w-6xl mx-auto">
+        {/* Section Header */}
+        <h2 className="text-4xl font-bold text-center text-black mb-6">
+          Why Choose Sikkim Manipal University Online (SMU Online)
+        </h2>
+        <p className="text-lg text-center mb-12 text-gray-700">
+          Choosing the right university for your online education is crucial for academic success and career growth.
+          Sikkim Manipal University Online (SMU Online) stands out as a preferred destination for learners who aspire
+          to earn a recognized online degree without compromising on quality.
+        </p>
 
+        {/* Key Reasons */}
+        <div className="space-y-8">
+          {[
+            {
+              title: "1. UGC-Approved and NAAC Accredited",
+              desc: "All programs at Sikkim Manipal University Online are UGC-entitled and recognized by AICTE. The university has also received NAAC A+ accreditation, ensuring that its online degrees meet the highest academic standards. Graduates can confidently use their qualifications for both government and private-sector opportunities in India and abroad.",
+            },
+            {
+              title: "2. Wide Range of Online Programs",
+              desc: "SMU Online offers a comprehensive selection of online courses such as Online MBA, Online MCA, Online BBA, Online BCA, and Online BA, enabling students to choose programs that align with their professional aspirations. These UGC-approved online degrees are designed to match modern industry requirements.",
+            },
+            {
+              title: "3. Advanced Learning Management System (LMS)",
+              desc: "The university’s state-of-the-art LMS platform provides 24/7 access to lectures, assignments, e-books, and recorded sessions. It supports self-paced learning, enabling students to study flexibly while maintaining professional and personal balance.",
+            },
+            {
+              title: "4. Experienced Faculty and Industry Mentors",
+              desc: "Sikkim Manipal University Online has a dedicated team of professors, researchers, and industry practitioners who bring a wealth of experience to every class. Their mentorship ensures that students gain practical insights alongside academic knowledge.",
+            },
+            {
+              title: "5. Career-Oriented Curriculum",
+              desc: "Every program at SMU Online is structured to meet the dynamic demands of the global job market. The curriculum emphasizes practical skills, case studies, and project-based learning. This career-focused approach helps students become industry-ready upon graduation.",
+            },
+            {
+              title: "6. AI-Proctored Online Examinations",
+              desc: "To maintain academic integrity, SMU Online conducts AI-proctored online exams that are flexible yet transparent. This system enables students to appear for exams securely from any location, offering convenience and credibility.",
+            },
+            {
+              title: "7. Flexible and Affordable Fee Structure",
+              desc: "Sikkim Manipal University Online ensures education remains accessible to all. It offers flexible payment options, including installments and EMI plans, allowing students from diverse backgrounds to pursue online degree programs without financial strain.",
+            },
+            {
+              title: "8. Dedicated Student Support",
+              desc: "The student support team at SMU Online assists learners throughout their academic journey — from admission to graduation. Students have access to academic counselors, tech support, and placement guidance 24/7 through the online portal.",
+            },
+            {
+              title: "9. Strong Industry and Placement Network",
+              desc: "SMU Online maintains partnerships with leading organizations across IT, Finance, Consulting, and Banking sectors. Recruiters such as TCS, Wipro, HDFC Bank, Deloitte, and IBM hire graduates from Sikkim Manipal University Online, making it one of the most employability-driven universities in India.",
+            },
+            {
+              title: "10. Global Recognition and Alumni Network",
+              desc: "With a global alumni base spread across 90+ countries, Sikkim Manipal University Online provides strong professional networking opportunities. The reputation of SMU Online ensures that its degrees are recognized both nationally and internationally.",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-2xl shadow-md hover:shadow-lg p-6 transition-all duration-300"
+            >
+              <h3 className="text-xl font-semibold text-black mb-2">
+                {item.title}
+              </h3>
+              <p>{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Additional Info Sections */}
+        <div className="mt-16 space-y-10">
+          {[
+            {
+              title: "Academic Excellence with a Digital Edge",
+              desc: "The blend of academic rigor and technological innovation makes SMU Online a leader in digital education. Every student experiences a structured yet flexible learning model enriched with video lectures, quizzes, assignments, and faculty interactions.",
+            },
+            {
+              title: "Empowering Working Professionals",
+              desc: "SMU Online programs are designed to enhance career prospects without interrupting job commitments. Whether it’s an Online MBA for managers, an Online MCA for IT professionals, or an Online BBA for business aspirants, flexibility is key.",
+            },
+            {
+              title: "Affordable Education with Global Standards",
+              desc: "SMU Online offers world-class education at affordable costs. The transparent fee structure ensures quality education is accessible to all.",
+            },
+            {
+              title: "Holistic Learning Ecosystem",
+              desc: "Beyond academics, SMU Online emphasizes personality development, communication, and leadership. Virtual workshops, webinars, and lectures foster real-world exposure.",
+            },
+            {
+              title: "Commitment to Quality and Integrity",
+              desc: "SMU Online upholds strict academic standards, complying with UGC and NAAC guidelines. Continuous monitoring and feedback ensure its credibility.",
+            },
+            {
+              title: "Lifelong Learning and Career Growth",
+              desc: "Graduates become part of a lifelong learning community. Alumni benefit from ongoing career counseling, networking, and professional development opportunities.",
+            },
+          ].map((section, i) => (
+            <div
+              key={i}
+              className="bg-gradient-to-r from-gray-100 to-gray-50 border-l-4 border-black p-6 rounded-lg shadow-sm"
+            >
+              <h3 className="text-2xl font-bold text-black mb-2">
+                {section.title}
+              </h3>
+              <p>{section.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Conclusion */}
+        <div className="mt-16 bg-black text-white p-10 rounded-2xl shadow-lg">
+          <h3 className="text-2xl font-semibold mb-4">Conclusion</h3>
+          <p className="mb-4">
+            Sikkim Manipal University Online (SMU Online) is more than just an
+            institution — it is a digital gateway to global education. Its
+            combination of academic excellence, flexible learning, affordable
+            structure, and global recognition makes it one of the most
+            sought-after UGC-approved online universities in India.
+          </p>
+          <p className="mb-4">
+            By choosing SMU Online, students invest in a transformative journey
+            that opens doors to professional advancement and lifelong success.
+            Whether pursuing an Online MBA, Online MCA, Online BBA, or Online
+            BCA, learners receive a globally recognized qualification that
+            reflects both prestige and performance.
+          </p>
+          <p>
+            SMU Online continues to redefine distance education through
+            technology-driven innovation and a steadfast commitment to
+            excellence — making it the ideal choice for learners who aim to
+            build successful careers in today’s competitive world.
+          </p>
+        </div>
+      </div>
+    </section>
         {/* Why Choose Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -731,9 +1347,9 @@ const SMU = () => {
             </div>
           </div>
         </section>
-
+       
         {/* Admission Procedure */}
-        <section className="relative py-20 bg-white">
+        <section id="admission-process" className="relative py-20 bg-white">
           {/* Decorative Blobs */}
           <div className="absolute -top-20 -left-20 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-32 -right-32 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
@@ -750,7 +1366,7 @@ const SMU = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
                 Admission Procedure
               </h2>
-              <div className="w-24 h-1 bg-red-500 mx-auto mb-8 rounded-full"></div>
+              <div className="w-24 h-1 bg-[#f26722] mx-auto mb-8 rounded-full"></div>
               <p className="text-lg text-gray-700 max-w-2xl mx-auto">
                 A simple, transparent, and student-friendly admission process
                 designed to help you begin your learning journey smoothly.
@@ -771,7 +1387,7 @@ const SMU = () => {
       
               <div className="grid grid-cols-1 md:grid-cols-4 gap-10 relative">
                 {/* Connecting Line */}
-                <div className="hidden md:block absolute top-28 left-[10%] right-[10%] h-1 bg-gradient-to-r from-red-400 to-red-500 z-0 rounded-full"></div>
+                <div className="hidden md:block absolute top-28 left-[10%] right-[10%] h-1 bg-gradient-to-r from-orange-400 to-[#f26722] z-0 rounded-full"></div>
       
                 {[
                   {
@@ -803,7 +1419,7 @@ const SMU = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.3 }}
                   >
-                    <div className="bg-gradient-to-br from-red-400 to-red-500 w-28 h-28 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center mx-auto mb-6 text-white shadow-2xl">
+                              <div className="bg-gradient-to-br from-orange-400 to-[#f26722] w-28 h-28 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center mx-auto mb-6 text-white shadow-2xl">
                       <span className="text-3xl md:text-4xl font-bold">{step.number}</span>
                       <span className="text-xs md:text-sm uppercase font-semibold mt-1">Step</span>
                     </div>
@@ -831,32 +1447,165 @@ const SMU = () => {
               </p>
               <ul className="space-y-4 text-lg">
                 <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-[#f26722] rounded-full"></span>
                   UGC Recognized Online Degrees
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-[#f26722] rounded-full"></span>
                   Learn from Industry Experts
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-[#f26722] rounded-full"></span>
                   Comprehensive Study Material
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-[#f26722] rounded-full"></span>
                   Dedicated Student Support
                 </li>
               </ul>
             </div>
           </div>
         </section>
+         
+       <section id="key-highlights" className="bg-gradient-to-b from-white via-blue-50 to-white py-16 px-6 md:px-16">
+  <div className="max-w-6xl mx-auto text-center">
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+      Key Highlights
+    </h2>
+    <p className="text-gray-600 mb-10 text-lg max-w-3xl mx-auto">
+      Sikkim Manipal University Online stands out for its innovative approach to digital higher education.
+      The following features define its reputation and success:
+    </p>
+  </div>
+
+  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
+    {[
+      {
+        title: "UGC-Approved Online Degrees",
+        desc: "All programs are recognized by UGC-DEB, ensuring credibility and acceptance in government and private sectors."
+      },
+      {
+        title: "NAAC A+ Accredited University",
+        desc: "A testament to academic excellence and quality assurance."
+      },
+      {
+        title: "State-of-the-Art LMS",
+        desc: "Offers 24/7 access to lectures, e-books, quizzes, and recorded sessions."
+      },
+      {
+        title: "Live & Recorded Classes",
+        desc: "Students can attend live faculty-led sessions or watch recordings at their convenience."
+      },
+      {
+        title: "AI-Proctored Examinations",
+        desc: "Transparent and secure online examination process."
+      },
+      {
+        title: "Global Alumni Network",
+        desc: "50,000+ graduates working in multinational corporations across the globe."
+      },
+      {
+        title: "Dedicated Placement Assistance",
+        desc: "Career counseling, virtual job fairs, and resume support."
+      },
+      {
+        title: "Flexible Fee Options",
+        desc: "Installment and EMI facilities for affordability."
+      },
+      {
+        title: "Industry-Integrated Curriculum",
+        desc: "Designed in collaboration with experts from IBM, TCS, and Deloitte."
+      },
+    ].map((item, index) => (
+      <div
+        key={index}
+        className="flex items-start bg-white shadow-md rounded-2xl p-5 hover:shadow-xl transition-all border border-gray-100"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-6 h-6 mt-1 mr-3 text-blue-600 flex-shrink-0"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth="2"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M9 12l2 2l4-4m6 2a9 9 0 11-18 0a9 9 0 0118 0z"
+          />
+        </svg>
+        <p className="text-gray-700 leading-relaxed">
+          <strong>{item.title}:</strong> {item.desc}
+        </p>
+      </div>
+    ))}
+  </div>
+
+  <div className="mt-12 text-center">
+    <p className="text-gray-700 text-lg max-w-3xl mx-auto font-medium">
+      SMU Online combines quality academics with real-world exposure — ensuring every learner 
+      graduates <span className="text-blue-700 font-semibold">career-ready</span> and 
+      <span className="text-blue-700 font-semibold"> globally competent</span>.
+    </p>
+  </div>
+</section>
+
+       <section id="placement-record" className="bg-gradient-to-b from-white via-gray-50 to-white py-16 px-6 md:px-16">
+  <div className="max-w-6xl mx-auto">
+    {/* Placement Record Section */}
+    <div className="text-center mb-14">
+      <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+        Placement Record
+      </h2>
+      <p className="text-gray-700 text-lg max-w-4xl mx-auto leading-relaxed">
+        With over <span className="font-semibold text-black">two decades of academic excellence</span>, 
+        SMU Online maintains an <span className="font-semibold text-black">85–90% placement success rate</span>.
+      </p>
+    </div>
+
+    <div className="max-w-5xl mx-auto bg-white shadow-md rounded-2xl border border-gray-100 p-8 mb-12 hover:shadow-lg transition-all">
+      <h3 className="text-2xl font-semibold text-black mb-6 text-center">
+        Highlights
+      </h3>
+      <ul className="space-y-4 text-lg text-gray-800">
+        <li className="flex items-start">
+          <span className="text-black text-xl mr-2">•</span>
+          <span><strong>Average package for MBA graduates:</strong> ₹6–8 LPA</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-black text-xl mr-2">•</span>
+          <span><strong>Top package:</strong> ₹18 LPA (International role)</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-black text-xl mr-2">•</span>
+          <span><strong>Leading recruiters:</strong> BFSI, IT, Consulting, and E-commerce sectors</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-black text-xl mr-2">•</span>
+          <span><strong>Career support:</strong> Resume writing, LinkedIn optimization, and mock interview training</span>
+        </li>
+      </ul>
+
+      <p className="text-gray-700 mt-8 text-lg leading-relaxed text-center">
+        Graduates of <span className="font-semibold text-black">Sikkim Manipal University Online</span> 
+        are employed across <span className="font-semibold text-black">India, the Middle East, Southeast Asia,</span> 
+        and <span className="font-semibold text-black">Europe</span> — a testament to the global recognition 
+        of SMU’s online degrees.
+      </p>
+    </div>
+
+    
+  </div>
+</section>
+
 
         {/* Premium Testimonials */}
-        <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <section id="student-review" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
-                Success <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">Stories</span>
+                Success <span className="bg-gradient-to-r from-orange-500 to-[#f26722] bg-clip-text text-transparent">Stories</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Hear from our alumni who have transformed their careers with SMU Online
@@ -870,15 +1619,15 @@ const SMU = () => {
                     <div className="flex items-start gap-6">
                       {/* Avatar */}
                       <div className="flex-shrink-0">
-                        <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-[#f26722] rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
                           {testimonial.name.split(' ').map(n => n[0]).join('')}
                         </div>
                       </div>
                       
                       {/* Content */}
                       <div className="flex-1">
-                        <div className="mb-4">
-                          <svg className="w-8 h-8 text-red-500 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                        <div className="mb-4"> 
+                          <svg className="w-8 h-8 text-[#f26722] mb-4" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
                           </svg>
                           <p className="text-gray-700 text-lg leading-relaxed italic">
@@ -888,7 +1637,7 @@ const SMU = () => {
                         
                         <div className="border-t border-gray-100 pt-4">
                           <h4 className="font-bold text-gray-900 text-xl">{testimonial.name}</h4>
-                          <p className="text-red-600 font-semibold text-lg">
+                          <p className="text-[#f26722] font-semibold text-lg">
                             {testimonial.course}, {testimonial.university}
                           </p>
                         </div>
@@ -902,11 +1651,11 @@ const SMU = () => {
         </section>
 
         {/* Professional FAQ Section */}
-        <section className="py-20 bg-white">
+        <section id="faqs" className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
-                Frequently Asked <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">Questions</span>
+                Frequently Asked <span className="bg-gradient-to-r from-orange-500 to-[#f26722] bg-clip-text text-transparent">Questions</span>
               </h2>
               <p className="text-xl text-gray-600">
                 Everything you need to know about Sikkim Manipal University Online Programs
@@ -921,10 +1670,10 @@ const SMU = () => {
                 >
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className="w-full text-left px-8 py-6 bg-gradient-to-r from-gray-50 to-gray-100 hover:from-red-50 hover:to-red-100 flex justify-between items-center font-semibold text-gray-800 transition-all duration-300 group-hover:text-red-700 text-lg"
-                  >
+                    className="w-full text-left px-8 py-6 bg-gradient-to-r from-gray-50 to-gray-100 hover:from-orange-50 hover:to-orange-100 flex justify-between items-center font-semibold text-gray-800 transition-all duration-300 group-hover:text-orange-700 text-lg"
+                   >
                     <span className="pr-8">{faq.question}</span>
-                    <div className="flex-shrink-0 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:bg-red-500 group-hover:text-white transition-all duration-300">
+                    <div className="flex-shrink-0 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:bg-[#f26722] group-hover:text-white transition-all duration-300">
                       <span className="text-xl font-bold">{openIndex === index ? "−" : "+"}</span>
                     </div>
                   </button>
@@ -940,22 +1689,23 @@ const SMU = () => {
         </section>
 
         {/* Professional Hiring Partners Section */}
-        <section className="py-20 bg-gradient-to-br from-gray-100 to-gray-200">
+        <section id="placement-partners" className="py-20 bg-gradient-to-br from-gray-100 to-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
-                Our Students Work At <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">Top Companies</span>
+                Our Students Work At <span className="bg-gradient-to-r from-orange-500 to-[#f26722] bg-clip-text text-transparent">Top Companies</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Join the ranks of successful graduates working at leading organizations worldwide
               </p>
             </div>
             
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"> 
               {["/images/company.webp", "/images/company1.webp", "/images/company9.webp", "/images/com10.webp", "/images/companany4.webp", "/images/company6.webp", "/images/companany5.webp", "/images/adove.webp", "/images/samsung.webp", "/images/ey.webp", "/images/ibm.webp", "/images/hp.webp", "/images/tata.png", "/images/apple.jpg","/images/hero.webp"].map((src, i) => (
                 <div key={i} className="group">
                   <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                    <div className="aspect-square flex items-center justify-center">
+                    <div className="aspect-square flex items-center justify-center"> 
                       <Image 
                         width={100} 
                         height={100} 
@@ -968,30 +1718,30 @@ const SMU = () => {
                 </div>
               ))}
             </div>
-            
+
             {/* Final CTA */}
             <div className="text-center mt-16">
-              <div className="bg-gradient-to-r from-red-500 to-red-600 rounded-3xl p-12 text-white max-w-4xl mx-auto hover:shadow-2xl transition-all duration-300">
+              <div className="bg-gradient-to-r from-orange-500 to-[#f26722] rounded-3xl p-12 text-white max-w-4xl mx-auto hover:shadow-2xl transition-all duration-300">
                 <h3 className="text-4xl lg:text-5xl font-bold mb-6">Ready to Join Them?</h3>
-                <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
+                <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
                   Start your journey with Sikkim Manipal University Online and unlock endless career opportunities
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
                   <button 
                     onClick={() => setOpenModal({ type: 'apply' })}
-                    className="bg-white text-red-600 font-semibold px-12 py-4 rounded-full hover:bg-red-50 transition-all duration-300 transform hover:scale-105 shadow-2xl text-lg"
+                    className="bg-white text-orange-600 font-semibold px-12 py-4 rounded-full hover:bg-orange-50 transition-all duration-300 transform hover:scale-105 shadow-2xl text-lg"
                   >
                     Apply Now
                   </button>
                   <button 
                     onClick={() => setOpenModal({ type: 'enquire' })}
-                    className="border-2 border-white text-white font-semibold px-12 py-4 rounded-full hover:bg-white/10 transition-all duration-300 transform hover:scale-105 text-lg"
+                    className="border-2 border-white text-white font-semibold px-12 py-4 rounded-full hover:bg-white/10 transition-all duration-300 transform hover:scale-105 text-lg cursor-pointer"
                   >
                     Download Brochure
                   </button>
                 </div>
               </div>
-            </div>
+             </div>
           </div>
           
           {openModal && (
@@ -1007,6 +1757,92 @@ const SMU = () => {
             />
           )}
         </section>
+       <section id="reviews" className="bg-gradient-to-b from-black-50 via-white to-black-50 py-16 px-6 md:px-16">
+  <div className="max-w-6xl mx-auto">
+    {/* Reviews Section */}
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Sikkim Manipal University Reviews
+      </h2>
+      <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+        Sikkim Manipal University Online has received consistent appreciation from students, alumni,
+        and employers alike for its academic quality and career outcomes.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-6 mb-10">
+      {/* Rating Cards */}
+      <div className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-xl transition-all border border-gray-100">
+        <h3 className="text-4xl font-bold text-black-700 mb-2">4.6/5</h3>
+        <p className="text-gray-700 font-medium">Google Rating</p>
+      </div>
+
+      <div className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-xl transition-all border border-gray-100">
+        <h3 className="text-4xl font-bold text-black-700 mb-2">96%</h3>
+        <p className="text-gray-700 font-medium">Student Satisfaction</p>
+      </div>
+
+      <div className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-xl transition-all border border-gray-100">
+        <h3 className="text-4xl font-bold text-black-700 mb-2">85%+</h3>
+        <p className="text-gray-700 font-medium">Placement Record (Annually)</p>
+      </div>
+    </div>
+
+    <div className="max-w-4xl mx-auto bg-white border border-gray-100 shadow-md rounded-2xl p-8 hover:shadow-xl transition-all">
+      <h4 className="text-2xl font-semibold text-gray-900 mb-4 text-center">
+        Strengths Recognized by Students
+      </h4>
+      <ul className="space-y-3 text-gray-700 text-lg">
+        <li className="flex items-start">
+          <span className="text-black-600 text-xl mr-2">•</span>
+          Responsive faculty and mentorship support.
+        </li>
+        <li className="flex items-start">
+          <span className="text-black-600 text-xl mr-2">•</span>
+          Industry-relevant course content.
+        </li>
+        <li className="flex items-start">
+          <span className="text-black-600 text-xl mr-2">•</span>
+          Flexible schedules and affordable fee structure.
+        </li>
+        <li className="flex items-start">
+          <span className="text-black-600 text-xl mr-2">•</span>
+          Efficient online examination system.
+        </li>
+      </ul>
+    </div>
+
+    <div className="text-center mt-12">
+      <p className="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed">
+        SMU Online’s reputation as a top online university in India continues to grow,
+        making it a preferred choice for learners seeking career-oriented online education.
+      </p>
+    </div>
+
+    {/* Conclusion Section */}
+    <div id="conclusion" className="mt-20 text-center max-w-5xl mx-auto">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        Conclusion
+      </h2>
+      <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+        Sikkim Manipal University Online (SMU Online) exemplifies the evolution of higher education through
+        digital innovation. With UGC-approved online degrees, interactive learning systems, and robust placement
+        assistance, it empowers learners to pursue education without boundaries.
+      </p>
+      <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+        Whether it’s an <span className="font-semibold text-black-700">Online MBA</span>, 
+        <span className="font-semibold text-black-700"> Online MCA</span>, 
+        <span className="font-semibold text-black-700"> Online BBA</span>, or 
+        <span className="font-semibold text-black-700"> Online BCA</span>, SMU Online ensures you gain academic excellence,
+        flexibility, and career readiness — all under one trusted name.
+      </p>
+      <p className="text-gray-800 text-lg font-medium leading-relaxed">
+        By choosing <span className="font-semibold text-black-700">Sikkim Manipal University Online</span>, 
+        you invest in future-focused learning that aligns with your professional aspirations and global opportunities.
+      </p>
+    </div>
+  </div>
+</section>
 
         {/* Premium Footer */}
         <footer className="bg-gradient-to-br from-gray-900 to-slate-900 text-gray-300 pt-20 pb-8">
@@ -1022,10 +1858,10 @@ const SMU = () => {
                   UGC-entitled online degrees from Sikkim Manipal University designed for modern learners seeking career advancement.
                 </p>
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-red-500 transition-colors cursor-pointer">
-                    <span className="text-lg">📞</span>
+                  <div className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-[#f26722] transition-colors cursor-pointer">
+                     <FaPhone className="text-orange-500 rotate-90" />
                   </div>
-                  <div className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-red-500 transition-colors cursor-pointer">
+                  <div className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-[#f26722] transition-colors cursor-pointer">
                     <span className="text-lg">💬</span>
                   </div>
                 </div>
@@ -1037,7 +1873,7 @@ const SMU = () => {
                 <ul className="space-y-3">
                   {['Online MBA', 'MCA', 'B.Com', 'B.A.', 'M.Com', 'M.A.'].map((program, i) => (
                     <li key={i}>
-                      <a onClick={() => setOpenModal({ type: 'enquary' })} className="text-gray-400 hover:text-red-400 transition-colors cursor-pointer">
+                      <a onClick={() => setOpenModal({ type: 'enquary' })} className="text-gray-400 hover:text-orange-400 transition-colors cursor-pointer">
                         {program}
                       </a>
                     </li>
@@ -1051,7 +1887,7 @@ const SMU = () => {
                 <ul className="space-y-3">
                   {['Admissions', 'Scholarships', 'Placements', 'FAQs', 'Contact Us'].map((item, i) => (
                     <li key={i}>
-                      <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">
+                      <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">
                         {item}
                       </a>
                     </li>
@@ -1064,8 +1900,8 @@ const SMU = () => {
                 <h4 className="text-white font-bold text-lg mb-6">Get Started</h4>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
-                      <span className="text-white">📞</span>
+                    <div className="w-10 h-10 bg-[#f26722] rounded-full flex items-center justify-center">
+                       <FaPhone className="text-black-500 rotate-90" />
                     </div>
                     <div>
                       <p className="text-sm text-gray-400">Call Us</p>
@@ -1075,7 +1911,7 @@ const SMU = () => {
                   
                   <button 
                     onClick={() => setOpenModal({ type: 'apply' })}
-                    className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
+                    className="w-full bg-gradient-to-r from-orange-500 to-[#f26722] hover:from-[#f26722] hover:to-orange-600 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
                   >
                     Apply Now
                   </button>
@@ -1125,6 +1961,9 @@ const SMU = () => {
             </div>
           </div>
         </footer>
+        </div>
+        </main>
+      </div>
       </div>
     </>
   );

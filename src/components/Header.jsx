@@ -34,7 +34,7 @@ const [modalType, setModalType] = useState();
   const universities = [
     { name: "Amity University Online", link: "/Amity-University-Online", logo: "/images/amity.webp" },
     { name: "Lovely Professional University", link: "/lpu-online", logo: "/images/lpu.webp" },
-    { name: "Online Manipal University", link: "/manipal", logo: "/images/manipal.webp" },
+    { name: "Manipal University Jaipur", link: "/manipal", logo: "/images/manipal.webp" },
     { name: "Manipal Academy of Higher Education", link: "/mahe-online", logo: "/images/mahe-uni.webp" },
      { name: "Sikkim Manipal University", link: "/smu", logo: "/images/smu-uni.webp" },
     { name: "Uttaranchal University", link: "/uu", logo: "/images/uu-uni.webp" },

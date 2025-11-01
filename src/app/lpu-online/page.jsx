@@ -300,19 +300,18 @@ const LpuOnline = () => {
       <div className="max-w-screen-2xl mx-auto flex">
         {/* Desktop Sidebar */}
         <aside className="fixed hidden lg:flex flex-col top-20 w-64 h-[calc(100vh-5rem)] px-4 py-8 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40 ">
-            <h3 className="text-lg font-bold mb-6 text-indigo-800 border-b-2 border-indigo-200 pb-2 cursor-pointer">Page Contents</h3>
-            <ul className="space-y-3 cursor-pointer">
+            <h3 className="text-lg font-bold mb-6 text-indigo-800 border-b-2 border-indigo-200 pb-2 ">Page Contents</h3>
+            <ul className="space-y-3 ">
                 {[
                     { id: "introduction", label: "Introduction" },
                     { id: "campus-tour", label: "Campus Tour" },
-                    { id: "courses", label: "Explore Online Courses" },
+                    { id: "courses", label: "Explore Online Courses&Fees Structure" },
                     { id: "highlights", label: "Key Highlights" },
-                    { id: "admission-dates", label: "Admission Dates" },
-                    { id: "fees", label: "Fees Structure" },
+                    { id: "admission-dates", label: "Admission & Exam Details " },
+                    
                     { id: "admission-process", label: "Admission Process" },
                     { id: "sessions", label: "Upcoming Session" },
-                    { id: "placement-partners", label: "Placement Partners" },
-                    
+                    { id: "placement-partners", label: "Placement Partners" },   
                     { id: "faq", label: "Student Reviews & FAQ" },
                     { id: "conclusion", label: "Conclusion" }
                 ].map((item) => (
@@ -322,7 +321,7 @@ const LpuOnline = () => {
                                 const section = document.getElementById(item.id);
                                 if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
                             }}
-                            className="text-gray-700 hover:text-indigo-600 font-medium text-sm transition-colors duration-200 text-left"
+                            className="text-gray-700 hover:text-indigo-600 font-medium text-sm transition-colors duration-200 text-left cursor-pointer"
                         >
                             {item.label}
                         </button>
@@ -361,7 +360,7 @@ const LpuOnline = () => {
                       href="tel:+917042867717"
                       className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-orange-600 transition-colors"
                     > 
-                      <FaPhone className="text-orange-500" />
+                      <FaPhone className="text-orange-500 rotate-90" />
                       <span className="hidden lg:inline">+91-7042867717</span>
                     </a>
                     
@@ -407,10 +406,9 @@ const LpuOnline = () => {
                       {[
                           { id: "introduction", label: "Introduction" },
                           { id: "campus-tour", label: "Campus Tour" },
-                          { id: "courses", label: "Explore Online Courses" },
+                          { id: "courses", label: "Explore Online Courses & Fees" },
                           { id: "highlights", label: "Key Highlights" },
-                          { id: "admission-dates", label: "Admission Dates" },
-                          { id: "fees", label: "Fees Structure" },
+                          { id: "admission-dates", label: "Admission & Exam Details" },
                           { id: "admission-process", label: "Admission Process" },
                           { id: "sessions", label: "Upcoming Session" },
                           { id: "placement-partners", label: "Placement Partners" },
@@ -665,14 +663,17 @@ const LpuOnline = () => {
 </div>
 
         <p className="mt-8 mb-[10px] text-lg sm:text-xl text-black-600 leading-relaxed">
-           While **LPU Online** offers the convenience of digital learning, it is backed by the monumental infrastructure and legacy of its parent university. Imagine a **campus tour** that showcases sprawling acres of academic blocks, state-of-the-art labs, modern libraries, and vibrant student life—this is the foundation upon which **LPU Online** is built. Although you will be studying remotely, you gain access to a wealth of digital resources, including recorded lectures from esteemed faculty, virtual labs, and a comprehensive e-library. Prospective students can **explore online courses** through virtual **campus tour** videos and interactive sessions, giving them a feel of the LPU ecosystem from the comfort of their homes. This unique blend of a strong physical university and a dynamic **online** learning environment sets **LPU Online** apart from other **distance learning universities India**.         
+           <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
+  While <span className="font-bold text-black mx-1">LPU Online</span> offers the convenience of digital learning, it is backed by the monumental infrastructure and legacy of its parent university. Imagine a <span className="font-bold text-black mx-1">campus tour</span> that showcases sprawling acres of academic blocks, state-of-the-art labs, modern libraries, and vibrant student life—this is the foundation upon which <span className="font-bold text-black mx-1">LPU Online</span> is built. Although you will be studying remotely, you gain access to a wealth of digital resources, including recorded lectures from esteemed faculty, virtual labs, and a comprehensive e-library. Prospective students can <span className="font-bold text-black mx-1">explore online courses</span> through virtual <span className="font-bold text-black mx-1">campus tour</span> videos and interactive sessions, giving them a feel of the LPU ecosystem from the comfort of their homes. This unique blend of a strong physical university and a dynamic <span className="font-bold text-black mx-1">online</span> learning environment sets <span className="font-bold text-black mx-1">LPU Online</span> apart from other <span className="font-bold text-black mx-1">distance learning universities India</span>.
+</p>
+         
                   </p>
         
       </div>
     </section>
 
         {/* Enhanced Statistics Section */}
-        <section id="highlights" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-orange-50 via-white to-yellow-50">
+        <section id="" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-orange-50 via-white to-yellow-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -745,56 +746,56 @@ const LpuOnline = () => {
            <p className="mt-8 mb-[10px] text-lg sm:text-xl text-black-600 leading-relaxed">
               When you compare online universities in India, LPU Online consistently emerges as a top contender. But what exactly sets it apart? The decision to choose LPU Online is an investment in a future-proof career, supported by a multitude of compelling benefits designed for the aspirants of 2025.
              </p>
-            <h3 className="text-3xl font-bold text-center mb-10">
+            <h3 className=" mt-8 mb-[10px] text-3xl font-bold text-center mb-10">
              1. UGC-Entitled and Nationally Recognized Degrees
             </h3>
              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
              The foremost concern for any student considering online courses is validity. Rest assured, every online degree offered by LPU Online is fully entitled by the University Grants Commission (UGC). This national recognition means your qualification, be it an online MBA in India or a B.Com, will be valued by employers, government bodies, and other educational institutions across India. This crucial factor places LPU Online high on the list of recognized online universities in India, giving you the confidence that your investment is secure and your credential is powerful.
              </p>
-                <h3 className="text-3xl font-bold text-center mb-10">
+                <h3 className=" mt-8 mb-[10px] text-3xl font-bold text-center mb-10">
                  2. A Curriculum Designed for the Real World
             </h3>
              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
               The academic programs at LPU Online are not created in an ivory tower. They are meticulously designed in consultation with industry leaders to ensure relevance. For instance, the online data science course India incorporates the latest tools and programming languages like Python and R, while the digital marketing certification online covers everything from SEO and SEM to social media analytics and content marketing. Similarly, the ai and ml certification India delves into machine learning algorithms and AI applications that are revolutionizing industries. This focus on practical, employable skills ensures that graduates are job-ready from day one.
              </p>
-                <h3 className="text-3xl font-bold text-center mb-10">
+                <h3 className="mt-8 mb-[10px] text-3xl font-bold text-center mb-10">
                 3. Unmatched Flexibility for Working Professionals and Freshers
             </h3>
              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
               The core of online education is flexibility, and LPU Online has perfected this art. The platform is a boon for working professionals who aspire to upskill or earn a higher degree like an executive MBA online India without pausing their careers. There are no fixed class timings; you can access your lectures, complete assignments, and prepare for exams according to your own schedule, whether you are in Delhi, Mumbai, Bangalore, or Chennai. This flexibility also extends to freshers who may be preparing for other competitive exams or pursuing personal interests alongside their degree.
              </p>
-                <h3 className="text-3xl font-bold text-center mb-10">
+                <h3 className="mt-8 mb-[10px] text-3xl font-bold text-center mb-10">
                 4. Affordable Education with Transparent Fee Structure
             </h3>
              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
               LPU Online is committed to making quality education affordable. When you compare course fees online for similar programs offered by other best online universities in India, you will find that LPU Online offers exceptional value. The fees structure is transparent, with no hidden costs, making an affordable online MBA India a reality for thousands of students. This commitment to affordability ensures that financial constraints do not hinder talent and ambition.
              </p>
              
-              <h3 className="text-3xl font-bold text-center mb-10">
+              <h3 className="mt-8 mb-[10px] text-3xl font-bold text-center mb-10">
                5. Learn from the Best in the Business
             </h3>
              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
               The faculty at LPU Online comprises a blend of seasoned academicians and industry veterans who bring a wealth of knowledge and real-world experience into the virtual classroom. Their expertise ensures that the learning is not just about passing exams but about understanding concepts and their practical applications. This high-quality instruction is a consistent highlight in positive LPU online courses reviews and is a critical component of the university's success.
              </p>
-               <h3 className="text-3xl font-bold text-center mb-10">
+               <h3 className="mt-8 mb-[10px] text-3xl font-bold text-center mb-10">
                 6. Simplified Admission Process
             </h3>
              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
               The admission process at LPU Online is streamlined and user-friendly. It is often a key differentiator for those looking for an online MBA without entrance exam, as the process is generally based on academic merit. Prospective students can easily initiate their journey by filling out an online application. To help with this decision, the university offers the opportunity to book free counseling for courses or talk to education expert online, providing clarity and guidance at every step. You can also download course guide or university info pack download to have all the information at your fingertips.
              </p>
-               <h3 className="text-3xl font-bold text-center mb-10">
+               <h3 className=" mt-8 mb-[10px] text-3xl font-bold text-center mb-10">
               7. Robust Placement Assistance and Career Support
             </h3>
              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
               While LPU Online offers flexibility, it does not compromise on career outcomes. The university has a dedicated placement cell that works tirelessly to connect students with a wide network of placement partners. From leading MNCs to growing startups, these placement partners regularly recruit from the LPU talent pool. The university also provides career counseling session online and career guidance online India to help students prepare their resumes, hone their interview skills, and navigate their career paths successfully. This strong placement record is a testament to the quality of LPU Online graduates.
              </p>
-               <h3 className="text-3xl font-bold text-center mb-10">
+               <h3 className="mt-8 mb-[10px] text-3xl font-bold text-center mb-10">
               8. A Supportive and Interactive Learning Community
             </h3>
              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
               Despite being a distance learning platform, LPU Online fosters a strong sense of community. Students can interact with peers and faculty through discussion forums, live chat sessions, and virtual group projects. This collaborative environment allows for networking and knowledge sharing, replicating the collaborative spirit of a physical campus in a digital space. The student support team is always available to resolve any technical or academic queries, ensuring a smooth and hassle-free learning journey.
              </p>
-                <h3 className="text-3xl font-bold text-center mb-10">
+                <h3 className="mt-8 mb-[10px] text-3xl font-bold text-center mb-10">
               9. A Proven Track Record of Success
             </h3>
              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
@@ -804,21 +805,21 @@ const LpuOnline = () => {
           </div>
         </section>
 
-        {/* Professional Rankings & Accorangeitations Section */}
+        {/* Professional Rankings & Accreditation Section */}
         <section id="accreditations" className="py-16 bg-white ">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
-                Rankings & <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Accorangeitations</span>
+                Rankings & <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Accreditation</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Recognized by leading accorangeitation bodies and ranked among India's top universities
+                Recognized by leading accreditation bodies and ranked among India's top universities
               </p>
             </div>
             
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
               {[
-                { img: '/images/naac.webp', title: 'NAAC A++ Accorangeited University' },
+                { img: '/images/naac.webp', title: 'NAAC A++ Accreditation University' },
                 { img: '/images/ugc.webp', title: 'UGC Entitled Online Degrees' },
                 { img: '/images/nirf.webp', title: "Amongst India's top 50 Universities" },
                 { img: '/images/aicte.webp', title: 'AICTE Norms Compliant' },
@@ -925,7 +926,7 @@ const LpuOnline = () => {
         </section>
 
         {/* Enhanced Courses Section */}
-        <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+        <section id="courses" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -1101,7 +1102,7 @@ const LpuOnline = () => {
           </div>
         </section>
         {/*key highlight*/}
-        <section className="w-full py-16 bg-gradient-to-b from-white to-blue-50">
+        <section id="highlights" className="w-full py-16 bg-gradient-to-b from-white to-blue-50">
   <div className="max-w-6xl mx-auto px-6 text-center">
     <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
       🎓 Key Highlights
@@ -1428,6 +1429,53 @@ const LpuOnline = () => {
           </div>
         </section>
         
+        <section id="faq" className="max-w-6xl mx-auto px-4 py-16">
+  {/* Placement Record Section */}
+  <div className="bg-gradient-to-b from-orange-50 to-white rounded-2xl shadow-md p-8 sm:p-12 mb-16 text-center">
+    <h3 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">
+      Placement <span className="text-[#f45100]">Record</span>
+    </h3>
+    <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
+      The <span className="font-semibold text-black">placement record</span> of
+      <span className="font-semibold text-black"> LPU Online</span> is a testament to the quality of its education and
+      the employability of its graduates. Students from programs like the
+      <span className="font-semibold text-black"> online MBA in India</span> and
+      <span className="font-semibold text-black"> online data science course India</span> have been successfully placed in roles
+      such as <span className="font-semibold text-black">Business Analyst</span>,
+      <span className="font-semibold text-black"> Digital Marketing Manager</span>,
+      <span className="font-semibold text-black"> Data Scientist</span>, and
+      <span className="font-semibold text-black"> Project Manager</span>, with competitive compensation packages.
+    </p>
+    <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mt-4">
+      The university's dedicated placement cell provides
+      <span className="font-semibold text-black"> career counseling sessions online</span> and professional training to
+      prepare students for interviews, contributing to a strong
+      <span className="font-semibold text-black"> placement record</span>.
+    </p>
+  </div>
+
+  {/* Student Reviews & FAQ Section */}
+  <div className="bg-gradient-to-b from-white to-orange-50 rounded-2xl shadow-md p-8 sm:p-12 text-center">
+    <h3 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">
+      Student <span className="text-[#f45100]">Reviews</span> & FAQ
+    </h3>
+    <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
+      Before enrolling, checking
+      <span className="font-semibold text-black"> LPU Online Courses</span> reviews is a wise step. Generally,
+      <span className="font-semibold text-black"> student reviews</span> highlight the flexible learning schedule, high-quality
+      study materials, and the real-world value of the degree in the job market.
+    </p>
+
+    <div className="mt-10 flex flex-col sm:flex-row justify-center gap-6">
+      <button  onClick={() => setOpenModal({ type: 'enquiry' })} className="bg-[#f45100] text-white font-semibold py-3 px-8 rounded-full shadow-md hover:bg-orange-600 transition duration-300 cursor-pointer">
+        Read Student Reviews
+      </button>
+      <button  onClick={() => setOpenModal({ type: 'enquiry' })} className="border border-[#f45100] text-[#f45100] font-semibold py-3 px-8 rounded-full hover:bg-[#f45100] hover:text-white transition duration-300 cursor-pointer">
+        View FAQs
+      </button>
+    </div>
+  </div>
+</section>
 
         
         {/* Premium Testimonials */}
@@ -1481,7 +1529,7 @@ const LpuOnline = () => {
         </section>
 
         {/* Professional FAQ Section */}
-        <section id="faq" className="py-20 bg-white "> 
+        <section id="" className="py-20 bg-white "> 
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
@@ -1517,7 +1565,7 @@ const LpuOnline = () => {
             </div>
           </div>
         </section>
-
+          
         {/* Professional Hiring Partners Section */} 
         <section id="placement-partners" className="py-20 bg-gradient-to-br from-gray-100 to-gray-200 ">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1586,6 +1634,36 @@ const LpuOnline = () => {
             />
           )}
         </section>
+        <section className="max-w-5xl mx-auto px-4 py-12 text-center bg-gradient-to-b from-orange-50 to-white rounded-2xl shadow-sm mt-12">
+  <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">
+    Your <span className="text-[#f45100]">Future with LPU Online</span>
+  </h2>
+
+  <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-6">
+    In conclusion, <span className="font-semibold text-black">LPU Online</span> presents a formidable opportunity for anyone
+    seeking to enhance their qualifications through a flexible and reputable platform. Whether your goal is to pursue an
+    <span className="font-semibold text-black"> online MBA in India</span>, gain a
+    <span className="font-semibold text-black"> digital marketing certification online</span>, or earn an
+    <span className="font-semibold text-black"> AI and ML certification India</span>,
+    <span className="font-semibold text-black"> LPU Online</span> provides the tools and recognition you need to succeed.
+  </p>
+
+  <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
+    Its <span className="font-semibold text-black">affordable fee structure</span>, straightforward
+    <span className="font-semibold text-black"> admission process</span>, and strong
+    <span className="font-semibold text-black"> placement record</span> make it a top contender among the
+    <span className="font-semibold text-black"> best online universities in India</span>.
+  </p>
+
+  <div className="mt-10">
+    <a
+      href="#courses"
+      className="inline-block bg-[#f45100] text-white font-semibold py-3 px-8 rounded-full shadow-md hover:bg-orange-600 transition duration-300"
+    >
+      Explore Courses
+    </a>
+  </div>
+</section>
 
         {/* Premium Footer */}
         <footer id="footer" className="bg-gradient-to-br from-gray-900 via-slate-900 to-black text-gray-300 pt-12 sm:pt-16 lg:pt-20 pb-6 sm:pb-8 relative overflow-hidden "> 
@@ -1622,7 +1700,7 @@ const LpuOnline = () => {
                   
                   <div className="flex gap-3 sm:gap-4">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-orange-500 hover:scale-110 transition-all duration-300 cursor-pointer border border-gray-700">
-                      <FaPhone className="text-orange-400 text-sm sm:text-base" />
+                      <FaPhone className="text-orange-400 text-sm sm:text-base rotate-90" />
                   </div>
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-orange-500 hover:scale-110 transition-all duration-300 cursor-pointer border border-gray-700">
                       <FaWhatsapp className="text-green-400 text-sm sm:text-base" />
@@ -1696,7 +1774,7 @@ const LpuOnline = () => {
                 className="space-y-4 sm:space-y-6"
               >
                 <h4 className="text-white font-bold text-lg sm:text-xl mb-6 sm:mb-8 flex items-center gap-2">
-                  <FaPhone className="text-orange-500" />
+                  <FaPhone className="text-orange-500 rotate-90" />
                   Get Started
                 </h4> 
                 
@@ -1704,11 +1782,11 @@ const LpuOnline = () => {
                   <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-gray-700">
                     <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
                       <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center">
-                        <FaPhone className="text-white text-sm sm:text-base" />
+                        <FaPhone className="text-white text-sm sm:text-base rotate-90" />
                     </div>
                     <div>
                         <p className="text-xs sm:text-sm text-gray-400">Call Us</p>
-                        <p className="text-white font-bold text-base sm:text-lg">+91-7042867717</p>
+                        <p className="text-white font-bold text-base sm:text-lg">+917042867717</p>
                     </div>
                     </div>
                     <p className="text-gray-400 text-xs sm:text-sm">Available 24/7 for your queries</p>
