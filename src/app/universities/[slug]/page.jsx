@@ -55,13 +55,6 @@ const universityData = {
   },
 };
 
-// Add this function for static export
-export async function generateStaticParams() {
-  return Object.keys(universityData).map((slug) => ({
-    slug: slug,
-  }));
-}
-
 function slugify(input) {
   return input.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
@@ -69,7 +62,7 @@ function slugify(input) {
 // (metadata is generated below; keeping a single generateMetadata export)
 
 export default async function UniversityPage({ params }) {
-  const { slug } = params;
+  const { slug } = await params;
 
   let university = universityData[slug];
   if (!university) {
@@ -194,7 +187,7 @@ export default async function UniversityPage({ params }) {
 }
 
 export async function generateMetadata({ params }) {
-  const { slug } = params;
+  const { slug } = await params;
 
   let university = universityData[slug];
   if (!university) {
@@ -226,7 +219,7 @@ export async function generateMetadata({ params }) {
 }
 
 // Provide static params for export builds
-export function generateStaticParams() {
+export async function generateStaticParams() {
   const params = [];
   Object.keys(universityData).forEach((key) => {
     params.push({ slug: key });
