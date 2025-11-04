@@ -4,7 +4,7 @@ import { FaBook, FaUniversity, FaGraduationCap, FaBriefcase, FaBookOpen, FaUsers
 
 export const heroSlides = [
   {
-    src: "/slider/slider-1.webp",
+    src: "/images/sliders/slider-1.webp",
     alt: "Compare before you decide",
     width: 1200,
     height: 800,
@@ -13,7 +13,7 @@ export const heroSlides = [
     description: "Find the perfect online degree program from India's top-ranked universities. Get expert guidance to make informed decisions for your academic future.",
   },
   {
-    src: "/slider/slider-2.webp",
+    src: "/images/sliders/slider-2.webp",
     alt: "Your One-Stop Platform for Online Universities",
     width: 1200,
     height: 800,
@@ -22,7 +22,7 @@ export const heroSlides = [
     description: "Access world-class education from anywhere, anytime. Study with industry experts and get recognized degrees from UGC-approved universities.",
   },
   {
-    src: "/slider/slider-3.webp",
+    src: "/images/sliders/slider-3.webp",
     alt: "Search • Compare • Choose • Succeed",
     width: 1200,
     height: 800,
@@ -31,7 +31,7 @@ export const heroSlides = [
     description: "Get personalized counseling from education experts. Compare courses, fees, and career prospects to choose the best program for your goals.",
   },
   {
-    src: "/slider/slider-4.webp",
+    src: "/images/sliders/slider-4.webp",
     alt: "Compare universities with Unifost",
     width: 1200,
     height: 800,
