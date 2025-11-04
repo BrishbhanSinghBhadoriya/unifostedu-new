@@ -423,11 +423,27 @@ function CompareContent() {
 
            {/* All Available Universities Section */}
            <div className="mb-8">
-             <h2 className="text-xl font-bold text-gray-800 mb-4">Select Universities to Compare</h2>
+             <div className="flex items-center justify-between mb-4">
+               <h2 className="text-xl font-bold text-gray-800">Select Universities to Compare</h2>
+               <div className="text-right">
+                 <Badge className="bg-blue-100 text-blue-800 text-sm font-medium">
+                   Total: {RAW_UNIVERSITIES.length} Universities Available
+                 </Badge>
+               </div>
+             </div>
              <p className="text-gray-600 mb-4">Click on any university below to add it to your comparison. You can compare up to 4 universities at once.</p>
              
+             {/* University Count Display */}
+             <div className="mb-4 p-3 bg-gray-50 rounded-lg">
+               <p className="text-sm text-gray-700">
+                 <strong>Available Universities:</strong> {RAW_UNIVERSITIES.length} | 
+                 <strong>Selected:</strong> {selectedUniversities.length} | 
+                 <strong>Can Select:</strong> {4 - selectedUniversities.length} more
+               </p>
+             </div>
+             
              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-               {RAW_UNIVERSITIES.map((university) => {
+               {RAW_UNIVERSITIES.map((university, index) => {
                  const isSelected = selectedUniversities.some(u => u.key === university.key);
                  return (
                    <div
@@ -443,13 +459,18 @@ function CompareContent() {
                          router.push(`/compare?u=${newKeys.join(',')}`);
                        }
                      }}
-                     className={`p-4 rounded-lg border-2 cursor-pointer transition-all hover:shadow-md ${
+                     className={`p-4 rounded-lg border-2 cursor-pointer transition-all hover:shadow-md relative ${
                        isSelected 
                          ? 'border-[#00ffe0] bg-[#00ffe0]/10' 
                          : 'border-gray-200 hover:border-[#00ffe0]/50'
                      }`}
                    >
                      <div className="text-center">
+                       {/* University Number */}
+                       <div className="absolute top-2 left-2 w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center text-xs font-bold text-gray-600">
+                         {index + 1}
+                       </div>
+                       
                        <div className="w-12 h-12 mx-auto mb-2 rounded-lg overflow-hidden">
                          <img 
                            src={university.logo} 
@@ -481,7 +502,8 @@ function CompareContent() {
              
              <div className="mt-4 text-center">
                <p className="text-sm text-gray-600">
-                 Currently showing {selectedUniversities.length} selected universities. 
+                 <strong>Total Universities Displayed:</strong> {RAW_UNIVERSITIES.length} | 
+                 <strong>Currently Selected:</strong> {selectedUniversities.length} | 
                  {selectedUniversities.length < 2 && ' Select at least 2 universities to compare.'}
                </p>
              </div>

@@ -10,10 +10,78 @@ const inter = Inter({ subsets: ["latin"] });
 
 
 export const metadata = {
-  title: "UNIFOST| Because The Right University Matters",
-  description: "Unifost",
+  title: {
+    default: "UNIFOST | Because The Right University Matters",
+    template: "%s | UNIFOST"
+  },
+  description: "Compare and choose the best online degree programs from India's top universities. Get expert counseling, compare courses, fees, and eligibility for MBA, BBA, MCA, BCA, and more. UGC-approved online degrees with placement assistance.",
+  keywords: [
+    "online degree programs",
+    "online MBA",
+    "online BBA",
+    "online MCA",
+    "online BCA",
+    "UGC approved universities",
+    "compare universities",
+    "online education India",
+    "distance learning",
+    "online courses",
+    "university counseling"
+  ],
+  authors: [{ name: "UNIFOST" }],
+  creator: "UNIFOST",
+  publisher: "UNIFOST",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://unifostedu.com'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://unifostedu.com',
+    siteName: 'UNIFOST',
+    title: 'UNIFOST | Compare Online Universities & Courses',
+    description: 'Compare and choose the best online degree programs from India\'s top universities. Get expert counseling for MBA, BBA, MCA, BCA and more.',
+    images: [
+      {
+        url: '/unilogo.png',
+        width: 1200,
+        height: 630,
+        alt: 'UNIFOST - Online University Comparison Platform',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'UNIFOST | Compare Online Universities & Courses',
+    description: 'Compare and choose the best online degree programs from India\'s top universities.',
+    images: ['/unilogo.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: "/uni.jpg",
+    apple: "/uni.jpg",
+  },
+  verification: {
+    // Add your verification codes here when available
+    // google: 'your-google-verification-code',
+    // yandex: 'your-yandex-verification-code',
+    // yahoo: 'your-yahoo-verification-code',
   },
 };
 

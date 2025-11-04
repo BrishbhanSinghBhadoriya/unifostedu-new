@@ -2175,6 +2175,13 @@ const courseData = {
     }
   };
 
+// Add this function for static export
+export async function generateStaticParams() {
+  return Object.keys(courseData).map((slug) => ({
+    slug: slug,
+  }));
+}
+
 function slugify(input) {
   return input
     .toLowerCase()

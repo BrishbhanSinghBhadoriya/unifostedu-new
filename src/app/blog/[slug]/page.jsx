@@ -62,6 +62,13 @@ const blogData = {
   }
 };
 
+// Add this function for static export
+export async function generateStaticParams() {
+  return Object.keys(blogData).map((slug) => ({
+    slug: slug,
+  }));
+}
+
 export default async function BlogPage({ params }) {
   const { slug } = await params;
   const blog = blogData[slug];
