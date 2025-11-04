@@ -1,5 +1,6 @@
-/** @type {import('next').NextConfig} */
+/** @type {import('next').nextConfig} */
 const nextConfig = {
+<<<<<<< HEAD
   // SSR and SSG enabled by default in Next.js App Router
   // Pages will be pre-rendered at build time (SSG) or on-demand (SSR)
   
@@ -21,6 +22,11 @@ const nextConfig = {
   
   // Enable React strict mode for better development experience
   reactStrictMode: true,
+=======
+  output: 'export', 
+ images: { unoptimized: true },
+ trailingSlash: true,
+>>>>>>> 3bce43348b80bfa3c33c3da341ca30fae12f2a3f
 };
 
 module.exports = nextConfig;

@@ -1,9 +1,12 @@
 'use client';
 import React, { useState, useEffect } from "react";
+import { toast } from "sonner";
+import { usePathname } from 'next/navigation';
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp, FaArrowUp, FaUser, FaGraduationCap, FaUniversity } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
+  const pathname = usePathname();
   const [showHiringInfo, setShowHiringInfo] = useState(false);
   const [showContactInfo, setShowContactInfo] = useState(false);
   const [formData, setFormData] = useState({
@@ -21,6 +24,7 @@ const Footer = () => {
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [newsletterDone, setNewsletterDone] = useState(false);
 
+  
   // Mock search params functionality
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -155,7 +159,7 @@ const Footer = () => {
       setTimeout(() => setSubmitted(false), 5000);
     } catch (error) {
       console.error("❌ Error submitting enquiry:", error);
-      alert("Something went wrong while submitting. Please try again.");
+      toast.error("Something went wrong while submitting. Please try again.");
     }
   };
 
@@ -163,9 +167,10 @@ const Footer = () => {
     e.preventDefault();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(newsletterEmail)) {
-      alert("Please enter a valid email address.");
+      toast.error("Please enter a valid email address.");
       return;
     }
+    toast.success("Subscribed successfully!");
     setNewsletterDone(true);
     setTimeout(() => setNewsletterDone(false), 4000);
     setNewsletterEmail("");
@@ -174,6 +179,29 @@ const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+  const hideFooterRoutes = [
+  "/Amity-University-Online/",
+      "/lpu-online/",
+      "/manipal/",
+      "/cuonline/",
+      "/mahe-online/",
+      "/ku-online/",
+      "/bookdemo/",
+      "/smu/",
+      "/jain/",
+      "/dypatil/",
+      "/sharda/",
+      "/upes/",
+      "/vgu/",
+      "/shoolini/",
+      "/opjindal/",
+      "/nmims/",
+      "/uu/"
+  ];
+  if (hideFooterRoutes.includes(pathname)) {
+    return null;
+  }
+
 
   return (
     <>
@@ -201,9 +229,9 @@ const Footer = () => {
               <div className="lg:col-span-3 group">
                 <div className="h-full bg-white/5 backdrop-blur-xl p-6 rounded-2xl shadow-xl border border-white/10 hover:border-white/20 transition-all duration-300">
                   <div className="text-center mb-6">
-                    <h1 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent mb-3 tracking-tight">
+                    <p className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent mb-3 tracking-tight">
                       UNIFOST
-                    </h1>
+                    </p>
                     <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 mx-auto rounded-full"></div>
                   </div>
                   
@@ -369,9 +397,11 @@ const Footer = () => {
                           {errors.phone && <p className="text-red-400 text-xs mt-1">{errors.phone}</p>}
                         </div>
                         <div className="relative">
+                          <label htmlFor="footer-city" className="sr-only">Select City</label>
                           <FaMapMarkerAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
                           <select
                             name="city"
+                            id="footer-city"
                             value={formData.city}
                             onChange={handleChange}
                             className={`w-full pl-10 pr-3 py-2.5 appearance-none rounded-xl bg-white/90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-md hover:shadow-lg text-sm ${errors.city ? 'ring-2 ring-red-400' : ''}`}
@@ -406,9 +436,11 @@ const Footer = () => {
                       {/* Row 3: University and Program */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div className="relative">
+                          <label htmlFor="footer-university" className="sr-only">Select University</label>
                           <FaUniversity className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
                           <select
                             name="university"
+                            id="footer-university"
                             value={formData.university}
                             onChange={handleChange}
                             className={`w-full pl-10 pr-3 py-2.5 appearance-none rounded-xl bg-white/90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-md hover:shadow-lg text-sm ${errors.university ? 'ring-2 ring-red-400' : ''}`}
@@ -431,9 +463,11 @@ const Footer = () => {
                           {errors.university && <p className="text-red-400 text-xs mt-1">{errors.university}</p>}
                         </div>
                         <div className="relative">
+                          <label htmlFor="footer-program" className="sr-only">Select Program</label>
                           <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
                           <select
                             name="program"
+                            id="footer-program"
                             value={formData.program}
                             onChange={handleChange}
                             className={`w-full pl-10 pr-3 py-2.5 appearance-none rounded-xl bg-white/90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-md hover:shadow-lg text-sm ${errors.program ? 'ring-2 ring-red-400' : ''}`}
@@ -456,9 +490,11 @@ const Footer = () => {
 
                       {/* Row 4: Highest Qualification */}
                       <div className="relative">
+                        <label htmlFor="footer-qualification" className="sr-only">Select Highest Qualification</label>
                         <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
                         <select
                           name="qualification"
+                          id="footer-qualification"
                           value={formData.qualification}
                           onChange={handleChange}
                           className={`w-full pl-10 pr-3 py-2.5 appearance-none rounded-xl bg-white/90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-md hover:shadow-lg text-sm ${errors.qualification ? 'ring-2 ring-red-400' : ''}`}
@@ -502,18 +538,18 @@ const Footer = () => {
                         <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></div>
                         Quick Links
                       </h3>
-                      <ul className="space-y-2">
+                      <ul className="space-y-6">
                         {[
                           { href: "/", label: "Home" },
                           { href: "/about", label: "About" },
                           { href: "/services", label: "Services" },
                           { href: "/listofcollege", label: "Explore Colleges" },
-                          { href: "/blog/blog-page", label: "Blogs" }
+                          { href: "/search", label: "Blogs" }
                         ].map((link, index) => (
                           <li key={index}>
                             <a 
                               href={link.href} 
-                              className="group/link flex items-center text-cyan-300 hover:text-white transition-all duration-300 hover:translate-x-1 text-sm"
+                              className="group/link flex items-center  text-cyan-300 hover:text-white transition-all duration-300 hover:translate-x-1 text-sm"
                             >
                               <span className="w-1 h-1 bg-cyan-400 rounded-full mr-2 group-hover/link:w-2 transition-all duration-300"></span>
                               {link.label}
@@ -542,15 +578,16 @@ const Footer = () => {
       { href: "/courses/bajmc-online", label: "BAJMC" },
       { href: "/courses/majmc-online", label: "MAJMC" },
     ].map((course, index) => (
-      <a
-        key={index}
-        href={course.href}
-        className="group/course block p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300"
+    <a
+         key={index}
+         href={course.href}
+         className="group/course block p-2 rounded-lg transition-all duration-300"
       >
         <span className="text-cyan-300 font-medium group-hover/course:text-white transition-colors text-sm">
-          {course.label}
+        {course.label}
         </span>
       </a>
+
     ))}
   </div>
 </div>
@@ -570,7 +607,7 @@ const Footer = () => {
               {[
                 { label: "Universities", value: "25+", color: "from-cyan-500 to-blue-500" },
                 { label: "Programs", value: "80+", color: "from-indigo-500 to-purple-500" },
-                { label: "Students Guided", value: "10K+", color: "from-emerald-500 to-teal-500" },
+                { label: "Students Guided", value: "5K+", color: "from-emerald-500 to-teal-500" },
               ].map((item, i) => (
                 <div key={i} className="relative overflow-hidden rounded-xl p-4 border border-white/10 bg-white/5">
                   <div className={`absolute -inset-8 blur-2xl opacity-20 bg-gradient-to-r ${item.color}`} />
@@ -591,10 +628,10 @@ const Footer = () => {
            <div className="mt-12 pt-6 border-t border-gray-300">
   <div className="flex flex-col justify-center items-center gap-3 text-center">
     <div>
-      <p className="text-black text-xs">
+      <p className="text-white text-xs">
         © {new Date().getFullYear()} UNIFOST. All rights reserved.
       </p>
-      <p className="text-black text-xs mt-1">
+      <p className="text-white text-xs mt-1">
         Empowering education through technology
       </p>
     </div>
@@ -603,11 +640,11 @@ const Footer = () => {
                 
                 <div className="flex items-center gap-3">
                   <div className="flex gap-2">
-                    <a href="mailto:info@unifostedu.com" className="relative p-2.5 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group">
+                    <a href="mailto:info@unifostedu.com" className="relative p-2.5 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group" aria-label="Email us at info@unifostedu.com" title="Email us at info@unifostedu.com">
                       <span className="absolute inset-0 rounded-full bg-cyan-400/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
                       <FaEnvelope className="relative text-cyan-400 group-hover:text-white transition-colors text-sm" />
                     </a>
-                    <a href="https://wa.me/919354735410" className="relative p-2.5 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group">
+                    <a href="https://wa.me/919354735410" className="relative p-2.5 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group" aria-label="Chat with us on WhatsApp at +91 93547 35410" title="WhatsApp: +91 93547 35410">
                       <span className="absolute inset-0 rounded-full bg-green-400/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
                       <FaWhatsapp className="relative text-green-400 group-hover:text-white transition-colors text-sm" />
                     </a>

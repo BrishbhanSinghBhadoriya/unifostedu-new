@@ -3,6 +3,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Font Family Utilities */
+.font-baskervville {
+  font-family: var(--font-baskervville), serif;
+}
+
+
 /* Custom responsive utilities for better mobile experience */
 @layer utilities {
   /* Extra small screen breakpoint */
@@ -43,6 +49,23 @@
   .no-horizontal-scroll {
     overflow-x: hidden;
     width: 100%;
+  }
+
+  /* Design utilities for consistent premium look */
+  .btn-primary {
+    @apply bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-full font-semibold shadow-md hover:shadow-lg transition-all duration-200 hover:from-blue-700 hover:to-indigo-800;
+  }
+  .btn-accent {
+    @apply bg-[#00d4c4] text-[#001e3c] rounded-full font-semibold shadow-md hover:bg-[#00c0b1] transition-colors duration-200;
+  }
+  .btn-outline {
+    @apply border border-white/30 text-white rounded-full hover:bg-white/10 transition-colors duration-200;
+  }
+  .card {
+    @apply bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300;
+  }
+  .card-muted {
+    @apply bg-gradient-to-br from-slate-50 to-white rounded-2xl border border-gray-200 shadow-sm;
   }
 }
 

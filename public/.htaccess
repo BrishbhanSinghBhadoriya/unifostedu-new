@@ -1,0 +1,35 @@
+Options -Indexes -MultiViews
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# Only apply redirects when on our production host to avoid 403s on other hosts
+RewriteCond %{HTTP_HOST} ^(www\.)?unifostedu\.com$ [NC]
+
+# Force www to non-www
+RewriteCond %{HTTP_HOST} ^www\.unifostedu\.com$ [NC]
+RewriteRule ^(.*)$ https://unifostedu.com/$1 [L,R=301]
+
+# University slug fixes
+RewriteRule ^universities/jain-university-online/?$ https://unifostedu.com/jain/ [L,R=301]
+RewriteRule ^universities/lovely-professional-university-online/?$ https://unifostedu.com/lpu-online/ [L,R=301]
+RewriteRule ^universities/university-of-petroleum-and-energy-studies-online/?$ https://unifostedu.com/upes/ [L,R=301]
+RewriteRule ^universities/sharda-university-online/?$ https://unifostedu.com/sharda/ [L,R=301]
+RewriteRule ^universities/chandigarh-university-online/?$ https://unifostedu.com/cuonline/ [L,R=301]
+RewriteRule ^universities/dr\.-dy-patil-online/?$ https://unifostedu.com/dypatil/ [L,R=301]
+RewriteRule ^universities/narsee-monjee-institute-of-management-studies-online/?$ https://unifostedu.com/nmims/ [L,R=301]
+RewriteRule ^universities/amity-university-online/?$ https://unifostedu.com/Amity-University-Online/ [L,R=301]
+RewriteRule ^universities/manipal-university-online/?$ https://unifostedu.com/manipal/ [L,R=301]
+
+# Courses broken slugs
+RewriteRule ^courses/m\.com-online/?$ https://unifostedu.com/courses/mcom-online/ [L,R=301]
+RewriteRule ^courses/b\.com-online/?$ https://unifostedu.com/courses/bcom-online/ [L,R=301]
+
+# Blog safe fallback
+RewriteRule ^blog/blog-page/?$ https://unifostedu.com/search/ [L,R=301]
+
+# Image redirects
+RewriteRule ^images/lpu\.webp$ https://unifostedu.com/images/lpu.webp [L,R=301]
+</IfModule>

@@ -6,18 +6,19 @@ import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
-import { FaUser, FaPhone, FaEnvelope, FaGraduationCap, FaPaperPlane, FaUniversity, FaMapMarkerAlt } from 'react-icons/fa';
-import toast from 'react-hot-toast';
+import { FaUser, FaPhone, FaEnvelope, FaGraduationCap, FaPaperPlane, FaUniversity, FaMapMarkerAlt, FaComments, FaWhatsapp } from 'react-icons/fa';
+import { toast } from 'sonner';
 import { enquiryAPI } from '@/lib/axios';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 
-export default function EnquiryForm({ universityName, defaultProgram = 'MBA', onSubmitted, formType = "general" }) {
+export default function EnquiryForm({ universityName, defaultProgram = 'MBA', onSubmitted, formType = "general", autoCloseOnSuccess = true }) {
   const [loading, setLoading] = useState(false);
   const [program, setProgram] = useState(defaultProgram);
   const [selectedUniversity, setSelectedUniversity] = useState(universityName || '');
   const [city, setCity] = useState('');
+  const isAmity = (selectedUniversity || universityName || '').toLowerCase().includes('amity');
 
   const universities = [
     'Amity University Online',
@@ -55,19 +56,18 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
   const schema = useMemo(() => {
     const base = {
       name: yup.string().trim().required('Name is required').min(2, 'Name must be at least 2 characters long'),
-      email: yup.string().trim().email('Please provide a valid email address').required('Email is required'),
-      // phone defaults to required; overridden as optional for videoCall below
+      email: yup.string().trim().email('Please provide a valid email address').optional(),
+      // phone is required by default
       phone: yup
         .string()
         .matches(/^\d{10}$/, { message: 'Enter 10 digit phone number', excludeEmptyString: true })
         .required('Phone number is required'),
-      // city is required for all form types
-      city: yup.string().trim().required('City is required'),
-      // university required across all three schemas
-      university: yup.string().trim().required('University is required'),
-      program: yup.string().trim().required('Program is required'),
+      // optional by default; required in specific form types
+      city: yup.string().trim().optional(),
+      university: yup.string().trim().optional(),
+      program: yup.string().trim().optional(),
       message: yup.string().trim(),
-      qualification: yup.string().trim().required('Qualification is required'),
+      qualification: yup.string().trim().optional(),
       otherQualification: yup.string().trim().when('qualification', {
         is: 'Other',
         then: (schema) => schema.required('Please specify your qualification'),
@@ -86,6 +86,9 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
       base.phone = yup.string().matches(/^\d{10}$/, { message: 'Enter 10 digit phone number', excludeEmptyString: true }).required('Phone number is required');
       // Qualification is required for videoCall
       base.qualification = yup.string().trim().required('Qualification is required');
+      base.city = yup.string().trim().required('City is required');
+      base.university = yup.string().trim().required('University is required');
+      base.program = yup.string().trim().required('Program is required');
     }
     if (formType === 'homeDemo') {
       base.preferredDate = yup.string().trim().required('Preferred date is required');
@@ -94,6 +97,9 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
       // phone remains required
       // Qualification is required for homeDemo
       base.qualification = yup.string().trim().required('Qualification is required');
+      base.city = yup.string().trim().required('City is required');
+      base.university = yup.string().trim().required('University is required');
+      base.program = yup.string().trim().required('Program is required');
     }
 
     return yup.object(base);
@@ -116,21 +122,22 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
       preferredTime: '',
       address: '',
     },
-    mode: 'onTouched',
+    mode: 'onSubmit',
+    reValidateMode: 'onBlur',
   });
 
   // Sync local select states into RHF values
   const onCityChange = (val) => {
     setCity(val);
-    setValue('city', val, { shouldValidate: true });
+    setValue('city', val, { shouldDirty: true, shouldTouch: true });
   };
   const onUniversityChange = (val) => {
     setSelectedUniversity(val);
-    setValue('university', val, { shouldValidate: true });
+    setValue('university', val, { shouldDirty: true, shouldTouch: true });
   };
   const onProgramChange = (val) => {
     setProgram(val);
-    setValue('program', val, { shouldValidate: true });
+    setValue('program', val, { shouldDirty: true, shouldTouch: true });
   };
 
   const onSubmit = async (values) => {
@@ -180,7 +187,11 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
         await enquiryAPI.general(requestBody);
         toast.success('Enquiry submitted successfully!');
       }
-      onSubmitted && onSubmitted();
+      if (autoCloseOnSuccess && onSubmitted) {
+        setTimeout(() => {
+          onSubmitted();
+        }, 800);
+      }
     } catch (err) {
       const data = err?.response?.data;
       const parsedMessage =
@@ -203,6 +214,30 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
     }
   };
 
+  const handleWhatsAppConnect = () => {
+    const values = getValues();
+    const targetNumber = '919354735410';
+    const typeLabel = formType === 'videoCall' ? 'Video Call' : formType === 'homeDemo' ? 'Home Demo' : 'General Enquiry';
+    const composed = [
+      `Hello Unifost, I would like to connect with a counselor via WhatsApp.`,
+      `Type: ${typeLabel}`,
+      values.name ? `Name: ${values.name}` : null,
+      values.phone ? `Phone: ${values.phone}` : null,
+      (city || values.city) ? `City: ${city || values.city}` : null,
+      (selectedUniversity || values.university) ? `University: ${selectedUniversity || values.university}` : null,
+      (program || values.program) ? `Program: ${program || values.program}` : null,
+      values.preferredDate ? `Preferred Date: ${values.preferredDate}` : null,
+      values.preferredTime ? `Preferred Time: ${values.preferredTime}` : null,
+      values.address ? `Address: ${values.address}` : null,
+      values.message ? `Message: ${values.message}` : null,
+    ].filter(Boolean).join('%0A');
+
+    const url = `https://wa.me/${targetNumber}?text=${composed}`;
+    if (typeof window !== 'undefined') {
+      window.open(url, '_blank');
+    }
+  };
+
   return (
     <form className="space-y-4 sm:space-y-5 relative z-[20002]" onSubmit={handleSubmit(onSubmit)}>
       <input type="hidden" {...register('program')} value={program} readOnly />
@@ -214,7 +249,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
         <div className="rounded-lg p-3 sm:p-4 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] text-[#001e3c]">
           <p className="text-xs sm:text-sm">University</p>
           <p className="font-semibold text-base sm:text-lg leading-tight">{universityName}</p>
-        </div>
+          </div>
       )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
@@ -238,7 +273,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
             {formState.errors.phone && (<p className="text-red-600 text-xs mt-1">{formState.errors.phone.message}</p>)}
           </div>
         </div>
-      </div>
+                </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         <div className="space-y-1.5">
@@ -271,9 +306,9 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
               </SelectContent>
             </Select>
             {formState.errors.city && (<p className="text-red-600 text-xs mt-1">{formState.errors.city.message}</p>)}
-          </div>
-        </div>
-      </div>
+                        </div>
+                      </div>
+                    </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         <div className="space-y-1.5">
@@ -294,7 +329,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
             </Select>
             {formState.errors.university && (<p className="text-red-600 text-xs mt-1">{formState.errors.university.message}</p>)}
 
-          </div>
+              </div>
         </div>
         
         <div className="space-y-1.5">
@@ -321,9 +356,9 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
             {formState.errors.program && (
               <p className="text-red-600 text-xs mt-1">{formState.errors.program.message}</p>
             )}
-          </div>
-        </div>
-      </div>
+                      </div>
+                    </div>
+                  </div>
 
       {/* Additional fields for specific form types */}
       {(formType === 'getStarted' || formType === 'general') && (
@@ -346,12 +381,12 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
                   <SelectItem value="Other">Other</SelectItem>
                 </SelectContent>
               </Select>
-            </div>
+                    </div>
             {formState.errors.qualification && (
               <p className="text-red-600 text-xs mt-1">{formState.errors.qualification.message}</p>
             )}
           </div>
-          
+
           {/* Show input field when "Other" is selected */}
           {getValues('qualification') === 'Other' && (
             <div className="space-y-1.5">
@@ -368,9 +403,9 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
               {formState.errors.otherQualification && (
                 <p className="text-red-600 text-xs mt-1">{formState.errors.otherQualification.message}</p>
               )}
-            </div>
-          )}
-          
+                    </div>
+                  )}
+
           <div className="space-y-1.5">
             <Label htmlFor="experience">Experience (Optional)</Label>
             <Textarea id="experience" placeholder="Describe your relevant experience (optional)" rows={3} {...register('experience')} />
@@ -414,7 +449,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
             </Label>
             <Input id="preferredDate" type="date" className="w-full h-11 sm:h-10" aria-invalid={!!formState.errors.preferredDate} {...register('preferredDate')} />
             {formState.errors.preferredDate && (<p className="text-red-600 text-xs mt-1">{formState.errors.preferredDate.message}</p>)}
-          </div>
+                  </div>
           <div className="space-y-1.5">
             <Label htmlFor="preferredTime" className="flex items-center gap-1">
               Preferred Time <span className="text-red-500">*</span>
@@ -466,19 +501,29 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
         <p className="text-xs text-gray-500">We'll contact you within 24 hours.</p>
       </div>
 
-      <Button 
-        type="submit" 
-        onClick={handleSubmit(onSubmit)}
-        disabled={loading} 
-        className="w-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] font-bold relative z-[20002] py-3 sm:py-2.5 text-sm sm:text-base"
-      >
-        <FaPaperPlane className="mr-2" />
-        {loading ? 'Submitting...' : 
-          formType === "homeDemo" ? 'Schedule Home Demo' :
-          formType === "videoCall" ? 'Book Video Call' :
-          'Submit Enquiry'
-        }
-      </Button>
+      <div className="flex flex-col sm:flex-row gap-3">
+        <Button 
+          type="submit" 
+          disabled={loading} 
+          className="flex-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] font-bold relative z-[20002] py-3 sm:py-2.5 text-sm sm:text-base"
+        >
+          <FaPaperPlane className="mr-2" />
+          {loading ? 'Submitting...' : 
+            formType === "homeDemo" ? 'Schedule Home Demo' :
+            formType === "videoCall" ? 'Book Video Call' :
+            'Submit Enquiry'
+          }
+        </Button>
+
+        <Button
+          type="button"
+          onClick={handleWhatsAppConnect}
+          className="flex-1 bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700 font-semibold py-3 sm:py-2.5 text-sm sm:text-base"
+        >
+          <FaWhatsapp className="mr-2" />
+          Connect Counselor
+        </Button>
+    </div>
     </form>
   );
 }

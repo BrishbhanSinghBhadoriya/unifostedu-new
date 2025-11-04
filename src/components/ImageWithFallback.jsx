@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { FaUniversity } from 'react-icons/fa';
 
 export default function ImageWithFallback({ src, alt, className }) {
@@ -15,12 +16,7 @@ export default function ImageWithFallback({ src, alt, className }) {
   }
 
   return (
-    <img
-      src={src}
-      alt={alt}
-      className={className}
-      onError={() => setHasError(true)}
-    />
+    <Image width={100} height={100} loading="lazy" src={src} alt={alt} className={className} onError={() => setHasError(true)} />
   );
 }
 

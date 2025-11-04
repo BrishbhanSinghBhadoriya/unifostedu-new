@@ -7,7 +7,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, } from '@/components/ui/dialog';
 import EnquiryForm from '@/components/EnquiryForm';
 import {
   FaUniversity,
@@ -19,17 +19,19 @@ import {
   FaTimes,
   FaArrowLeft,
 } from 'react-icons/fa';
+import Head from 'next/head';
+import Image from 'next/image';
 
 // ---------- DATA ----------
 const RAW_UNIVERSITIES = [
   {
     key: 'amity-university-online',
     name: 'Amity University Online',
-    logo: '/amity.png',
+    logo: '/images/amity.webp',
     location: 'Noida, Uttar Pradesh',
-    ranking: 'Top 10',
+
     established: '2005',
-    fee: '₹99K - ₹2.0L',
+    fee: '₹99K - ₹3.45L',
     courses: ['MBA', 'BBA', 'BCA', 'MCA', 'M.Com', 'B.Com'],
     features: ['UGC recognized', 'NAAC A+ accreditation', 'Industry partnerships', 'Placement assistance'],
     approvals: ['UGC', 'NAAC A+'],
@@ -41,36 +43,36 @@ const RAW_UNIVERSITIES = [
     wesApproved: true,
     emiOption: true,
     examMode: 'Online',
-    classType: 'Live + Self-paced',
+    classType: 'Live + Recorded',
   },
   {
     key: 'manipal-university-online',
     name: 'Online Manipal University',
-    logo: '/manipal.png',
-    location: 'Manipal, Karnataka',
-    ranking: 'Top 5',
+    logo: '/images/manipal.webp',
+    location: 'jaipur, Rajastan',
+    
     established: '1953',
-    fee: '₹99K - ₹1.8L',
+    fee: '₹99K - ₹2.92L',
     courses: ['MBA', 'BBA', 'BCA', 'MCA', 'M.Com', 'B.Com'],
-    features: ['UGC recognized', 'NAAC A++ accreditation', 'International partnerships', 'Career development'],
-    approvals: ['UGC', 'NAAC A++'],
+    features: ['UGC recognized', 'NAAC A+ accreditation', 'International partnerships', 'Career development'],
+    approvals: ['UGC', 'NAAC A+'],
     rating: 4.6,
     eligibility: 'Graduation in any stream',
     nirfRank: 73,
-    naacGrade: 'A++',
+    naacGrade: 'A+',
     placementSupport: true,
     wesApproved: true,
     emiOption: true,
     examMode: 'Online',
-    classType: 'Live + Self-paced',
+    classType: 'Live + Recorded',
   },
   {
     key: 'sikkim-manipal-university',
     name: 'Sikkim Manipal University',
-    logo: '/smu-uni.jpg',
+    logo: '/images/smu-uni.webp',
     location: 'Gangtok, Sikkim',
     established: '1995',
-    fee: '₹0.90L - ₹1.80L',
+    fee: '₹0.75L - ₹1.10L',
     courses: ['MBA', 'BBA', 'BCA', 'MCA', 'M.Com', 'B.Com'],
     features: ['UGC recognized', 'NAAC A+ accreditation', 'Industry partnerships', 'Placement assistance'],
     approvals: ['UGC', 'NAAC A+'],
@@ -82,15 +84,15 @@ const RAW_UNIVERSITIES = [
     wesApproved: true,
     emiOption: true,
     examMode: 'Online',
-    classType: 'Live + Self-paced',
+    classType: 'Live + Rercorded',
   },
   {
     key: 'uttaranchal-university',
     name: 'Uttaranchal University',
-    logo: '/uu-uni.webp',
+    logo: '/images/uu-uni.webp',
     location: 'Dehradun, Uttarakhand',
     established: '2002',
-    fee: '₹0.85L - ₹1.65L',
+    fee: '₹0.72L - ₹1.40L',
     courses: ['MBA', 'BBA', 'BCA', 'MCA', 'M.Com', 'B.Com'],
     features: ['UGC recognized', 'NAAC accreditation', 'Industry partnerships', 'Placement assistance'],
     approvals: ['UGC', 'NAAC'],
@@ -102,32 +104,32 @@ const RAW_UNIVERSITIES = [
     wesApproved: true,
     emiOption: true,
     examMode: 'Online',
-    classType: 'Live + Self-paced',
+    classType: 'Live + Recorded',
   },
   {
     key: 'nmims',
     name: 'NMIMS University',
-    logo: '/nmims.png',
+    logo: '/images/nmims.webp',
     location: 'Mumbai, Maharashtra',
     established: '1981',
-    fee: '₹0.94L - ₹2.20L',
-    courses: ['MBA', 'BBA', 'M.Com', 'MA', 'MCA'],
+    fee: '₹0.94L - ₹4.0L',
+    courses: ['MBA', 'BBA', 'B.Com',  'Mba(WX)'],
     features: ['Industry connect', 'Placement assistance', 'Quality education', 'NAAC A+'],
-    approvals: ['UGC', 'NAAC A+'],
+    approvals: ['UGC', 'NAAC A++'],
     rating: 4.7,
     eligibility: '10+2,Graduation in any stream',
     nirfRank: 21,
-    naacGrade: 'A+',
+    naacGrade: 'A++',
     placementSupport: true,
     wesApproved: true,
     emiOption: true,
     examMode: 'Online',
-    classType: 'Live + LMS Access',
+    classType: 'Live + Recorded',
   },
   {
     key: 'lovely-professional-university-online',
     name: 'Lovely Professional University',
-    logo: '/lpu.png',
+    logo: '/images/lpu.webp',
     location: 'Jalandhar, Punjab',
     established: '2005',
     fee: '₹0.80L - ₹2.0L',
@@ -142,15 +144,15 @@ const RAW_UNIVERSITIES = [
     wesApproved: true,
     emiOption: true,
     examMode: 'Online',
-    classType: 'Live + Self-paced',
+    classType: 'Live + Recorded',
   },
   {
     key: 'university-of-petroleum-and-energy-studies-online',
     name: 'Upes Online',
-    logo: '/upes.png',
+    logo: '/images/upes.webp',
     location: 'Dehradun, Uttarakhand',
     established: '2003',
-    fee: '₹1.50L - ₹1.75L',
+    fee: '₹1.50L - ₹2,20L',
     courses: ['MBA', 'BBA', 'MCA', 'BCA', 'M.Com'],
     features: ['Placement support', 'Industry focused', 'Energy sector expertise'],
     approvals: ['UGC', 'AICTE', 'NAAC'],
@@ -162,16 +164,16 @@ const RAW_UNIVERSITIES = [
     wesApproved: true,
     emiOption: true,
     examMode: 'Online',
-    classType: 'Live + Self-paced',
+    classType: 'Live + Recorded',
   },
   {
     key: 'dr-dy-patil-online',
     name: 'Dr. D Y Patil',
-    logo: '/dypatil.png',
+    logo: '/images/dypatil.webp',
     location: 'Pune, Maharashtra',
     established: '2003',
-    fee: '₹1.45L - ₹1.90L',
-    courses: ['MBA', 'BBA', 'MCA', 'BCA', 'M.Com'],
+    fee: '₹1.40L - ₹1.90L',
+    courses: ['MBA', 'BBA', 'MCA', ],
     features: ['Placement support', 'EMI options', 'WES approved', 'Industry connect'],
     approvals: ['UGC', 'AICTE', 'NAAC'],
     rating: 4.4,
@@ -182,16 +184,16 @@ const RAW_UNIVERSITIES = [
     wesApproved: true,
     emiOption: true,
     examMode: 'Online',
-    classType: 'Live + LMS Access',
+    classType: 'Live + Recorded',
   },
   {
     key: 'sharda-university-online',
     name: 'Sharda University Online',
-    logo: '/sharda.png',
+    logo: '/images/sharda.webp',
     location: 'Greater Noida, Uttar Pradesh',
     established: '2009',
-    fee: '₹0.8L - ₹1.30L',
-    courses: ['MBA', 'BBA', 'MA', 'BA'],
+    fee: '₹1.05L - ₹1.60L',
+    courses: ['MBA', 'BBA', 'MCA','BCA', 'BA'],
     features: ['Quality education', 'Industry connect', 'Career support'],
     approvals: ['UGC', 'NAAC'],
     rating: 4.1,
@@ -202,15 +204,15 @@ const RAW_UNIVERSITIES = [
     wesApproved: false,
     emiOption: true,
     examMode: 'Online',
-    classType: 'Live + Self-paced',
+    classType: 'Live + Recorded',
   },
   {
     key: 'jain-university-online',
     name: 'Jain University',
-    logo: '/jain.png',
+    logo: '/images/jain.webp',
     location: 'Bengaluru, Karnataka',
     established: '1990',
-    fee: '1.05L - ₹2.98L',
+    fee: '1.30L - ₹2.16L',
     courses: ['MBA', 'BBA', 'MCA', 'BCA'],
     features: ['Modern curriculum', 'Industry projects', 'Career services', 'NAAC A++'],
     approvals: ['UGC', 'NAAC A++'],
@@ -222,19 +224,19 @@ const RAW_UNIVERSITIES = [
     wesApproved: true,
     emiOption: true,
     examMode: 'Online',
-    classType: 'Live + Self-paced',
+    classType: 'Live + Recorded',
   },
   {
     key: 'chandigarh-university-online',
     name: 'Chandigarh University Online',
-    logo: '/chandigarh.jpg',
+    logo: '/images/chandigarh.webp',
     location: 'Chandigarh, Punjab',
     established: '2012',
-    fee: '0.75L - ₹1.58L',
+    fee: '₹1.0L - ₹2.10L',
     courses: ['MBA', 'BBA', 'MCA', 'BCA'],
     features: ['Modern curriculum', 'Industry projects', 'Career services', 'NAAC A+'],
     approvals: ['UGC', 'NAAC A+'],
-    rating: 4.1,
+    rating: 4.2,
     eligibility: '10+2,Graduation in any stream',
     nirfRank: 36,
     naacGrade: 'A+',
@@ -242,15 +244,15 @@ const RAW_UNIVERSITIES = [
     wesApproved: true,
     emiOption: true,
     examMode: 'Online',
-    classType: 'Live + Self-paced',
+    classType: 'Live + recorded',
   },
   {
     key: 'op-jindal-university',
     name: 'OP Jindal University',
-    logo: '/opjindal.png',
+    logo: '/images/opjindal.webp',
     location: 'Sonipat, Haryana',
     established: '2009',
-    fee: '₹1.20L - ₹2.50L',
+    fee: '₹2.0L - ₹3.0L',
     courses: ['MBA', 'BBA', 'BCA', 'MCA'],
     features: ['Global perspective', 'Industry partnerships', 'Career services', 'International focus'],
     approvals: ['UGC', 'NAAC'],
@@ -262,15 +264,15 @@ const RAW_UNIVERSITIES = [
     wesApproved: true,
     emiOption: true,
     examMode: 'Online',
-    classType: 'Live + Self-paced',
+    classType: 'Live + Recorded',
   },
   {
     key: 'shoolini-university-online',
     name: 'Shoolini University Online',
-    logo: '/shoolini.jpg',
+    logo: '/images/shoolini.webp',
     location: 'Solan, Himachal Pradesh',
     established: '2009',
-    fee: '₹0.90L - ₹1.80L',
+    fee: '₹0.75L - ₹1.40L',
     courses: ['MBA', 'BBA', 'BCA', 'MCA', 'M.Com', 'B.Com'],
     features: ['Research focus', 'Industry connect', 'Career guidance', 'NAAC A+'],
     approvals: ['UGC', 'NAAC A+'],
@@ -282,15 +284,15 @@ const RAW_UNIVERSITIES = [
     wesApproved: true,
     emiOption: true,
     examMode: 'Online',
-    classType: 'Live + Self-paced',
+    classType: 'Live + Recorded',
   },
   {
     key: 'vivekananda-global-university-online',
     name: 'Vivekananda Global University Online',
-    logo: '/vgu1.png',
+    logo: '/images/vgu1.webp',
     location: 'Jaipur, Rajasthan',
     established: '2012',
-    fee: '₹0.85L - ₹1.65L',
+    fee: '₹0.72L - ₹2.40L',
     courses: ['MBA', 'BBA', 'BCA', 'MCA', 'M.Com', 'B.Com'],
     features: ['Quality education', 'Research projects', 'Career support', 'Industry exposure'],
     approvals: ['UGC', 'NAAC'],
@@ -302,7 +304,7 @@ const RAW_UNIVERSITIES = [
     wesApproved: true,
     emiOption: true,
     examMode: 'Online',
-    classType: 'Live + Self-paced',
+    classType: 'Live + Recorded',
   },
 ];
 
@@ -378,13 +380,19 @@ function CompareContent() {
   const noop = () => {};
 
   return (
+
+    
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12 md:mt-20 px-4 sm:px-6 lg:px-8">
              {/* Enquiry gating */}
-               <Dialog open={!enquiryDone} onOpenChange={noop}>
+              <Dialog open={!enquiryDone} onOpenChange={(open) => {
+                if (!open) {
+                  // Redirect to home when the enquiry modal is closed via cross/overlay
+                  router.replace('/');
+                }
+              }}>
           <DialogContent
-            className="w-[95vw] max-w-[560px] max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10"
-            onInteractOutside={(e) => e.preventDefault()}
-            onEscapeKeyDown={(e) => e.preventDefault()}
+            className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-6 md:my-12 p-4 sm:p-6"
+            
           >
            <DialogHeader className="px-4 sm:px-6">
              <DialogTitle className="text-lg sm:text-xl font-bold text-center">Quick Enquiry before Comparison</DialogTitle>
@@ -392,15 +400,7 @@ function CompareContent() {
            <div className="px-4 sm:px-6 pb-4">
              <EnquiryForm onSubmitted={() => setEnquiryDone(true)} />
            </div>
-           <div className="mt-4 px-4 sm:px-6 pb-4 flex flex-col sm:flex-row gap-3 justify-end">
-             <Button
-               variant="outline"
-               onClick={() => router.replace('/')}
-               className="w-full sm:w-auto border-[#00ffe0] text-[#001e3c] hover:bg-[#00ffe0] hover:text-[#001e3c] py-2.5"
-             >
-               Cancel
-             </Button>
-           </div>
+          
          </DialogContent>
        </Dialog>
 
@@ -453,7 +453,7 @@ function CompareContent() {
                          // Remove from selection
                          const newKeys = selectedKeysArray.filter(k => k !== university.key);
                          router.push(`/compare?u=${newKeys.join(',')}`);
-                       } else if (selectedUniversities.length < 4) {
+                       } else if (selectedUniversities.length < 3) {
                          // Add to selection
                          const newKeys = [...selectedKeysArray, university.key];
                          router.push(`/compare?u=${newKeys.join(',')}`);
@@ -472,9 +472,12 @@ function CompareContent() {
                        </div>
                        
                        <div className="w-12 h-12 mx-auto mb-2 rounded-lg overflow-hidden">
-                         <img 
+                         <Image
                            src={university.logo} 
                            alt={university.name} 
+                           width={100}
+                           height={100}
+                           loading='lazy'
                            className="w-full h-full object-contain"
                          />
                        </div>
