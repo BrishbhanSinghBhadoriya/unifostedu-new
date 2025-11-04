@@ -39,6 +39,7 @@ import {
   FaBook,
   FaUniversity,
   FaUserFriends,
+  FaTimes,
   FaClipboardCheck,
   FaUserTie,
   FaRobot,
@@ -588,7 +589,7 @@ const AmityLandingPage = () => {
 
       <div className="max-w-screen-2xl mx-auto flex">
           {/* Left Sidebar */}
-        <aside className="fixed hidden lg:flex flex-col top-24 w-64 h-[calc(100vh-6rem)] px-4 py-8 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40 ">
+        <aside className="fixed hidden lg:flex flex-col top-14 w-64 h-[calc(100vh-6rem)] px-4 py-8 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40 ">
           <h3 className="text-lg font-bold mb-6 text-indigo-800 border-b-2 border-indigo-200 pb-2 cursor-pointer">
               Page Contents
             </h3>
@@ -643,7 +644,12 @@ const AmityLandingPage = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 className="fixed top-0 left-0 w-72 h-full bg-white z-50 p-6 flex flex-col lg:hidden"
               >
-                <h3 className="text-xl font-bold mb-8 text-indigo-800">Page Contents</h3>
+                <div className="flex items-center justify-between mb-8">
+                  <h3 className="text-xl font-bold text-indigo-800">Page Contents</h3>
+                  <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-full hover:bg-gray-100">
+                    <FaTimes className="w-5 h-5 text-gray-600" />
+                  </button>
+                </div>
                 <ul className="space-y-4">
                   {[
                     { id: "HeroSection", label: "Introduction" },

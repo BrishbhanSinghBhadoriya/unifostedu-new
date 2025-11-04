@@ -662,12 +662,12 @@ const LpuOnline = () => {
               </motion.div>
 </div>
 
-        <p className="mt-8 mb-[10px] text-lg sm:text-xl text-black-600 leading-relaxed">
+        <p className="mt-8 mb-[10px] text-lg sm:text-xl text-black-600 leading-relaxed"> </p>
            <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
   While <span className="font-bold text-black mx-1">LPU Online</span> offers the convenience of digital learning, it is backed by the monumental infrastructure and legacy of its parent university. Imagine a <span className="font-bold text-black mx-1">campus tour</span> that showcases sprawling acres of academic blocks, state-of-the-art labs, modern libraries, and vibrant student life—this is the foundation upon which <span className="font-bold text-black mx-1">LPU Online</span> is built. Although you will be studying remotely, you gain access to a wealth of digital resources, including recorded lectures from esteemed faculty, virtual labs, and a comprehensive e-library. Prospective students can <span className="font-bold text-black mx-1">explore online courses</span> through virtual <span className="font-bold text-black mx-1">campus tour</span> videos and interactive sessions, giving them a feel of the LPU ecosystem from the comfort of their homes. This unique blend of a strong physical university and a dynamic <span className="font-bold text-black mx-1">online</span> learning environment sets <span className="font-bold text-black mx-1">LPU Online</span> apart from other <span className="font-bold text-black mx-1">distance learning universities India</span>.
 </p>
          
-                  </p>
+                 
         
       </div>
     </section>

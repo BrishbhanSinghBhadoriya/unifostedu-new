@@ -309,12 +309,10 @@ const SMU = () => {
                      
                { id: "introduction", label: "Introduction" },
                { id: "campus-tour", label: "Campus Tour (Images, Videos)" },
-               { id: "explore-courses", label: "Explore Online Courses" },
+               { id: "explore-courses", label: "Explore Online Courses and Fee Structure" },
                { id: "key-highlights", label: "Key Highlights" },
-               { id: "dates and session", label: "Admission Dates for UG & PG Programs" },
-               { id: "explore-courses", label: "Fee Structure" },
+               { id: "dates and session", label: "Admission Dates and Upcoming & Ongoing Sessions" },
                { id: "admission-process", label: "Admission Process" },
-               { id: "dates and session", label: "Details of Upcoming & Ongoing Sessions" },
                { id: "placement-partners", label: "Placement Partners" },
                { id: "placement-record", label: "Placement Record" },
                { id: "student-review", label: "Student Reviews" },
@@ -372,12 +370,11 @@ const SMU = () => {
                               {[
                               { id: "introduction", label: "Introduction" },
                               { id: "campus-tour", label: "Campus Tour (Images, Videos)" },
-                              { id: "explore-courses", label: "Explore Online Courses" },
+                              { id: "explore-courses", label: "Explore Online Courses and Fee Structure" },
                               { id: "key-highlights", label: "Key Highlights" },
-                              { id: "dates and session", label: "Admission Dates for UG & PG Programs" },
+                              { id: "dates and session", label: "Admission Dates and Upcoming & Ongoing Sessions" },
                               { id: "fees", label: "Fee Structure" },
                               { id: "admission-process", label: "Admission Process" },
-                              { id: "dates and session", label: "Details of Upcoming & Ongoing Sessions" },
                               { id: "placement-partners", label: "Placement Partners" },
                               { id: "placement-record", label: "Placement Record" },
                               { id: "student-review", label: "Student Reviews" },
@@ -1062,31 +1059,18 @@ const SMU = () => {
           <div className="space-y-8">
             <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
               <h4 className="text-xl font-semibold text-gray-800 mb-2">
-                1. Online Bachelor of Business Administration (BBA)
+                1. Online Bachelor of Commerce (B.Com)
               </h4>
               <p className="text-gray-600 leading-relaxed">
-                The SMU Online BBA program provides foundational knowledge in
-                business management, marketing, human resources, and finance. It
-                equips students with analytical and leadership skills essential
-                for managerial success.
+             The online Bachelor of Commerce (BCom) from Sikkim Manipal University (SMU) is designed to help learners delve into the world of business and commerce. The industry aligned curriculum of this online BCom program equips learners with strong foundations in various levels of accounting such as financial, corporate accounting, cost, and management while covering other core areas such as taxation, HRM, investments, auditing, statistics, and mathematics. Delivered by experienced faculty through an AI-enabled platform, learners can access learning resources, live and recorded classes, discussion forums, e-libraries, AI-tutor, and quizzes from the comfort of their homes. By pursuing this program, learners can boost their career prospects across industries
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
-              <h4 className="text-xl font-semibold text-gray-800 mb-2">
-                2. Online Bachelor of Computer Applications (BCA)
-              </h4>
-              <p className="text-gray-600 leading-relaxed">
-                Aimed at aspiring IT professionals, the Online BCA program focuses
-                on computer fundamentals, programming languages, web development,
-                and database management — preparing students for careers in
-                software development and IT support.
-              </p>
-            </div>
+            
 
             <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
               <h4 className="text-xl font-semibold text-gray-800 mb-2">
-                3. Online Bachelor of Arts (BA)
+                2. Online Bachelor of Arts (BA)
               </h4>
               <p className="text-gray-600 leading-relaxed">
                 The Online BA program nurtures critical thinking and communication
@@ -1127,6 +1111,22 @@ const SMU = () => {
                 in artificial intelligence, data analytics, and software
                 engineering. The curriculum emphasizes both technical depth and
                 managerial perspective.
+              </p>
+            </div>
+             <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+              <h4 className="text-xl font-semibold text-gray-800 mb-2">
+                3. Online Master of Commerce  (MCom)
+              </h4>
+              <p className="text-gray-600 leading-relaxed">
+                 The online Master of Commerce (MCom) from the prestigious Sikkim Manipal University (SMU) aims to build future-ready professionals across industries. Delivered through an AI-enabled learning portal, this most affordable online MCom supports anytime, anywhere learning by providing high-quality learning content, live & recorded classes by expert faculty, clarifying queries with an AI tutor, participating in discussion forums, and taking online examinations. The curriculum covers key commerce concepts such as corporate financial management, investment management, security analysis, and portfolio management to enhance commerce acumen. Earn a globally accepted degree certificate and prestigious SMU alumni status to boost your career prospects and expand your professional network.
+              </p>
+            </div>
+             <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+              <h4 className="text-xl font-semibold text-gray-800 mb-2">
+                4. Online Master of Art (MA)
+              </h4>
+              <p className="text-gray-600 leading-relaxed">
+                 The online Master of Arts (MA) programs from Sikkim Manipal University (SMU) are designed to provide learners with a deep understanding of their chosen field—whether English, Political Science, or Sociology. These two-year online degrees offer comprehensive curricula, interactive live and recorded classes, and AI-powered learning tools. Students can study from anywhere in India, access digital resources, participate in discussions, and take online proctored exams. The affordable programs prepare graduates for diverse career paths in education, research, media, public service, and other related sectors
               </p>
             </div>
           </div>

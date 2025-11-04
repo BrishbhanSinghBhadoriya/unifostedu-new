@@ -3,6 +3,7 @@ import React, { useState,useEffect } from 'react';
 import {
   FaBookOpen,
   FaUserTie,
+  FaTimes,
   FaRobot,
   FaBriefcase,
   FaBook,
@@ -514,7 +515,12 @@ useEffect(() => {
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
               className="fixed top-0 left-0 w-[85vw] sm:w-72 h-full bg-white border-r shadow-xl z-50 p-6 flex flex-col overflow-y-auto will-change-transform lg:hidden"
             >
-              <h3 className="text-xl font-bold mb-6 text-[#001C54]">Page Contents</h3>
+            <div className="flex items-center justify-between mb-8">
+                              <h3 className="text-xl font-bold text-orange-600">Page Contents</h3>
+                              <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-full hover:bg-gray-100">
+                                <FaTimes className="w-5 h-5 text-gray-600" />
+                              </button>
+                            </div>
               <ul className="space-y-4">
                 {[
                   { id: "HeroSection", label: "Hero" },

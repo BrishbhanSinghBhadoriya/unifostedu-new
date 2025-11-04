@@ -2,13 +2,23 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
+
 import {
   FaBookOpen,
   FaUserTie,
   FaRobot,
+  FaUserGraduate,
+  FaLaptop,
+  FaRupeeSign,
   FaBriefcase,
+  FaClock,
+  FaChalkboardTeacher,
+  FaLaptopCode,
+  FaUsers,
+  FaGlobe,
   FaBook,
   FaUniversity,
+  FaHandsHelping,
   FaUserFriends,
   FaClipboardCheck,
 } from "react-icons/fa";
@@ -261,6 +271,86 @@ const OPJindal = () => {
   </div>
 </section>
 
+<section className="bg-gradient-to-b from-white to-gray-50 py-16 px-6 md:px-16">
+      <div className="max-w-6xl mx-auto text-gray-800">
+        {/* Title */}
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-8">
+          OP Jindal University Online
+        </h2>
+
+        {/* Intro Paragraph */}
+        <p className="text-lg leading-relaxed text-center text-gray-700 mb-12">
+          OP Jindal University Online is one of India’s leading digital
+          universities, setting benchmarks in high-quality, flexible, and
+          globally recognized online education. Built on innovation and
+          technology, it empowers students to pursue world-class learning
+          anytime, anywhere.
+        </p>
+
+        {/* Highlights Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition">
+            <FaUniversity className="text-4xl text-blue-700 mx-auto mb-4" />
+            <h3 className="font-semibold text-lg mb-2">Academic Excellence</h3>
+            <p className="text-gray-600 text-sm">
+              Courses designed to meet global standards and evolving industry needs.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition">
+            <FaLaptopCode className="text-4xl text-blue-700 mx-auto mb-4" />
+            <h3 className="font-semibold text-lg mb-2">Digital Learning</h3>
+            <p className="text-gray-600 text-sm">
+              Advanced LMS, live sessions, and virtual classrooms ensure engaging learning.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition">
+            <FaGlobe className="text-4xl text-blue-700 mx-auto mb-4" />
+            <h3 className="font-semibold text-lg mb-2">Global Recognition</h3>
+            <p className="text-gray-600 text-sm">
+              Internationally relevant programs that prepare learners for global careers.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition">
+            <FaUsers className="text-4xl text-blue-700 mx-auto mb-4" />
+            <h3 className="font-semibold text-lg mb-2">Expert Faculty</h3>
+            <p className="text-gray-600 text-sm">
+              Industry-experienced mentors bridge theory with real-world practice.
+            </p>
+          </div>
+        </div>
+
+        {/* Detailed Section */}
+        <div className="space-y-6 text-gray-700 text-justify">
+          <p>
+            The mission of OP Jindal University Online is to bridge the gap between traditional education and modern digital learning. Students from all backgrounds gain access to flexible programs that meet international standards while maintaining academic integrity, innovation, and inclusivity.
+          </p>
+          <p>
+            Every program emphasizes experiential learning, digital engagement, and academic depth. Through virtual classrooms and interactive tools, students receive the same credibility as on-campus education — making every course a step toward professional success.
+          </p>
+          <p>
+            With a user-friendly learning management system, live lectures, discussion boards, and real-time assessments, Jindal Online offers a dynamic and supportive digital ecosystem for learners across the globe.
+          </p>
+          <p>
+            The university’s commitment to innovation ensures that every degree remains relevant in the fast-changing global landscape. Students graduate with the skills, confidence, and knowledge needed to thrive in their professional journeys.
+          </p>
+        </div>
+
+        {/* Closing Line */}
+        <div className="mt-12 text-center">
+          <h3 className="text-2xl font-semibold text-blue-800">
+            A Legacy of Digital Excellence
+          </h3>
+          <p className="text-gray-700 mt-3 max-w-3xl mx-auto">
+            OP Jindal University Online isn’t just an institution—it’s a movement toward
+            lifelong learning and global empowerment. Where technology meets tradition,
+            leaders of the future are born.
+          </p>
+        </div>
+      </div>
+    </section>
       {/* Hero Section */}
    <HeroSection
   universityName="About OP Jindal University"
@@ -288,6 +378,7 @@ const OPJindal = () => {
     { icon: <FaClipboardCheck className="text-blue-600" />, text: "Global Recognition" },
   ]}
 />
+
     <section className="py-12 px-6 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         {/* UG COURSES TABLE */}
@@ -468,17 +559,141 @@ const OPJindal = () => {
   />
 </div>
 
-      {/* UG & PG Course Cards */}
-      {/* {[{ title: "Undergraduate Courses", list: ugCourses }, { title: "Postgraduate Courses", list: pgCourses }].map((section, idx) => (
-        <section key={idx} className="py-12 bg-white px-6 font-[Inter]">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">{section.title}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start content-start">
-              {section.list.map((item, index) => <EnquireCard key={index} {...item} />)}
-            </div>
+
+   <section className="bg-gradient-to-b from-gray-50 to-white py-20 px-6 md:px-16">
+      <div className="max-w-7xl mx-auto text-gray-800">
+        {/* Heading */}
+       
+        <p className="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-14">
+          Choosing OP Jindal University Online means choosing an education that blends
+          global recognition, digital flexibility, and real-world impact.
+          Here’s what makes Jindal Online a trusted choice for thousands of learners worldwide.
+        </p>
+
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {/* 1 */}
+          <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+            <FaGlobe className="text-blue-700 text-4xl mb-4" />
+            <h3 className="text-xl font-semibold text-blue-800 mb-2">
+              Globally Recognized & UGC-Entitled Programs
+            </h3>
+            <p className="text-gray-600">
+              All programs are UGC-approved and globally accepted, carrying equal value
+              to on-campus degrees for worldwide career opportunities.
+            </p>
           </div>
-        </section>
-      ))} */}
+
+          {/* 2 */}
+          <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+            <FaClock className="text-blue-700 text-4xl mb-4" />
+            <h3 className="text-xl font-semibold text-blue-800 mb-2">
+              Flexible Learning Environment
+            </h3>
+            <p className="text-gray-600">
+              Study anytime, anywhere. The online platform enables learners to
+              balance education with work or personal commitments seamlessly.
+            </p>
+          </div>
+
+          {/* 3 */}
+          <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+            <FaChalkboardTeacher className="text-blue-700 text-4xl mb-4" />
+            <h3 className="text-xl font-semibold text-blue-800 mb-2">
+              Industry-Aligned Curriculum
+            </h3>
+            <p className="text-gray-600">
+              Designed in collaboration with industry experts, ensuring every
+              course is skill-focused and aligned with professional demands.
+            </p>
+          </div>
+
+          {/* 4 */}
+          <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+            <FaUserGraduate className="text-blue-700 text-4xl mb-4" />
+            <h3 className="text-xl font-semibold text-blue-800 mb-2">
+              Experienced Faculty
+            </h3>
+            <p className="text-gray-600">
+              Learn from distinguished educators and professionals who bring
+              academic excellence and industry experience to every session.
+            </p>
+          </div>
+
+          {/* 5 */}
+          <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+            <FaLaptop className="text-blue-700 text-4xl mb-4" />
+            <h3 className="text-xl font-semibold text-blue-800 mb-2">
+              Interactive Digital Learning Platform
+            </h3>
+            <p className="text-gray-600">
+              Access live classes, recorded lectures, e-books, and online discussions
+              through a state-of-the-art virtual learning system.
+            </p>
+          </div>
+
+          {/* 6 */}
+          <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+            <FaRupeeSign className="text-blue-700 text-4xl mb-4" />
+            <h3 className="text-xl font-semibold text-blue-800 mb-2">
+              Affordable & Transparent Fee Structure
+            </h3>
+            <p className="text-gray-600">
+              Flexible payment plans, transparent pricing, and scholarship options
+              make quality education accessible to every learner.
+            </p>
+          </div>
+
+          {/* 7 */}
+          <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+            <FaBriefcase className="text-blue-700 text-4xl mb-4" />
+            <h3 className="text-xl font-semibold text-blue-800 mb-2">
+              Career Support & Placement Assistance
+            </h3>
+            <p className="text-gray-600">
+              Dedicated placement cell offering guidance, resume-building sessions,
+              and access to top hiring partners for career advancement.
+            </p>
+          </div>
+
+          {/* 8 */}
+          <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+            <FaUsers className="text-blue-700 text-4xl mb-4" />
+            <h3 className="text-xl font-semibold text-blue-800 mb-2">
+              Global Networking Opportunities
+            </h3>
+            <p className="text-gray-600">
+              Connect with a vibrant international community of students, alumni,
+              and professionals for global exposure and collaborations.
+            </p>
+          </div>
+
+          {/* 9 */}
+          <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+            <FaHandsHelping className="text-blue-700 text-4xl mb-4" />
+            <h3 className="text-xl font-semibold text-blue-800 mb-2">
+              24×7 Learning Support
+            </h3>
+            <p className="text-gray-600">
+              A dedicated support system provides academic and technical assistance
+              around the clock for a smooth learning experience.
+            </p>
+          </div>
+        </div>
+
+        {/* Closing Note */}
+        <div className="mt-16 text-center max-w-4xl mx-auto">
+          <h3 className="text-2xl font-semibold text-blue-800 mb-3">
+            Building Careers, Empowering Futures
+          </h3>
+          <p className="text-gray-700 text-lg">
+            At OP Jindal University Online, education is not just about earning
+            a degree — it’s about creating leaders ready to make an impact in
+            a rapidly evolving global world.
+          </p>
+        </div>
+      </div>
+    </section>
 
       
 
