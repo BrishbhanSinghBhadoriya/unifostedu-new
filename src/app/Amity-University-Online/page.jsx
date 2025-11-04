@@ -39,7 +39,6 @@ import {
   FaBook,
   FaUniversity,
   FaUserFriends,
-  FaTimes,
   FaClipboardCheck,
   FaUserTie,
   FaRobot,
@@ -513,6 +512,7 @@ const AmityLandingPage = () => {
 
   return (
     <div style={{ overflowX: "hidden" }}>
+      
       <div className="min-h-screen bg-white relative">
         {/* Header */}
         <motion.header
@@ -560,8 +560,10 @@ const AmityLandingPage = () => {
           </div>
         </motion.header>
 
+        
         {/* Notification Bar */}
-        <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 py-2 md:py-3 mt-[72px] md:mt-[80px]">
+        <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 py-2 md:py-2 mt-[64px] md:mt-[70px] mb-0
+">
           <div className="max-w-7xl mx-auto px-4 md:px-6 text-center">
             <motion.div
               className="font-semibold flex flex-col sm:flex-row items-center justify-center space-x-0 sm:space-x-2 space-y-1 sm:space-y-0 text-sm md:text-base"
@@ -589,7 +591,7 @@ const AmityLandingPage = () => {
 
       <div className="max-w-screen-2xl mx-auto flex">
           {/* Left Sidebar */}
-        <aside className="fixed hidden lg:flex flex-col top-14 w-64 h-[calc(100vh-6rem)] px-4 py-8 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40 ">
+        <aside className="fixed hidden lg:flex flex-col top-24 w-64 h-[calc(100vh-6rem)] px-4 py-8 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40 ">
           <h3 className="text-lg font-bold mb-6 text-indigo-800 border-b-2 border-indigo-200 pb-2 cursor-pointer">
               Page Contents
             </h3>
@@ -644,12 +646,7 @@ const AmityLandingPage = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 className="fixed top-0 left-0 w-72 h-full bg-white z-50 p-6 flex flex-col lg:hidden"
               >
-                <div className="flex items-center justify-between mb-8">
-                  <h3 className="text-xl font-bold text-indigo-800">Page Contents</h3>
-                  <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-full hover:bg-gray-100">
-                    <FaTimes className="w-5 h-5 text-gray-600" />
-                  </button>
-                </div>
+                <h3 className="text-xl font-bold mb-8 text-indigo-800">Page Contents</h3>
                 <ul className="space-y-4">
                   {[
                     { id: "HeroSection", label: "Introduction" },
@@ -681,8 +678,8 @@ const AmityLandingPage = () => {
             </>
           )}
         </AnimatePresence>
-
-        <main className="flex-1 min-w-0 pt-[120px] md:pt-[128px] lg:pl-64">
+       
+        <main className="flex-1 min-w-0 lg:pl-64">
             {/* Hero Section */}
 
             <section

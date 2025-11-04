@@ -6,6 +6,7 @@ import { AnimatePresence } from 'framer-motion';
 import {
   FaBookOpen,
   FaUserTie,
+  FaPhone,
   FaRobot,
   FaUserGraduate,
   FaLaptop,
@@ -21,6 +22,8 @@ import {
   FaHandsHelping,
   FaUserFriends,
   FaClipboardCheck,
+  FaBars,
+  FaTimes,
 } from "react-icons/fa";
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -37,7 +40,12 @@ const OPJindal = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [openModal, setOpenModal] = useState(null);
   const [openIndex, setOpenIndex] = useState(null);
- 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+
+  const toggleFAQ = (index) => {
+   setOpenIndex(openIndex === index ? null : index);
+};
   useEffect(() => {
       
 
@@ -147,6 +155,35 @@ const OPJindal = () => {
     
   ];
 
+  const faqs = [
+    {
+      question: "Are OP Jindal University Online degrees recognized?",
+      answer:
+        "Yes, OP Jindal University Online offers UGC-entitled degrees that hold the same value as regular on-campus programs.",
+    },
+    {
+      question: "Can working professionals apply for online programs?",
+      answer:
+        "Absolutely. The online format of Jindal Online University is designed for working professionals seeking flexibility and career advancement.",
+    },
+    {
+      question: "What learning resources are provided?",
+      answer:
+        "Students receive access to e-books, recorded lectures, digital libraries, discussion forums, and continuous faculty support throughout their learning journey.",
+    },
+    {
+      question: "Does OPJU Online offer placement support?",
+      answer:
+        "Yes, OP Jindal University Online provides dedicated career counseling, resume assistance, and placement guidance to help students achieve professional success.",
+    },
+    {
+      question: "Is the fee affordable?",
+      answer:
+        "Yes, the fee structure is transparent, affordable, and designed to make quality education accessible to all learners.",
+    },
+  ];
+
+
   return (
     <>
        <Head>
@@ -206,11 +243,19 @@ const OPJindal = () => {
                     {/* Right Side - Responsive */}
                     <div className="flex items-center gap-2 sm:gap-4">
                       {/* Phone - Hidden on small screens */}
+                      {/* Mobile Menu Button */}
+                      <button
+                        onClick={() => setIsMobileMenuOpen(true)}
+                        aria-label="Open menu"
+                        className="lg:hidden p-2 border rounded-md hover:bg-gray-100 transition-colors"
+                      >
+                        <FaBars className="w-5 h-5 text-white" />
+                      </button>
                       <a
                         href="tel:+917042867717"
                         className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-orange-600 transition-colors"
                       > 
-                        <span className="text-lg">📞</span>
+                        <FaPhone className="text-blue-500 rotate-90" />
                         <span className="text-white lg:inline">+91-7042867717</span>
                         <span className="lg:hidden">Call Now</span>
                       </a>
@@ -220,13 +265,13 @@ const OPJindal = () => {
                         href="tel:+917042867717"
                         className="sm:hidden flex items-center justify-center w-10 h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
                       >
-                        📞
+                        <FaPhone className="text-blue-500 rotate-90" />
                       </a>
                       
                       {/* Apply Button */}
                       <button 
                         onClick={() => setOpenModal({ type: 'apply' })}
-                        className="bg-[#d9235c] hover:bg-black text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-black-500/25 text-sm sm:text-base cursor-pointer"
+                        className="bg-white hover:bg-white text-blue font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-black-500/25 text-sm sm:text-base cursor-pointer"
                       >
                         <span className="hidden sm:inline ">Apply Now</span>
                         <span className="sm:hidden">Apply</span>
@@ -235,8 +280,112 @@ const OPJindal = () => {
                   </div>
                 </div>
               </header>
+              
+      <div className="max-w-screen-2xl mx-auto flex w-full">
+        {/* Desktop Sidebar */}
+        <aside className="fixed hidden lg:flex flex-col top-20 w-64 h-[calc(100vh-5rem)] px-4 py-8 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40">
+          <h3 className="text-lg font-bold mb-6 text-blue-600 border-b-2 border-blue-200 pb-2">
+            Page Contents
+          </h3>
+          <ul className="space-y-3">
+            {[
+              { id: "Home", label: "Introduction" },
+              { id: "campus-tour", label: "Campus Tour (Images & Videos)" },
+              { id: "opju-online-courses", label: "Explore Online Courses" },
+              { id: "key-highlights", label: "Key Highlights" },
+              { id: "admission-dates", label: "Admission Dates for UG & PG Programs" },
+              { id: "fees-structure", label: "Fees Structure" },
+              { id: "Admission", label: "Admission Process" },
+              { id: "sessions-details", label: "Details of Upcoming & Ongoing Sessions" },
+              { id: "placement-partners", label: "Placement Partners" },
+              { id: "placement-record", label: "Placement Record" },
+              { id: "student-reviews", label: "Student Reviews" },
+              { id: "faq", label: "FAQs" },
+              { id: "opju-reviews", label: "OP Jindal University Online Reviews" },
+            ].map((item) => (
+              <li key={item.id}>
+                <button
+                  onClick={() => {
+                    const section = document.getElementById(item.id);
+                    if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }}
+                  className="text-white-700 hover:text-blue-600 font-medium text-sm transition-colors duration-200 text-left cursor-pointer"
+                >
+                  {item.label}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </aside>
+
+        {/* Main Content Wrapper */}
+        <main className="flex-1 min-w-0 lg:pl-64">
+          <div className="overflow-x-hidden pt-16 lg:pt-20">
+            {/* Mobile Sidebar */}
+            <AnimatePresence>
+              {isMobileMenuOpen && (
+                <>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[999] lg:hidden"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  />
+                  <motion.aside
+                    initial={{ x: "-100%" }}
+                    animate={{ x: 0 }}
+                    exit={{ x: "-100%" }}
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    className="fixed top-0 left-0 w-[85vw] sm:w-80 h-full bg-white border-r shadow-2xl z-[1000] p-6 flex flex-col overflow-y-auto will-change-transform lg:hidden"
+                  >
+                    <div className="flex items-center justify-between mb-8">
+                      <h3 className="text-xl font-bold text-blue-600">Page Contents</h3>
+                      <button
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="p-2 rounded-full hover:bg-gray-100"
+                      >
+                        <FaTimes className="w-5 h-5 text-gray-600" />
+                      </button>
+                    </div>
+                    <ul className="space-y-4">
+                      {[
+                        { id: "Home", label: "Introduction" },
+                        { id: "campus-tour", label: "Campus Tour (Images & Videos)" },
+                        { id: "opju-online-courses", label: "Explore Online Courses" },
+                        { id: "key-highlights", label: "Key Highlights" },
+                        { id: "admission-dates", label: "Admission Dates for UG & PG Programs" },
+                        { id: "fees-structure", label: "Fees Structure" },
+                        { id: "Admission", label: "Admission Process" },
+                        { id: "sessions-details", label: "Details of Upcoming & Ongoing Sessions" },
+                        { id: "placement-partners", label: "Placement Partners" },
+                        { id: "placement-record", label: "Placement Record" },
+                        { id: "student-reviews", label: "Student Reviews" },
+                        { id: "faq", label: "FAQs" },
+                        { id: "opju-reviews", label: "OP Jindal University Online Reviews" },
+                      ].map((item) => (
+                        <li key={item.id}>
+                          <button
+                            onClick={() => {
+                              const section = document.getElementById(item.id);
+                              if (section)
+                                section.scrollIntoView({ behavior: "smooth", block: "start" });
+                              setIsMobileMenuOpen(false);
+                            }}
+                            className="text-gray-700 hover:text-blue-600 font-semibold text-base transition-colors duration-200 w-full text-left py-2"
+                          >
+                            {item.label}
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.aside>
+                </>
+              )}
+            </AnimatePresence>
             {/* Image Slider Section */}
-           <section id='Home' className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden mt-16">
+           <section id='Home' className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden mt-0">
   <AnimatePresence initial={false}>
     <motion.div
       key={currentSlide}
@@ -270,7 +419,7 @@ const OPJindal = () => {
     ))}
   </div>
 </section>
-
+ 
 <section className="bg-gradient-to-b from-white to-gray-50 py-16 px-6 md:px-16">
       <div className="max-w-6xl mx-auto text-gray-800">
         {/* Title */}
@@ -351,6 +500,58 @@ const OPJindal = () => {
         </div>
       </div>
     </section>
+    <section className="py-16 bg-white" id="campus-tour">
+  <div className="max-w-6xl mx-auto px-6">
+    <h2 className="text-3xl md:text-4xl font-bold text-center text-black mb-8">
+      Campus Tour <span className="text-[#ffc107]"></span>
+    </h2>
+
+    <p className="text-gray-700 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
+      Experience the modern infrastructure and world-class facilities of{" "}
+      <span className="font-semibold text-black">OP Jindal University</span> from the comfort of
+      your home. The <span className="text-[#ffc107] font-semibold">Online Campus Tour</span> offers
+      an immersive glimpse into the institution’s academic environment.
+    </p>
+
+    {/* Grid for Images or Video Thumbnails */}
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12">
+      {[
+        "/images/op-jgu-campus1.webp",
+        "/images/op-jgu-campus2.webp",
+        "/images/op-jgu-campus3.webp",
+        "/images/op-jgu-campus4.webp",
+        "/images/op-jgu-campus5.webp",
+        "/images/op-jgu-campus6.webp",
+      ].map((src, i) => (
+        <div
+          key={i}
+          className="relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+        >
+          <img
+            src={src}
+            alt={`Campus tour ${i + 1}`}
+            className="w-full h-56 object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      ))}
+    </div>
+
+    <div className="text-center">
+      <p className="text-gray-700 mb-6 leading-relaxed">
+        From advanced digital classrooms to virtual libraries, innovation labs, and
+        state-of-the-art learning systems, OP Jindal University Online ensures students stay
+        connected to the spirit of campus life.
+      </p>
+      <p className="text-gray-700 leading-relaxed">
+        Every virtual tour showcases <span className="text-[#ffc107] font-semibold">interactive platforms</span>,{" "}
+        <span className="text-[#ffc107] font-semibold">student engagement activities</span>, and{" "}
+        <span className="text-[#ffc107] font-semibold">academic tools</span> that make OP Jindal
+        University Online a truly global digital learning experience.
+      </p>
+    </div>
+  </div>
+</section>
+
       {/* Hero Section */}
    <HeroSection
   universityName="About OP Jindal University"
@@ -378,6 +579,47 @@ const OPJindal = () => {
     { icon: <FaClipboardCheck className="text-blue-600" />, text: "Global Recognition" },
   ]}
 />
+   <section className="py-16 bg-white" id="opju-online-courses">
+  <div className="max-w-6xl mx-auto px-6 text-center">
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+      Explore Online Courses
+    </h2>
+    <p className="text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto">
+      OP Jindal University Online offers a wide range of UGC-approved undergraduate and postgraduate programs 
+      designed to meet the evolving demands of modern industries. Each program emphasizes academic excellence, 
+      flexibility, and practical relevance to help learners advance their careers.
+    </p>
+
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-left">
+      {[
+        "Online MBA Programs",
+        "Online BBA Programs",
+        "Online MCA & Computer Science Programs",
+        "Online MA in Public Policy & International Relations",
+        "Online BCom & BA Programs",
+        "Online Data Science & Artificial Intelligence Courses",
+      ].map((course, index) => (
+        <div
+          key={index}
+          className="p-6 bg-gray-50 border rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300"
+        >
+          <h3 className="text-lg font-semibold text-gray-800">{course}</h3>
+        </div>
+      ))}
+    </div>
+
+    <p className="text-gray-600 mt-10 leading-relaxed max-w-4xl mx-auto">
+      Each course offered by OP Jindal University Online is developed by industry experts and academic leaders, 
+      ensuring a balance between theoretical depth and practical skills. Learners can access study materials anytime, 
+      join live classes, and engage directly with faculty through an advanced digital learning platform.
+    </p>
+
+    <p className="text-gray-600 mt-4 leading-relaxed max-w-3xl mx-auto">
+      OPJU Online maintains the same academic standards, integrity, and credibility as its on-campus programs — 
+      empowering students to achieve their academic and professional goals from anywhere.
+    </p>
+  </div>
+</section>
 
     <section className="py-12 px-6 bg-gray-50">
       <div className="max-w-6xl mx-auto">
@@ -486,6 +728,48 @@ const OPJindal = () => {
             />
           )}
     </section> 
+    <section className="py-16 bg-gray-50" id="fees-structure">
+  <div className="max-w-6xl mx-auto px-6 text-center">
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+      Fees Structure
+    </h2>
+
+    <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-10 max-w-3xl mx-auto">
+      The fee structure at OP Jindal University Online is designed to make higher education 
+      both affordable and accessible. Students can conveniently pay their fees in easy installments 
+      through secure online payment gateways.
+    </p>
+
+    <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-left">
+      <ul className="space-y-4 text-gray-700">
+        <li className="flex items-start">
+          <span className="text-blue-600 font-bold mr-2">•</span>
+          <p>
+            <strong>Affordable and Flexible:</strong> Students have the option to pay their fees in convenient installments 
+            using secure digital payment methods.
+          </p>
+        </li>
+        <li className="flex items-start">
+          <span className="text-blue-600 font-bold mr-2">•</span>
+          <p>
+            <strong>Transparent Fee Policy:</strong> The OPJU Online fee structure is fully transparent, 
+            with no hidden costs. All tuition, registration, and examination fees are clearly detailed 
+            in the admission brochure and on the official website.
+          </p>
+        </li>
+        <li className="flex items-start">
+          <span className="text-blue-600 font-bold mr-2">•</span>
+          <p>
+            <strong>Scholarships and Financial Aid:</strong> OP Jindal University Online provides merit-based scholarships 
+            and financial assistance for deserving candidates, ensuring that financial constraints 
+            never hinder academic goals.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
      <div>
   <AccreditationSection
     title="Why Choose OP Jindal University?"
@@ -695,7 +979,85 @@ const OPJindal = () => {
       </div>
     </section>
 
-      
+      <section className="py-16 bg-gray-50" id="key-highlights">
+  <div className="max-w-6xl mx-auto px-6 text-center">
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+      Key Highlights of OP Jindal University Online
+    </h2>
+
+    <p className="text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
+      OP Jindal University Online stands out as a pioneer in digital higher education, 
+      offering learners a blend of academic excellence, flexibility, and global recognition. 
+      Each program is crafted to deliver an enriching learning experience that matches the quality of on-campus education.
+    </p>
+
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-left">
+      {[
+        "UGC-Entitled & NAAC Accredited Programs ensuring credibility and recognition.",
+        "Flexible, 100% Online Learning Format for self-paced study.",
+        "Globally Recognized Degrees accepted worldwide.",
+        "Access to Recorded Lectures and Live Sessions for interactive learning.",
+        "Dedicated Student Support and Career Guidance throughout the journey.",
+        "Affordable Fee Structure with Easy Installment Options.",
+        "Experienced Faculty and Industry Mentors providing real-world insights.",
+        "Global Alumni Network offering lifelong professional connections.",
+        "Internship and Placement Assistance ensuring employability.",
+        "24×7 Learning Management System (LMS) Access for continuous learning.",
+      ].map((highlight, index) => (
+        <div
+          key={index}
+          className="bg-white p-6 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition duration-300 flex items-start"
+        >
+          <span className="text-blue-600 text-lg font-bold mr-3">•</span>
+          <p className="text-gray-700 text-base leading-relaxed">{highlight}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+   <section className="py-16 bg-white" id="admission-dates">
+  <div className="max-w-5xl mx-auto px-6 text-center">
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+      Admission Dates for UG & PG Programs
+    </h2>
+
+    <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
+      OP Jindal University Online follows a flexible, semester-based admission process, 
+      allowing students to enroll during multiple intakes throughout the year. 
+      This system ensures that learners can begin their academic journey at a time that suits their schedule and goals.
+    </p>
+
+    <div className="bg-blue-50 border border-blue-100 rounded-2xl p-8 text-left shadow-sm">
+      <ul className="space-y-4 text-gray-700">
+        <li className="flex items-start">
+          <span className="text-blue-600 font-bold mr-2">•</span>
+          <p>
+            <strong>Multiple Intakes:</strong> Admissions are open for various sessions, providing flexibility for UG and PG aspirants.
+          </p>
+        </li>
+        <li className="flex items-start">
+          <span className="text-blue-600 font-bold mr-2">•</span>
+          <p>
+            <strong>Online Application:</strong> Students can apply through the official OPJU Online Admission Portal with a simple and secure registration process.
+          </p>
+        </li>
+        <li className="flex items-start">
+          <span className="text-blue-600 font-bold mr-2">•</span>
+          <p>
+            <strong>Regular Updates:</strong> Important dates, registration deadlines, and counseling schedules are published on the official website.
+          </p>
+        </li>
+        <li className="flex items-start">
+          <span className="text-blue-600 font-bold mr-2">•</span>
+          <p>
+            <strong>Early Admission Benefits:</strong> Early applicants receive priority counseling and advance access to course materials.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 
         {/* Admission Procedure */}
               <section id='Admission' className="relative py-20 bg-white">
@@ -715,7 +1077,7 @@ const OPJindal = () => {
                     <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
                     Admission Procedure
                     </h2>
-                      <div className="w-24 h-1 bg-[#d9235c] mx-auto mb-8 rounded-full"></div>
+                      <div className="w-24 h-1 bg-blue-600 mx-auto mb-8 rounded-full"></div>
                       <p className="text-lg text-gray-700 max-w-2xl mx-auto">
                        A simple, transparent, and student-friendly admission process
                        designed to help you begin your learning journey smoothly.
@@ -736,7 +1098,7 @@ const OPJindal = () => {
                           
                                   <div className="grid grid-cols-1 md:grid-cols-4 gap-10 relative">
                                     {/* Connecting Line */}
-                                    <div className="hidden md:block absolute top-28 left-[10%] right-[10%] h-1 bg-[#d9235c] z-0 rounded-full"></div>
+                                    <div className="hidden md:block absolute top-28 left-[10%] right-[10%] h-1 bg-blue-600 z-0 rounded-full"></div>
                           
                                     {[
                                       {
@@ -768,7 +1130,7 @@ const OPJindal = () => {
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.6, delay: index * 0.3 }}
                                       >
-                                        <div className="bg-[#d9235c] w-28 h-28 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center mx-auto mb-6 text-white shadow-2xl">
+                                        <div className="bg-blue-600 rounded-full w-28 h-28 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center mx-auto mb-6 text-white shadow-2xl">
                                           <span className="text-3xl md:text-4xl font-bold">{step.number}</span>
                                           <span className="text-xs md:text-sm uppercase font-semibold mt-1">Step</span>
                                         </div>
@@ -881,7 +1243,7 @@ const OPJindal = () => {
          <div className="overflow-x-auto">
            <table className="w-full border-collapse">
              <thead>
-               <tr className="bg-[#d9235c] text-white">
+               <tr className="bg-[#ffc107] text-white">
                  <th className="p-4 text-left">Feature</th>
                  <th className="p-4 text-center">OP Jindal University Online</th>
                  <th className="p-4 text-center">Regular Campus</th>
@@ -928,12 +1290,89 @@ const OPJindal = () => {
           </div>
         </div>
       </section>
+      <section className="py-16 bg-white" id="sessions-details">
+  <div className="max-w-6xl mx-auto px-6 text-center">
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+      Details of Upcoming and Ongoing Sessions
+    </h2>
+
+    <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-10 max-w-3xl mx-auto">
+      OP Jindal University Online conducts multiple academic sessions every year for its 
+      undergraduate and postgraduate programs. Students can easily check details of upcoming sessions 
+      through the university’s online academic calendar.
+    </p>
+
+    <div className="grid md:grid-cols-2 gap-8 text-left">
+      <div className="bg-blue-50 border border-blue-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition duration-300">
+        <h3 className="text-xl font-semibold text-blue-700 mb-4">📘 Upcoming Sessions</h3>
+        <ul className="space-y-3 text-gray-700">
+          <li className="flex items-start">
+            <span className="text-blue-600 font-bold mr-2">•</span>
+            <p>
+              New academic sessions begin multiple times each year for UG and PG programs.
+            </p>
+          </li>
+          <li className="flex items-start">
+            <span className="text-blue-600 font-bold mr-2">•</span>
+            <p>
+              Students can view detailed schedules and important dates on the 
+              <strong> OPJU Online Academic Calendar</strong>.
+            </p>
+          </li>
+          <li className="flex items-start">
+            <span className="text-blue-600 font-bold mr-2">•</span>
+            <p>
+              Each new session starts with an engaging <strong>Orientation Program</strong> 
+              and live introduction classes led by experienced faculty.
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition duration-300">
+        <h3 className="text-xl font-semibold text-gray-800 mb-4">🎓 Ongoing Sessions</h3>
+        <ul className="space-y-3 text-gray-700">
+          <li className="flex items-start">
+            <span className="text-blue-600 font-bold mr-2">•</span>
+            <p>
+              Current batches are actively participating in live classes, group discussions, and digital workshops.
+            </p>
+          </li>
+          <li className="flex items-start">
+            <span className="text-blue-600 font-bold mr-2">•</span>
+            <p>
+              Students engage in <strong>continuous assessments, projects, and interactive learning modules</strong> 
+              to strengthen academic performance.
+            </p>
+          </li>
+          <li className="flex items-start">
+            <span className="text-blue-600 font-bold mr-2">•</span>
+            <p>
+              The LMS ensures smooth access to lectures, study materials, and real-time progress tracking.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+   
+  </div>
+</section>
+  
 
       {/* Hiring Companies */}
-<section className="py-12 bg-gray-100">
+<section id="placement-partners" className="py-12 bg-gray-100">
   <div className="max-w-6xl mx-auto px-4 text-center mb-10">
     <h2 className="text-3xl font-bold text-gray-800">Top Recruiters at OP Jindal University</h2>
     <p className="text-xl text-gray-600">Trusted by leading global brands</p>
+    <p className="text-black-600 leading-relaxed max-w-3xl mx-auto mb-10">
+      OP Jindal University Online has built strong relationships with leading global and national corporations.
+      Its placement partners include top organizations from sectors like IT, management, banking, consulting, 
+      and data analytics. Through virtual internships, career counseling, and placement training, the university 
+      ensures students gain relevant industry exposure even while learning remotely. 
+      Corporate tie-ups and professional networking opportunities help learners build successful careers in 
+      reputed companies after completing OP Jindal University Online programs.
+    </p>
   </div>
   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
     {[
@@ -972,6 +1411,154 @@ const OPJindal = () => {
     ))}
   </div>
 </section>
+{/* Placement Record Section */}
+<section id="placement-record" className="py-16 bg-white">
+  <div className="max-w-6xl mx-auto px-4 text-center">
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+      Placement Record
+    </h2>
+
+    <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto mb-10">
+      The placement record of OP Jindal University Online reflects the university’s commitment to employability 
+      and skill-based learning. Graduates from OPJU’s online programs have been successfully placed in reputed 
+      companies and startups, holding positions in business management, data analysis, marketing, finance, IT, 
+      and more. The university’s dedicated placement cell offers resume-building workshops, mock interviews, 
+      and mentorship programs to prepare students for global job markets.
+    </p>
+
+    {/* Placement Stats Cards */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10">
+      <div className="bg-gray-50 shadow-md rounded-2xl p-6 hover:shadow-lg transition">
+        <h3 className="text-4xl font-bold text-blue-600 mb-2">95%</h3>
+        <p className="text-gray-700">Placement Success Rate</p>
+      </div>
+
+      <div className="bg-gray-50 shadow-md rounded-2xl p-6 hover:shadow-lg transition">
+        <h3 className="text-4xl font-bold text-blue-600 mb-2">300+</h3>
+        <p className="text-gray-700">Hiring Partners</p>
+      </div>
+
+      <div className="bg-gray-50 shadow-md rounded-2xl p-6 hover:shadow-lg transition">
+        <h3 className="text-4xl font-bold text-blue-600 mb-2">₹12 LPA</h3>
+        <p className="text-gray-700">Highest Package Offered</p>
+      </div>
+    </div>
+  </div>
+</section>
+{/* Student Reviews Section */}
+<section id="student-reviews" className="py-16 bg-gray-50">
+  <div className="max-w-6xl mx-auto px-4 text-center">
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+      Student Reviews
+    </h2>
+
+    <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto mb-12">
+      Students of OP Jindal University Online consistently praise the university for its academic excellence,
+      responsive support system, and flexible learning structure. Many learners appreciate the balance between
+      self-paced learning and interactive live sessions. Reviews highlight the value of the digital learning
+      experience, emphasizing that OP Jindal University Online provides not just a degree but real professional growth.
+      Alumni also commend the networking opportunities and mentorship provided by industry leaders.
+    </p>
+
+    {/* Reviews Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition text-left">
+        <p className="text-gray-700 italic mb-4">
+          “The flexibility of the OPJU Online program allowed me to balance work and study easily. The recorded lectures
+          and live sessions were incredibly useful!”
+        </p>
+        <h4 className="font-semibold text-gray-800">— Aditi Sharma</h4>
+        <p className="text-sm text-gray-500">MBA Student</p>
+      </div>
+
+      <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition text-left">
+        <p className="text-gray-700 italic mb-4">
+          “The mentorship and support I received from faculty and industry experts helped me grow professionally and
+          apply concepts directly in my workplace.”
+        </p>
+        <h4 className="font-semibold text-gray-800">— Rohan Mehta</h4>
+        <p className="text-sm text-gray-500">BBA Student</p>
+      </div>
+
+      <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition text-left">
+        <p className="text-gray-700 italic mb-4">
+          “OPJU Online provides an amazing learning environment. The digital platform is smooth, and the academic team
+          is always there to guide you.”
+        </p>
+        <h4 className="font-semibold text-gray-800">— Sneha Patel</h4>
+        <p className="text-sm text-gray-500">MCA Student</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{/* OP Jindal University Online Reviews Section */}
+<section id="opju-reviews" className="py-16 bg-gray-50">
+  <div className="max-w-6xl mx-auto px-4 text-center">
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+      OP Jindal University Online Reviews
+    </h2>
+
+    <p className="text-gray-600 leading-relaxed max-w-4xl mx-auto mb-8">
+      OP Jindal University Online has earned an excellent reputation for its dedication to academic excellence and innovation.
+      Thousands of students across India and abroad have benefitted from its flexible online learning model, industry-ready curriculum,
+      and personalized student support. The reviews consistently highlight OP Jindal University Online’s strong academic framework,
+      global recognition, and commitment to quality education.
+    </p>
+
+    <p className="text-gray-700 font-medium max-w-3xl mx-auto">
+      Choosing OP Jindal University Online means investing in a future built on <span className="text-blue-600">knowledge</span>,
+      <span className="text-blue-600"> innovation</span>, and <span className="text-blue-600">success</span>.
+    </p>
+  </div>
+</section>
+   <section id="faq" className="py-20 bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Heading */}
+        <div className="text-center mb-14">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            Frequently Asked{" "}
+            <span className="bg-yellow-500 bg-clip-text text-transparent">
+              Questions
+            </span>
+          </h2>
+          <p className="text-lg text-gray-600">
+            Get all your queries about OP Jindal University Online answered here
+          </p>
+        </div>
+
+        {/* FAQ Cards */}
+        <div className="space-y-6">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+            >
+              {/* Question Button */}
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="w-full text-left px-8 py-6 bg-gradient-to-r from-gray-50 to-gray-100 hover:from-blue-500 hover:to-blue-600 flex justify-between items-center font-semibold text-gray-800 transition-all duration-300 group-hover:text-yellow-500 text-lg"
+              >
+                <span className="pr-8">{faq.question}</span>
+                <div className="flex-shrink-0 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:bg-yellow-500 group-hover:text-white transition-all duration-300 cursor-pointer">
+                  <span className="text-xl font-bold">
+                    {openIndex === index ? "−" : "+"}
+                  </span>
+                </div>
+              </button>
+
+              {/* Answer Section */}
+              {openIndex === index && (
+                <div className="px-8 py-6 text-gray-700 bg-white border-t border-gray-100 animate-[fadeIn_0.3s_ease-in-out]">
+                  <p className="text-lg leading-relaxed">{faq.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-gray-300 pt-12 sm:pt-16 relative overflow-hidden">
                     {/* Background Pattern */}
                     <div className="absolute inset-0 opacity-50" style={{
@@ -991,7 +1578,7 @@ const OPJindal = () => {
                           >
                             <div className="flex items-center gap-3 mb-4">
                               <img src="/images/opjindal_banner.png" alt="OP Jindal University Logo" className="h-10 w-auto" />
-                              <span className="text-xl font-bold text-[#d9235c]">OP Jindal</span>
+                              <span className="text-xl font-bold text-[#ffc107]">OP Jindal</span>
                             </div>
                             <p className="text-sm text-gray-400 leading-relaxed">
                               UGC-entitled, NAAC A+ accredited online degrees designed for modern learners. 
@@ -1025,7 +1612,7 @@ const OPJindal = () => {
                             <h4 className="text-white font-bold mb-4 text-lg">Programs</h4>
                             <ul className="space-y-3 text-sm">
                               {['MBA', 'BBA',  'BCA', 'MCA'].map((program, i) => (
-                                <li key={i} onClick = {() => setOpenModal({ type: 'apply',})} className="hover:text-[#d9235c] transition-colors cursor-pointer">
+                                <li key={i} onClick = {() => setOpenModal({ type: 'apply',})} className="hover:text-[#ffc107] transition-colors cursor-pointer">
                                   {program}
                                 </li>
                               ))}
@@ -1076,7 +1663,7 @@ const OPJindal = () => {
                                 
                                 <a href="tel:+917042867717" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us"  aria-label="Email us at info@unifostedu.com">
                                              
-                                             <span className="text-orange-400">📞</span>
+                                           <FaPhone className="text-blue-500 rotate-90" />
                                             </a>
                                 <span className="text-sm">+91-7042867717</span>
                               </div>
@@ -1084,18 +1671,19 @@ const OPJindal = () => {
                                 <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
                                   <span className="text-orange-400">✉️</span>
                                 </div>
-                                <a href="mailto:info@unifostedu.com" className='p-2 rounded-lg hover:bg-slate-100 transition-all duration-200' title='Email us' aria-label='Email us at info@unifostedu.com'>
+                                <a href="mailto:info@unifostedu.com" className='p-2 rounded-lg hover:bg-slate-100 text-blue-500 transition-all duration-200' title='Email us' aria-label='Email us at info@unifostedu.com'>
                                 <span className="text-sm">info@unifostedu.com</span>
                                 </a>
                               </div>
                             </div>
                             
-                            <Button 
-                              onClick={() => setOpenModal({ type: 'apply' })}
-                              className="w-full bg-[#d9235c]  hover:from-[#821812] hover:from-[#821812] text-white font-bold px-6 py-3 rounded-full shadow-lg hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300"
+                            <Button
+                            onClick={() => setOpenModal({ type: 'apply' })}
+                               className="w-full bg-[#ffc107] text-blue-500 font-bold px-6 py-3 rounded-full shadow-lg hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 hover:bg-[#e0a800] cursor-pointer"
                             >
-                              Apply Now
-                            </Button>
+                          Apply Now
+                             </Button>
+
                           </motion.div>
                         </div>
                       </div>
@@ -1155,8 +1743,11 @@ const OPJindal = () => {
                       </motion.div>
                     </div>
                   </footer>
+                  
 </div>
-
+</main>
+</div>
+</div>
     </>
   );
 };

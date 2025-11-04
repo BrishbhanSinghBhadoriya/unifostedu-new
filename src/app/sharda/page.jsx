@@ -956,41 +956,41 @@ const faqData = [
     </div>
   </div>
 </section>
-<section id="key-highlights" class="bg-white py-16">
-  <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold text-[#ee067f] mb-10">
+<section id="key-highlights" className="bg-white py-16">
+  <div className="max-w-6xl mx-auto px-6 text-center">
+    <h2 className="text-3xl font-bold text-[#ee067f] mb-10">
       Key Highlights of Sharda University Online
     </h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
-      <div class="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
-        <p class="text-black font-semibold">✅ UGC Entitled & NAAC Accredited</p>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+      <div className="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
+        <p className="text-black font-semibold">✅ UGC Entitled & NAAC Accredited</p>
       </div>
-      <div class="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
-        <p class="text-black font-semibold">✅ Global academic partnerships across <span class="text-[#ee067f]">30+ countries</span></p>
+      <div className="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
+        <p className="text-black font-semibold">✅ Global academic partnerships across <span class="text-[#ee067f]">30+ countries</span></p>
       </div>
-      <div class="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
-        <p class="text-black font-semibold">✅ Flexible learning via <span class="text-[#ee067f]">advanced LMS</span></p>
+      <div className="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
+        <p className="text-black font-semibold">✅ Flexible learning via <span class="text-[#ee067f]">advanced LMS</span></p>
       </div>
-      <div class="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
-        <p class="text-black font-semibold">✅ Expert faculty & <span class="text-[#ee067f]">industry mentors</span></p>
+      <div className="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
+        <p className="text-black font-semibold">✅ Expert faculty & <span class="text-[#ee067f]">industry mentors</span></p>
       </div>
-      <div class="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
-        <p class="text-black font-semibold">✅ Accessible to <span class="text-[#ee067f]">working professionals</span></p>
+      <div className="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
+        <p className="text-black font-semibold">✅ Accessible to <span class="text-[#ee067f]">working professionals</span></p>
       </div>
-      <div class="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
-        <p class="text-black font-semibold">✅ EMI fee payment options available</p>
+      <div className="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
+        <p className="text-black font-semibold">✅ EMI fee payment options available</p>
       </div>
-      <div class="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
-        <p class="text-black font-semibold">✅ 100% online proctored examinations</p>
+      <div className="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
+        <p className="text-black font-semibold">✅ 100% online proctored examinations</p>
       </div>
-      <div class="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
-        <p class="text-black font-semibold">✅ Career support & <span class="text-[#ee067f]">placement assistance</span></p>
+      <div className="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
+        <p className="text-black font-semibold">✅ Career support & <span class="text-[#ee067f]">placement assistance</span></p>
       </div>
-      <div class="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
-        <p class="text-black font-semibold">✅ Recorded + live sessions for <span class="text-[#ee067f]">best learning outcome</span></p>
+      <div className="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
+        <p className="text-black font-semibold">✅ Recorded + live sessions for <span class="text-[#ee067f]">best learning outcome</span></p>
       </div>
-      <div class="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
-        <p class="text-black font-semibold">✅ Internship & <span class="text-[#ee067f]">skill development guidance</span></p>
+      <div className="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
+        <p className="text-black font-semibold">✅ Internship & <span class="text-[#ee067f]">skill development guidance</span></p>
       </div>
     </div>
   </div>
