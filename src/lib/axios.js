@@ -48,7 +48,7 @@ export const authAPI = {
 export const demoAPI = {
   bookDemo: (data) =>
     axios.post(
-      "https://api.unifostedu.com/api/v1/enquiry",
+      "/api/v1/enquiry",
       data,
       { headers: { "Content-Type": "application/json" } }
     ),
@@ -58,19 +58,19 @@ export const demoAPI = {
 export const enquiryAPI = {
   videoCall: (data) =>
     axios.post(
-      "https://api.unifostedu.com/api/v1/videoCallEnquiry",
+      "/api/v1/videoCallEnquiry",
       data,
       { headers: { "Content-Type": "application/json" } }
     ),
   homeDemo: (data) =>
     axios.post(
-      "https://api.unifostedu.com/api/v1/homeDemoEnquiry",
+      "/api/v1/homeDemoEnquiry",
       data,
       { headers: { "Content-Type": "application/json" } }
     ),
   general: (data) =>
     axios.post(
-      "https://api.unifostedu.com/api/v1/enquiry",
+      "/api/v1/enquiry",
       data,
       { headers: { "Content-Type": "application/json" } }
     ),

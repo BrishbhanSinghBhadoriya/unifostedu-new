@@ -34,7 +34,7 @@ const [modalType, setModalType] = useState();
   const universities = [
     { name: "Amity University Online", link: "/Amity-University-Online", logo: "/images/amity.webp" },
     { name: "Lovely Professional University", link: "/lpu-online", logo: "/images/lpu.webp" },
-    { name: "Online Manipal University", link: "/manipal", logo: "/images/manipal.webp" },
+    { name: "Manipal University Jaipur", link: "/manipal", logo: "/images/manipal.webp" },
     { name: "Manipal Academy of Higher Education", link: "/mahe-online", logo: "/images/mahe-uni.webp" },
      { name: "Sikkim Manipal University", link: "/smu", logo: "/images/smu-uni.webp" },
     { name: "Uttaranchal University", link: "/uu", logo: "/images/uu-uni.webp" },
@@ -253,7 +253,7 @@ const [modalType, setModalType] = useState();
           </nav>
 
           {/* Search with suggestions (click to redirect) */}
-          <div className="hidden sm:block relative flex-1 max-w-sm mx-2 lg:mx-3">
+          <div className="relative flex-1 max-w-sm mx-2 lg:mx-3">
             <div className="flex items-center bg-white/95 backdrop-blur rounded-full px-3 py-1.5 shadow-md ring-1 ring-slate-200">
               <FaSearch className="text-slate-500 text-xs" />
               <input
@@ -280,12 +280,12 @@ const [modalType, setModalType] = useState();
           </div>
 
           {/* Contact Icons - Made more compact */}
-          <div className="hidden md:flex gap-1 lg:gap-2 items-center text-[#00ffe0]">
-            <a href="tel:+919354735410" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us"  aria-label="Email us at info@unifostedu.com">
+          <div className="hidden sm:flex gap-1 lg:gap-2 items-center text-[#00ffe0]">
+            <a href="tel:+917042646766" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us"  aria-label="Email us at info@unifostedu.com">
              
               <FaPhoneAlt className="text-xl" />
             </a>
-            <a href="https://wa.me/919354735410" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="WhatsApp" aria-label="WhatsApp">
+            <a href="https://wa.me/917042646766" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="WhatsApp" aria-label="WhatsApp">
               <FaWhatsappSquare className="text-xl" />
             </a>
             <button onClick={() => openModal('videoCall')} className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Book Demo">
@@ -294,7 +294,7 @@ const [modalType, setModalType] = useState();
           </div>
 
           {/* Call/Email - Made more compact */}
-          <div className="hidden lg:flex flex-col justify-center items-end text-xs ml-2">
+          <div className="hidden md:flex flex-col justify-center items-end text-xs ml-2">
             <div className="flex items-center gap-1 text-white-600 font-semibold">
               <FaPhoneAlt className="text-[#00ffe0] text-xs" /> <span className="text-white">+91 7042867717</span>
             </div>
@@ -307,7 +307,7 @@ const [modalType, setModalType] = useState();
           {/* Mobile Toggle */}
           <div className="md:hidden ml-auto flex items-center gap-2">
             <a
-              href="tel:+919354735410"
+              href="tel:+917042646766"
               aria-label="Call us"
               className={`p-2 rounded-lg transition-all duration-300 ${
                 scrolled ? 'bg-white/10 text-white' : 'bg-white/20 text-white'
@@ -316,7 +316,7 @@ const [modalType, setModalType] = useState();
               <FaPhoneAlt className="text-base" />
             </a>
             <a
-              href="https://wa.me/919354735410"
+              href="https://wa.me/917042646766"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
@@ -347,7 +347,7 @@ const [modalType, setModalType] = useState();
               {/* Top bar */}
               <div className="flex items-center justify-between mb-6 sm:mb-8">
                 <div className="flex items-center gap-3">
-                  <Image width={100} height={100} loading="lazy" src="images/uni.webp" alt="Unifost" className="h-8 w-auto" />
+                  <Image width={100} height={100} loading="lazy" src="/images/uni.webp" alt="Unifost" className="h-8 w-auto" />
                   <span className="text-lg font-bold text-[#00ffe0]">Unifost</span>
                 </div>
                 <button
@@ -452,7 +452,7 @@ const [modalType, setModalType] = useState();
                 
                 {/* Contact Buttons */}
                 <div className="grid grid-cols-3 gap-3">
-                  <a href="tel:+919354735410" 
+                  <a href="tel:+917042646766" 
                      className="flex flex-col items-center gap-2 p-3 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-xl text-[#001e3c] text-center font-bold text-sm hover:scale-105 transition">
                     <FaPhoneAlt className="text-lg" />
                     <span>Call</span>
