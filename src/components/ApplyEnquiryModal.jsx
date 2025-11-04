@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogDescription, DialogTitle } from '@/components/ui/dialog';
 import EnquiryForm from '@/components/EnquiryForm';
 
 export default function ApplyEnquiryModal({
@@ -31,6 +31,10 @@ export default function ApplyEnquiryModal({
               <DialogTitle className="text-xl sm:text-2xl font-bold">
                 {title}
               </DialogTitle>
+                 <DialogDescription className="text-black">
+                    {/* Please fill in the details below to enquire about the program. */}
+                </DialogDescription>
+
               {subtitle && (
                 <p className="text-sm text-gray-500">{subtitle}</p>
               )}

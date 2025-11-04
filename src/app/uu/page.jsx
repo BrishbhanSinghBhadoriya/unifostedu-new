@@ -780,9 +780,9 @@ const UttaranchalUniversity = () => {
                 "/images/icici.webp",
                 "/images/adove.webp",
                 "/images/infosys.webp",
-                "/images/wipro.webp",
+                "/images/coca-cola.webp",
                 "/images/ibm.webp",
-                "/images/accenture.webp",
+                "/images/company6.webp",
               ].map((src, i) => (
                 <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
                   <Image width={100} height={100} loading="lazy" src={src} alt={`Company ${i + 1}`} className="h-12 object-contain" />

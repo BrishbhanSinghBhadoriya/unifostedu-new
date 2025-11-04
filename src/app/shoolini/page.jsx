@@ -2,9 +2,10 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import {
-  FaBookOpen, FaUserTie, FaRobot, FaBriefcase, FaBook, FaUniversity,FaGraduationCap,FaGlobe,
-  FaUserFriends, FaClipboardCheck
+  FaBookOpen,FaAward,FaQuestionCircle,FaComments, FaStar,FaQuoteLeft,FaCalendarAlt,FaBuilding,FaUserGraduate,FaChartLine, FaClock, FaMoneyBillWave, FaUserTie, FaRobot, FaBriefcase, FaBook, FaUniversity,FaGraduationCap,FaGlobe,
+  FaUserFriends, FaClipboardCheck, FaHome, FaInfoCircle, FaCheckCircle, FaRupeeSign, FaPhoneAlt, FaBars, FaTimes
 } from "react-icons/fa";
+import * as Tabs from '@radix-ui/react-tabs';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import EnquireCard from '@/components/EnquireCard';
@@ -13,6 +14,430 @@ import HeroSection from '@/components/HeroSection';
 import AccreditationSection from '@/components/AccreditationSection';
 import { Button } from '@/components/ui/button';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
+import Link from 'next/link';
+ 
+// Sidebar Component
+const Sidebar = ({ isOpen, toggleSidebar, onApplyNowClick }) => {
+  const menuItems =  [
+  { icon: <FaInfoCircle className="mr-2" />, text: "Introduction", link: "#" },
+  { icon: <FaUniversity className="mr-2" />, text: "Campus Tour", link: "#campus-tour" },
+  { icon: <FaBookOpen className="mr-2" />, text: "Explore Online Courses", link: "#explore-courses" },
+  { icon: <FaStar className="mr-2" />, text: "Key Highlights", link: "#key-highlights" },
+  { icon: <FaRupeeSign className="mr-2" />, text: "Fee Structure", link: "#fee-structure" },
+  { icon: <FaClipboardCheck className="mr-2" />, text: "Admission Process", link: "#admission-process" },
+  { icon: <FaClock className="mr-2" />, text: "Upcoming Sessions", link: "#upcoming-sessions" },
+  { icon: <FaBuilding className="mr-2" />, text: "Placement Partners", link: "#placement-partners" },
+  { icon: <FaChartLine className="mr-2" />, text: "Placement Records", link: "#placement-records" },
+  { icon: <FaUserGraduate className="mr-2" />, text: "Student Reviews", link: "#student-reviews" },
+  { icon: <FaQuestionCircle className="mr-2" />, text: "FAQs", link: "#faq" },
+  { icon: <FaComments className="mr-2" />, text: "Shoolini University Reviews", link: "#shoolini-reviews" }
+];
+
+  return (
+    <>
+      {/* Mobile overlay */}
+      {isOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          onClick={toggleSidebar}
+        />
+      )}
+      
+      {/* Sidebar */}
+      <div className={`fixed top-0 left-0 h-full bg-white shadow-lg z-50 transition-all duration-300 ease-in-out w-64 transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:sticky lg:top-20 lg:h-[calc(100vh-5rem)] lg:translate-x-0 flex flex-col overflow-y-auto border-r border-gray-200`}>
+        <div className="p-4 border-b flex justify-between items-center">
+          <div className="flex items-center">
+
+            <span className="font-bold text-lg">page Content</span>
+          </div>
+          <button 
+            className="text-gray-500 hover:text-gray-700 lg:hidden"
+            onClick={toggleSidebar}
+          >
+            <FaTimes size={20} />
+          </button>
+        </div>
+        
+        <nav className="p-4">
+          <ul className="space-y-2">
+            {menuItems.map((item, index) => (
+              <li key={index}>
+                <Link 
+                  href={item.link}
+                  className="flex items-center p-2 text-gray-700 hover:bg-red-50 hover:text-red-600 rounded-md transition-colors"
+                  onClick={toggleSidebar}
+                >
+                  {item.icon}
+                  <span>{item.text}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        
+        <div className="p-4 mt-auto border-t">
+          <Button  className="w-full bg-red-600 hover:bg-red-700 text-white cursor-pointer" onClick={() => {
+            onApplyNowClick();
+            toggleSidebar();
+          }} >
+            Apply Now
+          </Button>
+        </div>
+      </div>
+    </>
+  );
+};
+
+// Introduction Section Component
+const ShooliniIntroduction = () => {
+  return (
+    <section id="introduction" className="py-12 md:py-16 bg-gradient-to-b from-white to-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Shoolini University <span className="text-red-600">Online</span>
+          </h2>
+          <div className="w-24 h-1 bg-red-500 mx-auto mb-6 rounded-full"></div>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="space-y-6">
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Shoolini University Online is one of India's most trusted and innovative digital learning institutions, offering UGC-approved online degree programs that empower students to achieve academic and professional excellence from anywhere in the world. Recognized as a NAAC A+ accredited university, Shoolini University Online blends academic rigor, cutting-edge technology, and global exposure to make quality higher education accessible to everyone.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Founded with a vision to redefine online education in India, Shoolini University Online offers a flexible and engaging platform for learners who aspire to pursue online MBA, online BBA, online MCA, online M.Com, and other online programs. As one of the best online universities in India, the institution focuses on developing job-ready graduates equipped with industry-relevant skills, critical thinking, and leadership qualities.
+            </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+              <div className="bg-white p-5 rounded-xl shadow-md hover:shadow-lg transition-all">
+                <div className="flex items-center mb-3">
+                  <div className="bg-red-100 p-3 rounded-full mr-3">
+                    <FaUniversity className="text-red-600 text-xl" />
+                  </div>
+                  <h3 className="font-semibold text-lg">UGC-DEB Approved</h3>
+                </div>
+                <p className="text-gray-600">Globally recognized degrees valid for jobs and higher education</p>
+              </div>
+              
+              <div className="bg-white p-5 rounded-xl shadow-md hover:shadow-lg transition-all">
+                <div className="flex items-center mb-3">
+                  <div className="bg-red-100 p-3 rounded-full mr-3">
+                    <FaGraduationCap className="text-red-600 text-xl" />
+                  </div>
+                  <h3 className="font-semibold text-lg">NAAC A+ Accredited</h3>
+                </div>
+                <p className="text-gray-600">Mark of academic excellence and quality education</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Our Vision</h3>
+              <p className="text-gray-700 mb-6">
+                To empower learners through technology-enabled education that fosters creativity, innovation, and leadership, making Shoolini University Online a global symbol of quality and excellence in online education.
+              </p>
+              
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Our Mission</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5 mr-3">
+                    <span className="text-red-600 text-sm font-bold">✓</span>
+                  </div>
+                  <p className="text-gray-700">To provide affordable online education accessible to students across India and abroad.</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5 mr-3">
+                    <span className="text-red-600 text-sm font-bold">✓</span>
+                  </div>
+                  <p className="text-gray-700">To deliver UGC-approved online degree programs aligned with current industry demands.</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5 mr-3">
+                    <span className="text-red-600 text-sm font-bold">✓</span>
+                  </div>
+                  <p className="text-gray-700">To promote lifelong learning and skill development through innovative teaching methods.</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5 mr-3">
+                    <span className="text-red-600 text-sm font-bold">✓</span>
+                  </div>
+                  <p className="text-gray-700">To establish Shoolini Online as one of the best online universities in India by maintaining academic integrity, research excellence, and career-focused education.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Why Choose Shoolini University Online Section
+const WhyChooseShoolini = ({ setOpenModal }) => {
+  return (
+    <section id="why-choose" className="py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" >
+            Why Choose <span className="text-red-600">Shoolini University Online</span>
+          </h2>
+          <div className="w-24 h-1 bg-red-500 mx-auto mb-6 rounded-full"></div>
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+            Choosing Shoolini University Online means choosing quality, credibility, and innovation. Whether you're a working professional, a recent graduate, or someone seeking career advancement, Shoolini Online offers the flexibility and recognition you need to succeed.
+          </p>
+        </div>
+        
+        <div className="space-y-12">
+          {/* Reason 1 */}
+          <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+            <div className="p-6 md:p-8">
+              <div className="flex items-center mb-4">
+                <div className="bg-red-100 p-3 rounded-full mr-4">
+                  <FaAward className="text-red-600 text-xl" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900">UGC-Approved and NAAC A+ Accredited University</h3>
+              </div>
+              <p className="text-gray-700 mb-4">
+                Shoolini University Online is a UGC-DEB approved online university, ensuring that every online degree is recognized for both government and private sector employment. The university's NAAC A+ accreditation reflects its commitment to academic excellence and global quality standards, making it one of the top online universities in India.
+              </p>
+              <p className="text-gray-700">
+                By enrolling in Shoolini Online courses, students receive degrees equivalent in value and recognition to on-campus programs. This credibility helps graduates pursue higher education abroad or secure reputable positions in the corporate sector.
+              </p>
+            </div>
+          </div>
+          
+          {/* Reason 2 */}
+          <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+            <div className="p-6 md:p-8">
+              <div className="flex items-center mb-4">
+                <div className="bg-red-100 p-3 rounded-full mr-4">
+                  <FaGraduationCap className="text-red-600 text-xl" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900">Wide Range of Industry-Relevant Online Degrees</h3>
+              </div>
+              <p className="text-gray-700 mb-4">
+                Shoolini University Online offers a diverse portfolio of UGC-approved online programs, including:
+              </p>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5 mr-3">
+                    <span className="text-red-600 text-sm font-bold">•</span>
+                  </div>
+                  <p className="text-gray-700"><span className="font-semibold">Online MBA (Master of Business Administration)</span> – Designed to build leadership, strategic thinking, and managerial excellence.</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5 mr-3">
+                    <span className="text-red-600 text-sm font-bold">•</span>
+                  </div>
+                  <p className="text-gray-700"><span className="font-semibold">Online BBA (Bachelor of Business Administration)</span> – A foundation for future business leaders and entrepreneurs.</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5 mr-3">
+                    <span className="text-red-600 text-sm font-bold">•</span>
+                  </div>
+                  <p className="text-gray-700"><span className="font-semibold">Online MCA (Master of Computer Applications)</span> – Focused on software, AI, and data-driven technologies.</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5 mr-3">
+                    <span className="text-red-600 text-sm font-bold">•</span>
+                  </div>
+                  <p className="text-gray-700"><span className="font-semibold">Online M.Com (Master of Commerce)</span> – Tailored for finance, accounting, and business analytics enthusiasts.</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5 mr-3">
+                    <span className="text-red-600 text-sm font-bold">•</span>
+                  </div>
+                  <p className="text-gray-700"><span className="font-semibold">Online BA & B.Com</span> – For learners who wish to strengthen their theoretical and analytical foundations.</p>
+                </li>
+              </ul>
+              <p className="text-gray-700">
+                Every program under Shoolini University Online combines academic theory with real-world applications, preparing students for the demands of the digital economy.
+              </p>
+            </div>
+          </div>
+          
+          {/* Reason 3 */}
+          <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+            <div className="p-6 md:p-8">
+              <div className="flex items-center mb-4">
+                <div className="bg-red-100 p-3 rounded-full mr-4">
+                  <FaClock className="text-red-600 text-xl" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900">Flexible and Self-Paced Learning</h3>
+              </div>
+              <p className="text-gray-700 mb-4">
+                The hallmark of Shoolini University Online is flexibility. The AI-enabled LMS platform allows students to study at their own pace, attend live interactive classes, or watch recorded sessions as per convenience.
+              </p>
+              <p className="text-gray-700">
+                This self-paced learning environment ensures that Shoolini Online students can balance education with work, family, or entrepreneurial responsibilities. The platform promotes 24/7 accessibility, making it one of the most student-friendly online universities in India.
+              </p>
+            </div>
+          </div>
+          
+          {/* Reason 4 */}
+          <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+            <div className="p-6 md:p-8">
+              <div className="flex items-center mb-4">
+                <div className="bg-red-100 p-3 rounded-full mr-4">
+                  <FaUserTie className="text-red-600 text-xl" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900">Experienced Faculty and Global Learning Resources</h3>
+              </div>
+              <p className="text-gray-700 mb-4">
+                Students of Shoolini University Online learn from experienced professors, industry experts, and global mentors. The faculty bring a wealth of experience from academia and corporate industries, ensuring that each course is practical, relevant, and up to date.
+              </p>
+              <p className="text-gray-700">
+                The online library provides thousands of e-books, research papers, and journals, while online discussion forums encourage collaboration among learners worldwide. This unique blend of global resources and Indian education values gives Shoolini Online an edge in quality learning.
+              </p>
+            </div>
+          </div>
+          
+          {/* Reason 5 */}
+          <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+            <div className="p-6 md:p-8">
+              <div className="flex items-center mb-4">
+                <div className="bg-red-100 p-3 rounded-full mr-4">
+                  <FaMoneyBillWave className="text-red-600 text-xl" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900">Affordable Fee Structure and EMI Options</h3>
+              </div>
+              <p className="text-gray-700 mb-4">
+                Education should be accessible to everyone, and Shoolini University Online upholds this belief through an affordable fee structure and easy installment options. Students can pay tuition in flexible EMIs, making it easier to pursue online degrees without financial stress.
+              </p>
+              <p className="text-gray-700">
+                Scholarships are also available for meritorious and deserving candidates, ensuring that quality education remains within reach for all.
+              </p>
+            </div>
+          </div>
+          
+          {/* Reason 6 */}
+          <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+            <div className="p-6 md:p-8">
+              <div className="flex items-center mb-4">
+                <div className="bg-red-100 p-3 rounded-full mr-4">
+                  <FaBriefcase className="text-red-600 text-xl" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900">Excellent Placement Assistance</h3>
+              </div>
+              <p className="text-gray-700 mb-4">
+                One of the strongest aspects of Shoolini University Online is its dedicated placement support. The university partners with top recruiters such as Deloitte, Wipro, TCS, HCL, and HDFC Bank to provide job opportunities to online learners.
+              </p>
+              <p className="text-gray-700">
+                Through personalized career counseling, resume-building workshops, and interview preparation sessions, Shoolini Online ensures that every student graduates job-ready and confident.
+              </p>
+            </div>
+          </div>
+          
+          {/* Reason 7 */}
+          <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+            <div className="p-6 md:p-8">
+              <div className="flex items-center mb-4">
+                <div className="bg-red-100 p-3 rounded-full mr-4">
+                  <FaGlobe className="text-red-600 text-xl" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900">Global Recognition and Alumni Success</h3>
+              </div>
+              <p className="text-gray-700 mb-4">
+                Shoolini University Online degrees are globally recognized and accepted by employers and institutions across the world. The growing alumni network is a testament to the university's quality and impact. Graduates have secured roles in leading multinational companies, startups, and government sectors.
+              </p>
+              <p className="text-gray-700">
+                The credibility of a UGC-approved online degree from Shoolini University provides long-term career stability and recognition.
+              </p>
+            </div>
+          </div>
+          
+          {/* Reason 8 */}
+          <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+            <div className="p-6 md:p-8">
+              <div className="flex items-center mb-4">
+                <div className="bg-red-100 p-3 rounded-full mr-4">
+                  <FaRobot className="text-red-600 text-xl" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900">Technology-Driven Learning Experience</h3>
+              </div>
+              <p className="text-gray-700 mb-4">
+                Shoolini Online integrates AI, data analytics, and virtual simulations to create an engaging and modern learning environment. From gamified assessments to real-time performance tracking, students experience a fully digitized academic journey that aligns with the latest global standards.
+              </p>
+              <p className="text-gray-700">
+                The platform's mobile-friendly LMS ensures that students can learn from anywhere, anytime, on any device — a true mark of modern online education in India.
+              </p>
+            </div>
+          </div>
+          
+          {/* Reason 9 */}
+          <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+            <div className="p-6 md:p-8">
+              <div className="flex items-center mb-4">
+                <div className="bg-red-100 p-3 rounded-full mr-4">
+                  <FaUserFriends className="text-red-600 text-xl" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900">Personalized Student Support</h3>
+              </div>
+              <p className="text-gray-700 mb-4">
+                Every learner at Shoolini University Online is assigned a dedicated support mentor who assists with academic, technical, and career-related queries. The 24/7 student helpline ensures that help is always available.
+              </p>
+              <p className="text-gray-700">
+                This personalized approach has earned Shoolini Online high student satisfaction rates and positive feedback across all programs.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="bg-gray-50 py-16 px-6 md:px-16 lg:px-24">
+  <div className="max-w-6xl mx-auto space-y-16">
+
+    {/* Future-Ready Curriculum Section */}
+    <div>
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        Future-Ready Curriculum
+      </h2>
+      <p className="text-gray-700 text-lg leading-relaxed mb-6 text-justify">
+        <strong>Shoolini University Online</strong> focuses on developing future skills such as 
+        <strong> Data Analytics, Artificial Intelligence (AI), Entrepreneurship,</strong> and 
+        <strong> Sustainability.</strong> The curriculum is regularly updated to align with 
+        global industry standards, ensuring graduates remain competitive and employable 
+        in fast-changing job markets.
+      </p>
+      <p className="text-gray-700 text-lg leading-relaxed text-justify">
+        Whether it’s an <strong>Online MBA</strong> in Digital Marketing or an 
+        <strong> Online MCA</strong> with AI integration, 
+        <strong> Shoolini Online</strong> ensures that each learner is equipped to tackle 
+        tomorrow’s challenges with practical knowledge and confidence.
+      </p>
+    </div>
+
+    {/* The Shoolini Online Advantage Section */}
+    <div className="bg-white p-8 rounded-2xl shadow-md">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
+        The Shoolini Online Advantage
+      </h2>
+      <div className="max-w-4xl mx-auto space-y-4 text-gray-700 text-lg leading-relaxed">
+        <p>✅ A <strong>UGC-approved</strong> online degree recognized worldwide</p>
+        <p>✅ A <strong>NAAC A+</strong> accredited institution with a proven academic record</p>
+        <p>✅ <strong>Affordable</strong> and flexible online learning options</p>
+        <p>✅ 24/7 access to <strong>learning materials</strong> and expert guidance</p>
+        <p>✅ Real-world exposure through <strong>internships</strong> and virtual industry projects</p>
+        <p>✅ <strong>100% placement assistance</strong> and global career support</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div className="mt-12 text-center">
+          <button 
+            
+            className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-red-500/25 transform hover:scale-105 transition-all duration-300 cursor-pointer" onClick={() => setOpenModal({ type: 'apply' })}
+          >
+            Apply Now for Shoolini Online Programs
+          </button>
+        </div>
+      </div>
+    </section>
+
+    
+  );
+};
 
 const ShooliniFAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -156,7 +581,9 @@ const ShooliniFAQ = () => {
               📞 Call: +91-7042867717
             </a>
             <button className="inline-flex items-center justify-center px-8 py-3 bg-white text-red-500 font-semibold rounded-full border-2 border-red-500 hover:bg-red-50 transition-all duration-300">
-              💬 Chat with Counselor
+              <a href="https://wa.me/917042867717" target="_blank" rel="noopener noreferrer">
+                💬 Chat with Counselor
+              </a>
             </button>
           </div>
         </div>
@@ -168,6 +595,11 @@ const ShooliniFAQ = () => {
 // ✅ Main Shoolini Component
 const Shoolini = () => {
   const [openModal, setOpenModal] = useState(null);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+   const [activeTab, setActiveTab] = useState("overview");
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
   
   const ugCourses = [
     {
@@ -215,7 +647,7 @@ const Shoolini = () => {
       eligibility: "Passed Bachelor degree of minimum 3 years duration. Obtained atleast 50% marks.",
       fees: "₹1,80,000/-",
       specialization: "Marketing Management, Operation & Supply Chain Management, Agri Business Management, Human Resource Management, IT Management, Biotechnology Management, Financial Management, Tourism Management, Food Technology Management, Digital Marketing, Real Estate Management, Pharma & Health Care Management,Retail Management,Direct Selling Management,Banking & Insurance,Data Science & Business Analytics",
-      image: "/images/shoolini-mba.webp",
+      image: "/images/mba.webp",
       alt: "Executive MBA at Shoolini University",
     },
     {
@@ -225,6 +657,15 @@ const Shoolini = () => {
       fees: "₹1,20,000/-",
       specialization: "Data Science",
       image: "/images/shoolini-mca.webp",
+      alt: "Master of Science in Data Science at Shoolini University",
+    },
+    {
+      course: "MCA ",
+      duration: "2 Years",
+      eligibility: "Bachelor's degree in 3 years with at least 50% marks (45% for reserved category candidates,) ",
+      fees: "₹1,50,000/-",
+      specialization: "AI & ML, Data Science and Analytics, Full Stack Development",
+      image: "/images/mca1.webp",
       alt: "Master of Science in Data Science at Shoolini University",
     },
     {
@@ -266,19 +707,39 @@ const Shoolini = () => {
     body { 
       overflow-x: hidden; 
     }
+    
+    .main-content {
+      margin-top: 64px;
+      width: 100%;
+      overflow-y: auto;
+      height: calc(100vh - 64px);
+    }
+    
+    @media (min-width: 1024px) {
+      .main-content {
+        padding-right: 40px;
+      }
+    }
   `}</style>
-         <div className="roboto overflow-x-hidden">
+         <div className="roboto overflow-x-hidden flex flex-col h-screen">
         <header className="w-full bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 fixed top-0 left-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16 lg:h-20">
-              {/* Left Logo */}
+              {/* Left Logo and Menu Button */}
               <div className="flex items-center gap-2 lg:gap-4">
+                {/* Mobile Menu Button */}
+                <button
+                  className="lg:hidden flex items-center justify-center w-10 h-10 text-gray-700 hover:text-red-600"
+                  onClick={toggleSidebar}
+                >
+                  <FaBars size={20} />
+                </button>
+                
                 <img 
                   src="/images/logo_shoolini.webp" 
                   alt="Logo_shoolini" 
                   className="h-12 w-50 sm:h-10 lg:h-12" 
                 />
-               
               </div>
 
               {/* Right Side - Responsive */}
@@ -304,7 +765,7 @@ const Shoolini = () => {
                 {/* Apply Button */}
                 <button 
                   onClick={() => setOpenModal({ type: 'apply' })}
-                  className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-black-500/25 text-sm sm:text-base"
+                  className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-black-500/25 text-sm sm:text-base cursor-pointer"
                 >
                   <span className="hidden sm:inline">Apply Now</span>
                   <span className="sm:hidden">Apply</span>
@@ -313,8 +774,14 @@ const Shoolini = () => {
             </div>
           </div>
         </header>
+ 
+        {/* Main Content with Sidebar */}
+         <div className="flex flex-col lg:flex-row pt-20">
+           <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} onApplyNowClick={() => setOpenModal({ type: 'apply' })} />           
+            {/* Main Content - Scrollable */}
+            <main className="main-content flex-1 overflow-x-hidden px-4 lg:px-8 pb-10">
 
-        <section id="About" className="relative w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] overflow-hidden pt-16 lg:pt-20">
+        <section id="About" className="relative w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] overflow-hidden">
   {/* Background Image with Gradient Overlay */}
   <div className="absolute inset-0">
     <Image
@@ -359,7 +826,7 @@ const Shoolini = () => {
   <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex justify-center gap-4 px-4 z-10">
       <Button
         size="lg"
-        className="bg-red-500 hover:bg-white text-black font-bold px-8 py-3 rounded-full shadow-xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300"
+        className="bg-red-500 hover:bg-red-700 text-white font-bold px-8 py-3 rounded-full shadow-xl hover:shadow-red-500/25 transform hover:scale-105 transition-all duration-300"
         onClick={() => setOpenModal({ type: 'apply' })}
       >
         Apply Now
@@ -367,8 +834,8 @@ const Shoolini = () => {
 
       <Button
         size="lg"
-        variant="outline"
-        className="bg-white text-black hover:bg-red-500 font-bold px-8 py-3 rounded-full shadow-xl backdrop-blur-sm transition-all duration-300"
+        variant="secondary"
+        className="bg-white text-red-600 border border-red-500 hover:bg-red-50 font-bold px-8 py-3 rounded-full shadow-xl backdrop-blur-sm transition-all duration-300"
         onClick={() => setOpenModal({ type: 'Enquire Now' })}
       >
         Enquire Now
@@ -378,8 +845,15 @@ const Shoolini = () => {
 
 </section>
 
+   {/* Shoolini Introduction Section */}
+   <ShooliniIntroduction />
+   
+   {/* Why Choose Shoolini University Online Section */}
+   <WhyChooseShoolini setOpenModal={setOpenModal} />
+   
    { /* About Shoolini University Hero Section */}
-   <HeroSection
+   <section id='campus-tour'></section>
+   <HeroSection id="#campus-tour"
   universityName=" About Shoolini University Online"
   universityNameClass="text-red-500"
   location="Solan, Himachal Pradesh, India"
@@ -407,62 +881,102 @@ const Shoolini = () => {
   ]}
 />
 
-       <div>
-  <AccreditationSection
-    title="Why Choose Shoolini University?"
-    description="Shoolini University is one of India’s top innovators and patent filers, globally recognized for its research-driven education, experienced faculty, and career-oriented programs."
-    stats={[]} // No numerical stats
-    benefits={[
-      {
-        title: "Research-Driven Education",
-        description: "One of India’s top patent filers and innovators.",
-        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
-                    <path d="M4 6h16M4 12h16M4 18h16"/>
-                  </svg>`,
-      },
-      {
-        title: "Experienced Faculty",
-        description: "Faculty with global experience and industry exposure.",
-        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
-                    <path d="M12 12c2.7 0 8 1.34 8 4v4H4v-4c0-2.66 5.3-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z"/>
-                  </svg>`,
-      },
-      {
-        title: "Global Rankings",
-        description: "Ranked among top universities globally by QS.",
-        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
-                    <path d="M12 2l8 4v6c0 5-3.33 9.74-8 11-4.67-1.26-8-6-8-11V6l8-4z"/>
-                  </svg>`,
-      },
-      {
-        title: "Career-Oriented Programs",
-        description: "Job-ready curriculum and live industry projects.",
-        iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
-                    <path d="M6 22h12V6H6v16zM8 2h8v2H8V2z"/>
-                  </svg>`,
-      },
-    ]}
-    accreditations={[
-      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
-      { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
-      { src: "/images/wes.webp", alt: "WES Rankings", name: "WES Rankings" },
-    ]}
-    internationalRecognition={[]} 
-    successStories={[]} 
-  />
-</div>
+   
 
       {/* UG & PG Courses */}
-      {[{ title: "Undergraduate Courses", list: ugCourses }, { title: "Postgraduate Courses", list: pgCourses }].map((section, idx) => (
-        <section key={idx} className="py-12 bg-white px-6 font-[Inter]">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-2xl font-bold text-[#003b59] mb-6 font-[Poppins]">{section.title}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-              {section.list.map((item, index) => <EnquireCard key={index} {...item} />)}
-            </div>
-          </div>
-        </section>
-      ))}
+     {/* Courses Section */}
+           <section id="explore-courses" className="py-20 bg-white">
+             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+               <div className="text-center mb-16">
+                 <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                   Explore <span className="bg-orange-500 bg-clip-text text-transparent">Online Programs</span>
+                 </h2>
+                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                   Choose from industry-relevant programs designed for working professionals and fresh graduates
+                 </p>
+               </div>
+   
+               <Tabs.Root value={activeTab} onValueChange={setActiveTab} className="space-y-12">
+                 {/* Tab Buttons */}
+                 <div className="flex justify-center">
+                   <Tabs.List className="inline-flex bg-gray-100/80 backdrop-blur-sm rounded-2xl p-2 shadow-lg border border-gray-200">
+                     {[
+                       { value: 'all', label: 'All Programs' },
+                       { value: 'ug', label: 'Undergraduate' },
+                       { value: 'pg', label: 'Postgraduate' }
+                     ].map((tab) => (
+                       <Tabs.Trigger
+                         key={tab.value}
+                         value={tab.value}
+                         className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
+                           activeTab === tab.value
+                             ? 'bg-[#f9141e] text-white shadow-lg'
+                             : 'text-gray-700 hover:text-[#f7188b] hover:bg-white'
+                         }`}
+                       >
+                         {tab.label}
+                       </Tabs.Trigger>
+                     ))}
+                   </Tabs.List>
+                 </div>
+   
+                 {/* Course Grid */}
+                 <Tabs.Content value={activeTab} className="outline-none">
+                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                     {(activeTab === 'all' ? [...ugCourses, ...pgCourses] : 
+                       activeTab === 'ug' ? ugCourses : pgCourses).map((course, idx) => (
+                       <div key={idx} className="group">
+                         <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
+                           {/* Course Image */}
+                           <div className="relative h-48 overflow-hidden">
+                             <Image
+                               src={course.image}
+                               alt={course.alt}
+                               fill
+                               className="object-cover group-hover:scale-110 transition-transform duration-500"
+                             />
+                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                             <div className="absolute bottom-4 left-4">
+                               <span className="bg-[#f9141e] text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                 {course.universityShort}
+                               </span>
+                             </div>
+                           </div>
+   
+                           {/* Course Content */}
+                           <div className="p-6 space-y-4">
+                             <h3 className="text-xl font-bold text-gray-900 line-clamp-2">{course.course}</h3>
+                             
+                             <div className="space-y-2">
+                               <div className="flex items-center gap-2 text-gray-600">
+                                 <span>⏱️</span>
+                                 <span className="text-sm">{course.duration}</span>
+                               </div>
+                               <div className="flex items-center gap-2 text-gray-600">
+                                 <span>🎓</span>
+                                 <span className="text-sm">{course.eligibility}</span>
+                               </div>
+                               <div className="flex items-center gap-2 text-gray-600">
+                                 <span>💰</span>
+                                 <span className="text-sm">₹{course.fees}</span>
+                               </div>
+                             </div>
+   
+                             <button 
+                               onClick={() => setOpenModal({ type: 'apply', program: course.course })}
+                               className="w-full bg-[#f9141e] hover:from-[#f9141e] hover:to-[#f9141e] text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
+                             >
+                               Apply Now
+                             </button>
+                           </div>
+                         </div>
+                       </div>
+                     ))}
+                   </div>
+                 </Tabs.Content>
+               </Tabs.Root>
+             </div>
+           </section>
          
 
          <section id='Fees' className="py-10 px-4 md:px-12 bg-gray-50">
@@ -475,7 +989,7 @@ const Shoolini = () => {
     <h2 className="text-2xl font-semibold text-center mb-4 text-blue-700">
       Undergraduate (UG) Courses
     </h2>
-    <div className="overflow-x-auto">
+    <div id='fee-structure' className="overflow-x-auto">
       <table className="min-w-full border border-gray-300 text-sm md:text-base">
         <thead className="bg-blue-100 text-gray-800">
           <tr>
@@ -657,9 +1171,63 @@ const Shoolini = () => {
       </section>
     
 
-                
+        <section id='key-highlights' className="py-12 bg-gray-50">
+  <div className="max-w-6xl mx-auto px-6">
+    <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
+      Key Highlights of Shoolini University Online
+    </h2>
+
+    <div className="overflow-x-auto">
+      <table className="w-full border border-gray-200 rounded-lg shadow-sm bg-white">
+        <tbody>
+          <tr className="border-b border-gray-200">
+            <td className="p-4 font-semibold text-gray-700 w-1/3">University Type</td>
+            <td className="p-4 text-gray-600">Private, NAAC A+ Accredited</td>
+          </tr>
+          <tr className="border-b border-gray-200">
+            <td className="p-4 font-semibold text-gray-700">Recognition</td>
+            <td className="p-4 text-gray-600">UGC, AICTE, ISO Certified</td>
+          </tr>
+          <tr className="border-b border-gray-200">
+            <td className="p-4 font-semibold text-gray-700">Mode of Learning</td>
+            <td className="p-4 text-gray-600">100% Online</td>
+          </tr>
+          <tr className="border-b border-gray-200">
+            <td className="p-4 font-semibold text-gray-700">Learning Tools</td>
+            <td className="p-4 text-gray-600">LMS, Recorded Lectures, E-Library</td>
+          </tr>
+          <tr className="border-b border-gray-200">
+            <td className="p-4 font-semibold text-gray-700">Student Support</td>
+            <td className="p-4 text-gray-600">24/7 Assistance, Career Counselling</td>
+          </tr>
+          <tr className="border-b border-gray-200">
+            <td className="p-4 font-semibold text-gray-700">Placement Support</td>
+            <td className="p-4 text-gray-600">Dedicated Career Cell</td>
+          </tr>
+          <tr className="border-b border-gray-200">
+            <td className="p-4 font-semibold text-gray-700">Flexibility</td>
+            <td className="p-4 text-gray-600">Learn Anytime, Anywhere</td>
+          </tr>
+          <tr className="border-b border-gray-200">
+            <td className="p-4 font-semibold text-gray-700">Specializations</td>
+            <td className="p-4 text-gray-600">
+              Marketing, HR, Finance, Data Science, Entrepreneurship
+            </td>
+          </tr>
+          <tr>
+            <td className="p-4 font-semibold text-gray-700">Global Recognition</td>
+            <td className="p-4 text-gray-600">
+              Acceptable for Higher Education & Jobs Abroad
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+     
          {/* Admission Procedure */}
-               <section id='Admission' className="relative py-20 bg-white">
+               <section id='admission-process' className="relative py-20 bg-white">
                  {/* Decorative Blobs */}
                  <div className="absolute -top-20 -left-20 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
                  <div className="absolute -bottom-32 -right-32 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
@@ -764,11 +1332,160 @@ const Shoolini = () => {
           </div>
         </div>
       </section>
-        <section id='Faq'><ShooliniFAQ /></section>
+      <section className="py-12 bg-white">
+  <div className="max-w-5xl mx-auto px-6">
+    <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">
+      Admission Dates for Various UG & PG Programs
+    </h2>
 
-      
+    <p className="text-gray-700 text-lg leading-relaxed mb-6 text-center">
+      Shoolini University Online admissions open three times a year — <span className="font-semibold">January</span>, <span className="font-semibold">May</span>, and <span className="font-semibold">September</span> sessions.
+    </p>
+
+    <div className="grid md:grid-cols-3 gap-6 mb-10">
+      <div className="border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition">
+        <h3 className="text-xl font-semibold text-gray-800 mb-2">January Session</h3>
+        <p className="text-gray-600">Application opens in <span className="font-medium">November</span></p>
+      </div>
+
+      <div className="border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition">
+        <h3 className="text-xl font-semibold text-gray-800 mb-2">May Session</h3>
+        <p className="text-gray-600">Application opens in <span className="font-medium">March</span></p>
+      </div>
+
+      <div className="border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition">
+        <h3 className="text-xl font-semibold text-gray-800 mb-2">September Session</h3>
+        <p className="text-gray-600">Application opens in <span className="font-medium">July</span></p>
+      </div>
+    </div>
+
+    <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h3 className="text-2xl font-semibold text-gray-800 mb-4">Important Dates</h3>
+      <ul className="space-y-2 text-gray-700">
+        <li>• <span className="font-semibold">Application Deadline:</span> One week before session start</li>
+        <li>• <span className="font-semibold">Orientation Program:</span> Conducted online via LMS</li>
+        <li>• <span className="font-semibold">Classes Commence:</span> First week of the new session</li>
+      </ul>
+    </div>
+
+    <p className="text-gray-700 mt-8 text-center leading-relaxed">
+      Students can apply anytime on the <span className="font-semibold">Shoolini University Online Admission Portal</span> and receive timely updates via <span className="font-semibold">email or SMS</span>.
+    </p>
+  </div>
+</section>
+
+    <section id='upcoming-sessions' className="py-12 bg-white">
+  <div className="max-w-5xl mx-auto px-6">
+    <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">
+      Details of Upcoming and Ongoing Sessions
+    </h2>
+
+    <div className="overflow-x-auto">
+      <table className="min-w-full border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+        <thead className="bg-gray-100">
+          <tr>
+            <th className="text-left py-3 px-6 text-gray-800 font-semibold border-b">Session</th>
+            <th className="text-left py-3 px-6 text-gray-800 font-semibold border-b">Application Period</th>
+            <th className="text-left py-3 px-6 text-gray-800 font-semibold border-b">Commencement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="hover:bg-gray-50">
+            <td className="py-3 px-6 border-b text-gray-700">January 2025</td>
+            <td className="py-3 px-6 border-b text-gray-700">Nov – Jan</td>
+            <td className="py-3 px-6 border-b text-gray-700">Jan 15, 2025</td>
+          </tr>
+          <tr className="hover:bg-gray-50">
+            <td className="py-3 px-6 border-b text-gray-700">May 2025</td>
+            <td className="py-3 px-6 border-b text-gray-700">Mar – May</td>
+            <td className="py-3 px-6 border-b text-gray-700">May 10, 2025</td>
+          </tr>
+          <tr className="hover:bg-gray-50">
+            <td className="py-3 px-6 border-b text-gray-700">September 2025</td>
+            <td className="py-3 px-6 border-b text-gray-700">Jul – Sep</td>
+            <td className="py-3 px-6 border-b text-gray-700">Sep 5, 2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p className="text-gray-700 text-lg leading-relaxed mt-6 text-center">
+      Each session includes orientation programs, interactive faculty webinars, and career mentorships 
+      to keep learners engaged and connected with the academic community.
+    </p>
+  </div>
+</section>
+         <section id='student-reviews' className="py-16 bg-white">
+  <div className="max-w-5xl mx-auto px-6">
+    <h2 className="text-3xl font-bold text-gray-800 text-center mb-10">
+      Student Reviews
+    </h2>
+
+    <div className="space-y-8">
+      {/* Review 1 */}
+      <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
+        <p className="text-lg text-gray-700 italic">
+          ⭐ “The best thing about Shoolini University Online is flexibility. I could balance work and study easily.”
+        </p>
+        <p className="mt-3 text-gray-900 font-semibold">— Ananya, Online MBA Student</p>
+      </div>
+
+      {/* Review 2 */}
+      <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
+        <p className="text-lg text-gray-700 italic">
+          ⭐ “Top-notch faculty and excellent online support. The LMS is smooth and easy to use.”
+        </p>
+        <p className="mt-3 text-gray-900 font-semibold">— Rahul, Online MCA Student</p>
+      </div>
+
+      {/* Review 3 */}
+      <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
+        <p className="text-lg text-gray-700 italic">
+          ⭐ “Affordable online degree with global recognition. Totally worth it.”
+        </p>
+        <p className="mt-3 text-gray-900 font-semibold">— Priya, Online BBA Student</p>
+      </div>
+    </div>
+
+    <p className="text-gray-700 text-lg leading-relaxed mt-10 text-justify">
+      <strong>Shoolini University Online</strong> has earned a reputation for student satisfaction, 
+      academic innovation, and employability, making it one of the top-rated online universities in India.
+    </p>
+  </div>
+</section>
+
+        <section id='faq'><ShooliniFAQ /></section>
+
+      <section id='placement-records' className="py-12 bg-gray-50">
+  <div className="max-w-5xl mx-auto px-6">
+    <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">
+      Placement Record
+    </h2>
+
+    <div className="bg-white p-8 rounded-2xl shadow-md">
+      <p className="text-gray-700 text-lg leading-relaxed mb-6 text-justify">
+        With a proven track record, <strong>Shoolini University Online</strong> graduates are placed 
+        in reputed organizations with competitive salary packages. The university’s career cell 
+        ensures that every learner receives complete professional guidance and industry exposure.
+      </p>
+
+      <ul className="list-disc list-inside text-gray-700 space-y-3 mb-6 text-lg">
+        <li><strong>Average Package:</strong> ₹5–6 LPA</li>
+        <li><strong>Highest Package:</strong> ₹18 LPA</li>
+        <li><strong>Placement Rate:</strong> 95%+ for MBA and MCA graduates</li>
+      </ul>
+
+      <p className="text-gray-700 text-lg leading-relaxed text-justify">
+        Dedicated <strong>career support mentors</strong> assist students with resume building, 
+        LinkedIn optimization, mock interviews, and professional networking — helping them secure 
+        roles in leading companies across diverse industries.
+      </p>
+    </div>
+  </div>
+</section>
+
       {/* Hiring Companies */}
-      <section id='Placement' className="py-12 bg-gray-100">
+      <section id='placement-partners' className="py-12 bg-gray-100">
         <div className="max-w-6xl mx-auto px-4 text-center mb-10">
           <h2 className="text-3xl font-bold text-gray-800">Top Recruiters at Shoolini</h2>
           <p className="text-xl text-gray-600">Trusted by global companies</p>
@@ -786,6 +1503,68 @@ const Shoolini = () => {
           
         </div>
       </section>
+       <section id='shoolini-reviews' className="bg-gray-50 py-16 px-6 lg:px-20" >
+      <div className="max-w-5xl mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+          Shoolini University <span className="text-blue-600">Reviews</span>
+        </h2>
+        <p className="text-lg text-gray-600 leading-relaxed mb-10">
+          Shoolini University Online stands among India’s top online universities,
+          praised for its academic excellence, research-driven approach, and digital
+          innovation.
+        </p>
+      </div>
+
+      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+        <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition duration-300">
+          <FaQuoteLeft className="text-blue-500 text-3xl mb-4" />
+          <p className="text-gray-700 mb-6">
+            “The interactive learning methods at Shoolini University make studying online
+            engaging and effective. I love how flexible the courses are!”
+          </p>
+          <div className="flex items-center justify-between">
+            <div>
+              <h4 className="font-semibold text-gray-800">Amit Sharma</h4>
+              <p className="text-sm text-gray-500">MBA Student (Online)</p>
+            </div>
+            <div className="flex text-yellow-400">
+              {[...Array(5)].map((_, i) => (
+                <FaStar key={i} />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition duration-300">
+          <FaQuoteLeft className="text-blue-500 text-3xl mb-4" />
+          <p className="text-gray-700 mb-6">
+            “Affordable fee structure and a truly industry-oriented curriculum! The faculty
+            support has been outstanding throughout my journey.”
+          </p>
+          <div className="flex items-center justify-between">
+            <div>
+              <h4 className="font-semibold text-gray-800">Priya Mehta</h4>
+              <p className="text-sm text-gray-500">BBA Online Student</p>
+            </div>
+            <div className="flex text-yellow-400">
+              {[...Array(5)].map((_, i) => (
+                <FaStar key={i} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto mt-12 text-center">
+        <p className="text-gray-600 text-lg leading-relaxed">
+          With a growing global alumni network, <span className="font-semibold text-blue-600">
+            Shoolini University Online
+          </span>{" "}
+          continues to redefine online education standards in India — combining flexibility,
+          innovation, and academic excellence.
+        </p>
+      </div>
+    </section>
     <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-gray-300 pt-12 sm:pt-16 relative overflow-hidden">
               {/* Background Pattern */}
               <div className="absolute inset-0 opacity-50" style={{
@@ -906,7 +1685,7 @@ const Shoolini = () => {
                       
                       <Button 
                         onClick={() => setOpenModal({ type: 'apply' })}
-                        className="w-full bg-red-500 hover:from-orange-600 hover:to-orange-700 text-white font-bold px-6 py-3 rounded-full shadow-lg hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300"
+                        className="w-full bg-red-500 hover:from-orange-600 hover:to-orange-700 text-white font-bold px-6 py-3 rounded-full shadow-lg hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 cursor-pointer"
                       >
                         Apply Now
                       </Button>
@@ -973,7 +1752,7 @@ const Shoolini = () => {
                   </div>
                 </motion.div>
     
-                {/* Copyright */}
+                
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -985,7 +1764,9 @@ const Shoolini = () => {
                   <p className="mt-2 text-xs">UGC-entitled | NAAC A+ Accredited | Globally Recognized</p>
                 </motion.div>
               </div>
-            </footer>
+            </footer>          
+            </main>
+        </div> 
        {openModal && (
               <ApplyEnquiryModal
                 open={!!openModal}
