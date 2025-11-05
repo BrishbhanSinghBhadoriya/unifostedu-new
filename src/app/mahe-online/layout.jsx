@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Manipal Academy of Higher Education Online Degrees | MAHE UG & PG Courses - UNIFOST",
+  title: "Manipal Academy of Higher Education Online Degrees | MAHE UG & PG Courses | UNIFOST",
   description:
-    "Manipal Academy of Higher Education Online Degrees  Explore undergraduate and postgraduate programs from Manipal Academy of Higher Education (MAHE), a NAAC A++ accredited Institution of Eminence. Enquire now for BBA, BBA Hons, B.Com, MBA, MCA, and M.Sc courses.",
+    "Explore undergraduate and postgraduate programs from Manipal Academy of Higher Education (MAHE), a NAAC A++ accredited Institution of Eminence. Flexible, career-focused online degrees with global recognition.",
   keywords: [
     "Manipal Online",
     "MAHE Online",
@@ -21,34 +21,56 @@ export const metadata = {
     "Online Courses MAHE",
     "Manipal Academy of Higher Education"
   ],
+  alternates: {
+    canonical: "https://unifostedu.com/mahe-online",
+  },
   openGraph: {
-    title: "Manipal Online Degrees | MAHE UG & PG Courses - UNIFOST",
+    title: "Manipal Academy of Higher Education Online Degrees | MAHE UG & PG Courses",
     description:
       "Explore undergraduate and postgraduate online programs from MAHE, NAAC A++ accredited and UGC recognized. Flexible, career-focused education with global recognition.",
-    url: "https://unifostedu.com/mahe",
+    url: "https://unifostedu.com/mahe-online",
     siteName: "UNIFOST",
     images: [
       {
-        url: "/images/mahe-uni.webp",
+        url: "https://unifostedu.com/images/mahe-uni.webp",
         width: 1200,
         height: 630,
         alt: "Manipal Academy of Higher Education - Online Programs",
       },
     ],
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
-  },
-  alternates: {
-    canonical: "https://unifostedu.com/mahe-online",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Manipal Online Degrees | MAHE UG & PG Courses - UNIFOST",
+    title: "Manipal Academy of Higher Education Online Degrees | MAHE UG & PG Courses",
     description:
       "Explore online programs from Manipal Academy of Higher Education (MAHE), a NAAC A++ accredited Institution of Eminence. Flexible & career-oriented learning.",
-    images: ["/images/mahe-uni.webp"],
+    images: ["https://unifostedu.com/images/mahe-uni.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  authors: [{ name: "UNIFOST" }],
+  publisher: "UNIFOST",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
 };
+
+// Force static generation (SSG)
+export const dynamic = 'force-static';
+export const revalidate = 604800; // Revalidate every 7 days
 
 export default function MaheLayout({ children }) {
   return <>{children}</>;

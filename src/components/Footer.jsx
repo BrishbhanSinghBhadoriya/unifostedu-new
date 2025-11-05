@@ -179,26 +179,33 @@ const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+  
   const hideFooterRoutes = [
-  "/Amity-University-Online/",
-      "/lpu-online/",
-      "/manipal/",
-      "/cuonline/",
-      "/mahe-online/",
-      "/ku-online/",
-      "/bookdemo/",
-      "/smu/",
-      "/jain/",
-      "/dypatil/",
-      "/sharda/",
-      "/upes/",
-      "/vgu/",
-      "/shoolini/",
-      "/opjindal/",
-      "/nmims/",
-      "/uu/"
+    "/Amity-University-Online",
+    "/lpu-online",
+    "/manipal",
+    "/cuonline",
+    "/mahe-online",
+    "/ku-online",
+    "/bookdemo",
+    "/smu",
+    "/jain",
+    "/dypatil",
+    "/sharda",
+    "/upes",
+    "/vgu",
+    "/shoolini",
+    "/opjindal",
+    "/nmims",
+    "/uu",
   ];
-  if (hideFooterRoutes.includes(pathname)) {
+  
+  // Check if current pathname starts with any of the hide routes
+  const shouldHide = hideFooterRoutes.some(route => 
+    pathname === route || pathname.startsWith(route + '/')
+  );
+  
+  if (shouldHide) {
     return null;
   }
 

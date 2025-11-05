@@ -22,6 +22,13 @@ import { Button } from "@/components/ui/button";
 
 import CourseUniversitiesBrowser from '@/components/CourseUniversitiesBrowser';
 
+// Generate static params at build time (ISR)
+export async function generateStaticParams() {
+  return Object.keys(courseData).map((slug) => ({
+    slug,
+  }));
+}
+
 // Generate metadata for course pages
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -30,16 +37,62 @@ export async function generateMetadata({ params }) {
   if (!course) {
     return {
       title: 'Course Not Found | UNIFOST',
-      description: 'The requested course page could not be found.'
+      description: 'The requested course page could not be found.',
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
   
+  const courseTitle = course.title || `Online ${course.subtitle || slug} Programs in India`;
+  const courseDescription = course.description || `Explore ${courseTitle} from top UGC-approved universities in India. Compare fees, eligibility, and career prospects.`;
+  
   return {
-    title: course.title || `Online ${course.subtitle || slug} Programs in India | UNIFOST`,
-    description: course.description,
+    title: `${courseTitle} | UNIFOST`,
+    description: courseDescription,
     keywords: course.keywords || [],
+    alternates: {
+      canonical: `https://unifostedu.com/courses/${slug}`,
+    },
+    openGraph: {
+      title: `${courseTitle} | UNIFOST`,
+      description: courseDescription,
+      url: `https://unifostedu.com/courses/${slug}`,
+      siteName: "UNIFOST",
+      images: [
+        {
+          url: course.image || "https://unifostedu.com/images/default-course.webp",
+          width: 1200,
+          height: 630,
+          alt: courseTitle,
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: courseTitle,
+      description: courseDescription,
+      images: [course.image || "https://unifostedu.com/images/default-course.webp"],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
   };
 }
+
+// ISR with revalidation
+export const revalidate = 86400; // Revalidate every 24 hours
+export const dynamicParams = true; // Allow dynamic params not in generateStaticParams
 
 function slugify(input) {
   return input
@@ -284,10 +337,4 @@ export default async function CoursePage({ params }) {
     console.error('Error in CoursePage:', error);
     notFound();
   }
-}
-
-export async function generateStaticParams() {
-  return Object.keys(courseData).map((slug) => ({
-    slug: slug,
-  }));
 }

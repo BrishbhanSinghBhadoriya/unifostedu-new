@@ -299,72 +299,72 @@ useEffect(() => {
       
          
       
-      {/* Professional Responsive Header */}
+      {/* Professional Responsive Header - Optimized */}
       <header className="w-full fixed top-0 left-0 bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
             {/* Left Logo */}
-            <div className="flex items-center gap-2 lg:gap-4">
+            <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-4 flex-shrink-0">
               <img 
                 src="/images/manipallogo.jpg" 
                 alt="Manipal University Logo" 
-                className="h-8 w-auto sm:h-10 lg:h-12" 
+                className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto" 
               />
-              <h1 className="font-queens text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold">
+              <h1 className="font-queens text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-extrabold whitespace-nowrap">
                 <span className="text-[#ff7a36]">Online</span>{" "}
-                <span className="text-gray-800">Manipal</span>
+                <span className="text-gray-800 hidden xs:inline">Manipal</span>
               </h1>
           </div>
 
             {/* Right Side - Responsive */}
-            <div className="flex items-center gap-2 sm:gap-4">
+            <div className="flex items-center gap-1.5 sm:gap-2 md:gap-4 flex-1 justify-end">
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
                 aria-label="Open menu"
                 aria-expanded={isMobileMenuOpen}
-                className="lg:hidden inline-flex items-center p-2 rounded-md border hover:bg-gray-50"
+                className="lg:hidden inline-flex items-center p-1.5 sm:p-2 rounded-md border border-gray-200 hover:bg-gray-50 transition-colors"
               >
-                Menu
+                <span className="text-xs sm:text-sm font-medium">Menu</span>
               </button>
               {/* Phone - Hidden on small screens */}
               <a
                 href="tel:+917042867717"
-                className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-orange-600 transition-colors"
+                className="hidden sm:flex items-center gap-1.5 md:gap-2 text-gray-700 font-medium text-xs sm:text-sm md:text-base hover:text-orange-600 transition-colors"
               > 
-                <span className="text-lg">📞</span>
+                <span className="text-base sm:text-lg">📞</span>
                 <span className="hidden lg:inline">+91-7042867717</span>
-                <span className="lg:hidden">Call Now</span>
+                <span className="lg:hidden">Call</span>
               </a>
               
               {/* Mobile Phone Icon */}
               <a
                 href="tel:+917042867717"
-                className="sm:hidden flex items-center justify-center w-10 h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
+                className="sm:hidden flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
               >
-                📞
+                <span className="text-base">📞</span>
               </a>
               
               {/* Apply Button */}
               <button 
                 onClick={() => setOpenModal({ type: 'apply' })}
-                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-Pointer"
+                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
               >
-                <span className="hidden sm:inline cursor-pointer">Apply Now</span>
-                <span className="sm:hidden cursor-pointer">Apply</span>
+                <span className="hidden sm:inline">Apply Now</span>
+                <span className="sm:hidden">Apply</span>
               </button>
               </div>
             </div>
           </div>
       </header>
 
-      <div className="max-w-screen-2xl mx-auto flex w-full">
-        {/* Left Sidebar */}
-        <aside className="fixed hidden lg:flex flex-col top-20 w-64 h-[calc(100vh-5rem)] px-4 py-8 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40">
-          <h3 className="text-lg font-bold mb-6 text-orange-600 border-b-2 border-orange-200 pb-2 cursor-pointer">
+      <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row w-full">
+        {/* Left Sidebar - Optimized */}
+        <aside className="fixed hidden lg:flex flex-col top-[56px] sm:top-[64px] lg:top-20 w-64 h-[calc(100vh-4rem)] sm:h-[calc(100vh-5rem)] px-3 sm:px-4 py-4 sm:py-6 lg:py-8 self-start overflow-y-auto border-r border-gray-200 bg-white/95 backdrop-blur-sm z-40">
+          <h3 className="text-base sm:text-lg font-bold mb-4 sm:mb-6 text-orange-600 border-b-2 border-orange-200 pb-2">
             Page Contents
           </h3>
-          <ul className="space-y-3 cursor-pointer">
+          <ul className="space-y-2 sm:space-y-3">
             {[
               { id: "HeroSection", label: "Introduction" },
               { id: "CampusTour", label: "Campus Tour" },
@@ -382,11 +382,11 @@ useEffect(() => {
             ].map((item) => (
               <li
                 key={item.id}
-                className="text-sm text-gray-600 hover:text-orange-600 transition-colors duration-200 py-1 px-2 rounded hover:bg-orange-50"
+                className="text-xs sm:text-sm text-gray-600 hover:text-orange-600 transition-colors duration-200 py-1.5 px-2 rounded hover:bg-orange-50 cursor-pointer"
                 onClick={() => {
                   const element = document.getElementById(item.id);
                   if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   }
                 }}
               >
@@ -396,7 +396,7 @@ useEffect(() => {
           </ul>
         </aside>
 
-        {/* Mobile Sidebar */}
+        {/* Mobile Sidebar - Enhanced */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <>
@@ -413,16 +413,15 @@ useEffect(() => {
                 animate={{ x: 0 }}
                 exit={{ x: "-100%" }}
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                
-                className="fixed top-0 left-0 w-[85vw] sm:w-72 h-full bg-white border-r shadow-xl z-50 p-6 flex flex-col overflow-y-auto will-change-transform lg:hidden"
+                className="fixed top-0 left-0 w-[85vw] sm:w-72 h-full bg-white border-r shadow-xl z-50 p-4 sm:p-6 flex flex-col overflow-y-auto will-change-transform lg:hidden"
               > 
-                <div className="flex items-center justify-between mb-8">
-                  <h3 className="text-xl font-bold text-orange-600">Page Contents</h3>
-                  <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-full hover:bg-gray-100">
+                <div className="flex items-center justify-between mb-6 sm:mb-8">
+                  <h3 className="text-lg sm:text-xl font-bold text-orange-600">Page Contents</h3>
+                  <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-full hover:bg-gray-100 transition-colors">
                     <FaTimes className="w-5 h-5 text-gray-600" />
                   </button>
                 </div>
-                <ul className="space-y-4">
+                <ul className="space-y-2 sm:space-y-3 flex-1">
                   {[
                     { id: "HeroSection", label: "Introduction" },
                     { id: "CampusTour", label: "Campus Tour" },
@@ -445,7 +444,7 @@ useEffect(() => {
                           if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
                           setIsMobileMenuOpen(false);
                         }}
-                        className="text-gray-700 hover:text-orange-600 font-semibold text-base transition-colors duration-200 w-full text-left"
+                        className="text-gray-700 hover:text-orange-600 hover:bg-orange-50 font-medium sm:font-semibold text-sm sm:text-base transition-all duration-200 w-full text-left py-2.5 px-3 rounded-lg"
                       >
                         {item.label}
                       </button>
@@ -458,7 +457,7 @@ useEffect(() => {
         </AnimatePresence>
 
         {/* Main Content */}
-        <main className="flex-1 min-w-0 lg:ml-64 pt-16 lg:pt-20">
+        <main className="flex-1 min-w-0 lg:ml-64 pt-14 sm:pt-16 lg:pt-20">
 
       {/* Enquiry Modal */}
       {showEnquiryModal && (
@@ -475,8 +474,8 @@ useEffect(() => {
       )}
 
 
-        {/* Premium Hero Section */}
-        <section id="HeroSection" className="relative w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] overflow-hidden pt-20 lg:pt-24">
+        {/* Premium Hero Section - Fully Responsive */}
+        <section id="HeroSection" className="relative w-full min-h-[450px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] xl:min-h-[800px] overflow-hidden pt-14 sm:pt-16 lg:pt-20 xl:pt-24">
           {/* Background with Gradient Overlay */}
           <div className="absolute inset-0">
             <Image
@@ -485,35 +484,36 @@ useEffect(() => {
               fill
               className="object-cover object-center"
               priority
+              sizes="100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
         </div>
 
           {/* Content Container */}
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full overflow-x-hidden">
-            <div className="flex flex-col lg:flex-row items-center justify-between h-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] overflow-x-hidden">
+          <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 h-full overflow-x-hidden">
+            <div className="flex flex-col lg:flex-row items-center justify-between h-full min-h-[450px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] xl:min-h-[800px] overflow-x-hidden">
               
               {/* Left Content */}
-              <div className="flex-1 max-w-2xl lg:max-w-3xl text-white py-8 sm:py-12 lg:py-24 w-full">
+              <div className="flex-1 max-w-2xl lg:max-w-3xl text-white py-6 sm:py-8 md:py-12 lg:py-20 xl:py-24 w-full">
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="space-y-4 sm:space-y-6"
+                  className="space-y-3 sm:space-y-4 md:space-y-6"
                 >
                   {/* University Badge */}
-                  <div className="inline-flex items-center gap-2 sm:gap-3 bg-white/20 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 border border-white/30">
+                  <div className="inline-flex items-center gap-1.5 sm:gap-2 md:gap-3 bg-white/20 backdrop-blur-sm rounded-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 border border-white/30">
                     <img 
                       src="/images/manipallogo.jpg" 
                       alt="Manipal Logo" 
-                      className="h-6 sm:h-8 w-auto" 
+                      className="h-5 sm:h-6 md:h-8 w-auto" 
                     />
-                    <span className="text-sm sm:text-lg font-semibold">Manipal University Jaipur</span>
+                    <span className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold">Manipal University Jaipur</span>
                   </div>
 
                   {/* Main Heading */}
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                     <span className="block">Transform Your</span>
                     <span className="block bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
                       Future with Manipal
@@ -521,133 +521,125 @@ useEffect(() => {
                   </h1>
 
                   {/* Subtitle */}
-                  <p className="text-lg sm:text-xl md:text-2xl text-gray-200 leading-relaxed max-w-2xl">
+                  <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 leading-relaxed max-w-2xl">
                     UGC-approved online degrees with NAAC A+ accreditation. 
                     Flexible learning, expert mentorship, and global recognition.
                   </p>
 
                   {/* Key Features */}
-                  <div className="flex flex-wrap gap-2 sm:gap-4">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2 md:gap-4">
                     {['UGC Approved', 'NAAC A+', 'Global Recognition', 'Flexible Learning'].map((feature, index) => (
-                      <div key={index} className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1 sm:py-2 border border-white/30">
-                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-orange-400 rounded-full"></div>
-                        <span className="text-xs sm:text-sm font-medium">{feature}</span>
+                      <div key={index} className="flex items-center gap-1.5 sm:gap-2 bg-white/20 backdrop-blur-sm rounded-full px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 border border-white/30">
+                        <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 md:w-2 md:h-2 bg-orange-400 rounded-full"></div>
+                        <span className="text-[10px] sm:text-xs md:text-sm font-medium">{feature}</span>
                       </div>
             ))}
           </div>
 
                  
-                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 cursor-pointer">
-                    {/* <Button
-                      size="lg"
-                      className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
-                      onClick={() => setOpenModal({ type: 'apply' })}
-                    >
-                      Apply Now
-                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
-                    </Button> */}
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 pt-2 sm:pt-3 md:pt-4">
                     <Button
                       size="lg"
                       variant="outline"
-                      className="border-2 border-white/50 hover:border-white hover:bg-white/10 text-white font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full backdrop-blur-sm transition-all duration-300 w-full sm:w-auto bg-gray-600 cursor-pointer"
+                      className="border-2 border-white/50 hover:border-white hover:bg-white/10 text-white font-bold px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg rounded-full backdrop-blur-sm transition-all duration-300 w-full sm:w-auto bg-white/10 cursor-pointer"
                       onClick={() => setOpenModal({ type: 'enquiry' })}
                     >
-                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 mr-2 cursor-pointer" />
-                      
+                      <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 mr-2" />
+                      Enquire Now
                     </Button>
         </div>
                 </motion.div>
               </div>
 
               {/* Right Content - Stats Cards */}
-              <div className="flex-1 max-w-md lg:max-w-lg lg:ml-12 w-full mt-8 lg:mt-0">
+              <div className="flex-1 max-w-md lg:max-w-lg lg:ml-8 xl:ml-12 w-full mt-6 sm:mt-8 lg:mt-0">
                 <motion.div
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="grid grid-cols-2 gap-3 sm:gap-4"
+                  className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4"
                 >
                   {/* Stat Card 1 */}
-                  <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/30 text-center">
-                    <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1 sm:mb-2">50+</div>
-                    <div className="text-white text-xs sm:text-sm font-medium">Countries</div>
+                  <div className="bg-white/20 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border border-white/30 text-center">
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-orange-400 mb-1 sm:mb-2">50+</div>
+                    <div className="text-white text-[10px] sm:text-xs md:text-sm font-medium">Countries</div>
           </div>
                   
                   {/* Stat Card 2 */}
-                  <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/30 text-center">
-                    <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1 sm:mb-2">25+</div>
-                    <div className="text-white text-xs sm:text-sm font-medium">Programs</div>
+                  <div className="bg-white/20 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border border-white/30 text-center">
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-orange-400 mb-1 sm:mb-2">25+</div>
+                    <div className="text-white text-[10px] sm:text-xs md:text-sm font-medium">Programs</div>
         </div>
                   
                   {/* Stat Card 3 */}
-                  <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/30 text-center">
-                    <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1 sm:mb-2">95%</div>
-                    <div className="text-white text-xs sm:text-sm font-medium">Success Rate</div>
+                  <div className="bg-white/20 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border border-white/30 text-center">
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-orange-400 mb-1 sm:mb-2">95%</div>
+                    <div className="text-white text-[10px] sm:text-xs md:text-sm font-medium">Success Rate</div>
   </div>
                   
                   {/* Stat Card 4 */}
-                  <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/30 text-center">
-                    <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1 sm:mb-2">24/7</div>
-                    <div className="text-white text-xs sm:text-sm font-medium">Support</div>
+                  <div className="bg-white/20 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border border-white/30 text-center">
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-orange-400 mb-1 sm:mb-2">24/7</div>
+                    <div className="text-white text-[10px] sm:text-xs md:text-sm font-medium">Support</div>
                   </div>
                 </motion.div>
               </div>
             </div>
           </div>
 
-          {/* Accreditation Cards - Bottom */}
-          <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 w-full px-4">
+          {/* Accreditation Cards - Bottom - Responsive */}
+          <div className="absolute bottom-2 sm:bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20 w-full px-3 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-wrap justify-center gap-3 sm:gap-6  backdrop-blur-sm px-4 sm:px-8 py-4 sm:py-6 rounded-2xl shadow-2xl border border-white/50 max-w-2xl mx-auto"
+              className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-6 backdrop-blur-sm px-3 sm:px-4 md:px-8 py-3 sm:py-4 md:py-6 rounded-xl sm:rounded-2xl shadow-2xl border border-white/50 max-w-2xl mx-auto"
             >
               {/* Card 1 */}
               <div className="flex flex-col items-center text-center">
-                <img src="/images/naac.webp" alt="NAAC A+ Accredited" className="h-12 sm:h-16 w-12 sm:w-16 object-contain mb-2" />
-                <p className="text-xs sm:text-sm font-bold text-gray-800">NAAC A+</p>
+                <img src="/images/naac.webp" alt="NAAC A+ Accredited" className="h-10 sm:h-12 md:h-16 w-10 sm:w-12 md:w-16 object-contain mb-1 sm:mb-2" />
+                <p className="text-[10px] sm:text-xs md:text-sm font-bold text-gray-800">NAAC A+</p>
               </div>
 
               {/* Card 2 */}
               <div className="flex flex-col items-center text-center">
-                <img src="/images/ugc.webp" alt="UGC Approved" className="h-12 sm:h-16 w-12 sm:w-16 object-contain mb-2" />
-                <p className="text-xs sm:text-sm font-bold text-gray-800">UGC Approved</p>
+                <img src="/images/ugc.webp" alt="UGC Approved" className="h-10 sm:h-12 md:h-16 w-10 sm:w-12 md:w-16 object-contain mb-1 sm:mb-2" />
+                <p className="text-[10px] sm:text-xs md:text-sm font-bold text-gray-800">UGC Approved</p>
               </div>
 
               {/* Card 3 */}
               <div className="flex flex-col items-center text-center">
-                <img src="/images/qs.webp" alt="Global Recognition" className="h-12 sm:h-16 w-12 sm:w-16 object-contain mb-2" />
-                <p className="text-xs sm:text-sm font-bold text-gray-800">Global Recognition</p>
+                <img src="/images/qs.webp" alt="Global Recognition" className="h-10 sm:h-12 md:h-16 w-10 sm:w-12 md:w-16 object-contain mb-1 sm:mb-2" />
+                <p className="text-[10px] sm:text-xs md:text-sm font-bold text-gray-800">Global Recognition</p>
               </div>
             </motion.div>
           </div>
 
           {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+          <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce hidden sm:block">
             <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
               <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
             </div>
           </div>
         </section>
-       {/* Introduction Section - Detailed Overview */}
-<section className="py-16 sm:py-20 bg-white">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-12">
-      <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+       {/* Introduction Section - Detailed Overview - Responsive */}
+<section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+    <div className="text-center mb-8 sm:mb-10 md:mb-12">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
         Welcome to <span className="text-orange-600">Manipal University Jaipur Online</span>
       </h2>
-      <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+      <p className="text-base sm:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed px-2">
         Welcome to Manipal University Jaipur Online (MUJ Online), where the legacy of Manipal meets the potential of digital learning. 
         If you are here for the search of <strong>best online MBA programs in India</strong> you are at a platform which is designed for your better future. 
         Our foundation believes that: high-quality, <strong>affordable online MBA India</strong> programs should be accessible to every learner.
       </p>
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
       <div>
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">For Every Learner</h3>
-        <div className="space-y-4">
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">For Every Learner</h3>
+        <div className="space-y-3 sm:space-y-4">
           <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
               <span className="text-orange-600 text-sm">✓</span>

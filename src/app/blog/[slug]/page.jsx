@@ -62,12 +62,77 @@ const blogData = {
   }
 };
 
-// Add this function for static export
+// Generate static params at build time (ISR)
 export async function generateStaticParams() {
   return Object.keys(blogData).map((slug) => ({
     slug: slug,
   }));
 }
+
+// Generate metadata for blog posts
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const blog = blogData[slug];
+
+  if (!blog) {
+    return {
+      title: 'Blog Post Not Found | UNIFOST',
+      description: 'The requested blog post could not be found.',
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
+
+  return {
+    title: `${blog.title} | UNIFOST Blog`,
+    description: blog.content.substring(0, 160).replace(/<[^>]*>/g, '') || `Read about ${blog.title} on UNIFOST blog.`,
+    keywords: blog.category ? [blog.category, 'Online Education', 'UNIFOST'] : [],
+    authors: [{ name: blog.author || 'UNIFOST Team' }],
+    alternates: {
+      canonical: `https://unifostedu.com/blog/${slug}`,
+    },
+    openGraph: {
+      title: `${blog.title} | UNIFOST Blog`,
+      description: blog.content.substring(0, 160).replace(/<[^>]*>/g, '') || `Read about ${blog.title}`,
+      url: `https://unifostedu.com/blog/${slug}`,
+      siteName: 'UNIFOST',
+      images: [
+        {
+          url: 'https://unifostedu.com/images/blog-default.webp',
+          width: 1200,
+          height: 630,
+          alt: blog.title,
+        },
+      ],
+      type: 'article',
+      publishedTime: blog.date,
+      authors: [blog.author || 'UNIFOST'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: blog.title,
+      description: blog.content.substring(0, 160).replace(/<[^>]*>/g, ''),
+      images: ['https://unifostedu.com/images/blog-default.webp'],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+  };
+}
+
+// ISR with revalidation
+export const revalidate = 3600; // Revalidate every hour
+export const dynamicParams = true; // Allow dynamic params not in generateStaticParams
 
 export default async function BlogPage({ params }) {
   const { slug } = await params;

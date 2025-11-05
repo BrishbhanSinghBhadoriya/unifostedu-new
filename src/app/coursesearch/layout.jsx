@@ -1,16 +1,53 @@
 export const metadata = {
-  title: "Course Search|Find Your Perfect Online Degree",
+  title: "Course Search | Find Your Perfect Online Degree | UNIFOST",
   description: "Search and discover the best online degree programs from top universities. Find courses that match your career goals with our comprehensive course search tool.",
-  keywords: "Course Search, Online Degree Search, University Course Finder, Online Education Search, Degree Program Search, Course Discovery",
-  openGraph: {
-    title: "Course Search|Find Your Perfect Online Degree",
-    description: "Search and discover the best online degree programs from top universities. Find courses that match your career goals.",
-    images: ["/images/uni.webp"],
-  },
-   alternates: {
+  keywords: [
+    "Course Search",
+    "Online Degree Search",
+    "University Course Finder",
+    "Online Education Search",
+    "Degree Program Search",
+    "Course Discovery",
+  ],
+  alternates: {
     canonical: "https://unifostedu.com/coursesearch",
   },
+  openGraph: {
+    title: "Course Search | Find Your Perfect Online Degree | UNIFOST",
+    description: "Search and discover the best online degree programs from top universities. Find courses that match your career goals.",
+    url: "https://unifostedu.com/coursesearch",
+    siteName: "UNIFOST",
+    images: [
+      {
+        url: "https://unifostedu.com/images/uni.webp",
+        width: 1200,
+        height: 630,
+        alt: "UNIFOST Course Search",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Course Search | Find Your Perfect Online Degree",
+    description: "Search and discover the best online degree programs from top universities.",
+    images: ["https://unifostedu.com/images/uni.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
+
+// Note: CourseSearch page is CSR (Client-Side Rendering) - no static generation needed
 
 export default function CourseSearchLayout({ children }) {
   return (
