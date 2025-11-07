@@ -94,6 +94,16 @@ export const uploadAPI = {
   },
 };
 
+// 🧩 Chatbot AI API
+export const chatbotAPI = {
+  ask: (data) =>
+    axios.post(
+      "/api/v1/chatbot",
+      data,
+      { headers: { "Content-Type": "application/json" } }
+    ),
+};
+
 
 
 export default API;
