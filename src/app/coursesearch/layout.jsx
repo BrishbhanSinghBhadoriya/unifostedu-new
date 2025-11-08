@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Course Search|Find Your Perfect Online Degree",
     description: "Search and discover the best online degree programs from top universities. Find courses that match your career goals.",
-    images: ["/images/uni.webp"],
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp"],
   },
    alternates: {
     canonical: "https://unifostedu.com/coursesearch",

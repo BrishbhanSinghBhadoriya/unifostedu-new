@@ -26,7 +26,7 @@ export const metadata = {
     siteName: "UNIFOST",
     images: [
       {
-        url: "/images/smu-uni.webp",
+        url: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp",
         width: 1200,
         height: 630,
         alt: "Sikkim Manipal University Online Programs",
@@ -43,7 +43,7 @@ export const metadata = {
     title: "Sikkim Manipal University Online | UG & PG Courses, Fees & Admission - UNIFOST",
     description:
       "Sikkim Manipal University (SMU) offers online UG & PG programs with UGC recognition, flexible learning, affordable fees & placement assistance.",
-    images: ["/images/smu-uni.webp"],
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp"],
   },
 };
 

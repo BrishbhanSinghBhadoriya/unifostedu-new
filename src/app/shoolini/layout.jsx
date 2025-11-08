@@ -26,7 +26,7 @@ export const metadata = {
     siteName: "UNIFOST",
     images: [
       {
-        url: "/images/shoolini-uni.webp",
+        url: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327860/shoolini-uni_rqkaii.webp",
         width: 1200,
         height: 630,
         alt: "Shoolini University Online Programs",
@@ -43,7 +43,7 @@ export const metadata = {
     title: "Shoolini University Online Programs | UG & PG Courses, Fees & Admission - UNIFOST",
     description:
       "Shoolini University offers UGC-approved UG & PG online programs with global rankings, flexible learning, and career-focused curriculum.",
-    images: ["/images/shoolini-uni.webp"],
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327860/shoolini-uni_rqkaii.webp"],
   },
 };
 

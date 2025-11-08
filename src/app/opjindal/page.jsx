@@ -59,9 +59,9 @@ const OPJindal = () => {
 
    const sliderImages = [
       
-      '/images/opjindal-banner2.webp',
-      '/images/opjindal-banner3.webp',
-      '/images/opjindal_banner4.webp',
+      'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327836/opjindal-banner2_wpbugp.webp',
+      'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327837/opjindal-banner3_gtwjsl.webp',
+      'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327837/opjindal_banner4_qsqxfa.webp',
       
 
     ];
@@ -87,7 +87,7 @@ const OPJindal = () => {
       eligibility: "10+2 Pass, Applicants less than 50% marks in 10+2 will be required to appear for the Jindal Scholastic Aptitude Test (JSAT)",
       fees: "₹2,00,000 /-",
       specialization: "Finance, Marketing, Human Resources, Operation Management Supply Chain",
-      image: "/images/bba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
       alt: "BBA in OP Jindal University",
     },
     {
@@ -96,7 +96,7 @@ const OPJindal = () => {
       eligibility: "10+2 Pass, If less than 50%: Must clear JSAT (min 50%) or submit, SAT/ACT/LNAT-UK score or complete a JGU MOOC",
       specialization: "Psychology",
       fees: "₹3,00,000 /-",
-      image: "/images/op-psycology.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327851/op-psycology_ae5kax.png",
       alt: "B.Sc in Psycology in OP Jindal University",
     },
     
@@ -108,7 +108,7 @@ const OPJindal = () => {
       duration: "1 Years(4 terms)",
       eligibility: "A Bachelor’s degree, Active involvement as an entrepreneurial family member ",
       fees: "₹2,75,000/-",
-      image: "/images/op-masters1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327837/op-masters1_g752dn.webp",
       alt: "Master in Enterpreneurship and Family Business in OP Jindal University",
 
     },
@@ -117,7 +117,7 @@ const OPJindal = () => {
       duration: "12 Months(3 Trimester)",
       eligibility: "Bachelor’s degree from any recognized university with at least 50% marks Govt. Issued ID Proof (Passport for international applicants)",
       fees: "₹2,50,000/- ",
-      image: "/images/op-masters2.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327837/op-masters2_yj8q41.webp",
       alt: "MA in Teaching English to Speakers of Other languages (TESOL) in OP Jindal University",
     },
     {
@@ -125,7 +125,7 @@ const OPJindal = () => {
       duration: "12 Months(4 Terms)",
       eligibility: "Bachelor’s degree from any recognized university with at least 50% marks Govt. Issued ID Proof (Passport for international applicants)",
       fees: "₹2,50,000/-",
-      image: "/images/op-masters3.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327838/op-masters3_amikm8.webp",
       alt: "M.Sc in Environmental chnage and Sustainability in OP Jindal University",
     },
     {
@@ -133,7 +133,7 @@ const OPJindal = () => {
       duration: "12-24 Months",
       eligibility: "An undergraduate degree in any discipline from any recognised university in India or abroad.",
       fees: "₹3,00,000/-",
-      image: "/images/op-masters4.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327840/op-masters4_kgkbhl.webp",
       alt: "MA Public Policy in OP Jindal University",
     },
     {
@@ -141,7 +141,7 @@ const OPJindal = () => {
       duration: "12-24 Months",
       eligibility: "The eligibility criteria for the online MBA in Business Analytics programme require a bachelor’s degree from a recognised university in India. A minimum of 50% marks in any discipline is required for graduation.",
       fees: "₹2,00,000/-",
-      image: "/images/op-masters5.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327851/op-masters5_zkvcwa.webp",
       alt: "MBA in Business Analytics in OP Jindal University",
     },
     {
@@ -149,7 +149,7 @@ const OPJindal = () => {
       duration: "12 Months",
       eligibility: "Bachelor's degree in any discipline with a minimum 50% aggregate score from a recognized university.  ",
       fees: "₹3,00,000/-",
-      image: "/images/mba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
       alt: "MBA in Business Law in OP Jindal University",
     },
     
@@ -202,7 +202,7 @@ const OPJindal = () => {
           property="og:description"
           content="Explore undergraduate and postgraduate programs from OP Jindal University. Globally recognized, NAAC accredited, and industry-ready education."
         />
-        <meta property="og:image" content="/images/opjindal.webp" />
+        <meta property="og:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/opjindal_jdl7az.webp" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.opjindal.edu" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -211,7 +211,7 @@ const OPJindal = () => {
           name="twitter:description"
           content="Globally ranked OP Jindal University offers UG & PG courses in Business, Law, Psychology, and more. Apply now."
         />
-        <meta name="twitter:image" content="/images/opjindal.webp" />
+        <meta name="twitter:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/opjindal_jdl7az.webp" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
            <style jsx>{`
@@ -233,7 +233,7 @@ const OPJindal = () => {
                     {/* Left Logo */}
                     <div className="flex items-center gap-2 lg:gap-4">
                       <img 
-                        src="/images/opjindal_banner.png" 
+                        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/opjindal_banner_qhx3sb.png" 
                         alt="Logo_OP Jindal" 
                         className="h-12 w-50 sm:h-10 lg:h-12" 
                       />
@@ -516,12 +516,12 @@ const OPJindal = () => {
     {/* Grid for Images or Video Thumbnails */}
     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12">
       {[
-        "/images/op-jgu-campus1.webp",
-        "/images/op-jgu-campus2.webp",
-        "/images/op-jgu-campus3.webp",
-        "/images/op-jgu-campus4.webp",
-        "/images/op-jgu-campus5.webp",
-        "/images/op-jgu-campus6.webp",
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/op-jgu-campus1_ugjwyz.webp",
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327834/op-jgu-campus2_mccwd9.webp",
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327834/op-jgu-campus3_mth0wz.webp",
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/op-jgu-campus4_bcskow.webp",
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/op-jgu-campus5_vectrg.webp",
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/op-jgu-campus6_jvx7n4.webp",
       ].map((src, i) => (
         <div
           key={i}
@@ -567,7 +567,7 @@ const OPJindal = () => {
     Courses are designed to meet students' academic and professional needs through interdisciplinary learning and practical application, preparing them for the global workforce.
   `}
   badgeText="Globally Recognized | Interdisciplinary Learning | Practical Applications"
-  imgSrc="/images/opjindal_banner1.webp"
+  imgSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327836/opjindal_banner1_fmf7ba.webp"
   imgAlt="OP Jindal University Campus"
   students="25K+" 
   partners="100+" 
@@ -721,7 +721,7 @@ const OPJindal = () => {
               onOpenChange={(v) => !v && setOpenModal(null)}
               title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
               subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-              imageSrc="/images/opjindal_banner1.webp"
+              imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327836/opjindal_banner1_fmf7ba.webp"
               universityName="OP Jindal Global University Online"
               defaultProgram={openModal.program || "MBA"}
               formType={openModal.type}
@@ -834,9 +834,9 @@ const OPJindal = () => {
       },
     ]}
     accreditations={[
-      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
-      { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
-      { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
+      { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp", alt: "UGC", name: "UGC" },
+      { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp", alt: "AICTE", name: "AICTE" },
+      { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp", alt: "NAAC", name: "NAAC" },
     ]}
     internationalRecognition={[]}
     successStories={[]}
@@ -1274,7 +1274,7 @@ const OPJindal = () => {
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
-            <Image width={100} height={100} loading="lazy" src="/images/op-certificate.webp" alt="OP Jindal Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327834/op-certificate_b7snzo.webp" alt="OP Jindal Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
           </div>
           <div className="flex-1 text-white">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">Get Certified from OP Jindal University</h2>
@@ -1376,30 +1376,30 @@ const OPJindal = () => {
   </div>
   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
     {[
-      "/images/aditya-birla.webp",
-      "/images/airtel.webp",
-      "/images/aurobindo.webp",
-      "/images/bajaj-allianz.webp",
-      "/images/bharti-airtel.webp",
-      "/images/bosch.webp",
-      "/images/cipla.webp",
-      "/images/coca-cola.webp",
-      "/images/cyient.webp",
-      "/images/diageo.webp",
-      "/images/ey.webp",
-      "/images/fedex.webp",
-      "/images/hero.webp",
-      "/images/himalaya.webp",
-      "/images/hinduja.webp",
-      "/images/icici.webp",
-      "/images/iifl.webp",
-      "/images/india-mart.webp",
-      "/images/infosys.webp",
-      "/images/maruti.webp",
-      "/images/nestle.webp",
-      "/images/oyo.webp",
-      "/images/pepsico.webp",
-      "/images/samsung.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327033/aditya-birla_dln4ym.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/airtel_odc32s.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327033/aurobindo_myymk4.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/bajaj-allianz_w5copv.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bharti-airtel_hoajg1.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327070/bosch_psoaob.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327088/cipla_l21bms.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327088/coca-cola_krqtyj.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327108/cyient_o0zzp3.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327128/diageo_ezhnzr.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327152/ey_ph2bsx.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327152/fedex_ztxmsk.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327171/hero_krubph.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327171/himalaya_vworlj.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327171/hinduja_tuhqdi.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327200/icici_1_quita6.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327203/iifl_sihlun.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327203/india-mart_liq79t.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327238/infosys_vk4d5g.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/maruti_ofcgtx.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nestle_bibwqx.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327851/oyo_u0luvj.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327852/pepsico_lwhvcn.webp",
+      "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/samsung_sosfqv.webp",
       
     ].map((src, i) => (
       <div
@@ -1577,7 +1577,7 @@ const OPJindal = () => {
                             className="space-y-4"
                           >
                             <div className="flex items-center gap-3 mb-4">
-                              <img src="/images/opjindal_banner.png" alt="OP Jindal University Logo" className="h-10 w-auto" />
+                              <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/opjindal_banner_qhx3sb.png" alt="OP Jindal University Logo" className="h-10 w-auto" />
                               <span className="text-xl font-bold text-[#ffc107]">OP Jindal</span>
                             </div>
                             <p className="text-sm text-gray-400 leading-relaxed">

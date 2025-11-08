@@ -9,7 +9,7 @@ export default function ApplyEnquiryModal({
   onOpenChange,
   title = 'Start Your Application',
   subtitle,
-  imageSrc = '/images/amityForm.webp',
+  imageSrc = 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/amityForm_xdbvvf.webp',
 
 
 

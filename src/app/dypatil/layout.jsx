@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Dr. DY Patil Online - UG & PG Courses in India",
     description: "Explore online undergraduate and postgraduate programs offered by Dr. DY Patil University Online, a NAAC A++ accredited university.",
-    images: ["/images/dypatil.webp"],
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dypatil_tbbpf9.webp"],
   },
   alternates: {
     canonical: "https://unifostedu.com/dypatil",

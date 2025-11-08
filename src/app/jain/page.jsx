@@ -52,25 +52,25 @@ const Jain = () => {
     const rankings = [
     {
       id: 1,
-      img: "/images/ugc.webp",
+      img: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp",
       alt: "UGC Logo",
       text: "JAIN (Deemed-to-be University) awarded Graded Autonomy by University Grants Commission (UGC)",
     },
     {
       id: 2,
-      img: "/images/naac.png",
+      img: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_rodfbn.png",
       alt: "NAAC Logo",
       text: "National Assessment and Accreditation Council (NAAC) has awarded 'A++' Grade",
     },
     {
       id: 3,
-      img: "/images/qs.webp",
+      img: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/qs_k5hl4c.webp",
       alt: "QS World University Rankings",
       text: "Ranked 91–95 among the top Indian Universities",
     },
     {
       id: 4,
-      img: "/images/nirf.png",
+      img: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nirf_f5xen9.webp",
       alt: "NIRF Logo",
       text: "Ranked 68th in the Country",
     },
@@ -263,7 +263,7 @@ const Jain = () => {
       eligibility: "10+2 Pass",
       fees: "1,95,000",
       specialization: "Online Bachelor of Business Administration, Digital Marketing, Healthcare Management, Data Science and Analytics",
-      image: "/images/bba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
       alt: "Bachelor of Business Administration (BBA) in Jain University Online",
     },
     
@@ -273,7 +273,7 @@ const Jain = () => {
       eligibility: "10+2 Pass",
       fees: "1,35,000 -1,65,000",
       specialization: "Computer Science and IT, Data Science and Analytics, Cyber Security, Artificial Intelligence, Cloud Computing",
-      image: "/images/bca.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
       alt: "Bachelor of Computer Applications (BCA) in Jain University Online",
     },
     {
@@ -282,7 +282,7 @@ const Jain = () => {
       eligibility: "10+2 Pass",
       fees : "1,27,500",
       specialization: "Online Bachelor of Commerce, Corporate Accounting",
-      image: "/images/bcom.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
       alt: "Bachelor of Commerce (B.Com) in Jain University Online",
     },
  
@@ -295,7 +295,7 @@ const Jain = () => {
       eligibility: "Graduation",
       fees: "1,96,000 - 2,16,000 ",
       specialization: "Human Resource Management and Finance, Finance and Marketing, Marketing and Resource Management, Marketing and Business Analytics, Finance and Business Analytics, Human Resource and Business Analytics, Project Management, Retail Management and Quick Commerce, Information Technology Management, Healthcare Management, Supply Chain, Production and Operations Management, Business Intelligence and Analytics, Entrepreneurship and Venture Creation, International Finance, Data Science and Analytics, E-commerce, Artificial Intelligence and Human Resource Management, Digital Marketing, Banking and Finance, Technology Management, General Management, AI-Driven Marketing, AI-Driven Finance, AI-Driven Business Strategy, AI-Driven Human Resource Management,",
-      image: "/images/mba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
       alt: "Master of Business Administration (MBA) in Jain University Online",
     },
     {
@@ -304,7 +304,7 @@ const Jain = () => {
       eligibility: "Graduation in BCA/B.Sc(IT)",
       fees: "1,60,000",
       specialization: "DevOps, Natural Language Processing & Large Language Models Development, Computer Science and IT, Data Analytics, Cyber Security, Full Stack Development, Cloud Computing, Data Science, Artificial Intelligence" , 
-      image: "/images/mca1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
       alt: "Master of Computer Applications (MCA) in Jain University Online",
     },
     {
@@ -313,7 +313,7 @@ const Jain = () => {
       eligibility: "Graduation in Commerce",
       fees: "1,10,000",
       specialization: "Accounting and Finance, Professional Accounting and Finance (Accredited by CPA, US)", 
-      image: "/images/m.com.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/m.com_libbpo.webp",
       alt: "Master of Commerce (M.Com) in Jain University Online",
     },
     {
@@ -322,7 +322,7 @@ const Jain = () => {
       eligibility: "Graduation",
       fees: "190,000",
       specialization: "Jainology in Comparative Religion and Philosophy, English, Economics, Public Policy",
-      image: "/images/ma1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
       alt: "Master of Arts (MA) in Jain University Online",
     },
   ];
@@ -402,7 +402,7 @@ useEffect(() => {
         {/* Open Graph */}
         <meta property="og:title" content="Jain University Online | Accredited Online Degrees" />
         <meta property="og:description" content="Globally recognized online undergraduate and postgraduate programs with flexible, industry-relevant learning." />
-        <meta property="og:image" content="/images/jain-logo[1].png" />
+        <meta property="og:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762328981/jainlogo_ewfeoy.png" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://unifostedu.com/jain" />
 
@@ -410,7 +410,7 @@ useEffect(() => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Jain University Online | Accredited Online Degrees" />
         <meta name="twitter:description" content="Enroll in UGC and NAAC A++ approved online courses at Jain University Online." />
-        <meta name="twitter:image" content="/images/jain-logo[1].png" />
+        <meta name="twitter:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762328981/jainlogo_ewfeoy.png" />
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
@@ -422,7 +422,7 @@ useEffect(() => {
             {/* Logo - Left Side */}
             <div className="flex-shrink min-w-0">
               <Image 
-                src="/images/jain-logo[1].png" 
+                src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762328981/jainlogo_ewfeoy.png" 
                 alt="Jain University Online Logo" 
                 width={240} 
                 height={80} 
@@ -560,7 +560,7 @@ useEffect(() => {
         {/* Watermark Background Image */}
         <div className="absolute inset-0 opacity-20">
           <Image 
-            src="/images/jain.webp"
+            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp"
             alt="Watermark Background"
             width={800}
             height={600}
@@ -631,7 +631,7 @@ useEffect(() => {
                 <div className="flex gap-6 pt-2">
                   <div className="text-center">
                     <Image 
-                      src="/images/naac.webp" 
+                      src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp" 
                       alt="NAAC A++" 
                       width={70} 
                       height={70} 
@@ -641,7 +641,7 @@ useEffect(() => {
                   </div>
                   <div className="text-center">
                     <Image 
-                      src="/images/ugc.webp" 
+                      src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp" 
                       alt="UGC" 
                       width={70} 
                       height={70} 
@@ -661,7 +661,7 @@ useEffect(() => {
                   {/* Student Image - Perfectly Centered */}
                   <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
                     <Image 
-                      src="/images/jainimg.png" 
+                      src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327240/jainimg_swo4tp.png" 
                       alt="Jain University Online Student" 
                       width={500}
                       height={600}
@@ -1104,16 +1104,16 @@ useEffect(() => {
           },
         ]}
         accreditations={[
-          { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
-          { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
-          { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
-          { src: "/images/nirf.webp", alt: "NIRF", name: "NIRF" },
-          { src: "/images/wes.webp", alt: "WES", name: "WES" },
-          { src: "/images/aiu.webp", alt: "AIU", name: "AIU" },
-          { src: "/images/careers.webp", alt: "Careers", name: "Careers" },
-          { src: "/images/auap.webp", alt: "AUAP", name: "AUAP" },
-          { src: "/images/ksurf.webp", alt: "KSURF", name: "KSURF" },
-          { src: "/images/recogin.webp", alt: "Recognition", name: "Recognition" },
+          { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp", alt: "UGC", name: "UGC" },
+          { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp", alt: "AICTE", name: "AICTE" },
+          { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp", alt: "NAAC", name: "NAAC" },
+          { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nirf_f5xen9.webp", alt: "NIRF", name: "NIRF" },
+          { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/wes_zuxwfs.webp", alt: "WES", name: "WES" },
+          { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327029/aiu_yfa2is.webp", alt: "AIU", name: "AIU" },
+          { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327071/careers_grslii.png", alt: "Careers", name: "Careers" },
+          { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/auap_n1ea9m.webp", alt: "AUAP", name: "AUAP" },
+          { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327279/ksurf_udejgt.webp", alt: "KSURF", name: "KSURF" },
+          { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/recogin_wm3gqn.webp", alt: "Recognition", name: "Recognition" },
         ]}
         internationalRecognition={[]}
         successStories={[]}
@@ -1281,7 +1281,7 @@ useEffect(() => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
         {/* Certificate Image */}
         <div className="flex-1">
-          <Image width={500} height={400} loading='lazy' src="/images/jainonlined.webp" alt="Jain Online" className="w-full max-w-md mx-auto rounded shadow-lg" />
+          <Image width={500} height={400} loading='lazy' src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327279/jainonlined_wg8465.webp" alt="Jain Online" className="w-full max-w-md mx-auto rounded shadow-lg" />
         </div>
 
         {/* Text Content */}
@@ -1353,52 +1353,52 @@ useEffect(() => {
         {/* Logo Cards */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-            <Image width={100} height={100} loading="lazy" src="/images/company.webp" alt="Company" className="h-12 object-contain" />
+            <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company_vjgouc.webp" alt="Company" className="h-12 object-contain" />
           </div>
           <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-            <Image width={100} height={100} loading="lazy" src="/images/company1.webp" alt="Microsoft" className="h-12 object-contain" />
+            <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company1_tktbp7.webp" alt="Microsoft" className="h-12 object-contain" />
           </div>
           <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-            <Image width={100} height={100} loading="lazy" src="/images/company9.webp" alt="Company 9" className="h-12 object-contain" />
+            <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327090/company9_p4pgg3.webp" alt="Company 9" className="h-12 object-contain" />
           </div>
           <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-            <Image width={100} height={100} loading="lazy" src="/images/com10.webp" alt="Company 10" className="h-12 object-contain" />
+            <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327088/com10_cm37v8.webp" alt="Company 10" className="h-12 object-contain" />
           </div>
           <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-            <Image width={100} height={100} loading="lazy" src="/images/companany4.webp" alt="Company4" className="h-12 object-contain" />
+            <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany4_h5nana.webp" alt="Company4" className="h-12 object-contain" />
           </div>
           <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-            <Image width={100} height={100} loading="lazy" src="/images/company6.webp" alt="Company 6" className="h-12 object-contain" />
+            <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company6_rnuajo.webp" alt="Company 6" className="h-12 object-contain" />
           </div>
           <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-            <Image width={100} height={100} loading="lazy" src="/images/companany5.webp" alt="Companany5" className="h-12 object-contain" />
+            <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany5_qs6bgc.webp" alt="Companany5" className="h-12 object-contain" />
           </div>
           <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-            <Image width={100} height={100} loading="lazy" src="/images/adove.webp" alt="Adove" className="h-12 object-contain" />
+            <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/adove_jtmiou.webp" alt="Adove" className="h-12 object-contain" />
           </div>
           <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform h-24">
-            <Image width={100} height={100} loading="lazy" src="/images/3.webp" alt="Samsung3" className="h-12 object-contain" />
+            <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/3_qmk7vp.webp" alt="Samsung3" className="h-12 object-contain" />
           </div>
           <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform h-24">
-            <Image width={100} height={100} loading="lazy" src="/images/4.webp" alt="Samsung4" className="h-12 object-contain" />
+            <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327026/4_jdqypx.webp" alt="Samsung4" className="h-12 object-contain" />
           </div>
           <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform h-24">
-            <Image width={100} height={100} loading="lazy" src="/images/5.webp" alt="Samsung5" className="h-12 object-contain" />
+            <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327026/5_mcevmm.webp" alt="Samsung5" className="h-12 object-contain" />
           </div>
           <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform h-24">
-            <Image width={100} height={100} loading="lazy" src="/images/6.webp" alt="Samsung6" className="h-12 object-contain" />
+            <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/6_wioxuw.webp" alt="Samsung6" className="h-12 object-contain" />
           </div>
           <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform h-24">
-            <Image width={100} height={100} loading="lazy" src="/images/7.webp" alt="Samsung7" className="h-12 object-contain" />
+            <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327028/7_eilzgq.webp" alt="Samsung7" className="h-12 object-contain" />
           </div>
           <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform h-24">
-            <Image width={100} height={100} loading="lazy" src="/images/8.webp" alt="Samsung8" className="h-12 object-contain" />
+            <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327028/8_otnhv8.webp" alt="Samsung8" className="h-12 object-contain" />
           </div>
           <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform h-24">
-            <Image width={100} height={100} loading="lazy" src="/images/9.webp" alt="Samsung9" className="h-12 object-contain" />
+            <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327028/9_eqrytp.webp" alt="Samsung9" className="h-12 object-contain" />
           </div>
           <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-            <Image width={100} height={100} loading="lazy" src="/images/samsung.webp" alt="Samsung" className="h-12 object-contain" />
+            <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/samsung_sosfqv.webp" alt="Samsung" className="h-12 object-contain" />
           </div>
         </div>
       </div>
@@ -1503,7 +1503,7 @@ useEffect(() => {
           {/* Left Image */}
           <div className="flex justify-center">
             <img
-              src="/images/jain1.png"
+              src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain1_j2579m.webp"
               alt="Jain University"
               className="w-full h-auto rounded-lg shadow-lg"
             />
@@ -1539,7 +1539,7 @@ useEffect(() => {
         onOpenChange={(v) => !v && setOpenModal(null)}
         title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
         subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-        imageSrc="/images/jain.png"
+        imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_q9svec.png"
         universityName="Jain University Online"
         defaultProgram="MBA"
         formType={openModal.type === 'apply' ? 'getStarted' : 'general'}

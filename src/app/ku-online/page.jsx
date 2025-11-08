@@ -37,7 +37,7 @@ const KU = () => {
       eligibility: "10+2 Pass",
       fees: "₹72,661",
       specialization: "Business Administration",
-      image: "/images/bba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
@@ -45,7 +45,7 @@ const KU = () => {
       eligibility: "10+2 Pass",
       fees: "₹72,661",
       specialization: "Computer Applications",
-      image: "/images/bca.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
     },
     {
       course: "Bachelor of Commerce (B.Com)",
@@ -53,7 +53,7 @@ const KU = () => {
       eligibility: "10+2 Pass",
       fees: "₹72,661",
       specialization: "Commerce",
-      image: "/images/bcom.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
     },
   ];
 
@@ -64,7 +64,7 @@ const KU = () => {
       eligibility: "Graduation",
       fees: "₹98,545",
       specialization: "General Management",
-      image: "/images/mba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -72,7 +72,7 @@ const KU = () => {
       eligibility: "Graduation",
       fees: "₹76,667",
       specialization: "Computer Applications",
-      image: "/images/mca1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
     },
     {
       course: "Master of Commerce (M.Com)",
@@ -80,7 +80,7 @@ const KU = () => {
       eligibility: "Graduation in Commerce",
       fees: "₹54,036",
       specialization: "Commerce",
-      image: "/images/m.com.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/m.com_libbpo.webp",
     },
     {
       course: "Master of Arts (MA)",
@@ -88,7 +88,7 @@ const KU = () => {
       eligibility: "Graduation",
       fees: "₹72,661",
       specialization: "English, Journalism & Mass Communication, Political Science",
-      image: "/images/ma1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
     },
     {
       course: "MBA (Specializations)",
@@ -96,7 +96,7 @@ const KU = () => {
       eligibility: "Graduation",
       fees: "₹119,845",
       specialization: "Finance Management, Information Technology Management, Human Resource Management, Marketing, Business Analytics",
-      image: "/images/mba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
     },
   ];
 
@@ -298,7 +298,7 @@ const KU = () => {
         {/* Open Graph / Social Media */}
         <meta property="og:title" content="Kurukshetra University Online - UG & PG Courses in India" />
         <meta property="og:description" content="Explore online undergraduate and postgraduate programs offered by Kurukshetra University Online, NAAC A++ accredited, Haryana, India." />
-        <meta property="og:image" content="/images/ku.webp" />
+        <meta property="og:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku_xu5nkx.webp" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.kurukshetrauniversityonline.com" />
 
@@ -306,14 +306,14 @@ const KU = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Kurukshetra University Online - UG & PG Courses in India" />
         <meta name="twitter:description" content="Explore online undergraduate and postgraduate programs offered by Kurukshetra University Online, NAAC A++ accredited, Haryana, India." />
-        <meta name="twitter:image" content="/images/ku.webp" />
+        <meta name="twitter:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku_xu5nkx.webp" />
       </Head>
 
       <div className="min-h-screen bg-gray-50 overflow-hidden">
         {/* Header */}
         <header className="bg-white shadow-md fixed top-0 w-full z-20">
           <div className="max-w-7xl mx-auto p-2 flex justify-between items-center">
-            <Image src="/images/ku-logo.png" alt="Kurukshetra University" width={100} height={100} className="h-12" />
+            <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku-logo_nqbxot.png" alt="Kurukshetra University" width={100} height={100} className="h-12" />
             <div className="flex items-center gap-4">
               <a href="tel:+917042867717" className="flex items-center gap-2 text-gray-700 font-medium">
                 📞 +91-7042867717
@@ -345,7 +345,7 @@ const KU = () => {
     <SwiperSlide>
       <div className="relative w-full h-full">
         <Image
-          src="/images/ku.webp"
+          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku_xu5nkx.webp"
           alt="Kurukshetra University Online Programs"
           fill
           className="object-cover object-center"
@@ -378,7 +378,7 @@ const KU = () => {
     <SwiperSlide>
       <div className="relative w-full h-full">
         <Image
-          src="/images/ku-banner2.jpg"
+          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327282/ku-banner2_l6hqp0.jpg"
           alt="KU Online Programs"
           fill
           className="object-cover object-center"
@@ -406,7 +406,7 @@ const KU = () => {
     <SwiperSlide>
       <div className="relative w-full h-full">
         <Image
-          src="/images/ku-banner3.jpg"
+          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327281/ku-banner3_c0gb6a.jpg"
           alt="KU Online Courses"
           fill
           className="object-cover object-center"
@@ -439,7 +439,7 @@ const KU = () => {
               {/* Left side: Image */}
               <div>
                 <Image
-                  src="/images/ku.webp"
+                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku_xu5nkx.webp"
                   alt="Kurukshetra University"
                   width={100}
                   height={100}
@@ -493,10 +493,10 @@ const KU = () => {
 
             {/* Accreditation Logos */}
             <div className="flex justify-center items-center gap-8 mb-12 flex-wrap">
-              <img src="/images/ugc.webp" alt="UGC" className="h-16" />
-              <img src="/images/naac.webp" alt="NAAC A++" className="h-16" />
-              <img src="/images/nirf.webp" alt="NIRF" className="h-16" />
-              <img src="/images/aiu.webp" alt="AIU" className="h-16" />
+              <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp" alt="UGC" className="h-16" />
+              <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp" alt="NAAC A++" className="h-16" />
+              <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nirf_f5xen9.webp" alt="NIRF" className="h-16" />
+              <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327029/aiu_yfa2is.webp" alt="AIU" className="h-16" />
             </div>
 
             {/* Benefits Grid */}
@@ -718,7 +718,7 @@ const KU = () => {
         <section className="bg-[#003366] py-12 px-4">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
             <div className="flex-1">
-              <Image width={100} height={100} loading='lazy' src="/images/ku-certi.webp" alt="Kurukshetra University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+              <Image width={100} height={100} loading='lazy' src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327281/ku-certi_dguqgj.webp" alt="Kurukshetra University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
             </div>
             <div className="flex-1 text-white">
               <h2 className="text-3xl md:text-4xl font-semibold mb-4">
@@ -778,7 +778,7 @@ const KU = () => {
                       onOpenChange={(v) => !v && setOpenModal(null)}
                       title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
                       subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-                      imageSrc="/images/ku.webp"
+                      imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku_xu5nkx.webp"
                       universityName="Kurukshetra University Online"
                       defaultProgram="MBA"
                       formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
@@ -799,28 +799,28 @@ const KU = () => {
                   </div>
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
                     <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                      <Image width={100} height={100}loading="lazy" src="/images/company.webp" alt="Company" className="h-12 object-contain" />
+                      <Image width={100} height={100}loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company_vjgouc.webp" alt="Company" className="h-12 object-contain" />
                     </div>
                     <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                      <Image width={100} height={100}loading="lazy" src="/images/company1.webp" alt="Microsoft" className="h-12 object-contain" />
+                      <Image width={100} height={100}loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company1_tktbp7.webp" alt="Microsoft" className="h-12 object-contain" />
                     </div>
                     <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                      <Image width={100} height={100}loading="lazy" src="/images/company9.webp" alt="Company 9" className="h-12 object-contain" />
+                      <Image width={100} height={100}loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327090/company9_p4pgg3.webp" alt="Company 9" className="h-12 object-contain" />
                     </div>
                     <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                      <Image width={100} height={100}loading="lazy" src="/images/com10.webp" alt="Company 10" className="h-12 object-contain" />
+                      <Image width={100} height={100}loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327088/com10_cm37v8.webp" alt="Company 10" className="h-12 object-contain" />
                     </div>
                      <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                      <Image width={100} height={100}loading="lazy" src="/images/5.webp" alt="Company 10" className="h-12 object-contain" />
+                      <Image width={100} height={100}loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327026/5_mcevmm.webp" alt="Company 10" className="h-12 object-contain" />
                     </div>
                      <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                      <Image width={100} height={100}loading="lazy" src="/images/6.webp" alt="Company 10" className="h-12 object-contain" />
+                      <Image width={100} height={100}loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/6_wioxuw.webp" alt="Company 10" className="h-12 object-contain" />
                     </div>
                      <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                      <Image width={100} height={100}loading="lazy" src="/images/3.webp" alt="Company 10" className="h-12 object-contain" />
+                      <Image width={100} height={100}loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/3_qmk7vp.webp" alt="Company 10" className="h-12 object-contain" />
                     </div>
                      <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                      <Image width={100} height={100}loading="lazy" src="/images/4.webp" alt="Company 10" className="h-12 object-contain" />
+                      <Image width={100} height={100}loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327026/4_jdqypx.webp" alt="Company 10" className="h-12 object-contain" />
                     </div>
                   </div>
                 </div>
@@ -885,7 +885,7 @@ const KU = () => {
           <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-10 border-t border-gray-700 pt-8 flex flex-col md:flex-row items-center justify-between">
             {/* Logo */}
             <div className="flex items-center gap-3">
-              <Image src="/images/ku-logo.png" alt="KU Online" width={100} height={100} className="h-10" />
+              <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku-logo_nqbxot.png" alt="KU Online" width={100} height={100} className="h-10" />
               <div>
                 <h2 className="text-white font-bold text-xl">KU Online</h2>
                 <p className="text-sm text-gray-400">Quality Education Since 1956</p>

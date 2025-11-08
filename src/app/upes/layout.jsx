@@ -7,7 +7,7 @@ export const metadata = {
     description: "Explore online undergraduate and postgraduate programs offered by UPES Online, a NAAC A++ accredited university.",
     images: [
       {
-      url:"/images/upes.webp",
+      url:"https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/upes_uzkkmm.webp",
       width: 1200,
       height: 630,
       alt: "UPES University Campus",

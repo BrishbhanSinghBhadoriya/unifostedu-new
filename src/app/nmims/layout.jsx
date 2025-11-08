@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "NMIMS Online - UG & PG Courses in India",
     description: "Explore online undergraduate and postgraduate programs offered by NMIMS Online, a NAAC A++ accredited university.",
-    images: ["/images/nmims.webp"],
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327721/nmims_os8kn9.webp"],
   },
     alternates: {
     canonical: "https://unifostedu.com/nmims",

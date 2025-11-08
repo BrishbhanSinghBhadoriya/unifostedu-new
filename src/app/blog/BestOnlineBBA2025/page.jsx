@@ -92,7 +92,7 @@ const BestOnlineBBA2025 = () => {
         {/* Sidebar */}
         <aside className="w-full md:w-[38%] space-y-6">
           <img
-            src="/images/b2.webp"
+            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327033/b2_cfdbfk.webp"
             alt="Best Online BBA India 2025"
             className="rounded-xl w-full object-cover shadow-md"
           />
@@ -101,7 +101,7 @@ const BestOnlineBBA2025 = () => {
             <h2 className="text-xl font-semibold text-blue-900 mb-4">Related Blogs</h2>
             <div className="grid gap-4">
               <a href="/blog/mba-online-vs-distance" className="block bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                <img src="/images/b1.webp" alt="MBA Online vs Distance" className="h-32 w-full object-cover" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b1_xpmoe1.webp" alt="MBA Online vs Distance" className="h-32 w-full object-cover" />
                 <div className="p-3">
                   <h3 className="font-bold text-md text-blue-800">MBA Online vs Distance</h3>
                   <p className="text-sm text-gray-600 mt-1">Compare MBA formats and find the best fit for your goals in 2025.</p>
@@ -109,7 +109,7 @@ const BestOnlineBBA2025 = () => {
               </a>
 
               <a href="/blog/choose-online-university" className="block bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                <img src="/images/b6.webp" alt="Choose Online Course" className="h-32 w-full object-cover" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327035/b6_yvhxua.webp" alt="Choose Online Course" className="h-32 w-full object-cover" />
                 <div className="p-3">
                   <h3 className="font-bold text-md text-blue-800">Choosing an Online Course</h3>
                   <p className="text-sm text-gray-600 mt-1">Tips for selecting a course that matches your career aspirations.</p>
@@ -117,7 +117,7 @@ const BestOnlineBBA2025 = () => {
               </a>
 
               <a href="/blog/career-after-online-mba" className="block bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                <img src="/images/b9.webp" alt="MBA while working" className="h-32 w-full object-cover" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/b9_pkxdiq.webp" alt="MBA while working" className="h-32 w-full object-cover" />
                 <div className="p-3">
                   <h3 className="font-bold text-md text-blue-800">Can I do MBA while working?</h3>
                   <p className="text-sm text-gray-600 mt-1">Answers for pursuing MBA while working professionals.</p>

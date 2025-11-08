@@ -26,7 +26,7 @@ export const metadata = {
     siteName: "UNIFOST",
     images: [
       {
-        url: "/images/opjindal.webp",
+        url: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/opjindal_jdl7az.webp",
         width: 1200,
         height: 630,
         alt: "OP Jindal University - Online Programs",
@@ -43,7 +43,7 @@ export const metadata = {
     title: "OP Jindal University | Online & On-Campus UG & PG Programs - UNIFOST",
     description:
       "OP Jindal University offers globally ranked UG & PG programs in Business, Law, Psychology, Public Policy, and more. Enquire now for online and on-campus learning.",
-    images: ["/images/opjindal.webp"],
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/opjindal_jdl7az.webp"],
   },
 };
 

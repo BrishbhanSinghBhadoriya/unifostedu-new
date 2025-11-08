@@ -7,7 +7,7 @@ export const metadata = {
     description: "Explore online undergraduate and postgraduate programs offered by Sharda University Online, a NAAC A++ accredited university.",
     images: [
       {
-      url:"/images/sharda.webp",
+      url:"https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp",
       width: 1200,
       height: 630,
       alt: "Sharda University Campus",

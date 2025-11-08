@@ -17,7 +17,7 @@ export const metadata = {
   openGraph: {
     title: "FAQs | Online University Degrees & Career Counseling - UNIFOST",
     description: "Find answers to frequently asked questions about online university degrees, UGC-approved courses, career counseling, and more.",
-    images: ["/images/faq-hero.webp"],
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762583776/faq-hero_tz5w2b.webp"],
   },
 };
 

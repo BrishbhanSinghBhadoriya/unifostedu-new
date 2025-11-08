@@ -111,7 +111,7 @@ const MBADistanceVsOnline = () => {
         {/* Right Sidebar */}
         <aside className="w-full md:w-[40%] space-y-6">
           <img
-            src="/images/b1.webp"
+            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b1_xpmoe1.webp"
             alt="Online MBA vs Distance MBA"
             className="rounded-xl w-full object-cover shadow-md"
           />
@@ -123,7 +123,7 @@ const MBADistanceVsOnline = () => {
                 href="/blog/top-ugc-approved-online-mba-universities"
                 className="group bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden"
               >
-                <img src="/images/b2.webp" alt="Top UGC-Approved Online MBA Universities" className="h-32 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327033/b2_cfdbfk.webp" alt="Top UGC-Approved Online MBA Universities" className="h-32 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-3">
                   <h3 className="font-bold text-blue-800 text-md">Best BBA Programs in 2025</h3>
                   <p className="text-sm text-gray-600 mt-1">Top NAAC-rated universities offering online BBA.</p>
@@ -134,7 +134,7 @@ const MBADistanceVsOnline = () => {
                 href="/blog/how-to-choose-best-online-course"
                 className="group bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden"
               >
-                <img src="/images/b3.webp" alt="Choose Best Online Course" className="h-32 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b3_d52jqi.webp" alt="Choose Best Online Course" className="h-32 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-3">
                   <h3 className="font-bold text-blue-800 text-md">Choosing the Best Online Course</h3>
                   <p className="text-sm text-gray-600 mt-1">Match your goals with the right online course.</p>
@@ -145,7 +145,7 @@ const MBADistanceVsOnline = () => {
                 href="/blog/lpu-online-review"
                 className="group bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden"
               >
-                <img src="/images/b4.webp" alt="LPU Review" className="h-32 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327035/b4_xo9eua.webp" alt="LPU Review" className="h-32 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-3">
                   <h3 className="font-bold text-blue-800 text-md">LPU Online: Review & Admission</h3>
                   <p className="text-sm text-gray-600 mt-1">Pros, cons & full admission process explained.</p>

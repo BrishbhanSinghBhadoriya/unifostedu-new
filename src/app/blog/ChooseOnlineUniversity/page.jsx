@@ -93,7 +93,7 @@ const ChooseOnlineUniversity = () => {
         {/* Related Blogs Sidebar (Optional but Recommended) */}
         <aside className="w-full md:w-[38%] space-y-6">
           <img
-            src="/images/b6.webp"
+            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327035/b6_yvhxua.webp"
             alt="Choose Online University"
             className="rounded-xl w-full object-cover shadow-md"
           />
@@ -102,7 +102,7 @@ const ChooseOnlineUniversity = () => {
             <h2 className="text-xl font-semibold text-blue-900 mb-4">Related Blogs</h2>
             <div className="grid gap-5">
               <a href="/blog/mba-online-vs-distance" className="group bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
-                <img src="/images/b1.webp" alt="MBA Online vs Distance" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b1_xpmoe1.webp" alt="MBA Online vs Distance" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h3 className="font-bold text-blue-800 text-lg">MBA Online vs Distance</h3>
                   <p className="text-sm text-gray-600 mt-1">Which mode of MBA suits your lifestyle and career goals?</p>
@@ -110,7 +110,7 @@ const ChooseOnlineUniversity = () => {
               </a>
 
               <a href="/blog/jain-ugc-approval" className="group bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
-                <img src="/images/b5.webp" alt="Jain UGC approval" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b5_rdxlgr.webp" alt="Jain UGC approval" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h3 className="font-bold text-blue-800 text-lg">Is Jain Online University is UGC approved? </h3>
                   <p className="text-sm text-gray-600 mt-1">Explore the most trusted and approved MBA programs in India.</p>

@@ -90,7 +90,7 @@ const LPUOnlineReview = () => {
         {/* Sidebar */}
         <aside className="w-full md:w-[38%] space-y-6">
           <img
-            src="/images/b4.webp"
+            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327035/b4_xo9eua.webp"
             alt="LPU Online Review"
             className="rounded-xl w-full object-cover shadow-md"
           />
@@ -102,7 +102,7 @@ const LPUOnlineReview = () => {
                 href="/blog/mba-online-vs-distance"
                 className="group bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden"
               >
-                <img src="/images/b1.webp" alt="MBA Online vs Distance" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b1_xpmoe1.webp" alt="MBA Online vs Distance" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h3 className="font-bold text-blue-800 text-lg">MBA Online vs Distance</h3>
                   <p className="text-sm text-gray-600 mt-1">Compare flexibility, recognition & ROI.</p>
@@ -113,7 +113,7 @@ const LPUOnlineReview = () => {
                 href="/blog/how-to-choose-best-online-course"
                 className="group bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden"
               >
-                <img src="/images/b3.webp" alt="Choose Best Course" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b3_d52jqi.webp" alt="Choose Best Course" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h3 className="font-bold text-blue-800 text-lg">How to Choose the Best Online Course</h3>
                   <p className="text-sm text-gray-600 mt-1">What factors matter most when picking a course?</p>

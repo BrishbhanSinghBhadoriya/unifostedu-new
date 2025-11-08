@@ -6,7 +6,7 @@ export const metadata = {
     title: "Our Services | Career Counseling & Educational Guidance | UNIFOST",
     description: "Discover UNIFOST's comprehensive educational services including video call counseling, home demo sessions, university guidance, and career planning.",
     siteName: "UNIFOST",
-    images: ["/images/uni.webp"],
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp"],
     url: "https://unifostedu.com/services",
   },
   alternates: {

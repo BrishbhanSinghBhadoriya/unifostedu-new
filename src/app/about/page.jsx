@@ -51,7 +51,7 @@ export default function About() {
     "@type": "Organization",
     "name": "UniFost",
     "url": "https://unifostedu.com",
-    "logo": "https://unifostedu.com/images/uni.webp",
+    "logo": "https://unifostedu.comhttps://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp",
     "description": "UniFost is redefining how students discover and access quality education through personalized guidance and innovative technology.",
     "founder": [
       {
@@ -170,7 +170,7 @@ export default function About() {
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-[#001e3c] to-[#003b6c] opacity-95"></div>
-        <div className="absolute inset-0 bg-[url('/images/uni.webp')] opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp')] opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight">
@@ -260,12 +260,12 @@ export default function About() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[ 
-              { image: "/images/acard1.webp", title: "Personalized Video Counseling", desc: "One-on-one sessions with our expert counselors to help you make informed decisions about your education and career path.", icon: <FaVideo className="text-2xl" /> },
-              { image: "/images/acard2.webp", title: "Home Demo Sessions", desc: "Experience learning firsthand with trial sessions conducted at your convenience before committing to any program.", icon: <FaHome className="text-2xl" /> },
-              { image: "/images/acard3.webp", title: "Certified Programs", desc: "Access to industry-recognized certifications and courses that enhance your employability and skills.", icon: <FaCertificate className="text-2xl" /> },
-              { image: "/images/acard4.webp", title: "Online Degree Guidance", desc: "Comprehensive support for selecting and enrolling in accredited online degree programs from top institutions.", icon: <FaGraduationCap className="text-2xl" /> },
-              { image: "/images/acard5.webp", title: "University Admissions", desc: "Expert assistance in selecting and applying to traditional universities with high placement records.", icon: <FaUniversity className="text-2xl" /> },
-              { image: "/images/acard6.webp", title: "Skill Development", desc: "Specialized courses and workshops to bridge the gap between academic learning and industry requirements.", icon: <FaTools className="text-2xl" /> }
+              { image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/acard1_aaru4i.webp", title: "Personalized Video Counseling", desc: "One-on-one sessions with our expert counselors to help you make informed decisions about your education and career path.", icon: <FaVideo className="text-2xl" /> },
+              { image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327031/acard6-2_h6wqrc.webp", title: "Home Demo Sessions", desc: "Experience learning firsthand with trial sessions conducted at your convenience before committing to any program.", icon: <FaHome className="text-2xl" /> },
+              { image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/acard3_rkw0cv.webp", title: "Certified Programs", desc: "Access to industry-recognized certifications and courses that enhance your employability and skills.", icon: <FaCertificate className="text-2xl" /> },
+              { image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/acard4_cflry8.webp", title: "Online Degree Guidance", desc: "Comprehensive support for selecting and enrolling in accredited online degree programs from top institutions.", icon: <FaGraduationCap className="text-2xl" /> },
+              { image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327031/acard5_t1gih4.webp", title: "University Admissions", desc: "Expert assistance in selecting and applying to traditional universities with high placement records.", icon: <FaUniversity className="text-2xl" /> },
+              { image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327031/acard6_qhf7ia.webp", title: "Skill Development", desc: "Specialized courses and workshops to bridge the gap between academic learning and industry requirements.", icon: <FaTools className="text-2xl" /> }
             ].map((service, index) => (
               <div key={index} className="relative bg-white rounded-2xl overflow-hidden shadow-lg group hover:shadow-xl transition-all duration-500 border border-gray-100">
                 <div className="relative overflow-hidden h-48">
@@ -434,7 +434,7 @@ export default function About() {
     <div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
       <div className="relative">
         <Image
-          src="/images/priyansh.jpg" 
+          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327853/priyansh_hkubo0.jpg" 
           alt="Priyansh Mishra" 
           width={100}
           height={100}
@@ -500,7 +500,7 @@ export default function About() {
       </div>
       <div className="relative order-1 md:order-2">
         <Image
-          src="/images/aman.webp" 
+          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327029/aman_f4d7i7.webp" 
           alt="Aman Pawar" 
           width={100}
           height={100}

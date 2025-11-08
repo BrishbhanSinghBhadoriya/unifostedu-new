@@ -40,7 +40,7 @@ const Dypatil = () => {
       fees: "₹1,45,400",
       eligibility: "10+2 Pass",
       specialization: "IT & System Management, International Business Management, Retail Management, Banking, Financial Services and Insurance Management, Shipping & Logistics Management, Marketing Management, Human Resource Management (HRM), Finance Management, E-commerce Management ",
-      image: "/images/bba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
       alt: "Bachelor of Business Administration (BBA) in Dy Patil ",
     },
   ];
@@ -52,7 +52,7 @@ const Dypatil = () => {
       fees: "₹1,40,000",
       eligibility: "Graduation with 50% Marks",
       specialization: "General",
-      image: "/images/mca1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
       alt: "Master of Computer Applications (MCA) in Dy Patil ",
     },
     {
@@ -61,7 +61,7 @@ const Dypatil = () => {
       eligibility: "Graduation",
       fees: "1,89,400",
       specialization: "Marketing Management, Human Resource Management, Finance Management, IT Management, Project Management, Operations Management, Hospital Administration & Healthcare Management, International Business Management, FinTech Management, Business Analytics Management, Artificial Intelligence & Machine Learning Management, Logistics, Materials & Supply Chain Management, Blockchain Management, Digital Marketing Management, Agri-Business Management",
-      image: "/images/mba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
       alt: "Master of Business Administration (MBA) in Dy Patil ",
     },
   ];
@@ -285,7 +285,7 @@ const Dypatil = () => {
             {/* Left Logo */}
             <div className="flex items-center min-w-0">
               <img
-                src="/images/dpulogo.png"
+                src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327128/dpulogo_pjp6mc.png"
                 alt="DPU Logo"
                 className="h-10 sm:h-12 md:h-16 w-auto max-w-full"
               />
@@ -315,8 +315,8 @@ const Dypatil = () => {
               </button>
 
               {/* Accreditation icons - hide on small screens to prevent overflow */}
-              <img src="/images/ugc.webp" alt="UGC Logo" className="hidden sm:block h-8 sm:h-10 w-auto" />
-              <img src="/images/aicte.webp" alt="AICTE Logo" className="hidden sm:block h-9 sm:h-12 w-auto" />
+              <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp" alt="UGC Logo" className="hidden sm:block h-8 sm:h-10 w-auto" />
+              <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp" alt="AICTE Logo" className="hidden sm:block h-9 sm:h-12 w-auto" />
 
               {/* Call button (text on >=sm, icon on mobile) */}
               <a
@@ -454,7 +454,7 @@ const Dypatil = () => {
            <div className="overflow-x-hidden"
           className="relative w-full h-[500px] flex items-center"
           style={{
-            backgroundImage: "url('/images/dpu1.png')",
+            backgroundImage: "url('https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dpu1_wdmyqj.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -850,11 +850,11 @@ const Dypatil = () => {
               },
             ]}
             accreditations={[
-              { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
-              { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
-              { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
-              { src: "/images/nirf.webp", alt: "NIRF", name: "NIRF" },
-              { src: "/images/wes.webp", alt: "WES", name: "WES" },
+              { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp", alt: "UGC", name: "UGC" },
+              { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp", alt: "AICTE", name: "AICTE" },
+              { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp", alt: "NAAC", name: "NAAC" },
+              { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nirf_f5xen9.webp", alt: "NIRF", name: "NIRF" },
+              { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/wes_zuxwfs.webp", alt: "WES", name: "WES" },
             ]}
             internationalRecognition={[]}
             successStories={[]}
@@ -1479,7 +1479,7 @@ const Dypatil = () => {
             {/* Certificate Image */}
             <div className="flex-1">
               <Image
-                src="/images/dycertificates.webp"
+                src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dycertificates_oikhoh.webp"
                 alt="Dr. DY Patil"
                 width={500}
                 height={300}
@@ -1525,43 +1525,43 @@ const Dypatil = () => {
             {/* Logo Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image src="/images/3.webp" width={100} height={100} loading="lazy" alt="Company" className="h-12 object-contain" />
+                <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/3_qmk7vp.webp" width={100} height={100} loading="lazy" alt="Company" className="h-12 object-contain" />
               </div>
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image src="/images/4.webp" width={100} height={100} loading="lazy" alt="Microsoft" className="h-12 object-contain" />
+                <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327026/4_jdqypx.webp" width={100} height={100} loading="lazy" alt="Microsoft" className="h-12 object-contain" />
               </div>
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image src="/images/5.webp" width={100} height={100} loading="lazy" alt="Company 9" className="h-12 object-contain" />
+                <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327026/5_mcevmm.webp" width={100} height={100} loading="lazy" alt="Company 9" className="h-12 object-contain" />
               </div>
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image src="/images/6.webp" width={100} height={100} loading="lazy" alt="Company 10" className="h-12 object-contain" />
+                <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/6_wioxuw.webp" width={100} height={100} loading="lazy" alt="Company 10" className="h-12 object-contain" />
               </div>
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image src="/images/7.webp" width={100} height={100} loading="lazy" alt="Company4" className="h-12 object-contain" />
+                <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327028/7_eilzgq.webp" width={100} height={100} loading="lazy" alt="Company4" className="h-12 object-contain" />
               </div>
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image src="/images/8.webp" width={100} height={100} loading="lazy" alt="Company 6" className="h-12 object-contain" />
+                <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327028/8_otnhv8.webp" width={100} height={100} loading="lazy" alt="Company 6" className="h-12 object-contain" />
               </div>
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image src="/images/9.webp" width={100} height={100} loading="lazy" alt="Companany5" className="h-12 object-contain" />
+                <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327028/9_eqrytp.webp" width={100} height={100} loading="lazy" alt="Companany5" className="h-12 object-contain" />
               </div>
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image src="/images/company1.webp" width={100} height={100} loading="lazy" alt="Adove" className="h-12 object-contain" />
+                <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company1_tktbp7.webp" width={100} height={100} loading="lazy" alt="Adove" className="h-12 object-contain" />
               </div>
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image src="/images/company6.webp" width={100} height={100} loading="lazy" alt="Samsung4" className="h-12 object-contain" />
+                <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company6_rnuajo.webp" width={100} height={100} loading="lazy" alt="Samsung4" className="h-12 object-contain" />
               </div>
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image src="/images/nestle.webp" width={100} height={100} loading="lazy" alt="Samsung8" className="h-12 object-contain" />
+                <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nestle_bibwqx.webp" width={100} height={100} loading="lazy" alt="Samsung8" className="h-12 object-contain" />
               </div>
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image src="/images/microsoft.webp" width={100} height={100} loading="lazy" alt="Samsung9" className="h-12 object-contain" />
+                <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327499/microsoft_lppuxh.webp" width={100} height={100} loading="lazy" alt="Samsung9" className="h-12 object-contain" />
               </div>
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image src="/images/icici.webp" width={100} height={100} loading="lazy" alt="Samsung" className="h-12 object-contain" />
+                <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327200/icici_1_quita6.webp" width={100} height={100} loading="lazy" alt="Samsung" className="h-12 object-contain" />
               </div>
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image src="/images/hp.webp" width={100} height={100} loading="lazy" alt="Samsung2" className="h-12 object-contain" />
+                <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327172/hp_b4ylow.webp" width={100} height={100} loading="lazy" alt="Samsung2" className="h-12 object-contain" />
               </div>
             </div>
           </div>
@@ -1668,7 +1668,7 @@ const Dypatil = () => {
             onOpenChange={(v) => !v && setOpenModal(null)}
             title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
             subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-            imageSrc="/images/dpu.png"
+            imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dpu_c3ija5.png"
             universityName="Jain University Online"
             defaultProgram="MBA"
             formType={openModal.type === 'apply' ? 'getStarted' : 'general'}

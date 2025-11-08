@@ -21,8 +21,8 @@ const UniversityPage = () => {
   const universityData = {
     name: "Shardha University Name",
     shortName: "Sharda",
-    logo: "/images/shardalogos.webp",
-    heroImage: "/images/university-hero.webp",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/shardalogos_fecyer.webp",
+    heroImage: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762587569/university-hero_ikhcch.webp",
     description: "Globally recognized university offering quality online education",
     themeColor: "#EC027C",
     accreditation: "NAAC A+",
@@ -36,7 +36,7 @@ const UniversityPage = () => {
       eligibility: "Passed the (10+2) examination from State Board / CBSE / NIOS / IGCSE / IB /ICSE recognized by the State or Central Government.",
       fees: "General,",
       specialization: "Finance, Marketing, HR, Entrepreneurship",
-      image: "/images/bba-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
       university: universityData.name,
       universityShort: universityData.shortName,
       alt: "Bachelor of Business Administration (BBA)",
@@ -47,7 +47,7 @@ const UniversityPage = () => {
       eligibility: "Passed the (10+2) examination from State Board / CBSE / NIOS / IGCSE / IB /ICSE recognized by the State or Central Government.",
       fees: "1,20,000",
       specialization: "General,",
-      image: "/images/bca-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bca-online-image_awhemy.webp",
       university: universityData.name,
       universityShort: universityData.shortName,
       alt: "Bachelor of Computer Applications (BCA)",
@@ -58,7 +58,7 @@ const UniversityPage = () => {
       eligibility: "10+2 Minimum 40%",
       fees: "1,05,000",
       specialization: "Political Science,",
-      image: "/images/bcom-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327070/bcom-online-image_pdmurc.webp",
       university: universityData.name,
       universityShort: universityData.shortName,
       alt: "Bachelor of Commerce (B.Com)",
@@ -72,7 +72,7 @@ const UniversityPage = () => {
       eligibility: "Passed Bachelor’s Degree of minimum 3 years duration.",
       fees: "₹1,40,000 -₹1,96,000",
       specialization: ["Data Science and Analytics, Marketing, Healthcare and Hospital Administration, Human Resource Management, Sales and Marketing, Finance"],
-      image: "/images/mba-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
       university: universityData.name,
       universityShort: universityData.shortName,
       alt: "Master of Business Administration (MBA)",
@@ -83,7 +83,7 @@ const UniversityPage = () => {
       eligibility: "Passed BCA/ Bachelor Degree in Computer Science Engineering or equivalent Degree or Passed B.Sc./ B.Com./ B.A. with Mathematics at 10+2 Level or at Graduation Level",
       fees: "₹1,20,000",
       specialization: ["Computer Science and Information Technology, Data Science"],
-      image: "/images/mca-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca-online-image_w3f0sx.webp",
       university: universityData.name,
       universityShort: universityData.shortName,
       alt: "Master of Computer Applications (MCA)",
@@ -94,7 +94,7 @@ const UniversityPage = () => {
       eligibility: "Graduation in Commerce",
       fees: "₹50,000-1,40,000",
       specialization: "Master of commerce",
-      image: "/images/m.com.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/m.com_libbpo.webp",
       university: universityData.name,
       universityShort: universityData.shortName,
       alt: "Master of Commerce (M.Com) in Sharda Online",
@@ -377,7 +377,7 @@ const faqData = [
                    </AnimatePresence>
         {/* Hero Section */}
         <section id="introduction" className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
-          <div className="absolute inset-0 bg-[url('/images/sharda.webp')] bg-cover bg-center opacity-200"></div>
+          <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp')] bg-cover bg-center opacity-200"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-blue-900/70 to-indigo-900/80"></div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
@@ -602,7 +602,7 @@ const faqData = [
       {/* Left Image */}
       <div className="w-full lg:w-1/2">
         <img
-          src="/images/sharda.webp" 
+          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp" 
           alt="Sharda University Campus"
           className="rounded-2xl shadow-md w-full h-80 object-cover"
         />
@@ -1161,7 +1161,7 @@ const faqData = [
                     <section className="bg-[#003366] py-12 px-4">
                       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
                         <div className="flex-1">
-                          <Image width={100} height={100} loading="lazy" src="/images/certificateshardaonline.webp" alt="certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+                          <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327074/certificateshardaonline_tyy6cu.webp" alt="certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
                         </div>
                         <div className="flex-1 text-white">
                           <h2 className="text-3xl md:text-4xl font-semibold mb-4">Online Degree from Sharda Online University</h2>
@@ -1243,60 +1243,60 @@ const faqData = [
             {/* Logo Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image width={100} height={100} loading="lazy" src="/images/company.webp" alt="Company" className="h-12 object-contain" />
+                <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company_vjgouc.webp" alt="Company" className="h-12 object-contain" />
               </div>
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image width={100} height={100} loading="lazy" src="/images/company1.webp" alt="Microsoft" className="h-12 object-contain" />
+                <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company1_tktbp7.webp" alt="Microsoft" className="h-12 object-contain" />
               </div>
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image width={100} height={100} loading="lazy" src="/images/company9.webp" alt="Company 9" className="h-12 object-contain" />
+                <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327090/company9_p4pgg3.webp" alt="Company 9" className="h-12 object-contain" />
               </div>
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image width={100} height={100} loading="lazy" src="/images/com10.webp" alt="Company 10" className="h-12 object-contain" />
+                <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327088/com10_cm37v8.webp" alt="Company 10" className="h-12 object-contain" />
               </div>
                     <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image width={100} height={100} loading="lazy" src="/images/companany4.webp" alt="Company4" className="h-12 object-contain" />
+                <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany4_h5nana.webp" alt="Company4" className="h-12 object-contain" />
               </div>
                     <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image width={100} height={100} loading="lazy" src="/images/company6.webp" alt="Company 6" className="h-12 object-contain" />
+                <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company6_rnuajo.webp" alt="Company 6" className="h-12 object-contain" />
               </div>
                     <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image width={100} height={100} loading="lazy" src="/images/companany5.webp" alt="Companany5" className="h-12 object-contain" />
+                <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany5_qs6bgc.webp" alt="Companany5" className="h-12 object-contain" />
               </div>
                     <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image width={100} height={100} loading="lazy" src="/images/adove.webp" alt="Adove" className="h-12 object-contain" />
+                <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/adove_jtmiou.webp" alt="Adove" className="h-12 object-contain" />
               </div>
                     
         
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image width={100} height={100} loading="lazy" src="/images/3.webp" alt="Samsung3" className="h-12 object-contain" />
+                <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/3_qmk7vp.webp" alt="Samsung3" className="h-12 object-contain" />
               </div>
         
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image width={100} height={100} loading="lazy" src="/images/4.webp" alt="Samsung4" className="h-12 object-contain" />
+                <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327026/4_jdqypx.webp" alt="Samsung4" className="h-12 object-contain" />
               </div>
         
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image width={100} height={100} loading="lazy" src="/images/5.webp" alt="Samsung5" className="h-12 object-contain" />
+                <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327026/5_mcevmm.webp" alt="Samsung5" className="h-12 object-contain" />
               </div>
         
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image width={100} height={100} loading="lazy" src="/images/6.webp" alt="Samsung6" className="h-12 object-contain" />
+                <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/6_wioxuw.webp" alt="Samsung6" className="h-12 object-contain" />
               </div>
         
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image width={100} height={100} loading="lazy" src="/images/7.webp" alt="Samsung7" className="h-12 object-contain" />
+                <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327028/7_eilzgq.webp" alt="Samsung7" className="h-12 object-contain" />
               </div>
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image width={100} height={100} loading="lazy" src="/images/8.webp" alt="Samsung8" className="h-12 object-contain" />
-              </div>
-        
-              <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image width={100} height={100} loading="lazy" src="/images/9.webp" alt="Samsung9" className="h-12 object-contain" />
+                <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327028/8_otnhv8.webp" alt="Samsung8" className="h-12 object-contain" />
               </div>
         
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-                <Image width={100} height={100} loading="lazy" src="/images/samsung.webp" alt="Samsung" className="h-12 object-contain" />
+                <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327028/9_eqrytp.webp" alt="Samsung9" className="h-12 object-contain" />
+              </div>
+        
+              <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
+                <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/samsung_sosfqv.webp" alt="Samsung" className="h-12 object-contain" />
               </div>
               {/* Add more cards here as needed */}
             </div>
@@ -1575,7 +1575,7 @@ const faqData = [
             onOpenChange={(v) => !v && setOpenModal(null)}
             title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
             subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-            imageSrc="/images/sharda1.webp"
+            imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda1_eehdkh.webp"
             universityName={universityData.name}
             defaultProgram={openModal.program || 'MBA'}
             formType={openModal.type === 'apply' ? 'getStarted' : 'general'}

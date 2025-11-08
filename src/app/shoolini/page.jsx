@@ -608,7 +608,7 @@ const Shoolini = () => {
       eligibility: "10+2 pass with Commerce",
       fees: "₹75,000/-",
       specialization: "Accounting, Finance and Taxation",
-      image: "/images/bcom.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
       alt: "Bachelor of Commerce at Shoolini University",
     },
     {
@@ -617,7 +617,7 @@ const Shoolini = () => {
       eligibility: "10+2 in any discipline with 40% marks in last qualifying examination",
       fees: "(63,000/- + 27,000/-) = ₹90,000/-  [ ₹27,000/-(Only to be paid after Placement)]",
       specialization: "HR, Marketing, Finance, Digital Marketing, Computer Science, Direct Selling",
-      image: "/images/shoolini-bba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327856/shoolini-bba_gqzjmi.webp",
       alt: "Bachelor of Business Administration at Shoolini University",
     },
     {
@@ -626,7 +626,7 @@ const Shoolini = () => {
       eligibility: "10+2 in any discipline with 40% marks in last qualifying examination. Reservation of seats as per government policies. ",
       fees: "(63,000/- + 27,000/-) = ₹90,000/-  [ ₹27,000/-(Only to be paid after Placement)]",
       specialization: "Machine Learning, Data Science, Cyber Secruity and Artificial Intelligence",
-      image: "/images/shoolini-bca.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327857/shoolini-bca_zwvncy.webp",
       alt: "Bachelor of Computer Applications at Shoolini University",
     }
   ];
@@ -638,7 +638,7 @@ const Shoolini = () => {
       eligibility: "Passed Bachelor degree of minimum 3 years duration. Obtained atleast 50% marks.",
       fees: "(98,000/- + 42,000/-) = ₹1,40,000/- [ ₹42,000/-(Only to be paid after Placement)]",
       specialization: "Marketing Management, Operation & Supply Chain Management, Agri Business Management, Human Resource Management, IT Management, Biotechnology Management, Financial Management, Tourism Management, Food Technology Management, Digital Marketing, Real Estate Management, Pharma & Health Care Management,Retail Management,Direct Selling Management,Banking & Insurance,Data Science & Business Analytics",
-      image: "/images/shoolini-mba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327859/shoolini-mba_dpoger.webp",
       alt: "Master of Business Administration at Shoolini University",
     },
     {
@@ -647,7 +647,7 @@ const Shoolini = () => {
       eligibility: "Passed Bachelor degree of minimum 3 years duration. Obtained atleast 50% marks.",
       fees: "₹1,80,000/-",
       specialization: "Marketing Management, Operation & Supply Chain Management, Agri Business Management, Human Resource Management, IT Management, Biotechnology Management, Financial Management, Tourism Management, Food Technology Management, Digital Marketing, Real Estate Management, Pharma & Health Care Management,Retail Management,Direct Selling Management,Banking & Insurance,Data Science & Business Analytics",
-      image: "/images/mba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
       alt: "Executive MBA at Shoolini University",
     },
     {
@@ -656,7 +656,7 @@ const Shoolini = () => {
       eligibility: "Graduation in Life Sciences",
       fees: "₹1,20,000/-",
       specialization: "Data Science",
-      image: "/images/shoolini-mca.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327859/shoolini-mca_pxpsfz.webp",
       alt: "Master of Science in Data Science at Shoolini University",
     },
     {
@@ -665,7 +665,7 @@ const Shoolini = () => {
       eligibility: "Bachelor's degree in 3 years with at least 50% marks (45% for reserved category candidates,) ",
       fees: "₹1,50,000/-",
       specialization: "AI & ML, Data Science and Analytics, Full Stack Development",
-      image: "/images/mca1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
       alt: "Master of Science in Data Science at Shoolini University",
     },
     {
@@ -674,7 +674,7 @@ const Shoolini = () => {
       eligibility: "Bachelor's degree with any discipline with minimum of 40% marks. 60% marks in case of International Students in the qualifying examination.",
       fees: "42,000-1,00,000",
       specialization: "English Literature, journalism and Mass Communication",
-      image: "/images/shoolini-ma.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327858/shoolini-ma_uokqan.webp",
       alt: "Master of Arts in shoolini University",
     }
   ];
@@ -736,7 +736,7 @@ const Shoolini = () => {
                 </button>
                 
                 <img 
-                  src="/images/logo_shoolini.webp" 
+                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327282/logo_shoolini_cgz1an.webp" 
                   alt="Logo_shoolini" 
                   className="h-12 w-50 sm:h-10 lg:h-12" 
                 />
@@ -785,7 +785,7 @@ const Shoolini = () => {
   {/* Background Image with Gradient Overlay */}
   <div className="absolute inset-0">
     <Image
-      src="/images/shoolini_banner.png"
+      src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327859/shoolini_banner_vrgomm.png"
       alt="Shoolini University Campus"
       fill
       className="object-cover object-center"
@@ -868,7 +868,7 @@ const Shoolini = () => {
     Our online degree programs are designed to secure your future, give your career a competitive edge, and ensure great placements or selection in leading international universities. You only pay once your desired outcome is achieved.
   `}
   badgeText="Flexible Learning | Research-Focused | Career-Oriented Programs"
-  imgSrc="/images/shoolini-uni.webp"
+  imgSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327860/shoolini-uni_rqkaii.webp"
   imgAlt="Shoolini University Campus"
   students="20K+" 
   partners="50+"
@@ -1317,7 +1317,7 @@ const Shoolini = () => {
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
-            <Image width={100} height={100} loading="lazy" src="/images/shoolini-ccertificate.webp" alt="Shoolini Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327858/shoolini-ccertificate_hw3lvb.webp" alt="Shoolini Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
           </div>
           <div className="flex-1 text-white">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">Get Certified from Shoolini University</h2>
@@ -1491,11 +1491,11 @@ const Shoolini = () => {
           <p className="text-xl text-gray-600">Trusted by global companies</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {["/images/nestle.webp", "/images/decathlon.webp", "/images/icici.webp", "/images/company.webp", "/images/company1.webp", "/images/company9.webp", 
-              "/images/com10.webp", "/images/companany4.webp", 
-              "/images/companany5.webp", "/images/adove.webp", "/images/samsung.webp",
-              "/images/3.webp", "/images/4.webp", "/images/5.webp", 
-              "/images/6.webp", "/images/7.webp", "/images/9.webp", "/images/lt.webp", "/images/hindustanunilever.webp", "/images/lg.webp"].map((src, i) => (
+          {["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nestle_bibwqx.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327108/decathlon_zp87ip.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327200/icici_1_quita6.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company_vjgouc.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company1_tktbp7.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327090/company9_p4pgg3.webp", 
+              "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327088/com10_cm37v8.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany4_h5nana.webp", 
+              "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany5_qs6bgc.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/adove_jtmiou.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/samsung_sosfqv.webp",
+              "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/3_qmk7vp.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327026/4_jdqypx.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327026/5_mcevmm.webp", 
+              "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/6_wioxuw.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327028/7_eilzgq.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327028/9_eqrytp.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327362/lt_akwpfk.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327172/hindustanunilever_qrh10l.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327282/lg_luyozv.webp"].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
               <Image width={100} height={100} loading="lazy" src={src} alt="Recruiter" className="h-12 object-contain" />
             </div>
@@ -1583,7 +1583,7 @@ const Shoolini = () => {
                       className="space-y-4"
                     >
                       <div className="flex items-center gap-3 mb-4">
-                        <img src="/images/logo_shoolini.webp" alt="Shoolini University Logo" className="h-10 w-auto bg-white" />
+                        <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327282/logo_shoolini_cgz1an.webp" alt="Shoolini University Logo" className="h-10 w-auto bg-white" />
                         <span className="text-xl font-bold text-red">shoolini</span>
                       </div>
                       <p className="text-sm text-gray-400 leading-relaxed">
@@ -1773,7 +1773,7 @@ const Shoolini = () => {
                 onOpenChange={(v) => !v && setOpenModal(null)}
                 title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
                 subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-                imageSrc="/images/shoolini_form1.png"
+                imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327859/shoolini_form1_lsfmyo.png"
                 universityName="Shoolini Online University"
                 defaultProgram="MBA"
                 formType={openModal.type === 'apply' ? 'getStarted' : 'general'}

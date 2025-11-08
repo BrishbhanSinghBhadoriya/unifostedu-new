@@ -32,22 +32,22 @@ const [modalType, setModalType] = useState();
   // Hide header on Amity page
   
   const universities = [
-    { name: "Amity University Online", link: "/Amity-University-Online", logo: "/images/amity.webp" },
-    { name: "Lovely Professional University", link: "/lpu-online", logo: "/images/lpu.webp" },
-    { name: "Manipal University Jaipur", link: "/manipal", logo: "/images/manipal.webp" },
-    { name: "Manipal Academy of Higher Education", link: "/mahe-online", logo: "/images/mahe-uni.webp" },
-     { name: "Sikkim Manipal University", link: "/smu", logo: "/images/smu-uni.webp" },
-    { name: "Uttaranchal University", link: "/uu", logo: "/images/uu-uni.webp" },
-    { name: "Chandigarh University Online", link: "/cuonline", logo: "/images/chandigarh.webp" },
-    { name: "Jain University", link: "/jain", logo: "/images/jain.webp" },
-    { name: "Dr. D Y Patil", link: "/dypatil", logo: "/images/dypatil.webp" },
-    { name: "OP Jindal University", link: "/opjindal", logo: "/images/opjindal.webp" },
-    { name: "Kurukshetra University", link: "/ku-online", logo: "/images/ku.webp" },
-    { name: "Shoolini University Online", link: "/shoolini", logo: "/images/shoolini.webp" },
-    { name: "Vivekananda Global University Online", link: "/vgu", logo: "/images/vgu1.webp" },
-    { name: "Upes Online", link: "/upes", logo: "/images/upes.webp" },
-    { name: "Sharda University Online", link: "/sharda", logo: "/images/sharda.webp" },
-    { name: "NMIMS University", link: "/nmims", logo: "/images/nmims.webp" }
+    { name: "Amity University Online", link: "/Amity-University-Online", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp" },
+    { name: "Lovely Professional University", link: "/lpu-online", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp" },
+    { name: "Manipal University Jaipur", link: "/manipal", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp" },
+    { name: "Manipal Academy of Higher Education", link: "/mahe-online", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/mahe-uni_dvnm1d.webp" },
+     { name: "Sikkim Manipal University", link: "/smu", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp" },
+    { name: "Uttaranchal University", link: "/uu", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp" },
+    { name: "Chandigarh University Online", link: "/cuonline", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp" },
+    { name: "Jain University", link: "/jain", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp" },
+    { name: "Dr. D Y Patil", link: "/dypatil", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dypatil_tbbpf9.webp" },
+    { name: "OP Jindal University", link: "/opjindal", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/opjindal_jdl7az.webp" },
+    { name: "Kurukshetra University", link: "/ku-online", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku_xu5nkx.webp" },
+    { name: "Shoolini University Online", link: "/shoolini", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327856/shoolini_txvq6k.webp" },
+    { name: "Vivekananda Global University Online", link: "/vgu", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgu1_ieijw9.webp" },
+    { name: "Upes Online", link: "/upes", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/upes_uzkkmm.webp" },
+    { name: "Sharda University Online", link: "/sharda", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp" },
+    { name: "NMIMS University", link: "/nmims", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327721/nmims_os8kn9.webp" }
   ];
 
  
@@ -182,7 +182,7 @@ const [modalType, setModalType] = useState();
                   ? 'bg-gradient-to-r from-[#001e3c] to-[#003b6c] shadow-lg' 
                   : 'bg-white/10 backdrop-blur-sm'
               }`}>
-                <Image width={100} height={100} src="/images/unilogo.webp" alt="Unifost Logo" sizes="100px" quality={80} className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
+                <Image width={100} height={100} src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/unilogo_wvmt8h.webp" alt="Unifost Logo" sizes="100px" quality={80} className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
               </div>
               {!scrolled && (
                 <div className="absolute -inset-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-2xl blur opacity-10 group-hover:opacity-40 transition-opacity duration-500"></div>
@@ -347,7 +347,7 @@ const [modalType, setModalType] = useState();
               {/* Top bar */}
               <div className="flex items-center justify-between mb-6 sm:mb-8">
                 <div className="flex items-center gap-3">
-                  <Image width={100} height={100} loading="lazy" src="/images/uni.webp" alt="Unifost" className="h-8 w-auto" />
+                  <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp" alt="Unifost" className="h-8 w-auto" />
                   <span className="text-lg font-bold text-[#00ffe0]">Unifost</span>
                 </div>
                 <button

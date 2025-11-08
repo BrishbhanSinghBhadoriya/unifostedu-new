@@ -90,7 +90,7 @@ const JainUGCApproval = () => {
         {/* Sidebar */}
         <aside className="w-full md:w-[38%] space-y-6">
           <img
-            src="/images/b5.webp"
+            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b5_rdxlgr.webp"
             alt="Jain Online UGC Approval"
             className="rounded-xl w-full object-cover shadow-md"
           />
@@ -99,7 +99,7 @@ const JainUGCApproval = () => {
             <h2 className="text-xl font-semibold text-blue-900 mb-4">You Might Also Like</h2>
             <div className="grid gap-5">
               <a href="/blog/mba-online-vs-distance" className="group bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
-                <img src="/images/b1.webp" alt="MBA Online vs Distance" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b1_xpmoe1.webp" alt="MBA Online vs Distance" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h3 className="font-bold text-blue-800 text-lg">Online vs Distance MBA</h3>
                   <p className="text-sm text-gray-600 mt-1">Compare flexibility, recognition & ROI.</p>
@@ -107,7 +107,7 @@ const JainUGCApproval = () => {
               </a>
 
               <a href="/blog/lpu-online-review" className="group bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
-                <img src="/images/b4.webp" alt="jain Online Review" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327035/b4_xo9eua.webp" alt="jain Online Review" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h3 className="font-bold text-blue-800 text-lg">LPU Online Review</h3>
                   <p className="text-sm text-gray-600 mt-1">Understand pros, cons, and admissions process.</p>

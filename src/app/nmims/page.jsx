@@ -36,9 +36,9 @@ useEffect(() => {
     return () => clearTimeout(timer);
   }, []);
   const sliderImages = [
-    '/images/nmims_banner1.jpg',
-    '/images/nmims_banner2.jpg',
-    '/images/nmims_banner3.jpg',
+    'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327722/nmims_banner1_rjvczo.jpg',
+    'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327722/nmims_banner2_vwnvlf.jpg',
+    'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327722/nmims_banner3_tatyhr.jpg',
     
   ];
 
@@ -68,7 +68,7 @@ useEffect(() => {
       eligibility: "10+2 from a recognized board with minimum 50% marks",
       fees: "₹1,45,000",
       specialization: "General Management, Digital Marketing, Finance, Human Resources",
-      image: "/images/bba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
       alt: "Bachelor of Business Administration (BBA) in NMIMS Online",
     },
     {
@@ -77,7 +77,7 @@ useEffect(() => {
       eligibility: "10+2 with commerce stream and minimum 50% marks",
       fees: "₹94,000",
       specialization: "Accounting, Finance, Taxation, Banking",
-      image: "/images/bcom.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
       alt: "Bachelor of Commerce (B.Com) in NMIMS Online",
     },
   ];
@@ -89,7 +89,7 @@ useEffect(() => {
       eligibility: "Graduation in any discipline with minimum 50% marks",
       fees: "₹1,44,000",
       specialization: "Finance, Marketing, Human Resources, Operations, Business Analytics, International Business, Digital Marketing, Supply Chain Management",
-      image: "/images/mba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
       alt: "Master of Business Administration (MBA) in NMIMS Online",
     },
     {
@@ -98,7 +98,7 @@ useEffect(() => {
       eligibility: "Graduation with minimum 55% marks and 3 year Experience",
       fees: "₹4,00,000",
       specialization: "Applied Finance, Digital Marketing, Leadership & Strategy, Marketing, Operations & Supply Chain",
-      image: "/images/mca1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
       alt: "Master of Business Administration (WX) in NMIMS Online",
     },
   ];
@@ -147,7 +147,7 @@ useEffect(() => {
         <link rel="canonical" href="https://unifostedu.com/nmims" />
         <meta property="og:title" content="NMIMS Online Degrees | Accredited UG & PG Programs" />
         <meta property="og:description" content="UGC-Entitled & NAAC A++ accredited online courses from NMIMS Global. Learn anytime, anywhere with flexible UG & PG programs." />
-        <meta property="og:image" content="/images/nmims.webp" />
+        <meta property="og:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327721/nmims_os8kn9.webp" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -171,7 +171,7 @@ useEffect(() => {
             <div className="flex items-center justify-between h-16 lg:h-20">
               <div className="flex items-center gap-2 lg:gap-4">
                 <img 
-                  src="/images/nmims_logo.webp" 
+                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327722/nmims_logo_rjlpi8.webp" 
                   alt="NMIMS Logo" 
                   className="h-12 w-50 sm:h-10 lg:h-12" 
                 />
@@ -258,7 +258,7 @@ useEffect(() => {
             With 1.25L+ students across 600+ cities, NMIMS Global provides world-class education with industry-ready programs.
           `}
           badgeText="NAAC A++ Accredited | UGC Entitled | 1.25L+ Students"
-          imgSrc="/images/nmims.webp"
+          imgSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327721/nmims_os8kn9.webp"
           imgAlt="NMIMS Global Online Campus"
           students="1.25L+"
           partners="200+"
@@ -430,7 +430,7 @@ useEffect(() => {
               onOpenChange={(v) => !v && setOpenModal(null)}
               title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
               subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-              imageSrc="/images/nmims_form.webp"
+              imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327723/nmims_form_iaqoru.webp"
               universityName="NMIMS Global Online"
               defaultProgram={openModal.program || "MBA"}
               formType={openModal.type}
@@ -503,12 +503,12 @@ useEffect(() => {
               },
             ]}
             accreditations={[
-              { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
-              { src: "/images/naac.webp", alt: "NAAC", name: "NAAC A++" },
-              { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
-              { src: "/images/aiu.webp", alt: "AIU", name: "AIU" },
-              { src: "/images/nba.webp", alt: "NBA", name: "NBA" },
-              { src: "/images/qs.webp", alt: "QS", name: "QS Ranking" },
+              { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp", alt: "UGC", name: "UGC" },
+              { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp", alt: "NAAC", name: "NAAC A++" },
+              { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp", alt: "AICTE", name: "AICTE" },
+              { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327029/aiu_yfa2is.webp", alt: "AIU", name: "AIU" },
+              { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327643/nba_n9wp3z.webp", alt: "NBA", name: "NBA" },
+              { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/qs_k5hl4c.webp", alt: "QS", name: "QS Ranking" },
             ]}
             internationalRecognition={[]}
             successStories={[]}
@@ -638,7 +638,7 @@ useEffect(() => {
         <section className="bg-[#7b1fa2] text-white py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
             <div className="flex-1">
-              <Image width={500} height={400} loading="lazy" src="/images/nmims-certi.webp" alt="NMIMS Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+              <Image width={500} height={400} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327723/nmims-certi_crgspk.webp" alt="NMIMS Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
             </div>
             <div className="flex-1">
               <h2 className="text-3xl md:text-4xl font-semibold mb-4">
@@ -708,30 +708,30 @@ useEffect(() => {
             
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
               {[
-                "/images/aditya-birla.webp",
-                "/images/airtel.webp",
-                "/images/aurobindo.webp",
-                "/images/bajaj-allianz.webp",
-                "/images/bharti-airtel.webp",
-                "/images/bosch.webp",
-                "/images/cipla.webp",
-                "/images/coca-cola.webp",
-                "/images/cyient.webp",
-                "/images/diageo.webp",
-                "/images/ey.webp",
-                "/images/fedex.webp",
-                "/images/hero.webp",
-                "/images/himalaya.webp",
-                "/images/hinduja.webp",
-                "/images/icici.webp",
-                "/images/iifl.webp",
-                "/images/india-mart.webp",
-                "/images/infosys.webp",
-                "/images/maruti.webp",
-                "/images/nestle.webp",
-                "/images/oyo.webp",
-                "/images/pepsico.webp",
-                "/images/samsung.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327033/aditya-birla_dln4ym.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/airtel_odc32s.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327033/aurobindo_myymk4.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/bajaj-allianz_w5copv.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bharti-airtel_hoajg1.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327070/bosch_psoaob.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327088/cipla_l21bms.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327088/coca-cola_krqtyj.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327108/cyient_o0zzp3.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327128/diageo_ezhnzr.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327152/ey_ph2bsx.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327152/fedex_ztxmsk.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327171/hero_krubph.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327171/himalaya_vworlj.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327171/hinduja_tuhqdi.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327200/icici_1_quita6.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327203/iifl_sihlun.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327203/india-mart_liq79t.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327238/infosys_vk4d5g.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/maruti_ofcgtx.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nestle_bibwqx.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327851/oyo_u0luvj.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327852/pepsico_lwhvcn.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/samsung_sosfqv.webp",
               ].map((src, i) => (
                 <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
                   <Image width={100} height={100} loading="lazy" src={src} alt={`Company ${i + 1}`} className="h-12 object-contain" />
@@ -759,7 +759,7 @@ useEffect(() => {
                   className="space-y-4"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <img src="/images/nmims_logo.webp" alt="NMIMS Logo" className="h-10 w-auto bg-white rounded p-1" />
+                    <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327722/nmims_logo_rjlpi8.webp" alt="NMIMS Logo" className="h-10 w-auto bg-white rounded p-1" />
                     <span className="text-xl font-bold text-[#7b1fa2]">NMIMS</span>
                   </div>
                   <p className="text-sm text-gray-400 leading-relaxed">
@@ -933,7 +933,7 @@ useEffect(() => {
             onOpenChange={(v) => !v && setOpenModal(null)}
             title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
             subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-            imageSrc="/images/nmims_form.webp"
+            imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327723/nmims_form_iaqoru.webp"
             universityName="NMIMS Global Online"
             defaultProgram={openModal.program || "MBA"}
             formType={openModal.type === 'apply' ? 'getStarted' : 'general'}

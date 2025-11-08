@@ -82,7 +82,7 @@ const ScholarshipAndEMI = () => {
         {/* Sidebar */}
         <aside className="w-full md:w-[40%] flex flex-col gap-6">
           <img
-            src="/images/b7.webp"
+            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327035/b7_vymjqj.webp"
             alt="Scholarship & EMI Options"
             className="rounded-xl w-full object-cover shadow-md"
           />
@@ -94,7 +94,7 @@ const ScholarshipAndEMI = () => {
                 href="/blog/lpu-online-review"
                 className="block bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden"
               >
-                <img src="/images/b4.webp" alt="LPU Online Review" className="h-32 w-full object-cover" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327035/b4_xo9eua.webp" alt="LPU Online Review" className="h-32 w-full object-cover" />
                 <div className="p-3">
                   <h3 className="font-bold text-blue-800 text-md">LPU Online MBA Review</h3>
                   <p className="text-sm text-gray-600 mt-1">Pros, cons, fee structure, and placements.</p>
@@ -105,7 +105,7 @@ const ScholarshipAndEMI = () => {
                 href="/blog/mba-online-vs-distance"
                 className="block bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden"
               >
-                <img src="/images/b1.webp" alt="MBA Online vs Distance" className="h-32 w-full object-cover" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b1_xpmoe1.webp" alt="MBA Online vs Distance" className="h-32 w-full object-cover" />
                 <div className="p-3">
                   <h3 className="font-bold text-blue-800 text-md">Online vs Distance MBA</h3>
                   <p className="text-sm text-gray-600 mt-1">Compare flexibility, support, and ROI.</p>

@@ -179,7 +179,7 @@ export default function WorkflowRoadmap({ onGetStartedClick }) {
             {/* Start Image - University Building */}
             <div className="absolute left-[-1.2rem] sm:left-[-5rem] md:left-[-6rem] lg:left-[-7rem] bottom-24 sm:bottom-40 md:bottom-40 z-20">
               {/* <div className="relative">
-                <Image width={100} height={100} loading="lazy" src="/images/university.webp" alt="University Start" className="w-16 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 object-cover rounded-full" />
+                <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/university_bzfla5.webp" alt="University Start" className="w-16 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 object-cover rounded-full" />
               </div> */}
             </div>
 

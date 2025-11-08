@@ -252,22 +252,22 @@ function SearchContent({ onOpenModal }) {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {[
-                { name: 'Amity University', href: '/Amity-University-Online', img: '/images/amity.webp', rating: '4.8' },
-                { name: 'Manipal University', href: '/manipal', img: '/images/manipal.webp', rating: '4.7' },
-                { name: 'NMIMS University', href: '/nmims', img: '/images/nmims.webp', rating: '4.9' },
-                { name: 'Dr. D Y Patil University', href: '/dypatil', img: '/images/dypatil.webp', rating: '4.6' },
-                { name: 'Jain University', href: '/jain', img: '/images/jain.webp', rating: '4.5' },
-                { name: 'Lovely Professional University', href: '/lpu', img: '/images/lpu.webp', rating: '4.4' },
-                { name: 'Manipal Academy of Higher Education', href: '/mahe-online', img: '/images/mahe-uni.webp', rating: '4.8' },
-                { name: 'Sharda University', href: '/sharda', img: '/images/sharda.webp', rating: '4.3' },
-                { name: 'Shoolini University', href: '/shoolini', img: '/images/shoolini.webp', rating: '4.2' },
-                { name: 'Sikkim Manipal University', href: '/smu', img: '/images/smu-uni.webp', rating: '4.5' },
-                { name: 'UPES University', href: '/upes', img: '/images/upes.webp', rating: '4.7' },
-                { name: 'Uttaranchal University', href: '/uu', img: '/images/uu-uni.webp', rating: '4.1' },
-                { name: 'VGU University', href: '/vgu', img: '/images/vgu1.webp', rating: '4.0' },
-                { name: 'Kurukshetra University', href: '/ku-online', img: '/images/ku.webp', rating: '4.3' },
-                { name: 'OP Jindal University', href: '/opjindal', img: '/images/opjindal.webp', rating: '4.6' },
-                { name: 'Chandigarh University', href: '/cuonline', img: '/images/chandigarh.webp', rating: '4.4' },
+                { name: 'Amity University', href: '/Amity-University-Online', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp', rating: '4.8' },
+                { name: 'Manipal University', href: '/manipal', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp', rating: '4.7' },
+                { name: 'NMIMS University', href: '/nmims', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327721/nmims_os8kn9.webp', rating: '4.9' },
+                { name: 'Dr. D Y Patil University', href: '/dypatil', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dypatil_tbbpf9.webp', rating: '4.6' },
+                { name: 'Jain University', href: '/jain', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp', rating: '4.5' },
+                { name: 'Lovely Professional University', href: '/lpu', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp', rating: '4.4' },
+                { name: 'Manipal Academy of Higher Education', href: '/mahe-online', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/mahe-uni_dvnm1d.webp', rating: '4.8' },
+                { name: 'Sharda University', href: '/sharda', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp', rating: '4.3' },
+                { name: 'Shoolini University', href: '/shoolini', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327856/shoolini_txvq6k.webp', rating: '4.2' },
+                { name: 'Sikkim Manipal University', href: '/smu', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp', rating: '4.5' },
+                { name: 'UPES University', href: '/upes', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/upes_uzkkmm.webp', rating: '4.7' },
+                { name: 'Uttaranchal University', href: '/uu', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp', rating: '4.1' },
+                { name: 'VGU University', href: '/vgu', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgu1_ieijw9.webp', rating: '4.0' },
+                { name: 'Kurukshetra University', href: '/ku-online', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku_xu5nkx.webp', rating: '4.3' },
+                { name: 'OP Jindal University', href: '/opjindal', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/opjindal_jdl7az.webp', rating: '4.6' },
+                { name: 'Chandigarh University', href: '/cuonline', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp', rating: '4.4' },
               ].map((university, idx) => (
                 <div key={idx} className="group">
                   <Link 

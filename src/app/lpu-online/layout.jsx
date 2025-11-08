@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Lovely Professional University Online(LPU) Online Degrees | Lovely Professional University Courses",
     description: "Explore online undergraduate and postgraduate programs offered by LPU Online, NAAC A++ accredited. Flexible and career-focused education.",
-    images: ["/images/lpu.webp"],
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp"],
   },
     alternates: {
     canonical: "https://unifostedu.com/lpu-online",

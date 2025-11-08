@@ -5,7 +5,7 @@ import Head from 'next/head';
 const colleges = [
  {
     name: "Amity University Online",
-    logo: "/images/amitylogo.webp",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/amitylogo_nfe7fa.webp",
     ranking: "NIRF-29",
     location: "Noida, UP",
     fee: "₹1.2L - ₹3.45L",
@@ -15,7 +15,7 @@ const colleges = [
   },
   {
     name: "Manipal University Online",
-    logo: "/images/manipallogo.webp",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipallogo_yduega.jpg",
     ranking: "NIRF-73",
     location: "Jaipur, Rajasthan",
     fee: "₹1.5L - ₹2.92L",
@@ -25,7 +25,7 @@ const colleges = [
   },
   {
     name: "Lovely Professional University Online",
-    logo: "/images/lpulogo.webp",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762329087/lpulogo_vdgb4x.png",
     ranking: "NIRF-38",
     location: "Phagwara, Punjab",
     fee: "₹80K - ₹2L",
@@ -35,7 +35,7 @@ const colleges = [
   },
   {
     name: "University of Petroleum and Energy Studies Online",
-    logo: "/images/upeslogo.webp",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327864/upeslogo_o2apk7.webp",
     ranking: "NIRF-41",
     location: "Dehradun, Uttarakhand",
     fee: "₹1.5L - ₹2.2L",
@@ -45,7 +45,7 @@ const colleges = [
   },
   {
     name: "Narsee Monjee Institute of Management Studies Online",
-    logo: "/images/nmimslogo.webp",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327723/nmimslogo_sqp2fz.webp",
     ranking: "NIRF-21",
     location: "Mumbai, Maharashtra",
     fee: "₹94K - ₹3.5L",
@@ -55,7 +55,7 @@ const colleges = [
   },
   {
     name: "Sharda University Online",
-    logo: "/images/shardalogo.webp",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/shardalogos_fecyer.webp",
     ranking: "NIRF-87",
     location: "Greater Noida, UP",
     fee: "₹80K - ₹1.5L",
@@ -65,7 +65,7 @@ const colleges = [
   },
   {
     name: "Dr. DY Patil Online",
-    logo: "/images/dypatillogo.webp",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dypatillogo_uxdfid.webp",
     ranking: "NIRF-63",
     location: "Navi Mumbai, Maharashtra",
     fee: "₹1.4L - ₹1.9L",
@@ -75,7 +75,7 @@ const colleges = [
   },
   {
     name: "Jain University Online",
-    logo: "/images/jainlogo.webp",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327240/jainlogo_ey9e8p.webp",
     ranking: "NIRF-77",
     location: "Bangalore, Karnataka",
     fee: "₹1.28L - ₹2.6L",
@@ -85,7 +85,7 @@ const colleges = [
   },
   {
     name: "Chandigarh University Online",
-    logo: "/images/chandigarh.webp",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp",
     ranking: "NIRF-36",
     location: "Chandigarh",
     fee: "₹1L - ₹2L",
@@ -110,7 +110,7 @@ export default function ListofCollege() {
       {/* Open Graph */}
       <meta property="og:title" content="Top Online Colleges in India | Compare Fees, Courses & Rankings" />
       <meta property="og:description" content="Discover and compare top online colleges in India including Amity, Manipal, LPU, Chandigarh University and more. Find the best online program for your career." />
-      <meta property="og:image" content="/images/college-banner.webp" />
+      <meta property="og:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762592591/campus-banner_m0jqj5.png" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://unifostedu.com/listofcollege" />
 
@@ -118,7 +118,7 @@ export default function ListofCollege() {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Top Online Colleges in India | Compare Fees, Courses & Rankings" />
       <meta name="twitter:description" content="Explore and compare top online colleges in India including Amity, Manipal, LPU, Chandigarh University and more. Find your ideal online program today." />
-      <meta name="twitter:image" content="/images/college-banner.webp" />
+      <meta name="twitter:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762592591/campus-banner_m0jqj5.png" />
     </Head>
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-20">

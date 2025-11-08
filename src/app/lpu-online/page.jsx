@@ -66,7 +66,7 @@ const LpuOnline = () => {
       eligibility: "10+2 Minimum 40%",
       fees: "1,20,000",
       specialization: "Finance, Marketing, Human Resources, Digital Marketing, Entrepreneurship",
-      image: "/images/bba-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
       university: "Lovely Professional University",
       universityShort: "LPU",
       alt: "Bachelor of Business Administration (BBA) in LPU Online",
@@ -77,7 +77,7 @@ const LpuOnline = () => {
       eligibility: "10+2 Minimum 40%",
       fees: "1,20,000",
       specialization: "Data Science, Cloud Computing, Full Stack Development, Cyber Security",
-      image: "/images/bca.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
       university: "Lovely Professional University",
       universityShort: "LPU",
       alt: "Bachelor of Computer Applications (BCA) in LPU Online",
@@ -88,7 +88,7 @@ const LpuOnline = () => {
       eligibility: "10+2 Minimum 40%",
       fees: "90,000",
       specialization: "General, Accounting & Finance, E-commerce",
-      image: "/images/bcom-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327070/bcom-online-image_pdmurc.webp",
       university: "Lovely Professional University",
       universityShort: "LPU",
       alt: "Bachelor of Commerce (B.Com) in LPU Online",
@@ -99,7 +99,7 @@ const LpuOnline = () => {
       eligibility: "10+2 Minimum 40%",
       fees: "80,000",
       specialization: "General, Psychology, Economics, Political Science",
-      image: "/images/ma1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
       university: "Lovely Professional University",
       universityShort: "LPU",
       alt: "Bachelor of Arts (BA) in LPU Online",
@@ -113,7 +113,7 @@ const LpuOnline = () => {
       eligibility: "50% Graduation",
       fees: "1,60,000",
       specialization: "HR, Finance, Marketing, Operations, Analytics, Digital Marketing, Data Science, IT, International Business, Banking, Healthcare, Logistics",
-      image: "/images/mba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
       university: "Lovely Professional University",
       universityShort: "LPU",
       alt: "Master of Business Administration (MBA) in LPU Online",
@@ -124,7 +124,7 @@ const LpuOnline = () => {
       eligibility: "50% Graduation in BCA/B.Sc(IT)",
       fees: "1,48,000",
       specialization: "ML & AI, Data Science, Cybersecurity, Full Stack, AR/VR & Game Development", 
-      image: "/images/mca1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
       university: "Lovely Professional University",
       universityShort: "LPU",
       alt: "Master of Computer Applications (MCA) in LPU Online",
@@ -135,7 +135,7 @@ const LpuOnline = () => {
       eligibility: "Graduation in Commerce",
       fees: "95,000",
       specialization: "General, Accounting, Finance", 
-      image: "/images/m.com.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/m.com_libbpo.webp",
       university: "Lovely Professional University",
       universityShort: "LPU",
       alt: "Master of Commerce (M.Com) in LPU Online",
@@ -278,7 +278,7 @@ const LpuOnline = () => {
         {/* Open Graph */}
         <meta property="og:title" content="LPU Online Degrees | Accredited Online Degrees" />
         <meta property="og:description" content="Globally recognized online undergraduate and postgraduate programs with flexible, industry-relevant learning." />
-        <meta property="og:image" content="/images/lpu.webp" />
+        <meta property="og:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.onlinedegree.in/lpu-online" />
 
@@ -286,7 +286,7 @@ const LpuOnline = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="LPU Online | Accredited Online Degrees" />
         <meta name="twitter:description" content="Enroll in UGC and AICTE approved online courses at Lovely Professional University. Learn with flexibility and global recognition." />
-        <meta name="twitter:image" content="/images/lpu.webp" />
+        <meta name="twitter:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp" />
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
@@ -338,7 +338,7 @@ const LpuOnline = () => {
                   {/* Left Logo */}
                   <div className="flex items-center gap-1 sm:gap-2 lg:gap-4">
                     <img 
-                      src="/images/LPU-Online-Logo.svg" 
+                      src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327362/LPU-Online-Logo_blodcq.svg" 
                       alt="LPU Online Logo" 
                       className="h-6 w-auto sm:h-8 lg:h-12" 
                     />
@@ -439,7 +439,7 @@ const LpuOnline = () => {
           {/* Background with Gradient Overlay */}
           <div className="absolute inset-0">
   <Image
-    src="/images/lpu3.webp"
+    src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327358/lpu3_mzvr6y.webp"
     alt="LPU Online student studying on a laptop"
               fill
     className="object-cover object-center"
@@ -464,7 +464,7 @@ const LpuOnline = () => {
                   {/* University Badge */}
                   <div className="inline-flex items-center gap-1 sm:gap-3 bg-white/20 backdrop-blur-sm rounded-full px-3 sm:px-6 py-1.5 sm:py-3 border border-white/30">
                     <img 
-                      src="/images/LPU-Online-Logo.svg" 
+                      src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327362/LPU-Online-Logo_blodcq.svg" 
                       alt="LPU Logo" 
                       className="h-5 sm:h-8 w-auto" 
                     />
@@ -572,6 +572,59 @@ const LpuOnline = () => {
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black-600 leading-relaxed">
              Students choosing LPU Online benefit from a digital learning that enhances flexibility, engagement, and skill development. As one of the recognized MBA colleges in Punjab, the institution offers programs that prepare learners for leadership roles in business, technology, and management. With LPU Online, students from across India gain access to world-class education that can be pursued anytime, anywhere — whether they are professionals looking for online degrees in Jalandhar or students searching for top online courses near me.     </p>
           </div>
+          <div className="max-w-7xl mx-auto px-4 md:px-8  md:pt-15">
+    {/* Heading */}
+    <div className="text-center mb-12 ">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        LPU Online – Bridging Distance and Education
+      </h2>
+      <div className="mx-auto h-1 w-20 bg-yellow-400 rounded-full"></div>
+    </div>
+
+    {/* Text Section Only */}
+    <div className="space-y-6 text-gray-700 leading-relaxed text-justify">
+      <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black-600 leading-relaxed mb-4 sm:mb-6">
+        In the world of technology, <span className="font-semibold text-blue-700">LPU Online</span> acts as a bridge between quality education and accessibility. Ranked among the top colleges in India, it provides programs that combine academic competition with real-world experience. Its distance courses in Punjab have empowered thousands of learners to upgrade their qualifications while maintaining work-life balance.
+      </p>
+
+      <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black-600 leading-relaxed mb-4 sm:mb-6">
+        For those pursuing an <span className="font-semibold text-blue-700">online MBA from distance</span>, LPU Online stands out among MBA colleges in Punjab for its industry-oriented curriculum and experienced faculty. The program focuses on business strategy, leadership, and innovation—making it one of the best courses in LPU for professionals aiming to accelerate their careers. Students across India searching for <span className="italic">online courses near me</span> often choose LPU Online for its interactive lectures, live sessions, and comprehensive learning support.
+      </p>
+
+      <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black-600 leading-relaxed mb-4 sm:mb-6">
+        Every course under LPU Online—whether a management degree or a computer application program—is designed to meet evolving global education standards. With LPU Online, learners can earn <span className="font-semibold text-blue-700">online degrees in Jalandhar</span> that hold national and international credibility, opening doors to global opportunities. This makes LPU Online not just the best university for online degrees in Jalandhar but also a benchmark among top colleges in India for modern digital education.
+      </p>
+    </div>
+  </div>
+
+  {/* Academic Excellence Section */}
+  <div className="max-w-7xl mx-auto px-4 md:px-8 mt-20">
+    <div className="text-center mb-12">
+      <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        Academic Excellence and Innovation
+      </h3>
+      <div className="mx-auto h-1 w-16 bg-yellow-400 rounded-full"></div>
+    </div>
+
+    <div className="space-y-6 text-gray-700 leading-relaxed text-justify">
+      <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black-600 leading-relaxed mb-4 sm:mb-6">
+        <span className="font-semibold text-blue-700">LPU Online</span> combines technology, quality content, and expert faculty to deliver excellence in digital education. As one of the <span className="font-semibold">top colleges in India</span>, it continues to lead in offering <span className="font-semibold">distance courses in Punjab</span> that are flexible, affordable, and globally recognized.
+      </p>
+
+      <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black-600 leading-relaxed mb-4 sm:mb-6">
+        Students seeking <span className="italic">online courses near me</span> find that LPU Online’s curriculum and virtual infrastructure replicate the traditional classroom experience—enhanced with advanced e-learning tools. The platform offers programs ranging from <span className="font-semibold">online MBA from distance</span> to undergraduate and postgraduate degrees in commerce, computer science, arts, and management.
+      </p>
+
+      <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black-600 leading-relaxed mb-4 sm:mb-6">
+        Among all <span className="font-semibold">MBA colleges in Punjab</span>, LPU Online remains a top choice due to its unique blend of academic expertise and practical exposure. The <span className="font-semibold">best courses in LPU</span> integrate case studies, projects, and industry-driven modules that develop analytical and managerial capabilities.
+      </p>
+
+      <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black-600 leading-relaxed mb-4 sm:mb-6">
+        By pursuing <span className="font-semibold">online degrees in Jalandhar</span> through LPU Online, students gain access to international learning resources and expert mentorship. The institution’s focus on outcome-based learning ensures that every graduate is equipped for success in today’s competitive world.
+      </p>
+    </div>
+  </div>
+          
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           
@@ -588,7 +641,12 @@ const LpuOnline = () => {
                   
                  
                 </div>
-
+              <div className="text-center">
+      <h2 className="text-4xl font-bold text-gray-900 mb-3">Campus Tour</h2>
+      <p className="text-lg text-gray-600">
+        Explore LPU Online’s World-Class Learning Environment
+      </p>
+    </div>
                 {/* Key Features Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
                   {[
@@ -638,7 +696,7 @@ const LpuOnline = () => {
               >
                 <div className="relative group overflow-hidden rounded-xl sm:rounded-2xl">
                   <Image
-                    src="/images/lpu.webp" 
+                    src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp" 
                     alt="LPU Online Campus"
                     width={600}
                     height={400}
@@ -649,7 +707,7 @@ const LpuOnline = () => {
                 
                 <div className="relative group">
                   <Image
-    src="/images/images.jpeg" 
+    src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327203/images_mwnhd8.jpg" 
     alt="LPU Online Students"
                     width={600}
                     height={300}
@@ -669,6 +727,109 @@ const LpuOnline = () => {
         
       </div>
     </section>
+         <section className="bg-white py-16 px-6 md:px-20">
+  <div className="max-w-7xl mx-auto space-y-6">
+    {/* Section Header */}
+         <div className="text-center">
+      <h2 className="text-4xl font-bold text-gray-900 mb-3">LPU Online Benefits</h2>
+      
+    </div>
+
+    {/* Section Content */}
+    <div className="space-y-10 text-gray-700 leading-relaxed text-justify">
+      <p>
+        The <strong>LPU Online campus tour</strong> offers a glimpse into the
+        remarkable world of Lovely Professional University Online, one of the
+        top universities in India for higher education and distance learning.
+        Through the virtual campus tour of LPU Online, students can explore the
+        university’s modern infrastructure, interactive classrooms, digital
+        libraries, and global learning spaces — all designed to replicate the
+        immersive experience of studying on a physical campus.
+      </p>
+
+      <div>
+        <h3 className="text-2xl font-semibold text-black-600 mb-2">
+          1. The Digital Learning Environment
+        </h3>
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black-600 leading-relaxed mb-4 sm:mb-6">
+         At LPU Online, the campus extends beyond physical boundaries. The LPU Online virtual campus is equipped with smart classrooms, AI-driven learning tools, and interactive study platforms that foster engagement and collaboration. Through the LPU Online campus tour, learners witness how advanced digital systems ensure seamless communication between faculty and students, enabling the most efficient online learning in India. Every part of the LPU Online infrastructure — from its LMS (Learning Management System) to digital evaluation systems — reflects the university’s commitment to modern education and career-focused learning.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-semibold text-black-600 mb-2">
+          2. Library and Learning Resources
+        </h3>
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black-600 leading-relaxed mb-4 sm:mb-6">
+          The LPU Online digital library is a hub of academic excellence, providing access to thousands of e-books, journals, and research databases. During the LPU Online campus tour, students can explore this vast collection that supports continuous learning and research in fields like management, computer science, and commerce. The LPU Online e-library is open 24/7, ensuring that every learner can study anytime, anywhere — a key advantage of choosing LPU Online for distance education.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-semibold text-black-600 mb-2">
+          3. Student Support and Counseling
+        </h3>
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black-600 leading-relaxed mb-4 sm:mb-6">
+        The LPU Online campus tour also introduces learners to the student support system — a network of academic advisors, career counselors, and technical support staff who guide students throughout their journey. LPU Online is known for offering one of the most student-friendly ecosystems among the best online universities in India. Through the virtual tour, students can view how support is integrated into every stage of the learning process, from admission to graduation.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-semibold text-black-600 mb-2">
+          4. Global Classrooms and Industry Integration
+        </h3>
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black-600 leading-relaxed mb-4 sm:mb-6">
+           The LPU Online campus tour highlights its global learning ecosystem, connecting students from across the world. The LPU Online virtual classrooms are interactive spaces where international exposure meets academic innovation. Learners gain insights from industry experts, live webinars, and career development workshops that bridge the gap between theory and practice. With this immersive experience, the LPU Online campus mirrors the diversity and inclusivity of an international university setting.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-semibold text-black-600 mb-2">
+          5. Faculty and Mentorship
+        </h3>
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black-600 leading-relaxed mb-4 sm:mb-6">
+          As part of the LPU Online campus tour, prospective students can learn about the expert faculty members who drive academic excellence at the university. The LPU Online teaching staff includes Ph.D. holders, researchers, and industry professionals dedicated to mentoring students toward success. Every program, including LPU Online MBA, BCA, MCA, and B.Com online, is supported by personalized guidance, ensuring learners receive the same mentorship as on the physical campus.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-semibold text-black-600 mb-2">
+          6. Innovation, Research, and Virtual Events
+        </h3>
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black-600 leading-relaxed mb-4 sm:mb-6">
+          The LPU Online campus tour showcases how innovation drives every aspect of learning. The university regularly organizes virtual conferences, hackathons, webinars, and research seminars, allowing online students to participate actively in intellectual discussions. LPU Online maintains an engaging environment that encourages students to innovate, collaborate, and grow beyond academic boundaries — a key reason why it ranks among the top universities for online education in India.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-semibold text-black-600 mb-2">
+          7. Career Development and Placement
+        </h3>
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black-600 leading-relaxed mb-4 sm:mb-6">
+         A major highlight of the LPU Online virtual campus tour is its career advancement center, which prepares students for the professional world. The center provides resume-building workshops, mock interviews, and internship guidance. By integrating real-world exposure into the LPU Online education system, students are empowered to achieve global employability and success.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-semibold text-black-600 mb-2">
+          8. Alumni Network and Student Community
+        </h3>
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black-600 leading-relaxed mb-4 sm:mb-6">
+          The LPU Online alumni network connects thousands of graduates working across top global companies. Through the LPU Online campus tour, visitors can experience the strength of this network and the vibrant student community that continues to expand worldwide. Being part of LPU Online means being part of a community that celebrates diversity, learning, and lifelong success.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-semibold text-black-600 mb-2">
+          9. Why the Campus Tour Matters
+        </h3>
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black-600 leading-relaxed mb-4 sm:mb-6">
+           For anyone exploring the best online university in India, the LPU Online campus tour is an essential step. It gives students firsthand experience of how LPU combines academic innovation, technology-driven education, and student-centered learning into one dynamic platform. The LPU Online campus isn’t just about virtual classrooms — it’s about connecting, collaborating, and creating opportunities for every learner to succeed.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
         {/* Enhanced Statistics Section */}
         <section id="" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-orange-50 via-white to-yellow-50">
@@ -742,64 +903,62 @@ const LpuOnline = () => {
               ))}
             </div>
            <p className="mt-8 mb-[10px] text-lg sm:text-xl text-black-600 leading-relaxed">
-              When you compare online universities in India, LPU Online consistently emerges as a top contender. But what exactly sets it apart? The decision to choose LPU Online is an investment in a future-proof career, supported by a multitude of compelling benefits designed for the aspirants of 2025.
+            When it comes to online education, the choice of university defines your future. Here’s why students and professionals across India choose LPU Online over other MBA colleges in Punjab and top colleges in India:
              </p>
             <h3 className=" mt-8 mb-[10px] text-3xl font-bold text-center mb-10">
-             1. UGC-Entitled and Nationally Recognized Degrees
+                1. Globally Recognized Degrees
             </h3>
              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-             The foremost concern for any student considering online courses is validity. Rest assured, every online degree offered by LPU Online is fully entitled by the University Grants Commission (UGC). This national recognition means your qualification, be it an online MBA in India or a B.Com, will be valued by employers, government bodies, and other educational institutions across India. This crucial factor places LPU Online high on the list of recognized online universities in India, giving you the confidence that your investment is secure and your credential is powerful.
-             </p>
+                All programs offered by LPU Online are UGC-entitled and recognized worldwide. Whether you are pursuing online degrees in Jalandhar or enrolling from another city, your credentials from the best university for online degree in Jalandhar hold immense value. Graduates from LPU Online have successfully built careers in national and international companies, making it one of the most credible MBA colleges in Punjab.     </p>
                 <h3 className=" mt-8 mb-[10px] text-3xl font-bold text-center mb-10">
-                 2. A Curriculum Designed for the Real World
+               2. Flexible and Accessible Learning
             </h3>
              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-              The academic programs at LPU Online are not created in an ivory tower. They are meticulously designed in consultation with industry leaders to ensure relevance. For instance, the online data science course India incorporates the latest tools and programming languages like Python and R, while the digital marketing certification online covers everything from SEO and SEM to social media analytics and content marketing. Similarly, the ai and ml certification India delves into machine learning algorithms and AI applications that are revolutionizing industries. This focus on practical, employable skills ensures that graduates are job-ready from day one.
-             </p>
+               The flexible study options at LPU Online are ideal for students and working professionals seeking online courses near me or top online courses near me. Learners can attend live classes, watch recorded lectures, and submit assignments digitally. This flexibility allows individuals to manage their education and career simultaneously while benefiting from one of the best distance courses in Punjab.     </p>
                 <h3 className="mt-8 mb-[10px] text-3xl font-bold text-center mb-10">
-                3. Unmatched Flexibility for Working Professionals and Freshers
+                3. Industry-Oriented Curriculum
             </h3>
              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-              The core of online education is flexibility, and LPU Online has perfected this art. The platform is a boon for working professionals who aspire to upskill or earn a higher degree like an executive MBA online India without pausing their careers. There are no fixed class timings; you can access your lectures, complete assignments, and prepare for exams according to your own schedule, whether you are in Delhi, Mumbai, Bangalore, or Chennai. This flexibility also extends to freshers who may be preparing for other competitive exams or pursuing personal interests alongside their degree.
-             </p>
+                Among the best courses in LPU, the online MBA from distance is particularly popular for its relevance to modern business challenges. The curriculum is designed with insights from industry experts, ensuring that every subject contributes to employability. This practical approach makes LPU Online a standout among MBA colleges in Punjab and a trusted institution for career-focused online degrees in Jalandhar.     </p>
                 <h3 className="mt-8 mb-[10px] text-3xl font-bold text-center mb-10">
-                4. Affordable Education with Transparent Fee Structure
+              4. Experienced Faculty and Mentorship
             </h3>
              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-              LPU Online is committed to making quality education affordable. When you compare course fees online for similar programs offered by other best online universities in India, you will find that LPU Online offers exceptional value. The fees structure is transparent, with no hidden costs, making an affordable online MBA India a reality for thousands of students. This commitment to affordability ensures that financial constraints do not hinder talent and ambition.
-             </p>
+               As part of one of the top colleges in India, LPU Online provides access to a diverse and highly qualified faculty. Students enrolled in distance courses in Punjab or pursuing online degrees in Jalandhar receive academic mentorship and professional guidance. This personalized learning environment ensures that students feel supported and motivated throughout their programs.     </p>
              
               <h3 className="mt-8 mb-[10px] text-3xl font-bold text-center mb-10">
-               5. Learn from the Best in the Business
+              5. Cutting-Edge Digital Learning Platform
             </h3>
              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-              The faculty at LPU Online comprises a blend of seasoned academicians and industry veterans who bring a wealth of knowledge and real-world experience into the virtual classroom. Their expertise ensures that the learning is not just about passing exams but about understanding concepts and their practical applications. This high-quality instruction is a consistent highlight in positive LPU online courses reviews and is a critical component of the university's success.
-             </p>
+              The virtual campus of LPU Online offers advanced features such as AI-based tracking, discussion forums, and digital resource libraries. For students searching for online courses near me or top online courses near me, the university provides a highly interactive experience. This technological infrastructure reinforces LPU Online’s reputation as the best university for online degree in Jalandhar.      </p>
                <h3 className="mt-8 mb-[10px] text-3xl font-bold text-center mb-10">
-                6. Simplified Admission Process
+               6. Affordable Education and Scholarships
             </h3>
              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-              The admission process at LPU Online is streamlined and user-friendly. It is often a key differentiator for those looking for an online MBA without entrance exam, as the process is generally based on academic merit. Prospective students can easily initiate their journey by filling out an online application. To help with this decision, the university offers the opportunity to book free counseling for courses or talk to education expert online, providing clarity and guidance at every step. You can also download course guide or university info pack download to have all the information at your fingertips.
-             </p>
+               Among the top colleges in India, LPU Online is known for its affordability and transparency. The distance courses in Punjab offered here come with flexible payment options, financial assistance, and scholarships, making it easier for learners from diverse backgrounds to pursue their academic goals. Whether it’s an online MBA from distance or a technical degree, affordability meets excellence at LPU Online.    </p>
                <h3 className=" mt-8 mb-[10px] text-3xl font-bold text-center mb-10">
-              7. Robust Placement Assistance and Career Support
+             7. Career Support and Global Exposure
             </h3>
              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-              While LPU Online offers flexibility, it does not compromise on career outcomes. The university has a dedicated placement cell that works tirelessly to connect students with a wide network of placement partners. From leading MNCs to growing startups, these placement partners regularly recruit from the LPU talent pool. The university also provides career counseling session online and career guidance online India to help students prepare their resumes, hone their interview skills, and navigate their career paths successfully. This strong placement record is a testament to the quality of LPU Online graduates.
-             </p>
+               LPU Online offers dedicated career services, placement drives, and professional networking opportunities. The best courses in LPU are not just academically strong but also career-oriented, ensuring that graduates are job-ready. As one of the most progressive MBA colleges in Punjab, LPU Online connects students to industry leaders and international recruiters, making education a stepping-stone to success.      </p>
                <h3 className="mt-8 mb-[10px] text-3xl font-bold text-center mb-10">
-              8. A Supportive and Interactive Learning Community
+             Empowering Learners Across India
             </h3>
              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-              Despite being a distance learning platform, LPU Online fosters a strong sense of community. Students can interact with peers and faculty through discussion forums, live chat sessions, and virtual group projects. This collaborative environment allows for networking and knowledge sharing, replicating the collaborative spirit of a physical campus in a digital space. The student support team is always available to resolve any technical or academic queries, ensuring a smooth and hassle-free learning journey.
-             </p>
-                <h3 className="mt-8 mb-[10px] text-3xl font-bold text-center mb-10">
-              9. A Proven Track Record of Success
-            </h3>
+            Every year, thousands of students searching for online courses near me, top online courses near me, or distance courses in Punjab choose LPU Online for its quality, accessibility, and innovation. Recognized among the top colleges in India, LPU Online continues to empower learners with a future-ready education model. From online MBA from distance programs to technical and creative degrees, LPU Online has something for every learner.    </p>
+               
              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-              When you look at the placement record and read through student reviews, the success stories speak for themselves. Graduates from LPU Online have secured promotions, switched to high-growth industries, and landed prestigious roles in top companies. This proven placement record adds immense value to the degree and provides tangible returns on your educational investment.
+          Whether you are based in Punjab, Delhi, Mumbai, or any other part of India, LPU Online ensures that higher education is within reach. With strong student support and global credibility, it has earned the reputation of being the best university for online degree in Jalandhar. Students pursuing online degrees in Jalandhar enjoy personalized mentorship, continuous assessments, and an advanced digital learning experience that fosters confidence and growth.    </p>
+            
+             <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
+               The university’s consistent recognition among the top colleges in India reflects its commitment to academic integrity, inclusivity, and excellence. Learners enrolled in the best courses in LPU not only gain a degree but also the skills and perspective needed to succeed in a fast-changing world. For anyone exploring online MBA from distance or distance courses in Punjab, LPU Online remains the most trusted choice.
              </p>
 
+              <h3 className="mt-8 mb-[10px] text-3xl font-bold text-center mb-10"> Conclusion</h3>
+              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">In today’s competitive landscape, LPU Online represents a perfect balance between innovation, flexibility, and quality. As one of the top colleges in India, it provides access to globally recognized online degrees in Jalandhar and the most in-demand distance courses in Punjab. Students aiming to pursue an online MBA from distance, or those exploring the best courses in LPU, find the platform ideal for both academic and career growth.
+                    From its position among the MBA colleges in Punjab to its recognition as the best university for online degree in Jalandhar, LPU Online continues to redefine the future of education. Whether you’re searching for online courses near me or top online courses near me, LPU Online offers a path that combines excellence, flexibility, and success.
+                   Join LPU Online today — a leader among the top colleges in India, empowering learners with online degrees in Jalandhar, distance courses in Punjab, and globally valued credentials that shape the leaders of tomorrow.
+              </p>
           </div>
         </section>
 
@@ -817,14 +976,14 @@ const LpuOnline = () => {
             
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
               {[
-                { img: '/images/naac.webp', title: 'NAAC A++ Accreditation University' },
-                { img: '/images/ugc.webp', title: 'UGC Entitled Online Degrees' },
-                { img: '/images/nirf.webp', title: "Amongst India's top 50 Universities" },
-                { img: '/images/aicte.webp', title: 'AICTE Norms Compliant' },
-                { img: '/images/wes.webp', title: 'Globally Recognized Online Degrees' },
-                { img: '/images/acu.webp', title: 'Member of ACU' },
-                { img: '/images/aiu.webp', title: 'AIU Recognized' },
-                { img: '/images/qs.webp', title: 'QS Ranking' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp', title: 'NAAC A++ Accreditation University' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp', title: 'UGC Entitled Online Degrees' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nirf_f5xen9.webp', title: "Amongst India's top 50 Universities" },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp', title: 'AICTE Norms Compliant' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/wes_zuxwfs.webp', title: 'Globally Recognized Online Degrees' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/acu_oyjzvj.webp', title: 'Member of ACU' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327029/aiu_yfa2is.webp', title: 'AIU Recognized' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/qs_k5hl4c.webp', title: 'QS Ranking' },
               ].map((item, i)=>(
                 <div key={i} className="group">
                   <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
@@ -1050,7 +1209,7 @@ const LpuOnline = () => {
               </TabsContent>
             </Tabs>
             
-    <p className="text-lg sm:text-xl text-gray-700 leading-relaxed space-y-4">
+    <p className="text-lg sm:text-xl text-gray-700 leading-relaxed space-y-4  py-6 px-6 md:px-20">
   <span className="font-bold text-black mx-1">LPU Online</span> boasts a diverse and industry-relevant portfolio designed for 
   <span className="font-bold text-black mx-1">freshers</span> and 
   <span className="font-bold text-black mx-1">working professionals</span> alike. When you decide to 
@@ -1096,90 +1255,88 @@ const LpuOnline = () => {
   <span className="font-bold text-black mx-1">best online universities in India</span>.
 </p>
 
-
+  
           </div>
         </section>
         {/*key highlight*/}
-        <section id="highlights" className="w-full py-16 bg-gradient-to-b from-white to-blue-50">
-  <div className="max-w-6xl mx-auto px-6 text-center">
-    <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
-      🎓 Key Highlights
+       <section className="bg-gradient-to-b from-white to-blue-50 py-6 px-6 md:px-20">
+  <div className="max-w-7xl mx-auto text-center">
+    {/* Header */}
+    <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        🎓  Key Highlights of LPU
     </h2>
-
-    <p className="text-lg sm:text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
-      Choosing <span className="font-bold text-black mx-1">LPU Online</span> comes with a multitude of benefits that
-      solidify its position among the{" "}
-      <span className="font-bold text-black mx-1">top 10 online universities in India</span>.
+    <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+      The LPU Online Campus Tour showcases the perfect blend of innovation,
+      technology, and global education that defines Lovely Professional
+      University Online. This virtual experience lets learners explore
+      world-class academic excellence — reimagined for the digital era.
     </p>
 
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <div className="bg-white rounded-2xl shadow-md hover:shadow-xl p-6 text-left border border-gray-100 hover:border-blue-200 transition-all">
-        <h3 className="text-xl font-semibold mb-2 text-gray-900">UGC Entitled</h3>
-        <p className="text-gray-600">
-          All <span className="font-bold text-black mx-1">online degree university India</span> programs from LPU are
-          UGC-approved, ensuring national recognition.
+    {/* Highlights Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+      {/* 1. Smart Learning Infrastructure */}
+      <div className="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300">
+        <h3 className="text-xl font-semibold text-black-500 mb-2">
+          Smart Learning Infrastructure
+        </h3>
+        <p className="text-gray-700">
+          The LPU Online Campus is powered by AI-driven tools, interactive
+          classrooms, and a robust LMS. Students engage in real time through
+          video lectures, digital whiteboards, and discussion forums.
         </p>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-md hover:shadow-xl p-6 text-left border border-gray-100 hover:border-blue-200 transition-all">
-        <h3 className="text-xl font-semibold mb-2 text-gray-900">Flexible Learning</h3>
-        <p className="text-gray-600">
-          A truly <span className="font-bold text-black mx-1">online</span> and{" "}
-          <span className="font-bold text-black mx-1">distance</span> model that allows you to study at your own pace,
-          making it ideal for an <span className="font-bold text-black mx-1">online MBA for working professionals</span>.
+      {/* 2. Digital Library Access */}
+      <div className="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300">
+        <h3 className="text-xl font-semibold text-black-500 mb-2">
+          Digital Library Access
+        </h3>
+        <p className="text-gray-700">
+          Students can explore a vast digital library featuring thousands of
+          e-books, journals, and research papers — supporting 24/7 continuous
+          learning and academic growth.
         </p>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-md hover:shadow-xl p-6 text-left border border-gray-100 hover:border-blue-200 transition-all">
-        <h3 className="text-xl font-semibold mb-2 text-gray-900">Industry-Aligned Curriculum</h3>
-        <p className="text-gray-600">
-          Courses like the <span className="font-bold text-black mx-1">online data science course India</span> and{" "}
-          <span className="font-bold text-black mx-1">ai and ml certification India</span> are designed in consultation
-          with industry leaders.
+      {/* 3. Expert Faculty & Mentorship */}
+      <div className="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300">
+        <h3 className="text-xl font-semibold text-black-500 mb-2">
+          Expert Faculty & Mentorship
+        </h3>
+        <p className="text-gray-700">
+          Learn from globally recognized professors and industry leaders who
+          combine academic excellence with practical experience to guide your
+          professional journey.
         </p>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-md hover:shadow-xl p-6 text-left border border-gray-100 hover:border-blue-200 transition-all">
-        <h3 className="text-xl font-semibold mb-2 text-gray-900">Expert Faculty</h3>
-        <p className="text-gray-600">
-          Learn from the same renowned professors who teach on-campus.
+      {/* 4. Career Development Hub */}
+      <div className="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300">
+        <h3 className="text-xl font-semibold text-black-500 mb-2">
+          Career Development Hub
+        </h3>
+        <p className="text-gray-700">
+          The virtual campus includes specialized career services for
+          placements, internships, and professional training, ensuring career
+          readiness and success.
         </p>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-md hover:shadow-xl p-6 text-left border border-gray-100 hover:border-blue-200 transition-all">
-        <h3 className="text-xl font-semibold mb-2 text-gray-900">Affordable Education</h3>
-        <p className="text-gray-600">
-          LPU is known for its <span className="font-bold text-black mx-1">affordable online mba India</span> and other
-          cost-effective programs.
-        </p>
-      </div>
-
-      <div className="bg-white rounded-2xl shadow-md hover:shadow-xl p-6 text-left border border-gray-100 hover:border-blue-200 transition-all">
-        <h3 className="text-xl font-semibold mb-2 text-gray-900">Robust Digital Platform</h3>
-        <p className="text-gray-600">
-          An intuitive Learning Management System (LMS) provides a seamless{" "}
-          <span className="font-bold text-black mx-1">online</span> learning experience.
-        </p>
-      </div>
-
-      <div className="bg-white rounded-2xl shadow-md hover:shadow-xl p-6 text-left border border-gray-100 hover:border-blue-200 transition-all">
-        <h3 className="text-xl font-semibold mb-2 text-gray-900">Comprehensive Support</h3>
-        <p className="text-gray-600">
-          From <span className="font-bold text-black mx-1">career counseling session online</span> to dedicated student
-          support, help is always available.
-        </p>
-      </div>
-
-      <div className="bg-white rounded-2xl shadow-md hover:shadow-xl p-6 text-left border border-gray-100 hover:border-blue-200 transition-all">
-        <h3 className="text-xl font-semibold mb-2 text-gray-900">Strong Placement Assistance</h3>
-        <p className="text-gray-600">
-          A dedicated cell helps <span className="font-bold text-black mx-1">online</span> students connect with top{" "}
-          <span className="font-bold text-black mx-1">placement partners</span>.
+      {/* 5. Global Learning Ecosystem */}
+      <div className="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300">
+        <h3 className="text-xl font-semibold text-black-500 mb-2">
+          Global Learning Ecosystem
+        </h3>
+        <p className="text-gray-700">
+          LPU Online connects learners across the globe, promoting cultural
+          diversity and international collaboration in a truly global learning
+          environment.
         </p>
       </div>
     </div>
   </div>
 </section>
+
 
         {/* Lpu Advantage */}
         <section id="Scholarship" className="relative py-20 bg-gradient-to-br from-orange-50 via-white to-blue-50">
@@ -1398,7 +1555,7 @@ const LpuOnline = () => {
         <section className="bg-[#002d5f] text-white py-10 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center gap-6 sm:gap-12">
             <div className="w-full md:w-1/2">
-              <Image width={600} height={400} src="/images/lpu-certificate.webp" alt="Certificate" className="rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl w-full" />
+              <Image width={600} height={400} src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327358/lpu-certificate_lyegrn.webp" alt="Certificate" className="rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl w-full" />
             </div>
             <div className="md:w-1/2">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-6">Recognized Online Degree from Lovely Professional University </h2>
@@ -1577,7 +1734,7 @@ const LpuOnline = () => {
             </div>
             
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-              {["/images/company.webp", "/images/company1.webp", "/images/company9.webp", "/images/com10.webp", "/images/companany4.webp", "/images/company6.webp", "/images/companany5.webp", "/images/adove.webp", "/images/samsung.webp", "/images/ey.webp", "/images/ibm.webp", "/images/hp.webp", "/images/tata.png", "/images/apple.jpg","/images/hero.webp"].map((src, i) => (
+              {["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company_vjgouc.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company1_tktbp7.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327090/company9_p4pgg3.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327088/com10_cm37v8.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany4_h5nana.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company6_rnuajo.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany5_qs6bgc.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/adove_jtmiou.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/samsung_sosfqv.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327152/ey_ph2bsx.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327173/ibm_ced3ir.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327172/hp_b4ylow.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327860/tata_n9jnwt.png", "/images/apple.jpg","https://res.cloudinary.com/didkrwhbu/image/upload/v1762327171/hero_krubph.webp"].map((src, i) => (
                 <div key={i} className="group"> 
                   <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                     <div className="aspect-square flex items-center justify-center">
@@ -1625,7 +1782,7 @@ const LpuOnline = () => {
               onOpenChange={(v) => !v && setOpenModal(null)}
               title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
               subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-              imageSrc="/images/lpu2.png"
+              imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327358/lpu2_o13j1s.png"
               universityName="Lovely Professional University Online"
               defaultProgram="MBA"
               formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
@@ -1684,7 +1841,7 @@ const LpuOnline = () => {
                 >
                   <div className="flex items-center gap-3 sm:gap-4">
                     <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg"> 
-                      <img src="/images/LPU-Online-Logo.svg" alt="LPU" className="h-8 sm:h-10 w-auto" />
+                      <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327362/LPU-Online-Logo_blodcq.svg" alt="LPU" className="h-8 sm:h-10 w-auto" />
                 </div>
                     <div>
                       <h3 className="text-xl sm:text-2xl font-bold text-white">LPU Online</h3>

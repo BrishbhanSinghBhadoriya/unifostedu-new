@@ -42,9 +42,9 @@ const UttaranchalUniversity = () => {
         
  },[])
   const sliderImages = [
-    '/images/uu_banner.webp',
-    '/images/uu_banner1.webp',
-    '/images/uu-banner3.jpg',
+    'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327865/uu_banner_z4cs2w.webp',
+    'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327866/uu_banner1_n54uyp.webp',
+    'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-banner3_n0pwl6.jpg',
     
   ];
 
@@ -79,7 +79,7 @@ const UttaranchalUniversity = () => {
       eligibility: "10+2 pass from a recognized board",
       fees: "₹72,000",
       specialization: "General",
-      image: "/images/ba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
       alt: "Bachelor of Arts (BA) in Uttaranchal University Online",
     },
     {
@@ -88,7 +88,7 @@ const UttaranchalUniversity = () => {
       eligibility: "10+2 pass from a recognized board",
       fees: "₹1,20,000",
       specialization: "General",
-      image: "/images/bba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
       alt: "Bachelor of Business Administration (BBA) in Uttaranchal University Online",
     },
     {
@@ -97,7 +97,7 @@ const UttaranchalUniversity = () => {
       eligibility: "10+2 pass from a recognized board",
       fees: "₹1,20,000",
       specialization: "General",
-      image: "/images/bca.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
       alt: "Bachelor of Computer Applications (BCA) in Uttaranchal University Online",
     },
   ];
@@ -109,7 +109,7 @@ const UttaranchalUniversity = () => {
       eligibility: "Graduation in any field from a recognized university with a minimum of 40% marks in aggregate OR below 40% with eligibility test",
       fees: "₹1,40,000",
       specialization: "Marketing, Digital, Human Resource, Business Analytics, Finance, International Business, Information Technology Management, Logistics & Supply Chain Management",
-      image: "/images/mba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
       alt: "Master of Business Administration (MBA) in Uttaranchal University Online",
     },
     {
@@ -118,7 +118,7 @@ const UttaranchalUniversity = () => {
       eligibility: "Graduation in any field from a recognized university with relevant work experience",
       fees: "₹1,40,000",
       specialization: "Business Analytics, HR Analytics, Finance Analytics, Banking and Finance",
-      image: "/images/mca.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
       alt: "Executive MBA in Uttaranchal University Online",
     },
     {
@@ -127,7 +127,7 @@ const UttaranchalUniversity = () => {
       eligibility: "Graduate in Computer Applications/CS/IT/Engineering with 50% marks (45% reserved) OR Graduate with Mathematics at 10+2 or graduation level",
       fees: "₹1,20,000",
       specialization: "General",
-      image: "/images/mca1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
       alt: "Master of Computer Applications (MCA) in Uttaranchal University Online",
     },
   ];
@@ -184,7 +184,7 @@ const UttaranchalUniversity = () => {
         <link rel="canonical" href="https://unifostedu.com/uttaranchal-university" />
         <meta property="og:title" content="Uttaranchal University Online | UGC Approved Programs" />
         <meta property="og:description" content="Join UU Online for UGC-approved degrees with flexible learning, expert faculty, and placement assistance." />
-        <meta property="og:image" content="/images/uu-uni.webp" />
+        <meta property="og:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -208,7 +208,7 @@ const UttaranchalUniversity = () => {
             <div className="flex items-center justify-between h-16 lg:h-20">
               <div className="flex items-center gap-2 lg:gap-4">
                 <img 
-                  src="/images/uu_logo.webp" 
+                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327867/uu_logo_bksobh.webp" 
                   alt="Uttaranchal University Logo" 
                   className="h-12 w-50 sm:h-10 lg:h-12" 
                 />
@@ -296,7 +296,7 @@ const UttaranchalUniversity = () => {
             200+ expert faculty, and 100+ corporate partners, UU is your gateway to a bright future.
           `}
           badgeText="UGC Approved | 50K+ Students | 100+ Corporate Partners"
-          imgSrc="/images/uu-uni.webp"
+          imgSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp"
           imgAlt="Uttaranchal University Campus"
           students="50,000+"
           partners="100+"
@@ -468,7 +468,7 @@ const UttaranchalUniversity = () => {
               onOpenChange={(v) => !v && setOpenModal(null)}
               title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
               subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-              imageSrc="/images/uu_form.webp"
+              imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327867/uu_form_ipzqyg.webp"
               universityName="Uttaranchal University Online"
               defaultProgram={openModal.program || "MBA"}
               formType={openModal.type}
@@ -525,11 +525,11 @@ const UttaranchalUniversity = () => {
               },
             ]}
             accreditations={[
-              { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
-              { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
-              { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
-              { src: "/images/nirf.webp", alt: "NIRF", name: "NIRF" },
-              { src: "/images/wes.webp", alt: "WES", name: "WES" },
+              { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp", alt: "UGC", name: "UGC" },
+              { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp", alt: "AICTE", name: "AICTE" },
+              { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp", alt: "NAAC", name: "NAAC" },
+              { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nirf_f5xen9.webp", alt: "NIRF", name: "NIRF" },
+              { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/wes_zuxwfs.webp", alt: "WES", name: "WES" },
             ]}
             internationalRecognition={[]}
             successStories={[]}
@@ -565,7 +565,7 @@ const UttaranchalUniversity = () => {
               
               <div className="flex justify-center">
                 <div className="relative">
-                  <Image width={500} height={400} loading="lazy" src="/images/learning_platform.webp" alt="Learning Platform" className="rounded-xl shadow-2xl border-4 border-blue-700" />
+                  <Image width={500} height={400} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327282/learning_platform_mm4iyv.webp" alt="Learning Platform" className="rounded-xl shadow-2xl border-4 border-blue-700" />
                   <div className="absolute -bottom-4 -right-4 bg-yellow-400 text-blue-900 font-bold py-2 px-4 rounded-lg shadow-lg">
                     Experience The Future of Learning
                   </div>
@@ -698,7 +698,7 @@ const UttaranchalUniversity = () => {
         <section className="bg-[#003366] text-white py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
             <div className="flex-1">
-              <Image width={500} height={400} loading="lazy" src="/images/uu-certificate.webp" alt="UU Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+              <Image width={500} height={400} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327867/uu-certificate_srzmjx.webp" alt="UU Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
             </div>
             <div className="flex-1">
               <h2 className="text-3xl md:text-4xl font-semibold mb-4">
@@ -771,18 +771,18 @@ const UttaranchalUniversity = () => {
             
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
               {[
-                "/images/tcs.webp",
-                "/images/lt.webp",
-                "/images/company9.webp",
-                "/images/com10.webp",
-                "/images/companany4.webp",
-                "/images/sap.webp",
-                "/images/icici.webp",
-                "/images/adove.webp",
-                "/images/infosys.webp",
-                "/images/coca-cola.webp",
-                "/images/ibm.webp",
-                "/images/company6.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/tcs_mpq9no.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327362/lt_akwpfk.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327090/company9_p4pgg3.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327088/com10_cm37v8.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany4_h5nana.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/sap_wtbuz0.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327200/icici_1_quita6.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/adove_jtmiou.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327238/infosys_vk4d5g.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327088/coca-cola_krqtyj.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327173/ibm_ced3ir.webp",
+                "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company6_rnuajo.webp",
               ].map((src, i) => (
                 <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
                   <Image width={100} height={100} loading="lazy" src={src} alt={`Company ${i + 1}`} className="h-12 object-contain" />
@@ -810,7 +810,7 @@ const UttaranchalUniversity = () => {
                   className="space-y-4"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <img src="/images/uu_logo.webp" alt="UU Logo" className="h-10 w-auto bg-white rounded p-1" />
+                    <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327867/uu_logo_bksobh.webp" alt="UU Logo" className="h-10 w-auto bg-white rounded p-1" />
                     <span className="text-xl font-bold text-blue-500">UU Online</span>
                   </div>
                   <p className="text-sm text-gray-400 leading-relaxed">
@@ -984,7 +984,7 @@ const UttaranchalUniversity = () => {
             onOpenChange={(v) => !v && setOpenModal(null)}
             title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
             subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-            imageSrc="/images/uu_form.webp"
+            imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327867/uu_form_ipzqyg.webp"
             universityName="Uttaranchal University Online"
             defaultProgram={openModal.program || "MBA"}
             formType={openModal.type === 'apply' ? 'getStarted' : 'general'}

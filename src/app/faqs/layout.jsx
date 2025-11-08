@@ -20,7 +20,7 @@ export const metadata = {
     siteName: "UNIFOST",
     images: [
       {
-        url: "/images/faq-hero.webp",
+        url: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762583776/faq-hero_tz5w2b.webp",
         width: 1200,
         height: 630,
         alt: "Frequently Asked Questions - UNIFOST",
@@ -37,7 +37,7 @@ export const metadata = {
     title: "FAQs | Online University Degrees & Career Counseling - UNIFOST",
     description:
       "Get answers to FAQs about online degrees, UGC-approved programs, career counseling, and admissions.",
-    images: ["/images/faq-hero.webp"],
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762583776/faq-hero_tz5w2b.webp"],
   },
 };
 

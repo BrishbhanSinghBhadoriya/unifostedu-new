@@ -138,7 +138,7 @@ const ManipalVsAmityOnlineMBA = () => {
         {/* Sidebar */}
         <aside className="w-full md:w-[38%] space-y-6">
           <img
-            src="/images/b5.webp"
+            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b5_rdxlgr.webp"
             alt="Manipal vs Amity Online MBA"
             className="rounded-xl w-full object-cover shadow-md"
           />
@@ -148,7 +148,7 @@ const ManipalVsAmityOnlineMBA = () => {
             <div className="grid gap-4">
               {/* Blog 1 */}
               <a href="/blog/mba-online-vs-distance" className="block bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                <img src="/images/b3.webp" alt="Online vs Distance MBA" className="h-32 w-full object-cover" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b3_d52jqi.webp" alt="Online vs Distance MBA" className="h-32 w-full object-cover" />
                 <div className="p-3">
                   <h3 className="font-bold text-md text-indigo-700">Online vs Distance MBA</h3>
                   <p className="text-sm text-gray-600 mt-1">Understand which MBA mode suits your goals.</p>
@@ -157,7 +157,7 @@ const ManipalVsAmityOnlineMBA = () => {
 
               {/* Blog 2 */}
               <a href="/blog/top-ugc-approved-online-mba-universities" className="block bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                <img src="/images/b2.webp" alt="Top UGC Approved MBA Universities" className="h-32 w-full object-cover" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327033/b2_cfdbfk.webp" alt="Top UGC Approved MBA Universities" className="h-32 w-full object-cover" />
                 <div className="p-3">
                   <h3 className="font-bold text-md text-indigo-700">Top Online MBA Universities</h3>
                   <p className="text-sm text-gray-600 mt-1">Explore UGC-approved MBA universities in India.</p>
@@ -166,7 +166,7 @@ const ManipalVsAmityOnlineMBA = () => {
 
               {/* Blog 3 */}
               <a href="/blog/how-to-choose-best-online-course" className="block bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                <img src="/images/b3.webp" alt="Choose Best Online Course" className="h-32 w-full object-cover" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b3_d52jqi.webp" alt="Choose Best Online Course" className="h-32 w-full object-cover" />
                 <div className="p-3">
                   <h3 className="font-bold text-md text-indigo-700">Choosing Best Online Course</h3>
                   <p className="text-sm text-gray-600 mt-1">Tips to choose the right online course for your goals.</p>

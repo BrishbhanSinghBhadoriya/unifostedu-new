@@ -23,7 +23,7 @@ const SMU = () => {
       eligibility: "10+2 or equivalent",
       fees: "₹75,000",
       specialization: "English + Sociology + Political Science",
-      image: "/images/ba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
       university: "Sikkim Manipal University",
       universityShort: "SMU",
       alt: "Bachelor of Arts (BA) in SMU Online",
@@ -34,7 +34,7 @@ const SMU = () => {
       eligibility: "10+2 or equivalent",
       fees: "₹75,000",
       specialization: "General",
-      image: "/images/bcom.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
       university: "Sikkim Manipal University",
       universityShort: "SMU",
       alt: "Bachelor of Commerce (B.Com) in SMU Online",
@@ -48,7 +48,7 @@ const SMU = () => {
       eligibility: "Graduation with minimum 50% marks",
       fees: "₹1,10,000",
       specialization: "Dual Specialization (Marketing, Finance, HR, Systems, Operations and Supply Chain Management, Healthcare Management)",
-      image: "/images/mba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
       university: "Sikkim Manipal University",
       universityShort: "SMU",
       alt: "Master of Business Administration (MBA) in SMU Online",
@@ -59,7 +59,7 @@ const SMU = () => {
       eligibility: "Graduation with minimum 50% marks",
       fees: "₹98,000",
       specialization: "General",
-      image: "/images/mca1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
       university: "Sikkim Manipal University",
       universityShort: "SMU",
       alt: "Master of Computer Applications (MCA) in SMU Online",
@@ -70,7 +70,7 @@ const SMU = () => {
       eligibility: "Graduation in relevant stream",
       fees: "₹75,000",
       specialization: "English / Sociology / Political Science",
-      image: "/images/ma1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
       university: "Sikkim Manipal University",
       universityShort: "SMU",
       alt: "Master of Arts (M.A.) in SMU Online",
@@ -81,7 +81,7 @@ const SMU = () => {
       eligibility: "Graduation in Commerce or equivalent",
       fees: "₹75,000",
       specialization: "General",
-      image: "/images/bcom.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
       university: "Sikkim Manipal University",
       universityShort: "SMU",
       alt: "Master of Commerce (M.Com) in SMU Online",
@@ -222,7 +222,7 @@ const SMU = () => {
         {/* Open Graph */}
         <meta property="og:title" content="Sikkim Manipal University Online | UGC Approved Online Degrees" />
         <meta property="og:description" content="UGC-recognized online undergraduate and postgraduate programs with flexible, industry-relevant learning from Sikkim Manipal University." />
-        <meta property="og:image" content="/images/smu-uni.webp" />
+        <meta property="og:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.onlinedegree.in/smu" />
 
@@ -230,7 +230,7 @@ const SMU = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sikkim Manipal University Online | UGC Approved Online Degrees" />
         <meta name="twitter:description" content="Enroll in UGC and AICTE approved online courses at Sikkim Manipal University. Learn with flexibility and global recognition." />
-        <meta name="twitter:image" content="/images/smu-uni.webp" />
+        <meta name="twitter:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp" />
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
@@ -247,7 +247,7 @@ const SMU = () => {
       {/* Left Logo */}
       <div className="flex items-center gap-2 lg:gap-4">
         <img
-          src="/images/manipallogo.webp"
+          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipallogo_yduega.jpg"
           alt="SMU Logo"
           className="h-8 w-auto sm:h-10 lg:h-12"
         />
@@ -403,7 +403,7 @@ const SMU = () => {
         {/* Hero Section */}
         <section id="introduction" className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 ">
           {/* Background Image */}
-          <div className="absolute inset-0 bg-[url('/images/smu-uni.webp')] bg-cover bg-center opacity-200"></div>
+          <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp')] bg-cover bg-center opacity-200"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-blue-900/70 to-purple-900/80"></div>
 
           {/* Animated Background Elements */}
@@ -653,17 +653,17 @@ const SMU = () => {
     {/* Right Images */}
     <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-6">
       <img
-        src="/images/smu-uni.webp"
+        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp"
         alt="SMU Virtual Classroom"
         className="rounded-2xl shadow-lg w-full h-auto object-cover"
       />
       <img
-        src="/images/smu-class.webp"
+        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/smu-class_lc7xcd.webp"
         alt="SMU Library"
         className="rounded-2xl shadow-lg w-full h-auto object-cover"
       />
       <img
-        src="/images/smu-campus.webp"
+        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327860/smu-campus_u8h6kr.webp"
         alt="SMU Online Interaction"
         className="rounded-2xl shadow-lg w-full h-auto object-cover sm:col-span-2"
       />
@@ -727,14 +727,14 @@ const SMU = () => {
             
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
               {[
-                { img: '/images/ugc.webp', title: 'UGC Approved Online Degrees' },
-                { img: '/images/aicte.webp', title: 'AICTE Recognized Programs' },
-                { img: '/images/naac.webp', title: 'NAAC Accredited University' },
-                { img: '/images/nirf.webp', title: 'Ranked Among Top Universities' },
-                { img: '/images/IIRF.png', title: 'Top private university in North East' },
-                { img: '/images/aiu.webp', title: 'Member of AIU' },
-                { img: '/images/wes.webp', title: 'Internationally Recognized' },
-                { img: '/images/The-Week.png', title: 'Amongst Top 10 Multidisciplinary Universities in East Zone' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp', title: 'UGC Approved Online Degrees' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp', title: 'AICTE Recognized Programs' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp', title: 'NAAC Accredited University' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nirf_f5xen9.webp', title: 'Ranked Among Top Universities' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327203/IIRF_lrhmji.png', title: 'Top private university in North East' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327029/aiu_yfa2is.webp', title: 'Member of AIU' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/wes_zuxwfs.webp', title: 'Internationally Recognized' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/The-Week_c0snnl.png', title: 'Amongst Top 10 Multidisciplinary Universities in East Zone' },
               ].map((item, i)=>(
                 <div key={i} className="group">
                   <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
@@ -1438,7 +1438,7 @@ const SMU = () => {
         <section className="bg-[#002d5f] text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center gap-12">
             <div className="md:w-1/2">
-              <Image width={600} height={400} src="/images/smu.webp" alt="Certificate" className="rounded-2xl shadow-2xl w-full" />
+              <Image width={600} height={400} src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327860/smu_qgncya.webp" alt="Certificate" className="rounded-2xl shadow-2xl w-full" />
             </div>
             <div className="md:w-1/2">
               <h2 className="text-4xl lg:text-5xl font-bold mb-6">UGC-Entitled Online Degree from Sikkim Manipal University</h2>
@@ -1702,7 +1702,7 @@ const SMU = () => {
             
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"> 
-              {["/images/company.webp", "/images/company1.webp", "/images/company9.webp", "/images/com10.webp", "/images/companany4.webp", "/images/company6.webp", "/images/companany5.webp", "/images/adove.webp", "/images/samsung.webp", "/images/ey.webp", "/images/ibm.webp", "/images/hp.webp", "/images/tata.png", "/images/apple.jpg","/images/hero.webp"].map((src, i) => (
+              {["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company_vjgouc.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company1_tktbp7.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327090/company9_p4pgg3.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327088/com10_cm37v8.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany4_h5nana.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company6_rnuajo.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany5_qs6bgc.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/adove_jtmiou.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/samsung_sosfqv.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327152/ey_ph2bsx.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327173/ibm_ced3ir.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327172/hp_b4ylow.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327860/tata_n9jnwt.png", "/images/apple.jpg","https://res.cloudinary.com/didkrwhbu/image/upload/v1762327171/hero_krubph.webp"].map((src, i) => (
                 <div key={i} className="group">
                   <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                     <div className="aspect-square flex items-center justify-center"> 
@@ -1750,7 +1750,7 @@ const SMU = () => {
               onOpenChange={(v) => !v && setOpenModal(null)}
               title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
               subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-              imageSrc="/images/online-manipal-form.webp"
+              imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327725/online-manipal-form_nz7yft.webp"
               universityName="Sikkim Manipal University"
               defaultProgram="MBA"
               formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
@@ -1851,7 +1851,7 @@ const SMU = () => {
               {/* Brand */}
               <div className="lg:col-span-1">
                 <div className="flex items-center gap-4 mb-6">
-                  <img src="/images/manipallogo.webp" alt="SMU" className="h-12 w-auto" />
+                  <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipallogo_yduega.jpg" alt="SMU" className="h-12 w-auto" />
                   <span className="font-queens text-2xl text-white">Online SMU</span>
                 </div>
                 <p className="text-gray-400 leading-relaxed mb-6">

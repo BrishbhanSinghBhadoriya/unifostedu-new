@@ -8,7 +8,7 @@ const blogs = [
     title: "MBA Online vs. Distance: What’s the Difference?",
     slug: "mba-online-vs-distance",
     category: "Course Guide",
-    image: "/images/b1.webp",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b1_xpmoe1.webp",
     date: "June 2025",
     readTime: "5 min read",
     description:
@@ -18,7 +18,7 @@ const blogs = [
     title: "Best Online BBA Programs in India for 2025",
     slug: "best-online-bba-2025",
     category: "Course Guide",
-    image: "/images/b2.webp",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327033/b2_cfdbfk.webp",
     date: "June 2025",
     readTime: "6 min read",
     description:
@@ -28,7 +28,7 @@ const blogs = [
     title: "Which is better: Manipal vs. Amity Online MBA?",
     slug: "manipal-vs-amity-online-mba",
     category: "University Reviews",
-    image: "/images/b3.webp",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b3_d52jqi.webp",
     date: "May 2025",
     readTime: "4 min read",
     description:
@@ -38,7 +38,7 @@ const blogs = [
     title: "LPU Online Review – Pros and Cons, and Admissions Process",
     slug: "lpu-online-review",
     category: "University Reviews",
-    image: "/images/b4.webp",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327035/b4_xo9eua.webp",
     date: "May 2025",
     readTime: "5 min read",
     description:
@@ -48,7 +48,7 @@ const blogs = [
     title: "Is Jain Online University UGC Approved?",
     slug: "jain-ugc-approval",
     category: "University Reviews",
-    image: "/images/b5.webp",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b5_rdxlgr.webp",
     date: "May 2025",
     readTime: "5 min read",
     description:
@@ -58,7 +58,7 @@ const blogs = [
     title: "How to Choose the University for Online Courses",
     slug: "choose-online-university-guide",
     category: "Student Help Guides",
-    image: "/images/b6.webp",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327035/b6_yvhxua.webp",
     date: "June 2025",
     readTime: "7 min read",
     description:
@@ -68,7 +68,7 @@ const blogs = [
     title: "Scholarship and EMI Options for Online Degrees",
     slug: "online-degree-financing-options",
     category: "Student Help Guides",
-    image: "/images/b7.webp",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327035/b7_vymjqj.webp",
     date: "May 2025",
     readTime: "4 min read",
     description:
@@ -78,7 +78,7 @@ const blogs = [
     title: "Can I Do MBA While Working? Here's How",
     slug: "mba-while-working-guide",
     category: "Career & Outcomes",
-    image: "/images/b8.webp",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327035/b8_xwas04.webp",
     date: "April 2025",
     readTime: "5 min read",
     description:
@@ -88,7 +88,7 @@ const blogs = [
     title: "Career Opportunities After Online MBA",
     slug: "career-after-online-mba",
     category: "Career & Outcomes",
-    image: "/images/b9.webp",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/b9_pkxdiq.webp",
     date: "May 2025",
     readTime: "5 min read",
     description:

@@ -30,7 +30,7 @@ const Vgu = () => {
       eligibility: "Passed 10+2 examination in any stream from a recognized Board ",
       fees: "₹1,32,000/-",
       specialization: "'Full-stack development, cybersecurity, and software project management'  'Al, machine learning, deep learning, and chatbot development'  'Data mining, analytics, R & Python, big data, visualization' 'Virtualization, cloud platforms, cryptography, ethical hacking' 'UX research, wireframing, usability testing, visual tools'  'DLT, smart contracts, blockchain architecture, Ethereum'",
-      image: "/images/bca.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
     },
     {
       course: "Bachelore of Arts(BA)",
@@ -38,7 +38,7 @@ const Vgu = () => {
       eligibility: "10+2 in any stream",
       fees: "₹72,000/-",
       specialization: "Economics + Public Policy + Computer Applications, Public Policy + English, English + History + Political Science, Computer Applications + Public Policy/IR, Political Science + International Relations + Public Policy, 51+ COMBINATIONS AVAILABLE'",
-      image: "/images/ba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
     },
     {
       course: "Bachelor of Business Administration (BBA)",
@@ -46,7 +46,7 @@ const Vgu = () => {
       eligibility: "Passed 10+2 examination in any stream from a recognized Board.",
       fees: "₹1,32,000/-",
       specialization: "General, Digital Marketing, Retail Management, Fintech",
-      image: "/images/bba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
     },
    
   ];
@@ -58,7 +58,7 @@ const Vgu = () => {
       eligibility: "Graduation in any stream",
       fees: '₹1,50,000 - 2,40,000',
       specialization: ['Finance', 'Marketing', 'Human Resources', 'Operations', 'Business Analytics', 'Information Technology Management', 'Helthcare Management', 'Agribusiness Management', 'International Business'],
-      image: "/images/mba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -66,7 +66,7 @@ const Vgu = () => {
       eligibility: "Bachelor's Degree from a recognised University." ,
       fees: "₹1,50,000/-",
       specialization: "Software Engineering & Development, Data Science & Analytics, Cyber Security, Cloud & Devops, web & App Development, Blockchain & Emerging Technologies, Database Management",
-      image: "/images/mca.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
     },
      {
       course: "Master of Arts (English)",
@@ -74,7 +74,7 @@ const Vgu = () => {
       eligibility: "Bachelor's Degree from a recognised University.",
       fees: "₹72,000/-",
       specialization: "English",
-      image: "/images/ma.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma_ywzsnb.webp",
     },
     {
       course: "Master of Science (Maths)",
@@ -82,7 +82,7 @@ const Vgu = () => {
       eligibility: "Graduates with BA / BSc degree with Mathematics as one of the three main subjects.",
       fees: "₹72,000/-",
       specialization: " Mathematics",
-      image: "/images/ma1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
     },
     {
       course: "Master of Arts Journalism and Mass Communication (MAJMC)",
@@ -90,7 +90,7 @@ const Vgu = () => {
       eligibility: "Graduation in any stream",
       fees: "₹72,000/-",
       
-      image: "/images/ma1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
     }
 
   ];
@@ -200,7 +200,7 @@ const Vgu = () => {
         <meta property="og:description" content="Explore UG & PG programs at Vivekananda Global University, Jaipur. Get admissions, course details, and career guidance." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://unifostedu.com/vgu-university" />
-        <meta property="og:image" content="https://unifostedu.com/images/vgu-uni.webp" />
+        <meta property="og:image" content="https://unifostedu.comhttps://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/vgu-uni_khh8pt.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
 
@@ -225,7 +225,7 @@ const Vgu = () => {
               {/* Left Logo */}
               <div className="flex items-center gap-2 lg:gap-4">
                 <img 
-                  src="/images/vgulogo.webp" 
+                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgulogo_jrxgjd.webp" 
                   alt="Logo_vgu" 
                   className="h-12 w-50 sm:h-10 lg:h-12" 
                 />
@@ -270,7 +270,7 @@ const Vgu = () => {
         {/* Background Image with Gradient Overlay */}
         <div className="absolute inset-0">
           <Image
-            src="/images/vguonline.webp"
+            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/vguonline_orn06m.webp"
             alt="vgu online university"
             fill
             className="object-cover object-center"
@@ -346,7 +346,7 @@ const Vgu = () => {
     and professional success. 
   `}
   badgeText="UGC & AICTE Recognized | Innovation Driven | Global Learning"
-  imgSrc="/images/vgu-uni.webp"
+  imgSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/vgu-uni_khh8pt.webp"
   imgAlt="VGU University Campus"
   students="25K+" 
   partners="25+" 
@@ -419,11 +419,11 @@ const Vgu = () => {
       },
     ]}
     accreditations={[
-      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
-      { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
-      { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
-      { src: "/images/nirf.webp", alt: "NIRF", name: "NIRF" },
-      { src: "/images/bci.webp", alt: "BCI", name: "Bar Council of India (BCI)" },
+      { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp", alt: "UGC", name: "UGC" },
+      { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp", alt: "AICTE", name: "AICTE" },
+      { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp", alt: "NAAC", name: "NAAC" },
+      { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nirf_f5xen9.webp", alt: "NIRF", name: "NIRF" },
+      { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bci_fhxjax.webp", alt: "BCI", name: "Bar Council of India (BCI)" },
     ]}
     internationalRecognition={[]}
     successStories={[]}
@@ -647,7 +647,7 @@ const Vgu = () => {
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
-            <Image width={100} height={100} loading="lazy" src="/images/vgu-certificate.webp" alt="VGU Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgu-certificate_o79lcj.webp" alt="VGU Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
           </div>
           <div className="flex-1 text-white">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">Degree from VGU University</h2>
@@ -709,11 +709,11 @@ const Vgu = () => {
           <p className="text-xl text-gray-600">Top hiring partners of VGU</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {["/images/nestle.webp", "/images/decathlon.webp", "/images/icici.webp", "/images/company.webp", "/images/company1.webp", "/images/company9.webp", 
-              "/images/com10.webp", "/images/companany4.webp", 
-              "/images/companany5.webp", "/images/adove.webp", "/images/samsung.webp",
-              "/images/3.webp", "/images/4.webp", "/images/5.webp", 
-              "/images/6.webp", "/images/7.webp", "/images/9.webp", "/images/lt.webp", "/images/hindustanunilever.webp", "/images/lg.webp"].map((src, i) => (
+          {["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nestle_bibwqx.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327108/decathlon_zp87ip.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327200/icici_1_quita6.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company_vjgouc.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company1_tktbp7.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327090/company9_p4pgg3.webp", 
+              "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327088/com10_cm37v8.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany4_h5nana.webp", 
+              "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany5_qs6bgc.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/adove_jtmiou.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/samsung_sosfqv.webp",
+              "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/3_qmk7vp.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327026/4_jdqypx.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327026/5_mcevmm.webp", 
+              "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/6_wioxuw.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327028/7_eilzgq.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327028/9_eqrytp.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327362/lt_akwpfk.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327172/hindustanunilever_qrh10l.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327282/lg_luyozv.webp"].map((src, i) => (
             <div key={i} className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
               <Image width={100} height={100} loading="lazy" src={src} alt="Company" className="h-12 object-contain" />
             </div>
@@ -724,7 +724,7 @@ const Vgu = () => {
                           onOpenChange={(v) => !v && setOpenModal(null)}
                           title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
                           subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-                          imageSrc="/images/vgu_form.webp"
+                          imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgu_form_prrhfs.webp"
                           universityName="Vivekananda Global University (VGU)"
                           defaultProgram="MBA"
                           formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
@@ -752,7 +752,7 @@ const Vgu = () => {
                             className="space-y-4"
                           >
                             <div className="flex items-center gap-3 mb-4">
-                              <img src="/images/vgu_logo.jpeg" alt="vgu University Logo" className="h-10 w-auto bg-white" />
+                              <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/vgu_logo_gctrpo.jpg" alt="vgu University Logo" className="h-10 w-auto bg-white" />
                               <span className="text-xl font-bold text-[#821812]">VGU</span>
                             </div>
                             <p className="text-sm text-gray-400 leading-relaxed">

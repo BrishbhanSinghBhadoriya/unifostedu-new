@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Chandigarh University Online - UG & PG Courses in India",
     description: "Explore online undergraduate and postgraduate programs offered by Chandigarh University Online, a NAAC A++ accredited university.",
-    images: ["/images/chandigarh.webp"],
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp"],
   },
   alternates: {
     canonical: "https://unifostedu.com/cuonline",

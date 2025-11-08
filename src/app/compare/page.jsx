@@ -27,7 +27,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'amity-university-online',
     name: 'Amity University Online',
-    logo: '/images/amity.webp',
+    logo: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp',
     location: 'Noida, Uttar Pradesh',
 
     established: '2005',
@@ -48,7 +48,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'manipal-university-online',
     name: 'Online Manipal University',
-    logo: '/images/manipal.webp',
+    logo: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp',
     location: 'jaipur, Rajastan',
     
     established: '1953',
@@ -69,7 +69,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'sikkim-manipal-university',
     name: 'Sikkim Manipal University',
-    logo: '/images/smu-uni.webp',
+    logo: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp',
     location: 'Gangtok, Sikkim',
     established: '1995',
     fee: '₹0.75L - ₹1.10L',
@@ -89,7 +89,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'uttaranchal-university',
     name: 'Uttaranchal University',
-    logo: '/images/uu-uni.webp',
+    logo: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp',
     location: 'Dehradun, Uttarakhand',
     established: '2002',
     fee: '₹0.72L - ₹1.40L',
@@ -109,7 +109,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'nmims',
     name: 'NMIMS University',
-    logo: '/images/nmims.webp',
+    logo: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327721/nmims_os8kn9.webp',
     location: 'Mumbai, Maharashtra',
     established: '1981',
     fee: '₹0.94L - ₹4.0L',
@@ -129,7 +129,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'lovely-professional-university-online',
     name: 'Lovely Professional University',
-    logo: '/images/lpu.webp',
+    logo: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp',
     location: 'Jalandhar, Punjab',
     established: '2005',
     fee: '₹0.80L - ₹2.0L',
@@ -149,7 +149,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'university-of-petroleum-and-energy-studies-online',
     name: 'Upes Online',
-    logo: '/images/upes.webp',
+    logo: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/upes_uzkkmm.webp',
     location: 'Dehradun, Uttarakhand',
     established: '2003',
     fee: '₹1.50L - ₹2,20L',
@@ -169,7 +169,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'dr-dy-patil-online',
     name: 'Dr. D Y Patil',
-    logo: '/images/dypatil.webp',
+    logo: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dypatil_tbbpf9.webp',
     location: 'Pune, Maharashtra',
     established: '2003',
     fee: '₹1.40L - ₹1.90L',
@@ -189,7 +189,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'sharda-university-online',
     name: 'Sharda University Online',
-    logo: '/images/sharda.webp',
+    logo: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp',
     location: 'Greater Noida, Uttar Pradesh',
     established: '2009',
     fee: '₹1.05L - ₹1.60L',
@@ -209,7 +209,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'jain-university-online',
     name: 'Jain University',
-    logo: '/images/jain.webp',
+    logo: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp',
     location: 'Bengaluru, Karnataka',
     established: '1990',
     fee: '1.30L - ₹2.16L',
@@ -229,7 +229,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'chandigarh-university-online',
     name: 'Chandigarh University Online',
-    logo: '/images/chandigarh.webp',
+    logo: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp',
     location: 'Chandigarh, Punjab',
     established: '2012',
     fee: '₹1.0L - ₹2.10L',
@@ -249,7 +249,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'op-jindal-university',
     name: 'OP Jindal University',
-    logo: '/images/opjindal.webp',
+    logo: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/opjindal_jdl7az.webp',
     location: 'Sonipat, Haryana',
     established: '2009',
     fee: '₹2.0L - ₹3.0L',
@@ -269,7 +269,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'shoolini-university-online',
     name: 'Shoolini University Online',
-    logo: '/images/shoolini.webp',
+    logo: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327856/shoolini_txvq6k.webp',
     location: 'Solan, Himachal Pradesh',
     established: '2009',
     fee: '₹0.75L - ₹1.40L',
@@ -289,7 +289,7 @@ const RAW_UNIVERSITIES = [
   {
     key: 'vivekananda-global-university-online',
     name: 'Vivekananda Global University Online',
-    logo: '/images/vgu1.webp',
+    logo: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgu1_ieijw9.webp',
     location: 'Jaipur, Rajasthan',
     established: '2012',
     fee: '₹0.72L - ₹2.40L',

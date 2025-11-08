@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Book Demo | Free Counseling Session | UNIFOST",
     description: "Book a free demo session with our education experts. Get personalized guidance for your online degree journey.",
-    images: ["/images/uni.webp"],
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp"],
   },
    alternates: {
     canonical: "https://unifostedu.com/bookdemo",

@@ -31,5 +31,5 @@ RewriteRule ^courses/b\.com-online/?$ https://unifostedu.com/courses/bcom-online
 RewriteRule ^blog/blog-page/?$ https://unifostedu.com/search/ [L,R=301]
 
 # Image redirects
-RewriteRule ^images/lpu\.webp$ https://unifostedu.com/images/lpu.webp [L,R=301]
+RewriteRule ^images/lpu\.webp$ https://unifostedu.comhttps://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp [L,R=301]
 </IfModule>

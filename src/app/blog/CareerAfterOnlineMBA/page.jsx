@@ -88,7 +88,7 @@ const CareerAfterOnlineMBA = () => {
         {/* Related Blogs Sidebar */}
         <aside className="w-full md:w-[38%] space-y-6">
           <img
-            src="/images/b9.webp"
+            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/b9_pkxdiq.webp"
             alt="Career After Online MBA"
             className="rounded-xl w-full object-cover shadow-md"
           />
@@ -98,7 +98,7 @@ const CareerAfterOnlineMBA = () => {
             <div className="grid gap-5">
               {/* Card 1 */}
               <a href="/blog/mba-online-vs-distance" className="group bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
-                <img src="/images/b1.webp" alt="MBA Online vs Distance" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b1_xpmoe1.webp" alt="MBA Online vs Distance" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h3 className="font-bold text-blue-800 text-lg">MBA Online vs Distance</h3>
                   <p className="text-sm text-gray-600 mt-1">Understand which MBA format fits your career best in 2025.</p>
@@ -107,7 +107,7 @@ const CareerAfterOnlineMBA = () => {
 
               {/* Card 2 */}
               <a href="/blog/jain-ugc-approval" className="group bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
-                <img src="/images/b5.webp" alt="Jain UGC approval" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b5_rdxlgr.webp" alt="Jain UGC approval" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h3 className="font-bold text-blue-800 text-lg">Is Jain Online University is UGC approved? </h3>
                   <p className="text-sm text-gray-600 mt-1">Explore the most trusted and approved MBA programs in India.</p>
@@ -116,7 +116,7 @@ const CareerAfterOnlineMBA = () => {
 
               {/* Card 3 */}
               <a href="/blog/choose-online-university" className="group bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
-                <img src="/images/b6.webp" alt="Choosing Online Course" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327035/b6_yvhxua.webp" alt="Choosing Online Course" className="h-36 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h3 className="font-bold text-blue-800 text-lg">How to Choose the Right Online Course</h3>
                   <p className="text-sm text-gray-600 mt-1">Tips for selecting a course that aligns with your future goals.</p>

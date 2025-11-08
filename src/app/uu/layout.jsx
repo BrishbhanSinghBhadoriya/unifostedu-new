@@ -28,7 +28,7 @@ export const metadata = {
     siteName: "UNIFOST",
     images: [
       {
-        url: "/images/uu-uni.webp",
+        url: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp",
         width: 1200,
         height: 630,
         alt: "Uttaranchal University Online Programs",
@@ -45,7 +45,7 @@ export const metadata = {
     title: "Uttaranchal University Online | UG & PG Courses, Fees & Admission - UNIFOST",
     description:
       "Uttaranchal University (UU) offers online UG & PG programs with UGC recognition, flexible learning, affordable fees & placement assistance.",
-    images: ["/images/uu-uni.webp"],
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp"],
   },
 };
 

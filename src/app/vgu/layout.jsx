@@ -28,7 +28,7 @@ export const metadata = {
     siteName: "UNIFOST",
     images: [
       {
-        url: "/images/vgu-uni.webp",
+        url: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/vgu-uni_khh8pt.webp",
         width: 1200,
         height: 630,
         alt: "VGU Jaipur University Campus",
@@ -45,7 +45,7 @@ export const metadata = {
     title: "Vivekananda Global University (VGU) Jaipur | Online UG & PG Courses - UNIFOST",
     description:
       "Discover UGC & AICTE recognized UG & PG programs at Vivekananda Global University Jaipur. Flexible, affordable & career-focused online education.",
-    images: ["/images/vgu-uni.webp"],
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/vgu-uni_khh8pt.webp"],
   },
 };
 

@@ -22,7 +22,7 @@ const Manipal = () => {
       eligibility: "10+2 Minimum 40%",
       fees: "1,35,000",
       specialization: "Finance & Accounting, Digital Marketing, Enterepreneurship Management & Family Business, Human Resource Management,  Data Analytics, Retail & E-commerce Management",
-      image: "/images/bba-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
       university: "Manipal Academy of Higher Education(MAHE))",
       universityShort: "MAHE",
       alt: "Bachelor of Business Administration (BBA) in Manipal Online",
@@ -33,7 +33,7 @@ const Manipal = () => {
       eligibility: "10+2 Minimum 40%",
       fees: "1,35,000",
       specialization: "Data Science and Analytics, Cyber Security, Cloud Computing",
-      image: "/images/manipal-online-mca.png",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipal-online-mca_moc5om.png",
       university: "Manipal Academy of Higher Education(MAHE))",
       universityShort: "MAHE",
       alt: "Bachelor of Computer Applications (BCA) in Manipal Online",
@@ -44,7 +44,7 @@ const Manipal = () => {
       eligibility: "10+2 Minimum 40%",
       fees: "99,000",
       specialization: "General",
-      image: "/images/bcom-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327070/bcom-online-image_pdmurc.webp",
       university: "Manipal Academy of Higher Education(MAHE))",
       universityShort: "MAHE",
       alt: "Bachelor of Commerce (B.Com) in Manipal Online",
@@ -58,7 +58,7 @@ const Manipal = () => {
       eligibility: "50% Graduation",
       fees: "1,75,000",
       specialization: "Super/Dual(Human Resource Management and Finance, Finance and Marketing, Marketing and Human Resource Management, Marketing and Business Analytics, Finance and Business Analytics, Human Resource and Business Analytics, Project Management, Retail Management and Quick Commerce, Artificial Intelligence Banking and Finance, 15 other fields)",
-      image: "/images/mba-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
       university: "Manipal Academy of Higher Education(MAHE))",
       universityShort: "MAHE",
       alt: "Master of Business Administration (MBA) in Manipal Online",
@@ -69,7 +69,7 @@ const Manipal = () => {
       eligibility: "50% Graduation",
       fees: "1,58,000",
       specialization: "AI & Data Science, Cyber Security, Cloud Computing, Comprehensive Emerging Technologies,AI & ML", 
-      image: "/images/mca1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
       university: "Manipal Academy of Higher Education(MAHE))",
       universityShort: "MAHE",
       alt: "Master of Computer Applications (MCA) in Manipal Online",
@@ -80,7 +80,7 @@ const Manipal = () => {
       eligibility: "Graduation in Commerce",
       fees: "1,08,000",
       specialization: "General", 
-      image: "/images/m.com.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/m.com_libbpo.webp",
       university: "Manipal Academy of Higher Education(MAHE))",
       universityShort: "MAHE",
       alt: "Master of Commerce (M.Com) in Manipal Online",
@@ -92,7 +92,7 @@ const Manipal = () => {
       eligibility: "Graduation",
       fees: "80,000 - 1,40,000",
       specialization: " Economics,MA (Journalism and Mass Communication)",
-      image: "/images/ma1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
       university: "Manipal Academy of Higher Education(MAHE))",
       universityShort: "MAHE",
       alt: "Master of Arts (MA) in Manipal Online",
@@ -235,7 +235,7 @@ const Manipal = () => {
         {/* Open Graph */}
         <meta property="og:title" content="Manipal Academy of Higher Education Online Degrees | Accredited Online Degrees" />
         <meta property="og:description" content="Globally recognized online undergraduate and postgraduate programs with flexible, industry-relevant learning." />
-        <meta property="og:image" content="/images/manipal.webp" />
+        <meta property="og:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.onlinedegree.in/manipal" />
 
@@ -243,7 +243,7 @@ const Manipal = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Manipal Academy of Higher Education Online | Accredited Online Degrees" />
         <meta name="twitter:description" content="Enroll in UGC and AICTE approved online courses at Manipal Academy of Higher Education. Learn with flexibility and global recognition." />
-        <meta name="twitter:image" content="/images/manipal.webp" />
+        <meta name="twitter:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp" />
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
@@ -260,7 +260,7 @@ const Manipal = () => {
               {/* Left Logo */}
               <div className="flex items-center gap-2 lg:gap-4">
                 <img 
-                  src="/images/manipallogo.jpg" 
+                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" 
                   alt="Mahe Logo" 
                   className="h-8 w-auto sm:h-10 lg:h-12" 
                 />
@@ -306,7 +306,7 @@ const Manipal = () => {
         {/* Premium Hero Section */}
         <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
           {/* Animated Background */}
-          <div className="absolute inset-0 bg-[url('/images/mahe-uni.webp')] bg-cover bg-center opacity-200"></div>
+          <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/mahe-uni_dvnm1d.webp')] bg-cover bg-center opacity-200"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-blue-900/70 to-indigo-900/80"></div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
@@ -467,14 +467,14 @@ const Manipal = () => {
             
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
               {[
-                { img: '/images/naac.webp', title: 'NAAC A+ Accredited University' },
-                { img: '/images/ugc.webp', title: 'UGC-entitled Online Degrees' },
-                { img: '/images/nirf.webp', title: "Amongst India's top 60 Universities in 2025" },
-                { img: '/images/aicte.webp', title: 'AICTE Norms Compliant' },
-                { img: '/images/wes.webp', title: 'Globally Recognized Online Degrees' },
-                { img: '/images/acu.webp', title: 'Member of ACU' },
-                { img: '/images/icas.webp', title: 'ICAS Canada' },
-                { img: '/images/iqas.webp', title: 'IQAS' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp', title: 'NAAC A+ Accredited University' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp', title: 'UGC-entitled Online Degrees' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nirf_f5xen9.webp', title: "Amongst India's top 60 Universities in 2025" },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp', title: 'AICTE Norms Compliant' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/wes_zuxwfs.webp', title: 'Globally Recognized Online Degrees' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/acu_oyjzvj.webp', title: 'Member of ACU' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327200/icas_wyryup.webp', title: 'ICAS Canada' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327238/iqas_bieryy.webp', title: 'IQAS' },
               ].map((item, i)=>(
                 <div key={i} className="group">
                   <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
@@ -833,7 +833,7 @@ const Manipal = () => {
         <section className="bg-[#002d5f] text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center gap-12">
             <div className="md:w-1/2">
-              <Image width={600} height={400} src="/images/MAHE-certi.webp" alt="Certificate" className="rounded-2xl shadow-2xl w-full" />
+              <Image width={600} height={400} src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/mahe-certi_dwtj6m.webp" alt="Certificate" className="rounded-2xl shadow-2xl w-full" />
             </div>
             <div className="md:w-1/2">
               <h2 className="text-4xl lg:text-5xl font-bold mb-6">Recognized Online Degree from Manipal Academy of Higher Education</h2>
@@ -963,7 +963,7 @@ const Manipal = () => {
             </div>
             
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-              {["/images/company.webp", "/images/company1.webp", "/images/company9.webp", "/images/com10.webp", "/images/companany4.webp", "/images/company6.webp", "/images/companany5.webp", "/images/adove.webp", "/images/samsung.webp", "/images/ey.webp", "/images/ibm.webp", "/images/hp.webp", "/images/tata.png", "/images/apple.jpg","/images/hero.webp"].map((src, i) => (
+              {["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company_vjgouc.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company1_tktbp7.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327090/company9_p4pgg3.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327088/com10_cm37v8.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany4_h5nana.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company6_rnuajo.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany5_qs6bgc.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/adove_jtmiou.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/samsung_sosfqv.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327152/ey_ph2bsx.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327173/ibm_ced3ir.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327172/hp_b4ylow.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327860/tata_n9jnwt.png", "/images/apple.jpg","https://res.cloudinary.com/didkrwhbu/image/upload/v1762327171/hero_krubph.webp"].map((src, i) => (
                 <div key={i} className="group">
                   <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                     <div className="aspect-square flex items-center justify-center">
@@ -1011,7 +1011,7 @@ const Manipal = () => {
               onOpenChange={(v) => !v && setOpenModal(null)}
               title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
               subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-              imageSrc="/images/online-manipal-form.webp"
+              imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327725/online-manipal-form_nz7yft.webp"
               universityName="Manipal Academy of Higher Education"
               defaultProgram="MBA"
               formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
@@ -1026,7 +1026,7 @@ const Manipal = () => {
               {/* Brand */}
               <div className="lg:col-span-1">
                 <div className="flex items-center gap-4 mb-6">
-                  <img src="/images/manipallogo.jpg" alt="Manipal" className="h-12 w-auto" />
+                  <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" alt="Manipal" className="h-12 w-auto" />
                   <span className="font-queens text-2xl text-white">Online Manipal</span>
                 </div>
                 <p className="text-gray-400 leading-relaxed mb-6">

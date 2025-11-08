@@ -76,7 +76,7 @@ const AmityLandingPage = () => {
       fees: "₹1,65,000- ₹2,25,000",
       specialization:
         "BBA (General, Data Analytics, Travel And Tourism Management, Professional Certificate in Business Analytics)",
-      image: "/images/bba-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
       alt: "BBA from amity online university",
     },
     {
@@ -86,7 +86,7 @@ const AmityLandingPage = () => {
       fees: "₹1,50,000 - ₹2,25,000",
       specialization:
         "BCA (General, Cloud and Security, Software Engineering, Data Science, Data Engineering(HCL Tech), Data Analytics, Software Engineering(HCL Tech))",
-      image: "/images/bca-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bca-online-image_awhemy.webp",
       alt: "BCA from amity online university",
     },
     {
@@ -96,7 +96,7 @@ const AmityLandingPage = () => {
       fees: "₹99,000 - ₹2,50,000",
       specialization:
         "B.Com (General, Hons, International Finance & Accounting)",
-      image: "/images/bcom.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
       alt: "B.Com from amity online university",
     },
     {
@@ -106,7 +106,7 @@ const AmityLandingPage = () => {
       fees: "₹99,000 - ₹1,70,000",
       specialization:
         "BA (General, Journalism and Mass Communication, Native Languages(Kannada,Malayalam, Tamil, Telugu), Psychology, English, Sociology, Political Science, Economics)",
-      image: "/images/ba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
       alt: "BA from amity online university",
     },
   ];
@@ -119,7 +119,7 @@ const AmityLandingPage = () => {
       fees: "₹1,99,000 - ₹2,99,000",
       specialization:
         "MBA (General, Information Technology Management, Dual Specialization, Human Resource Analytics, Data Science, Business Analytics, International Business Management,Hospital Management, Digital Entrepreneurship, Digital Marketing Management, Entrepreneurship & Leadership Management, Finance & Accounting Management, Hospitality Management, Global Finance Market, Insurance Management, Marketing & Sales Management, Petroleum & Natural Gas, Production and Operations Management, Retail Management)",
-      image: "/images/mba-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
       alt: "MBA from amity online university",
     },
     {
@@ -129,7 +129,7 @@ const AmityLandingPage = () => {
       fees: "₹170,000- ₹2,50,000",
       specialization:
         "MCA (General, Cyber Security, Blockchain Technology, Machine Learning and Artificial Intelligence, Augmented Reality and Virtual Reality, Software Engineering)",
-      image: "/images/mca-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca-online-image_w3f0sx.webp",
       alt: "MCA from amity online university",
     },
     {
@@ -138,7 +138,7 @@ const AmityLandingPage = () => {
       eligibility: "Graduation in Commerce",
       fees: "₹1,20,000",
       specialization: "General, Financial Management, Financial Technology",
-      image: "/images/mcom-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327469/mcom-online-image_e79tno.webp",
       alt: "M.Com from amity online university",
     },
     {
@@ -148,7 +148,7 @@ const AmityLandingPage = () => {
       fees: "₹1,30,000 - ₹2,50,000",
       specialization:
         "MA (Psychology, Journalism and Mass Communication, Public Policy & Governance, English, Sociology)",
-      image: "/images/ma1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
       alt: "MA from amity online university",
     },
     {
@@ -157,7 +157,7 @@ const AmityLandingPage = () => {
       eligibility: "Graduation",
       fees: "₹2,50,000",
       specialization: "Data Science",
-      image: "/images/mcom-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327469/mcom-online-image_e79tno.webp",
       alt: "M.Sc from amity online university",
     },
   ];
@@ -169,7 +169,7 @@ const AmityLandingPage = () => {
       eligibility: "10+2 With minimum 50%",
       fees: "₹3,45,800",
       specialization: "BBA + MBA",
-      image: "/images/mba-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
       alt: "BBA + MBA from amity online university",
     },
     {
@@ -178,7 +178,7 @@ const AmityLandingPage = () => {
       eligibility: "10+2 With minimum 50%",
       fees: "₹3,04,000",
       specialization: "BCA + MCA",
-      image: "/images/mca-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca-online-image_w3f0sx.webp",
       alt: "BCA + MCA from amity online university",
     },
     {
@@ -187,7 +187,7 @@ const AmityLandingPage = () => {
       eligibility: "10+2 With minimum 50%",
       fees: "₹2,83,100 - ₹3,05,000",
       specialization: "B.Com + MBA",
-      image: "/images/mcom-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327469/mcom-online-image_e79tno.webp",
       alt: "B.Com + MBA from amity online university",
     },
   ];
@@ -466,25 +466,25 @@ const AmityLandingPage = () => {
       program: "MBA",
       count: "18+ Specializations",
       color: "bg-blue-50 border-blue-200 text-blue-800",
-      image: "/images/mbaSpecialization.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mbaSpecialization_ubxfpt.webp",
     },
     {
       program: "BBA",
       count: "2 Specializations",
       color: "bg-green-50 border-green-200 text-green-800",
-      image: "/images/bbaSpecialization.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bbaSpecialization_zjisuk.webp",
     },
     {
       program: "MCA",
       count: "5+ Specializations",
       color: "bg-purple-50 border-purple-200 text-purple-800",
-      image: "/images/mcaSpecialization.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mcaSpecialization_bp7v01.webp",
     },
     {
       program: "BCA",
       count: "6 Specializations",
       color: "bg-orange-50 border-orange-200 text-orange-800",
-      image: "/images/bcaSpecialization.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327068/bcaSpecialization_uwowv1.webp",
     },
   ];
   const fadeIn = {
@@ -544,7 +544,7 @@ const AmityLandingPage = () => {
                 </Button>
                 <Button
                   onClick={() => setOpenModal({ type: "enquiry" })}
-                  className="bg-yellow-400 text-black border border-black hover:text-white hover:bg-[#452971]"
+                  className="bg-yellow-400 text-black border border-black hover:text-white hover:bg-[#452971] cursor-pointer"
                 >
                   Enquire Now
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -592,10 +592,10 @@ const AmityLandingPage = () => {
       <div className="max-w-screen-2xl mx-auto flex">
           {/* Left Sidebar */}
         <aside className="fixed hidden lg:flex flex-col top-24 w-64 h-[calc(100vh-6rem)] px-4 py-8 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40 ">
-          <h3 className="text-lg font-bold mb-6 text-indigo-800 border-b-2 border-indigo-200 pb-2 cursor-pointer">
+          <h3 className="text-lg font-bold mb-6 text-indigo-800 border-b-2 border-indigo-200 pb-2">
               Page Contents
             </h3>
-            <ul className="space-y-3 cursor-pointer">
+            <ul className="space-y-3 ">
               {[
                 { id: "HeroSection", label: "Introduction" },
                 { id: "AboutAmity", label: "About Amity" },
@@ -618,7 +618,7 @@ const AmityLandingPage = () => {
                           block: "start",
                         });
                     }}
-                    className="text-gray-700 hover:text-indigo-600 font-medium text-sm transition-colors duration-200 text-left"
+                    className="text-gray-700 hover:text-indigo-600 font-medium text-sm transition-colors duration-200 text-left cursor-pointer"
                   >
                     {item.label}
                   </button>
@@ -700,7 +700,7 @@ const AmityLandingPage = () => {
                       {/* Badge */}
                       <Badge className="mb-3 md:mb-4 font-semibold px-3 md:px-4 py-2 border border-gray-300 bg-white flex items-center gap-2 w-fit">
                         <Image
-                          src="/images/UGC_India_Logo_9d01833e1b.svg"
+                          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/UGC_India_Logo_9d01833e1b_nsyboy.svg"
                           alt="UGC Approved"
                           width={24}
                           height={24}
@@ -820,7 +820,7 @@ const AmityLandingPage = () => {
                     >
                       <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg h-64 sm:h-80 md:h-96 lg:h-[520px] xl:h-[680px]">
                         <Image
-                          src="/images/girlImage.webp"
+                          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327155/girlImage_w9ulny.webp"
                           alt="Amity Campus"
                           fill
                           className="object-contain"
@@ -998,12 +998,12 @@ const AmityLandingPage = () => {
                 {/* Shadcn Tabs */}
                 <Tabs defaultValue="ug" className="w-full">
                   <div className="flex justify-center mb-8 md:mb-12">
-                    <TabsList className="grid w-full max-w-md md:max-w-2xl grid-cols-3 bg-white p-5 rounded-full">
+                    <TabsList className="grid w-full max-w-md md:max-w-2xl grid-cols-3 bg-white p-5 rounded-full ">
                       <TabsTrigger
                         value="ug"
                         className="px-3 md:px-6 py-2 md:py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300
                        data-[state=active]:bg-[#001F3F] data-[state=active]:text-white data-[state=active]:shadow-lg
-                       hover:bg-gray-50 data-[state=inactive]:text-gray-600"
+                       hover:bg-gray-50 data-[state=inactive]:text-gray-600 cursor-pointer"
                       >
                         Undergraduate
                       </TabsTrigger>
@@ -1011,7 +1011,7 @@ const AmityLandingPage = () => {
                         value="pg"
                         className="px-3 md:px-6 py-2 md:py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300
                        data-[state=active]:bg-[#001F3F] data-[state=active]:text-white data-[state=active]:shadow-lg
-                       hover:bg-gray-50 data-[state=inactive]:text-gray-600"
+                       hover:bg-gray-50 data-[state=inactive]:text-gray-600 cursor-pointer"
                       >
                         Postgraduate
                       </TabsTrigger>
@@ -1019,7 +1019,7 @@ const AmityLandingPage = () => {
                         value="integrated"
                         className="px-3 md:px-6 py-2 md:py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300
                        data-[state=active]:bg-[#001F3F] data-[state=active]:text-white data-[state=active]:shadow-lg
-                       hover:bg-gray-50 data-[state=inactive]:text-gray-600"
+                       hover:bg-gray-50 data-[state=inactive]:text-gray-600 cursor-pointer"
                       >
                         Integrated
                       </TabsTrigger>
@@ -1294,26 +1294,26 @@ const AmityLandingPage = () => {
                 },
               ]}
               accreditations={[
-                { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
-                { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
-                { src: "/images/nirf.webp", alt: "NIRF", name: "NIRF" },
-                { src: "/images/wes.webp", alt: "WES", name: "WES" },
-                { src: "/images/aiu.webp", alt: "AIU", name: "AIU" },
-                { src: "/images/acu.webp", alt: "ACU", name: "ACU" },
+                { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp", alt: "UGC", name: "UGC" },
+                { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp", alt: "AICTE", name: "AICTE" },
+                { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nirf_f5xen9.webp", alt: "NIRF", name: "NIRF" },
+                { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/wes_zuxwfs.webp", alt: "WES", name: "WES" },
+                { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327029/aiu_yfa2is.webp", alt: "AIU", name: "AIU" },
+                { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/acu_oyjzvj.webp", alt: "ACU", name: "ACU" },
               ]}
               internationalRecognition={[
-                { src: "/images/qs.webp", alt: "QS Ranking", name: "QS" },
+                { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/qs_k5hl4c.webp", alt: "QS Ranking", name: "QS" },
                 {
-                  src: "/images/wasc.webp",
+                  src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/wasc_emgnvc.webp",
                   alt: "WASC Accreditation",
                   name: "WASC",
                 },
                 {
-                  src: "/images/the.webp",
+                  src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/the_zp4hxg.webp",
                   alt: "Times Higher Education",
                   name: "THE",
                 },
-                { src: "/images/qaa.webp", alt: "QAA UK", name: "QAA UK" },
+                { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327853/qaa_anjp5o.webp", alt: "QAA UK", name: "QAA UK" },
               ]}
               successStories={[
                 {
@@ -1662,7 +1662,7 @@ const AmityLandingPage = () => {
                       <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Button
                           size="lg"
-                          className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-3 text-lg rounded-full"
+                          className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-3 text-lg rounded-full cursor-pointer"
                           onClick={() => setOpenModal({ type: "apply" })}
                         >
                           Apply Now
@@ -1672,7 +1672,7 @@ const AmityLandingPage = () => {
                         <Button
                           size="lg"
                           variant="outline"
-                          className="border-2 border-gray-300 hover:border-blue-400 px-8 py-3 text-lg rounded-full"
+                          className="border-2 border-gray-300 hover:border-blue-400 px-8 py-3 text-lg rounded-full cursor-pointer"
                           onClick={() => setOpenModal({ type: "enquiry" })}
                         >
                           <ArrowRight className="w-5 h-5 mr-2" />
@@ -1803,7 +1803,7 @@ const AmityLandingPage = () => {
                   className="flex justify-center"
                 >
                   <Image
-                    src="/images/hockey.webp"
+                    src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327173/hockey_jwo1y7.webp"
                     alt="Hockey Partnership"
                     width={900}
                     height={500}
@@ -1849,8 +1849,9 @@ const AmityLandingPage = () => {
                   <div className="mt-6"></div>
                 </motion.div>
               </div>
+              
             </section>
-
+          
             <div id="record">
               <div >
                 <section
@@ -2244,7 +2245,7 @@ const AmityLandingPage = () => {
                   <div className="relative">
                     <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 to-purple-500 rounded-2xl blur-lg opacity-20"></div>
                     <Image
-                      src="/images/amicri.webp"
+                      src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amicri_t0imga.webp"
                       alt="Amity University Certificate"
                       width={500}
                       height={350}
@@ -2400,21 +2401,21 @@ const AmityLandingPage = () => {
                   viewport={{ once: true }}
                 >
                   {[
-                    "/images/company.webp",
-                    "/images/company1.webp",
-                    "/images/company9.webp",
-                    "/images/com10.webp",
-                    "/images/companany4.webp",
-                    "/images/companany5.webp",
-                    "/images/adove.webp",
-                    "/images/samsung.webp",
-                    "/images/3.webp",
-                    "/images/4.webp",
-                    "/images/5.webp",
-                    "/images/6.webp",
-                    "/images/7.webp",
-                    "/images/8.webp",
-                    "/images/9.webp",
+                    "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company_vjgouc.webp",
+                    "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company1_tktbp7.webp",
+                    "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327090/company9_p4pgg3.webp",
+                    "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327088/com10_cm37v8.webp",
+                    "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany4_h5nana.webp",
+                    "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany5_qs6bgc.webp",
+                    "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/adove_jtmiou.webp",
+                    "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/samsung_sosfqv.webp",
+                    "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/3_qmk7vp.webp",
+                    "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327026/4_jdqypx.webp",
+                    "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327026/5_mcevmm.webp",
+                    "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/6_wioxuw.webp",
+                    "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327028/7_eilzgq.webp",
+                    "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327028/8_otnhv8.webp",
+                    "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327028/9_eqrytp.webp",
                   ].map((src, i) => (
                     <motion.div
                       key={i}
@@ -2470,9 +2471,8 @@ const AmityLandingPage = () => {
                     className="border border-gray-200 rounded-xl p-4"
                   >
                     <button
-                      className="w-full text-left flex justify-between items-center font-semibold text-lg sm:text-xl"
-                      onClick={() => toggleFAQ(index)}
-                    >
+                      className="w-full text-left flex justify-between items-center font-semibold text-lg sm:text-xl cursor-pointer"
+                     onClick={()=> toggleFAQ(index)}                    >
                       {faq.question}
                       <span className="ml-2 text-indigo-500">
                         {openIndex === index ? "-" : "+"}
@@ -2683,7 +2683,7 @@ const AmityLandingPage = () => {
                   ? "Fill the quick form to begin your admission process"
                   : "Share your details and our counselor will reach out"
               }
-              imageSrc="/images/amityForm.webp"
+              imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/amityForm_xdbvvf.webp"
               universityName="Amity University Online"
               defaultProgram="MBA"
               formType={openModal.type === "apply" ? "getStarted" : "general"}

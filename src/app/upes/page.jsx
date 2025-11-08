@@ -70,10 +70,10 @@ const Upes = () => {
   ];
     
   const sliderImages = [
-    '/images/upes-mba.webp',
-    '/images/upes-mca.webp',
-    '/images/upes-bba.webp',
-    '/images/upes-bca.webp',
+    'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327865/upes-mba_kljihd.webp',
+    'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327866/upes-mca_zh1oml.webp',
+    'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327864/upes-bba_xdinat.webp',
+    'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/upes-bca_gmulwj.webp',
   ];
 
   useEffect(() => {
@@ -98,7 +98,7 @@ const Upes = () => {
       eligibility: "10+2 Pass",
       fees: "₹1,50,000",
       specialization: "Operations Management, Financial Management, Human Resource Management, Marketing Management, BBA in Digital Business, BBA in Logistics and Supply Chain, BBA in International Business",
-      image: "/images/bba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
       alt: "BBA from UPES University Online",
     },
     {
@@ -107,7 +107,7 @@ const Upes = () => {
       eligibility: "10+2 Pass",
       fees: "₹1,50,000",
       specialization: "Cloud Computing, Cyber Security, Data Analytics, New age Technology",
-      image: "/images/bca.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
       alt: "BCA from UPES University Online",
     },
     
@@ -121,7 +121,7 @@ const Upes = () => {
       fees: "₹2,20,000",
       specialization: "Oil & Gas Management, Power Management, Logistics & Supply Chain Management, Business Analytics, Finance, Marketing, Human Resource Management, Infrastructure Management, International Business, Marketing Management, Human Resource Management, Operations Management, Operations Management, Financial Management, Digital Business",
 
-      image: "/images/mba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
       alt: "MBA from UPES University Online",
     },
     {
@@ -130,7 +130,7 @@ const Upes = () => {
       eligibility: "Graduation in BCA/B.Sc(IT)",
       fees: "₹1,70,000",
       specialization: "Artificial Intelligence and Machine Learning, Cyber Security and Forensics, Data Science ", 
-      image: "/images/mca1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
       alt: "MCA from UPES University Online",
     },
     
@@ -156,7 +156,7 @@ const Upes = () => {
           property="og:description"
           content="Explore UPES online degree programs with fees, eligibility, and admission details."
         />
-        <meta property="og:image" content="/images/upes.webp" />
+        <meta property="og:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/upes_uzkkmm.webp" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -179,7 +179,7 @@ const Upes = () => {
               {/* Left Logo */}
               <div className="flex items-center gap-2 lg:gap-4">
                 <img 
-                  src="/images/upes_logo.png" 
+                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327864/upes_logo_nogkrn.png" 
                   alt="Logo_upes" 
                   className="h-12 w-50 sm:h-10 lg:h-12" 
                 />
@@ -269,7 +269,7 @@ const Upes = () => {
     With online and flexible learning, UPES is shaping the future of higher education in India.
   `}
   badgeText="UGC Entitled | Industry-Aligned Curriculum | Innovation Focus"
-  imgSrc="/images/upes.webp"
+  imgSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/upes_uzkkmm.webp"
   imgAlt="UPES University"
   students="25K+" 
   partners="100+" 
@@ -459,7 +459,7 @@ const Upes = () => {
           onOpenChange={(v) => !v && setOpenModal(null)}
           title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
           subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-          imageSrc="/images/upes-form.webp"
+          imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762585497/upes-form_wis0ng.webp"
           universityName="UPES University Online"
           defaultProgram={openModal.program || "MBA"}
           formType={openModal.type}
@@ -502,11 +502,11 @@ const Upes = () => {
       },
     ]}
     accreditations={[
-      { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
-      { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
-      { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
-      { src: "/images/nirf.webp", alt: "NIRF", name: "NIRF" },
-      { src: "/images/wes.webp", alt: "WES", name: "WES" },
+      { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp", alt: "UGC", name: "UGC" },
+      { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp", alt: "AICTE", name: "AICTE" },
+      { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp", alt: "NAAC", name: "NAAC" },
+      { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nirf_f5xen9.webp", alt: "NIRF", name: "NIRF" },
+      { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/wes_zuxwfs.webp", alt: "WES", name: "WES" },
     ]}
     internationalRecognition={[]} 
     successStories={[]} 
@@ -726,7 +726,7 @@ const Upes = () => {
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
           <div className="flex-1">
-            <Image width={100} height={100} loading="lazy" src="/images/upes-certificate.webp" alt="UPES University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
+            <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327865/upes-certificate_fznbzc.webp" alt="UPES University Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
           </div>
 
           <div className="flex-1 text-white">
@@ -796,28 +796,28 @@ const Upes = () => {
            
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/company.webp" alt="Company" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company_vjgouc.webp" alt="Company" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/company1.webp" alt="Microsoft" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company1_tktbp7.webp" alt="Microsoft" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/company9.webp" alt="Company 9" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327090/company9_p4pgg3.webp" alt="Company 9" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/com10.webp" alt="Company 10" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327088/com10_cm37v8.webp" alt="Company 10" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/ibm.webp" alt="Company4" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327173/ibm_ced3ir.webp" alt="Company4" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/company6.webp" alt="Company 6" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company6_rnuajo.webp" alt="Company 6" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/tcs.webp" alt="Companany5" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/tcs_mpq9no.webp" alt="Companany5" className="h-12 object-contain" />
             </div>
             <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
-              <Image width={100} height={100} loading="lazy" src="/images/adove.webp" alt="Adove" className="h-12 object-contain" />
+              <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/adove_jtmiou.webp" alt="Adove" className="h-12 object-contain" />
             </div>
           </div>
         </div>
@@ -841,7 +841,7 @@ const Upes = () => {
                             className="space-y-4"
                           >
                             <div className="flex items-center gap-3 mb-4">
-                              <img src="/images/upes_logo.png" alt="UPES University Logo" className="h-10 w-auto bg-white" />
+                              <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327864/upes_logo_nogkrn.png" alt="UPES University Logo" className="h-10 w-auto bg-white" />
                               <span className="text-xl font-bold text-[#d9235c]">UPES</span>
                             </div>
                             <p className="text-sm text-gray-400 leading-relaxed">
@@ -1027,7 +1027,7 @@ const Upes = () => {
                                 onOpenChange={(v) => !v && setOpenModal(null)}
                                 title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
                                 subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-                                imageSrc="/images/vgu_form.webp"
+                                imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762585497/upes-form_wis0ng.webp"
                                 universityName="UPSE University Online"
                                 defaultProgram="MBA"
                                 formType={openModal.type === 'apply' ? 'getStarted' : 'general'}

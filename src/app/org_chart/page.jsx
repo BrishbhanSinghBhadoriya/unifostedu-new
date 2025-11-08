@@ -8,7 +8,7 @@ function OrganizationStructure() {
       {/* Company Logo */}
       <div className="text-center mb-10">
         <img
-          src="/images/uni.webp"
+          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp"
           alt="Company Logo"
           className="w-32 h-32 mx-auto mb-4"
         />

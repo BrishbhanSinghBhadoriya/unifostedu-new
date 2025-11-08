@@ -31,7 +31,7 @@ export default function ChandigarhPage() {
       eligibility: "10+2 Pass",
       fees: "₹1,66,668",
       specialization: "Journalism, Media Studies",
-      image: "/images/ba-jmc.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327037/ba-jmc_njfsqe.webp",
     },
     {
       title: "Bachelor of Business Administration - Business Analytics (BBA - KPMG)",
@@ -39,7 +39,7 @@ export default function ChandigarhPage() {
       eligibility: "10+2 Pass",
       fees: "₹1,60,000",
       specialization: "Business Analytics with KPMG",
-      image: "/images/bba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
     },
     {
       title: "Bachelor of Business Administration (BBA)",
@@ -47,7 +47,7 @@ export default function ChandigarhPage() {
       eligibility: "10+2 Pass",
       fees: "₹1,68,000",
       specialization: "Marketing, HR, Entrepreneurship, Digital Marketing, Fin-Tech",
-      image: "/images/bba-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
     },
     {
       title: "Bachelor of Computer Applications (BCA)",
@@ -55,7 +55,7 @@ export default function ChandigarhPage() {
       eligibility: "10+2 or equivalent",
       fees: "₹1,70,000",
       specialization: "IT & Systems",
-      image: "/images/bca-online-image.webp/images/bca.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bca-online-image_awhemy.webphttps://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
     },
   ];
 
@@ -66,7 +66,7 @@ export default function ChandigarhPage() {
       eligibility: "Bachelor degree in any discipline or professional programs (CA/ICWA etc.)",
       fees: "₹2,00,000",
       specialization: "Business Analytics with KPMG",
-      image: "/images/mba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
     },
     {
       title: "Master of Business Administration (MBA)",
@@ -74,7 +74,7 @@ export default function ChandigarhPage() {
       eligibility: "Graduation",
       fees: "₹2,10,668",
       specialization: "Finance, Marketing, HR, IT, Operations, International Business, Digital Marketing, Fin-Tech",
-      image: "/images/mba-online-image.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
     },
     {
       title: "Master of Computer Applications - AI & ML",
@@ -82,7 +82,7 @@ export default function ChandigarhPage() {
       eligibility: "BCA/B.Sc(IT/CS)/B.E/B.Tech",
       fees: "₹1,40,000",
       specialization: "AI, ML, Data Analytics, Cloud Computing, Full Stack",
-      image: "/images/mca.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
     },
     {
       title: "Master of Science - Data Science",
@@ -90,7 +90,7 @@ export default function ChandigarhPage() {
       eligibility: "Bachelor's in BA/BCA/B.Sc/BE/B.Tech",
       fees: "₹1,46,668",
       specialization: "Full Stack, Web Development",
-      image: "/images/mca.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
     },
     {
       title: "Master of Computer Applications - Cloud Computing (AWS Academy)",
@@ -98,7 +98,7 @@ export default function ChandigarhPage() {
       eligibility: "BCA/B.Sc/BE/B.Tech or any graduation",
       fees: "₹1,40,000",
       specialization: "Cloud, AWS, DevOps, Full Stack",
-      image: "/images/mca.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
     },
     {
       title: "Master of Computer Applications - Data Analytics",
@@ -106,7 +106,7 @@ export default function ChandigarhPage() {
       eligibility: "BCA/B.Sc/BE/B.Tech or any graduation with Math/Stats/Programming",
       fees: "₹1,40,000",
       specialization: "Big Data, Data Mining",
-      image: "/images/mca1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
     },
     {
       title: "Master of Computer Applications (MCA)",
@@ -114,7 +114,7 @@ export default function ChandigarhPage() {
       eligibility: "BCA/B.Sc/BE/B.Tech or any graduation",
       fees: "₹1,40,000",
       specialization: "General IT, Software Development",
-      image: "/images/mca.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
     },
     {
       title: "Master of Science (Mathematics)",
@@ -122,7 +122,7 @@ export default function ChandigarhPage() {
       eligibility: "Bachelor's with Math",
       fees: "₹1,00,000",
       specialization: "Pure Math, Applied Math",
-      image: "/images/mba.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
     },
     {
       title: "Master of Arts (MA)",
@@ -130,7 +130,7 @@ export default function ChandigarhPage() {
       eligibility: "Graduation in any discipline or BA(Hons.)",
       fees: "₹1,00,000",
       specialization: "Psychology, English, Economics",
-      image: "/images/ma1.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
     },
   ];
 
@@ -332,7 +332,7 @@ export default function ChandigarhPage() {
       {/* Header & Hero Section */}
       <header className="bg-white shadow-md fixed top-0 w-full z-20">
         <div className="max-w-7xl mx-auto p-2 flex justify-between items-center">
-          <img src="/images/logo-cu.png" alt="Chandigarh University" className="h-12" />
+          <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327282/logo-cu_aoiyom.png" alt="Chandigarh University" className="h-12" />
           <div className="flex items-center gap-4">
             <a href="tel:+917042867717" className="flex items-center gap-2 text-gray-700 font-medium">
               📞 +91-7042867717
@@ -365,7 +365,7 @@ export default function ChandigarhPage() {
         {/* Slide 1 */}
         <SwiperSlide>
           <Image
-            src="/images/banner-cu1.webp"
+            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327055/banner-cu1_a6rmh0.webp"
             alt="Fake Banner 1"
             width={1400}
             height={800}
@@ -377,7 +377,7 @@ export default function ChandigarhPage() {
         {/* Slide 2 */}
         <SwiperSlide>
           <Image
-            src="/images/banner-cu2.jpg"
+            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu2_wqusv8.jpg"
             alt="Fake Banner 2"
             width={1400}
             height={800}
@@ -388,7 +388,7 @@ export default function ChandigarhPage() {
         {/* Slide 3 */}
         <SwiperSlide>
           <Image
-            src="/images/banner-cu3.jpg"
+            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu3_bqn5u5.jpg"
             alt="Fake Banner 3"
             width={1400}
             height={800}
@@ -399,7 +399,7 @@ export default function ChandigarhPage() {
          {/* Slide 4 */}
         <SwiperSlide>
           <Image
-            src="/images/banner-cu4.jpg"
+            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu4_dwgigz.jpg"
             alt="Fake Banner 3"
             width={1400}
             height={800}
@@ -410,7 +410,7 @@ export default function ChandigarhPage() {
          {/* Slide 5 */}
         <SwiperSlide>
           <Image
-            src="/images/banner-cu5.jpg"
+            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu5_isobmb.jpg"
             alt="Fake Banner 3"
             width={1400}
             height={800}
@@ -421,7 +421,7 @@ export default function ChandigarhPage() {
          {/* Slide 6 */}
         <SwiperSlide>
           <Image
-            src="/images/banner-cu4.jpg"
+            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu4_dwgigz.jpg"
             alt="Fake Banner 3"
             width={1400}
             height={800}
@@ -436,7 +436,7 @@ export default function ChandigarhPage() {
       {/* Left side: Image */}
       <div>
         <img
-          src="/images/chandigarh.webp"
+          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp"
           alt="Chandigarh University"
           className="w-full rounded-2xl shadow-lg"
         />
@@ -487,10 +487,10 @@ export default function ChandigarhPage() {
         stats={[]}
         benefits={[]}
         accreditations={[
-          { src: "/images/ugc.webp", alt: "UGC", name: "UGC" },
-          { src: "/images/aicte.webp", alt: "AICTE", name: "AICTE" },
-          { src: "/images/naac.webp", alt: "NAAC", name: "NAAC" },
-          { src: "/images/wes.webp", alt: "WES", name: "WES" },
+          { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp", alt: "UGC", name: "UGC" },
+          { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp", alt: "AICTE", name: "AICTE" },
+          { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp", alt: "NAAC", name: "NAAC" },
+          { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/wes_zuxwfs.webp", alt: "WES", name: "WES" },
         ]}
       />
 
@@ -674,7 +674,7 @@ export default function ChandigarhPage() {
             <section className="bg-black py-12 px-4">
               <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
                 <div className="flex-1">
-                  <Image src="/images/certificate-cu.webp" alt="Chandigarh University Certificate" width={100} height={100} loading="lazy" className="w-full max-w-md mx-auto rounded shadow-lg" />
+                  <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327071/certificate-cu_srfqmo.webp" alt="Chandigarh University Certificate" width={100} height={100} loading="lazy" className="w-full max-w-md mx-auto rounded shadow-lg" />
                 </div>
                 <div className="flex-1 text-white">
                   <h2 className="text-3xl md:text-4xl font-semibold mb-4">Earn Your Online Degree from Chandigarh University</h2>
@@ -731,7 +731,7 @@ export default function ChandigarhPage() {
 
                             title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
                             subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-                            imageSrc="/images/girlImage.webp"
+                            imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327155/girlImage_w9ulny.webp"
                             universityName="chandigarh University Online"
                             defaultProgram="MBA"
                             formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
@@ -806,7 +806,7 @@ export default function ChandigarhPage() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-10 border-t border-gray-700 pt-8 flex flex-col md:flex-row items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <img src="/images/cu-logo.webp" alt="CU Online" className="h-10" />
+          <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327106/cu-logo_yd1wri.webp" alt="CU Online" className="h-10" />
           <div>
             <h2 className="text-white font-bold text-xl">CU Online</h2>
             <p className="text-sm text-gray-400">Discover. Learn. Empower.</p>

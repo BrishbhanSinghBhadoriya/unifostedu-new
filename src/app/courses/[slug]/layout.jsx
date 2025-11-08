@@ -9,7 +9,7 @@ export async function generateMetadata({ params }) {
     keywords:
       "Online Courses India, Online MBA, Online MCA, Online BBA, Online BCA, Distance Learning, UGC Approved Degrees",
     canonical: `https://unifostedu.com/courses/${slug}`,
-    image: "/images/uni.webp",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp",
   };
 
   return {
