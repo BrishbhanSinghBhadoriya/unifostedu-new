@@ -135,27 +135,31 @@ const [modalType, setModalType] = useState();
       const [showHeader, setShowHeader] = useState(true);
 
   useEffect(() => {
-    const path = window.location.pathname;
     const hideHeaderRoutes = [
-      "/Amity-University-Online/",
-      "/lpu-online/",
-      "/manipal/",
-      "/cuonline/",
-      "/mahe-online/",
-      "/ku-online/",
-      "/smu/",
-      "/jain/",
-      "/dypatil/",
-      "/sharda/",
-      "/shoolini/",
-      "/vgu/",
-      "/upes/",
-      "/opjindal/",
-      "/nmims/",
-      "/uu/",
-      
+      "/Amity-University-Online",
+      "/lpu-online",
+      "/manipal",
+      "/cuonline",
+      "/mahe-online",
+      "/ku-online",
+      "/smu",
+      "/jain",
+      "/dypatil",
+      "/sharda",
+      "/shoolini",
+      "/vgu",
+      "/upes",
+      "/opjindal",
+      "/nmims",
+      "/uu",
     ];
-    setShowHeader(!hideHeaderRoutes.includes(path));
+    
+    // Check if current pathname starts with any of the hide routes
+    const shouldHide = hideHeaderRoutes.some(route => 
+      pathname === route || pathname.startsWith(route + '/')
+    );
+    
+    setShowHeader(!shouldHide);
     
   }, [pathname]);
 

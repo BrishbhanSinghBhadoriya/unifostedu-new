@@ -1,9 +1,19 @@
 export const metadata = {
-  title: "Course Search|Find Your Perfect Online Degree",
+  title: "Course Search | Find Your Perfect Online Degree | UNIFOST",
   description: "Search and discover the best online degree programs from top universities. Find courses that match your career goals with our comprehensive course search tool.",
-  keywords: "Course Search, Online Degree Search, University Course Finder, Online Education Search, Degree Program Search, Course Discovery",
+  keywords: [
+    "Course Search",
+    "Online Degree Search",
+    "University Course Finder",
+    "Online Education Search",
+    "Degree Program Search",
+    "Course Discovery",
+  ],
+  alternates: {
+    canonical: "https://unifostedu.com/coursesearch",
+  },
   openGraph: {
-    title: "Course Search|Find Your Perfect Online Degree",
+    title: "Course Search | Find Your Perfect Online Degree | UNIFOST",
     description: "Search and discover the best online degree programs from top universities. Find courses that match your career goals.",
     images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp"],
   },
@@ -11,6 +21,8 @@ export const metadata = {
     canonical: "https://unifostedu.com/coursesearch",
   },
 };
+
+// Note: CourseSearch page is CSR (Client-Side Rendering) - no static generation needed
 
 export default function CourseSearchLayout({ children }) {
   return (

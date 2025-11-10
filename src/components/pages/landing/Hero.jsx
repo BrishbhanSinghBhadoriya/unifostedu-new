@@ -66,8 +66,8 @@ const Hero = ({ onOpenModal }) => {
                             src={heroSlides[slide].src}
                             alt={`${heroSlides[slide].title} – ${heroSlides[slide].subtitle} | Online University Degree guidance`}
                             loading="eager"
-                            priority
-                            fetchPriority="high"
+                            
+                           
                             sizes="(max-width: 768px) 100vw, 50vw"
                             className="object-contain rounded-2xl object-center"
                           />

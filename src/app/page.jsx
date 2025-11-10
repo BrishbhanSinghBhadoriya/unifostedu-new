@@ -1,5 +1,6 @@
 import Landing from "@/components/pages/Landing";
 import Image from "next/image";
+
 export const metadata = {
   title: "Unifost | UGC Approved Online University Degrees in India",
   description: "UnifostEdu.com – The official platform for UGC-approved online university degrees in India. Explore top courses, apply easily, and transform your career.",
@@ -70,6 +71,10 @@ export const metadata = {
     },
   },
 };
+
+// Force static generation (SSG) for homepage
+export const dynamic = 'force-static';
+export const revalidate = 86400; // Revalidate every 24 hours
 
 export default function Home() {
   return (

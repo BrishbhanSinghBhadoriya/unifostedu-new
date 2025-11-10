@@ -1,9 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import SEOOptimizer from '@/components/SEOOptimizer';
 import courseData from '@/data/courseData.json';
-import Head from 'next/head';
 
 
 import {
@@ -24,140 +22,59 @@ import { Button } from "@/components/ui/button";
 
 import CourseUniversitiesBrowser from '@/components/CourseUniversitiesBrowser';
 
+// Generate static params at build time (ISR)
+export async function generateStaticParams() {
+  return Object.keys(courseData).map((slug) => ({
+    slug,
+  }));
+}
+
 // Generate metadata for course pages
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  
-  const courseData = {
-    'mba-online': {
-      title: 'Online MBA Programs in India | Top Specializations|',
-      description: 'Compare India\'s leading UGC-approved online MBA programs with flexible schedules and career-focused specializations. Get expert guidance for MBA admissions from top universities like Amity, Manipal, NMIMS, and more.',
-      keywords: ['Online MBA India', 'Online MBA Programs', 'MBA Distance Learning', 'UGC Approved MBA', 'MBA Specializations', 'Online Business Administration', 'MBA Career Guidance'],
-      courseType: 'Master of Business Administration',
-      duration: '2 Years',
-      level: 'Postgraduate'
-    },
-    'mca-online': {
-      title: 'Online MCA Programs in India | UNIFOST',
-      description: 'Advance your tech career with industry-aligned online MCA programs from top Indian universities. Specializations in AI, Data Science, Cybersecurity, and more. Expert guidance for MCA admissions.',
-      keywords: ['Online MCA India', 'Online MCA Programs', 'MCA Distance Learning', 'Computer Applications Master', 'MCA Specializations', 'Online Tech Education', 'MCA Career Guidance'],
-      courseType: 'Master of Computer Applications',
-      duration: '2 Years',
-      level: 'Postgraduate'
-    },
-    'bba-online': {
-      title: "Online BBA Programs in India | UNIFOST",
-      description: 'Compare India\'s leading UGC-approved online BBA programs designed for aspiring business professionals. Get expert guidance for BBA admissions from top universities.',
-      keywords: ['Online BBA India', 'Online BBA Programs', 'BBA Distance Learning', 'Bachelor Business Administration', 'BBA Specializations', 'Online Business Education', 'BBA Career Guidance'],
-      courseType: 'Bachelor of Business Administration',
-      duration: '3 Years',
-      level: 'Undergraduate'
-    },
-    'bca-online': {
-      title: "Online BCA Programs in India | UNIFOST",
-      description: 'Build a solid foundation in computer science, programming, and software development with flexible online BCA programs from top Indian universities.',
-      keywords: ['Online BCA India', 'Online BCA Programs', 'BCA Distance Learning', 'Bachelor Computer Applications', 'BCA Specializations', 'Online Computer Science', 'BCA Career Guidance'],
-      courseType: 'Bachelor of Computer Applications',
-      duration: '3 Years',
-      level: 'Undergraduate'
-    },
-    'bcom-online': {
-      title: 'Online B.Com Programs in India | UNIFOST',
-      description: 'Build strong fundamentals in accounting, finance, taxation, and business with flexible UGC-approved online B.Com programs from top Indian universities.',
-      keywords: ['Online BCom India', 'Online BCom Programs', 'BCom Distance Learning', 'Bachelor of Commerce', 'BCom Specializations', 'Online Commerce Education', 'BCom Career Guidance'],
-      courseType: 'Bachelor of Commerce',
-      duration: '3 Years',
-      level: 'Undergraduate'
-    },
-    'ba-online': {
-      title: 'Online BA Programs in India | UNIFOST',
-      description: 'Build strong foundations in humanities and social sciences with flexible UGC-approved online BA programs from top Indian universities.',
-      keywords: ['Online BA India', 'Online BA Programs', 'BA Distance Learning', 'Bachelor of Arts', 'BA Specializations', 'Online Humanities Education', 'BA Career Guidance'],
-      courseType: 'Bachelor of Arts',
-      duration: '3 Years',
-      level: 'Undergraduate'
-    },
-    'bajmc-online': {
-      title: 'Online BA Journalism & Mass Communication| UNIFOST',
-      description: 'Launch your media career with comprehensive online BAJMC covering journalism, digital media, PR, advertising, and production with hands-on projects.',
-      keywords: ['Online BAJMC India', 'Online BAJMC Programs', 'BAJMC Distance Learning', 'Journalism Mass Communication', 'BAJMC Specializations', 'Online Media Education', 'BAJMC Career Guidance'],
-      courseType: 'Bachelor of Arts in Journalism & Mass Communication',
-      duration: '3 Years',
-      level: 'Undergraduate'
-    },
-    'mcom-online': {
-      title: 'Online M.Com Programs in India | UNIFOST',
-      description: 'Deepen your expertise in commerce, accounting, and finance with flexible online M.Com programs from top Indian universities.',
-      keywords: ['Online MCom India', 'Online MCom Programs', 'MCom Distance Learning', 'Master of Commerce', 'MCom Specializations', 'Online Commerce Master', 'MCom Career Guidance'],
-      courseType: 'Master of Commerce',
-      duration: '2 Years',
-      level: 'Postgraduate'
-    },
-    'ma-online': {
-      title: 'Online MA Programs in India | UNIFOST',
-      description: 'Explore humanities and social sciences with flexible online MA degrees from top Indian universities. Specializations in English, Psychology, Sociology, and more.',
-      keywords: ['Online MA India', 'Online MA Programs', 'MA Distance Learning', 'Master of Arts', 'MA Specializations', 'Online Humanities Master', 'MA Career Guidance'],
-      courseType: 'Master of Arts',
-      duration: '2 Years',
-      level: 'Postgraduate'
-    },
-    'majmc-online': {
-      title: 'Online MA Journalism & Mass Communication|UNIFOST',
-      description: 'Master journalism and mass communication with industry-focused curricula, practical projects, and expert mentorship from top online universities.',
-      keywords: ['Online MAJMC India', 'Online MAJMC Programs', 'MAJMC Distance Learning', 'Journalism Mass Communication Master', 'MAJMC Specializations', 'Online Media Master', 'MAJMC Career Guidance'],
-      courseType: 'Master of Arts in Journalism & Mass Communication',
-      duration: '2 Years',
-      level: 'Postgraduate'
-    },
-    'msc-online': {
-      title: 'Online MSc Programs in India | UNIFOST',
-      description: 'Advance your scientific career with specialized online MSc programs in Computer Science, Data Science, Mathematics, and more from top Indian universities.',
-      keywords: ['Online MSc India', 'Online MSc Programs', 'MSc Distance Learning', 'Master of Science', 'MSc Specializations', 'Online Science Master', 'MSc Career Guidance'],
-      courseType: 'Master of Science',
-      duration: '2 Years',
-      level: 'Postgraduate'
-    }
-  };
-
   const course = courseData[slug];
   
   if (!course) {
     return {
       title: 'Course Not Found | UNIFOST',
-      description: 'The requested course could not be found. Explore our available online degree programs.',
+      description: 'The requested course page could not be found.',
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
-
+  
+  const courseTitle = course.title || `Online ${course.subtitle || slug} Programs in India`;
+  const courseDescription = course.description || `Explore ${courseTitle} from top UGC-approved universities in India. Compare fees, eligibility, and career prospects.`;
+  
   return {
-    title: course.title,
-    description: course.description,
-    keywords: course.keywords,
+    title: `${courseTitle} | UNIFOST`,
+    description: courseDescription,
+    keywords: course.keywords || [],
     alternates: {
       canonical: `https://unifostedu.com/courses/${slug}`,
     },
     openGraph: {
-      title: course.title,
-      description: course.description,
+      title: `${courseTitle} | UNIFOST`,
+      description: courseDescription,
       url: `https://unifostedu.com/courses/${slug}`,
-      siteName: 'UNIFOST',
+      siteName: "UNIFOST",
       images: [
         {
-          url: 'images/uni.webp',
+          url: course.image || "https://unifostedu.com/images/default-course.webp",
           width: 1200,
           height: 630,
-          alt: `${course.courseType} - Online Programs in India`
-        }
+          alt: courseTitle,
+        },
       ],
-      locale: 'en_IN',
-      type: 'website',
+      type: "website",
     },
     twitter: {
-      card: 'summary_large_image',
-      site: '@unifost',
-      creator: '@unifost',
-      title: course.title,
-      description: course.description,
-      images: ['images/uni.webp'],
+      card: "summary_large_image",
+      title: courseTitle,
+      description: courseDescription,
+      images: [course.image || "https://unifostedu.com/images/default-course.webp"],
     },
     robots: {
       index: true,
@@ -165,18 +82,17 @@ export async function generateMetadata({ params }) {
       googleBot: {
         index: true,
         follow: true,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-        'max-video-preview': -1,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
       },
     },
-    other: {
-      'course-type': course.courseType,
-      'course-duration': course.duration,
-      'course-level': course.level,
-    }
   };
 }
+
+// ISR with revalidation
+export const revalidate = 86400; // Revalidate every 24 hours
+export const dynamicParams = true; // Allow dynamic params not in generateStaticParams
 
 function slugify(input) {
   return input
@@ -331,11 +247,8 @@ export default async function CoursePage({ params }) {
                   <div className="w-16 h-16 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] rounded-full flex items-center justify-center mx-auto mb-4">
                     <FaGraduationCap className="w-8 h-8 text-[#001e3c]" />
                   </div>
-                   <h3 className="text-xl font-semibold text-gray-900 mb-2">NIRF</h3>
-                  <p className="text-[#00ffe0] font-bold text-lg">{course.NIRF}</p>
-                
                   <h2 className="text-xl font-semibold text-gray-900 mb-2">Eligibility</h2>
-                  <p className="text-[#00ffe0] font-bold text-lg">{course.eligibility}</p>
+                  <p className="text-[#00ffe0] font-bold text-lg">{course.eligibility || 'Graduation in any discipline'}</p>
                 </div>
               </div>
 
@@ -424,20 +337,4 @@ export default async function CoursePage({ params }) {
     console.error('Error in CoursePage:', error);
     notFound();
   }
-}
-
-export function generateStaticParams() {
-  const extraSlugs = [
-    'msc-online',
-    'bba-online',
-    'bca-online',
-    'bcom-online',
-    'ba-online',
-    'bajmc-online',
-    'mcom-online',
-    'ma-online',
-    'majmc-online'
-  ];
-  const slugs = Array.from(new Set([...Object.keys(courseData), ...extraSlugs]));
-  return slugs.map((slug) => ({ slug }));
 }

@@ -11,13 +11,13 @@ export default function OnlineMBAFees() {
         <link rel="canonical" href="https://unifostedu.com/blog/OnlineMBAFees" />
         <meta property="og:title" content="Online MBA Fees in India (2025) – Complete Guide" />
         <meta property="og:description" content="Compare fees, EMI, scholarships for Online MBA programs from UGC-approved universities in India." />
-        <meta property="og:image" content="https://unifostedu.com/slider/slider-1.jpg" />
+        <meta property="og:image" content="https://unifostedu.comhttps://res.cloudinary.com/didkrwhbu/image/upload/v1762327967/slider-1_pjehj7.webp" />
         <meta property="og:url" content="https://unifostedu.com/blog/OnlineMBAFees" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Online MBA Fees in India (2025) – Complete Guide" />
         <meta name="twitter:description" content="Compare fees, EMI, scholarships for Online MBA programs from UGC-approved universities in India." />
-        <meta name="twitter:image" content="https://unifostedu.com/slider/slider-1.jpg" />
+        <meta name="twitter:image" content="https://unifostedu.comhttps://res.cloudinary.com/didkrwhbu/image/upload/v1762327967/slider-1_pjehj7.webp" />
       </Head>
 
       <article className="prose prose-lg max-w-none">

@@ -13,7 +13,7 @@ export const heroSlides = [
     description: "Find the perfect online degree program from India's top-ranked universities. Get expert guidance to make informed decisions for your academic future.",
   },
   {
-    src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327968/slider-2_bcffam.webp",
+    src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762602023/slider-2_ritvxe.webp",
     alt: "Your One-Stop Platform for Online Universities",
     width: 1200,
     height: 800,
@@ -22,7 +22,7 @@ export const heroSlides = [
     description: "Access world-class education from anywhere, anytime. Study with industry experts and get recognized degrees from UGC-approved universities.",
   },
   {
-    src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327968/slider-3_dova0q.webp",
+    src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762602052/slider-3_o7o8qw.webp",
     alt: "Search • Compare • Choose • Succeed",
     width: 1200,
     height: 800,
@@ -31,7 +31,7 @@ export const heroSlides = [
     description: "Get personalized counseling from education experts. Compare courses, fees, and career prospects to choose the best program for your goals.",
   },
   {
-    src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327967/slider-4_y1zsod.webp",
+    src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762602053/slider-4_jloprr.webp",
     alt: "Compare universities with Unifost",
     width: 1200,
     height: 800,

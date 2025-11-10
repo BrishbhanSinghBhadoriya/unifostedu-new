@@ -9,7 +9,7 @@ import dynamic from "next/dynamic";
 import Hero from "./landing/Hero";
 const WorkflowRoadmap = dynamic(() => import("@/components/pages/WorkflowRoadmap"));
 const UniversityLogoSlider = dynamic(() => import("./landing/UniversityLogoSlider"));
-const Stats = dynamic(() => import("./landing/Stats"));
+import Stats from "./landing/Stats";
 import { courses, features, colleges, cities, accreditationLogos } from "./landing/data.js";
 import { slugify, getCourseHref, getUniversityHref } from "./landing/data.js";
 import {
@@ -705,7 +705,9 @@ const Landing = () => {
                       alt="Accreditation and recognition logo"
                       width={100}
                       height={100}
-                      loading="lazy"
+                      loading="eager"
+                      decoding="async"
+                      unoptimized
                       className="max-h-10 sm:max-h-12 md:max-h-14 object-contain"
                     />
                 </div>

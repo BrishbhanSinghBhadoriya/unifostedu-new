@@ -186,7 +186,7 @@ const ManipalVsAmityOnlineMBA = () => {
       </div>
 
           <div className="flex justify-center mt-12 ">
-        <Link href="/Amity-university-Online">
+        <Link href="/Amity-University-Online">
           <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition cursor-pointer ">
             more Information about Amity
           </button>

@@ -514,17 +514,17 @@ const AmityLandingPage = () => {
     <div style={{ overflowX: "hidden" }}>
       
       <div className="min-h-screen bg-white relative">
-        {/* Header */}
+      
         <motion.header
           className="bg-white shadow-sm fixed top-0 left-0 w-full z-50"
           initial={{ y: -100 }}
           animate={{ y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="max-w-7xl mx-auto px-6 py-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <div className="w-[122px] h-10 relative">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4">
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+                <div className="w-20 sm:w-24 md:w-[122px] h-8 sm:h-9 md:h-10 relative">
                   <Image
                     src="/amity.svg"
                     alt="Amity University Online"
@@ -534,68 +534,68 @@ const AmityLandingPage = () => {
                   />
                 </div>
               </div>
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center gap-2 sm:gap-3 md:gap-4 flex-1 justify-end">
                 <Button
                   variant="outline"
-                  className="hidden md:flex items-center space-x-2"
+                  size="sm"
+                  className="hidden sm:flex items-center space-x-1 md:space-x-2 text-xs md:text-sm px-2 md:px-4 py-1.5 md:py-2"
                 >
-                  <Phone className="w-4 h-4" />
-                  <span>+91 7042867717</span>
+                  <Phone className="w-3 h-3 md:w-4 md:h-4" />
+                  <span className="hidden md:inline">+91 7042867717</span>
+                  <span className="md:hidden">Call</span>
                 </Button>
                 <Button
                   onClick={() => setOpenModal({ type: "enquiry" })}
-                  className="bg-yellow-400 text-black border border-black hover:text-white hover:bg-[#452971] cursor-pointer"
+                  size="sm"
+                  className="bg-yellow-400 text-black border border-black hover:text-white hover:bg-[#452971] text-xs sm:text-sm px-3 sm:px-4 md:px-6 py-1.5 md:py-2 whitespace-nowrap"
                 >
-                  Enquire Now
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <span className="hidden sm:inline">Enquire Now</span>
+                  <span className="sm:hidden">Enquire</span>
+                  <ArrowRight className="w-3 h-3 md:w-4 md:h-4 ml-1 md:ml-2" />
+                </Button>
+                {/* Mobile Menu Button */}
+                <Button 
+                  onClick={() => setIsMobileMenuOpen(true)} 
+                  variant="ghost" 
+                  size="icon"
+                  className="lg:hidden w-8 h-8 sm:w-10 sm:h-10"
+                >
+                  <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
                 </Button>
               </div>
-            {/* Mobile Menu Button */}
-            <div className="lg:hidden">
-              <Button onClick={() => setIsMobileMenuOpen(true)} variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </div>
             </div>
           </div>
         </motion.header>
 
         
-        {/* Notification Bar */}
-        <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 py-2 md:py-2 mt-[64px] md:mt-[70px] mb-0
-">
-          <div className="max-w-7xl mx-auto px-4 md:px-6 text-center">
+        {/* Notification Bar - Optimized */}
+        <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 py-2 sm:py-2.5 md:py-3 mt-[56px] sm:mt-[64px] md:mt-[70px] mb-0">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 text-center">
             <motion.div
-              className="font-semibold flex flex-col sm:flex-row items-center justify-center space-x-0 sm:space-x-2 space-y-1 sm:space-y-0 text-sm md:text-base"
+              className="font-semibold flex flex-wrap items-center justify-center gap-x-2 sm:gap-x-3 gap-y-1 text-xs sm:text-sm md:text-base"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
-                <span className="text-xs sm:text-sm md:text-base">
-                  August 2025 Admissions Open
-                </span>
+              <div className="flex items-center space-x-1.5 sm:space-x-2">
+                <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0" />
+                <span className="whitespace-nowrap">August 2025 Admissions Open</span>
               </div>
-              <span className="hidden sm:inline">•</span>
-              <span className="text-xs sm:text-sm md:text-base">
-                Scholarships up to 15% Available
-              </span>
-              <span className="hidden sm:inline">•</span>
-              <span className="text-xs sm:text-sm md:text-base">
-                Limited Time Offer
-              </span>
+              <span className="hidden sm:inline text-gray-700">•</span>
+              <span className="whitespace-nowrap">Scholarships up to 15% Available</span>
+              <span className="hidden sm:inline text-gray-700">•</span>
+              <span className="whitespace-nowrap">Limited Time Offer</span>
             </motion.div>
           </div>
         </div>
 
-      <div className="max-w-screen-2xl mx-auto flex">
-          {/* Left Sidebar */}
-        <aside className="fixed hidden lg:flex flex-col top-24 w-64 h-[calc(100vh-6rem)] px-4 py-8 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40 ">
-          <h3 className="text-lg font-bold mb-6 text-indigo-800 border-b-2 border-indigo-200 pb-2">
+      <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row">
+          {/* Left Sidebar - Hidden on Mobile, Sticky on Desktop */}
+        <aside className="hidden lg:flex flex-col fixed top-[88px] sm:top-[96px] md:top-[104px] w-64 h-[calc(100vh-6rem)] px-4 py-6 self-start overflow-y-auto border-r border-gray-200 bg-white/95 backdrop-blur-sm z-40">
+          <h3 className="text-base md:text-lg font-bold mb-4 md:mb-6 text-indigo-800 border-b-2 border-indigo-200 pb-2">
               Page Contents
             </h3>
-            <ul className="space-y-3 ">
+            <ul className="space-y-2.5 md:space-y-3">
               {[
                 { id: "HeroSection", label: "Introduction" },
                 { id: "AboutAmity", label: "About Amity" },
@@ -618,7 +618,7 @@ const AmityLandingPage = () => {
                           block: "start",
                         });
                     }}
-                    className="text-gray-700 hover:text-indigo-600 font-medium text-sm transition-colors duration-200 text-left cursor-pointer"
+                    className="text-gray-700 hover:text-indigo-600 font-medium text-xs md:text-sm transition-colors duration-200 text-left w-full py-1.5 px-2 rounded hover:bg-indigo-50"
                   >
                     {item.label}
                   </button>
@@ -627,7 +627,7 @@ const AmityLandingPage = () => {
             </ul>
           </aside>
 
-        {/* Mobile Sidebar */}
+        {/* Mobile Sidebar - Enhanced */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <>
@@ -644,10 +644,20 @@ const AmityLandingPage = () => {
                 animate={{ x: 0 }}
                 exit={{ x: "-100%" }}
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                className="fixed top-0 left-0 w-72 h-full bg-white z-50 p-6 flex flex-col lg:hidden"
+                className="fixed top-0 left-0 w-72 sm:w-80 h-full bg-white z-50 p-4 sm:p-6 flex flex-col lg:hidden shadow-2xl"
               >
-                <h3 className="text-xl font-bold mb-8 text-indigo-800">Page Contents</h3>
-                <ul className="space-y-4">
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-lg sm:text-xl font-bold text-indigo-800">Page Contents</h3>
+                  <Button
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    variant="ghost"
+                    size="icon"
+                    className="w-8 h-8"
+                  >
+                    <Menu className="h-5 w-5 rotate-45" />
+                  </Button>
+                </div>
+                <ul className="space-y-2 overflow-y-auto flex-1">
                   {[
                     { id: "HeroSection", label: "Introduction" },
                     { id: "AboutAmity", label: "About Amity" },
@@ -667,7 +677,7 @@ const AmityLandingPage = () => {
                           if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
                           setIsMobileMenuOpen(false);
                         }}
-                        className="text-gray-700 hover:text-indigo-600 font-semibold text-base transition-colors duration-200 w-full text-left cursor-pointer"
+                        className="text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 font-medium sm:font-semibold text-sm sm:text-base transition-all duration-200 w-full text-left py-2.5 px-3 rounded-lg"
                       >
                         {item.label}
                       </button>
@@ -680,14 +690,14 @@ const AmityLandingPage = () => {
         </AnimatePresence>
        
         <main className="flex-1 min-w-0 lg:pl-64">
-            {/* Hero Section */}
+            {/* Hero Section - Fully Responsive */}
 
             <section
               id="HeroSection"
-              className="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden "
+              className="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden"
             >
-              <div className="max-w-7xl mx-auto px-4 md:px-6 py-6 lg:py-12 xl:py-16">
-                <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+              <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 py-4 sm:py-6 md:py-8 lg:py-12 xl:py-16">
+                <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-12">
                   {/* Left Content */}
                   <div
                     className={`flex-1 w-full lg:min-w-[300px] ${inter.className} order-2 lg:order-1`}
@@ -698,22 +708,22 @@ const AmityLandingPage = () => {
                       transition={{ duration: 0.8 }}
                     >
                       {/* Badge */}
-                      <Badge className="mb-3 md:mb-4 font-semibold px-3 md:px-4 py-2 border border-gray-300 bg-white flex items-center gap-2 w-fit">
+                      <Badge className="mb-3 sm:mb-4 font-semibold px-2.5 sm:px-3 md:px-4 py-1.5 sm:py-2 border border-gray-300 bg-white flex items-center gap-1.5 sm:gap-2 w-fit">
                         <Image
                           src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/UGC_India_Logo_9d01833e1b_nsyboy.svg"
                           alt="UGC Approved"
-                          width={24}
-                          height={24}
-                          className="md:w-[30px] md:h-[30px] rounded-full"
+                          width={20}
+                          height={20}
+                          className="sm:w-6 sm:h-6 md:w-[30px] md:h-[30px] rounded-full"
                         />
-                        <span className="text-gray-500 text-sm md:text-base">
+                        <span className="text-gray-500 text-xs sm:text-sm md:text-base">
                           UGC Approved
                         </span>
                       </Badge>
 
                       {/* Heading */}
                       <h1
-                        className={`${playfair.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-2 md:mb-3`}
+                        className={`${playfair.className} text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-2 sm:mb-3`}
                       >
                         India&apos;s Leading
                         <span className="block text-transparent bg-clip-text bg-yellow-600">
@@ -722,7 +732,7 @@ const AmityLandingPage = () => {
                       </h1>
 
                       {/* Description */}
-                      <p className="text-lg md:text-xl text-gray-600 mb-5 md:mb-6 max-w-2xl leading-relaxed">
+                      <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-4 sm:mb-5 md:mb-6 max-w-2xl leading-relaxed">
                         Transform your career with industry-relevant programs
                         designed by experts.{" "}
                         <span className="font-semibold">Join 1.6 lakh+</span>{" "}
@@ -730,19 +740,19 @@ const AmityLandingPage = () => {
                         journey.
                       </p>
 
-                      {/* Program Cards */}
-                      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-6 md:mb-8">
+                      {/* Program Cards - Responsive Grid */}
+                      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4 lg:gap-6 mb-4 sm:mb-5 md:mb-6 lg:mb-8">
                         {specializations.map((item, index) => (
                           <motion.div
                             key={index}
-                            className="rounded-xl overflow-hidden shadow-lg bg-white cursor-pointer"
+                            className="rounded-lg sm:rounded-xl overflow-hidden shadow-md sm:shadow-lg bg-white cursor-pointer hover:shadow-xl transition-shadow"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
-                            whileHover={{ scale: 1.05 }}
+                            whileHover={{ scale: 1.03 }}
                           >
                             {/* Image */}
-                            <div className="h-24 sm:h-32 md:h-40 w-full">
+                            <div className="h-20 sm:h-24 md:h-32 lg:h-40 w-full">
                               <img
                                 src={item.image}
                                 alt={item.program}
@@ -751,11 +761,11 @@ const AmityLandingPage = () => {
                             </div>
 
                             {/* Text Section */}
-                            <div className="bg-[#0d1b4c] text-white py-2 md:py-3 text-center">
-                              <div className="font-bold text-sm md:text-lg">
+                            <div className="bg-[#0d1b4c] text-white py-1.5 sm:py-2 md:py-3 text-center">
+                              <div className="font-bold text-xs sm:text-sm md:text-base lg:text-lg">
                                 {item.program}
                               </div>
-                              <div className="text-xs md:text-sm opacity-90">
+                              <div className="text-[10px] sm:text-xs md:text-sm opacity-90 mt-0.5">
                                 {item.count}
                               </div>
                             </div>
@@ -763,29 +773,29 @@ const AmityLandingPage = () => {
                         ))}
                       </div>
 
-                      {/* CTA Buttons */}
-                      <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-6 md:mb-8">
+                      {/* CTA Buttons - Responsive */}
+                      <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-5 md:mb-6 lg:mb-8">
                         <Button
                           size="lg"
-                          className="bg-yellow-400 hover:bg-yellow-500 text-black cursor-pointer px-6 md:px-9 py-3 md:py-6 text-base md:text-lg rounded-full"
+                          className="bg-yellow-400 hover:bg-yellow-500 text-black cursor-pointer px-4 sm:px-6 md:px-8 lg:px-9 py-2 sm:py-2.5 md:py-3 lg:py-6 text-sm sm:text-base md:text-lg rounded-full w-full sm:w-auto"
                           onClick={() => setOpenModal({ type: "apply" })}
                         >
                           Apply Now
-                          <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2" />
+                          <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 ml-2" />
                         </Button>
                         <Button
                           size="lg"
                           variant="outline"
-                          className=" cursor-pointer border-2 border-gray-300 hover:border-blue-400 px-6 md:px-9 py-3 md:py-6 text-base md:text-lg rounded-full"
+                          className="cursor-pointer border-2 border-gray-300 hover:border-blue-400 px-4 sm:px-6 md:px-8 lg:px-9 py-2 sm:py-2.5 md:py-3 lg:py-6 text-sm sm:text-base md:text-lg rounded-full w-full sm:w-auto"
                           onClick={() => setOpenModal({ type: "enquiry" })}
                         >
-                          <ArrowRight className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                          <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 mr-2 rotate-180 sm:rotate-0" />
                           Enquire Now
                         </Button>
                       </div>
 
-                      {/* Stats */}
-                      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 md:mt-30">
+                      {/* Stats - Responsive Grid */}
+                      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
                         {stats.map((stat, index) => (
                           <motion.div
                             key={index}
@@ -797,11 +807,11 @@ const AmityLandingPage = () => {
                               delay: 0.8 + index * 0.1,
                             }}
                           >
-                            <stat.icon className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-yellow-500" />
-                            <div className="text-lg md:text-2xl font-bold text-gray-900">
+                            <stat.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 mx-auto mb-1 sm:mb-2 text-yellow-500" />
+                            <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-900">
                               {stat.number}
                             </div>
-                            <div className="text-xs md:text-sm text-gray-600">
+                            <div className="text-[10px] sm:text-xs md:text-sm text-gray-600">
                               {stat.label}
                             </div>
                           </motion.div>
@@ -818,13 +828,14 @@ const AmityLandingPage = () => {
                       transition={{ duration: 0.8, delay: 0.2 }}
                       className="flex justify-center lg:justify-end"
                     >
-                      <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg h-64 sm:h-80 md:h-96 lg:h-[520px] xl:h-[680px]">
+                      <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-48 sm:h-64 md:h-80 lg:h-[520px] xl:h-[680px]">
                         <Image
                           src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327155/girlImage_w9ulny.webp"
                           alt="Amity Campus"
                           fill
                           className="object-contain"
                           priority
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                         />
                       </div>
                     </motion.div>
@@ -833,10 +844,10 @@ const AmityLandingPage = () => {
               </div>
             </section>
 
-            {/* About Amity University Online Section */}
+            {/* About Amity University Online Section - Responsive */}
             <section
               id="AboutAmity"
-              className="py-12 md:py-16 bg-gradient-to-br from-blue-50 via-white to-purple-50 px-4 md:px-6 font-[Inter] relative"
+              className="py-8 sm:py-10 md:py-12 lg:py-16 bg-gradient-to-br from-blue-50 via-white to-purple-50 px-3 sm:px-4 md:px-6 font-[Inter] relative"
             >
               {/* Background Pattern */}
               <div
@@ -853,12 +864,12 @@ const AmityLandingPage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
-                  className="mb-10"
+                  className="mb-6 sm:mb-8 md:mb-10"
                 >
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
                     About Amity University Online
                   </h2>
-                  <div className="w-24 h-1 bg-yellow-500 mx-auto mb-8 rounded-full"></div>
+                  <div className="w-20 sm:w-24 h-0.5 sm:h-1 bg-yellow-500 mx-auto mb-6 sm:mb-8 rounded-full"></div>
                 </motion.div>
 
                 {/* Main Content */}
@@ -867,9 +878,9 @@ const AmityLandingPage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
                   viewport={{ once: true }}
-                  className="bg-white p-10 md:p-12 rounded-2xl shadow-lg border border-gray-100 text-left md:text-justify"
+                  className="bg-white p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 rounded-xl sm:rounded-2xl shadow-lg border border-gray-100 text-left md:text-justify"
                 >
-                  <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                  <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-5 md:mb-6">
                     Amity University Online is India’s one of the recognised
                     UGC-approved online university, which offers high-class
                     online degree programs designed for learners, working
@@ -882,7 +893,7 @@ const AmityLandingPage = () => {
                     their excellence with flexibility.
                   </p>
 
-                  <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                  <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-5 md:mb-6">
                     Our mission and vision are to make quality online education
                     in India that can be accessible to all — whether someone is
                     searching for the best online MBA in India, top online MBA
@@ -894,19 +905,19 @@ const AmityLandingPage = () => {
                     support.
                   </p>
 
-                  <p className="text-gray-700 text-lg leading-relaxed">
+                  <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-5 md:mb-6">
                     Students from cities such as Delhi, Mumbai, Bangalore,
                     Chennai, Hyderabad, and Kolkata choose Amity University
                     Online because it offers recognized online degrees in India
                     which is accepted by employers throughout the world.If
-                    you’re looking for an online MBA near me, online MBA in
+                    you're looking for an online MBA near me, online MBA in
                     India top-ranked, or online MBA for freshers, Amity delivers
                     flexibility, credibility, and global exposure to everyone
                     who are willing to persue degree.
                   </p>
 
-                  <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                    Amity Online’s MBA program in India is designed in such a
+                  <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-5 md:mb-6">
+                    Amity Online's MBA program in India is designed in such a
                     way for both fresh graduates and working professionals
                     seeking online MBA in India for career growth. Our AICTE and
                     UGC-approved online MBA courses specialize in HR, Finance,
@@ -915,7 +926,7 @@ const AmityLandingPage = () => {
                     for online education in India.
                   </p>
 
-                  <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                  <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-5 md:mb-6">
                     Not only MBA, Amity University Online offers a range of
                     online undergraduate and postgraduate degrees such as online
                     BBA, online M.Com, online MA, online MCA, and online BCA.
@@ -923,20 +934,18 @@ const AmityLandingPage = () => {
                     practical exposure, and interactive course delivery, which
                     are aligned with NEP 2020 online education goals.
                   </p>
-                  <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                  <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-5 md:mb-6">
                     Amity Online stands out among various top online
                     universities in India 2025 because of its strong global
                     collaborations, placement support, and advanced learning
-                    technologies, which they use in their courses.If you’re
+                    technologies, which they use in their courses.If you're
                     pursuing an online MBA in Delhi, online degree in Mumbai, or
                     distance education in India, you will gain academic
-                    experiences from one of the India’s most reputed
+                    experiences from one of the India's most reputed
                     universities, which will make you job-ready and give you
                     confidence to excel in your academics and build your great
                     future.
                   </p>
-
-                  <p className="text-gray-700 text-lg leading-relaxed mb-6"></p>
                 </motion.div>
 
                 {/* CTA Buttons */}
@@ -945,25 +954,25 @@ const AmityLandingPage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.5 }}
                   viewport={{ once: true }}
-                  className="mt-10 text-center"
+                  className="mt-6 sm:mt-8 md:mt-10 text-center"
                 >
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                     <Button
                       size="lg"
-                      className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-3 text-lg rounded-full"
+                      className="bg-yellow-400 hover:bg-yellow-500 text-black px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base md:text-lg rounded-full w-full sm:w-auto"
                       onClick={() => setOpenModal({ type: "apply" })}
                     >
                       Apply Now
-                      <ArrowRight className="w-5 h-5 ml-2" />
+                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                     </Button>
 
                     <Button
                       size="lg"
                       variant="outline"
-                      className="border-2 border-gray-300 hover:border-blue-400 px-8 py-3 text-lg rounded-full"
+                      className="border-2 border-gray-300 hover:border-blue-400 px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base md:text-lg rounded-full w-full sm:w-auto"
                       onClick={() => setOpenModal({ type: "enquiry" })}
                     >
-                      <ArrowRight className="w-5 h-5 mr-2" />
+                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                       Enquire Now
                     </Button>
                   </div>
@@ -971,10 +980,10 @@ const AmityLandingPage = () => {
               </div>
             </section>
 
-            {/* Courses Section with Tabs */}
+            {/* Courses Section with Tabs - Responsive */}
             <section
               id="Courses"
-              className="py-12 md:py-16 bg-white px-4 md:px-6 font-[Inter] relative"
+              className="py-8 sm:py-10 md:py-12 lg:py-16 bg-white px-3 sm:px-4 md:px-6 font-[Inter] relative"
             >
               {/* Background Pattern */}
               <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-blue-50/30"></div>
@@ -986,54 +995,57 @@ const AmityLandingPage = () => {
               ></div>
 
               <div className="max-w-7xl mx-auto relative z-10">
-                <div className="bg-yellow-400 text-center mb-8 md:mb-12 p-6 rounded-lg">
-                  <h2 className="text-3xl md:text-4xl font-extralight tracking-wide mb-2 text-black">
+                <div className="bg-yellow-400 text-center mb-6 sm:mb-8 md:mb-12 p-4 sm:p-5 md:p-6 rounded-lg">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-extralight tracking-wide mb-2 text-black">
                     Explore Our Programs
                   </h2>
-                  <p className="text-black text-base md:text-lg">
+                  <p className="text-black text-sm sm:text-base md:text-lg">
                     Find the perfect course to launch or advance your career.
                   </p>
                 </div>
 
-                {/* Shadcn Tabs */}
+                {/* Shadcn Tabs - Responsive */}
                 <Tabs defaultValue="ug" className="w-full">
-                  <div className="flex justify-center mb-8 md:mb-12">
-                    <TabsList className="grid w-full max-w-md md:max-w-2xl grid-cols-3 bg-white p-5 rounded-full ">
+                  <div className="flex justify-center mb-6 sm:mb-8 md:mb-12">
+                    <TabsList className="grid w-full max-w-full sm:max-w-md md:max-w-2xl grid-cols-3 bg-white p-1 sm:p-2 md:p-5 rounded-full gap-1 sm:gap-2">
                       <TabsTrigger
                         value="ug"
-                        className="px-3 md:px-6 py-2 md:py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300
+                        className="px-2 sm:px-3 md:px-6 py-1.5 sm:py-2 md:py-3 text-[10px] sm:text-xs md:text-sm font-semibold rounded-full transition-all duration-300
                        data-[state=active]:bg-[#001F3F] data-[state=active]:text-white data-[state=active]:shadow-lg
                        hover:bg-gray-50 data-[state=inactive]:text-gray-600 cursor-pointer"
                       >
-                        Undergraduate
+                        <span className="hidden sm:inline">Undergraduate</span>
+                        <span className="sm:hidden">UG</span>
                       </TabsTrigger>
                       <TabsTrigger
                         value="pg"
-                        className="px-3 md:px-6 py-2 md:py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300
+                        className="px-2 sm:px-3 md:px-6 py-1.5 sm:py-2 md:py-3 text-[10px] sm:text-xs md:text-sm font-semibold rounded-full transition-all duration-300
                        data-[state=active]:bg-[#001F3F] data-[state=active]:text-white data-[state=active]:shadow-lg
                        hover:bg-gray-50 data-[state=inactive]:text-gray-600 cursor-pointer"
                       >
-                        Postgraduate
+                        <span className="hidden sm:inline">Postgraduate</span>
+                        <span className="sm:hidden">PG</span>
                       </TabsTrigger>
                       <TabsTrigger
                         value="integrated"
-                        className="px-3 md:px-6 py-2 md:py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300
+                        className="px-2 sm:px-3 md:px-6 py-1.5 sm:py-2 md:py-3 text-[10px] sm:text-xs md:text-sm font-semibold rounded-full transition-all duration-300
                        data-[state=active]:bg-[#001F3F] data-[state=active]:text-white data-[state=active]:shadow-lg
                        hover:bg-gray-50 data-[state=inactive]:text-gray-600 cursor-pointer"
                       >
-                        Integrated
+                        <span className="hidden sm:inline">Integrated</span>
+                        <span className="sm:hidden">IG</span>
                       </TabsTrigger>
                     </TabsList>
                   </div>
 
                   {/* Tab Content */}
-                  <TabsContent value="ug" className="mt-6">
+                  <TabsContent value="ug" className="mt-4 sm:mt-6">
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5 }}
                     >
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
                         {ugCourses.map((item, index) => (
                           <div
                             key={`ug-${item.course}-${index}`}
@@ -1050,13 +1062,13 @@ const AmityLandingPage = () => {
                     </motion.div>
                   </TabsContent>
 
-                  <TabsContent value="pg" className="mt-6">
+                  <TabsContent value="pg" className="mt-4 sm:mt-6">
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5 }}
                     >
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
                         {pgCourses.map((item, index) => (
                           <div
                             key={`pg-${item.course}-${index}`}
@@ -1073,13 +1085,13 @@ const AmityLandingPage = () => {
                     </motion.div>
                   </TabsContent>
 
-                  <TabsContent value="integrated" className="mt-6">
+                  <TabsContent value="integrated" className="mt-4 sm:mt-6">
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5 }}
                     >
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
                         {ug_pgCourses.map((item, index) => (
                           <div
                             key={`integrated-${item.course}-${index}`}
@@ -1100,7 +1112,7 @@ const AmityLandingPage = () => {
             </section>
 
             <div id="highlights">
-              <section className="bg-gradient-to-b from-white to-indigo-50 py-16 px-6 md:px-12">
+              <section className="bg-gradient-to-b from-white to-indigo-50 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-12">
                 <div className="max-w-6xl mx-auto text-center">
                   {/* Heading */}
                   <motion.h2
@@ -1108,7 +1120,7 @@ const AmityLandingPage = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
-                    className="text-4xl font-bold text-black mb-6"
+                    className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6"
                   >
                     Key Highlights of Amity University Online
                   </motion.h2>
@@ -1118,7 +1130,7 @@ const AmityLandingPage = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.3, duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="text-gray-700 text-lg leading-relaxed max-w-3xl mx-auto mb-12"
+                    className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-8 sm:mb-10 md:mb-12 px-4"
                   >
                     Amity Online combines world-class education with flexibility
                     and innovation, helping learners gain global exposure while
@@ -1126,17 +1138,17 @@ const AmityLandingPage = () => {
                   </motion.p>
 
                   {/* Highlight Cards */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                     {/* Card 1 */}
                     <motion.div
                       whileHover={{ scale: 1.03 }}
-                      className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition duration-300"
+                      className="bg-white p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition duration-300"
                     >
-                      <CheckCircle2 className="w-10 h-10 text-indigo-600 mb-4 mx-auto" />
-                      <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                      <CheckCircle2 className="w-8 h-8 sm:w-10 sm:h-10 text-indigo-600 mb-3 sm:mb-4 mx-auto" />
+                      <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mb-2">
                         UGC-Approved & NAAC A+ Accredited
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 text-sm sm:text-base">
                         Recognized by top Indian authorities for maintaining
                         world-class academic standards.
                       </p>
@@ -1145,14 +1157,14 @@ const AmityLandingPage = () => {
                     {/* Card 2 */}
                     <motion.div
                       whileHover={{ scale: 1.03 }}
-                      className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition duration-300"
+                      className="bg-white p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition duration-300"
                     >
-                      <Globe className="w-10 h-10 text-indigo-600 mb-4 mx-auto" />
-                      <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                      <Globe className="w-8 h-8 sm:w-10 sm:h-10 text-indigo-600 mb-3 sm:mb-4 mx-auto" />
+                      <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mb-2">
                         Globally Recognized Online Degrees
                       </h3>
-                      <p className="text-gray-600">
-                        India’s first university offering online MBA & BBA
+                      <p className="text-gray-600 text-sm sm:text-base">
+                        India's first university offering online MBA & BBA
                         programs with global recognition.
                       </p>
                     </motion.div>
@@ -1160,13 +1172,13 @@ const AmityLandingPage = () => {
                     {/* Card 3 */}
                     <motion.div
                       whileHover={{ scale: 1.03 }}
-                      className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition duration-300"
+                      className="bg-white p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition duration-300"
                     >
-                      <Laptop className="w-10 h-10 text-indigo-600 mb-4 mx-auto" />
-                      <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                      <Laptop className="w-8 h-8 sm:w-10 sm:h-10 text-indigo-600 mb-3 sm:mb-4 mx-auto" />
+                      <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mb-2">
                         100% Online & Accessible Worldwide
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 text-sm sm:text-base">
                         Study anytime, anywhere with full online access to
                         lectures and resources.
                       </p>
@@ -1175,13 +1187,13 @@ const AmityLandingPage = () => {
                     {/* Card 4 */}
                     <motion.div
                       whileHover={{ scale: 1.03 }}
-                      className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition duration-300"
+                      className="bg-white p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition duration-300"
                     >
-                      <Users className="w-10 h-10 text-indigo-600 mb-4 mx-auto" />
-                      <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                      <Users className="w-8 h-8 sm:w-10 sm:h-10 text-indigo-600 mb-3 sm:mb-4 mx-auto" />
+                      <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mb-2">
                         Industry-Aligned Global Faculty
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 text-sm sm:text-base">
                         Programs designed and taught by top educators and global
                         industry experts.
                       </p>
@@ -1190,13 +1202,13 @@ const AmityLandingPage = () => {
                     {/* Card 5 */}
                     <motion.div
                       whileHover={{ scale: 1.03 }}
-                      className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition duration-300"
+                      className="bg-white p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition duration-300"
                     >
-                      <BookOpen className="w-10 h-10 text-indigo-600 mb-4 mx-auto" />
-                      <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                      <BookOpen className="w-8 h-8 sm:w-10 sm:h-10 text-indigo-600 mb-3 sm:mb-4 mx-auto" />
+                      <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mb-2">
                         24×7 Digital Learning Access
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 text-sm sm:text-base">
                         Unlimited access to recorded lectures, study materials,
                         and online library.
                       </p>
@@ -1205,13 +1217,13 @@ const AmityLandingPage = () => {
                     {/* Card 6 */}
                     <motion.div
                       whileHover={{ scale: 1.03 }}
-                      className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition duration-300"
+                      className="bg-white p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition duration-300"
                     >
-                      <Briefcase className="w-10 h-10 text-indigo-600 mb-4 mx-auto" />
-                      <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                      <Briefcase className="w-8 h-8 sm:w-10 sm:h-10 text-indigo-600 mb-3 sm:mb-4 mx-auto" />
+                      <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mb-2">
                         Career Support & Internship
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 text-sm sm:text-base">
                         Personalized placement guidance and internship
                         opportunities for all learners.
                       </p>
@@ -2459,27 +2471,28 @@ const AmityLandingPage = () => {
               </div>
             </section>
 
-            <section id="FAQs" className="max-w-6xl mx-auto py-16 px-4">
-              <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+            <section id="FAQs" className="max-w-6xl mx-auto py-8 sm:py-12 md:py-16 px-3 sm:px-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-8 md:mb-12">
                 Frequently Asked Questions about Amity University Online
               </h2>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {faqData.map((faq, index) => (
                   <div
                     key={index}
-                    className="border border-gray-200 rounded-xl p-4"
+                    className="border border-gray-200 rounded-lg sm:rounded-xl p-3 sm:p-4"
                   >
                     <button
-                      className="w-full text-left flex justify-between items-center font-semibold text-lg sm:text-xl cursor-pointer"
-                     onClick={()=> toggleFAQ(index)}                    >
-                      {faq.question}
-                      <span className="ml-2 text-indigo-500">
+                      className="w-full text-left flex justify-between items-center font-semibold text-sm sm:text-base md:text-lg lg:text-xl gap-2"
+                      onClick={() => toggleFAQ(index)}
+                    >
+                      <span className="flex-1">{faq.question}</span>
+                      <span className="ml-2 text-indigo-500 text-lg sm:text-xl md:text-2xl flex-shrink-0">
                         {openIndex === index ? "-" : "+"}
                       </span>
                     </button>
                     {openIndex === index && (
-                      <p className="mt-3 text-gray-700 text-sm sm:text-base">
+                      <p className="mt-2 sm:mt-3 text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed">
                         {faq.answer}
                       </p>
                     )}
@@ -2507,13 +2520,13 @@ const AmityLandingPage = () => {
               />
             </section>
 
-            {/* Footer */}
-            <footer className="bg-gray-900 text-white py-8 md:py-12">
-              <div className="max-w-7xl mx-auto px-4 md:px-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {/* Footer - Responsive */}
+            <footer className="bg-gray-900 text-white py-6 sm:py-8 md:py-12">
+              <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-6 md:gap-8">
                   <div className="sm:col-span-2 lg:col-span-1">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className="w-[100px] md:w-[122px] h-8 md:h-10 relative">
+                    <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                      <div className="w-20 sm:w-[100px] md:w-[122px] h-6 sm:h-8 md:h-10 relative">
                         <Image
                           src="/amity.svg"
                           alt="Amity University Online"
@@ -2522,17 +2535,17 @@ const AmityLandingPage = () => {
                         />
                       </div>
                     </div>
-                    <p className="text-gray-400 text-sm leading-relaxed">
+                    <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
                       Transforming lives through quality education and
                       innovation.
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="font-semibold mb-3 md:mb-4 text-base md:text-lg">
+                    <h4 className="font-semibold mb-2 sm:mb-3 md:mb-4 text-sm sm:text-base md:text-lg">
                       Quick Links
                     </h4>
-                    <ul className="space-y-2 text-sm text-gray-400">
+                    <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-gray-400">
                       <li>
                         <a
                           href="#Courses"
@@ -2588,31 +2601,31 @@ const AmityLandingPage = () => {
                   </div>
 
                   <div>
-                    <h4 className="font-semibold mb-3 md:mb-4 text-base md:text-lg">
+                    <h4 className="font-semibold mb-2 sm:mb-3 md:mb-4 text-sm sm:text-base md:text-lg">
                       Contact Info
                     </h4>
-                    <div className="space-y-2 text-sm text-gray-400">
+                    <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-gray-400">
                       <div className="flex items-center space-x-2">
-                        <Phone className="w-4 h-4 flex-shrink-0" />
+                        <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
                         <span>+91 7042867717</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Mail className="w-4 h-4 flex-shrink-0" />
+                        <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
                         <span className="break-all">info@unifostedu.com</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <MapPin className="w-4 h-4 flex-shrink-0" />
+                        <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
                         <span>Noida, India</span>
                       </div>
                     </div>
                   </div>
                 </div>
                 {/* Keywords Section */}
-                <div className="border-t border-gray-700 pt-8 mb-8">
-                  <h4 className="text-lg font-semibold mb-4 text-white text-center">
+                <div className="border-t border-gray-700 pt-4 sm:pt-6 md:pt-8 mb-4 sm:mb-6 md:mb-8">
+                  <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4 text-white text-center">
                     Popular Programs & Specializations - Amity University Online
                   </h4>
-                  <div className="flex flex-wrap justify-center gap-2">
+                  <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2">
                     {[
                       "BBA General - Amity Online",
                       "BBA Data Analytics - Amity Online",
@@ -2648,7 +2661,7 @@ const AmityLandingPage = () => {
                     ].map((keyword, index) => (
                       <span
                         key={index}
-                        className="bg-gray-800 cursor-pointer text-gray-300 px-3 py-1 rounded-full text-xs hover:bg-gray-700 hover:text-white transition-colors cursor-default"
+                        className="bg-gray-800 cursor-pointer text-gray-300 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs hover:bg-gray-700 hover:text-white transition-colors cursor-default"
                         title={keyword}
                         onClick={() => {
                           setOpenModal({ type: "apply" });
@@ -2662,7 +2675,7 @@ const AmityLandingPage = () => {
                   </div>
                 </div>
 
-                <div className="border-t border-gray-800 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-xs md:text-sm text-gray-400">
+                <div className="border-t border-gray-800 mt-4 sm:mt-6 md:mt-8 pt-4 sm:pt-6 md:pt-8 text-center text-xs sm:text-sm text-gray-400">
                   <p>&copy; 2025 . All rights reserved.</p>
                 </div>
               </div>

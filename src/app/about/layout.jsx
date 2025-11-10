@@ -1,32 +1,32 @@
 export const metadata = {
-  title: "UNIFOST | Online Education & Career Counseling Platform",
+  title: "About UNIFOST | Online Education & Career Counseling Platform | UNIFOST",
   description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees, career counseling, and personalized guidance. Discover our mission to transform education.",
   keywords: [
-    "About UNIFOST", 
-    "EdTech Platform India", 
-    "Online Education Company", 
-    "Career Counseling Services", 
-    "University Partner Network", 
+    "About UNIFOST",
+    "EdTech Platform India",
+    "Online Education Company",
+    "Career Counseling Services",
+    "University Partner Network",
     "Education Technology India",
     "Online University Degrees",
     "Student Guidance Platform",
-    "Educational Innovation India"
+    "Educational Innovation India",
   ],
   alternates: {
     canonical: "https://unifostedu.com/about",
   },
   openGraph: {
-    title: "About UNIFOST | India’s Leading Online Education Platform |Unifost",
+    title: "About UNIFOST | India's Leading Online Education Platform",
     description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees, career counseling, and personalized guidance.",
     url: "https://unifostedu.com/about",
     siteName: "UNIFOST",
     images: [
       {
-        url: "images/uni.webp",
+        url: "https://unifostedu.comhttps://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp",
         width: 1200,
         height: 630,
-        alt: "UNIFOST - India's Leading EdTech Platform"
-      }
+        alt: "UNIFOST - India's Leading EdTech Platform",
+      },
     ],
     locale: "en_IN",
     type: "website",
@@ -37,7 +37,7 @@ export const metadata = {
     creator: "@unifost",
     title: "About UNIFOST | India's Leading EdTech Platform",
     description: "Learn about UNIFOST, India's trusted EdTech platform providing online university degrees and career counseling.",
-    images: ["images/uni.webp"],
+    images: ["https://unifostedu.comhttps://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp"],
   },
   robots: {
     index: true,
@@ -50,11 +50,13 @@ export const metadata = {
       "max-video-preview": -1,
     },
   },
-  other: {
-    "page-type": "about",
-    "company-info": "UNIFOST EdTech Platform",
-  }
+  authors: [{ name: "UNIFOST" }],
+  publisher: "UNIFOST",
 };
+
+// Force static generation (SSG) for About page
+export const dynamic = 'force-static';
+export const revalidate = 604800; // Revalidate every 7 days
 
 export default function AboutLayout({ children }) {
   return children;

@@ -438,8 +438,10 @@ export default function About() {
           alt="Priyansh Mishra" 
           width={100}
           height={100}
+          
           loading='lazy'
           className="rounded-2xl w-full object-cover shadow-lg"
+         
         />
         <div className="absolute bottom-4 left-4 bg-gradient-to-br from-[#00ffe0] to-[#00d4c4] rounded-lg px-4 py-2 text-[#001e3c] font-bold shadow-lg">
           Co-Founder & Director
@@ -500,10 +502,11 @@ export default function About() {
       </div>
       <div className="relative order-1 md:order-2">
         <Image
-          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327029/aman_f4d7i7.webp" 
+          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762603121/Mr._Aman_Pawar_myujir.jpg" 
           alt="Aman Pawar" 
           width={100}
           height={100}
+          placeholder='empty'
           loading='lazy'
           className="rounded-2xl w-full object-cover shadow-lg"
         />

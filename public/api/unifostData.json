@@ -1,0 +1,315 @@
+{
+  "company": {
+    "name": "Unifost – University For Students",
+    "website": "https://www.unifostedu.com/",
+    "contact": {
+      "phone": ["+91 7042867717", "+91 93547 35410"],
+      "email": "info@unifostedu.com",
+      "location": "Noida, Uttar Pradesh, India"
+    },
+    "social_links": {
+      "whatsapp": "https://wa.me/917042646766"
+    }
+  },
+  "statistics": {
+    "students_guided": "5K+",
+    "universities": "25+",
+    "success_rate": "100%",
+    "programs": "80+"
+  },
+  "partner_universities": [
+    {
+      "name": "Amity University Online",
+      "nirf_ranking": "29",
+      "rating": "4.8",
+      "fees": "₹0.99L - ₹3.45L",
+      "website": "https://www.unifostedu.com/Amity-University-Online"
+    },
+    {
+      "name": "Manipal University Online",
+      "nirf_ranking": "73",
+      "rating": "4.6",
+      "fees": "₹0.99L - ₹2.92L",
+      "website": "https://www.unifostedu.com/manipal"
+    },
+    {
+      "name": "Lovely Professional University Online",
+      "nirf_ranking": "38",
+      "rating": "4.1",
+      "fees": "₹0.80L - ₹2.0L",
+      "website": "https://www.unifostedu.com/lpu-online"
+    },
+    {
+      "name": "University of Petroleum and Energy Studies Online",
+      "nirf_ranking": "41",
+      "rating": "4.4",
+      "fees": "₹1.50L - ₹2.20L",
+      "website": "https://www.unifostedu.com/upes"
+    },
+    {
+      "name": "Narsee Monjee Institute of Management Studies Online",
+      "nirf_ranking": "21",
+      "rating": "4.5",
+      "fees": "₹0.94L - ₹4.0L",
+      "website": "https://www.unifostedu.com/nmims"
+    },
+    {
+      "name": "Sharda University Online",
+      "nirf_ranking": "87",
+      "rating": "4.1",
+      "fees": "₹1.05L - ₹1.60L",
+      "website": "https://www.unifostedu.com/sharda"
+    },
+    {
+      "name": "Dr. DY Patil Online",
+      "nirf_ranking": "63",
+      "rating": "4.4",
+      "fees": "₹1.40L - ₹1.90L",
+      "website": "https://www.unifostedu.com/dypatil"
+    },
+    {
+      "name": "Jain University Online",
+      "nirf_ranking": "77",
+      "rating": "4.5",
+      "fees": "₹1.30L - ₹2.16L",
+      "website": "https://www.unifostedu.com/jain"
+    },
+    {
+      "name": "Chandigarh University Online",
+      "nirf_ranking": "36",
+      "rating": "4.7",
+      "fees": "₹1.0L - ₹2.10L",
+      "website": "https://www.unifostedu.com/chandigarh"
+    }
+  ],
+  "courses": [
+    {
+      "name": "MBA Online",
+      "level": "PG",
+      "description": "Gain strategic skills from top universities",
+      "link": "https://www.unifostedu.com/courses/mba-online"
+    },
+    {
+      "name": "MSC Online",
+      "level": "PG",
+      "description": "Advanced science and technology programs",
+      "link": "https://www.unifostedu.com/courses/msc-online"
+    },
+    {
+      "name": "MCA Online",
+      "level": "PG",
+      "description": "Advance in tech with flexible learning",
+      "link": "https://www.unifostedu.com/courses/mca-online"
+    },
+    {
+      "name": "M.Com Online",
+      "level": "PG",
+      "description": "Deepen commerce expertise",
+      "link": "https://www.unifostedu.com/courses/mcom-online"
+    },
+    {
+      "name": "MA Online",
+      "level": "PG",
+      "description": "Explore diverse specializations",
+      "link": "https://www.unifostedu.com/courses/ma-online"
+    },
+    {
+      "name": "MAJMC Online",
+      "level": "PG",
+      "description": "Master journalism and mass communication",
+      "link": "https://www.unifostedu.com/courses/majmc-online"
+    },
+    {
+      "name": "BBA Online",
+      "level": "UG",
+      "description": "Management fundamentals for the digital age",
+      "link": "https://www.unifostedu.com/courses/bba-online"
+    },
+    {
+      "name": "BCA Online",
+      "level": "UG",
+      "description": "Build a career in software development",
+      "link": "https://www.unifostedu.com/courses/bca-online"
+    },
+    {
+      "name": "B.Com Online",
+      "level": "UG",
+      "description": "Commerce education for business world",
+      "link": "https://www.unifostedu.com/courses/bcom-online"
+    },
+    {
+      "name": "BA Online",
+      "level": "UG",
+      "description": "Liberal arts foundation for diverse careers",
+      "link": "https://www.unifostedu.com/courses/ba-online"
+    },
+    {
+      "name": "BAJMC Online",
+      "level": "UG",
+      "description": "Journalism and mass communication basics",
+      "link": "https://www.unifostedu.com/courses/bajmc-online"
+    }
+  ],
+  "features": [
+    {
+      "name": "Expert Counseling",
+      "description": "Get personalized guidance from education experts"
+    },
+    {
+      "name": "Compare Programs",
+      "description": "Side-by-side comparison of courses and universities"
+    },
+    {
+      "name": "Flexible Learning",
+      "description": "Study at your own pace from anywhere"
+    },
+    {
+      "name": "Career Support",
+      "description": "Get assistance with job placement and career guidance"
+    }
+  ],
+  "accreditations": [
+    "UGC",
+    "NAAC",
+    "NIRF",
+    "AICTE",
+    "WASC",
+    "AIU",
+    "IACBE",
+    "AACSB",
+    "IQAS",
+    "WES",
+    "UNWTO",
+    "NABH"
+  ],
+  "cities_served": [
+    "Delhi",
+    "Mumbai",
+    "Bangalore",
+    "Chennai",
+    "Hyderabad",
+    "Pune",
+    "Kolkata",
+    "Ahmedabad"
+  ],
+  "amity_university_details": {
+    "name": "Amity University Online",
+    "description": "India's one of the recognised UGC-approved online university",
+    "statistics": {
+      "students_enrolled": "1.6L+",
+      "years_of_excellence": "25+",
+      "placement_assistance": "100%",
+      "corporate_partners": "200+"
+    },
+    "programs": {
+      "undergraduate": [
+        {
+          "name": "Bachelor of Business Administration (BBA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Pass",
+          "fees": "₹1,65,000- ₹2,25,000",
+          "specializations": ["General", "Data Analytics", "Travel And Tourism Management", "Professional Certificate in Business Analytics"]
+        },
+        {
+          "name": "Bachelor of Computer Applications (BCA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Pass",
+          "fees": "₹1,50,000 - ₹2,25,000",
+          "specializations": ["General", "Cloud and Security", "Software Engineering", "Data Science", "Data Engineering(HCL Tech)", "Data Analytics", "Software Engineering(HCL Tech)"]
+        },
+        {
+          "name": "Bachelor of Commerce (B.Com)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Pass",
+          "fees": "₹99,000 - ₹2,50,000",
+          "specializations": ["General", "Hons", "International Finance & Accounting"]
+        },
+        {
+          "name": "Bachelor of Arts (BA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Pass",
+          "fees": "₹99,000 - ₹1,70,000",
+          "specializations": ["General", "Journalism and Mass Communication", "Native Languages(Kannada,Malayalam, Tamil, Telugu)", "Psychology", "English", "Sociology", "Political Science", "Economics"]
+        }
+      ],
+      "postgraduate": [
+        {
+          "name": "Master of Business Administration (MBA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": "₹1,99,000 - ₹2,99,000",
+          "specializations": ["General", "Information Technology Management", "Dual Specialization", "Human Resource Analytics", "Data Science", "Business Analytics", "International Business Management", "Hospital Management", "Digital Entrepreneurship", "Digital Marketing Management", "Entrepreneurship & Leadership Management", "Finance & Accounting Management", "Hospitality Management", "Global Finance Market", "Insurance Management", "Marketing & Sales Management", "Petroleum & Natural Gas", "Production and Operations Management", "Retail Management"]
+        },
+        {
+          "name": "Master of Computer Applications (MCA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation in BCA/B.Sc(IT)",
+          "fees": "₹170,000- ₹2,50,000",
+          "specializations": ["General", "Cyber Security", "Blockchain Technology", "Machine Learning and Artificial Intelligence", "Augmented Reality and Virtual Reality", "Software Engineering"]
+        },
+        {
+          "name": "Master of Commerce (M.Com)",
+          "duration": "2 Years",
+          "eligibility": "Graduation in Commerce",
+          "fees": "₹1,20,000",
+          "specializations": ["General", "Financial Management", "Financial Technology"]
+        },
+        {
+          "name": "Master of Arts (MA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": "₹1,30,000 - ₹2,50,000",
+          "specializations": ["Psychology", "Journalism and Mass Communication", "Public Policy & Governance", "English", "Sociology"]
+        },
+        {
+          "name": "Master of Science (M.Sc)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": "₹2,50,000",
+          "specializations": ["Data Science"]
+        }
+      ]
+    },
+    "scholarships": [
+      {
+        "category": "Divyaang (for Persons with Special Needs)",
+        "discount": "20%",
+        "eligibility": "Valid certificate of disability as per government norms"
+      },
+      {
+        "category": "Defence Personnel",
+        "discount": "20%",
+        "eligibility": "Minimum 2 years of service in the defence forces with valid Identity Card number"
+      },
+      {
+        "category": "Amity University Alumni",
+        "discount": "20%",
+        "eligibility": "Amity University UG/PG alumni"
+      },
+      {
+        "category": "Merit-Based",
+        "discount": "20%",
+        "eligibility": "Academic excellence with minimum 85% aggregate in previous qualification"
+      },
+      {
+        "category": "Sports Scholarship (CHAMPS)",
+        "discount": "30% – 100%",
+        "eligibility": "State, national, or international-level sportspersons with valid sports federation affiliation"
+      }
+    ],
+    "admission_process": [
+      "Application Form - Fill the online application form on the university portal",
+      "Documents & Fee - Upload required documents and pay the application fee",
+      "Confirmation - Receive confirmation and student login credentials",
+      "Enrollment - Complete fee payment and begin your classes"
+    ],
+    "placement_stats": {
+      "employability_rate": "90%",
+      "corporate_partners": "500+",
+      "average_salary": "₹6–8 LPA",
+      "job_fairs": "Dedicated placement events for distance learners"
+    }
+  }
+}
+
+

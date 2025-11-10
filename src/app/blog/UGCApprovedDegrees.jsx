@@ -11,13 +11,13 @@ export default function UGCApprovedDegrees() {
         <link rel="canonical" href="https://unifostedu.com/blog/UGCApprovedDegrees" />
         <meta property="og:title" content="UGC-Approved Online Degrees in India – What to Check (2025)" />
         <meta property="og:description" content="How to verify UGC approval, NAAC grade, and university recognition for online programs in India." />
-        <meta property="og:image" content="https://unifostedu.com/slider/slider-1.jpg" />
+        <meta property="og:image" content="https://unifostedu.comhttps://res.cloudinary.com/didkrwhbu/image/upload/v1762327967/slider-1_pjehj7.webp" />
         <meta property="og:url" content="https://unifostedu.com/blog/UGCApprovedDegrees" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="UGC-Approved Online Degrees in India – What to Check (2025)" />
         <meta name="twitter:description" content="How to verify UGC approval, NAAC grade, and university recognition for online programs in India." />
-        <meta name="twitter:image" content="https://unifostedu.com/slider/slider-1.jpg" />
+        <meta name="twitter:image" content="https://unifostedu.comhttps://res.cloudinary.com/didkrwhbu/image/upload/v1762327967/slider-1_pjehj7.webp" />
       </Head>
 
       <article className="prose prose-lg max-w-none">
