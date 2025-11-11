@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 
 const N8N_STYLESHEET_URL = "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css";
 const N8N_CHAT_BUNDLE = "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
-const N8N_WEBHOOK_URL = "https://shivamjha18.app.n8n.cloud/webhook/d8eff321-c30c-41c3-8f94-f821fdd2119a/chat";
+const N8N_WEBHOOK_URL = "http://n8n.unifostedu.com:5678/webhook/fa76c212-548a-49a2-847e-b432690d7d6c/chat";
 
 const ChatbotWidget = () => {
   useEffect(() => {
