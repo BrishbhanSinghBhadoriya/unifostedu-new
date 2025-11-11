@@ -439,12 +439,13 @@ useEffect(() => {
                 aria-expanded={isMobileMenuOpen}
                 className="inline-flex items-center p-2 rounded-md border hover:bg-gray-50"
               >
-                Menu
+              =
+                
               </button>
             
               {/* Phone Number */}
               <a href="tel:+917042867717" className="hidden sm:flex items-center gap-2 bg-gradient-to-r from-[#001C54] to-[#b91c1c] text-white rounded-full px-4 py-2 shadow-lg hover:shadow-xl transition-all duration-300">
-                <FaPhone className="text-white text-sm" />
+                <FaPhone className="text-white text-sm rotate-100" />
                 <span className="font-semibold text-sm whitespace-nowrap">+91 70428 67717</span>
               </a>
 
@@ -516,9 +517,9 @@ useEffect(() => {
               className="fixed top-0 left-0 w-[85vw] sm:w-72 h-full bg-white border-r shadow-xl z-50 p-6 flex flex-col overflow-y-auto will-change-transform lg:hidden"
             >
             <div className="flex items-center justify-between mb-8">
-                              <h3 className="text-xl font-bold text-orange-600">Page Contents</h3>
+                              <h3 className="text-xl font-bold text-black-600">Page Contents</h3>
                               <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-full hover:bg-gray-100">
-                                <FaTimes className="w-5 h-5 text-gray-600" />
+                                <FaTimes className="w-5 h-5 text-black-600" />
                               </button>
                             </div>
               <ul className="space-y-4">
@@ -690,63 +691,120 @@ useEffect(() => {
       {/* Introduction - Text Section */}
       <section id="Introduction" className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Jain University Online – Empowering Future Leaders with World-Class Online Degrees</h2>
-          <p className="text-gray-700 mb-4">Jain University Online, also known as jain university online, is India’s leading UGC-approved online degree institution dedicated to delivering flexible, career-oriented higher education for learners across the world. As one of the most reputable universities in India, jain university online offers a wide portfolio of undergraduate and postgraduate programs such as online MBA Jain University, online BBA Jain University, online BCA Jain University, and online MCA Jain University designed to empower students with industry-relevant knowledge, practical skills, and global learning exposure.</p>
-          <p className="text-gray-700 mb-4">The vision of Jain University Online is to provide anytime, anywhere learning that builds a strong foundation for a successful career. With world-class faculty, advanced e-learning systems, and government approvals, Jain University Online stands among the most preferred institutions for online higher education and distance education Jain University programs.</p>
-          <p className="text-gray-700 mb-4">Every program at Jain University Online—including Online MBA Jain University, Online Degrees Jain University, and distance education Jain University programs—follows a future-ready curriculum aligned with modern market needs. Students are mentored by leading academic experts and industry professionals, ensuring real-world learning outcomes. Whether you're a working professional aiming to upskill or a recent school graduate planning to build a strong career path, Jain University Online provides complete flexibility through online live sessions, recorded classes, interactive digital platforms, virtual labs, and continuous academic support.</p>
-          <p className="text-gray-700 mb-4">Being a fully UGC-approved online degree provider, Jain University Online ensures that every qualification earned through its programs holds equal weightage to traditional on-campus degrees. The online degrees offered by Jain University Online are recognized for higher studies, government jobs, corporate careers, and global employment opportunities.</p>
-          <div className="mt-4">
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Popular Programs</h3>
-            <ul className="list-disc list-inside text-gray-700 space-y-1">
-              <li>Online MBA Jain University – Designed for leadership roles</li>
-              <li>Online BBA Jain University – Business foundation for future managers</li>
-              <li>Online BCA Jain University – Trending IT skills in applications</li>
-              <li>Online MCA Jain University – Advanced computing and software development</li>
-            </ul>
-          </div>
-          <p className="text-gray-700 mt-4">Programs also include B.Com, MA, M.Com, and professional certifications in Digital Marketing, Data Science, FinTech, Entrepreneurship, AI, and more. Students gain placement guidance, networking, internship support, and career development services—making Online MBA Jain University and Online Degrees Jain University highly sought-after for upskilling, promotions, and career switches.</p>
-          <p className="text-gray-700 mt-4">By blending flexibility, affordability, and global learning standards, Jain University Online transforms distance learning into a complete digital campus experience.</p>
-        </div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-black-900 mb-4">Jain University Online – Empowering Future Leaders with World-Class Online Degrees</h2>
+          <div className="text-black-800 leading-relaxed space-y-4 text-lg md:text-xl">
+  <p>
+    In today’s fast-changing world, learners seek flexible, career-oriented education that aligns with their goals. 
+    <strong>JAIN (Deemed-to-be University) Online</strong>, widely known as <strong>JAIN Online</strong>, stands as one of India’s 
+    premier platforms for higher education. Headquartered in Bangalore, JAIN Online delivers 
+    <strong>UGC-entitled</strong> and <strong>NAAC A+ accredited</strong> programs that are trusted and recognized nationwide.
+  </p>
+  <p>
+    Designed for working professionals, graduates, and lifelong learners, these programs combine 
+    <strong>academic excellence</strong> with <strong>industry relevance</strong>. Students gain the flexibility to study 
+    anytime, anywhere — while learning directly from distinguished faculty members and top industry experts.
+  </p>
+  <p>
+    With its modern digital learning tools and a strong focus on career advancement, 
+    <strong>JAIN Online</strong> empowers students to earn prestigious online degrees and 
+    thrive in a competitive global environment.
+  </p>
+</div>
+<div className="bg-white text-gray-800 p-6 md:p-10 rounded-2xl shadow-md space-y-6">
+  <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-4">
+    About Us
+  </h2>
+
+  <p className="text-lg md:text-xl leading-relaxed">
+    <strong>JAIN Online</strong> is the digital learning arm of 
+    <strong> JAIN (Deemed-to-be University)</strong> — one of India’s most reputed and trusted universities. 
+    Recognized as a leading institution for online education in Bangalore, JAIN is renowned for its 
+    <strong> expert faculty, strong industry connections,</strong> and a large network of 
+    <strong>successful alumni</strong> across diverse fields.
+  </p>
+
+  <p className="text-lg md:text-xl leading-relaxed">
+    Through <strong>JAIN Online</strong>, learners can now experience world-class education from the comfort 
+    of their homes. The university offers a wide range of <strong>UGC-entitled</strong> online programs designed 
+    to meet the demands of today’s industries and future careers.
+  </p>
+
+  <div className="bg-gray-50 p-6 rounded-xl shadow-inner space-y-3">
+    <h3 className="text-2xl font-semibold text-blue-700 mb-2">Popular Online Programs:</h3>
+    <ul className="list-disc list-inside text-lg md:text-xl space-y-2">
+      <li><strong>Online MBA</strong> – For aspiring leaders in business and management.</li>
+      <li><strong>Online BCA</strong> – Ideal for those passionate about programming, IT, and software development.</li>
+      <li><strong>Online MCA</strong> – For graduates looking to master advanced computing, AI, and data analytics.</li>
+      <li><strong>Online BBA</strong> – Perfect for students eager to explore business, marketing, and entrepreneurship.</li>
+      <li><strong>Online MCom</strong> – Tailored for learners aiming to advance in accounting, finance, and commerce.</li>
+    </ul>
+  </div>
+
+  <p className="text-lg md:text-xl leading-relaxed">
+    Every program at <strong>JAIN Online</strong> is crafted to deliver <strong>practical knowledge, 
+    real-world exposure,</strong> and <strong>strong career opportunities</strong> — empowering students to 
+    achieve academic excellence and professional success in a digital-first world.
+  </p>
+</div>
+</div>
+
+<div className="bg-gradient-to-br from-blue-50 to-white text-gray-800 p-6 md:p-10 rounded-2xl shadow-md space-y-8">
+  <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-8">
+    🎓 Programs at a Glance
+  </h2>
+
+  <div className="grid gap-6 md:grid-cols-2">
+    <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 className="text-2xl font-semibold text-blue-700 mb-2">💼 Online MBA</h3>
+      <p className="text-lg leading-relaxed">
+        A two-year management program that builds <strong>leadership, problem-solving,</strong> and 
+        <strong> business acumen</strong>. It includes <strong>live projects, case studies,</strong> and 
+        <strong> expert mentorship</strong> to ensure excellent placement opportunities after graduation.
+      </p>
+    </div>
+
+    <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 className="text-2xl font-semibold text-blue-700 mb-2">💻 Online BCA</h3>
+      <p className="text-lg leading-relaxed">
+        Designed for aspiring tech professionals, this program covers 
+        <strong> programming, data structures, web design,</strong> and 
+        <strong> software development</strong> — preparing students for a dynamic IT career.
+      </p>
+    </div>
+
+    <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 className="text-2xl font-semibold text-blue-700 mb-2">🖥️ Online MCA</h3>
+      <p className="text-lg leading-relaxed">
+        An advanced IT program focused on <strong>coding, AI, data science,</strong> and 
+        <strong> software engineering</strong>. It helps students build expertise for high-demand 
+        roles in the global technology sector.
+      </p>
+    </div>
+
+    <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 className="text-2xl font-semibold text-blue-700 mb-2">📊 Online BBA</h3>
+      <p className="text-lg leading-relaxed">
+        A comprehensive business program designed for future <strong>managers and entrepreneurs.</strong> 
+        The curriculum emphasizes <strong>business fundamentals, management skills,</strong> and 
+        <strong> marketing strategies</strong> for a successful corporate journey.
+      </p>
+    </div>
+
+    <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition md:col-span-2">
+      <h3 className="text-2xl font-semibold text-blue-700 mb-2">💰 Online MCom</h3>
+      <p className="text-lg leading-relaxed">
+        A postgraduate program tailored for those interested in <strong>finance, taxation,</strong> and 
+        <strong> commerce.</strong> The course equips learners for professional success in 
+        <strong>banking, accounting,</strong> and <strong>corporate finance</strong>.
+      </p>
+    </div>
+  </div>
+</div>
+
       </section>
 
       {/* Why Choose Jain University Online */}
-      <section id="WhyChoose" className="py-12 sm:py-16 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Why Choose Jain University Online?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[{
-              title: 'UGC and NAAC Accredited',
-              desc: 'UGC-approved with prestigious NAAC accreditation. Global recognition across job markets.'
-            }, {
-              title: 'Flexible Learning for Working Professionals',
-              desc: 'Live classes, recorded lectures, mobile access, and self-paced study without career interruption.'
-            }, {
-              title: 'Industry-Aligned Curriculum',
-              desc: 'Programs designed with industry experts in IT, Finance, Marketing, Analytics, and more.'
-            }, {
-              title: 'Affordable Fee Structure',
-              desc: 'Accessible education model with options for diverse backgrounds and EMI support.'
-            }, {
-              title: 'Placement and Career Support',
-              desc: 'Job readiness training, resume building, mock interviews, and placement drives.'
-            }, {
-              title: 'Expert Faculty and Mentorship',
-              desc: 'Experienced professors and corporate trainers, with personalized mentoring.'
-            }, {
-              title: 'Global Learning Experience',
-              desc: 'Collaborative online cohorts with global exposure and peer learning.'
-            }, {
-              title: 'Recognized for Govt and Private Jobs',
-              desc: 'Degrees carry full equivalence to traditional campus degrees.'
-            }].map((item, idx) => (
-              <div key={idx} className="bg-white rounded-xl p-6 shadow-sm border">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-700 text-sm sm:text-base">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Programs Offered Table */}
       <section id="ProgramsOffered" className="py-12 sm:py-16 bg-white">
@@ -792,6 +850,124 @@ useEffect(() => {
           </div>
         </div>
       </section>
+
+     {/* Why Choose Jain University Online */} 
+      <section className="bg-white text-black-800 py-12 px-6 md:px-16 rounded-2xl shadow-md space-y-12">
+
+  <div className="text-center space-y-4">
+    <h2 className="text-3xl md:text-4xl font-bold text-blue-800">
+      🌐 Why Choose JAIN Online?
+    </h2>
+    <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto">
+      Choosing where to study online is an important decision. 
+      Here’s why <strong>JAIN Online</strong> is one of the best options for students and professionals 
+      seeking quality education with flexibility.
+    </p>
+  </div>
+
+  <div className="grid gap-8 md:grid-cols-2">
+    
+    <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 className="text-2xl font-semibold text-blue-700 mb-2">
+        ✅ 1. Accredited and Respected University
+      </h3>
+      <p className="text-lg leading-relaxed">
+        All programs are <strong>UGC-approved</strong> and offered by a 
+        <strong> NAAC A+ accredited</strong> university. 
+        You earn a <strong>recognized online degree</strong> accepted by employers across India.
+      </p>
+    </div>
+
+    
+    <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 className="text-2xl font-semibold text-blue-700 mb-2">
+        🎯 2. Industry-Relevant Curriculum
+      </h3>
+      <p className="text-lg leading-relaxed">
+        Programs like <strong>MBA, BCA, MCA, BBA,</strong> and <strong>MCom</strong> 
+        are designed with input from industry experts. 
+        Students learn <strong>job-ready skills</strong> such as data analysis, 
+        software design, digital marketing, and leadership.
+      </p>
+    </div>
+
+    
+    <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 className="text-2xl font-semibold text-blue-700 mb-2">
+        ⏰ 3. Flexible and Convenient Learning
+      </h3>
+      <p className="text-lg leading-relaxed">
+        Study <strong>anytime, anywhere</strong> with both live and recorded classes. 
+        JAIN Online allows you to balance your education with work or personal life 
+        while earning a prestigious online degree.
+      </p>
+    </div>
+
+    
+    <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 className="text-2xl font-semibold text-blue-700 mb-2">
+        👩‍🏫 4. Expert Faculty and Mentors
+      </h3>
+      <p className="text-lg leading-relaxed">
+        Learn from experienced professors and corporate mentors who simplify complex topics 
+        and guide you through every step of your academic journey.
+      </p>
+    </div>
+
+    
+    <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 className="text-2xl font-semibold text-blue-700 mb-2">
+        💼 5. Best Placements and Career Support
+      </h3>
+      <p className="text-lg leading-relaxed">
+        JAIN Online maintains strong ties with leading companies. 
+        Students receive <strong>placement training, resume assistance,</strong> and 
+        <strong>career counseling</strong> to achieve top positions in reputed organizations.
+      </p>
+    </div>
+
+    
+    <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 className="text-2xl font-semibold text-blue-700 mb-2">
+        💻 6. Modern and Interactive Learning
+      </h3>
+      <p className="text-lg leading-relaxed">
+        Participate in engaging <strong>live sessions, projects,</strong> and 
+        <strong>online discussions</strong>. The learning experience is collaborative and 
+        interactive—just like a classroom.
+      </p>
+    </div>
+
+    
+    <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition md:col-span-2">
+      <h3 className="text-2xl font-semibold text-blue-700 mb-2">
+        🌍 7. Accessible from Anywhere in India
+      </h3>
+      <p className="text-lg leading-relaxed">
+        Whether you’re in <strong>Bangalore, Delhi, Jaipur,</strong> or any other city, 
+        JAIN Online lets you earn a top-quality degree without relocation.
+      </p>
+    </div>
+  </div>
+
+  
+  <div className="pt-10 border-t border-gray-200">
+    <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-6">
+      🚀 How JAIN Online Builds Your Career
+    </h2>
+    <p className="text-lg md:text-xl leading-relaxed text-center max-w-4xl mx-auto">
+      Every program at <strong>JAIN Online</strong> is structured to help students grow professionally. 
+      Courses include <strong>real-world projects, internship opportunities,</strong> and 
+      <strong>hands-on training</strong> that enhance employability and confidence.
+    </p>
+    <p className="text-lg md:text-xl leading-relaxed text-center max-w-4xl mx-auto mt-4">
+      Graduates from <strong>Online MBA, BBA, MCA,</strong> and <strong>MCom</strong> programs 
+      have secured top roles in leading organizations—thanks to JAIN’s 
+      <strong>industry reputation and strong placement network.</strong>
+    </p>
+  </div>
+
+</section>
 
       {/* Campus Tour */}
       <section id="CampusTour" className="py-12 sm:py-16 bg-gradient-to-br from-blue-50 to-yellow-50">
