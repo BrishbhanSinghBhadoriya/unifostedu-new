@@ -55,6 +55,7 @@ const ChatbotWidget = () => {
           i18n: {
             en: {
               footer: "",
+              inputPlaceholder: "Type your question...",
             },
           },
         });
