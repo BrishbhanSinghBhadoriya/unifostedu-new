@@ -19,7 +19,7 @@ import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 const UniversityPage = () => {
   // University data - you can replace this with your actual data
   const universityData = {
-    name: "Shardha University Name",
+    name: "Sharda University Name",
     shortName: "Sharda",
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/shardalogos_fecyer.webp",
     heroImage: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762587569/university-hero_ikhcch.webp",
