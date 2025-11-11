@@ -257,7 +257,7 @@ function SearchContent({ onOpenModal }) {
                 { name: 'NMIMS University', href: '/nmims', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327721/nmims_os8kn9.webp', rating: '4.9' },
                 { name: 'Dr. D Y Patil University', href: '/dypatil', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dypatil_tbbpf9.webp', rating: '4.6' },
                 { name: 'Jain University', href: '/jain', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp', rating: '4.5' },
-                { name: 'Lovely Professional University', href: '/lpu', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp', rating: '4.4' },
+                { name: 'Lovely Professional University', href: '/lpu-online', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp', rating: '4.4' },
                 { name: 'Manipal Academy of Higher Education', href: '/mahe-online', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/mahe-uni_dvnm1d.webp', rating: '4.8' },
                 { name: 'Sharda University', href: '/sharda', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp', rating: '4.3' },
                 { name: 'Shoolini University', href: '/shoolini', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327856/shoolini_txvq6k.webp', rating: '4.2' },
@@ -267,7 +267,7 @@ function SearchContent({ onOpenModal }) {
                 { name: 'VGU University', href: '/vgu', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgu1_ieijw9.webp', rating: '4.0' },
                 { name: 'Kurukshetra University', href: '/ku-online', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku_xu5nkx.webp', rating: '4.3' },
                 { name: 'OP Jindal University', href: '/opjindal', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/opjindal_jdl7az.webp', rating: '4.6' },
-                { name: 'Chandigarh University', href: '/cuonline', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp', rating: '4.4' },
+                { name: 'Chandigarh University', href: '/cuonline', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp', rating: '4.4' }
               ].map((university, idx) => (
                 <div key={idx} className="group">
                   <Link 
