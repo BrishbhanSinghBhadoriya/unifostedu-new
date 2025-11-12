@@ -1,0 +1,10 @@
+.blog-page {
+  scroll-behavior: smooth;
+  background-attachment: fixed;
+}
+
+.blog-page .blog-card:hover {
+  transform: translateY(-4px);
+  transition: transform 200ms ease;
+}
+

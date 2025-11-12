@@ -6,6 +6,7 @@ import {
   fetchBlogBySlug,
   fetchBlogs,
 } from "@/lib/blogApi";
+import SharePanel from "@/components/blog/SharePanel";
 
 const FALLBACK_BLOG_IMAGE =
   "https://res.cloudinary.com/didkrwhbu/image/upload/v1762932238/blog-images/a8cspd20trzfqocza1jw.png";
@@ -42,8 +43,9 @@ export async function generateMetadata({ params }) {
       };
     }
 
+    const decodedMetaContent = decodeHtmlEntities(blog.content);
     const plainDescription =
-      blog.description || stripHtml(blog.content).slice(0, 160);
+      blog.description || stripHtml(decodedMetaContent).slice(0, 160);
     const image = blog.image || FALLBACK_BLOG_IMAGE;
 
     return {
@@ -103,6 +105,22 @@ function stripHtml(html = "") {
   return html.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
 }
 
+function decodeHtmlEntities(text = "") {
+  const entities = {
+    "&nbsp;": " ",
+    "&amp;": "&",
+    "&lt;": "<",
+    "&gt;": ">",
+    "&quot;": '"',
+    "&#x27;": "'",
+    "&#39;": "'",
+  };
+
+  return text.replace(/&(?:nbsp|amp|lt|gt|quot|#x27|#39);/g, (match) => {
+    return entities[match] ?? match;
+  });
+}
+
 function formatDate(date) {
   if (!date) return "";
   const parsed = new Date(date);
@@ -114,6 +132,14 @@ function formatDate(date) {
   });
 }
 
+function calculateReadingTime(text = "") {
+  const WORDS_PER_MINUTE = 200;
+  const totalWords = text.split(/\s+/).filter(Boolean).length;
+  if (!totalWords) return "";
+  const minutes = Math.max(1, Math.round(totalWords / WORDS_PER_MINUTE));
+  return `${minutes} min read`;
+}
+
 export default async function BlogPage({ params }) {
   const { slug } = params;
   const blog = await fetchBlogBySlug(slug);
@@ -123,11 +149,15 @@ export default async function BlogPage({ params }) {
   }
 
   const publishedAt = formatDate(blog.createdAt || blog.updatedAt);
+  const rawContent = blog.content || "";
+  const decodedContent = decodeHtmlEntities(rawContent);
+  const readingTime = calculateReadingTime(stripHtml(decodedContent));
+  const shareUrl = `https://unifostedu.com/blog/${slug}`;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-16 md:py-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <article className="bg-white rounded-3xl shadow-xl overflow-hidden">
+        <article className="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
           <div className="relative h-56 sm:h-72 md:h-96 w-full">
             <Image
               src={blog.image || FALLBACK_BLOG_IMAGE}
@@ -150,6 +180,11 @@ export default async function BlogPage({ params }) {
                     {publishedAt}
                   </span>
                 )}
+                {readingTime && (
+                  <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
+                    {readingTime}
+                  </span>
+                )}
               </div>
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight drop-shadow-lg">
                 {blog.title}
@@ -165,21 +200,23 @@ export default async function BlogPage({ params }) {
             </div>
           </div>
 
-          <div className="p-6 sm:p-8">
+          <div className="p-5 sm:p-8">
             {blog.description && (
-              <p className="text-lg text-slate-700 mb-8">
+              <p className="text-base sm:text-lg text-slate-700 mb-8 leading-relaxed">
                 {blog.description}
               </p>
             )}
 
             <div
-              className="prose prose-lg max-w-none text-slate-800 prose-headings:text-slate-900 prose-a:text-[#003b6c] prose-strong:text-slate-900"
-              dangerouslySetInnerHTML={{ __html: blog.content }}
+              className="prose max-w-none text-slate-800 prose-headings:font-semibold prose-headings:text-slate-900 prose-a:text-[#003b6c] prose-strong:text-slate-900 prose-p:leading-relaxed prose-p:text-base sm:prose-p:text-lg sm:prose-lg lg:prose-xl prose-li:marker:text-[#003b6c] prose-ul:space-y-3 prose-ol:space-y-3 prose-blockquote:text-slate-700 prose-blockquote:border-l-4 prose-blockquote:border-[#00d4c4] prose-blockquote:bg-cyan-50 prose-blockquote:px-4 prose-blockquote:py-3 sm:prose-blockquote:px-6 prose-img:rounded-2xl prose-img:shadow-lg break-words"
+              dangerouslySetInnerHTML={{ __html: decodedContent }}
             />
           </div>
 
-          <div className="px-6 sm:px-8 pb-10">
-            <div className="mt-10 pt-6 border-t border-slate-200 flex items-center justify-between flex-wrap gap-4">
+          <div className="px-6 sm:px-8 pb-10 space-y-10">
+            <SharePanel shareUrl={shareUrl} title={blog.title} />
+
+            <div className="pt-6 border-t border-slate-200 flex items-center justify-between flex-wrap gap-4">
               <Link
                 href="/blog"
                 className="inline-flex items-center gap-2 text-[#003b6c] font-semibold hover:text-[#001e3c] transition-colors"

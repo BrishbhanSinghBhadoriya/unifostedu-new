@@ -1,0 +1,13 @@
+:root {
+  --lazy-section-opacity: 0;
+}
+
+.fade-in-late {
+  opacity: var(--lazy-section-opacity);
+  transition: opacity 400ms ease;
+}
+
+.fade-in-late.is-visible {
+  opacity: 1;
+}
+
