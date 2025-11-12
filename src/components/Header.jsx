@@ -15,6 +15,7 @@ import BlogsDropdown from '@/components/BlogsDropdown';
 import Image from 'next/image';
 import searchIndex from '@/data/searchIndex.json';
 import courseData from '@/data/courseData.json';
+import { BLOG_API_ENDPOINT } from '@/lib/blogApi';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(null);
@@ -162,6 +163,47 @@ const [modalType, setModalType] = useState();
     setShowHeader(!shouldHide);
     
   }, [pathname]);
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    const loadLatestBlogs = async () => {
+      setBlogsLoading(true);
+      try {
+        const response = await fetch(BLOG_API_ENDPOINT, {
+          signal: controller.signal,
+          cache: 'no-store',
+        });
+        if (!response.ok) {
+          throw new Error('Failed to fetch blogs');
+        }
+        const payload = await response.json();
+        if (payload?.success && Array.isArray(payload.data)) {
+          const sorted = payload.data
+            .filter((blog) => blog?.slug)
+            .sort((a, b) => {
+              const dateA = new Date(a.createdAt || a.updatedAt || 0).getTime();
+              const dateB = new Date(b.createdAt || b.updatedAt || 0).getTime();
+              return dateB - dateA;
+            });
+          setLatestBlogs(sorted);
+        } else {
+          setLatestBlogs([]);
+        }
+      } catch (err) {
+        if (err.name !== 'AbortError') {
+          console.error('Header blog fetch error:', err);
+        }
+        setLatestBlogs([]);
+      } finally {
+        setBlogsLoading(false);
+      }
+    };
+
+    loadLatestBlogs();
+
+    return () => controller.abort();
+  }, []);
 
   return (
     (showHeader &&
@@ -433,19 +475,34 @@ const [modalType, setModalType] = useState();
 
                 {/* Blog Posts */}
                 <div className="space-y-3">
-
                   <div className="space-y-2">
-                    {latestBlogs.slice(0, 3).map((blog, idx) => (
-                      <Link key={idx} href={`/blog/${blog.slug || (blog._id || blog.id)}`} onClick={() => setMobileMenuOpen(false)}
-                            className="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition text-white border border-white/10">
-                        <div className="w-8 h-8 bg-gradient-to-br from-[#00ffe0] to-[#00d4c4] rounded-lg flex items-center justify-center">
-                          <FaBookOpen className="text-[#001e3c] text-sm" />
-                        </div>
-                        <span className="font-medium text-sm flex-1">{blog.title}</span>
-                        <FaArrowRight className="text-[#00ffe0] text-xs" />
-                      </Link>
-                    ))}
-                    
+                    {blogsLoading && (
+                      <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-white/70 text-sm">
+                        Loading latest blogs...
+                      </div>
+                    )}
+                    {!blogsLoading && latestBlogs.length === 0 && (
+                      <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-white/70 text-sm">
+                        No blogs available yet.
+                      </div>
+                    )}
+                    {!blogsLoading &&
+                      latestBlogs.slice(0, 3).map((blog, idx) => (
+                        <Link
+                          key={idx}
+                          href={`/blog/${blog.slug || blog._id || blog.id}`}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition text-white border border-white/10"
+                        >
+                          <div className="w-8 h-8 bg-gradient-to-br from-[#00ffe0] to-[#00d4c4] rounded-lg flex items-center justify-center">
+                            <FaBookOpen className="text-[#001e3c] text-sm" />
+                          </div>
+                          <span className="font-medium text-sm flex-1">
+                            {blog.title}
+                          </span>
+                          <FaArrowRight className="text-[#00ffe0] text-xs" />
+                        </Link>
+                      ))}
                   </div>
                 </div>
               </div>
