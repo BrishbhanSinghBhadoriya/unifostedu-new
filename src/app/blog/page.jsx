@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import { fetchBlogs, DEFAULT_REVALIDATE_SECONDS } from "@/lib/blogApi";
+import { fetchBlogs } from "@/lib/blogApi";
 
-export const revalidate = DEFAULT_REVALIDATE_SECONDS;
+export const revalidate = 1800;
 
 export const metadata = {
   title: "UNIFOST Blog | Latest Insights on Online Education",

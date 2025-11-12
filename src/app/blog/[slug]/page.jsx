@@ -5,13 +5,12 @@ import { notFound } from "next/navigation";
 import {
   fetchBlogBySlug,
   fetchBlogs,
-  DEFAULT_REVALIDATE_SECONDS,
 } from "@/lib/blogApi";
 
 const FALLBACK_BLOG_IMAGE =
   "https://res.cloudinary.com/didkrwhbu/image/upload/v1762932238/blog-images/a8cspd20trzfqocza1jw.png";
 
-export const revalidate = DEFAULT_REVALIDATE_SECONDS;
+export const revalidate = 1800;
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
