@@ -6,7 +6,7 @@ const DEFAULT_REVALIDATE_SECONDS = 1800; // 30 minutes
 
 /**
  * Fetch the full list of blogs from the remote API.
- * Works in both server and client environments.
+ * Works in both server and clsdient environments.
  */
 export async function fetchBlogs(options = {}) {
   const {
