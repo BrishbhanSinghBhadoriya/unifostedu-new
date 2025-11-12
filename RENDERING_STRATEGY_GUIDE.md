@@ -5,7 +5,7 @@
 | Page Type | Route Example | Rendering Strategy | Reason | Revalidate/Cache |
 |-----------|---------------|-------------------|---------|------------------|
 | **Homepage** | `/` | **SSG** | Static content, rarely changes | `revalidate: 86400` (24h) |
-| **University Pages** | `/manipal`, `/amity-university-online` | **SSG** | Static university info, changes infrequently | `revalidate: 604800` (7 days) |
+| **University Pages** | `/manipal`, `/Amity-University-Online` | **SSG** | Static university info, changes infrequently | `revalidate: 604800` (7 days) |
 | **Course Pages** | `/courses/[slug]` | **ISR** | Course data updates occasionally | `revalidate: 86400` (24h) |
 | **Blog Posts** | `/blog/[slug]` | **ISR** | New posts added regularly | `revalidate: 3600` (1h) |
 | **Static Blog** | `/blog/WorkingMBA` | **SSG** | Static blog pages | `revalidate: 604800` (7 days) |
@@ -539,7 +539,7 @@ export default async function sitemap() {
 
   // University routes (fetch from API or static list)
   const universities = [
-    'amity-university-online',
+    'Amity-University-Online',
     'manipal',
     'mahe-online',
     'lpu-online',
