@@ -48,6 +48,10 @@ export async function generateMetadata({ params }) {
       blog.description || stripHtml(decodedMetaContent).slice(0, 160);
     const image = blog.image || FALLBACK_BLOG_IMAGE;
 
+    // Ensure canonical URL is clean and absolute
+    const cleanSlug = slug?.trim().replace(/\/+$/, ''); // Remove trailing slashes
+    const canonicalUrl = `https://unifostedu.com/blog/${cleanSlug}`;
+
     return {
       title: `${blog.title} | UNIFOST Blog`,
       description: plainDescription,
@@ -56,12 +60,13 @@ export async function generateMetadata({ params }) {
         : ["UNIFOST Blog"],
       authors: [{ name: blog.author || "UNIFOST Team" }],
       alternates: {
-        canonical: `https://unifostedu.com/blog/${slug}`,
+        canonical: canonicalUrl,
       },
+      metadataBase: new URL('https://unifostedu.com'),
       openGraph: {
         title: `${blog.title} | UNIFOST Blog`,
         description: plainDescription,
-        url: `https://unifostedu.com/blog/${slug}`,
+        url: canonicalUrl,
         siteName: "UNIFOST",
         images: [
           {
