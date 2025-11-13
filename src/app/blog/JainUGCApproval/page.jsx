@@ -11,7 +11,7 @@ const JainUGCApproval = () => {
         <title>Is Jain Online University UGC Approved? | UniFost Blog</title>
         <meta name="description" content="Wondering if Jain Online University is UGC approved? Explore its accreditations, recognitions, and what it means for your degree value and career." />
         <meta name="keywords" content="Jain University Online, UGC approved online universities, NAAC A+ University, Jain online degree value" />
-        <link rel="canonical" href="https://www.unifostedu.com/blog/jain-online-ugc-approved" />
+        <link rel="canonical" href="https://unifostedu.com/blog/jain-online-ugc-approved" />
         <meta property="og:title" content="Is Jain Online University UGC Approved?" />
         <meta property="og:description" content="Explore if Jain Online University is UGC approved and understand its accreditations, recognition, and what it means for students." />
         <meta property="og:image" content="https://www.unifost.com/images/blogs/jain-online-ugc.webp" />

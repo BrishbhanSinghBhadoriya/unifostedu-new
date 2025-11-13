@@ -37,7 +37,7 @@ const [modalType, setModalType] = useState();
     { name: "Lovely Professional University", link: "/lpu-online", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp" },
     { name: "Manipal University Jaipur", link: "/manipal", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp" },
     { name: "Manipal Academy of Higher Education", link: "/mahe-online", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/mahe-uni_dvnm1d.webp" },
-     { name: "Sikkim Manipal University", link: "/smu", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp" },
+    { name: "Sikkim Manipal University", link: "/smu", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp" },
     { name: "Uttaranchal University", link: "/uu", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp" },
     { name: "Chandigarh University Online", link: "/cuonline", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp" },
     { name: "Jain University", link: "/jain", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp" },

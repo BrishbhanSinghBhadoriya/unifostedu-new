@@ -1,7 +1,7 @@
 {
   "company": {
     "name": "Unifost – University For Students",
-    "website": "https://www.unifostedu.com/",
+    "website": "https://unifostedu.com/",
     "contact": {
       "phone": ["+91 7042867717", "+91 93547 35410"],
       "email": "info@unifostedu.com",
@@ -23,63 +23,63 @@
       "nirf_ranking": "29",
       "rating": "4.8",
       "fees": "₹0.99L - ₹3.45L",
-      "website": "https://www.unifostedu.com/Amity-University-Online"
+      "website": "https://unifostedu.com/Amity-University-Online"
     },
     {
       "name": "Manipal University Online",
       "nirf_ranking": "73",
       "rating": "4.6",
       "fees": "₹0.99L - ₹2.92L",
-      "website": "https://www.unifostedu.com/manipal"
+      "website": "https://unifostedu.com/manipal"
     },
     {
       "name": "Lovely Professional University Online",
       "nirf_ranking": "38",
       "rating": "4.1",
       "fees": "₹0.80L - ₹2.0L",
-      "website": "https://www.unifostedu.com/lpu-online"
+      "website": "https://unifostedu.com/lpu-online"
     },
     {
       "name": "University of Petroleum and Energy Studies Online",
       "nirf_ranking": "41",
       "rating": "4.4",
       "fees": "₹1.50L - ₹2.20L",
-      "website": "https://www.unifostedu.com/upes"
+      "website": "https://unifostedu.com/upes"
     },
     {
       "name": "Narsee Monjee Institute of Management Studies Online",
       "nirf_ranking": "21",
       "rating": "4.5",
       "fees": "₹0.94L - ₹4.0L",
-      "website": "https://www.unifostedu.com/nmims"
+      "website": "https://unifostedu.com/nmims"
     },
     {
       "name": "Sharda University Online",
       "nirf_ranking": "87",
       "rating": "4.1",
       "fees": "₹1.05L - ₹1.60L",
-      "website": "https://www.unifostedu.com/sharda"
+      "website": "https://unifostedu.com/sharda"
     },
     {
       "name": "Dr. DY Patil Online",
       "nirf_ranking": "63",
       "rating": "4.4",
       "fees": "₹1.40L - ₹1.90L",
-      "website": "https://www.unifostedu.com/dypatil"
+      "website": "https://unifostedu.com/dypatil"
     },
     {
       "name": "Jain University Online",
       "nirf_ranking": "77",
       "rating": "4.5",
       "fees": "₹1.30L - ₹2.16L",
-      "website": "https://www.unifostedu.com/jain"
+      "website": "https://unifostedu.com/jain"
     },
     {
       "name": "Chandigarh University Online",
       "nirf_ranking": "36",
       "rating": "4.7",
       "fees": "₹1.0L - ₹2.10L",
-      "website": "https://www.unifostedu.com/chandigarh"
+      "website": "https://unifostedu.com/chandigarh"
     }
   ],
   "courses": [
@@ -87,67 +87,67 @@
       "name": "MBA Online",
       "level": "PG",
       "description": "Gain strategic skills from top universities",
-      "link": "https://www.unifostedu.com/courses/mba-online"
+      "link": "https://unifostedu.com/courses/mba-online"
     },
     {
       "name": "MSC Online",
       "level": "PG",
       "description": "Advanced science and technology programs",
-      "link": "https://www.unifostedu.com/courses/msc-online"
+      "link": "https://unifostedu.com/courses/msc-online"
     },
     {
       "name": "MCA Online",
       "level": "PG",
       "description": "Advance in tech with flexible learning",
-      "link": "https://www.unifostedu.com/courses/mca-online"
+      "link": "https://unifostedu.com/courses/mca-online"
     },
     {
       "name": "M.Com Online",
       "level": "PG",
       "description": "Deepen commerce expertise",
-      "link": "https://www.unifostedu.com/courses/mcom-online"
+      "link": "https://unifostedu.com/courses/mcom-online"
     },
     {
       "name": "MA Online",
       "level": "PG",
       "description": "Explore diverse specializations",
-      "link": "https://www.unifostedu.com/courses/ma-online"
+      "link": "https://unifostedu.com/courses/ma-online"
     },
     {
       "name": "MAJMC Online",
       "level": "PG",
       "description": "Master journalism and mass communication",
-      "link": "https://www.unifostedu.com/courses/majmc-online"
+      "link": "https://unifostedu.com/courses/majmc-online"
     },
     {
       "name": "BBA Online",
       "level": "UG",
       "description": "Management fundamentals for the digital age",
-      "link": "https://www.unifostedu.com/courses/bba-online"
+      "link": "https://unifostedu.com/courses/bba-online"
     },
     {
       "name": "BCA Online",
       "level": "UG",
       "description": "Build a career in software development",
-      "link": "https://www.unifostedu.com/courses/bca-online"
+      "link": "https://unifostedu.com/courses/bca-online"
     },
     {
       "name": "B.Com Online",
       "level": "UG",
       "description": "Commerce education for business world",
-      "link": "https://www.unifostedu.com/courses/bcom-online"
+      "link": "https://unifostedu.com/courses/bcom-online"
     },
     {
       "name": "BA Online",
       "level": "UG",
       "description": "Liberal arts foundation for diverse careers",
-      "link": "https://www.unifostedu.com/courses/ba-online"
+      "link": "https://unifostedu.com/courses/ba-online"
     },
     {
       "name": "BAJMC Online",
       "level": "UG",
       "description": "Journalism and mass communication basics",
-      "link": "https://www.unifostedu.com/courses/bajmc-online"
+      "link": "https://unifostedu.com/courses/bajmc-online"
     }
   ],
   "features": [

@@ -8,11 +8,11 @@ const ScholarshipAndEMI = () => {
         <title>Complete Guide to Scholarships and EMI for Online Degrees in India 2025</title>
         <meta name="description" content="Discover how to fund your online MBA, BBA, or BCA with scholarships and easy EMI plans. Compare options from top UGC-approved universities with zero-cost EMI available." />
         <meta name="keywords" content="online degree scholarship India, EMI for online MBA, education loan for distance learning, affordable online university, UGC approved online courses finance, no cost EMI online degree" />
-        <link rel="canonical" href="https://www.unifostedu.com/blog/scholarship-emi-options-online-degrees" />
+        <link rel="canonical" href="https://unifostedu.com/blog/scholarship-emi-options-online-degrees" />
         <meta property="og:title" content="Complete Guide to Scholarships and EMI for Online Degrees" />
         <meta property="og:description" content="Learn how to make online education affordable with scholarships and flexible payment plans from top universities." />
-        <meta property="og:image" content="https://www.unifostedu.com/images/blogs/scholarship-emi.jpg" />
-        <meta property="og:url" content="https://www.unifostedu.com/blog/scholarship-emi-options-online-degrees" />
+        <meta property="og:image" content="https://unifostedu.com/images/blogs/scholarship-emi.jpg" />
+        <meta property="og:url" content="https://unifostedu.com/blog/scholarship-emi-options-online-degrees" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
       

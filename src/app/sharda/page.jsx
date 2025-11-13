@@ -11,6 +11,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import EnquiryForm from '@/components/EnquiryForm';
 import { Inter, Playfair_Display } from "next/font/google";
 import Head from 'next/head';
+import Link from "next/link";
 import Image from 'next/image';
 import * as Tabs from '@radix-ui/react-tabs';
 import { FaBars, FaTimes } from 'react-icons/fa';
@@ -19,7 +20,7 @@ import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 const UniversityPage = () => {
   // University data - you can replace this with your actual data
   const universityData = {
-    name: "Sharda University ",
+    name: "Sharda University",
     shortName: "Sharda",
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/shardalogos_fecyer.webp",
     heroImage: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762587569/university-hero_ikhcch.webp",
@@ -247,7 +248,7 @@ const faqData = [
                 <button
                   onClick={() => setIsMobileMenuOpen(true)}
                   aria-label="Open menu"
-                  className="lg:hidden p-2 border rounded-md hover:bg-gray-100 transition-colors"
+                  className="lg:hidden p-2 border rounded-md hover:bg-gray-100 transition-colors cursor-pointer"
                 >
                   <FaBars className="w-5 h-5 text-gray-700" />
                 </button>
@@ -269,7 +270,7 @@ const faqData = [
                 
                 <button 
                   onClick={() => setOpenModal({ type: 'apply' })}
-                  className="bg-gradient-to-r from-[#f7188b] to-[#ec027c] text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-[#f7188b]/25 text-sm sm:text-base"
+                  className="bg-gradient-to-r from-[#f7188b] to-[#ec027c] text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-[#f7188b]/25 text-sm sm:text-base cursor-pointer"
                 >
                   <span className="hidden sm:inline">Apply Now</span>
                   <span className="sm:hidden">Apply</span>
@@ -337,7 +338,7 @@ const faqData = [
                          >
                            <div className="flex items-center justify-between mb-8">
                              <h3 className="text-xl font-bold text-pink-600">Page Contents</h3>
-                             <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-full hover:bg-gray-100">
+                             <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-full hover:bg-gray-100 cursor-pointer">
                                <FaTimes className="w-5 h-5 text-gray-600" />
                              </button>
                            </div>
@@ -364,7 +365,7 @@ const faqData = [
                                      if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
                                      setIsMobileMenuOpen(false);
                                    }}
-                                   className="text-gray-700 hover:text-orange-600 font-semibold text-base transition-colors duration-200 w-full text-left py-2"
+                                   className="text-gray-700 hover:text-orange-600 font-semibold text-base transition-colors duration-200 w-full text-left py-2 cursor-pointer"
                                  >
                                    {item.label}
                                  </button>
@@ -380,7 +381,7 @@ const faqData = [
           <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp')] bg-cover bg-center opacity-200"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-blue-900/70 to-indigo-900/80"></div>
 
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left Content */}
               <div className="text-white space-y-8">
@@ -424,7 +425,7 @@ const faqData = [
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button 
                     onClick={() => setOpenModal({ type: 'apply' })}
-                    className="group bg-gradient-to-r from-[#f7188b] to-[#ec027c] hover:from-[#ec027c] hover:to-[#d40270] text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-[#f7188b]/30 flex items-center justify-center gap-3"
+                    className="group bg-gradient-to-r from-[#f7188b] to-[#ec027c] hover:from-[#ec027c] hover:to-[#d40270] text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-[#f7188b]/30 flex items-center justify-center gap-3 cursor-pointer"
                   >
                     <span>Apply Now</span>
                     <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -434,7 +435,7 @@ const faqData = [
                   
                   <button 
                     onClick={() => setOpenModal({ type: 'enquire' })}
-                    className="border-2 border-white/30 hover:border-white/50 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:bg-white/10 backdrop-blur-sm"
+                    className="border-2 border-white/30 hover:border-white/50 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:bg-white/10 backdrop-blur-sm cursor-pointer"
                   >
                     Download Brochure
                   </button>
@@ -485,11 +486,7 @@ const faqData = [
 
     {/* Introduction */}
     <p className="text-lg leading-relaxed text-gray-700">
-      <strong>Sharda University Online</strong> is a prestigious UGC-entitled university located in 
-      Greater Noida, NCR, offering world-class online education for learners across India and abroad. 
-      With a strong legacy in global education and a NAAC-accredited status, it delivers flexible, 
-      career-oriented programs through cutting-edge digital platforms.
-    </p>
+      <strong>Sharda University Online</strong> aims to make world-class education accessible to learners everywhere — across India and abroad — through its innovative online mode of learning. As one of the <strong>top private universities in Greater Noida</strong>, Sharda University offers a wide range of <strong>UGC-approved online courses</strong> designed for both students and working professionals. Popular programs such as the <strong>Online MBA at Sharda University</strong>, <strong>Online BBA at Sharda University</strong>, <strong>Online BCA</strong>, and <strong>Online MCA</strong> provide learners with practical knowledge, modern teaching methodologies, and expert mentorship from experienced faculty members. Students enjoy complete flexibility — they can learn at their own pace, attend <strong>live classes</strong>, and access <strong>recorded lectures</strong> anytime. This convenient format supports professionals who wish to balance work and education. Focused on <strong>skill development</strong>, <strong>career growth</strong>, and <strong>real-world learning</strong>, Sharda University Online empowers students to earn a <strong>recognized degree</strong> from one of the <strong>best universities in Delhi NCR</strong>. With <strong>transparent and affordable Sharda University fees</strong>, learners gain access to high-quality education that suits their budget. The <strong>Sharda University Admission 2025</strong> process is simple and hassle-free, allowing applicants to begin their academic journey quickly. Whether you seek an <strong>online BBA</strong>, <strong>online MCA</strong>, or any other <strong>Sharda University Online course</strong>, this platform delivers flexible, affordable, and career-oriented education. <strong>Sharda University Greater Noida</strong> continues to set benchmarks in digital learning, making it a preferred choice for ambitious learners aiming for excellence and success. </p>
     <p className="text-lg leading-relaxed text-gray-700">
       Established with a mission to make higher education accessible to all — especially working professionals 
       and students who wish to continue their studies without relocating or pausing their careers — Sharda offers 
@@ -588,14 +585,114 @@ const faqData = [
     </div>
   </div>
 </section>
+  <section className="bg-white text-black py-12 px-6 md:px-20">
+  <div className="max-w-6xl mx-auto">
+    {/* Section Heading */}
+    <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+      About <span className="text-[#ee067f]">Sharda University Online</span>
+    </h2>
+
+    {/* Paragraph Section */}
+    <p className="text-lg leading-relaxed mb-6">
+      Located in <strong>Greater Noida</strong>, <strong>Sharda University</strong> is one of India’s most respected and trusted 
+      private universities, renowned for its <strong>world-class infrastructure</strong>, advanced teaching methods, 
+      and <strong>international partnerships</strong>. With students from all over India and abroad, 
+      <strong>Sharda University Greater Noida</strong> has built a strong reputation as the 
+      <strong> best university in Delhi NCR</strong> for <strong>quality education</strong>, innovation, and global learning.
+    </p>
+
+    <p className="text-lg leading-relaxed mb-6">
+      To make its education accessible to everyone, <strong>Sharda University Online</strong> offers the same 
+      high-quality programs through digital learning. Students can now earn recognized and valuable degrees 
+      from the comfort of their homes. The university provides several <strong>Sharda University online courses</strong> 
+      that are <strong>flexible</strong>, <strong>affordable</strong>, and designed to match current industry needs.
+    </p>
+
+    {/* Course Highlights */}
+    <div className="bg-gray-50 border-l-4 border-[#ee067f] p-6 rounded-xl shadow-sm mb-6">
+      <h3 className="text-2xl font-semibold mb-4 text-[#ee067f]">Popular Programs Offered:</h3>
+      <ul className="list-disc pl-6 space-y-2 text-lg">
+        <li>
+          <strong>MBA at Sharda University</strong> – A professional management program that builds 
+          <strong> business</strong>, <strong>leadership</strong>, and <strong>strategic thinking</strong> skills to prepare 
+          students for top corporate roles.
+        </li>
+        <li>
+          <strong>BBA at Sharda University</strong> – A business foundation course for young students who want to 
+          start a career in <strong>management</strong>, <strong>marketing</strong>, or <strong>entrepreneurship</strong>.
+        </li>
+        <li>
+          <strong>Online BCA from Sharda University</strong> – A flexible online degree designed for learners who want 
+          to study <strong>technology</strong> from anywhere while gaining <strong>global exposure</strong>.
+        </li>
+        <li>
+          <strong>Online MCA from Sharda University</strong> – A master’s degree in <strong>computer applications</strong> 
+          that helps students grow in <strong>technology</strong>, <strong>software development</strong>, and 
+          <strong> IT management</strong>.
+        </li>
+      </ul>
+    </div>
+
+    {/* Additional Details */}
+    <p className="text-lg leading-relaxed mb-6">
+      All <strong>Sharda University online courses</strong> are created by experienced professors and industry experts. 
+      The curriculum blends <strong>theory</strong> with <strong>practical projects</strong>, helping students gain 
+      <strong> real-world knowledge</strong> and <strong>hands-on experience</strong>.
+    </p>
+
+    <p className="text-lg leading-relaxed mb-6">
+      Another key advantage of <strong>Sharda University Online</strong> is its <strong>affordability</strong>. 
+      The university offers <strong>transparent and reasonable fees</strong> along with <strong>installment</strong> 
+      and <strong>EMI options</strong>, making quality education possible for every student, regardless of background.
+    </p>
+
+    <p className="text-lg leading-relaxed mb-6">
+      With its simple <strong>Sharda University Admission 2025</strong> process, students can easily apply online, 
+      choose their program, and start learning immediately. Whether you are planning to pursue an 
+      <strong> MBA</strong>, <strong>BBA</strong>, <strong>Online BCA</strong>, or <strong>Online MCA</strong>, 
+      you can be sure of earning a <strong>recognized and respected degree</strong> from the 
+      <strong> best university in Delhi NCR</strong>.
+    </p>
+
+    <p className="text-lg leading-relaxed mb-8">
+      <strong>Sharda University Greater Noida</strong> continues to lead among 
+      <strong> private universities in Greater Noida</strong>, offering 
+      <strong> flexible</strong>, <strong>career-focused education</strong> through 
+      <strong> Sharda University Online</strong> — where <strong>global learning</strong> meets 
+      <strong> digital convenience</strong>.
+    </p>
+
+                  <button 
+                            onClick={() => setOpenModal({ type: 'apply' })}
+             className="w-full bg-gradient-to-r from-[#f7188b] to-[#ec027c] hover:from-[#ec027c] hover:to-[#d40270] text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                          >
+                            Apply Now
+                          </button>
    
+  </div>
+</section>
+
+
  {/* 🎓 Campus Tour Section */}
-<section id="campus-tour" className="py-16 px-6 sm:px-10 lg:px-20 bg-gradient-to-b from-white to-pink-50 text-gray-800">
+<section id="campus-tour" className=" px-6 sm:px-10 lg:px-20 bg-gradient-to-b from-white to-pink-50 text-gray-800">
   <div className="max-w-6xl mx-auto">
     {/* Title */}
     <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-[#ee067f] mb-12">
       Campus Tour
     </h2>
+ <div className="w-full   ">
+  <p className="text-black font-medium text-lg md:text-xl leading-relaxed">
+    Welcome to <strong>Sharda University Greater Noida</strong>, a modern and lively campus that represents 
+    <strong> innovation</strong>, <strong> diversity</strong>, and <strong> excellence</strong>. Spread across a large green area, 
+    <strong> Sharda</strong> is known as one of the <strong>best universities in Delhi NCR</strong> and is also among the 
+    <strong> top private universities in Greater Noida</strong>. The campus features 
+    <strong> smart classrooms</strong>, <strong> modern computer labs</strong>, <strong> digital libraries</strong>, 
+    <strong> innovation centers</strong>, and excellent <strong> sports and cultural facilities</strong>. Every space at 
+    Sharda is designed to help students <strong> learn</strong>, <strong> grow</strong>, and <strong> express their creativity</strong>. 
+    The friendly and energetic environment makes it a true place for <strong> learning</strong> and <strong> success</strong>.
+  </p>
+</div>
+
 
     {/* Content Section */}
     <div className="flex flex-col lg:flex-row items-center gap-10">
@@ -626,6 +723,29 @@ const faqData = [
         </ul>
       </div>
     </div>
+    <div className="w-full py-12 px-8 md:px-24">
+  <p className="text-black font-medium text-lg md:text-xl leading-relaxed">
+    Students of <strong>Sharda University Online</strong> can also feel connected to this experience through 
+    <strong> virtual tours</strong>, <strong> live sessions</strong>, and <strong> online campus events</strong>. 
+    They get the same <strong>quality education</strong> and <strong>academic support</strong> as on-campus students. 
+    Programs like <strong>MBA at Sharda University</strong>, <strong>BBA at Sharda University</strong>, 
+    <strong>Online BCA from Sharda University</strong>, and <strong>Online MCA from Sharda University</strong> 
+    are taught by expert faculty using <strong>advanced learning tools</strong>.
+  </p>
+
+  <p className="text-black font-medium text-lg md:text-xl leading-relaxed mt-6">
+    With <strong>transparent and affordable Sharda University fees</strong>, <strong>flexible online study options</strong>, 
+    and <strong>international exposure</strong>, Sharda attracts students from across India and abroad. 
+    As <strong>Sharda University admission 2025</strong> opens, it’s the perfect time to explore a campus where 
+    <strong>innovation meets opportunity</strong> — and where your journey toward <strong>success</strong> truly begins.
+  </p>
+</div>
+        <button 
+         onClick={() => setOpenModal({ type: 'apply' })}
+         className="w-full bg-gradient-to-r from-[#f7188b] to-[#ec027c] hover:from-[#ec027c] hover:to-[#d40270] text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
+        >
+        Apply Now
+        </button>
   </div>
 </section>
 
@@ -751,7 +871,7 @@ const faqData = [
 
                           <button 
                             onClick={() => setOpenModal({ type: 'apply', program: course.course })}
-                            className="w-full bg-gradient-to-r from-[#f7188b] to-[#ec027c] hover:from-[#ec027c] hover:to-[#d40270] text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
+                            className="w-full bg-gradient-to-r from-[#f7188b] to-[#ec027c] hover:from-[#ec027c] hover:to-[#d40270] text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
                           >
                             Apply Now
                           </button>
@@ -765,68 +885,136 @@ const faqData = [
           </div>
         </section>
     {/* 🎓 Explore Online Courses Section */}
-<section className="py-16 px-6 sm:px-10 lg:px-20 bg-gradient-to-b from-white to-black-50 text-gray-900">
-  <div className="max-w-6xl mx-auto space-y-10">
-    {/* Title */}
-    <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-black-600">
-      Explore Online Courses at Sharda University Online
+<section className="w-full bg-white text-black py-16 px-6 md:px-20 lg:px-32">
+  {/* Intro Section */}
+  <div className="space-y-6">
+    <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-900">
+      Sharda University Online – Learn Anytime, Anywhere
     </h2>
-
-    {/* Intro Paragraph */}
-    <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto leading-relaxed">
-      <strong>Sharda University Online</strong> offers <strong>UGC-approved online degrees</strong> 
-      across management, IT, commerce, and arts. Each program is carefully designed to meet 
-      <strong> industry skill demands</strong> and prepare learners for career excellence.
+    <p className="text-base md:text-lg leading-relaxed font-medium">
+      <strong>Sharda University Online</strong>, the digital learning platform of <strong>Sharda University Greater Noida</strong>, offers a wide range of 
+      <strong> UGC-approved online courses</strong> for today’s learners. As one of the <strong>best universities in Delhi NCR</strong>, 
+      Sharda provides <strong>flexible</strong>, <strong>affordable</strong>, and <strong>globally recognized</strong> degree programs 
+      that combine academic excellence with modern technology.
     </p>
-
-    {/* Table Section */}
-    <div className="overflow-x-auto">
-      <table className="w-full border border-gray-200 rounded-lg shadow-md bg-white">
-        <thead className="bg-blue-600 text-white">
-          <tr>
-            <th className="py-3 px-4 text-left text-lg font-semibold">Program</th>
-            <th className="py-3 px-4 text-left text-lg font-semibold">Specializations Available</th>
-          </tr>
-        </thead>
-        <tbody className="divide-y divide-gray-200 text-gray-800">
-          <tr>
-            <td className="py-3 px-4 font-medium">Online MBA (Master of Business Administration)</td>
-            <td className="py-3 px-4">Data Science and Analytics, Marketing, Healthcare and Hospital Administration, Human Resource Management, Sales and Marketing, FinanceMarketing, HR, Finance, Busines</td>
-          </tr>
-          <tr>
-            <td className="py-3 px-4 font-medium">Online MCA (Master of Computer Applications)</td>
-            <td className="py-3 px-4">Computer Science and Information Technology, Data Science</td>
-          </tr>
-           <tr>
-            <td className="py-3 px-4 font-medium">Online M.Com (Master of Commerce)</td>
-            <td className="py-3 px-4">Accounting & Finance, Public Accountion</td>
-          </tr>
-          <tr>
-            <td className="py-3 px-4 font-medium">Online BBA (Bachelor of Business Administration)</td>
-            <td className="py-3 px-4">General</td>
-          </tr>
-           <tr>
-            <td className="py-3 px-4 font-medium">Online BCA (Bachelor of Computer Applications)</td>
-            <td className="py-3 px-4">General</td>
-          </tr>
-          <tr>
-            <td className="py-3 px-4 font-medium">Online BA (Bachelor of Arts)</td>
-            <td className="py-3 px-4">Political Science</td>
-          </tr>
-          
-        </tbody>
-      </table>
-    </div>
-
-    {/* Closing Paragraph */}
-    <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto leading-relaxed">
-      Each course under <strong>Sharda University Online</strong> is crafted for 
-      <strong> professional growth</strong>, featuring <strong>live interactive classes</strong>, 
-      <strong> recorded lectures</strong>, engaging <strong>discussion forums</strong>, and 
-      <strong> project-based assessments</strong>.
+    <p className="text-base md:text-lg leading-relaxed font-medium">
+      Each program at <strong>Sharda University Online</strong> is designed to help students gain <strong>practical knowledge</strong>, 
+      <strong> industry exposure</strong>, and <strong>career growth</strong>. Whether you are a student, a working professional, 
+      or someone who wants to upskill, Sharda’s online programs let you <strong>study at your own pace</strong> and build a 
+      successful career.
+    </p>
+    <p className="text-base md:text-lg leading-relaxed font-medium">
+      With clear and affordable <strong>Sharda University fees</strong> and a simple <strong>Sharda University admission 2025</strong> process, 
+      the university ensures that <strong>quality education</strong> is open to everyone.
     </p>
   </div>
+
+  {/* MBA Section */}
+  <div className="mt-12 border-t pt-10">
+    <h3 className="text-2xl md:text-3xl font-semibold mb-4">💼 MBA at Sharda University</h3>
+    <p className="text-base md:text-lg leading-relaxed font-medium">
+      The <strong>MBA at Sharda University</strong> is one of the most popular <strong>Sharda University online courses</strong>. 
+      It is designed for students who aspire to become <strong>future business leaders</strong> and <strong>managers</strong>. 
+      This two-year online program focuses on <strong>marketing</strong>, <strong>finance</strong>, <strong>human resources</strong>, 
+      <strong> data analytics</strong>, and <strong>strategy</strong>.
+    </p>
+    <p className="text-base md:text-lg leading-relaxed font-medium mt-4">
+      Students learn through <strong>live online classes</strong>, <strong>recorded video lectures</strong>, and 
+      <strong> real-world projects</strong> taught by <strong>expert faculty</strong> and <strong>industry professionals</strong>. 
+      As one of the top choices for <strong>Sharda University admission 2025</strong>, this online MBA helps students 
+      build <strong>global business knowledge</strong> and secure <strong>strong placement opportunities</strong> after graduation.
+    </p>
+  </div>
+
+  {/* BBA Section */}
+  <div className="mt-12 border-t pt-10">
+    <h3 className="text-2xl md:text-3xl font-semibold mb-4">📊 BBA at Sharda University / Online BBA from Sharda University</h3>
+    <p className="text-base md:text-lg leading-relaxed font-medium">
+      The <strong>BBA at Sharda University</strong> and <strong>Online BBA from Sharda University</strong> are ideal for students 
+      who want to start their journey in <strong>business</strong> and <strong>management</strong>. These programs cover 
+      <strong> business management</strong>, <strong>marketing</strong>, <strong>entrepreneurship</strong>, 
+      <strong> economics</strong>, and <strong>digital business</strong>.
+    </p>
+    <p className="text-base md:text-lg leading-relaxed font-medium mt-4">
+      Students enjoy <strong>flexible online learning</strong> through <strong>live sessions</strong>, <strong>recorded classes</strong>, 
+      and <strong>practical assignments</strong>. The BBA program builds <strong>leadership</strong> and 
+      <strong> problem-solving skills</strong> that prepare students for successful careers in the <strong>corporate world</strong>.
+    </p>
+  </div>
+
+  {/* MCA Section */}
+  <div className="mt-12 border-t pt-10">
+    <h3 className="text-2xl md:text-3xl font-semibold mb-4">💻 Online MCA from Sharda University</h3>
+    <p className="text-base md:text-lg leading-relaxed font-medium">
+      The <strong>Online MCA from Sharda University</strong> is perfect for students interested in 
+      <strong> computers</strong>, <strong> software</strong>, and <strong> technology</strong>. It covers 
+      <strong> computer applications</strong>, <strong>artificial intelligence</strong>, <strong>web development</strong>, 
+      and <strong>data analytics</strong> — ideal for careers in <strong>IT</strong>, <strong>programming</strong>, 
+      or <strong>data science</strong>.
+    </p>
+    <p className="text-base md:text-lg leading-relaxed font-medium mt-4">
+      Students gain hands-on experience through <strong>industry projects</strong>, <strong>internships</strong>, and 
+      <strong> expert mentorship</strong>. With <strong>affordable Sharda University fees</strong>, 
+      <strong> flexible study hours</strong>, and <strong>high-quality faculty guidance</strong>, this program blends 
+      learning and opportunity seamlessly.
+    </p>
+  </div>
+
+  {/* Why Choose Section */}
+  <div className="mt-12 border-t pt-10">
+    <h3 className="text-2xl md:text-3xl font-semibold mb-6">🧠 Why Choose Sharda University Online Courses?</h3>
+    <ul className="list-disc list-inside text-base md:text-lg font-medium space-y-3">
+      <li>🎓 Offered by one of the <strong>best universities in Delhi NCR</strong></li>
+      <li>💻 <strong>100% online programs</strong> with live and recorded classes</li>
+      <li>💼 <strong>Career-focused courses</strong> with practical projects</li>
+      <li>🏆 Strong <strong>placement support</strong> and global recognition</li>
+      <li>💰 <strong>Affordable Sharda University fees</strong> with EMI options</li>
+      <li>🗓️ Simple <strong>Sharda University admission 2025</strong> process for all students</li>
+    </ul>
+  </div>
+
+  {/* Learn Anytime Section */}
+  <div className="mt-12 border-t pt-10">
+    <h3 className="text-2xl md:text-3xl font-semibold mb-4">🌍 Learn Anytime, Anywhere</h3>
+    <p className="text-base md:text-lg leading-relaxed font-medium">
+      No matter where you live — in <strong>Delhi NCR</strong>, <strong>Noida</strong>, or anywhere in India — 
+      you can easily enroll in <strong>Sharda University Online</strong> and earn a <strong>recognized degree</strong>. 
+      The platform is <strong>user-friendly</strong> and designed for flexible, self-paced learning.
+    </p>
+    <p className="text-base md:text-lg leading-relaxed font-medium mt-4">
+      As one of the <strong>top private universities in Greater Noida</strong>, 
+      <strong> Sharda University Greater Noida</strong> brings <strong>academic excellence</strong> and 
+      <strong> digital learning</strong> together. Thousands of students trust <strong>Sharda University Online</strong> 
+      for its <strong>quality education</strong> and <strong>flexible programs</strong> like 
+      <strong> Online BBA</strong>, <strong> Online MCA</strong>, and <strong> Online MBA</strong>.
+    </p>
+  </div>
+
+  {/* Start Journey Section */}
+  <div className="mt-12 border-t pt-10 text-center">
+    <h3 className="text-2xl md:text-3xl font-semibold mb-6">🎯 Start Your Journey Today</h3>
+    <p className="text-base md:text-lg leading-relaxed font-medium mb-8">
+      Begin your academic and career journey with <strong>Sharda University Online</strong>, part of the 
+      <strong> best university in Delhi NCR</strong>. Explore programs such as 
+      <strong> MBA at Sharda University</strong>, <strong>BBA at Sharda University</strong>, 
+      <strong> Online BBA from Sharda University</strong>, and <strong>Online MCA from Sharda University</strong>.
+    </p>
+    <p className="text-base md:text-lg leading-relaxed font-medium mb-10">
+      With <strong>easy Sharda University admission 2025</strong>, <strong>global exposure</strong>, and 
+      <strong> affordable Sharda University fees</strong>, now is the best time to join one of 
+      <strong> India’s leading private universities</strong> and take the next step toward your 
+      <strong> dream career</strong>.
+    </p>
+    <button 
+      onClick={() => setOpenModal({ type: 'apply' })}
+      className="bg-gradient-to-r from-[#f7188b] to-[#ec027c] text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-[#f7188b]/25 text-sm sm:text-base cursor-pointer"
+    >
+      Apply Now
+    </button>
+  </div>
 </section>
+
+
 
        <section className="py-16 px-6 sm:px-10 lg:px-20 bg-gradient-to-b from-white to-pink-50 text-black">
   <div className="max-w-6xl mx-auto space-y-12">
@@ -837,9 +1025,14 @@ const faqData = [
 
     {/* 1️⃣ UGC-Approved */}
     <div>
-      <h3 className="text-2xl font-semibold text-[#ee067f] mb-3">1️⃣ UGC-Approved & NAAC Accredited ✅</h3>
-      <p className="text-lg leading-relaxed text-black">
-        Degrees from <strong>Sharda University Online</strong> are officially recognized and valid for:
+      <h3 className="text-2xl font-semibold text-[#ee067f] mb-3">1️⃣ UGC-Approved and Globally Recognized Degrees </h3>
+      <p className="text-black bg-white text-lg leading-relaxed">
+         All <strong>Sharda University online courses</strong> are <strong>UGC-approved</strong> and 
+         <strong> globally recognized</strong>. Your degree from 
+         <strong> Sharda University Online</strong> holds the same value and respect as a regular 
+         on-campus program from <strong>Sharda University Greater Noida</strong>, ensuring you receive 
+         a qualification that is both <strong>credible</strong> and 
+         <strong> respected worldwide</strong>.
       </p>
       <ul className="list-disc pl-6 mt-3 text-black space-y-1">
         <li>Government jobs</li>
@@ -854,10 +1047,15 @@ const faqData = [
 
     {/* 2️⃣ Career-Oriented Courses */}
     <div>
-      <h3 className="text-2xl font-semibold text-[#ee067f] mb-3">2️⃣ Career-Oriented Online Courses 🎯</h3>
-      <p className="text-lg leading-relaxed text-black">
-        Programs like:
+      <h3 className="text-2xl font-semibold text-[#ee067f] mb-3">2️⃣  Career-Focused Programs 🎯</h3>
+      <p className="text-black bg-white text-lg leading-relaxed">
+        Each course, from <strong>MBA at Sharda University</strong> to 
+        <strong> Online MCA from Sharda University</strong>, is created to prepare students 
+        for <strong>real jobs</strong> and <strong>professional success</strong>. The programs are 
+        updated regularly to match <strong>industry needs</strong> and 
+        <strong> future career trends</strong>.
       </p>
+
       <ul className="list-disc pl-6 mt-3 text-black space-y-1">
         <li>📌 Online MBA Sharda University</li>
         <li>📌 Online MCA Sharda University</li>
@@ -871,9 +1069,15 @@ const faqData = [
     {/* 3️⃣ Flexible Learning */}
     <div>
       <h3 className="text-2xl font-semibold text-[#ee067f] mb-3">3️⃣ Flexible Learning for Busy Schedules 🕒</h3>
-      <p className="text-lg leading-relaxed text-black">
-        Study anytime, anywhere, at your own pace:
-      </p>
+      <p className="text-black bg-white text-lg leading-relaxed">
+        With <strong>Sharda University Online</strong>, you can study 
+        <strong> anytime</strong> and <strong> anywhere</strong>. You get 
+        <strong> recorded lectures</strong>, <strong> live online classes</strong>, and 
+        <strong> easy-to-use study materials</strong>. It’s perfect for 
+        <strong> working professionals</strong> who want to study while managing their 
+        <strong> job</strong> or <strong> personal life</strong>.
+       </p>
+
       <ul className="list-disc pl-6 mt-3 text-black space-y-1">
         <li>✅ Recorded lectures</li>
         <li>✅ Weekend live classes</li>
@@ -903,10 +1107,15 @@ const faqData = [
 
     {/* 5️⃣ Affordable Fees */}
     <div>
-      <h3 className="text-2xl font-semibold text-[#ee067f] mb-3">5️⃣ Affordable Fees & EMI Options 💰</h3>
-      <p className="text-lg leading-relaxed text-black">
-        Education should be accessible to all. Sharda University Online offers:
-      </p>
+      <h3 className="text-2xl font-semibold text-[#ee067f] mb-3">5️⃣ Affordable Fees, Global Learning and EMI Options 💰</h3>
+      <p className="text-black bg-white text-lg leading-relaxed">
+      <strong>Sharda University fees</strong> are <strong>transparent</strong> and <strong>affordable</strong>. 
+      Students also get <strong>global exposure</strong> through 
+      <strong> international collaborations</strong>, <strong>online events</strong>, and 
+      <strong> industry interactions</strong>. You get <strong>quality education</strong> 
+      at a <strong>reasonable cost</strong>.
+    </p>
+
       <ul className="list-disc pl-6 mt-3 text-black space-y-1">
         <li>✔ Budget-friendly fees compared to other private universities</li>
         <li>✔ No-cost EMI options</li>
@@ -945,6 +1154,24 @@ const faqData = [
         ensuring equal job and academic opportunities.
       </p>
     </div>
+   {/*9 Expert Teachers and Mentors*/}
+   <h3 className="text-2xl font-semibold text-[#ee067f] mb-3"> 9️⃣ Expert Teachers and Mentors</h3>
+   <p className="text-black bg-white text-lg leading-relaxed">
+      Learn from <strong>experienced professors</strong> and 
+      <strong> industry mentors</strong> who make learning 
+      <strong> simple</strong> and <strong> practical</strong>. They guide students 
+      at every step and help them gain <strong>useful knowledge</strong> for the 
+     <strong> real world</strong>.
+   </p>
+   {/*10 Part of a Leading Private University in Greater Noida*/}
+    <h3 className="text-2xl font-semibold text-[#ee067f] mb-3"> 1️⃣0️⃣ Part of a Leading Private University in Greater Noida</h3>
+    <p className="text-black bg-white text-lg leading-relaxed">
+  <strong>Sharda University Greater Noida</strong> is one of the most 
+  <strong> reputed private universities</strong> in Greater Noida and is ranked 
+  among the <strong>best universities in Delhi NCR</strong>. The university is 
+  known for its <strong>excellent faculty</strong>, <strong>strong placement record</strong>, 
+  and <strong>innovative teaching methods</strong>.
+</p>
 
     {/* Final Verdict */}
     <div className="bg-white rounded-2xl shadow-md p-6 border-l-4 border-[#ee067f]">
@@ -966,16 +1193,16 @@ const faqData = [
         <p className="text-black font-semibold">✅ UGC Entitled & NAAC Accredited</p>
       </div>
       <div className="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
-        <p className="text-black font-semibold">✅ Global academic partnerships across <span class="text-[#ee067f]">30+ countries</span></p>
+        <p className="text-black font-semibold">✅ Global academic partnerships across <span className="text-[#ee067f]">30+ countries</span></p>
       </div>
       <div className="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
-        <p className="text-black font-semibold">✅ Flexible learning via <span class="text-[#ee067f]">advanced LMS</span></p>
+        <p className="text-black font-semibold">✅ Flexible learning via <span className="text-[#ee067f]">advanced LMS</span></p>
       </div>
       <div className="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
-        <p className="text-black font-semibold">✅ Expert faculty & <span class="text-[#ee067f]">industry mentors</span></p>
+        <p className="text-black font-semibold">✅ Expert faculty & <span className="text-[#ee067f]">industry mentors</span></p>
       </div>
       <div className="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
-        <p className="text-black font-semibold">✅ Accessible to <span class="text-[#ee067f]">working professionals</span></p>
+        <p className="text-black font-semibold">✅ Accessible to <span className="text-[#ee067f]">working professionals</span></p>
       </div>
       <div className="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
         <p className="text-black font-semibold">✅ EMI fee payment options available</p>
@@ -984,13 +1211,13 @@ const faqData = [
         <p className="text-black font-semibold">✅ 100% online proctored examinations</p>
       </div>
       <div className="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
-        <p className="text-black font-semibold">✅ Career support & <span class="text-[#ee067f]">placement assistance</span></p>
+        <p className="text-black font-semibold">✅ Career support & <span className="text-[#ee067f]">placement assistance</span></p>
       </div>
       <div className="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
-        <p className="text-black font-semibold">✅ Recorded + live sessions for <span class="text-[#ee067f]">best learning outcome</span></p>
+        <p className="text-black font-semibold">✅ Recorded + live sessions for <span className="text-[#ee067f]">best learning outcome</span></p>
       </div>
       <div className="p-6 border border-[#ee067f] rounded-2xl shadow-sm hover:shadow-md transition">
-        <p className="text-black font-semibold">✅ Internship & <span class="text-[#ee067f]">skill development guidance</span></p>
+        <p className="text-black font-semibold">✅ Internship & <span className="text-[#ee067f]">skill development guidance</span></p>
       </div>
     </div>
   </div>
@@ -1324,7 +1551,7 @@ const faqData = [
                 >
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className="w-full text-left px-8 py-6 bg-gradient-to-r from-gray-50 to-gray-100 hover:from-[#f7188b]/10 hover:to-[#ec027c]/10 flex justify-between items-center font-semibold text-gray-800 transition-all duration-300 group-hover:text-[#f7188b] text-lg"
+                    className="w-full text-left px-8 py-6 bg-gradient-to-r from-gray-50 to-gray-100 hover:from-[#f7188b]/10 hover:to-[#ec027c]/10 flex justify-between items-center font-semibold text-gray-800 transition-all duration-300 group-hover:text-[#f7188b] text-lg cursor-pointer"
                   >
                     <span className="pr-8">{faq.question}</span>
                     <div className="flex-shrink-0 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:bg-[#f7188b] group-hover:text-white transition-all duration-300">
@@ -1433,13 +1660,13 @@ const faqData = [
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <button 
                   onClick={() => setOpenModal({ type: 'apply' })}
-                  className="bg-white text-[#f7188b] font-semibold px-12 py-4 rounded-full hover: transition-all duration-300 transform hover:scale-105 shadow-2xl text-lg"
+                  className="bg-white text-[#f7188b] font-semibold px-12 py-4 rounded-full hover: transition-all duration-300 transform hover:scale-105 shadow-2xl text-lg cursor-pointer"
                 >
                   Apply Now
                 </button>
                 <button 
                   onClick={() => setOpenModal({ type: 'enquire' })}
-                  className="border-2 border-white text-white font-semibold px-12 py-4 rounded-full hover:bg-white/10 transition-all duration-300 transform hover:scale-105 text-lg"
+                  className="border-2 border-white text-white font-semibold px-12 py-4 rounded-full hover:bg-white/10 transition-all duration-300 transform hover:scale-105 text-lg cursor-pointer"
                 >
                   Download Brochure
                 </button>
@@ -1507,7 +1734,7 @@ const faqData = [
                   
                   <button 
                     onClick={() => setOpenModal({ type: 'apply' })}
-                    className="w-full bg-gradient-to-r from-[#f7188b] to-[#ec027c] hover:from-[#ec027c] hover:to-[#d40270] text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
+                    className="w-full bg-gradient-to-r from-[#f7188b] to-[#ec027c] hover:from-[#ec027c] hover:to-[#d40270] text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
                   >
                     Apply Now
                   </button>

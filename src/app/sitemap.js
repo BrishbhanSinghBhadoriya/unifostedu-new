@@ -81,7 +81,7 @@ export default async function sitemap() {
 
   // University routes (updated with correct slugs)
   const universityRoutes = [
-    'amity-university-online',
+    'Amity-University-Online',
     'manipal',
     'mahe-online',
     'lpu-online',

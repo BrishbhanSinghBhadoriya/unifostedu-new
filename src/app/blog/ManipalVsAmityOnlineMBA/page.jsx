@@ -18,7 +18,7 @@ const ManipalVsAmityOnlineMBA = () => {
           name="keywords"
           content="Manipal Online MBA, Amity Online MBA, Manipal vs Amity, Online MBA comparison, Best Online MBA India, UniFost Blog"
         />
-        <link rel="canonical" href="https://www.unifostedu.com/blog/manipal-vs-amity-online-mba" />
+        <link rel="canonical" href="https://unifostedu.com/blog/manipal-vs-amity-online-mba" />
         <meta property="og:title" content="Manipal vs Amity: Which Online MBA is Better?" />
         <meta
           property="og:description"

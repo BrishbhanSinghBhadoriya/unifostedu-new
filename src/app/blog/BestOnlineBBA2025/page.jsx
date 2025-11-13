@@ -16,18 +16,18 @@ const BestOnlineBBA2025 = () => {
           name="keywords"
           content="Best Online BBA, Online BBA India, UGC Approved BBA, BBA 2025, Online Education India"
         />
-        <link rel="canonical" href="https://www.unifostedu.com/blog/best-online-bba-2025" />
+        <link rel="canonical" href="https://unifostedu.com/blog/best-online-bba-2025" />
         {/* Open Graph */}
         <meta property="og:title" content="Best Online BBA Programs in India for 2025" />
         <meta property="og:description" content="Explore the top UGC-approved online BBA programs and make the right career choice in 2025." />
-        <meta property="og:image" content="https://www.unifostedu.com/images/blogs/best-online-bba-2025.webp" />
-        <meta property="og:url" content="https://www.unifostedu.com/blog/best-online-bba-2025" />
+        <meta property="og:image" content="https://unifostedu.com/images/blogs/best-online-bba-2025.webp" />
+        <meta property="og:url" content="https://unifostedu.com/blog/best-online-bba-2025" />
         <meta property="og:type" content="article" />
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Best Online BBA Programs in India for 2025" />
         <meta name="twitter:description" content="Explore the top UGC-approved online BBA programs and make the right career choice in 2025." />
-        <meta name="twitter:image" content="https://www.unifostedu.com/images/blogs/best-online-bba-2025.webp" />
+        <meta name="twitter:image" content="https://unifostedu.com/images/blogs/best-online-bba-2025.webp" />
       </Head>
 
       <div className="flex flex-col md:flex-row gap-10">
