@@ -8,15 +8,21 @@ export default function Canonical() {
 
   useEffect(() => {
     if (typeof document === 'undefined') return;
-    const base = 'https://unifostedu.com';
-    const href = base + (pathname || '/');
-    let link = document.querySelector('link[rel="canonical"]');
-    if (!link) {
-      link = document.createElement('link');
+    
+    // Check if canonical already exists (set by Next.js metadata API)
+    const existingCanonical = document.querySelector('link[rel="canonical"]');
+    
+    // Only set canonical if it doesn't exist (metadata API takes precedence)
+    if (!existingCanonical) {
+      const base = 'https://unifostedu.com';
+      const normalizedPath = (pathname || '/').replace(/\/$/, ''); // Remove trailing slash
+      const href = normalizedPath === '/' ? base : `${base}${normalizedPath}`;
+      
+      const link = document.createElement('link');
       link.setAttribute('rel', 'canonical');
+      link.setAttribute('href', href);
       document.head.appendChild(link);
     }
-    link.setAttribute('href', href.endsWith('/') ? href : href + '/');
   }, [pathname]);
 
   return null;
