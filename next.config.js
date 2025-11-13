@@ -33,6 +33,34 @@ const nextConfig = {
   // ✅ Compression and React strict mode
   compress: true,
   reactStrictMode: true,
+
+  // ✅ Redirects for broken URLs (4xx errors)
+  async redirects() {
+    return [
+      // Fix case sensitivity issue: cuonline -> cuOnline
+      {
+        source: '/cuonline',
+        destination: '/cuOnline',
+        permanent: true, // 301 redirect
+      },
+      {
+        source: '/cuonline/:path*',
+        destination: '/cuOnline/:path*',
+        permanent: true,
+      },
+      // Fix course slugs with dots
+      {
+        source: '/courses/m.com-online',
+        destination: '/courses/mcom-online',
+        permanent: true,
+      },
+      {
+        source: '/courses/b.com-online',
+        destination: '/courses/bcom-online',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
