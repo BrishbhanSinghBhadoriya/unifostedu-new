@@ -13,6 +13,7 @@ export const metadata = {
     "Academic Guidance",
     "Professional Development",
   ],
+  metadataBase: new URL("https://unifostedu.com"),
   alternates: {
     canonical: "https://unifostedu.com/services",
   },
@@ -20,12 +21,10 @@ export const metadata = {
     title: "Our Services | Career Counseling & Educational Guidance | UNIFOST",
     description: "Discover UNIFOST's comprehensive educational services including video call counseling, home demo sessions, university guidance, and career planning.",
     siteName: "UNIFOST",
-    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp"],
     url: "https://unifostedu.com/services",
-    siteName: "UNIFOST",
     images: [
       {
-        url: "https://unifostedu.com/images/https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp",
+        url: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp",
         width: 1200,
         height: 630,
         alt: "UNIFOST Services",
@@ -38,7 +37,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Our Services | Career Counseling & Educational Guidance",
     description: "Discover UNIFOST's comprehensive educational services including video call counseling, home demo sessions, and university guidance.",
-    images: ["https://unifostedu.com/images/uni.webp"],
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp"],
   },
   robots: {
     index: true,

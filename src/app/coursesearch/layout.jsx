@@ -9,16 +9,43 @@ export const metadata = {
     "Degree Program Search",
     "Course Discovery",
   ],
+  metadataBase: new URL("https://unifostedu.com"),
   alternates: {
     canonical: "https://unifostedu.com/coursesearch",
   },
   openGraph: {
     title: "Course Search | Find Your Perfect Online Degree | UNIFOST",
     description: "Search and discover the best online degree programs from top universities. Find courses that match your career goals.",
+    url: "https://unifostedu.com/coursesearch",
+    siteName: "UNIFOST",
+    images: [
+      {
+        url: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp",
+        width: 1200,
+        height: 630,
+        alt: "UNIFOST Course Search",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Course Search | Find Your Perfect Online Degree | UNIFOST",
+    description:
+      "Search and discover the best online degree programs from top universities tailored to your career goals.",
     images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp"],
   },
-   alternates: {
-    canonical: "https://unifostedu.com/coursesearch",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
