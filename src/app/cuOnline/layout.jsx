@@ -8,8 +8,9 @@ export const metadata = {
     images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp"],
   },
   alternates: {
-    canonical: "https://unifostedu.com/cuonline",
+    canonical: "https://unifostedu.com/cuOnline",
   },
+  metadataBase: new URL('https://unifostedu.com'),
 };
 
 export default function ChandigarhLayout({ children }) {

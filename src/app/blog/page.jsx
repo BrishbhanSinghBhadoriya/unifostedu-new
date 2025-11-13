@@ -8,8 +8,20 @@ export const metadata = {
   title: "UNIFOST Blog | Latest Insights on Online Education",
   description:
     "Read the latest articles from UNIFOST on online degrees, university reviews, and career growth tips for working professionals.",
+  metadataBase: new URL('https://unifostedu.com'),
   alternates: {
     canonical: "https://unifostedu.com/blog",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 

@@ -33,13 +33,19 @@ export async function generateMetadata({ params }) {
     const blog = await fetchBlogBySlug(slug);
 
     if (!blog) {
+      // Don't set canonical for non-existent pages to avoid non-indexable canonical URLs
       return {
         title: "Blog Post Not Found | UNIFOST",
         description: "The requested blog post could not be found.",
         robots: {
           index: false,
           follow: false,
+          googleBot: {
+            index: false,
+            follow: false,
+          },
         },
+        // No canonical URL for 404 pages - prevents non-indexable canonical issue
       };
     }
 
@@ -98,10 +104,21 @@ export async function generateMetadata({ params }) {
         },
       },
     };
-  } catch {
+  } catch (error) {
+    // If there's an error fetching blog data, don't set canonical
+    // to avoid pointing to a non-indexable page
     return {
       title: "UNIFOST Blog",
       description: "Explore the latest insights from the UNIFOST blog.",
+      robots: {
+        index: false,
+        follow: false,
+        googleBot: {
+          index: false,
+          follow: false,
+        },
+      },
+      // No canonical URL for error pages - prevents non-indexable canonical issue
     };
   }
 }

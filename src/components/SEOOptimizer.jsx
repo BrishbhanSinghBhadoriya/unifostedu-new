@@ -44,8 +44,8 @@ const SEOOptimizer = ({
         <meta name="revisit-after" content="7 days" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
-        {/* Canonical URL */}
-        {canonicalUrl && (
+        {/* Canonical URL - Only set for indexable pages to avoid non-indexable canonical issues */}
+        {canonicalUrl && !noIndex && (
           <link rel="canonical" href={canonicalUrl} />
         )}
         
