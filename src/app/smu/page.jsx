@@ -102,6 +102,7 @@ const SMU = () => {
    
 
  const faqData = [
+  
   {
     question: "Is Sikkim Manipal University recognized by UGC?",
     answer:
@@ -162,6 +163,11 @@ const SMU = () => {
     answer:
       "Yes, SMU provides dedicated technical support to online students. From accessing the learning management system to attending live sessions, comprehensive support is available to ensure a smooth learning experience.",
   },
+  {
+ question: "What is the exam mode?",
+ answer:"Examinations are AI-proctored and conducted online for complete flexibility."
+
+  }
 ];
 
   const testimonials = [
@@ -169,24 +175,28 @@ const SMU = () => {
       name: "Priya Sharma",
       course: "MBA",
       university: "SMU",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1763101215/Sneha_tmk0yf.jpg",
       text: "The online MBA program at SMU helped me transition from a technical role to a management position. The flexible schedule allowed me to continue working while upgrading my skills."
     },
     {
       name: "Rahul Verma",
       course: "MCA",
       university: "SMU",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1763102290/amit_laq7ku.jpg",
       text: "As a working professional in IT, SMU's MCA program provided me with the latest technical knowledge without disrupting my career. The faculty support was exceptional."
     },
     {
       name: "Anita Patel",
       course: "B.Com",
       university: "SMU",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1763102177/riya1_qsbhqy.jpg",
       text: "Pursuing B.Com from SMU Online was the best decision. The affordable fees and quality education helped me build a strong foundation in commerce while managing my family responsibilities."
     },
     {
       name: "Deepak Singh",
       course: "MA Political Science",
       university: "SMU",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1763102223/pritik_i2s3ch.jpg",
       text: "The MA program at SMU provided me with deep insights into political science. The online resources and faculty guidance were instrumental in my academic growth."
     }
   ];
@@ -239,7 +249,7 @@ const SMU = () => {
         .queens { font-family: 'Queens', serif; }
       `}</style>
       
-      <div className="queens overflow-x-hidden">
+      <div className="queens overflow-x-hidden text-lg md:text-xl lg:text-2xl">
         {/* Header */}
        <header className="w-full fixed bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 top-0 left-0 z-50">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -336,8 +346,14 @@ const SMU = () => {
                       </li>
                   ))}
               </ul>
+              <button 
+                    onClick={() => setOpenModal({ type: 'apply' })}
+                    className="w-full bg-gradient-to-r from-orange-500 to-[#f26722] hover:from-[#f26722] hover:to-orange-600 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                  >
+                    Apply Now
+                  </button>
           </aside>
-
+            
           <main className="flex-1 min-w-0 lg:pl-64 ">
             <div className="overflow-x-hidden pt-0">
        
@@ -396,6 +412,12 @@ const SMU = () => {
                                </li>
                              ))}
                            </ul>
+                           <button 
+                    onClick={() => setOpenModal({ type: 'apply' })}
+                    className="w-full bg-gradient-to-r from-orange-500 to-[#f26722] hover:from-[#f26722] hover:to-orange-600 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer "
+                  >
+                    Apply Now
+                  </button>
                          </motion.aside>
                        </>
                      )}
@@ -469,7 +491,7 @@ const SMU = () => {
                   
                   <button 
                     onClick={() => setOpenModal({ type: 'enquire' })}
-                    className="border-2 border-white/30 hover:border-white/50 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:bg-white/10 backdrop-blur-sm"
+                    className="border-2 border-white/30 hover:border-white/50 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:bg-white/10 backdrop-blur-sm cursor-pointer"
                   >
                     Download Brochure
                   </button>
@@ -483,7 +505,7 @@ const SMU = () => {
                   
                   <div className="grid grid-cols-2 gap-6">
                     {[
-                      { number: '25+', label: 'Years Excellence' },
+                      { number: '30+', label: 'Years Excellence' },
                       { number: '50K+', label: 'Students' },
                       { number: '90%', label: 'Satisfaction Rate' },
                       { number: '150+', label: 'Hiring Partners' }
@@ -518,6 +540,33 @@ const SMU = () => {
             </div>
           </div>
         </section>
+        <section id="smu-online" className="py-14 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-6">
+      Sikkim Manipal University Online (SMU Online)
+    </h2>
+
+    <p className="text-lg text-black-700 leading-relaxed text-center max-w-3xl mx-auto mb-10">
+      In today's digital world, learning is no longer limited to classrooms — and 
+      <span className="font-semibold text-black-700"> Sikkim Manipal University Online (SMU Online) </span>
+      is leading this transformation. Known for its quality education and strong industry 
+      connections, SMU Online offers UGC-approved online degrees designed for flexibility, 
+      affordability, and real-world career growth.
+    </p>
+
+    <p className="text-gray-700 leading-relaxed max-w-4xl mx-auto text-center">
+      Students across India can now earn globally recognized degrees such as the 
+      <span className="font-semibold"> Online MCom</span>, 
+      <span className="font-semibold"> Online BCom</span>, 
+      <span className="font-semibold"> Online MBA</span>, and 
+      <span className="font-semibold"> Online BBA</span> from Sikkim Manipal University — 
+      all from the comfort of their homes, without compromising on quality or learning experience.
+    </p>
+
+  </div>
+</section>
+
         <section  className="bg-white py-16 px-6 md:px-16 lg:px-24">
   <div className="max-w-5xl mx-auto">
     {/* Heading */}
@@ -529,7 +578,7 @@ const SMU = () => {
     {/* Content */}
     <div className="space-y-6 text-gray-700 text-lg leading-relaxed text-justify">
       <p>
-        <strong>Sikkim Manipal University Online (SMU Online)</strong> is one of India’s
+        <strong>Sikkim Manipal University Online (SMU Online)</strong> is one of India's
         leading UGC-approved online universities, offering high-quality degree programs
         that blend academic excellence with digital innovation. Established under the
         prestigious Sikkim Manipal University legacy, SMU Online has become a trusted name
@@ -537,15 +586,21 @@ const SMU = () => {
       </p>
 
       <p>
-        As a pioneer in online higher education, SMU Online empowers learners to pursue
-        globally recognized degrees while maintaining a balance between personal and
-        professional goals. With a strong focus on accessibility, affordability, and
-        academic quality, it delivers education that transcends geographical barriers.
+        Sikkim Manipal University Online (SMU Online) is part of the well-known Manipal Education Group, which has over 20 years of experience in higher education. The goal of SMU Online is to make quality education accessible to everyone through digital learning.
       </p>
+       
+       <p className="text-gray-700 leading-relaxed">
+         All programs — including BCom, MCom, and the Online MBA from Sikkim Manipal University — 
+         are designed in alignment with UGC guidelines and updated to meet modern industry requirements. 
+         The university's online learning platform provides a rich academic experience through live and 
+         recorded classes, interactive sessions, and practical case studies. Whether you are a student, 
+         a working professional, or someone restarting your education, Sikkim Manipal University Online 
+         offers the flexibility to learn at your own pace without compromising on quality or academic standards.
+       </p>
 
       <p>
         The university offers a wide range of UGC-entitled online programs such as
-        <strong> Online MBA, MCA, BBA, BCA,</strong> and <strong>BA</strong>, catering to
+        <strong> Online MBA, MCA, MCom, BCom,</strong> and <strong>BA</strong>, catering to
         the diverse needs of students and working professionals. Each program is crafted
         to meet evolving industry standards and ensure learners are job-ready upon
         graduation.
@@ -553,7 +608,7 @@ const SMU = () => {
 
       <p>
         Guided by the philosophy of{" "}
-        <span className="italic">“Learning Anytime, Anywhere”</span>, SMU Online integrates
+        <span className="italic">"Learning Anytime, Anywhere"</span>, SMU Online integrates
         live classes, interactive e-learning modules, AI-proctored assessments, and
         personalized academic support through an advanced Learning Management System (LMS).
       </p>
@@ -562,7 +617,7 @@ const SMU = () => {
         Recognized by <strong>UGC-DEB</strong> and accredited with <strong>NAAC A+</strong>,
         SMU Online maintains rigorous academic standards and a future-ready curriculum.
         Its commitment to quality, digital innovation, and student success places it among
-        India’s top online universities.
+        India's top online universities.
       </p>
 
       <p>
@@ -598,6 +653,12 @@ const SMU = () => {
         world.
       </p>
     </div>
+    <button 
+                    onClick={() => setOpenModal({ type: 'apply' })}
+                    className="w-full bg-gradient-to-r from-orange-500 to-[#f26722] hover:from-[#f26722] hover:to-orange-600 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
+                  >
+                    Apply Now
+                  </button>
   </div>
 </section>
 
@@ -648,6 +709,12 @@ const SMU = () => {
           students feel truly connected to a reputed academic institution.
         </p>
       </div>
+      <button 
+                    onClick={() => setOpenModal({ type: 'apply' })}
+                    className="w-full bg-gradient-to-r from-orange-500 to-[#f26722] hover:from-[#f26722] hover:to-orange-600 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
+                  >
+                    Apply Now
+                  </button>
     </div>
 
     {/* Right Images */}
@@ -729,7 +796,7 @@ const SMU = () => {
               {[
                 { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp', title: 'UGC Approved Online Degrees' },
                 { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp', title: 'AICTE Recognized Programs' },
-                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp', title: 'NAAC Accredited University' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1763124771/NAAC-A_g3pb34.webp', title: 'NAAC Accredited University' },
                 { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nirf_f5xen9.webp', title: 'Ranked Among Top Universities' },
                 { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327203/IIRF_lrhmji.png', title: 'Top private university in North East' },
                 { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327029/aiu_yfa2is.webp', title: 'Member of AIU' },
@@ -862,10 +929,16 @@ const SMU = () => {
 
       <p className="text-gray-700 text-lg leading-relaxed mt-8">
         <strong>Sikkim Manipal University Online</strong> provides flexible financial options including
-        <strong> EMI facilities, scholarships,</strong> and <strong>early-bird discounts</strong>.
+        <strong> EMI facilities, scholarships,</strong> and
         The transparent fee policy ensures students have a clear understanding of their total educational investment.
       </p>
     </div>
+    <button 
+    onClick={() => setOpenModal({ type: 'apply' })}
+    className="w-full bg-gradient-to-r from-orange-500 to-[#f26722] hover:from-[#f26722] hover:to-orange-600 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
+    >
+    Apply Now
+   </button>
   </div>
 </section>
 
@@ -878,7 +951,7 @@ const SMU = () => {
             {/* Stats Row */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 mb-14">
               {[
-                {value:'25+', label:'Years of academic\nexcellence and trust'},
+                {value:'30+', label:'Years of academic\nexcellence and trust'},
                 {value:'50k+', label:'Successful alumni\nacross the globe'},
                 {value:'90%', label:'Student satisfaction\nand success rate'},
                 {value:'150+', label:'Corporate partners for\nplacements and internships'}
@@ -1044,9 +1117,7 @@ const SMU = () => {
             Explore Online Courses
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Sikkim Manipal University Online offers a comprehensive portfolio of
-            UGC-entitled online degree programs, enabling learners to pursue
-            higher education from anywhere, at any time.
+            Sikkim Manipal University Online (SMU Online) offers a wide range of UGC-approved online degrees, allowing students to study from anywhere, anytime. With flexible learning, expert faculty, and industry-relevant curriculum, SMU Online helps learners build successful careers through recognized programs like the Online MBA from Sikkim Manipal University, Online BCom, Online BA, and Online MCA.
           </p>
         </div>
 
@@ -1057,7 +1128,9 @@ const SMU = () => {
           </h3>
 
           <div className="space-y-8">
-            <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+          
+            
+           <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
               <h4 className="text-xl font-semibold text-gray-800 mb-2">
                 1. Online Bachelor of Commerce (B.Com)
               </h4>
@@ -1065,7 +1138,6 @@ const SMU = () => {
              The online Bachelor of Commerce (BCom) from Sikkim Manipal University (SMU) is designed to help learners delve into the world of business and commerce. The industry aligned curriculum of this online BCom program equips learners with strong foundations in various levels of accounting such as financial, corporate accounting, cost, and management while covering other core areas such as taxation, HRM, investments, auditing, statistics, and mathematics. Delivered by experienced faculty through an AI-enabled platform, learners can access learning resources, live and recorded classes, discussion forums, e-libraries, AI-tutor, and quizzes from the comfort of their homes. By pursuing this program, learners can boost their career prospects across industries
               </p>
             </div>
-
             
 
             <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
@@ -1073,9 +1145,7 @@ const SMU = () => {
                 2. Online Bachelor of Arts (BA)
               </h4>
               <p className="text-gray-600 leading-relaxed">
-                The Online BA program nurtures critical thinking and communication
-                skills through diverse specializations in humanities and social
-                sciences, offering holistic intellectual development.
+                The Online BA from Sikkim Manipal University enhances communication, creativity, and critical thinking skills. With multiple specializations in humanities and social sciences, this program encourages holistic learning and personal growth.
               </p>
             </div>
           </div>
@@ -1093,12 +1163,9 @@ const SMU = () => {
                 1. Online Master of Business Administration (MBA)
               </h4>
               <p className="text-gray-600 leading-relaxed">
-                The flagship Online MBA from Sikkim Manipal University is among
-                the top online MBA programs in India. Designed for working
-                professionals, it offers specializations in Marketing, HR,
-                Finance, Data Analytics, and Operations Management. Students
-                benefit from practical case studies, live projects, and
-                mentor-driven learning experiences.
+                The Online MBA from Sikkim Manipal University is one of the best online MBA programs in India, ideal for working professionals aiming for career advancement.
+                Students can specialize in Marketing, HR, Finance, Data Analytics, or Operations Management. The program includes live projects, business simulations, and mentorship from industry experts, ensuring practical and career-focused learning.
+
               </p>
             </div>
 
@@ -1107,11 +1174,8 @@ const SMU = () => {
                 2. Online Master of Computer Applications (MCA)
               </h4>
               <p className="text-gray-600 leading-relaxed">
-                The Online MCA program prepares learners for advanced IT careers
-                in artificial intelligence, data analytics, and software
-                engineering. The curriculum emphasizes both technical depth and
-                managerial perspective.
-              </p>
+               The Online MCA from Sikkim Manipal University helps learners master advanced IT skills in software engineering, data analytics, and artificial intelligence. It blends technical knowledge with management insights — preparing students for leadership roles in technology and digital industries.
+           </p>
             </div>
              <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
               <h4 className="text-xl font-semibold text-gray-800 mb-2">
@@ -1135,10 +1199,9 @@ const SMU = () => {
         {/* Summary */}
         <div className="mt-12 text-center">
           <p className="text-gray-700 max-w-4xl mx-auto text-lg leading-relaxed">
-            Every online course at SMU Online integrates experiential learning,
-            real-world application, and continuous assessment. Learners can
-            personalize their academic journey through flexible schedules,
-            ensuring the best blend of professional and personal balance.
+            Every Sikkim Manipal University online degree emphasizes experiential learning, real-world application, and continuous assessment. Students can plan their study schedules based on personal and professional commitments.
+            With its UGC-approved online BCom, BA, MBA, and MCA programs, Sikkim Manipal University Online ensures that learners achieve both career growth and academic excellence — anytime, anywhere.
+
           </p>
         </div>
       </div>
@@ -1206,11 +1269,11 @@ const SMU = () => {
             },
             {
               title: "2. Wide Range of Online Programs",
-              desc: "SMU Online offers a comprehensive selection of online courses such as Online MBA, Online MCA, Online BBA, Online BCA, and Online BA, enabling students to choose programs that align with their professional aspirations. These UGC-approved online degrees are designed to match modern industry requirements.",
+              desc: "SMU Online offers a comprehensive selection of online courses such as Online MBA, Online MCA, Online BA, and Online BCom, enabling students to choose programs that align with their professional aspirations. These UGC-approved online degrees are designed to match modern industry requirements.",
             },
             {
               title: "3. Advanced Learning Management System (LMS)",
-              desc: "The university’s state-of-the-art LMS platform provides 24/7 access to lectures, assignments, e-books, and recorded sessions. It supports self-paced learning, enabling students to study flexibly while maintaining professional and personal balance.",
+              desc: "The university's state-of-the-art LMS platform provides 24/7 access to lectures, assignments, e-books, and recorded sessions. It supports self-paced learning, enabling students to study flexibly while maintaining professional and personal balance.",
             },
             {
               title: "4. Experienced Faculty and Industry Mentors",
@@ -1262,7 +1325,7 @@ const SMU = () => {
             },
             {
               title: "Empowering Working Professionals",
-              desc: "SMU Online programs are designed to enhance career prospects without interrupting job commitments. Whether it’s an Online MBA for managers, an Online MCA for IT professionals, or an Online BBA for business aspirants, flexibility is key.",
+              desc: "SMU Online programs are designed to enhance career prospects without interrupting job commitments. Whether it's an Online MBA for managers, an Online MCA for IT professionals, or an Online BBA for business aspirants, flexibility is key.",
             },
             {
               title: "Affordable Education with Global Standards",
@@ -1303,18 +1366,20 @@ const SMU = () => {
             structure, and global recognition makes it one of the most
             sought-after UGC-approved online universities in India.
           </p>
+          <p className="mb-4">There are many reasons why learners across India choose SMU Online. Every Sikkim Manipal University online degree is UGC-approved, valid, and carries the same value as a regular campus degree.
+             When you study programs like the Online MCom from Sikkim Manipal University or Online BCom from Sikkim Manipal University, you get recognized qualifications that are respected in both India and abroad.
+          </p>
           <p className="mb-4">
             By choosing SMU Online, students invest in a transformative journey
             that opens doors to professional advancement and lifelong success.
-            Whether pursuing an Online MBA, Online MCA, Online BBA, or Online
-            BCA, learners receive a globally recognized qualification that
+            Whether pursuing an Online MBA, Online MCA, Online BA, or Online
+            BCom, learners receive a globally recognized qualification that
             reflects both prestige and performance.
           </p>
           <p>
-            SMU Online continues to redefine distance education through
-            technology-driven innovation and a steadfast commitment to
-            excellence — making it the ideal choice for learners who aim to
-            build successful careers in today’s competitive world.
+           The MCom at Sikkim Manipal University is considered one of the best online MCom courses in India because it covers advanced topics in accounting, finance, and business analytics. The BCom at Sikkim Manipal University builds a strong base in business and finance with practical exposure and real-world assignments.
+           For management aspirants, the Online MBA from Sikkim Manipal University and BBA at Sikkim Manipal University focus on leadership, business strategy, and modern management skills. These programs are among the top online BBA and MBA courses in India.
+
           </p>
         </div>
       </div>
@@ -1347,7 +1412,93 @@ const SMU = () => {
             </div>
           </div>
         </section>
-       
+       <section className="w-full bg-white text-gray-800 py-12">
+  <div className="max-w-5xl mx-auto space-y-10 px-4">
+
+    {/* Legacy of Quality */}
+    <div>
+      <h2 className="text-2xl font-bold text-gray-900 mb-3">A Legacy of Quality and Trust</h2>
+      <p className="leading-relaxed">
+        SMU Online carries forward the trust and excellence of the Manipal Education Group, which has educated 
+        millions globally. Courses are designed by experienced teachers and industry experts to ensure they 
+        remain practical and up-to-date. Students gain access to digital libraries, 24/7 study materials, live 
+        discussions, and continuous mentor support. Whether you live in Delhi, Patna, Mumbai, or abroad, you can 
+        earn a UGC-approved online degree from Sikkim Manipal University that is recognized worldwide. This 
+        strong reputation makes SMU Online one of the top choices for online BCom, online MCom, online MBA, and 
+        BBA programs in India.
+      </p>
+    </div>
+
+    {/* Empowering Learners */}
+    <div>
+      <h2 className="text-2xl font-bold text-gray-900 mb-3">Empowering Learners for the Future</h2>
+      <p className="leading-relaxed">
+        Today's workplaces demand digital skills, business understanding, and financial knowledge. The Online 
+        MCom and Online BCom programs from Sikkim Manipal University are designed to prepare learners with 
+        exactly these skills. The curriculum integrates case studies, interactive assessments, and live 
+        industry projects to ensure students gain hands-on experience. Graduates find strong career 
+        opportunities in banking, auditing, taxation, and finance. Meanwhile, the Online MBA and BBA programs 
+        help build managerial and entrepreneurial confidence for leadership roles.
+      </p>
+    </div>
+
+    {/* Recognition and Global Acceptance */}
+    <div>
+      <h2 className="text-2xl font-bold text-gray-900 mb-3">Recognition and Global Acceptance</h2>
+      <p className="leading-relaxed">
+        A major benefit of studying at Sikkim Manipal University Online is the global acceptance of its degrees. 
+        All programs — including Online MCom, Online BCom, Online MBA, and BBA — are UGC-approved and hold the 
+        same value as on-campus programs. Employers and universities worldwide recognize the academic standards 
+        of SMU Online, giving learners an advantage in both career opportunities and higher education.
+      </p>
+    </div>
+
+    {/* Technology Driven Learning */}
+    <div>
+      <h2 className="text-2xl font-bold text-gray-900 mb-3">Technology-Driven Learning Experience</h2>
+      <p className="leading-relaxed mb-4">
+        SMU Online uses advanced digital tools to deliver an interactive and seamless learning experience. 
+        Students benefit from:
+      </p>
+      <ul className="list-disc ml-6 space-y-1 text-gray-700">
+        <li>Live virtual classes</li>
+        <li>AI-based assessments</li>
+        <li>Progress tracking</li>
+        <li>24/7 access to e-resources and recorded lectures</li>
+      </ul>
+      <p className="leading-relaxed mt-3">
+        Every online degree provides access to e-books, discussion forums, doubt-clearing sessions, and 
+        placement guidance — ensuring an engaging and supportive learning journey.
+      </p>
+    </div>
+
+    {/* Affordable & Flexible */}
+    <div>
+      <h2 className="text-2xl font-bold text-gray-900 mb-3">Affordable and Flexible Education</h2>
+      <p className="leading-relaxed">
+        Sikkim Manipal University Online ensures education remains both flexible and affordable. Programs like 
+        the Online MCom, Online BCom, and Online MBA come with easy EMI plans and reasonable fees. Students can 
+        balance academics with work or personal commitments, making SMU Online a preferred choice for working 
+        professionals. This approach has helped SMU rank among India's best universities for online MCom, online 
+        BBA programs, and UGC-approved online degrees.
+      </p>
+    </div>
+
+    {/* Career Focus */}
+    <div>
+      <h2 className="text-2xl font-bold text-gray-900 mb-3">Building Careers, Not Just Degrees</h2>
+      <p className="leading-relaxed">
+        At SMU Online, education goes beyond academics — it focuses on career development. Students receive 
+        career counseling, resume-building support, mock interview sessions, and participate in virtual job 
+        fairs. Graduates from Online BCom and Online MCom programs secure roles in top industries such as 
+        banking, finance, and consulting. With a strong emphasis on employability, Sikkim Manipal University 
+        Online ensures students gain not just a degree, but a pathway to a successful and rewarding career.
+      </p>
+    </div>
+
+  </div>
+</section>
+
         {/* Admission Procedure */}
         <section id="admission-process" className="relative py-20 bg-white">
           {/* Decorative Blobs */}
@@ -1432,6 +1583,14 @@ const SMU = () => {
               </div>
             </motion.div>
           </div>
+          <div className="mt-10">
+          <button 
+                    onClick={() => setOpenModal({ type: 'apply' })}
+                    className="w-full bg-gradient-to-r from-orange-500 to-[#f26722] hover:from-[#f26722] hover:to-orange-600 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
+                  >
+                    Apply Now
+                  </button>
+            </div>      
         </section>
 
         {/* Certificate Section */}
@@ -1467,91 +1626,160 @@ const SMU = () => {
           </div>
         </section>
          
-       <section id="key-highlights" className="bg-gradient-to-b from-white via-blue-50 to-white py-16 px-6 md:px-16">
-  <div className="max-w-6xl mx-auto text-center">
-    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-      Key Highlights
-    </h2>
-    <p className="text-gray-600 mb-10 text-lg max-w-3xl mx-auto">
-      Sikkim Manipal University Online stands out for its innovative approach to digital higher education.
-      The following features define its reputation and success:
-    </p>
-  </div>
+       <section id="key-highlights" className="w-full bg-white py-14 text-gray-800">
+  <div className="max-w-6xl mx-auto px-4">
 
-  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
-    {[
-      {
-        title: "UGC-Approved Online Degrees",
-        desc: "All programs are recognized by UGC-DEB, ensuring credibility and acceptance in government and private sectors."
-      },
-      {
-        title: "NAAC A+ Accredited University",
-        desc: "A testament to academic excellence and quality assurance."
-      },
-      {
-        title: "State-of-the-Art LMS",
-        desc: "Offers 24/7 access to lectures, e-books, quizzes, and recorded sessions."
-      },
-      {
-        title: "Live & Recorded Classes",
-        desc: "Students can attend live faculty-led sessions or watch recordings at their convenience."
-      },
-      {
-        title: "AI-Proctored Examinations",
-        desc: "Transparent and secure online examination process."
-      },
-      {
-        title: "Global Alumni Network",
-        desc: "50,000+ graduates working in multinational corporations across the globe."
-      },
-      {
-        title: "Dedicated Placement Assistance",
-        desc: "Career counseling, virtual job fairs, and resume support."
-      },
-      {
-        title: "Flexible Fee Options",
-        desc: "Installment and EMI facilities for affordability."
-      },
-      {
-        title: "Industry-Integrated Curriculum",
-        desc: "Designed in collaboration with experts from IBM, TCS, and Deloitte."
-      },
-    ].map((item, index) => (
-      <div
-        key={index}
-        className="flex items-start bg-white shadow-md rounded-2xl p-5 hover:shadow-xl transition-all border border-gray-100"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 mt-1 mr-3 text-blue-600 flex-shrink-0"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth="2"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M9 12l2 2l4-4m6 2a9 9 0 11-18 0a9 9 0 0118 0z"
-          />
-        </svg>
-        <p className="text-gray-700 leading-relaxed">
-          <strong>{item.title}:</strong> {item.desc}
+    {/* Heading */}
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-8">
+      Key Highlights of Sikkim Manipal University Online (SMU Online)
+    </h2>
+
+    {/* Intro Paragraph */}
+    <p className="text-lg leading-relaxed text-gray-700 mb-10 text-center">
+      Sikkim Manipal University Online (SMU Online) is one of India's leading universities 
+      offering UGC-approved online degrees. With a perfect blend of quality education, modern 
+      technology, and global recognition, SMU Online empowers learners through flexible and 
+      career-focused programs such as Online MCom, Online BCom, Online MBA, and BBA.  
+      Here's why SMU Online is trusted by students across India and abroad:
+    </p>
+
+    {/* Highlights List */}
+    <div className="space-y-6">
+
+      {/* Point 1 */}
+      <div className="flex items-start gap-3">
+        <span className="text-2xl">🎓</span>
+        <p className="leading-relaxed">
+          <strong>UGC-Approved Online Degrees:</strong>  
+          All programs — including MCom, BCom, BBA, and Online MBA — are approved by UGC-DEB and 
+          recognized by both government and private sectors.
         </p>
       </div>
-    ))}
-  </div>
 
-  <div className="mt-12 text-center">
-    <p className="text-gray-700 text-lg max-w-3xl mx-auto font-medium">
-      SMU Online combines quality academics with real-world exposure — ensuring every learner 
-      graduates <span className="text-blue-700 font-semibold">career-ready</span> and 
-      <span className="text-blue-700 font-semibold"> globally competent</span>.
+      {/* Point 2 */}
+      <div className="flex items-start gap-3">
+        <span className="text-2xl">🏅</span>
+        <p className="leading-relaxed">
+          <strong>NAAC A+ Accredited University:</strong>  
+          SMU holds an A+ grade from NAAC, ensuring high-quality academics and globally accepted standards.
+        </p>
+      </div>
+
+      {/* Point 3 */}
+      <div className="flex items-start gap-3">
+        <span className="text-2xl">💻</span>
+        <p className="leading-relaxed">
+          <strong>Advanced Learning Management System (LMS):</strong>  
+          Students get 24/7 access to e-books, quizzes, lectures, and recorded sessions through a modern LMS.
+        </p>
+      </div>
+
+      {/* Point 4 */}
+      <div className="flex items-start gap-3">
+        <span className="text-2xl">🕒</span>
+        <p className="leading-relaxed">
+          <strong>Live & Recorded Classes:</strong>  
+          Attend live interactive classes or watch recordings anytime — ideal for working professionals.
+        </p>
+      </div>
+
+      {/* Point 5 */}
+      <div className="flex items-start gap-3">
+        <span className="text-2xl">🧠</span>
+        <p className="leading-relaxed">
+          <strong>AI-Proctored Examinations:</strong>  
+          Secure and transparent online exams using advanced AI technology.
+        </p>
+      </div>
+
+      {/* Point 6 */}
+      <div className="flex items-start gap-3">
+        <span className="text-2xl">🌍</span>
+        <p className="leading-relaxed">
+          <strong>Global Alumni Network:</strong>  
+          Join a worldwide community of 50,000+ alumni working in top multinational companies.
+        </p>
+      </div>
+
+      {/* Point 7 */}
+      <div className="flex items-start gap-3">
+        <span className="text-2xl">💼</span>
+        <p className="leading-relaxed">
+          <strong>Dedicated Placement Assistance:</strong>  
+          Career counseling, virtual job fairs, and resume-building support to make students job-ready.
+        </p>
+      </div>
+
+      {/* Point 8 */}
+      <div className="flex items-start gap-3">
+        <span className="text-2xl">💳</span>
+        <p className="leading-relaxed">
+          <strong>Flexible Fee Options:</strong>  
+          Affordable fees with easy EMI options for programs like Online BCom and Online MCom.
+        </p>
+      </div>
+
+      {/* Point 9 */}
+      <div className="flex items-start gap-3">
+        <span className="text-2xl">⚙️</span>
+        <p className="leading-relaxed">
+          <strong>Industry-Integrated Curriculum:</strong>  
+          Courses developed with experts from IBM, TCS, and Deloitte to match real-world business needs.
+        </p>
+      </div>
+
+    </div>
+
+    {/* Closing Statement */}
+    <p className="text-lg leading-relaxed text-gray-700 mt-10 text-center">
+      SMU Online blends academic excellence with global exposure and modern digital learning. 
+      Whether you choose BBA, MBA, BCom, or MCom — you graduate with confidence, industry-ready skills, 
+      and a degree accepted worldwide.
     </p>
+
   </div>
 </section>
 
-       <section id="placement-record" className="bg-gradient-to-b from-white via-gray-50 to-white py-16 px-6 md:px-16">
+
+   
+        {/* Professional FAQ Section */}
+        <section id="faqs" className="py-20 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
+                Frequently Asked <span className="bg-gradient-to-r from-orange-500 to-[#f26722] bg-clip-text text-transparent">Questions</span>
+              </h2>
+              <p className="text-xl text-gray-600">
+                Everything you need to know about Sikkim Manipal University Online Programs
+              </p>
+            </div>
+            
+            <div className="space-y-6">
+              {faqData.map((faq, index) => (
+                <div
+                  key={index}
+                  className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+                >
+                  <button
+                    onClick={() => toggleFAQ(index)}
+                    className="w-full text-left px-8 py-6 bg-gradient-to-r from-gray-50 to-gray-100 hover:from-orange-50 hover:to-orange-100 flex justify-between items-center font-semibold text-gray-800 transition-all duration-300 group-hover:text-orange-700 text-lg"
+                   >
+                    <span className="pr-8">{faq.question}</span>
+                    <div className="flex-shrink-0 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:bg-[#f26722] group-hover:text-white transition-all duration-300">
+                      <span className="text-xl font-bold">{openIndex === index ? "−" : "+"}</span>
+                    </div>
+                  </button>
+                  {openIndex === index && (
+                    <div className="px-8 py-6 text-gray-700 bg-white border-t border-gray-100 animate-[fadeIn_0.3s_ease-in-out]">
+                      <p className="text-lg leading-relaxed">{faq.answer}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+             <section id="placement-record" className="bg-gradient-to-b from-white via-gray-50 to-white py-16 px-6 md:px-16">
   <div className="max-w-6xl mx-auto">
     {/* Placement Record Section */}
     <div className="text-center mb-14">
@@ -1591,7 +1819,7 @@ const SMU = () => {
         Graduates of <span className="font-semibold text-black">Sikkim Manipal University Online</span> 
         are employed across <span className="font-semibold text-black">India, the Middle East, Southeast Asia,</span> 
         and <span className="font-semibold text-black">Europe</span> — a testament to the global recognition 
-        of SMU’s online degrees.
+        of SMU's online degrees.
       </p>
     </div>
 
@@ -1617,14 +1845,31 @@ const SMU = () => {
                 <div key={index} className="group">
                   <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
                     <div className="flex items-start gap-6">
-                      {/* Avatar */}
-                      <div className="flex-shrink-0">
-                        <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-[#f26722] rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
-                          {testimonial.name.split(' ').map(n => n[0]).join('')}
+                      {/* Left Column: Avatar and Details */}
+                      <div className="flex-shrink-0 w-40 text-center">
+                        <div className="relative w-32 h-32 mx-auto">
+                          {testimonial.image ? (
+                            <Image
+                              src={testimonial.image}
+                              alt={testimonial.name}
+                              fill
+                              className="rounded-full object-cover shadow-lg group-hover:scale-110 transition-transform duration-300"
+                            />
+                          ) : (
+                            <div className="w-full h-full bg-gradient-to-br from-orange-500 to-[#f26722] rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
+                              {testimonial.name.split(' ').map(n => n[0]).join('')}
+                            </div>
+                          )}
+                        </div>
+                        <div className="mt-4">
+                          <h4 className="font-bold text-gray-900 text-lg">{testimonial.name}</h4>
+                          <p className="text-[#f26722] font-semibold text-sm">
+                            {testimonial.course}
+                          </p>
                         </div>
                       </div>
                       
-                      {/* Content */}
+                      {/* Right Column: Quote */}
                       <div className="flex-1">
                         <div className="mb-4"> 
                           <svg className="w-8 h-8 text-[#f26722] mb-4" fill="currentColor" viewBox="0 0 24 24">
@@ -1634,54 +1879,9 @@ const SMU = () => {
                             "{testimonial.text}"
                           </p>
                         </div>
-                        
-                        <div className="border-t border-gray-100 pt-4">
-                          <h4 className="font-bold text-gray-900 text-xl">{testimonial.name}</h4>
-                          <p className="text-[#f26722] font-semibold text-lg">
-                            {testimonial.course}, {testimonial.university}
-                          </p>
-                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Professional FAQ Section */}
-        <section id="faqs" className="py-20 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
-                Frequently Asked <span className="bg-gradient-to-r from-orange-500 to-[#f26722] bg-clip-text text-transparent">Questions</span>
-              </h2>
-              <p className="text-xl text-gray-600">
-                Everything you need to know about Sikkim Manipal University Online Programs
-              </p>
-            </div>
-            
-            <div className="space-y-6">
-              {faqData.map((faq, index) => (
-                <div
-                  key={index}
-                  className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
-                >
-                  <button
-                    onClick={() => toggleFAQ(index)}
-                    className="w-full text-left px-8 py-6 bg-gradient-to-r from-gray-50 to-gray-100 hover:from-orange-50 hover:to-orange-100 flex justify-between items-center font-semibold text-gray-800 transition-all duration-300 group-hover:text-orange-700 text-lg"
-                   >
-                    <span className="pr-8">{faq.question}</span>
-                    <div className="flex-shrink-0 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:bg-[#f26722] group-hover:text-white transition-all duration-300">
-                      <span className="text-xl font-bold">{openIndex === index ? "−" : "+"}</span>
-                    </div>
-                  </button>
-                  {openIndex === index && (
-                    <div className="px-8 py-6 text-gray-700 bg-white border-t border-gray-100 animate-[fadeIn_0.3s_ease-in-out]">
-                      <p className="text-lg leading-relaxed">{faq.answer}</p>
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
@@ -1814,9 +2014,15 @@ const SMU = () => {
 
     <div className="text-center mt-12">
       <p className="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed">
-        SMU Online’s reputation as a top online university in India continues to grow,
+        SMU Online's reputation as a top online university in India continues to grow,
         making it a preferred choice for learners seeking career-oriented online education.
       </p>
+       <button 
+                    onClick={() => setOpenModal({ type: 'apply' })}
+                    className="w-full bg-gradient-to-r from-orange-500 to-[#f26722] hover:from-[#f26722] hover:to-orange-600 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
+                  >
+                    Apply Now
+                  </button>
     </div>
 
     {/* Conclusion Section */}
@@ -1830,10 +2036,10 @@ const SMU = () => {
         assistance, it empowers learners to pursue education without boundaries.
       </p>
       <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-        Whether it’s an <span className="font-semibold text-black-700">Online MBA</span>, 
+        Whether it's an <span className="font-semibold text-black-700">Online MBA</span>, 
         <span className="font-semibold text-black-700"> Online MCA</span>, 
-        <span className="font-semibold text-black-700"> Online BBA</span>, or 
-        <span className="font-semibold text-black-700"> Online BCA</span>, SMU Online ensures you gain academic excellence,
+        <span className="font-semibold text-black-700"> Online BA</span>, or 
+        <span className="font-semibold text-black-700"> Online BCom</span>, SMU Online ensures you gain academic excellence,
         flexibility, and career readiness — all under one trusted name.
       </p>
       <p className="text-gray-800 text-lg font-medium leading-relaxed">

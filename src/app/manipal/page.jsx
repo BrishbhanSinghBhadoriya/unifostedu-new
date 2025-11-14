@@ -629,18 +629,18 @@ useEffect(() => {
         Welcome to <span className="text-orange-600">Manipal University Jaipur Online</span>
       </h2>
       <p className="text-base sm:text-lg text-black-600 max-w-4xl mx-auto leading-relaxed px-2">
-  Welcome to  Manipal University Jaipur Online (Manipal Online) , building on over 70 years of Manipal's educational excellence to offer the 
-     best online degree in Jaipur . Designed for working professionals, recent graduates, and lifelong learners, 
-  Manipal Online provides a wide range of  recognized and career-oriented online degree programs .
-  Whether you are searching for an  online MBA with Manipal  or exploring the 
-    best online degree in Jaipur , our programs deliver career-driven learning with real-world projects and flexible study options — ideal for students balancing work and education.
+  Welcome to <strong>Manipal University Jaipur Online (Manipal Online)</strong>, building on over 70 years of Manipal's educational excellence to offer the 
+  <strong>best online degree in Jaipur</strong>. Designed for working professionals, recent graduates, and lifelong learners, 
+  Manipal Online provides a wide range of <strong>recognized and career-oriented online degree programs</strong>.
+  Whether you are searching for an <strong>online MBA with Manipal</strong> or exploring the 
+  <strong>best online degree in Jaipur</strong>, our programs deliver career-driven learning with real-world projects and flexible study options — ideal for students balancing work and education.
 </p>
 
 <p className="text-base sm:text-lg text-black-600 max-w-4xl mx-auto leading-relaxed px-2 mt-4">
-   A Trusted Platform for Online Learning <br />
-   Online Manipal (Manipal Online)  serves as the official platform presenting Manipal's digital degrees, 
-  delivered by  Manipal University Jaipur  and affiliated Manipal institutions. 
-  From  online MBA programs  to a variety of undergraduate and postgraduate courses, this platform stands out 
+  <strong>A Trusted Platform for Online Learning</strong><br />
+  <strong>Online Manipal (Manipal Online)</strong> serves as the official platform presenting Manipal's digital degrees, 
+  delivered by <strong>Manipal University Jaipur</strong> and affiliated Manipal institutions. 
+  From <strong>online MBA programs</strong> to a variety of undergraduate and postgraduate courses, this platform stands out 
   as a leading answer for learners searching for <em>"online degree near me"</em> or <em>"online MBA near me."</em> 
   Each program page clearly outlines specializations, duration, fees, and learning outcomes — ensuring transparency and 
   confidence for every learner's educational journey.
@@ -657,7 +657,7 @@ useEffect(() => {
               <span className="text-orange-600 text-sm">✓</span>
             </div>
             <p className="text-gray-700">
-               Fresh Graduates:  Exploring  online MBA in India for freshers  to kickstart your career
+              <strong>Fresh Graduates:</strong> Exploring <strong>online MBA in India for freshers</strong> to kickstart your career
             </p>
           </div>
           <div className="flex items-start gap-3">
@@ -665,7 +665,7 @@ useEffect(() => {
               <span className="text-orange-600 text-sm">✓</span>
             </div>
             <p className="text-gray-700">
-               Working Professionals:  Looking for  executive MBA online India  to accelerate your career growth
+              <strong>Working Professionals:</strong> Looking for <strong>executive MBA online India</strong> to accelerate your career growth
             </p>
           </div>
           <div className="flex items-start gap-3">
@@ -673,7 +673,7 @@ useEffect(() => {
               <span className="text-orange-600 text-sm">✓</span>
             </div>
             <p className="text-gray-700">
-               Location Flexible:  Whether in  Mumbai, Bangalore, Chennai , or anywhere across India
+              <strong>Location Flexible:</strong> Whether in <strong>Mumbai, Bangalore, Chennai</strong>, or anywhere across India
             </p>
           </div>
           <div className="flex items-start gap-3">
@@ -681,21 +681,21 @@ useEffect(() => {
               <span className="text-orange-600 text-sm">✓</span>
             </div>
             <p className="text-gray-700">
-               No Entrance Exam:  Seeking flexibility with  online MBA without entrance exam  options
+              <strong>No Entrance Exam:</strong> Seeking flexibility with <strong>online MBA without entrance exam</strong> options
             </p>
           </div>
         </div>
         
         <div className="mt-6">
           <p className="text-gray-700 mb-4">
-            If you are a graduate exploring  online MBA in India for freshers  or a working professional looking for an 
-             executive MBA online India  to fasten your career, MUJ Online provides a supportive environment. 
+            If you are a graduate exploring <strong>online MBA in India for freshers</strong> or a working professional looking for an 
+            <strong>executive MBA online India</strong> to fasten your career, MUJ Online provides a supportive environment. 
             Your growth story starts with us.
           </p>
           <p className="text-gray-700">
-            Maybe you are searching for an  online MBA in India in Mumbai ,  online MBA in India in Bangalore , 
-            or  online MBA in India in Chennai . You may be seeking the flexibility to learn at your own pace of an 
-             online MBA without entrance exam  or comparing  distance learning universities India  to find the best fit. 
+            Maybe you are searching for an <strong>online MBA in India in Mumbai</strong>, <strong>online MBA in India in Bangalore</strong>, 
+            or <strong>online MBA in India in Chennai</strong>. You may be seeking the flexibility to learn at your own pace of an 
+            <strong>online MBA without entrance exam</strong> or comparing <strong>distance learning universities India</strong> to find the best fit. 
             Wherever you are, and whatever your specific needs, Manipal University Jaipur is here for your help.
           </p>
         </div>
@@ -705,41 +705,41 @@ useEffect(() => {
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Academic Portfolio: Your Pathway to Specialization</h3>
         <div className="space-y-4">
           <p className="text-sm text-gray-600 mb-4">
-            Our programs stands out when you  compare online courses in India , offering a perfect blend of academic excellence and real–world relevance. 
-            Unlike other  online courses in India , our programs are structured to ensure seamless integration between conceptual understanding and hands-on learning.
+            Our programs stands out when you <strong>compare online courses in India</strong>, offering a perfect blend of academic excellence and real–world relevance. 
+            Unlike other <strong>online courses in India</strong>, our programs are structured to ensure seamless integration between conceptual understanding and hands-on learning.
           </p>
           
           <div>
             <h4 className="font-bold text-gray-900 mb-2">📊 Business & Management</h4>
             <p className="text-sm text-gray-600">
-              Manipal University Jaipur online offers one of the top  online MBA programs in India , which is designed for learners whose aim is to lead in today's competitive business world. 
-              Our  MBA Online in India  enhances innovation, leadership, and strategic decision-making through Industry-driven courses. 
-              For professionals searching advancement in careers, our  online MBA for working professionals  and  Executive MBA online India  programs provide the flexibility to balance work and study while developing high-impact management skills.
+              Manipal University Jaipur online offers one of the top <strong>online MBA programs in India</strong>, which is designed for learners whose aim is to lead in today's competitive business world. 
+              Our <strong>MBA Online in India</strong> enhances innovation, leadership, and strategic decision-making through Industry-driven courses. 
+              For professionals searching advancement in careers, our <strong>online MBA for working professionals</strong> and <strong>Executive MBA online India</strong> programs provide the flexibility to balance work and study while developing high-impact management skills.
             </p>
           </div>
           
           <div>
             <h4 className="font-bold text-gray-900 mb-2">💻 Technology & Data Science</h4>
             <p className="text-sm text-gray-600">
-              In an era driven by data and automation, our  online data science course India  and  AI and ML certification India  are perfect for those looking to build expertise in high-growth fields. 
-              These programs are ideal for both  freshers  and  working professionals  in tech.
+              In an era driven by data and automation, our <strong>online data science course India</strong> and <strong>AI and ML certification India</strong> are perfect for those looking to build expertise in high-growth fields. 
+              These programs are ideal for both <strong>freshers</strong> and <strong>working professionals</strong> in tech.
             </p>
           </div>
           
           <div>
             <h4 className="font-bold text-gray-900 mb-2">🎨 Digital Skills & Development</h4>
             <p className="text-sm text-gray-600">
-              For creatives and strategists, our  digital marketing certification online  provides a comprehensive toolkit for the digital landscape. 
-              Similarly, our  certificate in web development  equips you with the skills to build the web of tomorrow.
+              For creatives and strategists, our <strong>digital marketing certification online</strong> provides a comprehensive toolkit for the digital landscape. 
+              Similarly, our <strong>certificate in web development</strong> equips you with the skills to build the web of tomorrow.
             </p>
           </div>
         </div>
 
         <div className="mt-6">
           <p className="text-xs text-gray-600 mb-4">
-            Before you decide, we encourage you to  download MBA brochure India ,  get course brochure  for our  AI and ML certification India , 
-            or  download course guide  for our  digital marketing certification online . This will help you  compare course fees online , 
-            review the  course syllabus PDF download , and make an informed choice.
+            Before you decide, we encourage you to <strong>download MBA brochure India</strong>, <strong>get course brochure</strong> for our <strong>AI and ML certification India</strong>, 
+            or <strong>download course guide</strong> for our <strong>digital marketing certification online</strong>. This will help you <strong>compare course fees online</strong>, 
+            review the <strong>course syllabus PDF download</strong>, and make an informed choice.
           </p>
         </div>
 
@@ -762,103 +762,171 @@ useEffect(() => {
   </div>
 </section>
 {/* Why Choose Section */}
-<section className="py-12 bg-gradient-to-br from-orange-50 via-white to-yellow-50 border-t border-orange-100">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-12">
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-        Why Choose <span className="text-orange-500">Manipal Online?</span>
-      </h2>
-      <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto font-medium">
-        Your path to an accredited, industry-recognized degree, with the best of digital learning and career support. Every detail below helps you succeed.
-      </p>
-    </div>
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-      <div className="bg-white rounded-2xl shadow-lg border border-orange-100 p-7 flex flex-col">
-        <div className="flex items-center gap-3 mb-3"><FaCertificate className="text-2xl text-orange-500" /><h3 className="text-xl font-semibold text-gray-900">1. Accredited, Respected Degrees</h3></div>
-        <p className="text-gray-700">
-           Manipal Online  degrees are  UGC-entitled  and backed by  Manipal University Jaipur (MUJ)  — a  NAAC A+ accredited  institution. This recognition positions Manipal among the  best online degree in Jaipur  options for quality and credibility. If you are searching for <em>"top college in Jaipur"</em>, institutional accreditation makes  Manipal Online  a trusted choice for long-term career growth.
+<section className="py-10 bg-gray-50">
+  <div className="max-w-6xl mx-auto px-4">
+    <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800 text-center mb-8">
+      Why Choose Manipal Online?
+    </h2>
+
+    <div className="space-y-8 text-gray-600 text-base sm:text-lg leading-relaxed">
+
+      <div>
+        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
+          1. Accredited, Respected Degrees
+        </h3>
+        <p>
+          <strong>Manipal Online</strong> degrees are <strong>UGC-entitled</strong> and backed by 
+          <strong>Manipal University Jaipur (MUJ)</strong> — a <strong>NAAC A+ accredited</strong> institution. 
+          This recognition positions Manipal among the <strong>best online degree in Jaipur</strong> options for quality and credibility. 
+          If you are searching for <em>"top college in Jaipur"</em>, institutional accreditation makes 
+          <strong>Manipal Online</strong> a trusted choice for long-term career growth.
         </p>
       </div>
-      <div className="bg-white rounded-2xl shadow-lg border border-orange-100 p-7 flex flex-col">
-        <div className="flex items-center gap-3 mb-3"><FaBriefcase className="text-2xl text-emerald-500" /><h3 className="text-xl font-semibold text-gray-900">2. Career-Driven, Industry-Aligned Curriculum</h3></div>
-        <p className="text-gray-700">
-          The  online MBA with Manipal  is designed with input from industry leaders and offers immediate workplace relevance. With specializations in  Digital Marketing, Business Analytics, Finance, Healthcare Management, and IT & Fintech , learners can tailor their studies to market needs. Those exploring <em>"online MBA near me"</em> will find that Manipal's case-based learning and applied projects enhance real-world employability.
+
+      <div>
+        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
+          2. Career-Driven, Industry-Aligned Curriculum
+        </h3>
+        <p>
+          The <strong>online MBA with Manipal</strong> is designed with input from industry leaders and offers 
+          immediate workplace relevance. With specializations in <strong>Digital Marketing, Business Analytics, Finance, 
+          Healthcare Management, and IT & Fintech</strong>, learners can tailor their studies to market needs. 
+          Those exploring <em>"online MBA near me"</em> will find that Manipal's case-based learning and applied projects 
+          enhance real-world employability.
         </p>
       </div>
-      <div className="bg-white rounded-2xl shadow-lg border border-orange-100 p-7 flex flex-col">
-        <div className="flex items-center gap-3 mb-3"><FaStar className="text-2xl text-yellow-500" /><h3 className="text-xl font-semibold text-gray-900">3. Flexible Learning that Fits Busy Lives</h3></div>
-        <p className="text-gray-700">
-          Flexibility is one of the main reasons learners search <em>"online degree near me."</em>  Manipal Online  combines asynchronous video lectures, live interactive sessions, recorded classes, and hands-on assignments — allowing learners to balance work, study, and personal life. Programs like the  online BBA  and  online MBA  make it easy for professionals to pursue top-tier education without relocating.
+
+      <div>
+        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
+          3. Flexible Learning that Fits Busy Lives
+        </h3>
+        <p>
+          Flexibility is one of the main reasons learners search <em>"online degree near me."</em> 
+          <strong>Manipal Online</strong> combines asynchronous video lectures, live interactive sessions, 
+          recorded classes, and hands-on assignments — allowing learners to balance work, study, and personal life. 
+          Programs like the <strong>online BBA</strong> and <strong>online MBA</strong> make it easy for professionals 
+          to pursue top-tier education without relocating.
         </p>
       </div>
-      <div className="bg-white rounded-2xl shadow-lg border border-orange-100 p-7 flex flex-col">
-        <div className="flex items-center gap-3 mb-3"><FaUserTie className="text-2xl text-blue-600" /><h3 className="text-xl font-semibold text-gray-900">4. Experienced Faculty and Industry Mentors</h3></div>
-        <p className="text-gray-700">
-          Courses are led by academic experts and industry mentors who bring real-world experience to every class. Whether pursuing an  online BBA  or the  online MBA with Manipal , students benefit from updated curricula that remain relevant and industry-focused.
+
+      <div>
+        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
+          4. Experienced Faculty and Industry Mentors
+        </h3>
+        <p>
+          Courses are led by academic experts and industry mentors who bring real-world experience to every class. 
+          Whether pursuing an <strong>online BBA</strong> or the <strong>online MBA with Manipal</strong>, 
+          students benefit from updated curricula that remain relevant and industry-focused.
         </p>
       </div>
-      <div className="bg-white rounded-2xl shadow-lg border border-orange-100 p-7 flex flex-col">
-        <div className="flex items-center gap-3 mb-3"><FaClipboardCheck className="text-2xl text-purple-600" /><h3 className="text-xl font-semibold text-gray-900">5. Strong Career Services and Networking</h3></div>
-        <p className="text-gray-700">
-           Manipal Online  supports learners through career guidance, placement preparation, interview training, and access to a strong alumni network. These services help students become  job-ready and industry-connected  from day one.
+
+      <div>
+        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
+          5. Strong Career Services and Networking
+        </h3>
+        <p>
+          <strong>Manipal Online</strong> supports learners through career guidance, placement preparation, 
+          interview training, and access to a strong alumni network. These services help students become 
+          <strong>job-ready and industry-connected</strong> from day one.
         </p>
       </div>
-      <div className="bg-white rounded-2xl shadow-lg border border-orange-100 p-7 flex flex-col">
-        <div className="flex items-center gap-3 mb-3"><FaLaptop className="text-2xl text-indigo-500" /><h3 className="text-xl font-semibold text-gray-900">6. Technology-Enabled, Applied Learning</h3></div>
-        <p className="text-gray-700">
-          Learners gain hands-on experience through  virtual labs, live projects, group assignments, and simulations . This approach ensures practical understanding and real-world application across every online degree offered by Manipal Online.
+
+      <div>
+        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
+          6. Technology-Enabled, Applied Learning
+        </h3>
+        <p>
+          Learners gain hands-on experience through <strong>virtual labs, live projects, group assignments, 
+          and simulations</strong>. This approach ensures practical understanding and real-world application 
+          across every online degree offered by Manipal Online.
         </p>
       </div>
-      <div className="bg-white rounded-2xl shadow-lg border border-orange-100 p-7 flex flex-col">
-        <div className="flex items-center gap-3 mb-3"><FaBookOpen className="text-2xl text-pink-500" /><h3 className="text-xl font-semibold text-gray-900">Programs and Pathways: From BBA to MBA</h3></div>
-        <p className="text-gray-700">
-           Manipal Online  offers programs across management, commerce, computing, and the arts. Its flagship  online MBA  is a 24-month career-focused degree, while undergraduate programs like the  online BBA  and  BCA  equip learners with strong business and technical foundations — making Manipal a top choice for the <em>best online degree in Jaipur</em>.
+
+      <div>
+        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
+          Programs and Pathways: From BBA to MBA
+        </h3>
+        <p>
+          <strong>Manipal Online</strong> offers programs across management, commerce, computing, and the arts. 
+          Its flagship <strong>online MBA</strong> is a 24-month career-focused degree, while undergraduate programs 
+          like the <strong>online BBA</strong> and <strong>BCA</strong> equip learners with strong business and 
+          technical foundations — making Manipal a top choice for the 
+          <em>best online degree in Jaipur</em>.
         </p>
       </div>
-      <div className="bg-white rounded-2xl shadow-lg border border-orange-100 p-7 flex flex-col">
-        <div className="flex items-center gap-3 mb-3"><FaMoneyBillWave className="text-2xl text-green-500" /><h3 className="text-xl font-semibold text-gray-900">Admissions, Fees, and Financial Support</h3></div>
-        <p className="text-gray-700">
-          The admission process is  simple, digital, and transparent , supported by EMI options and scholarships. From application to graduation, Manipal provides  academic advisors, mentorship, technical assistance, and career counseling  — ensuring every learner's success journey.
+
+      <div>
+        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
+          Admissions, Fees, and Financial Support
+        </h3>
+        <p>
+          The admission process is <strong>simple, digital, and transparent</strong>, supported by EMI options 
+          and scholarships. From application to graduation, Manipal provides <strong>academic advisors, mentorship, 
+          technical assistance, and career counseling</strong> — ensuring every learner's success journey.
         </p>
       </div>
-      <div className="bg-white rounded-2xl shadow-lg border border-orange-100 p-7 flex flex-col">
-        <div className="flex items-center gap-3 mb-3"><FaIndustry className="text-2xl text-orange-500" /><h3 className="text-xl font-semibold text-gray-900">Industry Projects, Internships, and Applied Learning</h3></div>
-        <p className="text-gray-700">
-          Real-world projects, internships, and capstone assignments are integrated into each program. For students searching <em>"online MBA near me,"</em> these experiences help demonstrate practical expertise and strengthen employability.
+
+      <div>
+        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
+          Industry Projects, Internships, and Applied Learning
+        </h3>
+        <p>
+          Real-world projects, internships, and capstone assignments are integrated into each program. 
+          For students searching <em>"online MBA near me,"</em> these experiences help demonstrate 
+          practical expertise and strengthen employability.
         </p>
       </div>
-      <div className="bg-white rounded-2xl shadow-lg border border-orange-100 p-7 flex flex-col">
-        <div className="flex items-center gap-3 mb-3"><FaUsers className="text-2xl text-cyan-600" /><h3 className="text-xl font-semibold text-gray-900">Alumni Outcomes and Employer Recognition</h3></div>
-        <p className="text-gray-700">
-          Graduates of  Manipal University Jaipur  and  Manipal Online  hold leadership roles in consulting, fintech, healthcare, analytics, and marketing. The strong employer reputation of Manipal degrees ensures alumni are recognized across industries worldwide.
+
+      <div>
+        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
+          Alumni Outcomes and Employer Recognition
+        </h3>
+        <p>
+          Graduates of <strong>Manipal University Jaipur</strong> and <strong>Manipal Online</strong> 
+          hold leadership roles in consulting, fintech, healthcare, analytics, and marketing. 
+          The strong employer reputation of Manipal degrees ensures alumni are recognized 
+          across industries worldwide.
         </p>
       </div>
-      <div className="bg-white rounded-2xl shadow-lg border border-orange-100 p-7 flex flex-col">
-        <div className="flex items-center gap-3 mb-3"><FaBook className="text-2xl text-indigo-400" /><h3 className="text-xl font-semibold text-gray-900">Comparing Manipal Online with Other Options</h3></div>
-        <p className="text-gray-700">
-          When comparing <em>"top colleges in Jaipur"</em> or searching for the <em>"best online degree in Jaipur,"</em>  Manipal Online  stands apart with  NAAC A+ accreditation, expert faculty, and flexible programs  that combine academic depth with industry relevance and career support.
+
+      <div>
+        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
+          Comparing Manipal Online with Other Options
+        </h3>
+        <p>
+          When comparing <em>"top colleges in Jaipur"</em> or searching for the 
+          <em>"best online degree in Jaipur,"</em> <strong>Manipal Online</strong> stands apart with 
+          <strong>NAAC A+ accreditation, expert faculty, and flexible programs</strong> that combine 
+          academic depth with industry relevance and career support.
         </p>
       </div>
-      <div className="bg-white rounded-2xl shadow-lg border border-orange-100 p-7 flex flex-col">
-        <div className="flex items-center gap-3 mb-3"><FaClipboardCheck className="text-2xl text-orange-400" /><h3 className="text-xl font-semibold text-gray-900">Application Tips and Success Strategies</h3></div>
-        <ul className="list-disc pl-6 space-y-1 text-gray-700">
-          <li> Review Program Curriculum:  Compare modules and specializations with your career goals before choosing the  online MBA with Manipal .</li>
-          <li> Plan Your Study Schedule:  Create a consistent plan to balance professional and academic commitments.</li>
-          <li> Leverage Career Services:  Utilize placement assistance, alumni mentorship, and resume workshops to maximize outcomes.</li>
-          <li> Build a Portfolio:  Document your projects and internships to showcase skills to future employers.</li>
+
+      <div>
+        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
+          Application Tips and Success Strategies
+        </h3>
+        <ul className="list-disc pl-6 space-y-2">
+          <li><strong>Review Program Curriculum:</strong> Compare modules and specializations with your career goals before choosing the <strong>online MBA with Manipal</strong>.</li>
+          <li><strong>Plan Your Study Schedule:</strong> Create a consistent plan to balance professional and academic commitments.</li>
+          <li><strong>Leverage Career Services:</strong> Utilize placement assistance, alumni mentorship, and resume workshops to maximize outcomes.</li>
+          <li><strong>Build a Portfolio:</strong> Document your projects and internships to showcase skills to future employers.</li>
         </ul>
       </div>
-    </div>
-    <div className="mt-10 text-center">
-      <p className="text-xl text-gray-700 font-medium mb-4">
-        If you are exploring options like the  online MBA with Manipal  or the  best online degree in Jaipur ,  Manipal Online  offers accredited programs, flexible schedules, and hands-on learning pathways that empower you to reach your professional goals.
+
+      <p className="text-center text-gray-700 text-lg mt-6">
+        If you are exploring options like the <strong>online MBA with Manipal</strong> or the 
+        <strong>best online degree in Jaipur</strong>, <strong>Manipal Online</strong> offers 
+        accredited programs, flexible schedules, and hands-on learning pathways that empower you to 
+        reach your professional goals. <br /> <br />
+        <strong>Start your journey today with Manipal Online!</strong>
       </p>
-      <button 
-        onClick={() => setOpenModal({ type: 'enquiry' })}
-        className="w-full max-w-xs mx-auto bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold px-7 py-4 rounded-lg hover:shadow-lg transition-all duration-300 cursor-pointer text-lg shadow"
-      >
-        Apply Now
-      </button>
+       <button 
+            onClick={() => setOpenModal({ type: 'enquiry' })}
+            className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
+          >
+            Apply Now
+          </button>
+        
     </div>
   </div>
 </section>
@@ -871,7 +939,7 @@ useEffect(() => {
         Explore <span className="text-orange-600">Online Classes</span> at Manipal
       </h2>
       <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
-        Discover a new world of learning with  Manipal University Jaipur Online (Manipal Online)  —
+        Discover a new world of learning with <strong>Manipal University Jaipur Online (Manipal Online)</strong> —
         your trusted destination for the best online degrees in Jaipur. Whether you're a working professional, entrepreneur, or student searching for an <i>online degree near me</i>, Manipal Online offers flexible, career-focused programs designed for your success.
       </p>
     </div>
@@ -882,7 +950,7 @@ useEffect(() => {
           <h3 className="text-xl font-semibold text-gray-800">Online MBA with Manipal</h3>
         </div>
         <p className="text-gray-700 mb-3">
-          The highly sought-after  online MBA  is crafted for future leaders who wish to build advanced management expertise and global business insight. Enjoy live classes, interactive case studies, and mentorship from industry experts—all from your home.
+          The highly sought-after <strong>online MBA</strong> is crafted for future leaders who wish to build advanced management expertise and global business insight. Enjoy live classes, interactive case studies, and mentorship from industry experts—all from your home.
         </p>
         <p className="text-gray-600 text-sm">For professionals searching for an <i>"online MBA near me"</i>, this program blends flexibility with industry relevance.</p>
       </div>
@@ -892,14 +960,14 @@ useEffect(() => {
           <h3 className="text-xl font-semibold text-gray-800">Online BBA Near Me</h3>
         </div>
         <p className="text-gray-700 mb-3">
-          Aspiring professionals can opt for Manipal's  online BBA , a comprehensive undergraduate program in business and management. Build strong foundations in business strategy, marketing, and leadership—while learning analytical thinking essential for the modern workplace.
+          Aspiring professionals can opt for Manipal's <strong>online BBA</strong>, a comprehensive undergraduate program in business and management. Build strong foundations in business strategy, marketing, and leadership—while learning analytical thinking essential for the modern workplace.
         </p>
         <p className="text-gray-600 text-sm">Perfect for those seeking an <i>online BBA near me</i> from a top college in Jaipur.</p>
       </div>
     </div>
     <div className="bg-orange-50 border-l-4 border-orange-400 rounded-xl p-6 mb-8 max-w-5xl mx-auto text-gray-800 shadow-md">
       <p className="mb-3">
-        Recognized as a  top college in Jaipur , Manipal University Jaipur provides accredited, industry-aligned degrees with both academic credibility and practical relevance. Enjoy access to advanced learning tools, 24×7 support, and a successful alumni network.
+        Recognized as a <strong>top college in Jaipur</strong>, Manipal University Jaipur provides accredited, industry-aligned degrees with both academic credibility and practical relevance. Enjoy access to advanced learning tools, 24×7 support, and a successful alumni network.
       </p>
       <p>
         Take your career to new heights—<span className="font-semibold text-orange-700">explore an online MBA with Manipal, BBA, or other online degree programs today</span>. Join Manipal Online—where excellence meets flexibility and innovation shapes your future.
