@@ -15,6 +15,7 @@ export const metadata = {
     "Online Degree Programs India",
     "Amity Online Courses",
   ],
+  metadataBase: new URL("https://unifostedu.com"),
   alternates: {
     canonical: "https://unifostedu.com/Amity-University-Online",
   },
@@ -26,7 +27,7 @@ export const metadata = {
     siteName: "UNIFOST",
     images: [
       {
-        url: "https://unifostedu.comhttps://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp",
+        url: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp",
         width: 1200,
         height: 630,
         alt: "Amity University Online",
@@ -39,7 +40,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Amity University Online | Accredited Online Degrees",
     description: "Enroll in UGC and AICTE approved online courses at Amity University Online.",
-    images: ["https://unifostedu.comhttps://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp"],
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp"],
   },
   robots: {
     index: true,

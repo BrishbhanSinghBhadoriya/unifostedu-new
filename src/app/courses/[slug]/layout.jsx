@@ -1,5 +1,6 @@
 export async function generateMetadata({ params }) {
   const { slug } = params;
+  const cleanSlug = (slug || "").trim().replace(/\/+$/, "");
 
   
   const defaultMeta = {
@@ -8,7 +9,7 @@ export async function generateMetadata({ params }) {
       "Discover UGC-approved online degree programs in India. Compare MBA, MCA, BBA, BCA, and more with expert admission guidance.",
     keywords:
       "Online Courses India, Online MBA, Online MCA, Online BBA, Online BCA, Distance Learning, UGC Approved Degrees",
-    canonical: `https://unifostedu.com/courses/${slug}`,
+    canonical: `https://unifostedu.com/courses/${cleanSlug}`,
     image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp",
   };
 
@@ -36,6 +37,7 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: defaultMeta.canonical,
     },
+    metadataBase: new URL("https://unifostedu.com"),
     robots: {
       index: true,
       follow: true,
