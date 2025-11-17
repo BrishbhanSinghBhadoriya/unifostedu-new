@@ -38,16 +38,8 @@ const nextConfig = {
   async redirects() {
     return [
       // Fix case sensitivity issue: cuonline -> cuOnline
-      {
-        source: '/cuonline',
-        destination: '/cuOnline',
-        permanent: true, // 301 redirect
-      },
-      {
-        source: '/cuonline/:path*',
-        destination: '/cuOnline/:path*',
-        permanent: true,
-      },
+   
+      
       // Fix course slugs with dots
       {
         source: '/courses/m.com-online',

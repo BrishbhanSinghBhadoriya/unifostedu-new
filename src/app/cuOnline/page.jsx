@@ -1,27 +1,29 @@
-"use client";
+'use client';
 
-import { useState,useEffect } from "react";
-import Image from "next/image";
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from "lucide-react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import EnquiryForm from "@/components/EnquiryForm";
-import AccreditationSection from "@/components/AccreditationSection";
-import { FaGraduationCap, FaUsers, FaChalkboardTeacher, FaRupeeSign } from "react-icons/fa";
-import { MdSupportAgent } from "react-icons/md";
-import { BiBookContent } from "react-icons/bi";
-import { BsBuildingCheck } from "react-icons/bs";
-import { AiOutlineSchedule } from "react-icons/ai";
-import { ChevronDown } from "lucide-react";
+import { ArrowRight } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import EnquiryForm from '@/components/EnquiryForm';
+import AccreditationSection from '@/components/AccreditationSection';
+import { FaGraduationCap, FaUsers, FaChalkboardTeacher, FaRupeeSign } from 'react-icons/fa';
+import { MdSupportAgent } from 'react-icons/md';
+import { BiBookContent } from 'react-icons/bi';
+import { BsBuildingCheck } from 'react-icons/bs';
+import { AiOutlineSchedule } from 'react-icons/ai';
+import { ChevronDown } from 'lucide-react';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
+import Head from 'next/head';
 
-export default function ChandigarhPage() {
-  const [activeCategory, setActiveCategory] = useState("PG"); // PG or UG
+const CUOnline = () => {
+  const [activeCategory, setActiveCategory] = useState('PG'); // PG or UG
   const [current, setCurrent] = useState(0);
 
   const ugCourses = [
@@ -55,7 +57,7 @@ export default function ChandigarhPage() {
       eligibility: "10+2 or equivalent",
       fees: "₹1,70,000",
       specialization: "IT & Systems",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bca-online-image_awhemy.webphttps://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
     },
   ];
 
@@ -151,8 +153,9 @@ export default function ChandigarhPage() {
   for (let i = 0; i < itemsPerSlide; i++) {
     visibleCourses.push(courses[(current + i) % courses.length]);
   }
-  const [openModal, setOpenModal] = useState(false);
-//   const [openModal, setOpenModal] = useState(null);
+  
+  const [openModal, setOpenModal] = useState(null);
+  const [openIndex, setOpenIndex] = useState(null);
   const benefits = [
     {
       icon: <FaGraduationCap className="text-red-500 text-4xl" />,
@@ -221,16 +224,12 @@ export default function ChandigarhPage() {
   ];
   
 
-   useEffect(() => {
-         
-   
-         const timer= setTimeout(()=>{
-          setOpenModal(true)
-         },3000)
-         return () => clearTimeout(timer);
-   
-          
-   },[])
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setOpenModal({ type: 'apply' });
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
    
   const faqs = [
   {
@@ -322,13 +321,23 @@ export default function ChandigarhPage() {
   }
 ];
 
-   const [openIndex, setOpenIndex] = useState(null);
-
   const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+    if (openIndex === index) setOpenIndex(null);
+    else setOpenIndex(index);
   };
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <Head>
+        <title>Chandigarh University Online | UGC Approved UG & PG Courses - UNIFOST</title>
+        <meta name="description" content="Explore UGC-recognized online programs from Chandigarh University Online. Flexible learning, expert mentorship, and career-focused degrees with UGC & AICTE approvals." />
+        <meta name="keywords" content="CU Online, Chandigarh University Online, CU Distance Learning, MBA in CU Online, MCA in CU Online, BBA in CU Online, BCA in CU Online, Online Degrees India, UGC Approved, AICTE Approved" />
+        <meta name="author" content="Chandigarh University Online" />
+        <meta name="robots" content="index, follow" /> 
+        <link rel="canonical" href="https://unifostedu.com/cuonline" />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50 overflow-x-hidden">
       {/* Header & Hero Section */}
       <header className="bg-white shadow-md fixed top-0 w-full z-20">
         <div className="max-w-7xl mx-auto p-2 flex justify-between items-center">
@@ -722,21 +731,6 @@ export default function ChandigarhPage() {
           ))}
         </div>
       </div>
-                      {openModal && (
-                          <ApplyEnquiryModal
-                            open={!!openModal}
-                            onOpenChange={(isOpen) => {
-                            if (!isOpen) setOpenModal(null);
-                               }}
-
-                            title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
-                            subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-                            imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327155/girlImage_w9ulny.webp"
-                            universityName="chandigarh University Online"
-                            defaultProgram="MBA"
-                            formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
-                          />
-                        )}
     </section>
 
              <footer className="bg-[#1a1a1a] text-gray-300 py-12">
@@ -824,7 +818,7 @@ export default function ChandigarhPage() {
                                           className="border-t border-white/10 pt-8 mb-8"
                                         >
                                           <h4 className="text-lg font-bold mb-6 text-white text-center">
-                                            Popular Programs & Specializations –Manipal Academy of Higher Education Online(MAHE) "  
+                                            Popular Programs & Specializations – Chandigarh University Online (CU Online)
                                           </h4>
                             
                                           <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
@@ -900,7 +894,22 @@ export default function ChandigarhPage() {
         All rights reserved | Unifostedu
       </div>
     </footer>
-    </div>
-    
+      </div>
+      
+      {openModal && (
+        <ApplyEnquiryModal
+          open={!!openModal}
+          onOpenChange={(v) => !v && setOpenModal(null)}
+          title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
+          subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
+          imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327155/girlImage_w9ulny.webp"
+          universityName="Chandigarh University Online"
+          defaultProgram={openModal.program || 'MBA'}
+          formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
+        />
+      )}
+    </>
   );
-}
+};
+
+export default CUOnline;
