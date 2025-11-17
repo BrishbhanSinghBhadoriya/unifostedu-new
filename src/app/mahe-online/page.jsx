@@ -252,9 +252,9 @@ const Manipal = () => {
         .queens { font-family: 'Queens', serif; }
       `}</style>
       
-      <div className="queens">
+      <div className="queens overflow-x-hidden">
         {/* Professional Responsive Header - Optimized */}
-        <header className="w-full bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 fixed top-0 z-50 overflow-x-hidden">
+        <header className="w-full bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 fixed top-0 z-50 overflow-hidden">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
             <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
               {/* Left Logo */}
@@ -265,8 +265,7 @@ const Manipal = () => {
                   className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto" 
                 />
                 <h1 className="font-queens text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-extrabold whitespace-nowrap">
-                  <span className="text-[#ff7a36]">Online</span>{" "}
-                  <span className="text-gray-800 hidden xs:inline">Manipal</span>
+                  
                 </h1>
               </div>
 
@@ -304,32 +303,32 @@ const Manipal = () => {
         </header>
 
         {/* Premium Hero Section - Fully Responsive */}
-        <section className="relative min-h-[450px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 pt-14 sm:pt-16 lg:pt-20">
+        <section className="relative min-h-[500px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 pt-14 sm:pt-16 lg:pt-20">
           {/* Animated Background */}
           <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/mahe-uni_dvnm1d.webp')] bg-cover bg-center opacity-200"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-blue-900/70 to-indigo-900/80"></div>
 
-          <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-20 xl:py-28">
-            <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-6 lg:px-8 py-6 sm:py-8 md:py-12 lg:py-20 xl:py-28">
+            <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-center">
               {/* Left Content */}
-              <div className="text-white space-y-4 sm:space-y-6 md:space-y-8">
+              <div className="text-white space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8">
                 {/* Accreditation Badge */}
-                <div className="inline-flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-3 sm:px-4 py-1.5 sm:py-2">
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-3 py-1.5 sm:px-4 sm:py-2">
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-xs sm:text-sm font-medium">NAAC A+ Accredited • UGC Approved</span>
+                  <span className="text-[10px] xs:text-xs sm:text-sm font-medium">NAAC A+ Accredited • UGC Approved</span>
                 </div>
 
                 {/* Main Heading */}
-                <div className="space-y-3 sm:space-y-4 md:space-y-6">
-                  <h1 className="font-queens text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight">
+                <div className="space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6">
+                  <h1 className="font-queens text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold leading-tight">
                     <span className="block text-white">Transform Your</span>
                     <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
                       Career with
                     </span>
-                    <span className="block text-white">Manipal Academy of Higher Education</span>
+                    <span className="block text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">Manipal Academy of Higher Education</span>
                   </h1>
                   
-                  <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-300 leading-relaxed max-w-2xl">
                     Earn globally recognized degrees from Manipal Academy of Higher Education with 100% online learning and placement assistance.
                   </p>
                 </div>
@@ -342,9 +341,9 @@ const Manipal = () => {
                     { icon: '💰', text: 'Easy EMI Options' },
                     { icon: '🌍', text: 'Global Recognition' }
                   ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-2 sm:gap-3">
-                      <span className="text-xl sm:text-2xl">{item.icon}</span>
-                      <span className="text-xs sm:text-sm text-gray-300">{item.text}</span>
+                    <div key={i} className="flex items-center gap-1.5 sm:gap-2 md:gap-3">
+                      <span className="text-lg sm:text-xl md:text-2xl flex-shrink-0">{item.icon}</span>
+                      <span className="text-[10px] xs:text-xs sm:text-sm text-gray-300 leading-tight">{item.text}</span>
                     </div>
                   ))}
                 </div>
@@ -353,17 +352,17 @@ const Manipal = () => {
                 <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 pt-2">
                   <button 
                     onClick={() => setOpenModal({ type: 'apply' })}
-                    className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-orange-500/30 flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base md:text-lg w-full sm:w-auto"
+                    className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-orange-500/30 flex items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm md:text-base lg:text-lg w-full sm:w-auto"
                   >
                     <span>Apply Now</span>
-                    <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
                   </button>
                   
                   <button 
                     onClick={() => setOpenModal({ type: 'enquire' })}
-                    className="border-2 border-white/30 hover:border-white/50 text-white font-semibold px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-full transition-all duration-300 hover:bg-white/10 backdrop-blur-sm text-sm sm:text-base md:text-lg w-full sm:w-auto"
+                    className="border-2 border-white/30 hover:border-white/50 text-white font-semibold px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-full transition-all duration-300 hover:bg-white/10 backdrop-blur-sm text-xs sm:text-sm md:text-base lg:text-lg w-full sm:w-auto"
                   >
                     Download Brochure
                   </button>
@@ -371,11 +370,11 @@ const Manipal = () => {
               </div>
 
               {/* Right Content - Stats Card */}
-              <div className="lg:pl-4 xl:pl-8 mt-6 lg:mt-0">
-                <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white text-center">Why Choose Manipal Academy of Higher Education Online?</h3>
+              <div className="lg:pl-4 xl:pl-8 mt-4 sm:mt-6 lg:mt-0">
+                <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl sm:rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-8 space-y-3 sm:space-y-4 md:space-y-6">
+                  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white text-center">Why Choose Manipal Academy of Higher Education Online?</h3>
                   
-                  <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6">
+                  <div className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4 lg:gap-6">
                     {[
                       { number: '50+', label: 'Countries' },
                       { number: '100K+', label: 'Students' },
@@ -383,18 +382,18 @@ const Manipal = () => {
                       { number: '200+', label: 'Hiring Partners' }
                     ].map((stat, i) => (
                       <div key={i} className="text-center">
-                        <div className="text-2xl sm:text-3xl font-bold text-orange-400">{stat.number}</div>
-                        <div className="text-gray-300 text-xs sm:text-sm mt-1">{stat.label}</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl font-bold text-orange-400">{stat.number}</div>
+                        <div className="text-gray-300 text-[10px] xs:text-xs sm:text-sm mt-1">{stat.label}</div>
                       </div>
                     ))}
                   </div>
 
                   {/* Quick Program Links */}
-                  <div className="pt-4 sm:pt-6 border-t border-white/20">
-                    <h4 className="text-white font-semibold mb-3 sm:mb-4 text-center text-sm sm:text-base">Popular Programs</h4>
-                    <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2">
+                  <div className="pt-3 sm:pt-4 md:pt-6 border-t border-white/20">
+                    <h4 className="text-white font-semibold mb-2 sm:mb-3 md:mb-4 text-center text-xs sm:text-sm md:text-base">Popular Programs</h4>
+                    <div className="flex flex-wrap justify-center gap-1 sm:gap-1.5 md:gap-2">
                       {['Online MBA', 'BBA', 'MCA', 'BCA', 'M.Com', 'B.Com'].map((program, i) => (
-                        <span key={i} className="bg-white/5 hover:bg-white/10 border border-white/10 rounded-full px-2 sm:px-3 md:px-4 py-1 sm:py-2 text-white text-xs sm:text-sm transition-all duration-300 cursor-pointer hover:scale-105">
+                        <span key={i} className="bg-white/5 hover:bg-white/10 border border-white/10 rounded-full px-2 sm:px-2.5 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 text-white text-[10px] xs:text-xs sm:text-sm transition-all duration-300 cursor-pointer hover:scale-105">
                           {program}
                         </span>
                       ))}
@@ -414,9 +413,9 @@ const Manipal = () => {
         </section>
 
         {/* Enhanced Statistics Section - Responsive */}
-        <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-r from-slate-50 to-blue-50">
-          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+        <section className="py-6 sm:py-8 md:py-12 lg:py-16 bg-gradient-to-r from-slate-50 to-blue-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-6 lg:px-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 lg:gap-8">
               {[
                 {
                   icon: '⏱️',
@@ -440,12 +439,12 @@ const Manipal = () => {
                 }
               ].map((feature, i) => (
                 <div key={i} className="group text-center">
-                  <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 h-full flex flex-col">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-xl sm:text-2xl">{feature.icon}</span>
+                  <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 h-full flex flex-col">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-lg sm:text-xl md:text-2xl">{feature.icon}</span>
                     </div>
-                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">{feature.title}</h3>
-                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed flex-1">{feature.description}</p>
+                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-2 sm:mb-3">{feature.title}</h3>
+                    <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed flex-1">{feature.description}</p>
                   </div>
                 </div>
               ))}
@@ -454,18 +453,18 @@ const Manipal = () => {
         </section>
 
         {/* Professional Rankings & Accreditations Section - Responsive */}
-        <section className="py-8 sm:py-12 md:py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-            <div className="text-center mb-8 sm:mb-12 md:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 font-queens">
+        <section className="py-6 sm:py-8 md:py-12 lg:py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-6 lg:px-8">
+            <div className="text-center mb-6 sm:mb-8 md:mb-12 lg:mb-16">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6 font-queens">
                 Rankings & <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Accreditations</span>
               </h2>
-              <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-2">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-2">
                 Recognized by leading accreditation bodies and ranked among India's top universities
               </p>
             </div>
             
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8">
               {[
                 { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp', title: 'NAAC A+ Accredited University' },
                 { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp', title: 'UGC-entitled Online Degrees' },
@@ -500,13 +499,13 @@ const Manipal = () => {
         </section>
 
         {/* Why Choose Manipal Academy of Higher Education */}
-        <section className="relative py-20 bg-[#0B0B10] text-white overflow-hidden">
+        <section className="relative py-10 sm:py-12 md:py-16 lg:py-20 bg-[#0B0B10] text-white overflow-hidden">
           {/* Subtle grid pattern */}
           <div className="pointer-events-none absolute inset-0 opacity-[0.08]" style={{backgroundImage:"linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)", backgroundSize:"40px 40px"}} />
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Stats Row */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 mb-14">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-10 mb-8 sm:mb-10 md:mb-14">
               {[
                 {value:'60+', label:'Countries and 2000+ towns &\ncities- our students span the globe'},
                 {value:'100k+', label:'Learners have been empowered through Online Manipal'},
@@ -514,81 +513,81 @@ const Manipal = () => {
                 {value:'81%', label:'Of students find online is better than or equal to on-campus learning'}
               ].map((s, i) => (
                 <div key={i} className="text-left">
-                  <div className="font-queens text-5xl sm:text-6xl md:text-7xl leading-none">{s.value}</div>
-                  <p className="mt-3 text-sm sm:text-base text-gray-300 whitespace-pre-line max-w-xs">{s.label}</p>
+                  <div className="font-queens text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-none">{s.value}</div>
+                  <p className="mt-2 sm:mt-3 text-xs sm:text-sm md:text-base text-gray-300 whitespace-pre-line max-w-xs">{s.label}</p>
                 </div>
               ))}
             </div>
 
             {/* Heading */}
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-center">Why Students Choose Us</h3>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 text-center">Why Students Choose Us</h3>
 
             {/* Feature Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5 md:gap-6">
               {/* Card 1 */}
-              <div className="bg-white text-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center mb-4">
-                  <span className="text-2xl">🏅</span>
+              <div className="bg-white text-gray-900 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-yellow-100 flex items-center justify-center mb-3 sm:mb-4">
+                  <span className="text-xl sm:text-2xl">🏅</span>
                 </div>
-                <h4 className="text-xl font-semibold mb-2">Degree from top ranked Manipal universities</h4>
-                <p className="text-gray-600 text-sm">Graduate with UGC-entitled, NAAC A+ accredited degrees trusted by employers.</p>
+                <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">Degree from top ranked Manipal universities</h4>
+                <p className="text-gray-600 text-xs sm:text-sm">Graduate with UGC-entitled, NAAC A+ accredited degrees trusted by employers.</p>
               </div>
 
               {/* Card 2 */}
-              <div className="bg-white text-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-14 h-14 rounded-full bg-sky-100 flex items-center justify-center mb-4">
-                  <span className="text-2xl font-bold">C</span>
+              <div className="bg-white text-gray-900 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-sky-100 flex items-center justify-center mb-3 sm:mb-4">
+                  <span className="text-xl sm:text-2xl font-bold">C</span>
                 </div>
-                <h4 className="text-xl font-semibold mb-2">Exclusive Coursera access</h4>
-                <p className="text-gray-600 text-sm">Free access to 10K+ courses and professional certificates from global partners.</p>
+                <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">Exclusive Coursera access</h4>
+                <p className="text-gray-600 text-xs sm:text-sm">Free access to 10K+ courses and professional certificates from global partners.</p>
               </div>
 
               {/* Card 3 */}
-              <div className="bg-white text-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-14 h-14 rounded-full bg-pink-100 flex items-center justify-center mb-4">
-                  <span className="text-2xl">🎓</span>
+              <div className="bg-white text-gray-900 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-pink-100 flex items-center justify-center mb-3 sm:mb-4">
+                  <span className="text-xl sm:text-2xl">🎓</span>
                 </div>
-                <h4 className="text-xl font-semibold mb-2">Scholarships up to 30%</h4>
-                <p className="text-gray-600 text-sm">Avail scholarships under merit, defense, alumni, and other categories.</p>
+                <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">Scholarships up to 30%</h4>
+                <p className="text-gray-600 text-xs sm:text-sm">Avail scholarships under merit, defense, alumni, and other categories.</p>
               </div>
 
               {/* Card 4 */}
-              <div className="bg-white text-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-14 h-14 rounded-full bg-lime-100 flex items-center justify-center mb-4">
-                  <span className="text-2xl">💳</span>
+              <div className="bg-white text-gray-900 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-lime-100 flex items-center justify-center mb-3 sm:mb-4">
+                  <span className="text-xl sm:text-2xl">💳</span>
                 </div>
-                <h4 className="text-xl font-semibold mb-2">Easy financing options</h4>
-                <p className="text-gray-600 text-sm">Improved affordability with flexible financing and no-cost EMIs.</p>
+                <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">Easy financing options</h4>
+                <p className="text-gray-600 text-xs sm:text-sm">Improved affordability with flexible financing and no-cost EMIs.</p>
               </div>
 
               {/* Card 5 */}
-              <div className="bg-white text-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-14 h-14 rounded-full bg-rose-100 flex items-center justify-center mb-4">
-                  <span className="text-2xl">🎓</span>
+              <div className="bg-white text-gray-900 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-rose-100 flex items-center justify-center mb-3 sm:mb-4">
+                  <span className="text-xl sm:text-2xl">🎓</span>
                 </div>
-                <h4 className="text-xl font-semibold mb-2">Manipal alumni status</h4>
-                <p className="text-gray-600 text-sm">Become part of a 200,000+ strong global alumni network.</p>
+                <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">Manipal alumni status</h4>
+                <p className="text-gray-600 text-xs sm:text-sm">Become part of a 200,000+ strong global alumni network.</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Enhanced Courses Section */}
-        <section className="py-20 bg-white">
+        <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
+            <div className="text-center mb-8 sm:mb-12 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 font-queens">
                 Explore <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Online Programs</span>
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-2">
                 Choose from industry-relevant programs designed for working professionals and fresh graduates
               </p>
             </div>
 
-            <Tabs.Root value={activeTab} onValueChange={setActiveTab} className="space-y-12">
+            <Tabs.Root value={activeTab} onValueChange={setActiveTab} className="space-y-6 sm:space-y-8 md:space-y-12">
               {/* Enhanced Tab Buttons */}
-              <div className="flex justify-center">
-                <Tabs.List className="inline-flex bg-gray-100/80 backdrop-blur-sm rounded-2xl p-2 shadow-lg border border-gray-200">
+              <div className="flex justify-center overflow-x-auto">
+                <Tabs.List className="inline-flex bg-gray-100/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-1.5 sm:p-2 shadow-lg border border-gray-200">
                   {[
                     { value: 'all', label: 'All Programs' },
                     { value: 'ug', label: 'Undergraduate' },
@@ -597,7 +596,7 @@ const Manipal = () => {
                     <Tabs.Trigger
                       key={tab.value}
                       value={tab.value}
-                      className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
+                      className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg sm:rounded-xl font-semibold transition-all duration-300 text-xs sm:text-sm md:text-base ${
                         activeTab === tab.value
                           ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg'
                           : 'text-gray-700 hover:text-orange-600 hover:bg-white'
@@ -611,7 +610,7 @@ const Manipal = () => {
 
               {/* Course Grid */}
               <Tabs.Content value={activeTab} className="outline-none">
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                   {(activeTab === 'all' ? [...ugCourses, ...pgCourses] : 
                     activeTab === 'ug' ? ugCourses : pgCourses).map((course, idx) => (
                     <div key={idx} className="group">
@@ -668,16 +667,16 @@ const Manipal = () => {
         </section>
 
         {/* Modern 360 Advantage */}
-        <section className="relative py-20 bg-gradient-to-br from-orange-50 via-white to-blue-50">
+        <section className="relative py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-orange-50 via-white to-blue-50">
           <div className="pointer-events-none absolute inset-0" style={{background:"radial-gradient(1200px 300px at 10% -10%, rgba(255,122,54,.09), transparent), radial-gradient(1200px 300px at 90% 110%, rgba(59,130,246,.08), transparent)"}} />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-14">
-              <h2 className="text-4xl lg:text-5xl font-queens font-bold text-gray-900">Unlock The 360° Advantage</h2>
-              <p className="text-xl text-gray-600 mt-4 max-w-3xl mx-auto">Comprehensive benefits designed to support your learning journey and career growth.</p>
+            <div className="text-center mb-8 sm:mb-10 md:mb-14">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-queens font-bold text-gray-900">Unlock The 360° Advantage</h2>
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 mt-3 sm:mt-4 max-w-3xl mx-auto px-2">Comprehensive benefits designed to support your learning journey and career growth.</p>
             </div>
 
             {/* Benefits grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
               {[{
                 icon:'🎓', title:'Prestigious Degree', desc:'Globally recognized degree that opens doors worldwide.'
               },{
@@ -687,52 +686,52 @@ const Manipal = () => {
               },{
                 icon:'💳', title:'Easy Financing', desc:'Affordable no-cost EMI options for all learners.'
               }].map((b,i)=>(
-                <div key={i} className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 text-white flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">{b.icon}</div>
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">{b.title}</h3>
-                  <p className="text-gray-600">{b.desc}</p>
+                <div key={i} className="group bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg sm:rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 text-white flex items-center justify-center text-xl sm:text-2xl mb-4 sm:mb-5 md:mb-6 group-hover:scale-110 transition-transform duration-300">{b.icon}</div>
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-2 sm:mb-3">{b.title}</h3>
+                  <p className="text-sm sm:text-base text-gray-600">{b.desc}</p>
                 </div>
               ))}
             </div>
 
             {/* Financing + Scholarships */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
-              <div className="rounded-2xl p-8 bg-gradient-to-br from-orange-500 to-orange-600 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                <h3 className="text-3xl font-bold mb-4">Avail easy financing options</h3>
-                <p className="text-orange-100 text-lg">With our no-cost EMIs, we let your learning take the spotlight without the stress of financing.</p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mt-8 sm:mt-10 md:mt-12">
+              <div className="rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 bg-gradient-to-br from-orange-500 to-orange-600 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">Avail easy financing options</h3>
+                <p className="text-orange-100 text-sm sm:text-base md:text-lg">With our no-cost EMIs, we let your learning take the spotlight without the stress of financing.</p>
               </div>
-              <div className="rounded-2xl p-8 bg-gradient-to-br from-blue-600 to-indigo-600 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                <h3 className="text-3xl font-bold mb-4">Get attractive scholarships</h3>
-                <p className="text-blue-100 text-lg">Exclusive scholarships for defense personnel, govt. employees, differently-abled & meritorious students.</p>
+              <div className="rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 bg-gradient-to-br from-blue-600 to-indigo-600 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">Get attractive scholarships</h3>
+                <p className="text-blue-100 text-sm sm:text-base md:text-lg">Exclusive scholarships for defense personnel, govt. employees, differently-abled & meritorious students.</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Why Choose Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-16 font-queens">Online Manipal Advantages</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                <FaStar className="text-yellow-500 text-4xl mb-6" />
-                <h3 className="text-2xl font-semibold mb-4">Flexible & Convenient Schedule</h3>
-                <p className="text-gray-600 text-lg">Balance your academic pursuits with personal and professional commitments by learning anywhere and at any time, as per your convenience.</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-8 sm:mb-12 md:mb-16 font-queens">Online Manipal Advantages</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+              <div className="bg-white p-5 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <FaStar className="text-yellow-500 text-3xl sm:text-4xl mb-4 sm:mb-6" />
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4">Flexible & Convenient Schedule</h3>
+                <p className="text-gray-600 text-sm sm:text-base md:text-lg">Balance your academic pursuits with personal and professional commitments by learning anywhere and at any time, as per your convenience.</p>
               </div>
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                <FaCertificate className="text-blue-500 text-4xl mb-6" />
-                <h3 className="text-2xl font-semibold mb-4">At Par with On-Campus Degrees</h3>
-                <p className="text-gray-600 text-lg">Access UGC-entitled online degrees that are at par with on-campus degrees and accepted for govt. or corporate jobs and higher education.</p>
+              <div className="bg-white p-5 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <FaCertificate className="text-blue-500 text-3xl sm:text-4xl mb-4 sm:mb-6" />
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4">At Par with On-Campus Degrees</h3>
+                <p className="text-gray-600 text-sm sm:text-base md:text-lg">Access UGC-entitled online degrees that are at par with on-campus degrees and accepted for govt. or corporate jobs and higher education.</p>
               </div>
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                <FaUsers className="text-green-500 text-4xl mb-6" />
-                <h3 className="text-2xl font-semibold mb-4">Experienced Faculty & Mentors</h3>
-                <p className="text-gray-600 text-lg">Acquire quality education and guidance from esteemed faculty and mentors who share their expertise and practical knowledge.</p>
+              <div className="bg-white p-5 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <FaUsers className="text-green-500 text-3xl sm:text-4xl mb-4 sm:mb-6" />
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4">Experienced Faculty & Mentors</h3>
+                <p className="text-gray-600 text-sm sm:text-base md:text-lg">Acquire quality education and guidance from esteemed faculty and mentors who share their expertise and practical knowledge.</p>
               </div>
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                <FaBuilding className="text-purple-500 text-4xl mb-6" />
-                <h3 className="text-2xl font-semibold mb-4">Prestigious Manipal Alumni Network</h3>
-                <p className="text-gray-600 text-lg">Be a part of the prestigious Manipal alumni network to build connections and to gain easy access to a wide range of career opportunities.</p>
+              <div className="bg-white p-5 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <FaBuilding className="text-purple-500 text-3xl sm:text-4xl mb-4 sm:mb-6" />
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4">Prestigious Manipal Alumni Network</h3>
+                <p className="text-gray-600 text-sm sm:text-base md:text-lg">Be a part of the prestigious Manipal alumni network to build connections and to gain easy access to a wide range of career opportunities.</p>
               </div>
             </div>
           </div>
@@ -752,13 +751,13 @@ const Manipal = () => {
                  whileInView={{ opacity: 1, y: 0 }}
                  viewport={{ once: true }}
                  transition={{ duration: 0.8 }}
-                 className="text-center mb-16"
+                 className="text-center mb-8 sm:mb-12 md:mb-16"
                >
-                 <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 sm:mb-6">
                    Admission Procedure
                  </h2>
-                 <div className="w-24 h-1 bg-orange-500 mx-auto mb-8 rounded-full"></div>
-                 <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+                 <div className="w-16 sm:w-20 md:w-24 h-1 bg-orange-500 mx-auto mb-4 sm:mb-6 md:mb-8 rounded-full"></div>
+                 <p className="text-sm sm:text-base md:text-lg text-gray-700 max-w-2xl mx-auto px-2">
                    A simple, transparent, and student-friendly admission process
                    designed to help you begin your learning journey smoothly.
                  </p>
@@ -770,15 +769,15 @@ const Manipal = () => {
                  whileInView={{ opacity: 1, y: 0 }}
                  viewport={{ once: true }}
                  transition={{ duration: 0.8 }}
-                 className="mt-20 bg-white p-10 rounded-3xl shadow-xl border border-gray-200"
+                 className="mt-8 sm:mt-12 md:mt-16 lg:mt-20 bg-white p-5 sm:p-6 md:p-8 lg:p-10 rounded-2xl sm:rounded-3xl shadow-xl border border-gray-200"
                >
-                 <h3 className="text-3xl md:text-4xl font-bold text-black mb-12 text-center">
+                 <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-6 sm:mb-8 md:mb-12 text-center">
                    Easy 4-Step Admission Process
                  </h3>
          
-                 <div className="grid grid-cols-1 md:grid-cols-4 gap-10 relative">
+                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-10 relative">
                    {/* Connecting Line */}
-                   <div className="hidden md:block absolute top-28 left-[10%] right-[10%] h-1 bg-gradient-to-r from-orange-400 to-orange-500 z-0 rounded-full"></div>
+                   <div className="hidden md:block absolute top-20 sm:top-24 md:top-28 left-[10%] right-[10%] h-1 bg-gradient-to-r from-orange-400 to-orange-500 z-0 rounded-full"></div>
          
                    {[
                      {
@@ -810,14 +809,14 @@ const Manipal = () => {
                        viewport={{ once: true }}
                        transition={{ duration: 0.6, delay: index * 0.3 }}
                      >
-                       <div className="bg-gradient-to-br from-orange-400 to-orange-500 w-28 h-28 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center mx-auto mb-6 text-white shadow-2xl">
-                         <span className="text-3xl md:text-4xl font-bold">{step.number}</span>
-                         <span className="text-xs md:text-sm uppercase font-semibold mt-1">Step</span>
+                       <div className="bg-gradient-to-br from-orange-400 to-orange-500 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full flex flex-col items-center justify-center mx-auto mb-4 sm:mb-5 md:mb-6 text-white shadow-2xl">
+                         <span className="text-2xl sm:text-3xl md:text-4xl font-bold">{step.number}</span>
+                         <span className="text-[10px] xs:text-xs md:text-sm uppercase font-semibold mt-1">Step</span>
                        </div>
-                       <h4 className="text-lg md:text-xl font-bold text-black mb-2">
+                       <h4 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2">
                          {step.title}
                        </h4>
-                       <p className="text-gray-700 text-sm md:text-base">{step.desc}</p>
+                       <p className="text-gray-700 text-xs sm:text-sm md:text-base px-2">{step.desc}</p>
                      </motion.div>
                    ))}
                  </div>
@@ -830,31 +829,31 @@ const Manipal = () => {
          
 
         {/* Certificate Section */}
-        <section className="bg-[#002d5f] text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center gap-12">
-            <div className="md:w-1/2">
-              <Image width={600} height={400} src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/mahe-certi_dwtj6m.webp" alt="Certificate" className="rounded-2xl shadow-2xl w-full" />
+        <section className="bg-[#002d5f] text-white py-10 sm:py-12 md:py-16 lg:py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+            <div className="md:w-1/2 w-full">
+              <Image width={600} height={400} src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/mahe-certi_dwtj6m.webp" alt="Certificate" className="rounded-xl sm:rounded-2xl shadow-2xl w-full" />
             </div>
-            <div className="md:w-1/2">
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6">Recognized Online Degree from Manipal Academy of Higher Education</h2>
-              <p className="mb-8 text-xl">
+            <div className="md:w-1/2 w-full">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Recognized Online Degree from Manipal Academy of Higher Education</h2>
+              <p className="mb-6 sm:mb-8 text-base sm:text-lg md:text-xl">
                 Learn at your pace, guided by experts, with a UGC-entitled degree that is accepted globally across industries and sectors.
               </p>
-              <ul className="space-y-4 text-lg">
-                <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+              <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg">
+                <li className="flex items-center gap-2 sm:gap-3">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></span>
                   UGC & AICTE Recognized Degrees
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                <li className="flex items-center gap-2 sm:gap-3">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></span>
                   Daily Live & Recorded Classes
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                <li className="flex items-center gap-2 sm:gap-3">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></span>
                   Global Collaborations with Ivy-League Institutions
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                <li className="flex items-center gap-2 sm:gap-3">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></span>
                   100% Placement & Internship Support
                 </li>
               </ul>
@@ -863,43 +862,43 @@ const Manipal = () => {
         </section>
 
         {/* Premium Testimonials */}
-        <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-blue-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
+            <div className="text-center mb-8 sm:mb-12 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 font-queens">
                 Success <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Stories</span>
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-2">
                 Hear from our alumni who have transformed their careers with Manipal Online
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="group">
-                  <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
-                    <div className="flex items-start gap-6">
+                  <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
+                    <div className="flex items-start gap-4 sm:gap-5 md:gap-6">
                       {/* Avatar */}
                       <div className="flex-shrink-0">
-                        <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl sm:rounded-2xl flex items-center justify-center text-white text-lg sm:text-xl md:text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
                           {testimonial.name.split(' ').map(n => n[0]).join('')}
                         </div>
                       </div>
                       
                       {/* Content */}
-                      <div className="flex-1">
-                        <div className="mb-4">
-                          <svg className="w-8 h-8 text-orange-500 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                      <div className="flex-1 min-w-0">
+                        <div className="mb-3 sm:mb-4">
+                          <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-orange-500 mb-2 sm:mb-3 md:mb-4" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
                           </svg>
-                          <p className="text-gray-700 text-lg leading-relaxed italic">
+                          <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed italic">
                             "{testimonial.text}"
                           </p>
                         </div>
                         
-                        <div className="border-t border-gray-100 pt-4">
-                          <h4 className="font-bold text-gray-900 text-xl">{testimonial.name}</h4>
-                          <p className="text-orange-600 font-semibold text-lg">
+                        <div className="border-t border-gray-100 pt-3 sm:pt-4">
+                          <h4 className="font-bold text-gray-900 text-base sm:text-lg md:text-xl">{testimonial.name}</h4>
+                          <p className="text-orange-600 font-semibold text-sm sm:text-base md:text-lg">
                             {testimonial.course}, {testimonial.university}
                           </p>
                         </div>
@@ -913,35 +912,35 @@ const Manipal = () => {
         </section>
 
         {/* Professional FAQ Section */}
-        <section className="py-20 bg-white">
+        <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
+            <div className="text-center mb-8 sm:mb-12 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 font-queens">
                 Frequently Asked <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Questions</span>
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 px-2">
                 Everything you need to know about Manipal Academy of Higher Education Online Programs
               </p>
             </div>
             
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-5 md:space-y-6">
               {faqData.map((faq, index) => (
                 <div
                   key={index}
-                  className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+                  className="group bg-white border border-gray-200 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
                 >
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className="w-full text-left px-8 py-6 bg-gradient-to-r from-gray-50 to-gray-100 hover:from-orange-50 hover:to-orange-100 flex justify-between items-center font-semibold text-gray-800 transition-all duration-300 group-hover:text-orange-700 text-lg"
+                    className="w-full text-left px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 bg-gradient-to-r from-gray-50 to-gray-100 hover:from-orange-50 hover:to-orange-100 flex justify-between items-center font-semibold text-gray-800 transition-all duration-300 group-hover:text-orange-700 text-sm sm:text-base md:text-lg"
                   >
-                    <span className="pr-8">{faq.question}</span>
-                    <div className="flex-shrink-0 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
-                      <span className="text-xl font-bold">{openIndex === index ? "−" : "+"}</span>
+                    <span className="pr-4 sm:pr-6 md:pr-8 flex-1">{faq.question}</span>
+                    <div className="flex-shrink-0 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                      <span className="text-lg sm:text-xl font-bold">{openIndex === index ? "−" : "+"}</span>
                     </div>
                   </button>
                   {openIndex === index && (
-                    <div className="px-8 py-6 text-gray-700 bg-white border-t border-gray-100 animate-[fadeIn_0.3s_ease-in-out]">
-                      <p className="text-lg leading-relaxed">{faq.answer}</p>
+                    <div className="px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-gray-700 bg-white border-t border-gray-100 animate-[fadeIn_0.3s_ease-in-out]">
+                      <p className="text-sm sm:text-base md:text-lg leading-relaxed">{faq.answer}</p>
                     </div>
                   )}
                 </div>
@@ -951,18 +950,18 @@ const Manipal = () => {
         </section>
 
         {/* Professional Hiring Partners Section */}
-        <section className="py-20 bg-gradient-to-br from-gray-100 to-gray-200">
+        <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-100 to-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
+            <div className="text-center mb-8 sm:mb-12 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 font-queens">
                 Our Students Work At <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Top Companies</span>
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-2">
                 Join the ranks of successful graduates working at leading organizations worldwide
               </p>
             </div>
             
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
               {["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company_vjgouc.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company1_tktbp7.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327090/company9_p4pgg3.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327088/com10_cm37v8.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany4_h5nana.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company6_rnuajo.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany5_qs6bgc.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/adove_jtmiou.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/samsung_sosfqv.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327152/ey_ph2bsx.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327173/ibm_ced3ir.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327172/hp_b4ylow.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327860/tata_n9jnwt.png", "/images/apple.jpg","https://res.cloudinary.com/didkrwhbu/image/upload/v1762327171/hero_krubph.webp"].map((src, i) => (
                 <div key={i} className="group">
                   <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
@@ -981,22 +980,22 @@ const Manipal = () => {
             </div>
             
             {/* Final CTA */}
-            <div className="text-center mt-16">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-3xl p-12 text-white max-w-4xl mx-auto hover:shadow-2xl transition-all duration-300">
-                <h3 className="text-4xl lg:text-5xl font-bold mb-6">Ready to Join Them?</h3>
-                <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+            <div className="text-center mt-8 sm:mt-12 md:mt-16">
+              <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 text-white max-w-4xl mx-auto hover:shadow-2xl transition-all duration-300">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Ready to Join Them?</h3>
+                <p className="text-base sm:text-lg md:text-xl text-orange-100 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
                   Start your journey with Manipal Academy of Higher Education Online and unlock endless career opportunities
                 </p>
-                <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
                   <button 
                     onClick={() => setOpenModal({ type: 'apply' })}
-                    className="bg-white text-orange-600 font-semibold px-12 py-4 rounded-full hover:bg-orange-50 transition-all duration-300 transform hover:scale-105 shadow-2xl text-lg"
+                    className="bg-white text-orange-600 font-semibold px-8 sm:px-10 md:px-12 py-3 sm:py-3.5 md:py-4 rounded-full hover:bg-orange-50 transition-all duration-300 transform hover:scale-105 shadow-2xl text-sm sm:text-base md:text-lg"
                   >
                     Apply Now
                   </button>
                   <button 
                     onClick={() => setOpenModal({ type: 'enquire' })}
-                    className="border-2 border-white text-white font-semibold px-12 py-4 rounded-full hover:bg-white/10 transition-all duration-300 transform hover:scale-105 text-lg"
+                    className="border-2 border-white text-white font-semibold px-8 sm:px-10 md:px-12 py-3 sm:py-3.5 md:py-4 rounded-full hover:bg-white/10 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base md:text-lg"
                   >
                     Download Brochure
                   </button>

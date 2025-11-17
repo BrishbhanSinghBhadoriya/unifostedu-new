@@ -267,7 +267,7 @@ function SearchContent({ onOpenModal }) {
                 { name: 'VGU University', href: '/vgu', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgu1_ieijw9.webp', rating: '4.0' },
                 { name: 'Kurukshetra University', href: '/ku-online', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku_xu5nkx.webp', rating: '4.3' },
                 { name: 'OP Jindal University', href: '/opjindal', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/opjindal_jdl7az.webp', rating: '4.6' },
-                { name: 'Chandigarh University', href: '/cuonline', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp', rating: '4.4' }
+                { name: 'Chandigarh University', href: '/cuonline', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp', rating: '4.4' },
               ].map((university, idx) => (
                 <div key={idx} className="group">
                   <Link 

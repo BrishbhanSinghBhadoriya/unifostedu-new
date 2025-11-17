@@ -318,7 +318,7 @@ const SMU = () => {
                   {[
                      
                { id: "introduction", label: "Introduction" },
-               { id: "campus-tour", label: "Campus Tour (Images, Videos)" },
+               { id: "campus-tour", label: "Campus Tour" },
                { id: "explore-courses", label: "Explore Online Courses and Fee Structure" },
                { id: "key-highlights", label: "Key Highlights" },
                { id: "dates and session", label: "Admission Dates and Upcoming & Ongoing Sessions" },
@@ -385,7 +385,7 @@ const SMU = () => {
                            <ul className="space-y-4">
                               {[
                               { id: "introduction", label: "Introduction" },
-                              { id: "campus-tour", label: "Campus Tour (Images, Videos)" },
+                              { id: "campus-tour", label: "Campus Tour" },
                               { id: "explore-courses", label: "Explore Online Courses and Fee Structure" },
                               { id: "key-highlights", label: "Key Highlights" },
                               { id: "dates and session", label: "Admission Dates and Upcoming & Ongoing Sessions" },

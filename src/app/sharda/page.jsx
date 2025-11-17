@@ -16,7 +16,6 @@ import Image from 'next/image';
 import * as Tabs from '@radix-ui/react-tabs';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
-import { images } from "next.config";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -104,7 +103,7 @@ const UniversityPage = () => {
       alt: "Master of Commerce (M.Com) in Sharda Online",
     },
   ];
-
+ 
    useEffect(() => {
          
    
@@ -115,8 +114,8 @@ const UniversityPage = () => {
    
           
    },[])
-   
- const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+ 
 const faqData = [
   {
     question: "What is Sharda University Online?",
@@ -231,6 +230,7 @@ const faqData = [
   const [openIndex, setOpenIndex] = useState(null);
   const [openModal, setOpenModal] = useState(null);
   const [activeTab, setActiveTab] = useState('all');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleFAQ = (index) => {
     if (openIndex === index) setOpenIndex(null);
@@ -768,10 +768,10 @@ const faqData = [
 
         <h3 className="text-2xl font-semibold text-[#ee067f]">Campus Highlights:</h3>
         <ul className="list-disc pl-6 space-y-2 text-gray-700 leading-relaxed ">
-          <li>✅ Hi-tech smart classrooms</li>
-          <li>✅ Global student community (50+ nationalities)</li>
-          <li>✅ International tie-ups and exchange programs</li>
-          <li>✅ Modern labs and innovation centers</li>
+          <li> Hi-tech smart classrooms</li>
+          <li> Global student community (50+ nationalities)</li>
+          <li> International tie-ups and exchange programs</li>
+          <li> Modern labs and innovation centers</li>
         </ul>
       </div>
     </div>
@@ -867,7 +867,7 @@ const faqData = [
                     <Tabs.Trigger
                       key={tab.value}
                       value={tab.value}
-                      className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
+                      className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg sm:rounded-xl font-semibold transition-all duration-300 text-sm sm:text-base ${
                         activeTab === tab.value
                           ? 'bg-gradient-to-r from-[#f7188b] to-[#ec027c] text-white shadow-lg'
                           : 'text-gray-700 hover:text-[#f7188b] hover:bg-white'
@@ -963,7 +963,7 @@ const faqData = [
 
   {/* MBA Section */}
   <div className="mt-12 border-t pt-10">
-    <h3 className="text-2xl md:text-3xl font-semibold mb-4">💼 MBA at Sharda University</h3>
+    <h3 className="text-2xl md:text-3xl font-semibold mb-4"> MBA at Sharda University</h3>
     <p className="text-lg leading-relaxed font-medium ">
       The  MBA at Sharda University  is one of the most popular  Sharda University online courses . 
       It is designed for students who aspire to become  future business leaders  and  managers . 
@@ -996,10 +996,10 @@ const faqData = [
 
   {/* MCA Section */}
   <div className="mt-12 border-t pt-10">
-    <h3 className="text-2xl md:text-3xl font-semibold mb-4">💻 Online MCA from Sharda University</h3>
+    <h3 className="text-2xl md:text-3xl font-semibold mb-4"> Online MCA from Sharda University</h3>
     <p className="text-lg leading-relaxed font-medium ">
       The  Online MCA from Sharda University  is perfect for students interested in 
-        computers ,   software , and   technology . It covers 
+        computers ,   software , and   technology . It covers
         computer applications ,  artificial intelligence ,  web development , 
       and  data analytics  — ideal for careers in  IT ,  programming , 
       or  data science .
@@ -1014,20 +1014,20 @@ const faqData = [
 
   {/* Why Choose Section */}
   <div className="mt-12 border-t pt-10">
-    <h3 className="text-2xl md:text-3xl font-semibold mb-6">🧠 Why Choose Sharda University Online Courses?</h3>
+    <h3 className="text-2xl md:text-3xl font-semibold mb-6"> Why Choose Sharda University Online Courses?</h3>
     <ul className="list-disc list-inside text-lg font-medium space-y-3 ">
-      <li>🎓 Offered by one of the  best universities in Delhi NCR </li>
-      <li>💻  100% online programs  with live and recorded classes</li>
-      <li>💼  Career-focused courses  with practical projects</li>
-      <li>🏆 Strong  placement support  and global recognition</li>
-      <li>💰  Affordable Sharda University fees  with EMI options</li>
-      <li>🗓️ Simple  Sharda University admission 2025  process for all students</li>
+      <li> Offered by one of the  best universities in Delhi NCR </li>
+      <li>  100% online programs  with live and recorded classes</li>
+      <li>  Career-focused courses  with practical projects</li>
+      <li> Strong  placement support  and global recognition</li>
+      <li>  Affordable Sharda University fees  with EMI options</li>
+      <li> Simple  Sharda University admission 2025  process for all students</li>
     </ul>
   </div>
 
   {/* Learn Anytime Section */}
   <div className="mt-12 border-t pt-10">
-    <h3 className="text-2xl md:text-3xl font-semibold mb-4">🌍 Learn Anytime, Anywhere</h3>
+    <h3 className="text-2xl md:text-3xl font-semibold mb-4"> Learn Anytime, Anywhere</h3>
     <p className="text-lg leading-relaxed font-medium ">
       No matter where you live — in  Delhi NCR ,  Noida , or anywhere in India — 
       you can easily enroll in  Sharda University Online  and earn a  recognized degree . 
@@ -1044,7 +1044,7 @@ const faqData = [
 
   {/* Start Journey Section */}
   <div className="mt-12 border-t pt-10 text-center">
-    <h3 className="text-2xl md:text-3xl font-semibold mb-6">🎯 Start Your Journey Today</h3>
+    <h3 className="text-2xl md:text-3xl font-semibold mb-6"> Start Your Journey Today</h3>
     <p className="text-lg leading-relaxed font-medium mb-8 ">
       Begin your academic and career journey with  Sharda University Online , part of the 
         best university in Delhi NCR . Explore programs such as 
@@ -1109,9 +1109,9 @@ const faqData = [
       </p>
 
       <ul className="list-disc pl-6 mt-3 text-black space-y-1">
-        <li>📌 Online MBA Sharda University</li>
-        <li>📌 Online MCA Sharda University</li>
-        <li>📌 Online BBA Sharda University</li>
+        <li> Online MBA Sharda University</li>
+        <li> Online MCA Sharda University</li>
+        <li> Online BBA Sharda University</li>
       </ul>
       <p className="mt-3 text-black ">
         focus on essential industry skills such as data analytics, leadership, innovation, and entrepreneurship — preparing learners for high-paying roles in fast-growing sectors.
@@ -1297,38 +1297,88 @@ const faqData = [
             <th className="py-4 px-6 text-gray-800 font-semibold text-base">Program</th>
             <th className="py-4 px-6 text-gray-800 font-semibold text-base">Eligibility</th>
             <th className="py-4 px-6 text-gray-800 font-semibold text-base">Status</th>
+            <th className="py-4 px-6 text-gray-800 font-semibold text-base">Action</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-200">
           <tr className="hover:bg-gray-50 transition">
             <td className="py-4 px-6 text-gray-900 font-medium">Online MBA (Sharda University)</td>
             <td className="py-4 px-6 text-gray-600">Graduation</td>
-            <td className="py-4 px-6 text-green-600 font-semibold">Admission Open </td>
+            <td className="py-4 px-6 text-green-600 font-semibold">Admission Open</td>
+            <td className="py-4 px-6">
+              <button 
+                onClick={() => setOpenModal({ type: 'enquire', program: 'MBA' })}
+                className="bg-gradient-to-r from-[#f7188b] to-[#ec027c] text-white font-semibold px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-[#f7188b]/25 text-sm cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </td>
           </tr>
           <tr className="hover:bg-gray-50 transition">
             <td className="py-4 px-6 text-gray-900 font-medium">Online MCA (Sharda University)</td>
             <td className="py-4 px-6 text-gray-600">BCA / B.Sc. IT or relevant degree</td>
-            <td className="py-4 px-6 text-green-600 font-semibold">Admission Open </td>
+            <td className="py-4 px-6 text-green-600 font-semibold">Admission Open</td>
+            <td className="py-4 px-6">
+              <button 
+                onClick={() => setOpenModal({ type: 'enquire', program: 'MCA' })}
+                className="bg-gradient-to-r from-[#f7188b] to-[#ec027c] text-white font-semibold px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-[#f7188b]/25 text-sm cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </td>
           </tr>
           <tr className="hover:bg-gray-50 transition">
             <td className="py-4 px-6 text-gray-900 font-medium">Online BBA (Sharda University)</td>
             <td className="py-4 px-6 text-gray-600">10+2 Pass</td>
-            <td className="py-4 px-6 text-green-600 font-semibold">Admission Open </td>
+            <td className="py-4 px-6 text-green-600 font-semibold">Admission Open</td>
+            <td className="py-4 px-6">
+              <button 
+                onClick={() => setOpenModal({ type: 'enquire', program: 'BBA' })}
+                className="bg-gradient-to-r from-[#f7188b] to-[#ec027c] text-white font-semibold px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-[#f7188b]/25 text-sm cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </td>
           </tr>
           <tr className="hover:bg-gray-50 transition">
             <td className="py-4 px-6 text-gray-900 font-medium">Online BCA (Sharda University)</td>
             <td className="py-4 px-6 text-gray-600">10+2 Pass (Govt. recognized board)</td>
-            <td className="py-4 px-6 text-yellow-600 font-semibold">Limited Seats </td>
+            <td className="py-4 px-6 text-yellow-600 font-semibold">Limited Seats</td>
+            <td className="py-4 px-6">
+              <button 
+                onClick={() => setOpenModal({ type: 'enquire', program: 'BCA' })}
+                className="bg-gradient-to-r from-[#f7188b] to-[#ec027c] text-white font-semibold px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-[#f7188b]/25 text-sm cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </td>
           </tr>
           <tr className="hover:bg-gray-50 transition">
             <td className="py-4 px-6 text-gray-900 font-medium">Online M.Com</td>
             <td className="py-4 px-6 text-gray-600">B.Com / Equivalent</td>
-            <td className="py-4 px-6 text-green-600 font-semibold">Admission Open </td>
+            <td className="py-4 px-6 text-green-600 font-semibold">Admission Open</td>
+            <td className="py-4 px-6">
+              <button 
+                onClick={() => setOpenModal({ type: 'enquire', program: 'M.Com' })}
+                className="bg-gradient-to-r from-[#f7188b] to-[#ec027c] text-white font-semibold px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-[#f7188b]/25 text-sm cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </td>
           </tr>
           <tr className="hover:bg-gray-50 transition">
             <td className="py-4 px-6 text-gray-900 font-medium">Online BA</td>
             <td className="py-4 px-6 text-gray-600">10+2 Pass (Govt. recognized board)</td>
-            <td className="py-4 px-6 text-green-600 font-semibold">Admission Open </td>
+            <td className="py-4 px-6 text-green-600 font-semibold">Admission Open</td>
+           
+            <td className="py-4 px-6">
+              <button 
+                onClick={() => setOpenModal({ type: 'enquire', program: 'BA' })}
+                className="bg-gradient-to-r from-[#f7188b] to-[#ec027c] text-white font-semibold px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-[#f7188b]/25 text-sm cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -1671,12 +1721,12 @@ const faqData = [
         Top Job Roles:
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-gray-700 text-base">
-        <p>📌 Business Analyst</p>
-        <p>📌 Software Developer</p>
-        <p>📌 HR Manager</p>
-        <p>📌 Marketing Executive</p>
-        <p>📌 Data Analyst</p>
-        <p>📌 Project Coordinator</p>
+        <p> Business Analyst</p>
+        <p> Software Developer</p>
+        <p> HR Manager</p>
+        <p> Marketing Executive</p>
+        <p> Data Analyst</p>
+        <p> Project Coordinator</p>
       </div>
     </div>
   </div>
@@ -1827,7 +1877,7 @@ const faqData = [
       {/* Review 1 */}
       <div className="bg-gray-50 rounded-xl shadow-sm p-6 hover:shadow-md transition">
         <h3 className="text-lg font-semibold text-gray-800 mb-2">
-          ⭐ Online MBA Student
+           Online MBA Student
         </h3>
         <p className="text-gray-600 ">
           "Classes are well organized and faculty support is excellent. The Online MBA Sharda University
@@ -1838,7 +1888,7 @@ const faqData = [
       {/* Review 2 */}
       <div className="bg-gray-50 rounded-xl shadow-sm p-6 hover:shadow-md transition">
         <h3 className="text-lg font-semibold text-gray-800 mb-2">
-          ⭐ Online MCA Student
+          Online MCA Student
         </h3>
         <p className="text-gray-600 ">
           "The curriculum is updated as per industry trends, especially AI & Data Science.
@@ -1849,7 +1899,7 @@ const faqData = [
       {/* Review 3 */}
       <div className="bg-gray-50 rounded-xl shadow-sm p-6 hover:shadow-md transition">
         <h3 className="text-lg font-semibold text-gray-800 mb-2">
-          ⭐ Online BBA Student
+           Online BBA Student
         </h3>
         <p className="text-gray-600 ">
           "The flexibility of Sharda University Online allowed me to study while managing my family business."

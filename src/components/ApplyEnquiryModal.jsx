@@ -1,8 +1,8 @@
 'use client';
-
 import React from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogDescription, DialogTitle } from '@/components/ui/dialog';
 import EnquiryForm from '@/components/EnquiryForm';
+import Image from 'next/image';
 
 export default function ApplyEnquiryModal({
   open,
@@ -10,56 +10,110 @@ export default function ApplyEnquiryModal({
   title = 'Start Your Application',
   subtitle,
   imageSrc = 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/amityForm_xdbvvf.webp',
-
-
-
-  
   universityName,
   defaultProgram = 'MBA',
   formType = 'general',
 }) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-5xl md:max-w-6xl p-0 max-h-[90vh] overflow-y-auto scrollbar-hide">
-        <div className="block md:flex md:h-[90vh]">
-          {/* Side Image */}
-          <div className={`w-full md:w-2/5 bg-${universityName.toLowerCase() === 'manipal university online' ? '[#ff7a36]' : '[#f8c100]'} h-56 md:h-auto md:relative`}>
-            <img src={imageSrc} alt={title} className="w-full h-full object-cover md:absolute md:inset-0" />
-          </div>
-          <div className="w-full md:w-3/5 p-5 sm:p-8 md:p-8 lg:p-10 md:overflow-y-auto scrollbar-hide">
-            <DialogHeader className="mb-2">
-              <DialogTitle className="text-xl sm:text-2xl font-bold">
-                {title}
-              </DialogTitle>
-                 <DialogDescription className="text-black">
-                    {/* Please fill in the details below to enquire about the program. */}
-                </DialogDescription>
+      <DialogContent className="max-w-5xl md:max-w-6xl p-0 h-[95vh] md:h-[90vh] flex flex-col">
+        <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
+          {/* Side Image Section */}
+          <div className={`
+            w-full md:w-2/5 
+            ${universityName?.toLowerCase() === 'manipal university online' ? 'bg-[#ff7a36]' : 'bg-[#f8c100]'}
+            relative 
+            h-[180px] sm:h-[200px] md:h-full
+            flex-shrink-0
+            overflow-hidden
+          `}>
+            {/* Desktop Image */}
+            <div className="hidden md:block w-full h-full relative">
+              <Image 
+                src={imageSrc} 
+                alt={title}
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 768px) 100vw, 40vw"
+                priority
+              />
+            </div>
 
-              {subtitle && (
-                <p className="text-sm text-gray-500">{subtitle}</p>
-              )}
-            </DialogHeader>
-            <EnquiryForm
-              universityName={universityName}
-              defaultProgram={defaultProgram}
-              formType={formType}
-              autoCloseOnSuccess={true}
-              onSubmitted={() => onOpenChange(false)}
-            />
+            {/* Mobile Image */}
+            <div className="md:hidden w-full h-full relative flex items-center justify-center p-3">
+              <div className="relative w-full h-full max-w-sm mx-auto">
+                <Image 
+                  src={imageSrc} 
+                  alt={title}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  priority
+                />
+              </div>
+            </div>
+
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent md:hidden" />
+          </div>
+
+          {/* Form Section - Scrollable */}
+          <div className="w-full md:w-3/5 flex flex-col flex-1 overflow-hidden">
+            {/* Scrollable Content */}
+            <div className="flex-1 overflow-y-auto overflow-x-hidden" style={{ WebkitOverflowScrolling: 'touch' }}>
+              <div className="p-4 sm:p-5 md:p-8 lg:p-10">
+                <DialogHeader className="mb-3 md:mb-5">
+                  <DialogTitle className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
+                    {title}
+                  </DialogTitle>
+                  <DialogDescription className="text-xs sm:text-sm md:text-base text-gray-600 mt-1.5 md:mt-2">
+                    {subtitle || 'Please fill in the details below to enquire about the program.'}
+                  </DialogDescription>
+                </DialogHeader>
+
+                <EnquiryForm
+                  universityName={universityName}
+                  defaultProgram={defaultProgram}
+                  formType={formType}
+                  autoCloseOnSuccess={true}
+                  onSubmitted={() => onOpenChange(false)}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </DialogContent>
-      <style jsx>{`
-        :global(.scrollbar-hide) {
-          -ms-overflow-style: none; /* IE and Edge */
-          scrollbar-width: none;    /* Firefox */
+
+      <style jsx global>{`
+        /* Scrollbar hide karo but functionality maintain karo */
+        .overflow-y-auto {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
         }
-        :global(.scrollbar-hide::-webkit-scrollbar) {
-          display: none;            /* Chrome, Safari */
+        .overflow-y-auto::-webkit-scrollbar {
+          display: none;
+        }
+
+        /* Mobile touch scrolling optimize karo */
+        @media (max-width: 768px) {
+          [role="dialog"] {
+            overflow: hidden !important;
+          }
+          
+          .overflow-y-auto {
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: contain;
+          }
+        }
+
+        /* Dialog animation smooth karo */
+        [data-state="open"] {
+          animation-duration: 200ms;
+        }
+        [data-state="closed"] {
+          animation-duration: 200ms;
         }
       `}</style>
     </Dialog>
   );
 }
-
-
