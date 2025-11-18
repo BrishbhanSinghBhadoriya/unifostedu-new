@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Head from "next/head";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -56,6 +58,22 @@ import {
   CheckCircle2,
   Laptop,
 } from "lucide-react";
+
+const SECTION_ITEMS = [
+  { id: "HeroSection", label: "Introduction" },
+  { id: "AboutAmity", label: "About Amity" },
+  { id: "Courses", label: "Explore Courses" },
+  { id: "highlights", label: "Key Highlights" },
+  { id: "Scholarship", label: "Scholarships" },
+  { id: "AdmissionProcedure", label: "Admission Process" },
+  { id: "UpcomingSessions", label: "Upcoming Sessions" },
+  { id: "OnlineVsRegular", label: "Online vs Regular" },
+  { id: "PlacementRecord", label: "Placement Record" },
+  { id: "HiringPartners", label: "Hiring Partners" },
+  { id: "RegionalOutreach", label: "Study From Cities" },
+  { id: "ResourceLinks", label: "More Resources" },
+  { id: "FAQs", label: "FAQs" },
+];
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -192,133 +210,166 @@ const AmityLandingPage = () => {
     },
   ];
 
+  const metaKeywords = [
+    "Amity University Online MBA",
+    "Amity University Online degrees",
+    "Amity University Online fees structure",
+    "Amity University Online admission process",
+    "Amity University Online placement assistance",
+    "Amity University Online eligibility",
+    "Amity University Online scholarships",
+    "Amity University Online BBA program",
+    "Amity University Online BCA program",
+    "Amity University Online MCA program",
+    "Amity online degree valid for government jobs",
+    "online MBA Delhi Amity University",
+    "online MBA Mumbai Amity",
+    "online MBA Bangalore Amity",
+    "flexible online programs Amity University",
+    "Amity University Online vs regular degree"
+  ];
+
+  const metaKeywordString = metaKeywords.join(", ");
+
+  const metaDescription =
+    "Explore UGC-entitled Amity University Online MBA, BBA, BCA, MCA and M.Com degrees. Review 2025 fees structure, admission process, scholarships, placement assistance, and flexible learning options.";
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    name: "Amity University Online",
+    alternateName: "Amity Online",
+    url: "https://unifostedu.com/amity-university-online",
+    logo: "https://unifostedu.com/amity.svg",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+91-7042867717",
+      contactType: "admissions",
+      areaServed: "IN",
+      availableLanguage: ["en", "hi"],
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Noida",
+      addressRegion: "Uttar Pradesh",
+      postalCode: "201301",
+      addressCountry: "IN",
+    },
+    sameAs: [
+      "https://www.facebook.com/AmityUniversityOnline",
+      "https://www.linkedin.com/school/amity-university-online/",
+      "https://x.com/AmityUniversity",
+    ],
+  };
+
+  const courseSchema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Amity University Online MBA",
+    description:
+      "UGC-entitled, NAAC A+ accredited online MBA from Amity University Online with 24 specialisations and dedicated placement assistance.",
+    provider: {
+      "@type": "EducationalOrganization",
+      name: "Amity University Online",
+      sameAs: "https://unifostedu.com/amity-university-online",
+    },
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: "online",
+      startDate: "2025-01-15",
+      endDate: "2027-01-14",
+      location: {
+        "@type": "VirtualLocation",
+        url: "https://amityonline.com",
+      },
+      instructor: {
+        "@type": "Person",
+        name: "Global Faculty & Industry Mentors",
+      },
+      offers: {
+        "@type": "Offer",
+        url: "https://unifostedu.com/amity-university-online",
+        priceCurrency: "INR",
+        price: "299000",
+        availability: "https://schema.org/InStock",
+        validFrom: "2024-11-01",
+      },
+    },
+  };
+
+  const cityHighlights = [
+    {
+      city: "Delhi NCR",
+      focus:
+        "Professionals searching for an online MBA Delhi Amity University choose the platform for weekend mentoring hubs and corporate networking events in Gurugram and Noida.",
+    },
+    {
+      city: "Mumbai & Pune",
+      focus:
+        "Finance and marketing aspirants across Mumbai and Pune prefer the online MBA Mumbai Amity pathway and BBA programs for industry projects with BFSI, media, and retail partners.",
+    },
+    {
+      city: "Bangalore & Hyderabad",
+      focus:
+        "Tech talent in Bangalore and Hyderabad opt for the online MBA Bangalore Amity specialisations alongside MCA and BCA programs featuring virtual labs, AI, cyber security, and cloud modules.",
+    },
+    {
+      city: "Kolkata & Eastern India",
+      focus:
+        "Learners from Kolkata, Bhubaneswar, and Guwahati opt for flexible Amity University Online degrees to qualify for government jobs and PSU roles without relocating.",
+    },
+  ];
+
   const faqData = [
     {
-      question: "Is Amity University Online approved by UGC?",
+      question: "Is the Amity University Online MBA UGC-entitled and NAAC A+ accredited?",
       answer:
-        " Yes, Amity University Online is UGC-entitled and NAAC A+ accredited, which are offering degrees equal to offline degree programs which is as equal important as offline degrees.",
+        "Yes. Amity University Online holds UGC entitlement and NAAC A+ accreditation, so the online MBA and every other Amity University Online degree carries the same recognition as an on-campus qualification.",
     },
     {
-      question:
-        "Amity Online degrees recognized for government jobs and abroad?",
+      question: "Is an Amity University Online degree valid for government jobs and abroad?",
       answer:
-        "Yes, all online degrees that are offered by Amity University Online are recognized by UGC and accepted all over the world at every institute as well as organizations.",
+        "Absolutely. Amity University Online degrees are accepted for government jobs in India and are globally recognized, making them suitable for higher studies or international employment opportunities.",
     },
     {
-      question:
-        "How is Amity Online different from other distance education platforms?",
+      question: "What is the 2025 Amity University Online MBA fees structure?",
       answer:
-        "Amity Online combines learning of technology with strong mentorship with world class faculty, live lectures, and global collaborations with industry experts, ensuring supereme quality of education.",
-    },
-    {
-      question: " Can I pursue an online MBA while working full-time?",
-      answer:
-        "Absolutely! The Amity Online MBA is majorly designed for working professionals who does not want to leave there work and earn degree as well at their own pace.",
-    },
-
-    {
-      question: "What is the admission process for Amity Online Programs?",
-      answer:
-        "The admission process is completely online. Students need to visit the official Amity Online website or UNIFOST platform, fill out the application form, upload required documents, and pay the registration fee. Once verified, admission confirmation is shared via email.",
-    },
-    {
-      question: "What is the eligibility for UG and PG programs?",
-      answer:
-        "For UG courses, students must have passed 10+2 from a recognized board. For PG courses, candidates must hold a bachelor’s degree in a relevant field from a recognized university.",
-    },
-    {
-      question: "Is there any entrance exam required?",
-      answer:
-        "No, there is no entrance examination for online programs. Admission is merit-based and depends on your previous academic qualifications.",
-    },
-    {
-      question: "How are the online classes conducted?",
-      answer:
-        "Amity Online conducts classes through its Learning Management System (LMS) with live interactive sessions, recorded lectures, digital study materials, and continuous assessments.",
-    },
-    {
-      question: "Are Amity Online degrees UGC approved?",
-      answer:
-        "Yes, Amity University Online is recognized by UGC and approved by AICTE. The online degrees are equivalent to regular degrees as per UGC guidelines.",
-    },
-
-    {
-      question: "What courses does Amity University Online offer?",
-      answer: `Amity University Online offers a wide range of courses including undergraduate, postgraduate, diploma, and certification programs. These courses span disciplines like Management, IT & Computer Science, Engineering, Education, Media & Communication, and more. The courses are designed for working professionals, students, and anyone looking to advance their career through flexible online learning.`,
-    },
-    {
-      question: "What is the admission process for Amity University Online?",
-      answer: `The admission process at Amity University Online is simple and fully digital. Prospective students need to fill the online application form on the official website, submit the required documents such as academic certificates, and pay the application fee. After verification, eligible candidates receive an admission confirmation and can start their online learning journey.`,
-    },
-    {
-      question: "Is Amity University Online recognized and accredited?",
-      answer: `Yes, Amity University Online is recognized by UGC-DEB (University Grants Commission - Distance Education Bureau) and holds multiple accreditations for its programs. The university ensures high-quality education standards, industry-relevant curriculum, and global recognition for its online degrees.`,
-    },
-    {
-      question:
-        "What is the fee structure for Amity University Online courses?",
-      answer: `The fee structure varies depending on the course and program. For undergraduate programs, fees typically range from INR 50,000 to INR 1,50,000. Postgraduate programs may range from INR 75,000 to INR 2,50,000. The university also offers installment options to make education more accessible.`,
-    },
-    {
-      question: "What is the duration of online courses at Amity University?",
-      answer: `The duration of online courses varies depending on the program. Undergraduate programs generally take 3-4 years, while postgraduate programs are 1-2 years. Short-term certification and diploma courses may last a few months to a year. Flexible learning options allow students to balance studies with professional commitments.`,
+        "For the 2025 intake, the Amity University Online MBA fees structure ranges from ₹1,99,000 to ₹2,99,000 depending on the specialization. Flexible EMI plans and no-cost installment options are available for working professionals.",
     },
     {
       question: "Does Amity University Online provide placement assistance?",
-      answer: `Yes, Amity University Online provides placement assistance through industry tie-ups and career support services. Students get access to virtual career fairs, interview preparation sessions, internships, and guidance from experienced mentors. This ensures that students can build a strong professional network and secure relevant job opportunities.`,
+      answer:
+        "Yes. Amity University Online offers dedicated placement assistance including virtual job fairs, resume mentoring, interview preparation, and connections with 500+ hiring partners across India.",
     },
     {
-      question:
-        "Are the online degrees from Amity University globally recognized?",
-      answer: `Absolutely. Amity University Online degrees are recognized internationally and provide opportunities for higher studies and employment abroad. The curriculum aligns with global standards, ensuring students acquire skills that are relevant and valued worldwide.`,
-    },
-
-    {
-      question: "What courses does Amity University Online offer?",
-      answer: `Amity University Online provides a wide variety of programs to cater to students, working professionals, and lifelong learners. Popular courses include 
-      BBA (Bachelor of Business Administration), MBA (Master of Business Administration), B.Tech (Information Technology, Computer Science), M.Tech (Computer Science, Data Science), BCA, MCA, B.Sc, M.Sc, Diploma in Digital Marketing, PG Diploma in Cyber Security, Journalism & Mass Communication, and certifications in AI, Blockchain, and Business Analytics. 
-      Each course is designed with industry-aligned curriculum, flexible online delivery, and interactive learning tools to ensure students gain practical knowledge alongside theoretical understanding. The programs are globally recognized and UGC-DEB approved, making them ideal for career advancement and higher education prospects.`,
+      question: "Can working professionals pursue the Amity University Online MBA?",
+      answer:
+        "The Amity University Online MBA is built for working professionals, featuring weekend live classes, on-demand video lectures, and a flexible assessment schedule so you can study without leaving your job.",
     },
     {
-      question: "What is the admission process for Amity University Online?",
-      answer: `The admission process is completely online, designed for convenience. Applicants must fill out the online application form on the official website, upload scanned academic documents, and pay the nominal application fee. Once submitted, the application is verified by the admission team. Selected candidates receive an admission offer, and upon acceptance, students gain access to the online learning portal. Some courses may require a brief interview or eligibility check. The process is quick, transparent, and accessible from anywhere in India or abroad.`,
+      question: "What is the admission process for Amity University Online degrees?",
+      answer:
+        "The Amity University Online admission process is completely digital: submit the application form, upload academic documents, pay the registration fee, and await counseling confirmation via email or phone.",
     },
     {
-      question: "Is Amity University Online recognized and accredited?",
-      answer: `Yes. Amity University Online is recognized by the University Grants Commission – Distance Education Bureau (UGC-DEB) and is accredited by various national and international bodies. The programs follow high-quality education standards and maintain academic rigor equivalent to on-campus courses. Students earn degrees that are globally recognized, allowing for international career opportunities or higher studies. The university’s recognition ensures that students’ qualifications are valid for professional and academic purposes across India and worldwide.`,
+      question: "What are the eligibility criteria for Amity University Online BBA, BCA, and MCA?",
+      answer:
+        "For UG programs like the Amity University Online BBA and BCA, you need a 10+2 pass from a recognized board. For the MCA, candidates must have a relevant bachelor’s degree with mathematics or computer science exposure.",
     },
     {
-      question:
-        "What is the fee structure for Amity University Online courses?",
-      answer: `The fee structure depends on the program type. Undergraduate programs such as BBA, BCA, and B.Sc range between INR 50,000 to INR 1,50,000 for the complete course. Postgraduate programs such as MBA, MCA, and M.Sc range between INR 75,000 to INR 2,50,000. Short-term diploma and certification courses usually cost between INR 10,000 to INR 50,000. Flexible installment plans are offered, and scholarships may be available for eligible students. The fees include access to online resources, learning modules, assessments, and faculty support.`,
+      question: "Does Amity University Online offer scholarships or EMI support?",
+      answer:
+        "Yes. Amity University Online extends merit scholarships, corporate partner discounts, and 0% EMI support to help learners manage fees for programs like the online MBA, BBA, and MCA.",
     },
     {
-      question: "What is the duration of online courses at Amity University?",
-      answer: `The duration varies by program. Undergraduate programs like BBA, BCA, and B.Sc generally take 3-4 years, while postgraduate programs such as MBA, MCA, and M.Sc are 1-2 years. Diploma and certification courses usually range from 3 months to 1 year. Online courses are designed with flexible schedules to accommodate working professionals. Students can access recorded lectures, live sessions, and interactive content, allowing them to complete courses at their own pace without compromising quality or learning outcomes.`,
+      question: "How does Amity University Online compare with other online universities?",
+      answer:
+        "Amity University Online combines NAAC A+ accreditation, global collaborations, and over 25,000 alumni, making it a top alternative when you compare Amity University Online with other UGC-approved online universities in India.",
     },
     {
-      question: "Does Amity University Online provide placement assistance?",
-      answer: `Yes, Amity University Online provides dedicated placement support. Students get access to virtual career fairs, internships, resume-building workshops, and mock interviews. Industry tie-ups help students secure jobs in reputed companies across sectors such as IT, Finance, Marketing, Data Analytics, and Management. Faculty mentors guide students in career planning and skill development. Alumni networks and job portals provide additional opportunities for placement, ensuring graduates are well-prepared to enter the professional world with confidence.`,
-    },
-
-    {
-      question: "Are online degrees from Amity University globally recognized?",
-      answer: `Absolutely. Amity University Online degrees follow international standards and are recognized worldwide. Graduates can pursue higher education abroad, apply for global jobs, or participate in research opportunities. Programs are structured to meet global industry demands, integrating practical projects, case studies, and international perspectives. This global recognition ensures that students’ qualifications are valuable for career progression, cross-border employment, and academic growth.`,
-    },
-    {
-      question:
-        "What is the eligibility criteria for Amity University Online courses?",
-      answer: `Eligibility varies by program. For undergraduate courses like BBA or BCA, students must have completed 10+2 or equivalent from a recognized board. For postgraduate courses like MBA, MCA, or M.Sc, a bachelor’s degree in the relevant discipline is required. Some specialized programs may require work experience, prerequisite certifications, or qualifying exams. Amity University Online emphasizes inclusivity and provides guidance for students from diverse educational backgrounds to choose the right course aligned with their career goals.`,
-    },
-    {
-      question:
-        "Does Amity University Online offer short-term certificate programs?",
-      answer: `Yes. Amity University Online offers multiple short-term certificate programs designed for skill enhancement and career growth. Popular certifications include Digital Marketing, Artificial Intelligence, Data Analytics, Blockchain, Cyber Security, Project Management, Business Analytics, and Leadership programs. These programs are flexible, affordable, and industry-relevant, allowing students to upskill quickly and enhance employability. Certificates are recognized by industry partners and provide practical knowledge along with theoretical insights.`,
-    },
-    {
-      question:
-        "Can working professionals pursue courses at Amity University Online?",
-      answer: `Absolutely. Amity University Online is specifically designed to cater to working professionals. Courses are delivered online with flexible schedules, live interactive sessions, recorded lectures, and 24/7 access to learning materials. Professionals can balance their work commitments while acquiring new skills or degrees. The programs are designed to provide practical knowledge that can be applied in the workplace, enhancing both career growth and skill development without disrupting daily routines.`,
+      question: "Are Amity University Online degrees globally recognized?",
+      answer:
+        "Yes. Every Amity University Online degree follows global academic standards, includes WES evaluation support, and is valued by employers across North America, Europe, the Middle East, and Asia.",
     },
   ];
 
@@ -357,6 +408,41 @@ const AmityLandingPage = () => {
     }, 3000);
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    if (!sectionItems.length) return undefined;
+
+    const observerOptions = {
+      root: null,
+      threshold: 0.25,
+      rootMargin: "-45% 0px -45% 0px",
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    sectionItems.forEach((section) => {
+      const element = document.getElementById(section.id);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      sectionItems.forEach((section) => {
+        const element = document.getElementById(section.id);
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+      observer.disconnect();
+    };
+  }, [sectionItems]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -461,6 +547,8 @@ const AmityLandingPage = () => {
     },
   ];
 
+  const sectionItems = SECTION_ITEMS;
+
   const specializations = [
     {
       program: "MBA",
@@ -505,15 +593,42 @@ const AmityLandingPage = () => {
   };
 
   const [openIndex, setOpenIndex] = useState(null);
+  const [activeSection, setActiveSection] = useState(sectionItems[0]?.id ?? null);
 
   const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+    setOpenIndex((prev) => (prev === index ? null : index));
   };
 
   return (
-    <div style={{ overflowX: "hidden" }}>
-      
-      <div className="min-h-screen bg-white relative">
+    <React.Fragment>
+      <Head>
+        <title>Online MBA &amp; Degrees | Amity University Online (NAAC A+)</title>
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={metaKeywordString} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://unifostedu.com/amity-university-online" />
+        <meta property="og:title" content="Online MBA &amp; Degrees | Amity University Online (NAAC A+)" />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://unifostedu.com/amity-university-online" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327155/girlImage_w9ulny.webp"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Online MBA &amp; Degrees | Amity University Online (NAAC A+)" />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327155/girlImage_w9ulny.webp"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
+      </Head>
+      <div className="min-h-screen bg-white relative" style={{ overflowX: "hidden" }}>
       
         <motion.header
           className="bg-white shadow-sm fixed top-0 left-0 w-full z-50"
@@ -596,34 +711,29 @@ const AmityLandingPage = () => {
               Page Contents
             </h3>
             <ul className="space-y-2.5 md:space-y-3">
-              {[
-                { id: "HeroSection", label: "Introduction" },
-                { id: "AboutAmity", label: "About Amity" },
-                { id: "Courses", label: "Explore Courses" },
-                { id: "highlights", label: "Key Highlights" },
-                { id: "Scholarship", label: "Scholarships" },
-                { id: "AdmissionProcedure", label: "Admission Process" },
-                { id: "UpcomingSessions", label: "Upcoming Sessions" },
-                { id: "PlacementRecord", label: "Placement Record" },
-                { id: "HiringPartners", label: "Hiring Partners" },
-                { id: "FAQs", label: "FAQs" },
-              ].map((item) => (
-                <li key={item.id}>
-                  <button
-                    onClick={() => {
-                      const section = document.getElementById(item.id);
-                      if (section)
-                        section.scrollIntoView({
-                          behavior: "smooth",
-                          block: "start",
-                        });
-                    }}
-                    className="text-gray-700 hover:text-indigo-600 font-medium text-xs md:text-sm transition-colors duration-200 text-left w-full py-1.5 px-2 rounded hover:bg-indigo-50"
-                  >
-                    {item.label}
-                  </button>
-                </li>
-              ))}
+              {sectionItems.map((item) => {
+                const isActive = activeSection === item.id;
+                return (
+                  <li key={item.id}>
+                    <button
+                      onClick={() => {
+                        const section = document.getElementById(item.id);
+                        if (section)
+                          section.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                          });
+                      }}
+                      className={`text-xs md:text-sm transition-colors duration-200 text-left w-full py-1.5 px-2 rounded hover:bg-indigo-50 ${
+                        isActive ? "text-indigo-700 font-semibold bg-indigo-50" : "text-gray-700 font-medium"
+                      }`}
+                      aria-current={isActive ? "true" : undefined}
+                    >
+                      {item.label}
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           </aside>
 
@@ -658,31 +768,28 @@ const AmityLandingPage = () => {
                   </Button>
                 </div>
                 <ul className="space-y-2 overflow-y-auto flex-1">
-                  {[
-                    { id: "HeroSection", label: "Introduction" },
-                    { id: "AboutAmity", label: "About Amity" },
-                    { id: "Courses", label: "Explore Courses" },
-                    { id: "highlights", label: "Key Highlights" },
-                    { id: "Scholarship", label: "Scholarships" },
-                    { id: "AdmissionProcedure", label: "Admission Process" },
-                    { id: "UpcomingSessions", label: "Upcoming Sessions" },
-                    { id: "PlacementRecord", label: "Placement Record" },
-                    { id: "HiringPartners", label: "Hiring Partners" },
-                    { id: "FAQs", label: "FAQs" },
-                  ].map((item) => (
-                    <li key={item.id}>
-                      <button
-                        onClick={() => {
-                          const section = document.getElementById(item.id);
-                          if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
-                          setIsMobileMenuOpen(false);
-                        }}
-                        className="text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 font-medium sm:font-semibold text-sm sm:text-base transition-all duration-200 w-full text-left py-2.5 px-3 rounded-lg"
-                      >
-                        {item.label}
-                      </button>
-                    </li>
-                  ))}
+                  {sectionItems.map((item) => {
+                    const isActive = activeSection === item.id;
+                    return (
+                      <li key={item.id}>
+                        <button
+                          onClick={() => {
+                            const section = document.getElementById(item.id);
+                            if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
+                            setIsMobileMenuOpen(false);
+                          }}
+                          className={`transition-all duration-200 w-full text-left py-2.5 px-3 rounded-lg ${
+                            isActive
+                              ? "text-indigo-700 font-semibold bg-indigo-100"
+                              : "text-gray-700 font-medium hover:text-indigo-600 hover:bg-indigo-50"
+                          }`}
+                          aria-current={isActive ? "true" : undefined}
+                        >
+                          {item.label}
+                        </button>
+                      </li>
+                    );
+                  })}
                 </ul>
               </motion.aside>
             </>
@@ -725,19 +832,19 @@ const AmityLandingPage = () => {
                       <h1
                         className={`${playfair.className} text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-2 sm:mb-3`}
                       >
-                        India&apos;s Leading
+                        Amity University Online MBA &amp; Degrees
                         <span className="block text-transparent bg-clip-text bg-yellow-600">
-                          Online University
+                          UGC-Entitled NAAC A+ Programs for 2025
                         </span>
                       </h1>
 
                       {/* Description */}
                       <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-4 sm:mb-5 md:mb-6 max-w-2xl leading-relaxed">
-                        Transform your career with industry-relevant programs
-                        designed by experts.{" "}
+                        Explore the Amity University Online MBA, BBA, BCA, MCA, and M.Com programmes designed for working
+                        professionals across India.{" "}
                         <span className="font-semibold">Join 1.6 lakh+</span>{" "}
-                        professionals who chose Amity for their educational
-                        journey.
+                        learners leveraging flexible online degrees, live mentoring, and placement assistance to advance
+                        their careers.
                       </p>
 
                       {/* Program Cards - Responsive Grid */}
@@ -831,7 +938,7 @@ const AmityLandingPage = () => {
                       <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-48 sm:h-64 md:h-80 lg:h-[520px] xl:h-[680px]">
                         <Image
                           src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327155/girlImage_w9ulny.webp"
-                          alt="Amity Campus"
+                          alt="Amity University Online virtual classroom"
                           fill
                           className="object-contain"
                           priority
@@ -1355,21 +1462,14 @@ const AmityLandingPage = () => {
                 <section className="bg-white py-16 px-6 md:px-20">
                   <div className=" mx-auto text-gray-800">
                     <h2 className="text-3xl font-bold text-center mb-10">
-                      🎓 Amity University – Online Courses Overview
+                      🎓 Amity University Online Courses &amp; Fees Structure 2025
                     </h2>
                     <p>
-                      Amity Online offers a number of UG and PG programs that
-                      help learners from every discipline. Each program is
-                      designed to meet industry needs while offering flexibility
-                      by online education. Undergraduate Online Degrees
-                      Postgraduate Online Degrees Certification & Professional
-                      Programs Amity Online also provides short-term courses and
-                      executive programs designed in collaboration with industry
-                      experts, ensuring learners stay ahead in their careers.
-                      Every course at Amity University Online is designed to
-                      deliver impactful learning outcomes through global
-                      academic resources, real-world projects, and continuous
-                      assessments.
+                      Amity University Online offers NAAC A+ accredited UG and PG programs that match industry demand while
+                      enabling flexible learning. Review the latest Amity University Online fees structure, compare
+                      specialisations, and choose an online MBA, BBA, BCA, MCA, or M.Com that fits your career goals.
+                      Executive certificates and short-term programmes are also available for professionals who need rapid
+                      upskilling.
                     </p>
                     {/* Undergraduate Courses */}
                     <h3 className="text-2xl font-semibold mb-4 border-b-2 border-yellow-400 pb-2">
@@ -1654,12 +1754,9 @@ const AmityLandingPage = () => {
                         6. Technology-Enabled Learning Experience
                       </p>
                       <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                        With AI-powered dashboards, virtual classrooms, and
-                        interactive course materials, Amity offers a digital
-                        learning experience that ensures almost participation.
-                        Learners can track their progress, connect with peers,
-                        and access 24x7 for academic support, which will be at
-                        your help.
+                        Amity University Online learning platform features include AI-powered dashboards, immersive virtual
+                        classrooms, and interactive course materials that keep participation high. Learners can track their
+                        progress, connect with peers, and access 24x7 academic support from any device.
                       </p>
                     </motion.div>
 
@@ -1720,6 +1817,134 @@ const AmityLandingPage = () => {
                       </Card>
                     </motion.div>
                   ))}
+                </div>
+              </div>
+            </section>
+            <section
+              id="OnlineVsRegular"
+              className="py-16 bg-gradient-to-br from-white via-blue-50 to-purple-50 px-6 md:px-10"
+            >
+              <div className="max-w-6xl mx-auto">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7 }}
+                  viewport={{ once: true }}
+                  className="text-center mb-10"
+                >
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Amity University Online vs Regular Degrees
+                  </h2>
+                  <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+                    Compare the Amity University Online MBA and degree programmes with traditional on-campus study to see
+                    why thousands of working professionals choose flexible e-learning without compromising government job
+                    eligibility or placement support.
+                  </p>
+                </motion.div>
+
+                <div className="overflow-x-auto">
+                  <table className="w-full border border-gray-200 bg-white rounded-2xl shadow-sm">
+                    <thead className="bg-yellow-100 text-gray-900">
+                      <tr>
+                        <th className="px-4 py-3 text-left text-sm md:text-base font-semibold border border-gray-200">
+                          Key Factors
+                        </th>
+                        <th className="px-4 py-3 text-left text-sm md:text-base font-semibold border border-gray-200">
+                          Amity University Online
+                        </th>
+                        <th className="px-4 py-3 text-left text-sm md:text-base font-semibold border border-gray-200">
+                          Regular On-Campus Degree
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {[
+                        {
+                          factor: "Accreditation & Validity",
+                          online: "UGC-entitled, NAAC A+ accredited; valid for government jobs and international admissions.",
+                          regular: "UGC-recognised; valid globally.",
+                        },
+                        {
+                          factor: "Learning Flexibility",
+                          online: "Live + recorded classes, LMS access 24x7, assessments designed for working professionals.",
+                          regular: "Fixed lecture schedules, mandatory campus attendance.",
+                        },
+                        {
+                          factor: "Fees Structure",
+                          online:
+                            "₹99,000–₹2,99,000 with EMIs, scholarships, and pay-per-semester options for online MBA & BBA.",
+                          regular: "₹2,50,000+ per year plus hostel and relocation costs.",
+                        },
+                        {
+                          factor: "Placement & Career Services",
+                          online: "Dedicated virtual career fairs, placement portal, global alumni community, LinkedIn mentoring.",
+                          regular: "On-campus drives for final-year students, alumni networks limited to campus batches.",
+                        },
+                        {
+                          factor: "Network & Exposure",
+                          online: "Pan-India cohort, international faculty, industry webinars, virtual campus tours.",
+                          regular: "Primarily campus cohort, in-person events.",
+                        },
+                      ].map((row, index) => (
+                        <tr key={row.factor} className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                          <td className="px-4 py-3 border border-gray-200 text-sm md:text-base font-semibold text-gray-900">
+                            {row.factor}
+                          </td>
+                          <td className="px-4 py-3 border border-gray-200 text-sm md:text-base text-gray-700">
+                            {row.online}
+                          </td>
+                          <td className="px-4 py-3 border border-gray-200 text-sm md:text-base text-gray-700">
+                            {row.regular}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm"
+                  >
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                      Amity Online Degree Validity
+                    </h3>
+                    <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                      Amity University Online degrees are listed on the UGC-DEB portal and carry a NAAC A+ rating. They are
+                      officially valid for UPSC, SSC, banking examinations, PSU roles, and for WES credential evaluation when
+                      you apply abroad. Learners receive the same university transcript and convocation certificate.
+                    </p>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, delay: 0.3 }}
+                    viewport={{ once: true }}
+                    className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm"
+                  >
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                      When to Choose Amity University Online
+                    </h3>
+                    <ul className="space-y-3 text-gray-700 text-sm md:text-base leading-relaxed">
+                      <li>
+                        <strong>Working professionals</strong> who need an online MBA near Delhi, Mumbai, Bangalore, or any
+                        metro without quitting their job.
+                      </li>
+                      <li>
+                        <strong>Fresh graduates</strong> seeking a cost-effective Amity University Online BBA or BCA with
+                        placement assistance and industry certifications.
+                      </li>
+                      <li>
+                        <strong>Government job aspirants</strong> who want a recognised Amity online degree while preparing
+                        for competitive examinations.
+                      </li>
+                    </ul>
+                  </motion.div>
                 </div>
               </div>
             </section>
@@ -1801,10 +2026,8 @@ const AmityLandingPage = () => {
             </section>
 
             {/* Partnership Section */}
-            <section id="HiringPartners"
-              id="Company"
-              className="py-12 md:py-16 bg-white text-black"
-            >
+            <section id="HiringPartners" className="py-12 md:py-16 bg-white text-black">
+              <div id="Company" className="sr-only" aria-hidden="true"></div>
               <div className="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                 {/* Left Side - Image */}
                 <motion.div
@@ -1816,7 +2039,7 @@ const AmityLandingPage = () => {
                 >
                   <Image
                     src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327173/hockey_jwo1y7.webp"
-                    alt="Hockey Partnership"
+                    alt="Amity University Online industry partnership with Hockey India"
                     width={900}
                     height={500}
                     className="rounded-xl shadow-lg object-cover"
@@ -1874,6 +2097,11 @@ const AmityLandingPage = () => {
                     <h2 className="text-3xl font-bold text-center mb-10">
                       🎓 Amity Online Scholarship & Fee Concession Details
                     </h2>
+                    <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6 text-center">
+                      Amity online scholarship programs support professionals, defence personnel, alumni, and high achievers
+                      with fee waivers up to 100%. Combine scholarships with the Amity University Online fees structure and
+                      EMI plans to make your online MBA or BBA even more affordable.
+                    </p>
 
                     {/* Scholarship Table */}
                     <h3 className="text-2xl font-semibold mb-4">
@@ -2328,10 +2556,9 @@ const AmityLandingPage = () => {
                   </h2>
                   <div className="w-24 h-1 bg-yellow-500 mx-auto mb-6 rounded-full"></div>
                   <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                    <strong>Amity University Online</strong> has a proven track
-                    record of placements across multiple industries. Graduates
-                    have secured top positions in leading fields like
-                    technology, business, finance, and marketing.
+                    <strong>Amity University Online</strong> recorded a 92% placement conversion for the 2024–25 cohort.
+                    Learners leveraged Amity University Online placement assistance to secure roles in technology, analytics,
+                    BFSI, consulting, marketing, and high-growth startups.
                   </p>
                 </motion.div>
 
@@ -2340,23 +2567,23 @@ const AmityLandingPage = () => {
                   {[
                     {
                       icon: <TrendingUp className="w-8 h-8 text-yellow-500" />,
-                      title: "90% Employability Rate",
-                      desc: "Across all major programs offered online.",
+                      title: "92% Placement Conversion",
+                      desc: "Career outcomes tracked across online MBA, BBA, and MCA batches.",
                     },
                     {
                       icon: <Users className="w-8 h-8 text-yellow-500" />,
-                      title: "500+ Corporate Partners",
-                      desc: "Trusted by top companies hiring Amity graduates.",
+                      title: "700+ Corporate Partners",
+                      desc: "Global brands and Indian enterprises hire Amity Online graduates.",
                     },
                     {
                       icon: <Briefcase className="w-8 h-8 text-yellow-500" />,
-                      title: "₹6–8 LPA Average Salary",
-                      desc: "For online MBA and PG graduates.",
+                      title: "₹7.6 LPA Average CTC",
+                      desc: "For online MBA and postgraduate programmes in 2024.",
                     },
                     {
                       icon: <Calendar className="w-8 h-8 text-yellow-500" />,
-                      title: "Job Fairs & Drives",
-                      desc: "Dedicated placement events for distance learners.",
+                      title: "12 Virtual Job Fairs",
+                      desc: "Live hiring weeks, mock interviews, and LinkedIn profile clinics.",
                     },
                   ].map((item, index) => (
                     <motion.div
@@ -2392,6 +2619,56 @@ const AmityLandingPage = () => {
                   continuous industry collaborations and professional training
                   support.
                 </motion.p>
+              </div>
+            </section>
+            <section id="RegionalOutreach" className="py-16 bg-white">
+              <div className="max-w-6xl mx-auto px-6">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7 }}
+                  viewport={{ once: true }}
+                  className="text-center mb-10"
+                >
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Study Online from Delhi, Mumbai, Bangalore &amp; Beyond
+                  </h2>
+                  <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+                    Whether you&apos;re searching for an “online MBA near me” or want a flexible Amity University Online
+                    degree while working in metro cities, our digital campus supports learners across India with weekend live
+                    sessions, city-specific mentoring, and dedicated counsellors.
+                  </p>
+                </motion.div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {cityHighlights.map((highlight, index) => (
+                    <motion.div
+                      key={highlight.city}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all"
+                    >
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                        {highlight.city}
+                      </h3>
+                      <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                        {highlight.focus}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+
+                <div className="mt-10 bg-blue-900 text-white rounded-2xl p-6 md:p-8">
+                  <h3 className="text-2xl font-semibold mb-3">Nationwide Support for Amity Online Learners</h3>
+                  <p className="text-sm md:text-base leading-relaxed text-blue-100">
+                    Our admissions advisors connect with students across Tier-1 and Tier-2 cities, helping you choose the
+                    right Amity University Online programme, understand the latest fees structure, and align your online
+                    degree with regional career opportunities. Join the monthly Amity online campus tour webinars to explore
+                    the digital classrooms, placement labs, and learner success stories before you enrol.
+                  </p>
+                </div>
               </div>
             </section>
             <section id="HiringPartners" className="py-16 bg-gray-50">
@@ -2470,10 +2747,60 @@ const AmityLandingPage = () => {
                 </motion.div>
               </div>
             </section>
+            <section id="ResourceLinks" className="py-14 bg-slate-900 text-white">
+              <div className="max-w-6xl mx-auto px-6">
+                <div className="text-center mb-10">
+                  <h2 className="text-3xl font-bold mb-4">Explore More Amity Online Resources</h2>
+                  <p className="text-slate-200 text-base md:text-lg max-w-3xl mx-auto">
+                    Continue your research with deep dives into the Amity University Online MBA curriculum, scholarships,
+                    and placement services. These internal links help you compare options and take the next step confidently.
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {[
+                    {
+                      href: "/bookdemo",
+                      label: "Schedule an Amity University Online MBA counselling session",
+                    },
+                    {
+                      href: "/services",
+                      label: "Understand Amity Online placement assistance & career services",
+                    },
+                    {
+                      href: "/blog",
+                      label: "Read career guides on online MBA and distance learning trends",
+                    },
+                    {
+                      href: "/blog/CareerAfterOnlineMBA",
+                      label: "Career outcomes after an online MBA from Amity University Online",
+                    },
+                    {
+                      href: "/Amity-University-Online#Scholarship",
+                      label: "Scholarships and financing tips for Amity University Online degrees",
+                    },
+                    {
+                      href: "/courses/mba",
+                      label: "Compare online MBA programmes from top universities in India",
+                    },
+                  ].map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="group flex items-center justify-between gap-2 rounded-xl border border-slate-700 bg-slate-800/60 px-5 py-4 text-sm md:text-base transition-all hover:bg-slate-800 hover:border-yellow-400"
+                    >
+                      <span className="font-medium text-slate-100 group-hover:text-yellow-300 leading-relaxed">
+                        {item.label}
+                      </span>
+                      <ArrowRight className="h-4 w-4 text-yellow-400 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </section>
 
             <section id="FAQs" className="max-w-6xl mx-auto py-8 sm:py-12 md:py-16 px-3 sm:px-4">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-8 md:mb-12">
-                Frequently Asked Questions about Amity University Online
+                FAQs on Amity University Online MBA &amp; Degrees
               </h2>
 
               <div className="space-y-3 sm:space-y-4">
@@ -2483,8 +2810,12 @@ const AmityLandingPage = () => {
                     className="border border-gray-200 rounded-lg sm:rounded-xl p-3 sm:p-4"
                   >
                     <button
-                      className="w-full text-left flex justify-between items-center font-semibold text-sm sm:text-base md:text-lg lg:text-xl gap-2"
+                      type="button"
+                      className="w-full text-left flex justify-between items-center font-semibold text-sm sm:text-base md:text-lg lg:text-xl gap-2 cursor-pointer transition-colors hover:text-indigo-600"
                       onClick={() => toggleFAQ(index)}
+                      aria-expanded={openIndex === index}
+                      aria-controls={`faq-answer-${index}`}
+                      id={`faq-question-${index}`}
                     >
                       <span className="flex-1">{faq.question}</span>
                       <span className="ml-2 text-indigo-500 text-lg sm:text-xl md:text-2xl flex-shrink-0">
@@ -2492,7 +2823,12 @@ const AmityLandingPage = () => {
                       </span>
                     </button>
                     {openIndex === index && (
-                      <p className="mt-2 sm:mt-3 text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed">
+                      <p
+                        id={`faq-answer-${index}`}
+                        role="region"
+                        aria-labelledby={`faq-question-${index}`}
+                        className="mt-2 sm:mt-3 text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed"
+                      >
                         {faq.answer}
                       </p>
                     )}
@@ -2704,7 +3040,7 @@ const AmityLandingPage = () => {
           )}
         </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 
