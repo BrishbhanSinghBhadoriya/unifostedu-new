@@ -62,8 +62,9 @@ export const metadata = {
   },
 };
 
-// Force static generation (SSG)
-export const dynamic = 'force-static';
+// Use dynamic rendering for this route to avoid prerender-time initialization errors
+export const dynamic = 'force-dynamic';
+// keep a long revalidate if you want cached results for ISR-like behavior
 export const revalidate = 604800; // Revalidate every 7 days
 
 export default function AmityLayout({ children }) {
