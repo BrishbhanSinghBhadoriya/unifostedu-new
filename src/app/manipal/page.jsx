@@ -1,7 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
-import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck, FaStar, FaCertificate, FaBuilding, FaUsers, FaPhone, FaWhatsapp } from "react-icons/fa";
+import Link from 'next/link';
+import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck, FaBars, FaStar, FaCertificate, FaBuilding, FaUsers, FaPhone, FaWhatsapp } from "react-icons/fa";
 import { FaLaptop, FaBook, FaGraduationCap, FaIndustry, FaUserCircle, FaUniversity, FaMoneyBillWave, FaTimes } from "react-icons/fa";
 import EnquireCard from '@/components/EnquireCard';
 import AccreditationSection from '@/components/AccreditationSection';
@@ -24,7 +25,7 @@ const Manipal = () => {
       duration: "3 Years",
       eligibility: "10+2 Minimum 40%",
       fees: "1,35,000",
-      specialization: "Finance & Accounting, Digital Marketing, Enterepreneurship Management & Family Business, Human Resource Management,  Data Analytics, Retail & E-commerce Management",
+      specialization: "Finance & Accounting, Digital Marketing,Marketing, Enterepreneurship Management & Family Business, Human Resource Management,  Data Analytics, Retail & E-commerce Management",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
       university: "Manipal University Jaipur",
       universityShort: "MUJ",
@@ -318,14 +319,15 @@ useEffect(() => {
             {/* Right Side - Responsive */}
             <div className="flex items-center gap-1.5 sm:gap-2 md:gap-4 flex-1 justify-end">
               {/* Mobile Menu Button */}
-              <button
-                onClick={() => setIsMobileMenuOpen(true)}
+               {/* Mobile Menu Button */}
+             <button
+              onClick={() => setIsMobileMenuOpen(true)}
                 aria-label="Open menu"
-                aria-expanded={isMobileMenuOpen}
-                className="lg:hidden inline-flex items-center p-1.5 sm:p-2 rounded-md border border-gray-200 hover:bg-gray-50 transition-colors"
-              >
-                <span className="text-xs sm:text-sm font-medium">Menu</span>
-              </button>
+                className="lg:hidden p-2 border rounded-md hover:bg-gray-100 transition-colors"
+                 >
+                 <FaBars className="w-5 h-5 text-gray-700" />
+                 </button>
+              
               {/* Phone - Hidden on small screens */}
               <a
                 href="tel:+917042867717"
@@ -508,7 +510,7 @@ useEffect(() => {
                       alt="Manipal Logo" 
                       className="h-5 sm:h-6 md:h-8 w-auto" 
                     />
-                    <span className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold">Manipal University Jaipur</span>
+                  
                   </div>
 
                   {/* Main Heading */}
@@ -630,7 +632,7 @@ useEffect(() => {
       </h2>
       <p className="text-base sm:text-lg text-black-600 max-w-4xl mx-auto leading-relaxed px-2">
   Welcome to <strong>Manipal University Jaipur Online (Manipal Online)</strong>, building on over 70 years of Manipal's educational excellence to offer the 
-  <strong>best online degree in Jaipur</strong>. Designed for working professionals, recent graduates, and lifelong learners, 
+  <strong> best online degree in Jaipur</strong>. Designed for working professionals, recent graduates, and lifelong learners, 
   Manipal Online provides a wide range of <strong>recognized and career-oriented online degree programs</strong>.
   Whether you are searching for an <strong>online MBA with Manipal</strong> or exploring the 
   <strong>best online degree in Jaipur</strong>, our programs deliver career-driven learning with real-world projects and flexible study options — ideal for students balancing work and education.
@@ -641,7 +643,7 @@ useEffect(() => {
   <strong>Online Manipal (Manipal Online)</strong> serves as the official platform presenting Manipal's digital degrees, 
   delivered by <strong>Manipal University Jaipur</strong> and affiliated Manipal institutions. 
   From <strong>online MBA programs</strong> to a variety of undergraduate and postgraduate courses, this platform stands out 
-  as a leading answer for learners searching for <em>"online degree near me"</em> or <em>"online MBA near me."</em> 
+  as a leading answer for learners searching for <em>"online degree near me"</em> or <em>"online MBA near me." </em> 
   Each program page clearly outlines specializations, duration, fees, and learning outcomes — ensuring transparency and 
   confidence for every learner's educational journey.
 </p>
@@ -1331,6 +1333,13 @@ useEffect(() => {
                       <p className="text-gray-600 text-sm">
                         Gain a solid foundation in business, finance, and management. This online BBA program helps students develop leadership and strategic thinking skills required in global business environments.
                       </p>
+                      <div>
+                       <Link href="/muj-online-bba">
+                       <button className="px-6 py-2 bg-orange-600 text-white rounded-full hover:bg-orange-700 transition-all duration-300 cursor-pointer">
+                       more info
+                       </button>
+                         </Link>
+                         </div>
                     </div>
                     
                     <div className="border-l-4 border-blue-500 pl-4">
@@ -1338,6 +1347,13 @@ useEffect(() => {
                       <p className="text-gray-600 text-sm">
                         A three-year degree focused on computer science, programming, and IT applications. The online BCA from Manipal Online is ideal for students looking to enter the tech industry.
                       </p>
+                       <div>
+                       <Link href="/manipal">
+                       <button className="px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-700 transition-all duration-300 cursor-pointer">
+                       more info
+                       </button>
+                         </Link>
+                         </div>
                     </div>
                     
                     <div className="border-l-4 border-green-500 pl-4">
@@ -1345,6 +1361,13 @@ useEffect(() => {
                       <p className="text-gray-600 text-sm">
                         This flexible and interdisciplinary online BA degree enhances analytical, communication, and creative thinking abilities across humanities and social science subjects.
                       </p>
+                       <div>
+                       <Link href="/manipal">
+                       <button className="px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-700 transition-all duration-300 cursor-pointer">
+                       more info
+                       </button>
+                         </Link>
+                         </div>
                     </div>
                   </div>
                 </div>
@@ -1363,6 +1386,13 @@ useEffect(() => {
                         The flagship program of Manipal University Jaipur Online, the online MBA offers specializations in Marketing, HR, Finance, Operations, and Analytics. 
                         Designed for working professionals, it blends management theory with real-world business practices.
                       </p>
+                       <div>
+                       <Link href="/manipal">
+                       <button className="px-6 py-2 bg-orange-600 text-white rounded-full hover:bg-orange-700 transition-all duration-300 cursor-pointer">
+                       more info
+                       </button>
+                         </Link>
+                         </div>
                     </div>
                     
                     <div className="border-l-4 border-blue-500 pl-4">
@@ -1370,6 +1400,13 @@ useEffect(() => {
                       <p className="text-gray-600 text-sm">
                         A program built for tech enthusiasts and professionals looking to enhance their software development and data analytics skills.
                       </p>
+                       <div>
+                       <Link href="/manipal">
+                       <button className="px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-700 transition-all duration-300 cursor-pointer">
+                       more info
+                       </button>
+                         </Link>
+                         </div>
                     </div>
                     
                     <div className="border-l-4 border-green-500 pl-4">
@@ -1377,6 +1414,13 @@ useEffect(() => {
                       <p className="text-gray-600 text-sm">
                         Designed for commerce graduates and professionals, this online M.Com program focuses on financial management, accounting, and business analytics.
                       </p>
+                       <div>
+                       <Link href="/manipal">
+                       <button className="px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-700 transition-all duration-300 cursor-pointer">
+                       more info
+                       </button>
+                         </Link>
+                         </div>
                     </div>
                   </div>
                 </div>
@@ -3082,6 +3126,7 @@ useEffect(() => {
                   "BBA General - MUJ Online",
                   "BBA Finance & Accounting - MUJ Online",
                   "BBA Digital Marketing - MUJ Online",
+                  "BBA Marketing -MUJ Online",
                   "BBA Entrepreneurship & Family Business - MUJ Online",
                   "BBA Human Resource Management - MUJ Online",
                   "BBA Data Analytics - MUJ Online",

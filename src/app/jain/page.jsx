@@ -448,7 +448,13 @@ useEffect(() => {
                 <FaPhone className="text-white text-sm rotate-100" />
                 <span className="font-semibold text-sm whitespace-nowrap">+91 70428 67717</span>
               </a>
-
+              {/* Phone (Mobile) */}
+             <a
+               href="tel:+917042867717"
+               className="sm:hidden flex items-center justify-center w-10 h-10 bg-white-500 rounded-full text-[#f26722] hover:bg-red-700 transition-colors cursor-pointer"
+             >
+               📞
+             </a>
               {/* Apply Now Button */}
               <button 
                 onClick={() => setOpenModal('apply')}
@@ -556,139 +562,132 @@ useEffect(() => {
       </AnimatePresence>
 
       {/* Modern Hero Section - Optimized Spacing */}
-      <section id="HeroSection" className="relative min-h-screen overflow-hidden pt-16 lg:pt-20">
-        {/* Background Pattern - Enhanced Yellow Shade */}
-        <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-200 opacity-90"></div>
-        
-        {/* Watermark Background Image */}
-        <div className="absolute inset-0 opacity-20">
-          <Image 
-            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp"
-            alt="Watermark Background"
-            width={800}
-            height={600}
-            className="object-cover"
-            priority
-          />
+      <section
+  id="HeroSection"
+  className="relative min-h-[90vh] sm:min-h-screen overflow-hidden pt-20 sm:pt-24"
+>
+  {/* Background Gradient */}
+  <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-200 opacity-90"></div>
+
+  {/* Watermark Image */}
+  <div className="absolute inset-0 opacity-10 sm:opacity-20">
+    <Image
+      src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp"
+      alt="Watermark Background"
+      width={800}
+      height={600}
+      className="object-cover"
+      priority
+    />
+  </div>
+
+  {/* Animated Blobs */}
+  <div className="absolute inset-0 overflow-hidden">
+    <div className="absolute -top-40 -right-40 w-60 h-40 bg-indigo-500/20 rounded-full blur-2xl animate-pulse"></div>
+    <div className="absolute -bottom-40 -left-40 w-60 h-60 bg-rose-500/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
+  </div>
+
+  {/* MAIN CONTENT */}
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center min-h-[90vh]">
+    <div className="grid lg:grid-cols-2 gap-10 items-center w-full">
+
+      {/* LEFT CONTENT */}
+      <div className="text-gray-900 space-y-4 sm:space-y-6 order-2 lg:order-1 text-center lg:text-left">
+
+        <h5 className="font-[calibri] text-xl sm:text-2xl md:text-3xl leading-tight">
+          Uplift your Career with
+        </h5>
+
+        <h1 className="font-[Calibri] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#001C54] to-[#b91c1c] bg-clip-text text-transparent leading-tight">
+          Jain University Online
+        </h1>
+
+        <p className="text-sm sm:text-base md:text-lg text-gray-800 max-w-xl mx-auto lg:mx-0">
+          Globally recognized online degrees with flexible learning, expert mentorship, and career-focused programs.
+        </p>
+
+        {/* COURSE TAGS */}
+        <div className="bg-[#001C54] w-fit mx-auto lg:mx-0 flex flex-wrap">
+          {['MBA', 'MCA', 'M.COM', 'MA', 'BBA', 'B.COM', 'BCA'].map((course, i) => (
+            <div
+              key={i}
+              className="px-3 py-2 text-white font-bold text-xs sm:text-sm uppercase border-r last:border-none"
+            >
+              {course}
+            </div>
+          ))}
         </div>
-        
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-40 -right-40 w-80 h-60 bg-indigo-500/15 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-rose-500/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
+        {/* BUTTON + BADGES */}
+        <div className="space-y-4">
+
+          {/* CTA Button */}
+          <div className="flex justify-center lg:justify-start">
+            <button
+              onClick={() => setOpenModal('apply')}
+              className="bg-gradient-to-r from-[#001C54] to-[#b91c1c] hover:from-[#0b2b77] hover:to-[#991b1b] text-white font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-full transition-all duration-300 hover:scale-[1.02] shadow-lg text-sm sm:text-base"
+            >
+              Apply Now
+            </button>
+          </div>
+
+          {/* Recognitions */}
+          <div className="flex justify-center lg:justify-start gap-6 flex-wrap">
+            <div className="text-center">
+              <Image
+                src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp"
+                alt="NAAC A++"
+                width={60}
+                height={60}
+                className="h-12 w-auto object-contain"
+              />
+              <p className="text-gray-700 text-xs font-medium">NAAC A++</p>
+            </div>
+
+            <div className="text-center">
+              <Image
+                src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp"
+                alt="UGC"
+                width={60}
+                height={60}
+                className="h-12 w-auto object-contain"
+              />
+              <p className="text-gray-700 text-xs font-medium">UGC</p>
+            </div>
+          </div>
         </div>
+      </div>
 
-        {/* Main Content - Perfectly Centered */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-screen flex items-center justify-center overflow-x-hidden">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center w-full">
-            {/* Left Content - Optimized Spacing */}
-            <div className="text-gray-900 space-y-4 sm:space-y-6 order-2 lg:order-1">
-              
-              
+      {/* RIGHT IMAGE CONTENT */}
+      <div className="order-1 lg:order-2">
+        <div className="relative max-w-xs sm:max-w-sm md:max-w-md mx-auto lg:mx-0">
+          <div className="bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-300 rounded-xl p-4 shadow-xl min-h-[260px] sm:min-h-[350px] md:min-h-[450px] flex items-center justify-center">
+            <Image
+              src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327240/jainimg_swo4tp.png"
+              alt="Student"
+              width={500}
+              height={600}
+              className="w-full h-auto object-contain"
+            />
+          </div>
 
-              {/* Main Heading - Perfectly Balanced */}
-              <div className="space-y-3 sm:space-y-4">
-                <h5 className="font-[calibri] text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-800 leading-tight">
-                  Uplift your Career with
-                </h5>
-                </div>
-                <div>
-                <h1 className="font-[Calibri] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-[#001C54] to-[#b91c1c] bg-clip-text text-transparent leading-tight">
-                  Jain University Online
-                </h1>
-              </div>
-                
-              <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed max-w-2xl">
-                Globally recognized online degrees with flexible learning, expert mentorship, and career-focused programs.
-              </p>
-
-              {/* Course Tags */}
- <div className="bg-[#001C54] w-fit flex">
-  {['MBA', 'MCA', 'M.COM', 'MA', 'BBA', 'B.COM','BCA'].map((course, i, arr) => (
-    <div
-      key={i}
-      className={`px-3 py-2 text-white font-bold text-xs sm:text-sm uppercase ${
-        i !== arr.length - 1 ? 'border-r border-white' : ''
-      }`}
-    >
-      {course}
+          {/* Overlay */}
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 sm:left-4 sm:translate-x-0 bg-white/90 backdrop-blur-sm rounded-full px-3 py-2 shadow z-20">
+            <p className="text-gray-900 font-semibold text-xs">50,000+ Successful Graduates</p>
+          </div>
+        </div>
+      </div>
     </div>
-  ))}
-</div>
+  </div>
 
+  {/* SCROLL INDICATOR */}
+  <div className="hidden sm:block absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10">
+    <div className="w-6 h-10 border-2 border-gray-900/30 rounded-full flex justify-center">
+      <div className="w-1 h-3 bg-gray-900/60 rounded-full mt-2 animate-pulse"></div>
+    </div>
+  </div>
+</section>
 
-
-              {/* CTA Buttons and Recognition Icons */}
-              <div className="space-y-4">
-                {/* Apply Now Button */}
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <button 
-                    onClick={() => setOpenModal('apply')}
-                    className="bg-gradient-to-r from-[#001C54] to-[#b91c1c] hover:from-[#0b2b77] hover:to-[#991b1b] cursor-pointer text-white font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-full transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-red-500/20 text-sm sm:text-base"
-                  >
-                    Apply Now
-                  </button>
-                </div>
-
-                {/* NAAC and UGC Recognition */}
-                <div className="flex gap-6 pt-2">
-                  <div className="text-center">
-                    <Image 
-                      src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp" 
-                      alt="NAAC A++" 
-                      width={70} 
-                      height={70} 
-                      className="h-14 w-auto object-contain drop-shadow"
-                    />
-                    <p className="text-gray-700 text-xs font-medium mt-1">NAAC A++</p>
-                  </div>
-                  <div className="text-center">
-                    <Image 
-                      src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp" 
-                      alt="UGC" 
-                      width={70} 
-                      height={70} 
-                      className="h-14 w-auto object-contain drop-shadow"
-                    />
-                    <p className="text-gray-700 text-xs font-medium mt-1">UGC</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Content - Student Image with Yellow Background */}
-            <div className="lg:pl-6 xl:pl-12 order-1 lg:order-2 w-full">
-              <div className="relative">
-                {/* Yellow Background Container - Perfectly Sized */}
-                <div className="bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-300 rounded-1xl shadow-1xl p-4 w-full h-[400px] sm:h-[500px] lg:h-[550px] flex items-center justify-center overflow-hidden">
-                  {/* Student Image - Perfectly Centered */}
-                  <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
-                    <Image 
-                      src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327240/jainimg_swo4tp.png" 
-                      alt="Jain University Online Student" 
-                      width={500}
-                      height={600}
-                      className="w-full h-full max-w-full object-contain rounded-lg"
-                      priority
-                    />
-                  </div>
-                </div>
-                {/* Overlay text */}
-                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-2 z-20">
-                  <p className="text-gray-900 font-semibold text-xs">50,000+ Successful Graduates</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-900 animate-bounce z-10">
-          <div className="w-6 h-10 border-2 border-gray-900/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-gray-900/60 rounded-full mt-2 animate-pulse"></div>
-          </div>
-        </div>
-      </section>
 
       {/* Introduction - Text Section */}
       <section id="Introduction" className="py-12 sm:py-16 bg-white">
@@ -696,8 +695,8 @@ useEffect(() => {
           <h2 className="text-2xl sm:text-3xl font-bold text-black-900 mb-4">Jain University Online – Empowering Future Leaders with World-Class Online Degrees</h2>
           <div className="text-black-800 leading-relaxed space-y-4 text-lg md:text-xl">
   <p>
-    In today’s fast-changing world, learners seek flexible, career-oriented education that aligns with their goals. 
-    <strong>JAIN (Deemed-to-be University) Online</strong>, widely known as <strong>JAIN Online</strong>, stands as one of India’s 
+    In today's fast-changing world, learners seek flexible, career-oriented education that aligns with their goals. 
+    <strong>JAIN (Deemed-to-be University) Online</strong>, widely known as <strong>JAIN Online</strong>, stands as one of India's 
     premier platforms for higher education. Headquartered in Bangalore, JAIN Online delivers 
     <strong>UGC-entitled</strong> and <strong>NAAC A+ accredited</strong> programs that are trusted and recognized nationwide.
   </p>
@@ -719,7 +718,7 @@ useEffect(() => {
 
   <p className="text-lg md:text-xl leading-relaxed">
     <strong>JAIN Online</strong> is the digital learning arm of 
-    <strong> JAIN (Deemed-to-be University)</strong> — one of India’s most reputed and trusted universities. 
+    <strong> JAIN (Deemed-to-be University)</strong> — one of India's most reputed and trusted universities. 
     Recognized as a leading institution for online education in Bangalore, JAIN is renowned for its 
     <strong> expert faculty, strong industry connections,</strong> and a large network of 
     <strong>successful alumni</strong> across diverse fields.
@@ -728,7 +727,7 @@ useEffect(() => {
   <p className="text-lg md:text-xl leading-relaxed">
     Through <strong>JAIN Online</strong>, learners can now experience world-class education from the comfort 
     of their homes. The university offers a wide range of <strong>UGC-entitled</strong> online programs designed 
-    to meet the demands of today’s industries and future careers.
+    to meet the demands of today's industries and future careers.
   </p>
 
   <div className="bg-gray-50 p-6 rounded-xl shadow-inner space-y-3">
@@ -862,7 +861,7 @@ useEffect(() => {
     </h2>
     <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto">
       Choosing where to study online is an important decision. 
-      Here’s why <strong>JAIN Online</strong> is one of the best options for students and professionals 
+      Here's why <strong>JAIN Online</strong> is one of the best options for students and professionals 
       seeking quality education with flexibility.
     </p>
   </div>
@@ -946,7 +945,7 @@ useEffect(() => {
         🌍 7. Accessible from Anywhere in India
       </h3>
       <p className="text-lg leading-relaxed">
-        Whether you’re in <strong>Bangalore, Delhi, Jaipur,</strong> or any other city, 
+        Whether you're in <strong>Bangalore, Delhi, Jaipur,</strong> or any other city, 
         JAIN Online lets you earn a top-quality degree without relocation.
       </p>
     </div>
@@ -1014,7 +1013,7 @@ useEffect(() => {
     </p>
     <p className="text-lg md:text-xl leading-relaxed text-center max-w-4xl mx-auto mt-4">
       Graduates from <strong>Online MBA, BBA, MCA,</strong> and <strong>MCom</strong> programs 
-      have secured top roles in leading organizations—thanks to JAIN’s 
+      have secured top roles in leading organizations—thanks to JAIN's 
       <strong>industry reputation and strong placement network.</strong>
     </p>
   </div>
@@ -1022,7 +1021,7 @@ useEffect(() => {
   <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">🌟 Key Takeaway</h2>
     <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-      JAIN University Online is one of India’s leading universities for online degrees in Bangalore.
+      JAIN University Online is one of India's leading universities for online degrees in Bangalore.
       It offers top online degrees in management, commerce, and computer applications with best
       placements and global recognition.
     </p>
@@ -1074,8 +1073,8 @@ useEffect(() => {
       </p>
 
       <p>
-        Whether you’re pursuing an <strong>Online MBA, BCA, MCA, BBA,</strong> or <strong>MCom</strong>, 
-        you’ll feel connected to a <strong>vibrant learning community</strong> that inspires growth, 
+        Whether you're pursuing an <strong>Online MBA, BCA, MCA, BBA,</strong> or <strong>MCom</strong>, 
+        you'll feel connected to a <strong>vibrant learning community</strong> that inspires growth, 
         collaboration, and innovation.
       </p>
     </div>
@@ -1210,7 +1209,7 @@ useEffect(() => {
             <div className="bg-white rounded-xl p-6 shadow-sm border">
               <h3 className="text-lg font-semibold mb-2">PG Courses (MBA, MCA, M.Com., MA)</h3>
               <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>Bachelor’s degree with minimum required marks</li>
+                <li>Bachelor's degree with minimum required marks</li>
                 <li>Work experience recommended (for MBA)</li>
               </ul>
             </div>
@@ -1264,11 +1263,11 @@ useEffect(() => {
       {[
         {
           name: "⭐ Priya Sharma – Online MBA (Marketing)",
-          text: "I chose JAIN Online for my online MBA, and it has been an amazing experience. The teachers are very supportive, and the classes are easy to follow. I could study while working full-time. Compared to an online MBA with Manipal, JAIN’s program feels more personal and practical."
+          text: "I chose JAIN Online for my online MBA, and it has been an amazing experience. The teachers are very supportive, and the classes are easy to follow. I could study while working full-time. Compared to an online MBA with Manipal, JAIN's program feels more personal and practical."
         },
         {
           name: "⭐ Rohit Verma – Online BBA (General Management)",
-          text: "I was searching for an online BBA near me, and I found JAIN Online. The lessons are clear, and the platform is simple to use. I also got great career advice and internship support. It’s the best online degree in Jaipur for anyone who wants flexible learning and good guidance."
+          text: "I was searching for an online BBA near me, and I found JAIN Online. The lessons are clear, and the platform is simple to use. I also got great career advice and internship support. It's the best online degree in Jaipur for anyone who wants flexible learning and good guidance."
         },
         {
           name: "⭐ Sneha Iyer – Online MBA (Finance)",
@@ -1276,7 +1275,7 @@ useEffect(() => {
         },
         {
           name: "⭐ Arjun Patel – BBA (Entrepreneurship)",
-          text: "I compared many universities, including those offering an online MBA with Manipal, but I liked JAIN Online the most. The study material is great, the support team is helpful, and the teachers make learning interesting. It’s a perfect choice for online learners."
+          text: "I compared many universities, including those offering an online MBA with Manipal, but I liked JAIN Online the most. The study material is great, the support team is helpful, and the teachers make learning interesting. It's a perfect choice for online learners."
         },
         {
           name: "⭐ Muskan Khan – Online MBA (HR Management)",
@@ -1284,11 +1283,11 @@ useEffect(() => {
         },
         {
           name: "⭐ Aditya Rao – Online BCom (Accounting & Finance)",
-          text: "While looking for an online degree near me, I came across JAIN Online. The online classes are smooth, and the teachers explain everything clearly. It’s amazing how a top college in Bangalore has made such a good online platform."
+          text: "While looking for an online degree near me, I came across JAIN Online. The online classes are smooth, and the teachers explain everything clearly. It's amazing how a top college in Bangalore has made such a good online platform."
         },
         {
           name: "⭐ Nikita Singh – Online MBA (Business Analytics)",
-          text: "I joined the online MBA at JAIN Online, and it’s been great. The program is practical, and I learned new tools that helped me at work. If you’re thinking about an online MBA with Manipal, you should also check out JAIN — it’s equally strong and student-friendly."
+          text: "I joined the online MBA at JAIN Online, and it's been great. The program is practical, and I learned new tools that helped me at work. If you're thinking about an online MBA with Manipal, you should also check out JAIN — it's equally strong and student-friendly."
         },
         {
           name: "⭐ Ravi Joshi – BBA (Digital Marketing)",
@@ -1499,7 +1498,7 @@ useEffect(() => {
       <div className="bg-white rounded-2xl shadow-md p-6 border hover:shadow-lg transition duration-300">
         <h3 className="text-xl font-semibold text-blue-700 mb-2">💼 Online MBA – Master of Business Administration</h3>
         <p className="text-gray-700 text-sm leading-relaxed mb-3">
-          Take the next step in your career with JAIN’s online MBA program. This two-year management degree helps you 
+          Take the next step in your career with JAIN's online MBA program. This two-year management degree helps you 
           develop leadership, decision-making, and problem-solving skills through live projects, case studies, and mentorship.
         </p>
         <ul className="text-gray-700 text-sm list-disc list-inside space-y-1 mb-3">
@@ -1515,7 +1514,7 @@ useEffect(() => {
       <div className="bg-white rounded-2xl shadow-md p-6 border hover:shadow-lg transition duration-300">
         <h3 className="text-xl font-semibold text-blue-700 mb-2">💻 Online BCA – Bachelor of Computer Applications</h3>
         <p className="text-gray-700 text-sm leading-relaxed mb-3">
-          Start your tech journey with JAIN’s online BCA program. Learn programming, databases, and web development to 
+          Start your tech journey with JAIN's online BCA program. Learn programming, databases, and web development to 
           prepare for roles in IT, software development, and data analytics.
         </p>
         <ul className="text-gray-700 text-sm list-disc list-inside space-y-1 mb-3">
@@ -1531,7 +1530,7 @@ useEffect(() => {
       <div className="bg-white rounded-2xl shadow-md p-6 border hover:shadow-lg transition duration-300">
         <h3 className="text-xl font-semibold text-blue-700 mb-2">🖥️ Online MCA – Master of Computer Applications</h3>
         <p className="text-gray-700 text-sm leading-relaxed mb-3">
-          Advance your IT career with JAIN’s online MCA program focused on artificial intelligence, data science, 
+          Advance your IT career with JAIN's online MCA program focused on artificial intelligence, data science, 
           and modern software engineering practices.
         </p>
         <ul className="text-gray-700 text-sm list-disc list-inside space-y-1 mb-3">
@@ -1547,7 +1546,7 @@ useEffect(() => {
       <div className="bg-white rounded-2xl shadow-md p-6 border hover:shadow-lg transition duration-300">
         <h3 className="text-xl font-semibold text-blue-700 mb-2">📊 Online BBA – Bachelor of Business Administration</h3>
         <p className="text-gray-700 text-sm leading-relaxed mb-3">
-          Build your business and management foundation with JAIN’s online BBA. Learn marketing, finance, and 
+          Build your business and management foundation with JAIN's online BBA. Learn marketing, finance, and 
           entrepreneurship directly from corporate mentors.
         </p>
         <ul className="text-gray-700 text-sm list-disc list-inside space-y-1 mb-3">
@@ -1563,7 +1562,7 @@ useEffect(() => {
       <div className="bg-white rounded-2xl shadow-md p-6 border hover:shadow-lg transition duration-300">
         <h3 className="text-xl font-semibold text-blue-700 mb-2">💰 Online MCom – Master of Commerce</h3>
         <p className="text-gray-700 text-sm leading-relaxed mb-3">
-          Advance in finance and commerce through JAIN’s online MCom. Master accounting, taxation, auditing, and business law.
+          Advance in finance and commerce through JAIN's online MCom. Master accounting, taxation, auditing, and business law.
         </p>
         <ul className="text-gray-700 text-sm list-disc list-inside space-y-1 mb-3">
           <li>Career support in banking, corporate finance, and accounting</li>
@@ -1593,8 +1592,8 @@ useEffect(() => {
       🌟 Key Highlights of JAIN University Online
     </h2>
     <p className="text-center text-lg text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed">
-      Discover what makes JAIN University Online one of India’s most trusted and dynamic platforms for
-      higher education. From global recognition to flexible online learning — here’s why students choose JAIN Online.
+      Discover what makes JAIN University Online one of India's most trusted and dynamic platforms for
+      higher education. From global recognition to flexible online learning — here's why students choose JAIN Online.
     </p>
 
     {/* Highlights Grid */}
@@ -1603,7 +1602,7 @@ useEffect(() => {
       <div className="bg-white rounded-2xl shadow-md p-6 border hover:shadow-lg transition duration-300">
         <h3 className="text-xl font-semibold text-blue-700 mb-2">🎓 UGC-Approved and NAAC A+ Accredited University</h3>
         <p className="text-gray-700 text-sm leading-relaxed">
-          Earn your degree from one of India’s top universities in Bangalore. JAIN Online is UGC-approved and NAAC A+ accredited — ensuring global recognition and trust.
+          Earn your degree from one of India's top universities in Bangalore. JAIN Online is UGC-approved and NAAC A+ accredited — ensuring global recognition and trust.
         </p>
       </div>
 
@@ -1675,7 +1674,7 @@ useEffect(() => {
       <div className="bg-white rounded-2xl shadow-md p-6 border hover:shadow-lg transition duration-300 sm:col-span-2 lg:col-span-3">
         <h3 className="text-xl font-semibold text-blue-700 mb-2">🧭 Virtual Campus Experience</h3>
         <p className="text-gray-700 text-sm leading-relaxed">
-          Take a virtual tour of JAIN’s modern Bangalore campus — experience digital classrooms, innovation centers, and interactive learning just like being on campus.
+          Take a virtual tour of JAIN's modern Bangalore campus — experience digital classrooms, innovation centers, and interactive learning just like being on campus.
         </p>
       </div>
     </div>

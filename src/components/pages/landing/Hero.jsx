@@ -195,7 +195,7 @@ const Hero = ({ onOpenModal }) => {
                   transition={{ duration: 0.8 }}
                   className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0"
                 >
-                 Get expert guidance to find the perfect online degree program from 25+ UGC-approved universities. Compare courses, fees, and rankings to make informed decisions for your future.
+                 Get expert guidance to find the perfect online degree program from 25+ UGC-approved universities. Compare University, fees, and rankings to make informed decisions for your future.
                 </motion.p>
 
                 {/* Key Features */}
@@ -378,7 +378,7 @@ const Hero = ({ onOpenModal }) => {
                 },
                 { 
                   icon: FaGraduationCap, 
-                  title: "Compare Courses", 
+                  title: "Compare University", 
                   desc: "Compare fees, rankings, and programs",
                   action: () => scrollToId("compare-universities")
                 },

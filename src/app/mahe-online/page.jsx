@@ -1,7 +1,7 @@
 'use client';
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import React, { useState, useEffect } from 'react';
-import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck, FaStar, FaCertificate, FaBuilding, FaUsers, FaPhone, FaWhatsapp } from "react-icons/fa";
+import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck, FaStar, FaCertificate, FaBuilding, FaUsers, FaPhone, FaWhatsapp, FaTimes } from "react-icons/fa";
 import { FaLaptop, FaBook, FaGraduationCap, FaIndustry, FaUserCircle, FaUniversity, FaMoneyBillWave } from "react-icons/fa";
 import EnquireCard from '@/components/EnquireCard';
 import AccreditationSection from '@/components/AccreditationSection';
@@ -217,6 +217,7 @@ const Manipal = () => {
   const [modalType, setModalType] = useState('getStarted');
   const [openModal, setOpenModal] = useState(null);
   const [activeTab, setActiveTab] = useState('all');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 
   
@@ -271,6 +272,16 @@ const Manipal = () => {
 
               {/* Right Side - Responsive */}
               <div className="flex items-center gap-1.5 sm:gap-2 md:gap-4 flex-1 justify-end">
+                {/* Mobile Menu Button */}
+                <button
+                  onClick={() => setIsMobileMenuOpen(true)}
+                  aria-label="Open menu"
+                  aria-expanded={isMobileMenuOpen}
+                  className="lg:hidden inline-flex items-center p-2 rounded-md border hover:bg-gray-50 cursor-pointer mr-2"
+                >
+                  <span className="text-xl">☰</span>
+                </button>
+
                 {/* Phone - Hidden on small screens */}
                 <a
                   href="tel:+917042867717"
@@ -302,8 +313,133 @@ const Manipal = () => {
           </div>
         </header>
 
+        {/* Add padding to the top of the first section to account for fixed header */}
+        <div className="pt-16 overflow-x-hidden break-words hyphens-auto lg:ml-64">
+
+        {/* Desktop Sidebar */}
+        <aside className="fixed hidden lg:flex flex-col top-16 left-0 w-64 h-[calc(100vh-4rem)] px-4 py-6 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40">
+          <h3 className="text-lg font-bold mb-5 text-orange-600 border-b-2 border-gray-200 pb-2 cursor-pointer">
+            Page Contents
+          </h3>
+          <ul className="space-y-3 cursor-pointer text-sm">
+            {[
+              { id: "HeroSection", label: "Hero" },
+              { id: "Introduction", label: "Introduction to MAHE" },
+              { id: "AboutUs", label: "About Us" },
+              { id: "FutureReady", label: "Future-Ready Platform" },
+              { id: "UGCApproved", label: "UGC-Approved Degrees" },
+              { id: "Leader", label: "Leader Among Universities" },
+              { id: "WhyChoose", label: "Why Choose MAHE" },
+              { id: "CampusTour", label: "Campus Tour" },
+              { id: "ExploreCourses", label: "Explore Courses" },
+              { id: "KeyHighlights", label: "Key Highlights" },
+              { id: "FeeStructure", label: "Fee Structure" },
+              { id: "AdmissionProcess", label: "Admission Process" },
+              { id: "PlacementPartners", label: "Placement Partners" },
+              { id: "PlacementRecords", label: "Placement Records" },
+              { id: "StudentReviews", label: "Student Reviews" },
+              { id: "Faq", label: "FAQs" },
+              { id: "Conclusion", label: "Conclusion" },
+            ].map((item) => (
+              <li
+                key={item.id}
+                className="text-gray-600 hover:text-orange-600 transition-colors duration-200 py-1 px-2 rounded hover:bg-gray-50"
+                onClick={() => {
+                  const element = document.getElementById(item.id);
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }}
+              >
+                {item.label}
+              </li>
+            ))}
+            {/* Apply Button */}
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
+          </ul>
+        </aside>
+
+        {/* Mobile Sidebar */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="fixed inset-0 bg-black/40 backdrop-blur-[1px] z-40 lg:hidden"
+                onClick={() => setIsMobileMenuOpen(false)}
+              />
+              <motion.aside
+                initial={{ x: "-100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "-100%" }}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                className="fixed top-0 left-0 w-[85vw] sm:w-72 h-full bg-white border-r shadow-xl z-50 p-6 flex flex-col overflow-y-auto will-change-transform lg:hidden"
+              >
+                <div className="flex items-center justify-between mb-8">
+                  <h3 className="text-xl font-bold text-gray-900">Page Contents</h3>
+                  <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-full hover:bg-gray-100 cursor-pointer">
+                    <FaTimes className="w-5 h-5 text-gray-600" />
+                  </button>
+                </div>
+                
+                <ul className="space-y-3">
+                  {[
+                    { id: "HeroSection", label: "Hero" },
+                    { id: "Introduction", label: "Introduction to MAHE" },
+                    { id: "AboutUs", label: "About Us" },
+                    { id: "FutureReady", label: "Future-Ready Platform" },
+                    { id: "UGCApproved", label: "UGC-Approved Degrees" },
+                    { id: "Leader", label: "Leader Among Universities" },
+                    { id: "WhyChoose", label: "Why Choose MAHE" },
+                    { id: "CampusTour", label: "Campus Tour" },
+                    { id: "ExploreCourses", label: "Explore Courses" },
+                    { id: "KeyHighlights", label: "Key Highlights" },
+                    { id: "FeeStructure", label: "Fee Structure" },
+                    { id: "AdmissionProcess", label: "Admission Process" },
+                    { id: "PlacementPartners", label: "Placement Partners" },
+                    { id: "PlacementRecords", label: "Placement Records" },
+                    { id: "StudentReviews", label: "Student Reviews" },
+                    { id: "Faq", label: "FAQs" },
+                    { id: "Conclusion", label: "Conclusion" },
+                  ].map((item) => (
+                    <li key={item.id}>
+                      <button
+                        onClick={() => {
+                          const section = document.getElementById(item.id);
+                          if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                          setIsMobileMenuOpen(false);
+                        }}
+                        className="text-gray-700 hover:text-orange-600 font-semibold text-base transition-colors duration-200 w-full text-left cursor-pointer"
+                      >
+                        {item.label}
+                      </button>
+                    </li>
+                  ))}
+                  {/* Apply Button */}
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
+                </ul>
+              </motion.aside>
+            </>
+          )}
+        </AnimatePresence>
+
         {/* Premium Hero Section - Fully Responsive */}
-        <section className="relative min-h-[500px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 pt-14 sm:pt-16 lg:pt-20">
+        <section id="HeroSection" className="relative min-h-[500px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 pt-14 sm:pt-16 lg:pt-20">
           {/* Animated Background */}
           <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/mahe-uni_dvnm1d.webp')] bg-cover bg-center opacity-200"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-blue-900/70 to-indigo-900/80"></div>
@@ -449,6 +585,15 @@ const Manipal = () => {
                 </div>
               ))}
             </div>
+            <div className="text-center mt-8 sm:mt-12">
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
+            </div>
           </div>
         </section>
 
@@ -466,7 +611,7 @@ const Manipal = () => {
             
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8">
               {[
-                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp', title: 'NAAC A+ Accredited University' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp', title: 'NAAC A++ Accredited University' },
                 { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp', title: 'UGC-entitled Online Degrees' },
                 { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nirf_f5xen9.webp', title: "Amongst India's top 60 Universities in 2025" },
                 { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp', title: 'AICTE Norms Compliant' },
@@ -495,11 +640,178 @@ const Manipal = () => {
                 </div>
               ))}
             </div>
+            <div className="text-center mt-8 sm:mt-12">
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
+            </div>
           </div>
         </section>
 
-        {/* Why Choose Manipal Academy of Higher Education */}
-        <section className="relative py-10 sm:py-12 md:py-16 lg:py-20 bg-[#0B0B10] text-white overflow-hidden">
+        {/* Introduction to MAHE University Online */}
+        <section id="Introduction" className="py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="prose prose-lg max-w-none">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 font-queens">
+                Introduction to <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">MAHE University Online</span>
+              </h2>
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+                MAHE University Online is one of the most trusted and recognized online education platforms in India. It offers a wide range of high-quality <strong>MAHE Online Courses</strong>, industry-focused <strong>MAHE Online Programs</strong>, and fully approved <strong>MAHE Online Degrees</strong> for students across the country. With the growing demand for flexible and digital education, MAHE University Online has become one of the <strong>Best online universities in India</strong>, helping lakhs of learners upgrade their skills, complete their degrees, and build strong careers through online learning.
+              </p>
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+                As a top UGC-approved university, MAHE University Online brings real university-level education directly to your home through <strong>UG & PG online courses by MAHE</strong>. These include some of the most popular online programs such as the <strong>MAHE Online MBA</strong>, <strong>MAHE Online BCA</strong>, <strong>MAHE Online MCA</strong>, <strong>MAHE Online BBA</strong>, <strong>MAHE Online MCom</strong>, and <strong>MAHE Online BCom</strong>. Every program is designed to match industry needs, helping students gain practical knowledge and real job-ready skills.
+              </p>
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+                The main mission of MAHE University Online is to offer education that is flexible, student-friendly, and relevant to current industry trends. Even though the courses are online, the quality and credibility remain the same as MAHE's on-campus degrees. Backed by the strong legacy of Manipal Academy of Higher Education, MAHE's online platform allows students to study anytime, anywhere, and grow without limitations.
+              </p>
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
+                Whether you are a working professional looking for a promotion, a student searching for a recognised UG or PG degree, or someone planning a career change, <strong>MAHE Online Courses</strong> and <strong>MAHE Online Programs</strong> have everything you need to build a successful future.
+              </p>
+            </div>
+            <div className="text-center mt-8 sm:mt-12">
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
+            </div>
+          </div>
+        </section>
+
+        {/* About Us - MAHE University Online */}
+        <section id="AboutUs" className="py-10 sm:py-12 md:py-16 lg:py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 font-queens">
+              About Us – <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">MAHE University Online</span>
+            </h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+                MAHE University Online is the official online learning arm of Manipal Academy of Higher Education—one of India's top universities with <strong>NAAC A++ accreditation</strong> and global recognition. MAHE brings high-quality, accessible, and flexible education to students through carefully designed <strong>MAHE Online Degrees</strong>.
+              </p>
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
+                The goal of MAHE University Online is simple: to make premium higher education available to students all across India and the world. No matter where you live or what your schedule is, you can access top-quality teaching, modern learning tools, and complete academic support through <strong>MAHE Online Courses</strong>.
+              </p>
+            </div>
+            <div className="text-center mt-8 sm:mt-12">
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
+            </div>
+          </div>
+        </section>
+
+        {/* A Future-Ready Online Learning Platform */}
+        <section id="FutureReady" className="py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-orange-50 to-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 font-queens">
+              A Future-Ready <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Online Learning Platform</span>
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+              Students enrolled in <strong>MAHE Online Programs</strong> get access to a smooth and advanced digital learning system. You can:
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-6">
+              {[
+                'Attend live online classes',
+                'Watch recorded videos anytime',
+                'Access a 24/7 Learning Management System (LMS)',
+                'Download e-books & digital notes',
+                'Join group discussions',
+                'Work on case studies & projects',
+                'Interact with faculty and mentors'
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-3 bg-white p-4 sm:p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                  <span className="text-orange-500 text-xl font-bold mt-1">✓</span>
+                  <span className="text-base sm:text-lg text-gray-700">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mt-6">
+              This ensures every learner in <strong>UG & PG online courses by MAHE</strong> gets an engaging and easy online learning experience.
+            </p>
+            <div className="text-center mt-8 sm:mt-12">
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
+            </div>
+          </div>
+        </section>
+
+        {/* UGC-Approved Online Degrees */}
+        <section id="UGCApproved" className="py-10 sm:py-12 md:py-16 lg:py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 font-queens">
+              <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">UGC-Approved</span> Online Degrees
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+              All programs offered under MAHE University Online are UGC-entitled, giving you the same value as a regular MAHE on-campus degree. Popular options include:
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-6">
+              {[
+                { name: 'MAHE Online MBA', desc: 'Master management, leadership & business strategy' },
+                { name: 'MAHE Online BCA', desc: 'Learn programming, databases & IT fundamentals' },
+                { name: 'MAHE Online MCA', desc: 'Advanced computing, AI, ML & cloud skills' },
+                { name: 'MAHE Online BBA', desc: 'Strong foundation in business, finance & marketing' },
+                { name: 'MAHE Online MCom', desc: 'Deep knowledge of accounting, finance & taxation' },
+                { name: 'MAHE Online BCom', desc: 'Core fundamentals of commerce & business analytics' }
+              ].map((program, i) => (
+                <div key={i} className="bg-gradient-to-br from-orange-50 to-white p-5 sm:p-6 rounded-xl shadow-md hover:shadow-xl transition-all border border-orange-100">
+                  <h3 className="text-lg sm:text-xl font-bold text-orange-600 mb-2">{program.name}</h3>
+                  <p className="text-sm sm:text-base text-gray-700">{program.desc}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mt-6">
+              These <strong>MAHE Online Degrees</strong> are designed by expert faculty and industry specialists, ensuring students gain relevant, high-quality, and employable skills.
+            </p>
+            <div className="text-center mt-8 sm:mt-12">
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
+            </div>
+          </div>
+        </section>
+
+        {/* A Leader Among Online Universities in India */}
+        <section id="Leader" className="py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 font-queens">
+              A Leader Among <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Online Universities in India</span>
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
+              MAHE is known for its strong academic reputation and advanced online learning system. This makes MAHE University Online one of the <strong>Best online universities in India</strong>, offering excellent <strong>MAHE Online Courses</strong>, well-designed <strong>MAHE Online Programs</strong>, and valuable <strong>MAHE Online Degrees</strong> for all types of learners.
+            </p>
+            <div className="text-center mt-8 sm:mt-12">
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose MAHE University Online */}
+        <section id="WhyChoose" className="relative py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
           {/* Subtle grid pattern */}
           <div className="pointer-events-none absolute inset-0 opacity-[0.08]" style={{backgroundImage:"linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)", backgroundSize:"40px 40px"}} />
 
@@ -520,68 +832,187 @@ const Manipal = () => {
             </div>
 
             {/* Heading */}
-            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 text-center">Why Students Choose Us</h3>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 text-center font-queens">Why Choose MAHE University Online?</h3>
+            <p className="text-center text-gray-300 mb-8 sm:mb-10 text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4">
+              Choosing an online university is an important decision, and MAHE University Online provides everything a student needs for a successful learning experience.
+            </p>
 
-            {/* Feature Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5 md:gap-6">
-              {/* Card 1 */}
+            {/* Feature Cards - 8 Points */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
+              {/* Card 1: UGC-Entitled MAHE Online Degrees */}
+              <div className="bg-white text-gray-900 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-orange-100 flex items-center justify-center mb-3 sm:mb-4">
+                  <span className="text-xl sm:text-2xl">🎓</span>
+                </div>
+                <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">1. UGC-Entitled MAHE Online Degrees</h4>
+                <p className="text-gray-600 text-xs sm:text-sm">All major MAHE Online Programs—including the MAHE Online MBA, MAHE Online BCA, MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, and MAHE Online BCom—are fully UGC-approved. These online degrees have full academic value and are accepted by companies, government sectors, and private organisations.</p>
+              </div>
+
+              {/* Card 2: Best Online Universities in India */}
+              <div className="bg-white text-gray-900 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-blue-100 flex items-center justify-center mb-3 sm:mb-4">
+                  <span className="text-xl sm:text-2xl">🏆</span>
+                </div>
+                <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">2. One of the Best Online Universities in India</h4>
+                <p className="text-gray-600 text-xs sm:text-sm">MAHE consistently ranks among top Indian institutions. Its strong online infrastructure, expert faculty, and high-quality learning system make it widely recognised as the Best online university in India.</p>
+              </div>
+
+              {/* Card 3: Wide Range of UG & PG Online Courses */}
+              <div className="bg-white text-gray-900 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-green-100 flex items-center justify-center mb-3 sm:mb-4">
+                  <span className="text-xl sm:text-2xl">📚</span>
+                </div>
+                <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">3. Wide Range of UG & PG Online Courses by MAHE</h4>
+                <p className="text-gray-600 text-xs sm:text-sm">MAHE offers many programs to match different career goals. Popular MAHE Online Courses include MAHE Online MBA, MAHE Online BCA, MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, and MAHE Online BCom. Each program prepares students with real-world skills and future-ready knowledge.</p>
+              </div>
+
+              {/* Card 4: Flexible & Convenient Learning */}
+              <div className="bg-white text-gray-900 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-purple-100 flex items-center justify-center mb-3 sm:mb-4">
+                  <span className="text-xl sm:text-2xl">⏰</span>
+                </div>
+                <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">4. Flexible & Convenient Learning</h4>
+                <p className="text-gray-600 text-xs sm:text-sm">All MAHE Online Programs are designed for flexible learning. You can study at your own pace, join live classes, or watch recorded sessions anytime. This helps working professionals, students, and homemakers balance education with daily life.</p>
+              </div>
+
+              {/* Card 5: Industry-Aligned Curriculum */}
               <div className="bg-white text-gray-900 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-yellow-100 flex items-center justify-center mb-3 sm:mb-4">
-                  <span className="text-xl sm:text-2xl">🏅</span>
+                  <span className="text-xl sm:text-2xl">💼</span>
                 </div>
-                <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">Degree from top ranked Manipal universities</h4>
-                <p className="text-gray-600 text-xs sm:text-sm">Graduate with UGC-entitled, NAAC A+ accredited degrees trusted by employers.</p>
+                <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">5. Industry-Aligned Curriculum</h4>
+                <p className="text-gray-600 text-xs sm:text-sm">Every program under MAHE Online Courses is designed with industry experts. You learn updated course content, practical case studies, real-world examples, assignments focused on careers, and industry tools & techniques. This makes MAHE Online Degrees more valuable and job-focused.</p>
               </div>
 
-              {/* Card 2 */}
-              <div className="bg-white text-gray-900 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-sky-100 flex items-center justify-center mb-3 sm:mb-4">
-                  <span className="text-xl sm:text-2xl font-bold">C</span>
-                </div>
-                <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">Exclusive Coursera access</h4>
-                <p className="text-gray-600 text-xs sm:text-sm">Free access to 10K+ courses and professional certificates from global partners.</p>
-              </div>
-
-              {/* Card 3 */}
+              {/* Card 6: Experienced Faculty & Modern Tools */}
               <div className="bg-white text-gray-900 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-pink-100 flex items-center justify-center mb-3 sm:mb-4">
-                  <span className="text-xl sm:text-2xl">🎓</span>
+                  <span className="text-xl sm:text-2xl">👨‍🏫</span>
                 </div>
-                <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">Scholarships up to 30%</h4>
-                <p className="text-gray-600 text-xs sm:text-sm">Avail scholarships under merit, defense, alumni, and other categories.</p>
+                <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">6. Experienced Faculty & Modern Tools</h4>
+                <p className="text-gray-600 text-xs sm:text-sm">Students in MAHE Online MBA, MAHE Online BCA, MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, and MAHE Online BCom are taught by highly experienced professors and industry mentors. MAHE provides virtual classrooms, e-learning modules, AI-enabled tools, and 24/7 academic support.</p>
               </div>
 
-              {/* Card 4 */}
+              {/* Card 7: Excellent Placement & Career Support */}
+              <div className="bg-white text-gray-900 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-cyan-100 flex items-center justify-center mb-3 sm:mb-4">
+                  <span className="text-xl sm:text-2xl">🎯</span>
+                </div>
+                <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">7. Excellent Placement & Career Support</h4>
+                <p className="text-gray-600 text-xs sm:text-sm">MAHE offers strong career services, including resume-building, interview preparation, job-readiness training, placement guidance, and networking sessions. This makes MAHE Online Programs highly helpful for students aiming to improve their employability.</p>
+              </div>
+
+              {/* Card 8: Affordable & Accessible Education */}
               <div className="bg-white text-gray-900 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-lime-100 flex items-center justify-center mb-3 sm:mb-4">
-                  <span className="text-xl sm:text-2xl">💳</span>
+                  <span className="text-xl sm:text-2xl">💰</span>
                 </div>
-                <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">Easy financing options</h4>
-                <p className="text-gray-600 text-xs sm:text-sm">Improved affordability with flexible financing and no-cost EMIs.</p>
+                <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">8. Affordable & Accessible Education</h4>
+                <p className="text-gray-600 text-xs sm:text-sm">MAHE ensures its MAHE Online Courses and MAHE Online Degrees are affordable for all. With premium quality and reasonable pricing, MAHE remains the Best online university in India for thousands of learners.</p>
               </div>
+            </div>
+            <div className="text-center mt-8 sm:mt-12">
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
+            </div>
+          </div>
+        </section>
 
-              {/* Card 5 */}
-              <div className="bg-white text-gray-900 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-rose-100 flex items-center justify-center mb-3 sm:mb-4">
-                  <span className="text-xl sm:text-2xl">🎓</span>
-                </div>
-                <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">Manipal alumni status</h4>
-                <p className="text-gray-600 text-xs sm:text-sm">Become part of a 200,000+ strong global alumni network.</p>
+        {/* Campus Tour Section */}
+        <section id="CampusTour" className="py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-white to-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 font-queens">
+              <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Campus Tour</span>
+            </h2>
+            <div className="prose prose-lg max-w-none mb-8">
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+                Welcome to the MAHE University Online Campus Tour, a simple and friendly walk-through that helps you understand the vibrant and inspiring learning environment MAHE offers. Even though students study through <strong>MAHE Online Courses</strong> and <strong>MAHE Online Programs</strong>, MAHE provides the same level of academic quality, support, and innovation as an on-campus experience. Whether you explore from home or plan to visit, this tour shows you the energy, diversity, and excellence that make MAHE one of the <strong>Best online universities in India</strong>.
+              </p>
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+                From modern classrooms to advanced digital learning spaces, every part of the MAHE environment is designed to support students pursuing <strong>MAHE Online Degrees</strong> like the <strong>MAHE Online MBA</strong>, <strong>MAHE Online BCA</strong>, <strong>MAHE Online MCA</strong>, <strong>MAHE Online BBA</strong>, <strong>MAHE Online MCom</strong>, and <strong>MAHE Online BCom</strong>. MAHE creates a space where learning, creativity, and personal growth come together.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+              <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Academic Blocks – Where Learning Comes to Life</h3>
+                <p className="text-base text-gray-700 mb-4">MAHE's academic spaces are created to help students succeed in every way. These include:</p>
+                <ul className="space-y-2">
+                  {['Smart digital classrooms', 'High-tech audio–visual tools', 'Comfortable seating for long study sessions', 'Modern labs for hands-on learning'].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="text-orange-500 mt-1">•</span>
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-base text-gray-700 mt-4">Even for students studying through <strong>UG & PG online courses by MAHE</strong>, these facilities reflect MAHE's commitment to quality and innovation.</p>
               </div>
+              
+              <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Digital Learning Zones</h3>
+                <p className="text-base text-gray-700 mb-4">Since MAHE University Online focuses on flexible and technology-driven learning, the campus includes digital zones that support students pursuing <strong>MAHE Online Courses</strong>:</p>
+                <ul className="space-y-2">
+                  {['High-speed internet access', 'Modern computer systems', 'Group study areas', 'E-learning support centers'].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="text-orange-500 mt-1">•</span>
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-base text-gray-700 mt-4">These spaces show how MAHE blends strong academic support with technology to enhance every <strong>MAHE Online Program</strong>.</p>
+              </div>
+            </div>
+            
+            <div className="mt-6 sm:mt-8 bg-gradient-to-br from-orange-50 to-white p-6 sm:p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">A Campus Built for Students</h3>
+              <p className="text-base sm:text-lg text-gray-700">
+                MAHE's campus—both physical and virtual—is more than just buildings. It is a lively, welcoming community where every student feels valued, supported, and motivated. The environment encourages academic excellence, personal development, creativity, and teamwork. Whether you are touring in person or exploring virtually as part of your MAHE University Online journey, you'll feel the warmth, inspiration, and positive energy that MAHE is known for. It is a place where students build knowledge, friendships, confidence, and unforgettable experiences while completing their <strong>MAHE Online Degrees</strong>.
+              </p>
+            </div>
+            <div className="text-center mt-8 sm:mt-12">
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
             </div>
           </div>
         </section>
 
         {/* Enhanced Courses Section */}
-        <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-white">
+        <section id="ExploreCourses" className="py-10 sm:py-12 md:py-16 lg:py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 sm:mb-12 md:mb-16">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 font-queens">
-                Explore <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Online Programs</span>
+                Explore <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Online Courses</span>
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-2">
                 Choose from industry-relevant programs designed for working professionals and fresh graduates
               </p>
+            </div>
+
+            {/* Quick Course Overview */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
+              {[
+                { name: 'MAHE Online MBA', desc: 'Master management, leadership & business strategy. Ideal for working professionals & future leaders' },
+                { name: 'MAHE Online BCA', desc: 'Learn programming, databases & IT fundamentals. Start your journey in the tech and IT industry' },
+                { name: 'MAHE Online MCA', desc: 'Advanced computing, AI, ML & cloud skills. Designed for tech professionals aiming for growth' },
+                { name: 'MAHE Online BBA', desc: 'Strong foundation in business, finance & marketing. Perfect for students interested in corporate careers' },
+                { name: 'MAHE Online MCom', desc: 'Deep knowledge of accounting, finance & taxation. Great for careers in banking, finance & auditing' },
+                { name: 'MAHE Online BCom', desc: 'Core fundamentals of commerce & business analytics. Best for students starting their commerce journey' }
+              ].map((course, i) => (
+                <div key={i} className="bg-gradient-to-br from-white to-orange-50 p-5 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border border-orange-100">
+                  <h3 className="text-lg sm:text-xl font-bold text-orange-600 mb-2">{course.name}</h3>
+                  <p className="text-sm sm:text-base text-gray-700">{course.desc}</p>
+                </div>
+              ))}
             </div>
 
             <Tabs.Root value={activeTab} onValueChange={setActiveTab} className="space-y-6 sm:space-y-8 md:space-y-12">
@@ -663,6 +1094,15 @@ const Manipal = () => {
                 </div>
               </Tabs.Content>
             </Tabs.Root>
+            <div className="text-center mt-8 sm:mt-12">
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
+            </div>
           </div>
         </section>
 
@@ -705,6 +1145,178 @@ const Manipal = () => {
                 <p className="text-blue-100 text-sm sm:text-base md:text-lg">Exclusive scholarships for defense personnel, govt. employees, differently-abled & meritorious students.</p>
               </div>
             </div>
+            <div className="text-center mt-8 sm:mt-12">
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Key Highlights Section */}
+        <section id="KeyHighlights" className="py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-orange-50 to-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-6 sm:mb-8 font-queens">
+              <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Key Highlights</span>
+            </h2>
+            <p className="text-center text-base sm:text-lg md:text-xl text-gray-700 mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
+              Discover why MAHE University Online is known as one of the <strong>Best online universities in India</strong>. With flexible learning, expert faculty, modern digital tools, and globally recognised <strong>MAHE Online Degrees</strong>, the university offers a top-quality online education experience for every student.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+              {[
+                {
+                  title: 'UGC-Entitled MAHE Online Degrees',
+                  points: [
+                    'All MAHE Online Courses and MAHE Online Programs are fully UGC-approved.',
+                    'Degrees such as the MAHE Online MBA, MAHE Online BCA, MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, and MAHE Online BCom hold the same value as regular on-campus degrees.'
+                  ]
+                },
+                {
+                  title: 'Wide Range of UG & PG Online Courses by MAHE',
+                  points: [
+                    'Students can choose from industry-focused online programs in business, IT, commerce, and management.',
+                    'Popular programs include the MAHE Online MBA, MAHE Online BCA, MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, and MAHE Online BCom.'
+                  ]
+                },
+                {
+                  title: 'Flexible Learning Anytime, Anywhere',
+                  points: [
+                    'Study at your own pace using recorded classes, live online lectures, and a 24/7 digital LMS.',
+                    'Perfect for working professionals, regular students, and distance learners.'
+                  ]
+                },
+                {
+                  title: 'Industry-Aligned Curriculum',
+                  points: [
+                    'All MAHE Online Courses are created with input from industry experts to ensure the content is updated, relevant, and job-oriented.',
+                    'Every program includes real-world case studies and modern learning tools.'
+                  ]
+                },
+                {
+                  title: 'Expert Faculty & High-Quality Teaching',
+                  points: [
+                    'Learn directly from MAHE\'s experienced professors, researchers, and industry specialists.',
+                    'Each MAHE Online Program provides strong academic support from start to finish.'
+                  ]
+                },
+                {
+                  title: 'Affordable & Accessible Education',
+                  points: [
+                    'MAHE offers high-quality education at competitive and student-friendly fees, making it one of the Best online universities in India in terms of value and credibility.'
+                  ]
+                },
+                {
+                  title: 'Career Guidance & Placement Support',
+                  points: [
+                    'Students receive resume-building help, interview preparation, job support, and skill training.',
+                    'MAHE prepares students for strong careers in business, IT, finance, technology, management, and more.'
+                  ]
+                },
+                {
+                  title: 'Trusted University with Decades of Excellence',
+                  points: [
+                    'Powered by Manipal Academy of Higher Education, a NAAC A++ accredited institution with global recognition.',
+                    'MAHE University Online is known for academic excellence, strong learning outcomes, and student success.'
+                  ]
+                }
+              ].map((highlight, i) => (
+                <div key={i} className="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all border border-orange-100">
+                  <h3 className="text-xl sm:text-2xl font-bold text-orange-600 mb-4">{highlight.title}</h3>
+                  <ul className="space-y-2">
+                    {highlight.points.map((point, j) => (
+                      <li key={j} className="flex items-start gap-2">
+                        <span className="text-orange-500 mt-1">•</span>
+                        <span className="text-gray-700 text-sm sm:text-base">{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-8 sm:mt-12">
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Fee Structure Section */}
+        <section id="FeeStructure" className="py-10 sm:py-12 md:py-16 lg:py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-6 sm:mb-8 font-queens">
+              <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Fee Structure</span>
+            </h2>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
+              {[
+                { name: 'MAHE Online MBA', desc: 'Flexible and affordable management program. Suitable for working professionals. EMI payment options available. Full access to live and recorded classes.' },
+                { name: 'MAHE Online BCA', desc: 'Budget-friendly program for students starting their IT career. Affordable for undergraduate learners. Easy semester-wise payment options.' },
+                { name: 'MAHE Online MCA', desc: 'Priced to support students who want advanced technical skills. Includes industry-focused curriculum. Comes with digital tools and virtual labs.' },
+                { name: 'MAHE Online BBA', desc: 'Cost-effective and ideal for students interested in business and management. Pay yearly or semester-wise. Study materials included in the fee.' },
+                { name: 'MAHE Online MCom', desc: 'Affordable pricing for those aiming for careers in finance and accounting. One of the most economical PG programs. Includes academic support and digital resources.' },
+                { name: 'MAHE Online BCom', desc: 'Designed to offer value at a pocket-friendly fee. Flexible fee payment options. Access to MAHE\'s digital LMS included.' }
+              ].map((program, i) => (
+                <div key={i} className="bg-gradient-to-br from-orange-50 to-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all border border-orange-100">
+                  <h3 className="text-xl sm:text-2xl font-bold text-orange-600 mb-3">{program.name} Fee Structure</h3>
+                  <p className="text-sm sm:text-base text-gray-700">{program.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-50 to-white p-6 sm:p-8 md:p-10 rounded-xl shadow-lg mb-8 sm:mb-12">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">What's Included in the Fees?</h3>
+              <p className="text-base sm:text-lg text-gray-700 mb-4">Every fee paid for <strong>MAHE Online Courses</strong> includes:</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                {[
+                  '24/7 access to MAHE\'s digital LMS',
+                  'Live online classes',
+                  'Recorded lecture sessions',
+                  'Digital notes & study materials',
+                  'Assessments and quizzes',
+                  'Real-world case studies',
+                  'Full student and academic support'
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <span className="text-orange-500 text-lg">✓</span>
+                    <span className="text-gray-700 text-sm sm:text-base">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-base sm:text-lg text-gray-700 mt-4">This ensures great value for students pursuing <strong>MAHE Online Degrees</strong>.</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-white p-6 sm:p-8 md:p-10 rounded-xl shadow-lg">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">Flexible Payment Options</h3>
+              <p className="text-base sm:text-lg text-gray-700 mb-4">To make <strong>UG & PG online courses by MAHE</strong> accessible to all, MAHE University Online offers:</p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+                {['Semester-wise payment plans', 'EMI options through partnered platforms', 'Easy and secure online fee payment'].map((item, i) => (
+                  <div key={i} className="bg-white p-4 sm:p-5 rounded-lg shadow-md text-center">
+                    <span className="text-gray-700 text-sm sm:text-base">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-base sm:text-lg text-gray-700 mt-6">These flexible options help students focus on learning without financial stress.</p>
+              <p className="text-base sm:text-lg text-gray-700 mt-4">With reasonable fees, excellent teaching quality, and globally recognised <strong>MAHE Online Degrees</strong>, MAHE University Online continues to be one of the <strong>Best online universities in India</strong> for students seeking affordability along with academic excellence.</p>
+            </div>
+            <div className="text-center mt-8 sm:mt-12">
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
+            </div>
           </div>
         </section>
 
@@ -734,6 +1346,15 @@ const Manipal = () => {
                 <p className="text-gray-600 text-sm sm:text-base md:text-lg">Be a part of the prestigious Manipal alumni network to build connections and to gain easy access to a wide range of career opportunities.</p>
               </div>
             </div>
+            <div className="text-center mt-8 sm:mt-12">
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
+            </div>
           </div>
         </section>
        <section>
@@ -753,8 +1374,8 @@ const Manipal = () => {
                  transition={{ duration: 0.8 }}
                  className="text-center mb-8 sm:mb-12 md:mb-16"
                >
-                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 sm:mb-6">
-                   Admission Procedure
+                 <h2 id="AdmissionProcess" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 sm:mb-6">
+                   Admission Process
                  </h2>
                  <div className="w-16 sm:w-20 md:w-24 h-1 bg-orange-500 mx-auto mb-4 sm:mb-6 md:mb-8 rounded-full"></div>
                  <p className="text-sm sm:text-base md:text-lg text-gray-700 max-w-2xl mx-auto px-2">
@@ -782,23 +1403,23 @@ const Manipal = () => {
                    {[
                      {
                        number: "01",
-                       title: "Application Form",
-                       desc: "Fill the online application form on the university portal.",
+                       title: "Choose Your MAHE Online Program",
+                       desc: "Select from MAHE Online MBA, MAHE Online BCA, MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, or MAHE Online BCom.",
                      },
                      {
                        number: "02",
-                       title: "Documents & Fee",
-                       desc: "Upload required documents and pay the application fee.",
+                       title: "Fill Out the Online Application Form",
+                       desc: "Complete the application form with your personal and academic details.",
                      },
                      {
                        number: "03",
-                       title: "Confirmation",
-                       desc: "Receive confirmation and student login credentials.",
+                       title: "Pay the Program Fee Online",
+                       desc: "Make secure online payment through available payment options.",
                      },
                      {
                        number: "04",
-                       title: "Enrollment",
-                       desc: "Complete fee payment and begin your classes.",
+                       title: "Get Confirmation & Start Learning",
+                       desc: "Receive confirmation and student login credentials to begin your journey.",
                      },
                    ].map((step, index) => (
                      <motion.div
@@ -821,6 +1442,15 @@ const Manipal = () => {
                    ))}
                  </div>
                </motion.div>
+               <div className="text-center mt-8 sm:mt-12">
+                   <button 
+                     onClick={() => setOpenModal({ type: 'apply' })}
+                     className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                   >
+                     <span className="hidden sm:inline">Apply Now</span>
+                     <span className="sm:hidden">Apply</span>
+                   </button>
+               </div>
              </div>
            </section>
          </div>
@@ -857,24 +1487,159 @@ const Manipal = () => {
                   100% Placement & Internship Support
                 </li>
               </ul>
+              <div className="text-center mt-8 sm:mt-12">
+                  <button 
+                    onClick={() => setOpenModal({ type: 'apply' })}
+                    className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                  >
+                    <span className="hidden sm:inline">Apply Now</span>
+                    <span className="sm:hidden">Apply</span>
+                  </button>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Premium Testimonials */}
-        <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        {/* Placement Partners Section */}
+        <section id="PlacementPartners" className="py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-100 to-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 sm:mb-12 md:mb-16">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 font-queens">
-                Success <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Stories</span>
+                <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Placement Partners</span>
+              </h2>
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6">
+                Top Companies That Hire MAHE University Online Students
+              </p>
+              <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-2">
+                Our placement partners include some of the most trusted and globally recognized brands:
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-5 lg:gap-6 mb-8">
+              {['Accenture', 'Deloitte', 'TCS', 'Infosys', 'Wipro', 'HCL Technologies', 'EY', 'Cognizant', 'IBM', 'Capgemini', 'KPMG', 'Amazon', 'Flipkart', 'HDFC Bank', 'ICICI Bank', 'PwC', 'Tech Mahindra'].map((company, i) => (
+                <div key={i} className="bg-white p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all text-center border border-gray-100">
+                  <p className="text-sm sm:text-base font-semibold text-gray-800">{company}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-white p-6 sm:p-8 md:p-10 rounded-xl shadow-lg mb-8">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">Why Top Companies Choose MAHE Students?</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                {[
+                  'Industry-ready curriculum aligned with modern skills',
+                  'Practical training through projects and case studies',
+                  'Soft skills & interview preparation provided to students',
+                  'Strong reputation of MAHE University Online as one of the Best online universities in India',
+                  'UGC-entitled MAHE Online Degrees ensuring credibility and recognition'
+                ].map((point, i) => (
+                  <div key={i} className="flex items-start gap-2">
+                    <span className="text-orange-500 text-lg mt-1">✓</span>
+                    <span className="text-gray-700 text-sm sm:text-base">{point}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-50 to-white p-6 sm:p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Career Support You Can Trust</h3>
+              <p className="text-base text-gray-700 mb-4">MAHE University Online provides:</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+                {['Resume-building workshops', 'Mock interviews', 'Job readiness training', 'Internship opportunities', 'Dedicated placement cell guidance'].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <span className="text-orange-500">•</span>
+                    <span className="text-gray-700 text-sm sm:text-base">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="text-center mt-8 sm:mt-12">
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Placement Records Section */}
+        <section id="PlacementRecords" className="py-10 sm:py-12 md:py-16 lg:py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-6 sm:mb-8 font-queens">
+              Highlights of <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">MAHE Online Placement Records</span>
+            </h2>
+            
+            <div className="bg-gradient-to-br from-orange-50 to-white p-6 sm:p-8 md:p-10 rounded-xl shadow-lg">
+              <ul className="space-y-3 sm:space-y-4">
+                {[
+                  'High placement success rate across all MAHE Online Programs',
+                  'Students hired in top companies like Deloitte, TCS, Infosys, HCL, Wipro, EY, IBM, Amazon & more',
+                  'Strong outcomes for graduates of MAHE Online MBA in management, marketing, HR, and finance',
+                  'Excellent results for MAHE Online BCA and MAHE Online MCA students in software, IT services, cloud, and data roles',
+                  'Commerce programs such as MAHE Online MCom and MAHE Online BCom see strong placements in banking, finance, and accounting',
+                  'Students from MAHE Online BBA secure roles in sales, operations, business development, and corporate support',
+                  'Many learners experience career upgrades, salary hikes, and industry transitions after completing MAHE Online Degrees'
+                ].map((point, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="text-orange-500 text-xl font-bold mt-1">✓</span>
+                    <span className="text-gray-700 text-base sm:text-lg flex-1">{point}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-base sm:text-lg text-gray-700 mt-6 sm:mt-8">
+                With excellent placement records, strong career support, and industry alignment, MAHE University Online ensures that every student pursuing <strong>MAHE Online Programs</strong> gets the right guidance and opportunities to grow professionally.
+              </p>
+            </div>
+            <div className="text-center mt-8 sm:mt-12">
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Premium Testimonials / Student Reviews */}
+        <section id="StudentReviews" className="py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8 sm:mb-12 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 font-queens">
+                Student <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Reviews</span>
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-2">
-                Hear from our alumni who have transformed their careers with Manipal Online
+                Hear from our students who have transformed their careers with MAHE University Online
               </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
-              {testimonials.map((testimonial, index) => (
+              {[
+                {
+                  name: 'Aditi Sharma',
+                  course: 'MAHE Online MBA',
+                  text: 'Choosing MAHE University Online for my MBA was truly the best decision. The MAHE Online MBA program is flexible, well-structured, and perfect for working professionals like me. The live classes, case studies, and faculty support made learning easy and engaging. Today, I\'ve secured a promotion at my company thanks to the skills I gained through MAHE.'
+                },
+                {
+                  name: 'Sneha Gupta',
+                  course: 'MAHE Online BBA',
+                  text: 'The MAHE Online BBA program helped me build strong basics in business and management. The faculty explains everything clearly, and the recorded classes help me revise whenever I want. MAHE University Online truly provides flexibility without compromising quality.'
+                },
+                {
+                  name: 'Nikhil Verma',
+                  course: 'MAHE Online MCA',
+                  text: 'The MAHE Online MCA program has exceeded my expectations. The content is advanced and matches industry requirements. The faculty is supportive, and the virtual labs really helped me understand concepts. I feel well-prepared for roles like software developer and data analyst.'
+                },
+                {
+                  name: 'Priya Nair',
+                  course: 'MAHE Online MCom',
+                  text: 'I joined the MAHE Online MCom program because it offered quality education at an affordable fee. The subjects are detailed, and the support team is always available to help. I would definitely recommend MAHE University Online to commerce students.'
+                }
+              ].map((testimonial, index) => (
                 <div key={index} className="group">
                   <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
                     <div className="flex items-start gap-4 sm:gap-5 md:gap-6">
@@ -899,7 +1664,7 @@ const Manipal = () => {
                         <div className="border-t border-gray-100 pt-3 sm:pt-4">
                           <h4 className="font-bold text-gray-900 text-base sm:text-lg md:text-xl">{testimonial.name}</h4>
                           <p className="text-orange-600 font-semibold text-sm sm:text-base md:text-lg">
-                            {testimonial.course}, {testimonial.university}
+                            {testimonial.course} Student
                           </p>
                         </div>
                       </div>
@@ -908,23 +1673,53 @@ const Manipal = () => {
                 </div>
               ))}
             </div>
+            <div className="text-center mt-8 sm:mt-12">
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
+            </div>
           </div>
         </section>
 
         {/* Professional FAQ Section */}
-        <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-white">
+        <section id="Faq" className="py-10 sm:py-12 md:py-16 lg:py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 sm:mb-12 md:mb-16">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 font-queens">
                 Frequently Asked <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Questions</span>
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 px-2">
-                Everything you need to know about Manipal Academy of Higher Education Online Programs
+                Everything you need to know about MAHE University Online Programs
               </p>
             </div>
             
             <div className="space-y-4 sm:space-y-5 md:space-y-6">
-              {faqData.map((faq, index) => (
+              {[
+                {
+                  question: 'Is MAHE University Online UGC-approved?',
+                  answer: 'Yes. MAHE University Online offers fully UGC-entitled MAHE Online Degrees, which hold the same value as regular on-campus degrees. All MAHE Online Courses meet the academic standards set by regulatory bodies.'
+                },
+                {
+                  question: 'Are MAHE Online Degrees valid for jobs and higher studies?',
+                  answer: 'Absolutely. All MAHE Online Programs, including the MAHE Online MBA, MAHE Online BCA, MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, and MAHE Online BCom, are valid for government jobs, corporate roles, and further education like PhD or professional certifications.'
+                },
+                {
+                  question: 'How does the online learning process work at MAHE?',
+                  answer: 'Students of MAHE University Online get access to live online classes, recorded lecture videos, 24/7 digital LMS, assignments & quizzes, and discussion forums & faculty support. This makes UG & PG online courses by MAHE flexible and easy to follow.'
+                },
+                {
+                  question: 'What are the eligibility criteria for MAHE Online Courses?',
+                  answer: 'Eligibility varies by program: MAHE Online BCA / BBA / BCom – 10+2 from a recognised board; MAHE Online MBA / MCom / MCA – Bachelor\'s degree from a recognised university. Specific program requirements are mentioned in each course description.'
+                },
+                {
+                  question: 'What is the fee structure for MAHE Online Programs?',
+                  answer: 'The fee for MAHE Online Courses is affordable and varies program-wise. MAHE also provides flexible payment options, including semester-wise fees and EMIs.'
+                }
+              ].map((faq, index) => (
                 <div
                   key={index}
                   className="group bg-white border border-gray-200 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
@@ -945,6 +1740,38 @@ const Manipal = () => {
                   )}
                 </div>
               ))}
+            </div>
+            <div className="text-center mt-8 sm:mt-12">
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Conclusion Section */}
+        <section id="Conclusion" className="py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-orange-50 to-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-6 sm:mb-8 font-queens">
+              <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Conclusion</span>
+            </h2>
+            <div className="prose prose-lg max-w-none text-center">
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+                MAHE University Online stands as one of the <strong>best online universities in India</strong>, offering high-quality education through flexible and industry-focused <strong>MAHE Online Courses</strong>, <strong>MAHE Online Programs</strong>, and UGC-entitled <strong>MAHE Online Degrees</strong>. Whether you choose the <strong>MAHE Online MBA</strong>, <strong>MAHE Online BCA</strong>, <strong>MAHE Online MCA</strong>, <strong>MAHE Online BBA</strong>, <strong>MAHE Online MCom</strong>, or <strong>MAHE Online BCom</strong>, each program is designed to build real-world skills, support career growth, and provide a future-ready learning experience.
+              </p>
+            </div>
+            <div className="text-center mt-8 sm:mt-12">
+                <button 
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                >
+                  <span className="hidden sm:inline">Apply Now</span>
+                  <span className="sm:hidden">Apply</span>
+                </button>
             </div>
           </div>
         </section>
@@ -1163,6 +1990,7 @@ const Manipal = () => {
             </div>
           </div>
         </footer>
+        </div>
       </div>
     </>
   );
