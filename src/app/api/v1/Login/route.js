@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
-import User from "@/models/User";
+import MobileAppUser from "@/models/MobileAppUser";
 import { connectToDatabase } from "@/lib/mongoose";
 
 export async function POST(request) {
@@ -14,7 +14,7 @@ export async function POST(request) {
 
     await connectToDatabase();
 
-    const user = await User.findOne({ email });
+    const user = await MobileAppUser.findOne({ email });
     if (!user) {
       return NextResponse.json({ success: false, message: "User not found" }, { status: 404 });
     }
@@ -24,6 +24,16 @@ export async function POST(request) {
     if (!isMatch) {
       return NextResponse.json({ success: false, message: "Invalid password" }, { status: 401 });
     }
+    const token = jwt.sign(
+      {
+        id: user._id,
+        email: user.email,
+      },
+      process.env.JWT_SECRET,
+      { expiresIn: "7d" }
+    );
+
+
 
     return NextResponse.json({
       success: true,
@@ -33,6 +43,7 @@ export async function POST(request) {
         email: user.email,
         phone: user.phone,
       },
+        token,
     });
   } catch (error) {
     return NextResponse.json({ success: false, message: error.message }, { status: 500 });

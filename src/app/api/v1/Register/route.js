@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
 import User from "@/models/User";
 import { connectToDatabase } from "@/lib/mongoose";
+import MobileAppUser from "@/models/MobileAppUser";
 
 export async function POST(request) {
   try {
@@ -15,7 +16,7 @@ export async function POST(request) {
     await connectToDatabase();
 
     // Check existing user
-    const existingUser = await User.findOne({ email });
+    const existingUser = await MobileAppUser.findOne({ email });
     if (existingUser) {
       return NextResponse.json({ success: false, message: "Email already exists" }, { status: 409 });
     }
@@ -24,7 +25,7 @@ export async function POST(request) {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     // Create user
-    const newUser = await User.create({
+    const newUser = await MobileAppUser.create({
       fullname,
       email,
       phone,
