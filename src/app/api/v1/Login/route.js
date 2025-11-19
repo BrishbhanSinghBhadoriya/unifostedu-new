@@ -32,7 +32,7 @@ export async function POST(request) {
       },
       process.env.JWT_SECRET,
       { expiresIn: "7d" }
-    );
+    );  
 
 
 
