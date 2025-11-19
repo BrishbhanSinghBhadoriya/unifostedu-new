@@ -300,7 +300,7 @@ const Dypatil = () => {
               aria-expanded={isMobileMenuOpen}
               className="lg:hidden inline-flex items-center p-2 rounded-md border hover:bg-gray-50"
             >
-              Menu
+              <span className="text-xl">☰</span>
             </button>
               {/* Apply Now Button */}
               <button 
@@ -389,6 +389,16 @@ const Dypatil = () => {
                   {item.label}
                 </li>
               ))}
+               <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+              >
+                Apply Now
+              </button>
             </ul>
           </aside>
           
@@ -443,6 +453,16 @@ const Dypatil = () => {
                         </button>
                       </li>
                     ))}
+                     <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+              >
+                Apply Now
+              </button>
                   </ul>
                 </motion.aside>
               </>
@@ -580,6 +600,18 @@ const Dypatil = () => {
                   <li>✅ <b>AgNext AI</b> (AI-driven supply chain for agriculture)</li>
                 </ul>
               </div>
+            </div>
+            <div className="text-center mt-8 sm:mt-12">
+              <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+              >
+                Apply Now
+              </button>
             </div>
           </div>
         </section>
@@ -736,6 +768,18 @@ const Dypatil = () => {
                 These virtual resources enable students to experience the same energy, collaboration, and innovation that define the DY Patil legacy, all from the comfort of their home.
               </p>
             </div>
+            <div className="text-center mt-8 sm:mt-12">
+              <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+              >
+                Apply Now
+              </button>
+            </div>
           </div>
         </section>
         {/* AI Tools Section */}
@@ -811,6 +855,18 @@ const Dypatil = () => {
                 </ul>
               </div>
             </div>
+            <div className="text-center mt-8 sm:mt-12">
+              <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+              >
+                Apply Now
+              </button>
+            </div>
           </div>
         </section>
 
@@ -860,6 +916,18 @@ const Dypatil = () => {
             successStories={[]}
           />
         </div>
+        <div className="text-center -mt-8 sm:-mt-12 mb-8 sm:mb-12">
+            <button 
+              onClick={() => {
+                setOpenModal({ type: 'apply' });
+                setShowEnquiryModal(true);
+                setModalType('apply');
+              }}
+              className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+            >
+              Apply Now
+            </button>
+        </div>
 
         {/* Explore Online Courses Section */}
         <section id="Courses" className="py-16 sm:py-20 bg-gradient-to-br from-gray-50 via-white to-red-50">
@@ -887,7 +955,18 @@ const Dypatil = () => {
                     <h4 className="text-xl font-bold text-gray-900 mb-4">Online BBA</h4>
                     <p className="text-gray-600 mb-4">Bachelor of Business Administration</p>
                     <p className="text-gray-700">Build strong managerial and business foundations through an industry-relevant curriculum that emphasizes leadership, communication, and entrepreneurship.</p>
-                  </div>
+
+                     <button 
+                     onClick={() => {
+                     setOpenModal({ type: 'apply' });
+                     setShowEnquiryModal(true);
+                     setModalType('apply');
+                     }}
+                    className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+                    >
+                   Apply Now
+                   </button>
+               </div>
 
                  
 
@@ -908,6 +987,16 @@ const Dypatil = () => {
                     <h4 className="text-xl font-bold text-gray-900 mb-4">Online MBA</h4>
                     <p className="text-gray-600 mb-4">Master of Business Administration</p>
                     <p className="text-gray-700">The flagship DYPU Online MBA program offers specializations in Marketing, Finance, HR, Operations, International Business, and Hospital Administration. Tailored for professionals seeking to elevate their careers through strategic and managerial expertise.</p>
+                       <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+              >
+                Apply Now
+              </button>
                   </div>
 
                   <div className="bg-white p-8 rounded-xl shadow-lg">
@@ -915,10 +1004,22 @@ const Dypatil = () => {
                       <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                       </svg>
+
                     </div>
                     <h4 className="text-xl font-bold text-gray-900 mb-4">Online MCA</h4>
                     <p className="text-gray-600 mb-4">Master of Computer Applications</p>
                     <p className="text-gray-700">Designed for aspiring tech leaders, this online MCA program builds advanced skills in programming, database management, AI, and software development.</p>
+                      <button 
+                       onClick={() => {
+                       setOpenModal({ type: 'apply' });
+                       setShowEnquiryModal(true);
+                       setModalType('apply');
+                      }}
+                     className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer mt-[4px]"
+
+                   >
+                  Apply Now
+                 </button>
                   </div>
 
                   
@@ -1034,6 +1135,18 @@ const Dypatil = () => {
                 DY Patil Online stands out for its combination of innovation, flexibility, and academic credibility — offering students a powerful platform to achieve their educational and professional goals.
               </p>
             </div>
+            <div className="text-center mt-8 sm:mt-12">
+              <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+              >
+                Apply Now
+              </button>
+            </div>
           </div>
         </section>
 
@@ -1115,6 +1228,18 @@ const Dypatil = () => {
                 Students can apply directly on the DYPU Online Admission Portal. Early applicants may qualify for merit-based scholarships, fee waivers, and early bird discounts.
               </p>
             </div>
+          </div>
+          <div className="text-center mt-8 sm:mt-12">
+            <button 
+              onClick={() => {
+                setOpenModal({ type: 'apply' });
+                setShowEnquiryModal(true);
+                setModalType('apply');
+              }}
+              className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+            >
+              Apply Now
+            </button>
           </div>
         </section>
 
@@ -1213,6 +1338,18 @@ const Dypatil = () => {
                 </ul>
               </div>
             </div>
+            <div className="text-center mt-8 sm:mt-12">
+              <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+              >
+                Apply Now
+              </button>
+            </div>
           </div>
         </section>
 
@@ -1285,6 +1422,18 @@ const Dypatil = () => {
                   The process is supported by a dedicated admissions team, ensuring guidance from registration to orientation. Our team is available to help you at every step of your admission journey.
                 </p>
               </div>
+            </div>
+            <div className="text-center mt-8 sm:mt-12">
+              <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+              >
+                Apply Now
+              </button>
             </div>
           </div>
         </section>
@@ -1382,6 +1531,18 @@ const Dypatil = () => {
                 Each session includes live classes, orientation events, assignments, and industry interaction sessions, ensuring that learning continues seamlessly year-round.
               </p>
             </div>
+            <div className="text-center mt-8 sm:mt-12">
+              <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+              >
+                Apply Now
+              </button>
+            </div>
           </div>
         </section>
 
@@ -1468,6 +1629,18 @@ const Dypatil = () => {
                 ))}
               </div>
             </motion.div>
+            <div className="text-center mt-8 sm:mt-12">
+              <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+              >
+                Apply Now
+              </button>
+            </div>
           </div>
         </section>
 
@@ -1475,6 +1648,18 @@ const Dypatil = () => {
         <CareerSupport />
 
         <section className="bg-[#E91C63] py-12 px-4">
+          <div className="text-center -mt-8 sm:-mt-12 mb-8 sm:mb-12">
+              <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-white text-[#d91c5c] px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+              >
+                Apply Now
+              </button>
+          </div>
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
             {/* Certificate Image */}
             <div className="flex-1">
@@ -1506,6 +1691,18 @@ const Dypatil = () => {
                 <li>Hands-on & Immersive Learning through world-Class Experince</li>
               </ul>
             </div>
+          </div>
+          <div className="text-center mt-8 sm:mt-12">
+              <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-white text-[#d91c5c] px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+              >
+                Apply Now
+              </button>
           </div>
         </section>
 
@@ -1563,6 +1760,18 @@ const Dypatil = () => {
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
                 <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327172/hp_b4ylow.webp" width={100} height={100} loading="lazy" alt="Samsung2" className="h-12 object-contain" />
               </div>
+            </div>
+            <div className="text-center mt-8 sm:mt-12">
+              <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+              >
+                Apply Now
+              </button>
             </div>
           </div>
         </section>
@@ -1659,6 +1868,18 @@ const Dypatil = () => {
                 Contact Admissions Counselor
               </button>
             </motion.div>
+            <div className="text-center mt-8 sm:mt-12">
+              <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+              >
+                Apply Now
+              </button>
+            </div>
           </div>
         </section>
 

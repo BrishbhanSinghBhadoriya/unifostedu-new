@@ -83,6 +83,8 @@ export default async function sitemap() {
   const universityRoutes = [
     'Amity-University-Online',
     'manipal',
+    'muj-online-bba',
+    'muj-online-bca',
     'mahe-online',
     'lpu-online',
     'ku-online',

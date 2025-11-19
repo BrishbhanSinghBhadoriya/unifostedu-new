@@ -13,7 +13,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import EnquiryForm from '@/components/EnquiryForm';
 import AccreditationSection from '@/components/AccreditationSection';
-import { FaGraduationCap, FaUsers, FaChalkboardTeacher, FaRupeeSign } from 'react-icons/fa';
+import { FaGraduationCap, FaUsers, FaChalkboardTeacher, FaRupeeSign, FaPhone } from 'react-icons/fa';
 import { MdSupportAgent } from 'react-icons/md';
 import { BiBookContent } from 'react-icons/bi';
 import { BsBuildingCheck } from 'react-icons/bs';
@@ -339,106 +339,191 @@ const CUOnline = () => {
       
       <div className="min-h-screen bg-gray-50 overflow-x-hidden">
       {/* Header & Hero Section */}
-      <header className="bg-white shadow-md fixed top-0 w-full z-20">
-        <div className="max-w-7xl mx-auto p-2 flex justify-between items-center">
-          <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327282/logo-cu_aoiyom.png" alt="Chandigarh University" className="h-12" />
-          <div className="flex items-center gap-4">
-            <a href="tel:+917042867717" className="flex items-center gap-2 text-gray-700 font-medium">
-              📞 +91-7042867717
-            </a>
-            <button 
-              onClick={() => setOpenModal({ type: 'apply' })}
-              className="bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded-full transition cursor-pointer"
-            >
-              Apply Now
-            </button>
-          </div>
-        </div>
-      </header>
-
+      <header className="w-full fixed bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 top-0 left-0 z-50">
+       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         <div className="flex items-center justify-between h-16 lg:h-20">
+           {/* Left Logo */}
+           <div className="flex items-center gap-2 lg:gap-4">
+             <img
+              src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327282/logo-cu_aoiyom.png" 
+              alt="Chandigarh University" 
+              className="h-10 sm:h-12 w-auto" 
+             />
+             
+           </div>
+     
+           {/* Right Side */}
+           <div className="flex items-center gap-2 sm:gap-4">
+             {/* Mobile Menu Button */}
+            
+     
+             {/* Phone (Desktop) */}
+             <a
+               href="tel:+917042867717"
+               className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-[#f26722] transition-colors"
+             >
+                <FaPhone className="text-red-500 rotate-90" />
+               <span className="hidden lg:inline">+91-7042867717</span>
+               <span className="lg:hidden">Call Now</span>
+             </a>
+     
+             {/* Phone (Mobile) */}
+             <a
+               href="tel:+917042867717"
+               className="sm:hidden flex items-center justify-center w-10 h-10 bg-white-500 rounded-full text-[#f26722] hover:bg-red-700 transition-colors cursor-pointer"
+             >
+               📞
+             </a>
+     
+             {/* Apply Button */}
+             <button
+               onClick={() => setOpenModal({ type: "apply" })}
+               className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
+             >
+               <span className="hidden sm:inline">Apply Now</span>
+     
+               <span className="sm:hidden">Apply</span>
+             </button>
+           </div>
+         </div>
+       </div>
+     </header>    
       {/* Hero Banner */}
-      <section className="relative w-full h-[70vh] mt-[90px] mb-[10px]">
-      <Swiper
-        modules={[Autoplay, Navigation, Pagination]}
-        spaceBetween={0}
-        slidesPerView={1}
-        loop={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false, 
-        }}
-        navigation
-        pagination={{ clickable: true }}
-        className="w-full h-full"
+     <section
+  className="relative w-full 
+             h-[20vh]          
+             sm:h-[65vh] 
+             lg:h-[80vh]
+             mt-[80px] sm:mt-[96px] mb-6 px-4"
+>
+  <Swiper
+    modules={[Autoplay, Navigation, Pagination]}
+    spaceBetween={0}
+    slidesPerView={1}
+    loop={true}
+    autoplay={{
+      delay: 3000,
+      disableOnInteraction: false,
+    }}
+    navigation
+    pagination={{ clickable: true }}
+    className="w-full h-full rounded-2xl overflow-hidden bg-white"
+  >
+    {/* Slide 1 */}
+    <SwiperSlide>
+      <Image
+        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327055/banner-cu1_a6rmh0.webp"
+        alt="Banner 1"
+        width={1400}
+        height={800}
+        className="
+          w-full h-full 
+          object-cover         /* Mobile: full cover */
+          sm:object-contain    /* Tablet/desktop: maintain aspect */
+          object-center
+          p-0 sm:p-4
+        "
+        priority
+      />
+    </SwiperSlide>
+
+    {/* Slide 2 */}
+    <SwiperSlide>
+      <Image
+        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu2_wqusv8.jpg"
+        alt="Banner 2"
+        width={1400}
+        height={800}
+        className="
+          w-full h-full 
+          object-cover 
+          sm:object-contain 
+          object-center
+          p-0 sm:p-4
+        "
+      />
+    </SwiperSlide>
+
+    {/* Slide 3 */}
+    <SwiperSlide>
+      <Image
+        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu3_bqn5u5.jpg"
+        alt="Banner 3"
+        width={1400}
+        height={800}
+        className="
+          w-full h-full 
+          object-cover 
+          sm:object-contain 
+          object-center
+          p-0 sm:p-4
+        "
+      />
+    </SwiperSlide>
+
+    {/* Slide 4 */}
+    <SwiperSlide>
+      <Image
+        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu4_dwgigz.jpg"
+        alt="Banner 4"
+        width={1400}
+        height={800}
+        className="
+          w-full h-full 
+          object-cover 
+          sm:object-contain 
+          object-center
+          p-0 sm:p-4
+        "
+      />
+    </SwiperSlide>
+
+    {/* Slide 5 */}
+    <SwiperSlide>
+      <Image
+        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu5_isobmb.jpg"
+        alt="Banner 5"
+        width={1400}
+        height={800}
+        className="
+          w-full h-full 
+          object-cover 
+          sm:object-contain 
+          object-center
+          p-0 sm:p-4
+        "
+      />
+    </SwiperSlide>
+
+    {/* Slide 6 */}
+    <SwiperSlide>
+      <Image
+        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu4_dwgigz.jpg"
+        alt="Banner 6"
+        width={1400}
+        height={800}
+        className="
+          w-full h-full 
+          object-cover 
+          sm:object-contain 
+          object-center
+          p-0 sm:p-4
+        "
+      />
+    </SwiperSlide>
+  </Swiper>
+  <div className="text-left mt-8 sm:mt-12">
+      <button
+        onClick={() => setOpenModal({ type: "apply" })}
+        className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
       >
-        {/* Slide 1 */}
-        <SwiperSlide>
-          <Image
-            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327055/banner-cu1_a6rmh0.webp"
-            alt="Fake Banner 1"
-            width={1400}
-            height={800}
-            className="object-cover object-center w-full h-full"
-            priority
-          />
-        </SwiperSlide>
+        <span className="hidden sm:inline">Apply Now</span>
 
-        {/* Slide 2 */}
-        <SwiperSlide>
-          <Image
-            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu2_wqusv8.jpg"
-            alt="Fake Banner 2"
-            width={1400}
-            height={800}
-            className="object-cover object-center w-full h-full"
-          />
-        </SwiperSlide>
+        <span className="sm:hidden">Apply</span>
+      </button>
+  </div>
+</section>
 
-        {/* Slide 3 */}
-        <SwiperSlide>
-          <Image
-            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu3_bqn5u5.jpg"
-            alt="Fake Banner 3"
-            width={1400}
-            height={800}
-            className="object-cover object-center w-full h-full"
-          />
-        </SwiperSlide>
-
-         {/* Slide 4 */}
-        <SwiperSlide>
-          <Image
-            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu4_dwgigz.jpg"
-            alt="Fake Banner 3"
-            width={1400}
-            height={800}
-            className="object-cover object-center w-full h-full"
-          />
-        </SwiperSlide>
-
-         {/* Slide 5 */}
-        <SwiperSlide>
-          <Image
-            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu5_isobmb.jpg"
-            alt="Fake Banner 3"
-            width={1400}
-            height={800}
-            className="object-cover object-center w-full h-full"
-          />
-        </SwiperSlide>
-
-         {/* Slide 6 */}
-        <SwiperSlide>
-          <Image
-            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu4_dwgigz.jpg"
-            alt="Fake Banner 3"
-            width={1400}
-            height={800}
-            className="object-cover object-center w-full h-full"
-          />
-        </SwiperSlide>
-      </Swiper>
-    </section>
 <section className="py-10 bg-white">
   <div className="container mx-auto px-4">
     <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -483,6 +568,16 @@ const CUOnline = () => {
         </p>
       </div>
     </div>
+    <div className="text-center mt-8 sm:mt-12">
+        <button
+          onClick={() => setOpenModal({ type: "apply" })}
+          className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
+        >
+          <span className="hidden sm:inline">Apply Now</span>
+
+          <span className="sm:hidden">Apply</span>
+        </button>
+    </div>
   </div>
 </section>
 
@@ -502,6 +597,16 @@ const CUOnline = () => {
           { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/wes_zuxwfs.webp", alt: "WES", name: "WES" },
         ]}
       />
+      <div className="text-center mt-8 sm:mt-12">
+          <button
+            onClick={() => setOpenModal({ type: "apply" })}
+            className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
+          >
+            <span className="hidden sm:inline">Apply Now</span>
+
+            <span className="sm:hidden">Apply</span>
+          </button>
+      </div>
 
       {/* UG/PG Programs Carousel */}
       <main className="pt-32 max-w-7xl mx-auto px-4">
@@ -566,8 +671,18 @@ const CUOnline = () => {
             onClick={nextSlide}
             className="absolute right-0 top-1/2 -translate-y-1/2 bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 z-10 shadow-lg"
           >
-            Next
+            
           </button>
+        </div>
+        <div className="text-center mt-8 sm:mt-12">
+            <button
+              onClick={() => setOpenModal({ type: "apply" })}
+              className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
+            >
+              <span className="hidden sm:inline">Apply Now</span>
+
+              <span className="sm:hidden">Apply</span>
+            </button>
         </div>
         
       </main>
@@ -589,6 +704,16 @@ const CUOnline = () => {
               </ul>
             </div>
           ))}
+        </div>
+        <div className="text-center mt-8 sm:mt-12">
+            <button
+              onClick={() => setOpenModal({ type: "apply" })}
+              className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
+            >
+              <span className="hidden sm:inline">Apply Now</span>
+
+              <span className="sm:hidden">Apply</span>
+            </button>
         </div>
       </div>
     </section>
@@ -674,6 +799,16 @@ const CUOnline = () => {
                      </motion.div>
                    ))}
                  </div>
+                 <div className="text-center mt-8 sm:mt-12">
+                     <button
+                       onClick={() => setOpenModal({ type: "apply" })}
+                       className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
+                     >
+                       <span className="hidden sm:inline">Apply Now</span>
+
+                       <span className="sm:hidden">Apply</span>
+                     </button>
+                 </div>
                </motion.div>
              </div>
            </section>
@@ -695,6 +830,16 @@ const CUOnline = () => {
                     <li>Global Exposure & Alumni Network</li>
                     <li>Affordable, Flexible & Recognized Programs</li>
                   </ul>
+                  <div className="text-center mt-8 sm:mt-12">
+                      <button
+                        onClick={() => setOpenModal({ type: "apply" })}
+                        className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
+                      >
+                        <span className="hidden sm:inline">Apply Now</span>
+
+                        <span className="sm:hidden">Apply</span>
+                      </button>
+                  </div>
                 </div>
               </div>
             </section>
@@ -729,6 +874,16 @@ const CUOnline = () => {
               )}
             </div>
           ))}
+        </div>
+        <div className="text-center mt-8 sm:mt-12">
+            <button
+              onClick={() => setOpenModal({ type: "apply" })}
+              className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
+            >
+              <span className="hidden sm:inline">Apply Now</span>
+
+              <span className="sm:hidden">Apply</span>
+            </button>
         </div>
       </div>
     </section>

@@ -61,7 +61,7 @@ const OPJindal = () => {
       
       'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327836/opjindal-banner2_wpbugp.webp',
       'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327837/opjindal-banner3_gtwjsl.webp',
-      'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327837/opjindal_banner4_qsqxfa.webp',
+      'https://res.cloudinary.com/didkrwhbu/image/upload/v1763543204/opjindal_banner41_oppjgn.jpg',
       
 
     ];
@@ -69,7 +69,7 @@ const OPJindal = () => {
     useEffect(() => {
       const timer = setInterval(() => {
         setCurrentSlide((prev) => (prev === sliderImages.length - 1 ? 0 : prev + 1));
-      }, 5000); // Change slide every 5 seconds
+      }, 3000); // Change slide every 5 seconds
   
       return () => {
         clearInterval(timer);
@@ -315,6 +315,14 @@ const OPJindal = () => {
                 </button>
               </li>
             ))}
+            {/* Apply Button */}
+                      <button 
+                        onClick={() => setOpenModal({ type: 'apply' })}
+                        className="bg-white hover:bg-white text-blue font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-black-500/25 text-sm sm:text-base cursor-pointer"
+                      >
+                        <span className="hidden sm:inline ">Apply Now</span>
+                        <span className="sm:hidden">Apply</span>
+                      </button>
           </ul>
         </aside>
 
@@ -379,46 +387,45 @@ const OPJindal = () => {
                           </button>
                         </li>
                       ))}
+                      {/* Apply Button */}
+                      <button 
+                        onClick={() => setOpenModal({ type: 'apply' })}
+                        className="bg-white hover:bg-white text-blue font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-black-500/25 text-sm sm:text-base cursor-pointer"
+                      >
+                        <span className="hidden sm:inline ">Apply Now</span>
+                        <span className="sm:hidden">Apply</span>
+                      </button>
                     </ul>
                   </motion.aside>
                 </>
               )}
             </AnimatePresence>
             {/* Image Slider Section */}
-           <section id='Home' className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden mt-0">
+ <section 
+  id="Home" 
+  className="relative w-full h-[150px] sm:h-[200px] md:h-[250px] lg:h-[300px] overflow-hidden"
+>
   <AnimatePresence initial={false}>
     <motion.div
       key={currentSlide}
-      className="absolute inset-0"
+      className="absolute inset-1"
       initial={{ opacity: 0, scale: 1.05 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
-      transition={{ duration: 0.8, ease: 'easeInOut' }}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
     >
-      <Image 
-        src={sliderImages[currentSlide]} 
-        alt={`OP Jindal University Slide ${currentSlide + 1}`}
+      <Image
+        src={sliderImages[currentSlide]}
+        alt="Slider Image"
         fill
-        priority={currentSlide === 0}
         className="object-cover"
-        sizes="100vw"
       />
       <div className="absolute inset-0 bg-black/30" />
     </motion.div>
   </AnimatePresence>
-  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-    {sliderImages.map((_, index) => (
-      <button
-        key={index}
-        onClick={() => setCurrentSlide(index)}
-        className={`w-3 h-3 rounded-full transition-all duration-300 ${
-          currentSlide === index ? 'bg-white scale-125' : 'bg-white/50'
-        }`}
-        aria-label={`Go to slide ${index + 1}`}
-      />
-    ))}
-  </div>
 </section>
+
+
  
 <section className="bg-gradient-to-b from-white to-gray-50 py-16 px-6 md:px-16">
       <div className="max-w-6xl mx-auto text-gray-800">
@@ -780,8 +787,9 @@ const OPJindal = () => {
         title: "Innovative Curriculum",
         description: "Blends theory with practical exposure.",
         iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M4 6h16M4 12h16M4 18h16"></path>
-                  </svg>`,
+                      <path d="M12 12c2.67 0 8 1.34 8 4v4H4v-4c0-2.66 5.33-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z"></path>
+                    </svg>`,             
+
       },
       {
         title: "Expert Faculty",
@@ -801,8 +809,8 @@ const OPJindal = () => {
         title: "Strong Placements",
         description: "Top companies hire our graduates.",
         iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M5 12h14M12 5v14"></path>
-                  </svg>`,
+                      <path d="M12 2l9 4.5v11L12 22l-9-4.5v-11L12 2z"></path>
+                    </svg>`,
       },
       {
         title: "Global Exposure",
@@ -1557,6 +1565,12 @@ const OPJindal = () => {
             </div>
           ))}
         </div>
+         <Button
+          onClick={() => setOpenModal({ type: 'apply' })}
+          className="w-full bg-[#ffc107] text-blue-500 font-bold px-6 py-3 rounded-full shadow-lg hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 hover:bg-[#e0a800] cursor-pointer"
+          >
+          Apply Now
+          </Button>
       </div>
     </section>
 <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-gray-300 pt-12 sm:pt-16 relative overflow-hidden">

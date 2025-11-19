@@ -1,5 +1,6 @@
 'use client';
 import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
 import React, { useState, useEffect } from 'react';
 import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck, FaStar, FaCertificate, FaBuilding, FaUsers, FaPhone, FaWhatsapp } from "react-icons/fa";
 import { FaLaptop, FaBook, FaGraduationCap, FaIndustry, FaUserCircle, FaUniversity, FaMoneyBillWave } from "react-icons/fa";
@@ -1040,11 +1041,11 @@ const SMU = () => {
                     <Tabs.Trigger
                       key={tab.value}
                       value={tab.value}
-                      className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 cursor-pointer ${ 
+                      className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg sm:rounded-xl font-semibold transition-all duration-300 text-sm sm:text-base cursor-pointer ${
                         activeTab === tab.value 
                           ? 'bg-gradient-to-r from-orange-500 to-[#f26722] text-white shadow-lg' 
                           : 'text-gray-700 hover:text-[#f26722] hover:bg-white' 
-                      }`} 
+                      }`}
                     >
                       {tab.label}
                     </Tabs.Trigger>
