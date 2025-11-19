@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
 import MobileAppUser from "@/models/MobileAppUser";
 import { connectToDatabase } from "@/lib/mongoose";
+import jwt from "jsonwebtoken";
 
 export async function POST(request) {
   try {
