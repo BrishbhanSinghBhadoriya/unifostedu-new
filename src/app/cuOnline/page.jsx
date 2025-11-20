@@ -1,29 +1,35 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import EnquiryForm from '@/components/EnquiryForm';
-import AccreditationSection from '@/components/AccreditationSection';
-import { FaGraduationCap, FaUsers, FaChalkboardTeacher, FaRupeeSign, FaPhone } from 'react-icons/fa';
-import { MdSupportAgent } from 'react-icons/md';
-import { BiBookContent } from 'react-icons/bi';
-import { BsBuildingCheck } from 'react-icons/bs';
-import { AiOutlineSchedule } from 'react-icons/ai';
-import { ChevronDown } from 'lucide-react';
-import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
-import Head from 'next/head';
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import EnquiryForm from "@/components/EnquiryForm";
+import AccreditationSection from "@/components/AccreditationSection";
+import {
+  FaGraduationCap,
+  FaUsers,
+  FaChalkboardTeacher,
+  FaRupeeSign,
+  FaPhone,
+} from "react-icons/fa";
+import { MdSupportAgent } from "react-icons/md";
+import { BiBookContent } from "react-icons/bi";
+import { BsBuildingCheck } from "react-icons/bs";
+import { AiOutlineSchedule } from "react-icons/ai";
+import { ChevronDown } from "lucide-react";
+import ApplyEnquiryModal from "@/components/ApplyEnquiryModal";
+import Head from "next/head";
 
-const CUOnline = () => {
-  const [activeCategory, setActiveCategory] = useState('PG'); // PG or UG
+const cuonline = () => {
+  const [activeCategory, setActiveCategory] = useState("PG"); // PG or UG
   const [current, setCurrent] = useState(0);
 
   const ugCourses = [
@@ -33,23 +39,28 @@ const CUOnline = () => {
       eligibility: "10+2 Pass",
       fees: "₹1,66,668",
       specialization: "Journalism, Media Studies",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327037/ba-jmc_njfsqe.webp",
+      image:
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327037/ba-jmc_njfsqe.webp",
     },
     {
-      title: "Bachelor of Business Administration - Business Analytics (BBA - KPMG)",
+      title:
+        "Bachelor of Business Administration - Business Analytics (BBA - KPMG)",
       duration: "3 Years(6 Semesters)",
       eligibility: "10+2 Pass",
       fees: "₹1,60,000",
       specialization: "Business Analytics with KPMG",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
+      image:
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
     },
     {
       title: "Bachelor of Business Administration (BBA)",
       duration: "3 Years(6 Semesters)",
       eligibility: "10+2 Pass",
       fees: "₹1,68,000",
-      specialization: "Marketing, HR, Entrepreneurship, Digital Marketing, Fin-Tech",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
+      specialization:
+        "Marketing, HR, Entrepreneurship, Digital Marketing, Fin-Tech",
+      image:
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
     },
     {
       title: "Bachelor of Computer Applications (BCA)",
@@ -57,26 +68,32 @@ const CUOnline = () => {
       eligibility: "10+2 or equivalent",
       fees: "₹1,70,000",
       specialization: "IT & Systems",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
+      image:
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
     },
   ];
 
   const pgCourses = [
     {
-      title: "Master of Business Administration - Business Analytics (MBA - KPMG)",
+      title:
+        "Master of Business Administration - Business Analytics (MBA - KPMG)",
       duration: "2 Years(4 Semesters)",
-      eligibility: "Bachelor degree in any discipline or professional programs (CA/ICWA etc.)",
+      eligibility:
+        "Bachelor degree in any discipline or professional programs (CA/ICWA etc.)",
       fees: "₹2,00,000",
       specialization: "Business Analytics with KPMG",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
+      image:
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
     },
     {
       title: "Master of Business Administration (MBA)",
       duration: "2 Years",
       eligibility: "Graduation",
       fees: "₹2,10,668",
-      specialization: "Finance, Marketing, HR, IT, Operations, International Business, Digital Marketing, Fin-Tech",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
+      specialization:
+        "Finance, Marketing, HR, IT, Operations, International Business, Digital Marketing, Fin-Tech",
+      image:
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
     },
     {
       title: "Master of Computer Applications - AI & ML",
@@ -84,7 +101,8 @@ const CUOnline = () => {
       eligibility: "BCA/B.Sc(IT/CS)/B.E/B.Tech",
       fees: "₹1,40,000",
       specialization: "AI, ML, Data Analytics, Cloud Computing, Full Stack",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
+      image:
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
     },
     {
       title: "Master of Science - Data Science",
@@ -92,7 +110,8 @@ const CUOnline = () => {
       eligibility: "Bachelor's in BA/BCA/B.Sc/BE/B.Tech",
       fees: "₹1,46,668",
       specialization: "Full Stack, Web Development",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
+      image:
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
     },
     {
       title: "Master of Computer Applications - Cloud Computing (AWS Academy)",
@@ -100,15 +119,18 @@ const CUOnline = () => {
       eligibility: "BCA/B.Sc/BE/B.Tech or any graduation",
       fees: "₹1,40,000",
       specialization: "Cloud, AWS, DevOps, Full Stack",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
+      image:
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
     },
     {
       title: "Master of Computer Applications - Data Analytics",
       duration: "2 Years",
-      eligibility: "BCA/B.Sc/BE/B.Tech or any graduation with Math/Stats/Programming",
+      eligibility:
+        "BCA/B.Sc/BE/B.Tech or any graduation with Math/Stats/Programming",
       fees: "₹1,40,000",
       specialization: "Big Data, Data Mining",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
+      image:
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
     },
     {
       title: "Master of Computer Applications (MCA)",
@@ -116,7 +138,8 @@ const CUOnline = () => {
       eligibility: "BCA/B.Sc/BE/B.Tech or any graduation",
       fees: "₹1,40,000",
       specialization: "General IT, Software Development",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
+      image:
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
     },
     {
       title: "Master of Science (Mathematics)",
@@ -124,7 +147,8 @@ const CUOnline = () => {
       eligibility: "Bachelor's with Math",
       fees: "₹1,00,000",
       specialization: "Pure Math, Applied Math",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
+      image:
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
     },
     {
       title: "Master of Arts (MA)",
@@ -132,11 +156,10 @@ const CUOnline = () => {
       eligibility: "Graduation in any discipline or BA(Hons.)",
       fees: "₹1,00,000",
       specialization: "Psychology, English, Economics",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
+      image:
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
     },
   ];
-
-
 
   const courses = activeCategory === "PG" ? pgCourses : ugCourses;
   const itemsPerSlide = 3;
@@ -153,7 +176,7 @@ const CUOnline = () => {
   for (let i = 0; i < itemsPerSlide; i++) {
     visibleCourses.push(courses[(current + i) % courses.length]);
   }
-  
+
   const [openModal, setOpenModal] = useState(null);
   const [openIndex, setOpenIndex] = useState(null);
   const benefits = [
@@ -162,87 +185,86 @@ const CUOnline = () => {
       title: "UGC Entitled Programs",
       points: [
         "Recognition by the UGC, India is a stamp of approval for credibility, quality & acceptance.",
-        "CU Online degree is held in high regard by academicians & corporate leaders globally."
-      ]
+        "CU Online degree is held in high regard by academicians & corporate leaders globally.",
+      ],
     },
     {
       icon: <BsBuildingCheck className="text-red-500 text-4xl" />,
       title: "HBPE & KPMG Empowered Courses",
       points: [
         "Backed by prestigious universities and globally renowned courses.",
-        "VIP access to insights from industry stalwarts & global faculties."
-      ]
+        "VIP access to insights from industry stalwarts & global faculties.",
+      ],
     },
     {
       icon: <MdSupportAgent className="text-red-500 text-4xl" />,
       title: "24x7 Learner Support + On-Demand Examination",
       points: [
         "Comprehensive online support & resources anytime.",
-        "Freedom to schedule exams when you’re ready."
-      ]
+        "Freedom to schedule exams when you’re ready.",
+      ],
     },
     {
       icon: <AiOutlineSchedule className="text-red-500 text-4xl" />,
       title: "Interactive Industry Expert Sessions",
       points: [
         "Engage in real-time discussions with industry leaders.",
-        "Gain confidence & practical know-how from interactive experiences."
-      ]
+        "Gain confidence & practical know-how from interactive experiences.",
+      ],
     },
     {
       icon: <FaUsers className="text-red-500 text-4xl" />,
       title: "Career & Placement Assistance",
       points: [
         "Networking opportunities, internships & job placements.",
-        "Industry partnerships for career growth."
-      ]
+        "Industry partnerships for career growth.",
+      ],
     },
     {
       icon: <FaChalkboardTeacher className="text-red-500 text-4xl" />,
       title: "Globally Acclaimed Faculty",
       points: [
         "Learn from acclaimed professionals with vast expertise.",
-        "Rich & insightful learning experiences."
-      ]
+        "Rich & insightful learning experiences.",
+      ],
     },
     {
       icon: <FaRupeeSign className="text-red-500 text-4xl" />,
       title: "Affordable & Flexible Fee Structure",
       points: [
         "Scholarships & discounts available.",
-        "Pay per seat with flexible options."
-      ]
+        "Pay per seat with flexible options.",
+      ],
     },
     {
       icon: <BiBookContent className="text-red-500 text-4xl" />,
       title: "World Class Learning Management System (LMS)",
       points: [
         "Advanced LMS for seamless learning.",
-        "Personalized digital learning experience."
-      ]
-    }
+        "Personalized digital learning experience.",
+      ],
+    },
   ];
-  
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setOpenModal({ type: 'apply' });
+      setOpenModal({ type: "apply" });
     }, 3000);
     return () => clearTimeout(timer);
   }, []);
-   
+
   const faqs = [
-  {
-    question: "What is Chandigarh University Online?",
-    answer: `Chandigarh University Online (CU Online) is the Centre for Distance and Online Education (CDOE) of Chandigarh University. It offers UGC-entitled, AICTE-approved online bachelor's and master's degree programs designed for working professionals, fresh graduates, and learners across India and abroad. CU Online combines academic excellence with flexibility, allowing students to study from anywhere while receiving globally recognized degrees.`
-  },
-  {
-    question: "Is Chandigarh University Online degree valid?",
-    answer: `Yes, CU Online degrees are fully valid and recognized by UGC (University Grants Commission). All programs are entitled by UGC-DEB, making them equivalent to regular on-campus degrees. Chandigarh University has also been accredited with NAAC A+ and holds global recognition, ensuring your degree is accepted by employers, corporates, and universities in India and abroad.`
-  },
-  {
-    question: "What courses are offered at Chandigarh University Online?",
-    answer: `Chandigarh University Online offers a wide range of undergraduate and postgraduate programs across multiple disciplines:
+    {
+      question: "What is Chandigarh University Online?",
+      answer: `Chandigarh University Online (CU Online) is the Centre for Distance and Online Education (CDOE) of Chandigarh University. It offers UGC-entitled, AICTE-approved online bachelor's and master's degree programs designed for working professionals, fresh graduates, and learners across India and abroad. CU Online combines academic excellence with flexibility, allowing students to study from anywhere while receiving globally recognized degrees.`,
+    },
+    {
+      question: "Is Chandigarh University Online degree valid?",
+      answer: `Yes, CU Online degrees are fully valid and recognized by UGC (University Grants Commission). All programs are entitled by UGC-DEB, making them equivalent to regular on-campus degrees. Chandigarh University has also been accredited with NAAC A+ and holds global recognition, ensuring your degree is accepted by employers, corporates, and universities in India and abroad.`,
+    },
+    {
+      question: "What courses are offered at Chandigarh University Online?",
+      answer: `Chandigarh University Online offers a wide range of undergraduate and postgraduate programs across multiple disciplines:
     
     🔹 Undergraduate Programs (UG):
     - BBA (Bachelor of Business Administration)
@@ -256,70 +278,72 @@ const CUOnline = () => {
     - M.Com (Master of Commerce)
     - MA in English, Psychology, Sociology, and more
 
-    These programs are designed with industry relevance and future-ready skills in mind.`
-  },
-  {
-    question: "What is the eligibility for Chandigarh University Online courses?",
-    answer: `Eligibility criteria vary by course:
+    These programs are designed with industry relevance and future-ready skills in mind.`,
+    },
+    {
+      question:
+        "What is the eligibility for Chandigarh University Online courses?",
+      answer: `Eligibility criteria vary by course:
     - For UG Programs: Candidates must have completed 10+2 from a recognized board.
     - For PG Programs: A bachelor's degree from a recognized university in a relevant field is required.
     - Some programs may require specific subject combinations or a minimum percentage.
 
-    International students must submit equivalent qualifications recognized by relevant authorities.`
-  },
-  {
-    question: "What is the fee structure of Chandigarh University Online?",
-    answer: `CU Online offers an affordable and flexible fee structure. Fees vary depending on the program:
+    International students must submit equivalent qualifications recognized by relevant authorities.`,
+    },
+    {
+      question: "What is the fee structure of Chandigarh University Online?",
+      answer: `CU Online offers an affordable and flexible fee structure. Fees vary depending on the program:
     - UG Programs: ₹25,000 – ₹35,000 per year
     - PG Programs (MBA, MCA, M.Com, MA): ₹30,000 – ₹50,000 per year
 
-    Scholarships and installment options are available. Students can pay semester-wise or annually, making it budget-friendly for working professionals and students.`
-  },
-  {
-    question: "Does Chandigarh University Online provide placement assistance?",
-    answer: `Yes, CU Online provides strong career support and placement assistance. Students gain access to:
+    Scholarships and installment options are available. Students can pay semester-wise or annually, making it budget-friendly for working professionals and students.`,
+    },
+    {
+      question:
+        "Does Chandigarh University Online provide placement assistance?",
+      answer: `Yes, CU Online provides strong career support and placement assistance. Students gain access to:
     - 300+ top recruiters and corporate partners
     - Virtual placement drives and job fairs
     - Industry mentorship programs
     - Resume building workshops and interview preparation
     - Internships and live projects with leading companies
     
-    Many CU Online graduates have secured roles in MNCs, IT companies, consulting firms, and startups across India and abroad.`
-  },
-  {
-    question: "What is the learning method at Chandigarh University Online?",
-    answer: `CU Online provides a world-class Learning Management System (LMS) which includes:
+    Many CU Online graduates have secured roles in MNCs, IT companies, consulting firms, and startups across India and abroad.`,
+    },
+    {
+      question: "What is the learning method at Chandigarh University Online?",
+      answer: `CU Online provides a world-class Learning Management System (LMS) which includes:
     - Live interactive classes by expert faculty
     - Recorded video lectures (accessible anytime)
     - Digital e-learning materials, case studies, and projects
     - Discussion forums and peer-to-peer interaction
     - On-demand doubt clearing and 24/7 academic support
     
-    The learning is flexible and completely online, making it easy for students to balance work, study, and personal commitments.`
-  },
-  {
-    question: "Are Chandigarh University Online degrees accepted abroad?",
-    answer: `Yes, CU Online degrees are globally recognized. The university is ranked among top Indian private universities and collaborates with international institutions. Many alumni pursue higher education and jobs abroad with CU Online degrees. Employers worldwide accept the degree as equivalent to traditional on-campus degrees.`
-  },
-  {
-    question: "How are exams conducted at Chandigarh University Online?",
-    answer: `Examinations at CU Online are conducted through an online proctored system:
+    The learning is flexible and completely online, making it easy for students to balance work, study, and personal commitments.`,
+    },
+    {
+      question: "Are Chandigarh University Online degrees accepted abroad?",
+      answer: `Yes, CU Online degrees are globally recognized. The university is ranked among top Indian private universities and collaborates with international institutions. Many alumni pursue higher education and jobs abroad with CU Online degrees. Employers worldwide accept the degree as equivalent to traditional on-campus degrees.`,
+    },
+    {
+      question: "How are exams conducted at Chandigarh University Online?",
+      answer: `Examinations at CU Online are conducted through an online proctored system:
     - Students can schedule exams at their convenience within the exam window.
     - AI-enabled remote proctoring ensures transparency and fairness.
     - Exams include objective as well as subjective questions, case studies, and projects.
-    - Results are declared online with transcripts and degree certificates sent digitally and physically.`
-  },
-  {
-    question: "How can I apply for Chandigarh University Online programs?",
-    answer: `You can apply online in a few steps:
+    - Results are declared online with transcripts and degree certificates sent digitally and physically.`,
+    },
+    {
+      question: "How can I apply for Chandigarh University Online programs?",
+      answer: `You can apply online in a few steps:
     1. Visit the official Chandigarh University Online website.
     2. Register and fill out the application form with personal and academic details.
     3. Upload scanned documents (marksheets, ID proof, photograph, etc.).
     4. Pay the application fee and confirm your admission.
     
-    After verification, you will receive confirmation and access to the LMS to begin your learning journey.`
-  }
-];
+    After verification, you will receive confirmation and access to the LMS to begin your learning journey.`,
+    },
+  ];
 
   const toggleFAQ = (index) => {
     if (openIndex === index) setOpenIndex(null);
@@ -329,742 +353,892 @@ const CUOnline = () => {
   return (
     <>
       <Head>
-        <title>Chandigarh University Online | UGC Approved UG & PG Courses - UNIFOST</title>
-        <meta name="description" content="Explore UGC-recognized online programs from Chandigarh University Online. Flexible learning, expert mentorship, and career-focused degrees with UGC & AICTE approvals." />
-        <meta name="keywords" content="CU Online, Chandigarh University Online, CU Distance Learning, MBA in CU Online, MCA in CU Online, BBA in CU Online, BCA in CU Online, Online Degrees India, UGC Approved, AICTE Approved" />
+        <title>
+          Chandigarh University Online | UGC Approved UG & PG Courses - UNIFOST
+        </title>
+        <meta
+          name="description"
+          content="Explore UGC-recognized online programs from Chandigarh University Online. Flexible learning, expert mentorship, and career-focused degrees with UGC & AICTE approvals."
+        />
+        <meta
+          name="keywords"
+          content="CU Online, Chandigarh University Online, CU Distance Learning, MBA in CU Online, MCA in CU Online, BBA in CU Online, BCA in CU Online, Online Degrees India, UGC Approved, AICTE Approved"
+        />
         <meta name="author" content="Chandigarh University Online" />
-        <meta name="robots" content="index, follow" /> 
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://unifostedu.com/cuonline" />
       </Head>
-      
+
       <div className="min-h-screen bg-gray-50 overflow-x-hidden">
-      {/* Header & Hero Section */}
-      <header className="w-full fixed bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 top-0 left-0 z-50">
-       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-         <div className="flex items-center justify-between h-16 lg:h-20">
-           {/* Left Logo */}
-           <div className="flex items-center gap-2 lg:gap-4">
-             <img
-              src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327282/logo-cu_aoiyom.png" 
-              alt="Chandigarh University" 
-              className="h-10 sm:h-12 w-auto" 
-             />
-             
-           </div>
-     
-           {/* Right Side */}
-           <div className="flex items-center gap-2 sm:gap-4">
-             {/* Mobile Menu Button */}
-            
-     
-             {/* Phone (Desktop) */}
-             <a
-               href="tel:+917042867717"
-               className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-[#f26722] transition-colors"
-             >
-                <FaPhone className="text-red-500 rotate-90" />
-               <span className="hidden lg:inline">+91-7042867717</span>
-               <span className="lg:hidden">Call Now</span>
-             </a>
-     
-             {/* Phone (Mobile) */}
-             <a
-               href="tel:+917042867717"
-               className="sm:hidden flex items-center justify-center w-10 h-10 bg-white-500 rounded-full text-[#f26722] hover:bg-red-700 transition-colors cursor-pointer"
-             >
-               📞
-             </a>
-     
-             {/* Apply Button */}
-             <button
-               onClick={() => setOpenModal({ type: "apply" })}
-               className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
-             >
-               <span className="hidden sm:inline">Apply Now</span>
-     
-               <span className="sm:hidden">Apply</span>
-             </button>
-           </div>
-         </div>
-       </div>
-     </header>    
-      {/* Hero Banner */}
-     <section
-  className="relative w-full 
+        {/* Header & Hero Section */}
+        <header className="w-full fixed bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 top-0 left-0 z-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between h-16 lg:h-20">
+              {/* Left Logo */}
+              <div className="flex items-center gap-2 lg:gap-4">
+                <img
+                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327282/logo-cu_aoiyom.png"
+                  alt="Chandigarh University"
+                  className="h-10 sm:h-12 w-auto"
+                />
+              </div>
+
+              {/* Right Side */}
+              <div className="flex items-center gap-2 sm:gap-4">
+                {/* Mobile Menu Button */}
+
+                {/* Phone (Desktop) */}
+                <a
+                  href="tel:+917042867717"
+                  className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-[#f26722] transition-colors">
+                  <FaPhone className="text-red-500 rotate-90" />
+                  <span className="hidden lg:inline">+91-7042867717</span>
+                  <span className="lg:hidden">Call Now</span>
+                </a>
+
+                {/* Phone (Mobile) */}
+                <a
+                  href="tel:+917042867717"
+                  className="sm:hidden flex items-center justify-center w-10 h-10 bg-white-500 rounded-full text-[#f26722] hover:bg-red-700 transition-colors cursor-pointer">
+                  📞
+                </a>
+
+                {/* Apply Button */}
+                <button
+                  onClick={() => setOpenModal({ type: "apply" })}
+                  className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer">
+                  <span className="hidden sm:inline">Apply Now</span>
+
+                  <span className="sm:hidden">Apply</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+        {/* Hero Banner */}
+        <section
+          className="relative w-full 
              h-[20vh]          
              sm:h-[65vh] 
              lg:h-[80vh]
-             mt-[80px] sm:mt-[96px] mb-6 px-4"
->
-  <Swiper
-    modules={[Autoplay, Navigation, Pagination]}
-    spaceBetween={0}
-    slidesPerView={1}
-    loop={true}
-    autoplay={{
-      delay: 3000,
-      disableOnInteraction: false,
-    }}
-    navigation
-    pagination={{ clickable: true }}
-    className="w-full h-full rounded-2xl overflow-hidden bg-white"
-  >
-    {/* Slide 1 */}
-    <SwiperSlide>
-      <Image
-        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327055/banner-cu1_a6rmh0.webp"
-        alt="Banner 1"
-        width={1400}
-        height={800}
-        className="
+             mt-[80px] sm:mt-[96px] mb-6 px-4">
+          <Swiper
+            modules={[Autoplay, Navigation, Pagination]}
+            spaceBetween={0}
+            slidesPerView={1}
+            loop={true}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            navigation
+            pagination={{ clickable: true }}
+            className="w-full h-full rounded-2xl overflow-hidden bg-white">
+            {/* Slide 1 */}
+            <SwiperSlide>
+              <Image
+                src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327055/banner-cu1_a6rmh0.webp"
+                alt="Banner 1"
+                width={1400}
+                height={800}
+                className="
           w-full h-full 
           object-cover         /* Mobile: full cover */
           sm:object-contain    /* Tablet/desktop: maintain aspect */
           object-center
           p-0 sm:p-4
         "
-        priority
-      />
-    </SwiperSlide>
+                priority
+              />
+            </SwiperSlide>
 
-    {/* Slide 2 */}
-    <SwiperSlide>
-      <Image
-        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu2_wqusv8.jpg"
-        alt="Banner 2"
-        width={1400}
-        height={800}
-        className="
+            {/* Slide 2 */}
+            <SwiperSlide>
+              <Image
+                src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu2_wqusv8.jpg"
+                alt="Banner 2"
+                width={1400}
+                height={800}
+                className="
           w-full h-full 
           object-cover 
           sm:object-contain 
           object-center
           p-0 sm:p-4
         "
-      />
-    </SwiperSlide>
+              />
+            </SwiperSlide>
 
-    {/* Slide 3 */}
-    <SwiperSlide>
-      <Image
-        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu3_bqn5u5.jpg"
-        alt="Banner 3"
-        width={1400}
-        height={800}
-        className="
+            {/* Slide 3 */}
+            <SwiperSlide>
+              <Image
+                src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu3_bqn5u5.jpg"
+                alt="Banner 3"
+                width={1400}
+                height={800}
+                className="
           w-full h-full 
           object-cover 
           sm:object-contain 
           object-center
           p-0 sm:p-4
         "
-      />
-    </SwiperSlide>
+              />
+            </SwiperSlide>
 
-    {/* Slide 4 */}
-    <SwiperSlide>
-      <Image
-        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu4_dwgigz.jpg"
-        alt="Banner 4"
-        width={1400}
-        height={800}
-        className="
+            {/* Slide 4 */}
+            <SwiperSlide>
+              <Image
+                src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu4_dwgigz.jpg"
+                alt="Banner 4"
+                width={1400}
+                height={800}
+                className="
           w-full h-full 
           object-cover 
           sm:object-contain 
           object-center
           p-0 sm:p-4
         "
-      />
-    </SwiperSlide>
+              />
+            </SwiperSlide>
 
-    {/* Slide 5 */}
-    <SwiperSlide>
-      <Image
-        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu5_isobmb.jpg"
-        alt="Banner 5"
-        width={1400}
-        height={800}
-        className="
+            {/* Slide 5 */}
+            <SwiperSlide>
+              <Image
+                src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu5_isobmb.jpg"
+                alt="Banner 5"
+                width={1400}
+                height={800}
+                className="
           w-full h-full 
           object-cover 
           sm:object-contain 
           object-center
           p-0 sm:p-4
         "
-      />
-    </SwiperSlide>
+              />
+            </SwiperSlide>
 
-    {/* Slide 6 */}
-    <SwiperSlide>
-      <Image
-        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu4_dwgigz.jpg"
-        alt="Banner 6"
-        width={1400}
-        height={800}
-        className="
+            {/* Slide 6 */}
+            <SwiperSlide>
+              <Image
+                src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/banner-cu4_dwgigz.jpg"
+                alt="Banner 6"
+                width={1400}
+                height={800}
+                className="
           w-full h-full 
           object-cover 
           sm:object-contain 
           object-center
           p-0 sm:p-4
         "
-      />
-    </SwiperSlide>
-  </Swiper>
-  <div className="text-left mt-8 sm:mt-12">
-      <button
-        onClick={() => setOpenModal({ type: "apply" })}
-        className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
-      >
-        <span className="hidden sm:inline">Apply Now</span>
+              />
+            </SwiperSlide>
+          </Swiper>
+          <div className="text-left mt-8 sm:mt-12">
+            <button
+              onClick={() => setOpenModal({ type: "apply" })}
+              className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer">
+              <span className="hidden sm:inline">Apply Now</span>
 
-        <span className="sm:hidden">Apply</span>
-      </button>
-  </div>
-</section>
+              <span className="sm:hidden">Apply</span>
+            </button>
+          </div>
+        </section>
 
-<section className="py-10 bg-white">
-  <div className="container mx-auto px-4">
-    <div className="grid md:grid-cols-2 gap-8 items-center">
-      {/* Left side: Image */}
-      <div>
-        <img
-          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp"
-          alt="Chandigarh University"
-          className="w-full rounded-2xl shadow-lg"
+        <section className="py-10 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Left side: Image */}
+              <div>
+                <img
+                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp"
+                  alt="Chandigarh University"
+                  className="w-full rounded-2xl shadow-lg"
+                />
+              </div>
+
+              {/* Right side: Content */}
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold leading-snug">
+                  Discover the Legacy of Excellence at - <br />
+                  <span className="bg-red-600 text-white px-2 py-1 rounded">
+                    Chandigarh University Online
+                  </span>
+                </h2>
+                <p className="mt-4 text-gray-700">
+                  <strong>Chandigarh University (CU)</strong> is a leading
+                  Indian institution offering a unique blend of academic
+                  excellence and professional growth. Situated in the vibrant
+                  city of <strong>Mohali, Punjab</strong>, CU has rapidly
+                  emerged as one of the{" "}
+                  <strong>fastest-growing private universities</strong> in Asia.
+                </p>
+                <p className="mt-3 text-gray-700">
+                  <strong>Chandigarh University Online</strong> offers
+                  UGC-entitled degrees and industry-oriented programs to help
+                  learners achieve global recognition. With a flexible learning
+                  environment, expert faculty, and modern LMS, it enables
+                  working professionals and students to elevate their careers
+                  while learning from anywhere.
+                </p>
+                <p className="mt-3 text-gray-700">
+                  Chandigarh University Online has become a top choice for those
+                  seeking quality education in India, with a strong focus on{" "}
+                  <strong>practical skills</strong> and{" "}
+                  <strong>career readiness</strong>. We are committed to
+                  providing a transformative learning experience that prepares
+                  students for success in the global job market.
+                </p>
+              </div>
+            </div>
+            <div className="text-center mt-8 sm:mt-12">
+              <button
+                onClick={() => setOpenModal({ type: "apply" })}
+                className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer">
+                <span className="hidden sm:inline">Apply Now</span>
+
+                <span className="sm:hidden">Apply</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Accreditation & Why Choose Section */}
+        <AccreditationSection
+          title="Why Choose Chandigarh University Online?"
+          description="Learn flexibly with expert mentorship, AI-driven LMS, and career support — all with globally recognized UGC-entitled degrees."
+          stats={[]}
+          benefits={[]}
+          accreditations={[
+            {
+              src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp",
+              alt: "UGC",
+              name: "UGC",
+            },
+            {
+              src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp",
+              alt: "AICTE",
+              name: "AICTE",
+            },
+            {
+              src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp",
+              alt: "NAAC",
+              name: "NAAC",
+            },
+            {
+              src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/wes_zuxwfs.webp",
+              alt: "WES",
+              name: "WES",
+            },
+          ]}
         />
-      </div>
-
-      {/* Right side: Content */}
-      <div>
-        <h2 className="text-2xl md:text-3xl font-bold leading-snug">
-          Discover the Legacy of Excellence at - <br />
-          <span className="bg-red-600 text-white px-2 py-1 rounded">
-            Chandigarh University Online
-          </span>
-        </h2>
-        <p className="mt-4 text-gray-700">
-          <strong>Chandigarh University (CU)</strong> is a leading Indian
-          institution offering a unique blend of academic excellence and
-          professional growth. Situated in the vibrant city of{" "}
-          <strong>Mohali, Punjab</strong>, CU has rapidly emerged as one of the{" "}
-          <strong>fastest-growing private universities</strong> in Asia.
-        </p>
-        <p className="mt-3 text-gray-700">
-          <strong>Chandigarh University Online</strong> offers UGC-entitled
-          degrees and industry-oriented programs to help learners achieve global
-          recognition. With a flexible learning environment, expert faculty, and
-          modern LMS, it enables working professionals and students to elevate
-          their careers while learning from anywhere.
-        </p>
-        <p className="mt-3 text-gray-700">
-          Chandigarh University Online has become a top choice for those seeking
-          quality education in India, with a strong focus on{" "}
-          <strong>practical skills</strong> and{" "}
-          <strong>career readiness</strong>. We are committed to providing a
-          transformative learning experience that prepares students for success
-          in the global job market.
-        </p>
-      </div>
-    </div>
-    <div className="text-center mt-8 sm:mt-12">
-        <button
-          onClick={() => setOpenModal({ type: "apply" })}
-          className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
-        >
-          <span className="hidden sm:inline">Apply Now</span>
-
-          <span className="sm:hidden">Apply</span>
-        </button>
-    </div>
-  </div>
-</section>
-
-
-
-
-      {/* Accreditation & Why Choose Section */}
-      <AccreditationSection
-        title="Why Choose Chandigarh University Online?"
-        description="Learn flexibly with expert mentorship, AI-driven LMS, and career support — all with globally recognized UGC-entitled degrees."
-        stats={[]}
-        benefits={[]}
-        accreditations={[
-          { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp", alt: "UGC", name: "UGC" },
-          { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp", alt: "AICTE", name: "AICTE" },
-          { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp", alt: "NAAC", name: "NAAC" },
-          { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/wes_zuxwfs.webp", alt: "WES", name: "WES" },
-        ]}
-      />
-      <div className="text-center mt-8 sm:mt-12">
+        <div className="text-center mt-8 sm:mt-12">
           <button
             onClick={() => setOpenModal({ type: "apply" })}
-            className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
-          >
+            className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer">
             <span className="hidden sm:inline">Apply Now</span>
 
             <span className="sm:hidden">Apply</span>
           </button>
-      </div>
-
-      {/* UG/PG Programs Carousel */}
-      <main className="pt-32 max-w-7xl mx-auto px-4">
-        <h1 className="text-3xl md:text-4xl text-center font-semibold mb-10">
-          Explore Chandigarh University Online Programs
-        </h1>
-
-        <div className="flex justify-center gap-4 mb-12 flex-wrap">
-          <button
-            className={`px-6 py-4 w-60  text-xl ${activeCategory === "PG" ? "bg-[#e60000] text-white" : "bg-gray-200 text-gray-700"}`}
-            onClick={() => { setActiveCategory("PG"); setCurrent(0); }}
-          >
-            PG Programs
-            <span className="block text-sm">(After Graduation)</span>
-          </button>
-          <button
-            className={`px-6 py-4 w-60 text-xl ${activeCategory === "UG" ? "bg-[#e60000] text-white" : "bg-gray-200 text-gray-700"}`}
-            onClick={() => { setActiveCategory("UG"); setCurrent(0); }}
-          >
-            UG Programs
-            <span className="block text-sm">(After 12th)</span>
-          </button>
         </div>
 
-        <div className="relative">
-          <button
-            onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 z-10 shadow-lg"
-          >
-            Prev
-          </button>
-          <div className="flex gap-4 justify-center">
-            {visibleCourses.map((program, index) => (
-              <div key={index} className="flex-shrink-0 w-full md:w-1/3 px-2">
-                <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-red-100 hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
-                  <img src={program.image} alt={program.title} className="w-full h-60 object-cover" />
-                  <div className="p-6 flex-1 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-2xl font-medium text-red-500 mb-2">{program.title}</h3>
-                      <p className="text-gray-600 mb-2"><span className="font-semibold">Duration:</span> {program.duration}</p>
-                      <p className="text-gray-600 mb-2"><span className="font-semibold">Eligibility:</span> {program.eligibility}</p>
-                      <p className="text-gray-600 mb-2 truncate"><span className="font-semibold">Specialization:</span> {program.specialization}</p>
-                    </div>
-                    <p className="text-gray-600 font-medium mt-4">
-                      Fees: <span className="text-red-500 font-semibold border border-[#f58225] p-1 rounded">{program.fees}</span>
-                    </p>
-                    <div className="mt-4">
+        {/* UG/PG Programs Carousel */}
+        <main className="pt-32 max-w-7xl mx-auto px-4">
+          <h1 className="text-3xl md:text-4xl text-center font-semibold mb-10">
+            Explore Chandigarh University Online Programs
+          </h1>
+
+          <div className="flex justify-center gap-4 mb-12 flex-wrap">
+            <button
+              className={`px-6 py-4 w-60  text-xl ${
+                activeCategory === "PG"
+                  ? "bg-[#e60000] text-white"
+                  : "bg-gray-200 text-gray-700"
+              }`}
+              onClick={() => {
+                setActiveCategory("PG");
+                setCurrent(0);
+              }}>
+              PG Programs
+              <span className="block text-sm">(After Graduation)</span>
+            </button>
+            <button
+              className={`px-6 py-4 w-60 text-xl ${
+                activeCategory === "UG"
+                  ? "bg-[#e60000] text-white"
+                  : "bg-gray-200 text-gray-700"
+              }`}
+              onClick={() => {
+                setActiveCategory("UG");
+                setCurrent(0);
+              }}>
+              UG Programs
+              <span className="block text-sm">(After 12th)</span>
+            </button>
+          </div>
+
+          <div className="relative">
+            <button
+              onClick={prevSlide}
+              className="absolute left-0 top-1/2 -translate-y-1/2 bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 z-10 shadow-lg">
+              Prev
+            </button>
+            <div className="flex gap-4 justify-center">
+              {visibleCourses.map((program, index) => (
+                <div key={index} className="flex-shrink-0 w-full md:w-1/3 px-2">
+                  <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-red-100 hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
+                    <img
+                      src={program.image}
+                      alt={program.title}
+                      className="w-full h-60 object-cover"
+                    />
+                    <div className="p-6 flex-1 flex flex-col justify-between">
+                      <div>
+                        <h3 className="text-2xl font-medium text-red-500 mb-2">
+                          {program.title}
+                        </h3>
+                        <p className="text-gray-600 mb-2">
+                          <span className="font-semibold">Duration:</span>{" "}
+                          {program.duration}
+                        </p>
+                        <p className="text-gray-600 mb-2">
+                          <span className="font-semibold">Eligibility:</span>{" "}
+                          {program.eligibility}
+                        </p>
+                        <p className="text-gray-600 mb-2 truncate">
+                          <span className="font-semibold">Specialization:</span>{" "}
+                          {program.specialization}
+                        </p>
+                      </div>
+                      <p className="text-gray-600 font-medium mt-4">
+                        Fees:{" "}
+                        <span className="text-red-500 font-semibold border border-[#f58225] p-1 rounded">
+                          {program.fees}
+                        </span>
+                      </p>
+                      <div className="mt-4">
                         <button
-                         onClick={() => setOpenModal({ type: 'apply', program: program.title })}
-                         className="inline-block bg-black text-white font-bold py-2 px-4 rounded hover:bg-red-700 w-full text-center"
-                        >
-                         Apply Now
+                          onClick={() =>
+                            setOpenModal({
+                              type: "apply",
+                              program: program.title,
+                            })
+                          }
+                          className="inline-block bg-black text-white font-bold py-2 px-4 rounded hover:bg-red-700 w-full text-center">
+                          Apply Now
                         </button>
-
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-          <button
-            onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 z-10 shadow-lg"
-          >
-            
-          </button>
-        </div>
-        <div className="text-center mt-8 sm:mt-12">
-            <button
-              onClick={() => setOpenModal({ type: "apply" })}
-              className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
-            >
-              <span className="hidden sm:inline">Apply Now</span>
-
-              <span className="sm:hidden">Apply</span>
-            </button>
-        </div>
-        
-      </main>
-      
-       <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="p-6 border border-red-200 rounded-lg shadow-sm hover:shadow-md transition bg-white">
-              <div className="mb-4">{benefit.icon}</div>
-              <h3 className="text-lg font-bold text-red-600 mb-3">{benefit.title}</h3>
-              <ul className="space-y-2 text-gray-700 text-sm">
-                {benefit.points.map((point, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="text-red-500">►</span>
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
+              ))}
             </div>
-          ))}
-        </div>
-        <div className="text-center mt-8 sm:mt-12">
+            <button
+              onClick={nextSlide}
+              className="absolute right-0 top-1/2 -translate-y-1/2 bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 z-10 shadow-lg"></button>
+          </div>
+          <div className="text-center mt-8 sm:mt-12">
             <button
               onClick={() => setOpenModal({ type: "apply" })}
-              className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
-            >
+              className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer">
               <span className="hidden sm:inline">Apply Now</span>
 
               <span className="sm:hidden">Apply</span>
             </button>
-        </div>
-      </div>
-    </section>
+          </div>
+        </main>
 
-          <section className="relative py-20 bg-white">
-             {/* Decorative Blobs */}
-             <div className="absolute -top-20 -left-20 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
-             <div className="absolute -bottom-32 -right-32 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
-         
-             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-               {/* Section Header */}
-               <motion.div
-                 initial={{ opacity: 0, y: 30 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 viewport={{ once: true }}
-                 transition={{ duration: 0.8 }}
-                 className="text-center mb-16"
-               >
-                 <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-                   Admission Procedure
-                 </h2>
-                 <div className="w-24 h-1 bg-red-500 mx-auto mb-8 rounded-full"></div>
-                 <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                   A simple, transparent, and student-friendly admission process
-                   designed to help you begin your learning journey smoothly.
-                 </p>
-               </motion.div>
-         
-               {/* 4-Step Process */}
-               <motion.div
-                 initial={{ opacity: 0, y: 30 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 viewport={{ once: true }}
-                 transition={{ duration: 0.8 }}
-                 className="mt-20 bg-white p-10 rounded-3xl shadow-xl border border-gray-200"
-               >
-                 <h3 className="text-3xl md:text-4xl font-bold text-black mb-12 text-center">
-                   Easy 4-Step Admission Process
-                 </h3>
-         
-                 <div className="grid grid-cols-1 md:grid-cols-4 gap-10 relative">
-                   {/* Connecting Line */}
-                   <div className="hidden md:block absolute top-28 left-[10%] right-[10%] h-1 bg-gradient-to-r from-red-400 to-red-500 z-0 rounded-full"></div>
-         
-                   {[
-                     {
-                       number: "01",
-                       title: "Application Form",
-                       desc: "Fill the online application form on the university portal.",
-                     },
-                     {
-                       number: "02",
-                       title: "Documents & Fee",
-                       desc: "Upload required documents and pay the application fee.",
-                     },
-                     {
-                       number: "03",
-                       title: "Confirmation",
-                       desc: "Receive confirmation and student login credentials.",
-                     },
-                     {
-                       number: "04",
-                       title: "Enrollment",
-                       desc: "Complete fee payment and begin your classes.",
-                     },
-                   ].map((step, index) => (
-                     <motion.div
-                       key={index}
-                       className="text-center relative z-10"
-                       initial={{ opacity: 0, y: 30 }}
-                       whileInView={{ opacity: 1, y: 0 }}
-                       viewport={{ once: true }}
-                       transition={{ duration: 0.6, delay: index * 0.3 }}
-                     >
-                       <div className="bg-gradient-to-br from-red-400 to-red-500 w-28 h-28 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center mx-auto mb-6 text-white shadow-2xl">
-                         <span className="text-3xl md:text-4xl font-bold">{step.number}</span>
-                         <span className="text-xs md:text-sm uppercase font-semibold mt-1">Step</span>
-                       </div>
-                       <h4 className="text-lg md:text-xl font-bold text-black mb-2">
-                         {step.title}
-                       </h4>
-                       <p className="text-gray-700 text-sm md:text-base">{step.desc}</p>
-                     </motion.div>
-                   ))}
-                 </div>
-                 <div className="text-center mt-8 sm:mt-12">
-                     <button
-                       onClick={() => setOpenModal({ type: "apply" })}
-                       className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
-                     >
-                       <span className="hidden sm:inline">Apply Now</span>
-
-                       <span className="sm:hidden">Apply</span>
-                     </button>
-                 </div>
-               </motion.div>
-             </div>
-           </section>
-
-
-            {/* Certificate + Benefits */}
-            <section className="bg-black py-12 px-4">
-              <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
-                <div className="flex-1">
-                  <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327071/certificate-cu_srfqmo.webp" alt="Chandigarh University Certificate" width={100} height={100} loading="lazy" className="w-full max-w-md mx-auto rounded shadow-lg" />
-                </div>
-                <div className="flex-1 text-white">
-                  <h2 className="text-3xl md:text-4xl font-semibold mb-4">Earn Your Online Degree from Chandigarh University</h2>
-                  <p className="mb-6 text-lg">Chandigarh University Online Enhance your career with daily live classes, skill-based training, and global recognition.</p>
-                  <h3 className="text-xl font-semibold mb-2">Benefits of Chandigarh University Online</h3>
-                  <ul className="list-disc list-inside space-y-2">
-                    <li>Interactive Live & Recorded Sessions</li>
-                    <li>Personalized Career Support</li>
-                    <li>Global Exposure & Alumni Network</li>
-                    <li>Affordable, Flexible & Recognized Programs</li>
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="p-6 border border-red-200 rounded-lg shadow-sm hover:shadow-md transition bg-white">
+                  <div className="mb-4">{benefit.icon}</div>
+                  <h3 className="text-lg font-bold text-red-600 mb-3">
+                    {benefit.title}
+                  </h3>
+                  <ul className="space-y-2 text-gray-700 text-sm">
+                    {benefit.points.map((point, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-red-500">►</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
                   </ul>
-                  <div className="text-center mt-8 sm:mt-12">
-                      <button
-                        onClick={() => setOpenModal({ type: "apply" })}
-                        className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
-                      >
-                        <span className="hidden sm:inline">Apply Now</span>
-
-                        <span className="sm:hidden">Apply</span>
-                      </button>
-                  </div>
                 </div>
-              </div>
-            </section>
-
-             
-             <section className="bg-gray-50 py-16 px-6 md:px-16">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
-          Frequently Asked Questions (FAQs) – Chandigarh University Online
-        </h2>
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="border border-gray-200 rounded-lg bg-white shadow-sm"
-            >
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center px-5 py-4 text-left font-semibold text-gray-800"
-              >
-                {faq.question}
-                <ChevronDown
-                  className={`w-5 h-5 transform transition-transform ${
-                    openIndex === index ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-              {openIndex === index && (
-                <div className="px-5 pb-5 text-gray-600 text-sm leading-6 whitespace-pre-line">
-                  {faq.answer}
-                </div>
-              )}
+              ))}
             </div>
-          ))}
-        </div>
-        <div className="text-center mt-8 sm:mt-12">
-            <button
-              onClick={() => setOpenModal({ type: "apply" })}
-              className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
-            >
-              <span className="hidden sm:inline">Apply Now</span>
+            <div className="text-center mt-8 sm:mt-12">
+              <button
+                onClick={() => setOpenModal({ type: "apply" })}
+                className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer">
+                <span className="hidden sm:inline">Apply Now</span>
 
-              <span className="sm:hidden">Apply</span>
-            </button>
-        </div>
-      </div>
-    </section>
-
-             <footer className="bg-[#1a1a1a] text-gray-300 py-12">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-10">
-        
-        {/* Important Links */}
-        <div>
-          <h3 className="text-white font-bold mb-4">IMPORTANT LINKS</h3>
-          <div className="grid grid-cols-2 gap-2 text-sm">
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-red-500">Home</a></li>
-              <li><a href="#" className="hover:text-red-500">About Us</a></li>
-              <li><a href="#" className="hover:text-red-500">Vision & Mission</a></li>
-              <li><a href="#" className="hover:text-red-500">Events</a></li>
-              <li><a href="#" className="hover:text-red-500">How to Apply</a></li>
-              <li><a href="#" className="hover:text-red-500">Admission Guideline</a></li>
-              <li><a href="#" className="hover:text-red-500">UGC-DEB Approval</a></li>
-              <li><a href="#" className="hover:text-red-500">Online Degree</a></li>
-              <li><a href="#" className="hover:text-red-500">Equivalence</a></li>
-              <li><a href="#" className="hover:text-red-500">Education Loan</a></li>
-            </ul>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-red-500">Student Stories</a></li>
-              <li><a href="#" className="hover:text-red-500">FAQs</a></li>
-              <li><a href="#" className="hover:text-red-500">Office Hours</a></li>
-              <li><a href="#" className="hover:text-red-500">Contact Us</a></li>
-              <li><a href="#" className="hover:text-red-500">CIQA Report</a></li>
-              <li><a href="#" className="hover:text-red-500">Student Facilitation</a></li>
-              <li><a href="#" className="hover:text-red-500">Mandatory Disclosure</a></li>
-              <li><a href="#" className="hover:text-red-500">Public Notice</a></li>
-              <li><a href="#" className="hover:text-red-500">Regular Programs Admissions</a></li>
-            </ul>
+                <span className="sm:hidden">Apply</span>
+              </button>
+            </div>
           </div>
-        </div>
+        </section>
 
-        {/* About */}
-        <div>
-          <h3 className="text-white font-bold mb-4">ABOUT</h3>
-          <p className="text-sm leading-6">
-            Chandigarh University's  for  Online Education  
-            has an array of online bachelor's and master's programs to help you achieve your educational goals. 
-            The courses are globally benchmarked, with industry exposure, and regular interface with 
-            top-notch industry experts. Your education at Chandigarh University will be steeped in global learning.
-          </p>
-        </div>
+        <section className="relative py-20 bg-white">
+          {/* Decorative Blobs */}
+          <div className="absolute -top-20 -left-20 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-32 -right-32 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
 
-        {/* Get in Touch */}
-        <div>
-          <h3 className="text-white font-bold mb-4">GET IN TOUCH</h3>
-          <p className="text-sm leading-6">
-            Chandigarh University<br />
-            NH-05 Chandigarh-Ludhiana Highway,<br />
-            Mohali, Punjab (INDIA)
-          </p>
-          <p className="mt-3 text-sm">
-            General Helpline No: <br />
-            <a href="tel:+91-7042867717" className="text-yellow-400 font-semibold">+91-7042867717</a>
-          </p>
-          <p className="mt-2 text-sm">
-            Email: <br />
-            <a href="mailto:info@unifostedu.com" className="text-yellow-400 font-semibold">info@unifostedu.com</a>
-          </p>
-        </div>
-      </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            {/* Section Header */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+                Admission Procedure
+              </h2>
+              <div className="w-24 h-1 bg-red-500 mx-auto mb-8 rounded-full"></div>
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+                A simple, transparent, and student-friendly admission process
+                designed to help you begin your learning journey smoothly.
+              </p>
+            </motion.div>
 
-      {/* Logo + Social */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-10 border-t border-gray-700 pt-8 flex flex-col md:flex-row items-center justify-between">
-        {/* Logo */}
-        <div className="flex items-center gap-3">
-          <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327106/cu-logo_yd1wri.webp" alt="CU Online" className="h-10" />
-          <div>
-            <h2 className="text-white font-bold text-xl">CU Online</h2>
-            <p className="text-sm text-gray-400">Discover. Learn. Empower.</p>
+            {/* 4-Step Process */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="mt-20 bg-white p-10 rounded-3xl shadow-xl border border-gray-200">
+              <h3 className="text-3xl md:text-4xl font-bold text-black mb-12 text-center">
+                Easy 4-Step Admission Process
+              </h3>
+
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-10 relative">
+                {/* Connecting Line */}
+                <div className="hidden md:block absolute top-28 left-[10%] right-[10%] h-1 bg-gradient-to-r from-red-400 to-red-500 z-0 rounded-full"></div>
+
+                {[
+                  {
+                    number: "01",
+                    title: "Application Form",
+                    desc: "Fill the online application form on the university portal.",
+                  },
+                  {
+                    number: "02",
+                    title: "Documents & Fee",
+                    desc: "Upload required documents and pay the application fee.",
+                  },
+                  {
+                    number: "03",
+                    title: "Confirmation",
+                    desc: "Receive confirmation and student login credentials.",
+                  },
+                  {
+                    number: "04",
+                    title: "Enrollment",
+                    desc: "Complete fee payment and begin your classes.",
+                  },
+                ].map((step, index) => (
+                  <motion.div
+                    key={index}
+                    className="text-center relative z-10"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.3 }}>
+                    <div className="bg-gradient-to-br from-red-400 to-red-500 w-28 h-28 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center mx-auto mb-6 text-white shadow-2xl">
+                      <span className="text-3xl md:text-4xl font-bold">
+                        {step.number}
+                      </span>
+                      <span className="text-xs md:text-sm uppercase font-semibold mt-1">
+                        Step
+                      </span>
+                    </div>
+                    <h4 className="text-lg md:text-xl font-bold text-black mb-2">
+                      {step.title}
+                    </h4>
+                    <p className="text-gray-700 text-sm md:text-base">
+                      {step.desc}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+              <div className="text-center mt-8 sm:mt-12">
+                <button
+                  onClick={() => setOpenModal({ type: "apply" })}
+                  className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer">
+                  <span className="hidden sm:inline">Apply Now</span>
+
+                  <span className="sm:hidden">Apply</span>
+                </button>
+              </div>
+            </motion.div>
           </div>
-        </div>
+        </section>
 
-       
+        {/* Certificate + Benefits */}
+        <section className="bg-black py-12 px-4">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+            <div className="flex-1">
+              <Image
+                src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327071/certificate-cu_srfqmo.webp"
+                alt="Chandigarh University Certificate"
+                width={100}
+                height={100}
+                loading="lazy"
+                className="w-full max-w-md mx-auto rounded shadow-lg"
+              />
+            </div>
+            <div className="flex-1 text-white">
+              <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+                Earn Your Online Degree from Chandigarh University
+              </h2>
+              <p className="mb-6 text-lg">
+                Chandigarh University Online Enhance your career with daily live
+                classes, skill-based training, and global recognition.
+              </p>
+              <h3 className="text-xl font-semibold mb-2">
+                Benefits of Chandigarh University Online
+              </h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li>Interactive Live & Recorded Sessions</li>
+                <li>Personalized Career Support</li>
+                <li>Global Exposure & Alumni Network</li>
+                <li>Affordable, Flexible & Recognized Programs</li>
+              </ul>
+              <div className="text-center mt-8 sm:mt-12">
+                <button
+                  onClick={() => setOpenModal({ type: "apply" })}
+                  className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer">
+                  <span className="hidden sm:inline">Apply Now</span>
+
+                  <span className="sm:hidden">Apply</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-gray-50 py-16 px-6 md:px-16">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
+              Frequently Asked Questions (FAQs) – Chandigarh University Online
+            </h2>
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className="border border-gray-200 rounded-lg bg-white shadow-sm">
+                  <button
+                    onClick={() => toggleFAQ(index)}
+                    className="w-full flex justify-between items-center px-5 py-4 text-left font-semibold text-gray-800">
+                    {faq.question}
+                    <ChevronDown
+                      className={`w-5 h-5 transform transition-transform ${
+                        openIndex === index ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  {openIndex === index && (
+                    <div className="px-5 pb-5 text-gray-600 text-sm leading-6 whitespace-pre-line">
+                      {faq.answer}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-8 sm:mt-12">
+              <button
+                onClick={() => setOpenModal({ type: "apply" })}
+                className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer">
+                <span className="hidden sm:inline">Apply Now</span>
+
+                <span className="sm:hidden">Apply</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <footer className="bg-[#1a1a1a] text-gray-300 py-12">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+            {/* Important Links */}
+            <div>
+              <h3 className="text-white font-bold mb-4">IMPORTANT LINKS</h3>
+              <div className="grid grid-cols-2 gap-2 text-sm">
+                <ul className="space-y-2">
+                  <li>
+                    <a href="#" className="hover:text-red-500">
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-red-500">
+                      About Us
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-red-500">
+                      Vision & Mission
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-red-500">
+                      Events
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-red-500">
+                      How to Apply
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-red-500">
+                      Admission Guideline
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-red-500">
+                      UGC-DEB Approval
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-red-500">
+                      Online Degree
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-red-500">
+                      Equivalence
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-red-500">
+                      Education Loan
+                    </a>
+                  </li>
+                </ul>
+                <ul className="space-y-2">
+                  <li>
+                    <a href="#" className="hover:text-red-500">
+                      Student Stories
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-red-500">
+                      FAQs
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-red-500">
+                      Office Hours
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-red-500">
+                      Contact Us
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-red-500">
+                      CIQA Report
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-red-500">
+                      Student Facilitation
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-red-500">
+                      Mandatory Disclosure
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-red-500">
+                      Public Notice
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-red-500">
+                      Regular Programs Admissions
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* About */}
+            <div>
+              <h3 className="text-white font-bold mb-4">ABOUT</h3>
+              <p className="text-sm leading-6">
+                Chandigarh University's for Online Education has an array of
+                online bachelor's and master's programs to help you achieve your
+                educational goals. The courses are globally benchmarked, with
+                industry exposure, and regular interface with top-notch industry
+                experts. Your education at Chandigarh University will be steeped
+                in global learning.
+              </p>
+            </div>
+
+            {/* Get in Touch */}
+            <div>
+              <h3 className="text-white font-bold mb-4">GET IN TOUCH</h3>
+              <p className="text-sm leading-6">
+                Chandigarh University
+                <br />
+                NH-05 Chandigarh-Ludhiana Highway,
+                <br />
+                Mohali, Punjab (INDIA)
+              </p>
+              <p className="mt-3 text-sm">
+                General Helpline No: <br />
+                <a
+                  href="tel:+91-7042867717"
+                  className="text-yellow-400 font-semibold">
+                  +91-7042867717
+                </a>
+              </p>
+              <p className="mt-2 text-sm">
+                Email: <br />
+                <a
+                  href="mailto:info@unifostedu.com"
+                  className="text-yellow-400 font-semibold">
+                  info@unifostedu.com
+                </a>
+              </p>
+            </div>
+          </div>
+
+          {/* Logo + Social */}
+          <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-10 border-t border-gray-700 pt-8 flex flex-col md:flex-row items-center justify-between">
+            {/* Logo */}
+            <div className="flex items-center gap-3">
+              <img
+                src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327106/cu-logo_yd1wri.webp"
+                alt="CU Online"
+                className="h-10"
+              />
+              <div>
+                <h2 className="text-white font-bold text-xl">CU Online</h2>
+                <p className="text-sm text-gray-400">
+                  Discover. Learn. Empower.
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* Popular Programs Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="border-t border-white/10 pt-8 mb-8">
+            <h4 className="text-lg font-bold mb-6 text-white text-center">
+              Popular Programs & Specializations – Chandigarh University Online
+              (CU Online)
+            </h4>
+
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+              {[
+                "BA Journalism - CU Online",
+                "BA Media Studies - CU Online",
+
+                "BBA Business Analytics (KPMG) - CU Online",
+                "BBA Marketing - CU Online",
+                "BBA HR - CU Online",
+                "BBA Entrepreneurship - CU Online",
+                "BBA Digital Marketing - CU Online",
+                "BBA Fin-Tech - CU Online",
+
+                "BCA IT & Systems - CU Online",
+
+                "MBA Business Analytics (KPMG) - CU Online",
+                "MBA Finance - CU Online",
+                "MBA Marketing - CU Online",
+                "MBA HR - CU Online",
+                "MBA IT - CU Online",
+                "MBA Operations - CU Online",
+                "MBA International Business - CU Online",
+                "MBA Digital Marketing - CU Online",
+                "MBA Fin-Tech - CU Online",
+
+                "MCA AI - CU Online",
+                "MCA ML - CU Online",
+                "MCA Data Analytics - CU Online",
+                "MCA Cloud Computing - CU Online",
+                "MCA Full Stack - CU Online",
+
+                "M.Sc Data Science - CU Online",
+                "M.Sc Full Stack - CU Online",
+                "M.Sc Web Development - CU Online",
+
+                "MCA Cloud Computing (AWS Academy) - CU Online",
+                "MCA AWS - CU Online",
+                "MCA DevOps - CU Online",
+
+                "MCA Data Analytics - CU Online",
+                "MCA Big Data - CU Online",
+                "MCA Data Mining - CU Online",
+
+                "MCA General IT - CU Online",
+                "MCA Software Development - CU Online",
+
+                "M.Sc Mathematics - CU Online",
+                "M.Sc Pure Math - CU Online",
+                "M.Sc Applied Math - CU Online",
+
+                "MA Psychology - CU Online",
+                "MA English - CU Online",
+                "MA Economics - CU Online",
+              ].map((keyword, index) => (
+                <span
+                  key={index}
+                  onClick={() => setOpenModal({ type: "apply" })}
+                  className="bg-white/10 backdrop-blur-sm text-gray-300 px-3 py-2 rounded-full text-xs sm:text-sm hover:bg-[#821812] hover:text-white transition-all duration-300 cursor-pointer border border-white/20 hover:border-orange-500"
+                  title={keyword}>
+                  {keyword.length > 25
+                    ? `${keyword.substring(0, 25)}...`
+                    : keyword}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Bottom Note */}
+          <div className="text-center text-sm text-gray-400 mt-6 border-t border-gray-700 pt-4">
+            All rights reserved | Unifostedu
+          </div>
+        </footer>
       </div>
-        {/* Popular Programs Section */}
-                                        <motion.div
-                                          initial={{ opacity: 0, y: 20 }}
-                                          whileInView={{ opacity: 1, y: 0 }}
-                                          transition={{ duration: 0.6, delay: 0.4 }}
-                                          viewport={{ once: true }}
-                                          className="border-t border-white/10 pt-8 mb-8"
-                                        >
-                                          <h4 className="text-lg font-bold mb-6 text-white text-center">
-                                            Popular Programs & Specializations – Chandigarh University Online (CU Online)
-                                          </h4>
-                            
-                                          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
-                                            {[
-  "BA Journalism - CU Online",
-  "BA Media Studies - CU Online",
 
-  "BBA Business Analytics (KPMG) - CU Online",
-  "BBA Marketing - CU Online",
-  "BBA HR - CU Online",
-  "BBA Entrepreneurship - CU Online",
-  "BBA Digital Marketing - CU Online",
-  "BBA Fin-Tech - CU Online",
-
-  "BCA IT & Systems - CU Online",
-
-  "MBA Business Analytics (KPMG) - CU Online",
-  "MBA Finance - CU Online",
-  "MBA Marketing - CU Online",
-  "MBA HR - CU Online",
-  "MBA IT - CU Online",
-  "MBA Operations - CU Online",
-  "MBA International Business - CU Online",
-  "MBA Digital Marketing - CU Online",
-  "MBA Fin-Tech - CU Online",
-
-  "MCA AI - CU Online",
-  "MCA ML - CU Online",
-  "MCA Data Analytics - CU Online",
-  "MCA Cloud Computing - CU Online",
-  "MCA Full Stack - CU Online",
-
-  "M.Sc Data Science - CU Online",
-  "M.Sc Full Stack - CU Online",
-  "M.Sc Web Development - CU Online",
-
-  "MCA Cloud Computing (AWS Academy) - CU Online",
-  "MCA AWS - CU Online",
-  "MCA DevOps - CU Online",
-
-  "MCA Data Analytics - CU Online",
-  "MCA Big Data - CU Online",
-  "MCA Data Mining - CU Online",
-
-  "MCA General IT - CU Online",
-  "MCA Software Development - CU Online",
-
-  "M.Sc Mathematics - CU Online",
-  "M.Sc Pure Math - CU Online",
-  "M.Sc Applied Math - CU Online",
-
-  "MA Psychology - CU Online",
-  "MA English - CU Online",
-  "MA Economics - CU Online"
-]
-
-      
-                                          .map((keyword, index) => (
-                                              <span
-                                                key={index} onClick = {() => setOpenModal({ type: 'apply',})}
-                                                className="bg-white/10 backdrop-blur-sm text-gray-300 px-3 py-2 rounded-full text-xs sm:text-sm hover:bg-[#821812] hover:text-white transition-all duration-300 cursor-pointer border border-white/20 hover:border-orange-500"
-                                                title={keyword}
-                                              >
-                                                {keyword.length > 25 ? `${keyword.substring(0, 25)}...` : keyword}
-                                              </span>
-                                            ))}
-                                          </div>
-                                        </motion.div>
-                            
-
-      {/* Bottom Note */}
-      <div className="text-center text-sm text-gray-400 mt-6 border-t border-gray-700 pt-4">
-        All rights reserved | Unifostedu
-      </div>
-    </footer>
-      </div>
-      
       {openModal && (
         <ApplyEnquiryModal
           open={!!openModal}
           onOpenChange={(v) => !v && setOpenModal(null)}
-          title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
-          subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
+          title={
+            openModal.type === "apply"
+              ? "Start Your Application"
+              : "Enquire Now"
+          }
+          subtitle={
+            openModal.type === "apply"
+              ? "Fill the quick form to begin your admission process"
+              : "Share your details and our counselor will reach out"
+          }
           imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327155/girlImage_w9ulny.webp"
           universityName="Chandigarh University Online"
-          defaultProgram={openModal.program || 'MBA'}
-          formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
+          defaultProgram={openModal.program || "MBA"}
+          formType={openModal.type === "apply" ? "getStarted" : "general"}
         />
       )}
     </>
   );
 };
 
-export default CUOnline;
+export default cuonline;
