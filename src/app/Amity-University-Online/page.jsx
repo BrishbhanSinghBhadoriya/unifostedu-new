@@ -408,6 +408,7 @@ const AmityLandingPage = () => {
     }, 3000);
     return () => clearTimeout(timer);
   }, []);
+  const sectionItems = SECTION_ITEMS;
 
   useEffect(() => {
     if (!sectionItems.length) return undefined;
@@ -547,7 +548,6 @@ const AmityLandingPage = () => {
     },
   ];
 
-  const sectionItems = SECTION_ITEMS;
 
   const specializations = [
     {
