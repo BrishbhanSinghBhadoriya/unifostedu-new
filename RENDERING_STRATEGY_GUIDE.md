@@ -544,7 +544,7 @@ export default async function sitemap() {
     'mahe-online',
     'lpu-online',
     'ku-online',
-    'cuonline',
+    'cuOnline',
     'nmims',
     'smu',
     'jain',

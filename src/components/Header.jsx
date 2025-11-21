@@ -83,7 +83,7 @@ const Header = () => {
     },
     {
       name: "Chandigarh University Online",
-      link: "/cuonline",
+      link: "/cuOnline",
       logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp",
     },
     {
@@ -226,7 +226,7 @@ const Header = () => {
       "/Amity-University-Online",
       "/lpu-online",
       "/manipal",
-      "/cuonline",
+      "/cuOnline",
       "/mahe-online",
       "/ku-online",
       "/smu",

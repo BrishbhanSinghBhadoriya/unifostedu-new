@@ -184,7 +184,7 @@ const Footer = () => {
     "/Amity-University-Online",
     "/lpu-online",
     "/manipal",
-    "/cuonline",
+    "/cuOnline",
     "/mahe-online",
     "/ku-online",
     "/bookdemo",

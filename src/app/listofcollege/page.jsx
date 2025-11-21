@@ -91,7 +91,7 @@ const colleges = [
     fee: "₹1L - ₹2L",
     courses: ["MBA", "BBA", "BCA", "MCA","more"],
     description: "Northern India's prominent university with online programs.",
-    link: "/cuonline"
+    link: "/cuOnline"
   }
 ];
 

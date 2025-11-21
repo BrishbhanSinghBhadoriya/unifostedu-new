@@ -31,7 +31,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import EnquiryForm from "@/components/EnquiryForm";
 import { AnimatePresence } from "framer-motion";
 
-const cuonline = () => {
+const cuOnline = () => {
   const [activeCategory, setActiveCategory] = useState("PG"); // PG or UG
   const [current, setCurrent] = useState(0);
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
@@ -340,7 +340,7 @@ const cuonline = () => {
         />
         <meta name="author" content="Chandigarh University Online" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://unifostedu.com/cuonline" />
+        <link rel="canonical" href="https://unifostedu.com/cuOnline" />
       </Head>
 
       <div className="min-h-screen bg-gray-50 overflow-x-hidden">
@@ -1742,4 +1742,4 @@ const cuonline = () => {
   );
 };
 
-export default cuonline;
+export default cuOnline;
