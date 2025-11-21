@@ -593,7 +593,7 @@ const AmityLandingPage = () => {
   };
 
   const [openIndex, setOpenIndex] = useState(null);
-  const [activeSection, setActiveSection] = useState(sectionItems[0]?.id ?? null);
+  const [activeSection, setActiveSection] = useState([sectionItems][0]?.id ?? null);
 
   const toggleFAQ = (index) => {
     setOpenIndex((prev) => (prev === index ? null : index));

@@ -134,7 +134,7 @@ const Landing = () => {
     if (n.includes("sharda")) return "/sharda";
     if (n.includes("dy patil") || n.includes("d.y.")) return "/dypatil";
     if (n.includes("jain")) return "/jain";
-    if (n.includes("chandigarh")) return "/cuonline";
+    if (n.includes("chandigarh")) return "/cuOnline";
     if (n.includes("jindal")) return "/opjindal";
     if (n.includes("vivekananda global") || n.includes("vgu")) return "/vgu";
     if (n.includes("shoolini")) return "/shoolini";

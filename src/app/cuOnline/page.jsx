@@ -340,7 +340,7 @@ const cuonline = () => {
         />
         <meta name="author" content="Chandigarh University Online" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://unifostedu.com/cuonline" />
+        <link rel="canonical" href="https://unifostedu.com/cuOnline" />
       </Head>
 
       <div className="min-h-screen bg-gray-50 overflow-x-hidden">

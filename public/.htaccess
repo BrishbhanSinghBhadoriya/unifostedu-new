@@ -17,7 +17,7 @@ RewriteRule ^universities/jain-university-online/?$ https://unifostedu.com/jain/
 RewriteRule ^universities/lovely-professional-university-online/?$ https://unifostedu.com/lpu-online/ [L,R=301]
 RewriteRule ^universities/university-of-petroleum-and-energy-studies-online/?$ https://unifostedu.com/upes/ [L,R=301]
 RewriteRule ^universities/sharda-university-online/?$ https://unifostedu.com/sharda/ [L,R=301]
-RewriteRule ^universities/chandigarh-university-online/?$ https://unifostedu.com/cuonline/ [L,R=301]
+RewriteRule ^universities/chandigarh-university-online/?$ https://unifostedu.com/cuOnline/ [L,R=301]
 RewriteRule ^universities/dr\.-dy-patil-online/?$ https://unifostedu.com/dypatil/ [L,R=301]
 RewriteRule ^universities/narsee-monjee-institute-of-management-studies-online/?$ https://unifostedu.com/nmims/ [L,R=301]
 RewriteRule ^universities/amity-university-online/?$ https://unifostedu.com/Amity-University-Online/ [L,R=301]
