@@ -194,7 +194,7 @@ const Upes = () => {
                   className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-orange-600 transition-colors"
                 > 
                   <span className="text-lg">📞</span>
-                  <span className="hidden lg:inline">+91-7042867717</span>
+                  <span className="hidden lg:inline">+91 7042646766</span>
                   <span className="lg:hidden">Call Now</span>
                 </a>
                 
@@ -929,7 +929,7 @@ const Upes = () => {
                                              
                                              <span className="text-orange-400">📞</span>
                                             </a>
-                                <span className="text-sm">+91-7042867717</span>
+                                <span className="text-sm">+91 7042646766</span>
                               </div>
                               <div className="flex items-center gap-3">
                                 <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">

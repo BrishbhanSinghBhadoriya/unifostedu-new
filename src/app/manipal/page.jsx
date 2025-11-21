@@ -236,7 +236,7 @@ useEffect(() => {
       "url": "https://unifostedu.com/manipal",
       "logo": "https://unifostedu.comhttps://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg",
       "description": "UGC-entitled online degrees from NAAC A+ accredited Manipal University Jaipur",
-      "telephone": "+91-7042867717",
+      "telephone": "+91 7042646766",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Jaipur",
@@ -334,7 +334,7 @@ useEffect(() => {
                 className="hidden sm:flex items-center gap-1.5 md:gap-2 text-gray-700 font-medium text-xs sm:text-sm md:text-base hover:text-orange-600 transition-colors"
               > 
                 <span className="text-base sm:text-lg">📞</span>
-                <span className="hidden lg:inline">+91-7042867717</span>
+                <span className="hidden lg:inline">+91 7042646766</span>
                 <span className="lg:hidden">Call</span>
               </a>
               
@@ -383,7 +383,7 @@ useEffect(() => {
             ].map((item) => (
               <li
                 key={item.id}
-                className="text-xs sm:text-sm text-gray-600 hover:text-orange-600 transition-colors duration-200 py-1.5 px-2 rounded hover:bg-orange-50 cursor-pointer"
+                className="text-xs sm:text-sm text-black-600 hover:text-orange-600 transition-colors duration-200 py-1.5 px-2 rounded hover:bg-orange-50 cursor-pointer"
                 onClick={() => {
                   const element = document.getElementById(item.id);
                   if (element) {
@@ -1336,7 +1336,7 @@ useEffect(() => {
                       <div>
                        <Link href="/muj-online-bba">
                        <button className="px-6 py-2 bg-orange-600 text-white rounded-full hover:bg-orange-700 transition-all duration-300 cursor-pointer">
-                       more info
+                       More Information
                        </button>
                          </Link>
                          </div>
@@ -1348,9 +1348,9 @@ useEffect(() => {
                         A three-year degree focused on computer science, programming, and IT applications. The online BCA from Manipal Online is ideal for students looking to enter the tech industry.
                       </p>
                        <div>
-                       <Link href="/manipal">
+                       <Link href="/muj-online-bca">
                        <button className="px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-700 transition-all duration-300 cursor-pointer">
-                       more info
+                       More Information
                        </button>
                          </Link>
                          </div>
@@ -1362,9 +1362,9 @@ useEffect(() => {
                         This flexible and interdisciplinary online BA degree enhances analytical, communication, and creative thinking abilities across humanities and social science subjects.
                       </p>
                        <div>
-                       <Link href="/manipal">
+                       <Link href="/muj-online-ba">
                        <button className="px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-700 transition-all duration-300 cursor-pointer">
-                       more info
+                        More Information
                        </button>
                          </Link>
                          </div>
@@ -1387,9 +1387,9 @@ useEffect(() => {
                         Designed for working professionals, it blends management theory with real-world business practices.
                       </p>
                        <div>
-                       <Link href="/manipal">
+                       <Link href="/muj-online-mba">
                        <button className="px-6 py-2 bg-orange-600 text-white rounded-full hover:bg-orange-700 transition-all duration-300 cursor-pointer">
-                       more info
+                       More Information
                        </button>
                          </Link>
                          </div>
@@ -1403,7 +1403,7 @@ useEffect(() => {
                        <div>
                        <Link href="/manipal">
                        <button className="px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-700 transition-all duration-300 cursor-pointer">
-                       more info
+                       More Information
                        </button>
                          </Link>
                          </div>
@@ -1417,7 +1417,7 @@ useEffect(() => {
                        <div>
                        <Link href="/manipal">
                        <button className="px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-700 transition-all duration-300 cursor-pointer">
-                       more info
+                        More Information
                        </button>
                          </Link>
                          </div>
@@ -3088,7 +3088,7 @@ useEffect(() => {
                       <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
                         <span className="text-orange-400">📞</span>
                       </div>
-                      <span className="text-sm">+91-7042867717</span>
+                      <span className="text-sm">+91 7042646766</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">

@@ -241,7 +241,7 @@ const Header = () => {
       "/uu",
       "/muj-online-bba",
       "/muj-online-bca",
-      "/muj-online-ba/",
+      "/muj-online-ba/"
     ];
 
     // Check if current pathname starts with any of the hide routes
@@ -488,19 +488,16 @@ const Header = () => {
               </button>
             </div>
 
-            {/* Call/Email - Made more compact */}
-            <div className="hidden md:flex flex-col justify-center items-end text-xs ml-2">
-              <div className="flex items-center gap-1 text-white-600 font-semibold">
-                <FaPhoneAlt className="text-[#00ffe0] text-xs" />{" "}
-                <span className="text-white">+91 7042867717</span>
-              </div>
-              <div className="flex items-center gap-1 text-white-600 font-semibold">
-                <FaEnvelope className="text-sky-400 text-xs" />
-                <a href="mailto:info@unifostedu.com" className=" text-white  ">
-                  info@unifostedu.com{" "}
-                </a>
-              </div>
+          {/* Call/Email - Made more compact */}
+          <div className="hidden md:flex flex-col justify-center items-end text-xs ml-2">
+            <div className="flex items-center gap-1 text-white-600 font-semibold">
+              <FaPhoneAlt className="text-[#00ffe0] text-xs" /> <span className="text-white">+91 7042867717</span>
             </div>
+            <div className="flex items-center gap-1 text-white-600 font-semibold">
+              <FaEnvelope className="text-sky-400 text-xs" />
+              <a href="mailto:info@unifostedu.com" className=" text-white  ">info@unifostedu.com  </a>
+            </div>
+          </div>
 
             {/* Mobile Toggle */}
             <div className="md:hidden ml-auto flex items-center gap-2">
@@ -736,55 +733,46 @@ const Header = () => {
                     </button>
                   </div>
 
-                  {/* Contact Info */}
-                  <div className="bg-white/5 rounded-xl p-4 border border-white/10 space-y-3">
-                    <div className="flex items-center gap-3 text-white">
-                      <FaPhoneAlt className="text-[#00ffe0] text-lg" />
-                      <div>
-                        <p className="text-xs text-white/70">Phone Number</p>
-                        <p className="font-semibold">+91 7042867717</p>
-                      </div>
+                {/* Contact Info */}
+                <div className="bg-white/5 rounded-xl p-4 border border-white/10 space-y-3">
+                  <div className="flex items-center gap-3 text-white">
+                    <FaPhoneAlt className="text-[#00ffe0] text-lg" />
+                    <div>
+                      <p className="text-xs text-white/70">Phone Number</p>
+                      <p className="font-semibold">+91 7042867717</p>
                     </div>
-                    <div className="flex items-center gap-3 text-white">
-                      <FaEnvelope className="text-[#00ffe0] text-lg" />
-                      <div>
-                        <p className="text-xs text-white/70">Email Address</p>
-                        <a
-                          href="mailto:info@unifostedu.com"
-                          className="font-semibold hover:text-[#00ffe0] transition"
-                          aria-label="Email us at info@unifostedu.com">
-                          info@unifostedu.com
-                        </a>
-                      </div>
+                  </div>
+                  <div className="flex items-center gap-3 text-white">
+                    <FaEnvelope className="text-[#00ffe0] text-lg" />
+                    <div>
+                      <p className="text-xs text-white/70">Email Address</p>
+                      <a href="mailto:info@unifostedu.com" className="font-semibold hover:text-[#00ffe0] transition" aria-label="Email us at info@unifostedu.com">
+                        info@unifostedu.com
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          )}
-          {/* Header-scoped Enquiry Modal */}
-          {showEnquiryModal && (
-            <Dialog
-              open={showEnquiryModal}
-              onOpenChange={setShowEnquiryModal}
-              modal={false}>
-              <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10 p-4 sm:p-6 z-[30001]">
-                <DialogHeader>
-                  <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
-                    {modalType === "videoCall" && "Book a Video Call"}
-                    {modalType === "homeDemo" && "Book a Home Demo"}
-                    {modalType === "getStarted" && "Get Started with Unifost"}
-                  </DialogTitle>
-                </DialogHeader>
-                <EnquiryForm
-                  onSubmitted={() => setShowEnquiryModal(false)}
-                  formType={modalType}
-                />
-              </DialogContent>
-            </Dialog>
-          )}
-        </div>
-      </header>
+          </div>
+        )}
+      {/* Header-scoped Enquiry Modal */}
+      {showEnquiryModal && (
+        <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
+          <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10 p-4 sm:p-6 z-[30001]">
+            <DialogHeader>
+              <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
+                {modalType === 'videoCall' && 'Book a Video Call'}
+                {modalType === 'homeDemo' && 'Book a Home Demo'}
+                {modalType === 'getStarted' && 'Get Started with Unifost'}
+              </DialogTitle>
+            </DialogHeader>
+            <EnquiryForm onSubmitted={() => setShowEnquiryModal(false)} formType={modalType} />
+          </DialogContent>
+        </Dialog>
+      )}
+      </div>
+    </header>
     )
   );
 };

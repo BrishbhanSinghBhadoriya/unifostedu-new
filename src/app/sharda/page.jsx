@@ -29,7 +29,7 @@ const UniversityPage = () => {
     description: "Globally recognized university offering quality online education",
     themeColor: "#EC027C",
     accreditation: "NAAC A+",
-    phone: "+91-7042867717"
+    phone: "+91 7042646766"
   };
 
   const ugCourses = [

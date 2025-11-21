@@ -59,7 +59,7 @@ const MUJBCAPage = () => {
               </button>
               <a href="tel:+917042867717" className="hidden sm:flex items-center gap-1.5 md:gap-2 text-gray-700 font-medium text-xs sm:text-sm md:text-base hover:text-orange-600 transition-colors">
                 <FaPhone className="text-base sm:text-lg" />
-                <span className="hidden lg:inline">+91-7042867717</span>
+                <span className="hidden lg:inline">+91 7042646766</span>
                 <span className="lg:hidden">Call</span>
               </a>
               <a href="tel:+917042867717" className="sm:hidden flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors">
@@ -949,7 +949,7 @@ const MUJBCAPage = () => {
                                           <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
                                             <span className="text-orange-400">📞</span>
                                           </div>
-                                          <span className="text-sm">+91-7042867717</span>
+                                          <span className="text-sm">+91 7042646766</span>
                                         </div>
                                         <div className="flex items-center gap-3">
                                           <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">

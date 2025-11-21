@@ -288,7 +288,7 @@ const Manipal = () => {
                   className="hidden sm:flex items-center gap-1.5 md:gap-2 text-gray-700 font-medium text-xs sm:text-sm md:text-base hover:text-orange-600 transition-colors"
                 > 
                   <span className="text-base sm:text-lg">📞</span>
-                  <span className="hidden lg:inline">+91-7042867717</span>
+                  <span className="hidden lg:inline">+91 7042646766</span>
                   <span className="lg:hidden">Call</span>
                 </a>
                 
@@ -1906,7 +1906,7 @@ const Manipal = () => {
                     </div>
                     <div>
                       <p className="text-sm text-gray-400">Call Us</p>
-                      <p className="text-white font-semibold">+91-7042867717</p>
+                      <p className="text-white font-semibold">+91 7042646766</p>
                     </div>
                   </div>
                   

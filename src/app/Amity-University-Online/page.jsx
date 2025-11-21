@@ -243,7 +243,7 @@ const AmityLandingPage = () => {
     logo: "https://unifostedu.com/amity.svg",
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+91-7042867717",
+      telephone: "+91 7042646766",
       contactType: "admissions",
       areaServed: "IN",
       availableLanguage: ["en", "hi"],
@@ -380,6 +380,7 @@ const AmityLandingPage = () => {
       <p className="text-gray-600">{description}</p>
     </div>
   );
+  
   const [formData, setFormData] = useState({
     fullName: "",
     phoneNumber: "",
@@ -408,7 +409,6 @@ const AmityLandingPage = () => {
     }, 3000);
     return () => clearTimeout(timer);
   }, []);
-  const sectionItems = SECTION_ITEMS;
 
   useEffect(() => {
     if (!sectionItems.length) return undefined;
@@ -656,7 +656,7 @@ const AmityLandingPage = () => {
                   className="hidden sm:flex items-center space-x-1 md:space-x-2 text-xs md:text-sm px-2 md:px-4 py-1.5 md:py-2"
                 >
                   <Phone className="w-3 h-3 md:w-4 md:h-4" />
-                  <span className="hidden md:inline">+91 7042867717</span>
+                  <span className="hidden md:inline">+91 7042646766</span>
                   <span className="md:hidden">Call</span>
                 </Button>
                 <Button
@@ -2943,7 +2943,7 @@ const AmityLandingPage = () => {
                     <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-gray-400">
                       <div className="flex items-center space-x-2">
                         <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
-                        <span>+91 7042867717</span>
+                        <span>+91 7042646766</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />

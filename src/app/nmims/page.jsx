@@ -183,7 +183,7 @@ useEffect(() => {
                   className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-purple-600 transition-colors"
                 > 
                   <span className="text-lg">📞</span>
-                  <span className="hidden lg:inline">+91-7042867717</span>
+                  <span className="hidden lg:inline">+91 7042646766</span>
                   <span className="lg:hidden">Call Now</span>
                 </a>
                 
@@ -845,7 +845,7 @@ useEffect(() => {
                       <a href="tel:+917042867717" className="p-2 rounded-lg hover:bg-purple-900 transition-all duration-200">
                         <span className="text-purple-400">📞</span>
                       </a>
-                      <span className="text-sm">+91-7042867717</span>
+                      <span className="text-sm">+91 7042646766</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <a href="mailto:info@unifostedu.com" className="p-2 rounded-lg hover:bg-purple-900 transition-all duration-200">
