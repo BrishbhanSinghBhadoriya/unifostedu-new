@@ -86,6 +86,7 @@ const inter = Inter({
 const AmityLandingPage = () => {
   const [openModal, setOpenModal] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const sectionItems = SECTION_ITEMS;
   const ugCourses = [
     {
       course: "Bachelor of Business Administration (BBA)",
