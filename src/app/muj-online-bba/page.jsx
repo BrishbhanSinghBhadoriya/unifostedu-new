@@ -132,7 +132,7 @@ const MUJBBAPage = () => {
                   className="hidden sm:flex items-center gap-1.5 md:gap-2 text-gray-700 font-medium text-xs sm:text-sm md:text-base hover:text-orange-600 transition-colors"
                 > 
                   <FaPhone className="text-base sm:text-lg" />
-                  <span className="hidden lg:inline">+91-7042867717</span>
+                  <span className="hidden lg:inline">+91 7042646766</span>
                   <span className="lg:hidden">Call</span>
                 </a>
                 
@@ -2634,7 +2634,7 @@ const MUJBBAPage = () => {
                                     <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
                                       <span className="text-orange-400">📞</span>
                                     </div>
-                                    <span className="text-sm">+91-7042867717</span>
+                                    <span className="text-sm">+91 7042646766</span>
                                   </div>
                                   <div className="flex items-center gap-3">
                                     <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">

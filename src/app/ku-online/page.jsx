@@ -316,7 +316,7 @@ const KU = () => {
             <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku-logo_nqbxot.png" alt="Kurukshetra University" width={100} height={100} className="h-12" />
             <div className="flex items-center gap-4">
               <a href="tel:+917042867717" className="flex items-center gap-2 text-gray-700 font-medium">
-                📞 +91-7042867717
+                📞 +91 7042646766
               </a>
               <button 
               onClick={() => setOpenModal({ type: 'apply' })}
@@ -872,7 +872,7 @@ const KU = () => {
               </p>
               <p className="mt-3 text-sm">
                 General Helpline No: <br />
-                <a href="tel:+91-7042867717" className="text-yellow-400 font-semibold">+91-7042867717</a>
+                <a href="tel:+91 7042646766" className="text-yellow-400 font-semibold">+91 7042646766</a>
               </p>
               <p className="mt-2 text-sm">
                 Email: <br />

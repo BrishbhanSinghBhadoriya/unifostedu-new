@@ -155,7 +155,8 @@ const [modalType, setModalType] = useState();
       "/uu",
       "/muj-online-bba",
       "/muj-online-bca",
-      "/muj-online-ba/"
+      "/muj-online-ba",
+      "/muj-online-mba"
     ];
     
     // Check if current pathname starts with any of the hide routes
@@ -345,7 +346,7 @@ const [modalType, setModalType] = useState();
           {/* Call/Email - Made more compact */}
           <div className="hidden md:flex flex-col justify-center items-end text-xs ml-2">
             <div className="flex items-center gap-1 text-white-600 font-semibold">
-              <FaPhoneAlt className="text-[#00ffe0] text-xs" /> <span className="text-white">+91 7042867717</span>
+              <FaPhoneAlt className="text-[#00ffe0] text-xs" /> <span className="text-white">+91 7042646766</span>
             </div>
             <div className="flex items-center gap-1 text-white-600 font-semibold">
               <FaEnvelope className="text-sky-400 text-xs" />
@@ -536,7 +537,7 @@ const [modalType, setModalType] = useState();
                     <FaPhoneAlt className="text-[#00ffe0] text-lg" />
                     <div>
                       <p className="text-xs text-white/70">Phone Number</p>
-                      <p className="font-semibold">+91 7042867717</p>
+                      <p className="font-semibold">+91 7042646766</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 text-white">

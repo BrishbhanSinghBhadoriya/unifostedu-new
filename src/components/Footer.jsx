@@ -200,7 +200,8 @@ const Footer = () => {
     "/uu",
     "/muj-online-bba",
     "/muj-online-bca",
-    "/muj-online-ba"
+    "/muj-online-ba",
+    "/muj-online-mba"
   ];
   
   // Check if current pathname starts with any of the hide routes

@@ -37,7 +37,7 @@ const OrganizationSchema = () => {
       {
         "@type": "ContactPoint",
         "contactType": "customer service",
-        "telephone": "+91 7042867717",
+        "telephone": "+91 7042646766",
         "email": "info@unifostedu.com",
         "availableLanguage": ["English", "Hindi"],
         "hoursAvailable": {
@@ -57,7 +57,7 @@ const OrganizationSchema = () => {
       {
         "@type": "ContactPoint",
         "contactType": "technical support",
-        "telephone": "+91 7042867717",
+        "telephone": "+91 7042646766",
         "email": "info@unifostedu.com"
       }
     ],

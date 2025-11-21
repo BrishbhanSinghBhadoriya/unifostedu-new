@@ -361,7 +361,7 @@ const LpuOnline = () => {
                       className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-orange-600 transition-colors"
                     > 
                       <FaPhone className="text-orange-500 rotate-90" />
-                      <span className="hidden lg:inline">+91-7042867717</span>
+                      <span className="hidden lg:inline">+91 7042646766</span>
                     </a>
                     
                     {/* Apply Button */}

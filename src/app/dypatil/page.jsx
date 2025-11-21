@@ -82,20 +82,36 @@ const Dypatil = () => {
 
   const faqData = [
     {
-      question: "Is Dr. DY Patil University Online recognized by UGC?",
-      answer: "Yes, DY Patil University Online is UGC-entitled and NAAC A++ accredited. All online degrees are fully valid and recognized across India and abroad."
+      question: "What is DY Patil University Online?",
+      answer: "DY Patil University Online (DPU Online) is the digital learning platform of Dr. D.Y. Patil Vidyapeeth, Pune. It offers flexible and UGC approved online degrees in management, computer applications, and business studies. Students can study from anywhere with the same quality as campus programs."
     },
     {
-      question: "Are online degrees from DYPU Online equivalent to regular programs?",
-      answer: "Absolutely. All DY Patil Online degrees hold the same academic and professional value as traditional on-campus programs."
+      question: "Are the online degrees from DPU Online valid?",
+      answer: "Yes, all degrees offered by DY Patil University Online are UGC-approved, making them valid for higher studies, government jobs, private-sector jobs, and global opportunities."
     },
     {
-      question: "Can international students apply for DYPU Online programs?",
-      answer: "Yes, DY Patil University Online welcomes students from over 50 countries."
+      question: "What programs are available at DY Patil University Online?",
+      answer: "DPU Online offers several popular programs, including: Online MBA from DY Patil University, DY Patil Online BBA, DY Patil Online BCA, and Online MCA from DY Patil University. These programs are designed to match industry needs and prepare students for future careers."
     },
     {
-      question: "Does DY Patil Online provide placement support?",
-      answer: "Yes, students receive personalized career assistance, industry mentorship, and access to global placement opportunities."
+      question: "How do I apply for admission?",
+      answer: "You can apply directly through the official DPU Online website. Register, Fill out the form, Upload documents, Pay the application fee. The admission process is completely online and easy to complete."
+    },
+    {
+      question: "What is the eligibility for online programs?",
+      answer: "BBA & BCA: 10+2 from any recognized board, MBA: Graduation in any stream, MCA: Graduation with Mathematics/Computer Science."
+    },
+    {
+      question: "Does DPU Online offer placement assistance?",
+      answer: "Yes. DY Patil University Online provides full placement support, including resume help, interview training, job updates, and counseling. Many students find strong career opportunities after DY Patil Online MBA and MCA programs."
+    },
+    {
+      question: "Why choose DY Patil University Online?",
+      answer: "Students choose DPU Online because it is one of the best online university in India, offering: UGC approved online degrees, Expert faculty, Flexible schedules, Affordable fees and EMI options, Strong placement assistance, Industry-aligned curriculum."
+    },
+    {
+      question: "Is the Online MBA from DY Patil University worth it?",
+      answer: "Yes. The Online MBA from DY Patil University is one of the best online MBA universities in India 2025. It offers practical learning, updated subjects, and great placement opportunities for career growth."
     },
     {
       question: "What kind of learning support is available?",
@@ -323,7 +339,7 @@ const Dypatil = () => {
                 href="tel:+917042867717"
                 className="hidden sm:inline-flex items-center bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-4 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
               >
-                +91-7042867717
+                +91 7042646766
               </a>
               <a
                 href="tel:+917042867717"
@@ -364,17 +380,16 @@ const Dypatil = () => {
               {[
                 { id: "HeroSection", label: "Introduction" },
                 { id: "CampusTour", label: "Campus Tour" },
-                { id: "Courses", label: "Explore Courses" },
+                { id: "Courses", label: "Explore Programs" },
                 { id: "KeyHighlights", label: "Key Highlights" },
                 { id: "AdmissionDates", label: "Admission Dates" },
-                { id: "Fees", label: "Fees Structure" },
+                { id: "Fees", label: "Fee Structure" },
                 { id: "Admission", label: "Admission Process" },
-                { id: "Sessions", label: "Sessions Info" },
+                { id: "Sessions", label: "Details of Upcoming Session" },
+                { id: "Placements", label: "Placements Records" },
                 { id: "Companies", label: "Placement Partners" },
-               
-                
-                { id: "Faq", label: "FAQs" },
-                
+                { id: "StudentsReview", label: "Students Review" },
+                { id: "Faq", label: "FAQ" },
               ].map((item) => (
                 <li
                   key={item.id}
@@ -431,14 +446,16 @@ const Dypatil = () => {
                     {[
                       { id: "HeroSection", label: "Introduction" },
                       { id: "CampusTour", label: "Campus Tour" },
-                      { id: "Courses", label: "Explore Courses" },
+                      { id: "Courses", label: "Explore Programs" },
                       { id: "KeyHighlights", label: "Key Highlights" },
                       { id: "AdmissionDates", label: "Admission Dates" },
-                      { id: "Fees", label: "Fees Structure" },
+                      { id: "Fees", label: "Fee Structure" },
                       { id: "Admission", label: "Admission Process" },
-                      { id: "Sessions", label: "Sessions Info" },
+                      { id: "Sessions", label: "Details of Upcoming Session" },
+                      { id: "Placements", label: "Placements Records" },
                       { id: "Companies", label: "Placement Partners" },
-                      { id: "Faq", label: "FAQs" },
+                      { id: "StudentsReview", label: "Students Review" },
+                      { id: "Faq", label: "FAQ" },
                     ].map((item) => (
                       <li key={item.id}>
                         <button
@@ -510,9 +527,16 @@ const Dypatil = () => {
 
               {/* Admission Open */}
               <div className="mt-6">
-                <p className="text-xl sm:text-2xl font-semibold bg-white text-[#0c254a] inline-block px-4 py-2 rounded shadow-lg">
+                 <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                 className="text-xl sm:text-2xl font-semibold bg-white text-[#0c254a] inline-block px-4 py-2 rounded shadow-lg cursor-pointer">
                   Admissions Open 2025
-                </p>
+                
+                </button>
               </div>
             </div>
           </div>
@@ -608,7 +632,7 @@ const Dypatil = () => {
                   setShowEnquiryModal(true);
                   setModalType('apply');
                 }}
-                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+                className="bg-white text-black px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
               >
                 Apply Now
               </button>
@@ -616,263 +640,261 @@ const Dypatil = () => {
           </div>
         </section>
         {/* Introduction Section */}
-        <section id="HeroSection" className="py-16 sm:py-20 bg-gradient-to-br from-red-50 to-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                Welcome to <span className="text-red-600">Dr. D. Y. Patil University Online</span>
-              </h1>
-              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-                A vibrant and forward-thinking institution built on a legacy of academic excellence and a commitment to shaping the future of professionals across India and beyond.
-              </p>
-            </div>
+        <section
+  id="HeroSection"
+  className="py-16 sm:py-20 bg-gradient-to-br from-red-50 to-white"
+>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* ------------------ Heading Section ------------------ */}
+    <div className="text-center mb-16">
+      <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+        Introduction to DY Patil University Online (DPU Online)
+      </h1>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Left Content */}
-              <div className="space-y-6">
-                <div className="bg-white p-8 rounded-xl shadow-lg">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
-                  <p className="text-gray-700 leading-relaxed">
-                    In an era where searching for the "best online MBA programs India" or a "top online data science course India" is common, we stand out by offering more than just a degree—we offer a transformative educational journey. Our mission is to break down barriers, making high-quality, UGC-entitled online education accessible to every aspiring learner, whether you are a "fresher" taking your first career step or a "working professional" seeking to upskill without pressing pause on your life.
-                  </p>
-                </div>
+      <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        DY Patil University Online, also known as DPU Online, is one of India's
+        top platforms for online education. It is trusted by students across the
+        country because it offers UGC approved online degrees, flexible study
+        options, and high-quality learning. Many learners choose DPU Online
+        because it is recognized as one of the <b>best online university in India</b>.
+      </p>
 
-                <div className="bg-white p-8 rounded-xl shadow-lg">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Legacy of Excellence</h2>
-                  <p className="text-gray-700 leading-relaxed">
-                    Named after the visionary Dr. D. Y. Patil, our university carries forward a tradition of innovation and student-centric learning. We understand that your search for an "affordable online MBA India" or a reputable "digital marketing certification online" is driven by ambition. Our robust digital platform is designed to fuel that ambition with flexibility, industry-relevant curricula, and unwavering support.
-                  </p>
-                </div>
-              </div>
+      <p className="text-xl text-gray-600 max-w-4xl mx-auto mt-4 leading-relaxed">
+        In today's world, students need education that fits their lifestyle.
+        DPU Online provides this flexibility with digital classrooms, interactive
+        learning, online exams, and real-world case studies.
+      </p>
 
-              {/* Right Content */}
-              <div className="space-y-6">
-                <div className="bg-white p-8 rounded-xl shadow-lg">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Global Accessibility</h2>
-                  <p className="text-gray-700 leading-relaxed mb-4">
-                    Whether you are located "in Delhi," "in Mumbai," "in Bangalore," "in Chennai," or anywhere else, you can access our world-class programs. We are a premier destination among "recognized online universities India," providing credible qualifications that empower your career.
-                  </p>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="text-center p-4 bg-red-50 rounded-lg">
-                      <div className="text-2xl font-bold text-red-600">UGC</div>
-                      <div className="text-sm text-gray-600">Entitled</div>
-                    </div>
-                    <div className="text-center p-4 bg-red-50 rounded-lg">
-                      <div className="text-2xl font-bold text-red-600">NAAC</div>
-                      <div className="text-sm text-gray-600">A++ Accredited</div>
-                    </div>
-                  </div>
-                </div>
+      <p className="text-xl text-gray-600 max-w-4xl mx-auto mt-4 leading-relaxed">
+        DPU Online is part of Dr. D.Y. Patil Vidyapeeth, Pune, known for academic
+        excellence and industry partnerships. This makes DPU Online one of the
+        <b> top UGC approved online universities in India</b>.
+      </p>
 
-                <div className="bg-white p-8 rounded-xl shadow-lg">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Academic Portfolio</h2>
-                  <p className="text-gray-700 leading-relaxed mb-4">
-                    We take immense pride in a diverse and dynamic portfolio of programs that cater to the evolving demands of the global economy. When you "compare online courses India," you will find our offerings are meticulously crafted to bridge the gap between theoretical knowledge and practical application.
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                      <span className="text-gray-700">Management Programs</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                      <span className="text-gray-700">Technology & Data Science</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                      <span className="text-gray-700">Contemporary Specializations</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <p className="text-xl text-gray-600 max-w-4xl mx-auto mt-4 leading-relaxed">
+        Popular programs include the <b>Online MBA</b>, <b>Online BBA</b>, 
+        <b> Online MCA</b>, and <b>Online BCA</b>, making it a preferred choice
+        for lakhs of students across India.
+      </p>
+    </div>
+
+    {/* ------------------ Two Cards Left-Right ------------------ */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      
+      {/* About Us Card */}
+      <div className="bg-white p-8 rounded-xl shadow-lg h-full">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          About Us – DY Patil University Online
+        </h2>
+
+        <p className="text-gray-700 leading-relaxed mb-4">
+          DY Patil University Online was created to make high-quality education
+          available to all students. It is one of the <b>best online universities in India</b>, offering UGC-approved online degrees.
+        </p>
+
+        <h3 className="text-xl font-semibold text-gray-900 mb-3">
+          🎯 The main goals of DPU Online are:
+        </h3>
+
+        <ul className="list-disc ml-6 text-gray-700 mb-4 space-y-1">
+          <li>Make learning easy</li>
+          <li>Make education flexible</li>
+          <li>Make degrees valuable</li>
+          <li>Make careers successful</li>
+        </ul>
+
+        <p className="text-gray-700 leading-relaxed mb-4">
+          The university uses a modern digital learning system:
+        </p>
+
+        <ul className="list-disc ml-6 text-gray-700 mb-4 space-y-1">
+          <li>Live online classes</li>
+          <li>Recorded lectures</li>
+          <li>Digital study materials</li>
+          <li>Online exams</li>
+          <li>Student support services</li>
+          <li>Career and placement guidance</li>
+        </ul>
+
+        <p className="text-gray-700 leading-relaxed mt-2">
+          Programs include <b>Online MBA</b>, <b>BBA</b>, <b>BCA</b>, and <b>MCA</b>,
+          created by professors and industry experts.
+        </p>
+
+        {/* Apply Button */}
+        <div className="mt-6">
+          <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+              >
+                Apply Now
+              </button>
+        </div>
+      </div>
+
+      {/* Why Choose Us Card */}
+      <div className="bg-white p-8 rounded-xl shadow-lg h-full">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Why Choose DY Patil University Online (DPU Online)?
+        </h2>
+
+        <p className="text-gray-700 leading-relaxed mb-4">
+          Here's why thousands of students trust DPU Online:
+        </p>
+
+        <div className="space-y-4">
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              ✔ UGC Approved Online Degrees
+            </h3>
+            <p className="text-gray-700">
+              Valid for jobs, higher studies, government exams, and abroad.
+            </p>
           </div>
-        </section>
+
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              ✔ One of the Best Online Universities in India
+            </h3>
+            <p className="text-gray-700">
+              High-quality teaching + modern learning system.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              ✔ Popular & Job-Focused Courses
+            </h3>
+            <ul className="list-disc ml-6 text-gray-700 mt-2">
+              <li>Online MBA</li>
+              <li>Online BBA</li>
+              <li>Online BCA</li>
+              <li>Online MCA</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              ✔ Career Support & Guidance
+            </h3>
+            <p className="text-gray-700">
+              Resume building, interview preparation & placement support.
+            </p>
+          </div>
+        </div>
+
+        {/* Apply Button */}
+        <div className="mt-6">
+          <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+              >
+                Apply Now
+              </button>
+        </div>
+      </div>
+    </div>
+
+    {/* ------------------ Popular Programs (Below) ------------------ */}
+    <div className="mt-16">
+      <div className="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+          Popular Programs at DPU Online
+        </h2>
+
+        <ul className="list-disc ml-6 text-gray-700 space-y-3">
+          <li>
+            <b>Online MBA:</b> Marketing Management, Human Resource Management, Finance Management, IT Management, Project Management, Operations Management, Hospital Administration and Health Care Management, International Business Management, Fintech Business Analytics Management, AI & ML Management, Logistics Material & Supply Chain Management, Blockchain Management, Digital Marketing Management, Agri Business Management.
+          </li>
+          <li>
+            <b>Online BBA:</b> IT and Systems Management, International Business Management, Retail Management, Banking Financial Services and Insurance Management, Shipping and Logistics Management, Marketing Management, Human Resource Management, Finance Management, E-Commerce Management.
+          </li>
+          <li>
+            <b>Online BCA:</b> Strong foundation for IT & software careers.
+          </li>
+          <li>
+            <b>Online MCA:</b> Advanced IT, AI & data science skills.
+          </li>
+        </ul>
+
+        {/* Apply Button */}
+        <div className="mt-6 text-center">
+         <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+              >
+                Apply Now
+              </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         {/* Campus Tour Section */}
         <section id="CampusTour" className="py-16 sm:py-20 bg-gradient-to-br from-blue-50 to-red-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Virtual <span className="text-red-600">Campus Tour</span>
+                Campus Tour
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Even though Dr. DY Patil University Online functions through a digital medium, it retains the dynamic essence of campus learning through its Virtual Learning Environment (VLE) — a platform designed to simulate the vibrancy of university life.
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                Welcome to the beautiful campus of DY Patil University, the main institution behind DY Patil University Online (DPU Online). Even though DPU Online allows students to study from home with UGC approved online degrees, the physical campus in Pune shows the same values of quality, innovation, and modern learning.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Interactive Virtual Classrooms</h3>
-                <p className="text-gray-600">Live faculty sessions with real-time interaction and engagement</p>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">24×7 Digital Libraries</h3>
-                <p className="text-gray-600">Access to e-resources and research materials anytime, anywhere</p>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Discussion Forums</h3>
-                <p className="text-gray-600">Engaging peer-to-peer learning groups and collaborative spaces</p>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Virtual Laboratories</h3>
-                <p className="text-gray-600">Hands-on experience for technology and management disciplines</p>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Global Webinars</h3>
-                <p className="text-gray-600">Industry interactions and mentoring workshops with experts</p>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">DY Patil Legacy</h3>
-                <p className="text-gray-600">Experience the same energy, collaboration, and innovation that define our legacy</p>
-              </div>
-            </div>
-
-            <div className="text-center mt-12">
-              <p className="text-lg text-gray-700 max-w-4xl mx-auto">
-                These virtual resources enable students to experience the same energy, collaboration, and innovation that define the DY Patil legacy, all from the comfort of their home.
+            <div className="mb-8">
+              <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mb-6">
+                The DY Patil University campus is big, green, and well-designed. It has smart classrooms, advanced computer labs, digital libraries, research centers, and modern auditoriums. These facilities show why DY Patil is known as one of the <b>best online university in India</b> and trusted for programs like the <b>Online MBA from DY Patil University</b>, <b>DY Patil Online BBA</b>, <b>DY Patil Online BCA</b>, and the <b>Online MCA from DY Patil University</b>.
+              </p>
+              <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mb-6">
+                Students of DY Patil University Online still feel connected to the campus through virtual tours, online events, live workshops, and expert sessions that come directly from the university studios. Teachers use the same advanced tools and campus infrastructure to create lectures and learning materials, so online students get the same academic quality as on-campus students.
+              </p>
+              <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mb-6">
+                The campus also has innovation labs, digital studios for recording lectures, sports areas, and cultural spaces. This strong learning environment helps DPU Online maintain its reputation as one of the <b>top UGC approved online universities in India</b>.
+              </p>
+              <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                Even if you are studying from your home, you are still part of the DY Patil family—known for discipline, creativity, and excellence. Whether you choose business programs like the <b>Online MBA from DY Patil University</b> or tech programs like the <b>Online MCA from DY Patil University</b>, you get the experience of a campus built for student growth, learning, and success.
               </p>
             </div>
-            <div className="text-center mt-8 sm:mt-12">
-              <button 
-                onClick={() => {
-                  setOpenModal({ type: 'apply' });
-                  setShowEnquiryModal(true);
-                  setModalType('apply');
-                }}
-                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
-              >
-                Apply Now
-              </button>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Smart Classrooms & Digital Studios</h3>
+                <p className="text-gray-600">Modern infrastructure supports recording engaging lectures and interactive learning for online students.</p>
+              </div>
+              <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Digital Libraries & Labs</h3>
+                <p className="text-gray-600">Access to e-resources, digital libraries, and practical labs—virtually or in person.</p>
+              </div>
+              <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Events & Exposures</h3>
+                <p className="text-gray-600">Virtual events, workshops, and expert sessions connect online learners directly with campus life and industry leaders.</p>
+              </div>
+              <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Sports & Culture</h3>
+                <p className="text-gray-600">Participate in virtual and on-campus sports, cultural and innovation activities supporting all-around development.</p>
+              </div>
             </div>
           </div>
         </section>
-        {/* AI Tools Section */}
-        <section
-          className="w-full py-16"
-          style={{
-            background: "linear-gradient(180deg, #E91C63 0%, #9C144A 100%)",
-          }}
-        >
-          <div className="max-w-7xl mx-auto px-6 text-center">
-            {/* Title */}
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
-              AI Tools Covered
-            </h2>
 
-            {/* Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Card 1 */}
-              <div className="relative bg-white rounded-xl shadow-lg p-6 text-left">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-white rotate-45"></div>
-                <h3 className="text-lg font-semibold text-center mb-4 text-[#0c254a]">
-                  Logistics, Materials, and Supply Chain Management
-                </h3>
-                <ul className="space-y-3 text-sm">
-                  <li>✅ <b>Llamasoft AI</b> (AI-driven logistics decision-making)</li>
-                  <li>✅ <b>FourKites AI</b> (Real-time supply chain visibility)</li>
-                  <li>✅ <b>Project44 AI</b> (AI-powered freight management)</li>
-                  <li>✅ <b>Blume Global AI</b> (AI in supply chain automation)</li>
-                </ul>
-              </div>
-
-              {/* Card 2 */}
-              <div className="relative bg-white rounded-xl shadow-lg p-6 text-left">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-white rotate-45"></div>
-                <h3 className="text-lg font-semibold text-center mb-4 text-[#0c254a]">
-                  Blockchain Management
-                </h3>
-                <ul className="space-y-3 text-sm">
-                  <li>✅ <b>IBM Blockchain AI</b> (AI for smart contract management)</li>
-                  <li>✅ <b>Hyperledger Fabric</b> (Enterprise blockchain AI solutions)</li>
-                  <li>✅ <b>Ethereum AI</b> (AI-powered decentralized applications)</li>
-                  <li>✅ <b>Chainalysis AI</b> (AI in blockchain security & compliance)</li>
-                  <li>✅ <b>Consensys AI</b> (AI-driven blockchain finance tools)</li>
-                </ul>
-              </div>
-
-              {/* Card 3 */}
-              <div className="relative bg-white rounded-xl shadow-lg p-6 text-left">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-white rotate-45"></div>
-                <h3 className="text-lg font-semibold text-center mb-4 text-[#0c254a]">
-                  Digital Marketing Management
-                </h3>
-                <ul className="space-y-3 text-sm">
-                  <li>✅ <b>SurferSEO AI & Clearscope</b> (AI-driven SEO optimization)</li>
-                  <li>✅ <b>Adzooma AI</b> (AI-powered digital ad management)</li>
-                  <li>✅ <b>ChatGPT & Jasper AI</b> (AI-powered content generation)</li>
-                  <li>✅ <b>Albert AI</b> (AI-driven digital marketing automation)</li>
-                  <li>✅ <b>Canva AI</b> (AI-powered creative design)</li>
-                </ul>
-              </div>
-
-              {/* Card 4 */}
-              <div className="relative bg-white rounded-xl shadow-lg p-6 text-left">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-white rotate-45"></div>
-                <h3 className="text-lg font-semibold text-center mb-4 text-[#0c254a]">
-                  AgriBusiness Management
-                </h3>
-                <ul className="space-y-3 text-sm">
-                  <li>✅ <b>Taranis AI</b> (AI for precision farming)</li>
-                  <li>✅ <b>Prospera AI</b> (AI-powered farm management)</li>
-                  <li>✅ <b>aWhere AI</b> (AI for weather-based agribusiness decisions)</li>
-                  <li>✅ <b>AgNext AI</b> (AI-driven supply chain for agriculture)</li>
-                </ul>
-              </div>
-            </div>
-            <div className="text-center mt-8 sm:mt-12">
-              <button 
-                onClick={() => {
-                  setOpenModal({ type: 'apply' });
-                  setShowEnquiryModal(true);
-                  setModalType('apply');
-                }}
-                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
-              >
-                Apply Now
-              </button>
-            </div>
-          </div>
-        </section>
+        
 
         <div>
           <AccreditationSection
-            title="Why Choose DY Patil Online?"
+            title="DY Patil Online Accredited and Recognitions?"
             description="Recognized by UGC, NAAC A+, and AICTE. DY Patil offers flexible online learning with expert faculty, career services, and placement support."
             stats={[]}
             benefits={[
@@ -934,10 +956,13 @@ const Dypatil = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Explore <span className="text-red-600">Online Courses</span>
+                Explore Programs
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Dr. DY Patil University Online offers a diverse range of UG and PG online degree programs, each designed to meet industry needs and prepare learners for real-world challenges.
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                At DY Patil University Online, learning is not just sitting in a classroom—it's a full learning experience made for you. Whether you want to become a business leader, build software, or start your own company, DPU Online gives you the freedom to choose the right course for your goals. With flexible classes, expert teachers, and UGC approved online degrees, you can build your career from anywhere.
+              </p>
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto mt-4 leading-relaxed">
+                Every course at DPU Online is designed to help you succeed in real life.
               </p>
             </div>
 
@@ -945,16 +970,16 @@ const Dypatil = () => {
               {/* Undergraduate Programs */}
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Undergraduate Online Degrees</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="bg-white p-8 rounded-xl shadow-lg">
                     <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
                       <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                       </svg>
                     </div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-4">Online BBA</h4>
-                    <p className="text-gray-600 mb-4">Bachelor of Business Administration</p>
-                    <p className="text-gray-700">Build strong managerial and business foundations through an industry-relevant curriculum that emphasizes leadership, communication, and entrepreneurship.</p>
+                    <h4 className="text-xl font-bold text-gray-900 mb-2"> DY Patil Online BBA</h4>
+                    <p className="text-gray-700 mb-4 font-semibold">A great start to your business career.</p>
+                    <p className="text-gray-700 mb-4">This program teaches marketing, management, and entrepreneurship. It is one of the <b>top online BBA programs in India</b> and is ideal for students who want to grow in the business world.</p>
 
                      <button 
                      onClick={() => {
@@ -968,25 +993,43 @@ const Dypatil = () => {
                    </button>
                </div>
 
-                 
+                  <div className="bg-white p-8 rounded-xl shadow-lg">
+                    <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                      <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                      </svg>
+                    </div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-2"> DY Patil Online BCA</h4>
+                    <p className="text-gray-700 mb-4 font-semibold">A good choice for technology lovers.</p>
+                    <p className="text-gray-700 mb-4">You learn IT basics, programming, databases, and digital tools. You can study at your own speed and build a strong base in computer applications.</p>
 
-               
+                     <button 
+                     onClick={() => {
+                     setOpenModal({ type: 'apply' });
+                     setShowEnquiryModal(true);
+                     setModalType('apply');
+                     }}
+                    className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+                    >
+                   Apply Now
+                   </button>
+               </div>
                 </div>
               </div>
 
               {/* Postgraduate Programs */}
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Postgraduate Online Degrees</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="bg-white p-8 rounded-xl shadow-lg">
                     <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
                       <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6" />
                       </svg>
                     </div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-4">Online MBA</h4>
-                    <p className="text-gray-600 mb-4">Master of Business Administration</p>
-                    <p className="text-gray-700">The flagship DYPU Online MBA program offers specializations in Marketing, Finance, HR, Operations, International Business, and Hospital Administration. Tailored for professionals seeking to elevate their careers through strategic and managerial expertise.</p>
+                    <h4 className="text-xl font-bold text-gray-900 mb-2"> Online MBA from DY Patil University</h4>
+                    <p className="text-gray-700 mb-4 font-semibold">A perfect program for future leaders.</p>
+                    <p className="text-gray-700 mb-4">You learn management, strategy, leadership, and important digital skills. This MBA is offered by one of the <b>best online university in India</b> and helps students get strong career and global opportunities.</p>
                        <button 
                 onClick={() => {
                   setOpenModal({ type: 'apply' });
@@ -1006,9 +1049,9 @@ const Dypatil = () => {
                       </svg>
 
                     </div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-4">Online MCA</h4>
-                    <p className="text-gray-600 mb-4">Master of Computer Applications</p>
-                    <p className="text-gray-700">Designed for aspiring tech leaders, this online MCA program builds advanced skills in programming, database management, AI, and software development.</p>
+                    <h4 className="text-xl font-bold text-gray-900 mb-2"> Online MCA from DY Patil University</h4>
+                    <p className="text-gray-700 mb-4 font-semibold">Made for future tech professionals.</p>
+                    <p className="text-gray-700 mb-4">This program is known as one of the <b>best online MCA in India</b>. It is great for students who want to build careers in IT, software development, artificial intelligence, or data science.</p>
                       <button 
                        onClick={() => {
                        setOpenModal({ type: 'apply' });
@@ -1026,15 +1069,11 @@ const Dypatil = () => {
                 </div>
               </div>
 
-              {/* Professional Certification Programs */}
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Professional Certification Programs</h3>
-                <div className="bg-white p-8 rounded-xl shadow-lg">
-                  <p className="text-lg text-gray-700 text-center">
-                    In addition to degree courses, DY Patil University Online offers specialized professional certificates in fields like Digital Marketing, Data Science, Artificial Intelligence, and Project Management, allowing learners to stay relevant in today's fast-changing job market.
-                  </p>
-                </div>
-              </div>
+            </div>
+            <div className="mt-12 text-center">
+              <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                At DPU Online, every course is more than just a degree—it is the start of your future. Join one of the <b>top UGC approved online universities in India</b> and enjoy learning without limits.
+              </p>
             </div>
           </div>
         </section>
@@ -1044,11 +1083,82 @@ const Dypatil = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Key Highlights of <span className="text-red-600">Dr. DY Patil University Online</span>
+                Key Highlights
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-red-600 font-bold mr-3">•</span>
+                  <div>
+                    <strong className="text-gray-900">UGC Approved Online Degrees</strong> - All programs offered by DY Patil University Online (DPU Online) are approved by UGC, so your degree is valid for jobs, higher studies, and government exams.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-600 font-bold mr-3">•</span>
+                  <div>
+                    <strong className="text-gray-900">Best Online University in India</strong> - DPU Online is known across India for quality education, modern learning tools, and strong student support.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-600 font-bold mr-3">•</span>
+                  <div>
+                    <strong className="text-gray-900">Career-Focused Online Programs</strong> - Choose top courses like the Online MBA from DY Patil University, DY Patil Online BBA, DY Patil Online BCA, and the Online MCA from DY Patil University.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-600 font-bold mr-3">•</span>
+                  <div>
+                    <strong className="text-gray-900">Flexible Learning Anytime, Anywhere</strong> - Study at your own pace with live classes, recorded videos, and a mobile-friendly platform that works anywhere.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-600 font-bold mr-3">•</span>
+                  <div>
+                    <strong className="text-gray-900">Expert Faculty & Updated Curriculum</strong> - Learn from experienced teachers and industry professionals who teach real-world skills.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-600 font-bold mr-3">•</span>
+                  <div>
+                    <strong className="text-gray-900">Top UGC Approved Online Universities in India</strong> - DPU Online is ranked among the top UGC approved online universities in India for its high academic standards.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-600 font-bold mr-3">•</span>
+                  <div>
+                    <strong className="text-gray-900">Strong Career Support & Placement Help</strong> - Get resume training, interview practice, and career counselling for better career opportunities after DY Patil Online MBA and other programs.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-600 font-bold mr-3">•</span>
+                  <div>
+                    <strong className="text-gray-900">Modern Digital Learning Platform</strong> - Use an interactive LMS with e-books, quizzes, assignments, and virtual classrooms for a smooth learning experience.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-600 font-bold mr-3">•</span>
+                  <div>
+                    <strong className="text-gray-900">Affordable Fees With EMI Options</strong> - Study at a low cost with transparent fees and easy EMI payment plans.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-600 font-bold mr-3">•</span>
+                  <div>
+                    <strong className="text-gray-900">Top Online BBA & MCA Programs</strong> - The DY Patil Online BBA and Online MCA from DY Patil University are ranked among the best online MCA in India and top online BBA programs in India.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-600 font-bold mr-3">•</span>
+                  <div>
+                    <strong className="text-gray-900">National & International Recognition</strong> - Degrees from DY Patil University Online are accepted in India and abroad, helping you build a strong global career.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
               <div className="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-xl text-center">
                 <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1248,10 +1358,13 @@ const Dypatil = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                <span className="text-red-600">Fees Structure</span>
+                <span className="text-red-600">Fee Structure</span>
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                DYPU Online provides transparent and flexible fee options, ensuring quality education is accessible to all learners.
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                At DY Patil University Online (DPU Online), education is designed to be high-quality, affordable, and accessible. As one of the <b>best online university in India</b>, DPU Online offers UGC approved online degrees with a transparent and student-friendly fee structure.
+              </p>
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto mt-4 leading-relaxed">
+                The fee plans are created to support every learner—whether you are a student, working professional, or someone looking to upgrade skills. Flexible EMI options and simple payment methods make it easy to continue your higher education without financial stress.
               </p>
             </div>
 
@@ -1293,49 +1406,67 @@ const Dypatil = () => {
               </div>
             </div>
 
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="mt-8 space-y-8">
               <div className="bg-white p-8 rounded-xl shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">What's Included</h3>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                    <span>LMS access</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                    <span>E-learning resources</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                    <span>Live classes</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                    <span>Support services</span>
-                  </li>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Online MBA from DY Patil University – Fee Structure</h3>
+                <p className="text-gray-700 mb-4">The Online MBA from DY Patil University is one of the most popular and career-focused programs.</p>
+                <ul className="list-disc ml-6 text-gray-700 space-y-2">
+                  <li>Affordable semester-wise payment</li>
+                  <li>EMI options available</li>
+                  <li>Value-based pricing for a globally recognized degree</li>
+                </ul>
+                <p className="text-gray-700 mt-4">This is one of the reasons the program is listed among the <b>best online MBA universities in India 2025</b>.</p>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">DY Patil Online BBA – Fee Structure</h3>
+                <p className="text-gray-700 mb-4">The DY Patil Online BBA program is designed for students who want a strong business foundation.</p>
+                <ul className="list-disc ml-6 text-gray-700 space-y-2">
+                  <li>Budget-friendly fees</li>
+                  <li>Flexible payment schedule</li>
+                  <li>Ideal for students looking for the <b>top online BBA programs in India</b></li>
                 </ul>
               </div>
 
               <div className="bg-white p-8 rounded-xl shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Scholarships Available</h3>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                    <span>Defense personnel</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                    <span>Working professionals</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                    <span>Outstanding students</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                    <span>Early bird discounts</span>
-                  </li>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">DY Patil Online BCA – Fee Structure</h3>
+                <p className="text-gray-700 mb-4">The DY Patil Online BCA program offers excellent value for students interested in IT and software.</p>
+                <ul className="list-disc ml-6 text-gray-700 space-y-2">
+                  <li>Affordable tuition per semester</li>
+                  <li>Easy EMI and installment options</li>
+                  <li>One of the most cost-effective programs for beginners in tech</li>
                 </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Online MCA from DY Patil University – Fee Structure</h3>
+                <p className="text-gray-700 mb-4">The Online MCA from DY Patil University is considered one of the <b>best online MCA in India</b>.</p>
+                <ul className="list-disc ml-6 text-gray-700 space-y-2">
+                  <li>Industry-aligned curriculum with reasonable fees</li>
+                  <li>Flexible payment plans</li>
+                  <li>Perfect for students upgrading their tech career</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-4"> Why Students Prefer DPU Online's Fee Structure</h3>
+                <ul className="list-disc ml-6 text-gray-700 space-y-2">
+                  <li>Transparent pricing with no hidden charges</li>
+                  <li>UGC-approved and globally valid degrees</li>
+                  <li>Programs priced lower than many other <b>top UGC approved online universities in India</b></li>
+                  <li>EMI and installment options for all courses</li>
+                  <li>Excellent ROI due to strong <b>career opportunities after DY Patil Online MBA</b> and other programs</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">High Quality, Affordable Learning</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Whether you choose the <b>Online MBA from DY Patil University</b>, <b>DY Patil Online BBA</b>, <b>DY Patil Online BCA</b>, or the <b>Online MCA from DY Patil University</b>, you receive top-quality education at a cost designed to support every learner.
+                </p>
+                <p className="text-gray-700 leading-relaxed mt-4">
+                  DY Patil University Online continues to prove that world-class education doesn't have to be expensive—it just needs to be accessible.
+                </p>
               </div>
             </div>
             <div className="text-center mt-8 sm:mt-12">
@@ -1360,58 +1491,42 @@ const Dypatil = () => {
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 <span className="text-red-600">Admission Process</span>
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                 The Dr. DY Patil University Online admission process is 100% online, quick, and student-friendly.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-red-600">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">1</div>
-                  <h3 className="text-xl font-bold text-gray-900">Visit Website</h3>
+                  <h3 className="text-xl font-bold text-gray-900">Step 1: Register Online</h3>
                 </div>
-                <p className="text-gray-700">Visit the official DYPU Online website</p>
+                <p className="text-gray-700">Register on the official DPU Online website</p>
               </div>
 
               <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-red-600">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">2</div>
-                  <h3 className="text-xl font-bold text-gray-900">Select Program</h3>
+                  <h3 className="text-xl font-bold text-gray-900">Step 2: Fill Out the Application Form</h3>
                 </div>
-                <p className="text-gray-700">Choose your preferred program (e.g., online MBA, online BBA, online BCA, etc.)</p>
+                <p className="text-gray-700">Complete the online application form with your details</p>
               </div>
 
               <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-red-600">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">3</div>
-                  <h3 className="text-xl font-bold text-gray-900">Complete Form</h3>
+                  <h3 className="text-xl font-bold text-gray-900">Step 3: Pay the Application Fee</h3>
                 </div>
-                <p className="text-gray-700">Fill the registration form with your academic and personal details</p>
+                <p className="text-gray-700">Complete payment through secure online gateway</p>
               </div>
 
               <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-red-600">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">4</div>
-                  <h3 className="text-xl font-bold text-gray-900">Upload Documents</h3>
+                  <h3 className="text-xl font-bold text-gray-900">Step 4: Admission Confirmation</h3>
                 </div>
-                <p className="text-gray-700">Upload necessary documents (mark sheets, ID proof, and photograph)</p>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-red-600">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">5</div>
-                  <h3 className="text-xl font-bold text-gray-900">Pay Fee</h3>
-                </div>
-                <p className="text-gray-700">Pay the admission fee online via a secure payment gateway</p>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-red-600">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">6</div>
-                  <h3 className="text-xl font-bold text-gray-900">Get Access</h3>
-                </div>
-                <p className="text-gray-700">Receive your login credentials and access the student dashboard</p>
+                <p className="text-gray-700">Receive admission confirmation and student login details</p>
               </div>
             </div>
 
@@ -1706,6 +1821,70 @@ const Dypatil = () => {
           </div>
         </section>
 
+        {/* Placements Records Section */}
+        <section id="Placements" className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                Placements Records
+              </h2>
+            </div>
+            <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                DY Patil University Online (DPU Online) has a strong and successful placement record that helps students build rewarding careers after completing their degree. As one of the <b>best online university in India</b>, DPU Online focuses on career growth just as much as academic excellence. Each student receives support, guidance, and training to prepare for real-world job opportunities.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                Whether you enroll in the <b>Online MBA from DY Patil University</b>, <b>DY Patil Online BBA</b>, <b>DY Patil Online BCA</b>, or the <b>Online MCA from DY Patil University</b>, the placement team ensures that every learner becomes job-ready with the right skills and confidence.
+              </p>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Students receive:</h3>
+              <ul className="list-disc ml-6 text-gray-700 space-y-2 mb-6">
+                <li>Resume-building assistance</li>
+                <li>Interview preparation sessions</li>
+                <li>Soft skills and communication training</li>
+                <li>Mock interviews with industry experts</li>
+                <li>Career counseling and mentorship</li>
+                <li>Job alerts through the placement portal</li>
+              </ul>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                This structured support helps students secure great roles in top companies.
+              </p>
+              <h3 className="text-xl font-bold text-gray-900 mb-4"> Top Recruiters</h3>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                Graduates from DY Patil University Online are hired by leading companies across India and abroad. Top recruiters include:
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
+                <div className="bg-gray-50 p-4 rounded-lg text-center">TCS</div>
+                <div className="bg-gray-50 p-4 rounded-lg text-center">Infosys</div>
+                <div className="bg-gray-50 p-4 rounded-lg text-center">Cognizant</div>
+                <div className="bg-gray-50 p-4 rounded-lg text-center">Wipro</div>
+                <div className="bg-gray-50 p-4 rounded-lg text-center">Deloitte</div>
+                <div className="bg-gray-50 p-4 rounded-lg text-center">HCL</div>
+                <div className="bg-gray-50 p-4 rounded-lg text-center">Accenture</div>
+                <div className="bg-gray-50 p-4 rounded-lg text-center">Capgemini</div>
+                <div className="bg-gray-50 p-4 rounded-lg text-center">Amazon</div>
+                <div className="bg-gray-50 p-4 rounded-lg text-center">HDFC Bank</div>
+                <div className="bg-gray-50 p-4 rounded-lg text-center">ICICI Bank</div>
+                <div className="bg-gray-50 p-4 rounded-lg text-center">Tech Mahindra</div>
+              </div>
+              <p className="text-lg text-gray-700 leading-relaxed mt-6">
+                These strong industry ties are one of the reasons why there are excellent <b>career opportunities after DY Patil Online MBA</b> and other programs.
+              </p>
+            </div>
+            <div className="text-center mt-8 sm:mt-12">
+              <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+              >
+                Apply Now
+              </button>
+            </div>
+          </div>
+        </section>
+
         {/* Hiring Partners Section */}
         <section id='Companies' className="py-12 bg-gray-100">
           <div className="max-w-6xl mx-auto px-4">
@@ -1715,7 +1894,7 @@ const Dypatil = () => {
                 Our learners work at
               </h2>
               <p className="text-xl text-gray-600 mt-2">
-                Top hiring partners at Jain Online
+                Top hiring partners at DY Patil Online
               </p>
             </div>
 
@@ -1759,6 +1938,86 @@ const Dypatil = () => {
               </div>
               <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:scale-105 transition-transform">
                 <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327172/hp_b4ylow.webp" width={100} height={100} loading="lazy" alt="Samsung2" className="h-12 object-contain" />
+              </div>
+            </div>
+            <div className="text-center mt-8 sm:mt-12">
+              <button 
+                onClick={() => {
+                  setOpenModal({ type: 'apply' });
+                  setShowEnquiryModal(true);
+                  setModalType('apply');
+                }}
+                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
+              >
+                Apply Now
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Students Review Section */}
+        <section id="StudentsReview" className="py-16 bg-gradient-to-br from-gray-50 to-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                Students Review
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-red-600 font-bold text-xl"></span>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-gray-900">Riya Sharma – Online MBA Student</h4>
+                  </div>
+                </div>
+                <p className="text-gray-700 leading-relaxed italic">
+                  "Studying the Online MBA from DY Patil University has been one of the best decisions of my career. The classes are flexible, the teachers explain everything clearly, and the study material is easy to understand. The placement support helped me prepare for interviews. I truly feel that DY Patil University Online is the best online university in India."
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-red-600 font-bold text-xl"></span>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-gray-900">Amit Verma – BBA Student</h4>
+                  </div>
+                </div>
+                <p className="text-gray-700 leading-relaxed italic">
+                  "The DY Patil Online BBA program gave me a strong understanding of management and business skills. I loved the learning platform and the recorded classes helped me study at my own pace. The course structure is very student-friendly. I am happy I chose DPU Online for my degree."
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-red-600 font-bold text-xl"></span>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-gray-900">Sneha Iyer – MCA Student</h4>
+                  </div>
+                </div>
+                <p className="text-gray-700 leading-relaxed italic">
+                  "I joined the Online MCA from DY Patil University and the experience has been excellent. The teachers are supportive, and the digital labs make it easy to practice coding. This is one of the best online MCA in India, and I would recommend it to anyone who wants to grow in IT."
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-red-600 font-bold text-xl"></span>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-gray-900">Mohit Singh – MBA Student</h4>
+                  </div>
+                </div>
+                <p className="text-gray-700 leading-relaxed italic">
+                  "What I liked most about DY Patil University Online is how simple and smooth the entire learning process is. The Online MBA from DY Patil University has helped me upgrade my skills and confidence at work. The live classes and real case studies were very useful."
+                </p>
               </div>
             </div>
             <div className="text-center mt-8 sm:mt-12">
@@ -1947,7 +2206,7 @@ const Dypatil = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <span>📞</span>
-                  <a href="tel:+917042867717" className="hover:text-white transition-colors">+91-7042867717</a>
+                  <a href="tel:+917042867717" className="hover:text-white transition-colors">+91 7042646766</a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <span>📧</span>

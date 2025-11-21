@@ -578,7 +578,7 @@ const ShooliniFAQ = () => {
               href="tel:+917042867717"
               className="inline-flex items-center justify-center px-8 py-3 bg-red-500 text-white font-semibold rounded-full hover:bg-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              📞 Call: +91-7042867717
+              📞 Call: +91 7042646766
             </a>
             <button className="inline-flex items-center justify-center px-8 py-3 bg-white text-red-500 font-semibold rounded-full border-2 border-red-500 hover:bg-red-50 transition-all duration-300">
               <a href="https://wa.me/917042867717" target="_blank" rel="noopener noreferrer">
@@ -750,7 +750,7 @@ const Shoolini = () => {
                   className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-orange-600 transition-colors"
                 > 
                   <span className="text-lg">📞</span>
-                  <span className="hidden lg:inline">+91-7042867717</span>
+                  <span className="hidden lg:inline">+91 7042646766</span>
                   <span className="lg:hidden">Call Now</span>
                 </a>
                 
@@ -1671,7 +1671,7 @@ const Shoolini = () => {
                                        
                                        <span className="text-orange-400">📞</span>
                                       </a>
-                          <span className="text-sm">+91-7042867717</span>
+                          <span className="text-sm">+91 7042646766</span>
                         </div>
                         <div className="flex items-center gap-3">
                           <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
