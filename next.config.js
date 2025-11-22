@@ -46,7 +46,7 @@ const nextConfig = {
   // ✅ Redirects for broken URLs (4xx errors)
   async redirects() {
     return [
-      // Fix case sensitivity issue: cuonline -> cuOnline
+      // Fix case sensitivity issue: cuOnline -> cuOnline
    
       
       // Fix course slugs with dots

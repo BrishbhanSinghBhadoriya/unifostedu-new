@@ -31,7 +31,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import EnquiryForm from "@/components/EnquiryForm";
 import { AnimatePresence } from "framer-motion";
 
-const cuonline = () => {
+const cuOnline = () => {
   const [activeCategory, setActiveCategory] = useState("PG"); // PG or UG
   const [current, setCurrent] = useState(0);
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
@@ -1742,4 +1742,4 @@ const cuonline = () => {
   );
 };
 
-export default cuonline;
+export default cuOnline;

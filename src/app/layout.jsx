@@ -2,8 +2,7 @@ import { Inter, Baskervville } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import dynamic from 'next/dynamic';
-const ChatbotWidget = dynamic(() => import('@/components/ChatbotWidget'), { loading: () => null });
+import ChatBoxWrapper from '@/components/ChatBoxWrapper';
 import OrganizationSchema from "@/components/OrganizationSchema";
 import Canonical from "@/components/Canonical";
 import { Toaster as SonnerToaster } from "sonner";
@@ -343,7 +342,7 @@ export default function RootLayout({ children }) {
   <Header />
   <main>{children}</main>
   <Footer />
-  <ChatbotWidget />
+  <ChatBoxWrapper />
   <SonnerToaster
     position="top-center"
     richColors
