@@ -23,7 +23,7 @@ const SMU = () => {
       duration: "3 Years",
       eligibility: "10+2 or equivalent",
       fees: "₹75,000",
-      specialization: "English + Sociology + Political Science",
+      specialization: "English , Sociology , Political Science",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
       university: "Sikkim Manipal University",
       universityShort: "SMU",
