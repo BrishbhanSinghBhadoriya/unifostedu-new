@@ -25,7 +25,7 @@ const Manipal = () => {
       duration: "3 Years",
       eligibility: "10+2 Minimum 40%",
       fees: "1,35,000",
-      specialization: "Finance & Accounting, Digital Marketing,Marketing, Enterepreneurship Management & Family Business, Human Resource Management,  Data Analytics, Retail & E-commerce Management",
+      specialization: "Finance & Accounting, Digital Marketing,Marketing, Entrepreneurship Management & Family Business, Human Resource Management,  Data Analytics, Retail & E-commerce Management",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
       university: "Manipal University Jaipur",
       universityShort: "MUJ",

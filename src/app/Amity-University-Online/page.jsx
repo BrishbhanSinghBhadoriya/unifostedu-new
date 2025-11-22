@@ -124,7 +124,7 @@ const AmityLandingPage = () => {
       eligibility: "10+2 Pass",
       fees: "₹99,000 - ₹1,70,000",
       specialization:
-        "BA (General, Journalism and Mass Communication, Native Languages(Kannada,Malayalam, Tamil, Telugu), Psychology, English, Sociology, Political Science, Economics)",
+        "BA (General, Journalism and Mass Communication, Native Languages(Kannada,Malayalam, Tamil, Telugu), English, Sociology, Political Science, Economics)",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
       alt: "BA from amity online university",
     },
@@ -137,7 +137,7 @@ const AmityLandingPage = () => {
       eligibility: "Graduation",
       fees: "₹1,99,000 - ₹2,99,000",
       specialization:
-        "MBA (General, Information Technology Management, Dual Specialization, Human Resource Analytics, Data Science, Business Analytics, International Business Management,Hospital Management, Digital Entrepreneurship, Digital Marketing Management, Entrepreneurship & Leadership Management, Finance & Accounting Management, Hospitality Management, Global Finance Market, Insurance Management, Marketing & Sales Management, Petroleum & Natural Gas, Production and Operations Management, Retail Management)",
+        "MBA (General, Information Technology Management, Dual Specialization, Human Resource Analytics, Data Science, Business Analytics, International Finance Management,Hospital Management, Digital Entrepreneurship, Digital Marketing Management, Entrepreneurship & Leadership Management, Finance & Accounting Management, Hospitality Management, Global Finance Market, Insurance Management, Marketing & Sales Management, Petroleum & Natural Gas, Production and Operations Management, Retail Management)",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
       alt: "MBA from amity online university",
     },
@@ -164,9 +164,9 @@ const AmityLandingPage = () => {
       course: "Master of Arts (MA)",
       duration: "2 Years",
       eligibility: "Graduation",
-      fees: "₹1,30,000 - ₹2,50,000",
+      fees: "₹1,30,000 - ₹1,70,000",
       specialization:
-        "MA (Psychology, Journalism and Mass Communication, Public Policy & Governance, English, Sociology)",
+        "MA ( Journalism and Mass Communication, Public Policy & Governance)",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
       alt: "MA from amity online university",
     },
@@ -594,7 +594,7 @@ const AmityLandingPage = () => {
   };
 
   const [openIndex, setOpenIndex] = useState(null);
-  const [activeSection, setActiveSection] = useState(sectionItems[0]?.id ?? null);
+  const [activeSection, setActiveSection] = useState([sectionItems][0]?.id ?? null);
 
   const toggleFAQ = (index) => {
     setOpenIndex((prev) => (prev === index ? null : index));
