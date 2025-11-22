@@ -19,31 +19,32 @@ const Manipal = () => {
     {
       course: "Bachelor of Business Administration (BBA)",
       duration: "3 Years",
-      eligibility: "10+2 Minimum 40%",
-      fees: "1,35,000",
-      specialization: "Finance & Accounting, Digital Marketing, Enterepreneurship Management & Family Business, Human Resource Management,  Data Analytics, Retail & E-commerce Management",
+      eligibility: "10+2, 10+3 Minimum 50%",
+      fees: "1,80,000",
+      specialization: "Healthcare Management, Business Analytics, Financial Technology, Marketing Management, human resource Management ",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
       university: "Manipal Academy of Higher Education(MAHE))",
       universityShort: "MAHE",
       alt: "Bachelor of Business Administration (BBA) in Manipal Online",
     },
-    {
-      course: "Bachelor of Computer Applications (BCA)",
-      duration: "3 Years",
-      eligibility: "10+2 Minimum 40%",
-      fees: "1,35,000",
-      specialization: "Data Science and Analytics, Cyber Security, Cloud Computing",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipal-online-mca_moc5om.png",
+      {
+      course: "Bachelor of Business Administration (Hons.)",
+      duration: "4 Years",
+      eligibility: "10+2, 10+3 Minimum 50%",
+      fees: "2,40,000",
+      specialization: "Healthcare Management, Business Analytics, Financial Technology, Marketing Management, human resource Management ",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
       university: "Manipal Academy of Higher Education(MAHE))",
       universityShort: "MAHE",
-      alt: "Bachelor of Computer Applications (BCA) in Manipal Online",
+      alt: "Bachelor of Business Administration (BBA) in Manipal Online",
     },
+   
     {
       course: "Bachelor of Commerce (B.Com)",
       duration: "3 Years",
-      eligibility: "10+2 Minimum 40%",
-      fees: "99,000",
-      specialization: "General",
+      eligibility: "10+2,10+3 Minimum 50%",
+      fees: "2,94,000",
+      specialization: "(Professional)",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327070/bcom-online-image_pdmurc.webp",
       university: "Manipal Academy of Higher Education(MAHE))",
       universityShort: "MAHE",
@@ -55,9 +56,9 @@ const Manipal = () => {
     {
       course: "Master of Business Administration (MBA)",
       duration: "2 Years",
-      eligibility: "50% Graduation",
-      fees: "1,75,000",
-      specialization: "Super/Dual(Human Resource Management and Finance, Finance and Marketing, Marketing and Human Resource Management, Marketing and Business Analytics, Finance and Business Analytics, Human Resource and Business Analytics, Project Management, Retail Management and Quick Commerce, Artificial Intelligence Banking and Finance, 15 other fields)",
+      eligibility: "Working Professionals with min 50% in graduation",
+      fees: "2,92,000",
+      specialization: "Healthcare Management, Financial Technology, Marketing Management, Human Resource Management, Business Analytics, Data Science, Logistics and Supply Chain Management",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
       university: "Manipal Academy of Higher Education(MAHE))",
       universityShort: "MAHE",
@@ -67,36 +68,26 @@ const Manipal = () => {
       course: "Master of Computer Applications (MCA)",
       duration: "2 Years",
       eligibility: "50% Graduation",
-      fees: "1,58,000",
-      specialization: "AI & Data Science, Cyber Security, Cloud Computing, Comprehensive Emerging Technologies,AI & ML", 
+      fees: "2,20,000",
+      specialization: "AI & ML, Cyber Security, Cloud Computing, Full Stack Development", 
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
       university: "Manipal Academy of Higher Education(MAHE))",
       universityShort: "MAHE",
       alt: "Master of Computer Applications (MCA) in Manipal Online",
     },
     {
-      course: "Master of Commerce (M.Com)",
+      course: "Master of Science (M.Sc)",
       duration: "2 Years",
-      eligibility: "Graduation in Commerce",
-      fees: "1,08,000",
-      specialization: "General", 
+      eligibility: "min 50% Graduation",
+      fees: "2,80,000",
+      specialization: "Business Analytics, Data Science", 
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/m.com_libbpo.webp",
       university: "Manipal Academy of Higher Education(MAHE))",
       universityShort: "MAHE",
-      alt: "Master of Commerce (M.Com) in Manipal Online",
+      alt: "Master of Science (M.Sc) in Manipal Online",
     },
   
-    {
-      course: "Master of Arts (MA)",
-      duration: "2 Years",
-      eligibility: "Graduation",
-      fees: "80,000 - 1,40,000",
-      specialization: " Economics,MA (Journalism and Mass Communication)",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
-      university: "Manipal Academy of Higher Education(MAHE))",
-      universityShort: "MAHE",
-      alt: "Master of Arts (MA) in Manipal Online",
-    },
+
   ];
     
     
@@ -187,7 +178,7 @@ const Manipal = () => {
     },
     {
       name: "Rajeev ",
-      course: "B.Com",
+      course: "BBA",
       university: "MAHE",
       text: "Funding my undergraduate degree and my younger brother's education has been possible only because of Manipal Academy of Higher Education(MAHE))'s affordable online B.Com degree. Thanks to Online Manipal, I'm able to manage my work and academics. I believe this online degree will help me become personally and financially independent."
     },
@@ -199,9 +190,9 @@ const Manipal = () => {
     },
     {
       name: "Akshansh",
-      course: "M.Com",
+      course: "M.Sc",
       university: "MAHE",
-      text: "With over 2 years of work experience in accounting, I wanted to pursue an online M.Com degree to boost my career further and get a higher salary. Thanks to Online Manipal, I'm able to manage my work life and academic through flexible live classes and recorded sessions which are available on the portal."
+      text: "With over 2 years of work experience in accounting, I wanted to pursue an online M.Sc. degree to boost my career further and get a higher salary. Thanks to Online Manipal, I'm able to manage my work life and academic through flexible live classes and recorded sessions which are available on the portal."
     }
   ];
   
