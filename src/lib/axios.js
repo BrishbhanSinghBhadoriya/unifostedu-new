@@ -48,29 +48,31 @@ export const authAPI = {
 export const demoAPI = {
   bookDemo: (data) =>
     axios.post(
-      "/api/v1/enquiry",
+      "https://25515469-e21f-48a6-93fb-91446641fcda.neodove.com/integration/custom/4fa16adb-e429-4417-a5ba-fc6f77e3fea3/leads",
       data,
       { headers: { "Content-Type": "application/json" } }
     ),
 };
+const API_ENDPOINT = process.env.NEXT_PUBLIC_API_ENDPOINT || "";
+console.log(API_ENDPOINT);
 
 // 🧩 Specific enquiries (absolute URLs as provided)
 export const enquiryAPI = {
   videoCall: (data) =>
     axios.post(
-      "/api/v1/videoCallEnquiry",
+     "https://25515469-e21f-48a6-93fb-91446641fcda.neodove.com/integration/custom/4fa16adb-e429-4417-a5ba-fc6f77e3fea3/leads",
       data,
       { headers: { "Content-Type": "application/json" } }
     ),
   homeDemo: (data) =>
     axios.post(
-      "/api/v1/homeDemoEnquiry",
+      "https://25515469-e21f-48a6-93fb-91446641fcda.neodove.com/integration/custom/4fa16adb-e429-4417-a5ba-fc6f77e3fea3/leads",
       data,
       { headers: { "Content-Type": "application/json" } }
     ),
   general: (data) =>
     axios.post(
-      "/api/v1/enquiry",
+      "https://25515469-e21f-48a6-93fb-91446641fcda.neodove.com/integration/custom/4fa16adb-e429-4417-a5ba-fc6f77e3fea3/leads",
       data,
       { headers: { "Content-Type": "application/json" } }
     ),
