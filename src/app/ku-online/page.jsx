@@ -312,20 +312,58 @@ const KU = () => {
       <div className="min-h-screen bg-gray-50 overflow-hidden">
         {/* Header */}
         <header className="bg-white shadow-md fixed top-0 w-full z-20">
-          <div className="max-w-7xl mx-auto p-2 flex justify-between items-center">
-            <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku-logo_nqbxot.png" alt="Kurukshetra University" width={100} height={100} className="h-12" />
-            <div className="flex items-center gap-4">
-              <a href="tel:+917042867717" className="flex items-center gap-2 text-gray-700 font-medium">
-                📞 +91 7042646766
-              </a>
-              <button 
-              onClick={() => setOpenModal({ type: 'apply' })}
-              className="bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded-full transition cursor-pointer">
-                Apply Now
-              </button>
-            </div>
-          </div>
-        </header>
+  <div className="max-w-7xl mx-auto p-2 flex justify-between items-center">
+
+    {/* Logo */}
+    <Image
+      src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku-logo_nqbxot.png"
+      alt="Kurukshetra University"
+      width={100}
+      height={100}
+      className="h-12"
+    />
+
+    {/* Desktop Phone + Apply */}
+    <div className="hidden sm:flex items-center gap-4">
+      <a
+        href="tel:+917042867717"
+        className="flex items-center gap-2 text-gray-700 font-medium"
+      >
+        📞 +91 7042646766
+      </a>
+
+      <button
+        onClick={() => setOpenModal({ type: 'apply' })}
+        className="bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded-full transition cursor-pointer"
+      >
+        Apply Now
+      </button>
+    </div>
+
+    {/* Mobile Phone + Apply */}
+    <div className="flex sm:hidden items-center gap-3">
+
+      {/* Phone Icon */}
+      <a
+        href="tel:+917042867717"
+        className="flex items-center justify-center w-10 h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
+      >
+        📞
+      </a>
+
+      {/* Apply Button (small size) */}
+      <button
+        onClick={() => setOpenModal({ type: 'apply' })}
+        className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-sm"
+      >
+        Apply
+      </button>
+
+    </div>
+
+  </div>
+</header>
+
           {/*hero section*/}
       <section className="relative w-full h-[75vh] md:h-[85vh] mt-[90px] mb-[20px] font-[Poppins]">
   <Swiper

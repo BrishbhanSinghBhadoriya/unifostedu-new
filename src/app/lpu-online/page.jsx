@@ -82,23 +82,13 @@ const LpuOnline = () => {
       universityShort: "LPU",
       alt: "Bachelor of Computer Applications (BCA) in LPU Online",
     },
-    {
-      course: "Bachelor of Commerce (B.Com)",
-      duration: "3 Years",
-      eligibility: "10+2 Minimum 40%",
-      fees: "90,000",
-      specialization: "General, Accounting & Finance, E-commerce",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327070/bcom-online-image_pdmurc.webp",
-      university: "Lovely Professional University",
-      universityShort: "LPU",
-      alt: "Bachelor of Commerce (B.Com) in LPU Online",
-    },
+   
     {
       course: "Bachelor of Arts (BA)",
       duration: "3 Years",
-      eligibility: "10+2 Minimum 40%",
+      eligibility: "10+2 Minimum ",
       fees: "80,000",
-      specialization: "General, Psychology, Economics, Political Science",
+      specialization: "General",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
       university: "Lovely Professional University",
       universityShort: "LPU",
@@ -110,8 +100,8 @@ const LpuOnline = () => {
     {
       course: "Master of Business Administration (MBA)",
       duration: "2 Years",
-      eligibility: "50% Graduation",
-      fees: "1,60,000",
+      eligibility: " Bachelor’s degree (any discipline) or equivalent",
+      fees: "2,00,000",
       specialization: "HR, Finance, Marketing, Operations, Analytics, Digital Marketing, Data Science, IT, International Business, Banking, Healthcare, Logistics",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
       university: "Lovely Professional University",
@@ -121,7 +111,7 @@ const LpuOnline = () => {
     {
       course: "Master of Computer Applications (MCA)",
       duration: "2 Years",
-      eligibility: "50% Graduation in BCA/B.Sc(IT)",
+      eligibility: "Graduation in BCA/B.Sc(IT) With Mathematics",
       fees: "1,48,000",
       specialization: "ML & AI, Data Science, Cybersecurity, Full Stack, AR/VR & Game Development", 
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
@@ -133,13 +123,36 @@ const LpuOnline = () => {
       course: "Master of Commerce (M.Com)",
       duration: "2 Years",
       eligibility: "Graduation in Commerce",
-      fees: "95,000",
-      specialization: "General, Accounting, Finance", 
+      fees: "1,00,000",
+      specialization: "General,", 
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/m.com_libbpo.webp",
       university: "Lovely Professional University",
       universityShort: "LPU",
       alt: "Master of Commerce (M.Com) in LPU Online",
     },
+     {
+      course: "Master of Arts (MA)",
+      duration: "2 Years",
+      eligibility: "Graduation ",
+      fees: "80,000",
+      specialization: "Sociology, English, Political Science, History", 
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/m.com_libbpo.webp",
+      university: "Lovely Professional University",
+      universityShort: "LPU",
+      alt: "Master of Arts(MA) in LPU Online",
+     },
+      {
+      course: "Master of Science (M.Sc)",
+      duration: "2 Years",
+      eligibility: "Graduation",
+      fees: "80,000",
+      specialization: "Mathematics, Economics", 
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327070/bcom-online-image_pdmurc.webp",
+      university: "Lovely Professional University",
+      universityShort: "LPU",
+      alt: "Master of Science(M.Sc) in LPU Online",
+    },
+    
   ];
     
   
@@ -310,7 +323,7 @@ const LpuOnline = () => {
                     { id: "admission-dates", label: "Admission & Exam Details " },
                     
                     { id: "admission-process", label: "Admission Process" },
-                    { id: "sessions", label: "Upcoming Session" },
+                  
                     { id: "placement-partners", label: "Placement Partners" },   
                     { id: "faq", label: "Student Reviews & FAQ" },
                     { id: "conclusion", label: "Conclusion" }
@@ -328,6 +341,16 @@ const LpuOnline = () => {
                     </li>
                 ))}
             </ul>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
+                  <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  >
+                  Apply Now
+                
+                 </Button>
+                 </div>
         </aside>
         <main className="flex-1 min-w-0 lg:pl-72">
           <div className="overflow-x-hidden pt-16 lg:pt-20">
@@ -410,7 +433,7 @@ const LpuOnline = () => {
                           { id: "highlights", label: "Key Highlights" },
                           { id: "admission-dates", label: "Admission & Exam Details" },
                           { id: "admission-process", label: "Admission Process" },
-                          { id: "sessions", label: "Upcoming Session" },
+                     
                           { id: "placement-partners", label: "Placement Partners" },
                           { id: "faq", label: "Student Reviews & FAQ" },
                           { id: "conclusion", label: "Conclusion" }
@@ -428,6 +451,16 @@ const LpuOnline = () => {
                           </button>
                         </li>
                       ))}
+                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
+                  <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  >
+                  Apply Now
+                
+                 </Button>
+                 </div>
                     </ul>
                   </motion.aside>
                 </>
@@ -572,6 +605,19 @@ const LpuOnline = () => {
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black-600 leading-relaxed">
              Students choosing LPU Online benefit from a digital learning that enhances flexibility, engagement, and skill development. As one of the recognized MBA colleges in Punjab, the institution offers programs that prepare learners for leadership roles in business, technology, and management. With LPU Online, students from across India gain access to world-class education that can be pursued anytime, anywhere — whether they are professionals looking for online degrees in Jalandhar or students searching for top online courses near me.     </p>
           </div>
+
+          {/* CTA Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
+                  <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  >
+                  Apply Now
+                
+                 </Button>
+                 </div>
+
           <div className="max-w-7xl mx-auto px-4 md:px-8  md:pt-15">
     {/* Heading */}
     <div className="text-center mb-12 ">
@@ -596,7 +642,16 @@ const LpuOnline = () => {
       </p>
     </div>
   </div>
-
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
+                  <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  >
+                  Apply Now
+                
+                 </Button>
+                 </div>
   {/* Academic Excellence Section */}
   <div className="max-w-7xl mx-auto px-4 md:px-8 mt-20">
     <div className="text-center mb-12">
@@ -727,6 +782,16 @@ const LpuOnline = () => {
         
       </div>
     </section>
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
+                  <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  >
+                  Apply Now
+                
+                 </Button>
+                 </div>
          <section className="bg-white py-16 px-6 md:px-20">
   <div className="max-w-7xl mx-auto space-y-6">
     {/* Section Header */}
@@ -830,6 +895,17 @@ const LpuOnline = () => {
     </div>
   </div>
 </section>
+
+  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
+                  <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  >
+                  Apply Now
+                
+                 </Button>
+                 </div>
 
         {/* Enhanced Statistics Section */}
         <section id="" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-orange-50 via-white to-yellow-50">
@@ -962,6 +1038,17 @@ const LpuOnline = () => {
           </div>
         </section>
 
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
+                  <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  >
+                  Apply Now
+                
+                 </Button>
+                 </div>
+
         {/* Professional Rankings & Accreditation Section */}
         <section id="accreditations" className="py-16 bg-white ">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1008,8 +1095,19 @@ const LpuOnline = () => {
           </div>
         </section>
 
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
+                  <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  >
+                  Apply Now
+                
+                 </Button>
+                 </div>
+
         {/* Why Choose Lovely Professional University */}
-        <section className="relative py-20 bg-[#0B0B10] text-white overflow-hidden"> 
+        <section className="relative py-20 bg-[#0B0B10] text-white overflow-hidden mt-10"> 
           {/* Subtle grid pattern */}
           <div className="pointer-events-none absolute inset-0 opacity-[0.08]" style={{backgroundImage:"linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)", backgroundSize:"40px 40px"}} />
 
@@ -1258,6 +1356,17 @@ const LpuOnline = () => {
   
           </div>
         </section>
+
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
+                  <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  >
+                  Apply Now
+                
+                 </Button>
+                 </div>
         {/*key highlight*/}
        <section className="bg-gradient-to-b from-white to-blue-50 py-6 px-6 md:px-20">
   <div className="max-w-7xl mx-auto text-center">
@@ -1337,6 +1446,17 @@ const LpuOnline = () => {
   </div>
 </section>
 
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
+                  <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  >
+                  Apply Now
+                
+                 </Button>
+                 </div>
+
 
         {/* Lpu Advantage */}
         <section id="Scholarship" className="relative py-20 bg-gradient-to-br from-orange-50 via-white to-blue-50">
@@ -1380,6 +1500,17 @@ const LpuOnline = () => {
           </div>
         </section>
 
+                                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
+                  <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  >
+                  Apply Now
+                
+                 </Button>
+                 </div>
+
         {/* Why Choose Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1408,7 +1539,16 @@ const LpuOnline = () => {
             </div>
           </div>
         </section>
-
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
+                  <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  >
+                  Apply Now
+                
+                 </Button>
+                 </div>
         {/* Admission Procedure Section */}
         <section id="admission-process" className="relative py-20 bg-white"> 
           {/* Decorative Blobs */}
@@ -1494,6 +1634,17 @@ const LpuOnline = () => {
             </motion.div>
           </div>
         </section>
+
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
+                  <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  >
+                  Apply Now
+                
+                 </Button>
+                 </div>
         {/* This section seems to be a duplicate of the one above, I'll remove it to avoid redundancy */}
                   {/* ===================== LPU Admission & Exam Section ===================== */}
 <section id="admission-dates" className="bg-white py-12 px-4 sm:px-6 lg:px-8">
@@ -1536,6 +1687,17 @@ const LpuOnline = () => {
       </ul>
     </article>
 
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
+                  <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  >
+                  Apply Now
+                
+                 </Button>
+                 </div>
+
     {/* ===== About LPU Online ===== */}
     <article id="sessions" className="bg-gray-50 border-l-4 border-gray-500 p-4 sm:p-6 rounded-xl mb-6 sm:mb-10 shadow-md">
       <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2 sm:mb-3">About LPU Online Programs</h3>
@@ -1547,7 +1709,16 @@ const LpuOnline = () => {
       </ul>
     </article>
 
-  
+    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
+                  <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  >
+                  Apply Now
+                
+                 </Button>
+                 </div>
   </div>
 </section> 
 
@@ -1583,7 +1754,16 @@ const LpuOnline = () => {
             </div>
           </div>
         </section>
-        
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
+                  <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  >
+                  Apply Now
+                
+                 </Button>
+                 </div>
         <section id="faq" className="max-w-6xl mx-auto px-4 py-16">
   {/* Placement Record Section */}
   <div className="bg-gradient-to-b from-orange-50 to-white rounded-2xl shadow-md p-8 sm:p-12 mb-16 text-center">
@@ -1683,6 +1863,17 @@ const LpuOnline = () => {
           </div>
         </section>
 
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
+                  <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  >
+                  Apply Now
+                
+                 </Button>
+                 </div>
+
         {/* Professional FAQ Section */}
         <section id="" className="py-20 bg-white "> 
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1719,6 +1910,16 @@ const LpuOnline = () => {
               ))}
             </div>
           </div>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
+                  <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  >
+                  Apply Now
+                
+                 </Button>
+                 </div>
         </section>
           
         {/* Professional Hiring Partners Section */} 

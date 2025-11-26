@@ -1401,7 +1401,7 @@ useEffect(() => {
                         A program built for tech enthusiasts and professionals looking to enhance their software development and data analytics skills.
                       </p>
                        <div>
-                       <Link href="/manipal">
+                       <Link href="/muj-online-mca">
                        <button className="px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-700 transition-all duration-300 cursor-pointer">
                        More Information
                        </button>

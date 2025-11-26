@@ -3,7 +3,8 @@ export const metadata = {
   description:
     "Get details about UGC-approved Online BA from Manipal University Jaipur — eligibility, specializations, fees, and flexible digital learning. NAAC A+ accredited university.",
   keywords:
-    "Manipal Online BA, MUJ BA Online, Bachelor of Arts, Online BA, UGC Approved BA, NAAC A+ BA",
+    "Manipal Online BA, Online BA Degree India, Best Online BA Program, UGC Approved BA Online, Manipal University Jaipur BA, Online Manipal BA Fees, Manipal Online BA Syllabus, Is Manipal Online BA Good, BA Online Course India, Top Online BA Colleges India, Distance vs Online BA, BA English Online Manipal, BA Psychology Online Manipal"
+,
   metadataBase: new URL("https://unifostedu.com"),
   alternates: {
     canonical: "https://unifostedu.com/muj-online-ba",

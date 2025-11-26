@@ -15,6 +15,8 @@ import {
   FaBriefcase,
   FaClipboardCheck,
   FaChalkboardTeacher,
+  FaTimes,
+  FaBars,
 } from "react-icons/fa";
 import * as Tabs from '@radix-ui/react-tabs';
 import { Button } from '@/components/ui/button';
@@ -26,21 +28,61 @@ import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 
+const SECTION_ITEMS = [
+  { id: "Introduction", label: "Introduction" },
+  { id: "AboutUs", label: "About Us" },
+  { id: "WhyChoose", label: "Why Choose UU Online" },
+  { id: "CampusTour", label: "Campus Tour" },
+  { id: "ExploreCourses", label: "Explore Online Courses" },
+  { id: "KeyHighlights", label: "Key Highlights" },
+  { id: "AdmissionDates", label: "Admission Dates" },
+  { id: "FeeStructures", label: "Fee Structures" },
+  { id: "AdmissionProcess", label: "Admission Process" },
+  { id: "UpcomingSessions", label: "Upcoming Sessions" },
+  { id: "PlacementPartners", label: "Placement Partners" },
+  { id: "PlacementRecords", label: "Placement Records" },
+  { id: "StudentReviews", label: "Student Reviews" },
+  { id: "FAQs", label: "FAQs" },
+];
+
 const UttaranchalUniversity = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeTab, setActiveTab] = useState('all');
   const [openModal, setOpenModal] = useState(null);
   const [openIndex, setOpenIndex] = useState(null);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('Introduction');
   useEffect(() => {
-       
- 
-       const timer= setTimeout(()=>{
-        setOpenModal(true)
-       },3000)
-       return () => clearTimeout(timer);
- 
-        
- },[])
+    const timer = setTimeout(() => {
+      setOpenModal({ type: 'apply' });
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = SECTION_ITEMS.map(item => document.getElementById(item.id)).filter(Boolean);
+      const scrollPosition = window.scrollY + 2;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        if (sections[i].offsetTop <= scrollPosition) {
+          setActiveSection(SECTION_ITEMS[i].id);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleSectionNavigation = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setIsSidebarOpen(false);
+    }
+  };
   const sliderImages = [
     'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327865/uu_banner_z4cs2w.webp',
     'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327866/uu_banner1_n54uyp.webp',
@@ -134,44 +176,44 @@ const UttaranchalUniversity = () => {
 
   const faqData = [
     {
-      question: "Is Uttaranchal University Online degree valid and recognized?",
-      answer: "Yes, Uttaranchal University Online degrees are UGC-approved and NAAC accredited. They hold the same value as regular degrees and are recognized by employers globally and for higher education.",
+      question: "What is Uttaranchal University Online?",
+      answer: "Uttaranchal University Online is the digital learning platform of Uttaranchal University Dehradun. It offers flexible and affordable online degrees in Dehradun and online courses in Uttarakhand through a modern and easy-to-use online system.",
     },
     {
-      question: "What is the eligibility criteria for UU Online programs?",
-      answer: "For UG programs (BA, BBA, BCA), candidates need 10+2 pass from a recognized board. For PG programs (MBA, Executive MBA), graduation with 40% marks is required. For MCA, graduation in CS/IT or with Mathematics background is needed.",
+      question: "Are the online degrees valid?",
+      answer: "Yes. All programs are UGC-approved and offered by a NAAC A+ university online. This makes every degree from Uttaranchal University Online valid for jobs, higher studies, and government exams across India.",
     },
     {
-      question: "What is the fee structure for Uttaranchal University Online courses?",
-      answer: "BA costs ₹72,000, BBA costs ₹1,20,000, BCA costs ₹1,20,000, MBA costs ₹1,40,000, Executive MBA costs ₹1,40,000, and MCA costs ₹1,20,000. Fees can be paid in installments.",
+      question: "Which courses are available online?",
+      answer: "You can choose from many programs, including: Online MBA from Uttaranchal University, Online BBA from Uttaranchal University, Online BCA from Uttaranchal University, Online MCA from Uttaranchal University, Online MCom from Uttaranchal University, and Online BA from Uttaranchal University. These are among the most trusted online degrees in Dehradun and online courses in Uttarakhand.",
     },
     {
-      question: "Can I work while studying at UU Online?",
-      answer: "Absolutely! UU Online programs are designed for working professionals with flexible learning schedules, recorded sessions, and weekend classes allowing you to balance work and studies effectively.",
+      question: "Is Uttaranchal University Online affordable?",
+      answer: "Yes. The university offers affordable online degrees in India with flexible EMIs, making quality education accessible for students from all backgrounds.",
     },
     {
-      question: "Does Uttaranchal University Online provide placement assistance?",
-      answer: "Yes, UU Online offers comprehensive career services including resume building, interview preparation, placement assistance, and access to job opportunities through their strong industry network with 100+ corporate partners.",
+      question: "Is this the best online university in Dehradun?",
+      answer: "Many students consider Uttaranchal University Online one of the best online university in Dehradun because of its NAAC A+ accreditation, strong academics, and flexible learning system.",
     },
     {
-      question: "What is the mode of examination for UU Online students?",
-      answer: "All examinations and assessments are conducted online through UU's secure Learning Management System (LMS). Students can take exams from anywhere with proper proctoring and monitoring.",
+      question: "Is it a top online university in Uttarakhand?",
+      answer: "Yes. With high-quality teaching and modern digital tools, the university is widely regarded as a top online university in Uttarakhand.",
     },
     {
-      question: "How are classes conducted in UU Online programs?",
-      answer: "Classes are conducted through interactive live sessions with faculty and pre-recorded video lectures. Students get 24/7 access to comprehensive study materials, e-books, assignments, and online labs through the LMS.",
+      question: "What are the job opportunities after Online MBA?",
+      answer: "There are excellent job opportunities after online MBA from Uttaranchal University. Students can pursue careers in management, HR, marketing, finance, operations, and leadership roles across industries.",
     },
     {
-      question: "What makes Uttaranchal University Online different from other universities?",
-      answer: "UU Online stands out with its UGC & NAAC recognition, 50,000+ students, expert faculty with industry experience, advanced digital platform, 24/7 learning resources, strong placement support, and globally recognized degrees.",
+      question: "Can working professionals apply?",
+      answer: "Absolutely. All programs like the Online MBA, Online MCA, and Online BBA from Uttaranchal University are designed for flexible learning, making them perfect for working professionals.",
     },
     {
-      question: "What specializations are available in MBA program?",
-      answer: "MBA program offers 8 specializations: Marketing, Digital Marketing, Human Resource, Business Analytics, Finance, International Business, IT Management, and Logistics & Supply Chain Management.",
+      question: "How do I apply for admission?",
+      answer: "You can apply directly on the Uttaranchal University Online portal. Choose your course, upload documents, pay the fee, and get quick admission confirmation.",
     },
     {
-      question: "Is there any entrance exam for admission to UU Online programs?",
-      answer: "For most programs, admission is based on qualifying examination marks. However, candidates with below 40% marks in graduation need to clear an eligibility test for MBA programs.",
+      question: "Is the degree recognized across India?",
+      answer: "Yes. Degrees from Uttaranchal University Dehradun are recognized nationally, making it a respected top online university in India for online education.",
     },
   ];
 
@@ -199,6 +241,13 @@ const UttaranchalUniversity = () => {
         body { 
           overflow-x: hidden; 
         }
+        .sidebar-hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .sidebar-hide-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+        }
       `}</style>
 
       <div className="uu-font overflow-x-hidden">
@@ -207,6 +256,13 @@ const UttaranchalUniversity = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16 lg:h-20">
               <div className="flex items-center gap-2 lg:gap-4">
+                <button
+                  onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                  className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+                  aria-label="Toggle menu"
+                >
+                  <FaBars size={20} />
+                </button>
                 <img 
                   src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327867/uu_logo_bksobh.webp" 
                   alt="Uttaranchal University Logo" 
@@ -243,6 +299,65 @@ const UttaranchalUniversity = () => {
           </div>
         </header>
 
+        {/* Mobile Sidebar Overlay */}
+        {isSidebarOpen && (
+          <div
+            className="fixed inset-0 bg-black/40 z-40 lg:hidden"
+            onClick={() => setIsSidebarOpen(false)}
+          />
+        )}
+
+        {/* Sidebar Navigation */}
+        <aside
+          className={`fixed top-16 lg:top-20 left-0 h-[calc(100vh-4rem)] lg:h-[calc(100vh-5rem)] w-64 px-4 py-6 border-r border-gray-200 bg-white shadow-sm z-50 transition-transform duration-300 ease-in-out transform ${
+            isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+          } lg:translate-x-0 lg:block lg:shadow-none lg:z-40 overflow-y-auto sidebar-hide-scrollbar`}
+        >
+          <div className="flex items-center justify-between pb-4 border-b">
+            <h3 className="text-lg font-semibold text-gray-900">Page Contents</h3>
+            <button
+              className="text-gray-500 hover:text-gray-700 lg:hidden"
+              onClick={() => setIsSidebarOpen(false)}
+              aria-label="Close menu"
+            >
+              <FaTimes size={18} />
+            </button>
+          </div>
+          <nav className="mt-4 space-y-2 overflow-y-auto h-[calc(100%-12rem)] pr-2 sidebar-hide-scrollbar">
+            {SECTION_ITEMS.map((item) => { 
+              const isActive = activeSection === item.id;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => handleSectionNavigation(item.id)}
+                  className={`w-full text-left text-sm transition-colors rounded-md px-3 py-2 ${
+                    isActive
+                      ? "text-blue-600 bg-blue-50 font-semibold"
+                      : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              );
+            })}
+          </nav>
+          <div className="mt-6 border-t pt-4 space-y-3">
+            <div className='flex justify-center'>
+            <button
+              onClick={() => {
+                setOpenModal({ type: 'apply' });
+                setIsSidebarOpen(false);
+              }}
+              className="w-30 px bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2.5 rounded-full shadow-sm transition-all duration-300 cursor-pointer"
+            >
+              Apply Now
+            </button>
+           </div>
+          </div>
+        </aside>
+
+        {/* Main Content Area */}
+        <main className="lg:pl-64">
         {/* Image Slider Section */}
         <section id='Home' className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden mt-16">
           <AnimatePresence initial={false}>
@@ -280,34 +395,407 @@ const UttaranchalUniversity = () => {
           </div>
         </section>
 
-        {/* Hero Section */}
-        <HeroSection
-          universityName="About Uttaranchal University Online"
-          universityNameClass="text-blue-700"
-          location="Dehradun, Uttarakhand, India"
-          type="Private University"
-          nirfRank="100+" 
-          rating="4.1/5"
-          description="UGC Recognized Programs | Global Learning Community | Industry-Relevant Curriculum"
-          description2={`
-            Uttaranchal University offers world-class online education designed for working professionals 
-            and students seeking flexible learning options. Our programs combine academic excellence with 
-            practical skills to prepare you for success in today's competitive job market. With 50,000+ students, 
-            200+ expert faculty, and 100+ corporate partners, UU is your gateway to a bright future.
-          `}
-          badgeText="UGC Approved | 50K+ Students | 100+ Corporate Partners"
-          imgSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp"
-          imgAlt="Uttaranchal University Campus"
-          students="50,000+"
-          partners="100+"
-          campus="Dehradun Campus"
-          highlights={[
-            { icon: <FaBookOpen className="text-blue-600" />, text: "Industry-Relevant Curriculum" },
-            { icon: <FaUserTie className="text-blue-600" />, text: "Expert Faculty" },
-            { icon: <FaBriefcase className="text-blue-600" />, text: "100% Placement Assistance" },
-            { icon: <FaClipboardCheck className="text-blue-600" />, text: "UGC Recognized Degrees" },
-          ]}
-        />
+        {/* Introduction Section */}
+        <section id="Introduction" className="py-12 sm:py-16 lg:py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="prose prose-lg max-w-none"
+            >
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Uttaranchal University Online – Introduction
+              </h1>
+              <div className="text-gray-700 space-y-4 text-base sm:text-lg leading-relaxed">
+                <p>
+                  Uttaranchal University Online is one of the fastest-growing and most trusted platforms for online education in India. It is built on the strong academic base of Uttaranchal University Dehradun, a well-known institution in Uttarakhand. Through Uttaranchal University Online, students from any city can study from home without leaving their job, family, or responsibilities. This is why many learners prefer it when searching for online degrees in Dehradun, online courses in Uttarakhand, or recognized online programs across India.
+                </p>
+                <p>
+                  Located in the beautiful surroundings of Uttarakhand, Uttaranchal University Dehradun has a long history of offering excellent education. Today, through Uttaranchal University Online, the same quality is delivered in a simple, flexible, and affordable format. Many students call it the best online university in Dehradun because it offers a wide range of programs, expert teachers, and an easy-to-use digital platform. Whether you want to study business, technology, commerce, or arts, the university provides some of the best online degrees in Dehradun.
+                </p>
+                <p>
+                  As a top online university in Uttarakhand, Uttaranchal University Uttarakhand is known for high-quality learning and strong academic values. The university offers many popular online programs such as:
+                </p>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>Online MBA from Uttaranchal University</li>
+                  <li>Online BBA from Uttaranchal University</li>
+                  <li>Online BCA from Uttaranchal University</li>
+                  <li>Online MCA from Uttaranchal University</li>
+                  <li>Online MCom from Uttaranchal University</li>
+                  <li>Online BA from Uttaranchal University</li>
+                </ul>
+                <p>
+                  Students across India trust these programs because they are updated, industry-ready, and designed to help them build strong careers.
+                </p>
+                <p>
+                  The university is also a NAAC A+ university online, which shows its high academic standards. Being a top online university in India, Uttaranchal University Dehradun maintains strong teaching methods, practical learning, and a modern online platform. Students who join Uttaranchal University Online get degrees recognized by employers and respected for their value.
+                </p>
+                <p>
+                  Another strong reason students prefer this university is its affordable online degrees in India. Many universities charge very high fees for online programs, but Uttaranchal University Online keeps its fees affordable so students from all backgrounds can study easily. Whether you choose the Online MBA from Uttaranchal University or the Online BCA from Uttaranchal University, affordability is always a big advantage.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+          <div className="mt-6 border-t pt-4 space-y-3">
+            <div className='flex justify-center'>
+            <button
+              onClick={() => {
+                setOpenModal({ type: 'apply' });
+                setIsSidebarOpen(false);
+              }}
+              className="w-30 px bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2.5 rounded-full shadow-sm transition-all duration-300 cursor-pointer"
+            >
+              Apply Now
+            </button>
+           
+           </div>
+          </div>
+        </section>
+
+        {/* About Us Section */}
+        <section id="AboutUs" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                 About Us – Uttaranchal University Online
+              </h2>
+              <div className="text-gray-700 space-y-4 text-base sm:text-lg leading-relaxed">
+                <p>
+                  Uttaranchal University Online is the digital learning platform of Uttaranchal University Dehradun, one of the most respected universities in Uttarakhand. The main aim of Uttaranchal University Online is to offer high-quality, flexible, and career-focused education to every student—whether they live in large cities or small rural towns. As a NAAC A+ university online, the university offers programs that match global education standards.
+                </p>
+                <p>
+                  Students choose Uttaranchal University Online because it uses the best digital tools, experienced teachers, and a simple learning system. All the online degrees in Dehradun offered here maintain the same quality as the on-campus programs. Whether it is the Online MBA from Uttaranchal University or the Online BBA from Uttaranchal University, each program is created by experts who understand industry needs.
+                </p>
+                <p>
+                  As a top online university in Uttarakhand, Uttaranchal University Uttarakhand ensures that learning is smooth and accessible. Students can join live classes, watch recorded sessions, download study materials, and attempt exams online. This makes it easy for working professionals, homemakers, or busy students to continue their education.
+                </p>
+                <p>
+                  The university offers many programs, including:
+                </p>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>Online MBA from Uttaranchal University</li>
+                  <li>Online BBA from Uttaranchal University</li>
+                  <li>Online BCA from Uttaranchal University</li>
+                  <li>Online MCA from Uttaranchal University</li>
+                  <li>Online MCom from Uttaranchal University</li>
+                  <li>Online BA from Uttaranchal University</li>
+                </ul>
+                <p>
+                  These courses are among the most preferred online courses in Uttarakhand, and thousands of students choose them every year.
+                </p>
+                <p>
+                  Because of its strong academic background, many students see Uttaranchal University Online as a top online university in India. It is also a popular choice for people searching for affordable online degrees in India, as the fees are reasonable and the quality is high. The degrees earned here are accepted by employers and universities, making them valuable for career growth.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+          <div className="mt-6 border-t pt-4 space-y-3">
+            <div className='flex justify-center'>
+            <button
+              onClick={() => {
+                setOpenModal({ type: 'apply' });
+                setIsSidebarOpen(false);
+              }}
+              className="w-30 px bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2.5 rounded-full shadow-sm transition-all duration-300 cursor-pointer"
+            >
+              Apply Now
+            </button>
+          </div>
+          </div>
+        </section>
+
+        {/* Why Choose Section */}
+        <section id="WhyChoose" className="py-12 sm:py-16 lg:py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                 Why Choose Uttaranchal University Online?
+              </h2>
+              <div className="text-gray-700 space-y-6 text-base sm:text-lg leading-relaxed">
+                <div>
+                  <h3 className="text-xl font-semibold text-blue-700 mb-2"> NAAC A+ University Online</h3>
+                  <p>
+                    Uttaranchal University Dehradun is graded NAAC A+, which means it meets very high academic standards. Degrees earned through Uttaranchal University Online are respected and globally accepted.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-blue-700 mb-2"> Best Online University in Dehradun</h3>
+                  <p>
+                    Students call it the best online university in Dehradun because it provides strong academics, good faculty, and a modern learning system that is easy to use.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-blue-700 mb-2"> Top Online University in Uttarakhand</h3>
+                  <p>
+                    Students across the state trust Uttaranchal University Uttarakhand as a top online university in Uttarakhand due to its excellent online education setup.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-blue-700 mb-2"> Wide Range of Online Degrees in Dehradun</h3>
+                  <p>You can choose from many programs:</p>
+                  <ul className="list-disc list-inside space-y-2 ml-4 mt-2">
+                    <li>Online MBA from Uttaranchal University</li>
+                    <li>Online BBA from Uttaranchal University</li>
+                    <li>Online BCA from Uttaranchal University</li>
+                    <li>Online MCA from Uttaranchal University</li>
+                    <li>Online MCom from Uttaranchal University</li>
+                    <li>Online BA from Uttaranchal University</li>
+                  </ul>
+                  <p className="mt-2">These are among the most popular online degrees in Dehradun and online courses in Uttarakhand.</p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-blue-700 mb-2"> Job Opportunities After Online MBA</h3>
+                  <p>
+                    One major benefit is the strong job opportunities after online MBA. The Online MBA from Uttaranchal University prepares students for leadership, management, and corporate careers.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-blue-700 mb-2"> Affordable Online Degrees in India</h3>
+                  <p>
+                    Many students choose this university because it offers truly affordable online degrees in India with flexible fee payment options.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-blue-700 mb-2"> Top Online University in India</h3>
+                  <p>
+                    Because of its teaching quality and online learning system, the university is seen as a top online university in India.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-blue-700 mb-2"> Modern and Easy Learning</h3>
+                  <p>
+                    Students get live classes, recordings, online notes, quizzes, and online exams, making Uttaranchal University Online one of the most advanced online courses in Uttarakhand.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-blue-700 mb-2"> Strong Support from Teachers</h3>
+                  <p>
+                    Faculty from Uttaranchal University Dehradun support students throughout their learning journey. Whether you choose the Online MBA, Online BCA, or Online MCom from Uttaranchal University, you receive full academic guidance.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-blue-700 mb-2"> Study Anytime, Anywhere</h3>
+                  <p>
+                    Students can study from home, office, or any location. This flexibility makes Uttaranchal University Uttarakhand a top choice for working professionals.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Campus Tour Section */}
+        <section id="CampusTour" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Campus Tour
+              </h2>
+              <div className="text-gray-700 space-y-6 text-base sm:text-lg leading-relaxed">
+                <p>
+                  Step into the world of Uttaranchal University Online, where digital learning connects with the beautiful and modern campus of Uttaranchal University Dehradun. Even when you study from home, the energy, quality, and learning environment of the real campus are a big part of your journey. This mix of nature, innovation, and strong academics makes the university one of the best online university in Dehradun, a top online university in Uttarakhand, and a growing top online university in India.
+                </p>
+                
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-700 mb-4">Experience the Campus Atmosphere</h3>
+                  <p>
+                    The real campus of Uttaranchal University Uttarakhand is surrounded by the natural beauty of Dehradun. When you imagine walking through the campus, you see:
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 ml-4 mt-2">
+                    <li>Green lawns and peaceful surroundings</li>
+                    <li>Modern buildings with smart classrooms</li>
+                    <li>Creative spaces that encourage new ideas</li>
+                    <li>Faculty areas where teachers prepare online lessons</li>
+                    <li>A calm and motivating environment for all students</li>
+                  </ul>
+                  <p className="mt-2">
+                    These campus spaces help create the learning experience you enjoy through Uttaranchal University Online, even if you study from home through online degrees in Dehradun.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-700 mb-4">Smart Classrooms & Digital Learning Studios</h3>
+                  <p>
+                    Many online programs—like the Online MBA from Uttaranchal University, Online BBA from Uttaranchal University, and Online BA from Uttaranchal University—are supported by high-tech classrooms and studios on campus.
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 ml-4 mt-2">
+                    <li>Smart screens and digital boards</li>
+                    <li>Special studios for online teaching</li>
+                    <li>High-quality audio and video tools</li>
+                    <li>Modern interactive technology</li>
+                  </ul>
+                  <p className="mt-2">
+                    These tools support all online programs, including the Online BCA from Uttaranchal University, Online MCA from Uttaranchal University, and Online MCom from Uttaranchal University.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-700 mb-4">Advanced Computer Labs</h3>
+                  <p>
+                    The campus has advanced computer labs that help students in IT-based programs.
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 ml-4 mt-2">
+                    <li>Latest and updated software</li>
+                    <li>High-speed systems for coding</li>
+                    <li>Lab support for online learners</li>
+                    <li>Useful tools for BCA, MCA, and MCom courses</li>
+                  </ul>
+                  <p className="mt-2">
+                    This gives online learners practical knowledge, even while they study from home.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-700 mb-4">Digital Library & Research Spaces</h3>
+                  <p>
+                    The digital library provides thousands of resources to support all programs.
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 ml-4 mt-2">
+                    <li>E-books, journals, and research papers</li>
+                    <li>Online study materials</li>
+                    <li>Research help for the Online MBA, Online MCom, and Online BA</li>
+                    <li>24×7 digital access from anywhere in India</li>
+                  </ul>
+                  <p className="mt-2">
+                    This makes Uttaranchal University Online one of the best platforms for online degrees in Dehradun.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-700 mb-4">Virtual Campus Experience</h3>
+                  <p>
+                    Even when studying remotely, students can experience campus life through:
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 ml-4 mt-2">
+                    <li>Virtual campus tours</li>
+                    <li>Online workshops</li>
+                    <li>Live industry guest sessions</li>
+                    <li>Interactive webinars</li>
+                    <li>Student networking events</li>
+                  </ul>
+                  <p className="mt-2">
+                    These activities help Uttaranchal University Online feel like a real campus for students across India.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-700 mb-4">A NAAC A+ University Online</h3>
+                  <p>
+                    As a NAAC A+ university online, the campus shows:
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 ml-4 mt-2">
+                    <li>High academic quality</li>
+                    <li>Strong academic systems</li>
+                    <li>Modern and well-built infrastructure</li>
+                    <li>A supportive and student-friendly environment</li>
+                  </ul>
+                  <p className="mt-2">
+                    These same qualities shape the digital platform, making the university a top online university in Uttarakhand and a trusted choice for affordable online degrees in India.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+          <div className='flex justify-center mt-6 border-t pt-4 space-y-3'>
+           <button
+              onClick={() => {
+                setOpenModal({ type: 'apply' });
+                setIsSidebarOpen(false);
+              }}
+              className="w-30 px bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2.5 rounded-full shadow-sm transition-all duration-300 cursor-pointer"
+            >
+              Apply Now
+            </button>
+            </div>
+        </section>
+
+        {/* Explore Online Courses Section */}
+        <section id="ExploreCourses" className="py-12 sm:py-16 lg:py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Explore Online Courses
+              </h2>
+              <div className="text-gray-700 space-y-6 text-base sm:text-lg leading-relaxed mb-8">
+                <p>
+                  At Uttaranchal University Online, you get modern and flexible learning that helps you build a strong future. Whether you want to study business, technology, or humanities, the university offers many online courses in Uttarakhand that match your goals. With the support of Uttaranchal University Dehradun, all programs are credible online degrees in Dehradun, backed by the trust of a NAAC A+ university online and a top online university in India.
+                </p>
+                
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-700 mb-4"> What Programs Are Available?</h3>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-xl font-semibold text-gray-800 mb-3">Undergraduate Courses</h4>
+                    <ul className="list-disc list-inside space-y-2 ml-4">
+                      <li><strong>Online BBA from Uttaranchal University</strong> – A popular business program that gives you a strong foundation. It is known as one of the best online BBA in Dehradun and across Uttarakhand.</li>
+                      <li><strong>Online BCA from Uttaranchal University</strong> – Great for students who enjoy technology. Through CU Online BCA admission, you learn programming, databases, and IT basics.</li>
+                      <li><strong>Online BA from Uttaranchal University</strong> – Perfect for students interested in arts, communication, or humanities with a flexible study schedule.</li>
+                      <li><strong>Other online degrees in Dehradun</strong> – Includes commerce and related subjects for students who want more options.</li>
+                    </ul>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="text-xl font-semibold text-gray-800 mb-3">Postgraduate / Advanced Courses</h4>
+                    <ul className="list-disc list-inside space-y-2 ml-4">
+                      <li><strong>Online MBA from Uttaranchal University</strong> – A top program for future leaders. It is known as one of the best online MBA in Uttarakhand and offers industry projects, leadership training, and great job opportunities after online MBA.</li>
+                      <li><strong>Online MCA from Uttaranchal University</strong> – Ideal for tech lovers and considered one of the best programs for IT career growth.</li>
+                      <li><strong>Online MCom from Uttaranchal University</strong> – Suitable for students who want to grow in commerce, finance, and business analytics.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-700 mb-4"> Why These Programs Stand Out</h3>
+                  <ul className="list-disc list-inside space-y-2 ml-4">
+                    <li>Fully online and accessible from anywhere, making it one of the best online university in Dehradun.</li>
+                    <li>Designed by experienced teachers from Uttaranchal University Dehradun, a top online university in Uttarakhand.</li>
+                    <li>All programs are UGC approved online degrees Uttaranchal University.</li>
+                    <li>Flexible learning with live classes, recorded sessions, and online discussion forums.</li>
+                    <li>Wide range of subjects from business to technology, offering something for everyone.</li>
+                    <li>Career-focused programs that match the current job market.</li>
+                    <li>Affordable fees, offering truly affordable online degrees in India.</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-700 mb-4"> How to Get Started</h3>
+                  <ol className="list-decimal list-inside space-y-2 ml-4">
+                    <li><strong>Choose your course</strong> – Business (BBA, MBA), tech (BCA, MCA), or arts (BA) at Uttaranchal University Online.</li>
+                    <li><strong>Submit your application</strong> – Enroll in one of the online courses in Uttarakhand and complete your registration.</li>
+                    <li><strong>Study online</strong> – Join live classes or watch recordings, submit assignments, and participate in discussions from home.</li>
+                    <li><strong>Start your career</strong> – With a degree from a top online university in India, you'll be ready for strong career opportunities, including job opportunities after online MBA.</li>
+                  </ol>
+                </div>
+
+                <p className="mt-6">
+                  Explore the wide range of programs at Uttaranchal University Online and join a learning community that values flexibility, quality, and career growth. Whether you choose the Online MBA from Uttaranchal University, Online BBA, Online BCA, Online MCA, or Online BA from Uttaranchal University, you are choosing one of the most trusted online education platforms in India.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
         {/* Courses Section with Tabs */}
         <section id='courses' className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
@@ -379,6 +867,101 @@ const UttaranchalUniversity = () => {
                 </div>
               </Tabs.Content>
             </Tabs.Root>
+          </div>
+        </section>
+
+        {/* Key Highlights Section */}
+        <section id="KeyHighlights" className="py-12 sm:py-16 lg:py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Key Highlights
+              </h2>
+              <ul className="list-disc list-inside space-y-3 text-base sm:text-lg text-gray-700 ml-4">
+                <li>A NAAC A+ university online known for quality and trust</li>
+                <li>Supported by the strong reputation of Uttaranchal University Dehradun</li>
+                <li>Offers a wide range of online degrees in Dehradun and online courses in Uttarakhand</li>
+                <li>Programs include Online MBA, Online BBA, Online BCA, Online MCA, Online MCom, and Online BA from Uttaranchal University</li>
+                <li>Recognized as a top online university in Uttarakhand and a top online university in India</li>
+              </ul>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Admission Dates Section */}
+        <section id="AdmissionDates" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Admission Dates
+              </h2>
+              <p className="text-base sm:text-lg text-gray-700">
+                Admission dates and upcoming session information will be updated here. Please contact our admission counselors for the latest information.
+              </p>
+            </motion.div>
+          </div>
+          <div className="mt-6 border-t pt-4 space-y-3">
+            <div className='flex justify-center'>
+            <button
+              onClick={() => {
+                setOpenModal({ type: 'apply' });
+                setIsSidebarOpen(false);
+              }}
+              className="w-30 px bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2.5 rounded-full shadow-sm transition-all duration-300 cursor-pointer"
+            >
+              Apply Now
+            </button>
+           </div>
+          </div>
+        </section>
+
+        {/* Fee Structures Section */}
+        <section id="FeeStructures" className="py-12 sm:py-16 lg:py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Fee Structures
+              </h2>
+              <div className="text-gray-700 space-y-4 text-base sm:text-lg leading-relaxed">
+                <p>
+                  The fee structure at Uttaranchal University Online is designed to be affordable and student-friendly, making it one of the best options for affordable online degrees in India. Whether you choose the Online MBA from Uttaranchal University, Online BBA from Uttaranchal University, or the Online BCA, Online MCA, Online MCom, or Online BA from Uttaranchal University, the university ensures every student can access quality education at a reasonable cost.
+                </p>
+                <p>
+                  As a top online university in Uttarakhand and one of the best online university in Dehradun, the institution offers transparent fees, easy EMIs, and no hidden charges. Students from across India trust Uttaranchal University Dehradun because the programs offer great value and recognized credentials.
+                </p>
+                <p>
+                  With flexible payment options, quick online fee submission, and complete clarity in pricing, Uttaranchal University Online stands out as a reliable and affordable choice for students seeking high-quality online degrees in Dehradun and online courses in Uttarakhand.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+          <div className="mt-6 border-t pt-4 space-y-3">
+            <div className='flex justify-center'>
+            <button
+              onClick={() => {
+                setOpenModal({ type: 'apply' });
+                setIsSidebarOpen(false);
+              }}
+              className="w-30 px bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2.5 rounded-full shadow-sm transition-all duration-300 cursor-pointer"
+            >
+              Apply Now
+            </button>
+           </div>
           </div>
         </section>
 
@@ -496,7 +1079,9 @@ const UttaranchalUniversity = () => {
               {
                 title: "Cutting-Edge Curriculum",
                 description: "Programs updated regularly to match latest industry trends and technologies.",
-                iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>`,
+                iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"></circle>
+                  </svg>`,
               },
               {
                 title: "Flexible Learning",
@@ -506,7 +1091,7 @@ const UttaranchalUniversity = () => {
               {
                 title: "100% Placement Support",
                 description: "Resume building, interview prep, and job placement assistance with 100+ corporate partners.",
-                iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg>`,
+                iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"> <path d="M12 2l9 4.5v11L12 22l-9-4.5v-11L12 2z"></path> </svg>`,
               },
               {
                 title: "50,000+ Students",
@@ -575,8 +1160,8 @@ const UttaranchalUniversity = () => {
           </div>
         </section>
 
-        {/* Admission Procedure */}
-        <section id='Admission' className="relative py-20 bg-white">
+        {/* Admission Process Section */}
+        <section id="AdmissionProcess" className="relative py-20 bg-white">
           <div className="absolute -top-20 -left-20 w-72 h-72 bg-blue-100 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-32 -right-32 w-72 h-72 bg-blue-100 rounded-full blur-3xl animate-pulse"></div>
                      
@@ -589,12 +1174,52 @@ const UttaranchalUniversity = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-                Admission Procedure
+                Admission Process
               </h2>
               <div className="w-24 h-1 bg-blue-600 mx-auto mb-8 rounded-full"></div>
-              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
                 A simple, transparent, and student-friendly admission process designed to help you begin your learning journey smoothly.
               </p>
+              
+              <div className="max-w-4xl mx-auto text-left space-y-6 mb-12">
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-700 mb-3">Step 1: Register Online</h3>
+                  <p className="text-gray-700">
+                    Visit the official Uttaranchal University Online portal and create your account. Choose your preferred program from the available online degrees in Dehradun and online courses in Uttarakhand.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-700 mb-3">Step 2: Fill Out the Application Form</h3>
+                  <p className="text-gray-700">
+                    Enter your personal and academic details. Upload the required documents and select programs such as the Online MBA, Online BCA, or Online MCom from Uttaranchal University.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-700 mb-3">Step 3: Pay the Application Fee</h3>
+                  <p className="text-gray-700">
+                    Make the payment online through UPI, net banking, or card. The secure process supports all programs offered by the best online university in Dehradun.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-700 mb-3">Step 4: Get Admission Confirmation</h3>
+                  <p className="text-gray-700">
+                    After verification, you will receive your official admission confirmation. You are now ready to begin your journey with a top online university in Uttarakhand and pursue affordable online degrees in India.
+                  </p>
+                </div>
+                <div className="mt-6 border-t pt-4 space-y-3">
+                  <div className='flex justify-center'>
+            <button
+              onClick={() => {
+                setOpenModal({ type: 'apply' });
+                setIsSidebarOpen(false);
+              }}
+              className="w-30 px bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2.5 rounded-full shadow-sm transition-all duration-300 cursor-pointer"
+            >
+              Apply Now
+            </button>
+           </div>
+          </div>
+              </div>
             </motion.div>
                      
             <motion.div
@@ -691,6 +1316,19 @@ const UttaranchalUniversity = () => {
                 </tbody>
               </table>
             </div>
+            <div className="mt-6 border-t pt-4 space-y-3">
+              <div className='flex justify-center'>
+            <button
+              onClick={() => {
+                setOpenModal({ type: 'apply' });
+                setIsSidebarOpen(false);
+              }}
+              className="w-30 px bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2.5 rounded-full shadow-sm transition-all duration-300 cursor-pointer"
+            >
+              Apply Now
+            </button>
+          </div>
+          </div>
           </div>
         </section>
 
@@ -723,8 +1361,195 @@ const UttaranchalUniversity = () => {
           </div>
         </section>
 
+        {/* Upcoming Sessions Section */}
+        <section id="UpcomingSessions" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Details of Upcoming Sessions
+              </h2>
+              <p className="text-base sm:text-lg text-gray-700">
+                Information about upcoming admission sessions and batch start dates will be updated here. Please contact our admission team for the latest session details.
+              </p>
+            </motion.div>
+          </div>
+          <div className="mt-6 border-t pt-4 space-y-3">
+            <div className='flex justify-center'>
+            <button
+              onClick={() => {
+                setOpenModal({ type: 'apply' });
+                setIsSidebarOpen(false);
+              }}
+              className="w-30 px bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2.5 rounded-full shadow-sm transition-all duration-300 cursor-pointer"
+            >
+              Apply Now
+            </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Placement Partners Section */}
+        <section id="PlacementPartners" className="py-12 sm:py-16 lg:py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Placement Partners
+              </h2>
+              <div className="text-gray-700 space-y-4 text-base sm:text-lg leading-relaxed mb-8">
+                <p>
+                  Uttaranchal University Online has strong connections with top national and international companies, making it one of the best online university in Dehradun and a trusted top online university in Uttarakhand for career growth. Students from programs like the Online MBA from Uttaranchal University, Online BBA, Online BCA, Online MCA, Online MCom, and Online BA from Uttaranchal University receive excellent placement support.
+                </p>
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-700 mb-4"> Top Placement Partners Include:</h3>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-4">
+                    {['Amazon', 'Wipro', 'Infosys', 'TCS', 'HCL', 'Deloitte', 'Accenture', 'Capgemini', 'Tech Mahindra', 'Cognizant', 'HDFC Bank', 'ICICI Bank', 'Aditya Birla Group'].map((company, index) => (
+                      <div key={index} className="bg-gray-50 p-4 rounded-lg text-center font-medium text-gray-700">
+                        {company}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <p className="mt-6">
+                  These companies regularly hire graduates because Uttaranchal University Dehradun offers strong academic training, practical learning, and industry-aligned online courses in Uttarakhand. The university also provides resume support, interview preparation, and career guidance, helping students achieve great job opportunities after online MBA and other programs.
+                </p>
+                <p>
+                  With recognized and affordable online degrees in India, Uttaranchal University Online prepares students for real corporate success.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+          <div className="mt-6 border-t pt-4 space-y-3">
+            <div className='flex justify-center'>
+            <button
+              onClick={() => {
+                setOpenModal({ type: 'apply' });
+                setIsSidebarOpen(false);
+              }}
+              className="w-30 px bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2.5 rounded-full shadow-sm transition-all duration-300 cursor-pointer"
+            >
+              Apply Now
+            </button>
+          </div>
+          </div>
+        </section>
+
+        {/* Placement Records Section */}
+        <section id="PlacementRecords" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Placement Records
+              </h2>
+              <div className="text-gray-700 space-y-4 text-base sm:text-lg leading-relaxed">
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-700 mb-4">Key Placement Highlights</h3>
+                  <ul className="list-disc list-inside space-y-2 ml-4">
+                    <li>Over 2356+ students placed in recent years.</li>
+                    <li>More than 750 recruiters visited campus and digital platforms.</li>
+                    <li>Highest package reached up to INR 1.5 Crore for some students.</li>
+                    <li>Strong career opportunities reported for students after programs like the Online MBA from Uttaranchal University and more.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-700 mb-4">Why this Matters</h3>
+                  <p>
+                    By choosing Uttaranchal University Online and one of its UGC approved online degrees, students get recognized qualifications plus access to meaningful job outcomes. As a platform associated with a NAAC A+ university online, the institution supports students in building strong professional futures through its affordable online degrees in India model.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+          <div className="mt-6 border-t pt-4 space-y-3">
+            <div className='flex justify-center'>
+              
+            <button
+              onClick={() => {
+                setOpenModal({ type: 'apply' });
+                setIsSidebarOpen(false);
+              }}
+              className="w-30 px bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2.5 rounded-full shadow-sm transition-all duration-300 cursor-pointer"
+            >
+              Apply Now
+            </button>
+
+           </div>
+          </div>
+        </section>
+
+        {/* Student Reviews Section */}
+        <section id="StudentReviews" className="py-12 sm:py-16 lg:py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Student Reviews
+              </h2>
+              <div className="space-y-8">
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-blue-700 mb-2">Riya Gupta – Online MBA Student</h3>
+                  <p className="text-gray-700 italic">
+                    "I chose the Online MBA from Uttaranchal University because I wanted flexibility and quality. With Uttaranchal University Online, I can study from home and still get excellent teaching. The platform is user-friendly and the faculty is very supportive. It is definitely one of the best online university in Dehradun for my career goals."
+                  </p>
+                </div>
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-blue-700 mb-2"> Aman Verma – Online BBA Student</h3>
+                  <p className="text-gray-700 italic">
+                    "The Online BBA from Uttaranchal University gave me a strong business foundation. I learned marketing, finance, and entrepreneurship with interactive sessions through online degrees in Dehradun. I feel confident choosing this program from one of the top online university in Uttarakhand."
+                  </p>
+                </div>
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-blue-700 mb-2"> Simran Kaur – Online BCA Student</h3>
+                  <p className="text-gray-700 italic">
+                    "I applied through Online BCA from Uttaranchal University and the Uttaranchal University Online experience has been great. The labs, digital resources, and practical lessons helped me understand IT and coding well. It is a smart choice for online courses in Uttarakhand."
+                  </p>
+                </div>
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-blue-700 mb-2"> Mohit Singh – Online MCA Student</h3>
+                  <p className="text-gray-700 italic">
+                    "Studying Online MCA from Uttaranchal University was perfect for me. I work full-time and needed something flexible. With this NAAC A+ university online, I get good quality, and I see real job skills being taught. It's one of the most trusted top online university in India for tech courses."
+                  </p>
+                </div>
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-blue-700 mb-2"> Neha Sharma – Online MCom Student</h3>
+                  <p className="text-gray-700 italic">
+                    "The Online MCom from Uttaranchal University is strong in commerce topics. The online learning system of Uttaranchal University Online made it easy to study from home while working. Good value for money and nearly as good as a campus degree."
+                  </p>
+                </div>
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-blue-700 mb-2"> Ravi Patel – Online BA Student</h3>
+                  <p className="text-gray-700 italic">
+                    "I chose the Online BA from Uttaranchal University because I wanted flexibility. The sessions were simple, recorded so I could watch later. With the reputation of Uttaranchal University Dehradun, I felt secure about my decision for an affordable online degree in India."
+                  </p>
+                </div>
+              </div>
+              <p className="mt-8 text-gray-700">
+                These reviews show how Uttaranchal University Online successfully delivers quality learning, flexibility, and recognized degrees for students across India. Whether you pick the Online MBA, Online BBA, Online BCA, Online MCA, Online MCom, or Online BA, you join one of the best platforms for modern online education.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
         {/* FAQ Section */}
-        <section id='Faq' className="py-12 sm:py-16 lg:py-20 bg-white">
+        <section id="FAQs" className="py-12 sm:py-16 lg:py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
@@ -757,6 +1582,19 @@ const UttaranchalUniversity = () => {
                   )}
                 </div>
               ))}
+            </div>
+          </div>
+          <div className="mt-6 border-t pt-4 space-y-3">
+            <div className='flex justify-center'>
+            <button
+              onClick={() => {
+                setOpenModal({ type: 'apply' });
+                setIsSidebarOpen(false);
+              }}
+              className="w-full bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2.5 rounded-full shadow-sm transition-all duration-300 cursor-pointer"
+            >
+              Apply Now
+            </button>
             </div>
           </div>
         </section>
@@ -977,6 +1815,7 @@ const UttaranchalUniversity = () => {
             </motion.div>
           </div>
         </footer>
+        </main>
 
         {openModal && (
           <ApplyEnquiryModal

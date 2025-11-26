@@ -198,10 +198,13 @@ const Footer = () => {
     "/opjindal",
     "/nmims",
     "/uu",
+    "/amity-online-mba-fees-2025-26",
+    "/best-online-mca-university-in-india",
     "/muj-online-bba",
     "/muj-online-bca",
     "/muj-online-ba",
-    "/muj-online-mba"
+    "/muj-online-mba",
+    "/muj-online-mca"
   ];
   
   // Check if current pathname starts with any of the hide routes
@@ -290,7 +293,7 @@ const Footer = () => {
                           <div className="p-2 bg-cyan-500/20 rounded-lg group-hover/item:bg-cyan-500/30 transition-colors">
                             <FaPhoneAlt className="text-cyan-400 text-sm" />
                           </div>
-                          <span className="flex-1 text-sm">+91 93547 35410</span>
+                          <span className="flex-1 text-sm">+91 7042646766</span>
                         </li>
                         <li className="flex items-center gap-3 group/item">
                           <div className="p-2 bg-cyan-500/20 rounded-lg group-hover/item:bg-cyan-500/30 transition-colors">
@@ -315,8 +318,8 @@ const Footer = () => {
                             <a href="mailto:info@unifostedu.com" className="flex items-center gap-1 text-blue-600 hover:text-blue-800 transition-colors text-xs">
                               <MdEmail className="text-sm" /> info@unifostedu.com
                             </a>
-                            <a href="https://wa.me/917303725297" className="flex items-center gap-1 text-green-600 hover:text-green-800 transition-colors text-xs">
-                              <FaWhatsapp className="text-sm" /> 7303725297
+                            <a href="https://wa.me/917042646766" className="flex items-center gap-1 text-green-600 hover:text-green-800 transition-colors text-xs">
+                              <FaWhatsapp className="text-sm" />+91 7042646766
                             </a>
                           </div>
                         </div>
@@ -328,8 +331,8 @@ const Footer = () => {
                             <a href="mailto:info@unifostedu.com" className="flex items-center gap-1 text-blue-600 hover:text-blue-800 transition-colors text-xs">
                               <MdEmail className="text-sm" /> info@unifostedu.com
                             </a>
-                            <a href="https://wa.me/917303725297" className="flex items-center gap-1 text-green-600 hover:text-green-800 transition-colors text-xs">
-                              <FaWhatsapp className="text-sm" /> 7303725297
+                            <a href="https://wa.me/91 7042646766" className="flex items-center gap-1 text-green-600 hover:text-green-800 transition-colors text-xs">
+                              <FaWhatsapp className="text-sm" /> 7042646766
                             </a>
                           </div>
                         </div>
