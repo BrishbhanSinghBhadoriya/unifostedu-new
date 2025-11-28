@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
-import { FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
+import { FaCompass, FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
 import { usePathname, useRouter } from "next/navigation";
 import {
   FaEnvelope,
@@ -460,6 +460,14 @@ const Header = () => {
                   )}
                 </div>
               )}
+            </div>
+            <div className="relative ml-2">
+              <button
+                onClick={() => router.push('/comapre-university')}
+                className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200"
+                title="Compare Universities">
+                <FaCompass className="text-xl" /> <span className="font-semibold">Compare Universities</span>
+              </button>
             </div>
 
             {/* Contact Icons - Made more compact */}

@@ -38,7 +38,7 @@ export async function POST(request) {
     }
 
     const data = await response.json();
-    console.log('n8n webhook response:', data);
+   
     // console.log('n8n webhook response:', data.response.raw[0].output);
     
     // Handle n8n webhook response format

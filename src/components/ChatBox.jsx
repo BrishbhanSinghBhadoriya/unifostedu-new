@@ -100,7 +100,7 @@ const ChatBox = () => {
 
     try {
       const messageToSend = inputValue.trim();
-      console.log('Sending message to n8n webhook:', messageToSend);
+      
       
       // Use Next.js API route as proxy to avoid CORS issues
       const response = await axios.post(
