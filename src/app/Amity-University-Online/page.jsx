@@ -595,7 +595,7 @@ const AmityLandingPage = () => {
   };
 
   const [openIndex, setOpenIndex] = useState(null);
-  const [activeSection, setActiveSection] = useState([sectionItems][0]?.id ?? null);
+  const [activeSection, setActiveSection] = useState(sectionItems[0]?.id ?? null);
 
   const toggleFAQ = (index) => {
     setOpenIndex((prev) => (prev === index ? null : index));
@@ -708,67 +708,14 @@ const AmityLandingPage = () => {
 
       <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row">
           {/* Left Sidebar - Hidden on Mobile, Sticky on Desktop */}
-        <PageContent sectionItems={sectionItems} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} />
+        <PageContent 
+          sectionItems={sectionItems} 
+          activeSection={activeSection} 
+          ismobilemenuopen={isMobileMenuOpen}
+          onClose={() => setIsMobileMenuOpen(false)}
+        />
 
-        {/* Mobile Sidebar - Enhanced */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
-            <>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="fixed inset-0 bg-black/50 z-50 lg:hidden"
-                onClick={() => setIsMobileMenuOpen(false)}
-              />
-              <motion.aside
-                initial={{ x: "-100%" }}
-                animate={{ x: 0 }}
-                exit={{ x: "-100%" }}
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                className="fixed top-0 left-0 w-72 sm:w-80 h-full bg-white z-50 p-4 sm:p-6 flex flex-col lg:hidden shadow-2xl"
-              >
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-lg sm:text-xl font-bold text-indigo-800">Page Contents</h3>
-                  <Button
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    variant="ghost"
-                    size="icon"
-                    className="w-8 h-8"
-                  >
-                    <Menu className="h-5 w-5 rotate-45" />
-                  </Button>
-                </div>
-                <ul className="space-y-2 overflow-y-auto flex-1">
-                  {sectionItems.map((item) => {
-                    const isActive = activeSection === item.id;
-                    return (
-                      <li key={item.id}>
-                        <button
-                          onClick={() => {
-                            const section = document.getElementById(item.id);
-                            if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
-                            setIsMobileMenuOpen(false);
-                          }}
-                          className={`transition-all duration-200 w-full text-left py-2.5 px-3 rounded-lg ${
-                            isActive
-                              ? "text-indigo-700 font-semibold bg-indigo-100"
-                              : "text-gray-700 font-medium hover:text-indigo-600 hover:bg-indigo-50"
-                          }`}
-                          aria-current={isActive ? "true" : undefined}
-                        >
-                          {item.label}
-                        </button>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </motion.aside>
-            </>
-          )}
-        </AnimatePresence>
-       
+        
         <main className="flex-1 min-w-0 lg:pl-64">
             {/* Hero Section - Fully Responsive */}
 

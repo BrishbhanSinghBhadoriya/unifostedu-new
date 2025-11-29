@@ -371,7 +371,12 @@ useEffect(() => {
 
       <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row w-full">
         {/* Left Sidebar - Optimized */}
-        <PageContent sectionItems={sectionItems} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} />
+        <PageContent 
+          sectionItems={sectionItems} 
+          activeSection={activeSection} 
+          ismobilemenuopen={isMobileMenuOpen}
+          onClose={() => setIsMobileMenuOpen(false)}
+        />
 
         {/* Mobile Sidebar - Enhanced */}
         
