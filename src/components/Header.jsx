@@ -48,8 +48,6 @@ const Header = () => {
   const [loading, setLoading] = useState(false);
   const [modalType, setModalType] = useState();
 
-  // Hide header on Amity page
-
   const universities = [
     {
       name: "Amity University Online",
@@ -150,7 +148,6 @@ const Header = () => {
       href: u.link,
     }));
 
-    // Deduplicate by href
     const map = new Map();
     [...fromJson, ...fromCourses, ...fromUniversities].forEach((item) => {
       if (!map.has(item.href)) map.set(item.href, item);
@@ -180,7 +177,6 @@ const Header = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Prevent scrolling when mobile menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -218,7 +214,6 @@ const Header = () => {
     setShowEnquiryModal(true);
   };
 
-  // Hide header on Amity page AFTER all hooks are declared to preserve hook order
   const [showHeader, setShowHeader] = useState(true);
 
   useEffect(() => {
@@ -244,7 +239,6 @@ const Header = () => {
       "/muj-online-ba/"
     ];
 
-    // Check if current pathname starts with any of the hide routes
     const shouldHide = hideHeaderRoutes.some(
       (route) => pathname === route || pathname.startsWith(route + "/")
     );
@@ -296,465 +290,351 @@ const Header = () => {
   return (
     showHeader && (
       <header className="w-full font-sans">
-        {/* Tagline - Responsive */}
-        <div className="bg-black py-2 px-4 text-center">
-          <p className="text-white text-sm sm:text-base lg:text-lg font-semibold">
-            <span className="bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] bg-clip-text text-transparent">
+        {/* Tagline Banner - Modern gradient design */}
+        <div className="bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 py-3 px-4 text-center border-b border-blue-800/30">
+          <p className="text-white text-sm sm:text-base font-medium tracking-wide">
+            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent font-bold">
               Unifost
             </span>{" "}
             – University{" "}
-            <span className="bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent font-bold">
               For
             </span>{" "}
             Students
           </p>
         </div>
 
-        {/* Navbar */}
+        {/* Main Navbar - Clean professional design */}
         <div
-          className={`px-3 sm:px-4 py-3 sm:py-4 sticky top-0 z-50 transition-all duration-300 ${
+          className={`sticky top-0 z-50 transition-all duration-300 ${
             scrolled
-              ? "backdrop-blur-md bg-gradient-to-r from-[#001e3c] via-[#05284f] to-[#003b6c] shadow-md py-2"
-              : "bg-gradient-to-r from-[#001e3c] via-[#05284f] to-[#003b6c] backdrop-blur-md shadow-sm"
+              ? "bg-white/85 backdrop-blur-lg shadow-lg"
+              : "bg-slate-100/85 backdrop-blur-lg shadow-lg"
           }`}>
-          <div className="flex items-center justify-between w-full gap-3 sm:gap-4 lg:gap-6 flex-nowrap">
-            {/* Logo - Made smaller to fit everything in one line */}
-            <Link href="/" className="flex-shrink-0 group">
-              <div className="relative">
-                <div
-                  className={`w-24 h-10 sm:w-28 sm:h-12 rounded-2xl p-1 transition-all duration-500 ${
-                    scrolled
-                      ? "bg-gradient-to-r from-[#001e3c] to-[#003b6c] shadow-lg"
-                      : "bg-white/10 backdrop-blur-sm"
-                  }`}>
+          <div className="max-w-[1920px] mx-auto px-3 sm:px-4 md:px-5 lg:px-6 xl:px-8 2xl:px-10">
+            <div className="flex items-center justify-between h-14 sm:h-16 md:h-16 lg:h-20 xl:h-24 gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6">
+              {/* Logo */}
+              <Link href="/" className="flex-shrink-0 group">
+                <div className="relative">
                   <Image
-                    width={100}
-                    height={100}
-                    src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/unilogo_wvmt8h.webp"
+                    width={140}
+                    height={56}
+                    src="https://res.cloudinary.com/didkrwhbu/image/upload/v1764316067/uniLogoo_nc6vhs.png"
                     alt="Unifost Logo"
-                    sizes="100px"
-                    quality={80}
-                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    className="h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 2xl:h-20 w-auto transition-transform duration-300 group-hover:scale-105"
+                    priority
                   />
                 </div>
-                {!scrolled && (
-                  <div className="absolute -inset-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-2xl blur opacity-10 group-hover:opacity-40 transition-opacity duration-500"></div>
-                )}
-              </div>
-            </Link>
+              </Link>
 
-            {/* Desktop Nav - Made more compact to fit in one line */}
-            <nav
-              className="hidden md:flex items-center gap-1 lg:gap-2 text-[13px] lg:text-[14px] font-medium"
-              ref={dropdownRef}>
-              {[
-                { label: "Home", path: "/", icon: FaHome },
-                { label: "About", path: "/about", icon: FaInfoCircle },
+              {/* Desktop Navigation */}
+              <nav
+                className="hidden lg:flex items-center space-x-1 flex-shrink-0"
+                ref={dropdownRef}>
+                {[
+                  { label: "Home", path: "/", icon: FaHome },
+                  { label: "About", path: "/about", icon: FaInfoCircle },
+                  { label: "Services", path: "/services", icon: FaCog },
+                ].map((link, i) => (
+                  <Link
+                    key={i}
+                    href={link.path}
+                    className="group relative px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg text-slate-700 hover:text-blue-600 font-medium text-sm transition-all duration-200 flex items-center gap-2 whitespace-nowrap">
+                    <link.icon className="text-sm flex-shrink-0" />
+                    <span>{link.label}</span>
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300" />
+                  </Link>
+                ))}
 
-                { label: "Services", path: "/services", icon: FaCog },
-              ].map((link, i) => (
-                <Link
-                  key={i}
-                  href={link.path}
-                  className="relative group text-white hover:text-[#0b223f] transition duration-300 px-3 py-2 rounded-xl flex items-center gap-2 hover:bg-slate-50">
-                  <link.icon className="text-xs" />
-                  <span className="font-semibold">{link.label}</span>
-                  <span className="pointer-events-none absolute left-3 right-3 -bottom-0.5 h-[2px] bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300" />
-                </Link>
-              ))}
-
-              {/* Explore Dropdown - Made more compact */}
-              <div className="relative">
-                <button
-                  onClick={() =>
-                    setMenuOpen(menuOpen === "explore" ? null : "explore")
-                  }
-                  className={`group flex items-center space-x-2 px-3 py-2 rounded-xl transition-all duration-300 text-white hover:text-[#0b223f] transition duration-300 px-3 py-2 rounded-xl flex items-center gap-2 hover:bg-slate-50`}>
-                  <FaUniversity className="text-xs" />
-                  <span className="font-semibold">University</span>
-                  <FaChevronDown
-                    className={`text-xs transition-transform duration-300 ${
-                      menuOpen === "explore" ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-                {menuOpen === "explore" && (
-                  <div
-                    className={`absolute left-0 top-full mt-2 w-[28rem] bg-white/92 backdrop-blur-xl rounded-2xl shadow-2xl border border-slate-200/70 overflow-hidden transition-all duration-200 transform origin-top`}>
-                    <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/10 via-cyan-500/10 to-emerald-500/10 pointer-events-none"></div>
-                    <div className="relative z-10 p-4">
-                      <h3 className="text-[#001e3c] font-bold text-base mb-3 flex items-center">
-                        <FaUniversity className="mr-2 text-[#00ffe0]" />
-                        Partner Universities
-                      </h3>
-                      <div className="grid grid-cols-2 gap-3 max-h-80 overflow-y-auto pr-1">
-                        {universities.map((uni, idx) => (
-                          <Link
-                            key={idx}
-                            href={uni.link}
-                            onClick={() => setMenuOpen(null)}
-                            className="group block rounded-xl overflow-hidden border border-slate-200 bg-white/85 hover:shadow-lg hover:shadow-indigo-100 hover:-translate-y-0.5 transition-all duration-200">
-                            <div className="w-full h-24 bg-white flex items-center justify-center overflow-hidden">
-                              <Image
-                                width={100}
-                                height={100}
-                                src={uni.logo}
-                                alt={uni.name}
-                                loading="lazy"
-                                decoding="async"
-                                sizes="100px"
-                                quality={70}
-                                className="max-h-full max-w-full object-contain"
-                              />
-                            </div>
-                            <div className="px-3 py-2">
-                              <p className="text-sm font-semibold text-[#001e3c] group-hover:text-[#00ffe0] line-clamp-2">
+                {/* Universities Dropdown */}
+                <div className="relative">
+                  <button
+                    onClick={() =>
+                      setMenuOpen(menuOpen === "explore" ? null : "explore")
+                    }
+                    className="group relative px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg text-slate-700 hover:text-blue-600 font-medium text-sm transition-all duration-200 flex items-center gap-2 whitespace-nowrap">
+                    <FaUniversity className="text-sm flex-shrink-0" />
+                    <span>Universities</span>
+                    <FaChevronDown
+                      className={`text-xs transition-transform duration-300 flex-shrink-0 ${
+                        menuOpen === "explore" ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  {menuOpen === "explore" && (
+                    <div className="absolute left-0 top-full mt-2 w-[90vw] max-w-[28rem] lg:max-w-[32rem] xl:max-w-[36rem] 2xl:max-w-[48rem] bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-[9999]">
+                      <div className="p-4 lg:p-5 xl:p-6">
+                        <h3 className="text-slate-900 font-bold text-base lg:text-lg xl:text-xl mb-3 lg:mb-4 flex items-center gap-2">
+                          <FaUniversity className="text-blue-500 text-sm lg:text-base xl:text-lg" />
+                          <span>Partner Universities</span>
+                        </h3>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4 max-h-[60vh] lg:max-h-96 overflow-y-auto pr-2">
+                          {universities.map((uni, idx) => (
+                            <Link
+                              key={idx}
+                              href={uni.link}
+                              onClick={() => setMenuOpen(null)}
+                              className="group flex items-center gap-2 lg:gap-3 p-3 lg:p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-blue-50 hover:border-blue-300 transition-all duration-200 min-h-[70px] lg:min-h-[80px]">
+                              <div className="w-12 h-12 lg:w-14 lg:h-14 bg-white rounded-lg flex items-center justify-center overflow-hidden flex-shrink-0 shadow-sm">
+                                <Image
+                                  width={56}
+                                  height={56}
+                                  src={uni.logo}
+                                  alt={uni.name}
+                                  className="max-h-full max-w-full object-contain p-1"
+                                />
+                              </div>
+                              <p className="text-xs lg:text-sm font-medium text-slate-700 group-hover:text-blue-600 line-clamp-2 leading-snug flex-1">
                                 {uni.name}
                               </p>
-                            </div>
-                          </Link>
-                        ))}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Blogs Dropdown - API-powered cards */}
-              <div className="relative">
-                <BlogsDropdown menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-              </div>
-            </nav>
-
-            {/* Search with suggestions (click to redirect) */}
-            <div className="relative flex-1 max-w-sm mx-2 lg:mx-3">
-              <div className="flex items-center bg-white/95 backdrop-blur rounded-full px-3 py-1.5 shadow-md ring-1 ring-slate-200">
-                <FaSearch className="text-slate-500 text-xs" />
-                <input
-                  type="text"
-                  placeholder="Search courses, universities..."
-                  className="outline-none text-black px-2 py-1 w-full text-xs"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                />
-              </div>
-              {searchQuery && (
-                <div className="absolute mt-2 w-full bg-white rounded-xl shadow-2xl border border-slate-200 z-[9999] max-h-80 overflow-auto">
-                  {filtered.map((item, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => handleSuggestionClick(item.href)}
-                      className="block w-full text-left px-3 py-2 hover:bg-slate-50">
-                      <div className="text-sm font-medium text-slate-900">
-                        {item.title}
-                      </div>
-                      <div className="text-xs text-slate-500 capitalize">
-                        {item.type}
-                      </div>
-                    </button>
-                  ))}
-                  {filtered.length === 0 && (
-                    <div className="px-3 py-3 text-sm text-slate-500">
-                      No results found
                     </div>
                   )}
                 </div>
-              )}
-            </div>
-            <div className="relative ml-2">
-              <button
-                onClick={() => router.push('/comapre-university')}
-                className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200"
-                title="Compare Universities">
-                <FaCompass className="text-xl" /> <span className="font-semibold">Compare Universities</span>
-              </button>
-            </div>
 
-            {/* Contact Icons - Made more compact */}
-            <div className="hidden sm:flex gap-1 lg:gap-2 items-center text-[#00ffe0]">
-              <a
-                href="tel:+917042646766"
-                className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200"
-                title="Call us"
-                aria-label="Email us at info@unifostedu.com">
-                <FaPhoneAlt className="text-xl" />
-              </a>
-              <a
-                href="https://wa.me/917042646766"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200"
-                title="WhatsApp"
-                aria-label="WhatsApp">
-                <FaWhatsappSquare className="text-xl" />
-              </a>
-              <button
-                onClick={() => openModal("videoCall")}
-                className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200"
-                title="Book Demo">
-                <FaVideo className="text-xl" />
-              </button>
-            </div>
+                {/* Blogs Dropdown */}
+                <div className="relative">
+                  <BlogsDropdown menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+                </div>
+              </nav>
 
-          {/* Call/Email - Made more compact */}
-          <div className="hidden md:flex flex-col justify-center items-end text-xs ml-2">
-            <div className="flex items-center gap-1 text-white-600 font-semibold">
-              <FaPhoneAlt className="text-[#00ffe0] text-xs" /> <span className="text-white">+91 7042867717</span>
-            </div>
-            <div className="flex items-center gap-1 text-white-600 font-semibold">
-              <FaEnvelope className="text-sky-400 text-xs" />
-              <a href="mailto:info@unifostedu.com" className=" text-white  ">info@unifostedu.com  </a>
-            </div>
-          </div>
+              {/* Search Bar */}
+              <div className="hidden md:flex relative flex-[0.7] lg:flex-[0.8] xl:flex-[0.9] min-w-0 mx-2 lg:mx-3 xl:mx-4 max-w-full md:max-w-xs lg:max-w-sm xl:max-w-md 2xl:max-w-lg">
+                <div className="flex items-center bg-slate-100 rounded-full px-3 lg:px-3 xl:px-4 py-2 lg:py-2 xl:py-2.5 ring-1 ring-slate-200 focus-within:ring-2 focus-within:ring-blue-400 transition-all w-full">
+                  <FaSearch className="text-slate-400 text-xs lg:text-sm flex-shrink-0" />
+                  <input
+                    type="text"
+                    placeholder="Search courses, universities..."
+                    className="outline-none bg-transparent text-slate-700 px-2 lg:px-3 py-0.5 w-full text-xs lg:text-sm placeholder:text-slate-400"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                  />
+                </div>
 
-            {/* Mobile Toggle */}
-            <div className="md:hidden ml-auto flex items-center gap-2">
-              <a
-                href="tel:+917042646766"
-                aria-label="Call us"
-                className={`p-2 rounded-lg transition-all duration-300 ${
-                  scrolled ? "bg-white/10 text-white" : "bg-white/20 text-white"
-                }`}>
-                <FaPhoneAlt className="text-base" />
-              </a>
-              <a
-                href="https://wa.me/917042646766"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
-                className={`p-2 rounded-lg transition-all duration-300 ${
-                  scrolled ? "bg-white/10 text-white" : "bg-white/20 text-white"
-                }`}>
-                <FaComments className="text-base" />
-              </a>
+                {searchQuery && (
+                  <div className="absolute mt-2 w-full bg-white rounded-xl shadow-2xl border border-slate-200 z-[9999] max-h-80 overflow-auto">
+                    {filtered.map((item, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => handleSuggestionClick(item.href)}
+                        className="block w-full text-left px-4 py-3 hover:bg-slate-50 border-b border-slate-100 last:border-0">
+                        <div className="text-sm font-medium text-slate-900">
+                          {item.title}
+                        </div>
+                        <div className="text-xs text-slate-500 capitalize mt-0.5">
+                          {item.type}
+                        </div>
+                      </button>
+                    ))}
+
+                    {filtered.length === 0 && (
+                      <div className="px-4 py-4 text-sm text-slate-500 text-center">
+                        No results found
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+
+
+              {/* Action Buttons */}
+              <div className="hidden lg:flex items-center gap-2 lg:gap-3 flex-shrink-0">
+                <button
+                  onClick={() => router.push('/comapre-university')}
+                  className="relative flex items-center gap-2 px-4 lg:px-5 py-2 lg:py-2.5 rounded-lg bg-white text-orange-600 font-semibold text-sm shadow-sm hover:shadow-md hover:scale-[1.04] transition-all duration-200 cursor-pointer whitespace-nowrap">
+                  {/* AI Powered Tag */}
+                  <span className="absolute -top-1 -right-1 bg-orange-500 text-white text-[7px] lg:text-[8px] font-bold px-1.5 py-[1px] rounded-sm shadow-md">
+                    AI
+                  </span>
+                  <FaCompass className="text-sm text-orange-500 bg-orange-100 rounded-full p-1 flex-shrink-0" />
+                  <span>Compare</span>
+                </button>
+
+                <Link
+                  href="tel:+917042646766"
+                  className="p-2.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 flex-shrink-0"
+                  title="Call us">
+                  <FaPhoneAlt className="text-lg" />
+                </Link>
+
+                <Link 
+                  href="https://wa.me/917042646766"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 rounded-lg bg-green-50 text-green-600 hover:bg-green-100 transition-all duration-200 flex-shrink-0"
+                  title="WhatsApp">
+                  <FaWhatsappSquare className="text-lg" />
+                </Link>
+
+                <button
+                  onClick={() => openModal("videoCall")}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium text-sm hover:shadow-lg hover:scale-105 transition-all duration-200 whitespace-nowrap">
+                  <FaVideo className="text-sm flex-shrink-0" />
+                  <span>Book Demo</span>
+                </button>
+              </div>
+
+              {/* Mobile Menu Button */}
               <button
-                aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-                onClick={() => setMobileMenuOpen((v) => !v)}
-                className={`p-2 sm:p-2 rounded-xl border transition-all duration-300 ${
-                  scrolled
-                    ? "bg-white/10 border-white/20 text-white hover:bg-white/20"
-                    : "bg-white/20 border-white/20 text-white hover:bg-white/30"
-                }`}>
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="lg:hidden p-2.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all duration-200">
                 {mobileMenuOpen ? (
-                  <FaTimes className="text-lg" />
+                  <FaTimes className="text-xl" />
                 ) : (
-                  <FaBars className="text-lg" />
+                  <FaBars className="text-xl" />
                 )}
               </button>
             </div>
           </div>
 
-          {/* Mobile Menu - Full Screen Overlay */}
-          {mobileMenuOpen && (
-            <div
-              className="md:hidden fixed inset-0 top-0 left-0 w-full h-screen z-[9999] text-white bg-gradient-to-br from-[#001e3c] to-[#003b6c] overflow-y-auto overscroll-contain"
-              style={{
-                minHeight: "100dvh",
-                maxHeight: "100svh",
-                WebkitOverflowScrolling: "touch",
-              }}>
-              <div
-                className="w-full flex flex-col p-4 sm:p-6 pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]"
-                style={{ minHeight: "100%" }}>
-                {/* Top bar */}
-                <div className="flex items-center justify-between mb-6 sm:mb-8">
-                  <div className="flex items-center gap-3">
-                    <Image
-                      width={100}
-                      height={100}
-                      loading="lazy"
-                      src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp"
-                      alt="Unifost"
-                      className="h-8 w-auto"
-                    />
-                    <span className="text-lg font-bold text-[#00ffe0]">
-                      Unifost
-                    </span>
+          {/* Contact Info Bar - Desktop only */}
+          <div className="hidden lg:block bg-slate-50 border-t border-slate-200">
+            <div className="max-w-[1920px] mx-auto px-3 sm:px-4 md:px-5 lg:px-6 xl:px-8 2xl:px-10">
+              <div className="flex items-center justify-end gap-4 lg:gap-5 xl:gap-6 py-2 text-xs lg:text-sm">
+                <div className="flex items-center gap-1.5 lg:gap-2 text-slate-600">
+                  <FaPhoneAlt className="text-blue-500 text-xs lg:text-sm" />
+                  <span className="font-medium whitespace-nowrap">+91 7042646766</span>
+                </div>
+                <div className="flex items-center gap-1.5 lg:gap-2 text-slate-600">
+                  <FaEnvelope className="text-blue-500 text-xs lg:text-sm" />
+                  <a
+                    href="mailto:info@unifostedu.com"
+                    className="font-medium hover:text-blue-600 transition whitespace-nowrap text-xs lg:text-sm">
+                    info@unifostedu.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Menu - Enhanced design */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden fixed inset-0 top-0 left-0 w-full h-screen z-[9999] bg-white overflow-y-auto">
+            <div className="p-6">
+              {/* Mobile Header */}
+              <div className="flex items-center justify-between mb-6">
+                <Image
+                  width={120}
+                  height={48}
+                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/unilogo_wvmt8h.webp"
+                  alt="Unifost"
+                  className="h-12 w-auto"
+                />
+                <button
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-2 rounded-lg bg-slate-100 text-slate-700">
+                  <FaTimes className="text-xl" />
+                </button>
+              </div>
+
+              {/* Mobile Search */}
+              <div className="mb-6">
+                <div className="flex items-center bg-slate-100 rounded-lg px-4 py-3">
+                  <FaSearch className="text-slate-400 text-sm" />
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    className="outline-none bg-transparent text-slate-700 px-3 w-full text-sm"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                  />
+                </div>
+                {searchQuery && filtered.length > 0 && (
+                  <div className="mt-2 bg-white rounded-lg shadow-lg border border-slate-200 max-h-60 overflow-auto">
+                    {filtered.map((item, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => {
+                          handleSuggestionClick(item.href);
+                          setMobileMenuOpen(false);
+                        }}
+                        className="block w-full text-left px-4 py-3 hover:bg-slate-50 border-b border-slate-100 last:border-0">
+                        <div className="text-sm font-medium text-slate-900">
+                          {item.title}
+                        </div>
+                        <div className="text-xs text-slate-500 capitalize">
+                          {item.type}
+                        </div>
+                      </button>
+                    ))}
                   </div>
+                )}
+              </div>
+
+              {/* Mobile Navigation */}
+              <div className="space-y-6">
+                <div className="space-y-2">
+                  <h3 className="text-slate-400 font-bold text-xs uppercase tracking-wider px-2">
+                    Main Menu
+                  </h3>
+                  {[
+                    { label: "Home", path: "/", icon: FaHome },
+                    { label: "About", path: "/about", icon: FaInfoCircle },
+                    { label: "Courses", path: "/coursesearch", icon: FaGraduationCap },
+                    { label: "Universities", path: "/listofcollege", icon: FaUniversity },
+                    { label: "Services", path: "/services", icon: FaCog },
+                  ].map((link, i) => (
+                    <Link
+                      key={i}
+                      href={link.path}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="flex items-center gap-3 p-4 rounded-lg bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 transition-all">
+                      <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white">
+                        <link.icon className="text-lg" />
+                      </div>
+                      <span className="font-semibold text-slate-700">{link.label}</span>
+                      <FaArrowRight className="ml-auto text-blue-500 text-sm" />
+                    </Link>
+                  ))}
+                </div>
+
+                {/* Contact Buttons */}
+                <div className="grid grid-cols-3 gap-3">
+                  <a
+                    href="tel:+917042646766"
+                    className="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg text-white font-bold text-sm hover:scale-105 transition">
+                    <FaPhoneAlt className="text-xl" />
+                    <span>Call</span>
+                  </a>
+                  <a
+                    href="https://wa.me/917042646766"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg text-white font-bold text-sm hover:scale-105 transition">
+                    <FaWhatsapp className="text-xl" />
+                    <span>WhatsApp</span>
+                  </a>
                   <button
-                    aria-label="Close menu"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="p-2 rounded-xl bg-white/10 border border-white/20 hover:bg-white/20 transition">
-                    <FaTimes className="text-xl" />
+                    onClick={() => {
+                      router.push("/bookdemo");
+                      setMobileMenuOpen(false);
+                    }}
+                    className="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg text-white font-bold text-sm hover:scale-105 transition">
+                    <FaVideo className="text-xl" />
+                    <span>Demo</span>
                   </button>
                 </div>
 
-                {/* Search Bar */}
-                <div className="mb-6 sm:mb-8">
-                  <div className="relative">
-                    <input
-                      type="text"
-                      placeholder="Search courses, universities..."
-                      className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/70 outline-none focus:border-[#00ffe0] transition"
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                    />
-                    {/* Suggestions */}
-                    {searchQuery && (
-                      <div className="absolute mt-2 w-full bg-white rounded-xl shadow-2xl border border-slate-200 z-[9999] max-h-72 overflow-auto text-slate-900">
-                        {filtered.map((item, idx) => (
-                          <button
-                            key={idx}
-                            onClick={() => handleSuggestionClick(item.href)}
-                            className="block w-full text-left px-3 py-2 hover:bg-slate-50">
-                            <div className="text-sm font-medium">
-                              {item.title}
-                            </div>
-                            <div className="text-xs text-slate-500 capitalize">
-                              {item.type}
-                            </div>
-                          </button>
-                        ))}
-                        {filtered.length === 0 && (
-                          <div className="px-3 py-3 text-sm text-slate-500">
-                            No results found
-                          </div>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                {/* Navigation Links */}
-                <div className="flex-1 space-y-4">
-                  {/* Main Navigation */}
-                  <div className="space-y-3">
-                    <h3 className="text-[#00ffe0] font-bold text-sm uppercase tracking-wider px-2">
-                      Main Menu
-                    </h3>
-                    {[
-                      { label: "Home", path: "/", icon: FaHome },
-                      { label: "About", path: "/about", icon: FaInfoCircle },
-                      {
-                        label: "Courses",
-                        path: "/coursesearch",
-                        icon: FaGraduationCap,
-                      },
-                      {
-                        label: "Universities",
-                        path: "/listofcollege",
-                        icon: FaUniversity,
-                      },
-                      { label: "Services", path: "/services", icon: FaCog },
-                      //  { label: 'Blog', path: '/blog', icon: FaBookOpen }
-                    ].map((link, i) => (
-                      <Link
-                        key={i}
-                        href={link.path}
-                        onClick={() => setMobileMenuOpen(false)}
-                        className="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition text-white border border-white/10">
-                        <div className="w-10 h-10 bg-gradient-to-br from-[#00ffe0] to-[#00d4c4] rounded-lg flex items-center justify-center">
-                          <link.icon className="text-[#001e3c] text-lg" />
-                        </div>
-                        <span className="font-semibold">{link.label}</span>
-                        <FaArrowRight className="ml-auto text-[#00ffe0] text-sm" />
-                      </Link>
-                    ))}
-                  </div>
-
-                  {/* Explore Universities */}
-                  <div className="space-y-3">
-                    <h3 className="text-[#00ffe0] font-bold text-sm uppercase tracking-wider px-2">
-                      Universities
-                    </h3>
-                    <div className="space-y-2">
-                      {universities.slice(0, 16).map((uni, idx) => (
-                        <Link
-                          key={idx}
-                          href={uni.link}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition text-white border border-white/10">
-                          <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center overflow-hidden">
-                            <Image
-                              width={100}
-                              height={100}
-                              src={uni.logo}
-                              alt={uni.name}
-                              className="w-full h-full object-contain"
-                            />
-                          </div>
-                          <span className="font-medium text-sm flex-1">
-                            {uni.name}
-                          </span>
-                          <FaArrowRight className="text-[#00ffe0] text-xs" />
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Blog Posts */}
-                  <div className="space-y-3">
-                    <div className="space-y-2">
-                      {blogsLoading && (
-                        <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-white/70 text-sm">
-                          Loading latest blogs...
-                        </div>
-                      )}
-                      {!blogsLoading && latestBlogs.length === 0 && (
-                        <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-white/70 text-sm">
-                          No blogs available yet.
-                        </div>
-                      )}
-                      {!blogsLoading &&
-                        latestBlogs.slice(0, 3).map((blog, idx) => (
-                          <Link
-                            key={idx}
-                            href={`/blog/${blog.slug || blog._id || blog.id}`}
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition text-white border border-white/10">
-                            <div className="w-8 h-8 bg-gradient-to-br from-[#00ffe0] to-[#00d4c4] rounded-lg flex items-center justify-center">
-                              <FaBookOpen className="text-[#001e3c] text-sm" />
-                            </div>
-                            <span className="font-medium text-sm flex-1">
-                              {blog.title}
-                            </span>
-                            <FaArrowRight className="text-[#00ffe0] text-xs" />
-                          </Link>
-                        ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Contact Section */}
-                <div className="mt-6 sm:mt-8 space-y-4">
-                  <h3 className="text-[#00ffe0] font-bold text-sm uppercase tracking-wider px-2">
-                    Contact Us
-                  </h3>
-
-                  {/* Contact Buttons */}
-                  <div className="grid grid-cols-3 gap-3">
-                    <a
-                      href="tel:+917042646766"
-                      className="flex flex-col items-center gap-2 p-3 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-xl text-[#001e3c] text-center font-bold text-sm hover:scale-105 transition">
-                      <FaPhoneAlt className="text-lg" />
-                      <span>Call</span>
-                    </a>
-
-                    <button
-                      onClick={() => {
-                        router.push("/bookdemo");
-                        setMobileMenuOpen(false);
-                      }}
-                      className="flex flex-col items-center gap-2 p-3 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] rounded-xl text-[#001e3c] text-center font-bold text-sm hover:scale-105 transition">
-                      <FaVideo className="text-lg" />
-                      <span>Demo</span>
-                    </button>
-                  </div>
-
                 {/* Contact Info */}
-                <div className="bg-white/5 rounded-xl p-4 border border-white/10 space-y-3">
-                  <div className="flex items-center gap-3 text-white">
-                    <FaPhoneAlt className="text-[#00ffe0] text-lg" />
+                <div className="bg-slate-50 rounded-lg p-4 space-y-3 border border-slate-200">
+                  <div className="flex items-center gap-3 text-slate-700">
+                    <FaPhoneAlt className="text-blue-500 text-lg" />
                     <div>
-                      <p className="text-xs text-white/70">Phone Number</p>
-                      <p className="font-semibold">+91 7042867717</p>
+                      <p className="text-xs text-slate-500">Phone</p>
+                      <p className="font-semibold">+91 7042646766</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 text-white">
-                    <FaEnvelope className="text-[#00ffe0] text-lg" />
+                  <div className="flex items-center gap-3 text-slate-700">
+                    <FaEnvelope className="text-blue-500 text-lg" />
                     <div>
-                      <p className="text-xs text-white/70">Email Address</p>
-                      <a href="mailto:info@unifostedu.com" className="font-semibold hover:text-[#00ffe0] transition" aria-label="Email us at info@unifostedu.com">
+                      <p className="text-xs text-slate-500">Email</p>
+                      <a
+                        href="mailto:info@unifostedu.com"
+                        className="font-semibold hover:text-blue-600 transition">
                         info@unifostedu.com
                       </a>
                     </div>
@@ -764,23 +644,26 @@ const Header = () => {
             </div>
           </div>
         )}
-      {/* Header-scoped Enquiry Modal */}
-      {showEnquiryModal && (
-        <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
-          <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10 p-4 sm:p-6 z-[30001]">
-            <DialogHeader>
-              <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
-                {modalType === 'videoCall' && 'Book a Video Call'}
-                {modalType === 'homeDemo' && 'Book a Home Demo'}
-                {modalType === 'getStarted' && 'Get Started with Unifost'}
-              </DialogTitle>
-            </DialogHeader>
-            <EnquiryForm onSubmitted={() => setShowEnquiryModal(false)} formType={modalType} />
-          </DialogContent>
-        </Dialog>
-      )}
-      </div>
-    </header>
+
+        {/* Enquiry Modal */}
+        {showEnquiryModal && (
+          <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal}>
+            <DialogContent className="max-w-2xl">
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-bold text-slate-900">
+                  {modalType === 'videoCall' && 'Book a Video Call'}
+                  {modalType === 'homeDemo' && 'Book a Home Demo'}
+                  {modalType === 'getStarted' && 'Get Started with Unifost'}
+                </DialogTitle>
+              </DialogHeader>
+              <EnquiryForm
+                onSubmitted={() => setShowEnquiryModal(false)}
+                formType={modalType}
+              />
+            </DialogContent>
+          </Dialog>
+        )}
+      </header>
     )
   );
 };

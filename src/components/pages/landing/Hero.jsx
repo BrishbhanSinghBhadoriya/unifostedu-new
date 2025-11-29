@@ -171,10 +171,10 @@ const Hero = ({ onOpenModal }) => {
                     transition={{ duration: 0.1 }}
                     className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
                   >
-                    <span className="text-gray-900">Your Gateway to</span>
+                    <span className="text-gray-900">India's Best Online</span>
                     <br />
                     <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                      Academic Excellence
+                      University Degrees
                     </span>
                   </motion.h1>
                   

@@ -16,6 +16,7 @@ import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from "lucide-react";
 import LazySection from '@/components/LazySection';
+import PageContent from '@/components/PageContent/PageContent';
 
 const Manipal = () => {
 
@@ -192,7 +193,16 @@ useEffect(() => {
   const [openModal, setOpenModal] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('all');
-  
+   const sectionItems = [
+    { id: "HeroSection", label: "Introduction" },
+    { id: "CampusTour", label: "Campus Tour" },
+    { id: "Courses", label: "Explore Courses" },
+    { id: "KeyHighlights", label: "Key Highlights" },
+    { id: "AdmissionDates", label: "Admission Dates" },
+    { id: "Fees", label: "Fees Structure" },
+    { id: "Admission", label: "Admission Process" },
+   ];
+   const activeSection = sectionItems[0]?.id ?? null;
 
   
 
@@ -361,101 +371,10 @@ useEffect(() => {
 
       <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row w-full">
         {/* Left Sidebar - Optimized */}
-        <aside className="fixed hidden lg:flex flex-col top-[56px] sm:top-[64px] lg:top-20 w-64 h-[calc(100vh-4rem)] sm:h-[calc(100vh-5rem)] px-3 sm:px-4 py-4 sm:py-6 lg:py-8 self-start overflow-y-auto border-r border-gray-200 bg-white/95 backdrop-blur-sm z-40">
-          <h3 className="text-base sm:text-lg font-bold mb-4 sm:mb-6 text-orange-600 border-b-2 border-orange-200 pb-2">
-            Page Contents
-          </h3>
-          <ul className="space-y-2 sm:space-y-3">
-            {[
-              { id: "HeroSection", label: "Introduction" },
-              { id: "CampusTour", label: "Campus Tour" },
-              { id: "Courses", label: "Explore Courses" },
-              { id: "KeyHighlights", label: "Key Highlights" },
-              { id: "AdmissionDates", label: "Admission Dates" },
-              { id: "Fees", label: "Fees Structure" },
-              { id: "Admission", label: "Admission Process" },
-              { id: "Sessions", label: "Sessions Info" },
-              { id: "PlacementPartners", label: "Placement Partners" },
-              { id: "PlacementRecord", label: "Placement Record" },
-              { id: "StudentReviews", label: "Student Reviews" },
-              { id: "Faq", label: "FAQs" },
-              { id: "ManipalReviews", label: "Manipal Reviews" }
-            ].map((item) => (
-              <li
-                key={item.id}
-                className="text-xs sm:text-sm text-black-600 hover:text-orange-600 transition-colors duration-200 py-1.5 px-2 rounded hover:bg-orange-50 cursor-pointer"
-                onClick={() => {
-                  const element = document.getElementById(item.id);
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }}
-              >
-                {item.label}
-              </li>
-            ))}
-          </ul>
-        </aside>
+        <PageContent sectionItems={sectionItems} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} />
 
         {/* Mobile Sidebar - Enhanced */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
-            <>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="fixed inset-0 bg-black/40 backdrop-blur-[1px] z-40 lg:hidden"
-                onClick={() => setIsMobileMenuOpen(false)}
-              />
-              <motion.aside
-                initial={{ x: "-100%" }}
-                animate={{ x: 0 }}
-                exit={{ x: "-100%" }}
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                className="fixed top-0 left-0 w-[85vw] sm:w-72 h-full bg-white border-r shadow-xl z-50 p-4 sm:p-6 flex flex-col overflow-y-auto will-change-transform lg:hidden"
-              > 
-                <div className="flex items-center justify-between mb-6 sm:mb-8">
-                  <h3 className="text-lg sm:text-xl font-bold text-orange-600">Page Contents</h3>
-                  <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-full hover:bg-gray-100 transition-colors">
-                    <FaTimes className="w-5 h-5 text-gray-600" />
-                  </button>
-                </div>
-                <ul className="space-y-2 sm:space-y-3 flex-1">
-                  {[
-                    { id: "HeroSection", label: "Introduction" },
-                    { id: "CampusTour", label: "Campus Tour" },
-                    { id: "Courses", label: "Explore Courses" },
-                    { id: "KeyHighlights", label: "Key Highlights" },
-                    { id: "AdmissionDates", label: "Admission Dates" },
-                    { id: "Fees", label: "Fees Structure" },
-                    { id: "Admission", label: "Admission Process" },
-                    { id: "Sessions", label: "Sessions Info" },
-                    { id: "PlacementPartners", label: "Placement Partners" },
-                    { id: "PlacementRecord", label: "Placement Record" },
-                    { id: "StudentReviews", label: "Student Reviews" },
-                    { id: "Faq", label: "FAQs" },
-                    { id: "ManipalReviews", label: "Manipal Reviews" }
-                  ].map((item) => (
-                    <li key={item.id}>
-                      <button
-                        onClick={() => {
-                          const section = document.getElementById(item.id);
-                          if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
-                          setIsMobileMenuOpen(false);
-                        }}
-                        className="text-gray-700 hover:text-orange-600 hover:bg-orange-50 font-medium sm:font-semibold text-sm sm:text-base transition-all duration-200 w-full text-left py-2.5 px-3 rounded-lg"
-                      >
-                        {item.label}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </motion.aside>
-            </>
-          )}
-        </AnimatePresence>
+        
 
         {/* Main Content */}
         <main className="flex-1 min-w-0 lg:ml-64 pt-14 sm:pt-16 lg:pt-20">

@@ -2,50 +2,34 @@ import Landing from "@/components/pages/Landing";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Unifost | UGC Approved Online University Degrees in India",
-  description: "UnifostEdu.com – The official platform for UGC-approved online university degrees in India. Explore top courses, apply easily, and transform your career.",
+  title: "Unifost | India's Best Online University Degrees & Career Counseling",
+  description: "Compare top UGC-approved online universities in India. Get expert career counseling for MBA, BBA, MCA, BCA & more. Apply now for 2025 admissions.",
   keywords: [
     "Unifost",
-    "UnifostEdu",
-    "UGC online degrees",
-    "Unifost Education Platform",
-    "online degrees India",
+    "online university degrees India",
     "UGC approved online courses",
-    "distance learning MBA",
-    "online university admission",
-    "career counseling India",
-    "best online MBA universities India",
-    "UGC approved distance learning courses",
-    "online degree career guidance",
-    "compare online universities India",
-    "distance education admission process",
-    "online university degrees",
-    "career counseling",
-    "UGC-approved",
-    "online education",
-    "university selection",
-    "education guidance",
-    "accredited programs",
-    "online degrees",
-    "MBA online",
-    "BBA online",
-    "MCA online",
-    "BCA online"
+    "best online MBA India",
+    "online BBA admission",
+    "online MCA colleges",
+    "career counseling for students",
+    "distance education India",
+    "compare online universities",
+    "online degree admission 2025"
   ],
   alternates: {
     canonical: "https://unifostedu.com",
   },
   openGraph: {
-    title: "Unifost | UGC Approved Online University Degrees in India",
-    description: "UnifostEdu.com – The official platform for UGC-approved online university degrees in India. Explore top courses, apply easily, and transform your career.",
+    title: "Unifost | India's Best Online University Degrees & Career Counseling",
+    description: "Compare top UGC-approved online universities in India. Get expert career counseling for MBA, BBA, MCA, BCA & more. Apply now for 2025 admissions.",
     url: "https://unifostedu.com",
     siteName: "Unifost",
     images: [
       { 
-        url: "/favicon.ico",
+        url: "/uni.webp",
         width: 1200,
         height: 630,
-        alt: "Online university degrees India with UGC approved courses and career counseling services"
+        alt: "Unifost - Online University Degrees & Career Counseling"
       }
     ],
     locale: "en_IN",
@@ -55,20 +39,9 @@ export const metadata = {
     card: "summary_large_image",
     site: "@unifost",
     creator: "@unifost",
-    title: "Top UGC Approved Online Degrees in India | UNIFOST",
-    description: "Compare UGC-approved online degrees from top universities. Get free career counseling for MBA, BBA, MCA courses. 5000+ students enrolled.",
-    images: ["/favicon.ico"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-      'max-video-preview': -1,
-    },
+    title: "Unifost | India's Best Online University Degrees & Career Counseling",
+    description: "Compare top UGC-approved online universities in India. Get expert career counseling for MBA, BBA, MCA, BCA & more.",
+    images: ["/uni.webp"],
   },
 };
 
@@ -79,23 +52,71 @@ export const revalidate = 86400; // Revalidate every 24 hours
 export default function Home() {
   return (
     <>
-      {/* Organization Schema for Unifost Brand */}
+      {/* FAQ Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Unifost",
-            "url": "https://unifostedu.com",
-            "alternateName": "UnifostEdu",
-            "sameAs": [
-              "https://www.linkedin.com/company/unifost",
-              "https://www.instagram.com/unifost_edu/",
-              "https://twitter.com/unifost"
-            ],
-            "logo": "https://unifostedu.com/uni.webp.48x48.png",
-            "description": "UnifostEdu.com – The official platform for UGC-approved online university degrees in India. Explore top courses, apply easily, and transform your career."
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Are online university degrees UGC-approved and recognized?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, all online university degrees we recommend are UGC-approved and fully recognized by the University Grants Commission. These degrees have the same value as traditional campus programs."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does career counseling help in choosing online university degrees?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our career counseling provides personalized guidance based on your career goals, academic background, and industry requirements to help you select the best UGC-approved programs."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the benefits of UGC-approved online university degrees?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Benefits include flexibility, cost-effectiveness, ability to study while working, and global recognition. You also get comprehensive career support."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I apply for online university degrees through UNIFOST?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Contact our counselors for end-to-end support, from university selection to application submission and admission guidance."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What courses are available in online university degrees?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We offer MBA, BBA, MCA, BCA, B.Com, M.Com, BA, MA, and more from top-ranked universities."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is there any difference between online and regular degrees?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No, UGC-approved online degrees have the same value and recognition as regular degrees, just with a different mode of delivery."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much do online university degrees cost?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "They are generally more affordable, ranging from ₹1-4 lakhs for complete programs. Costs vary by university."
+                }
+              }
+            ]
           })
         }}
       />

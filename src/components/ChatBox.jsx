@@ -168,10 +168,19 @@ const ChatBox = () => {
       {/* Floating Chat Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 via-blue-500 to-blue-700 shadow-2xl transition-all duration-300 hover:scale-110 hover:shadow-3xl hover:from-blue-500 hover:via-blue-400 hover:to-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-offset-2 animate-pulse"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9999] group flex h-32 w-32 items-center justify-center cursor-pointer "
         aria-label="Open chat"
       >
-        <MessageCircle className="h-7 w-7 text-white drop-shadow-lg" />
+        <div className="relative flex h-32 w-32 items-center justify-center rounded-full bg-white/95 p-1.5 shadow-inner ring-2 ring-white/60">
+          <Image
+            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1764325099/chat-bot_iczljl.gif"
+            alt="EduAI chatbot icon"
+            width={96}
+            height={96}
+            className="h-full w-full rounded-full object-cover drop-shadow-lg"
+            priority={false}
+          />
+        </div>
         {!isOpen && (
           <span className="absolute -top-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-red-500 to-red-600 text-xs font-bold text-white shadow-lg animate-bounce">
             1

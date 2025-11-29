@@ -26,6 +26,8 @@ const Compare = () => {
   const [selectedSpecialization, setSelectedSpecialization] = useState('Not decided yet');
   const [specializationSearch, setSpecializationSearch] = useState('');
   const [selectedBudget, setSelectedBudget] = useState('');
+  const [selectedQualification, setSelectedQualification] = useState('');
+  const [lastDegreeScore, setLastDegreeScore] = useState('');
 
   const degreeOptions = useMemo(() => ([
     { id: 'PG Courses', label: 'PG Courses', icon: FaGraduationCap },
@@ -127,6 +129,23 @@ const Compare = () => {
     'Banking and Finance (Dual)',
     'International Finance with ACCA'
   ], []);
+
+  const qualificationOptions = useMemo(() => [
+    'Postgraduate',
+    'College Graduate',
+    'Completed 12th',
+    'Completed 10th',
+    'Diploma Holder'
+  ], []);
+
+  const scoreOptions = useMemo(() => [
+    'Below 50%',
+    '50% - 60%',
+    '60% - 70%',
+    '70% - 80%',
+    '80% - 90%',
+    'Above 90%'
+  ], []);
   const selectedCourseMeta = useMemo(() => {
     const lists = Object.values(courseOptions);
     return lists.flat().find((course) => course.id === selectedCourse);
@@ -189,8 +208,18 @@ const Compare = () => {
     } else {
       url.searchParams.delete('budget');
     }
+    if (selectedQualification) {
+      url.searchParams.set('qualification', selectedQualification);
+    } else {
+      url.searchParams.delete('qualification');
+    }
+    if (lastDegreeScore) {
+      url.searchParams.set('score', lastDegreeScore);
+    } else {
+      url.searchParams.delete('score');
+    }
     window.history.replaceState({}, '', `${url.pathname}${url.search}`);
-  }, [selectedCategory, selectedCourse, selectedSpecialization, selectedBudget, shouldAskSpecialization]);
+  }, [selectedCategory, selectedCourse, selectedSpecialization, selectedBudget, selectedQualification, lastDegreeScore, shouldAskSpecialization]);
 
   
  
@@ -212,16 +241,20 @@ const Compare = () => {
   };
 
   const getProgressValue = () => {
-    if (step >= 4) return '30% Complete';
-    if (step === 3) return '20% Complete';
-    if (step === 2) return '10% Complete';
-    return '0% Complete';
+    if (step >= 6) return '100% Complete';
+    if (step === 5) return '85% Complete';
+    if (step === 4) return '70% Complete';
+    if (step === 3) return '55% Complete';
+    if (step === 2) return '35% Complete';
+    return '15% Complete';
   };
   const progressWidths = {
-    1: '0%',
-    2: '10%',
-    3: '20%',
-    4: '30%',
+    1: '15%',
+    2: '35%',
+    3: '55%',
+    4: '70%',
+    5: '85%',
+    6: '100%',
   };
   const progressValue = getProgressValue();
 
@@ -254,52 +287,25 @@ const Compare = () => {
   const renderDegreeStep = () => (
     <>
       {renderHeading('Which degree are you interested in?')}
-      <div className="flex items-center gap-2 mb-5 text-sm sm:text-base">
-        <FaCheckCircle className="text-green-500 text-lg flex-shrink-0" />
-        <p className="text-gray-700 text-center">
-          <span className="font-semibold text-green-600">Select</span> the degree you are interested in
-        </p>
-      </div>
-
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 w-full mb-8 sm:mb-12">
+      
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full mb-10">
         {degreeOptions.map((option) => {
-          const IconComponent = option.icon;
           const isSelected = selectedCategory === option.id;
 
           return (
             <button
               key={option.id}
-              onClick={() => setSelectedCategory(option.id)}
-              className={`
-                relative p-4 sm:p-6 rounded-xl border-2 transition-all duration-300
-                bg-white hover:shadow-lg hover:scale-105
-                ${isSelected 
-                  ? 'border-green-500 bg-green-50 shadow-md' 
-                  : 'border-gray-200 hover:border-green-300'
-                }
-              `}
+              onClick={() => {
+                setSelectedCategory(option.id);
+                setStep(2);
+              }}
+              className={`rounded-2xl border-2 px-4 py-6 text-center text-sm sm:text-base font-semibold transition-all cursor-pointer h-full flex items-center justify-center ${
+                isSelected
+                  ? 'border-green-500 bg-green-50 text-green-700 shadow'
+                  : 'border-gray-200 text-gray-700 hover:border-green-200 hover:shadow'
+              }`}
             >
-              <div className={`
-                flex items-center justify-center mb-3 sm:mb-4
-                ${isSelected ? 'text-green-600' : 'text-gray-600'}
-              `}>
-                <IconComponent className="text-3xl sm:text-4xl md:text-5xl" />
-              </div>
-
-              <p className={`
-                text-xs sm:text-sm md:text-base font-semibold text-center
-                ${isSelected ? 'text-green-700' : 'text-gray-700'}
-              `}>
-                {option.label}
-              </p>
-
-              {isSelected && (
-                <div className="absolute top-2 right-2">
-                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
-                    <FaCheckCircle className="text-white text-xs" />
-                  </div>
-                </div>
-              )}
+              {option.label}
             </button>
           );
         })}
@@ -314,33 +320,29 @@ const Compare = () => {
     return (
       <>
         {renderHeading('Which course would you like to pursue?')}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 w-full mb-10 cursor-pointer">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full mb-10">
           {currentList.map((course) => {
-          const isActive = selectedCourse === course.id;
+            const isActive = selectedCourse === course.id;
          
-          return (
-            <button
-              key={course.label}
-              onClick={() => {setSelectedCourse(course.id)
-                console.log("selectedCourse",selectedCourse);
-              }}
-              className={`relative p-4 sm:p-5 rounded-2xl border-2 bg-white text-left shadow-sm transition-all cursor-pointer
-                ${isActive ? 'border-green-400 shadow-lg bg-green-50' : 'border-gray-200 hover:border-orange-200 hover:shadow-md'}`}
-            >
-                
-              {renderBadge(course.badge)}
-              {isActive && (
-                <div className="absolute top-3 right-3 flex items-center gap-1 text-xs font-semibold text-green-600">
-                  <FaCheckCircle className="text-green-500" />
-                  Selected
-                </div>
-              )}
-              <div className="flex flex-col items-start gap-3">
-                <span className="text-3xl">{course.icon}</span>
-                <p className="text-sm sm:text-base font-semibold text-gray-800">{course.label}</p>
-              </div>
-            </button>
-          );
+            return (
+              <button
+                key={course.label}
+                onClick={() => {
+                  setSelectedCourse(course.id);
+                  console.log("selectedCourse", course.id);
+                  const meta = currentList.find(c => c.id === course.id);
+                  const hasSpecs = meta?.specialization && meta.specialization.length > 0;
+                  setStep(hasSpecs ? 3 : 4);
+                }}
+                className={`rounded-2xl border-2 px-4 py-6 text-center text-sm sm:text-base font-semibold transition-all cursor-pointer h-full flex items-center justify-center ${
+                  isActive
+                    ? 'border-green-500 bg-green-50 text-green-700 shadow'
+                    : 'border-gray-200 text-gray-700 hover:border-green-200 hover:shadow'
+                }`}
+              >
+                {course.label}
+              </button>
+            );
           })}
         </div>
       </>
@@ -356,34 +358,23 @@ const Compare = () => {
     return (
       <>
         {renderHeading('Have a particular specialization in mind?')}
-        <div className="w-full max-w-3xl mb-8">
-          <div className="relative">
-            <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
-            <input
-              type="text"
-              value={specializationSearch}
-              onChange={(e) => setSpecializationSearch(e.target.value)}
-              placeholder="Search Specialization"
-              className="w-full rounded-full border border-gray-200 py-3 pl-12 pr-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-400"
-            />
-          </div>
-        </div>
-
-        <div className="flex flex-wrap gap-3 w-full justify-center mb-10">
+        
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 w-full mb-10">
           {filteredSpecializations.map((spec) => {
             const isSelected = selectedSpecialization === spec;
-            const isDefault = spec === 'Not decided yet';
             return (
               <button
                 key={spec}
-                onClick={() => setSelectedSpecialization(spec)}
-                className={`px-5 py-3 rounded-full border text-sm sm:text-base font-semibold transition-all 
-                  ${isSelected
-                    ? 'border-green-500 text-green-600 bg-green-50 shadow-md'
-                    : 'border-gray-200 text-gray-700 bg-white hover:border-green-200 hover:shadow'}`
-                }
+                onClick={() => {
+                  setSelectedSpecialization(spec);
+                  setStep(4);
+                }}
+                className={`rounded-2xl border-2 px-4 py-6 text-center text-sm sm:text-base font-semibold transition-all cursor-pointer h-full flex items-center justify-center ${
+                  isSelected
+                    ? 'border-green-500 bg-green-50 text-green-700 shadow'
+                    : 'border-gray-200 text-gray-700 hover:border-green-200 hover:shadow'
+                }`}
               >
-                {isDefault && <FaHeart className="inline-block mr-2 text-green-500" />}
                 {spec}
               </button>
             );
@@ -396,22 +387,21 @@ const Compare = () => {
   const renderBudgetStep = () => (
     <>
       {renderHeading('Choose the total course fees you have in mind!')}
-      <div className="flex items-center justify-center gap-2 mb-8 text-blue-600 font-semibold text-sm sm:text-base">
-        <FaBell />
-        EMI Options Also Available
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 w-full mb-10 ">
+      
+      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 w-full mb-10">
         {budgetOptions.map((budget) => {
           const isSelected = selectedBudget === budget;
           return (
             <button
               key={budget}
-              onClick={() => setSelectedBudget(budget)}
-              className={`rounded-2xl border-2 px-6 py-4 text-center text-sm sm:text-base font-semibold transition-all cursor-pointer ${
+              onClick={() => {
+                setSelectedBudget(budget);
+                setStep(5);
+              }}
+              className={`rounded-2xl border-2 px-4 py-6 text-center text-sm sm:text-base font-semibold transition-all cursor-pointer h-full flex items-center justify-center ${
                 isSelected
-                  ? 'border-orange-400 bg-orange-50 text-orange-600 shadow'
-                  : 'border-gray-200 text-gray-700 hover:border-orange-200 hover:shadow'
+                  ? 'border-green-500 bg-green-50 text-green-700 shadow'
+                  : 'border-gray-200 text-gray-700 hover:border-green-200 hover:shadow'
               }`}
             >
               {budget}
@@ -419,88 +409,172 @@ const Compare = () => {
           );
         })}
       </div>
+    </>
+  );
 
-     
+  const renderQualificationStep = () => (
+    <>
+      {renderHeading('Your Highest Qualification?')}
+      
+      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 w-full mb-10">
+        {qualificationOptions.map((qual) => {
+          const isSelected = selectedQualification === qual;
+          return (
+            <button
+              key={qual}
+              onClick={() => {
+                setSelectedQualification(qual);
+                setStep(6);
+              }}
+              className={`rounded-2xl border-2 px-4 py-6 text-center text-sm sm:text-base font-semibold transition-all cursor-pointer h-full flex items-center justify-center ${
+                isSelected
+                  ? 'border-green-500 bg-green-50 text-green-700 shadow'
+                  : 'border-gray-200 text-gray-700 hover:border-green-200 hover:shadow'
+              }`}
+            >
+              {qual}
+            </button>
+          );
+        })}
+      </div>
+
+      
+    </>
+  );
+
+  const renderScoreStep = () => (
+    <>
+      {renderHeading('Your Last Degree Percentage/Score?')}
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full mb-10">
+        {scoreOptions.map((score) => {
+          const isSelected = lastDegreeScore === score;
+          return (
+            <button
+              key={score}
+              onClick={() => {
+                setLastDegreeScore(score);
+                console.log('Flow completed with score:', score);
+              }}
+              className={`rounded-2xl border-2 px-4 py-6 text-center text-sm sm:text-base font-semibold transition-all cursor-pointer h-full flex items-center justify-center ${
+                isSelected
+                  ? 'border-green-500 bg-green-50 text-green-700 shadow'
+                  : 'border-gray-200 text-gray-700 hover:border-green-200 hover:shadow'
+              }`}
+            >
+              {score}
+            </button>
+          );
+        })}
+      </div>
+
+      <div className="w-full max-w-2xl mx-auto bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6 text-center border border-green-200">
+        <p className="text-gray-700 text-sm mb-2">🎓 Almost There!</p>
+        <p className="text-gray-800 font-medium text-lg mb-4">
+          Click <span className="text-green-600 font-bold">Submit</span> to get your personalized university recommendations
+        </p>
+        <Button
+          onClick={() => {
+            const formData = {
+              degree: selectedCategory,
+              course: selectedCourse,
+              specialization: selectedSpecialization,
+              budget: selectedBudget,
+              qualification: selectedQualification,
+              score: lastDegreeScore
+            };
+            console.log('=== Form Submission Data ===');
+            console.log(formData);
+            console.log('===========================');
+          }}
+          className="w-full sm:w-auto px-12 py-4 text-lg bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg cursor-pointer"
+        >
+          Submit
+        </Button>
+      </div>
     </>
   );
 
   const renderActions = () => {
-    
-    if (step === 1) {
-      return (
-        <div className="w-full flex flex-col items-center gap-4">
-     
-          <Button
-            onClick={() => setStep(2)}
-            className="w-full sm:w-auto min-w-[300px] bg-green-500 hover:bg-green-600 text-white text-base sm:text-lg font-semibold py-4 sm:py-6 px-8 sm:px-12 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
-          >
-            Next
-          </Button>
-        </div>
-      );
-    }
+    // Step 1: No Back button
+    if (step === 1) return null;
 
+    // Step 2: Back to Step 1
     if (step === 2) {
-      const nextStep = shouldAskSpecialization ? 3 : 4;
       return (
-        <div className="w-full flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+        <div className="w-full flex justify-start mt-8">
           <Button
             variant="outline"
             onClick={() => setStep(1)}
-            className="w-full sm:w-auto px-10 py-6 text-lg border-2 border-orange-300 text-orange-500 hover:bg-orange-50"
+            className="px-8 py-4 text-base border-2 border-orange-300 text-orange-500 hover:bg-orange-50"
           >
             Back
-          </Button>
-        
-          <Button
-            onClick={() => setStep(nextStep)}
-            className="w-full sm:w-auto px-10 py-6 text-lg bg-green-500 hover:bg-green-600 text-white shadow-lg cursor-pointer"
-          >
-            Next
           </Button>
         </div>
       );
     }
 
+    // Step 3: Back to Step 2
     if (step === 3) {
       return (
-        <div className="w-full flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+        <div className="w-full flex justify-start mt-8">
           <Button
             variant="outline"
             onClick={() => setStep(2)}
-            className="w-full sm:w-auto px-10 py-6 text-lg border-2 border-orange-300 text-orange-500 hover:bg-orange-50"
+            className="px-8 py-4 text-base border-2 border-orange-300 text-orange-500 hover:bg-orange-50"
           >
             Back
-          </Button>
-         
-          <Button
-            onClick={() => setStep(4)}
-            className="w-full sm:w-auto px-10 py-6 text-lg bg-green-500 hover:bg-green-600 text-white shadow-lg cursor-pointer"
-          >
-            Next
           </Button>
         </div>
       );
     }
 
-    return (
-      <div className="w-full flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-        <Button
-          variant="outline"
-          onClick={() => setStep(shouldAskSpecialization ? 3 : 2)}
-          className="w-full sm:w-auto px-10 py-6 text-lg border-2 border-orange-300 text-orange-500 hover:bg-orange-50"
-        >
-          Back
-        </Button>
-       
-        <Button
-          onClick={() => console.log('Flow completed')}
-          className="w-full sm:w-auto px-10 py-6 text-lg bg-green-500 hover:bg-green-600 text-white shadow-lg cursor-pointer"
-        >
-          Next
-        </Button>
-      </div>
-    );
+    // Step 4: Back to Step 3 (if specialization was asked) or Step 2
+    if (step === 4) {
+      return (
+        <div className="w-full flex justify-start mt-8">
+          <Button
+            variant="outline"
+            onClick={() => setStep(shouldAskSpecialization ? 3 : 2)}
+            className="px-8 py-4 text-base border-2 border-orange-300 text-orange-500 hover:bg-orange-50"
+          >
+            Back
+          </Button>
+        </div>
+      );
+    }
+
+    // Step 5: Back to Step 4
+    if (step === 5) {
+      return (
+        <div className="w-full flex justify-start mt-8">
+          <Button
+            variant="outline"
+            onClick={() => setStep(4)}
+            className="px-8 py-4 text-base border-2 border-orange-300 text-orange-500 hover:bg-orange-50"
+          >
+            Back
+          </Button>
+        </div>
+      );
+    }
+
+    // Step 6: Back to Step 5
+    if (step === 6) {
+      return (
+        <div className="w-full flex justify-start mt-8">
+          <Button
+            variant="outline"
+            onClick={() => setStep(5)}
+            className="px-8 py-4 text-base border-2 border-orange-300 text-orange-500 hover:bg-orange-50"
+          >
+            Back
+          </Button>
+        </div>
+      );
+    }
+
+    return null;
   };
 
   return (
@@ -517,6 +591,8 @@ const Compare = () => {
         {step === 2 && renderCourseStep()}
         {step === 3 && renderSpecializationStep()}
         {step === 4 && renderBudgetStep()}
+        {step === 5 && renderQualificationStep()}
+        {step === 6 && renderScoreStep()}
         {renderActions()}
       </div>
     </div>
