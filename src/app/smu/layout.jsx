@@ -1,9 +1,12 @@
 export const metadata = {
-  title: "Sikkim Manipal University Online | UG & PG Courses, Fees & Admission - UNIFOST",
+  title: "Sikkim Manipal University Online",
   description:
     "Sikkim Manipal University (SMU) offers UGC-approved online UG & PG programs including MBA, MCA, B.Com, and BA. Explore fees, eligibility, placements, admission process & global recognition.",
   keywords: [
     "Sikkim Manipal University Online",
+    "smu online",
+    "smu university online",
+    "smu online courses",
     "SMU Online MBA",
     "SMU Online MCA",
     "SMU Online B.Com",
@@ -19,7 +22,7 @@ export const metadata = {
     "NAAC Accredited University",
   ],
   openGraph: {
-    title: "Sikkim Manipal University Online | UG & PG Courses, Fees & Admission - UNIFOST",
+    title: "Sikkim Manipal University Online",
     description:
       "Discover UGC-approved UG & PG online programs from Sikkim Manipal University (SMU). Flexible learning, affordable fees, expert faculty & placement support.",
     url: "https://unifostedu.com/smu",

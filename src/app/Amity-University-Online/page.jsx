@@ -382,7 +382,7 @@ const AmityLandingPage = () => {
       <p className="text-gray-600">{description}</p>
     </div>
   );
-  
+
   const [formData, setFormData] = useState({
     fullName: "",
     phoneNumber: "",
@@ -631,7 +631,7 @@ const AmityLandingPage = () => {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       </Head>
       <div className="min-h-screen bg-white relative" style={{ overflowX: "hidden" }}>
-      
+
         <motion.header
           className="bg-white shadow-sm fixed top-0 left-0 w-full z-50"
           initial={{ y: -100 }}
@@ -671,9 +671,9 @@ const AmityLandingPage = () => {
                   <ArrowRight className="w-3 h-3 md:w-4 md:h-4 ml-1 md:ml-2" />
                 </Button>
                 {/* Mobile Menu Button */}
-                <Button 
-                  onClick={() => setIsMobileMenuOpen(true)} 
-                  variant="ghost" 
+                <Button
+                  onClick={() => setIsMobileMenuOpen(true)}
+                  variant="ghost"
                   size="icon"
                   className="lg:hidden w-8 h-8 sm:w-10 sm:h-10"
                 >
@@ -684,7 +684,7 @@ const AmityLandingPage = () => {
           </div>
         </motion.header>
 
-        
+
         {/* Notification Bar - Optimized */}
         <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 py-2 sm:py-2.5 md:py-3 mt-[56px] sm:mt-[64px] md:mt-[70px] mb-0">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 text-center">
@@ -706,17 +706,17 @@ const AmityLandingPage = () => {
           </div>
         </div>
 
-      <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row">
+        <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row">
           {/* Left Sidebar - Hidden on Mobile, Sticky on Desktop */}
-        <PageContent 
-          sectionItems={sectionItems} 
-          activeSection={activeSection} 
-          ismobilemenuopen={isMobileMenuOpen}
-          onClose={() => setIsMobileMenuOpen(false)}
-        />
+          <PageContent
+            sectionItems={sectionItems}
+            activeSection={activeSection}
+            ismobilemenuopen={isMobileMenuOpen}
+            onClose={() => setIsMobileMenuOpen(false)}
+          />
 
-        
-        <main className="flex-1 min-w-0 lg:pl-64">
+
+          <main className="flex-1 min-w-0 lg:pl-64">
             {/* Hero Section - Fully Responsive */}
 
             <section
@@ -2004,9 +2004,9 @@ const AmityLandingPage = () => {
                   <div className="mt-6"></div>
                 </motion.div>
               </div>
-              
+
             </section>
-          
+
             <div id="record">
               <div >
                 <section
@@ -2161,7 +2161,7 @@ const AmityLandingPage = () => {
                   </div>
                 </section>
 
-            <section id="AdmissionProcedure" className="relative py-20 bg-white">
+                <section id="AdmissionProcedure" className="relative py-20 bg-white">
                   {/* Decorative Blobs */}
                   <div className="absolute -top-20 -left-20 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
                   <div className="absolute -bottom-32 -right-32 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
@@ -2189,7 +2189,7 @@ const AmityLandingPage = () => {
                         their academic or professional schedule.
                       </p>
 
-                      <div  className="bg-gray-50 p-6 rounded-xl shadow-sm mt-6 max-w-3xl mx-auto">
+                      <div className="bg-gray-50 p-6 rounded-xl shadow-sm mt-6 max-w-3xl mx-auto">
                         <h4 className="text-xl font-semibold text-gray-900 mb-4">
                           📅 Important Admission Dates
                         </h4>
@@ -2802,58 +2802,24 @@ const AmityLandingPage = () => {
                       Quick Links
                     </h4>
                     <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-gray-400">
-                      <li>
-                        <a
-                          href="#Courses"
-                          className="hover:text-white transition-colors"
-                        >
-                          Programs
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#Admission"
-                          className="hover:text-white transition-colors"
-                        >
-                          Admissions
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#Scholarship"
-                          className="hover:text-white transition-colors"
-                        >
-                          Scholarships
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#Company"
-                          className="hover:text-white transition-colors"
-                        >
-                          Career Services
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#AboutAmity"
-                          className="hover:text-white transition-colors"
-                        >
-                          About Us
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#HeroSection"
-                          className="hover:text-white transition-colors"
-                        >
-                          Home
-                        </a>
-                      </li>
-                      {/* <li><a href="/services" className="hover:text-white transition-colors">services</a></li>
-                <li><a href="/listofcollege" className="hover:text-white transition-colors">Explore Colleges</a></li>
-               */}
-                    </ul>
+  {[
+    "Programs",
+    "Admissions",
+    "Scholarships",
+    "Career Services",
+    "About Us",
+    "Home",
+  ].map((item, i) => (
+    <li
+      key={i}
+      onClick={() => setOpenModal({ type: "apply" })}
+      className="hover:text-white transition-colors cursor-pointer"
+    >
+      {item}
+    </li>
+  ))}
+</ul>
+
                   </div>
 
                   <div>
@@ -2883,37 +2849,32 @@ const AmityLandingPage = () => {
                   </h4>
                   <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2">
                     {[
-                      "BBA General - Amity Online",
-                      "BBA Data Analytics - Amity Online",
-                      "BBA Travel & Tourism Management - Amity Online",
-                      "BBA Business Analytics - Amity Online",
-                      "BCA General - Amity Online",
-                      "BCA Cloud & Security - Amity Online",
-                      "BCA Software Engineering - Amity Online",
-                      "BCA Data Science - Amity Online",
-                      "B.Com General - Amity Online",
-                      "B.Com Hons - Amity Online",
-                      "B.Com International Finance & Accounting - Amity Online",
-                      "BA Journalism & Mass Communication - Amity Online",
-                      "BA Psychology - Amity Online",
-                      "BA English - Amity Online",
-                      "BA Sociology - Amity Online",
-                      "BA Political Science - Amity Online",
-                      "BA Economics - Amity Online",
-                      "BA Native Languages - Amity Online",
-                      "MBA General - Amity Online",
-                      "MBA HR Analytics - Amity Online",
-                      "MBA Data Science - Amity Online",
-                      "MBA Digital Marketing - Amity Online",
-                      "MBA International Business - Amity Online",
-                      "MBA Finance & Accounting - Amity Online",
-                      "MBA Operations Management - Amity Online",
-                      "MCA Cyber Security - Amity Online",
-                      "MCA Blockchain Technology - Amity Online",
-                      "MCA Artificial Intelligence - Amity Online",
-                      "M.Sc Data Science - Amity Online",
-                      "M.Com Financial Management - Amity Online",
-                      "MA Public Policy & Governance - Amity Online",
+                      "amity university online mba",
+                      "amity online mba fees",
+                      "amity university online bca",
+                      "amity university online bba",
+                      "amity university online bcom",
+                      "amity university online ma psychology",
+                      "amity university online mca",
+                      "amity university online courses list",
+                      "amity university online ugc approved degrees",
+                      "amity university online admission 2025",
+                      "amity online january batch admission last date",
+                      "amity online apply now",
+                      "amity university online eligibility for mba",
+                      "amity online mba fees per semester",
+                      "amity online bca fees 2025",
+                      "amity university online scholarship, no cost emi",
+                      "amity online admission process step by step",
+                      "amity university online noida admission",
+                      "amity online mba from noida campus",
+                      "amity university online distance and online courses",
+                      "amity online degree valid for government jobs in india",
+                      "amity online vs manipal online mba",
+                      "amity online mba reviews and placements",
+                      "amity university online genuine or fake",
+                      "best online mba in india amity university",
+                      "amity online mba vs nmims online mba"
                     ].map((keyword, index) => (
                       <span
                         key={index}

@@ -1,10 +1,19 @@
 export const metadata = {
-  title: "Manipal Academy of Higher Education Online Degrees | MAHE UG & PG Courses | UNIFOST",
+  title: "Manipal Academy of Higher Education Online Degrees | MAHE ",
   description:
     "Explore undergraduate and postgraduate programs from Manipal Academy of Higher Education (MAHE), a NAAC A++ accredited Institution of Eminence. Flexible, career-focused online degrees with global recognition.",
   keywords: [
-    "Manipal Online",
-    "MAHE Online",
+    "online mahe university",
+    "online mahe university courses",
+    "online mahe university courses India",
+    "online mahe university courses in India",
+    "online mahe university courses in India",
+    "mahe online",
+    "mahe university online",
+    "mahe university online courses",
+    "mahe university online courses India",
+    "mahe university online courses in India",
+    "mahe university online courses in India",
     "Manipal University Online",
     "Manipal Academy of Higher Education",
     "Mahe UG & PG Courses",

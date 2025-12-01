@@ -2927,7 +2927,6 @@ useEffect(() => {
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" alt="Manipal" className="h-10 w-auto" />
-                    <span className="text-xl font-bold text-white">Online Manipal</span>
                   </div>
                   <p className="text-sm text-gray-400 leading-relaxed">
                     UGC-entitled, NAAC A+ accredited online degrees designed for modern learners. 
@@ -2935,18 +2934,7 @@ useEffect(() => {
                   </p>
                   
                   {/* Social Media */}
-                  <div className="flex space-x-4">
-                    {[
-                      { icon: '📘', label: 'Facebook' },
-                      { icon: '📷', label: 'Instagram' },
-                      { icon: '🐦', label: 'Twitter' },
-                      { icon: '💼', label: 'LinkedIn' }
-                    ].map((social, i) => (
-                      <div key={i} className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors cursor-pointer">
-                        <span className="text-lg">{social.icon}</span>
-                      </div>
-                    ))}
-                  </div>
+                  
                 </motion.div>
               </div>
 
