@@ -1842,9 +1842,9 @@ const Manipal = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-12 border-b border-gray-700">
               {/* Brand */}
               <div className="lg:col-span-1">
-                <div className="flex items-center gap-4 mb-6">
+                <div className=" bg-white flex items-center gap-4 mb-6">
                   <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" alt="Manipal" className="h-12 w-auto" />
-                  <span className="font-queens text-2xl text-white">Online Manipal</span>
+                 
                 </div>
                 <p className="text-gray-400 leading-relaxed mb-6">
                   UGC-entitled, NAAC A+ accredited online degrees designed for modern learners seeking career advancement.

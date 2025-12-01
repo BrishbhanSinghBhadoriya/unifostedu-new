@@ -23,7 +23,7 @@ const SMU = () => {
       duration: "3 Years",
       eligibility: "10+2 or equivalent",
       fees: "₹75,000",
-      specialization: "English + Sociology + Political Science",
+      specialization: "English , Sociology , Political Science",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
       university: "Sikkim Manipal University",
       universityShort: "SMU",
@@ -566,6 +566,16 @@ const SMU = () => {
     </p>
 
   </div>
+<div className="flex justify-center mt-10">
+     <button
+          onClick={() => setOpenModal({ type: "apply" })}
+          className="bg-[#f26722] hover:bg-orange-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
+        >
+          <span className="hidden sm:inline">Apply Now</span>
+
+          <span className="sm:hidden">Apply</span>
+        </button>
+        </div>
 </section>
 
         <section  className="bg-white py-16 px-6 md:px-16 lg:px-24">
@@ -1138,9 +1148,18 @@ const SMU = () => {
               <p className="text-gray-600 leading-relaxed">
              The online Bachelor of Commerce (BCom) from Sikkim Manipal University (SMU) is designed to help learners delve into the world of business and commerce. The industry aligned curriculum of this online BCom program equips learners with strong foundations in various levels of accounting such as financial, corporate accounting, cost, and management while covering other core areas such as taxation, HRM, investments, auditing, statistics, and mathematics. Delivered by experienced faculty through an AI-enabled platform, learners can access learning resources, live and recorded classes, discussion forums, e-libraries, AI-tutor, and quizzes from the comfort of their homes. By pursuing this program, learners can boost their career prospects across industries
               </p>
+
+                 <button
+          onClick={() => setOpenModal({ type: "apply" })}
+          className="bg-[#f26722] hover:bg-orange-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
+        >
+          <span className="hidden sm:inline">Apply Now</span>
+
+          <span className="sm:hidden">Apply</span>
+        </button>
             </div>
             
-
+         
             <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
               <h4 className="text-xl font-semibold text-gray-800 mb-2">
                 2. Online Bachelor of Arts (BA)
@@ -1148,8 +1167,17 @@ const SMU = () => {
               <p className="text-gray-600 leading-relaxed">
                 The Online BA from Sikkim Manipal University enhances communication, creativity, and critical thinking skills. With multiple specializations in humanities and social sciences, this program encourages holistic learning and personal growth.
               </p>
+                 <button
+          onClick={() => setOpenModal({ type: "apply" })}
+          className="bg-[#f26722] hover:bg-orange-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
+        >
+          <span className="hidden sm:inline">Apply Now</span>
+
+          <span className="sm:hidden">Apply</span>
+        </button>
             </div>
           </div>
+          
         </div>
 
         {/* Postgraduate Programs */}
@@ -1168,6 +1196,14 @@ const SMU = () => {
                 Students can specialize in Marketing, HR, Finance, Data Analytics, or Operations Management. The program includes live projects, business simulations, and mentorship from industry experts, ensuring practical and career-focused learning.
 
               </p>
+                 <button
+          onClick={() => setOpenModal({ type: "apply" })}
+          className="bg-[#f26722] hover:bg-orange-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
+        >
+          <span className="hidden sm:inline">Apply Now</span>
+
+          <span className="sm:hidden">Apply</span>
+        </button>
             </div>
 
             <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
@@ -1177,6 +1213,14 @@ const SMU = () => {
               <p className="text-gray-600 leading-relaxed">
                The Online MCA from Sikkim Manipal University helps learners master advanced IT skills in software engineering, data analytics, and artificial intelligence. It blends technical knowledge with management insights — preparing students for leadership roles in technology and digital industries.
            </p>
+              <button
+          onClick={() => setOpenModal({ type: "apply" })}
+          className="bg-[#f26722] hover:bg-orange-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
+        >
+          <span className="hidden sm:inline">Apply Now</span>
+
+          <span className="sm:hidden">Apply</span>
+        </button>
             </div>
              <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
               <h4 className="text-xl font-semibold text-gray-800 mb-2">
@@ -1185,6 +1229,14 @@ const SMU = () => {
               <p className="text-gray-600 leading-relaxed">
                  The online Master of Commerce (MCom) from the prestigious Sikkim Manipal University (SMU) aims to build future-ready professionals across industries. Delivered through an AI-enabled learning portal, this most affordable online MCom supports anytime, anywhere learning by providing high-quality learning content, live & recorded classes by expert faculty, clarifying queries with an AI tutor, participating in discussion forums, and taking online examinations. The curriculum covers key commerce concepts such as corporate financial management, investment management, security analysis, and portfolio management to enhance commerce acumen. Earn a globally accepted degree certificate and prestigious SMU alumni status to boost your career prospects and expand your professional network.
               </p>
+                 <button
+          onClick={() => setOpenModal({ type: "apply" })}
+          className="bg-[#f26722] hover:bg-orange-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
+        >
+          <span className="hidden sm:inline">Apply Now</span>
+
+          <span className="sm:hidden">Apply</span>
+        </button>
             </div>
              <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
               <h4 className="text-xl font-semibold text-gray-800 mb-2">
@@ -1193,6 +1245,14 @@ const SMU = () => {
               <p className="text-gray-600 leading-relaxed">
                  The online Master of Arts (MA) programs from Sikkim Manipal University (SMU) are designed to provide learners with a deep understanding of their chosen field—whether English, Political Science, or Sociology. These two-year online degrees offer comprehensive curricula, interactive live and recorded classes, and AI-powered learning tools. Students can study from anywhere in India, access digital resources, participate in discussions, and take online proctored exams. The affordable programs prepare graduates for diverse career paths in education, research, media, public service, and other related sectors
               </p>
+                 <button
+          onClick={() => setOpenModal({ type: "apply" })}
+          className="bg-[#f26722] hover:bg-orange-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
+        >
+          <span className="hidden sm:inline">Apply Now</span>
+
+          <span className="sm:hidden">Apply</span>
+        </button>
             </div>
           </div>
         </div>
@@ -1314,9 +1374,18 @@ const SMU = () => {
               </h3>
               <p>{item.desc}</p>
             </div>
+            
           ))}
-        </div>
+        </div><div className="mt-10 text-center">
+               <button
+          onClick={() => setOpenModal({ type: "apply" })}
+          className="bg-[#f26722] hover:bg-orange-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
+        >
+          <span className="hidden sm:inline">Apply Now</span>
 
+          <span className="sm:hidden">Apply</span>
+        </button>
+            </div>
         {/* Additional Info Sections */}
         <div className="mt-16 space-y-10">
           {[
@@ -1356,7 +1425,16 @@ const SMU = () => {
             </div>
           ))}
         </div>
+           <div className="flex justify-center mt-10">
+     <button
+          onClick={() => setOpenModal({ type: "apply" })}
+          className="bg-[#f26722] hover:bg-orange-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
+        >
+          <span className="hidden sm:inline">Apply Now</span>
 
+          <span className="sm:hidden">Apply</span>
+        </button>
+        </div>
         {/* Conclusion */}
         <div className="mt-16 bg-black text-white p-10 rounded-2xl shadow-lg">
           <h3 className="text-2xl font-semibold mb-4">Conclusion</h3>
@@ -1384,6 +1462,16 @@ const SMU = () => {
           </p>
         </div>
       </div>
+      <div className="flex justify-center mt-10">
+     <button
+          onClick={() => setOpenModal({ type: "apply" })}
+          className="bg-[#f26722] hover:bg-orange-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
+        >
+          <span className="hidden sm:inline">Apply Now</span>
+
+          <span className="sm:hidden">Apply</span>
+        </button>
+        </div>
     </section>
         {/* Why Choose Section */}
         <section className="py-20 bg-gray-50">

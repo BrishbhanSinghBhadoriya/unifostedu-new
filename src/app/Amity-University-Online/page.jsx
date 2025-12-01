@@ -405,12 +405,7 @@ const AmityLandingPage = () => {
       [name]: value,
     }));
   };
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setOpenModal(true);
-    }, 3000);
-    return () => clearTimeout(timer);
-  }, []);
+
 
   useEffect(() => {
     if (!sectionItems.length) return undefined;
@@ -1272,7 +1267,36 @@ const AmityLandingPage = () => {
                     professional journey.
                   </motion.p>
                 </div>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  viewport={{ once: true }}
+                  className="mt-6 sm:mt-8 md:mt-10 text-center"
+                >
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+                    <Button
+                      size="lg"
+                      className="bg-yellow-400 hover:bg-yellow-500 text-black px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base md:text-lg rounded-full w-full sm:w-auto"
+                      onClick={() => setOpenModal({ type: "apply" })}
+                    >
+                      Apply Now
+                      
+                    </Button>
+
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-2 border-gray-300 hover:border-blue-400 px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base md:text-lg rounded-full w-full sm:w-auto"
+                      onClick={() => setOpenModal({ type: "enquiry" })}
+                    >
+                      
+                      Enquire Now
+                    </Button>
+                  </div>
+                </motion.div>
               </section>
+              
             </div>
 
             <AccreditationSection
@@ -1549,6 +1573,7 @@ const AmityLandingPage = () => {
                   </div>
                 </section>
               </div>
+              
             </section>
 
             {/* Features Section */}
@@ -2218,11 +2243,21 @@ const AmityLandingPage = () => {
                         <strong> Online MBA</strong>,{" "}
                         <strong>Online BBA</strong>, <strong>Online BCA</strong>
                         ,<strong>Online BA</strong>, <strong>Online MCA</strong>
-                        , and <strong>Online M.Com</strong>
-                        through the official Amity University Online portal.
+                        , and <strong>Online M.Com </strong>
+                        Fill the Enquiry Form  And  Apply Now  Form   .
+
+                            <Button
+                  onClick={() => setOpenModal({ type: "enquiry" })}
+                  size="sm"
+                  className="bg-yellow-400 text-black border border-black hover:text-white hover:bg-[#452971] text-xs sm:text-sm px-3 sm:px-4 md:px-6 py-1.5 md:py-2 whitespace-nowrap cursor-Pointer"
+                >
+                  <span className="hidden sm:inline">Enquire Now</span>
+                  <span className="sm:hidden">Enquire</span>
+                 
+                </Button>
                       </p>
                     </motion.div>
-
+                  
                     {/* 4-Step Process */}
                     <motion.div
                       initial={{ opacity: 0, y: 30 }}
@@ -2389,6 +2424,22 @@ const AmityLandingPage = () => {
                     students can join anytime without losing an academic year.
                   </motion.p>
                 </div>
+
+                <div className="w-full flex justify-center mt-4">
+  <Button
+    onClick={() => setOpenModal({ type: "enquiry" })}
+    size="lg"
+    className="bg-yellow-400 text-black border border-black 
+               hover:text-white hover:bg-[#452971] 
+               text-sm sm:text-base px-6 sm:px-8 py-2.5 
+               rounded-lg shadow-md transition-all duration-300
+               hover:scale-105 cursor-pointer"
+  >
+    <span className="hidden sm:inline">Enquire Now</span>
+    <span className="sm:hidden">Enquire</span>
+  </Button>
+</div>
+
               </section>
             </div>
 
@@ -2451,6 +2502,21 @@ const AmityLandingPage = () => {
                   </ul>
                 </motion.div>
               </div>
+              <div className="w-full flex justify-center mt-4">
+  <Button
+    onClick={() => setOpenModal({ type: "enquiry" })}
+    size="lg"
+    className="bg-yellow-400 text-black border border-black 
+               hover:text-white hover:bg-[#452971] 
+               text-sm sm:text-base px-6 sm:px-8 py-2.5 
+               rounded-lg shadow-md transition-all duration-300
+               hover:scale-105 cursor-pointer"
+  >
+    <span className="hidden sm:inline">Enquire Now</span>
+    <span className="sm:hidden">Enquire</span>
+  </Button>
+</div>
+
             </section>
             {/* Hiring Partners */}
             <section id="PlacementRecord" className="py-16 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative font-[Inter]">
@@ -2540,6 +2606,8 @@ const AmityLandingPage = () => {
                   support.
                 </motion.p>
               </div>
+          
+
             </section>
             <section id="RegionalOutreach" className="py-16 bg-white">
               <div className="max-w-6xl mx-auto px-6">
@@ -2589,7 +2657,22 @@ const AmityLandingPage = () => {
                     the digital classrooms, placement labs, and learner success stories before you enrol.
                   </p>
                 </div>
-              </div>
+              </div> 
+              <div className="w-full flex justify-center mt-4">
+  <Button
+    onClick={() => setOpenModal({ type: "enquiry" })}
+    size="lg"
+    className="bg-yellow-400 text-black border border-black 
+               hover:text-white hover:bg-[#452971] 
+               text-sm sm:text-base px-6 sm:px-8 py-2.5 
+               rounded-lg shadow-md transition-all duration-300
+               hover:scale-105 cursor-pointer"
+  >
+    <span className="hidden sm:inline">Enquire Now</span>
+    <span className="sm:hidden">Enquire</span>
+  </Button>
+</div>
+
             </section>
             <section id="HiringPartners" className="py-16 bg-gray-50">
               <div className="max-w-7xl mx-auto px-6">
@@ -2646,6 +2729,22 @@ const AmityLandingPage = () => {
                   ))}
                 </motion.div>
               </div>
+
+              <div className="w-full flex justify-center mt-4">
+  <Button
+    onClick={() => setOpenModal({ type: "enquiry" })}
+    size="lg"
+    className="bg-yellow-400 text-black border border-black 
+               hover:text-white hover:bg-[#452971] 
+               text-sm sm:text-base px-6 sm:px-8 py-2.5 
+               rounded-lg shadow-md transition-all duration-300
+               hover:scale-105 cursor-pointer"
+  >
+    <span className="hidden sm:inline">Enquire Now</span>
+    <span className="sm:hidden">Enquire</span>
+  </Button>
+</div>
+
             </section>
 
             {/* CTA Section */}
@@ -2716,6 +2815,21 @@ const AmityLandingPage = () => {
                   ))}
                 </div>
               </div>
+              <div className="w-full flex justify-center mt-4">
+  <Button
+    onClick={() => setOpenModal({ type: "apply" })}
+    size="lg"
+    className="bg-yellow-400 text-black border border-black 
+               hover:text-white hover:bg-[#452971] 
+               text-sm sm:text-base px-6 sm:px-8 py-2.5 
+               rounded-lg shadow-md transition-all duration-300
+               hover:scale-105 cursor-pointer"
+  >
+    <span className="hidden sm:inline">Enquire Now</span>
+    <span className="sm:hidden">Enquire</span>
+  </Button>
+</div>
+
             </section>
 
             <section id="FAQs" className="max-w-6xl mx-auto py-8 sm:py-12 md:py-16 px-3 sm:px-4">
@@ -2774,6 +2888,22 @@ const AmityLandingPage = () => {
                   }),
                 }}
               />
+
+              <div className="w-full flex justify-center mt-4">
+  <Button
+    onClick={() => setOpenModal({ type: "apply" })}
+    size="lg"
+    className="bg-yellow-400 text-black border border-black 
+               hover:text-white hover:bg-[#452971] 
+               text-sm sm:text-base px-6 sm:px-8 py-2.5 
+               rounded-lg shadow-md transition-all duration-300
+               hover:scale-105 cursor-pointer"
+  >
+    <span className="hidden sm:inline">Enquire Now</span>
+    <span className="sm:hidden">Enquire</span>
+  </Button>
+</div>
+
             </section>
 
             {/* Footer - Responsive */}

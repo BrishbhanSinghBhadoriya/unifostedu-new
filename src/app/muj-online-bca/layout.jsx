@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Manipal Online BCA | Bachelor of Computer Applications | MUJ Online",
   description: "Explore the UGC-approved Online BCA from Manipal University Jaipur. Learn about eligibility, syllabus, fees, career opportunities, and admissions. NAAC A+ accredited.",
-  keywords: "Manipal Online BCA, MUJ BCA Online, Bachelor of Computer Applications, Online BCA, UGC Approved BCA, NAAC A+ BCA",
+  keywords: "Manipal Online BCA,Online BCA Course India, Best Online BCA Programs, UGC Approved Online BCA, Manipal University Jaipur BCA,Online Manipal BCA Fees,Manipal Online BCA Eligibility,BCA Online Degree India,Best Online IT Degree India,Online BCA Syllabus,Is Manipal Online BCA Good,Full Stack BCA Online,Cybersecurity BCA Online",
   metadataBase: new URL("https://unifostedu.com"),
   alternates: {
     canonical: "https://unifostedu.com/muj-online-bca",

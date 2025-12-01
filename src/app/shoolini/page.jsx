@@ -610,6 +610,7 @@ const Shoolini = () => {
       specialization: "Accounting, Finance and Taxation",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
       alt: "Bachelor of Commerce at Shoolini University",
+      universityShort: "shoolini"
     },
     {
       course: "Bachelor of Business Administration (BBA)",
@@ -619,6 +620,7 @@ const Shoolini = () => {
       specialization: "HR, Marketing, Finance, Digital Marketing, Computer Science, Direct Selling",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327856/shoolini-bba_gqzjmi.webp",
       alt: "Bachelor of Business Administration at Shoolini University",
+      universityShort: "shoolini"
     },
     {
       course: "Bachelor of Computer Applications (BCA)",
@@ -628,6 +630,7 @@ const Shoolini = () => {
       specialization: "Machine Learning, Data Science, Cyber Secruity and Artificial Intelligence",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327857/shoolini-bca_zwvncy.webp",
       alt: "Bachelor of Computer Applications at Shoolini University",
+      universityShort: "shoolini"
     }
   ];
 
@@ -640,6 +643,7 @@ const Shoolini = () => {
       specialization: "Marketing Management, Operation & Supply Chain Management, Agri Business Management, Human Resource Management, IT Management, Biotechnology Management, Financial Management, Tourism Management, Food Technology Management, Digital Marketing, Real Estate Management, Pharma & Health Care Management,Retail Management,Direct Selling Management,Banking & Insurance,Data Science & Business Analytics",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327859/shoolini-mba_dpoger.webp",
       alt: "Master of Business Administration at Shoolini University",
+      universityShort: "shoolini"
     },
     {
       course: "Executive MBA",
@@ -649,6 +653,7 @@ const Shoolini = () => {
       specialization: "Marketing Management, Operation & Supply Chain Management, Agri Business Management, Human Resource Management, IT Management, Biotechnology Management, Financial Management, Tourism Management, Food Technology Management, Digital Marketing, Real Estate Management, Pharma & Health Care Management,Retail Management,Direct Selling Management,Banking & Insurance,Data Science & Business Analytics",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
       alt: "Executive MBA at Shoolini University",
+      universityShort: "shoolini"
     },
     {
       course: "MSC in Data science ",
@@ -658,6 +663,7 @@ const Shoolini = () => {
       specialization: "Data Science",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327859/shoolini-mca_pxpsfz.webp",
       alt: "Master of Science in Data Science at Shoolini University",
+      universityShort: "shoolini"
     },
     {
       course: "MCA ",
@@ -667,6 +673,7 @@ const Shoolini = () => {
       specialization: "AI & ML, Data Science and Analytics, Full Stack Development",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
       alt: "Master of Science in Data Science at Shoolini University",
+      universityShort: "shoolini"
     },
     {
       course: "Master of Arts (M.A) ",
@@ -676,6 +683,7 @@ const Shoolini = () => {
       specialization: "English Literature, journalism and Mass Communication",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327858/shoolini-ma_uokqan.webp",
       alt: "Master of Arts in shoolini University",
+      universityShort: "shoolini"
     }
   ];
 
@@ -776,19 +784,19 @@ const Shoolini = () => {
         </header>
  
         {/* Main Content with Sidebar */}
-         <div className="flex flex-col lg:flex-row pt-20">
+         <div className="flex flex-col lg:flex-row pt-0 ">
            <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} onApplyNowClick={() => setOpenModal({ type: 'apply' })} />           
             {/* Main Content - Scrollable */}
-            <main className="main-content flex-1 overflow-x-hidden px-4 lg:px-8 pb-10">
+            <main className="main-content flex-1 overflow-x-hidden px-4 lg:px-8 pb-10 mt-0">
 
-        <section id="About" className="relative w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] overflow-hidden">
+        <section id="About" className="relative w-full min-h-[450px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] overflow-hidden mt-0">
   {/* Background Image with Gradient Overlay */}
   <div className="absolute inset-0">
     <Image
       src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327859/shoolini_banner_vrgomm.png"
       alt="Shoolini University Campus"
       fill
-      className="object-cover object-center"
+      className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden mt-0"
       priority
     />
     <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
@@ -796,7 +804,7 @@ const Shoolini = () => {
   </div>
   {/* Content Container */}
   <div className="relative z-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
-  <div className="flex flex-col lg:flex-row items-center justify-between h-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px]">
+  <div className="flex flex-col lg:flex-row items-center justify-between h-full min-h-[450px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px]">
 
     {/* Left Content */}
     <div className="flex-1 max-w-2xl lg:max-w-3xl text-white py-8 sm:py-12 lg:py-24 w-full">
@@ -806,18 +814,7 @@ const Shoolini = () => {
         transition={{ duration: 0.8 }}
         className="space-y-4 sm:space-y-6"
       >
-        {/* Badge Text */}
-      <div className="flex flex-wrap gap-2 sm:gap-4 mt-10 sm:mt-12">
-  {["Flexible Learning", "Research-Focused", "Career-Oriented Programs"].map((text, idx) => (
-    <div
-      key={idx}
-      className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1 sm:py-2 border border-white/30"
-    >
-      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-400 rounded-full"></div>
-      <span className="text-xs sm:text-sm font-medium">{text}</span>
-    </div>
-  ))}
-</div>
+       
       </motion.div>
     </div>
   </div>
@@ -884,99 +881,99 @@ const Shoolini = () => {
    
 
       {/* UG & PG Courses */}
-     {/* Courses Section */}
-           <section id="explore-courses" className="py-20 bg-white">
-             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-               <div className="text-center mb-16">
-                 <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                   Explore <span className="bg-orange-500 bg-clip-text text-transparent">Online Programs</span>
-                 </h2>
-                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                   Choose from industry-relevant programs designed for working professionals and fresh graduates
-                 </p>
-               </div>
-   
-               <Tabs.Root value={activeTab} onValueChange={setActiveTab} className="space-y-12">
-                 {/* Tab Buttons */}
-                 <div className="flex justify-center">
-                   <Tabs.List className="inline-flex bg-gray-100/80 backdrop-blur-sm rounded-2xl p-2 shadow-lg border border-gray-200">
-                     {[
-                       { value: 'all', label: 'All Programs' },
-                       { value: 'ug', label: 'Undergraduate' },
-                       { value: 'pg', label: 'Postgraduate' }
-                     ].map((tab) => (
-                       <Tabs.Trigger
-                         key={tab.value}
-                         value={tab.value}
-                         className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
-                           activeTab === tab.value
-                             ? 'bg-[#f9141e] text-white shadow-lg'
-                             : 'text-gray-700 hover:text-[#f7188b] hover:bg-white'
-                         }`}
-                       >
-                         {tab.label}
-                       </Tabs.Trigger>
-                     ))}
-                   </Tabs.List>
+        {/* Courses Section */}
+             <section id="explore-courses" className="py-20 bg-white">
+               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <div className="text-center mb-16">
+                   <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                     Explore <span className="bg-red-500 bg-clip-text text-transparent">Online Programs</span>
+                   </h2>
+                   <p className="text-xl text-gray-600 max-w-3xl mx-auto ">
+                     Choose from industry-relevant programs designed for working professionals and fresh graduates
+                   </p>
                  </div>
-   
-                 {/* Course Grid */}
-                 <Tabs.Content value={activeTab} className="outline-none">
-                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-                     {(activeTab === 'all' ? [...ugCourses, ...pgCourses] : 
-                       activeTab === 'ug' ? ugCourses : pgCourses).map((course, idx) => (
-                       <div key={idx} className="group">
-                         <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
-                           {/* Course Image */}
-                           <div className="relative h-48 overflow-hidden">
-                             <Image
-                               src={course.image}
-                               alt={course.alt}
-                               fill
-                               className="object-cover group-hover:scale-110 transition-transform duration-500"
-                             />
-                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                             <div className="absolute bottom-4 left-4">
-                               <span className="bg-[#f9141e] text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                 {course.universityShort}
-                               </span>
+     
+                 <Tabs.Root value={activeTab} onValueChange={setActiveTab} className="space-y-12">
+                   {/* Tab Buttons */}
+                   <div className="flex justify-center">
+                     <Tabs.List className="inline-flex bg-gray-100/80 backdrop-blur-sm rounded-2xl p-2 shadow-lg border border-gray-200">
+                       {[
+                         { value: 'all', label: 'All Programs' },
+                         { value: 'ug', label: 'Undergraduate' },
+                         { value: 'pg', label: 'Postgraduate' }
+                       ].map((tab) => (
+                         <Tabs.Trigger
+                           key={tab.value}
+                           value={tab.value}
+                           className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg sm:rounded-xl font-semibold transition-all duration-300 text-sm sm:text-base ${
+                             activeTab === tab.value
+                               ? 'bg-red-500 text-white shadow-lg'
+                               : 'text-gray-700 hover:text-[#f7188b] hover:bg-white'
+                           }`}
+                         >
+                           {tab.label}
+                         </Tabs.Trigger>
+                       ))}
+                     </Tabs.List>
+                   </div>
+     
+                   {/* Course Grid */}
+                   <Tabs.Content value={activeTab} className="outline-none">
+                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                       {(activeTab === 'all' ? [...ugCourses, ...pgCourses] : 
+                         activeTab === 'ug' ? ugCourses : pgCourses).map((course, idx) => (
+                         <div key={idx} className="group">
+                           <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
+                             {/* Course Image */}
+                             <div className="relative h-48 overflow-hidden">
+                               <Image
+                                 src={course.image}
+                                 alt={course.alt}
+                                 fill
+                                 className="object-cover group-hover:scale-110 transition-transform duration-500"
+                               />
+                               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                               <div className="absolute bottom-4 left-4">
+                                 <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                   {course.universityShort}
+                                 </span>
+                               </div>
                              </div>
-                           </div>
-   
-                           {/* Course Content */}
-                           <div className="p-6 space-y-4">
-                             <h3 className="text-xl font-bold text-gray-900 line-clamp-2">{course.course}</h3>
-                             
-                             <div className="space-y-2">
-                               <div className="flex items-center gap-2 text-gray-600">
-                                 <span>⏱️</span>
-                                 <span className="text-sm">{course.duration}</span>
+     
+                             {/* Course Content */}
+                             <div className="p-6 space-y-4">
+                               <h3 className="text-xl font-bold text-gray-900 line-clamp-2">{course.course}</h3>
+                               
+                               <div className="space-y-2">
+                                 <div className="flex items-center gap-2 text-gray-600">
+                                   <span>⏱️</span>
+                                   <span className="text-sm">{course.duration}</span>
+                                 </div>
+                                 <div className="flex items-center gap-2 text-gray-600">
+                                   <span>🎓</span>
+                                   <span className="text-sm">{course.eligibility}</span>
+                                 </div>
+                                 <div className="flex items-center gap-2 text-gray-600">
+                                   <span>💰</span>
+                                   <span className="text-sm">₹{course.fees}</span>
+                                 </div>
                                </div>
-                               <div className="flex items-center gap-2 text-gray-600">
-                                 <span>🎓</span>
-                                 <span className="text-sm">{course.eligibility}</span>
-                               </div>
-                               <div className="flex items-center gap-2 text-gray-600">
-                                 <span>💰</span>
-                                 <span className="text-sm">₹{course.fees}</span>
-                               </div>
+     
+                               <button 
+                                 onClick={() => setOpenModal({ type: 'apply', program: course.course })}
+                                 className="w-full bg-red-500 hover:from-[#ec027c] hover:to-[#d40270] text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                               >
+                                 Apply Now
+                               </button>
                              </div>
-   
-                             <button 
-                               onClick={() => setOpenModal({ type: 'apply', program: course.course })}
-                               className="w-full bg-[#f9141e] hover:from-[#f9141e] hover:to-[#f9141e] text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
-                             >
-                               Apply Now
-                             </button>
                            </div>
                          </div>
-                       </div>
-                     ))}
-                   </div>
-                 </Tabs.Content>
-               </Tabs.Root>
-             </div>
-           </section>
+                       ))}
+                     </div>
+                   </Tabs.Content>
+                 </Tabs.Root>
+               </div>
+             </section>
          
 
          <section id='Fees' className="py-10 px-4 md:px-12 bg-gray-50">
@@ -1053,10 +1050,19 @@ const Shoolini = () => {
         </tbody>
       </table>
     </div>
+    <div className="flex justify-center mt-10">
+      <Button 
+        onClick={() => setOpenModal({ type: 'apply' })}
+        className="w-20px bg-red-500 h text-white font-bold px-6 py-3 rounded-full shadow-lg  transform duration-300 cursor-pointer"
+         >
+         Apply Now
+       </Button>
+       </div>
   </div>
+ 
 
   {/* PG Courses Table */}
-  <div className="mb-12">
+  <div className="mb-20">
     <h2 className="text-2xl font-semibold text-center mb-4 text-blue-700">
       Postgraduate (PG) Courses
     </h2>
@@ -1130,6 +1136,14 @@ const Shoolini = () => {
       </table>
     </div>
   </div>
+  <div className="flex justify-center mt-10">
+      <Button 
+        onClick={() => setOpenModal({ type: 'apply' })}
+        className="w-20px bg-red-500 h text-white font-bold px-6 py-3 rounded-full shadow-lg  transform duration-300 cursor-pointer"
+         >
+         Apply Now
+       </Button>
+       </div>
 </section>
 
 
@@ -1168,6 +1182,14 @@ const Shoolini = () => {
       </table>
     </div>
         </div>
+        <div className="flex justify-center mt-10">
+      <Button 
+        onClick={() => setOpenModal({ type: 'apply' })}
+        className="w-20px bg-red-500 h text-white font-bold px-6 py-3 rounded-full shadow-lg  transform duration-300 cursor-pointer"
+         >
+         Apply Now
+       </Button>
+       </div>
       </section>
     
 
@@ -1224,6 +1246,14 @@ const Shoolini = () => {
       </table>
     </div>
   </div>
+  <div className="flex justify-center mt-10">
+      <Button 
+        onClick={() => setOpenModal({ type: 'apply' })}
+        className="w-20px bg-red-500 h text-white font-bold px-6 py-3 rounded-full shadow-lg  transform duration-300 cursor-pointer"
+         >
+         Apply Now
+       </Button>
+       </div>
 </section>
      
          {/* Admission Procedure */}
@@ -1310,6 +1340,14 @@ const Shoolini = () => {
                      </div>
                    </motion.div>
                  </div>
+                 <div className="flex justify-center mt-10">
+      <Button 
+        onClick={() => setOpenModal({ type: 'apply' })}
+        className="w-20px bg-red-500 h text-white font-bold px-6 py-3 rounded-full shadow-lg  transform duration-300 cursor-pointer"
+         >
+         Apply Now
+       </Button>
+       </div>
                </section> 
 
 
@@ -1331,6 +1369,15 @@ const Shoolini = () => {
             </ul>
           </div>
         </div>
+
+        <div className="flex justify-center mt-10">
+      <Button 
+        onClick={() => setOpenModal({ type: 'apply' })}
+        className="w-20px bg-red-500 h text-white font-bold px-6 py-3 rounded-full shadow-lg  transform duration-300 cursor-pointer"
+         >
+         Apply Now
+       </Button>
+       </div>
       </section>
       <section className="py-12 bg-white">
   <div className="max-w-5xl mx-auto px-6">
@@ -1369,9 +1416,18 @@ const Shoolini = () => {
     </div>
 
     <p className="text-gray-700 mt-8 text-center leading-relaxed">
-      Students can apply anytime on the <span className="font-semibold">Shoolini University Online Admission Portal</span> and receive timely updates via <span className="font-semibold">email or SMS</span>.
+      Students can apply anytime on this <span className="font-semibold"><div className="flex justify-center mt-10">
+   
+       </div></span> and receive timely updates via <span className="font-semibold">email or SMS</span>.
     </p>
+       <Button 
+        onClick={() => setOpenModal({ type: 'apply' })}
+        className="w-20px bg-red-500 h text-white font-bold px-6 py-3 rounded-full shadow-lg  transform duration-300 cursor-pointer"
+         >
+         Apply Now
+       </Button>
   </div>
+  
 </section>
 
     <section id='upcoming-sessions' className="py-12 bg-white">
@@ -1452,6 +1508,15 @@ const Shoolini = () => {
       academic innovation, and employability, making it one of the top-rated online universities in India.
     </p>
   </div>
+
+  <div className="flex justify-center mt-10">
+      <Button 
+        onClick={() => setOpenModal({ type: 'apply' })}
+        className="w-20px bg-red-500 h text-white font-bold px-6 py-3 rounded-full shadow-lg  transform duration-300 cursor-pointer"
+         >
+         Apply Now
+       </Button>
+       </div>
 </section>
 
         <section id='faq'><ShooliniFAQ /></section>
@@ -1502,6 +1567,14 @@ const Shoolini = () => {
           ))}
           
         </div>
+        <div className="flex justify-center mt-10">
+      <Button 
+        onClick={() => setOpenModal({ type: 'apply' })}
+        className="w-20px bg-red-500 h text-white font-bold px-6 py-3 rounded-full shadow-lg  transform duration-300 cursor-pointer"
+         >
+         Apply Now
+       </Button>
+       </div>
       </section>
        <section id='shoolini-reviews' className="bg-gray-50 py-16 px-6 lg:px-20" >
       <div className="max-w-5xl mx-auto text-center">
@@ -1564,6 +1637,14 @@ const Shoolini = () => {
           innovation, and academic excellence.
         </p>
       </div>
+      <div className="flex justify-center mt-10">
+      <Button 
+        onClick={() => setOpenModal({ type: 'apply' })}
+        className="w-20px bg-red-500 h text-white font-bold px-6 py-3 rounded-full shadow-lg  transform duration-300 cursor-pointer"
+         >
+         Apply Now
+       </Button>
+       </div>
     </section>
     <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-gray-300 pt-12 sm:pt-16 relative overflow-hidden">
               {/* Background Pattern */}
@@ -1685,7 +1766,7 @@ const Shoolini = () => {
                       
                       <Button 
                         onClick={() => setOpenModal({ type: 'apply' })}
-                        className="w-full bg-red-500 hover:from-orange-600 hover:to-orange-700 text-white font-bold px-6 py-3 rounded-full shadow-lg hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 cursor-pointer"
+                        className="w-full bg-red-500 hover:from-red-600 hover:to-red-700 text-white font-bold px-6 py-3 rounded-full shadow-lg hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 cursor-pointer"
                       >
                         Apply Now
                       </Button>

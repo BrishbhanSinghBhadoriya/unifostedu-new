@@ -43,7 +43,7 @@ const cuOnline = () => {
       title: "Bachelor of Arts - Journalism & Mass Communication (BA-JMC)",
       duration: "3 Years(6 Semesters)",
       eligibility: "10+2 Pass",
-      fees: "₹1,66,668",
+      fees: "₹1,75,000",
       specialization: "Journalism, Media Studies",
       image:
         "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327037/ba-jmc_njfsqe.webp",
@@ -53,7 +53,7 @@ const cuOnline = () => {
         "Bachelor of Business Administration - Business Analytics (BBA - KPMG)",
       duration: "3 Years(6 Semesters)",
       eligibility: "10+2 Pass",
-      fees: "₹1,60,000",
+      fees: "₹1,90,000",
       specialization: "Business Analytics with KPMG",
       image:
         "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
@@ -64,7 +64,7 @@ const cuOnline = () => {
       eligibility: "10+2 Pass",
       fees: "₹1,68,000",
       specialization:
-        "Marketing, HR, Entrepreneurship, Digital Marketing, Fin-Tech",
+        "Marketing, HRM, Entrepreneurship, Digital Marketing, Fin-Tech, Artificial Intelligence, Logistics & Supply Chain Management,Travel & Tourism, Banking & Finance, International Business, Retail And E-Commerce, Healthcare Management,foreign Exchange Management,Event Management",
       image:
         "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
     },
@@ -95,9 +95,9 @@ const cuOnline = () => {
       title: "Master of Business Administration (MBA)",
       duration: "2 Years",
       eligibility: "Graduation",
-      fees: "₹2,10,668",
+      fees: "₹2,20,000",
       specialization:
-        "Finance, Marketing, HR, IT, Operations, International Business, Digital Marketing, Fin-Tech",
+        "Human Resource Management (HRM),Marketing,International Business (IB),Entrepreneurship,Finance,Information Technology (IT),Logistics and Supply Chain Management (LSCM),Retail Management,Operation Management,Banking and Insurance,Hospital Management,Event Management,Media Management,Travel and Tourism Management,Airlines & Airport Management,Digital Marketing,Data Science & Artificial Intelligence,International Relations,FinTech,General Management,Business Analytics,Disaster Management,Brand Management",
       image:
         "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
     },
@@ -105,8 +105,8 @@ const cuOnline = () => {
       title: "Master of Computer Applications - AI & ML",
       duration: "2 Years",
       eligibility: "BCA/B.Sc(IT/CS)/B.E/B.Tech",
-      fees: "₹1,40,000",
-      specialization: "AI, ML, Data Analytics, Cloud Computing, Full Stack",
+      fees: "₹1,55,000",
+      specialization: "AI & ML, Data Analytics, Cloud Computing, Full Stack",
       image:
         "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
     },
@@ -115,7 +115,7 @@ const cuOnline = () => {
       duration: "2 Years",
       eligibility: "Bachelor's in BA/BCA/B.Sc/BE/B.Tech",
       fees: "₹1,46,668",
-      specialization: "Full Stack, Web Development",
+      specialization: "Data Science",
       image:
         "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
     },
@@ -123,7 +123,7 @@ const cuOnline = () => {
       title: "Master of Computer Applications - Cloud Computing (AWS Academy)",
       duration: "2 Years",
       eligibility: "BCA/B.Sc/BE/B.Tech or any graduation",
-      fees: "₹1,40,000",
+      fees: "₹1,55,000",
       specialization: "Cloud, AWS, DevOps, Full Stack",
       image:
         "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
@@ -133,7 +133,7 @@ const cuOnline = () => {
       duration: "2 Years",
       eligibility:
         "BCA/B.Sc/BE/B.Tech or any graduation with Math/Stats/Programming",
-      fees: "₹1,40,000",
+      fees: "₹1,55,000",
       specialization: "Big Data, Data Mining",
       image:
         "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
@@ -142,7 +142,7 @@ const cuOnline = () => {
       title: "Master of Computer Applications (MCA)",
       duration: "2 Years",
       eligibility: "BCA/B.Sc/BE/B.Tech or any graduation",
-      fees: "₹1,40,000",
+      fees: "₹1,55,000",
       specialization: "General IT, Software Development",
       image:
         "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
@@ -152,7 +152,7 @@ const cuOnline = () => {
       duration: "2 Years",
       eligibility: "Bachelor's with Math",
       fees: "₹1,00,000",
-      specialization: "Pure Math, Applied Math",
+      specialization: "Mathematics",
       image:
         "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
     },
@@ -161,7 +161,7 @@ const cuOnline = () => {
       duration: "2 Years",
       eligibility: "Graduation in any discipline or BA(Hons.)",
       fees: "₹1,00,000",
-      specialization: "Psychology, English, Economics",
+      specialization: " English, Economics",
       image:
         "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
     },
@@ -463,7 +463,7 @@ const cuOnline = () => {
           </div>
         </aside>
 
-        <main className="pt-24 pb-16 lg:pl-72">
+        <main className="pt-24 pb-16 lg:pl-64">
           {/* Hero Banner */}
           <section
             id="HeroSection"
@@ -1466,7 +1466,7 @@ const cuOnline = () => {
         </section>
       </main>
 
-      <footer className="bg-[#1a1a1a] text-gray-300 py-12">
+      <footer className="bg-[#1a1a1a] text-gray-300 py-12 lg:pl-64">
           <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* Important Links */}
             <div>
