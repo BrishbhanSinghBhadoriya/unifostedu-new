@@ -24,15 +24,16 @@ const UniversityLogoSlider = () => {
             {[...universityLogos, ...universityLogos].map((university, index) => (
               <div key={`${university.name}-${index}`} className="flex-shrink-0 flex items-center justify-center" style={{ width: `${100 / itemsToShow}%` }}>
                 <div className="h-24 w-full flex items-center justify-center px-2">
-                  <Image 
-                    src={university.logo} 
-                    alt={`${university.name} logo`} 
+                  <Image
+                    src={university.logo}
+                    alt={`${university.name} logo`}
                     width={120}
                     height={48}
                     loading="eager"
                     decoding="async"
                     unoptimized
-                    className="max-h-14 max-w-full object-contain hover:scale-110 transition-transform duration-300" 
+                    className="max-h-14 max-w-full object-contain hover:scale-110 transition-transform duration-300"
+                    style={{ width: "auto", height: "auto" }}
                   />
                 </div>
               </div>

@@ -447,7 +447,7 @@ const Header = () => {
               {/* Action Buttons */}
               <div className="hidden lg:flex items-center gap-2 lg:gap-3 flex-shrink-0">
                 <button
-                  onClick={() => router.push('/comapre-university')}
+                  onClick={() => router.push("/comapre-university")}
                   className="relative flex items-center gap-2 px-4 lg:px-5 py-2 lg:py-2.5 rounded-lg bg-white text-orange-600 font-semibold text-sm shadow-sm hover:shadow-md hover:scale-[1.04] transition-all duration-200 cursor-pointer whitespace-nowrap">
                   {/* AI Powered Tag */}
                   <span className="absolute -top-1 -right-1 bg-orange-500 text-white text-[7px] lg:text-[8px] font-bold px-1.5 py-[1px] rounded-sm shadow-md">
@@ -464,7 +464,7 @@ const Header = () => {
                   <FaPhoneAlt className="text-lg" />
                 </Link>
 
-                <Link 
+                <Link
                   href="https://wa.me/917042646766"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -481,16 +481,31 @@ const Header = () => {
                 </button>
               </div>
 
-              {/* Mobile Menu Button */}
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden p-2.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all duration-200">
-                {mobileMenuOpen ? (
-                  <FaTimes className="text-xl" />
-                ) : (
-                  <FaBars className="text-xl" />
-                )}
-              </button>
+              {/* Mobile Compare AI + Menu Button */}
+              <div className="flex items-center gap-2 lg:hidden flex-shrink-0">
+  <button
+    onClick={() => router.push("/comapre-university")}
+    className="relative flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-orange-600 font-semibold text-xs shadow-sm hover:shadow-md hover:scale-[1.03] transition-all duration-200 cursor-pointer whitespace-nowrap"
+  >
+    {/* AI Badge */}
+    <span className="absolute -top-1 -right-1 bg-rose-600 text-white text-[8px] font-bold px-1.5 py-0.5 rounded-md shadow-md">
+      AI
+    </span>
+
+    <FaCompass className="text-xs text-orange-500 bg-orange-100 rounded-full p-1 flex-shrink-0" />
+    <span>Compare</span>
+  </button>
+
+                <button
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                  className="p-2.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all duration-200">
+                  {mobileMenuOpen ? (
+                    <FaTimes className="text-xl" />
+                  ) : (
+                    <FaBars className="text-xl" />
+                  )}
+                </button>
+              </div>
             </div>
           </div>
 
@@ -524,7 +539,7 @@ const Header = () => {
                 <Image
                   width={120}
                   height={48}
-                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/unilogo_wvmt8h.webp"
+                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1764316067/uniLogoo_nc6vhs.png"
                   alt="Unifost"
                   className="h-12 w-auto"
                 />
@@ -537,7 +552,7 @@ const Header = () => {
 
               {/* Mobile Search */}
               <div className="mb-6">
-                <div className="flex items-center bg-slate-100 rounded-lg px-4 py-3">
+                <div className="flex items-center bg-slate-100 rounded-lg px-4 py-3 border border-black">
                   <FaSearch className="text-slate-400 text-sm" />
                   <input
                     type="text"
@@ -575,13 +590,21 @@ const Header = () => {
                   <h3 className="text-slate-400 font-bold text-xs uppercase tracking-wider px-2">
                     Main Menu
                   </h3>
-                  {[
-                    { label: "Home", path: "/", icon: FaHome },
-                    { label: "About", path: "/about", icon: FaInfoCircle },
-                    { label: "Courses", path: "/coursesearch", icon: FaGraduationCap },
-                    { label: "Universities", path: "/listofcollege", icon: FaUniversity },
-                    { label: "Services", path: "/services", icon: FaCog },
-                  ].map((link, i) => (
+                    {[
+                      { label: "Home", path: "/", icon: FaHome },
+                      { label: "About", path: "/about", icon: FaInfoCircle },
+                      {
+                        label: "Courses",
+                        path: "/coursesearch",
+                        icon: FaGraduationCap,
+                      },
+                      {
+                        label: "Universities",
+                        path: "/listofcollege",
+                        icon: FaUniversity,
+                      },
+                      { label: "Services", path: "/services", icon: FaCog },
+                    ].map((link, i) => (
                     <Link
                       key={i}
                       href={link.path}

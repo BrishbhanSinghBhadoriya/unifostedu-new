@@ -121,9 +121,18 @@ const ChatBox = () => {
       console.log('Webhook response:', response.data); // Debug log
       
       // Handle response from proxy
-      const botResponse = response.data?.response || 
-                         response.data?.message || 
-                         'I received your message, but the response format was unexpected.';
+      const cleanedRawResponse = Array.isArray(response.data?.raw)
+        ? response.data.raw
+            .map((entry) => entry?.cleaned?.trim())
+            .filter(Boolean)
+            .join('\n\n')
+        : null;
+
+      const botResponse =
+        cleanedRawResponse ||
+        response.data?.response ||
+        response.data?.message ||
+        'I received your message, but the response format was unexpected.';
       
       const botMessage = {
         id: Date.now() + 1,
