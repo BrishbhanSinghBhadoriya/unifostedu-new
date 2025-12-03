@@ -13,7 +13,7 @@ const ChatBox = () => {
   const [messages, setMessages] = useState([
     {
       id: 1,
-      text: "Hello! 👋 I'm EduAI Assistant. How can I help you today?",
+      text: "Hello! 👋 I'm Prof.Uni. How can I help you today?",
       sender: 'bot',
       timestamp: new Date(),
     },
@@ -211,7 +211,7 @@ const ChatBox = () => {
             <div className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-white shadow-md ring-2 ring-white/50">
               <Image
                 src="/uni.webp"
-                alt="EduAI Assistant"
+                alt="Prof.Uni"
                 width={48}
                 height={48}
                 className="h-full w-full object-cover"
