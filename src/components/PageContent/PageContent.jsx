@@ -3,20 +3,22 @@ import React, { useEffect, useState } from 'react'
 import { FaTimes } from "react-icons/fa";
 
 const PageContent = ({ sectionItems, activeSection, ismobilemenuopen, onClose }) => {
+  console.log("activeSection prop in PageContent:", activeSection);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(ismobilemenuopen);
-  const [currentActiveSection, setCurrentActiveSection] = useState(activeSection || sectionItems[0]?.id);
+  const [currentActiveSection, setCurrentActiveSection] = useState(activeSection);
 
   // Sync with parent state
   useEffect(() => {
     setIsMobileMenuOpen(ismobilemenuopen);
   }, [ismobilemenuopen]);
 
+  console.log("Current Active Section in PageContent:", currentActiveSection);
   // Track active section on scroll
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 150; // Offset for header
 
-      for (let i = sectionItems.length - 1; i >= 0; i--) {
+      for (let i =0; i <= sectionItems.length - 1; i++) {
         const section = document.getElementById(sectionItems[i].id);
         if (section) {
           const sectionTop = section.offsetTop;
@@ -27,6 +29,7 @@ const PageContent = ({ sectionItems, activeSection, ismobilemenuopen, onClose })
         }
       }
     };
+    console.log(currentActiveSection)
 
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Check on mount

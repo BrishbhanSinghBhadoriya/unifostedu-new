@@ -1,6 +1,6 @@
 'use client';
 import { motion, AnimatePresence } from "framer-motion";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, use } from 'react';
 import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck, FaStar, FaCertificate, FaBuilding, FaUsers, FaPhone, FaWhatsapp, FaTimes } from "react-icons/fa";
 import { FaLaptop, FaBook, FaGraduationCap, FaIndustry, FaUserCircle, FaUniversity, FaMoneyBillWave } from "react-icons/fa";
 import EnquireCard from '@/components/EnquireCard';
@@ -12,9 +12,66 @@ import Head from 'next/head';
 import Image from 'next/image';
 import * as Tabs from '@radix-ui/react-tabs';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
+import PageContent from "@/components/PageContent/PageContent";
 
 const Manipal = () => {
+const selectionItem=[
+              { id: "HeroSection", label: "Hero" },
+              { id: "Introduction", label: "Introduction to MAHE" },
+              { id: "AboutUs", label: "About Us" },
+              { id: "FutureReady", label: "Future-Ready Platform" },
+              { id: "UGCApproved", label: "UGC-Approved Degrees" },
+              { id: "Leader", label: "Leader Among Universities" },
+              { id: "WhyChoose", label: "Why Choose MAHE" },
+              { id: "CampusTour", label: "Campus Tour" },
+              { id: "ExploreCourses", label: "Explore Courses" },
+              { id: "KeyHighlights", label: "Key Highlights" },
+              { id: "FeeStructure", label: "Fee Structure" },
+              { id: "AdmissionProcess", label: "Admission Process" },
+              { id: "PlacementPartners", label: "Placement Partners" },
+              { id: "PlacementRecords", label: "Placement Records" },
+              { id: "StudentReviews", label: "Student Reviews" },
+              { id: "Faq", label: "FAQs" },
+              { id: "Conclusion", label: "Conclusion" },
+            ];
+            const [activeSection, setActiveSection] = useState(selectionItem[0]?.id ?? null);
+            console.log("Active Section:", activeSection);
 
+           useEffect(() => {
+               if (!selectionItem.length) return undefined;
+           
+               const observerOptions = {
+                 root: null,
+                 threshold: 0.25,
+                 rootMargin: "-45% 0px -45% 0px",
+               };
+           
+               const observer = new IntersectionObserver((entries) => {
+                 entries.forEach((entry) => {
+                   if (entry.isIntersecting) {
+                     setActiveSection(entry.target.id);
+                   }
+                 });
+               }, observerOptions);
+           
+               selectionItem.forEach((section) => {
+                 const element = document.getElementById(section.id);
+                 if (element) {
+                   observer.observe(element);
+                 }
+               });
+           
+               return () => {
+                 selectionItem.forEach((section) => {
+                   const element = document.getElementById(section.id);
+                   if (element) {
+                     observer.unobserve(element);
+                   }
+                 });
+                 observer.disconnect();
+               };
+             }, [selectionItem]);
+           
  const ugCourses = [
     {
       course: "Bachelor of Business Administration (BBA)",
@@ -331,129 +388,10 @@ const Manipal = () => {
         </header>
 
         {/* Add padding to the top of the first section to account for fixed header */}
+              <PageContent sectionItems={selectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
+
         <div className="pt-16 overflow-x-hidden break-words hyphens-auto lg:ml-64">
-
-        {/* Desktop Sidebar */}
-        <aside className="fixed hidden lg:flex flex-col top-16 left-0 w-64 h-[calc(100vh-4rem)] px-4 py-6 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40">
-          <h3 className="text-lg font-bold mb-5 text-orange-600 border-b-2 border-gray-200 pb-2 cursor-pointer">
-            Page Contents
-          </h3>
-          <ul className="space-y-3 cursor-pointer text-sm">
-            {[
-              { id: "HeroSection", label: "Hero" },
-              { id: "Introduction", label: "Introduction to MAHE" },
-              { id: "AboutUs", label: "About Us" },
-              { id: "FutureReady", label: "Future-Ready Platform" },
-              { id: "UGCApproved", label: "UGC-Approved Degrees" },
-              { id: "Leader", label: "Leader Among Universities" },
-              { id: "WhyChoose", label: "Why Choose MAHE" },
-              { id: "CampusTour", label: "Campus Tour" },
-              { id: "ExploreCourses", label: "Explore Courses" },
-              { id: "KeyHighlights", label: "Key Highlights" },
-              { id: "FeeStructure", label: "Fee Structure" },
-              { id: "AdmissionProcess", label: "Admission Process" },
-              { id: "PlacementPartners", label: "Placement Partners" },
-              { id: "PlacementRecords", label: "Placement Records" },
-              { id: "StudentReviews", label: "Student Reviews" },
-              { id: "Faq", label: "FAQs" },
-              { id: "Conclusion", label: "Conclusion" },
-            ].map((item) => (
-              <li
-                key={item.id}
-                className="text-gray-600 hover:text-orange-600 transition-colors duration-200 py-1 px-2 rounded hover:bg-gray-50"
-                onClick={() => {
-                  const element = document.getElementById(item.id);
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }}
-              >
-                {item.label}
-              </li>
-            ))}
-            {/* Apply Button */}
-                <button 
-                  onClick={() => setOpenModal({ type: 'apply' })}
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
-                >
-                  <span className="hidden sm:inline">Apply Now</span>
-                  <span className="sm:hidden">Apply</span>
-                </button>
-          </ul>
-        </aside>
-
-        {/* Mobile Sidebar */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
-            <>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="fixed inset-0 bg-black/40 backdrop-blur-[1px] z-40 lg:hidden"
-                onClick={() => setIsMobileMenuOpen(false)}
-              />
-              <motion.aside
-                initial={{ x: "-100%" }}
-                animate={{ x: 0 }}
-                exit={{ x: "-100%" }}
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                className="fixed top-0 left-0 w-[85vw] sm:w-72 h-full bg-white border-r shadow-xl z-50 p-6 flex flex-col overflow-y-auto will-change-transform lg:hidden"
-              >
-                <div className="flex items-center justify-between mb-8">
-                  <h3 className="text-xl font-bold text-gray-900">Page Contents</h3>
-                  <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-full hover:bg-gray-100 cursor-pointer">
-                    <FaTimes className="w-5 h-5 text-gray-600" />
-                  </button>
-                </div>
-                
-                <ul className="space-y-3">
-                  {[
-                    { id: "HeroSection", label: "Hero" },
-                    { id: "Introduction", label: "Introduction to MAHE" },
-                    { id: "AboutUs", label: "About Us" },
-                    { id: "FutureReady", label: "Future-Ready Platform" },
-                    { id: "UGCApproved", label: "UGC-Approved Degrees" },
-                    { id: "Leader", label: "Leader Among Universities" },
-                    { id: "WhyChoose", label: "Why Choose MAHE" },
-                    { id: "CampusTour", label: "Campus Tour" },
-                    { id: "ExploreCourses", label: "Explore Courses" },
-                    { id: "KeyHighlights", label: "Key Highlights" },
-                    { id: "FeeStructure", label: "Fee Structure" },
-                    { id: "AdmissionProcess", label: "Admission Process" },
-                    { id: "PlacementPartners", label: "Placement Partners" },
-                    { id: "PlacementRecords", label: "Placement Records" },
-                    { id: "StudentReviews", label: "Student Reviews" },
-                    { id: "Faq", label: "FAQs" },
-                    { id: "Conclusion", label: "Conclusion" },
-                  ].map((item) => (
-                    <li key={item.id}>
-                      <button
-                        onClick={() => {
-                          const section = document.getElementById(item.id);
-                          if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                          setIsMobileMenuOpen(false);
-                        }}
-                        className="text-gray-700 hover:text-orange-600 font-semibold text-base transition-colors duration-200 w-full text-left cursor-pointer"
-                      >
-                        {item.label}
-                      </button>
-                    </li>
-                  ))}
-                  {/* Apply Button */}
-                <button 
-                  onClick={() => setOpenModal({ type: 'apply' })}
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
-                >
-                  <span className="hidden sm:inline">Apply Now</span>
-                  <span className="sm:hidden">Apply</span>
-                </button>
-                </ul>
-              </motion.aside>
-            </>
-          )}
-        </AnimatePresence>
+             
 
         {/* Premium Hero Section - Fully Responsive */}
         <section
