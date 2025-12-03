@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { FaTimes } from "react-icons/fa";
 
 const PageContent = ({ sectionItems, activeSection, ismobilemenuopen, onClose }) => {
-  console.log("activeSection prop in PageContent:", activeSection);
+  console.log(sectionItems, "sectionItems", activeSection, "activeSection", ismobilemenuopen, "ismobilemenuopen", onClose, "onClose");
+ 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(ismobilemenuopen);
   const [currentActiveSection, setCurrentActiveSection] = useState(activeSection);
 
@@ -12,31 +13,33 @@ const PageContent = ({ sectionItems, activeSection, ismobilemenuopen, onClose })
     setIsMobileMenuOpen(ismobilemenuopen);
   }, [ismobilemenuopen]);
 
-  console.log("Current Active Section in PageContent:", currentActiveSection);
-  // Track active section on scroll
+  console.log(currentActiveSection, "currentActiveSection");
+
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 150; // Offset for header
-
-      for (let i =0; i <= sectionItems.length - 1; i++) {
+      const scrollPosition = window.scrollY + 150;
+  
+      let activeId = currentActiveSection; // fallback
+  
+      for (let i = 0; i < sectionItems.length; i++) {
         const section = document.getElementById(sectionItems[i].id);
+  
         if (section) {
           const sectionTop = section.offsetTop;
+  
           if (scrollPosition >= sectionTop) {
-            setCurrentActiveSection(sectionItems[i].id);
-            break;
+            activeId = sectionItems[i].id; // keep updating
           }
         }
       }
+  
+      setCurrentActiveSection(activeId);
     };
-    console.log(currentActiveSection)
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check on mount
-
-    return () => window.removeEventListener('scroll', handleScroll);
+  
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [sectionItems]);
-
+  
   const handleClose = () => {
     setIsMobileMenuOpen(false);
     if (onClose) {

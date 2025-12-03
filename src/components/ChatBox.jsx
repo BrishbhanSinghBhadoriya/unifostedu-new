@@ -204,7 +204,7 @@ const ChatBox = () => {
           showCloseButton={true}
         >
           {/* Dialog Title for accessibility - visually hidden */}
-          <DialogTitle className="sr-only">EduAI Assistant Chat</DialogTitle>
+          <DialogTitle className="sr-only">Prof.Uni</DialogTitle>
           
           {/* Chat Header */}
           <div className="flex items-center gap-3 border-b border-blue-400/20 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 px-5 py-4 shadow-lg">
@@ -219,7 +219,7 @@ const ChatBox = () => {
             </div>
             <div className="flex-1">
               <div className="flex items-center gap-2">
-                <h3 className="font-bold text-lg text-white drop-shadow-sm">EduAI Assistant</h3>
+                <h3 className="font-bold text-lg text-white drop-shadow-sm">Prof.Uni</h3>
               </div>
               <div className="flex items-center gap-2 mt-0.5">
                 <div className="flex items-center gap-1.5">
