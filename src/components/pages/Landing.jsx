@@ -69,6 +69,7 @@ import {
 } from "@/components/ui/dialog";
 import EnquiryForm from "@/components/EnquiryForm";
 import FAQ from "../FAQ";
+import { TopOnlineUniversity } from "../University/TopOnlineUniversity";
 
 //
 
@@ -138,7 +139,7 @@ const Landing = () => {
     if (n.includes("jindal")) return "/opjindal";
     if (n.includes("vivekananda global") || n.includes("vgu")) return "/vgu";
     if (n.includes("shoolini")) return "/shoolini";
-    return "/listofcollege";
+    return "/University-List";
   };
 
   //
@@ -540,139 +541,10 @@ const Landing = () => {
       <section id="top-partner-universities" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-16" data-aos="fade-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] mb-3">
-              Top Partner Universities
-            </h2>
-            <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-4"></div>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Choose from India's most prestigious online universities
-            </p>
+           <TopOnlineUniversity />
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {colleges.map((college, index) => (
-          <motion.div 
-                key={index}
-                className="group h-full"
-            data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                {/* Enhanced Card Wrapper with gradient border and subtle glass */}
-                <div
-                  className="relative rounded-2xl overflow-hidden p-[1.5px] bg-gradient-to-br from-blue-400/40 via-indigo-400/40 to-cyan-400/40 shadow-md group-hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full"
-                >
-                  <div className="rounded-2xl h-full flex flex-col min-h-[420px] bg-white/90 backdrop-blur-[2px]">
-                  {/* Decorative Corner Accents */}
-                  <div className="absolute top-0 right-0 w-20 h-20 overflow-hidden pointer-events-none">
-                    <div className="absolute transform rotate-45 translate-x-10 -translate-y-10 bg-gradient-to-r from-blue-500/20 to-indigo-600/20 w-28 h-10"></div>
-                  </div>
-
-                  {/* Hover Overlay */}
-                  <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-blue-500/5 to-indigo-600/5"
-                  ></div>
-
-                  {/* Top Section */}
-                  <div className="p-5 sm:p-6 relative z-[1]">
-                    <div className="flex items-center justify-between">
-                      <Badge className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white border-0 shadow-sm text-[11px] sm:text-xs font-medium px-2 py-1">
-                        {college.ranking}
-                      </Badge>
-                      <div className="flex items-center gap-1 bg-white/90 rounded-full py-1 px-2 shadow-sm">
-                        <FaStar className="text-yellow-400 text-sm" />
-                        <span className="text-sm font-medium text-gray-700">
-                          {college.rating}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Logo/Image area */}
-                  <div className="px-5 sm:px-6 relative">
-                    <div
-                      className="h-28 sm:h-32 w-full rounded-xl bg-white flex items-center justify-center overflow-hidden group-hover:shadow-lg transition-all duration-300 border border-blue-100 shadow-sm ring-1 ring-blue-50"
-                    >
-                      <Image
-                        src={college.logo}
-                        alt={`${college.name} logo`}
-                        width={120}
-                        height={120}
-                        loading="lazy"
-                        className="max-h-20 sm:max-h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
-                      />
-                    </div>
-
-                    {/* Decorative Element */}
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-14 h-1 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-full opacity-80"></div>
-                  </div>
-
-                  {/* Content + Button */}
-                  <div className="p-5 sm:p-6 relative z-[1] flex flex-col flex-grow">
-                    <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 line-clamp-2 group-hover:text-gray-900 transition-colors">
-                      {college.name}
-                    </h3>
-                    <div className="text-sm text-gray-600 mb-4 flex items-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4 mr-1 text-blue-500"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                      <span className="font-medium">Fees:</span> {college.fee}
-                    </div>
-
-                    {/* Additional Info (if available) */}
-                    {college.courses && (
-                      <div className="mt-2 text-xs text-gray-500 flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-3.5 w-3.5 mr-1 text-blue-500"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                          />
-                        </svg>
-                        {college.courses}+ Courses
-                      </div>
-                    )}
-
-                    {/* Button sticks to bottom */}
-                    <div className="mt-auto pt-4">
-                      <Link
-                        href={getUniversityHref(college.name)}
-                        className="block w-full"
-                      >
-                        <div
-                          className="w-full bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-3 px-4 rounded-xl font-semibold text-center hover:from-blue-700 hover:to-indigo-800 transform hover:scale-[1.02] transition-all duration-200 text-sm shadow-md hover:shadow-xl relative overflow-hidden"
-                        >
-                          <span className="relative z-10">Learn More</span>
-                          <div className="absolute inset-0 bg-white/10" />
-                          <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-120%] group-hover:translate-x-[120%] transition-transform duration-700" />
-                        </div>
-                      </Link>
-                    </div>
-                  </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* View All Button */}
+          
          
         </div>
       </section>
@@ -1003,7 +875,7 @@ const Landing = () => {
       </section>
       {/* FAQ Section */}
 
-      {/* Unified Modal - Responsive */}
+    
       {showEnquiryModal && (
         <Dialog
           open={showEnquiryModal}

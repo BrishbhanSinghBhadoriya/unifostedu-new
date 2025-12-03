@@ -321,7 +321,7 @@ function SearchContent({ onOpenModal }) {
             {/* View All Universities CTA */}
             <div className="text-center mt-12">
               <Link
-                href="/listofcollege"
+                href="/University-List"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105"
               >
                 View All Universities

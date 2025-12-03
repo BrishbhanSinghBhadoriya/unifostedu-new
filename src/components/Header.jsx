@@ -600,7 +600,7 @@ const Header = () => {
                       },
                       {
                         label: "Universities",
-                        path: "/listofcollege",
+                        path: "/University-List",
                         icon: FaUniversity,
                       },
                       { label: "Services", path: "/services", icon: FaCog },

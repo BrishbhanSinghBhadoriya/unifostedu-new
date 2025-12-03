@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "List of Colleges | Top Online Universities|UNIFOST",
+  title: "Partner Universities | Top Online Universities",
   description: "Explore our comprehensive list of top online universities and colleges. Find the best accredited institutions for your online degree programs with the help of unifost.",
   keywords: "List of Colleges, Online Universities, Top Universities, Accredited Colleges, University Directory, Online Education Institutions",
   openGraph: {
@@ -8,10 +8,10 @@ export const metadata = {
     images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp"],
   },
     alternates: {
-    canonical: "https://unifostedu.com/listofcollege",
+    canonical: "https://unifostedu.com/University-List",
   },
 };
 
-export default function ListOfCollegeLayout({ children }) {
+export default function UniversityListLayout({ children }) {
   return children;
 }

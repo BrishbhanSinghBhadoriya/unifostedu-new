@@ -34,7 +34,7 @@ export default async function sitemap() {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/listofcollege`,
+      url: `${baseUrl}/University-List`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,

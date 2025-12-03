@@ -175,7 +175,7 @@ export default async function UniversityPage({ params }) {
             Book Demo
           </Link>
           <Link
-            href="/listofcollege"
+            href="/University-List"
             className="bg-[#001e3c] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#003b6c] transition-colors"
           >
             Explore More Universities
