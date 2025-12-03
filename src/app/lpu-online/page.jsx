@@ -380,7 +380,7 @@ const LpuOnline = () => {
 
                     {/* Phone - Hidden on small screens */}
                     <a
-                      href="tel:+917042867717"
+                      href="tel:+917042646766"
                       className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-orange-600 transition-colors"
                     > 
                       <FaPhone className="text-orange-500 rotate-90" />
@@ -2142,7 +2142,7 @@ const LpuOnline = () => {
                     </div>
                     <div>
                         <p className="text-xs sm:text-sm text-gray-400">Call Us</p>
-                        <p className="text-white font-bold text-base sm:text-lg">+917042867717</p>
+                        <p className="text-white font-bold text-base sm:text-lg">+917042646766</p>
                     </div>
                     </div>
                     <p className="text-gray-400 text-xs sm:text-sm">Available 24/7 for your queries</p>

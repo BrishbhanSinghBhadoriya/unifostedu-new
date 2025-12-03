@@ -179,7 +179,7 @@ useEffect(() => {
 
               <div className="flex items-center gap-2 sm:gap-4">
                 <a
-                  href="tel:+917042867717"
+                  href="tel:+917042646766"
                   className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-purple-600 transition-colors"
                 > 
                   <span className="text-lg">📞</span>
@@ -188,7 +188,7 @@ useEffect(() => {
                 </a>
                 
                 <a
-                  href="tel:+917042867717"
+                  href="tel:+917042646766"
                   className="sm:hidden flex items-center justify-center w-10 h-10 bg-purple-100 rounded-full text-purple-600 hover:bg-purple-200 transition-colors"
                 >
                   📞
@@ -842,7 +842,7 @@ useEffect(() => {
                   <h4 className="text-white font-bold mb-4 text-lg">Contact Us</h4>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
-                      <a href="tel:+917042867717" className="p-2 rounded-lg hover:bg-purple-900 transition-all duration-200">
+                      <a href="tel:+917042646766" className="p-2 rounded-lg hover:bg-purple-900 transition-all duration-200">
                         <span className="text-purple-400">📞</span>
                       </a>
                       <span className="text-sm">+91 7042646766</span>

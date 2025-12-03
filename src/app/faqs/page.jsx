@@ -172,7 +172,7 @@ const FAQPage = () => {
               href="tel:+917042646766"
               className="px-8 py-3 border border-white text-white font-semibold rounded-full hover:bg-white/10 transition-colors"
             >
-              Call Us: +91 93547 35410
+              Call Us: +91 7042646766
             </a>
           </div>
         </div>
