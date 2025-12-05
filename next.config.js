@@ -9,7 +9,6 @@ const nextConfig = {
     qualities: [70, 75, 80],
     minimumCacheTTL: 31536000, // 1 year
 
-    // ✅ Allow Cloudinary images
     remotePatterns: [
       {
         protocol: "https",
@@ -18,7 +17,6 @@ const nextConfig = {
     ],
   },
 
-  // ✅ Strong caching for local images
   async headers() {
     return [
       {

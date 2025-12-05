@@ -3,10 +3,20 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaRocket, FaVideo, FaMapMarkerAlt, FaGraduationCap, FaUsers, FaAward, FaCheckCircle, FaPlay, FaArrowRight } from "react-icons/fa";
-import { heroSlides } from "./data";
+import {
+  FaRocket,
+  FaVideo,
+  FaMapMarkerAlt,
+  FaGraduationCap,
+  FaUsers,
+  FaAward,
+  FaCheckCircle,
+  FaPlay,
+  FaArrowRight,
+} from "react-icons/fa";
 
-const Hero = ({ onOpenModal }) => {
+const Hero = ({ onOpenModal, heroSlides = [] }) => {
+  console.log("heroSlides is",heroSlides)
   const [slide, setSlide] = useState(0);
   const [isFirstRender, setIsFirstRender] = useState(true);
   const scrollToId = (id) => {
@@ -18,10 +28,15 @@ const Hero = ({ onOpenModal }) => {
   };
 
   useEffect(() => {
+    if (!heroSlides.length) return;
+
     setIsFirstRender(false);
-    const id = setInterval(() => setSlide((s) => (s + 1) % heroSlides.length), 6000);
+    const id = setInterval(
+      () => setSlide((s) => (s + 1) % heroSlides.length),
+      6000
+    );
     return () => clearInterval(id);
-  }, []);
+  }, [heroSlides.length]);
 
   return (
     <section className="relative min-h-screen flex flex-col bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 overflow-hidden">

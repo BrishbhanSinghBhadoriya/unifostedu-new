@@ -2,10 +2,9 @@
 
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { universityLogos } from "./data";
 import Image from "next/image";
 
-const UniversityLogoSlider = () => {
+const UniversityLogoSlider = ({ universityLogos = [] }) => {
   const [itemsToShow, setItemsToShow] = useState(6);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -15,6 +14,8 @@ const UniversityLogoSlider = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  if (!universityLogos.length) return null;
 
   return (
     <section className="py-1 bg-white">
