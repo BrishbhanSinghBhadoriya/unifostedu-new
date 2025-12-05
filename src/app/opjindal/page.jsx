@@ -2,7 +2,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
-
+import PageContent from '@/components/PageContent/PageContent';
 import {
   FaBookOpen,
   FaUserTie,
@@ -37,6 +37,58 @@ import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import { Button } from '@/components/ui/button';
 
 const OPJindal = () => {
+  const sectionItem = [
+              { id: "Home", label: "Introduction" },
+              { id: "campus-tour", label: "Campus Tour (Images & Videos)" },
+              { id: "opju-online-courses", label: "Explore Online Courses" },
+              { id: "key-highlights", label: "Key Highlights" },
+              { id: "admission-dates", label: "Admission Dates for UG & PG Programs" },
+              { id: "fees-structure", label: "Fees Structure" },
+              { id: "Admission", label: "Admission Process" },
+              { id: "sessions-details", label: "Details of Upcoming & Ongoing Sessions" },
+              { id: "placement-partners", label: "Placement Partners" },
+              { id: "placement-record", label: "Placement Record" },
+              { id: "student-reviews", label: "Student Reviews" },
+              { id: "faq", label: "FAQs" },
+              { id: "opju-reviews", label: "OP Jindal University Online Reviews" },
+            ]
+  const [activeSection, setActiveSection] = useState(sectionItem[0]?.id ?? null);
+           console.log("Active Section:", activeSection);
+                      
+           useEffect(() => {
+                                     if (!sectionItem.length) return undefined;
+                                 
+                                     const observerOptions = {
+                                       root: null,
+                                       threshold: 0.25,
+                                       rootMargin: "-45% 0px -45% 0px",
+                                     };
+                                 
+                                     const observer = new IntersectionObserver((entries) => {
+                                       entries.forEach((entry) => {
+                                         if (entry.isIntersecting) {
+                                           setActiveSection(entry.target.id);
+                                         }
+                                       });
+                                     }, observerOptions);
+                                 
+                                     sectionItem.forEach((section) => {
+                                       const element = document.getElementById(section.id);
+                                       if (element) {
+                                         observer.observe(element);
+                                       }
+                                     });
+                                 
+                                     return () => {
+                                       sectionItem.forEach((section) => {
+                                         const element = document.getElementById(section.id);
+                                         if (element) {
+                                           observer.unobserve(element);
+                                         }
+                                       });
+                                       observer.disconnect();
+                                     };
+                                      }, [sectionItem]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [openModal, setOpenModal] = useState(null);
   const [openIndex, setOpenIndex] = useState(null);
@@ -91,10 +143,29 @@ const OPJindal = () => {
       alt: "BBA in OP Jindal University",
     },
     {
-      course: "B.Sc in Psycology",
+      course: "B.Sc in Psycology(Blended)",
       duration: "3 Years",
       eligibility: "10+2 Pass, If less than 50%: Must clear JSAT (min 50%) or submit, SAT/ACT/LNAT-UK score or complete a JGU MOOC",
       specialization: "Psychology",
+      fees: "₹3,00,000 /-",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327851/op-psycology_ae5kax.png",
+      alt: "B.Sc in Psycology(Blended) in OP Jindal University",
+    },
+
+     {
+      course: "B.Sc in Risk Management",
+      duration: "3 Years",
+      eligibility: "Minimum 50% in Class 12, with either Maths, Physics, Business Maths, Statistics, or IT / MIS as one of the subjects.Exemptions from JSAT for students scoring: SAT (≥1100) ACT (≥27) UGAT/CUET (≥60 percentile)",
+      specialization: "Risk Management",
+      fees: "₹3,00,000 /-",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327851/op-psycology_ae5kax.png",
+      alt: "B.Sc in Psycology in OP Jindal University",
+    },
+        {
+      course: "B.Com in International Accounting & Finance",
+      duration: "3 Years",
+      eligibility: "Eligibility: Minimum 50% in Class 12, with either of Maths, Physics, Business Maths, Statistics, or IT / MIS as one of the subjects",
+      specialization: "International Accounting & Finance",
       fees: "₹3,00,000 /-",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327851/op-psycology_ae5kax.png",
       alt: "B.Sc in Psycology in OP Jindal University",
@@ -103,56 +174,192 @@ const OPJindal = () => {
   ];
 
   const pgCourses = [
+    
+    {
+      course: "MA in Teaching English to Speakers of Other languages (TESOL)",
+      duration: "12 Months(3 Trimester)",
+      eligibility: "Bachelor’s degree from any recognized university with at least 50% marks Govt. Issued ID Proof (Passport for international applicants)",
+      specialization: "Teaching English to Speakers of Other languages (TESOL)",
+      fees: "₹2,50,000/- ",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327837/op-masters2_yj8q41.webp",
+      alt: "MA i Teaching English to Speakers of Other languages (TESOL) in OP Jindal University",
+    },
+     {
+      course: "M.A. in Museology & Cultural Heritage",
+      duration: "12 Months",
+      eligibility: "Bachelor’s degree from any recognized university with at least 50% marks Govt. Issued ID Proof (Passport for international applicants)",
+      specialization: "Museology & Cultural Heritage",
+      fees: "₹2,50,000/- ",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327837/op-masters2_yj8q41.webp",
+      alt: "MA Museology & Cultural Heritage in OP Jindal University",
+    },
+      {
+      course: "M.A. in International Relations, Security and Strategy",
+      duration: "12-24 Months",
+      eligibility: "An undergraduate degree in any discipline from any recognised university in India or abroad.",
+      specialization: "International Relations, Security and Strategy",
+      fees: "₹3,00,000/-",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327840/op-masters4_kgkbhl.webp",
+      alt: "M.A.  International Relations, Security and Strategy in OP Jindal University",
+    },
+    {
+      course: "M.A. in Educational Leadership & Governance",
+      duration: "12 Months",
+      eligibility: "An undergraduate degree in any discipline from any recognised university in India or abroad.",
+      specialization: "Educational Leadership & Governance",
+      fees: "₹3,00,000/-",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327840/op-masters4_kgkbhl.webp",
+      alt: "M.A.  Educational Leadership & Governance in OP Jindal University",
+    },
+    {
+      course: "M.Sc in Environmental chnage and Sustainability",
+      duration: "12 Months",
+      eligibility: "Bachelor’s degree from any recognized university with at least 50% marks Govt. Issued ID Proof (Passport for international applicants)",
+      specialization: "Environmental chnage and Sustainability",
+      fees: "₹2,50,000/-",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327838/op-masters3_amikm8.webp",
+      alt: "M.Sc in Environmental chnage and Sustainability in OP Jindal University",
+    },
+    {
+      course: "M.Sc. in Design Thinking & Innovation & Strategy",
+      duration: "12 Months",
+      eligibility: "Minimum 60% marks in both Class 10 and Class 12.Minimum 50% marks in a bachelor's degree ",
+      specialization: "Design Thinking & Innovation & Strategy",
+      fees: "₹2,50,000/-",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327838/op-masters3_amikm8.webp",
+      alt: "M.Sc Design Thinking & Innovation & Strategy in OP Jindal University",
+    },
+     {
+      course: "M.Sc. in  Artificial Intelligence & Finance",
+      duration: "12 Months",
+      eligibility: "Minimum 60% marks in both Class 10 and Class 12.Minimum 50% marks in a bachelor's degree ",
+      specialization: "Artificial Intelligence & Financ",
+      fees: "₹2,75,000/-",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327838/op-masters3_amikm8.webp",
+      alt: "M.Sc Artificial Intelligence & Finance in OP Jindal University",
+    },
+     {
+      course: "M.Sc. In Global Health and Development.",
+      duration: "12 Months",
+      eligibility: "Bachelor’s degree from any recognized university. Govt. Issued ID Proof (Passport for International Applicants)",
+      specialization: "Global Health and Development",
+      fees: "₹2,50,000/-",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327838/op-masters3_amikm8.webp",
+      alt: "M.Sc  Global Health and Development in OP Jindal University",
+    },
+      {
+      course: "M.Sc. in Global Risk Management",
+      duration: "12 Months",
+      eligibility: "Undergraduate degree with at least 50% marks Candidates with less than 50% marks must: Appear for the JSAT examination, andAttend a mandatory interview",
+      specialization: "Global Risk Management",
+      fees: "₹2,75,000/-",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327838/op-masters3_amikm8.webp",
+      alt: "M.Sc  Global Risk Management in OP Jindal University",
+    },
+      
+      {
+      course: "M.Sc. in Development Studies",
+      duration: "12 Months",
+      eligibility: "Bachelor’s degree from any recognized university. Govt. Issued ID Proof (Passport for International Applicants)",
+      specialization: "Development Studies",
+      fees: "₹2,50,000/-",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327838/op-masters3_amikm8.webp",
+      alt: "M.Sc  Development Studies in OP Jindal University",
+    },
+       {
+      course: "M.Sc. in Strategic Communication.",
+      duration: "12 Months",
+      eligibility: "Bachelor’s degree from any recognized university. Govt. Issued ID Proof (Passport for International Applicants)",
+      specialization: "in Strategic Communication",
+      fees: "₹2,50,000/-",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327838/op-masters3_amikm8.webp",
+      alt: "M.Sc in in Strategic Communication in OP Jindal University",
+    },
+
+     {
+      course: "M.Sc in International Accounting & Finance from JGU (Accredited by ACCA, UK.)",
+      duration: "12 Months",
+      eligibility: "Bachelor’s degree from any recognized university. Govt. Issued ID Proof (Passport for International Applicants)",
+      specialization: "International Accounting & Finance",
+      fees: "₹2,75,000/-",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327838/op-masters3_amikm8.webp",
+      alt: "M.Sc International Accounting & Finance from JGU (Accredited by ACCA, UK.)in OP Jindal University",
+    },
+
+     {
+      course: "M.Sc. in Artificial Intelligence and Data Science",
+      duration: "12 Months",
+      eligibility: "Bachelor’s degree from any recognized university. Govt. Issued ID Proof (Passport for International Applicants)",
+      specialization: "Artificial Intelligence and Data Science",
+      fees: "₹2,75,000/-",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327838/op-masters3_amikm8.webp",
+      alt: "M.Sc  in Artificial Intelligence and Data Sciencein OP Jindal University",
+    },
+    {
+      course: "M.A. in India Studies",
+      duration: "12 Months",
+      eligibility: "An undergraduate degree in any discipline from any recognised university in India or abroad.",
+      specialization: "India Studies",
+      fees: "₹2,50,000/-",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327840/op-masters4_kgkbhl.webp",
+      alt: "MA India Studies in OP Jindal University",
+    },
+     {
+      course: "MA in Public Policy",
+      duration: "12 Months",
+      eligibility: "An undergraduate degree in any discipline from any recognised university in India or abroad.",
+      specialization: "Public Policy",
+      fees: "₹3,00,000/-",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327840/op-masters4_kgkbhl.webp",
+      alt: "MA Public Policy in OP Jindal University",
+    },
+     {
+      course: "Master of Design in User Experience",
+      duration: "12 Months",
+      eligibility: "An undergraduate degree in any discipline from any recognised university in India or abroad.",
+      specialization: "Design in User Experience",
+      fees: "₹5,00,000/-",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327840/op-masters4_kgkbhl.webp",
+      alt: "Master of Design in User Experience",
+    },
     {
       course: "Master in Enterpreneurship and Family Business",
       duration: "1 Years(4 terms)",
       eligibility: "A Bachelor’s degree, Active involvement as an entrepreneurial family member ",
+      specialization: "Enterpreneurship and Family Business",
       fees: "₹2,75,000/-",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327837/op-masters1_g752dn.webp",
       alt: "Master in Enterpreneurship and Family Business in OP Jindal University",
 
     },
     {
-      course: "MA in Teaching English to Speakers of Other languages (TESOL)",
-      duration: "12 Months(3 Trimester)",
-      eligibility: "Bachelor’s degree from any recognized university with at least 50% marks Govt. Issued ID Proof (Passport for international applicants)",
-      fees: "₹2,50,000/- ",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327837/op-masters2_yj8q41.webp",
-      alt: "MA in Teaching English to Speakers of Other languages (TESOL) in OP Jindal University",
-    },
-    {
-      course: "M.Sc in Environmental chnage and Sustainability",
-      duration: "12 Months(4 Terms)",
-      eligibility: "Bachelor’s degree from any recognized university with at least 50% marks Govt. Issued ID Proof (Passport for international applicants)",
-      fees: "₹2,50,000/-",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327838/op-masters3_amikm8.webp",
-      alt: "M.Sc in Environmental chnage and Sustainability in OP Jindal University",
-    },
-    {
-      course: "MA Public Policy",
-      duration: "12-24 Months",
-      eligibility: "An undergraduate degree in any discipline from any recognised university in India or abroad.",
-      fees: "₹3,00,000/-",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327840/op-masters4_kgkbhl.webp",
-      alt: "MA Public Policy in OP Jindal University",
-    },
-    {
       course: "MBA in Business Analytics",
-      duration: "12-24 Months",
+      duration: "12 Months",
       eligibility: "The eligibility criteria for the online MBA in Business Analytics programme require a bachelor’s degree from a recognised university in India. A minimum of 50% marks in any discipline is required for graduation.",
+      specialization: "Business Analytics",
       fees: "₹2,00,000/-",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327851/op-masters5_zkvcwa.webp",
       alt: "MBA in Business Analytics in OP Jindal University",
     },
     {
-      course: "MBA in Business Law",
+      course: "MBA in Business & Law",
       duration: "12 Months",
       eligibility: "Bachelor's degree in any discipline with a minimum 50% aggregate score from a recognized university.  ",
+      specialization: "Business & Law",
       fees: "₹3,00,000/-",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
-      alt: "MBA in Business Law in OP Jindal University",
+      alt: "MBA in Business & Law in OP Jindal University",
     },
     
+    {
+      course: "MBA ",
+      duration: "12 Months",
+      eligibility: "Bachelor's degree in any discipline with a minimum 50% aggregate score from a recognized university.  ",
+      specialization: "Finance, Human Resource Management, Marketing, Strategy & Leadership, Supply Chain & Operations, AI for Business, Digital Finance",
+      fees: "₹1,80,000/-",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
+      alt: "MBA  in OP Jindal University",
+    },
   ];
 
   const faqs = [
@@ -283,123 +490,13 @@ const OPJindal = () => {
               
       <div className="max-w-screen-2xl mx-auto flex w-full">
         {/* Desktop Sidebar */}
-        <aside className="fixed hidden lg:flex flex-col top-20 w-64 h-[calc(100vh-5rem)] px-4 py-8 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40">
-          <h3 className="text-lg font-bold mb-6 text-blue-600 border-b-2 border-blue-200 pb-2">
-            Page Contents
-          </h3>
-          <ul className="space-y-3">
-            {[
-              { id: "Home", label: "Introduction" },
-              { id: "campus-tour", label: "Campus Tour (Images & Videos)" },
-              { id: "opju-online-courses", label: "Explore Online Courses" },
-              { id: "key-highlights", label: "Key Highlights" },
-              { id: "admission-dates", label: "Admission Dates for UG & PG Programs" },
-              { id: "fees-structure", label: "Fees Structure" },
-              { id: "Admission", label: "Admission Process" },
-              { id: "sessions-details", label: "Details of Upcoming & Ongoing Sessions" },
-              { id: "placement-partners", label: "Placement Partners" },
-              { id: "placement-record", label: "Placement Record" },
-              { id: "student-reviews", label: "Student Reviews" },
-              { id: "faq", label: "FAQs" },
-              { id: "opju-reviews", label: "OP Jindal University Online Reviews" },
-            ].map((item) => (
-              <li key={item.id}>
-                <button
-                  onClick={() => {
-                    const section = document.getElementById(item.id);
-                    if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
-                  }}
-                  className="text-white-700 hover:text-blue-600 font-medium text-sm transition-colors duration-200 text-left cursor-pointer"
-                >
-                  {item.label}
-                </button>
-              </li>
-            ))}
-            {/* Apply Button */}
-                      <button 
-                        onClick={() => setOpenModal({ type: 'apply' })}
-                        className="bg-white hover:bg-white text-blue font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-black-500/25 text-sm sm:text-base cursor-pointer"
-                      >
-                        <span className="hidden sm:inline ">Apply Now</span>
-                        <span className="sm:hidden">Apply</span>
-                      </button>
-          </ul>
-        </aside>
+       <PageContent sectionItems={sectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} /> 
 
         {/* Main Content Wrapper */}
         <main className="flex-1 min-w-0 lg:pl-64">
           <div className="overflow-x-hidden pt-16 lg:pt-20">
-            {/* Mobile Sidebar */}
-            <AnimatePresence>
-              {isMobileMenuOpen && (
-                <>
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[999] lg:hidden"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  />
-                  <motion.aside
-                    initial={{ x: "-100%" }}
-                    animate={{ x: 0 }}
-                    exit={{ x: "-100%" }}
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                    className="fixed top-0 left-0 w-[85vw] sm:w-80 h-full bg-white border-r shadow-2xl z-[1000] p-6 flex flex-col overflow-y-auto will-change-transform lg:hidden"
-                  >
-                    <div className="flex items-center justify-between mb-8">
-                      <h3 className="text-xl font-bold text-blue-600">Page Contents</h3>
-                      <button
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className="p-2 rounded-full hover:bg-gray-100"
-                      >
-                        <FaTimes className="w-5 h-5 text-gray-600" />
-                      </button>
-                    </div>
-                    <ul className="space-y-4">
-                      {[
-                        { id: "Home", label: "Introduction" },
-                        { id: "campus-tour", label: "Campus Tour (Images & Videos)" },
-                        { id: "opju-online-courses", label: "Explore Online Courses" },
-                        { id: "key-highlights", label: "Key Highlights" },
-                        { id: "admission-dates", label: "Admission Dates for UG & PG Programs" },
-                        { id: "fees-structure", label: "Fees Structure" },
-                        { id: "Admission", label: "Admission Process" },
-                        { id: "sessions-details", label: "Details of Upcoming & Ongoing Sessions" },
-                        { id: "placement-partners", label: "Placement Partners" },
-                        { id: "placement-record", label: "Placement Record" },
-                        { id: "student-reviews", label: "Student Reviews" },
-                        { id: "faq", label: "FAQs" },
-                        { id: "opju-reviews", label: "OP Jindal University Online Reviews" },
-                      ].map((item) => (
-                        <li key={item.id}>
-                          <button
-                            onClick={() => {
-                              const section = document.getElementById(item.id);
-                              if (section)
-                                section.scrollIntoView({ behavior: "smooth", block: "start" });
-                              setIsMobileMenuOpen(false);
-                            }}
-                            className="text-gray-700 hover:text-blue-600 font-semibold text-base transition-colors duration-200 w-full text-left py-2"
-                          >
-                            {item.label}
-                          </button>
-                        </li>
-                      ))}
-                      {/* Apply Button */}
-                      <button 
-                        onClick={() => setOpenModal({ type: 'apply' })}
-                        className="bg-white hover:bg-white text-blue font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-black-500/25 text-sm sm:text-base cursor-pointer"
-                      >
-                        <span className="hidden sm:inline ">Apply Now</span>
-                        <span className="sm:hidden">Apply</span>
-                      </button>
-                    </ul>
-                  </motion.aside>
-                </>
-              )}
-            </AnimatePresence>
+           
+            
             {/* Image Slider Section */}
  <section 
   id="Home" 
@@ -1234,7 +1331,7 @@ const OPJindal = () => {
      
              <div className="mt-12 border-t border-gray-200 pt-6 text-center">
                <p className="text-gray-700 max-w-3xl mx-auto">
-                 Apply through <span className="font-semibold text-blue-600">UniFost</span> 
+                 Apply through <span className="font-semibold text-blue-600"> UniFost </span> 
                  for personalized guidance, faster processing, and complete support 
                  throughout your admission journey with  Online.
                </p>
@@ -1566,11 +1663,12 @@ const OPJindal = () => {
           ))}
         </div>
          <Button
-          onClick={() => setOpenModal({ type: 'apply' })}
-          className="w-full bg-[#ffc107] text-blue-500 font-bold px-6 py-3 rounded-full shadow-lg hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 hover:bg-[#e0a800] cursor-pointer"
-          >
-          Apply Now
-          </Button>
+  onClick={() => setOpenModal({ type: 'apply' })}
+  className="w-full bg-[#ffc107] text-blue-500  font-semibold px-4 py-2  /* smaller size */rounded-full shadow-lg hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 hover:bg-[#e0a800] cursor-pointer my-4              /* top & bottom spacing */ "
+>
+  Apply Now
+</Button>
+
       </div>
     </section>
 <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-gray-300 pt-12 sm:pt-16 relative overflow-hidden">
@@ -1730,6 +1828,7 @@ const OPJindal = () => {
   "MA Public Policy - OP Jindal University",
   "MBA in Business Analytics - OP Jindal University",
   "MBA in Business Law - OP Jindal University"
+  
 ]
 
                         .map((keyword, index) => (

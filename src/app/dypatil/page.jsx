@@ -1,7 +1,6 @@
 'use client';
 import React, { useState,useEffect } from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import { Helmet } from 'react-helmet';
+
 import EnquireCard from '@/components/EnquireCard';
 import { FaBookOpen, FaUserTie,FaTimes, FaBriefcase, FaClipboardCheck, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import Image from 'next/image';
@@ -13,8 +12,61 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import EnquiryForm from '@/components/EnquiryForm';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import { motion, AnimatePresence } from 'framer-motion';
+import PageContent from "@/components/PageContent/PageContent";
 
 const Dypatil = () => {
+  const selectionItem = [
+                { id: "HeroSection", label: "Introduction" },
+                { id: "CampusTour", label: "Campus Tour" },
+                { id: "Courses", label: "Explore Programs" },
+                { id: "KeyHighlights", label: "Key Highlights" },
+                { id: "AdmissionDates", label: "Admission Dates" },
+                { id: "Fees", label: "Fee Structure" },
+                { id: "Admission", label: "Admission Process" },
+                { id: "Sessions", label: "Details of Upcoming Session" },
+                { id: "Placements", label: "Placements Records" },
+                { id: "Companies", label: "Placement Partners" },
+                { id: "StudentsReview", label: "Students Review" },
+                { id: "Faq", label: "FAQ" },
+              ]
+       const [activeSection, setActiveSection] = useState(selectionItem[0]?.id ?? null);
+             console.log("Active Section:", activeSection);
+              
+                         useEffect(() => {
+                             if (!selectionItem.length) return undefined;
+                         
+                             const observerOptions = {
+                               root: null,
+                               threshold: 0.25,
+                               rootMargin: "-45% 0px -45% 0px",
+                             };
+                         
+                             const observer = new IntersectionObserver((entries) => {
+                               entries.forEach((entry) => {
+                                 if (entry.isIntersecting) {
+                                   setActiveSection(entry.target.id);
+                                 }
+                               });
+                             }, observerOptions);
+                         
+                             selectionItem.forEach((section) => {
+                               const element = document.getElementById(section.id);
+                               if (element) {
+                                 observer.observe(element);
+                               }
+                             });
+                         
+                             return () => {
+                               selectionItem.forEach((section) => {
+                                 const element = document.getElementById(section.id);
+                                 if (element) {
+                                   observer.unobserve(element);
+                                 }
+                               });
+                               observer.disconnect();
+                             };
+                           }, [selectionItem]);
+                         
   const [expandedItems, setExpandedItems] = useState({});
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
   const [openModal, setOpenModal] = useState(null);
@@ -372,119 +424,12 @@ const Dypatil = () => {
         
         <div className="max-w-screen-2xl mx-auto flex w-full">
           {/* Left Sidebar */}
-          <aside className="fixed hidden lg:flex flex-col top-20 w-64 h-[calc(100vh-5rem)] px-4 py-8 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40">
-            <h3 className="text-lg font-bold mb-6 text-red-600 border-b-2 border-red-200 pb-2 cursor-pointer">
-              Page Contents
-            </h3>
-            <ul className="space-y-3 cursor-pointer">
-              {[
-                { id: "HeroSection", label: "Introduction" },
-                { id: "CampusTour", label: "Campus Tour" },
-                { id: "Courses", label: "Explore Programs" },
-                { id: "KeyHighlights", label: "Key Highlights" },
-                { id: "AdmissionDates", label: "Admission Dates" },
-                { id: "Fees", label: "Fee Structure" },
-                { id: "Admission", label: "Admission Process" },
-                { id: "Sessions", label: "Details of Upcoming Session" },
-                { id: "Placements", label: "Placements Records" },
-                { id: "Companies", label: "Placement Partners" },
-                { id: "StudentsReview", label: "Students Review" },
-                { id: "Faq", label: "FAQ" },
-              ].map((item) => (
-                <li
-                  key={item.id}
-                  className="text-sm text-gray-600 hover:text-red-600 transition-colors duration-200 py-1 px-2 rounded hover:bg-red-50"
-                  onClick={() => {
-                    const element = document.getElementById(item.id);
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
-                >
-                  {item.label}
-                </li>
-              ))}
-               <button 
-                onClick={() => {
-                  setOpenModal({ type: 'apply' });
-                  setShowEnquiryModal(true);
-                  setModalType('apply');
-                }}
-                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
-              >
-                Apply Now
-              </button>
-            </ul>
-          </aside>
+          {/* Add padding to the top of the first section to account for fixed header */}
+            <PageContent sectionItems={selectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
           
-          {/* Mobile Sidebar */}
-          <AnimatePresence>
-            {isMobileMenuOpen && (
-              <>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="fixed inset-0 bg-black/40 backdrop-blur-[1px] z-40 lg:hidden"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                />
-                <motion.aside
-                  initial={{ x: "-100%" }}
-                  animate={{ x: 0 }}
-                  exit={{ x: "-100%" }}
-                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                  className="fixed top-0 left-0 w-[85vw] sm:w-72 h-full bg-white border-r shadow-xl z-50 p-6 flex flex-col overflow-y-auto will-change-transform lg:hidden"
-                >
-                    <div className="flex items-center justify-between mb-8">
-                                        <h3 className="text-xl font-bold text-pink-600">Page Contents</h3>
-                                        <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-full hover:bg-gray-100">
-                                          <FaTimes className="w-5 h-5 text-gray-600" />
-                                        </button>
-                                      </div>
-                  <ul className="space-y-4">
-                    {[
-                      { id: "HeroSection", label: "Introduction" },
-                      { id: "CampusTour", label: "Campus Tour" },
-                      { id: "Courses", label: "Explore Programs" },
-                      { id: "KeyHighlights", label: "Key Highlights" },
-                      { id: "AdmissionDates", label: "Admission Dates" },
-                      { id: "Fees", label: "Fee Structure" },
-                      { id: "Admission", label: "Admission Process" },
-                      { id: "Sessions", label: "Details of Upcoming Session" },
-                      { id: "Placements", label: "Placements Records" },
-                      { id: "Companies", label: "Placement Partners" },
-                      { id: "StudentsReview", label: "Students Review" },
-                      { id: "Faq", label: "FAQ" },
-                    ].map((item) => (
-                      <li key={item.id}>
-                        <button
-                          onClick={() => {
-                            const section = document.getElementById(item.id);
-                            if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
-                            setIsMobileMenuOpen(false);
-                          }}
-                          className="text-gray-700 hover:text-red-600 font-semibold text-base transition-colors duration-200 w-full text-left"
-                        >
-                          {item.label}
-                        </button>
-                      </li>
-                    ))}
-                     <button 
-                onClick={() => {
-                  setOpenModal({ type: 'apply' });
-                  setShowEnquiryModal(true);
-                  setModalType('apply');
-                }}
-                className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
-              >
-                Apply Now
-              </button>
-                  </ul>
-                </motion.aside>
-              </>
-            )}
-          </AnimatePresence>
+                
+          
+          
 
           {/* Main Content */}
           <main className="flex-1 min-w-0 lg:ml-64">

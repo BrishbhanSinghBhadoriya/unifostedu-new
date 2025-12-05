@@ -73,9 +73,10 @@ const selectionItem=[
              }, [selectionItem]);
            
  const ugCourses = [
-    {
-      course: "Bachelor of Business Administration (BBA)",
-      duration: "3 Years",
+   
+      {
+      course: "Bachelor of Business Administration (Hons.)",
+      duration: "4 Years",
       eligibility: "10+2, 10+3 Minimum 50%",
       fees: "1,80,000",
       specialization: "Healthcare Management, Business Analytics, Financial Technology, Marketing Management, human resource Management ",
@@ -84,20 +85,9 @@ const selectionItem=[
       universityShort: "MAHE",
       alt: "Bachelor of Business Administration (BBA) in Manipal Online",
     },
-      {
-      course: "Bachelor of Business Administration (Hons.)",
-      duration: "4 Years",
-      eligibility: "10+2, 10+3 Minimum 50%",
-      fees: "2,40,000",
-      specialization: "Healthcare Management, Business Analytics, Financial Technology, Marketing Management, human resource Management ",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
-      university: "Manipal Academy of Higher Education(MAHE))",
-      universityShort: "MAHE",
-      alt: "Bachelor of Business Administration (BBA) in Manipal Online",
-    },
    
     {
-      course: "Bachelor of Commerce (B.Com)",
+      course: "Bachelor of Commerce (B.Com)(Professional)",
       duration: "3 Years",
       eligibility: "10+2,10+3 Minimum 50%",
       fees: "2,94,000",
@@ -115,7 +105,7 @@ const selectionItem=[
       duration: "2 Years",
       eligibility: "Working Professionals with min 50% in graduation",
       fees: "2,92,000",
-      specialization: "Healthcare Management, Financial Technology, Marketing Management, Human Resource Management, Business Analytics, Data Science, Logistics and Supply Chain Management",
+      specialization: "Healthcare Management, Financial Technology, Marketing Management, Human Resource Management, Business Analytics, Data Science, Logistics and Supply Chain Management, Operations Management, Pharmaceutical Management",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
       university: "Manipal Academy of Higher Education(MAHE))",
       universityShort: "MAHE",
@@ -1104,7 +1094,22 @@ const selectionItem=[
                         {/* Course Content */}
                         <div className="p-6 space-y-4">
                           <h3 className="text-xl font-bold text-gray-900 line-clamp-2">{course.course}</h3>
-                          
+                          <div className="text-sm text-gray-500 min-h-[40px]">
+                              {course.specialization.split(',').length > 1 ? (
+                                <>
+                                  {course.specialization.split(',')[0]}
+                                  <details className="inline">
+                                    <summary className="text-orange-500 cursor-pointer text-xs focus:outline-none">...more</summary>
+                                    <p className="mt-1">
+                                      {course.specialization.split(',').slice(1).join(', ')}
+                                    </p>
+                                  </details>
+                                </>
+                              ) : (
+                                course.specialization
+                              )}
+                            </div>
+
                           <div className="space-y-2">
                             <div className="flex items-center gap-2 text-gray-600">
                               <span>⏱️</span>

@@ -62,7 +62,7 @@ const Manipal = () => {
       duration: "2 Years",
       eligibility: "50% Graduation",
       fees: "1,75,000",
-      specialization: "Super/Dual(Human Resource Management and Finance, Finance and Marketing, Marketing and Human Resource Management, Marketing and Business Analytics, Finance and Business Analytics, Human Resource and Business Analytics, Project Management, Retail Management and Quick Commerce, Artificial Intelligence Banking and Finance, 15 other fields)",
+      specialization: "Super/Dual(Digital Marketing, Marketing, Analytics and Data Science, IT & Fintech, Finance Management, Human Resource Management, BFSI, Operations Management, International Business, Information Systems Management, Project Management, Supply Chain Management, Retail Management)",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
       university: "Manipal University Jaipur",
       universityShort: "MUJ",
