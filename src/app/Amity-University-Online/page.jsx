@@ -95,7 +95,7 @@ const AmityLandingPage = () => {
       eligibility: "10+2 Pass",
       fees: "₹1,65,000- ₹2,25,000",
       specialization:
-        "BBA (General, Data Analytics, Travel And Tourism Management, Professional Certificate in Business Analytics)",
+        "BBA (General, Data Analytics In collaboration with HCL Tech, Travel And Tourism Management, Professional Certificate in Business Analytics In collaboration with KPMG)",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
       alt: "BBA from amity online university",
     },
@@ -105,7 +105,7 @@ const AmityLandingPage = () => {
       eligibility: "10+2 Pass",
       fees: "₹1,50,000 - ₹2,25,000",
       specialization:
-        "BCA (General, Cloud and Security, Software Engineering, Data Science, Data Engineering(HCL Tech), Data Analytics, Software Engineering(HCL Tech))",
+        "BCA (General, Cloud and Security In collaboration with TCS iON, Data Analytics In collaboration with TCS iON, Data Engineering In collaboration with HCL Tech, Software Engineering In collaboration with HCL Tech, Financial Technology And AI In collaboration withpaytm,Professional Certificate in Applied Data EngineeringIn collaboration with KPMG)",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bca-online-image_awhemy.webp",
       alt: "BCA from amity online university",
     },
@@ -123,7 +123,7 @@ const AmityLandingPage = () => {
       course: "Bachelor of Arts (BA)",
       duration: "3 Years",
       eligibility: "10+2 Pass",
-      fees: "₹99,000 - ₹1,70,000",
+      fees: "₹85,000 - ₹1,70,000",
       specialization:
         "BA (General, Journalism and Mass Communication, Native Languages(Kannada,Malayalam, Tamil, Telugu), English, Sociology, Political Science, Economics)",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
@@ -138,7 +138,7 @@ const AmityLandingPage = () => {
       eligibility: "Graduation",
       fees: "₹1,99,000 - ₹2,99,000",
       specialization:
-        "MBA (General, Information Technology Management, Dual Specialization, Human Resource Analytics, Data Science, Business Analytics, International Finance Management,Hospital Management, Digital Entrepreneurship, Digital Marketing Management, Entrepreneurship & Leadership Management, Finance & Accounting Management, Hospitality Management, Global Finance Market, Insurance Management, Marketing & Sales Management, Petroleum & Natural Gas, Production and Operations Management, Retail Management)",
+        "MBA (General Management, Information Technology Management, Dual Specialization, Human Resource Analytics, Data Science, Business Analytics, International Finance Management,Hospital and Healthcare Management In collaboration with Medersity / Appollo Hospital , Digital Entrepreneurship, Digital Marketing Management, Entrepreneurship & Leadership Management, Finance & Accounting Management, Hospitality Management, Global Finance Market, Insurance Management, Marketing & Sales Management, Petroleum & Natural Gas, Production and Operations Management, Retail Management)",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
       alt: "MBA from amity online university",
     },
@@ -148,7 +148,7 @@ const AmityLandingPage = () => {
       eligibility: "Graduation in BCA/B.Sc(IT)",
       fees: "₹170,000- ₹2,50,000",
       specialization:
-        "MCA (General, Cyber Security, Blockchain Technology, Machine Learning and Artificial Intelligence, Augmented Reality and Virtual Reality, Software Engineering)",
+        "MCA (General, Cyber Security In collaboration with HCL Tech, Blockchain Technology And Management,Machine Learning and Artificial Intelligence, Machine Learning and Artificial Intelligence In collaboration with TCS iON, Software Engineering,Financial Technology & AI In collaboration with Paytm)",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca-online-image_w3f0sx.webp",
       alt: "MCA from amity online university",
     },

@@ -1199,6 +1199,10 @@ const testimonials = [
                               <span>💰</span>
                               <span className="text-sm">{course.fees}</span>
                             </div>
+                            <div className="flex items-start gap-2 text-gray-600">
+                              <span className="mt-1">⭐</span>
+                              <span className="text-sm"><strong>Specialization:</strong> {course.specialization}</span>
+                            </div>
                           </div>
 
                           <button 
