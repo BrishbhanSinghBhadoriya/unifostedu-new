@@ -1,11 +1,12 @@
-export async function getLandingData() {
-  // Always use localhost for builds and development
-  const baseUrl = "http://localhost:3000";
+const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://unifostedu.com"     // <-- production domain
+    : "http://localhost:3000";       // <-- dev domain
 
+export async function getLandingData() {
   try {
-    const res = await fetch('/api/v1/landingData', {
-      next: { revalidate: 43200 },
-      cache: 'force-cache'
+    const res = await fetch(`${baseUrl}/api/v1/landingData`, {
+      next: { revalidate: 43200 }
     });
 
     if (!res.ok) {
