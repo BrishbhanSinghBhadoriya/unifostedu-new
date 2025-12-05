@@ -3,7 +3,7 @@ export async function getLandingData() {
   const baseUrl = "http://localhost:3000";
 
   try {
-    const res = await fetch(`${baseUrl}/api/v1/landingData`, {
+    const res = await fetch('/api/v1/landingData', {
       next: { revalidate: 43200 },
       cache: 'force-cache'
     });
