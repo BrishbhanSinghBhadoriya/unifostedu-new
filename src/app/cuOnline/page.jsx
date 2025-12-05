@@ -11,6 +11,7 @@ import "swiper/css";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import PageContent from "@/components/PageContent/PageContent";
 import AccreditationSection from "@/components/AccreditationSection";
 import {
   FaGraduationCap,
@@ -291,7 +292,7 @@ const cuOnline = () => {
     else setOpenIndex(index);
   };
 
-  const sectionLinks = [
+  const sectionItems = [
     { id: "HeroSection", label: "Introduction" },
     { id: "AboutUs", label: "About CU Online" },
     { id: "WhyChoose", label: "Why Choose" },
@@ -309,6 +310,42 @@ const cuOnline = () => {
     { id: "StudentReviews", label: "Student Reviews" },
     { id: "Faq", label: "FAQs" },
   ];
+   const [activeSection, setActiveSection] = useState(sectionItems[0]?.id ?? null);
+  useEffect(() => {
+               if (!sectionItems.length) return undefined;
+           
+               const observerOptions = {
+                 root: null,
+                 threshold: 0.25,
+                 rootMargin: "-45% 0px -45% 0px",
+               };
+           
+               const observer = new IntersectionObserver((entries) => {
+                 entries.forEach((entry) => {
+                   if (entry.isIntersecting) {
+                     setActiveSection(entry.target.id);
+                   }
+                 });
+               }, observerOptions);
+           
+               sectionItems.forEach((section) => {
+                 const element = document.getElementById(section.id);
+                 if (element) {
+                   observer.observe(element);
+                 }
+               });
+           
+               return () => {
+                 sectionItems.forEach((section) => {
+                   const element = document.getElementById(section.id);
+                   if (element) {
+                     observer.unobserve(element);
+                   }
+                 });
+                 observer.disconnect();
+               };
+             }, [sectionItems]);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleSectionNavigation = (sectionId) => {
     if (typeof window === "undefined") return;
@@ -419,49 +456,10 @@ const cuOnline = () => {
           )}
         </header>
 
-        {isSidebarOpen && (
-          <div
-            className="fixed inset-0 bg-black/40 z-40 lg:hidden"
-            onClick={() => setIsSidebarOpen(false)}
-          />
-        )}
+            <PageContent sectionItems={sectionItems} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
+        
 
-        <aside
-          className={`fixed top-20 left-0 h-[calc(100vh-5rem)] w-64 px-4 py-6 border-r border-gray-200 bg-white shadow-sm z-50 transition-transform duration-300 ease-in-out transform ${
-            isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-          } lg:translate-x-0 lg:block lg:shadow-none lg:z-40`}>
-          <div className="flex items-center justify-between pb-4 border-b">
-            <h3 className="text-lg font-semibold text-gray-900">Page Contents</h3>
-            <button
-              className="text-gray-500 hover:text-gray-700 lg:hidden"
-              onClick={() => setIsSidebarOpen(false)}
-              aria-label="Close menu">
-              <FaTimes size={18} />
-            </button>
-          </div>
-          <nav className="mt-4 space-y-2 overflow-y-auto h-[calc(100%-3.5rem)] pr-2">
-            {sectionLinks.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleSectionNavigation(item.id)}
-                className="w-full text-left text-sm text-gray-600 hover:text-red-600 hover:bg-red-50 rounded-md px-3 py-2 transition-colors">
-                {item.label}
-              </button>
-            ))}
-          </nav>
-          <div className="mt-6 border-t pt-4">
-            <button
-              onClick={() => {
-                setOpenModal({ type: "apply" });
-                setShowEnquiryModal(true);
-                setModalType("apply");
-                setIsSidebarOpen(false);
-              }}
-              className="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-2 rounded-full shadow-sm transition-all duration-300 cursor-pointer">
-              Apply Now
-            </button>
-          </div>
-        </aside>
+       
 
         <main className="pt-24 pb-16 lg:pl-64">
           {/* Hero Banner */}

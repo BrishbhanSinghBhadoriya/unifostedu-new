@@ -189,6 +189,9 @@ const ChatBox = () => {
             className="h-full w-full rounded-full object-cover drop-shadow-lg"
             priority={false}
           />
+          <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg whitespace-nowrap">
+              Professor Uni
+            </div>
         </div>
         {!isOpen && (
           <span className="absolute -top-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-red-500 to-red-600 text-xs font-bold text-white shadow-lg animate-bounce">

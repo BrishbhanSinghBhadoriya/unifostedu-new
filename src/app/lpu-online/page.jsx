@@ -18,9 +18,57 @@ import { BiBookContent } from "react-icons/bi";
 import { BsBuildingCheck } from "react-icons/bs";
 import { AiOutlineSchedule } from "react-icons/ai";
 import { ChevronDown } from "lucide-react";
+import PageContent from "@/components/PageContent/PageContent";
 
 const LpuOnline = () => {
-
+  const sectionItem = [
+                    { id: "introduction", label: "Introduction" },
+                    { id: "campus-tour", label: "Campus Tour" },
+                    { id: "courses", label: "Explore Online Courses & Fees Structure" },
+                    { id: "highlights", label: "Key Highlights" },
+                    { id: "admission-dates", label: "Admission & Exam Details " },     
+                    { id: "admission-process", label: "Admission Process" },
+                    { id: "placement-partners", label: "Placement Partners" },   
+                    { id: "faq", label: "Student Reviews & FAQ" },
+                    { id: "conclusion", label: "Conclusion" }
+                ]
+         const [activeSection, setActiveSection] = useState(sectionItem[0]?.id ?? null);
+                  console.log("Active Section:", activeSection);
+      
+                 useEffect(() => {
+                     if (!sectionItem.length) return undefined;
+                 
+                     const observerOptions = {
+                       root: null,
+                       threshold: 0.25,
+                       rootMargin: "-45% 0px -45% 0px",
+                     };
+                 
+                     const observer = new IntersectionObserver((entries) => {
+                       entries.forEach((entry) => {
+                         if (entry.isIntersecting) {
+                           setActiveSection(entry.target.id);
+                         }
+                       });
+                     }, observerOptions);
+                 
+                     sectionItem.forEach((section) => {
+                       const element = document.getElementById(section.id);
+                       if (element) {
+                         observer.observe(element);
+                       }
+                     });
+                 
+                     return () => {
+                       sectionItem.forEach((section) => {
+                         const element = document.getElementById(section.id);
+                         if (element) {
+                           observer.unobserve(element);
+                         }
+                       });
+                       observer.disconnect();
+                     };
+                   }, [sectionItem]);
   // Introduction content
   const introductionContent = {
     title: "About LPU Online: Redefining Education for India 2025",
@@ -64,8 +112,8 @@ const LpuOnline = () => {
       course: "Bachelor of Business Administration (BBA)",
       duration: "3 Years",
       eligibility: "10+2 Minimum 40%",
-      fees: "1,20,000",
-      specialization: "Finance, Marketing, Human Resources, Digital Marketing, Entrepreneurship",
+      fees: "1,50,000",
+      specialization: "General",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
       university: "Lovely Professional University",
       universityShort: "LPU",
@@ -75,8 +123,8 @@ const LpuOnline = () => {
       course: "Bachelor of Computer Applications (BCA)",
       duration: "3 Years",
       eligibility: "10+2 Minimum 40%",
-      fees: "1,20,000",
-      specialization: "Data Science, Cloud Computing, Full Stack Development, Cyber Security",
+      fees: "1,50,000",
+      specialization: "General",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
       university: "Lovely Professional University",
       universityShort: "LPU",
@@ -312,46 +360,7 @@ const LpuOnline = () => {
         
       <div className="max-w-screen-2xl mx-auto flex">
         {/* Desktop Sidebar */}
-        <aside className="fixed hidden lg:flex flex-col top-20 w-64 h-[calc(100vh-5rem)] px-4 py-8 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40 ">
-            <h3 className="text-lg font-bold mb-6 text-indigo-800 border-b-2 border-indigo-200 pb-2 ">Page Contents</h3>
-            <ul className="space-y-3 ">
-                {[
-                    { id: "introduction", label: "Introduction" },
-                    { id: "campus-tour", label: "Campus Tour" },
-                    { id: "courses", label: "Explore Online Courses&Fees Structure" },
-                    { id: "highlights", label: "Key Highlights" },
-                    { id: "admission-dates", label: "Admission & Exam Details " },
-                    
-                    { id: "admission-process", label: "Admission Process" },
-                  
-                    { id: "placement-partners", label: "Placement Partners" },   
-                    { id: "faq", label: "Student Reviews & FAQ" },
-                    { id: "conclusion", label: "Conclusion" }
-                ].map((item) => (
-                    <li key={item.id}>
-                        <button
-                            onClick={() => {
-                                const section = document.getElementById(item.id);
-                                if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
-                            }}
-                            className="text-gray-700 hover:text-indigo-600 font-medium text-sm transition-colors duration-200 text-left cursor-pointer"
-                        >
-                            {item.label}
-                        </button>
-                    </li>
-                ))}
-            </ul>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
-                  <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
-                  onClick={() => setOpenModal({ type: 'apply' })}
-                  >
-                  Apply Now
-                
-                 </Button>
-                 </div>
-        </aside>
+           <PageContent sectionItems={sectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
         <main className="flex-1 min-w-0 lg:pl-72">
           <div className="overflow-x-hidden pt-16 lg:pt-20">
             {/* Professional Responsive Header */}
@@ -400,72 +409,7 @@ const LpuOnline = () => {
               </div>
             </header>
 
-            {/* Mobile Sidebar */}
-            <AnimatePresence>
-              {isMobileMenuOpen && (
-                <>
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[999] lg:hidden"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  />
-                  <motion.aside
-                    initial={{ x: "-100%" }}
-                    animate={{ x: 0 }}
-                    exit={{ x: "-100%" }}
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                    className="fixed top-0 left-0 w-[85vw] sm:w-80 h-full bg-white border-r shadow-2xl z-[1000] p-6 flex flex-col overflow-y-auto will-change-transform lg:hidden"
-                  >
-                    <div className="flex items-center justify-between mb-8">
-                      <h3 className="text-xl font-bold text-orange-600">Page Contents</h3>
-                      <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-full hover:bg-gray-100">
-                        <FaTimes className="w-5 h-5 text-gray-600" />
-                      </button>
-                    </div>
-                    <ul className="space-y-4">
-                      {[
-                          { id: "introduction", label: "Introduction" },
-                          { id: "campus-tour", label: "Campus Tour" },
-                          { id: "courses", label: "Explore Online Courses & Fees" },
-                          { id: "highlights", label: "Key Highlights" },
-                          { id: "admission-dates", label: "Admission & Exam Details" },
-                          { id: "admission-process", label: "Admission Process" },
-                     
-                          { id: "placement-partners", label: "Placement Partners" },
-                          { id: "faq", label: "Student Reviews & FAQ" },
-                          { id: "conclusion", label: "Conclusion" }
-                      ].map((item) => (
-                        <li key={item.id}>
-                          <button
-                            onClick={() => {
-                              const section = document.getElementById(item.id);
-                              if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                              setIsMobileMenuOpen(false);
-                            }}
-                            className="text-gray-700 hover:text-orange-600 font-semibold text-base transition-colors duration-200 w-full text-left py-2"
-                          >
-                            {item.label}
-                          </button>
-                        </li>
-                      ))}
-                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
-                  <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
-                  onClick={() => setOpenModal({ type: 'apply' })}
-                  >
-                  Apply Now
-                
-                 </Button>
-                 </div>
-                    </ul>
-                  </motion.aside>
-                </>
-              )}
-            </AnimatePresence>
+          
 
         {/* Premium Hero Section */}
         <section id="introduction" className="relative w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] overflow-hidden">
@@ -1179,7 +1123,22 @@ const LpuOnline = () => {
             </div>
           </div>
         </section>
+             <div
+      className="max-w-4xl mx-auto my-4 p-5 bg-orange-500 text-white rounded-lg shadow-lg"
+      role="note"
+      aria-label="Scholarship information"
+    >
+      <strong className="block mb-2 text-lg font-bold">
+        Scholarship Information:
+      </strong>
 
+      <p className="text-base leading-relaxed font-medium">
+        Scholarships are available according to each university's official
+        guidelines. Eligibility and scholarship amounts vary by program.
+        Please connect with our counsellors for accurate details and
+        application assistance.
+      </p>
+    </div>
         {/* Enhanced Courses Section */}
         <section id="courses" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
