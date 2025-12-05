@@ -46,7 +46,8 @@ export const metadata = {
   },
 };
 
-// Force static generation (SSG) for homepage
+// Force dynamic rendering so API fetch happens ONLY at runtime
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
   const data = await getLandingData();

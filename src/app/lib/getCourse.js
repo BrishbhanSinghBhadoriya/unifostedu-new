@@ -1,21 +1,36 @@
 const baseUrl =
   process.env.NODE_ENV === "production"
-    ? "https://unifostedu.com"     // <-- production domain
-    : "http://localhost:3000";       // <-- dev domain
+    ? "https://unifostedu.com"
+    : "http://localhost:3000";
 
 export async function getLandingData() {
   try {
     const res = await fetch(`${baseUrl}/api/v1/landingData`, {
-      next: { revalidate: 43200 }
+      cache: "no-store", // Ensure dynamic fetching at runtime
     });
 
     if (!res.ok) {
-      throw new Error(`Failed to fetch data: ${res.status}`);
+      console.error(`Failed to fetch landing data: ${res.status}`);
+      return getFallbackData();
     }
 
-    return res.json();
+    const data = await res.json();
+    return data || getFallbackData();
   } catch (error) {
     console.error("Error fetching landing data:", error);
-    return {};
+    return getFallbackData();
   }
+}
+
+function getFallbackData() {
+  return {
+    heroSlides: [],
+    courses: [],
+    features: [],
+    cities: [],
+    accreditationLogos: [],
+    universityLogos: [],
+    faqs: [],
+    colleges: [],
+  };
 }
