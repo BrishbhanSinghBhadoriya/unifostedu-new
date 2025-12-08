@@ -3,14 +3,15 @@ import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react/dist/cjs/lucide-react'
 import Image from 'next/image'
+import { optimizeCloudinary } from '@/utils/cloudinary'
 
-const Introduction = () => {
+const Introduction = ({ setOpenModal , openModal}) => {
   return (
     <div> <section id="HeroSection" className="relative w-full min-h-[450px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] xl:min-h-[800px] overflow-hidden pt-14 sm:pt-16 lg:pt-20 xl:pt-24">
               {/* Background with Gradient Overlay */}
               <div className="absolute inset-0">
                 <Image
-                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp"
+                  src={optimizeCloudinary("https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp")}
                   alt="Manipal University Banner"
                   fill
                   className="object-cover object-center"
