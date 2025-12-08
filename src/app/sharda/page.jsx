@@ -16,10 +16,64 @@ import Image from 'next/image';
 import * as Tabs from '@radix-ui/react-tabs';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
+import PageContent from "@/components/PageContent/PageContent";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const UniversityPage = () => {
+  const sectionItem = [
+                                { id: "introduction", label: "Introduction" },
+                                { id: "campus-tour", label: "Campus Tour" },
+                                { id: "explore-courses", label: "Explore Sharda University Online Courses" },
+                                { id: "key-highlights", label: "Key Highlights" },
+                                { id: "admission-dates", label: "Admission Dates (UG & PG)" },
+                                { id: "admission-process", label: "Admission Process" },
+                                { id: "Ongoing & Upcoming Admission Sessions", label:"Ongoing & Upcoming Admission Sessions"},
+                                { id: "placement-partners", label: "Placement Partners" },
+                                { id: "placement-record", label: "Placement Record" },
+                                { id: "student-reviews", label: "Student Reviews" },
+                                { id: "faqs", label: "FAQs" },
+                                { id: "university-reviews", label: "Sharda University Online Reviews" },
+
+                  ];
+
+                    const [activeSection, setActiveSection] = useState(sectionItem[0]?.id ?? null);
+                                   console.log("Active Section:", activeSection);
+                                    
+                                               useEffect(() => {
+                                                   if (!sectionItem.length) return undefined;
+                                               
+                                                   const observerOptions = {
+                                                     root: null,
+                                                     threshold: 0.25,
+                                                     rootMargin: "-45% 0px -45% 0px",
+                                                   };
+                                               
+                                                   const observer = new IntersectionObserver((entries) => {
+                                                     entries.forEach((entry) => {
+                                                       if (entry.isIntersecting) {
+                                                         setActiveSection(entry.target.id);
+                                                       }
+                                                     });
+                                                   }, observerOptions);
+                                               
+                                                   sectionItem.forEach((section) => {
+                                                     const element = document.getElementById(section.id);
+                                                     if (element) {
+                                                       observer.observe(element);
+                                                     }
+                                                   });
+                                               
+                                                   return () => {
+                                                     sectionItem.forEach((section) => {
+                                                       const element = document.getElementById(section.id);
+                                                       if (element) {
+                                                         observer.unobserve(element);
+                                                       }
+                                                     });
+                                                     observer.disconnect();
+                                                   };
+                                                 }, [sectionItem]); 
   // University data - you can replace this with your actual data
   const universityData = {
     name: "Sharda University",
@@ -74,7 +128,7 @@ const UniversityPage = () => {
       duration: "2 Years",
       eligibility: "Passed Bachelor's Degree of minimum 3 years duration.",
       fees: "₹1,40,000 -₹1,96,000",
-      specialization: ["Data Science and Analytics, Marketing, Healthcare and Hospital Administration, Human Resource Management, Sales and Marketing, Finance"],
+      specialization: ["Data Science and Analytics, Marketing, Healthcare and Hospital Administration, Human Resource Management, Finance"],
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
       university: universityData.name,
       universityShort: universityData.shortName,
@@ -318,116 +372,16 @@ const faqData = [
             </div>
           </div>
         </header>
-
+ <PageContent sectionItems={sectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
         <div className="max-w-screen-2xl mx-auto flex">
           {/* Desktop Sidebar */}
-          <aside className="fixed hidden lg:flex flex-col top-20 w-64 h-[calc(100vh-5rem)] px-4 py-8 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40">
-              <h3 className="text-lg font-bold mb-6 text-pink-600 border-b-2 border-pink-200 pb-2">Page Contents</h3>
-              <ul className="space-y-3">
-                  {[
-                                { id: "introduction", label: "Introduction" },
-                                { id: "campus-tour", label: "Campus Tour" },
-                                { id: "explore-courses", label: "Explore Sharda University Online Courses" },
-                                { id: "key-highlights", label: "Key Highlights" },
-                                { id: "admission-dates", label: "Admission Dates (UG & PG)" },
-                                { id: "admission-process", label: "Admission Process" },
-                                { id: "Ongoing & Upcoming Admission Sessions", label:"Ongoing & Upcoming Admission Sessions"},
-                                { id: "placement-partners", label: "Placement Partners" },
-                                { id: "placement-record", label: "Placement Record" },
-                                { id: "student-reviews", label: "Student Reviews" },
-                                { id: "faqs", label: "FAQs" },
-                                { id: "university-reviews", label: "Sharda University Online Reviews" },
-
-                  ].map((item) => (
-                      <li key={item.id}>
-                          <button
-                              onClick={() => {
-                                  const section = document.getElementById(item.id);
-                                  if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
-                              }}
-                              className="text-gray-700 hover:text-pink-600 font-medium text-sm transition-colors duration-200 text-left cursor-pointer"
-                          >
-                              {item.label}
-                          </button>
-                      </li>
-                  ))}
-                   <button 
-                    onClick={() => setOpenModal({ type: 'apply' })}
-                    className="w-full bg-gradient-to-r from-[#f7188b] to-[#ec027c] hover:from-[#ec027c] hover:to-[#d40270] text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
-                  >
-                    Apply Now
-                  </button>
-              </ul>
-          </aside>
+          
 
           <main className="flex-1 min-w-0 lg:pl-64">
             <div className="overflow-x-hidden">
        
-                   {/* Mobile Sidebar */}
-                   <AnimatePresence>
-                     {isMobileMenuOpen && (
-                       <>
-                         <motion.div
-                           initial={{ opacity: 0 }}
-                           animate={{ opacity: 1 }}
-                           exit={{ opacity: 0 }}
-                           transition={{ duration: 0.3 }}
-                           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[999] lg:hidden"
-                           onClick={() => setIsMobileMenuOpen(false)}
-                         />
-                         <motion.aside
-                           initial={{ x: "-100%" }}
-                           animate={{ x: 0 }}
-                           exit={{ x: "-100%" }}
-                           transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                           className="fixed top-0 left-0 w-[85vw] sm:w-80 h-full bg-white border-r shadow-2xl z-[1000] p-6 flex flex-col overflow-y-auto will-change-transform lg:hidden"
-                         >
-                           <div className="flex items-center justify-between mb-8">
-                             <h3 className="text-xl font-bold text-pink-600">Page Contents</h3>
-                             <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-full hover:bg-gray-100 cursor-pointer">
-                               <FaTimes className="w-5 h-5 text-gray-600" />
-                             </button>
-                           </div>
-                           <ul className="space-y-4">
-                              {[
-                                { id: "introduction", label: "Introduction" },
-                                { id: "campus-tour", label: "Campus Tour" },
-                                { id: "explore-courses", label: "Explore Sharda University Online Courses" },
-                                { id: "key-highlights", label: "Key Highlights" },
-                                { id: "admission-dates", label: "Admission Dates (UG & PG)" },
-                                { id: "admission-process", label: "Admission Process" },
-                                { id: "Ongoing & Upcoming Admission Sessions", label:"Ongoing & Upcoming Admission Sessions"},
-                                { id: "placement-partners", label: "Placement Partners" },
-                                { id: "placement-record", label: "Placement Record" },
-                                { id: "student-reviews", label: "Student Reviews" },
-                                { id: "faqs", label: "FAQs" },
-                                { id: "university-reviews", label: "Sharda University Online Reviews" },
-
-                             ].map((item) => (
-                               <li key={item.id}>
-                                 <button
-                                   onClick={() => {
-                                     const section = document.getElementById(item.id);
-                                     if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                     setIsMobileMenuOpen(false);
-                                   }}
-                                   className="text-gray-700 hover:text-orange-600 font-semibold text-base transition-colors duration-200 w-full text-left py-2 cursor-pointer"
-                                 >
-                                   {item.label}
-                                 </button>
-                               </li>
-                             ))}
-                              <button 
-                    onClick={() => setOpenModal({ type: 'apply' })}
-                    className="w-full bg-gradient-to-r from-[#f7188b] to-[#ec027c] hover:from-[#ec027c] hover:to-[#d40270] text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
-                  >
-                        Apply Now
-                        </button>
-                           </ul>
-                         </motion.aside>
-                       </>
-                     )}
-                   </AnimatePresence>
+                 
+                   
         {/* Hero Section */}
         <section id="introduction" className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
           <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp')] bg-cover bg-center opacity-200"></div>
@@ -918,6 +872,10 @@ const faqData = [
                             <div className="flex items-center gap-2 text-gray-600">
                               <span>💰</span>
                               <span className="text-sm">₹{course.fees}</span>
+                            </div>
+                            <div className="flex items-start gap-2 text-gray-600">
+                              <span className="mt-1">⭐</span>
+                              <span className="text-sm"><strong>Specialization:</strong> {Array.isArray(course.specialization) ? course.specialization.join(', ') : course.specialization}</span>
                             </div>
                           </div>
 

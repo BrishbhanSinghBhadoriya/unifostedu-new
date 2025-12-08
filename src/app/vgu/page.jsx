@@ -25,7 +25,62 @@ import HeroSection from '@/components/HeroSection';
 import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
+import PageContent from '@/components/PageContent/PageContent';
 const Vgu = () => {
+  const selectionItem = [
+               { id: "introduction", label: "Introduction" },
+               { id: "campus-tour", label: "Campus Tour (Images, Videos)" },
+               { id: "explore-courses", label: "Explore Online Courses and Fee Structure" },
+               { id: "key-highlights", label: "Key Highlights" },
+             
+               { id: "admission-process", label: "Admission Process" },
+               { id: "placement-partners", label: "Placement Partners" },
+               { id: "placement-record", label: "Placement Record" },
+               { id: "student-review", label: "Student Reviews" },
+               { id: "faqs", label: "FAQs" },
+              
+               { id: "conclusion", label: "Conclusion" }
+                  ];
+
+                   const [activeSection, setActiveSection] = useState(selectionItem[0]?.id ?? null);
+                               console.log("Active Section:", activeSection);
+                                
+                                           useEffect(() => {
+                                               if (!selectionItem.length) return undefined;
+                                           
+                                               const observerOptions = {
+                                                 root: null,
+                                                 threshold: 0.25,
+                                                 rootMargin: "-45% 0px -45% 0px",
+                                               };
+                                           
+                                               const observer = new IntersectionObserver((entries) => {
+                                                 entries.forEach((entry) => {
+                                                   if (entry.isIntersecting) {
+                                                     setActiveSection(entry.target.id);
+                                                   }
+                                                 });
+                                               }, observerOptions);
+                                           
+                                               selectionItem.forEach((section) => {
+                                                 const element = document.getElementById(section.id);
+                                                 if (element) {
+                                                   observer.observe(element);
+                                                 }
+                                               });
+                                           
+                                               return () => {
+                                                 selectionItem.forEach((section) => {
+                                                   const element = document.getElementById(section.id);
+                                                   if (element) {
+                                                     observer.unobserve(element);
+                                                   }
+                                                 });
+                                                 observer.disconnect();
+                                               };
+                                             }, [selectionItem]);
+
+  
   const ugCourses = [
      {
       course: "Bachelor of Computer Applications (BCA)",
@@ -41,7 +96,7 @@ const Vgu = () => {
       duration: "3 Years",
       eligibility: "10+2 in any stream",
       fees: "₹72,000/-",
-      specialization: "Economics + Public Policy + Computer Applications, Public Policy + English, English + History + Political Science, Computer Applications + Public Policy/IR, Political Science + International Relations + Public Policy, 51+ COMBINATIONS AVAILABLE'",
+      specialization: "Economics + Public Policy + Computer Applications, Public Policy + English, English + History + Political Science, Computer Applications + Public Policy/IR, Political Science + International Relations + Public Policy,",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
       alt:"BA In VGU",
     },
@@ -108,6 +163,7 @@ const Vgu = () => {
   ];
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('all');
+  const [expandedSpecializations, setExpandedSpecializations] = useState({});
 
   const faqData = [
     
@@ -178,6 +234,13 @@ const Vgu = () => {
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const toggleSpecialization = (courseId) => {
+    setExpandedSpecializations(prev => ({
+      ...prev,
+      [courseId]: !prev[courseId]
+    }));
   };
 
   
@@ -271,114 +334,10 @@ const Vgu = () => {
       {/* Hero Section */}
        <div className="flex">
           {/* Desktop Sidebar */}
-        <aside className="fixed hidden lg:flex flex-col top-20 w-64 h-[calc(100vh-5rem)] px-2 py-4 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-20">
-              <h3 className="text-lg font-bold mb-6 text-[#821812] border-b-2 border-orange-200 pb-2">Page Contents</h3>
-              <ul className="space-y-4 cursor-pointer">
-                  {[
-               { id: "introduction", label: "Introduction" },
-               { id: "campus-tour", label: "Campus Tour (Images, Videos)" },
-               { id: "explore-courses", label: "Explore Online Courses and Fee Structure" },
-               { id: "key-highlights", label: "Key Highlights" },
-             
-               { id: "admission-process", label: "Admission Process" },
-               { id: "placement-partners", label: "Placement Partners" },
-               { id: "placement-record", label: "Placement Record" },
-               { id: "student-review", label: "Student Reviews" },
-               { id: "faqs", label: "FAQs" },
-              
-               { id: "conclusion", label: "Conclusion" }
-
-
-
-                  ].map((item) => (
-                      <li key={item.id}>
-                          <button
-                              onClick={() => {
-                                  const section = document.getElementById(item.id);
-                                  if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
-                              }}
-                            className="text-gray-700 hover:text-[#821812] font-semibold text-base transition-colors duration-200 w-full text-left py-2 cursor-pointer"
-                          >
-                              {item.label}
-                          </button>
-                      </li>
-                  ))}
-              </ul>
-              <button 
-                    onClick={() => setOpenModal({ type: 'apply' })}
-                    className="w-full bg-[#821812] hover:from-[#f26722] hover:to-orange-600 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
-                  >
-                    Apply Now
-                  </button>
-        </aside>
-          <main className="flex-1 min-w-0 lg:pl-64 ">
+     <PageContent sectionItems={selectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
+       <main className="flex-1 min-w-0 lg:pl-64 ">
                       <div className="overflow-x-hidden pt-0">
                  
-                             {/* Mobile Sidebar */}
-                             <AnimatePresence>
-                               {isMobileMenuOpen && (
-                                 <>
-                                   <motion.div
-                                     initial={{ opacity: 0 }}
-                                     animate={{ opacity: 1 }}
-                                     exit={{ opacity: 0 }}
-                                     transition={{ duration: 0.3 }}
-                                     className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[999] lg:hidden"
-                                     onClick={() => setIsMobileMenuOpen(false)}
-                                   />
-                                   <motion.aside
-                                     initial={{ x: "-100%" }}
-                                     animate={{ x: 0 }}
-                                     exit={{ x: "-100%" }}
-                                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                                     className="fixed top-0 left-0 w-[85vw] sm:w-80 h-full bg-white border-r shadow-2xl z-[1000] p-6 flex flex-col overflow-y-auto will-change-transform lg:hidden"
-                                   >
-                                     <div className="flex items-center justify-between mb-8">
-                                       <h3 className="text-xl font-bold text-[#821812]">Page Contents</h3>
-                                       <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-full hover:bg-gray-100">
-                                         <FaTimes className="w-5 h-5 text-gray-600" />
-                                       </button>
-                                     </div>
-                                     <ul className="space-y-4">
-                                        {[
-                                        { id: "introduction", label: "Introduction" },
-                                        { id: "campus-tour", label: "Campus Tour " },
-                                        { id: "explore-courses", label: "Explore Online Courses and Fee Structure" },
-                                        { id: "key-highlights", label: "Key Highlights" },
-                                       
-                                        { id: "fees", label: "Fee Structure" },
-                                        { id: "admission-process", label: "Admission Process" },
-                                        { id: "placement-partners", label: "Placement Partners" },
-                                        { id: "placement-record", label: "Placement Record" },
-                                        { id: "student-review", label: "Student Reviews" },
-                                        { id: "faqs", label: "FAQs" },
-                                      
-                                        { id: "conclusion", label: "Conclusion" }
-                                       ].map((item) => (
-                                         <li key={item.id}>
-                                           <button
-                                             onClick={() => {
-                                               const section = document.getElementById(item.id);
-                                               if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                               setIsMobileMenuOpen(false);
-                                             }}
-                                             className="text-gray-700 hover:text-orange-600 font-semibold text-base transition-colors duration-200 w-full text-left py-2"
-                                           >
-                                             {item.label}
-                                           </button>
-                                         </li>
-                                       ))}
-                                     </ul>
-                                     <button 
-                              onClick={() => setOpenModal({ type: 'apply' })}
-                              className="w-full bg-[#821812] hover:from-[#f26722] hover:black text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer "
-                            >
-                              Apply Now
-                            </button>
-                                   </motion.aside>
-                                 </>
-                               )}
-                             </AnimatePresence>
        <section 
       id="Admission" 
       className="relative w-full h-screen min-h-[600px] max-h-[900px] overflow-hidden"
@@ -987,6 +946,8 @@ Through the campus tour, students can explore digital classrooms, study resource
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                       {(activeTab === 'all' ? [...ugCourses, ...pgCourses] : 
                         activeTab === 'ug' ? ugCourses : pgCourses).map((course, idx) => (
+                        (() => {
+                          const courseId = `${activeTab}-${idx}`;
                         <div key={idx} className="group">
                           <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
                             {/* Course Image */}
@@ -1022,6 +983,24 @@ Through the campus tour, students can explore digital classrooms, study resource
                                   <span>💰</span>
                                   <span className="text-sm">₹{course.fees}</span>
                                 </div>
+                                {course.specialization && (
+                                  <div>
+                                    <div className="flex items-start gap-2 text-gray-600">
+                                      <span>✨</span>
+                                      <span className={`text-sm ${!expandedSpecializations[courseId] && 'line-clamp-2'}`}>
+                                        {Array.isArray(course.specialization) ? course.specialization.join(', ') : course.specialization}
+                                      </span>
+                                    </div>
+                                    {(Array.isArray(course.specialization) ? course.specialization.join(', ').length > 80 : course.specialization.length > 80) && (
+                                      <button
+                                        onClick={() => toggleSpecialization(courseId)}
+                                        className="text-xs text-[#821812] font-semibold mt-1 hover:underline"
+                                      >
+                                        {expandedSpecializations[courseId] ? 'कम दिखाएं' : 'और दिखाएं'}
+                                      </button>
+                                    )}
+                                  </div>
+                                )}
                               </div>
     
                               <button 
@@ -1033,6 +1012,7 @@ Through the campus tour, students can explore digital classrooms, study resource
                             </div>
                           </div>
                         </div>
+                        })()
                       ))}
                     </div>
                   </Tabs.Content>

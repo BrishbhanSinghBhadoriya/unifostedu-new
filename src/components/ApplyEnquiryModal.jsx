@@ -13,49 +13,47 @@ export default function ApplyEnquiryModal({
   universityName,
   defaultProgram = 'MBA',
   formType = 'general',
+  showImage = true,
 }) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-5xl md:max-w-6xl p-0 h-[95vh] md:h-[90vh] flex flex-col">
         <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
           {/* Side Image Section */}
-          <div className={`
-            w-full md:w-2/5 
-            ${universityName?.toLowerCase() === 'manipal university online' ? 'bg-[#ff7a36]' : 'bg-[#f8c100]'}
-            relative 
-            h-[180px] sm:h-[200px] md:h-full
-            flex-shrink-0
-            overflow-hidden
-          `}>
-            {/* Desktop Image */}
-            <div className="hidden md:block w-full h-full relative">
-              <Image 
-                src={imageSrc} 
-                alt={title}
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 768px) 100vw, 40vw"
-                priority
-              />
-            </div>
-
-            {/* Mobile Image */}
-            <div className="md:hidden w-full h-full relative flex items-center justify-center p-3">
-              <div className="relative w-full h-full max-w-sm mx-auto">
+          {showImage && (
+            <div className={`
+              w-full md:w-2/5 
+              ${universityName?.toLowerCase() === 'manipal university online' ? 'bg-[#ff7a36]' : 'bg-[#f8c100]'}
+              relative 
+              h-[180px] sm:h-[200px] md:h-full
+              flex-shrink-0
+              overflow-hidden
+            `}>
+              <div className="hidden md:block w-full h-full relative">
                 <Image 
                   src={imageSrc} 
                   alt={title}
                   fill
-                  className="object-contain"
+                  className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 40vw"
                   priority
                 />
               </div>
+              <div className="md:hidden w-full h-full relative flex items-center justify-center p-3">
+                <div className="relative w-full h-full max-w-sm mx-auto">
+                  <Image 
+                    src={imageSrc} 
+                    alt={title}
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                    priority
+                  />
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent md:hidden" />
             </div>
-
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent md:hidden" />
-          </div>
+          )}
 
           {/* Form Section - Scrollable */}
           <div className="w-full md:w-3/5 flex flex-col flex-1 overflow-hidden">

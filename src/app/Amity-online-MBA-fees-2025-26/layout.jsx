@@ -63,7 +63,7 @@ export default function Layout({ children }) {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3">
               <img
-                src="/images/amity-logo.png"
+                src="images/logos/amitylogo.jpg"
                 alt="Amity University Online"
                 className="h-10 w-auto"
               />
