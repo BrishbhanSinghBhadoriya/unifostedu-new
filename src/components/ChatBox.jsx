@@ -13,7 +13,7 @@ const ChatBox = () => {
   const [messages, setMessages] = useState([
     {
       id: 1,
-      text: "Hello! 👋 I'm EduAI Assistant. How can I help you today?",
+      text: "Hello! 👋 I'm Prof.Uni. How can I help you today?",
       sender: 'bot',
       timestamp: new Date(),
     },
@@ -102,7 +102,6 @@ const ChatBox = () => {
       const messageToSend = inputValue.trim();
       
       
-      // Use Next.js API route as proxy to avoid CORS issues
       const response = await axios.post(
         '/api/v1/n8n-webhook',
         { 
@@ -207,14 +206,14 @@ const ChatBox = () => {
           showCloseButton={true}
         >
           {/* Dialog Title for accessibility - visually hidden */}
-          <DialogTitle className="sr-only">EduAI Assistant Chat</DialogTitle>
+          <DialogTitle className="sr-only">Prof.Uni</DialogTitle>
           
           {/* Chat Header */}
           <div className="flex items-center gap-3 border-b border-blue-400/20 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 px-5 py-4 shadow-lg">
             <div className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-white shadow-md ring-2 ring-white/50">
               <Image
                 src="/uni.webp"
-                alt="EduAI Assistant"
+                alt="Prof.Uni"
                 width={48}
                 height={48}
                 className="h-full w-full object-cover"
@@ -222,7 +221,7 @@ const ChatBox = () => {
             </div>
             <div className="flex-1">
               <div className="flex items-center gap-2">
-                <h3 className="font-bold text-lg text-white drop-shadow-sm">EduAI Assistant</h3>
+                <h3 className="font-bold text-lg text-white drop-shadow-sm">Prof.Uni</h3>
               </div>
               <div className="flex items-center gap-2 mt-0.5">
                 <div className="flex items-center gap-1.5">

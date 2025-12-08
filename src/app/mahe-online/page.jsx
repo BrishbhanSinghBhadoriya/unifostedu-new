@@ -16,8 +16,8 @@ import PageContent from "@/components/PageContent/PageContent";
 
 const Manipal = () => {
 const selectionItem=[
-              { id: "HeroSection", label: "Hero" },
-              { id: "Introduction", label: "Introduction to MAHE" },
+              { id: "HeroSection", label: "Introduction" },
+              { id: "Introduction", label: "About MAHE" },
               { id: "AboutUs", label: "About Us" },
               { id: "FutureReady", label: "Future-Ready Platform" },
               { id: "UGCApproved", label: "UGC-Approved Degrees" },

@@ -25,7 +25,7 @@ export const viewport = {
 export const metadata = {
   title: {
     default: "UNIFOST | Because The Right University Matters",
-    template: "%s | UNIFOST"
+    template: "%s"
   },
   description: "Compare and choose the best online degree programs from India's top universities. Get expert counseling, compare courses, fees, and eligibility for MBA, BBA, MCA, BCA, and more. UGC-approved online degrees with placement assistance.",
   keywords: [

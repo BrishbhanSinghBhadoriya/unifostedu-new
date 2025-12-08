@@ -1,7 +1,10 @@
 export const metadata = {
-  title: "Amity University Online",
+  title: {
+    absolute: true,
+    default: "Amity Online | Study UGC & AICTE Approved Online UG/PG Degree Programs",
+  },
   description:
-    "Explore globally recognized online programs from Amity University Online. Flexible learning, expert mentorship, and career-focused degrees with UGC & AICTE approvals.",
+    "Explore globally recognized online programs from Amity University Online with flexible learning, expert mentorship, and career-focused degrees approved by UGC and AICTE.",
   keywords: [
     "amity university online mba",
   "amity online mba fees",
@@ -33,6 +36,11 @@ export const metadata = {
   
 
   ],
+  icons: {
+    icon: "/amity.svg",              
+    shortcut: "/amity.svg",          
+    apple: "/amity.svg",             
+  },
   metadataBase: new URL("https://unifostedu.com"),
   alternates: {
     canonical: "https://unifostedu.com/Amity-University-Online",
@@ -79,16 +87,56 @@ export const metadata = {
     telephone: false,
   },
 };
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    name: "Amity University Online",
+    alternateName: "Amity Online",
+    url: "https://unifostedu.com/amity-university-online",
+    logo: "https://unifostedu.com/amity.svg",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+91 7042646766",
+      contactType: "admissions",
+      areaServed: "IN",
+      availableLanguage: ["en", "hi"],
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Noida",
+      addressRegion: "Uttar Pradesh",
+      postalCode: "201301",
+      addressCountry: "IN",
+    },
+    sameAs: [
+      "https://www.facebook.com/AmityUniversityOnline",
+      "https://www.linkedin.com/school/amity-university-online/",
+      "https://x.com/AmityUniversity",
+    ],
+  };
+
 
 // Use dynamic rendering for this route to avoid prerender-time initialization errors
 export const dynamic = 'force-dynamic';
-// keep a long revalidate if you want cached results for ISR-like behavior
 export const revalidate = 604800; // Revalidate every 7 days
 
 export default function AmityLayout({ children }) {
   return (
     <>
+      {/* Preload critical hero image for faster LCP */}
+      <link
+        rel="preload"
+        href="https://res.cloudinary.com/didkrwhbu/image/upload/w_400,q_auto,f_auto/v1762327155/girlImage_w9ulny.webp"
+        as="image"
+        type="image/webp"
+      />
+      {/* Organization Schema for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       {children}
     </>
   );
 }
+

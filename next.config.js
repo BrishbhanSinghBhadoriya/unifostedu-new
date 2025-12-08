@@ -1,15 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    unoptimized: true, // ✅ disables Next.js optimization (no blur, no compression)
-
+    unoptimized: false, // Enable Next.js image optimization
     formats: ['image/avif', 'image/webp'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    qualities: [70, 75, 80],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256],
     minimumCacheTTL: 31536000, // 1 year
-
-    // ✅ Allow Cloudinary images
     remotePatterns: [
       {
         protocol: "https",
@@ -18,7 +14,16 @@ const nextConfig = {
     ],
   },
 
-  // ✅ Strong caching for local images
+  // ✅ Experimental optimizations for reducing JS bundle size
+  experimental: {
+    optimizePackageImports: [
+      'lucide-react',
+      'react-icons',
+      'framer-motion',
+      '@radix-ui/react-icons',
+    ],
+  },
+
   async headers() {
     return [
       {
@@ -36,6 +41,13 @@ const nextConfig = {
           { key: 'Access-Control-Allow-Headers', value: 'Content-Type, Authorization' },
         ],
       },
+      {
+        // Cache static assets
+        source: '/:all*(svg|jpg|jpeg|png|webp|avif|ico|woff|woff2)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
     ];
   },
 
@@ -43,12 +55,12 @@ const nextConfig = {
   compress: true,
   reactStrictMode: true,
 
+  // ✅ Reduce bundle size
+  swcMinify: true,
+
   // ✅ Redirects for broken URLs (4xx errors)
   async redirects() {
     return [
-      // Fix case sensitivity issue: cuOnline -> cuOnline
-   
-      
       // Fix course slugs with dots
       {
         source: '/courses/m.com-online',
@@ -65,3 +77,4 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
