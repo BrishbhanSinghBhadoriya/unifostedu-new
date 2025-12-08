@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import ApplyEnquiryModal from "@/components/ApplyEnquiryModal";
 // Simulated components (replace with actual imports in your project)
 const Card = ({ className, children }) => <div className={`rounded-lg ${className}`}>{children}</div>;
 const CardContent = ({ className, children }) => <div className={className}>{children}</div>;
@@ -86,7 +86,6 @@ const Clock = ({ className }) => <svg className={className} fill="none" stroke="
 
 const SECTION_ITEMS = [
   { id: "HeroSection", label: "Introduction" },
-  { id: "AboutMCA", label: "About MCA" },
   { id: "Specializations", label: "Specializations" },
   { id: "highlights", label: "Key Highlights" },
   { id: "Fees", label: "Fees Structure" },
@@ -96,11 +95,11 @@ const SECTION_ITEMS = [
   { id: "Curriculum", label: "Curriculum" },
   { id: "PlacementRecord", label: "Placement Record" },
   { id: "FAQs", label: "FAQs" },
-];
+]; 
 
 const AmityMCALandingPage = () => {
   const [openModal, setOpenModal] = useState(null);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
   const [activeSection, setActiveSection] = useState(SECTION_ITEMS[0]?.id ?? null);
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -111,22 +110,22 @@ const AmityMCALandingPage = () => {
       color: "bg-blue-50 border-blue-200",
     },
     {
-      name: "Augmented & Virtual Reality",
+      name: "Software Engineering",
       image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=400&h=300&fit=crop",
       color: "bg-purple-50 border-purple-200",
     },
     {
-      name: "Blockchain Technology",
+      name: "Blockchain Technology & Management",
       image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=300&fit=crop",
       color: "bg-green-50 border-green-200",
     },
     {
-      name: "Cybersecurity",
+      name: "Cybersecurity with Collaboration from HCL Tech.",
       image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=300&fit=crop",
       color: "bg-red-50 border-red-200",
     },
     {
-      name: "Data Science",
+      name: "Financial Technology & AI In collaboration with Paytm)",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
       color: "bg-yellow-50 border-yellow-200",
     },
@@ -134,6 +133,11 @@ const AmityMCALandingPage = () => {
       name: "Software Engineering",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
       color: "bg-indigo-50 border-indigo-200",
+    },
+    {
+      name: "Machine Learning & AI in collaboration with TCS iON",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop",
+      color: "bg-blue-50 border-blue-200",
     },
   ];
 
@@ -248,138 +252,37 @@ const AmityMCALandingPage = () => {
 
   return (
     <div className="min-h-screen bg-white" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
-      {/* Header */}
-      <motion.header
-        className="bg-white shadow-sm fixed top-0 left-0 w-full z-50"
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <div className="max-w-7xl mx-auto px-4 py-3">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-24 h-10 bg-blue-900 rounded flex items-center justify-center text-white font-bold">
-                AMITY
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <Button
-                className="hidden sm:flex items-center bg-transparent border border-gray-300 text-gray-700 hover:bg-gray-50"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                +91 7042646766
-              </Button>
-              <Button
-                onClick={() => setOpenModal({ type: "enquiry" })}
-                className="bg-yellow-400 text-black hover:bg-yellow-500 border border-black"
-              >
-                Enquire Now
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-              <Button 
-                onClick={() => setIsMobileMenuOpen(true)}
-                className="lg:hidden bg-transparent border border-gray-300"
-              >
-                <Menu className="h-6 w-6" />
-              </Button>
-            </div>
+      {/* Top Sticky Nav (replaces header and sidebar) */}
+      <nav className="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
+        <div className="max-w-7xl mx-auto px-4 py-2">
+          <div className="flex items-center">
+            <ul className="flex gap-1 md:gap-2 items-center overflow-x-auto no-scrollbar">
+              {SECTION_ITEMS.map((item) => (
+                <li key={item.id} className="flex-shrink-0">
+                  <button
+                    onClick={() => {
+                      const section = document.getElementById(item.id);
+                      if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }}
+                    className={`text-xs md:text-sm transition-colors px-2 md:px-3 py-1 rounded-full border ${
+                      activeSection === item.id
+                        ? "text-indigo-700 font-semibold bg-indigo-50 border-indigo-200"
+                        : "text-gray-700 hover:bg-indigo-50 border-transparent"
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-      </motion.header>
+      </nav>
 
-      {/* Notification Bar */}
-      <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 py-3 mt-16">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <motion.div className="font-semibold flex items-center justify-center gap-3 flex-wrap text-sm md:text-base" {...fadeIn}>
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="w-5 h-5" />
-              <span>January 2026 Admissions Open</span>
-            </div>
-            <span>•</span>
-            <span>Zero-Cost EMI Available</span>
-            <span>•</span>
-            <span>Scholarships up to 100%</span>
-          </motion.div>
-        </div>
-      </div>
+      
 
-      <div className="max-w-screen-2xl mx-auto flex">
-        {/* Desktop Sidebar */}
-        <aside className="hidden lg:flex flex-col fixed top-24 w-64 h-[calc(100vh-6rem)] px-4 py-6 overflow-y-auto border-r bg-white/95 z-40">
-          <h3 className="text-lg font-bold mb-6 text-indigo-800 border-b-2 border-indigo-200 pb-2">
-            Page Contents
-          </h3>
-          <ul className="space-y-3">
-            {SECTION_ITEMS.map((item) => (
-              <li key={item.id}>
-                <button
-                  onClick={() => {
-                    const section = document.getElementById(item.id);
-                    if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
-                  }}
-                  className={`text-sm transition-colors w-full text-left py-2 px-2 rounded ${
-                    activeSection === item.id
-                      ? "text-indigo-700 font-semibold bg-indigo-50"
-                      : "text-gray-700 font-medium hover:bg-indigo-50"
-                  }`}
-                >
-                  {item.label}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </aside>
-
-        {/* Mobile Sidebar */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
-            <>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="fixed inset-0 bg-black/50 z-50 lg:hidden"
-                onClick={() => setIsMobileMenuOpen(false)}
-              />
-              <motion.aside
-                initial={{ x: "-100%" }}
-                animate={{ x: 0 }}
-                exit={{ x: "-100%" }}
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                className="fixed top-0 left-0 w-80 h-full bg-white z-50 p-6 lg:hidden shadow-2xl"
-              >
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-xl font-bold text-indigo-800">Page Contents</h3>
-                  <Button onClick={() => setIsMobileMenuOpen(false)} className="bg-transparent p-2">
-                    <Menu className="h-5 w-5 rotate-45" />
-                  </Button>
-                </div>
-                <ul className="space-y-2 overflow-y-auto">
-                  {SECTION_ITEMS.map((item) => (
-                    <li key={item.id}>
-                      <button
-                        onClick={() => {
-                          const section = document.getElementById(item.id);
-                          if (section) section.scrollIntoView({ behavior: "smooth" });
-                          setIsMobileMenuOpen(false);
-                        }}
-                        className={`transition-all w-full text-left py-3 px-3 rounded-lg ${
-                          activeSection === item.id
-                            ? "text-indigo-700 font-semibold bg-indigo-100"
-                            : "text-gray-700 hover:bg-indigo-50"
-                        }`}
-                      >
-                        {item.label}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </motion.aside>
-            </>
-          )}
-        </AnimatePresence>
-
-        <main className="flex-1 lg:pl-64">
+      <div className="max-w-screen-2xl mx-auto">
+        <main className="flex-1">
           {/* Hero Section */}
           <section id="HeroSection" className="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12 md:py-20">
             <div className="max-w-7xl mx-auto px-4 md:px-6">
@@ -402,18 +305,18 @@ const AmityMCALandingPage = () => {
 
                   <div className="flex flex-col sm:flex-row gap-4 mb-8">
                     <Button
-                      className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-6 text-lg rounded-full"
+                      className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-6 text-lg rounded-full cursor-pointer"
                       onClick={() => setOpenModal({ type: "apply" })}
                     >
                       Apply Now
-                      <ArrowRight className="w-5 h-5 ml-2" />
+                     
                     </Button>
                     <Button
-                      className="border-2 border-gray-300 hover:border-blue-400 bg-white px-8 py-6 text-lg rounded-full"
+                      className="border-2 border-gray-300 hover:border-blue-400 bg-white px-8 py-6 text-lg rounded-full cursor-pointer"
                       onClick={() => setOpenModal({ type: "enquiry" })}
                     >
                       Download Brochure
-                      <ArrowRight className="w-5 h-5 ml-2" />
+                      
                     </Button>
                   </div>
 
@@ -565,9 +468,10 @@ const AmityMCALandingPage = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[
-                  { title: "Semester-wise", amount: "₹40,000/sem", total: "₹1,60,000", discount: "No Discount" },
-                  { title: "Annual Payment", amount: "₹77,000/year", total: "₹1,54,000", discount: "Save ₹6,000" },
-                  { title: "One-time Payment", amount: "₹1,50,000", total: "₹1,50,000", discount: "Save ₹10,000" },
+                  { title: "Month-wise", amount: "₹ /month", total: "₹1,70,000 - ₹2,50,000 According the Specilization" },
+                  { title: "Semester-wise", amount: "₹ /sem", total: "₹1,70,000 - ₹2,50,000 According the Specilization" },
+                  { title: "Annual Payment", amount: "₹ /year", total: "₹1,70,000 - ₹2,50,000 According the Specilization" },
+                  { title: "One-time Payment", amount: "₹1,70,000 - ₹2,50,000", total: "₹1,70,000 - ₹2,50,000   According the Specilization "  },
                 ].map((plan, index) => (
                   <motion.div
                     key={index}
@@ -867,7 +771,7 @@ const AmityMCALandingPage = () => {
                   onClick={() => setOpenModal({ type: "apply" })}
                 >
                   Apply Now for January 2026
-                  <ArrowRight className="w-5 h-5 ml-2" />
+              
                 </Button>
               </motion.div>
             </div>
@@ -878,9 +782,13 @@ const AmityMCALandingPage = () => {
             <div className="max-w-7xl mx-auto px-4 md:px-6">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                  <div className="w-24 h-10 bg-white rounded flex items-center justify-center text-blue-900 font-bold mb-4">
-                    AMITY
-                  </div>
+                  <div className="w-32 h-10 bg-white rounded flex items-center justify-center mb-4">
+                 <img 
+                 src="images/logos/amitylogo.jpg" 
+                 alt="Amity Online" 
+                 className="h-8 object-contain"
+                 />
+                </div>
                   <p className="text-gray-400 text-sm">Transforming lives through quality online education</p>
                 </div>
 
@@ -903,7 +811,7 @@ const AmityMCALandingPage = () => {
                     </div>
                     <div className="flex items-center space-x-2">
                       <Mail className="w-4 h-4" />
-                      <span>info@amityonline.com</span>
+                      <span>info@unifostedu.com</span>
                     </div>
                   </div>
                 </div>
@@ -918,39 +826,27 @@ const AmityMCALandingPage = () => {
       </div>
 
       {/* Modal */}
-      {openModal && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl p-8 max-w-md w-full">
-            <h3 className="text-2xl font-bold mb-4">Get Started Today</h3>
-            <p className="text-gray-600 mb-6">Fill in your details and our counselor will contact you</p>
-            <div className="space-y-4">
-              <Input placeholder="Full Name" />
-              <Input placeholder="Email" type="email" />
-              <Input placeholder="Phone Number" type="tel" />
-              <Select onValueChange={() => {}}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select Specialization" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="ml">Machine Learning & AI</SelectItem>
-                  <SelectItem value="cyber">Cybersecurity</SelectItem>
-                  <SelectItem value="blockchain">Blockchain</SelectItem>
-                  <SelectItem value="ds">Data Science</SelectItem>
-                </SelectContent>
-              </Select>
-              <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black">
-                Submit
-              </Button>
-              <Button 
-                className="w-full bg-gray-200 hover:bg-gray-300 text-gray-700"
-                onClick={() => setOpenModal(null)}
-              >
-                Close
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Apply / Enquiry Modal */}
+               {openModal && (
+                 <ApplyEnquiryModal
+                   open={!!openModal}
+                   onOpenChange={(v) => !v && setOpenModal(null)}
+                   title={
+                     openModal.type === "apply"
+                       ? "Start Your Application"
+                       : "Enquire Now"
+                   }
+                   subtitle={
+                     openModal.type === "apply"
+                       ? "Fill the quick form to begin your admission process"
+                       : "Share your details and our counselor will reach out"
+                   }
+                   imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/amityForm_xdbvvf.webp"
+                   universityName="Amity University Online"
+                   defaultProgram="MCA"
+                   formType={openModal.type === "apply" ? "getStarted" : "general"}
+                 />
+               )}
     </div>
   );
 };

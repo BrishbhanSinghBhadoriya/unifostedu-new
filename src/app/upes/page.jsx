@@ -119,7 +119,7 @@ const Upes = () => {
       duration: "2 Years",
       eligibility: "Graduation with  50%",
       fees: "₹1,90,920- 2,40,000",
-      specialization: "Oil & Gas Management, Power Management, Logistics & Supply Chain Management, Business Analytics, Finance, Marketing, Human Resource Management, Infrastructure Management, International Business, Marketing Management, Human Resource Management, Operations Management, Operations Management, Financial Management, Digital Business",
+      specialization: "Oil & Gas Management, Power Management, Logistics & Supply Chain Management, Business Analytics, Finance, Human Resource Management, Infrastructure Management, International Business, Marketing Management, Human Resource Management, Operations Management, Financial Management, Digital Business",
 
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
       alt: "MBA from UPES University Online",

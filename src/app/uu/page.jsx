@@ -158,7 +158,7 @@ const UttaranchalUniversity = () => {
       course: "Executive MBA",
       duration: "2 Years",
       eligibility: "Graduation in any field from a recognized university with relevant work experience",
-      fees: "₹1,40,000",
+      fees: "₹3,10,000",
       specialization: "Business Analytics, HR Analytics, Finance Analytics, Banking and Finance",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
       alt: "Executive MBA in Uttaranchal University Online",

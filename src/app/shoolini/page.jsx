@@ -592,7 +592,7 @@ const ShooliniFAQ = () => {
   );
 };
 
-// ✅ Main Shoolini Component
+
 const Shoolini = () => {
   const [openModal, setOpenModal] = useState(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -606,8 +606,8 @@ const Shoolini = () => {
       course: "Bachelor of Commerce (B.Com)",
       duration: "3 Years",
       eligibility: "10+2 pass with Commerce",
-      fees: "₹75,000/-",
-      specialization: "Accounting, Finance and Taxation",
+      fees: "₹1,00,000/-",
+      specialization: "Accounting, Finance , Taxation",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
       alt: "Bachelor of Commerce at Shoolini University",
       universityShort: "shoolini"
@@ -616,7 +616,7 @@ const Shoolini = () => {
       course: "Bachelor of Business Administration (BBA)",
       duration: "3 Years",
       eligibility: "10+2 in any discipline with 40% marks in last qualifying examination",
-      fees: "(63,000/- + 27,000/-) = ₹90,000/-  [ ₹27,000/-(Only to be paid after Placement)]",
+      fees: "₹ 1,20,000",
       specialization: "HR, Marketing, Finance, Digital Marketing, Computer Science, Direct Selling",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327856/shoolini-bba_gqzjmi.webp",
       alt: "Bachelor of Business Administration at Shoolini University",
@@ -626,8 +626,8 @@ const Shoolini = () => {
       course: "Bachelor of Computer Applications (BCA)",
       duration: "3 Years",
       eligibility: "10+2 in any discipline with 40% marks in last qualifying examination. Reservation of seats as per government policies. ",
-      fees: "(63,000/- + 27,000/-) = ₹90,000/-  [ ₹27,000/-(Only to be paid after Placement)]",
-      specialization: "Machine Learning, Data Science, Cyber Secruity and Artificial Intelligence",
+      fees: "₹ 1,20,000",
+      specialization: "Machine Learning & Artificial Intelligence, Data Science, Cyber Secruity, Full Stack Development",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327857/shoolini-bca_zwvncy.webp",
       alt: "Bachelor of Computer Applications at Shoolini University",
       universityShort: "shoolini"
@@ -669,7 +669,7 @@ const Shoolini = () => {
       course: "MCA ",
       duration: "2 Years",
       eligibility: "Bachelor's degree in 3 years with at least 50% marks (45% for reserved category candidates,) ",
-      fees: "₹1,50,000/-",
+      fees: "₹2,00,000/-",
       specialization: "AI & ML, Data Science and Analytics, Full Stack Development",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
       alt: "Master of Science in Data Science at Shoolini University",
@@ -679,7 +679,7 @@ const Shoolini = () => {
       course: "Master of Arts (M.A) ",
       duration: "2 Years",
       eligibility: "Bachelor's degree with any discipline with minimum of 40% marks. 60% marks in case of International Students in the qualifying examination.",
-      fees: "42,000-1,00,000",
+      fees: "84,000-1,00,000",
       specialization: "English Literature, journalism and Mass Communication",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327858/shoolini-ma_uokqan.webp",
       alt: "Master of Arts in shoolini University",
@@ -956,6 +956,10 @@ const Shoolini = () => {
                                  <div className="flex items-center gap-2 text-gray-600">
                                    <span>💰</span>
                                    <span className="text-sm">₹{course.fees}</span>
+                                 </div>
+                                 <div className="flex items-start gap-2 text-gray-600">
+                                   <span className="mt-1">⭐</span>
+                                   <span className="text-sm"><strong>Specialization:</strong> {course.specialization}</span>
                                  </div>
                                </div>
      
@@ -1481,7 +1485,7 @@ const Shoolini = () => {
       {/* Review 1 */}
       <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
         <p className="text-lg text-gray-700 italic">
-          ⭐ “The best thing about Shoolini University Online is flexibility. I could balance work and study easily.”
+           “The best thing about Shoolini University Online is flexibility. I could balance work and study easily.”
         </p>
         <p className="mt-3 text-gray-900 font-semibold">— Ananya, Online MBA Student</p>
       </div>
@@ -1489,7 +1493,7 @@ const Shoolini = () => {
       {/* Review 2 */}
       <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
         <p className="text-lg text-gray-700 italic">
-          ⭐ “Top-notch faculty and excellent online support. The LMS is smooth and easy to use.”
+           “Top-notch faculty and excellent online support. The LMS is smooth and easy to use.”
         </p>
         <p className="mt-3 text-gray-900 font-semibold">— Rahul, Online MCA Student</p>
       </div>
@@ -1497,7 +1501,7 @@ const Shoolini = () => {
       {/* Review 3 */}
       <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
         <p className="text-lg text-gray-700 italic">
-          ⭐ “Affordable online degree with global recognition. Totally worth it.”
+           “Affordable online degree with global recognition. Totally worth it.”
         </p>
         <p className="mt-3 text-gray-900 font-semibold">— Priya, Online BBA Student</p>
       </div>

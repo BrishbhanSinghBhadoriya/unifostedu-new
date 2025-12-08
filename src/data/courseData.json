@@ -942,7 +942,7 @@
           "rating": 4.6,
           "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp",
           "specializations": ["Data Science and Analytics, Cyber Security, Cloud Computing"],
-          "fee": "₹99,000",
+          "fee": "₹1,35,000",
           "duration": "3 Years",
           "accreditation": "UGC Approved",
           "features": ["Industry Projects", "Career Services", "Flexible Learning"]
@@ -954,7 +954,7 @@
           "rating": 4.5,
           "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp",
           "specializations": ["General"],
-          "fee": "₹80K - ₹1.6L",
+          "fee": "₹1,50,000",
           "duration": "3 Years",
           "accreditation": "UGC Approved",
           "features": ["Affordable Education", "Practical Curriculum", "Career Guidance"]
@@ -965,7 +965,7 @@
           "NIRF": "29",
           "rating": 4.4,
           "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp",
-          "specializations": ["Data Science", "AI/ML", "Cloud Computing"],
+          "specializations": ["BCA General", "Cloud and Security In collaboration with TCS iON", "Data Analytics In collaboration with TCS iON", "Data Engineering In collaboration with HCL Tech","Software Engineering In collaboration with HCL Tech","Financial Technology And AI In collaboration withpaytm", "Professional Certificate in Applied Data EngineeringIn collaboration with KPMG)"],
           "fee": "₹1,50,000 - ₹2,25,000",
           "duration": "3 Years",
           "accreditation": "UGC Approved",
@@ -977,13 +977,13 @@
           "NIRF": "36",
           "rating": 4.2,
           "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp",
-          "specializations": ["Computer Science", "Data Science", "AI/ML", "Software Engineering"],
-          "fee": "₹75K - ₹1.5L",
+          "specializations": ["General"],
+          "fee": "₹1,77,000",
           "duration": "3 Years",
           "accreditation": "UGC Approved",
           "features": ["Quality Education", "Industry Projects", "Career Support"]
         },
-        {
+       {
           "name": "Jain University",
           "location": "Bangalore, Karnataka",
           "NIRF": "77",

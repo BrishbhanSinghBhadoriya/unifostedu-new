@@ -73,8 +73,8 @@ const cuOnline = () => {
       title: "Bachelor of Computer Applications (BCA)",
       duration: "3 Years(6 Semesters)",
       eligibility: "10+2 or equivalent",
-      fees: "₹1,70,000",
-      specialization: "IT & Systems",
+      fees: "₹1,77,000",
+      specialization: "General",
       image:
         "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
     },
@@ -585,25 +585,29 @@ const cuOnline = () => {
               />
             </SwiperSlide>
           </Swiper>
-          <div className="text-left mt-8 sm:mt-12">
-            <button
-              onClick={() => {
-                setOpenModal({ type: "apply" });
-                setShowEnquiryModal(true);
-                setModalType("apply");
-              }}
-              className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer">
-              <span className="hidden sm:inline">Enquiry Now</span>
-              <span className="sm:hidden">Enquiry</span>
-            </button>
-          </div>
+          
         </section>
 
         <section id="AboutUs" className="py-10 bg-white">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              {/* Left side: Image */}
-              <div>
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div className="space-y-4">
+                <img
+                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1765002466/Chandigarh-University_nn82pp.png"
+                  alt="Chandigarh University"
+                  className="w-full rounded-2xl shadow-lg"
+                />
+                <img
+                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1765002466/u8IqqFEet28TyMx0VKRMGzM6osbwZCuAal26uaVH_zv1zl1.jpg"
+                  alt="Chandigarh University"
+                  className="w-full rounded-2xl shadow-lg"
+                />
+                <img
+                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1765002466/images_1_q0mfyu.jpg"
+                  alt="Chandigarh University"
+                  className="w-full rounded-2xl shadow-lg"
+                />
+               
                 <img
                   src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp"
                   alt="Chandigarh University"
@@ -611,7 +615,6 @@ const cuOnline = () => {
                 />
               </div>
 
-              {/* Right side: Content */}
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold leading-snug">
                   Discover the Legacy of Excellence at - <br />
@@ -636,7 +639,11 @@ const cuOnline = () => {
                   <p className="mt-3 text-gray-700">
                     The main purpose of Chandigarh University Online is to make learning accessible, flexible, and affordable for every student. No matter where students live—in Punjab, in another state, or outside India—they can study the same programs offered at the physical campus of <strong>Chandigarh University Punjab</strong>, but with the convenience of online classes. This helps students save time, balance work and studies, and learn at their own pace.
                   </p>
-                  <p className="mt-3 text-gray-700">
+                 
+                </div>
+              </div>
+            </div>
+            <p className="mt-3 text-gray-700">
                     The university offers many well-known online degree programs such as:
                   </p>
                   <ul className="list-disc list-inside mt-2 text-gray-700 space-y-1">
@@ -651,9 +658,7 @@ const cuOnline = () => {
                   <p className="mt-3 text-gray-700">
                     Students choose <strong>Chandigarh University Mohali</strong> because it offers modern learning methods, quality faculty, updated study materials, and a very supportive environment. This is why <strong>CU Online Chandigarh</strong> is considered one of the <strong>best online degree programs in Punjab</strong>, preferred by thousands of learners across India.
                   </p>
-                </div>
-              </div>
-            </div>
+
             <div className="text-center mt-8 sm:mt-12">
               <button
                 onClick={() => {
@@ -801,10 +806,22 @@ const cuOnline = () => {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <img
-                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp"
+                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1765002466/smart-university_qt1tf8.jpg"
                   alt="Chandigarh University Campus"
                   className="w-full rounded-2xl shadow-lg"
                 />
+                  <div className="text-center mt-8 sm:mt-12">
+                 <button
+            onClick={() => {
+              setOpenModal({ type: "apply" });
+              setShowEnquiryModal(true);
+              setModalType("apply");
+            }}
+            className="bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer">
+            <span className="hidden sm:inline">Enquiry Now</span>
+            <span className="sm:hidden">Enquiry</span>
+          </button>
+          </div>
               </div>
               <div>
                 <p className="text-gray-700 leading-relaxed mb-4">
