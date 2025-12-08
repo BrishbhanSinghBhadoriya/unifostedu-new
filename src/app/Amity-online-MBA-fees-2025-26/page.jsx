@@ -128,11 +128,11 @@ const AmityMBAFeesPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pt-20">
       {/* Top Section Nav */}
       <nav className="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
-        <div className="max-w-7xl mx-auto px-4 py-2 md:py-3 flex items-center gap-2">
-          <div className="flex-1 flex items-center gap-2 overflow-x-auto no-scrollbar">
+        <div className="max-w-7xl md:mx-auto px-4 py-2 md:py-3 flex items-center gap-2">
+<div className="flex-1 flex items-center gap-2 overflow-x-auto no-scrollbar whitespace-nowrap">
             {sectionItems.map((item) => (
               <button
                 key={item.id}

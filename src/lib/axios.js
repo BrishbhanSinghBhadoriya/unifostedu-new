@@ -46,13 +46,24 @@ export const authAPI = {
 
 // 🧩 Demo/Enquiry API
 export const demoAPI = {
-  bookDemo: (data) =>
-    axios.post(
-      "https://25515469-e21f-48a6-93fb-91446641fcda.neodove.com/integration/custom/4fa16adb-e429-4417-a5ba-fc6f77e3fea3/leads",
-      data,
-      { headers: { "Content-Type": "application/json" } }
-    ),
-};
+  bookDemo: async (data) =>{
+    const [localRes, neoDoveRes] = await Promise.all([
+        axios.post(
+          "http://localhost:3000/api/v1/enquiry",
+          data,
+          { headers: { "Content-Type": "application/json" } }
+        ),
+
+        axios.post(
+          "https://25515469-e21f-48a6-93fb-91446641fcda.neodove.com/integration/custom/4fa16adb-e429-4417-a5ba-fc6f77e3fea3/leads",
+          data,
+          { headers: { "Content-Type": "application/json" } }
+        )
+      ]);
+
+      return { localRes, neoDoveRes };
+}};
+
 const API_ENDPOINT = process.env.NEXT_PUBLIC_API_ENDPOINT || "";
 console.log(API_ENDPOINT);
 
@@ -70,12 +81,22 @@ export const enquiryAPI = {
       data,
       { headers: { "Content-Type": "application/json" } }
     ),
-  general: (data) =>
-    axios.post(
-      "https://25515469-e21f-48a6-93fb-91446641fcda.neodove.com/integration/custom/4fa16adb-e429-4417-a5ba-fc6f77e3fea3/leads",
-      data,
-      { headers: { "Content-Type": "application/json" } }
-    ),
+  // Submit to both internal API (to store lead) and NeoDove simultaneously
+  general: async (data) => {
+    const [localRes, neoDoveRes] = await Promise.all([
+      axios.post(
+        "api/v1/enquiry",
+        data,
+        { headers: { "Content-Type": "application/json" } }
+      ),
+      axios.post(
+        "https://25515469-e21f-48a6-93fb-91446641fcda.neodove.com/integration/custom/4fa16adb-e429-4417-a5ba-fc6f77e3fea3/leads",
+        data,
+        { headers: { "Content-Type": "application/json" } }
+      )
+    ]);
+    return { localRes, neoDoveRes };
+  },
 };
 
 // 🧩 Blog + Upload API (absolute URLs as provided)
