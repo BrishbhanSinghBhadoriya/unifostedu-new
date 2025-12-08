@@ -100,9 +100,9 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
         name: values.name,
         mobile: values.mobile,
         email: values.email,
-        Course: values.Course || program,
-        Univeristy: values.Univeristy || selectedUniversity,
         location: values.location || city,
+        university: values.Univeristy || selectedUniversity,
+        course: values.Course || program,
       };
       const response = await enquiryAPI.general(requestBody);
       console.log("response", response);
@@ -238,7 +238,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
                 ))}
               </SelectContent>
             </Select>
-            {formState.errors.University && (<p className="text-red-600 text-xs mt-1">{formState.errors.University.message}</p>)}
+            {formState.errors.Univeristy && (<p className="text-red-600 text-xs mt-1">{formState.errors.Univeristy.message}</p>)}
           </div>
         </div>
         

@@ -24,3 +24,4 @@ export default mongoose.models.LandingCollege ||
   mongoose.model("LandingCollege", landingCollegeSchema);
 
 
+
