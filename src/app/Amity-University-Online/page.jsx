@@ -215,68 +215,6 @@ const AmityLandingPage = () => {
   const metaDescription =
     "Explore UGC-entitled Amity University Online MBA, BBA, BCA, MCA and M.Com degrees. Review 2025 fees structure, admission process, scholarships, placement assistance.";
 
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    name: "Amity University Online",
-    alternateName: "Amity Online",
-    url: "https://unifostedu.com/amity-university-online",
-    logo: "https://unifostedu.com/amity.svg",
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+91 7042646766",
-      contactType: "admissions",
-      areaServed: "IN",
-      availableLanguage: ["en", "hi"],
-    },
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Noida",
-      addressRegion: "Uttar Pradesh",
-      postalCode: "201301",
-      addressCountry: "IN",
-    },
-    sameAs: [
-      "https://www.facebook.com/AmityUniversityOnline",
-      "https://www.linkedin.com/school/amity-university-online/",
-      "https://x.com/AmityUniversity",
-    ],
-  };
-
-  const courseSchema = {
-    "@context": "https://schema.org",
-    "@type": "Course",
-    name: "Amity University Online MBA",
-    description:
-      "UGC-entitled, NAAC A+ accredited online MBA from Amity University Online with 24 specialisations and dedicated placement assistance.",
-    provider: {
-      "@type": "EducationalOrganization",
-      name: "Amity University Online",
-      sameAs: "https://unifostedu.com/amity-university-online",
-    },
-    hasCourseInstance: {
-      "@type": "CourseInstance",
-      courseMode: "online",
-      startDate: "2025-01-15",
-      endDate: "2027-01-14",
-      location: {
-        "@type": "VirtualLocation",
-        url: "https://amityonline.com",
-      },
-      instructor: {
-        "@type": "Person",
-        name: "Global Faculty & Industry Mentors",
-      },
-      offers: {
-        "@type": "Offer",
-        url: "https://unifostedu.com/amity-university-online",
-        priceCurrency: "INR",
-        price: "299000",
-        availability: "https://schema.org/InStock",
-        validFrom: "2024-11-01",
-      },
-    },
-  };
 
   const cityHighlights = [
     {
@@ -473,16 +411,6 @@ const AmityLandingPage = () => {
 
   return (
     <React.Fragment>
-      {/* Structured Data - Organization Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-      {/* Structured Data - Course Schema */}
-      <script 
-        type="application/ld+json" 
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} 
-      />
       <div className="min-h-screen bg-white relative" style={{ overflowX: "hidden" }}>
 
         <motion.header
@@ -560,7 +488,6 @@ const AmityLandingPage = () => {
         </div>
 
         <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row">
-          {/* Left Sidebar - Hidden on Mobile, Sticky on Desktop */}
           <PageContent
             sectionItems={sectionItems}
             activeSection={activeSection}
