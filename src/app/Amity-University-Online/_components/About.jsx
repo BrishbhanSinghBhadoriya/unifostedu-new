@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-const About = () => {
+const About = ({openmodel ,setOpenModal}) => {
   return (
     <section
       id="AboutAmity"

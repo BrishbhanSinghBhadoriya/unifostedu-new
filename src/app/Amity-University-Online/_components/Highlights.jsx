@@ -51,7 +51,7 @@ const HighlightCard = memo(({ card }) => (
 ));
 HighlightCard.displayName = 'HighlightCard';
 
-const Highlights = () => {
+const Highlights = ({setOpenModal}) => {
   return (
     <section id="highlights" className="bg-gradient-to-b from-white to-indigo-50 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-12">
       <div className="max-w-6xl mx-auto text-center">

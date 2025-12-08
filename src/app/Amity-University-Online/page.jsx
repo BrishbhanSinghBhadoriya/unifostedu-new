@@ -571,14 +571,14 @@ const AmityLandingPage = () => {
 
           <main className="flex-1 min-w-0 lg:pl-64">
 
-            <Introduction inter={inter} playfair={playfair}/>
+            <Introduction inter={inter} playfair={playfair} openmodel={openModal} setOpenModal={setOpenModal}/>
 
-            <About/>
+            <About openmodel={openModal} setOpenModal={setOpenModal}/>
             <Courses ugCourses={ugCourses} pgCourses={pgCourses} ug_pgCourses={ug_pgCourses}/>
-              <Highlights/>
+              <Highlights setOpenModal={setOpenModal}/>
              <Accreditation/>
              <FeeStructure ugCourses={ugCourses} pgCourses={pgCourses} ug_pgCourses={ug_pgCourses}/>
-           <Feature/>
+           <Feature setOpenModal={setOpenModal}/>
             <OnlineRegular/>
             <Resources fadeIn={fadeIn} staggerChildren={staggerChildren}/>
             <Achievements/> 
@@ -587,7 +587,7 @@ const AmityLandingPage = () => {
            <Certificate/>
            <Placements/>
             <OutReach cityHighlights={cityHighlights}/>
-            <HiringPartners fadeIn={fadeIn} staggerChildren={staggerChildren}/>
+            <HiringPartners fadeIn={fadeIn} staggerChildren={staggerChildren}  setOpenModal={setOpenModal}/>
             
             <CTA/>
             <ResourceLinks/>

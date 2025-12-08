@@ -49,7 +49,7 @@ const ProgramCard = memo(({ item, index }) => (
 ));
 ProgramCard.displayName = 'ProgramCard';
 
-const Introduction = ({ inter, playfair }) => {
+const Introduction = ({ inter, playfair, setOpenModal}) => {
   const stats = [
     { number: "1.6L+", label: "Students Enrolled", icon: Users },
     { number: "25+", label: "Years of Excellence", icon: Award },

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 
-const HiringPartners = ({fadeIn, staggerChildren}) => {
+const HiringPartners = ({fadeIn, staggerChildren,setOpenModal}) => {
   // Reduced to 10 key hiring partners for better performance
   const hiringPartners = [
     { src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company_vjgouc.webp", alt: "Google" },

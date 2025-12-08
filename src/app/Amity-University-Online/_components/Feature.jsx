@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 
 
-const Feature = () => {
+const Feature = ({setOpenModal}) => {
      const features = [
         {
           icon: GraduationCap,
