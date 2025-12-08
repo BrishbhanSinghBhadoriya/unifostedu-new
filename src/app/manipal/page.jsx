@@ -38,6 +38,7 @@ import CertificateLocation from './_components/CertificateLocation';
 import ComparisonStudentReviews from './_components/ComparisonStudentReviews';
 import FooterManipal from './_components/FooterManipal';
 import { optimizeCloudinary } from '@/utils/cloudinary';
+import FaqReviewsHiring from './_components/FaqReviewsHiring';
 
 
 const Manipal = () => {
@@ -462,14 +463,14 @@ useEffect(() => {
 <ComparisonStudentReviews/>
 
         {/* Professional FAQ Section */}
-      
+      <FaqReviewsHiring/>
 
         </main>
       </div>
 
         {/* Enhanced Footer */}
        <FooterManipal setOpenModal={setOpenModal} openModal={openModal}/> 
-       
+
         {openModal && (
           <ApplyEnquiryModal
             open={!!openModal}
