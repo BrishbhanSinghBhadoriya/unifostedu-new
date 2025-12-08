@@ -22,3 +22,4 @@ const landingCollegeSchema = new mongoose.Schema(
 
 export default mongoose.models.LandingCollege ||
   mongoose.model("LandingCollege", landingCollegeSchema);
+

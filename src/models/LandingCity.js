@@ -16,3 +16,4 @@ export default mongoose.models.LandingCity ||
   mongoose.model("LandingCity", landingCitySchema);
 
 
+

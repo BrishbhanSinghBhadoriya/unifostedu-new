@@ -15,3 +15,4 @@ export default mongoose.models.UniversityLogo ||
   mongoose.model("UniversityLogo", universityLogoSchema);
 
 
+
