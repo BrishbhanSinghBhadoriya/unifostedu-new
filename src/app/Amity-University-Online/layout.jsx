@@ -1,10 +1,7 @@
 export const metadata = {
-  title: {
-    absolute: true,
-    default: "Amity Online | Study UGC & AICTE Approved Online UG/PG Degree Programs",
-  },
+  title: "Amity Online | Study UGC & AICTE Approved Online UG/PG Degree Programs",
   description:
-    "Explore globally recognized online programs from Amity University Online with flexible learning, expert mentorship, and career-focused degrees approved by UGC and AICTE.",
+    "Amity University Online offers flexible, globally recognized programs with expert mentorship and career-focused degrees approved by UGC and AICTE.",
   keywords: [
     "amity university online mba",
   "amity online mba fees",
