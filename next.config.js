@@ -14,7 +14,6 @@ const nextConfig = {
     ],
   },
 
-  // ✅ Experimental optimizations for reducing JS bundle size
   experimental: {
     optimizePackageImports: [
       'lucide-react',

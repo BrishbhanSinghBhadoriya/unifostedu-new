@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Manipal University Jaipur Online",
-  description: "Explore online undergraduate and postgraduate programs offered by Manipal University Online, a NAAC A++ accredited university. Flexible and career-focused education for students and working professionals.",
+  description: "Explore flexible, career-focused UG and PG programs from Manipal University Online, a NAAC A+ accredited institution for quality learning.",
   keywords: "Manipal University Online, BBA in manipal Online, BCA in manipal Online, MBA in manipal Online, MCA in manipal Online, M.Com in manipal Online, MA in manipal Online, NAAC A++ University, Online Degree Programs India, Online Courses",
   metadataBase: new URL("https://unifostedu.com"),
   alternates: {
