@@ -6,6 +6,7 @@ import {
   ArrowRight, CheckCircle, TrendingUp, Calendar, DollarSign, 
   CreditCard, Wallet, Gift, FileText, Menu, X, ChevronDown, ChevronUp
 } from "lucide-react";
+import ApplyEnquiryModal from "@/components/ApplyEnquiryModal";
 
 const AmityMBAFeesPage = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -19,7 +20,7 @@ const AmityMBAFeesPage = () => {
     { id: "payment-options", label: "Payment Options" },
     { id: "scholarships", label: "Scholarships" },
     { id: "specializations", label: "Specializations" },
-    { id: "roi", label: "ROI Analysis" },
+    
     { id: "eligibility", label: "Eligibility" },
     { id: "admission", label: "Admission Process" },
     { id: "comparison", label: "Comparison" },
@@ -128,127 +129,42 @@ const AmityMBAFeesPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <motion.header
-        className="bg-white shadow-sm fixed top-0 left-0 w-full z-50"
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <div className="max-w-7xl mx-auto px-4 py-3 md:py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-24 md:w-32 h-8 md:h-10 bg-indigo-600 rounded flex items-center justify-center">
-                <span className="text-white font-bold text-sm md:text-base">AMITY ONLINE</span>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <button className="hidden sm:flex items-center space-x-2 border border-gray-300 px-4 py-2 rounded-full text-sm hover:bg-gray-50">
-                <Phone className="w-4 h-4" />
-                <span>+91 7042646766</span>
-              </button>
+      {/* Top Section Nav */}
+      <nav className="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
+        <div className="max-w-7xl mx-auto px-4 py-2 md:py-3 flex items-center gap-2">
+          <div className="flex-1 flex items-center gap-2 overflow-x-auto no-scrollbar">
+            {sectionItems.map((item) => (
               <button
-                onClick={() => setOpenModal(true)}
-                className="bg-yellow-400 hover:bg-yellow-500 text-black px-4 md:px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2"
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={`whitespace-nowrap text-sm md:text-base px-3 md:px-4 py-2 rounded-full border transition-colors ${
+                  activeSection === item.id
+                    ? "bg-indigo-50 text-indigo-700 border-indigo-200 font-semibold"
+                    : "bg-white text-gray-700 border-gray-200 hover:bg-indigo-50"
+                }`}
               >
-                Apply Now
-                <ArrowRight className="w-4 h-4" />
+                {item.label}
               </button>
-              <button
-                onClick={() => setIsMobileMenuOpen(true)}
-                className="lg:hidden p-2"
-              >
-                <Menu className="w-6 h-6" />
-              </button>
-            </div>
+            ))}
           </div>
+          <button
+            onClick={() => setIsMobileMenuOpen(true)}
+            className="p-2 md:hidden"
+            aria-label="Open menu"
+          >
+            <Menu className="w-6 h-6" />
+          </button>
         </div>
-      </motion.header>
+      </nav>
 
-      {/* Notification Bar */}
-      <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black py-2 mt-[56px] md:mt-[70px]">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="font-semibold text-sm md:text-base flex flex-wrap items-center justify-center gap-2">
-            <CheckCircle className="w-4 h-4" />
-            <span>2025-26 Admissions Open</span>
-            <span className="hidden sm:inline">•</span>
-            <span>Scholarships up to 100%</span>
-            <span className="hidden sm:inline">•</span>
-            <span>Zero-Cost EMI Available</span>
-          </p>
-        </div>
-      </div>
+     
 
       <div className="max-w-screen-2xl mx-auto flex">
-        {/* Desktop Sidebar */}
-        <aside className="hidden lg:flex flex-col fixed top-[104px] w-64 h-[calc(100vh-6rem)] px-4 py-6 overflow-y-auto border-r bg-white z-40">
-          <h3 className="text-lg font-bold mb-6 text-indigo-800 border-b-2 border-indigo-200 pb-2">
-            Page Contents
-          </h3>
-          <ul className="space-y-3">
-            {sectionItems.map((item) => (
-              <li key={item.id}>
-                <button
-                  onClick={() => scrollToSection(item.id)}
-                  className={`text-sm w-full text-left py-2 px-3 rounded transition-colors ${
-                    activeSection === item.id
-                      ? "text-indigo-700 font-semibold bg-indigo-50"
-                      : "text-gray-700 hover:bg-indigo-50"
-                  }`}
-                >
-                  {item.label}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </aside>
 
-        {/* Mobile Sidebar */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
-            <>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="fixed inset-0 bg-black/50 z-50 lg:hidden"
-                onClick={() => setIsMobileMenuOpen(false)}
-              />
-              <motion.aside
-                initial={{ x: "-100%" }}
-                animate={{ x: 0 }}
-                exit={{ x: "-100%" }}
-                className="fixed top-0 left-0 w-80 h-full bg-white z-50 p-6 lg:hidden shadow-2xl overflow-y-auto"
-              >
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-xl font-bold text-indigo-800">Page Contents</h3>
-                  <button onClick={() => setIsMobileMenuOpen(false)} className="p-2">
-                    <X className="w-6 h-6" />
-                  </button>
-                </div>
-                <ul className="space-y-2">
-                  {sectionItems.map((item) => (
-                    <li key={item.id}>
-                      <button
-                        onClick={() => scrollToSection(item.id)}
-                        className={`w-full text-left py-3 px-3 rounded-lg transition-all ${
-                          activeSection === item.id
-                            ? "text-indigo-700 font-semibold bg-indigo-100"
-                            : "text-gray-700 hover:bg-indigo-50"
-                        }`}
-                      >
-                        {item.label}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </motion.aside>
-            </>
-          )}
-        </AnimatePresence>
+       
 
         {/* Main Content - Single Scrollable Slide */}
-        <main className="flex-1 lg:pl-64">
+        <main className="flex-1">
           {/* Hero Section */}
           <section id="hero" className="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12 md:py-16">
             <div className="max-w-7xl mx-auto px-4">
@@ -269,10 +185,10 @@ const AmityMBAFeesPage = () => {
                   Transparent pricing, flexible payment plans, and scholarships up to 100% for India's only QS-ranked online MBA program
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-3 rounded-full font-semibold flex items-center justify-center gap-2">
-                    Apply Now <ArrowRight className="w-5 h-5" />
+                  <button onClick={() => setOpenModal(true)} className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-3 rounded-full font-semibold flex items-center justify-center gap-2 cursor-pointer">
+                    Apply Now 
                   </button>
-                  <button className="border-2 border-gray-300 hover:border-indigo-400 px-8 py-3 rounded-full font-semibold">
+                  <button onClick={()=>setOpenModal(true)} className="border-2 border-gray-300 hover:border-indigo-400 px-8 py-3 rounded-full font-semibold cursor-pointer">
                     Download Brochure
                   </button>
                 </div>
@@ -316,11 +232,11 @@ const AmityMBAFeesPage = () => {
               </motion.div>
 
               {/* Fee Cards */}
-              <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <div className="grid md:grid-cols-2 gap-10 mb-12">
                 {[
                   { title: "Standard MBA", fee: "₹1,99,000", semester: "₹49,750/semester", duration: "2 years (4 semesters)" },
                   { title: "Dual Specialization", fee: "₹2,99,000", semester: "₹74,750/semester", duration: "2 years (4 semesters)", popular: true },
-                  { title: "MBA + Campus Immersion", fee: "₹4,75,000", semester: "Custom", duration: "2 years + campus experience" }
+                 
                 ].map((plan, i) => (
                   <motion.div
                     key={i}
@@ -341,7 +257,7 @@ const AmityMBAFeesPage = () => {
                     <div className="text-3xl font-bold text-indigo-600 mb-2">{plan.fee}</div>
                     <div className="text-gray-600 mb-4">{plan.semester}</div>
                     <div className="text-sm text-gray-500 mb-6">{plan.duration}</div>
-                    <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-lg font-semibold">
+                    <button onClick={()=> setOpenModal(true)} className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-lg font-semibold cursor-pointer">
                       View Details
                     </button>
                   </motion.div>
@@ -978,11 +894,11 @@ const AmityMBAFeesPage = () => {
                   Join 25,000+ students who chose Amity Online MBA for quality education at transparent pricing
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2">
-                    Apply Now - Save up to ₹63,680
+                  <button onClick={() => setOpenModal(true)} className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 cursor-pointer">
+                    Apply Now 
                     <ArrowRight className="w-5 h-5" />
                   </button>
-                  <button className="bg-white hover:bg-gray-100 text-indigo-600 px-8 py-4 rounded-full font-bold text-lg">
+                  <button onClick={() => setOpenModal(true)} className="bg-white hover:bg-gray-100 text-indigo-600 px-8 py-4 rounded-full font-bold text-lg cursor-pointer">
                     Download Fee Brochure
                   </button>
                 </div>
@@ -995,9 +911,14 @@ const AmityMBAFeesPage = () => {
             <div className="max-w-7xl mx-auto px-4">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div>
-                  <div className="w-32 h-10 bg-white rounded flex items-center justify-center mb-4">
-                    <span className="text-indigo-600 font-bold">AMITY ONLINE</span>
-                  </div>
+                 <div className="w-32 h-10 bg-white rounded flex items-center justify-center mb-4">
+                 <img 
+                 src="images/logos/amitylogo.jpg" 
+                 alt="Amity Online" 
+                 className="h-8 object-contain"
+                 />
+                </div>
+
                   <p className="text-gray-400 text-sm">
                     Transforming lives through quality education and innovation
                   </p>
@@ -1028,7 +949,7 @@ const AmityMBAFeesPage = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <Mail className="w-4 h-4" />
-                      <span>info@amityonline.com</span>
+                      <span>info@unifostedu.com</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <MapPin className="w-4 h-4" />
@@ -1049,68 +970,15 @@ const AmityMBAFeesPage = () => {
         </main>
       </div>
 
-      {/* Modal */}
-      <AnimatePresence>
-        {openModal && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 z-50"
-              onClick={() => setOpenModal(false)}
-            />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-2xl shadow-2xl z-50 w-full max-w-md mx-4 p-8"
-            >
-              <button
-                onClick={() => setOpenModal(false)}
-                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
-              >
-                <X className="w-6 h-6" />
-              </button>
-              <h3 className="text-2xl font-bold mb-4">Start Your Application</h3>
-              <p className="text-gray-600 mb-6">
-                Fill in your details and our counselor will contact you within 24 hours
-              </p>
-              <form className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Full Name"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-                <select className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                  <option>Select Specialization</option>
-                  <option>General Management</option>
-                  <option>Marketing & Sales</option>
-                  <option>Finance & Accounting</option>
-                  <option>Human Resources</option>
-                  <option>Data Science</option>
-                </select>
-                <button
-                  type="submit"
-                  className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-lg font-semibold"
-                >
-                  Submit Application
-                </button>
-              </form>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+      <ApplyEnquiryModal
+        open={openModal}
+        onOpenChange={setOpenModal}
+        title="Start Your Application"
+        subtitle="Fill in your details and our counselor will contact you within 24 hours"
+        universityName="Amity University Online"
+        defaultProgram="MBA"
+        formType="apply"
+      />
     </div>
   );
 };

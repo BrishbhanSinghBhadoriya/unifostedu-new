@@ -7,7 +7,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import AccreditationSection from '@/components/AccreditationSection';
-
+import PageContent from '@/components/PageContent/PageContent';
 const MUJBCAPage = () => {
   const [openModal, setOpenModal] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -32,6 +32,44 @@ const MUJBCAPage = () => {
     { id: 'unifost', label: 'How UNIFOST Helps' },
     { id: 'faq', label: 'FAQs' },
   ];
+
+   const [activeSection, setActiveSection] = useState(navSections[0]?.id ?? null);
+           console.log("Active Section:", activeSection);
+                      
+           useEffect(() => {
+                                     if (!navSections.length) return undefined;
+                                 
+                                     const observerOptions = {
+                                       root: null,
+                                       threshold: 0.25,
+                                       rootMargin: "-45% 0px -45% 0px",
+                                     };
+                                 
+                                     const observer = new IntersectionObserver((entries) => {
+                                       entries.forEach((entry) => {
+                                         if (entry.isIntersecting) {
+                                           setActiveSection(entry.target.id);
+                                         }
+                                       });
+                                     }, observerOptions);
+                                 
+                                     navSections.forEach((section) => {
+                                       const element = document.getElementById(section.id);
+                                       if (element) {
+                                         observer.observe(element);
+                                       }
+                                     });
+                                 
+                                     return () => {
+                                       navSections.forEach((section) => {
+                                         const element = document.getElementById(section.id);
+                                         if (element) {
+                                           observer.unobserve(element);
+                                         }
+                                       });
+                                       observer.disconnect();
+                                     };
+                                      }, [navSections]);
 
   return (
     <div className="poppins overflow-x-hidden flex">
@@ -77,71 +115,9 @@ const MUJBCAPage = () => {
       {/* Modal */}
       <ApplyEnquiryModal open={!!openModal} onOpenChange={(o) => setOpenModal(o ? { type: 'apply' } : null)} universityName="Manipal University Online" defaultProgram="BCA" formType="general" imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327725/online-manipal-form_nz7yft.webp" />
 
-      {/* --- Desktop Sidebar Navigation --- */}
-      <aside className="fixed hidden lg:flex flex-col top-20 w-64 h-[calc(100vh-5rem)] px-4 py-8 self-start overflow-y-auto border-r border-gray-200 bg-white rounded-lg shadow-sm z-40">
-        <h3 className="text-lg font-bold mb-6 text-orange-600 border-b-2 border-orange-200 pb-2">Page Contents</h3>
-        <ul className="space-y-3 flex-1">
-          {navSections.map((item) => (
-            <li key={item.id}>
-              <button
-                onClick={() => {
-                  const section = document.getElementById(item.id);
-                  if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }}
-                className="text-gray-700 hover:text-orange-600 font-medium text-sm transition-colors duration-200 text-left cursor-pointer"
-              >
-                {item.label}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </aside>
+     <PageContent sectionItems={navSections} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
 
-      {/* --- Mobile Sidebar/Drawer Navigation --- */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[999] lg:hidden"
-              onClick={() => setIsMobileMenuOpen(false)}
-            />
-            <motion.aside
-              initial={{ x: "-100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "-100%" }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="fixed top-0 left-0 w-[85vw] sm:w-72 h-full bg-white border-r shadow-xl z-[1000] p-4 sm:p-6 flex flex-col overflow-y-auto will-change-transform lg:hidden"
-            >
-              <div className="flex items-center justify-between mb-6 sm:mb-8">
-                <h3 className="text-lg font-bold text-orange-600">Page Contents</h3>
-                <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-full hover:bg-gray-100 transition-colors">
-                  <FaTimes className="w-5 h-5 text-gray-600" />
-                </button>
-              </div>
-              <ul className="space-y-3 flex-1">
-                {navSections.map((item) => (
-                  <li key={item.id}>
-                    <button
-                      onClick={() => {
-                        const section = document.getElementById(item.id);
-                        if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        setIsMobileMenuOpen(false);
-                      }}
-                      className="text-gray-700 hover:text-orange-600 font-semibold text-base transition-colors duration-200 w-full text-left py-2 cursor-pointer"
-                    >
-                      {item.label}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </motion.aside>
-          </>
-        )}
-      </AnimatePresence>
+     
       {/* --- End Sidebars --- */}
 
       <main className="flex-1 min-w-0 lg:pl-64">

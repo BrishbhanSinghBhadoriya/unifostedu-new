@@ -2244,17 +2244,19 @@ const AmityLandingPage = () => {
                         <strong>Online BBA</strong>, <strong>Online BCA</strong>
                         ,<strong>Online BA</strong>, <strong>Online MCA</strong>
                         , and <strong>Online M.Com </strong>
-                        Fill the Enquiry Form  And  Apply Now  Form   .
+                        Fill the Enquiry Form  And  Apply Now  Form .
+                     <div className="my-4">
+                        <Button
+                          onClick={() => setOpenModal({ type: "enquiry" })}
+                            size="sm"
+                         className="bg-yellow-400 text-black border border-black mt-4  hover:text-white hover:bg-[#452971] text-xs sm:text-sm px-3 sm:px-4 md:px-6 py-1.5 md:py-2 whitespace-nowrap cursor-pointer"
+                             >
+                         <span className="hidden sm:inline">Enquire Now</span>
+                          <span className="sm:hidden">Enquire</span>
+                         </Button>
 
-                            <Button
-                  onClick={() => setOpenModal({ type: "enquiry" })}
-                  size="sm"
-                  className="bg-yellow-400 text-black border border-black hover:text-white hover:bg-[#452971] text-xs sm:text-sm px-3 sm:px-4 md:px-6 py-1.5 md:py-2 whitespace-nowrap cursor-Pointer"
-                >
-                  <span className="hidden sm:inline">Enquire Now</span>
-                  <span className="sm:hidden">Enquire</span>
-                 
-                </Button>
+                       </div>
+
                       </p>
                     </motion.div>
                   
