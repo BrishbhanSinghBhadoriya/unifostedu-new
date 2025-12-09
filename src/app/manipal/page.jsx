@@ -632,7 +632,7 @@ useEffect(() => {
 <ComparisonStudentReviews/>
 
         {/* Professional FAQ Section */}
-      <FaqReviewsHiring/>
+      <FaqReviewsHiring setOpenModal={setOpenModal} openModal={openModal}/>
 
         </main>
       </div>

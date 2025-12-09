@@ -1,7 +1,9 @@
+import { optimizeCloudinary } from '@/utils/cloudinary';
 import React from 'react'
-import optimizeCloudinary from '@/utils/optimizeCloudinary'
+import Image from 'next/image';
 import { useState } from 'react'
-const FaqReviewsHiring = () => {
+
+const FaqReviewsHiring = ({setOpenModal, openModal}) => {
   const faqData = [
     {
       question: "Is Manipal University Jaipur Online approved by UGC?",
@@ -231,18 +233,7 @@ const FaqReviewsHiring = () => {
           </div>
         </div>
         
-        {openModal && (
-          <ApplyEnquiryModal
-            open={!!openModal}
-            onOpenChange={(v) => !v && setOpenModal(null)}
-            title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
-            subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-            imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327725/online-manipal-form_nz7yft.webp"
-            universityName="Manipal University Online"
-            defaultProgram="MBA"
-            formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
-          />
-        )}
+      
       </section>
     </div>
   )

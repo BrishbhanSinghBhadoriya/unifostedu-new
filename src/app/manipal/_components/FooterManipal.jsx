@@ -23,7 +23,7 @@ const FooterManipal = ({ setOpenModal , openModal}) => {
                   viewport={{ once: true }}
                   className="space-y-4"
                 >
-                  <div className="flex items-center gap-3 mb-4">
+                  <div className="flex items-center bg-white gap-3 mb-4">
                     <Image src={optimizeCloudinary("https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg")} alt="Manipal" className="h-10 w-auto"
                     width={200}
                     height={200}
