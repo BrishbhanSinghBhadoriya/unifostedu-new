@@ -6,9 +6,9 @@ const ExploreClasses = ({ setOpenModal ,openModal}) => {
    <section className="py-12 bg-white border-t border-gray-100">
      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
        <div className="text-center mb-10">
-         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+         <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
            Explore <span className="text-orange-600">Online Classes</span> at Manipal
-         </h2>
+         </h3>
          <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
            Discover a new world of learning with <strong>Manipal University Jaipur Online (Manipal Online)</strong> —
            your trusted destination for the best online degrees in Jaipur. Whether you're a working professional, entrepreneur, or student searching for an <i>online degree near me</i>, Manipal Online offers flexible, career-focused programs designed for your success.
@@ -36,7 +36,7 @@ const ExploreClasses = ({ setOpenModal ,openModal}) => {
            <p className="text-gray-600 text-sm">Perfect for those seeking an <i>online BBA near me</i> from a top college in Jaipur.</p>
          </div>
        </div>
-       <div className="bg-orange-50 border-l-4 border-orange-400 rounded-xl p-6 mb-8 max-w-5xl mx-auto text-gray-800 shadow-md">
+       <div className="bg-orange-50 border-l-4 border-orange-400 rounded-xl p-6 mb-8 max-w-5xl mx-auto text-gray-800 border border-orange-200">
          <p className="mb-3">
            Recognized as a <strong>top college in Jaipur</strong>, Manipal University Jaipur provides accredited, industry-aligned degrees with both academic credibility and practical relevance. Enjoy access to advanced learning tools, 24×7 support, and a successful alumni network.
          </p>
@@ -46,7 +46,7 @@ const ExploreClasses = ({ setOpenModal ,openModal}) => {
        </div>
        <div className="text-center">
          <button 
-           className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-7 py-3 rounded-lg shadow-md text-lg transition-all duration-300"
+           className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-7 py-3 rounded-lg text-lg transition-all duration-300 transform hover:scale-[1.02]"
            onClick={() => setOpenModal({ type: 'enquiry' })}
          >
            Explore Programs & Apply Now

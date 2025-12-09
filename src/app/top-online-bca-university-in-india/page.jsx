@@ -611,7 +611,7 @@ export default function OnlineBCAPage() {
           </h2>
           <div className="grid md:grid-cols-5 gap-6">
             {[
-              { num: '1', text: 'Visit Unifost  website' },
+             
               { num: '2', text: 'Fill application form' },
               { num: '3', text: 'Upload documents' },
               { num: '4', text: 'Pay application fee' },

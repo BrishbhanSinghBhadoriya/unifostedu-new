@@ -306,43 +306,38 @@ useEffect(() => {
       
          
       
-      {/* Professional Responsive Header - Optimized */}
-      <header className="w-full fixed top-0 left-0 bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 z-50">
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
+      {/* Professional Responsive Header */}
+      <header className="w-full fixed top-0 left-0 bg-white/98 backdrop-blur-md border-b border-gray-200 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 sm:h-18 lg:h-20 min-h-[64px]">
             {/* Left Logo */}
-            <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-4 flex-shrink-0">
+            <div className="flex items-center gap-2 lg:gap-4 flex-shrink-0">
               <Image 
                 src={optimizeCloudinary("https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg")} 
                 alt="Manipal University Logo"
                 width={200}
                 height={200}
-                 
-                className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto" 
+                className="h-7 sm:h-9 md:h-11 lg:h-12 w-auto" 
               />
-              <h1 className="font-queens text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-extrabold whitespace-nowrap">
-                
-              </h1>
-          </div>
+            </div>
 
             {/* Right Side - Responsive */}
-            <div className="flex items-center gap-1.5 sm:gap-2 md:gap-4 flex-1 justify-end">
+            <div className="flex items-center gap-2 md:gap-4 flex-1 justify-end">
               {/* Mobile Menu Button */}
-               {/* Mobile Menu Button */}
-             <button
-              onClick={() => setIsMobileMenuOpen(true)}
+              <button
+                onClick={() => setIsMobileMenuOpen(true)}
                 aria-label="Open menu"
-                className="lg:hidden p-2 border rounded-md hover:bg-gray-100 transition-colors"
-                 >
-                 <FaBars className="w-5 h-5 text-gray-700" />
-                 </button>
+                className="lg:hidden p-2.5 rounded-lg hover:bg-gray-100 transition-colors border border-gray-200"
+              >
+                <FaBars className="w-5 h-5 text-gray-700" />
+              </button>
               
               {/* Phone - Hidden on small screens */}
               <a
                 href="tel:+917042867717"
-                className="hidden sm:flex items-center gap-1.5 md:gap-2 text-gray-700 font-medium text-xs sm:text-sm md:text-base hover:text-orange-600 transition-colors"
+                className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm md:text-base hover:text-orange-600 transition-colors"
               > 
-                <span className="text-base sm:text-lg">📞</span>
+                <span className="text-lg">📞</span>
                 <span className="hidden lg:inline">+91 7042646766</span>
                 <span className="lg:hidden">Call</span>
               </a>
@@ -350,7 +345,7 @@ useEffect(() => {
               {/* Mobile Phone Icon */}
               <a
                 href="tel:+917042867717"
-                className="sm:hidden flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
+                className="sm:hidden flex items-center justify-center w-9 h-9 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
               >
                 <span className="text-base">📞</span>
               </a>
@@ -358,18 +353,18 @@ useEffect(() => {
               {/* Apply Button */}
               <button 
                 onClick={() => setOpenModal({ type: 'apply' })}
-                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-4 sm:px-5 md:px-6 lg:px-8 py-2 sm:py-2.5 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 text-sm sm:text-base cursor-pointer whitespace-nowrap"
               >
                 <span className="hidden sm:inline">Apply Now</span>
                 <span className="sm:hidden">Apply</span>
               </button>
-              </div>
             </div>
           </div>
+        </div>
       </header>
 
       <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row w-full">
-        {/* Left Sidebar - Optimized */}
+        {/* Left Sidebar */}
         <PageContent 
           sectionItems={sectionItems} 
           activeSection={activeSection} 
@@ -377,44 +372,47 @@ useEffect(() => {
           onClose={() => setIsMobileMenuOpen(false)}
         />
 
-        {/* Mobile Sidebar - Enhanced */}
-        
-
         {/* Main Content */}
-        <main className="flex-1 min-w-0 lg:ml-64 pt-14 sm:pt-16 lg:pt-20">
+        <main className="flex-1 min-w-0 lg:ml-64 pt-16 sm:pt-18 lg:pt-20">
 
-      {/* Enquiry Modal */}
-      {showEnquiryModal && (
-        <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
-          <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10 p-4 sm:p-6 z-[50001]">
-            <DialogHeader>
-              <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
-                Get Started with Manipal University
-              </DialogTitle>
-            </DialogHeader>
-            <EnquiryForm onSubmitted={() => setShowEnquiryModal(false)} formType={modalType} universityName="Manipal University Jaipur" />
-          </DialogContent>
-        </Dialog>
-      )}
+          {/* Enquiry Modal */}
+          {showEnquiryModal && (
+            <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
+              <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-10 p-4 sm:p-6 z-[50001]">
+                <DialogHeader>
+                  <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
+                    Get Started with Manipal University
+                  </DialogTitle>
+                </DialogHeader>
+                <EnquiryForm onSubmitted={() => setShowEnquiryModal(false)} formType={modalType} universityName="Manipal University Jaipur" />
+              </DialogContent>
+            </Dialog>
+          )}
 
-     <Introduction setOpenModal={setOpenModal} openModal={openModal}/>
-     <Hero setOpenModal={setOpenModal} openModal={openModal}/>
-       
+          {/* Introduction Hero Section */}
+          <Introduction setOpenModal={setOpenModal} openModal={openModal}/>
+          
+          {/* Welcome Section */}
+          <Hero setOpenModal={setOpenModal} openModal={openModal}/>
 
 {/* Why Choose Section */}
-<section className="py-10 bg-gray-50">
-  <div className="max-w-6xl mx-auto px-4">
-    <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800 text-center mb-8">
-      Why Choose Manipal Online?
-    </h2>
+<section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-gray-50 to-white">
+  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-10 sm:mb-12">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        Why Choose <span className="text-orange-600">Manipal University Jaipur Online?</span>
+      </h2>
+      <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mx-auto rounded-full"></div>
+    </div>
 
-    <div className="space-y-8 text-gray-600 text-base sm:text-lg leading-relaxed">
+    <div className="space-y-8 sm:space-y-10 text-gray-700 text-base sm:text-lg leading-relaxed">
 
-      <div>
-        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
-          1. Accredited, Respected Degrees
+      <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-100 hover:border-orange-200 transition-all duration-300">
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 flex items-start gap-3">
+          <span className="text-orange-600 font-bold text-2xl">1.</span>
+          <span>Accredited, Respected Degrees</span>
         </h3>
-        <p>
+        <p className="text-gray-700 leading-relaxed">
           <strong>Manipal Online</strong> degrees are <strong>UGC-entitled</strong> and backed by 
           <strong>Manipal University Jaipur (MUJ)</strong> — a <strong>NAAC A+ accredited</strong> institution. 
           This recognition positions Manipal among the <strong>best online degree in Jaipur</strong> options for quality and credibility. 
@@ -423,11 +421,12 @@ useEffect(() => {
         </p>
       </div>
 
-      <div>
-        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
-          2. Career-Driven, Industry-Aligned Curriculum
+      <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-100 hover:border-orange-200 transition-all duration-300">
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 flex items-start gap-3">
+          <span className="text-orange-600 font-bold text-2xl">2.</span>
+          <span>Career-Driven, Industry-Aligned Curriculum</span>
         </h3>
-        <p>
+        <p className="text-gray-700 leading-relaxed">
           The <strong>online MBA with Manipal</strong> is designed with input from industry leaders and offers 
           immediate workplace relevance. With specializations in <strong>Digital Marketing, Business Analytics, Finance, 
           Healthcare Management, and IT & Fintech</strong>, learners can tailor their studies to market needs. 
@@ -436,11 +435,12 @@ useEffect(() => {
         </p>
       </div>
 
-      <div>
-        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
-          3. Flexible Learning that Fits Busy Lives
+      <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-100 hover:border-orange-200 transition-all duration-300">
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 flex items-start gap-3">
+          <span className="text-orange-600 font-bold text-2xl">3.</span>
+          <span>Flexible Learning that Fits Busy Lives</span>
         </h3>
-        <p>
+        <p className="text-gray-700 leading-relaxed">
           Flexibility is one of the main reasons learners search <em>"online degree near me."</em> 
           <strong>Manipal Online</strong> combines asynchronous video lectures, live interactive sessions, 
           recorded classes, and hands-on assignments — allowing learners to balance work, study, and personal life. 
@@ -449,44 +449,48 @@ useEffect(() => {
         </p>
       </div>
 
-      <div>
-        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
-          4. Experienced Faculty and Industry Mentors
+      <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-100 hover:border-orange-200 transition-all duration-300">
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 flex items-start gap-3">
+          <span className="text-orange-600 font-bold text-2xl">4.</span>
+          <span>Experienced Faculty and Industry Mentors</span>
         </h3>
-        <p>
+        <p className="text-gray-700 leading-relaxed">
           Courses are led by academic experts and industry mentors who bring real-world experience to every class. 
           Whether pursuing an <strong>online BBA</strong> or the <strong>online MBA with Manipal</strong>, 
           students benefit from updated curricula that remain relevant and industry-focused.
         </p>
       </div>
 
-      <div>
-        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
-          5. Strong Career Services and Networking
+      <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-100 hover:border-orange-200 transition-all duration-300">
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 flex items-start gap-3">
+          <span className="text-orange-600 font-bold text-2xl">5.</span>
+          <span>Strong Career Services and Networking</span>
         </h3>
-        <p>
+        <p className="text-gray-700 leading-relaxed">
           <strong>Manipal Online</strong> supports learners through career guidance, placement preparation, 
           interview training, and access to a strong alumni network. These services help students become 
           <strong>job-ready and industry-connected</strong> from day one.
         </p>
       </div>
 
-      <div>
-        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
-          6. Technology-Enabled, Applied Learning
+      <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-100 hover:border-orange-200 transition-all duration-300">
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 flex items-start gap-3">
+          <span className="text-orange-600 font-bold text-2xl">6.</span>
+          <span>Technology-Enabled, Applied Learning</span>
         </h3>
-        <p>
+        <p className="text-gray-700 leading-relaxed">
           Learners gain hands-on experience through <strong>virtual labs, live projects, group assignments, 
           and simulations</strong>. This approach ensures practical understanding and real-world application 
           across every online degree offered by Manipal Online.
         </p>
       </div>
 
-      <div>
-        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
-          Programs and Pathways: From BBA to MBA
+      <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-100 hover:border-orange-200 transition-all duration-300">
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 flex items-start gap-3">
+          <span className="text-orange-600 font-bold text-2xl">7.</span>
+          <span>Programs and Pathways: From BBA to MBA</span>
         </h3>
-        <p>
+        <p className="text-gray-700 leading-relaxed">
           <strong>Manipal Online</strong> offers programs across management, commerce, computing, and the arts. 
           Its flagship <strong>online MBA</strong> is a 24-month career-focused degree, while undergraduate programs 
           like the <strong>online BBA</strong> and <strong>BCA</strong> equip learners with strong business and 
@@ -495,33 +499,36 @@ useEffect(() => {
         </p>
       </div>
 
-      <div>
-        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
-          Admissions, Fees, and Financial Support
+      <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-100 hover:border-orange-200 transition-all duration-300">
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 flex items-start gap-3">
+          <span className="text-orange-600 font-bold text-2xl">8.</span>
+          <span>Admissions, Fees, and Financial Support</span>
         </h3>
-        <p>
+        <p className="text-gray-700 leading-relaxed">
           The admission process is <strong>simple, digital, and transparent</strong>, supported by EMI options 
           and scholarships. From application to graduation, Manipal provides <strong>academic advisors, mentorship, 
           technical assistance, and career counseling</strong> — ensuring every learner's success journey.
         </p>
       </div>
 
-      <div>
-        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
-          Industry Projects, Internships, and Applied Learning
+      <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-100 hover:border-orange-200 transition-all duration-300">
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 flex items-start gap-3">
+          <span className="text-orange-600 font-bold text-2xl">9.</span>
+          <span>Industry Projects, Internships, and Applied Learning</span>
         </h3>
-        <p>
+        <p className="text-gray-700 leading-relaxed">
           Real-world projects, internships, and capstone assignments are integrated into each program. 
           For students searching <em>"online MBA near me,"</em> these experiences help demonstrate 
           practical expertise and strengthen employability.
         </p>
       </div>
 
-      <div>
-        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
-          Alumni Outcomes and Employer Recognition
+      <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-100 hover:border-orange-200 transition-all duration-300">
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 flex items-start gap-3">
+          <span className="text-orange-600 font-bold text-2xl">10.</span>
+          <span>Alumni Outcomes and Employer Recognition</span>
         </h3>
-        <p>
+        <p className="text-gray-700 leading-relaxed">
           Graduates of <strong>Manipal University Jaipur</strong> and <strong>Manipal Online</strong> 
           hold leadership roles in consulting, fintech, healthcare, analytics, and marketing. 
           The strong employer reputation of Manipal degrees ensures alumni are recognized 
@@ -529,11 +536,12 @@ useEffect(() => {
         </p>
       </div>
 
-      <div>
-        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
-          Comparing Manipal Online with Other Options
+      <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-100 hover:border-orange-200 transition-all duration-300">
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 flex items-start gap-3">
+          <span className="text-orange-600 font-bold text-2xl">11.</span>
+          <span>Comparing Manipal Online with Other Options</span>
         </h3>
-        <p>
+        <p className="text-gray-700 leading-relaxed">
           When comparing <em>"top colleges in Jaipur"</em> or searching for the 
           <em>"best online degree in Jaipur,"</em> <strong>Manipal Online</strong> stands apart with 
           <strong>NAAC A+ accreditation, expert faculty, and flexible programs</strong> that combine 
@@ -541,11 +549,12 @@ useEffect(() => {
         </p>
       </div>
 
-      <div>
-        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">
-          Application Tips and Success Strategies
+      <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-100 hover:border-orange-200 transition-all duration-300">
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 flex items-start gap-3">
+          <span className="text-orange-600 font-bold text-2xl">12.</span>
+          <span>Application Tips and Success Strategies</span>
         </h3>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-3 text-gray-700">
           <li><strong>Review Program Curriculum:</strong> Compare modules and specializations with your career goals before choosing the <strong>online MBA with Manipal</strong>.</li>
           <li><strong>Plan Your Study Schedule:</strong> Create a consistent plan to balance professional and academic commitments.</li>
           <li><strong>Leverage Career Services:</strong> Utilize placement assistance, alumni mentorship, and resume workshops to maximize outcomes.</li>
@@ -553,92 +562,82 @@ useEffect(() => {
         </ul>
       </div>
 
-      <p className="text-center text-gray-700 text-lg mt-6">
-        If you are exploring options like the <strong>online MBA with Manipal</strong> or the 
-        <strong>best online degree in Jaipur</strong>, <strong>Manipal Online</strong> offers 
-        accredited programs, flexible schedules, and hands-on learning pathways that empower you to 
-        reach your professional goals. <br /> <br />
-        <strong>Start your journey today with Manipal Online!</strong>
-      </p>
-       <button 
-            onClick={() => setOpenModal({ type: 'enquiry' })}
-            className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
-          >
-            Apply Now
-          </button>
-        
+      <div className="mt-10 sm:mt-12 text-center">
+        <p className="text-gray-700 text-lg sm:text-xl mb-6 leading-relaxed">
+          If you are exploring options like the <strong>online MBA with Manipal</strong> or the 
+          <strong>best online degree in Jaipur</strong>, <strong>Manipal Online</strong> offers 
+          accredited programs, flexible schedules, and hands-on learning pathways that empower you to 
+          reach your professional goals.
+        </p>
+        <p className="text-gray-900 text-xl sm:text-2xl font-bold mb-8">
+          Start your journey today with Manipal Online!
+        </p>
+        <button 
+          onClick={() => setOpenModal({ type: 'enquiry' })}
+          className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 cursor-pointer transform hover:scale-105 text-base sm:text-lg shadow-lg hover:shadow-xl"
+        >
+          Apply Now
+        </button>
+      </div>
     </div>
   </div>
 </section>
 
-{/* Explore Online Classes Section - Professionally Styled */}
-<ExploreClasses setOpenModal={setOpenModal} openModal={openModal}/>
+          {/* Explore Online Classes Section */}
+          <ExploreClasses setOpenModal={setOpenModal} openModal={openModal}/>
 
-{/* Campus Tour Section */}
-<CampusTour setOpenModal={setOpenModal} openModal={openModal}/>
+          {/* Campus Tour Section */}
+          <CampusTour setOpenModal={setOpenModal} openModal={openModal}/>
 
-  {/* Enhanced Statistics Section */}
-  <AdvantageManipal/>
+          {/* Enhanced Statistics Section */}
+          <AdvantageManipal/>
 
-      {/* Professional Rankings & Accreditations Section */}
-      <RankingAccreditionsManipal/>
+          {/* Professional Rankings & Accreditations Section */}
+          <RankingAccreditionsManipal/>
 
-      {/* Unlock 360 Advantage */}
-      
+          {/* Why Choose Manipal University Online */}
+          <WhyChooseManipal/>
 
-{/* Why Choose Manipal University Online - As per reference */}
-<WhyChooseManipal/>
+          {/* Enhanced Courses Section */}
+          <Courses ugCourses={ugCourses} pgCourses={pgCourses}/>
 
-        {/* Enhanced Courses Section */}
-     <Courses  ugCourses={ugCourses} pgCourses={pgCourses}/>
+          {/* Key Highlights Section */}
+          <KeyHighlights setOpenModal={setOpenModal} openModal={openModal}/>
 
-{/* Key Highlights Section */}
-<KeyHighlights setOpenModal={setOpenModal} openModal={openModal}/>
+          {/* Admission Dates Section */}
+          <AdmissionDatesManipal setOpenModal={setOpenModal} openModal={openModal}/>
 
-{/* Admission Dates Section */}
-<AdmissionDatesManipal setOpenModal={setOpenModal} openModal={openModal}/>
+          {/* Modern 360 Advantage */}
+          <AdvantagesManipal/>
 
-     {/*360 section*/}
+          {/* About Manipal Section */}
+          <About/>
 
-  
-  
-    {/* Modern 360 Advantage */}
-  <AdvantagesManipal/>
+          {/* Program Benefits Section */}
+          <ProgramBenefit/>
 
-      {/* About Manipal Section  */}
-<About/>
+          {/* Eligibility & Admission Section */}
+          <AdmissionFeesProcessSessions setOpenModal={setOpenModal} openModal={openModal}/>
 
-{/* Program Benefits Section */}
-<ProgramBenefit/>
+          {/* Placement Partners Section */}
+          <PlacementPartners setOpenModal={setOpenModal} openModal={openModal}/>
 
-{/* Eligibility & Admission Section */}
-<AdmissionFeesProcessSessions setOpenModal={setOpenModal} openModal={openModal}/>
+          {/* Placement Record Section */}
+          <PlacementRecord setOpenModal={setOpenModal} openModal={openModal}/>
 
-{/* Placement Partners Section */}
-<PlacementPartners setOpenModal={setOpenModal} openModal={openModal}/>
+          {/* Certificate Section */}
+          <CertificateLocation/>
 
-{/* Placement Record Section */}
-<PlacementRecord setOpenModal={setOpenModal} openModal={openModal}/>
-
-   
-
-
-      {/* Certificate Section */}
-     <CertificateLocation/>
-
-
-      {/*  Add Quick Comparison Table */}
-<ComparisonStudentReviews/>
-
-        {/* Professional FAQ Section */}
-      
+          {/* Quick Comparison Table */}
+          <ComparisonStudentReviews/>
 
         </main>
       </div>
 
         {/* Enhanced Footer */}
-       <FooterManipal setOpenModal={setOpenModal} openModal={openModal}/> 
+        <FooterManipal setOpenModal={setOpenModal} openModal={openModal}/> 
        
+        {/* Apply/Enquiry Modal */}
         {openModal && (
           <ApplyEnquiryModal
             open={!!openModal}
@@ -651,7 +650,7 @@ useEffect(() => {
             formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
           />
         )}
-        </div>
+      </div>
     </>
   );
 };

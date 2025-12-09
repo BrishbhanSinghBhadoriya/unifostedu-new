@@ -5,7 +5,7 @@ const AdmissionFeesProcessSessions = ({setOpenModal,openModal}) => {
    <section id='Admission' className="py-16 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 className="text-4xl font-bold text-center mb-12">
-      Eligibility & <span className="text-orange-600">Admission Process</span>
+      Eligibility & <span className="text-orange-600">Admission Process for Manipal Online</span>
     </h2>
     
     <div className="grid lg:grid-cols-2 gap-12">
@@ -74,7 +74,7 @@ const AdmissionFeesProcessSessions = ({setOpenModal,openModal}) => {
         
         <button 
           onClick={() => setOpenModal({ type: 'apply' })}
-          className="mt-6 w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold py-4 rounded-xl hover:shadow-lg transition-all cursor-pointer"
+          className="mt-6 w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-4 rounded-xl transition-all cursor-pointer transform hover:scale-[1.02]"
         >
           Start Your Application Now
         </button>
@@ -86,15 +86,15 @@ const AdmissionFeesProcessSessions = ({setOpenModal,openModal}) => {
 {/* Fee Structure Section */}
 <section id='Fees' className="py-16 bg-gray-50">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 className="text-4xl font-bold text-center mb-4">
+    <h3 className="text-4xl font-bold text-center mb-4">
       Affordable <span className="text-orange-600">Fee Structure</span>
-    </h2>
+    </h3> 
     <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
       Manipal University Jaipur Online offers affordable and transparent tuition fees, along with EMI and installment options to make education accessible for all.
     </p>
     
     {/* Fee Table */}
-    <div className="bg-white rounded-2xl shadow-xl overflow-hidden mb-8">
+    <div className="bg-white rounded-2xl border-2 border-gray-200 overflow-hidden mb-8">
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead className="bg-gradient-to-r from-orange-500 to-orange-600 text-white">
@@ -164,7 +164,7 @@ const AdmissionFeesProcessSessions = ({setOpenModal,openModal}) => {
     
     {/* Additional Information */}
     <div className="grid md:grid-cols-2 gap-8">
-      <div className="bg-white rounded-xl p-6 shadow-lg">
+      <div className="bg-white rounded-xl p-6 border border-gray-200">
         <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
           <span className="text-2xl">💰</span>
           Scholarship Opportunities
@@ -192,7 +192,7 @@ const AdmissionFeesProcessSessions = ({setOpenModal,openModal}) => {
         </ul>
       </div>
       
-      <div className="bg-white rounded-xl p-6 shadow-lg">
+      <div className="bg-white rounded-xl p-6 border border-gray-200">
         <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
           <span className="text-2xl">📋</span>
           What's Included
@@ -228,7 +228,7 @@ const AdmissionFeesProcessSessions = ({setOpenModal,openModal}) => {
     <div className="text-center mt-8">
       <button 
         onClick={() => setOpenModal({ type: 'enquiry' })}
-        className="bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
+        className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 cursor-pointer transform hover:scale-[1.02]"
       >
         Get Detailed Fee Structure & EMI Options
       </button>
@@ -240,9 +240,9 @@ const AdmissionFeesProcessSessions = ({setOpenModal,openModal}) => {
 <section id="AdmissionProcess" className="py-16 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-12">
-      <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+      <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
         <span className="text-orange-600">Admission Process</span>
-      </h2>
+      </h3>
       <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
         Manipal University Jaipur Online follows a streamlined and 100% digital admission process.
       </p>
@@ -253,51 +253,87 @@ const AdmissionFeesProcessSessions = ({setOpenModal,openModal}) => {
         <h3 className="text-2xl font-bold text-gray-900 mb-6">How to Apply</h3>
         
         <div className="space-y-6">
-          <div className="flex gap-4 items-start">
-            <div className="flex-shrink-0 w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
-            <div>
+          <div className="flex gap-4 items-start bg-white rounded-xl p-5 border border-gray-200 hover:border-orange-300 transition-all duration-300">
+            <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+            <div className="flex-1">
               <h4 className="font-bold text-lg text-gray-900 mb-2">Visit the Official Website</h4>
-              <p className="text-gray-600">Access the official Manipal Online website and navigate to the admissions section.</p>
+              <p className="text-gray-600 mb-4">Access the official Manipal Online website and navigate to the admissions section.</p>
+              <button 
+                onClick={() => setOpenModal({ type: 'apply' })}
+                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-2.5 rounded-lg transition-all duration-300 cursor-pointer transform hover:scale-105 text-sm"
+              >
+                Apply Now
+              </button>
             </div>
           </div>
           
-          <div className="flex gap-4 items-start">
-            <div className="flex-shrink-0 w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
-            <div>
+          <div className="flex gap-4 items-start bg-white rounded-xl p-5 border border-gray-200 hover:border-orange-300 transition-all duration-300">
+            <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+            <div className="flex-1">
               <h4 className="font-bold text-lg text-gray-900 mb-2">Choose Your Program</h4>
-              <p className="text-gray-600">Select your preferred online degree (MBA, BBA, BCA, MCA, BA, or M.Com) from the available options.</p>
+              <p className="text-gray-600 mb-4">Select your preferred online degree (MBA, BBA, BCA, MCA, BA, or M.Com) from the available options.</p>
+              <button 
+                onClick={() => setOpenModal({ type: 'enquiry' })}
+                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-2.5 rounded-lg transition-all duration-300 cursor-pointer transform hover:scale-105 text-sm"
+              >
+                Explore Programs
+              </button>
             </div>
           </div>
           
-          <div className="flex gap-4 items-start">
-            <div className="flex-shrink-0 w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
-            <div>
+          <div className="flex gap-4 items-start bg-white rounded-xl p-5 border border-gray-200 hover:border-orange-300 transition-all duration-300">
+            <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+            <div className="flex-1">
               <h4 className="font-bold text-lg text-gray-900 mb-2">Fill Registration Form</h4>
-              <p className="text-gray-600">Complete the online registration form with valid personal and academic details.</p>
+              <p className="text-gray-600 mb-4">Complete the online registration form with valid personal and academic details.</p>
+              <button 
+                onClick={() => setOpenModal({ type: 'apply' })}
+                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-2.5 rounded-lg transition-all duration-300 cursor-pointer transform hover:scale-105 text-sm"
+              >
+                Start Application
+              </button>
             </div>
           </div>
           
-          <div className="flex gap-4 items-start">
-            <div className="flex-shrink-0 w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
-            <div>
+          <div className="flex gap-4 items-start bg-white rounded-xl p-5 border border-gray-200 hover:border-orange-300 transition-all duration-300">
+            <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
+            <div className="flex-1">
               <h4 className="font-bold text-lg text-gray-900 mb-2">Upload Documents</h4>
-              <p className="text-gray-600">Upload academic documents, ID proof, and a recent photograph for verification.</p>
+              <p className="text-gray-600 mb-4">Upload academic documents, ID proof, and a recent photograph for verification.</p>
+              <button 
+                onClick={() => setOpenModal({ type: 'enquiry' })}
+                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-2.5 rounded-lg transition-all duration-300 cursor-pointer transform hover:scale-105 text-sm"
+              >
+                Get Help
+              </button>
             </div>
           </div>
           
-          <div className="flex gap-4 items-start">
-            <div className="flex-shrink-0 w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-lg">5</div>
-            <div>
+          <div className="flex gap-4 items-start bg-white rounded-xl p-5 border border-gray-200 hover:border-orange-300 transition-all duration-300">
+            <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full flex items-center justify-center font-bold text-lg">5</div>
+            <div className="flex-1">
               <h4 className="font-bold text-lg text-gray-900 mb-2">Pay Program Fee</h4>
-              <p className="text-gray-600">Complete the program fee payment securely online with flexible EMI options.</p>
+              <p className="text-gray-600 mb-4">Complete the program fee payment securely online with flexible EMI options.</p>
+              <button 
+                onClick={() => setOpenModal({ type: 'enquiry' })}
+                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-2.5 rounded-lg transition-all duration-300 cursor-pointer transform hover:scale-105 text-sm"
+              >
+                View Fee Structure
+              </button>
             </div>
           </div>
           
-          <div className="flex gap-4 items-start">
-            <div className="flex-shrink-0 w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-lg">6</div>
-            <div>
+          <div className="flex gap-4 items-start bg-white rounded-xl p-5 border border-gray-200 hover:border-orange-300 transition-all duration-300">
+            <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full flex items-center justify-center font-bold text-lg">6</div>
+            <div className="flex-1">
               <h4 className="font-bold text-lg text-gray-900 mb-2">Receive Confirmation</h4>
-              <p className="text-gray-600">Get instant confirmation and access to your student dashboard within 48 hours.</p>
+              <p className="text-gray-600 mb-4">Get instant confirmation and access to your student dashboard within 48 hours.</p>
+              <button 
+                onClick={() => setOpenModal({ type: 'enquiry' })}
+                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-2.5 rounded-lg transition-all duration-300 cursor-pointer transform hover:scale-105 text-sm"
+              >
+                Track Status
+              </button>
             </div>
           </div>
         </div>
@@ -342,7 +378,7 @@ const AdmissionFeesProcessSessions = ({setOpenModal,openModal}) => {
         
         <button 
           onClick={() => setOpenModal({ type: 'apply' })}
-          className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
+          className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 cursor-pointer transform hover:scale-[1.02]"
         >
           Start Your Application Now
         </button>
@@ -355,9 +391,9 @@ const AdmissionFeesProcessSessions = ({setOpenModal,openModal}) => {
 <section id="Sessions" className="py-16 bg-gradient-to-br from-blue-50 to-orange-50">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-12">
-      <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+      <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
         Details of <span className="text-orange-600">Upcoming and Ongoing Sessions</span>
-      </h2>
+      </h3>
       <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
         Manipal University Jaipur Online conducts multiple batches each year for both UG and PG programs.
       </p>
@@ -368,7 +404,7 @@ const AdmissionFeesProcessSessions = ({setOpenModal,openModal}) => {
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Upcoming Sessions</h3>
         
         <div className="space-y-4">
-          <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-green-500">
+          <div className="bg-white rounded-xl p-6 border border-gray-200 border-l-4 border-green-500">
             <div className="flex items-center justify-between mb-2">
               <h4 className="font-bold text-lg text-gray-900">January 2026 Session</h4>
               <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Applications Open</span>
@@ -376,7 +412,7 @@ const AdmissionFeesProcessSessions = ({setOpenModal,openModal}) => {
             <p className="text-gray-600 text-sm">Start your academic journey with comprehensive support and guidance.</p>
           </div>
           
-          <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-blue-500">
+          <div className="bg-white rounded-xl p-6 border border-gray-200 border-l-4 border-blue-500">
             <div className="flex items-center justify-between mb-2">
               <h4 className="font-bold text-lg text-gray-900">April 2026 Session</h4>
               <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">Enrollments in Progress</span>
@@ -384,7 +420,7 @@ const AdmissionFeesProcessSessions = ({setOpenModal,openModal}) => {
             <p className="text-gray-600 text-sm">Mid-year intake with flexible learning schedules.</p>
           </div>
           
-          <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-orange-500">
+          <div className="bg-white rounded-xl p-6 border border-gray-200 border-l-4 border-orange-500">
             <div className="flex items-center justify-between mb-2">
               <h4 className="font-bold text-lg text-gray-900">July 2026 Session</h4>
               <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">Early Bird Discounts Available</span>
@@ -392,7 +428,7 @@ const AdmissionFeesProcessSessions = ({setOpenModal,openModal}) => {
             <p className="text-gray-600 text-sm">Special offers and scholarships for early applicants.</p>
           </div>
           
-          <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-purple-500">
+          <div className="bg-white rounded-xl p-6 border border-gray-200 border-l-4 border-purple-500">
             <div className="flex items-center justify-between mb-2">
               <h4 className="font-bold text-lg text-gray-900">October 2026 Session</h4>
               <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">Pre-registration Soon</span>
@@ -402,7 +438,7 @@ const AdmissionFeesProcessSessions = ({setOpenModal,openModal}) => {
         </div>
       </div>
 
-      <div className="bg-white rounded-2xl p-8 shadow-xl">
+      <div className="bg-white rounded-2xl p-8 border-2 border-gray-200">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Ongoing Sessions</h3>
         
         <div className="space-y-4 mb-6">
@@ -457,7 +493,7 @@ const AdmissionFeesProcessSessions = ({setOpenModal,openModal}) => {
         
         <button 
           onClick={() => setOpenModal({ type: 'enquiry' })}
-          className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
+          className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 cursor-pointer transform hover:scale-[1.02]"
         >
           Enroll in Current Session
         </button>

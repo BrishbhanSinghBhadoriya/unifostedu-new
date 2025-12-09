@@ -6,13 +6,13 @@ export const metadata = {
     "Amity Online MBA Fees 2025, Amity Online MBA 2025-26, Amity University Online MBA Fees, Online MBA Fees India 2025, Amity MBA EMI Options, Amity Online MBA Scholarship, Amity Online MBA Fee Structure, Amity Online MBA Cost, Amity Online MBA Admission Fees",
   metadataBase: new URL("https://unifostedu.com"),
   alternates: {
-    canonical: "https://unifostedu.com/amity-online-mba-fees-2025-26",
+    canonical: "https://unifostedu.com/amity-online-mba-total-fees",
   },
   openGraph: {
     title: "Amity Online MBA Fees 2025-26 | Amity University Online",
     description:
       "View the official Amity Online MBA fee breakdown for 2025-26 — tuition, semester fees, one-time charges, and scholarship details for online MBA aspirants.",
-    url: "https://unifostedu.com/amity-online-mba-fees-2025-26",
+    url: "https://unifostedu.com/amity-online-mba-total-fees",
     siteName: "UNIFOST",
     images: [
       {

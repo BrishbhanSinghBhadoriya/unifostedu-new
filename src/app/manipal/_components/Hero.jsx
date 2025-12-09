@@ -5,9 +5,9 @@ const Hero = ({setOpenModal,openModal}) => {
     <div><section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
   <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
     <div className="text-center mb-8 sm:mb-10 md:mb-12">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
         Welcome to <span className="text-orange-600">Manipal University Jaipur Online</span>
-      </h2>
+      </h3>
       <p className="text-base sm:text-lg text-black-600 max-w-4xl mx-auto leading-relaxed px-2">
   Welcome to <strong>Manipal University Jaipur Online (Manipal Online)</strong>, building on over 70 years of Manipal's educational excellence to offer the 
   <strong> best online degree in Jaipur</strong>. Designed for working professionals, recent graduates, and lifelong learners, 

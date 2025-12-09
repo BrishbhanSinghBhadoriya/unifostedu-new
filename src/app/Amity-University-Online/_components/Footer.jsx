@@ -1,9 +1,10 @@
+'use client'
 import { Mail, MapPin, Phone } from 'lucide-react/dist/cjs/lucide-react';
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Footer = () => {
+const Footer = ({ setOpenModal, openModal }) => {
   // Quick Links with proper internal links - VERIFIED ROUTES
   const quickLinks = [
     { label: "MBA Program", href: "/courses/mba" },
@@ -14,17 +15,8 @@ const Footer = () => {
     { label: "Home", href: "/" },
   ];
 
-  // Explore Universities Links - VERIFIED ROUTES
-  const universityLinks = [
-    { label: "Compare Universities", href: "/compare" },
-    { label: "Manipal Online", href: "/manipal" },
-    { label: "LPU Online", href: "/lpu-online" },
-    { label: "Jain University Online", href: "/jain" },
-    { label: "NMIMS Online", href: "/nmims" },
-    { label: "DY Patil Online", href: "/dypatil" },
-  ];
 
-  // Resources Links - VERIFIED ROUTES
+
   const resourceLinks = [
     { label: "Blog", href: "/blog" },
     { label: "Career After MBA", href: "/blog/CareerAfterOnlineMBA" },
@@ -54,8 +46,8 @@ const Footer = () => {
     <div>
         <footer className="bg-gray-900 text-white py-6 sm:py-8 md:py-12">
               <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 md:gap-8">
-                  {/* Logo & Description */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-6 md:gap-8">
+              {/* Logo & Description */}
                   <div>
                     <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
                       <div className="w-20 sm:w-[100px] md:w-[122px] h-6 sm:h-8 md:h-10 relative">
@@ -70,49 +62,26 @@ const Footer = () => {
                     <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-4">
                       Transforming lives through quality education and innovation. UGC-approved online degrees from Amity University.
                     </p>
-                    <Link href="/" className="text-yellow-400 hover:text-yellow-300 text-sm font-medium">
-                      Visit UNIFOST Home →
-                    </Link>
+                   
                   </div>
 
-                  {/* Quick Links */}
+
                   <div>
                     <h4 className="font-semibold mb-2 sm:mb-3 md:mb-4 text-sm sm:text-base md:text-lg">
                       Programs
                     </h4>
                     <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-gray-400">
                       {quickLinks.map((item, i) => (
-                        <li key={i}>
-                          <Link 
-                            href={item.href}
-                            className="hover:text-yellow-400 transition-colors"
-                          >
+                        <li key={i} onClick={() => setOpenModal({ type: 'apply' })}>
+                        
                             {item.label}
-                          </Link>
+                        
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  {/* Explore Universities */}
-                  <div>
-                    <h4 className="font-semibold mb-2 sm:mb-3 md:mb-4 text-sm sm:text-base md:text-lg">
-                      Explore Universities
-                    </h4>
-                    <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-gray-400">
-                      {universityLinks.map((item, i) => (
-                        <li key={i}>
-                          <Link 
-                            href={item.href}
-                            className="hover:text-yellow-400 transition-colors"
-                          >
-                            {item.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
+                 
                   {/* Resources & Contact */}
                   <div>
                     <h4 className="font-semibold mb-2 sm:mb-3 md:mb-4 text-sm sm:text-base md:text-lg">
@@ -120,13 +89,10 @@ const Footer = () => {
                     </h4>
                     <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-gray-400 mb-4">
                       {resourceLinks.map((item, i) => (
-                        <li key={i}>
-                          <Link 
-                            href={item.href}
-                            className="hover:text-yellow-400 transition-colors"
-                          >
+                        <li key={i} onClick={() => setOpenModal({ type: 'apply' })}>
+                        
                             {item.label}
-                          </Link>
+                    
                         </li>
                       ))}
                     </ul>

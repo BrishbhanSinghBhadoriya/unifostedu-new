@@ -31,9 +31,9 @@ const ComparisonStudentReviews = () => {
   return (
     <section id='QuickComparison' className="py-16 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 className="text-3xl font-bold text-center mb-12">
+    <h3 className="text-3xl font-bold text-center mb-12">
       <span className="text-orange-600">Online vs Regular</span> Degree Comparison
-    </h2>
+    </h3>
     
     <div className="overflow-x-auto">
       <table className="w-full border-collapse">
@@ -68,9 +68,9 @@ const ComparisonStudentReviews = () => {
       <section id="StudentReviews" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-queens">
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-queens">
               Student <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Reviews</span>
-            </h2>
+            </h3>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
               Students across the globe praise Manipal Online for its technology-driven learning, professional mentorship, and strong placement assistance.
             </p>
@@ -79,10 +79,10 @@ const ComparisonStudentReviews = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="group">
-                <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-100">
+                <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 transition-all duration-500 transform hover:-translate-y-1 border-2 border-gray-200">
                   <div className="flex flex-col sm:flex-row items-center gap-6">
                     <div className="flex-shrink-0">
-                      <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white text-2xl sm:text-3xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white text-2xl sm:text-3xl font-bold group-hover:scale-110 transition-transform duration-300">
                         {testimonial.name.split(' ').map(n => n[0]).join('')}
                       </div>
                     </div>

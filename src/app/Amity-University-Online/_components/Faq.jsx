@@ -1,7 +1,7 @@
 import React from 'react'
 import {Button} from '@/components/ui/button'
 
-const Faq = ({faqData, openIndex, setOpenIndex}) => {
+const Faq = ({ faqData, openIndex, setOpenIndex, setOpenModal }) => {
     
   return (
     <div>
@@ -19,7 +19,7 @@ const Faq = ({faqData, openIndex, setOpenIndex}) => {
                             <button
                               type="button"
                               className="w-full text-left flex justify-between items-center font-semibold text-sm sm:text-base md:text-lg lg:text-xl gap-2 cursor-pointer transition-colors hover:text-indigo-600"
-                              onClick={() => toggleFAQ(index)}
+                              onClick={() => setOpenIndex((prev) => (prev === index ? null : index))}
                               aria-expanded={openIndex === index}
                               aria-controls={`faq-answer-${index}`}
                               id={`faq-question-${index}`}

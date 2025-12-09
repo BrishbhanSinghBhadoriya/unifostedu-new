@@ -35,7 +35,7 @@ const Introduction = ({ setOpenModal , openModal}) => {
                       className="space-y-3 sm:space-y-4 md:space-y-6"
                     >
                       {/* University Badge */}
-                      <div className="inline-flex items-center gap-1.5 sm:gap-2 md:gap-3 bg-white/20 backdrop-blur-sm rounded-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 border border-white/30">
+                      <div className="inline-flex items-center gap-1.5 sm:gap-2 md:gap-3 bg-white/30 rounded-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 border-2 border-white/50">
                         <img 
                           src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" 
                           alt="Manipal Logo" 
@@ -61,9 +61,9 @@ const Introduction = ({ setOpenModal , openModal}) => {
                       {/* Key Features */}
                       <div className="flex flex-wrap gap-1.5 sm:gap-2 md:gap-4">
                         {['UGC Approved', 'NAAC A+', 'Global Recognition', 'Flexible Learning'].map((feature, index) => (
-                          <div key={index} className="flex items-center gap-1.5 sm:gap-2 bg-white/20 backdrop-blur-sm rounded-full px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 border border-white/30">
+                          <div key={index} className="flex items-center gap-1.5 sm:gap-2 bg-white/30 rounded-full px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 border-2 border-white/50">
                             <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 md:w-2 md:h-2 bg-orange-400 rounded-full"></div>
-                            <span className="text-[10px] sm:text-xs md:text-sm font-medium">{feature}</span>
+                            <span className="text-[10px] sm:text-xs md:text-sm font-medium text-white font-semibold">{feature}</span>
                           </div>
                 ))}
               </div>
@@ -73,7 +73,7 @@ const Introduction = ({ setOpenModal , openModal}) => {
                         <Button
                           size="lg"
                           variant="outline"
-                          className="border-2 border-white/50 hover:border-white hover:bg-white/10 text-white font-bold px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg rounded-full backdrop-blur-sm transition-all duration-300 w-full sm:w-auto bg-white/10 cursor-pointer"
+                          className="border-2 border-white/70 hover:border-white hover:bg-white/20 text-white font-bold px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg rounded-full transition-all duration-300 w-full sm:w-auto bg-white/20 cursor-pointer"
                           onClick={() => setOpenModal({ type: 'enquiry' })}
                         >
                           <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 mr-2" />
@@ -92,27 +92,27 @@ const Introduction = ({ setOpenModal , openModal}) => {
                       className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4"
                     >
                       {/* Stat Card 1 */}
-                      <div className="bg-white/20 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border border-white/30 text-center">
+                      <div className="bg-white/30 rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border-2 border-white/50 text-center">
                         <div className="text-xl sm:text-2xl md:text-3xl font-bold text-orange-400 mb-1 sm:mb-2">50+</div>
-                        <div className="text-white text-[10px] sm:text-xs md:text-sm font-medium">Countries</div>
+                        <div className="text-white text-[10px] sm:text-xs md:text-sm font-semibold">Countries</div>
               </div>
                       
                       {/* Stat Card 2 */}
-                      <div className="bg-white/20 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border border-white/30 text-center">
+                      <div className="bg-white/30 rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border-2 border-white/50 text-center">
                         <div className="text-xl sm:text-2xl md:text-3xl font-bold text-orange-400 mb-1 sm:mb-2">25+</div>
-                        <div className="text-white text-[10px] sm:text-xs md:text-sm font-medium">Programs</div>
+                        <div className="text-white text-[10px] sm:text-xs md:text-sm font-semibold">Programs</div>
             </div>
                       
                       {/* Stat Card 3 */}
-                      <div className="bg-white/20 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border border-white/30 text-center">
+                      <div className="bg-white/30 rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border-2 border-white/50 text-center">
                         <div className="text-xl sm:text-2xl md:text-3xl font-bold text-orange-400 mb-1 sm:mb-2">95%</div>
-                        <div className="text-white text-[10px] sm:text-xs md:text-sm font-medium">Success Rate</div>
+                        <div className="text-white text-[10px] sm:text-xs md:text-sm font-semibold">Success Rate</div>
       </div>
                       
                       {/* Stat Card 4 */}
-                      <div className="bg-white/20 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border border-white/30 text-center">
+                      <div className="bg-white/30 rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border-2 border-white/50 text-center">
                         <div className="text-xl sm:text-2xl md:text-3xl font-bold text-orange-400 mb-1 sm:mb-2">24/7</div>
-                        <div className="text-white text-[10px] sm:text-xs md:text-sm font-medium">Support</div>
+                        <div className="text-white text-[10px] sm:text-xs md:text-sm font-semibold">Support</div>
                       </div>
                     </motion.div>
                   </div>
@@ -125,12 +125,12 @@ const Introduction = ({ setOpenModal , openModal}) => {
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-6 backdrop-blur-sm px-3 sm:px-4 md:px-8 py-3 sm:py-4 md:py-6 rounded-xl sm:rounded-2xl shadow-2xl border border-white/50 max-w-2xl mx-auto"
+                  className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-6 px-3 sm:px-4 md:px-8 py-3 sm:py-4 md:py-6 rounded-xl sm:rounded-2xl border-2 border-white/70 max-w-2xl mx-auto bg-white/40"
                 >
                   {/* Card 1 */}
                   <div className="flex flex-col items-center text-center">
                     <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp" alt="NAAC A+ Accredited" className="h-12 sm:h-16 w-12 sm:w-16 object-contain mb-2" />
-                    <p className="text-xs sm:text-sm font-bold text-gray-800">NAAC A+</p>
+                    <p className="text-xs sm:text-sm font-bold text-gray-900">NAAC A+</p>
                   </div>
     
                   {/* Card 2 */}
