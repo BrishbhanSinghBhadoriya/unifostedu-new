@@ -150,7 +150,7 @@ const UniversityPage = () => {
       duration: "2 Years",
       eligibility: "Graduation in Commerce",
       fees: "₹50,000-1,40,000",
-      specialization: "Master of commerce",
+      specialization: "public Accounting, Accounting And Finance",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/m.com_libbpo.webp",
       university: universityData.name,
       universityShort: universityData.shortName,
