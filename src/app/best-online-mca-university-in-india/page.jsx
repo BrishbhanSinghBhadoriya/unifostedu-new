@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ApplyEnquiryModal from "@/components/ApplyEnquiryModal";
+import Headers from "../Amity-University-Online/_components/Headers";
 // Simulated components (replace with actual imports in your project)
 const Card = ({ className, children }) => <div className={`rounded-lg ${className}`}>{children}</div>;
 const CardContent = ({ className, children }) => <div className={className}>{children}</div>;
@@ -252,8 +253,9 @@ const AmityMCALandingPage = () => {
 
   return (
     <div className="min-h-screen bg-white" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+      <Headers/>
       {/* Top Sticky Nav (replaces header and sidebar) */}
-      <nav className="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
+      <nav className="bg-white shadow-sm md:mt-15 mt-12 fixed top-0 left-0 w-full z-50">
         <div className="max-w-7xl mx-auto px-4 py-2">
           <div className="flex items-center">
             <ul className="flex gap-1 md:gap-2 items-center overflow-x-auto no-scrollbar">

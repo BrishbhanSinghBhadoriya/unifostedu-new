@@ -5,9 +5,9 @@ const PlacementPartners = ({ setOpenModal ,openModal}) => {
   <section id="PlacementPartners" className="py-16 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-12">
-      <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+      <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
         <span className="text-orange-600">Placement Partners</span>
-      </h2>
+      </h3>
       <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
         Manipal University Jaipur Online partners with leading national and multinational organizations to offer extensive placement and internship opportunities.
       </p>
@@ -127,7 +127,7 @@ const PlacementPartners = ({ setOpenModal ,openModal}) => {
         
         <button 
           onClick={() => setOpenModal({ type: 'enquiry' })}
-          className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
+          className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 cursor-pointer transform hover:scale-[1.02]"
         >
           Explore Career Opportunities
         </button>

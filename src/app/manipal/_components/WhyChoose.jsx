@@ -4,9 +4,9 @@ const WhyChoose = ({setOpenModal,openModal}) => {
   return (
 <section className="py-10 bg-gray-50">
   <div className="max-w-6xl mx-auto px-4">
-    <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800 text-center mb-8">
+    <h3 className="text-3xl sm:text-4xl font-semibold text-gray-800 text-center mb-8">
       Why Choose Manipal Online?
-    </h2>
+    </h3>
 
     <div className="space-y-8 text-gray-600 text-base sm:text-lg leading-relaxed">
 
@@ -162,7 +162,7 @@ const WhyChoose = ({setOpenModal,openModal}) => {
       </p>
        <button 
             onClick={() => setOpenModal({ type: 'enquiry' })}
-            className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
+            className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 cursor-pointer transform hover:scale-[1.02]"
           >
             Apply Now
           </button>

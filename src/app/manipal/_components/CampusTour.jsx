@@ -5,9 +5,9 @@ const CampusTour = ({ setOpenModal ,openModal}) => {
 <section id="CampusTour" className="py-16 sm:py-20 bg-gradient-to-br from-blue-50 to-orange-50">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-12">
-      <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+      <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
         Virtual <span className="text-orange-600">Campus Tour</span>
-      </h2>
+      </h3>
       <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
         While Manipal University Jaipur Online operates in a digital mode, it maintains the vibrancy of an on-campus experience through a powerful virtual learning environment.
       </p>
@@ -74,7 +74,7 @@ const CampusTour = ({ setOpenModal ,openModal}) => {
       </div>
 
       <div className="relative">
-        <div className="bg-white rounded-2xl p-8 shadow-xl">
+        <div className="bg-white rounded-2xl p-8 border-2 border-gray-200">
           <h3 className="text-xl font-bold text-gray-900 mb-4">Immersive Learning Experience</h3>
           <p className="text-gray-600 mb-6">
             Through immersive images and videos, students can experience how Manipal University Jaipur Online has transformed traditional learning into a dynamic, engaging, and personalized online education ecosystem.
@@ -105,7 +105,7 @@ const CampusTour = ({ setOpenModal ,openModal}) => {
           
           <button 
             onClick={() => setOpenModal({ type: 'enquiry' })}
-            className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
+            className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 cursor-pointer transform hover:scale-[1.02]"
           >
             Take Virtual Campus Tour
           </button>

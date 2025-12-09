@@ -19,9 +19,9 @@ const Courses = ({ ugCourses, pgCourses }) => {
               viewport={{ once: true }}
               className="text-center mb-12 sm:mb-16"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
                 Explore <span className="text-orange-500">Online Courses</span>
-              </h2>
+              </h3>
               <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
                 Manipal University Jaipur Online offers a diverse portfolio of UG and PG online degree programs tailored for career growth and lifelong learning. 
                 Each program follows an industry-relevant curriculum, designed to equip learners with job-ready skills.
@@ -32,7 +32,7 @@ const Courses = ({ ugCourses, pgCourses }) => {
             <div className="mb-12">
               <div className="grid md:grid-cols-2 gap-8 mb-12">
                 {/* Undergraduate Programs */}
-                <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <div className="bg-white rounded-2xl p-8 border border-gray-200">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                     <span className="text-3xl">🎓</span>
                     Undergraduate Online Degrees
@@ -84,7 +84,7 @@ const Courses = ({ ugCourses, pgCourses }) => {
                 </div>
 
                 {/* Postgraduate Programs */}
-                <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <div className="bg-white rounded-2xl p-8 border border-gray-200">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                     <span className="text-3xl">🎯</span>
                     Postgraduate Online Degrees
@@ -149,19 +149,19 @@ const Courses = ({ ugCourses, pgCourses }) => {
                 </p>
                 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                  <div className="text-center p-4 bg-white rounded-lg border border-gray-200">
                     <div className="text-2xl mb-2">📊</div>
                     <div className="font-semibold text-gray-800">Data Science</div>
                   </div>
-                  <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                  <div className="text-center p-4 bg-white rounded-lg border border-gray-200">
                     <div className="text-2xl mb-2">📱</div>
                     <div className="font-semibold text-gray-800">Digital Marketing</div>
                   </div>
-                  <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                  <div className="text-center p-4 bg-white rounded-lg border border-gray-200">
                     <div className="text-2xl mb-2">🤖</div>
                     <div className="font-semibold text-gray-800">Artificial Intelligence</div>
                   </div>
-                  <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                  <div className="text-center p-4 bg-white rounded-lg border border-gray-200">
                     <div className="text-2xl mb-2">📋</div>
                     <div className="font-semibold text-gray-800">Project Management</div>
                   </div>
@@ -171,25 +171,25 @@ const Courses = ({ ugCourses, pgCourses }) => {
 
             <Tabs.Root value={activeTab} onValueChange={setActiveTab} className="w-full">
               <div className="flex justify-center mb-8 sm:mb-12">
-                <Tabs.List className="flex flex-wrap justify-center gap-2 sm:gap-4 bg-white/90 backdrop-blur-sm rounded-2xl p-2 shadow-xl border border-gray-200">
+                <Tabs.List className="flex flex-wrap justify-center gap-2 sm:gap-4 bg-white/90 backdrop-blur-sm rounded-2xl p-2 border-2 border-gray-200">
                   <Tabs.Trigger 
                     value="all"   
                     className={`px-4 py-2 sm:px-6 sm:py-3 rounded-xl text-sm sm:text-base font-semibold transition-all duration-300
-                             ${activeTab==='all' ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg' : 'bg-gray-100 text-gray-700 hover:bg-orange-100 hover:text-orange-700'}`}
+                             ${activeTab==='all' ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-orange-100 hover:text-orange-700'}`}
                   >
                     All Programs
                   </Tabs.Trigger>
                   <Tabs.Trigger 
                     value="ug"  
                     className={`px-4 py-2 sm:px-6 sm:py-3 rounded-xl text-sm sm:text-base font-semibold transition-all duration-300
-                             ${activeTab==='ug' ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg' : 'bg-gray-100 text-gray-700 hover:bg-orange-100 hover:text-orange-700'}`}
+                             ${activeTab==='ug' ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-orange-100 hover:text-orange-700'}`}
                   >
                     Undergraduate
                   </Tabs.Trigger>
                   <Tabs.Trigger 
                     value="pg"  
                     className={`px-4 py-2 sm:px-6 sm:py-3 rounded-xl text-sm sm:text-base font-semibold transition-all duration-300
-                             ${activeTab==='pg' ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg' : 'bg-gray-100 text-gray-700 hover:bg-orange-100 hover:text-orange-700'}`}
+                             ${activeTab==='pg' ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-orange-100 hover:text-orange-700'}`}
                   >
                     Postgraduate
                   </Tabs.Trigger>
@@ -209,7 +209,7 @@ const Courses = ({ ugCourses, pgCourses }) => {
                       initial={{ opacity: 0, y: 50 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: idx * 0.1 }}
-                      className="transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl"
+                      className="transform hover:-translate-y-2 transition-all duration-300"
                     >
                       <EnquireCard {...course} universityName="Manipal University Online" />
                     </motion.div>
@@ -236,7 +236,7 @@ const Courses = ({ ugCourses, pgCourses }) => {
                       initial={{ opacity: 0, y: 50 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: idx * 0.1 }}
-                      className="transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl"
+                      className="transform hover:-translate-y-2 transition-all duration-300"
                     >
                       <EnquireCard {...course} universityName="Manipal University Online" />
                     </motion.div>
@@ -258,7 +258,7 @@ const Courses = ({ ugCourses, pgCourses }) => {
                       initial={{ opacity: 0, y: 50 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: idx * 0.1 }}
-                      className="transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl"
+                      className="transform hover:-translate-y-2 transition-all duration-300"
                     >
                       <EnquireCard {...course} universityName="Manipal University Online" />
                     </motion.div>

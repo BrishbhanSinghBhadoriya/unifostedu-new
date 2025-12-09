@@ -8,10 +8,10 @@ const CertificateLocation = () => {
    <section className="bg-[#002d5f] text-white py-16 px-6 font-[Inter]">
           <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
             <div className="md:w-1/2">
-              <Image width={100} height={100} src={optimizeCloudinary("https://res.cloudinary.com/didkrwhbu/image/upload/v1762327504/muj-certi_l0mgpy.webp")} alt="Certificate" className="rounded-lg shadow-lg w-full" />
+              <Image width={100} height={100} src={optimizeCloudinary("https://res.cloudinary.com/didkrwhbu/image/upload/v1762327504/muj-certi_l0mgpy.webp")} alt="Certificate" className="rounded-lg border-2 border-white/20 w-full" />
             </div>
             <div className="md:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Recognized Online Degree from Manipal University</h2>
+              <h3 className="text-3xl md:text-4xl font-bold mb-4">Recognized Online Degree from Manipal University</h3>
               <p className="mb-6 text-lg">
                 Learn at your pace, guided by experts, with a UGC-entitled degree that is accepted globally across industries and sectors.
               </p>
@@ -29,9 +29,9 @@ const CertificateLocation = () => {
       {/*  Add Location-Based Section (for local SEO) */}
   <section className="py-16 bg-gradient-to-br from-blue-50 to-orange-50">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 className="text-3xl font-bold text-center mb-12">
+      <h3 className="text-3xl font-bold text-center mb-12">
         Online Manipal Programs <span className="text-orange-600">Available Across India</span>
-      </h2>
+      </h3>
       
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
         {[
@@ -39,7 +39,7 @@ const CertificateLocation = () => {
           'Chennai', 'Kolkata', 'Pune', 'Ahmedabad',
           'Jaipur', 'Lucknow', 'Chandigarh', 'Indore'
         ].map(city => (
-          <div key={city} className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all text-center">
+          <div key={city} className="bg-white p-4 rounded-xl border border-gray-200 hover:border-orange-300 transition-all text-center transform hover:scale-[1.02]">
             <div className="text-2xl mb-2">📍</div>
             <h3 className="font-bold text-sm">{city}</h3>
             <p className="text-xs text-gray-600">Online Programs</p>

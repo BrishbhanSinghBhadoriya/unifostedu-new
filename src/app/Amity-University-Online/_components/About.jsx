@@ -27,7 +27,7 @@ const About = ({openmodel ,setOpenModal}) => {
             online degree programs designed for learners, working
             professionals, and entrepreneurs who aim to enhance their
             skills and advance their careers in the future. It is ranked
-            among the <Link href="/Amity-online-MBA-fees-2025-26" className="text-blue-600 hover:text-blue-800 underline">best online universities in India</Link>, Amity Online
+            among the <Link href="/amity-online-mba-total-fees" className="text-blue-600 hover:text-blue-800 underline">best online universities in India</Link>, Amity Online
             offers globally recognized <Link href="best-online-mca-university-in-india" className="text-blue-600 hover:text-blue-800 underline">online MBA in India 2025</Link>, <Link href="best-online-mca-university-in-india" className="text-blue-600 hover:text-blue-800 underline">online BBA</Link>, <Link href="best-online-mca-university-in-india" className="text-blue-600 hover:text-blue-800 underline">online MCA</Link>, online M.Com, online BA, and <Link href="best-online-mca-university-in-india" className="text-blue-600 hover:text-blue-800 underline">online BCA</Link> programs.
           </p>
 

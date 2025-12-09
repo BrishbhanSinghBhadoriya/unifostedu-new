@@ -21,12 +21,12 @@ const WhyChooseManipal = () => {
     </div>
 
     {/* Heading */}
-    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8">Why Students Choose Us</h3>
+    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8">Why Students Choose Manipal Online</h3>
 
     {/* Feature Cards */}
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
       {/* Card 1 */}
-      <div className="bg-white text-gray-900 rounded-2xl p-6 shadow-lg">
+      <div className="bg-white text-gray-900 rounded-2xl p-6 border border-gray-200">
         <div className="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center mb-4">
           <span className="text-2xl">🏅</span>
         </div>
@@ -35,7 +35,7 @@ const WhyChooseManipal = () => {
       </div>
 
       {/* Card 2 */}
-      <div className="bg-white text-gray-900 rounded-2xl p-6 shadow-lg">
+      <div className="bg-white text-gray-900 rounded-2xl p-6 border border-gray-200">
         <div className="w-14 h-14 rounded-full bg-sky-100 flex items-center justify-center mb-4">
           <span className="text-2xl font-bold">C</span>
         </div>
@@ -44,7 +44,7 @@ const WhyChooseManipal = () => {
       </div>
 
       {/* Card 3 */}
-      <div className="bg-white text-gray-900 rounded-2xl p-6 shadow-lg">
+      <div className="bg-white text-gray-900 rounded-2xl p-6 border border-gray-200">
         <div className="w-14 h-14 rounded-full bg-pink-100 flex items-center justify-center mb-4">
           <span className="text-2xl">🎓</span>
         </div>
@@ -53,7 +53,7 @@ const WhyChooseManipal = () => {
       </div>
 
       {/* Card 4 */}
-      <div className="bg-white text-gray-900 rounded-2xl p-6 shadow-lg">
+      <div className="bg-white text-gray-900 rounded-2xl p-6 border border-gray-200">
         <div className="w-14 h-14 rounded-full bg-lime-100 flex items-center justify-center mb-4">
           <span className="text-2xl">💳</span>
         </div>
@@ -62,7 +62,7 @@ const WhyChooseManipal = () => {
       </div>
 
       {/* Card 5 */}
-      <div className="bg-white text-gray-900 rounded-2xl p-6 shadow-lg">
+      <div className="bg-white text-gray-900 rounded-2xl p-6 border border-gray-200">
         <div className="w-14 h-14 rounded-full bg-rose-100 flex items-center justify-center mb-4">
           <span className="text-2xl">🎓</span>
         </div>

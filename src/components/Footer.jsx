@@ -198,14 +198,13 @@ const Footer = () => {
     "/opjindal",
     "/nmims",
     "/uu",
-    "/amity-online-mba-fees-2025-26",
+    "/amity-online-mba-total-fees",
     "/best-online-mca-university-in-india",
     "/muj-online-bba",
     "/muj-online-bca",
     "/muj-online-ba",
     "/muj-online-mba",
-    "/muj-online-mca",
-    "/amity-online-mba-fees-2025-26"
+    "/muj-online-mca"
   ];
   
   // Check if current pathname starts with any of the hide routes

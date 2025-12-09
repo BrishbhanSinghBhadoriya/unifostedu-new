@@ -9,9 +9,9 @@ const About = () => {
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="grid lg:grid-cols-2 gap-12 items-center">
       <div>
-        <h2 className="text-4xl font-bold mb-6">
+        <h3 className="text-4xl font-bold mb-6">
           About <span className="text-orange-600">Manipal University Jaipur</span>
-        </h2>
+        </h3>
         <div className="prose prose-lg text-gray-700 space-y-4">
           <p>
             Manipal University Jaipur (MUJ) is a premier institution offering globally recognized online degrees through Online Manipal. 
@@ -30,7 +30,7 @@ const About = () => {
         </div>
       </div>
       <div>
-        <Image width={100} height={100}src={optimizeCloudinary("https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp")} alt="Manipal University Jaipur Campus" className="w-full h-auto object-cover rounded-2xl shadow-2xl" />
+        <Image width={100} height={100}src={optimizeCloudinary("https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp")} alt="Manipal University Jaipur Campus" className="w-full h-auto object-cover rounded-2xl border-2 border-gray-200" />
       </div>
     </div>
   </div>

@@ -114,7 +114,7 @@ const FooterManipal = ({ setOpenModal , openModal}) => {
                   
                   <Button 
                     onClick={() => setOpenModal({ type: 'apply' })}
-                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold px-6 py-3 rounded-full shadow-lg hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300"
+                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold px-6 py-3 rounded-full transform hover:scale-105 transition-all duration-300"
                   >
                     Apply Now
                   </Button>

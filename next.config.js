@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone',
   images: {
     unoptimized: false, // Enable Next.js image optimization
     formats: ['image/avif', 'image/webp'],

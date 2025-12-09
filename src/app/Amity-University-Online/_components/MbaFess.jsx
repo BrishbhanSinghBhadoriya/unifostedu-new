@@ -1,4 +1,3 @@
-"use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
@@ -7,8 +6,9 @@ import {
   CreditCard, Wallet, Gift, FileText, Menu, X, ChevronDown, ChevronUp
 } from "lucide-react";
 import ApplyEnquiryModal from "@/components/ApplyEnquiryModal";
+import Headers from "./Headers";
 
-const AmityMBAFeesPage = () => {
+const MbaFess = () => {
   const [openModal, setOpenModal] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
@@ -128,11 +128,13 @@ const AmityMBAFeesPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div>
+      <Headers />
+        <div className="min-h-screen bg-white pt-24 md:pt-20">
       {/* Top Section Nav */}
-      <nav className="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
+      <nav className="bg-white shadow-sm md:mt-15 mt-12 fixed top-0 left-0 w-full z-50">
         <div className="max-w-7xl md:mx-auto px-4 py-2 md:py-3 flex items-center gap-2">
-<div className="flex-1 flex items-center gap-2 overflow-x-auto no-scrollbar whitespace-nowrap">
+          <div className="flex-1 flex items-center gap-2 overflow-x-auto no-scrollbar whitespace-nowrap">
             {sectionItems.map((item) => (
               <button
                 key={item.id}
@@ -148,18 +150,37 @@ const AmityMBAFeesPage = () => {
             ))}
           </div>
           <button
-            onClick={() => setIsMobileMenuOpen(true)}
-            className="p-2 md:hidden"
-            aria-label="Open menu"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-2 md:hidden border border-gray-200 rounded-lg"
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
           >
-            <Menu className="w-6 h-6" />
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-gray-200 shadow-md">
+            <div className="max-w-7xl mx-auto px-4 py-3 grid grid-cols-2 gap-2">
+              {sectionItems.map((item) => (
+                <button
+                  key={`mobile-${item.id}`}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`w-full text-left text-sm px-3 py-2 rounded-lg border transition-colors ${
+                    activeSection === item.id
+                      ? "bg-indigo-50 text-indigo-700 border-indigo-200 font-semibold"
+                      : "bg-white text-gray-700 border-gray-200 hover:bg-indigo-50"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
       </nav>
 
      
 
-      <div className="max-w-screen-2xl mx-auto flex">
+      <div className="max-w-screen-2xl mx-auto flex flex-col gap-6">
 
        
 
@@ -980,7 +1001,8 @@ const AmityMBAFeesPage = () => {
         formType="apply"
       />
     </div>
-  );
-};
+    </div>
+  )
+}
 
-export default AmityMBAFeesPage;
+export default MbaFess

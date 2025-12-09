@@ -9,9 +9,9 @@ const RankingAccreditionsManipal = () => {
           <section className="py-12 sm:py-16 lg:py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12 sm:mb-16">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-queens">
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-queens">
                   Rankings & <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Accreditations</span>
-                </h2>
+                </h3>
                 <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
                   Recognized by leading accreditation bodies and ranked among India's top universities
                 </p>
@@ -29,7 +29,7 @@ const RankingAccreditionsManipal = () => {
                   { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327238/iqas_bieryy.webp', title: 'IQAS' },
                 ].map((item, i)=>(
                   <div key={i} className="group">
-                    <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div className="bg-white border-2 border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 transform hover:-translate-y-1 hover:border-orange-300">
                       <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4 sm:p-6">
                         <Image 
                           src={optimizeCloudinary(item.img)} 
