@@ -597,6 +597,7 @@ const Shoolini = () => {
   const [openModal, setOpenModal] = useState(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
    const [activeTab, setActiveTab] = useState("overview");
+   const [expandedCourses, setExpandedCourses] = useState({});
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
@@ -959,7 +960,27 @@ const Shoolini = () => {
                                  </div>
                                  <div className="flex items-start gap-2 text-gray-600">
                                    <span className="mt-1">⭐</span>
-                                   <span className="text-sm"><strong>Specialization:</strong> {course.specialization}</span>
+                                   <div className="text-sm">
+                                    <strong>Specialization:</strong>
+                                    {course.specialization.split(',').length > 1 ? (
+                                      <>
+                                        {' '}{course.specialization.split(',')[0]}
+                                        <button
+                                          onClick={() => setExpandedCourses(prev => ({...prev, [idx]: !prev[idx]}))}
+                                          className="text-red-500 text-xs ml-1 cursor-pointer focus:outline-none"
+                                        >
+                                          {expandedCourses[idx] ? '...less' : '...more'}
+                                        </button>
+                                        {expandedCourses[idx] && (
+                                          <p className="mt-1">
+                                            {course.specialization.split(',').slice(1).join(', ')}
+                                          </p>
+                                        )}
+                                      </>
+                                    ) : (
+                                      ` ${course.specialization}`
+                                    )}
+                                  </div>
                                  </div>
                                </div>
      

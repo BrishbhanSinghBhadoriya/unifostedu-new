@@ -5,7 +5,7 @@ import { CalendarDays, Clock, GraduationCap } from 'lucide-react/dist/cjs/lucide
 
 
 
-const Scholarship = () => {
+const Scholarship = ({ setOpenModal, openModal}) => {
   return (
     <div>
          <div   id="Scholarship">
@@ -220,18 +220,20 @@ const Scholarship = () => {
                                 <strong>Online BBA</strong>, <strong>Online BCA</strong>
                                 ,<strong>Online BA</strong>, <strong>Online MCA</strong>
                                 , and <strong>Online M.Com </strong>
-                                Fill the Enquiry Form  And  Apply Now  Form   .
-        
+                                Fill the Enquiry Form  And  Apply Now  Form.
+                                </p>
+                                  <div>
                                     <Button
                           onClick={() => setOpenModal({ type: "enquiry" })}
                           size="sm"
-                          className="bg-yellow-400 text-black border border-black hover:text-white hover:bg-[#452971] text-xs sm:text-sm px-3 sm:px-4 md:px-6 py-1.5 md:py-2 whitespace-nowrap cursor-Pointer"
+                          className="bg-yellow-400 text-black border border-black hover:text-white hover:bg-[#452971] mt-12 text-xs sm:text-sm px-3 sm:px-4 md:px-6 py-1.5 md:py-2 whitespace-nowrap cursor-Pointer"
                         >
                           <span className="hidden sm:inline">Enquire Now</span>
                           <span className="sm:hidden">Enquire</span>
                          
                         </Button>
-                              </p>
+                        
+                              </div>
                             </motion.div>
                           
                             {/* 4-Step Process */}

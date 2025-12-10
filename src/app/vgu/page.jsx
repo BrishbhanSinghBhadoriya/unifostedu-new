@@ -28,57 +28,57 @@ import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import PageContent from '@/components/PageContent/PageContent';
 const Vgu = () => {
   const selectionItem = [
-               { id: "introduction", label: "Introduction" },
-               { id: "campus-tour", label: "Campus Tour (Images, Videos)" },
-               { id: "explore-courses", label: "Explore Online Courses and Fee Structure" },
-               { id: "key-highlights", label: "Key Highlights" },
+    { id: "introduction", label: "Introduction" },
+    { id: "campus-tour", label: "Campus Tour (Images, Videos)" },
+    { id: "explore-courses", label: "Explore Online Courses and Fee Structure" },
+    { id: "key-highlights", label: "Key Highlights" },
              
-               { id: "admission-process", label: "Admission Process" },
-               { id: "placement-partners", label: "Placement Partners" },
-               { id: "placement-record", label: "Placement Record" },
-               { id: "student-review", label: "Student Reviews" },
-               { id: "faqs", label: "FAQs" },
+    { id: "admission-process", label: "Admission Process" },
+    { id: "placement-partners", label: "Placement Partners" },
+    { id: "placement-record", label: "Placement Record" },
+    { id: "student-review", label: "Student Reviews" },
+    { id: "faqs", label: "FAQs" },
               
-               { id: "conclusion", label: "Conclusion" }
-                  ];
+    { id: "conclusion", label: "Conclusion" }
+     ];
 
-                   const [activeSection, setActiveSection] = useState(selectionItem[0]?.id ?? null);
-                               console.log("Active Section:", activeSection);
+       const [activeSection, setActiveSection] = useState(selectionItem[0]?.id ?? null);
+       console.log("Active Section:", activeSection);
                                 
-                                           useEffect(() => {
-                                               if (!selectionItem.length) return undefined;
+        useEffect(() => {
+       if (!selectionItem.length) return undefined;
                                            
-                                               const observerOptions = {
-                                                 root: null,
-                                                 threshold: 0.25,
-                                                 rootMargin: "-45% 0px -45% 0px",
-                                               };
+             const observerOptions = {
+             root: null,
+             threshold: 0.25,
+             rootMargin: "-45% 0px -45% 0px",
+              };
                                            
-                                               const observer = new IntersectionObserver((entries) => {
-                                                 entries.forEach((entry) => {
-                                                   if (entry.isIntersecting) {
-                                                     setActiveSection(entry.target.id);
-                                                   }
-                                                 });
-                                               }, observerOptions);
+             const observer = new IntersectionObserver((entries) => {
+             entries.forEach((entry) => {
+             if (entry.isIntersecting) {
+             setActiveSection(entry.target.id);
+             }
+            });
+            }, observerOptions);
                                            
-                                               selectionItem.forEach((section) => {
-                                                 const element = document.getElementById(section.id);
-                                                 if (element) {
-                                                   observer.observe(element);
-                                                 }
-                                               });
+             selectionItem.forEach((section) => {
+             const element = document.getElementById(section.id);
+             if (element) {
+             observer.observe(element);
+            }
+            });
                                            
-                                               return () => {
-                                                 selectionItem.forEach((section) => {
-                                                   const element = document.getElementById(section.id);
-                                                   if (element) {
-                                                     observer.unobserve(element);
-                                                   }
-                                                 });
-                                                 observer.disconnect();
-                                               };
-                                             }, [selectionItem]);
+            return () => {
+           selectionItem.forEach((section) => {
+           const element = document.getElementById(section.id);
+           if (element) {
+          observer.unobserve(element);
+            }
+          });
+         observer.disconnect();
+          };
+         }, [selectionItem]);
 
   
   const ugCourses = [
@@ -90,6 +90,7 @@ const Vgu = () => {
       specialization: "General, Data Science, Blockchain Technology, Artificial Intelligence, Cloud Tehnology & Information Security, UX",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
       alt:"BCA In VGU",
+      universityShort: "VGU",
     },
     {
       course: "Bachelore of Arts(BA)",
@@ -99,6 +100,7 @@ const Vgu = () => {
       specialization: "Economics + Public Policy + Computer Applications, Public Policy + English, English + History + Political Science, Computer Applications + Public Policy/IR, Political Science + International Relations + Public Policy,",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
       alt:"BA In VGU",
+       universityShort: "VGU",
     },
     {
       course: "Bachelor of Business Administration (BBA)",
@@ -108,6 +110,7 @@ const Vgu = () => {
       specialization: "General, Digital Marketing, Retail Management, Fintech",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
       alt:"BBA In VGU",
+       universityShort: "VGU",
 
     },
    
@@ -122,6 +125,7 @@ const Vgu = () => {
       specialization: ['Finance', 'Marketing', 'Human Resources', 'Operations', 'Business Analytics', 'Information Technology Management', 'Helthcare Management', 'Agribusiness Management', 'International Business'],
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
       alt:"MBA In VGU",
+       universityShort: "VGU",
     },
     {
       course: "Master of Computer Applications (MCA)",
@@ -131,6 +135,7 @@ const Vgu = () => {
       specialization: "General",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
       alt:"MCA In VGU",
+       universityShort: "VGU",
     },
      {
       course: "Master of Arts (English)",
@@ -140,6 +145,7 @@ const Vgu = () => {
       specialization: "English",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma_ywzsnb.webp",
       alt:"MA In VGU",
+       universityShort: "VGU",
     },
     {
       course: "Master of Science (Maths)",
@@ -149,15 +155,18 @@ const Vgu = () => {
       specialization: " Mathematics",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
       alt:"MSc In VGU",
+       universityShort: "VGU",
     },
     {
       course: "Master of Arts Journalism and Mass Communication (MAJMC)",
       duration: "2 Years",
       eligibility: "Graduation in any stream",
       fees: "₹72,000/-",
+       universityShort: "VGU",
       
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
       alt:"MAJMC In VGU",
+       universityShort: "VGU",
     }
 
   ];
@@ -906,119 +915,131 @@ Through the campus tour, students can explore digital classrooms, study resource
 />
 <section id='explore-courses'></section>
     {/* Courses Section */}
-            <section id="explore-courses" className="py-20 bg-white">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                  <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                    Explore <span className="bg-[#821812] bg-clip-text text-transparent">Online Programs</span>
-                  </h2>
-                  <p className="text-xl text-gray-600 max-w-3xl mx-auto ">
-                    Choose from industry-relevant programs designed for working professionals and fresh graduates
-                  </p>
-                </div>
-    
-                <Tabs.Root value={activeTab} onValueChange={setActiveTab} className="space-y-12">
-                  {/* Tab Buttons */}
-                  <div className="flex justify-center">
-                    <Tabs.List className="inline-flex bg-gray-100/80 backdrop-blur-sm rounded-2xl p-2 shadow-lg border border-gray-200">
-                      {[
-                        { value: 'all', label: 'All Programs' },
-                        { value: 'ug', label: 'Undergraduate' },
-                        { value: 'pg', label: 'Postgraduate' }
-                      ].map((tab) => (
-                        <Tabs.Trigger
-                          key={tab.value}
-                          value={tab.value}
-                          className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg sm:rounded-xl font-semibold transition-all duration-300 text-sm sm:text-base ${
-                            activeTab === tab.value
-                              ? 'bg-[#821812] text-white shadow-lg'
-                              : 'text-gray-700 hover:text-[#f7188b] hover:bg-white'
-                          }`}
-                        >
-                          {tab.label}
-                        </Tabs.Trigger>
-                      ))}
-                    </Tabs.List>
-                  </div>
-    
-                  {/* Course Grid */}
-                  <Tabs.Content value={activeTab} className="outline-none">
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-                      {(activeTab === 'all' ? [...ugCourses, ...pgCourses] : 
-                        activeTab === 'ug' ? ugCourses : pgCourses).map((course, idx) => (
-                        (() => {
-                          const courseId = `${activeTab}-${idx}`;
-                        <div key={idx} className="group">
-                          <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
-                            {/* Course Image */}
-                            <div className="relative h-48 overflow-hidden">
-                              <Image
-                                src={course.image}
-                                alt={course.alt}
-                                fill
-                                className="object-cover group-hover:scale-110 transition-transform duration-500"
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                              <div className="absolute bottom-4 left-4">
-                                <span className="bg-[#821812] text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                  {course.universityShort}
-                                </span>
-                              </div>
-                            </div>
-    
-                            {/* Course Content */}
-                            <div className="p-6 space-y-4">
-                              <h3 className="text-xl font-bold text-gray-900 line-clamp-2">{course.course}</h3>
-                              
-                              <div className="space-y-2">
-                                <div className="flex items-center gap-2 text-gray-600">
-                                  <span>⏱️</span>
-                                  <span className="text-sm">{course.duration}</span>
-                                </div>
-                                <div className="flex items-center gap-2 text-gray-600">
-                                  <span>🎓</span>
-                                  <span className="text-sm">{course.eligibility}</span>
-                                </div>
-                                <div className="flex items-center gap-2 text-gray-600">
-                                  <span>💰</span>
-                                  <span className="text-sm">₹{course.fees}</span>
-                                </div>
-                                {course.specialization && (
-                                  <div>
-                                    <div className="flex items-start gap-2 text-gray-600">
-                                      <span>✨</span>
-                                      <span className={`text-sm ${!expandedSpecializations[courseId] && 'line-clamp-2'}`}>
-                                        {Array.isArray(course.specialization) ? course.specialization.join(', ') : course.specialization}
-                                      </span>
-                                    </div>
-                                    {(Array.isArray(course.specialization) ? course.specialization.join(', ').length > 80 : course.specialization.length > 80) && (
-                                      <button
-                                        onClick={() => toggleSpecialization(courseId)}
-                                        className="text-xs text-[#821812] font-semibold mt-1 hover:underline"
-                                      >
-                                        {expandedSpecializations[courseId] ? 'कम दिखाएं' : 'और दिखाएं'}
-                                      </button>
-                                    )}
-                                  </div>
-                                )}
-                              </div>
-    
-                              <button 
-                                onClick={() => setOpenModal({ type: 'apply', program: course.course })}
-                                className="w-full bg-[#821812] hover:from-[#ec027c] hover:to-[#d40270] text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
-                              >
-                                Apply Now
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        })()
-                      ))}
+          <section id="explore-courses" className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div className="text-center mb-16">
+      <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+        Explore <span className="bg-[#821812] bg-clip-text text-transparent">Online Programs</span>
+      </h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        Choose from industry-relevant programs designed for working professionals and fresh graduates
+      </p>
+    </div>
+
+    <Tabs.Root value={activeTab} onValueChange={setActiveTab} className="space-y-12">
+
+      {/* Tabs */}
+      <div className="flex justify-center">
+        <Tabs.List className="inline-flex bg-gray-100/80 backdrop-blur-sm rounded-2xl p-2 shadow-lg border border-gray-200">
+          {[
+            { value: "all", label: "All Programs" },
+            { value: "ug", label: "Undergraduate" },
+            { value: "pg", label: "Postgraduate" }
+          ].map((tab) => (
+            <Tabs.Trigger
+              key={tab.value}
+              value={tab.value}
+              className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg sm:rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 ${
+                activeTab === tab.value
+                  ? "bg-[#821812] text-white shadow-lg"
+                  : "text-gray-700 hover:text-[#821812] hover:bg-white"
+              }`}
+            >
+              {tab.label}
+            </Tabs.Trigger>
+          ))}
+        </Tabs.List>
+      </div>
+
+      {/* Course Cards */}
+      <Tabs.Content value={activeTab} className="outline-none">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+          {(activeTab === "all"
+            ? [...ugCourses, ...pgCourses]
+            : activeTab === "ug"
+            ? ugCourses
+            : pgCourses
+          ).map((course, idx) => {
+
+            const courseId = `${activeTab}-${idx}`;
+
+            return (
+              <div key={courseId} className="group">
+                <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
+                  
+                  {/* Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={course.image}
+                      alt={course.alt}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4">
+                      <span className="bg-[#821812] text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        {course.universityShort}
+                      </span>
                     </div>
-                  </Tabs.Content>
-                </Tabs.Root>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6 space-y-4">
+                    <h3 className="text-xl font-bold text-gray-900 line-clamp-2">
+                      {course.course}
+                    </h3>
+
+                    <div className="space-y-2 text-gray-600">
+                      <p className="flex items-center gap-2 text-sm">⏱️ {course.duration}</p>
+                      <p className="flex items-center gap-2 text-sm">🎓 {course.eligibility}</p>
+                      <p className="flex items-center gap-2 text-sm">💰 ₹{course.fees}</p>
+
+                      {/* Specialization */}
+                      {course.specialization && (
+                        <div>
+                          <p className={`text-sm ${!expandedSpecializations[courseId] && "line-clamp-2"}`}>
+                            {Array.isArray(course.specialization)
+                              ? course.specialization.join(", ")
+                              : course.specialization}
+                          </p>
+
+                          {(Array.isArray(course.specialization)
+                            ? course.specialization.join(", ").length > 80
+                            : course.specialization.length > 80) && (
+                            <button
+                              onClick={() => toggleSpecialization(courseId)}
+                              className="text-xs text-[#821812] font-semibold hover:underline mt-1"
+                            >
+                              {expandedSpecializations[courseId] ? "Less Show" : "More Show"}
+                            </button>
+                          )}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Apply Button */}
+                    <button
+                      onClick={() => setOpenModal({ type: "apply", program: course.course })}
+                      className="w-full bg-[#821812] text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                    >
+                      Apply Now
+                    </button>
+                  </div>
+
+                </div>
               </div>
-            </section>
+            );
+          })}
+
+        </div>
+      </Tabs.Content>
+
+    </Tabs.Root>
+  </div>
+</section>
+
 
      <section className="py-8 sm:py-12 px-4 sm:px-6 bg-gray-50">
   <div className="max-w-6xl mx-auto">
