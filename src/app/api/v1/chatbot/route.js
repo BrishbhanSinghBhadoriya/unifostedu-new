@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const N8N_WEBHOOK_URL = 'https://n8n.unifostedu.com:5678/webhook/691c118c-a79e-4be3-8c9d-171704236806';
+const N8N_WEBHOOK_URL = 'https://n8n.unifostedu.com/webhook/691c118c-a79e-4be3-8c9d-171704236806';
 
 // Redirect chatbot API calls to n8n webhook
 export async function POST(request) {
