@@ -34,16 +34,17 @@ const SMU = () => {
                      
                { id: "introduction", label: "Introduction" },
                { id: "campus-tour", label: "Campus Tour" },
-               { id: "explore-courses", label: "Explore Online Courses and Fee Structure" },
-               { id: "key-highlights", label: "Key Highlights" },
                { id: "dates and session", label: "Admission Dates and Upcoming & Ongoing Sessions" },
+               { id: "explore-courses", label: "Explore Online Courses and Fee Structure" },
                { id: "admission-process", label: "Admission Process" },
-               { id: "placement-partners", label: "Placement Partners" },
+               { id: "key-highlights", label: "Key Highlights" },
+               { id: "faqs", label: "FAQs" },
                { id: "placement-record", label: "Placement Record" },
                { id: "student-review", label: "Student Reviews" },
-               { id: "faqs", label: "FAQs" },
+               { id: "placement-partners", label: "Placement Partners" },                  
                { id: "reviews", label: "Sikkim Manipal University Reviews" },
-               { id: "conclusion", label: "Conclusion" }
+               { id: "conclusion", label: "Conclusion" },
+              
                
                   ];
   const [activeSection, setActiveSection] = useState(sectionItem[0]?.id ?? null);

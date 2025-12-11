@@ -461,14 +461,20 @@ const AmityLandingPage = () => {
             <Resources fadeIn={fadeIn} staggerChildren={staggerChildren}/>
             <Achievements/> 
            
-           <Scholarship/>
-           <Certificate/>
+           <Scholarship setOpenModal={setOpenModal} openModal={openModal}/>
+           <Certificate setOpenModal={setOpenModal} openModal={openModal}/>
            <Placements/>
-            <OutReach cityHighlights={cityHighlights}/>
+           <OutReach
+               cityHighlights={cityHighlights}
+               setOpenModal={setOpenModal}
+               openModal={openModal}
+               />
+
+
             <HiringPartners fadeIn={fadeIn} staggerChildren={staggerChildren}  setOpenModal={setOpenModal}/>
             
             <CTA/>
-            <ResourceLinks/>
+            <ResourceLinks setOpenModal={setOpenModal} openModal={openModal}/>
             <Faq
               faqData={faqData}
               openIndex={openIndex}
