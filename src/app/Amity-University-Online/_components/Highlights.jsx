@@ -82,27 +82,7 @@ const Highlights = ({setOpenModal}) => {
           professional journey.
         </p>
 
-        {/* CTA Buttons - No animation */}
-        <div className="mt-6 sm:mt-8 md:mt-10 text-center">
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-yellow-400 hover:bg-yellow-500 text-black px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base md:text-lg rounded-full w-full sm:w-auto"
-              onClick={() => setOpenModal({ type: "apply" })}
-            >
-              Apply Now
-            </Button>
-
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-gray-300 hover:border-blue-400 px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base md:text-lg rounded-full w-full sm:w-auto"
-              onClick={() => setOpenModal({ type: "enquiry" })}
-            >
-              Enquire Now
-            </Button>
-          </div>
-        </div>
+        
       </div>
     </section>
   )
