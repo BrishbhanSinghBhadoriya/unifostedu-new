@@ -3164,7 +3164,7 @@ function normalizeContainer(e) {
 	return isString$2(e) ? document.querySelector(e) : e;
 }
 const defaultOptions = {
-	webhookUrl: "http://localhost:5678",
+	webhookUrl: "https://n8n.unifostedu.com/webhook/691c118c-a79e-4be3-8c9d-171704236806",
 	webhookConfig: {
 		method: "POST",
 		headers: {}

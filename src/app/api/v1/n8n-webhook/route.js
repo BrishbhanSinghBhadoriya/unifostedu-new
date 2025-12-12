@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 
-const N8N_WEBHOOK_URL = 'https://n8n.unifostedu.com/webhook/c18db3a6-b362-494e-adc6-f838628c8a97';
+// Active n8n webhook endpoint (previous one returned 404)
+const N8N_WEBHOOK_URL = 'https://n8n.unifostedu.com/webhook/691c118c-a79e-4be3-8c9d-171704236806';
 
 export async function POST(request) {
   try {
@@ -16,7 +17,7 @@ export async function POST(request) {
       );
     }
 
-    // Call n8n webhook
+   
     const response = await fetch(N8N_WEBHOOK_URL, {
       method: 'POST',
       headers: {
