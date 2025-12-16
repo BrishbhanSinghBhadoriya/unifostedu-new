@@ -12,7 +12,7 @@ const highlightCards = [
   },
   {
     icon: Globe,
-    title: "Globally Recognized Online Degrees",
+    title: "Globally Recognized Online Degrees Programs",
     description: "India's first university offering online MBA & BBA programs with global recognition."
   },
   {

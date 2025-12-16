@@ -65,7 +65,7 @@ const Footer = ({ setOpenModal,openModal }) => {
             </div>
 
             <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-4">
-              Transforming lives through quality education and innovation. UGC-approved online degrees from Amity University.
+              Transforming lives through quality education and innovation. UGC-approved online degree programs from Amity University.
             </p>
 
              <h4 className="font-semibold mb-2 text-sm sm:text-base">Contact</h4>

@@ -27,23 +27,23 @@ const About = ({openmodel ,setOpenModal}) => {
             online degree programs designed for learners, working
             professionals, and entrepreneurs who aim to enhance their
             skills and advance their careers in the future. It is ranked
-            among the <Link href="/amity-online-mba-total-fees" className="text-blue-600 hover:text-blue-800 underline">best online universities in India</Link>, Amity Online
-            offers globally recognized <Link href="best-online-mca-university-in-india" className="text-blue-600 hover:text-blue-800 underline">online MBA in India 2025</Link>, <Link href="best-online-mca-university-in-india" className="text-blue-600 hover:text-blue-800 underline">online BBA</Link>, <Link href="best-online-mca-university-in-india" className="text-blue-600 hover:text-blue-800 underline">online MCA</Link>, online M.Com, online BA, and <Link href="best-online-mca-university-in-india" className="text-blue-600 hover:text-blue-800 underline">online BCA</Link> programs.
+            among the <Link href="/amity-online-mba-total-fees" className="font-bold">best online universities in India</Link>, Amity Online
+            offers globally recognized <Link href="best-online-mca-university-in-india" className="font-bold">online MBA in India 2025</Link>, <Link href="best-online-mca-university-in-india" className="font-bold">online BBA</Link>, <Link href="best-online-mca-university-in-india" className="font-bold">online MCA</Link>, online M.Com, online BA, and <Link href="best-online-mca-university-in-india" className="font-bold">online BCA</Link> programs.
           </p>
 
           <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-5 md:mb-6">
             Our mission is to make quality online education
             accessible to all — whether someone is
-            searching for the <Link href="/Best-online-MBA-for-working-professionals-India-2025" className="text-blue-600 hover:text-blue-800 underline">best online MBA in India</Link>, top online MBA
+            searching for the <Link href="/Best-online-MBA-for-working-professionals-India-2025" className="font-bold">best online MBA in India</Link>, top online MBA
             for working professionals, or affordable online degree
             programs. Amity Online provides AI-driven tools, live online classes,
-            recorded lectures, personalized mentorship, and <Link href="//Best-online-MBA-for-working-professionals-India-2025" className="text-blue-600 hover:text-blue-800 underline">career support</Link>.
+            recorded lectures, personalized mentorship, and <Link href="//Best-online-MBA-for-working-professionals-India-2025" className="font-bold">career support</Link>.
           </p>
 
           <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-5 md:mb-6">
-            Amity Online's <Link href="best-online-mca-university-in-india" className="text-blue-600 hover:text-blue-800 underline">MBA program</Link> is designed for both fresh graduates and working professionals.
+            Amity Online's <Link href="best-online-mca-university-in-india" className="font-bold">MBA program</Link> is designed for both fresh graduates and working professionals.
             Our AICTE and UGC-approved courses specialize in HR, Finance, Marketing, Analytics, 
-            International Business, and Digital Marketing — making Amity one of the <Link href="/best-online-mca-university-in-india" className="text-blue-600 hover:text-blue-800 underline">best universities for online education</Link>.
+            International Business, and Digital Marketing — making Amity one of the <Link href="/best-online-mca-university-in-india" className="font-bold">best universities for online education</Link>.
           </p>
 
           {/* Quick Links Section */}

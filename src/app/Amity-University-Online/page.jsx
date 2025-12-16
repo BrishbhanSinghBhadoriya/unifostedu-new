@@ -208,13 +208,13 @@ const AmityLandingPage = () => {
     "online MBA Mumbai Amity",
     "online MBA Bangalore Amity",
     "flexible online programs Amity University",
-    "Amity University Online vs regular degree"
+    "Amity University Online vs regular degree programs"
   ];
 
   const metaKeywordString = metaKeywords.join(", ");
 
   const metaDescription =
-    "Explore UGC-entitled Amity University Online MBA, BBA, BCA, MCA and M.Com degrees. Review 2025 fees structure, admission process, scholarships, placement assistance.";
+    "Explore UGC-entitled Amity University Online MBA, BBA, BCA, MCA and M.Com degree programs. Review 2025 fees structure, admission process, scholarships, placement assistance.";
 
 
   const cityHighlights = [
@@ -236,7 +236,7 @@ const AmityLandingPage = () => {
     {
       city: "Kolkata & Eastern India",
       focus:
-        "Learners from Kolkata, Bhubaneswar, and Guwahati opt for flexible Amity University Online degrees to qualify for government jobs and PSU roles without relocating.",
+        "Learners from Kolkata, Bhubaneswar, and Guwahati opt for flexible Amity University Online degree programs to qualify for government jobs and PSU roles without relocating.",
     },
   ];
 
@@ -249,10 +249,10 @@ const AmityLandingPage = () => {
     {
       question: "Is an Amity University Online degree valid for government jobs and abroad?",
       answer:
-        "Absolutely. Amity University Online degrees are accepted for government jobs in India and are globally recognized, making them suitable for higher studies or international employment opportunities.",
+        "Absolutely. Amity University Online degree programs are accepted for government jobs in India and are globally recognized, making them suitable for higher studies or international employment opportunities.",
     },
     {
-      question: "What is the 2025 Amity University Online MBA fees structure?",
+      question: "What is the 2026 Amity University Online MBA fees 2026 structure?",
       answer:
         "For the 2025 intake, the Amity University Online MBA fees structure ranges from ₹1,99,000 to ₹2,99,000 depending on the specialization. Flexible EMI plans and no-cost installment options are available for working professionals.",
     },

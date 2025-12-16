@@ -10,15 +10,15 @@ const Feature = ({setOpenModal}) => {
      const features = [
         {
           icon: GraduationCap,
-          title: "UGC Approved Degrees",
+          title: "UGC Approved Degree Programs",
           description:
-            "All programs are UGC approved and globally recognized for academic excellence",
+            "All degree programs are UGC approved and globally recognized for academic excellence",
         },
         {
           icon: Globe,
           title: "Global Recognition",
           description:
-            "Degrees recognized by WES, international universities and multinational corporations",
+            "Degree programs recognized by WES, international universities and multinational corporations",
         },
         {
           icon: BookOpen,
@@ -91,7 +91,7 @@ const Feature = ({setOpenModal}) => {
                               <p className="text-gray-700 text-lg leading-relaxed mb-6">
                                 Amity University Online is a UGC-entitled and
                                 NAAC-accredited online university in India, ensuring
-                                that every online degree, online MBA, or online BBA you
+                                that every online degree programs, online MBA, or online BBA you
                                 earn is recognized by government bodies throughout the
                                 world. Our programs meet the standard quality of
                                 education set by the Government of India and are
@@ -149,7 +149,7 @@ const Feature = ({setOpenModal}) => {
                                 counsellor will be assigned who will help you throughout
                                 your journey. Our counselors will guide you in finding
                                 the right career path and choosing it after completing
-                                your online degree in India. Thousands of Amity Online
+                                your online degree programs in India. Thousands of Amity Online
                                 alumni now work in Fortune 500 companies, startups, and
                                 multinational organizations.{" "}
                               </p>

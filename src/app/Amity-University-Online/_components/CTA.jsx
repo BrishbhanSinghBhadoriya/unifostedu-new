@@ -17,7 +17,7 @@ const CTA = () => {
                   </h2>
                   <p className="text-blue-100 text-lg mb-8 max-w-3xl mx-auto">
                     Join thousands of students who have transformed their
-                    careers with Amity University's UGC-entitled online degrees
+                    careers with Amity University's UGC-entitled online degree programs
                   </p>
                 </motion.div>
               </div>

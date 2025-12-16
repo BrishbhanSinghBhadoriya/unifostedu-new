@@ -1,5 +1,6 @@
 "use client";
 import React, { memo } from 'react'
+import { useRouter } from 'next/navigation';
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -20,13 +21,14 @@ const StatItem = memo(({ stat, index }) => (
 StatItem.displayName = 'StatItem';
 
 // Memoized program card for better performance
-const ProgramCard = memo(({ item, index }) => (
+const ProgramCard = memo(({ item, index, onClick }) => (
   <div
     className="rounded-lg sm:rounded-xl overflow-hidden shadow-md sm:shadow-lg bg-white cursor-pointer hover:shadow-xl transition-shadow duration-200"
+    onClick={onClick}
   >
     {/* Image - use native img for better LCP on mobile */}
     <div className="h-20 sm:h-24 md:h-32 lg:h-40 w-full bg-gray-100">
-      <img
+      <Image
         src={item.image}
         alt={`${item.program} program at Amity Online`}
         className="h-full w-full object-cover"
@@ -49,7 +51,8 @@ const ProgramCard = memo(({ item, index }) => (
 ));
 ProgramCard.displayName = 'ProgramCard';
 
-const Introduction = ({ inter, playfair, setOpenModal}) => {
+const Introduction = ({ inter, playfair, setOpenModal }) => {
+  const router = useRouter();
   const stats = [
     { number: "1.6L+", label: "Students Enrolled", icon: Users },
     { number: "25+", label: "Years of Excellence", icon: Award },
@@ -112,9 +115,8 @@ const Introduction = ({ inter, playfair, setOpenModal}) => {
             <h1
               className={`${playfair?.className || ''} text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-2 sm:mb-3`}
             >
-              Amity University Online MBA &amp; Degrees
-              <span className="block text-transparent bg-clip-text bg-yellow-600">
-                UGC-Entitled NAAC A+ Programs for 2025
+                Amity University Online Degree Programs | Courses, Eligibility & Fees 2026              <span className="block text-transparent bg-clip-text bg-yellow-600">
+                UGC-Entitled NAAC A+ Programs for 2026
               </span>
             </h1>
 
@@ -129,7 +131,18 @@ const Introduction = ({ inter, playfair, setOpenModal}) => {
             {/* Program Cards - No animations for faster render */}
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4 lg:gap-6 mb-4 sm:mb-5 md:mb-6 lg:mb-8">
               {specializations.map((item, index) => (
-                <ProgramCard key={index} item={item} index={index} />
+                <ProgramCard
+                  key={index}
+                  item={item}
+                  index={index}
+                  onClick={() => {
+                    if (item.program === "MBA") {
+                      router.push("/amity-online-mba-total-fees");
+                    } else if (item.program === "MCA") {
+                      router.push("/best-online-mca-university-in-india");
+                    }
+                  }}
+                />
               ))}
             </div>
 

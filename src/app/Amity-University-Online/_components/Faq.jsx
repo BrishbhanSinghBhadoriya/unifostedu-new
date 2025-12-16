@@ -8,7 +8,7 @@ const Faq = ({ faqData, openIndex, setOpenIndex, setOpenModal }) => {
         <section id="FAQs" className="max-w-6xl mx-auto py-8 sm:py-12 md:py-16 px-3 sm:px-4">
           
                       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-8 md:mb-12">
-                        FAQs on Amity University Online MBA &amp; Degrees
+                        FAQs on Amity University Online MBA &amp; Degree Programs
                       </h2>
         
                       <div className="space-y-3 sm:space-y-4">

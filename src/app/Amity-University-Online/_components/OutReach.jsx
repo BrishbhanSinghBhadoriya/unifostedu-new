@@ -20,8 +20,8 @@ const OutReach = ({ cityHighlights, setOpenModal, openModal }) => {
               Study Online from Delhi, Mumbai, Bangalore &amp; Beyond
             </h2>
             <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
-              Whether you're searching for an “online MBA near me” or want a flexible 
-              Amity University Online degree while working in metro cities, our digital 
+              Whether you're searching for an “online MBA degree program near me” or want a flexible 
+              Amity University Online degree program while working in metro cities, our digital 
               campus supports learners across India with weekend live sessions, 
               city-specific mentoring, and dedicated counsellors.
             </p>
@@ -57,7 +57,7 @@ const OutReach = ({ cityHighlights, setOpenModal, openModal }) => {
             <p className="text-sm md:text-base leading-relaxed text-blue-100">
               Our admissions advisors connect with students across Tier-1 and 
               Tier-2 cities, helping you choose the right Amity University Online 
-              programme, understand the latest fees structure, and align your online 
+              programme, understand the latest fees 2026 structure, and align your online 
               degree with regional career opportunities. Join the monthly Amity online 
               campus tour webinars to explore the digital classrooms, placement labs, 
               and learner success stories before you enrol.
