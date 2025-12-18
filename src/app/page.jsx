@@ -51,7 +51,7 @@ export const dynamic = "force-dynamic";
 
 export default async function Home() {
   const data = await getLandingData();
-  console.log("data is",data)
+
   return <Landing data={data} />
 
 }

@@ -53,7 +53,7 @@ const OPJindal = () => {
               { id: "opju-reviews", label: "OP Jindal University Online Reviews" },
             ]
   const [activeSection, setActiveSection] = useState(sectionItem[0]?.id ?? null);
-           console.log("Active Section:", activeSection);
+
                       
            useEffect(() => {
                                      if (!sectionItem.length) return undefined;
@@ -128,7 +128,7 @@ const OPJindal = () => {
       };
     }, [sliderImages.length]);
     const handleOnclickEnquiry = () => {
-      console.log('Enquiry button clicked')
+
       setOpenModal({ type: 'enquiry' });
     };
   const ugCourses = [

@@ -30,7 +30,7 @@ const Dypatil = () => {
                 { id: "Faq", label: "FAQ" },
               ]
        const [activeSection, setActiveSection] = useState(selectionItem[0]?.id ?? null);
-             console.log("Active Section:", activeSection);
+        
               
                          useEffect(() => {
                              if (!selectionItem.length) return undefined;

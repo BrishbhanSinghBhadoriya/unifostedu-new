@@ -17,7 +17,7 @@
       {
         "name": "Amity University",
         "location": "Noida, Uttar Pradesh",
-        "NIRF": "29",
+        "NIRF": "29", 
         "rating": 4.8,
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp",
         "specializations": ["General Management", "Dual Specialization", "Human Resource Analytics", "Data Science", "Business Analytics", "International Finance", "Digital Entrepreneurship", "Digital Marketing Management", "General Management with optional Specialization"],

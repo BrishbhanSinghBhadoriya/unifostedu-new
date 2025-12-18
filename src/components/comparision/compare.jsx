@@ -315,7 +315,6 @@ const Compare = () => {
 
   const renderCourseStep = () => {
     const currentList = courseOptions[selectedCategory] || courseOptions.default;
-    console.log("currentList",currentList);
 
     return (
       <>
@@ -329,7 +328,7 @@ const Compare = () => {
                 key={course.label}
                 onClick={() => {
                   setSelectedCourse(course.id);
-                  console.log("selectedCourse", course.id);
+                
                   const meta = currentList.find(c => c.id === course.id);
                   const hasSpecs = meta?.specialization && meta.specialization.length > 0;
                   setStep(hasSpecs ? 3 : 4);
@@ -454,7 +453,7 @@ const Compare = () => {
               key={score}
               onClick={() => {
                 setLastDegreeScore(score);
-                console.log('Flow completed with score:', score);
+        
               }}
               className={`rounded-2xl border-2 px-4 py-6 text-center text-sm sm:text-base font-semibold transition-all cursor-pointer h-full flex items-center justify-center ${
                 isSelected
@@ -483,9 +482,7 @@ const Compare = () => {
               qualification: selectedQualification,
               score: lastDegreeScore
             };
-            console.log('=== Form Submission Data ===');
-            console.log(formData);
-            console.log('===========================');
+           
           }}
           className="w-full sm:w-auto px-12 py-4 text-lg bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg cursor-pointer"
         >

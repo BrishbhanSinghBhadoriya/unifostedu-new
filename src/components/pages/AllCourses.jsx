@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { FaClock, FaUsers, FaGraduationCap, FaBriefcase, FaUserTie, FaBook, FaUniversity, FaLaptopCode, FaChartLine, FaPalette, FaBalanceScale } from "react-icons/fa";
 
 export function AllCourses({ courses = [] }) {
-    console.log(courses);
+
     const getCourseHref = (title) => {
         const map = {
           "MBA Online": "/courses/mba-online",

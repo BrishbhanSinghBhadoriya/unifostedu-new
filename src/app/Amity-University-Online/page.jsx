@@ -20,7 +20,6 @@ import Introduction from "./_components/Introduction";
 import About from "./_components/About";
 import Headers from "./_components/Headers";
 
-// Dynamic imports for below-the-fold components - reduces initial JS bundle
 const Courses = dynamic(() => import("./_components/Courses"), { ssr: false });
 const Highlights = dynamic(() => import("./_components/Highlights"), { ssr: false });
 const Accreditation = dynamic(() => import("./_components/Accreditation"), { ssr: false });
@@ -65,8 +64,7 @@ const inter = Inter({
 });
 
 const AmityLandingPage = () => {
-  const [openModal, setOpenModal] = useState(null);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
   const sectionItems = SECTION_ITEMS;
   const ugCourses = [
     {
@@ -414,7 +412,7 @@ const AmityLandingPage = () => {
     <React.Fragment>
       <div className="min-h-screen bg-white relative" style={{ overflowX: "hidden" }}>
 
-       <Headers setOpenModal={setOpenModal} setIsMobileMenuOpen={setIsMobileMenuOpen}/>
+       <Headers />
 
 
         {/* Notification Bar - Optimized */}
@@ -483,26 +481,7 @@ const AmityLandingPage = () => {
             />
             <Footer setOpenModal={setOpenModal} openModal={openModal} />
           </main>
-          {openModal && (
-            <ApplyEnquiryModal
-              open={!!openModal}
-              onOpenChange={(v) => !v && setOpenModal(null)}
-              title={
-                openModal.type === "apply"
-                  ? "Start Your Application"
-                  : "Enquire Now"
-              }
-              subtitle={
-                openModal.type === "apply"
-                  ? "Fill the quick form to begin your admission process"
-                  : "Share your details and our counselor will reach out"
-              }
-              imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/amityForm_xdbvvf.webp"
-              universityName="Amity University Online"
-              defaultProgram="MBA"
-              formType={openModal.type === "apply" ? "getStarted" : "general"}
-            />
-          )}
+         
         </div>
       </div>
     </React.Fragment>

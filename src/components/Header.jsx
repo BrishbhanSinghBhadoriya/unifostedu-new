@@ -240,7 +240,7 @@ const Header = () => {
       "/muj-online-bca",
       "/muj-online-ba",
       "/muj-online-mba",
-      "/muj-online-mca"
+      "/muj-online-mca",
     ];
 
     const shouldHide = hideHeaderRoutes.some(
@@ -321,12 +321,14 @@ const Header = () => {
               <Link href="/" className="flex-shrink-0 group">
                 <div className="relative">
                   <Image
-                    width={140}
-                    height={56}
-                    src="https://res.cloudinary.com/didkrwhbu/image/upload/v1764316067/uniLogoo_nc6vhs.png"
+                    src="https://res.cloudinary.com/didkrwhbu/image/upload/c_fit,w_160,h_80,q_auto,f_auto/uniLogoo_nc6vhs.png"
                     alt="Unifost Logo"
+                    width={160}
+                    height={80}
+                    sizes="160px"
                     className="h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 2xl:h-20 w-auto transition-transform duration-300 group-hover:scale-105"
                     priority
+                    unoptimized
                   />
                 </div>
               </Link>
@@ -350,7 +352,7 @@ const Header = () => {
                   </Link>
                 ))}
 
-                {/* Universities Dropdown */}
+               
                 <div className="relative">
                   <button
                     onClick={() =>
@@ -401,7 +403,10 @@ const Header = () => {
 
                 {/* Blogs Dropdown */}
                 <div className="relative">
-                  <BlogsDropdown menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+                  <BlogsDropdown
+                    menuOpen={menuOpen}
+                    setMenuOpen={setMenuOpen}
+                  />
                 </div>
               </nav>
 
@@ -443,7 +448,6 @@ const Header = () => {
                 )}
               </div>
 
-
               {/* Action Buttons */}
               <div className="hidden lg:flex items-center gap-2 lg:gap-3 flex-shrink-0">
                 <button
@@ -483,18 +487,17 @@ const Header = () => {
 
               {/* Mobile Compare AI + Menu Button */}
               <div className="flex items-center gap-2 lg:hidden flex-shrink-0">
-  <button
-    onClick={() => router.push("/comapre-university")}
-    className="relative flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-orange-600 font-semibold text-xs shadow-sm hover:shadow-md hover:scale-[1.03] transition-all duration-200 cursor-pointer whitespace-nowrap"
-  >
-    {/* AI Badge */}
-    <span className="absolute -top-1 -right-1 bg-rose-600 text-white text-[8px] font-bold px-1.5 py-0.5 rounded-md shadow-md">
-      AI
-    </span>
+                <button
+                  onClick={() => router.push("/comapre-university")}
+                  className="relative flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-orange-600 font-semibold text-xs shadow-sm hover:shadow-md hover:scale-[1.03] transition-all duration-200 cursor-pointer whitespace-nowrap">
+                  {/* AI Badge */}
+                  <span className="absolute -top-1 -right-1 bg-rose-600 text-white text-[8px] font-bold px-1.5 py-0.5 rounded-md shadow-md">
+                    AI
+                  </span>
 
-    <FaCompass className="text-xs text-orange-500 bg-orange-100 rounded-full p-1 flex-shrink-0" />
-    <span>Compare</span>
-  </button>
+                  <FaCompass className="text-xs text-orange-500 bg-orange-100 rounded-full p-1 flex-shrink-0" />
+                  <span>Compare</span>
+                </button>
 
                 <button
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -515,7 +518,9 @@ const Header = () => {
               <div className="flex items-center justify-end gap-4 lg:gap-5 xl:gap-6 py-2 text-xs lg:text-sm">
                 <div className="flex items-center gap-1.5 lg:gap-2 text-slate-600">
                   <FaPhoneAlt className="text-blue-500 text-xs lg:text-sm" />
-                  <span className="font-medium whitespace-nowrap">+91 7042646766</span>
+                  <span className="font-medium whitespace-nowrap">
+                    +91 7042646766
+                  </span>
                 </div>
                 <div className="flex items-center gap-1.5 lg:gap-2 text-slate-600">
                   <FaEnvelope className="text-blue-500 text-xs lg:text-sm" />
@@ -590,21 +595,21 @@ const Header = () => {
                   <h3 className="text-slate-400 font-bold text-xs uppercase tracking-wider px-2">
                     Main Menu
                   </h3>
-                    {[
-                      { label: "Home", path: "/", icon: FaHome },
-                      { label: "About", path: "/about", icon: FaInfoCircle },
-                      {
-                        label: "Courses",
-                        path: "/coursesearch",
-                        icon: FaGraduationCap,
-                      },
-                      {
-                        label: "Universities",
-                        path: "/University-List",
-                        icon: FaUniversity,
-                      },
-                      { label: "Services", path: "/services", icon: FaCog },
-                    ].map((link, i) => (
+                  {[
+                    { label: "Home", path: "/", icon: FaHome },
+                    { label: "About", path: "/about", icon: FaInfoCircle },
+                    {
+                      label: "Courses",
+                      path: "/coursesearch",
+                      icon: FaGraduationCap,
+                    },
+                    {
+                      label: "Universities",
+                      path: "/University-List",
+                      icon: FaUniversity,
+                    },
+                    { label: "Services", path: "/services", icon: FaCog },
+                  ].map((link, i) => (
                     <Link
                       key={i}
                       href={link.path}
@@ -613,7 +618,9 @@ const Header = () => {
                       <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white">
                         <link.icon className="text-lg" />
                       </div>
-                      <span className="font-semibold text-slate-700">{link.label}</span>
+                      <span className="font-semibold text-slate-700">
+                        {link.label}
+                      </span>
                       <FaArrowRight className="ml-auto text-blue-500 text-sm" />
                     </Link>
                   ))}
@@ -678,9 +685,9 @@ const Header = () => {
             <DialogContent className="max-w-2xl">
               <DialogHeader>
                 <DialogTitle className="text-2xl font-bold text-slate-900">
-                  {modalType === 'videoCall' && 'Book a Video Call'}
-                  {modalType === 'homeDemo' && 'Book a Home Demo'}
-                  {modalType === 'getStarted' && 'Get Started with Unifost'}
+                  {modalType === "videoCall" && "Book a Video Call"}
+                  {modalType === "homeDemo" && "Book a Home Demo"}
+                  {modalType === "getStarted" && "Get Started with Unifost"}
                 </DialogTitle>
               </DialogHeader>
               <EnquiryForm

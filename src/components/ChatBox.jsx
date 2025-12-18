@@ -43,7 +43,7 @@ const ChatBox = () => {
       oscillator.start(audioContext.currentTime);
       oscillator.stop(audioContext.currentTime + 0.5);
     } catch (error) {
-      console.log('Could not play sound:', error);
+     
     }
   };
 
@@ -117,7 +117,7 @@ const ChatBox = () => {
         }
       );
       
-      console.log('Webhook response:', response.data); // Debug log
+     // Debug log
       
       // Handle response from proxy
       const cleanedRawResponse = Array.isArray(response.data?.raw)
@@ -186,8 +186,9 @@ const ChatBox = () => {
             width={96}
             height={96}
             className="h-full w-full rounded-full object-cover drop-shadow-lg"
-            priority={false}
-          />
+            unoptimized={true}
+            loading='lazy'         
+             />
           <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg whitespace-nowrap">
               Professor Uni
             </div>

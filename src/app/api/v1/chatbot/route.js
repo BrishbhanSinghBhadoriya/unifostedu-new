@@ -40,7 +40,7 @@ export async function POST(request) {
     }
 
     const data = await response.json();
-    console.log('n8n webhook raw response:', data);
+
     
     // Handle n8n webhook response format
     let botResponse = data?.response || 
