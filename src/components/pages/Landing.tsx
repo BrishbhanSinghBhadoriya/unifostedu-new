@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import "aos/dist/aos.css";
+import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
-import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
 import Hero from "./landing/Hero";
 const WorkflowRoadmap = dynamic(
   () => import("@/components/pages/WorkflowRoadmap")
@@ -13,67 +13,30 @@ const WorkflowRoadmap = dynamic(
 const UniversityLogoSlider = dynamic(
   () => import("./landing/UniversityLogoSlider")
 );
-import Stats from "./landing/Stats";
-import {
-  FaBook,
-  FaUniversity,
-  FaGraduationCap,
-  FaBriefcase,
-  FaTimes,
-  FaBookOpen,
-  FaHome,
-  FaVideo,
-  FaArrowRight,
-  FaStar,
-  FaUsers,
-  FaClock,
-  FaGlobe,
-  FaUserTie,
-  FaShieldAlt,
-  FaComments,
-  FaCompass,
-  FaRocket,
-  FaAward,
-  FaCheckCircle,
-  FaPlay,
-  FaSearch,
-  FaMapMarkerAlt,
-  FaPhone,
-  FaEnvelope,
-  FaWhatsapp,
-  FaHeadset,
-  FaLightbulb,
-  FaTarget,
-  FaCalendar,
-  FaCalendarAlt,
-  FaChevronLeft,
-  FaChevronRight,
-  FaBalanceScaleLeft,
-} from "react-icons/fa";
 
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+  FaBriefcase,
+  FaCompass,
+  FaGlobe,
+  FaHome,
+  FaUserTie,
+  FaVideo
+} from "react-icons/fa";
+import Stats from "./landing/Stats";
+
+import EnquiryForm from "@/components/EnquiryForm";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle,
-  DialogTrigger,
+  DialogTitle
 } from "@/components/ui/dialog";
-import EnquiryForm from "@/components/EnquiryForm";
+import AOS from "aos";
 import FAQ from "../FAQ";
 import { TopOnlineUniversity } from "../University/TopOnlineUniversity";
+import { AllCourses } from "./AllCourses";
 import CompareOnline from "./CompareOnline";
-import {AllCourses} from "./AllCourses";
+
 
 const iconMap = {
   FaUserTie,
@@ -81,6 +44,8 @@ const iconMap = {
   FaGlobe,
   FaBriefcase,
 };
+
+const MotionDiv: any = (motion as any).div;
 
 const Landing = ({ data }) => {
   const {
@@ -94,17 +59,11 @@ const Landing = ({ data }) => {
     colleges = [],
   } = data || {};
 
-  useEffect(() => {
-    let disposed = false;
-    (async () => {
-      const AOS = (await import("aos")).default;
-      await import("aos/dist/aos.css");
-      if (!disposed) {
-        AOS.init({ duration: 1000, once: true });
-      }
-    })();
-    return () => { disposed = true; };
-  }, []);
+  
+    useEffect(() => {
+      AOS.init({ duration: 1000, once: true });
+    }, []);
+    
 
   const router = useRouter();
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
@@ -130,7 +89,7 @@ const Landing = ({ data }) => {
     setModalType(type);
     setShowEnquiryModal(true);
   };
-
+const MotionDiv=motion('div');
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
@@ -146,9 +105,9 @@ const Landing = ({ data }) => {
 
       <section id="top-partner-universities" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="text-center mb-16" data-aos="fade-up">
+          <MotionDiv className="text-center mb-16" data-aos="fade-up">
             <TopOnlineUniversity />
-          </motion.div>
+          </MotionDiv>
 
 
 
@@ -269,7 +228,7 @@ const Landing = ({ data }) => {
                 <div className="flex gap-10 animate-[scroll_30s_linear_infinite] whitespace-nowrap">
                   {[...Array(2)].flatMap((_, i) =>
                     (cities || []).map((city, idx) => (
-                      <motion.div
+                      <MotionDiv
                         key={`city-${city._id || idx}-${i}`}
                         whileHover={{ y: -6 }}
                         className="min-w-[150px] flex flex-col items-center text-center bg-white/10 backdrop-blur-xl p-4 rounded-xl border border-white/20 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
@@ -286,7 +245,7 @@ const Landing = ({ data }) => {
                           {city.city}
                         </p>
                         <p className="text-blue-200 text-xs">{city.state}</p>
-                      </motion.div>
+                      </MotionDiv>
                     ))
                   )}
                 </div>
@@ -297,7 +256,7 @@ const Landing = ({ data }) => {
       {/* Services - SEO-optimized with CTAs */}
       <section className="py-14 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="text-center mb-10 sm:mb-14" data-aos="fade-up">
+          <MotionDiv className="text-center mb-10 sm:mb-14" data-aos="fade-up">
             <h2 className="text-3xl sm:text-4xl font-semibold text-[#001e3c] mb-2">
               Career Counseling Online & Virtual Learning Guidance
             </h2>
@@ -306,11 +265,11 @@ const Landing = ({ data }) => {
               Best Career Planning Services with trusted EdTech Solutions in
               India
             </p>
-          </motion.div>
+          </MotionDiv>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
             {/* Video Call Counseling */}
-            <motion.div
+            <MotionDiv
               className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm"
               data-aos="fade-up"
             >
@@ -332,10 +291,10 @@ const Landing = ({ data }) => {
               >
                 Book Your Free Counseling
               </button>
-            </motion.div>
+            </MotionDiv>
 
             {/* Home Demo Counseling */}
-            <motion.div
+            <MotionDiv
               className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm"
               data-aos="fade-up"
               data-aos-delay="100"
@@ -358,10 +317,10 @@ const Landing = ({ data }) => {
               >
                 Schedule a Home Demo
               </button>
-            </motion.div>
+            </MotionDiv>
 
             {/* Career Planning */}
-            <motion.div
+            <MotionDiv
               className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm"
               data-aos="fade-up"
               data-aos-delay="200"
@@ -384,7 +343,7 @@ const Landing = ({ data }) => {
               >
                 Start Your Journey Today
               </button>
-            </motion.div>
+            </MotionDiv>
           </div>
 
           {/* Trust bar */}
@@ -449,7 +408,7 @@ const Landing = ({ data }) => {
           modal={false}
         >
           <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-2 lg:my-1 p-4 sm:p-6 z-[30001]">
-            <DialogHeader>
+            <DialogHeader className="space-y-2">
               <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
                 {modalType === "getStarted" && "Get Started with Unifost"}
                 {modalType === "videoCall" && "Book a Video Call"}

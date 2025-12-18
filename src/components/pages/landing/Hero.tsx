@@ -37,6 +37,9 @@ const Hero = ({ onOpenModal, heroSlides = [] }) => {
     );
     return () => clearInterval(id);
   }, [heroSlides.length]);
+  const MotionDiv=motion('div');
+  const MotionH1=motion('h1');
+  const MotionP=motion('p');
 
   return (
     <section className="relative min-h-screen flex flex-col bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 overflow-hidden">
@@ -161,14 +164,14 @@ const Hero = ({ onOpenModal, heroSlides = [] }) => {
               </div>
 
               {/* Left Content */}
-              <motion.div 
+              <MotionDiv 
                 initial={{ opacity: 0, x: -50 }} 
                 animate={{ opacity: 1, x: 0 }} 
                 transition={{ duration: 0.1 }}
                 className="text-center lg:text-left space-y-8 order-2 lg:order-none"
               >
                 {/* Trust Badge */}
-                <motion.div 
+                <MotionDiv 
                   initial={{ opacity: 0, y: 20 }} 
                   animate={{ opacity: 1, y: 0 }} 
                   transition={{ duration: 0.1 }}
@@ -176,7 +179,7 @@ const Hero = ({ onOpenModal, heroSlides = [] }) => {
                 >
                   <FaAward className="text-yellow-500 " />
                   <span>Trusted by 5,000+ Students</span>
-                </motion.div>
+                </MotionDiv>
 
                 {/* Main Headline */}
                 <div className="space-y-4">
