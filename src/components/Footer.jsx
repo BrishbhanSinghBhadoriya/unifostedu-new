@@ -204,7 +204,8 @@ const Footer = () => {
     "/muj-online-bca",
     "/muj-online-ba",
     "/muj-online-mba",
-    "/muj-online-mca"
+    "/muj-online-mca",
+    "/best-online-mca-for-working-professionals-in-india",
   ];
   
   // Check if current pathname starts with any of the hide routes

@@ -252,44 +252,106 @@ const BestOnlineMBA = () =>{
             Are you a working professional looking to boost your career without leaving your job? An online MBA might be exactly what you need. In 2025, many top universities in India offer flexible, quality MBA programs that you can complete from home. This guide will help you understand everything about online MBAs and choose the best program for your career goals.
           </p>
 
-          <h2>Why Choose an Online MBA?</h2>
-          <p>Before we look at the best programs, let's understand why an online MBA makes sense for working professionals.</p>
+         <section className="py-10 sm:py-16 bg-white">
+  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <h3>Flexibility That Fits Your Life</h3>
-          <p>The biggest advantage of an online MBA is flexibility. You can study whenever you have time - early morning, late night, or weekends. There's no need to attend classes at fixed times. You can watch recorded lectures, complete assignments, and take tests according to your schedule. This means you don't have to choose between your job and your education.</p>
+    {/* Section Heading */}
+    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+      Why Choose an <span className="bg-gradient-to-r from-pink-600 to-red-600 bg-clip-text text-transparent">Online MBA?</span>
+    </h2>
 
-          <h3>Keep Earning While Learning</h3>
-          <p>With a traditional MBA, you would need to quit your job and lose two years of income. That's a big financial sacrifice. With an online MBA, you keep your salary while studying. You can apply what you learn directly to your job, making your education more practical and valuable.</p>
+    <p className="text-lg text-gray-700 leading-relaxed mb-10">
+      Before exploring the top universities, it’s important to understand why an Online MBA has become the most popular choice among working professionals and fresh graduates.
+    </p>
 
-          <h3>Lower Costs</h3>
-          <p>Online MBA programs usually cost less than regular campus programs. You save money on commuting, hostel fees, and relocation costs. Many universities offer easy payment plans too, making it easier to manage your finances.</p>
+    {/* 1. Flexibility */}
+    <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4"> Flexibility That Fits Your Life</h3>
+    <p className="text-gray-700 leading-relaxed mb-6">
+      The biggest advantage of an Online MBA is <strong>flexibility</strong>. Study anytime—early morning, late night, or on weekends. 
+      No compulsory attendance, no travelling, and no fixed classroom timings. 
+      You can learn through recorded lectures, submit assignments, and take exams at your convenience.
+    </p>
 
-          <h3>Learn at Your Own Pace</h3>
-          <p>Everyone learns differently. Some people grasp concepts quickly, while others need more time. Online programs let you learn at your own pace. You can replay lectures, review materials multiple times, and take your time to understand difficult topics.</p>
+    {/* 2. Keep Earning */}
+    <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4"> Keep Earning While Learning</h3>
+    <p className="text-gray-700 leading-relaxed mb-6">
+      A regular MBA often forces students to quit their jobs. But with an Online MBA, you continue your career while studying.  
+      You also apply what you learn directly in your job—making the program more practical and rewarding.
+    </p>
 
-          <h2>What to Look for in an Online MBA Program</h2>
-          <p>Not all online MBA programs are created equal. Here are the key things you should check before enrolling.</p>
+    {/* 3. Lower Costs */}
+    <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4"> Lower Costs</h3>
+    <p className="text-gray-700 leading-relaxed mb-6">
+      Online MBA programs are more affordable, with no hostel fees, commuting charges, or relocation expenses.  
+      Many universities also provide <strong>EMI options</strong> and semester-wise fee payments.
+    </p>
 
-          <h3>Accreditation and Recognition</h3>
-          <p>This is the most important factor. Make sure the university is recognized by UGC (University Grants Commission) and that their online degree is approved. Check if they have accreditations from bodies like NAAC or NBA. A recognized degree will be accepted by employers and will help you grow in your career.</p>
+    {/* 4. Learn at Your Pace */}
+    <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4"> Learn at Your Own Pace</h3>
+    <p className="text-gray-700 leading-relaxed mb-6">
+      Online programs allow you to learn slowly or quickly as per your comfort.  
+      Replay lectures, revise topics anytime, and take your time to absorb concepts—making learning smooth and stress-free.
+    </p>
 
-          <h3>Curriculum Quality</h3>
-          <p>Look at what subjects are taught. A good MBA program should cover core business areas like marketing, finance, human resources, operations, and strategy. It should also offer specializations that match your career goals. Check if the curriculum is updated with current business trends and technologies.</p>
+    {/* What to Look for */}
+    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mt-16 mb-6">
+      What Should You Look for in an <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Online MBA?</span>
+    </h2>
 
-          <h3>Faculty Experience</h3>
-          <p>Who will teach you matters a lot. Check if the faculty members have real industry experience along with academic qualifications. Professors who have worked in companies can share practical insights that make learning more valuable.</p>
+    <p className="text-lg text-gray-700 leading-relaxed mb-10">
+      Not all Online MBA programs offer the same value. Here are the most important things to check before choosing a university.
+    </p>
 
-          <h3>Learning Platform</h3>
-          <p>The technology used for teaching should be easy to use. The learning platform should work well on your phone, tablet, and computer. It should have features like recorded lectures, study materials, discussion forums, and easy submission of assignments.</p>
+    {/* Accreditation */}
+    <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">✔ Accreditation & Recognition</h3>
+    <p className="text-gray-700 leading-relaxed mb-6">
+      Make sure the university is <strong>UGC-entitled</strong>, <strong>AICTE approved</strong>, and preferably <strong>NAAC accredited</strong>.  
+      A valid and recognized degree ensures strong career growth and acceptance in India & abroad.
+    </p>
 
-          <h3>Placement Support</h3>
-          <p>Even if you're currently employed, you might want to change jobs later. Check if the university offers placement assistance, career counseling, resume building help, and interview preparation. Good placement support can make a big difference in your career growth.</p>
+    {/* Curriculum */}
+    <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">✔ Updated & Industry-Relevant Curriculum</h3>
+    <p className="text-gray-700 leading-relaxed mb-6">
+      The curriculum should cover essential management subjects like Marketing, Finance, HR, Operations, Strategy, and Analytics.  
+      Choose a university that offers modern specializations aligned with industry demand.
+    </p>
 
-          <h3>Alumni Network</h3>
-          <p>A strong alumni network gives you connections in various industries. These connections can help you throughout your career with job opportunities, business partnerships, and professional guidance.</p>
+    {/* Faculty */}
+    <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">✔ Experienced Faculty</h3>
+    <p className="text-gray-700 leading-relaxed mb-6">
+      Faculty with real corporate experience help you learn practical and industry-ready concepts.  
+      Check if the university includes industry mentors, global faculties, or corporate trainers.
+    </p>
 
-          <h2>Top Universities Offering Online MBA in India 2025</h2>
-          <p>Now let's look at the best universities offering online MBA programs for working professionals in India. Each university has its unique strengths.</p>
+    {/* LMS */}
+    <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">✔ User-Friendly Learning Platform</h3>
+    <p className="text-gray-700 leading-relaxed mb-6">
+      A good LMS should include recorded lectures, downloadable materials, quizzes, discussion forums, and 24×7 access—all optimized for mobile & laptop use.
+    </p>
+
+    {/* Placement Support */}
+    <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">✔ Placement & Career Support</h3>
+    <p className="text-gray-700 leading-relaxed mb-6">
+      Look for universities offering resume-building, interview training, career counselling, and tie-ups with top companies.
+    </p>
+
+    {/* Alumni */}
+    <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">✔ Strong Alumni Network</h3>
+    <p className="text-gray-700 leading-relaxed mb-10">
+      A strong alumni network helps you with job referrals, networking, mentorship, and industry insights—boosting long-term career success.
+    </p>
+
+    {/* Top Universities Section */}
+    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mt-16 mb-6">
+      Top Universities Offering <span className="bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">Online MBA in India (2025)</span>
+    </h2>
+
+    <p className="text-lg text-gray-700 leading-relaxed">
+      Here are India’s leading universities offering high-quality Online MBA programs suitable for working professionals, fresh graduates, and entrepreneurs.
+    </p>
+  </div>
+</section>
+
 
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl my-8 shadow-lg">
             <h3 className="!text-blue-800 !mt-0">1. Amity University Online</h3>

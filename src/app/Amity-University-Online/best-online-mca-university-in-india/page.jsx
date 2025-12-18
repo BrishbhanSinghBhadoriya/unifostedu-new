@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ApplyEnquiryModal from "@/components/ApplyEnquiryModal";
-import Headers from "../Amity-University-Online/_components/Headers";
+import Headers from "../_components/Headers";
 // Simulated components (replace with actual imports in your project)
 const Card = ({ className, children }) => <div className={`rounded-lg ${className}`}>{children}</div>;
 const CardContent = ({ className, children }) => <div className={className}>{children}</div>;
