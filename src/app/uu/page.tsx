@@ -856,13 +856,12 @@ const UttaranchalUniversity = () => {
                       key={`uu-${index}`}
                       course={item.course}
                       duration={item.duration}
+                      specialization={item.specialization}
                       eligibility={item.eligibility}
                       fees={item.fees}
-                      fee={item.fees}
 
                       image={item.image}
                       universityName="Uttaranchal University Online"
-                      uniqueId={`uu-${index}`}
                     />
                   ))}
                 </div>
@@ -877,11 +876,10 @@ const UttaranchalUniversity = () => {
   duration={item.duration}
   eligibility={item.eligibility}
   fees={item.fees}
-  fee={item.fees}
+  specialization={item.specialization}
  
   image={item.image}
   universityName="Uttaranchal University Online"
-  uniqueId={`uu-ug-${index}`}
 />
                   ))}
                 </div>
@@ -894,13 +892,12 @@ const UttaranchalUniversity = () => {
   key={`uu-pg-${index}`}
   course={item.course}
   duration={item.duration}
+  specialization={item.specialization}
   eligibility={item.eligibility}
   fees={item.fees}
-  fee={item.fees}
 
   image={item.image}
   universityName="Uttaranchal University Online"
-  uniqueId={`uu-pg-${index}`}
 />
                   ))}
                 </div>

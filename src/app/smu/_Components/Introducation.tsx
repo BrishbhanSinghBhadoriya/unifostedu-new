@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Interoducation = ({setOpenModal, openModal}) => {
+const Introducation = ({setOpenModal, openModal}) => {
     const heroBadges = [
   { label: "UGC Entitled", detail: "Globally valid degrees" },
   { label: "NAAC A+", detail: "Trusted academic legacy" },
@@ -202,4 +202,4 @@ const heroStats = [
   )
 }
 
-export default Interoducation
+export default Introducation
