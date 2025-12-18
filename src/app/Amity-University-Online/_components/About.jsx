@@ -4,13 +4,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-interface AboutProps {
-  openmodel?: { type: string } | null;
-  setOpenModal: (modal: { type: string } | null) => void;
-}
+// interface AboutProps {
+//   openmodel?: { type: string } | null;
+//   setOpenModal: (modal: { type: string } | null) => void;
+// }
 
 
-const About: React.FC<AboutProps> = ({ openmodel, setOpenModal }) => {
+const About = ({ openmodel, setOpenModal }) => {
   return (
     <section
       id="AboutAmity"
@@ -76,7 +76,6 @@ const About: React.FC<AboutProps> = ({ openmodel, setOpenModal }) => {
               onClick={() => setOpenModal({ type: "apply" })}
             >
               Apply Now
-              {/* @ts-expect-error - lucide-react icons accept className but types may not reflect it */}
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
             </Button>
 

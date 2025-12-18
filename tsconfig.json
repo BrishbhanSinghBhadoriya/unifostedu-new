@@ -23,6 +23,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
+    "types": [],
     "plugins": [
       {
         "name": "next"
