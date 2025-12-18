@@ -6,9 +6,15 @@ import { Phone, Menu, ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal'
 
-const Headers = () => {
+const Headers = ({ setOpenModal: setOpenModalProp, setIsMobileMenuOpen }) => {
   const [openModal, setOpenModal] = useState(null);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  const handleSetOpenModal = (modal) => {
+    setOpenModal(modal);
+    if (setOpenModalProp) {
+      setOpenModalProp(modal);
+    }
+  };
   return (
     <div> <motion.header
     className="bg-white shadow-sm fixed top-0 left-0 w-full z-50"
@@ -40,7 +46,7 @@ const Headers = () => {
             <span className="md:hidden">Call</span>
           </Button>
           <Button
-            onClick={() => setOpenModal({ type: "enquiry" })}
+            onClick={() => handleSetOpenModal({ type: "enquiry" })}
             size="sm"
             className="bg-yellow-400 text-black border border-black hover:text-white hover:bg-[#452971] text-xs sm:text-sm px-3 sm:px-4 md:px-6 py-1.5 md:py-2 whitespace-nowrap"
           >
@@ -50,7 +56,7 @@ const Headers = () => {
           </Button>
           {/* Mobile Menu Button */}
           <Button
-            onClick={() => setIsMobileMenuOpen(true)}
+            onClick={() => setIsMobileMenuOpen && setIsMobileMenuOpen(true)}
             variant="ghost"
             size="icon"
             className="lg:hidden w-8 h-8 sm:w-10 sm:h-10"

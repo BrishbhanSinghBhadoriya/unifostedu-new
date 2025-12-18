@@ -15,7 +15,6 @@ import {
 import { Inter, Playfair_Display } from "next/font/google";
 import PageContent from "@/components/PageContent/PageContent";
 
-// Critical above-the-fold components - loaded immediately
 import Introduction from "./_components/Introduction";
 import About from "./_components/About";
 import Headers from "./_components/Headers";
@@ -64,8 +63,9 @@ const inter = Inter({
 });
 
 const AmityLandingPage = () => {
-  
+  const [openModal, setOpenModal] = useState(null);
   const sectionItems = SECTION_ITEMS;
+
   const ugCourses = [
     {
       course: "Bachelor of Business Administration (BBA)",
@@ -403,6 +403,7 @@ const AmityLandingPage = () => {
 
   const [openIndex, setOpenIndex] = useState(null);
   const [activeSection, setActiveSection] = useState(sectionItems[0]?.id ?? null);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleFAQ = (index) => {
     setOpenIndex((prev) => (prev === index ? null : index));
@@ -412,10 +413,9 @@ const AmityLandingPage = () => {
     <React.Fragment>
       <div className="min-h-screen bg-white relative" style={{ overflowX: "hidden" }}>
 
-       <Headers />
+       <Headers setOpenModal={setOpenModal} setIsMobileMenuOpen={setIsMobileMenuOpen}/>
 
 
-        {/* Notification Bar - Optimized */}
         <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 py-2 sm:py-2.5 md:py-3 mt-[56px] sm:mt-[64px] md:mt-[70px] mb-0">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 text-center">
             <motion.div
