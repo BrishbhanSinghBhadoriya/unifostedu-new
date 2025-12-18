@@ -34,7 +34,7 @@ const MUJBCAPage = () => {
   ];
 
    const [activeSection, setActiveSection] = useState(navSections[0]?.id ?? null);
-           console.log("Active Section:", activeSection);
+          
                       
            useEffect(() => {
                                      if (!navSections.length) return undefined;

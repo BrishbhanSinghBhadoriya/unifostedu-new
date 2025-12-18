@@ -51,7 +51,6 @@ const ChatbotWidget = () => {
 
         module.createChat?.({
           webhookUrl: N8N_WEBHOOK_URL,
-          // Override footer via i18n to avoid "Powered by n8n"
           i18n: {
             en: {
               footer: "",

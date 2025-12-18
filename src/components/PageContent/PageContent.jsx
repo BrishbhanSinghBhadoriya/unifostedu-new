@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { FaTimes } from "react-icons/fa";
 
 const PageContent = ({ sectionItems, activeSection, ismobilemenuopen, onClose }) => {
-  console.log(sectionItems, "sectionItems", activeSection, "activeSection", ismobilemenuopen, "ismobilemenuopen", onClose, "onClose");
+  // console.log(sectionItems, "sectionItems", activeSection, "activeSection", ismobilemenuopen, "ismobilemenuopen", onClose, "onClose");
  
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(ismobilemenuopen);
   const [currentActiveSection, setCurrentActiveSection] = useState(activeSection);
@@ -13,7 +13,6 @@ const PageContent = ({ sectionItems, activeSection, ismobilemenuopen, onClose })
     setIsMobileMenuOpen(ismobilemenuopen);
   }, [ismobilemenuopen]);
 
-  console.log(currentActiveSection, "currentActiveSection");
 
   useEffect(() => {
     const handleScroll = () => {

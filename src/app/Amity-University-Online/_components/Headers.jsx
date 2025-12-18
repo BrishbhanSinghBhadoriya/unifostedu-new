@@ -1,10 +1,14 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { Phone, Menu, ArrowRight } from 'lucide-react'
 import Image from 'next/image'
+import ApplyEnquiryModal from '@/components/ApplyEnquiryModal'
 
-const Headers = ({ setOpenModal, setIsMobileMenuOpen }) => {
+const Headers = () => {
+  const [openModal, setOpenModal] = useState(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
     <div> <motion.header
     className="bg-white shadow-sm fixed top-0 left-0 w-full z-50"
@@ -56,8 +60,29 @@ const Headers = ({ setOpenModal, setIsMobileMenuOpen }) => {
         </div>
       </div>
     </div>
+    {openModal && (
+            <ApplyEnquiryModal
+              open={!!openModal}
+              onOpenChange={(v) => !v && setOpenModal(null)}
+              title={
+                openModal.type === "apply"
+                  ? "Start Your Application"
+                  : "Enquire Now"
+              }
+              subtitle={
+                openModal.type === "apply"
+                  ? "Fill the quick form to begin your admission process"
+                  : "Share your details and our counselor will reach out"
+              }
+              imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/amityForm_xdbvvf.webp"
+              universityName="Amity University Online"
+              defaultProgram="MBA"
+              formType={openModal.type === "apply" ? "getStarted" : "general"}
+            />
+          )}
   </motion.header></div>
   )
+  
 }
 
 export default Headers

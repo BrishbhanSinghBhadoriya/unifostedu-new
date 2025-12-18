@@ -43,7 +43,7 @@ const Certificate = ({ setOpenModal, openModal }) => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-[Poppins]">
-            Globally Recognized Online Degree
+            Globally Recognized Online Degree Programs
           </h2>
 
           <p className="mb-6 text-gray-600 text-lg">

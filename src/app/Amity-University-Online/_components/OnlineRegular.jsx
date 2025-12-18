@@ -17,10 +17,10 @@ const OnlineRegular = () => {
                           className="text-center mb-10"
                         >
                           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            Amity University Online vs Regular Degrees
+                            Amity University Online vs Regular Degree Programs
                           </h2>
                           <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
-                            Compare the Amity University Online MBA and degree programmes with traditional on-campus study to see
+                            Compare the Amity University Online MBA and degree programs with traditional on-campus study to see
                             why thousands of working professionals choose flexible e-learning without compromising government job
                             eligibility or placement support.
                           </p>
@@ -37,7 +37,7 @@ const OnlineRegular = () => {
                                   Amity University Online
                                 </th>
                                 <th className="px-4 py-3 text-left text-sm md:text-base font-semibold border border-gray-200">
-                                  Regular On-Campus Degree
+                                  Regular On-Campus Degree Programs
                                 </th>
                               </tr>
                             </thead>
@@ -54,7 +54,7 @@ const OnlineRegular = () => {
                                   regular: "Fixed lecture schedules, mandatory campus attendance.",
                                 },
                                 {
-                                  factor: "Fees Structure",
+                                  factor: "Fees 2026 Structure",
                                   online:
                                     "₹99,000–₹2,99,000 with EMIs, scholarships, and pay-per-semester options for online MBA & BBA.",
                                   regular: "₹2,50,000+ per year plus hostel and relocation costs.",
@@ -95,10 +95,10 @@ const OnlineRegular = () => {
                             className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm"
                           >
                             <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                              Amity Online Degree Validity
+                              Amity Online Degree Programs Validity
                             </h3>
                             <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                              Amity University Online degrees are listed on the UGC-DEB portal and carry a NAAC A+ rating. They are
+                              Amity University Online degree programs are listed on the UGC-DEB portal and carry a NAAC A+ rating. They are
                               officially valid for UPSC, SSC, banking examinations, PSU roles, and for WES credential evaluation when
                               you apply abroad. Learners receive the same university transcript and convocation certificate.
                             </p>
@@ -116,7 +116,7 @@ const OnlineRegular = () => {
                             </h3>
                             <ul className="space-y-3 text-gray-700 text-sm md:text-base leading-relaxed">
                               <li>
-                                <strong>Working professionals</strong> who need an online MBA near Delhi, Mumbai, Bangalore, or any
+                                <strong>Working professionals</strong> who need an online MBA degree program near Delhi, Mumbai, Bangalore, or any
                                 metro without quitting their job.
                               </li>
                               <li>
@@ -124,7 +124,7 @@ const OnlineRegular = () => {
                                 placement assistance and industry certifications.
                               </li>
                               <li>
-                                <strong>Government job aspirants</strong> who want a recognised Amity online degree while preparing
+                                <strong>Government job aspirants</strong> who want a recognised Amity online degree program while preparing
                                 for competitive examinations.
                               </li>
                             </ul>

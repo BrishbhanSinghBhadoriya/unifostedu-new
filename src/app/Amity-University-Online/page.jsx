@@ -20,7 +20,6 @@ import Introduction from "./_components/Introduction";
 import About from "./_components/About";
 import Headers from "./_components/Headers";
 
-// Dynamic imports for below-the-fold components - reduces initial JS bundle
 const Courses = dynamic(() => import("./_components/Courses"), { ssr: false });
 const Highlights = dynamic(() => import("./_components/Highlights"), { ssr: false });
 const Accreditation = dynamic(() => import("./_components/Accreditation"), { ssr: false });
@@ -65,8 +64,7 @@ const inter = Inter({
 });
 
 const AmityLandingPage = () => {
-  const [openModal, setOpenModal] = useState(null);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
   const sectionItems = SECTION_ITEMS;
   const ugCourses = [
     {
@@ -208,13 +206,13 @@ const AmityLandingPage = () => {
     "online MBA Mumbai Amity",
     "online MBA Bangalore Amity",
     "flexible online programs Amity University",
-    "Amity University Online vs regular degree"
+    "Amity University Online vs regular degree programs"
   ];
 
   const metaKeywordString = metaKeywords.join(", ");
 
   const metaDescription =
-    "Explore UGC-entitled Amity University Online MBA, BBA, BCA, MCA and M.Com degrees. Review 2025 fees structure, admission process, scholarships, placement assistance.";
+    "Explore UGC-entitled Amity University Online MBA, BBA, BCA, MCA and M.Com degree programs. Review 2025 fees structure, admission process, scholarships, placement assistance.";
 
 
   const cityHighlights = [
@@ -236,7 +234,7 @@ const AmityLandingPage = () => {
     {
       city: "Kolkata & Eastern India",
       focus:
-        "Learners from Kolkata, Bhubaneswar, and Guwahati opt for flexible Amity University Online degrees to qualify for government jobs and PSU roles without relocating.",
+        "Learners from Kolkata, Bhubaneswar, and Guwahati opt for flexible Amity University Online degree programs to qualify for government jobs and PSU roles without relocating.",
     },
   ];
 
@@ -249,10 +247,10 @@ const AmityLandingPage = () => {
     {
       question: "Is an Amity University Online degree valid for government jobs and abroad?",
       answer:
-        "Absolutely. Amity University Online degrees are accepted for government jobs in India and are globally recognized, making them suitable for higher studies or international employment opportunities.",
+        "Absolutely. Amity University Online degree programs are accepted for government jobs in India and are globally recognized, making them suitable for higher studies or international employment opportunities.",
     },
     {
-      question: "What is the 2025 Amity University Online MBA fees structure?",
+      question: "What is the 2026 Amity University Online MBA fees 2026 structure?",
       answer:
         "For the 2025 intake, the Amity University Online MBA fees structure ranges from ₹1,99,000 to ₹2,99,000 depending on the specialization. Flexible EMI plans and no-cost installment options are available for working professionals.",
     },
@@ -414,7 +412,7 @@ const AmityLandingPage = () => {
     <React.Fragment>
       <div className="min-h-screen bg-white relative" style={{ overflowX: "hidden" }}>
 
-       <Headers setOpenModal={setOpenModal} setIsMobileMenuOpen={setIsMobileMenuOpen}/>
+       <Headers />
 
 
         {/* Notification Bar - Optimized */}
@@ -483,26 +481,7 @@ const AmityLandingPage = () => {
             />
             <Footer setOpenModal={setOpenModal} openModal={openModal} />
           </main>
-          {openModal && (
-            <ApplyEnquiryModal
-              open={!!openModal}
-              onOpenChange={(v) => !v && setOpenModal(null)}
-              title={
-                openModal.type === "apply"
-                  ? "Start Your Application"
-                  : "Enquire Now"
-              }
-              subtitle={
-                openModal.type === "apply"
-                  ? "Fill the quick form to begin your admission process"
-                  : "Share your details and our counselor will reach out"
-              }
-              imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/amityForm_xdbvvf.webp"
-              universityName="Amity University Online"
-              defaultProgram="MBA"
-              formType={openModal.type === "apply" ? "getStarted" : "general"}
-            />
-          )}
+         
         </div>
       </div>
     </React.Fragment>

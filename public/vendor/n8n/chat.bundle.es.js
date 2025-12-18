@@ -3164,7 +3164,7 @@ function normalizeContainer(e) {
 	return isString$2(e) ? document.querySelector(e) : e;
 }
 const defaultOptions = {
-	webhookUrl: "http://localhost:5678",
+	webhookUrl: "https://n8n.unifostedu.com/webhook/691c118c-a79e-4be3-8c9d-171704236806",
 	webhookConfig: {
 		method: "POST",
 		headers: {}
@@ -4346,8 +4346,7 @@ var core_default = (/* @__PURE__ */ __toESM((/* @__PURE__ */ __commonJSMin(((e, 
 			if (G("before:highlightElement", {
 				el: e,
 				language: n
-			}), e.dataset.highlighted) {
-				console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", e);
+			}), e.dataset.highlighted) {console.log
 				return;
 			}
 			if (e.children.length > 0 && (u.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(e)), u.throwUnescapedHTML)) throw new B9("One of your code blocks includes unescaped HTML.", e.innerHTML);

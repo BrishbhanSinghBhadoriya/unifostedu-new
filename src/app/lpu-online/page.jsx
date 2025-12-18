@@ -33,7 +33,7 @@ const LpuOnline = () => {
                     { id: "conclusion", label: "Conclusion" }
                 ]
          const [activeSection, setActiveSection] = useState(sectionItem[0]?.id ?? null);
-                  console.log("Active Section:", activeSection);
+              
       
                  useEffect(() => {
                      if (!sectionItem.length) return undefined;

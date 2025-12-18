@@ -62,7 +62,7 @@ const Footer = () => {
   };
 
   const validateForm = () => {
-    console.log("🔍 Validating form data:", formData);
+   
     const newErrors = {};
     
     // Name validation
@@ -108,24 +108,19 @@ const Footer = () => {
       newErrors.qualification = "Highest qualification is required";
     }
     
-    console.log("❌ Validation errors:", newErrors);
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async () => {
-    console.log("🔄 Submit button clicked");
     
     if (!validateForm()) {
-      console.log("❌ Form validation failed");
       return;
     }
     
-    console.log("✅ Form validation passed, submitting...");
     
     try {
       // Use the same API call as "Get Started Today"
-      console.log("📡 Importing enquiryAPI...");
       const { enquiryAPI } = await import('@/lib/axios');
       
       const requestBody = {
@@ -139,10 +134,9 @@ const Footer = () => {
         message: ""
       };
       
-      console.log("📤 Sending request with data:", requestBody);
       await enquiryAPI.general(requestBody);
       
-      console.log("✅ Footer Enquiry Submitted:", requestBody);
+ 
       setSubmitted(true);
       setFormData({
         name: "",

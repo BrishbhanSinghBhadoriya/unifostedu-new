@@ -20,7 +20,7 @@ const Scholarship = ({ setOpenModal, openModal}) => {
                             </h2>
                             <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6 text-center">
                               Amity online scholarship programs support professionals, defence personnel, alumni, and high achievers
-                              with fee waivers up to 100%. Combine scholarships with the Amity University Online fees structure and
+                              with fees 2026 waivers up to 100%. Combine scholarships with the Amity University Online fees 2026 structure and
                               EMI plans to make your online MBA or BBA even more affordable.
                             </p>
         

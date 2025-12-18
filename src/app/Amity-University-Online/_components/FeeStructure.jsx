@@ -9,11 +9,11 @@ const FeeStructure = ({ugCourses, pgCourses, ug_pgCourses}) => {
                         <section className="bg-white py-16 px-6 md:px-20">
                           <div className=" mx-auto text-gray-800">
                             <h2 className="text-3xl font-bold text-center mb-10">
-                              🎓 Amity University Online Courses &amp; Fees Structure 2025
+                              🎓 Amity University Online Courses &amp; Fees 2026 Structure 
                             </h2>
                             <p>
                               Amity University Online offers NAAC A+ accredited UG and PG programs that match industry demand while
-                              enabling flexible learning. Review the latest Amity University Online fees structure, compare
+                              enabling flexible learning. Review the latest Amity University Online fees 2026 structure, compare
                               specialisations, and choose an online MBA, BBA, BCA, MCA, or M.Com that fits your career goals.
                               Executive certificates and short-term programmes are also available for professionals who need rapid
                               upskilling.

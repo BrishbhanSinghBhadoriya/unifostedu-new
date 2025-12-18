@@ -16,7 +16,7 @@ import {
 } from "react-icons/fa";
 
 const Hero = ({ onOpenModal, heroSlides = [] }) => {
-  console.log("heroSlides is",heroSlides)
+
   const [slide, setSlide] = useState(0);
   const [isFirstRender, setIsFirstRender] = useState(true);
   const scrollToId = (id) => {

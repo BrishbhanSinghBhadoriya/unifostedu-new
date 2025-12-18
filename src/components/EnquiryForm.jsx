@@ -105,7 +105,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
         course: values.Course || program,
       };
       const response = await enquiryAPI.general(requestBody);
-      console.log("response", response);
+     
 
       toast.success('Enquiry submitted successfully!');
       

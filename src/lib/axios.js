@@ -65,7 +65,7 @@ export const demoAPI = {
 }};
 
 const API_ENDPOINT = process.env.NEXT_PUBLIC_API_ENDPOINT || "";
-console.log(API_ENDPOINT);
+
 
 // 🧩 Specific enquiries (absolute URLs as provided)
 export const enquiryAPI = {

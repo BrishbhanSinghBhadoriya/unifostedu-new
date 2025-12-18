@@ -7,7 +7,7 @@ export async function GET() {
       await connectToDatabase();
   
       const programs = await CourseModel.find({});
-      console.log(programs)
+
 
   
       return NextResponse.json(programs, { status: 200 , message:"Course data fetch successfully !" });

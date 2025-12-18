@@ -86,7 +86,7 @@ const Upes = () => {
     };
   }, [sliderImages.length]);
   const handleOnclickEnquiry = () => {
-    console.log('Enquiry button clicked')
+  
     setOpenModal({ type: 'enquiry' });
   };
 

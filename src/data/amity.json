@@ -1,0 +1,349 @@
+{
+    "programName": "Amity Online MBA",
+    "university": "Amity University",
+    "accreditation": "UGC-DEB Approved",
+    
+    "programOverview": {
+      "description": "Amity Online MBA is a flexible, industry-aligned postgraduate program designed for working professionals and aspiring managers. The program combines academic excellence with practical business insights, delivered through a robust online learning platform.",
+      "highlights": [
+        "Recognized by UGC-DEB and approved by AICTE",
+        "Flexible learning with recorded lectures and live sessions",
+        "Industry-relevant curriculum aligned with current business trends",
+        "Access to e-library and digital learning resources",
+        "Interactive virtual classrooms and case study discussions"
+      ]
+    },
+  
+    "keyHighlights": [
+      {
+        "title": "Accreditation",
+        "value": "UGC-DEB Approved, NAAC A+ Accredited"
+      },
+      {
+        "title": "Learning Mode",
+        "value": "100% Online with Live & Recorded Sessions"
+      },
+      {
+        "title": "Flexibility",
+        "value": "Study Anytime, Anywhere"
+      },
+      {
+        "title": "Faculty",
+        "value": "Industry Experts & Experienced Academicians"
+      },
+      {
+        "title": "Support",
+        "value": "Dedicated Learning Support & Career Services"
+      },
+      {
+        "title": "Alumni Network",
+        "value": "Access to 5 Lakh+ Amity Alumni Worldwide"
+      },
+      {
+        "title": "Placement Support",
+        "value": "Career Guidance & Job Assistance"
+      },
+      {
+        "title": "Projects",
+        "value": "Industry Projects & Case Studies"
+      }
+    ],
+  
+    "subjectsSyllabus": {
+      "semester1": [
+        "Principles of Management",
+        "Managerial Economics",
+        "Accounting for Managers",
+        "Business Statistics",
+        "Organizational Behavior",
+        "Business Communication"
+      ],
+      "semester2": [
+        "Marketing Management",
+        "Human Resource Management",
+        "Financial Management",
+        "Operations Management",
+        "Management Information Systems",
+        "Business Research Methods"
+      ],
+      "semester3": [
+        "Strategic Management",
+        "Entrepreneurship Development",
+        "Business Ethics & Corporate Governance",
+        "Specialization Subjects (2-3)",
+        "Elective Subjects"
+      ],
+      "semester4": [
+        "International Business",
+        "Project Management",
+        "Specialization Subjects (2-3)",
+        "Dissertation/Project Work",
+        "Comprehensive Viva"
+      ]
+    },
+  
+    "eligibility": {
+      "academicQualification": "Bachelor's degree in any discipline from a recognized university",
+      "minimumMarks": "50% aggregate marks (45% for reserved categories)",
+      "workExperience": "Not mandatory but preferred for better learning outcomes",
+      "entrance": "Based on academic merit or university entrance test"
+    },
+  
+    "duration": {
+      "standard": "2 Years (4 Semesters)",
+      "minimum": "2 Years",
+      "maximum": "4 Years (extended period available)"
+    },
+  
+    "programFees": {
+      "totalFee": "₹1,50,000 - ₹2,50,000",
+      "semesterWise": "₹37,500 - ₹62,500 per semester",
+      "paymentOptions": [
+        "One-time payment with discount",
+        "Semester-wise payment",
+        "EMI options available",
+        "Education loan facility"
+      ],
+      "additionalCosts": {
+        "examFee": "Included in program fee",
+        "studyMaterial": "Digital materials included",
+        "convocation": "Additional charges applicable"
+      }
+    },
+  
+    "admissionProcedure": {
+      "steps": [
+        {
+          "step": 1,
+          "title": "Online Application",
+          "description": "Fill the online application form on Amity's official website"
+        },
+        {
+          "step": 2,
+          "title": "Document Submission",
+          "description": "Upload required documents (marksheets, ID proof, photographs)"
+        },
+        {
+          "step": 3,
+          "title": "Application Review",
+          "description": "University reviews application and documents"
+        },
+        {
+          "step": 4,
+          "title": "Fee Payment",
+          "description": "Pay the admission and semester fee"
+        },
+        {
+          "step": 5,
+          "title": "Enrollment Confirmation",
+          "description": "Receive login credentials and access to learning portal"
+        }
+      ],
+      "requiredDocuments": [
+        "10th & 12th Marksheets",
+        "Bachelor's Degree Certificate & Marksheets",
+        "ID Proof (Aadhar/PAN/Passport)",
+        "Passport-size Photographs",
+        "Experience Certificate (if applicable)",
+        "Category Certificate (if applicable)"
+      ]
+    },
+  
+    "topSpecializations": [
+      {
+        "name": "Marketing Management",
+        "description": "Focus on brand management, digital marketing, consumer behavior, and sales strategy",
+        "careerRoles": ["Marketing Manager", "Brand Manager", "Digital Marketing Specialist", "Sales Manager"]
+      },
+      {
+        "name": "Finance Management",
+        "description": "Covers financial analysis, investment banking, corporate finance, and risk management",
+        "careerRoles": ["Financial Analyst", "Investment Banker", "Finance Manager", "Risk Analyst"]
+      },
+      {
+        "name": "Human Resource Management",
+        "description": "Focuses on talent acquisition, training, compensation, and organizational development",
+        "careerRoles": ["HR Manager", "Talent Acquisition Specialist", "Training Manager", "HR Business Partner"]
+      },
+      {
+        "name": "Operations Management",
+        "description": "Emphasizes supply chain, quality management, logistics, and process optimization",
+        "careerRoles": ["Operations Manager", "Supply Chain Manager", "Logistics Manager", "Quality Manager"]
+      },
+      {
+        "name": "Information Technology Management",
+        "description": "Integrates IT with business strategy, covering system management and digital transformation",
+        "careerRoles": ["IT Manager", "Business Analyst", "Product Manager", "Technology Consultant"]
+      },
+      {
+        "name": "International Business",
+        "description": "Focus on global trade, international marketing, cross-cultural management",
+        "careerRoles": ["International Business Manager", "Export Manager", "Global Marketing Manager"]
+      },
+      {
+        "name": "Business Analytics",
+        "description": "Data-driven decision making, predictive analytics, and business intelligence",
+        "careerRoles": ["Business Analyst", "Data Analyst", "Analytics Manager", "Insights Manager"]
+      },
+      {
+        "name": "Entrepreneurship",
+        "description": "Startup management, venture capital, business planning, and innovation",
+        "careerRoles": ["Entrepreneur", "Business Consultant", "Startup Founder", "Venture Analyst"]
+      }
+    ],
+  
+    "educationLoanEMI": {
+      "loanAvailability": "Yes, Education loans available through partner banks",
+      "partnerBanks": [
+        "HDFC Credila",
+        "Axis Bank",
+        "ICICI Bank",
+        "Avanse Financial Services",
+        "Incred Financial Services"
+      ],
+      "loanAmount": "Up to 100% of program fees",
+      "interestRate": "9% - 15% per annum (varies by bank and profile)",
+      "repaymentPeriod": "Up to 7 years after course completion",
+      "emiOptions": {
+        "example1": {
+          "loanAmount": "₹2,00,000",
+          "interestRate": "12%",
+          "tenure": "5 years",
+          "approximateEMI": "₹4,450 per month"
+        },
+        "example2": {
+          "loanAmount": "₹1,50,000",
+          "interestRate": "11%",
+          "tenure": "4 years",
+          "approximateEMI": "₹3,885 per month"
+        }
+      },
+      "taxBenefits": "Interest paid on education loan is tax deductible under Section 80E",
+      "noCollateral": "For loans up to ₹7.5 lakhs (varies by bank)"
+    },
+  
+    "worthIt": {
+      "pros": [
+        "UGC-DEB approved degree with same value as regular MBA",
+        "Flexibility to study while working full-time",
+        "Cost-effective compared to traditional MBA programs",
+        "No compromise on career progression",
+        "Access to quality faculty and learning resources",
+        "Strong alumni network for networking opportunities",
+        "Industry-relevant curriculum with practical focus",
+        "Career services and placement support"
+      ],
+      "idealFor": [
+        "Working professionals seeking career advancement",
+        "Entrepreneurs wanting to strengthen business acumen",
+        "Career switchers looking to enter management roles",
+        "Individuals unable to pursue full-time MBA",
+        "Those seeking work-life-study balance"
+      ],
+      "roiAnalysis": {
+        "investment": "₹1.5 - 2.5 Lakhs",
+        "averageSalaryIncrease": "30% - 50% post-MBA",
+        "paybackPeriod": "1 - 2 years typically",
+        "longTermValue": "Enhanced career opportunities and leadership roles"
+      }
+    },
+  
+    "careerScope": {
+      "jobRoles": [
+        "Business Manager",
+        "Marketing Manager",
+        "Finance Manager",
+        "Operations Manager",
+        "HR Manager",
+        "Business Analyst",
+        "Product Manager",
+        "Project Manager",
+        "Strategy Consultant",
+        "Entrepreneur"
+      ],
+      "industries": [
+        "IT & Technology",
+        "Banking & Finance",
+        "Consulting",
+        "E-commerce",
+        "Manufacturing",
+        "Healthcare",
+        "Retail",
+        "FMCG",
+        "Telecommunications",
+        "Startups"
+      ],
+      "salaryRange": {
+        "freshers": "₹4 - 8 LPA",
+        "experienced1to3years": "₹6 - 12 LPA",
+        "experienced3to5years": "₹10 - 18 LPA",
+        "seniorLevel": "₹15 - 30+ LPA"
+      },
+      "careerGrowth": "MBA graduates typically move from executive to managerial and eventually senior leadership roles within 5-10 years",
+      "entrepreneurship": "Strong foundation for starting own business ventures with comprehensive business knowledge"
+    },
+  
+    "faqs": [
+      {
+        "question": "Is Amity Online MBA UGC approved?",
+        "answer": "Yes, Amity Online MBA is approved by UGC-DEB (Distance Education Bureau) and holds the same value as a regular MBA degree."
+      },
+      {
+        "question": "Can I pursue Amity Online MBA while working?",
+        "answer": "Absolutely! The program is designed specifically for working professionals with flexible schedules, recorded lectures, and weekend classes."
+      },
+      {
+        "question": "What is the duration of the program?",
+        "answer": "The standard duration is 2 years (4 semesters), with an option to extend up to 4 years if needed."
+      },
+      {
+        "question": "Are there any entrance exams required?",
+        "answer": "Admission is primarily based on academic merit. However, candidates may need to appear for the university's entrance test or interview in some cases."
+      },
+      {
+        "question": "What is the fee structure?",
+        "answer": "The total program fee ranges from ₹1.5 to ₹2.5 lakhs, which can be paid semester-wise or through EMI options."
+      },
+      {
+        "question": "Is placement assistance provided?",
+        "answer": "Yes, Amity provides career guidance, resume building support, and job placement assistance through their career services cell."
+      },
+      {
+        "question": "Can I get an education loan for this program?",
+        "answer": "Yes, education loans are available through partner banks like HDFC Credila, Axis Bank, and others covering up to 100% of fees."
+      },
+      {
+        "question": "How are exams conducted?",
+        "answer": "Exams are conducted online at the end of each semester through a secure, proctored examination system."
+      },
+      {
+        "question": "Will I get the same degree as campus students?",
+        "answer": "Yes, the degree awarded is identical to the on-campus MBA degree and is equally recognized by employers and institutions."
+      },
+      {
+        "question": "What specializations are offered?",
+        "answer": "Popular specializations include Marketing, Finance, HR, Operations, IT Management, International Business, Business Analytics, and Entrepreneurship."
+      },
+      {
+        "question": "Is there any age limit for admission?",
+        "answer": "No, there is no age limit. Anyone with a bachelor's degree meeting the eligibility criteria can apply."
+      },
+      {
+        "question": "How is the learning delivered?",
+        "answer": "Learning is delivered through a combination of recorded video lectures, live sessions, e-books, case studies, assignments, and interactive discussion forums."
+      },
+      {
+        "question": "Can I change my specialization after enrollment?",
+        "answer": "Specialization selection typically happens in the second year. You can choose your preferred specialization based on availability and your career goals."
+      },
+      {
+        "question": "What is the eligibility criteria?",
+        "answer": "A bachelor's degree in any discipline with minimum 50% marks (45% for reserved categories) from a recognized university is required."
+      },
+      {
+        "question": "Is work experience mandatory?",
+        "answer": "No, work experience is not mandatory, though it enhances learning outcomes and peer discussions during the program."
+      }
+    ]
+  }
+  

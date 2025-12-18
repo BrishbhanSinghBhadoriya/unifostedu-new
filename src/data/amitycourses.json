@@ -1,0 +1,2301 @@
+{
+    "bba-online": {
+      "about": {
+        "title": "Amity Online BBA",
+        "university": "Amity University Online",
+        "description": "Amity Online BBA is a UGC-approved undergraduate management program designed for 10+2 students aspiring to build careers in business management. The program delivers comprehensive business education with the flexibility of online learning. Students learn through live interactive sessions, recorded lectures, case studies, projects, and industry-relevant curriculum, building strong foundations in management principles, marketing, finance, HR, and operations.",
+        "duration": "3 Years (6 Semesters)",
+        "mode": "100% Online",
+        "learningMethod": [
+          "Live Interactive Classes",
+          "Recorded Video Lectures",
+          "Case Studies",
+          "Industry Projects",
+          "Online Assessments"
+        ],
+        "keyBenefits": [
+          "Study from Anywhere",
+          "Flexible Learning Schedule",
+          "Affordable Fees",
+          "Industry-Oriented Curriculum",
+          "Strong Brand Value"
+        ]
+      },
+      "approval": {
+        "ugc_deb": {
+          "status": "Approved",
+          "description": "Approved by University Grants Commission – Distance Education Bureau. Degree is equivalent to a regular BBA."
+        },
+        "naac": {
+          "grade": "A+",
+          "description": "Amity University is accredited with NAAC A+ grade, ensuring high academic standards."
+        },
+        "aicte": {
+          "status": "Recognized",
+          "description": "Recognized by AICTE for management education."
+        },
+        "aiu": {
+          "status": "Member",
+          "description": "Member of Association of Indian Universities."
+        },
+        "degreeRecognition": [
+          "Valid for Government Jobs",
+          "Valid for Private Jobs",
+          "Eligible for Higher Education (MBA/PGDM)",
+          "International Recognition"
+        ]
+      },
+      "whoCanApply": {
+        "eligibility": "10+2 from a recognized board",
+        "minimumMarks": "50% (45% for SC/ST candidates)",
+        "entranceExam": "Not Required",
+        "ageLimit": "No Age Limit",
+        "idealCandidates": [
+          "Fresh 10+2 Pass Out Students",
+          "Commerce Students",
+          "Science Students",
+          "Arts Students",
+          "Students from Remote Locations",
+          "Working Students"
+        ],
+        "documentsRequired": [
+          "10th Marksheet",
+          "12th Marksheet",
+          "12th Certificate",
+          "ID Proof (Aadhar/PAN)",
+          "Passport Size Photograph",
+          "Category Certificate (if applicable)"
+        ]
+      },
+      "specializations": [
+        {
+          "name": "General Management",
+          "fee": "₹1,65,000",
+          "description": "Comprehensive business education covering all aspects of management including marketing, finance, HR, and operations."
+        },
+        {
+          "name": "Data Analytics",
+          "fee": "₹2,25,000",
+          "description": "Specialized program focusing on business analytics, statistical analysis, data visualization, and business intelligence tools."
+        },
+        {
+          "name": "Travel And Tourism Management",
+          "fee": "₹2,25,000",
+          "description": "Comprehensive program covering tourism management, hospitality operations, travel planning, and tourism marketing."
+        }
+      ],
+      "courseFees": {
+        "feeRange": "₹1,65,000 - ₹2,25,000",
+        "semesterWiseApprox": "₹27,500 - ₹37,500",
+        "paymentOptions": [
+          "One-Time Payment (Discount Available)",
+          "Semester-Wise Payment",
+          "No-Cost EMI Options",
+          "Education Loan"
+        ],
+        "loanPartners": [
+          "HDFC Credila",
+          "Axis Bank",
+          "ICICI Bank",
+          "Avanse",
+          "InCred"
+        ],
+        "feeIncludes": [
+          "Learning Management System Access",
+          "Live & Recorded Lectures",
+          "Study Materials",
+          "Online Exams",
+          "Projects & Assignments",
+          "Placement Assistance",
+          "Degree Certificate"
+        ]
+      },
+      "certifications": {
+        "degreeAwarded": "Bachelor of Business Administration (BBA)",
+        "degreeModeMentioned": "No",
+        "certificateValidity": [
+          "Government Jobs",
+          "Private Jobs",
+          "Higher Studies (MBA/PGDM)",
+          "International Employment"
+        ],
+        "additionalCertificates": [
+          "Provisional Certificate",
+          "Consolidated Marksheet",
+          "Migration Certificate",
+          "Digital Degree"
+        ],
+        "verification": "Online verification via university portal"
+      },
+      "syllabus_curriculum": {
+        "year1": [
+          "Principles of Management",
+          "Business Economics",
+          "Financial Accounting",
+          "Business Mathematics",
+          "Business Communication",
+          "Organizational Behavior"
+        ],
+        "year2": [
+          "Marketing Management",
+          "Human Resource Management",
+          "Financial Management",
+          "Operations Management",
+          "Business Law",
+          "Business Statistics"
+        ],
+        "year3": [
+          "Strategic Management",
+          "Entrepreneurship Development",
+          "Business Ethics",
+          "International Business",
+          "Project Management",
+          "Final Project/Dissertation"
+        ],
+        "evaluationPattern": {
+          "internalAssessment": "30%",
+          "finalExam": "70%",
+          "examMode": "Online Proctored Exams"
+        }
+      },
+      "placementPartners": {
+        "topRecruiters": [
+          "TCS",
+          "Infosys",
+          "Wipro",
+          "Accenture",
+          "Deloitte",
+          "ICICI Bank",
+          "HDFC Bank",
+          "Axis Bank",
+          "Amazon",
+          "Flipkart",
+          "ITC",
+          "HUL"
+        ],
+        "jobRoles": [
+          "Management Trainee",
+          "Business Analyst",
+          "Marketing Executive",
+          "HR Executive",
+          "Sales Executive",
+          "Operations Executive"
+        ],
+        "averageSalary": "₹3 – 6 LPA",
+        "careerSupport": [
+          "Resume Building",
+          "Mock Interviews",
+          "Career Counseling",
+          "LinkedIn Optimization",
+          "Job Portal Access"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Is Amity Online BBA valid?",
+          "answer": "Yes, it is UGC-DEB approved and equivalent to a regular BBA degree."
+        },
+        {
+          "question": "Can I pursue MBA after online BBA?",
+          "answer": "Yes, you can pursue MBA from any recognized university after completing online BBA."
+        },
+        {
+          "question": "Are exams online?",
+          "answer": "Yes, exams are conducted online with remote proctoring."
+        },
+        {
+          "question": "Does degree mention online mode?",
+          "answer": "No, the degree does not mention online or distance mode."
+        },
+        {
+          "question": "Which specialization is best for me?",
+          "answer": "General Management is ideal for broad business knowledge, Data Analytics for tech-oriented careers, and Travel & Tourism for hospitality sector."
+        }
+      ],
+      "studentReview": {
+        "averageRating": 4.6,
+        "positiveFeedback": [
+          "Flexible Learning",
+          "Good Faculty Support",
+          "Affordable Fees",
+          "Recognized Degree",
+          "Career Growth Opportunities",
+          "Multiple Specialization Options"
+        ],
+        "studentCount": "5,00,000+ Alumni Network"
+      }
+    },
+
+    "bca-online": {
+      "about": {
+        "title": "Amity Online BCA",
+        "university": "Amity University Online",
+        "description": "Amity Online BCA is a UGC-approved undergraduate program in computer applications designed for students aspiring to build careers in IT and software development. The program covers programming languages, database management, web technologies, software engineering, and computer networks. Students gain practical coding skills and theoretical knowledge through live classes, coding labs, and industry projects to become job-ready IT professionals.",
+        "duration": "3 Years (6 Semesters)",
+        "mode": "100% Online",
+        "learningMethod": [
+          "Live Interactive Classes",
+          "Recorded Video Lectures",
+          "Coding Labs",
+          "Industry Projects",
+          "Online Assessments"
+        ],
+        "keyBenefits": [
+          "IT Career Foundation",
+          "Programming Skills",
+          "Flexible Learning",
+          "High-Demand Field",
+          "Industry Collaborations",
+          "Recognized Degree"
+        ]
+      },
+      "approval": {
+        "ugc_deb": {
+          "status": "Approved",
+          "description": "Approved by University Grants Commission – Distance Education Bureau. Degree is equivalent to a regular BCA."
+        },
+        "naac": {
+          "grade": "A+",
+          "description": "NAAC A+ accredited university ensuring high-quality education."
+        },
+        "aiu": {
+          "status": "Member",
+          "description": "Member of Association of Indian Universities."
+        },
+        "degreeRecognition": [
+          "Valid for Government IT Jobs",
+          "Valid for IT Industry Jobs",
+          "Eligible for MCA/M.Tech",
+          "International Recognition"
+        ]
+      },
+      "whoCanApply": {
+        "eligibility": "10+2 from a recognized board",
+        "minimumMarks": "50% (45% for SC/ST)",
+        "preferredSubjects": "Mathematics/Computer Science (preferred but not mandatory)",
+        "entranceExam": "Not Required",
+        "ageLimit": "No Age Limit",
+        "idealCandidates": [
+          "10+2 Pass Out Students",
+          "Students Interested in Programming",
+          "Aspiring Software Developers",
+          "Future IT Professionals",
+          "Students from Any Stream"
+        ],
+        "documentsRequired": [
+          "10th Marksheet",
+          "12th Marksheet",
+          "12th Certificate",
+          "ID Proof (Aadhar/PAN)",
+          "Passport Size Photograph",
+          "Category Certificate (if applicable)"
+        ]
+      },
+      "specializations": [
+        {
+          "name": "BCA General",
+          "fee": "₹1,50,000",
+          "description": "Comprehensive computer applications program covering programming, databases, web development, and software engineering."
+        },
+        {
+          "name": "Cloud and Security (In collaboration with TCS iON)",
+          "fee": "₹2,25,000",
+          "description": "Specialized program focusing on cloud computing and cybersecurity with TCS iON partnership. Learn AWS, Azure, network security, and ethical hacking."
+        },
+        {
+          "name": "Data Analytics (In collaboration with TCS iON)",
+          "fee": "₹2,25,000",
+          "description": "Data analytics specialization with TCS iON focusing on statistical analysis, data visualization, and business intelligence."
+        },
+        {
+          "name": "Data Engineering (In collaboration with HCL Tech)",
+          "fee": "₹2,25,000",
+          "description": "Industry-partnered program with HCL Tech focusing on data engineering, big data technologies, ETL processes, and data pipelines."
+        },
+        {
+          "name": "Software Engineering (In collaboration with HCL Tech)",
+          "fee": "₹2,25,000",
+          "description": "Software engineering specialization with HCL Tech covering SDLC, agile methodologies, and enterprise application development."
+        },
+        {
+          "name": "Financial Technology And AI (In collaboration with Paytm)",
+          "fee": "₹2,50,000",
+          "description": "Cutting-edge program with Paytm focusing on fintech, payment systems, blockchain, AI in finance, and digital banking."
+        },
+        {
+          "name": "Professional Certificate in Applied Data Engineering (In collaboration with KPMG)",
+          "fee": "₹2,25,000",
+          "description": "Premium program with KPMG offering professional certification in applied data engineering and enterprise data solutions."
+        }
+      ],
+      "courseFees": {
+        "feeRange": "₹1,50,000 - ₹2,50,000",
+        "semesterWiseApprox": "₹25,000 - ₹41,666",
+        "paymentOptions": [
+          "One-Time Payment (Discount Available)",
+          "Semester-Wise Payment",
+          "No-Cost EMI Options",
+          "Education Loan"
+        ],
+        "loanPartners": [
+          "HDFC Credila",
+          "Axis Bank",
+          "ICICI Bank",
+          "Avanse",
+          "InCred"
+        ],
+        "feeIncludes": [
+          "Learning Management System Access",
+          "Live & Recorded Lectures",
+          "Coding Lab Access",
+          "Industry Certification (for collaboration programs)",
+          "Study Materials",
+          "Online Exams",
+          "Projects & Assignments",
+          "Placement Assistance",
+          "Degree Certificate"
+        ]
+      },
+      "certifications": {
+        "degreeAwarded": "Bachelor of Computer Applications (BCA)",
+        "degreeModeMentioned": "No",
+        "certificateValidity": [
+          "IT Industry Jobs",
+          "Government IT Jobs",
+          "Higher Studies (MCA/M.Tech)",
+          "International IT Jobs"
+        ],
+        "additionalCertificates": [
+          "Provisional Certificate",
+          "Consolidated Marksheet",
+          "Migration Certificate",
+          "Digital Degree",
+          "Industry Partner Certification (TCS iON/HCL/Paytm/KPMG for collaboration programs)"
+        ],
+        "verification": "Online verification via university portal"
+      },
+      "syllabus_curriculum": {
+        "year1": [
+          "Programming in C",
+          "Computer Fundamentals",
+          "Digital Electronics",
+          "Mathematics",
+          "Communication Skills",
+          "Web Technologies (HTML/CSS)"
+        ],
+        "year2": [
+          "Programming in C++",
+          "Java Programming",
+          "Database Management Systems",
+          "Data Structures",
+          "Operating Systems",
+          "Software Engineering",
+          "Specialization Core Subjects"
+        ],
+        "year3": [
+          "Python Programming",
+          "Computer Networks",
+          "Web Development",
+          "Cloud Computing/Security/Analytics (based on specialization)",
+          "Advanced Specialization Subjects",
+          "BCA Project",
+          "Final Dissertation"
+        ],
+        "evaluationPattern": {
+          "internalAssessment": "30%",
+          "finalExam": "70%",
+          "examMode": "Online Proctored Exams"
+        }
+      },
+      "placementPartners": {
+        "topRecruiters": [
+          "TCS",
+          "Infosys",
+          "Wipro",
+          "Tech Mahindra",
+          "HCL Technologies",
+          "Capgemini",
+          "Cognizant",
+          "Accenture",
+          "Amazon",
+          "Microsoft",
+          "Google",
+          "Paytm",
+          "KPMG"
+        ],
+        "jobRoles": [
+          "Software Developer",
+          "Web Developer",
+          "Database Administrator",
+          "System Analyst",
+          "IT Support Engineer",
+          "Junior Programmer",
+          "Cloud Engineer (for Cloud specialization)",
+          "Data Analyst (for Analytics specialization)",
+          "Cybersecurity Analyst (for Security specialization)"
+        ],
+        "averageSalary": "₹3 – 8 LPA (varies by specialization)",
+        "careerSupport": [
+          "Resume Building",
+          "Mock Interviews",
+          "Career Counseling",
+          "Portfolio Development",
+          "Job Portal Access",
+          "Industry Mentor Connect"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Is mathematics mandatory for BCA?",
+          "answer": "Mathematics in 10+2 is preferred but not mandatory for admission to Amity Online BCA."
+        },
+        {
+          "question": "Can I pursue MCA after online BCA?",
+          "answer": "Yes, you can pursue MCA from any recognized university after completing online BCA."
+        },
+        {
+          "question": "What is the benefit of industry collaboration programs?",
+          "answer": "Industry collaboration programs (TCS iON, HCL, Paytm, KPMG) provide additional certifications, industry exposure, real-world projects, and enhanced placement opportunities."
+        },
+        {
+          "question": "Do I need programming knowledge before joining?",
+          "answer": "No prior programming knowledge is required. The program teaches all necessary skills from basics."
+        },
+        {
+          "question": "Are exams online?",
+          "answer": "Yes, all exams are conducted online with remote proctoring."
+        }
+      ],
+      "studentReview": {
+        "averageRating": 4.5,
+        "positiveFeedback": [
+          "Good Programming Training",
+          "Industry Collaborations Add Value",
+          "Placement Support",
+          "Recognized Degree",
+          "Flexible Learning",
+          "Multiple Specialization Options"
+        ],
+        "studentCount": "5,00,000+ Alumni Network"
+      }
+    },
+
+    "bcom-online": {
+      "about": {
+        "title": "Amity Online B.Com",
+        "university": "Amity University Online",
+        "description": "Amity Online B.Com is a UGC-approved undergraduate commerce program covering accounting, finance, taxation, business law, and economics. The program builds strong foundations for careers in accounting, banking, finance, insurance, and business. Students learn through live classes, case studies, and practical assignments, gaining both theoretical knowledge and practical skills for the commerce industry.",
+        "duration": "3 Years (6 Semesters)",
+        "mode": "100% Online",
+        "learningMethod": [
+          "Live Interactive Classes",
+          "Recorded Video Lectures",
+          "Case Studies",
+          "Practical Assignments",
+          "Online Assessments"
+        ],
+        "keyBenefits": [
+          "Commerce Career Foundation",
+          "Accounting & Finance Skills",
+          "Flexible Learning",
+          "Affordable Education",
+          "Recognized Degree"
+        ]
+      },
+      "approval": {
+        "ugc_deb": {
+          "status": "Approved",
+          "description": "Approved by University Grants Commission – Distance Education Bureau. Degree is equivalent to a regular B.Com."
+        },
+        "naac": {
+          "grade": "A+",
+          "description": "NAAC A+ accredited university."
+        },
+        "degreeRecognition": [
+          "Valid for Government Jobs",
+          "Valid for Banking Jobs",
+          "Valid for Private Sector Jobs",
+          "Eligible for M.Com/MBA",
+          "Eligible for CA/CS/CMA Foundation"
+        ]
+      },
+      "whoCanApply": {
+        "eligibility": "10+2 Pass from any stream (Commerce preferred)",
+        "minimumMarks": "50% (45% for SC/ST)",
+        "entranceExam": "Not Required",
+        "ageLimit": "No Age Limit",
+        "idealCandidates": [
+          "10+2 Pass Out Students",
+          "Commerce Students",
+          "Students Interested in Accounting",
+          "Aspiring CA/CS Candidates",
+          "Banking Career Aspirants"
+        ],
+        "documentsRequired": [
+          "10th Marksheet",
+          "12th Marksheet",
+          "12th Certificate",
+          "ID Proof",
+          "Passport Size Photograph"
+        ]
+      },
+      "specializations": [
+        {
+          "name": "B.Com General",
+          "fee": "₹99,000",
+          "description": "Comprehensive commerce program covering accounting, finance, taxation, business law, and economics."
+        },
+        {
+          "name": "B.Com Hons",
+          "fee": "₹1,70,000",
+          "description": "Honours program with advanced commerce subjects and in-depth specialization in accounting and finance."
+        },
+        {
+          "name": "International Finance & Accounting",
+          "fee": "₹2,50,000",
+          "description": "Specialized program focusing on international finance, global accounting standards, foreign exchange, and cross-border financial management."
+        }
+      ],
+      "courseFees": {
+        "feeRange": "₹99,000 - ₹2,50,000",
+        "semesterWiseApprox": "₹16,500 - ₹41,666",
+        "paymentOptions": [
+          "One-Time Payment (Discount Available)",
+          "Semester-Wise Payment",
+          "No-Cost EMI Options",
+          "Education Loan"
+        ],
+        "loanPartners": [
+          "HDFC Credila",
+          "Axis Bank",
+          "ICICI Bank",
+          "Avanse",
+          "InCred"
+        ],
+        "feeIncludes": [
+          "Learning Management System Access",
+          "Live & Recorded Lectures",
+          "Study Materials",
+          "Online Exams",
+          "Assignments",
+          "Placement Assistance",
+          "Degree Certificate"
+        ]
+      },
+      "certifications": {
+        "degreeAwarded": "Bachelor of Commerce (B.Com)",
+        "degreeModeMentioned": "No",
+        "certificateValidity": [
+          "Government Jobs",
+          "Banking Sector Jobs",
+          "Private Sector Jobs",
+          "CA/CS/CMA Foundation",
+          "Higher Studies (M.Com/MBA)"
+        ],
+        "additionalCertificates": [
+          "Provisional Certificate",
+          "Consolidated Marksheet",
+          "Migration Certificate",
+          "Digital Degree"
+        ],
+        "verification": "Online verification via university portal"
+      },
+      "syllabus_curriculum": {
+        "year1": [
+          "Financial Accounting",
+          "Business Economics",
+          "Business Mathematics",
+          "Business Communication",
+          "Principles of Management",
+          "Business Law"
+        ],
+        "year2": [
+          "Corporate Accounting",
+          "Income Tax",
+          "Cost Accounting",
+          "Banking & Insurance",
+          "Company Law",
+          "Business Statistics"
+        ],
+        "year3": [
+          "Advanced Accounting",
+          "Auditing",
+          "GST and Taxation",
+          "Financial Management",
+          "Management Accounting",
+          "Project Work"
+        ],
+        "evaluationPattern": {
+          "internalAssessment": "30%",
+          "finalExam": "70%",
+          "examMode": "Online Proctored Exams"
+        }
+      },
+      "placementPartners": {
+        "topRecruiters": [
+          "ICICI Bank",
+          "HDFC Bank",
+          "Axis Bank",
+          "Deloitte",
+          "EY",
+          "KPMG",
+          "PwC",
+          "Bajaj Finance",
+          "Reliance",
+          "TCS",
+          "Infosys"
+        ],
+        "jobRoles": [
+          "Accountant",
+          "Tax Consultant",
+          "Banking Officer",
+          "Financial Analyst",
+          "Audit Assistant",
+          "Accounts Executive",
+          "Financial Advisor"
+        ],
+        "averageSalary": "₹3 – 6 LPA",
+        "careerSupport": [
+          "Resume Building",
+          "Mock Interviews",
+          "Career Counseling",
+          "Job Portal Access",
+          "CA/CS Guidance"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Can I pursue CA after B.Com?",
+          "answer": "Yes, after completing B.Com you can pursue CA, CS, or CMA professional courses."
+        },
+        {
+          "question": "Is this degree valid for bank exams?",
+          "answer": "Yes, this UGC-approved degree is valid for all bank exams like IBPS, SBI PO, etc."
+        },
+        {
+          "question": "Can non-commerce students apply?",
+          "answer": "Yes, students from any stream (Science/Arts) can apply for B.Com."
+        },
+        {
+          "question": "What is the difference between General and Honours?",
+          "answer": "B.Com Honours has more in-depth curriculum and advanced subjects compared to General B.Com."
+        }
+      ],
+      "studentReview": {
+        "averageRating": 4.4,
+        "positiveFeedback": [
+          "Affordable Fees",
+          "Good Commerce Foundation",
+          "CA/CS Preparation Support",
+          "Recognized Degree",
+          "Banking Job Opportunities"
+        ],
+        "studentCount": "5,00,000+ Alumni Network"
+      }
+    },
+
+    "ba-online": {
+      "about": {
+        "title": "Amity Online BA",
+        "university": "Amity University Online",
+        "description": "Amity Online BA is a UGC-approved undergraduate arts program offering flexible subject combinations in humanities and social sciences. The program covers English, sociology, political science, economics, and regional languages, providing students with critical thinking, research, and communication skills essential for diverse career paths in education, media, civil services, and social work.",
+        "duration": "3 Years (6 Semesters)",
+        "mode": "100% Online",
+        "learningMethod": [
+          "Live Interactive Classes",
+          "Recorded Video Lectures",
+          "Research Projects",
+          "Online Assessments",
+          "Discussion Forums"
+        ],
+        "keyBenefits": [
+          "Flexible Subject Combinations",
+          "Affordable Education",
+          "Study from Anywhere",
+          "Civil Services Preparation",
+          "Recognized Degree"
+        ]
+      },
+      "approval": {
+        "ugc_deb": {
+          "status": "Approved",
+          "description": "Approved by University Grants Commission – Distance Education Bureau."
+        },
+        "naac": {
+          "grade": "A+",
+          "description": "NAAC A+ accredited university."
+        },
+        "degreeRecognition": [
+          "Valid for Government Jobs",
+          "Valid for Civil Services",
+          "Valid for Teaching Jobs",
+          "Eligible for MA Programs"
+        ]
+      },
+      "whoCanApply": {
+        "eligibility": "10+2 from any stream",
+        "minimumMarks": "50% (45% for SC/ST)",
+        "entranceExam": "Not Required",
+        "idealCandidates": [
+          "10+2 Pass Out Students",
+          "Civil Services Aspirants",
+          "Teaching Career Aspirants",
+          "Media & Journalism Aspirants",
+          "Social Work Enthusiasts"
+        ],
+        "documentsRequired": [
+          "10th Marksheet",
+          "12th Marksheet",
+          "12th Certificate",
+          "ID Proof",
+          "Passport Size Photograph"
+        ]
+      },
+      "specializations": [
+        {
+          "name": "BA General (English, Sociology, Political Science, Economics)",
+          "fee": "₹99,000",
+          "description": "Flexible arts program with multiple subject combinations in humanities and social sciences."
+        },
+        {
+          "name": "BAJMC (Journalism & Mass Communication)",
+          "fee": "₹1,70,000",
+          "description": "Specialized program in journalism, media studies, digital content creation, PR, advertising, and mass communication."
+        },
+        {
+          "name": "Native Languages (Kannada, Malayalam, Tamil, Telugu)",
+          "fee": "₹85,000",
+          "description": "BA program with specialization in regional Indian languages for cultural and linguistic studies."
+        }
+      ],
+      "courseFees": {
+        "feeRange": "₹85,000 - ₹1,70,000",
+        "semesterWiseApprox": "₹14,166 - ₹28,333",
+        "paymentOptions": [
+          "One-Time Payment",
+          "Semester-Wise Payment",
+          "No-Cost EMI",
+          "Education Loan"
+        ],
+        "feeIncludes": [
+          "LMS Access",
+          "Live & Recorded Lectures",
+          "Study Materials",
+          "Online Exams",
+          "Assignments",
+          "Degree Certificate"
+        ]
+      },
+      "certifications": {
+        "degreeAwarded": "Bachelor of Arts (BA) / BAJMC",
+        "degreeModeMentioned": "No",
+        "certificateValidity": [
+          "Government Jobs",
+          "Civil Services",
+          "Teaching Jobs",
+          "Media Industry",
+          "Higher Studies"
+        ]
+      },
+      "syllabus_curriculum": {
+        "year1": [
+          "English/Language Core",
+          "Sociology/Political Science/Economics",
+          "Communication Skills",
+          "Environmental Studies",
+          "General Electives"
+        ],
+        "year2": [
+          "Advanced Language Studies",
+          "Social Science Core Subjects",
+          "Research Methodology",
+          "Subject-Specific Electives"
+        ],
+        "year3": [
+          "Specialized Advanced Topics",
+          "Research Project",
+          "Dissertation",
+          "Applied Learning"
+        ],
+        "evaluationPattern": {
+          "internalAssessment": "30%",
+          "finalExam": "70%",
+          "examMode": "Online Proctored Exams"
+        }
+      },
+      "placementPartners": {
+        "topRecruiters": [
+          "Media Houses",
+          "Publishing Companies",
+          "Educational Institutions",
+          "NGOs",
+          "Content Agencies",
+          "Government Departments"
+        ],
+        "jobRoles": [
+          "Content Writer",
+          "Journalist",
+          "Teacher",
+          "Social Worker",
+          "Civil Services Officer",
+          "PR Executive"
+        ],
+        "averageSalary": "₹2.5 – 5 LPA"
+      },
+      "faq": [
+        {
+          "question": "Can I prepare for UPSC with BA?",
+          "answer": "Yes, BA is an excellent foundation for UPSC and other civil services preparation."
+        },
+        {
+          "question": "Is BAJMC different from regular BA?",
+          "answer": "Yes, BAJMC is specialized in journalism and mass communication with media-focused curriculum."
+        }
+      ],
+      "studentReview": {
+        "averageRating": 4.3,
+        "positiveFeedback": [
+          "Flexible Learning",
+          "Good for UPSC Preparation",
+          "Affordable Fees",
+          "Multiple Specializations"
+        ]
+      }
+    },
+
+    "mba-online": {
+      "about": {
+        "title": "Amity Online MBA",
+        "university": "Amity University Online",
+        "description": "Amity Online MBA is a UGC-approved postgraduate management program designed for working professionals, fresh graduates, entrepreneurs, and career switchers. The program delivers the same academic rigor as a regular MBA with the flexibility of online learning. Students learn through live interactive sessions, recorded lectures, case studies, projects, and industry-relevant curriculum, allowing them to upgrade skills without quitting their jobs.",
+        "duration": "2 Years (4 Semesters)",
+        "mode": "100% Online",
+        "learningMethod": [
+          "Live Interactive Classes",
+          "Recorded Video Lectures",
+          "Case Studies",
+          "Industry Projects",
+          "Online Assessments"
+        ],
+        "keyBenefits": [
+          "Study from Anywhere",
+          "No Career Break Required",
+          "Affordable Fees",
+          "Industry-Oriented Curriculum",
+          "Strong Brand Value",
+          "18+ Specializations Available"
+        ]
+      },
+      "approval": {
+        "ugc_deb": {
+          "status": "Approved",
+          "description": "Approved by University Grants Commission – Distance Education Bureau. Degree is equivalent to a regular MBA."
+        },
+        "naac": {
+          "grade": "A+",
+          "description": "Amity University is accredited with NAAC A+ grade, ensuring high academic standards."
+        },
+        "aicte": {
+          "status": "Recognized",
+          "description": "Recognized by AICTE for management education."
+        },
+        "aiu": {
+          "status": "Member",
+          "description": "Member of Association of Indian Universities."
+        },
+        "degreeRecognition": [
+          "Valid for Government Jobs",
+          "Valid for Private Jobs",
+          "Eligible for Higher Education (Ph.D.)",
+          "International Recognition"
+        ]
+      },
+      "whoCanApply": {
+        "eligibility": "Graduation from a recognized university",
+        "minimumMarks": "50% (45% for SC/ST candidates)",
+        "entranceExam": "Not Required",
+        "ageLimit": "No Age Limit",
+        "idealCandidates": [
+          "Fresh Graduates",
+          "Working Professionals",
+          "Entrepreneurs",
+          "Career Switchers",
+          "Mid-Career Professionals"
+        ],
+        "documentsRequired": [
+          "10th Marksheet",
+          "12th Marksheet",
+          "Graduation Marksheet (All Semesters)",
+          "Graduation Certificate",
+          "ID Proof (Aadhar/PAN)",
+          "Passport Size Photograph",
+          "Category Certificate (if applicable)"
+        ]
+      },
+      "specializations": [
+        {
+          "name": "MBA General",
+          "fee": "₹1,99,000",
+          "description": "Comprehensive management education covering all functional areas of business including marketing, finance, HR, and operations."
+        },
+        {
+          "name": "Information Technology Management",
+          "fee": "₹1,99,000",
+          "description": "Specialized program focusing on IT strategy, digital transformation, technology management, and enterprise systems."
+        },
+        {
+          "name": "Human Resource Analytics",
+          "fee": "₹1,99,000",
+          "description": "Advanced HR program combining traditional HR management with people analytics, workforce planning, and data-driven HR decisions."
+        },
+        {
+          "name": "Data Science",
+          "fee": "₹1,99,000",
+          "description": "Business-focused data science program covering analytics, machine learning, big data, and business intelligence for managerial roles."
+        },
+        {
+          "name": "Business Analytics",
+          "fee": "₹1,99,000",
+          "description": "Program focusing on business intelligence, predictive analytics, statistical modeling, and data-driven business strategy."
+        },
+        {
+          "name": "International Business Management",
+          "fee": "₹1,99,000",
+          "description": "Specialized program in global business operations, international trade, cross-cultural management, and export-import management."
+        },
+        {
+          "name": "Hospital Management",
+          "fee": "₹1,99,000",
+          "description": "Healthcare management program covering hospital administration, healthcare systems, medical billing, and healthcare operations."
+        },
+        {
+          "name": "Digital Entrepreneurship",
+          "fee": "₹1,99,000",
+          "description": "Entrepreneurship program focusing on digital businesses, startup management, e-commerce, and innovation management."
+        },
+        {
+          "name": "Digital Marketing Management",
+          "fee": "₹1,99,000",
+          "description": "Modern marketing program specializing in digital marketing, social media, SEO/SEM, content marketing, and growth hacking."
+        },
+        {
+          "name": "Entrepreneurship & Leadership Management",
+          "fee": "₹1,99,000",
+          "description": "Program combining entrepreneurial skills with leadership development, business planning, and venture management."
+        },
+        {
+          "name": "Finance & Accounting Management",
+          "fee": "₹1,99,000",
+          "description": "Comprehensive finance program covering financial management, investment analysis, corporate finance, and financial accounting."
+        },
+        {
+          "name": "Hospitality Management",
+          "fee": "₹1,99,000",
+          "description": "Specialized program in hotel management, tourism operations, hospitality services, and guest relations management."
+        },
+        {
+          "name": "Global Finance Market",
+          "fee": "₹1,99,000",
+          "description": "Advanced finance program focusing on global financial markets, international banking, forex, and global investment strategies."
+        },
+        {
+          "name": "Insurance Management",
+          "fee": "₹1,99,000",
+          "description": "Specialized program in insurance operations, underwriting, risk management, and insurance marketing."
+        },
+        {
+          "name": "Marketing & Sales Management",
+          "fee": "₹1,99,000",
+          "description": "Program focusing on brand management, consumer behavior, sales strategies, and marketing research."
+        },
+        {
+          "name": "Petroleum & Natural Gas",
+          "fee": "₹1,99,000",
+          "description": "Specialized program in oil and gas industry management, energy markets, and petroleum operations management."
+        },
+        {
+          "name": "Production and Operations Management",
+          "fee": "₹1,99,000",
+          "description": "Program focusing on manufacturing management, supply chain, quality management, and operations strategy."
+        },
+        {
+          "name": "Retail Management",
+          "fee": "₹1,99,000",
+          "description": "Specialized program in retail operations, merchandising, store management, and retail analytics."
+        },
+        {
+          "name": "MBA Dual Specialization",
+          "fee": "₹2,99,000",
+          "description": "Premium program allowing students to specialize in two areas simultaneously, enhancing career flexibility and expertise."
+        },
+        {
+          "name": "International Finance",
+          "fee": "₹2,99,000",
+          "description": "Advanced specialization in international finance, global markets, cross-border transactions, and multinational financial management."
+        }
+      ],
+      "courseFees": {
+        "feeRange": "₹1,99,000 - ₹2,99,000",
+        "semesterWiseApprox": "₹49,750 - ₹74,750",
+        "paymentOptions": [
+          "One-Time Payment (Discount Available)",
+          "Semester-Wise Payment",
+          "No-Cost EMI Options",
+          "Education Loan"
+        ],
+        "loanPartners": [
+          "HDFC Credila",
+          "Axis Bank",
+          "ICICI Bank",
+          "Avanse",
+          "InCred"
+        ],
+        "feeIncludes": [
+          "Learning Management System Access",
+          "Live & Recorded Lectures",
+          "Study Materials",
+          "Online Exams",
+          "Projects & Assignments",
+          "Placement Assistance",
+          "Degree Certificate"
+        ]
+      },
+      "certifications": {
+        "degreeAwarded": "Master of Business Administration (MBA)",
+        "degreeModeMentioned": "No",
+        "certificateValidity": [
+          "Government Jobs",
+          "Private Jobs",
+          "Higher Studies (Ph.D.)",
+          "International Employment"
+        ],
+        "additionalCertificates": [
+          "Provisional Certificate",
+          "Consolidated Marksheet",
+          "Migration Certificate",
+          "Digital Degree"
+        ],
+        "verification": "Online verification via university portal"
+      },
+      "syllabus_curriculum": {
+        "semester1": [
+          "Management and Organizational Behavior",
+          "Managerial Economics",
+          "Accounting for Managers",
+          "Marketing Management",
+          "Business Communication",
+          "Quantitative Techniques"
+        ],
+        "semester2": [
+          "Financial Management",
+          "Human Resource Management",
+          "Operations Management",
+          "Business Research Methods",
+          "Information Systems Management",
+          "Strategic Management"
+        ],
+        "semester3": [
+          "Specialization Core Subject 1",
+          "Specialization Core Subject 2",
+          "Specialization Core Subject 3",
+          "Specialization Elective 1",
+          "Business Ethics",
+          "Project Management"
+        ],
+        "semester4": [
+          "Specialization Advanced Subject 1",
+          "Specialization Advanced Subject 2",
+          "Specialization Elective 2",
+          "International Business",
+          "MBA Dissertation/Project",
+          "Comprehensive Viva"
+        ],
+        "evaluationPattern": {
+          "internalAssessment": "30%",
+          "finalExam": "70%",
+          "examMode": "Online Proctored Exams"
+        }
+      },
+      "placementPartners": {
+        "topRecruiters": [
+          "Deloitte",
+          "KPMG",
+          "EY",
+          "PwC",
+          "TCS",
+          "Infosys",
+          "Wipro",
+          "Accenture",
+          "ICICI Bank",
+          "HDFC Bank",
+          "Amazon",
+          "Flipkart",
+          "Google",
+          "Microsoft"
+        ],
+        "jobRoles": [
+          "Business Analyst",
+          "Product Manager",
+          "Marketing Manager",
+          "Finance Manager",
+          "HR Manager",
+          "Operations Manager",
+          "Strategy Consultant",
+          "Business Development Manager"
+        ],
+        "averageSalary": "₹5 – 12 LPA",
+        "careerSupport": [
+          "Resume Building",
+          "Mock Interviews",
+          "Career Counseling",
+          "LinkedIn Optimization",
+          "Job Portal Access",
+          "Industry Mentor Connect"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Can I pursue MBA without work experience?",
+          "answer": "Yes, fresh graduates can pursue Amity Online MBA without any work experience."
+        },
+        {
+          "question": "Is online MBA valid for government jobs?",
+          "answer": "Yes, UGC-approved online MBA is valid for government and PSU jobs."
+        },
+        {
+          "question": "Can I work while pursuing MBA?",
+          "answer": "Yes, the online format is designed for working professionals to continue their jobs while studying."
+        },
+        {
+          "question": "What is the difference between single and dual specialization?",
+          "answer": "Single specialization focuses on one area, while dual specialization allows you to master two domains simultaneously at a higher fee."
+        }
+      ],
+      "studentReview": {
+        "averageRating": 4.7,
+        "positiveFeedback": [
+          "Excellent for Working Professionals",
+          "Multiple Specializations",
+          "Good Faculty Support",
+          "Strong Placement Assistance",
+          "Recognized Degree",
+          "Industry-Relevant Curriculum"
+        ],
+        "studentCount": "5,00,000+ Alumni Network"
+      }
+    },
+
+    "mca-online": {
+      "about": {
+        "title": "Amity Online MCA",
+        "university": "Amity University Online",
+        "description": "Amity Online MCA is a UGC-approved postgraduate program in computer applications designed for IT professionals and BCA/B.Sc(IT) graduates. The program covers advanced programming, software development, database management, cloud computing, AI/ML, and emerging technologies. Students gain expertise in software engineering, system design, and enterprise application development through practical projects and industry-oriented curriculum.",
+        "duration": "2 Years (4 Semesters)",
+        "mode": "100% Online",
+        "learningMethod": [
+          "Live Interactive Classes",
+          "Recorded Video Lectures",
+          "Coding Labs",
+          "Industry Projects",
+          "Online Assessments"
+        ],
+        "keyBenefits": [
+          "Advanced IT Skills",
+          "Industry-Oriented Curriculum",
+          "Flexible Learning",
+          "High-Demand Field",
+          "Career Advancement"
+        ]
+      },
+      "approval": {
+        "ugc_deb": {
+          "status": "Approved",
+          "description": "Approved by University Grants Commission – Distance Education Bureau. Degree is equivalent to a regular MCA."
+        },
+        "naac": {
+          "grade": "A+",
+          "description": "NAAC A+ accredited university ensuring high-quality education."
+        },
+        "aiu": {
+          "status": "Member",
+          "description": "Member of Association of Indian Universities."
+        },
+        "degreeRecognition": [
+          "Valid for IT Industry Jobs",
+          "Valid for Government IT Jobs",
+          "Eligible for Ph.D.",
+          "International Recognition"
+        ]
+      },
+      "whoCanApply": {
+        "eligibility": "Graduation in BCA/B.Sc(IT) from a recognized university",
+        "minimumMarks": "50% (45% for SC/ST)",
+        "entranceExam": "Not Required",
+        "ageLimit": "No Age Limit",
+        "idealCandidates": [
+          "BCA Graduates",
+          "B.Sc(IT) Graduates",
+          "Working IT Professionals",
+          "Software Developers",
+          "Tech Career Aspirants"
+        ],
+        "documentsRequired": [
+          "10th Marksheet",
+          "12th Marksheet",
+          "Graduation Marksheet (All Semesters)",
+          "Graduation Certificate",
+          "ID Proof (Aadhar/PAN)",
+          "Passport Size Photograph",
+          "Category Certificate (if applicable)"
+        ]
+      },
+      "specializations": [
+        {
+          "name": "MCA General",
+          "fee": "₹1,70,000",
+          "description": "Comprehensive computer applications program covering advanced programming, software engineering, databases, and web technologies."
+        },
+        {
+          "name": "Blockchain Technology",
+          "fee": "₹1,70,000",
+          "description": "Specialized program in blockchain development, cryptocurrency, smart contracts, distributed ledger technology, and decentralized applications."
+        },
+        {
+          "name": "Machine Learning and Artificial Intelligence",
+          "fee": "₹1,70,000",
+          "description": "Advanced program focusing on AI/ML algorithms, deep learning, neural networks, natural language processing, and computer vision."
+        },
+        {
+          "name": "Augmented Reality and Virtual Reality",
+          "fee": "₹1,70,000",
+          "description": "Specialized program in AR/VR development, 3D graphics, immersive technologies, and extended reality applications."
+        },
+        {
+          "name": "Software Engineering",
+          "fee": "₹1,70,000",
+          "description": "Advanced software engineering program covering SDLC, agile methodologies, DevOps, software architecture, and enterprise systems."
+        },
+        {
+          "name": "Cyber Security",
+          "fee": "₹2,50,000",
+          "description": "Premium specialization in cybersecurity, ethical hacking, network security, penetration testing, and information security management."
+        }
+      ],
+      "courseFees": {
+        "feeRange": "₹1,70,000 - ₹2,50,000",
+        "semesterWiseApprox": "₹42,500 - ₹62,500",
+        "paymentOptions": [
+          "One-Time Payment (Discount Available)",
+          "Semester-Wise Payment",
+          "No-Cost EMI Options",
+          "Education Loan"
+        ],
+        "loanPartners": [
+          "HDFC Credila",
+          "Axis Bank",
+          "ICICI Bank",
+          "Avanse",
+          "InCred"
+        ],
+        "feeIncludes": [
+          "Learning Management System Access",
+          "Live & Recorded Lectures",
+          "Coding Lab Access",
+          "Study Materials",
+          "Online Exams",
+          "Projects & Assignments",
+          "Placement Assistance",
+          "Degree Certificate"
+        ]
+      },
+      "certifications": {
+        "degreeAwarded": "Master of Computer Applications (MCA)",
+        "degreeModeMentioned": "No",
+        "certificateValidity": [
+          "IT Industry Jobs",
+          "Government IT Jobs",
+          "Higher Studies (Ph.D.)",
+          "International IT Jobs"
+        ],
+        "additionalCertificates": [
+          "Provisional Certificate",
+          "Consolidated Marksheet",
+          "Migration Certificate",
+          "Digital Degree"
+        ],
+        "verification": "Online verification via university portal"
+      },
+      "syllabus_curriculum": {
+        "semester1": [
+          "Advanced Programming in Java",
+          "Data Structures and Algorithms",
+          "Database Management Systems",
+          "Computer Networks",
+          "Software Engineering",
+          "Web Technologies"
+        ],
+        "semester2": [
+          "Advanced Database Concepts",
+          "Operating Systems",
+          "Object-Oriented Analysis and Design",
+          "Cloud Computing",
+          "Mobile Application Development",
+          "Specialization Core Subject 1"
+        ],
+        "semester3": [
+          "Artificial Intelligence",
+          "Big Data Analytics",
+          "Information Security",
+          "Specialization Core Subject 2",
+          "Specialization Core Subject 3",
+          "Specialization Elective 1"
+        ],
+        "semester4": [
+          "Machine Learning",
+          "Internet of Things",
+          "Specialization Advanced Subject",
+          "Specialization Elective 2",
+          "MCA Dissertation/Project",
+          "Comprehensive Viva"
+        ],
+        "evaluationPattern": {
+          "internalAssessment": "30%",
+          "finalExam": "70%",
+          "examMode": "Online Proctored Exams"
+        }
+      },
+      "placementPartners": {
+        "topRecruiters": [
+          "Google",
+          "Microsoft",
+          "Amazon",
+          "TCS",
+          "Infosys",
+          "Wipro",
+          "Cognizant",
+          "Capgemini",
+          "Tech Mahindra",
+          "HCL Technologies",
+          "IBM",
+          "Oracle"
+        ],
+        "jobRoles": [
+          "Senior Software Developer",
+          "System Architect",
+          "Technical Lead",
+          "Database Administrator",
+          "Cloud Engineer",
+          "AI/ML Engineer",
+          "Cybersecurity Analyst",
+          "DevOps Engineer"
+        ],
+        "averageSalary": "₹5 – 15 LPA",
+        "careerSupport": [
+          "Resume Building",
+          "Mock Interviews",
+          "Career Counseling",
+          "Portfolio Development",
+          "Job Portal Access",
+          "Industry Mentor Connect"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Can non-IT graduates pursue MCA?",
+          "answer": "No, MCA requires graduation in BCA or B.Sc(IT). However, some universities accept other backgrounds with bridge courses."
+        },
+        {
+          "question": "Is MCA better than M.Tech?",
+          "answer": "MCA focuses on application development and software, while M.Tech is more research-oriented. Choose based on career goals."
+        },
+        {
+          "question": "Can I work while pursuing MCA?",
+          "answer": "Yes, the online format allows working professionals to continue their jobs while studying."
+        },
+        {
+          "question": "What is the placement scenario for MCA?",
+          "answer": "MCA graduates have excellent placement opportunities in IT companies with packages ranging from ₹5-15 LPA."
+        }
+      ],
+      "studentReview": {
+        "averageRating": 4.6,
+        "positiveFeedback": [
+          "Advanced Technical Skills",
+          "Industry-Relevant Curriculum",
+          "Excellent Placement Support",
+          "Flexible Learning",
+          "Emerging Technology Focus"
+        ],
+        "studentCount": "5,00,000+ Alumni Network"
+      }
+    },
+
+    "mcom-online": {
+      "about": {
+        "title": "Amity Online M.Com",
+        "university": "Amity University Online",
+        "description": "Amity Online M.Com is a UGC-approved postgraduate commerce program designed for B.Com graduates and commerce professionals. The program offers advanced knowledge in accounting, finance, taxation, auditing, and financial technology. Students gain expertise in financial management, corporate accounting, and business analytics, preparing them for senior roles in finance, banking, and accounting sectors.",
+        "duration": "2 Years (4 Semesters)",
+        "mode": "100% Online",
+        "learningMethod": [
+          "Live Interactive Classes",
+          "Recorded Video Lectures",
+          "Case Studies",
+          "Practical Assignments",
+          "Online Assessments"
+        ],
+        "keyBenefits": [
+          "Advanced Commerce Education",
+          "Flexible Learning",
+          "Career Advancement",
+          "Affordable Fees",
+          "Recognized Degree"
+        ]
+      },
+      "approval": {
+        "ugc_deb": {
+          "status": "Approved",
+          "description": "Approved by University Grants Commission – Distance Education Bureau. Degree is equivalent to a regular M.Com."
+        },
+        "naac": {
+          "grade": "A+",
+          "description": "NAAC A+ accredited university."
+        },
+        "degreeRecognition": [
+          "Valid for Government Jobs",
+          "Valid for Banking Jobs",
+          "Valid for Private Sector Jobs",
+          "Eligible for Ph.D.",
+          "Eligible for CA/CS/CMA Intermediate"
+        ]
+      },
+      "whoCanApply": {
+        "eligibility": "Graduation in Commerce (B.Com) from a recognized university",
+        "minimumMarks": "50% (45% for SC/ST)",
+        "entranceExam": "Not Required",
+        "ageLimit": "No Age Limit",
+        "idealCandidates": [
+          "B.Com Graduates",
+          "Accounting Professionals",
+          "Banking Professionals",
+          "CA/CS Candidates",
+          "Finance Career Aspirants"
+        ],
+        "documentsRequired": [
+          "10th Marksheet",
+          "12th Marksheet",
+          "Graduation Marksheet (All Semesters)",
+          "Graduation Certificate",
+          "ID Proof",
+          "Passport Size Photograph"
+        ]
+      },
+      "specializations": [
+        {
+          "name": "M.Com General",
+          "fee": "₹1,20,000",
+          "description": "Comprehensive commerce program covering advanced accounting, finance, taxation, and business management."
+        },
+        {
+          "name": "Financial Management",
+          "fee": "₹1,20,000",
+          "description": "Specialized program focusing on corporate finance, investment management, financial planning, and wealth management."
+        },
+        {
+          "name": "Financial Technology",
+          "fee": "₹1,20,000",
+          "description": "Modern program combining finance with technology, covering fintech innovations, digital banking, blockchain in finance, and payment systems."
+        }
+      ],
+      "courseFees": {
+        "feeRange": "₹1,20,000",
+        "semesterWiseApprox": "₹30,000",
+        "paymentOptions": [
+          "One-Time Payment (Discount Available)",
+          "Semester-Wise Payment",
+          "No-Cost EMI Options",
+          "Education Loan"
+        ],
+        "loanPartners": [
+          "HDFC Credila",
+          "Axis Bank",
+          "ICICI Bank",
+          "Avanse",
+          "InCred"
+        ],
+        "feeIncludes": [
+          "Learning Management System Access",
+          "Live & Recorded Lectures",
+          "Study Materials",
+          "Online Exams",
+          "Assignments",
+          "Placement Assistance",
+          "Degree Certificate"
+        ]
+      },
+      "certifications": {
+        "degreeAwarded": "Master of Commerce (M.Com)",
+        "degreeModeMentioned": "No",
+        "certificateValidity": [
+          "Government Jobs",
+          "Banking Sector Jobs",
+          "Private Sector Jobs",
+          "CA/CS/CMA Intermediate",
+          "Higher Studies (Ph.D.)"
+        ],
+        "additionalCertificates": [
+          "Provisional Certificate",
+          "Consolidated Marksheet",
+          "Migration Certificate",
+          "Digital Degree"
+        ],
+        "verification": "Online verification via university portal"
+      },
+      "syllabus_curriculum": {
+        "semester1": [
+          "Advanced Financial Accounting",
+          "Corporate Accounting",
+          "Managerial Economics",
+          "Business Statistics",
+          "Management Concepts",
+          "Research Methodology"
+        ],
+        "semester2": [
+          "Cost and Management Accounting",
+          "Financial Management",
+          "Corporate Tax Planning",
+          "International Business",
+          "E-Commerce",
+          "Banking and Insurance"
+        ],
+        "semester3": [
+          "Advanced Auditing",
+          "Security Analysis and Portfolio Management",
+          "Strategic Management",
+          "Specialization Core Subject 1",
+          "Specialization Core Subject 2",
+          "Specialization Elective 1"
+        ],
+        "semester4": [
+          "Advanced Financial Management",
+          "Business Ethics and Corporate Governance",
+          "Specialization Advanced Subject",
+          "Specialization Elective 2",
+          "M.Com Dissertation/Project",
+          "Comprehensive Viva"
+        ],
+        "evaluationPattern": {
+          "internalAssessment": "30%",
+          "finalExam": "70%",
+          "examMode": "Online Proctored Exams"
+        }
+      },
+      "placementPartners": {
+        "topRecruiters": [
+          "ICICI Bank",
+          "HDFC Bank",
+          "Axis Bank",
+          "Deloitte",
+          "EY",
+          "KPMG",
+          "PwC",
+          "Bajaj Finance",
+          "Reliance",
+          "TCS",
+          "Infosys"
+        ],
+        "jobRoles": [
+          "Senior Accountant",
+          "Financial Analyst",
+          "Tax Consultant",
+          "Banking Manager",
+          "Audit Manager",
+          "Finance Manager",
+          "Investment Advisor"
+        ],
+        "averageSalary": "₹4 – 8 LPA",
+        "careerSupport": [
+          "Resume Building",
+          "Mock Interviews",
+          "Career Counseling",
+          "Job Portal Access",
+          "CA/CS Guidance"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Can I pursue Ph.D. after M.Com?",
+          "answer": "Yes, M.Com graduates can pursue Ph.D. in Commerce from any recognized university."
+        },
+        {
+          "question": "Is this degree valid for bank PO exams?",
+          "answer": "Yes, this UGC-approved degree is valid for all bank exams like IBPS PO, SBI PO, etc."
+        },
+        {
+          "question": "Can I do CA/CS along with M.Com?",
+          "answer": "Yes, many students pursue CA/CS intermediate and final levels along with M.Com."
+        },
+        {
+          "question": "Which specialization is best for banking careers?",
+          "answer": "Financial Management is ideal for banking careers as it covers investment, financial planning, and banking operations."
+        }
+      ],
+      "studentReview": {
+        "averageRating": 4.5,
+        "positiveFeedback": [
+          "Affordable Fees",
+          "Good Commerce Foundation",
+          "CA/CS Preparation Support",
+          "Recognized Degree",
+          "Banking Job Opportunities",
+          "Flexible Learning"
+        ],
+        "studentCount": "5,00,000+ Alumni Network"
+      }
+    },
+"ma": {
+      "about": {
+        "title": "Amity Online MA",
+        "university": "Amity University Online",
+        "description": "Amity Online MA is a UGC-approved postgraduate arts program offering advanced studies in journalism, mass communication, and public policy. The program provides in-depth knowledge in media studies, communication theories, policy analysis, and governance. Students develop research skills, critical thinking, and specialized expertise in their chosen field through live classes, projects, and dissertations.",
+        "duration": "2 Years (4 Semesters)",
+        "mode": "100% Online",
+        "learningMethod": [
+          "Live Interactive Classes",
+          "Recorded Video Lectures",
+          "Research Projects",
+          "Case Studies",
+          "Online Assessments"
+        ],
+        "keyBenefits": [
+          "Specialized Knowledge",
+          "Research Skills Development",
+          "Flexible Learning",
+          "Career Advancement",
+          "Recognized Degree"
+        ]
+      },
+      "approval": {
+        "ugc_deb": {
+          "status": "Approved",
+          "description": "Approved by University Grants Commission – Distance Education Bureau"
+        },
+        "naac": {
+          "grade": "A+",
+          "description": "NAAC A+ accredited university"
+        },
+        "degreeRecognition": [
+          "Valid for Government Jobs",
+          "Valid for Civil Services",
+          "Valid for Teaching Jobs",
+          "Eligible for Ph.D.",
+          "Valid for Media Industry"
+        ]
+      },
+      "whoCanApply": {
+        "eligibility": "Graduation from a recognized university",
+        "minimumMarks": "50% (45% for SC/ST)",
+        "entranceExam": "Not Required",
+        "ageLimit": "No Age Limit",
+        "idealCandidates": [
+          "Graduates",
+          "Media Professionals",
+          "Journalists",
+          "Civil Services Aspirants",
+          "Policy Analysts",
+          "Social Workers"
+        ],
+        "documentsRequired": [
+          "10th Marksheet",
+          "12th Marksheet",
+          "Graduation Marksheet (All Semesters)",
+          "Graduation Certificate",
+          "ID Proof",
+          "Passport Size Photograph"
+        ]
+      },
+      "specializations": {
+        "journalism_mass_communication": {
+          "name": "MA Journalism and Mass Communication",
+          "fee": "₹1,70,000",
+          "description": "Advanced program in journalism, media studies, digital media, broadcasting, PR, advertising, and mass communication theories"
+        },
+        "public_policy_governance": {
+          "name": "Public Policy & Governance",
+          "fee": "₹1,30,000",
+          "description": "Specialized program focusing on policy analysis, governance, public administration, development studies, and policy formulation"
+        }
+      },
+      "courseFees": {
+        "feeRange": "₹1,30,000 - ₹1,70,000",
+        "semesterWiseApprox": "₹32,500 - ₹42,500",
+        "paymentOptions": [
+          "One-Time Payment (Discount Available)",
+          "Semester-Wise Payment",
+          "No-Cost EMI Options",
+          "Education Loan"
+        ],
+        "loanPartners": [
+          "HDFC Credila",
+          "Axis Bank",
+          "ICICI Bank",
+          "Avanse",
+          "InCred"
+        ],
+        "feeIncludes": [
+          "Learning Management System Access",
+          "Live & Recorded Lectures",
+          "Study Materials",
+          "Online Exams",
+          "Assignments",
+          "Placement Assistance",
+          "Degree Certificate"
+        ]
+      },
+      "certifications": {
+        "degreeAwarded": "Master of Arts (MA)",
+        "degreeModeMentioned": "No",
+        "certificateValidity": [
+          "Government Jobs",
+          "Civil Services",
+          "Teaching Jobs",
+          "Media Industry",
+          "Higher Studies (Ph.D.)"
+        ],
+        "additionalCertificates": [
+          "Provisional Certificate",
+          "Consolidated Marksheet",
+          "Migration Certificate",
+          "Digital Degree"
+        ],
+        "verification": "Online verification via university portal"
+      },
+      "syllabus_curriculum": {
+        "semester1": [
+          "Communication Theories / Policy Analysis",
+          "Research Methodology",
+          "Media Studies / Governance Studies",
+          "Advanced Topics in Specialization",
+          "Core Subject 1",
+          "Core Subject 2"
+        ],
+        "semester2": [
+          "Specialization Core Subject 3",
+          "Specialization Core Subject 4",
+          "Elective Subject 1",
+          "Elective Subject 2",
+          "Practical/Lab Work",
+          "Seminar"
+        ],
+        "semester3": [
+          "Advanced Specialization Subject 1",
+          "Advanced Specialization Subject 2",
+          "Elective Subject 3",
+          "Research Project Proposal",
+          "Contemporary Issues",
+          "Case Studies"
+        ],
+        "semester4": [
+          "Advanced Topics",
+          "Elective Subject 4",
+          "MA Dissertation",
+          "Comprehensive Viva",
+          "Thesis Defense"
+        ],
+        "evaluationPattern": {
+          "internalAssessment": "30%",
+          "finalExam": "70%",
+          "examMode": "Online Proctored Exams"
+        }
+      },
+      "placementPartners": {
+        "topRecruiters": [
+          "Media Houses",
+          "News Channels",
+          "Publishing Companies",
+          "NGOs",
+          "Government Departments",
+          "Think Tanks",
+          "Content Agencies",
+          "PR Firms"
+        ],
+        "jobRoles": [
+          "Senior Journalist",
+          "Content Strategist",
+          "Policy Analyst",
+          "Media Consultant",
+          "Government Affairs Manager",
+          "Communications Manager",
+          "Research Analyst"
+        ],
+        "averageSalary": "₹4 – 8 LPA"
+      },
+      "faq": [
+        {
+          "question": "Can I pursue Ph.D. after MA?",
+          "answer": "Yes, MA graduates can pursue Ph.D. from any recognized university."
+        },
+        {
+          "question": "Is MA JMC good for media careers?",
+          "answer": "Yes, MA in Journalism and Mass Communication opens doors to journalism, digital media, PR, and content creation careers."
+        },
+        {
+          "question": "Can I prepare for UPSC with MA Public Policy?",
+          "answer": "Yes, MA in Public Policy & Governance is excellent for UPSC and other civil services preparation."
+        }
+      ],
+      "studentReview": {
+        "averageRating": 4.4,
+        "positiveFeedback": [
+          "Good for Media Careers",
+          "Research-Oriented Curriculum",
+          "UPSC Preparation Support",
+          "Flexible Learning",
+          "Recognized Degree"
+        ],
+        "studentCount": "5,00,000+ Alumni Network"
+      }
+    },
+
+    "msc": {
+      "about": {
+        "title": "Amity Online M.Sc Data Science",
+        "university": "Amity University Online",
+        "description": "Amity Online M.Sc Data Science is a UGC-approved postgraduate program designed for graduates aspiring to become data scientists. The program covers statistical analysis, machine learning, big data analytics, data visualization, and predictive modeling. Students gain hands-on experience with Python, R, SQL, and various data science tools through practical projects and industry-focused curriculum.",
+        "duration": "2 Years (4 Semesters)",
+        "mode": "100% Online",
+        "learningMethod": [
+          "Live Interactive Classes",
+          "Recorded Video Lectures",
+          "Coding Labs",
+          "Data Science Projects",
+          "Online Assessments"
+        ],
+        "keyBenefits": [
+          "High-Demand Career",
+          "Hands-On Data Science Skills",
+          "Industry-Relevant Tools",
+          "Flexible Learning",
+          "Recognized Degree"
+        ]
+      },
+      "approval": {
+        "ugc_deb": {
+          "status": "Approved",
+          "description": "Approved by University Grants Commission – Distance Education Bureau"
+        },
+        "naac": {
+          "grade": "A+",
+          "description": "NAAC A+ accredited university"
+        },
+        "degreeRecognition": [
+          "Valid for Data Science Jobs",
+          "Valid for Government Jobs",
+          "Eligible for Ph.D.",
+          "International Recognition"
+        ]
+      },
+      "whoCanApply": {
+        "eligibility": "Graduation from a recognized university",
+        "minimumMarks": "50% (45% for SC/ST)",
+        "preferredBackground": "Science/IT/Engineering graduates preferred",
+        "entranceExam": "Not Required",
+        "ageLimit": "No Age Limit",
+        "idealCandidates": [
+          "Graduates",
+          "Working Professionals",
+          "Career Switchers to Data Science",
+          "Aspiring Data Scientists",
+          "IT Professionals"
+        ],
+        "documentsRequired": [
+          "10th Marksheet",
+          "12th Marksheet",
+          "Graduation Marksheet (All Semesters)",
+          "Graduation Certificate",
+          "ID Proof",
+          "Passport Size Photograph"
+        ]
+      },
+      "specializations": {
+        "data_science": {
+          "name": "M.Sc Data Science",
+          "fee": "₹2,50,000",
+          "description": "Comprehensive data science program covering statistics, machine learning, deep learning, big data, data visualization, and predictive analytics"
+        }
+      },
+      "courseFees": {
+        "feeRange": "₹2,50,000",
+        "semesterWiseApprox": "₹62,500",
+        "paymentOptions": [
+          "One-Time Payment (Discount Available)",
+          "Semester-Wise Payment",
+          "No-Cost EMI Options",
+          "Education Loan"
+        ],
+        "loanPartners": [
+          "HDFC Credila",
+          "Axis Bank",
+          "ICICI Bank",
+          "Avanse",
+          "InCred"
+        ],
+        "feeIncludes": [
+          "Learning Management System Access",
+          "Live & Recorded Lectures",
+          "Coding Lab Access",
+          "Data Science Tools Access",
+          "Study Materials",
+          "Online Exams",
+          "Projects & Assignments",
+          "Placement Assistance",
+          "Degree Certificate"
+        ]
+      },
+      "certifications": {
+        "degreeAwarded": "Master of Science (M.Sc) in Data Science",
+        "degreeModeMentioned": "No",
+        "certificateValidity": [
+          "Data Science Jobs",
+          "Analytics Jobs",
+          "Government Jobs",
+          "Higher Studies (Ph.D.)",
+          "International Jobs"
+        ],
+        "additionalCertificates": [
+          "Provisional Certificate",
+          "Consolidated Marksheet",
+          "Migration Certificate",
+          "Digital Degree"
+        ],
+        "verification": "Online verification via university portal"
+      },
+      "syllabus_curriculum": {
+        "semester1": [
+          "Python Programming for Data Science",
+          "Statistics for Data Science",
+          "Data Structures and Algorithms",
+          "Database Management Systems",
+          "Mathematics for Data Science",
+          "Data Visualization"
+        ],
+        "semester2": [
+          "Machine Learning",
+          "Big Data Analytics",
+          "R Programming",
+          "Data Mining",
+          "Business Intelligence",
+          "Practical Data Science Projects"
+        ],
+        "semester3": [
+          "Deep Learning",
+          "Natural Language Processing",
+          "Time Series Analysis",
+          "Cloud Computing for Data Science",
+          "Advanced Machine Learning",
+          "Capstone Project Phase 1"
+        ],
+        "semester4": [
+          "Reinforcement Learning",
+          "Computer Vision",
+          "Model Deployment",
+          "AI Ethics and Governance",
+          "Capstone Project Phase 2",
+          "Comprehensive Viva"
+        ],
+        "evaluationPattern": {
+          "internalAssessment": "30%",
+          "finalExam": "70%",
+          "examMode": "Online Proctored Exams"
+        }
+      },
+      "placementPartners": {
+        "topRecruiters": [
+          "Google",
+          "Microsoft",
+          "Amazon",
+          "Flipkart",
+          "TCS",
+          "Infosys",
+          "Wipro",
+          "Accenture",
+          "Deloitte",
+          "KPMG",
+          "Goldman Sachs",
+          "JP Morgan"
+        ],
+        "jobRoles": [
+          "Data Scientist",
+          "Machine Learning Engineer",
+          "Data Analyst",
+          "Business Intelligence Analyst",
+          "AI Engineer",
+          "Data Engineer",
+          "Research Scientist"
+        ],
+        "averageSalary": "₹6 – 18 LPA",
+        "careerSupport": [
+          "Resume Building",
+          "Mock Interviews",
+          "Career Counseling",
+          "Portfolio Development",
+          "Job Portal Access",
+          "Industry Mentor Connect"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Can non-IT graduates pursue M.Sc Data Science?",
+          "answer": "Yes, graduates from any stream can pursue M.Sc Data Science, though basic programming knowledge is helpful."
+        },
+        {
+          "question": "What is the difference between MCA and M.Sc Data Science?",
+          "answer": "MCA focuses on software development and applications, while M.Sc Data Science focuses on data analytics, ML, and AI."
+        },
+        {
+          "question": "Is coding mandatory for data science?",
+          "answer": "Yes, programming skills in Python/R are essential for data science. The program teaches these from basics."
+        },
+        {
+          "question": "What is the career scope after M.Sc Data Science?",
+          "answer": "Excellent career opportunities in IT, finance, healthcare, e-commerce, and consulting with high salary packages."
+        }
+      ],
+      "studentReview": {
+        "averageRating": 4.7,
+        "positiveFeedback": [
+          "High-Demand Skills",
+          "Practical Hands-On Training",
+          "Excellent Placement Support",
+          "Industry-Relevant Curriculum",
+          "Flexible Learning"
+        ],
+        "studentCount": "5,00,000+ Alumni Network"
+      }
+    },
+  
+
+
+  "integrated_programs": {
+    "about": {
+      "title": "Amity Online Integrated Programs",
+      "university": "Amity University Online",
+      "description": "Amity Online Integrated Programs combine undergraduate and postgraduate degrees into a seamless 5-year learning journey. These programs offer significant cost savings, reduced duration compared to pursuing degrees separately, and a continuous learning path. Students save time and money while gaining both UG and PG qualifications without career breaks.",
+      "duration": "5 Years Total (Integrated UG + PG)",
+      "mode": "100% Online",
+      "learningMethod": [
+        "Live Interactive Classes",
+        "Recorded Video Lectures",
+        "Case Studies",
+        "Industry Projects",
+        "Online Assessments"
+      ],
+      "keyBenefits": [
+        "Save Time (5 years instead of 6)",
+        "Save Money (Discounted Combined Fees)",
+        "Two Degrees in One Program",
+        "Continuous Learning Path",
+        "No Career Break Required",
+        "Strong Foundation + Specialization"
+      ]
+    },
+    "approval": {
+      "ugc_deb": {
+        "status": "Approved",
+        "description": "Both degrees in integrated programs are UGC-approved and equivalent to regular degrees"
+      },
+      "naac": {
+        "grade": "A+",
+        "description": "Amity University is NAAC A+ accredited"
+      },
+      "degreeRecognition": [
+        "Both degrees valid for Government Jobs",
+        "Both degrees valid for Private Jobs",
+        "Both degrees eligible for further studies",
+        "International Recognition"
+      ]
+    },
+    "whoCanApply": {
+      "eligibility": "10+2 from a recognized board",
+      "minimumMarks": "50%",
+      "entranceExam": "Not Required",
+      "ageLimit": "No Age Limit",
+      "idealCandidates": [
+        "10+2 Pass Out Students",
+        "Students Planning Long-term Career",
+        "Students Wanting Time & Money Savings",
+        "Career-focused Students"
+      ],
+      "documentsRequired": [
+        "10th Marksheet",
+        "12th Marksheet",
+        "12th Certificate",
+        "ID Proof",
+        "Passport Size Photograph"
+      ]
+    },
+    "programs": {
+      "bba_mba": {
+        "name": "BBA + MBA Integrated",
+        "degreesAwarded": [
+          "Bachelor of Business Administration (BBA)",
+          "Master of Business Administration (MBA)"
+        ],
+        "totalFee": "₹3,45,800",
+        "individualFees": "₹3,64,000 (BBA ₹1,65,000 + MBA ₹1,99,000)",
+        "savings": "₹18,200",
+        "duration": "5 Years (10 Semesters)",
+        "description": "Complete your BBA and MBA in 5 years with this integrated business management program. Build strong business foundations in the first 3 years and specialize in advanced management in the final 2 years.",
+        "specializations": "All MBA specializations available",
+        "careerOptions": [
+          "Business Analyst",
+          "Management Trainee",
+          "Marketing Manager",
+          "Finance Manager",
+          "HR Manager",
+          "Operations Manager"
+        ]
+      },
+      "bca_mca": {
+        "name": "BCA + MCA Integrated",
+        "degreesAwarded": [
+          "Bachelor of Computer Applications (BCA)",
+          "Master of Computer Applications (MCA)"
+        ],
+        "totalFee": "₹3,04,000",
+        "individualFees": "₹3,20,000 (BCA ₹1,50,000 + MCA ₹1,70,000)",
+        "savings": "₹16,000",
+        "duration": "5 Years (10 Semesters)",
+        "description": "Complete your BCA and MCA in 5 years with this integrated computer applications program. Master programming fundamentals in the first 3 years and advance to software engineering and emerging technologies in the final 2 years.",
+        "specializations": "All MCA specializations available (General, Blockchain, AI/ML, AR/VR, Software Engineering, Cyber Security)",
+        "careerOptions": [
+          "Software Developer",
+          "System Architect",
+          "Technical Lead",
+          "Full Stack Developer",
+          "AI/ML Engineer",
+          "Cybersecurity Analyst"
+        ]
+      },
+      "bcom_mba": {
+        "name": "B.Com + MBA Integrated",
+        "degreesAwarded": [
+          "Bachelor of Commerce (B.Com)",
+          "Master of Business Administration (MBA)"
+        ],
+        "totalFee": "₹2,83,100",
+        "individualFees": "₹2,98,000 (B.Com ₹99,000 + MBA ₹1,99,000)",
+        "savings": "₹14,900",
+        "duration": "5 Years (10 Semesters)",
+        "description": "Complete your B.Com and MBA in 5 years with this integrated commerce-management program. Build strong commerce foundations in accounting and finance in the first 3 years, then specialize in advanced business management in the final 2 years.",
+        "specializations": "All MBA specializations available (especially Finance, Accounting, Marketing)",
+        "careerOptions": [
+          "Financial Analyst",
+          "Business Manager",
+          "Accounts Manager",
+          "Marketing Manager",
+          "Banking Manager",
+          "Finance Manager"
+        ]
+      }
+    },
+    "courseFees": {
+      "paymentOptions": [
+        "One-Time Payment (Additional Discount Available)",
+        "Semester-Wise Payment",
+        "No-Cost EMI Options",
+        "Education Loan"
+      ],
+      "loanPartners": [
+        "HDFC Credila",
+        "Axis Bank",
+        "ICICI Bank",
+        "Avanse",
+        "InCred"
+      ],
+      "feeIncludes": [
+        "Learning Management System Access",
+        "Live & Recorded Lectures",
+        "Study Materials for Both Degrees",
+        "Online Exams",
+        "Projects & Assignments",
+        "Placement Assistance",
+        "Both Degree Certificates"
+      ]
+    },
+    "programStructure": {
+      "years1to3": "Complete undergraduate degree (BBA/BCA/B.Com)",
+      "years4to5": "Complete postgraduate degree (MBA/MCA)",
+      "transitionProcess": "Seamless transition from UG to PG without application process",
+      "evaluationPattern": {
+        "internalAssessment": "30%",
+        "finalExam": "70%",
+        "examMode": "Online Proctored Exams"
+      }
+    },
+    "placementPartners": {
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Accenture",
+        "Deloitte",
+        "KPMG",
+        "EY",
+        "PwC",
+        "Amazon",
+        "Microsoft",
+        "Google",
+        "ICICI Bank",
+        "HDFC Bank"
+      ],
+      "averageSalary": "₹5 – 15 LPA (for PG qualified candidates)",
+      "careerSupport": [
+        "Resume Building",
+        "Mock Interviews",
+        "Career Counseling throughout 5 years",
+        "LinkedIn Optimization",
+        "Job Portal Access",
+        "Industry Mentor Connect"
+      ]
+    },
+    "faq": [
+      {
+        "question": "Can I exit after completing UG in integrated program?",
+        "answer": "Yes, you will receive your UG degree after 3 years and can exit if needed. However, continuing to PG gives you better ROI."
+      },
+      {
+        "question": "Is there any break between UG and PG?",
+        "answer": "No, it's a continuous 5-year program with seamless transition from UG to PG."
+      },
+      {
+        "question": "Can I change specialization in PG part?",
+        "answer": "Yes, you can choose any MBA/MCA specialization in the PG phase regardless of your UG focus."
+      },
+      {
+        "question": "Are both degrees mentioned separately?",
+        "answer": "Yes, you receive two separate degree certificates - one for UG and one for PG."
+      },
+      {
+        "question": "Is this better than doing UG and PG separately?",
+        "answer": "Yes, integrated programs save time (1 year) and money (fees discount) while providing continuous learning."
+      },
+      {
+        "question": "Can I work while pursuing integrated program?",
+        "answer": "Yes, the online format allows you to work and study simultaneously throughout the 5 years."
+      }
+    ],
+    "studentReview": {
+      "averageRating": 4.8,
+      "positiveFeedback": [
+        "Excellent Value for Money",
+        "Saves Time and Fees",
+        "Continuous Learning Path",
+        "Two Degrees in 5 Years",
+        "No Application Stress for PG",
+        "Strong Career Foundation"
+      ],
+      "studentCount": "5,00,000+ Alumni Network"
+    }
+  }
+}

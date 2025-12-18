@@ -57,7 +57,6 @@ useEffect(() => {
   };
 
   const handleOnclickEnquiry = (programName) => {
-    console.log('Enquiry button clicked for:', programName);
     setOpenModal({ type: 'enquiry', program: programName });
   };
 

@@ -56,8 +56,8 @@ const Achievements = () => {
                     </li>
                     <li className="flex items-start">
                       <ArrowRight className="w-5 h-5 text-black mr-2 mt-0.5" />
-                      Recognition from UGC & NAAC ensures credibility of the
-                      degree.
+                      Recognition from UGC & NAAC ensures credibility of the degree programs
+                      .
                     </li>
                   </ul>
 

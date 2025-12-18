@@ -52,7 +52,6 @@ export async function GET() {
       universityLogos,
       faqs,
     };
-    console.log("payload is ", payload);
 
     return NextResponse.json(payload, {
       status: 200,
