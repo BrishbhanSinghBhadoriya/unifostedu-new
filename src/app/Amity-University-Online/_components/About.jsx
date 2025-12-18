@@ -4,7 +4,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-const About = ({openmodel ,setOpenModal}) => {
+// interface AboutProps {
+//   openmodel?: { type: string } | null;
+//   setOpenModal: (modal: { type: string } | null) => void;
+// }
+
+
+const About = ({ openmodel, setOpenModal }) => {
   return (
     <section
       id="AboutAmity"
@@ -65,6 +71,7 @@ const About = ({openmodel ,setOpenModal}) => {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button
               size="lg"
+              variant="default"
               className="bg-yellow-400 hover:bg-yellow-500 text-black px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base md:text-lg rounded-full w-full sm:w-auto"
               onClick={() => setOpenModal({ type: "apply" })}
             >
@@ -78,6 +85,7 @@ const About = ({openmodel ,setOpenModal}) => {
               className="border-2 border-gray-300 hover:border-blue-400 px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base md:text-lg rounded-full w-full sm:w-auto"
               onClick={() => setOpenModal({ type: "enquiry" })}
             >
+              {/* @ts-expect-error - lucide-react icons accept className but types may not reflect it */}
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Enquire Now
             </Button>

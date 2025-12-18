@@ -3,6 +3,12 @@
 import React, { useState } from 'react';
 import EnquiryForm from '@/components/EnquiryForm';
 
+interface enquiryFromProps {
+  formType: string;
+  onSubmitted: () => void;
+}
+
+
 export default function BookDemo() {
   const [submitted, setSubmitted] = useState(false);
 

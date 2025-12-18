@@ -2,19 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  FaBookOpen,
-  FaUserTie,
-  FaGraduationCap,
-  FaGlobe,
-  FaAward,
-  FaCertificate,
-  FaUsers,
-  FaLaptop,
-  FaHeadset,
-  FaBuilding,
-  FaBriefcase,
-  FaClipboardCheck,
-  FaChalkboardTeacher,
+  
   FaTimes,
   FaBars,
 } from "react-icons/fa";
@@ -23,10 +11,26 @@ import { Button } from '@/components/ui/button';
 import EnquireCard from '@/components/EnquireCard';
 import Head from 'next/head';
 import Image from 'next/image';
-import HeroSection from '@/components/HeroSection';
+
 import AccreditationSection from '@/components/AccreditationSection';
-import AdmissionProcedure from '@/components/AdmissionProcedure';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
+ 
+interface Benefit  {
+  title: string;
+  description: string;
+  iconSvg: string;
+};
+
+interface Accreditation  {
+  src: string;
+  alt: string;
+  name: string;
+};
+
+interface BenifitProps{
+  benefits: Benefit[];
+  accreditations: Accreditation[];
+}
 
 const SECTION_ITEMS = [
   { id: "Introduction", label: "Introduction" },
@@ -48,9 +52,9 @@ const SECTION_ITEMS = [
 const UttaranchalUniversity = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeTab, setActiveTab] = useState('all');
-  const [openModal, setOpenModal] = useState(null);
-  const [openIndex, setOpenIndex] = useState(null);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [openModal, setOpenModal] = useState<{ type: string,program?:string } |null >(null);
+  const [openIndex, setOpenIndex] = useState<number|null>(null);
+  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState('Introduction');
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -61,7 +65,9 @@ const UttaranchalUniversity = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = SECTION_ITEMS.map(item => document.getElementById(item.id)).filter(Boolean);
+      const sections:HTMLElement[] = SECTION_ITEMS
+  .map(item => document.getElementById(item.id))
+  .filter((el): el is HTMLElement => el !== null);
       const scrollPosition = window.scrollY + 2;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -76,7 +82,7 @@ const UttaranchalUniversity = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSectionNavigation = (sectionId) => {
+  const handleSectionNavigation = (sectionId:string) => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -105,11 +111,11 @@ const UttaranchalUniversity = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const toggleFAQ = (index) => {
+  const toggleFAQ = (index:number | null) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const handleOnclickEnquiry = (programName) => {
+  const handleOnclickEnquiry = (programName:string ) => {
    
     setOpenModal({ type: 'enquiry', program: programName });
   };
@@ -846,7 +852,18 @@ const UttaranchalUniversity = () => {
               <Tabs.Content value="all">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start content-start">
                   {[...ugCourses, ...pgCourses].map((item, index) => (
-                    <EnquireCard key={index} {...item} universityName="Uttaranchal University Online"/>
+                    <EnquireCard
+                      key={`uu-${index}`}
+                      course={item.course}
+                      duration={item.duration}
+                      eligibility={item.eligibility}
+                      fees={item.fees}
+                      fee={item.fees}
+
+                      image={item.image}
+                      universityName="Uttaranchal University Online"
+                      uniqueId={`uu-${index}`}
+                    />
                   ))}
                 </div>
               </Tabs.Content>
@@ -854,7 +871,18 @@ const UttaranchalUniversity = () => {
               <Tabs.Content value="ug">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start content-start">
                   {ugCourses.map((item, index) => (
-                    <EnquireCard key={index} {...item} universityName="Uttaranchal University Online"/>
+<EnquireCard
+  key={`uu-ug-${index}`}
+  course={item.course}
+  duration={item.duration}
+  eligibility={item.eligibility}
+  fees={item.fees}
+  fee={item.fees}
+ 
+  image={item.image}
+  universityName="Uttaranchal University Online"
+  uniqueId={`uu-ug-${index}`}
+/>
                   ))}
                 </div>
               </Tabs.Content>
@@ -862,7 +890,18 @@ const UttaranchalUniversity = () => {
               <Tabs.Content value="pg">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-start content-start">
                   {pgCourses.map((item, index) => (
-                    <EnquireCard key={index} {...item} universityName="Uttaranchal University Online"/>
+<EnquireCard
+  key={`uu-pg-${index}`}
+  course={item.course}
+  duration={item.duration}
+  eligibility={item.eligibility}
+  fees={item.fees}
+  fee={item.fees}
+
+  image={item.image}
+  universityName="Uttaranchal University Online"
+  uniqueId={`uu-pg-${index}`}
+/>
                   ))}
                 </div>
               </Tabs.Content>
