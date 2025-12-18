@@ -61,7 +61,12 @@ function slugify(input) {
 
 // (metadata is generated below; keeping a single generateMetadata export)
 
-export default async function UniversityPage({ params }) {
+type PageProps = {
+  params: {
+    slug: string;
+  };
+};
+export default async function UniversityPage({ params }:PageProps) {
   const { slug } = await params;
 
   let university = universityData[slug];

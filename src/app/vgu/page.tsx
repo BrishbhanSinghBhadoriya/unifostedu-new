@@ -1,25 +1,21 @@
 'use client';
-import React from 'react';
-import { useState, useEffect } from 'react';
-import {
-  FaBookOpen,
-  FaUserTie,
-  FaGlobe,
-  FaBars,
-  FaLightbulb
-} from "react-icons/fa";
-import { motion, AnimatePresence } from "framer-motion";
-import { useRouter } from 'next/navigation';
-import { Button } from '@/components/ui/button';
-import EnquireCard from '@/components/EnquireCard';
-import Head from 'next/head';
-import * as Tabs from '@radix-ui/react-tabs';
-import Image from 'next/image';
-import HeroSection from '@/components/HeroSection';
 import AccreditationSection from '@/components/AccreditationSection';
-import AdmissionProcedure from '@/components/AdmissionProcedure';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
+import HeroSection from '@/components/HeroSection';
 import PageContent from '@/components/PageContent/PageContent';
+import { Button } from '@/components/ui/button';
+import * as Tabs from '@radix-ui/react-tabs';
+import { motion } from "framer-motion";
+import Head from 'next/head';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import {
+  FaBars,
+  FaBookOpen,
+  FaGlobe,
+  FaLightbulb,
+  FaUserTie
+} from "react-icons/fa";
 const Vgu = () => {
   const selectionItem = [
     { id: "introduction", label: "Introduction" },
@@ -225,25 +221,28 @@ const Vgu = () => {
           
     
           const timer= setTimeout(()=>{
-          setOpenModal({ type: 'apply' })
+          setOpenModal({ type: 'apply' } as any)
           },3000)
           return () => clearTimeout(timer);
     
            
     },[])
-  const [openIndex, setOpenIndex] = useState(null);        
-  const [openModal, setOpenModal] = useState(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);        
+  const [openModal, setOpenModal] = useState<{ type: string,program?:string } |null >(null);
 
   const toggleFAQ = (index:number | null) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+// expandedSpecializations already declared above; remove duplicate declaration
+  useState<Record<string, boolean>>({});
 
-  const toggleSpecialization = (courseId) => {
-    setExpandedSpecializations(prev => ({
-      ...prev,
-      [courseId]: !prev[courseId]
-    }));
-  };
+const toggleSpecialization = (courseId: string) => {
+  setExpandedSpecializations(prev => ({
+    ...prev,
+    [courseId]: !prev[courseId as keyof typeof prev],
+  }));
+};
+
 
   
   return (
@@ -315,7 +314,7 @@ const Vgu = () => {
                 
                 {/* Apply Button */}
                 <button 
-                  onClick={() => setOpenModal({ type: 'apply' })}
+onClick={() => setOpenModal({ type: 'apply' } as any)}
                   className="bg-[#821812] hover:bg-black-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-black-500/25 text-sm sm:text-base cursor-pointer"
                 >
                   <span className="hidden sm:inline ">Apply Now</span>
@@ -445,14 +444,14 @@ const Vgu = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start max-w-md mx-auto lg:mx-0">
               <button
                 className="bg-white  hover:bg-[#821812] text-black hover:text-white font-bold px-6 py-3.5 sm:px-8 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 flex-1 sm:flex-none whitespace-nowrap cursor-pointer"
-                onClick={() => setOpenModal({ type: 'apply' })}
+                onClick={() => setOpenModal({ type: 'apply' } as any)}
               >
                 Apply Now
               </button>
 
               <button
                 className="bg-white  hover:bg-[#821812] text-black hover:text-white font-bold px-6 py-3.5 sm:px-8 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 flex-1 sm:flex-none whitespace-nowrap cursor-pointer"
-                onClick={() => setOpenModal({ type: 'Enquire Now' })}
+                onClick={() => setOpenModal({ type: 'Enquire Now' } as any)}
               >
                 Enquire Now
               </button>
@@ -992,7 +991,7 @@ Through the campus tour, students can explore digital classrooms, study resource
                       {/* Specialization */}
                       {course.specialization && (
                         <div>
-                          <p className={`text-sm ${!expandedSpecializations[courseId] && "line-clamp-2"}`}>
+                          <p className={`text-sm ${!(expandedSpecializations as Record<string, boolean>)[courseId] && "line-clamp-2"}`}>
                             {Array.isArray(course.specialization)
                               ? course.specialization.join(", ")
                               : course.specialization}
@@ -1005,7 +1004,7 @@ Through the campus tour, students can explore digital classrooms, study resource
                               onClick={() => toggleSpecialization(courseId)}
                               className="text-xs text-[#821812] font-semibold hover:underline mt-1"
                             >
-                              {expandedSpecializations[courseId] ? "Less Show" : "More Show"}
+                              {(expandedSpecializations as Record<string, boolean>)[courseId] ? "Show Less" : "Show More"}
                             </button>
                           )}
                         </div>

@@ -3,7 +3,7 @@ type ModalProps={
   onOpenChange:(value:boolean)=>void,
   title :string,
   subtitle:string,
-  imageSrc :string,
+  imageSrc? :string,
   universityName?:string,
   defaultProgram : string,
   formType : string,

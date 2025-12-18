@@ -5,29 +5,36 @@ import Image from "next/image";
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 export default function OnlineBCAPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('');
- const [openModal, setOpenModal] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll('section[id]');
-      const scrollY = window.scrollY;
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+ const [openModal, setOpenModal] =
+  useState<{ type: string; program?: string } | null>(null);
 
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.offsetHeight;
-        const sectionId = section.getAttribute('id');
 
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-          setActiveSection(sectionId);
-        }
-      });
-    };
+ useEffect(() => {
+  const handleScroll = () => {
+    const sections = document.querySelectorAll<HTMLElement>('section[id]');
+    const scrollY = window.scrollY;
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.id;
 
-  const scrollToSection = (id) => {
+      if (
+        scrollY > sectionTop &&
+        scrollY <= sectionTop + sectionHeight
+      ) {
+        setActiveSection(sectionId);
+      }
+    });
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
+
+
+  const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -59,7 +66,10 @@ export default function OnlineBCAPage() {
                   {item.charAt(0).toUpperCase() + item.slice(1)}
                 </button>
               ))}
-              <button onClick={() => setOpenModal(true)} className="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-purple-700 transition-colors">
+              
+            <button onClick={() => setOpenModal(null)}
+              
+               className="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-purple-700 transition-colors">
                 Apply Now
               </button>
             </div>
@@ -691,17 +701,20 @@ export default function OnlineBCAPage() {
           </div>
         </div>
       </footer>
-           {openModal && (
-                      <ApplyEnquiryModal
-                        open={!!openModal}
-                        onOpenChange={(v) => !v && setOpenModal(null)}
-                        title="Enquire Now"
-                        subtitle="Share your details and our counselor will reach out"
-                        defaultProgram="BCA"
-                        formType="general"
-                        showImage={false}
-                      />
-                    )}
+          {openModal && (
+  <ApplyEnquiryModal
+    open={true}
+    onOpenChange={(v) => {
+      if (!v) setOpenModal(null);
+    }}
+    title="Enquire Now"
+    subtitle="Share your details and our counselor will reach out"
+    defaultProgram="BCA"
+    formType="general"
+    showImage={false}
+  />
+)}
+
     </div>
   );
 }

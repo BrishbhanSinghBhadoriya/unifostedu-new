@@ -28,15 +28,15 @@ import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 const Upes = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeTab, setActiveTab] = useState('all');
-  const [openModal, setOpenModal] = useState(null);
-   const [openIndex, setOpenIndex] = useState(null);
+  const [openModal, setOpenModal] =  useState<{ type: string,program?:string } |null >(null);
+   const [openIndex, setOpenIndex] = useState<number | null>(null);
      useEffect(() => {
          
    
-         const timer= setTimeout(()=>{
-          setOpenModal(true)
-         },3000)
-         return () => clearTimeout(timer);
+    const timer= setTimeout(()=>{
+    setOpenModal({ type: 'apply' } as any)
+    },3000)
+    return () => clearTimeout(timer);
    
           
    },[])
@@ -68,7 +68,9 @@ const Upes = () => {
         "All assessments and examinations are conducted online through the university’s secure LMS platform, ensuring flexibility and convenience for all learners.",
     },
   ];
-    
+   const toggleFAQ = (index:number | null) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };  
   const sliderImages = [
     'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327865/upes-mba_kljihd.webp',
     'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327866/upes-mca_zh1oml.webp',

@@ -1,19 +1,18 @@
 'use client';
 
-import React, { useState, useCallback } from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import EnquiryForm from '@/components/EnquiryForm';
-import Image from 'next/image';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { motion } from 'framer-motion';
-import { 
-  FaClock, 
-  FaGraduationCap, 
-  FaMoneyBillWave, 
-  FaChevronDown, 
-  FaChevronUp,
+import Image from 'next/image';
+import { useCallback, useState } from 'react';
+import {
+  FaArrowRight,
   FaBookOpen,
-  FaStar,
-  FaArrowRight
+  FaChevronDown,
+  FaChevronUp,
+  FaClock,
+  FaGraduationCap,
+  FaMoneyBillWave
 } from 'react-icons/fa';
 
 const EnquireCard = ({ 
@@ -21,12 +20,12 @@ const EnquireCard = ({
   duration, 
   eligibility, 
   fees, 
-  fee,
+  
   specialization = [],  
   image, 
   universityName,
-  uniqueId 
-}) => {
+  
+}:EnquireCardProps) => {
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
   const [showMore, setShowMore] = useState(false);
 
@@ -38,7 +37,7 @@ const EnquireCard = ({
   };
 
   // Handle both 'fees' and 'fee' properties
-  const displayFees = fees || fee;
+  const displayFees = fees 
 
   // Normalize specialization → always array
   const specializationList = Array.isArray(specialization)
