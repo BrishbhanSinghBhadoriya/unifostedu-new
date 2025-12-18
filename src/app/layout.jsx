@@ -7,7 +7,7 @@ import OrganizationSchema from "@/components/OrganizationSchema";
 import Canonical from "@/components/Canonical";
 import { Toaster as SonnerToaster } from "sonner";
 import Script from 'next/script';
-
+import LenisProvider from "@/components/LenisProvider";
 const inter = Inter({ subsets: ["latin"] });
 const baskervville = Baskervville({
   subsets: ["latin"],
@@ -188,9 +188,11 @@ export default function RootLayout({ children }) {
   className={`${inter.className} ${baskervville.variable} overflow-x-hidden`}
 >
   <Canonical />
+  <LenisProvider>
   <Header />
   <main>{children}</main>
   <Footer />
+  </LenisProvider>
   <ChatBoxWrapper />
   <SonnerToaster
     position="top-center"

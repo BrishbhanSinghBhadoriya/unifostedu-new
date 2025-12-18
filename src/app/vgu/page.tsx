@@ -4,14 +4,8 @@ import { useState, useEffect } from 'react';
 import {
   FaBookOpen,
   FaUserTie,
-  FaUniversity,
-  FaBriefcase,
-  FaClipboardCheck,
   FaGlobe,
-  FaTimes,
   FaBars,
-  FaLaptopCode,
-  FaUserFriends,
   FaLightbulb
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
@@ -161,7 +155,7 @@ const Vgu = () => {
       duration: "2 Years",
       eligibility: "Graduation in any stream",
       fees: "₹72,000/-",
-       universityShort: "VGU",
+     
       
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
       alt:"MAJMC In VGU",
@@ -231,7 +225,7 @@ const Vgu = () => {
           
     
           const timer= setTimeout(()=>{
-           setOpenModal(true)
+          setOpenModal({ type: 'apply' })
           },3000)
           return () => clearTimeout(timer);
     
@@ -240,7 +234,7 @@ const Vgu = () => {
   const [openIndex, setOpenIndex] = useState(null);        
   const [openModal, setOpenModal] = useState(null);
 
-  const toggleFAQ = (index) => {
+  const toggleFAQ = (index:number | null) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 

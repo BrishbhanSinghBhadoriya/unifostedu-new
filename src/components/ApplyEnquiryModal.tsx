@@ -3,6 +3,7 @@ import React from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogDescription, DialogTitle } from '@/components/ui/dialog';
 import EnquiryForm from '@/components/EnquiryForm';
 import Image from 'next/image';
+import { ModalProps } from 'types/ApplyEnquiryModalTypes';
 
 export default function ApplyEnquiryModal({
   open,
@@ -14,7 +15,7 @@ export default function ApplyEnquiryModal({
   defaultProgram = 'MBA',
   formType = 'general',
   showImage = true,
-}) {
+}:ModalProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-5xl md:max-w-6xl p-0 h-[95vh] md:h-[90vh] flex flex-col">

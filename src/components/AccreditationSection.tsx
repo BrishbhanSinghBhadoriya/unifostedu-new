@@ -4,23 +4,26 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { AccreditationSectionProps } from "types/AccreditationSection";
 
-const AccreditationSection = ({
+const AccreditationSection:React.FC<AccreditationSectionProps> = ({
   title = "Education with Global Recognition",
   description = "Our accredited programs open doors to international opportunities and ensure your qualifications are recognized worldwide.",
-  stats = [], // Array of { value, label, bg, text }
-  benefits = [], // Array of { title, description, iconSvg }
-  accreditations = [], // Array of { src, alt, name }
-  internationalRecognition = [], // Array of { src, alt, name }
+  stats = [], 
+  benefits = [], 
+  accreditations = [], 
+  internationalRecognition = [
+
+  ], 
   trustText = "Trusted by 25,000+ Students",
-  successStories = [], // Array of { name, initials, quote, color }
+  successStories = [], 
 }) => {
   return (
     <section className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-8">
-        {/* Main Content */}
+        
         <div className="lg:w-3/4">
-          {/* Title & Description */}
+        
           <motion.div
             className="text-center mb-10"
             initial={{ opacity: 0, y: 20 }}
@@ -38,13 +41,13 @@ const AccreditationSection = ({
               {stats.map((stat, i) => (
                 <motion.div
                   key={i}
-                  className={`${stat.bg} p-6 rounded-xl text-center`}
+                  className={`p-6 rounded-xl text-center`}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <div className={`text-4xl font-bold ${stat.text} mb-2`}>{stat.value}</div>
+                  <div className={`text-4xl font-bold  mb-2`}>{stat.value}</div>
                   <div className="text-gray-700">{stat.label}</div>
                 </motion.div>
               ))}
@@ -90,33 +93,7 @@ const AccreditationSection = ({
           
           <p className="mt-4">Our multiple accreditations demonstrate our commitment to maintaining these high standards across all our programs and services.</p>
         </div>
-          {/* Success Stories */}
-          {/* {successStories.length > 0 && (
-            <motion.div
-              className="mb-12"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 font-[Poppins] text-center">Success Stories</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                {successStories.map((story, i) => (
-                  <div key={i} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <div className="flex items-center mb-4">
-                      <div className={`w-12 h-12 ${story.color} rounded-full flex items-center justify-center mr-4`}>
-                        <span className="font-semibold">{story.initials}</span>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold">{story.name}</h4>
-                      </div>
-                    </div>
-                    <p className="text-gray-700 italic">"{story.quote}"</p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          )} */}
+          
         </div>
        
         {/* Sidebar */}
@@ -143,23 +120,7 @@ const AccreditationSection = ({
               ))}
             </div>
               
-            {internationalRecognition.length > 0 && (
-              <div className="mt-6 pt-4 border-t border-gray-200">
-                <h4 className="text-xs font-semibold text-gray-600 mb-3 uppercase tracking-wide text-center">
-                  International Recognition
-                </h4>
-                <div className="grid grid-cols-2 gap-2">
-                  {internationalRecognition.map((item, i) => (
-                    <div key={i} className="flex flex-col items-center p-2 bg-gray-50 rounded-md">
-                      <div className="h-6 w-6 relative mb-1">
-                        <Image src={item.src} alt={item.alt} width={100} height={100} loading="lazy" />
-                      </div>
-                      <span className="text-xs text-gray-600 text-center">{item.name}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
+            
 
             <div className="mt-6 pt-4 border-t border-gray-200 text-center">
               <div className="flex items-center justify-center mb-2">

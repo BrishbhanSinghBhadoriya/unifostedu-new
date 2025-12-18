@@ -12,7 +12,16 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 
-export default function EnquiryForm({ universityName, defaultProgram = 'MBA', onSubmitted, formType = "general", autoCloseOnSuccess = true }) {
+interface EnquiryFormProps {
+
+  universityName?: string;
+  defaultProgram?: string;
+  onSubmitted?: () => void;
+  formType?: string;
+  autoCloseOnSuccess?: boolean;
+
+}
+export default function EnquiryForm({ universityName, defaultProgram = 'MBA', onSubmitted, formType = "general", autoCloseOnSuccess = true }: EnquiryFormProps) {
   const [loading, setLoading] = useState(false);
   const [program, setProgram] = useState(defaultProgram);
   const [selectedUniversity, setSelectedUniversity] = useState(universityName || '');

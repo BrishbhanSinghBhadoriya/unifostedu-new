@@ -35,8 +35,34 @@
   
   /* Smooth scrolling for better mobile experience */
   html {
-    scroll-behavior: smooth;
+  scroll-behavior: auto !important;
+}
+
+/* Lenis core */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Mobile & tablet: native fast scroll */
+@media (max-width: 1023px) {
+  html,
+  body {
+    scroll-behavior: auto !important;
+    overflow-y: auto !important;
   }
+}
   
   /* Better text rendering on mobile */
   body {
