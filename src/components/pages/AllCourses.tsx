@@ -1,9 +1,9 @@
 "use client";
-import React from "react";
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { FaClock, FaUsers, FaGraduationCap, FaBriefcase, FaUserTie, FaBook, FaUniversity, FaLaptopCode, FaChartLine, FaPalette, FaBalanceScale } from "react-icons/fa";
+import Link from "next/link";
 
 export function AllCourses({ courses = [] }) {
 
@@ -56,12 +56,14 @@ export function AllCourses({ courses = [] }) {
         const Icon = getIcon(course);
         return <Icon className="text-white text-xl sm:text-2xl" />;
     };
+    const MotionDiv=motion('div');
+
     
   return (
     <div>
          <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <motion.div className="text-center mb-10 sm:mb-14" data-aos="fade-up">
+          <MotionDiv className="text-center mb-10 sm:mb-14" data-aos="fade-up">
             <h2 className="text-3xl sm:text-4xl md:text-4xl font-semibold tracking-tight text-[#001e3c] mb-2">
               Select the Best Programs
             </h2>
@@ -69,7 +71,7 @@ export function AllCourses({ courses = [] }) {
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
               Explore curated online programs from leading universities.
             </p>
-          </motion.div>
+          </MotionDiv>
           
           <Tabs defaultValue="all" className="w-full">
             <TabsList className="mx-auto mb-6 sm:mb-8 grid grid-cols-3 w-full max-w-md">
@@ -81,7 +83,7 @@ export function AllCourses({ courses = [] }) {
             <TabsContent value="all">
               <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-6">
                 {courses.map((course, index) => (
-                  <motion.a
+                  <Link
                     key={index}
                     href={getCourseHref(course.title)}
                     className="group"
@@ -117,7 +119,7 @@ export function AllCourses({ courses = [] }) {
                         </div>
                       </div>
                     </div>
-                  </motion.a>
+                  </Link>
                 ))}
               </div>
             </TabsContent>
@@ -127,7 +129,7 @@ export function AllCourses({ courses = [] }) {
                 {courses
                   .filter((c) => c.level === "UG")
                   .map((course, index) => (
-                  <motion.a
+                  <Link
                     key={index}
                     href={getCourseHref(course.title)}
                     className="group"
@@ -163,7 +165,7 @@ export function AllCourses({ courses = [] }) {
                         </div>
                       </div>
                     </div>
-                  </motion.a>
+                  </Link>
                 ))}
               </div>
             </TabsContent>
@@ -173,7 +175,7 @@ export function AllCourses({ courses = [] }) {
                 {courses
                   .filter((c) => c.level === "PG")
                   .map((course, index) => (
-                  <motion.a
+                  <Link
                     key={index}
                     href={getCourseHref(course.title)}
                     className="group"
@@ -209,7 +211,7 @@ export function AllCourses({ courses = [] }) {
                         </div>
                       </div>
                     </div>
-                  </motion.a>
+                  </Link>
                 ))}
               </div>
             </TabsContent>

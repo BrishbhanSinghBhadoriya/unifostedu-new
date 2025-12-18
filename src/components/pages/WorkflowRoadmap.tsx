@@ -4,6 +4,8 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaGraduationCap, FaArrowRight, FaCheckCircle } from 'react-icons/fa';
+import gsap from "gsap";
+
 
 const steps = [
   { 
@@ -55,10 +57,11 @@ const steps = [
     icon: '🎓'
   },
 ];
+const MotionDiv=motion('div');
 
 // Animated Cap Component with better positioning
 const AnimatedCap = ({ start, delay = 0 }) => (
-  <motion.div
+  <MotionDiv
     className="absolute top-0 left-0 z-10"
     initial={{ offsetDistance: `${start}%` }}
     animate={{ offsetDistance: [`${start}%`, `${start + 100}%`] }}
@@ -77,7 +80,7 @@ const AnimatedCap = ({ start, delay = 0 }) => (
       <FaGraduationCap size={24} className="text-black drop-shadow-lg" />
       <div className="absolute -inset-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full blur-sm opacity-30 animate-pulse" />
     </div>
-  </motion.div>
+  </MotionDiv>
 );
 
 export default function WorkflowRoadmap({ onGetStartedClick }) {
@@ -194,7 +197,7 @@ export default function WorkflowRoadmap({ onGetStartedClick }) {
           {/* Milestones with improved positioning and spacing */}
           <div className="absolute inset-0 px-2 sm:px-4 md:px-8 lg:px-12 flex justify-between items-center">
             {steps.map((step, index) => (
-              <motion.div
+              <MotionDiv
                 key={step.id}
                 initial={{ opacity: 0, y: step.position === 'top' ? 50 : -50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -238,7 +241,7 @@ export default function WorkflowRoadmap({ onGetStartedClick }) {
                 </div>
 
                 {/* Progress indicator */}
-                <motion.div
+                <MotionDiv
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   transition={{ duration: 0.3, delay: index * 0.1 + 0.5 }}
@@ -246,15 +249,15 @@ export default function WorkflowRoadmap({ onGetStartedClick }) {
                   className={`mt-2 sm:mt-3 md:mt-4 ${step.id === 1 || step.id === 3 || step.id === 5 ? '-rotate-180' : ''}`}
                 >
                   <FaCheckCircle className="text-green-500 text-sm sm:text-base md:text-lg lg:text-xl" />
-                </motion.div>
-              </motion.div>
+                </MotionDiv>
+              </MotionDiv>
             ))}
           </div>
         </div>
 
         {/* Enhanced CTA Section */}
         <div className="mt-12 sm:mt-16 md:mt-20 text-center">
-          <motion.div
+          <MotionDiv
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -270,7 +273,7 @@ export default function WorkflowRoadmap({ onGetStartedClick }) {
               <span>Start Your Journey Today</span>
               <FaArrowRight className="text-xs" />
             </button>
-          </motion.div>
+          </MotionDiv>
           
           <p className="mt-3 sm:mt-4 text-slate-600 text-xs sm:text-sm md:text-base">
             Join thousands of students who have transformed their careers with UniFost
