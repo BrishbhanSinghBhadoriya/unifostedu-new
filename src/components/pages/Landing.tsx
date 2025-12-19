@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import "aos/dist/aos.css";
+import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
-import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
 import Hero from "./landing/Hero";
 const WorkflowRoadmap = dynamic(
   () => import("@/components/pages/WorkflowRoadmap")
@@ -13,76 +13,40 @@ const WorkflowRoadmap = dynamic(
 const UniversityLogoSlider = dynamic(
   () => import("./landing/UniversityLogoSlider")
 );
-import Stats from "./landing/Stats";
-import {
-  FaBook,
-  FaUniversity,
-  FaGraduationCap,
-  FaBriefcase,
-  FaTimes,
-  FaBookOpen,
-  FaHome,
-  FaVideo,
-  FaArrowRight,
-  FaStar,
-  FaUsers,
-  FaClock,
-  FaGlobe,
-  FaUserTie,
-  FaShieldAlt,
-  FaComments,
-  FaCompass,
-  FaRocket,
-  FaAward,
-  FaCheckCircle,
-  FaPlay,
-  FaSearch,
-  FaMapMarkerAlt,
-  FaPhone,
-  FaEnvelope,
-  FaWhatsapp,
-  FaHeadset,
-  FaLightbulb,
-  FaTarget,
-  FaCalendar,
-  FaCalendarAlt,
-  FaChevronLeft,
-  FaChevronRight,
-  FaBalanceScaleLeft,
-} from "react-icons/fa";
 
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+  FaBriefcase,
+  FaCompass,
+  FaGlobe,
+  FaHome,
+  FaUserTie,
+  FaVideo
+} from "react-icons/fa";
+import Stats from "./landing/Stats";
+
+import EnquiryForm from "@/components/EnquiryForm";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle,
-  DialogTrigger,
+  DialogTitle
 } from "@/components/ui/dialog";
-import EnquiryForm from "@/components/EnquiryForm";
+import AOS from "aos";
 import FAQ from "../FAQ";
 import { TopOnlineUniversity } from "../University/TopOnlineUniversity";
+import { AllCourses } from "./AllCourses";
 import CompareOnline from "./CompareOnline";
-import {AllCourses} from "./AllCourses";
+import { LandingPageProps } from "types/LandingPageTypes";
 
-const iconMap = {
+// Icon mapping with proper typing
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   FaUserTie,
   FaCompass,
   FaGlobe,
   FaBriefcase,
 };
 
-const Landing = ({ data }) => {
+const Landing = ({ data }: LandingPageProps) => {
   const {
     heroSlides = [],
     courses = [],
@@ -95,24 +59,17 @@ const Landing = ({ data }) => {
   } = data || {};
 
   useEffect(() => {
-    let disposed = false;
-    (async () => {
-      const AOS = (await import("aos")).default;
-      await import("aos/dist/aos.css");
-      if (!disposed) {
-        AOS.init({ duration: 1000, once: true });
-      }
-    })();
-    return () => { disposed = true; };
+    AOS.init({ duration: 1000, once: true });
   }, []);
 
   const router = useRouter();
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
-  const [modalType, setModalType] = useState("getStarted");
-  const [selectedUniversities, setSelectedUniversities] = useState([]);
+  const [modalType, setModalType] = useState<string>("getStarted");
+  const [selectedUniversities, setSelectedUniversities] = useState<string[]>([]);
 
-  const slugify = (name) => name.toLowerCase().replace(/\s+/g, "-");
-  const toggleUniversity = (name) => {
+  const slugify = (name: string): string => name.toLowerCase().replace(/\s+/g, "-");
+  
+  const toggleUniversity = (name: string): void => {
     const slug = slugify(name);
     setSelectedUniversities((prev) =>
       prev.includes(slug)
@@ -121,43 +78,36 @@ const Landing = ({ data }) => {
     );
   };
 
-
-
-
-
-  const openModal = (type) => {
-
+  const openModal = (type: string): void => {
     setModalType(type);
     setShowEnquiryModal(true);
   };
 
+  const MotionDiv = motion('div');
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-
       <Hero onOpenModal={openModal} heroSlides={heroSlides} />
       <UniversityLogoSlider universityLogos={universityLogos} />
       <WorkflowRoadmap onGetStartedClick={() => openModal("getStarted")} />
       <Stats />
       <AllCourses courses={courses} />
 
-      <CompareOnline colleges={colleges} selectedUniversities={selectedUniversities} toggleUniversity={toggleUniversity}/>
-
+      <CompareOnline 
+        colleges={colleges} 
+        selectedUniversities={selectedUniversities} 
+        toggleUniversity={toggleUniversity}
+      />
 
       <section id="top-partner-universities" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="text-center mb-16" data-aos="fade-up">
+          <MotionDiv className="text-center mb-16" data-aos="fade-up">
             <TopOnlineUniversity />
-          </motion.div>
-
-
-
+          </MotionDiv>
         </div>
       </section>
 
-
-
-      {/* Accreditation & Recognition - Responsive slider */}
+      {/* Accreditation & Recognition */}
       <section className="py-12 sm:py-16 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-10" data-aos="fade-up">
@@ -165,32 +115,29 @@ const Landing = ({ data }) => {
               Accreditation & Recognition
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-              We partner only with accredited and government-recognized
-              institutions
+              We partner only with accredited and government-recognized institutions
             </p>
           </div>
 
           <div className="relative overflow-hidden">
             <div className="flex items-center gap-4 sm:gap-6 animate-[accreditScroll_25s_linear_infinite] will-change-transform">
-              {[...(accreditationLogos || []), ...(accreditationLogos || [])].map(
-                (logo, idx) => (
-                  <div
-                    key={`${logo._id || 'logo'}-${idx}`}
-                    className="min-w-[80px] sm:min-w-[100px] md:min-w-[140px] rounded-xl p-3 sm:p-4 bg-white shadow-sm border border-gray-100 flex items-center justify-center h-16 sm:h-20 md:h-24"
-                  >
-                    <Image
-                      src={logo.imageUrl}
-                      alt={logo.name || "Accreditation and recognition logo"}
-                      width={100}
-                      height={100}
-                      loading="eager"
-                      decoding="async"
-                      unoptimized
-                      className="max-h-10 sm:max-h-12 md:max-h-14 object-contain"
-                    />
-                  </div>
-                )
-              )}
+              {[...accreditationLogos, ...accreditationLogos].map((logo, idx) => (
+                <div
+                  key={`${logo._id}-${idx}`}
+                  className="min-w-[80px] sm:min-w-[100px] md:min-w-[140px] rounded-xl p-3 sm:p-4 bg-white shadow-sm border border-gray-100 flex items-center justify-center h-16 sm:h-20 md:h-24"
+                >
+                  <Image
+                    src={logo.imageUrl}
+                    alt={logo.name || "Accreditation and recognition logo"}
+                    width={100}
+                    height={100}
+                    loading="eager"
+                    decoding="async"
+                    unoptimized
+                    className="max-h-10 sm:max-h-12 md:max-h-14 object-contain"
+                  />
+                </div>
+              ))}
             </div>
           </div>
 
@@ -207,7 +154,7 @@ const Landing = ({ data }) => {
         </div>
       </section>
 
-      {/* Features Section - Responsive */}
+      {/* Features Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16" data-aos="fade-up">
@@ -215,40 +162,37 @@ const Landing = ({ data }) => {
               Why Choose <span className="text-[#00ffe0]">Unifost</span>?
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-              Experience the difference that personalized guidance makes in your
-              educational journey
+              Experience the difference that personalized guidance makes in your educational journey
             </p>
           </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-              {(features || []).map((feature, index) => {
-                const Icon =
-                  iconMap[feature.iconKey] ||
-                  FaUserTie;
-                return (
-                  <div
-                    key={feature._id || index}
-                    className="group"
-                    data-aos="fade-up"
-                    data-aos-delay={index * 100}
-                  >
-                    <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 hover:transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 group-hover:shadow-2xl">
-                      <div
-                        className={`bg-gradient-to-br ${feature.color} w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300`}
-                      >
-                        <Icon className="text-xl sm:text-2xl text-white" />
-                      </div>
-                      <h2 className="text-lg sm:text-xl font-bold text-[#001e3c] mb-3 sm:mb-4">
-                        {feature.title}
-                      </h2>
-                      <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                        {feature.description}
-                      </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {features.map((feature, index) => {
+              const Icon = iconMap[feature.iconKey] || FaUserTie;
+              return (
+                <div
+                  key={feature._id}
+                  className="group"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                >
+                  <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 hover:transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 group-hover:shadow-2xl">
+                    <div
+                      className={`bg-gradient-to-br ${feature.color} w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300`}
+                    >
+                      <Icon className="text-xl sm:text-2xl text-white" />
                     </div>
+                    <h2 className="text-lg sm:text-xl font-bold text-[#001e3c] mb-3 sm:mb-4">
+                      {feature.title}
+                    </h2>
+                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                      {feature.description}
+                    </p>
                   </div>
-                );
-              })}
-            </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
@@ -265,52 +209,51 @@ const Landing = ({ data }) => {
             Explore top universities across India's major educational hubs.
           </p>
 
-              <div className="overflow-hidden relative backdrop-blur-md rounded-2xl border border-white/20 p-6">
-                <div className="flex gap-10 animate-[scroll_30s_linear_infinite] whitespace-nowrap">
-                  {[...Array(2)].flatMap((_, i) =>
-                    (cities || []).map((city, idx) => (
-                      <motion.div
-                        key={`city-${city._id || idx}-${i}`}
-                        whileHover={{ y: -6 }}
-                        className="min-w-[150px] flex flex-col items-center text-center bg-white/10 backdrop-blur-xl p-4 rounded-xl border border-white/20 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
-                      >
-                        <Image
-                          src={city.img}
-                          alt={`${city.city}, ${city.state} study city`}
-                          width={80}
-                          height={80}
-                          loading="lazy"
-                          className="w-16 h-16 object-contain mb-2 rounded-full border border-white/20 shadow"
-                        />
-                        <p className="text-white font-semibold text-sm">
-                          {city.city}
-                        </p>
-                        <p className="text-blue-200 text-xs">{city.state}</p>
-                      </motion.div>
-                    ))
-                  )}
-                </div>
-              </div>
+          <div className="overflow-hidden relative backdrop-blur-md rounded-2xl border border-white/20 p-6">
+            <div className="flex gap-10 animate-[scroll_30s_linear_infinite] whitespace-nowrap">
+              {[...Array(2)].flatMap((_, i) =>
+                cities.map((city, idx) => (
+                  <MotionDiv
+                    key={`city-${city._id}-${i}`}
+                    whileHover={{ y: -6 }}
+                    className="min-w-[150px] flex flex-col items-center text-center bg-white/10 backdrop-blur-xl p-4 rounded-xl border border-white/20 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+                  >
+                    <Image
+                      src={city.img}
+                      alt={`${city.city}, ${city.state} study city`}
+                      width={80}
+                      height={80}
+                      loading="lazy"
+                      className="w-16 h-16 object-contain mb-2 rounded-full border border-white/20 shadow"
+                    />
+                    <p className="text-white font-semibold text-sm">
+                      {city.city}
+                    </p>
+                    <p className="text-blue-200 text-xs">{city.state}</p>
+                  </MotionDiv>
+                ))
+              )}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Services - SEO-optimized with CTAs */}
+      {/* Services */}
       <section className="py-14 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="text-center mb-10 sm:mb-14" data-aos="fade-up">
+          <MotionDiv className="text-center mb-10 sm:mb-14" data-aos="fade-up">
             <h2 className="text-3xl sm:text-4xl font-semibold text-[#001e3c] mb-2">
               Career Counseling Online & Virtual Learning Guidance
             </h2>
             <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-3"></div>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
-              Best Career Planning Services with trusted EdTech Solutions in
-              India
+              Best Career Planning Services with trusted EdTech Solutions in India
             </p>
-          </motion.div>
+          </MotionDiv>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
             {/* Video Call Counseling */}
-            <motion.div
+            <MotionDiv
               className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm"
               data-aos="fade-up"
             >
@@ -323,8 +266,7 @@ const Landing = ({ data }) => {
                 </h3>
               </div>
               <p className="text-gray-600 text-sm sm:text-base mb-5">
-                Virtual learning guidance to compare accredited Online
-                University Degree options, fees, and placements.
+                Virtual learning guidance to compare accredited Online University Degree options, fees, and placements.
               </p>
               <button
                 onClick={() => openModal("videoCall")}
@@ -332,10 +274,10 @@ const Landing = ({ data }) => {
               >
                 Book Your Free Counseling
               </button>
-            </motion.div>
+            </MotionDiv>
 
             {/* Home Demo Counseling */}
-            <motion.div
+            <MotionDiv
               className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm"
               data-aos="fade-up"
               data-aos-delay="100"
@@ -349,8 +291,7 @@ const Landing = ({ data }) => {
                 </h3>
               </div>
               <p className="text-gray-600 text-sm sm:text-base mb-5">
-                Personalized in-home session for students and parents with
-                trusted university comparisons and timelines.
+                Personalized in-home session for students and parents with trusted university comparisons and timelines.
               </p>
               <button
                 onClick={() => openModal("homeDemo")}
@@ -358,10 +299,10 @@ const Landing = ({ data }) => {
               >
                 Schedule a Home Demo
               </button>
-            </motion.div>
+            </MotionDiv>
 
             {/* Career Planning */}
-            <motion.div
+            <MotionDiv
               className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm"
               data-aos="fade-up"
               data-aos-delay="200"
@@ -375,37 +316,30 @@ const Landing = ({ data }) => {
                 </h3>
               </div>
               <p className="text-gray-600 text-sm sm:text-base mb-5">
-                Strategic career roadmap aligned with in-demand skills and the
-                best career planning services.
+                Strategic career roadmap aligned with in-demand skills and the best career planning services.
               </p>
               <button
                 onClick={() => openModal("getStarted")}
-                className="w-full bg-slate-900 text-white py-2.5 rounded-xl font-semibold hover:bg-black transition-colors cursor-pointer "
+                className="w-full bg-slate-900 text-white py-2.5 rounded-xl font-semibold hover:bg-black transition-colors cursor-pointer"
               >
                 Start Your Journey Today
               </button>
-            </motion.div>
+            </MotionDiv>
           </div>
 
           {/* Trust bar */}
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
             <div className="text-sm text-gray-600">
-              <span className="font-semibold text-[#001e3c]">
-                UGC-DEB/AICTE/NAAC
-              </span>{" "}
-              accredited partners
+              <span className="font-semibold text-[#001e3c]">UGC-DEB/AICTE/NAAC</span> accredited partners
             </div>
-            <div className="text-sm text-gray-600">
-              Transparent, unbiased guidance
-            </div>
-            <div className="text-sm text-gray-600">
-              Student-friendly support across India
-            </div>
+            <div className="text-sm text-gray-600">Transparent, unbiased guidance</div>
+            <div className="text-sm text-gray-600">Student-friendly support across India</div>
           </div>
         </div>
       </section>
+
       <FAQ
-        faqs={(faqs || []).map((item) => ({
+        faqs={faqs.map((item) => ({
           question: item.question,
           answer: item.answer,
         }))}
@@ -439,8 +373,6 @@ const Landing = ({ data }) => {
           </div>
         </div>
       </section>
-      {/* FAQ Section */}
-
 
       {showEnquiryModal && (
         <Dialog
@@ -449,7 +381,7 @@ const Landing = ({ data }) => {
           modal={false}
         >
           <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-2 lg:my-1 p-4 sm:p-6 z-[30001]">
-            <DialogHeader>
+            <DialogHeader className="space-y-2">
               <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
                 {modalType === "getStarted" && "Get Started with Unifost"}
                 {modalType === "videoCall" && "Book a Video Call"}

@@ -1,21 +1,20 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 import {
-  FaRocket,
-  FaVideo,
-  FaMapMarkerAlt,
-  FaGraduationCap,
-  FaUsers,
+  FaArrowRight,
   FaAward,
   FaCheckCircle,
+  FaGraduationCap,
+  FaMapMarkerAlt,
   FaPlay,
-  FaArrowRight,
+  FaUsers
 } from "react-icons/fa";
+import { LandingPageProps } from "types/LandingPageTypes";
 
-const Hero = ({ onOpenModal, heroSlides = [] }) => {
+const Hero = ({ onOpenModal, heroSlides = []} ) => {
 
   const [slide, setSlide] = useState(0);
   const [isFirstRender, setIsFirstRender] = useState(true);
@@ -37,6 +36,9 @@ const Hero = ({ onOpenModal, heroSlides = [] }) => {
     );
     return () => clearInterval(id);
   }, [heroSlides.length]);
+  const MotionDiv=motion('div');
+  const MotionH1=motion('h1');
+  const MotionP=motion('p');
 
   return (
     <section className="relative min-h-screen flex flex-col bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 overflow-hidden">
@@ -65,9 +67,7 @@ const Hero = ({ onOpenModal, heroSlides = [] }) => {
               <div className="block lg:hidden order-1">
                 {/* Right Content - Visual Panel for Mobile */}
                 <div 
-                  initial={{ opacity: 0, x: 50 }} 
-                  animate={{ opacity: 1, x: 0 }} 
-                  transition={{ duration: 0.8 }}
+                  
                   className="relative mb-8"
                 >
                   {/* Main Visual Container */}
@@ -89,8 +89,8 @@ const Hero = ({ onOpenModal, heroSlides = [] }) => {
                           <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
                         </>
                       ) : (
-                        <AnimatePresence initial={false}>
-                          <motion.div
+                        <AnimatePresence initial={false} custom={undefined} onExitComplete={undefined} root={undefined} >
+                          <MotionDiv
                             key={slide}
                             className="absolute inset-0"
                             initial={{ opacity: 0, scale: 1.01 }}
@@ -109,7 +109,7 @@ const Hero = ({ onOpenModal, heroSlides = [] }) => {
                               className="object-contain rounded-2xl object-center"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
-                          </motion.div>
+                          </MotionDiv>
                         </AnimatePresence>
                       )}
                       
@@ -161,29 +161,26 @@ const Hero = ({ onOpenModal, heroSlides = [] }) => {
               </div>
 
               {/* Left Content */}
-              <motion.div 
-                initial={{ opacity: 0, x: -50 }} 
-                animate={{ opacity: 1, x: 0 }} 
-                transition={{ duration: 0.1 }}
+              <MotionDiv 
+                  initial={false}
+ 
+                animate={false} 
+                
                 className="text-center lg:text-left space-y-8 order-2 lg:order-none"
               >
                 {/* Trust Badge */}
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }} 
-                  animate={{ opacity: 1, y: 0 }} 
-                  transition={{ duration: 0.1 }}
+                <MotionDiv 
+                  
                   className="inline-flex items-center mt-5 gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-blue-200 text-blue-700 text-sm font-medium shadow-lg"
                 >
                   <FaAward className="text-yellow-500 " />
                   <span>Trusted by 5,000+ Students</span>
-                </motion.div>
+                </MotionDiv>
 
                 {/* Main Headline */}
                 <div className="space-y-4">
-                  <motion.h1 
-                    initial={{ opacity: 0, y: 30 }} 
-                    animate={{ opacity: 1, y: 0 }} 
-                    transition={{ duration: 0.1 }}
+                  <MotionH1 
+                    
                     className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
                   >
                     <span className="text-gray-900">India's Best Online</span>
@@ -191,33 +188,27 @@ const Hero = ({ onOpenModal, heroSlides = [] }) => {
                     <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
                       University Degrees
                     </span>
-                  </motion.h1>
+                  </MotionH1>
                   
-                  <motion.p 
-                    initial={{ opacity: 0, y: 20 }} 
-                    animate={{ opacity: 1, y: 0 }} 
-                    transition={{ duration: 0.1 }}
+                  <MotionP 
+                    
                     className="text-xl sm:text-2xl text-gray-600 font-medium"
                   >
                     Compare, Choose & Succeed with India's Top Online Universities
-                  </motion.p>
+                  </MotionP>
                 </div>
 
                 {/* Description */}
-                <motion.p 
-                  initial={{ opacity: 0, y: 20 }} 
-                  animate={{ opacity: 1, y: 0 }} 
-                  transition={{ duration: 0.8 }}
+                <MotionP 
+                  
                   className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0"
                 >
                  Get expert guidance to find the perfect online degree program from 25+ UGC-approved universities. Compare University, fees, and rankings to make informed decisions for your future.
-                </motion.p>
+                </MotionP>
 
                 {/* Key Features */}
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }} 
-                  animate={{ opacity: 1, y: 0 }} 
-                  transition={{ duration: 0.8 }}
+                <MotionDiv 
+                  
                   className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto lg:mx-0"
                 >
                   {[
@@ -230,13 +221,11 @@ const Hero = ({ onOpenModal, heroSlides = [] }) => {
                       <span className="text-sm font-medium">{feature.text}</span>
                     </div>
                   ))}
-                </motion.div>
+                </MotionDiv>
 
                 {/* CTA Buttons */}
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }} 
-                  animate={{ opacity: 1, y: 0 }} 
-                  transition={{ duration: 0.8 }}
+                <MotionDiv 
+                  
                   className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                 >
                   <button 
@@ -254,13 +243,11 @@ const Hero = ({ onOpenModal, heroSlides = [] }) => {
                     <FaPlay className="text-blue-600" />
                     <span>Book Home Demo</span>
                   </button>
-                </motion.div>
+                </MotionDiv>
 
                 {/* Stats */}
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }} 
-                  animate={{ opacity: 1, y: 0 }} 
-                  transition={{ duration: 0.8 }}
+                <MotionDiv 
+                  
                   className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200 max-w-md mx-auto lg:mx-0"
                 >
                   {[
@@ -273,14 +260,12 @@ const Hero = ({ onOpenModal, heroSlides = [] }) => {
                       <div className="text-sm text-gray-600">{stat.label}</div>
                     </div>
                   ))}
-                </motion.div>
-              </motion.div>
+                </MotionDiv>
+              </MotionDiv>
 
               {/* Right Content - Visual Panel - Desktop Only */}
               <div 
-                initial={{ opacity: 0, x: 50 }} 
-                animate={{ opacity: 1, x: 0 }} 
-                transition={{ duration: 0.8 }}
+                
                 className="relative hidden lg:block lg:order-2"
               >
                 {/* Main Visual Container */}
@@ -302,14 +287,12 @@ const Hero = ({ onOpenModal, heroSlides = [] }) => {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
                       </>
                     ) : (
-                      <AnimatePresence initial={false}>
-                        <motion.div
+                      <AnimatePresence initial={false} custom={undefined} onExitComplete={undefined} root={undefined}>
+                        <MotionDiv
                           key={slide}
                           className="absolute inset-0"
-                          initial={{ opacity: 0, scale: 1.01 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          exit={{ opacity: 0, scale: 1.01 }}
-                          transition={{ duration: 0.2, ease: "easeOut" }}
+                          
+                          
                         >
                           <Image
                             fill
@@ -322,7 +305,7 @@ const Hero = ({ onOpenModal, heroSlides = [] }) => {
                             className="object-contain rounded-2xl object-center"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
-                        </motion.div>
+                        </MotionDiv>
                       </AnimatePresence>
                     )}
                     
@@ -376,10 +359,8 @@ const Hero = ({ onOpenModal, heroSlides = [] }) => {
         </div>
 
         {/* Bottom Section - Quick Actions */}
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8 }}
+        <MotionDiv 
+          
           className="bg-white/60 backdrop-blur-sm border-t border-white/20 py-8 "
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  ">
@@ -432,7 +413,7 @@ const Hero = ({ onOpenModal, heroSlides = [] }) => {
               ))}
             </div>
           </div>
-        </motion.div>
+        </MotionDiv>
       </div>
     </section>
   );

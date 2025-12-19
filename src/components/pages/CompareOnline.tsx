@@ -22,12 +22,14 @@ const CompareOnline = ({ colleges: collegesFromProps, selectedUniversities, togg
     if (!canCompare) return;
     router.push(`/compare?u=${selectedUniversities.join(",")}`);
   };
+  const MotionDiv: any = (motion as any).div;
+
 
   return (
     <div>
       <section id="compare-universities" className="py-16 sm:py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="text-center mb-8 sm:mb-12" data-aos="fade-up">
+          <MotionDiv className="text-center mb-8 sm:mb-12" data-aos="fade-up">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a365d] mb-3 sm:mb-4">
               Compare Online Universities
             </h2>
@@ -35,7 +37,7 @@ const CompareOnline = ({ colleges: collegesFromProps, selectedUniversities, togg
             <p className="text-lg text-gray-700 max-w-3xl mx-auto px-4">
               Select up to 3 universities to compare fees, accreditation, placements and more
             </p>
-          </motion.div>
+          </MotionDiv>
 
           {/* Compare Controls - Enhanced */}
           <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row items-center justify-between gap-4 bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-2xl border border-blue-200 shadow-lg">
@@ -88,7 +90,7 @@ const CompareOnline = ({ colleges: collegesFromProps, selectedUniversities, togg
               const isSelected = selectedUniversities.includes(slug);
               
               return (
-                <motion.div
+                <MotionDiv
                   key={idx}
                   whileHover={{ y: -5 }}
                   className={`group relative rounded-2xl overflow-hidden transition-all duration-300 ${
@@ -211,7 +213,7 @@ const CompareOnline = ({ colleges: collegesFromProps, selectedUniversities, togg
 
                   {/* Hover Effect Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-indigo-500/0 group-hover:from-blue-500/5 group-hover:to-indigo-500/5 transition-opacity rounded-2xl pointer-events-none" />
-                </motion.div>
+                </MotionDiv>
               );
             })}
           </div>

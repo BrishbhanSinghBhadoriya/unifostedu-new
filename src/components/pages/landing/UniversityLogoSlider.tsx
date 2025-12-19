@@ -16,14 +16,15 @@ const UniversityLogoSlider = ({ universityLogos = [] }) => {
   }, []);
 
   if (!universityLogos.length) return null;
+  const MotionDiv=motion('div');
 
   return (
     <section className="py-1 bg-white">
       <div className="max-w-7xl mx-auto px-1">
         <div className="relative overflow-hidden" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
-          <motion.div className="flex" animate={{ x: [0, -100 * (universityLogos.length / itemsToShow) + "%"] }} transition={{ ease: "linear", duration: 40, repeat: Infinity, repeatType: "loop", pause: isPaused }}>
+          <MotionDiv className="flex" animate={{ x: [0, -100 * (universityLogos.length / itemsToShow) + "%"] }} transition={{ ease: "linear", duration: 40, repeat: Infinity, repeatType: "loop", pause: isPaused }}>
             {[...universityLogos, ...universityLogos].map((university, index) => (
-              <div key={`${university.name}-${index}`} className="flex-shrink-0 flex items-center justify-center" style={{ width: `${100 / itemsToShow}%` }}>
+              <MotionDiv key={`${university.name}-${index}`} className="flex-shrink-0 flex items-center justify-center" style={{ width: `${100 / itemsToShow}%` }}>
                 <div className="h-24 w-full flex items-center justify-center px-2">
                   <Image
                     src={university.logo}
@@ -37,9 +38,9 @@ const UniversityLogoSlider = ({ universityLogos = [] }) => {
                     style={{ width: "auto", height: "auto" }}
                   />
                 </div>
-              </div>
+              </MotionDiv>
             ))}
-          </motion.div>
+          </MotionDiv>
         </div>
       </div>
     </section>
