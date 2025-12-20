@@ -45,8 +45,13 @@ declare module 'react-icons/fa6' {
     export const FaSearch: IconType;
     export const FaCalendarAlt: IconType;
     export const FaBookOpen: IconType;
-    export const FaTimes: IconType;
-
+    export const FaTimes: IconType; 
+    export const FaChalkboardTeacher: IconType;
+    export const FaHandsHelping: IconType;
+    export const FaClipboardCheck: IconType;
+    export const FaUserGraduate: IconType;
+    export const FaRobot: IconType;
+    export const FaRupeeSign: IconType;
 
 
 
@@ -79,5 +84,15 @@ declare module 'lucide-react' {
     export const Menu: LucideIcon;
     export const FaTimes: LucideIcon;
     export const FaBars: LucideIcon;
+    export const Phone: LucideIcon;
+    export const Mail: LucideIcon;
+    export const MessageCircle: LucideIcon;
+    export const BookOpen: LucideIcon;
+    export const  MapPin: LucideIcon;
+    export const  Building2: LucideIcon;
+    export const  Star: LucideIcon;
+    export const  IndianRupee: LucideIcon;
+    export const  TrendingUp: LucideIcon;
+
     // Add more lucide-react icons as needed
 }

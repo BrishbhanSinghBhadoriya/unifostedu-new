@@ -13,8 +13,9 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+/* ------------------ TYPES ------------------ */
+type EnquiryFormType = "getStarted" | "videoCall" | "homeDemo";
 
-type ModalType = "getStarted" | "videoCall" | "homeDemo" | null;
 
 interface SearchResultItem {
   type: 'course';
