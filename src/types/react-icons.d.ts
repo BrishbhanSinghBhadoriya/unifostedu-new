@@ -24,7 +24,7 @@ declare module 'react-icons/fa6' {
     export const FaBalanceScaleLeft: IconType;
     export const FaUniversity: IconType;
     export const FaMapMarkerAlt: IconType;
-
+    export const FaXmark : IconType;
     export const FaStar: IconType;
     export const FaBalanceScaleLeft: IconType;
     export const FaUniversity: IconType;
@@ -81,9 +81,13 @@ declare module 'react-icons/fa6' {
     export const FaHeadset:IconType
     export const FaChalkboardTeacher:IconType
     export const FaHandsHelping:IconType
-
-
-
+    export const FaXmarkLarge:IconType
+    export const FaShield:IconType
+    export const FaMagnifyingGlass:IconType
+    export const FaCalendarDays:IconType
+    export const FaCircleCheck:IconType
+    export const FaHouse:IconType
+    export const FaQuestion:IconType
 
     
 }
@@ -114,5 +118,23 @@ declare module 'lucide-react' {
     export const Menu: LucideIcon;
     export const FaTimes: LucideIcon;
     export const FaBars: LucideIcon;
-    
+    export const Phone: LucideIcon;
+    export const Mail: LucideIcon;
+    export const BookOpen: LucideIcon;
+    export const TrendingUp: LucideIcon;
+    export const IndianRupee: LucideIcon;
+    export const ArrowRight: LucideIcon;
+    export const Check: LucideIcon;
+    export const Play: LucideIcon;
+    export const Star: LucideIcon;
+    export const BalanceScaleLeft: LucideIcon;
+    export const University: LucideIcon;
+    export const MapMarkerAlt: LucideIcon;
+    export const User: LucideIcon;
+    export const Users: LucideIcon;
+    export const Palette: LucideIcon;
+    export const LaptopCode: LucideIcon;
+    export const MapMarkert: LucideIcon;
+    export const Building2: LucideIcon;
+    export const MapPin: LucideIcon;
 }

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   
-  FaTimes,
+  FaXmark,
   FaBars,
 } from "react-icons/fa6";
 import * as Tabs from '@radix-ui/react-tabs';
@@ -326,7 +326,7 @@ const UttaranchalUniversity = () => {
               onClick={() => setIsSidebarOpen(false)}
               aria-label="Close menu"
             >
-              <FaTimes size={18} />
+              <FaXmark size={18} />
             </button>
           </div>
           <nav className="mt-4 space-y-2 overflow-y-auto h-[calc(100%-12rem)] pr-2 sidebar-hide-scrollbar">

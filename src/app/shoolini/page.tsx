@@ -19,14 +19,14 @@ import {
   FaComments,
   FaGlobe,
   FaGraduationCap,
-  FaInfoCircle,
-  FaMoneyBillWave,
-  FaQuestionCircle,
+  
+  FaX,
+  FaQuestion,
   FaQuoteLeft,
   FaRobot,
   FaRupeeSign,
   FaStar,
-  FaTimes,
+  FaXmark ,
   FaUsers,
   FaUserTie
 } from "react-icons/fa6";
@@ -36,7 +36,7 @@ import { motion } from 'framer-motion';
 type ModalState = { type: 'apply' | 'Enquire Now', program?: string } | null;
 
 const menuItems = [
-  { id: "introduction", icon: <FaInfoCircle className="mr-2" />, text: "Introduction", link: "#introduction" },
+  { id: "introduction", icon: <FaXmark className="mr-2" />, text: "Introduction", link: "#introduction" },
   { id: "campus-tour", icon: <FaBuildingColumns  className="mr-2" />, text: "Campus Tour", link: "#campus-tour" },
   { id: "explore-courses", icon: <FaBookOpen className="mr-2" />, text: "Explore Online Courses", link: "#explore-courses" },
   { id: "key-highlights", icon: <FaStar className="mr-2" />, text: "Key Highlights", link: "#key-highlights" },
@@ -46,7 +46,7 @@ const menuItems = [
   { id: "placement-partners", icon: <FaBuilding className="mr-2" />, text: "Placement Partners", link: "#placement-partners" },
   { id: "placement-records", icon: <FaChartLine className="mr-2" />, text: "Placement Records", link: "#placement-records" },
   { id: "student-reviews", icon: <FaGraduationCap className="mr-2" />, text: "Student Reviews", link: "#student-reviews" },
-  { id: "faq", icon: <FaQuestionCircle className="mr-2" />, text: "FAQs", link: "#faq" },
+  { id: "faq", icon: < FaQuestion className="mr-2" />, text: "FAQs", link: "#faq" },
   { id: "shoolini-reviews", icon: <FaComments className="mr-2" />, text: "Shoolini University Reviews", link: "#shoolini-reviews" }
 ];
 
@@ -80,7 +80,7 @@ const Sidebar = ({ isOpen, toggleSidebar, onApplyNowClick }: SidebarProps) => {
             className="text-gray-500 hover:text-gray-700 lg:hidden"
             onClick={toggleSidebar}
           >
-            <FaTimes size={20} />
+            <FaXmark  size={20} />
           </button>
         </div>
         
@@ -329,7 +329,7 @@ const WhyChooseShoolini = ({ setOpenModal }: WhyChooseShooliniProps) => {
             <div className="p-6 md:p-8">
               <div className="flex items-center mb-4">
                 <div className="bg-red-100 p-3 rounded-full mr-4">
-                  <FaMoneyBillWave className="text-red-600 text-xl" />
+                  <FaX className="text-red-600 text-xl" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900">Affordable Fee Structure and EMI Options</h3>
               </div>
@@ -542,7 +542,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null);
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">
-            <FaQuestionCircle className="w-8 h-8 text-red-500" />
+            < FaQuestion className="w-8 h-8 text-red-500" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Frequently Asked Questions

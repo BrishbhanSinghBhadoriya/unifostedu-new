@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, FC } from 'react';
-import { FaRocket, FaGraduationCap, FaHome, FaRoute, FaVideo, FaGlobe, FaClock, FaShieldAlt, FaDollarSign, FaCalendarAlt, FaCheckCircle, FaArrowRight, FaStar, FaUsers, FaAward, FaHeadset } from 'react-icons/fa6';
+import { FaRocket, FaGraduationCap, FaHouse, FaRoute, FaVideo, FaGlobe, FaClock, FaShield, FaDollarSign, FaCalendarAlt, FaCircleCheck, FaArrowRight, FaStar, FaUsers, FaAward, FaHeadset } from 'react-icons/fa6';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -54,7 +54,7 @@ export default function Services() {
       id: 'home-demo',
       title: 'Home Demo Counseling',
       subtitle: 'Personalized in-home sessions',
-      icon: FaHome,
+      icon: FaHouse,
       color: 'from-green-500 to-teal-600',
       badge: 'Premium Service',
       ctaButton: 'Book Home Demo',
@@ -67,7 +67,7 @@ export default function Services() {
         'Immediate feedback and Q&A sessions'
       ],
       highlights: [
-        { icon: FaHome, text: 'Home Comfort', subtitle: 'Learn in your familiar environment' },
+        { icon: FaHouse, text: 'Home Comfort', subtitle: 'Learn in your familiar environment' },
         { icon: FaUsers, text: 'Family Involvement', subtitle: 'Include family in decisions' },
         { icon: FaVideo, text: 'Live Demonstrations', subtitle: 'See platforms in action' },
         { icon: FaHeadset, text: 'Personal Attention', subtitle: 'Undivided counselor focus' }
@@ -91,7 +91,7 @@ export default function Services() {
       ],
       highlights: [
         { icon: FaRoute, text: 'Strategic Roadmap', subtitle: 'Clear path to your goals' },
-        { icon: FaCheckCircle, text: 'Skill Assessment', subtitle: 'Identify and bridge gaps' },
+        { icon: FaCircleCheck, text: 'Skill Assessment', subtitle: 'Identify and bridge gaps' },
         { icon: FaStar, text: 'Industry Insights', subtitle: 'Stay ahead of trends' },
         { icon: FaUsers, text: 'Expert Mentorship', subtitle: 'Guidance from industry professionals' }
       ]
@@ -161,7 +161,7 @@ export default function Services() {
                 Video Call
               </TabsTrigger>
               <TabsTrigger value="home-demo" className="text-base font-semibold py-3">
-                <FaHome className="mr-2" />
+                <FaHouse className="mr-2" />
                 Home Demo
               </TabsTrigger>
               <TabsTrigger value="career-planning" className="text-base font-semibold py-3">
@@ -195,13 +195,13 @@ export default function Services() {
                       {/* Features */}
                       <div>
                         <h3 className="text-2xl font-bold text-[#001e3c] mb-6 flex items-center">
-                          <FaCheckCircle className="text-[#00ffe0] mr-3" />
+                          <FaCircleCheck className="text-[#00ffe0] mr-3" />
                           What You'll Get
                         </h3>
                         <div className="space-y-4">
                           {service.features.map((feature, index) => (
                             <div key={index} className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                              <FaCheckCircle className="text-[#00ffe0] text-xl mt-1 flex-shrink-0" />
+                              <FaCircleCheck className="text-[#00ffe0] text-xl mt-1 flex-shrink-0" />
                               <p className="text-gray-700 font-medium">{feature}</p>
                             </div>
                           ))}
@@ -283,7 +283,7 @@ export default function Services() {
             <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center">
               <CardContent className="p-6">
                 <div className="bg-gradient-to-br from-[#00ffe0] to-[#00d4c4] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <FaShieldAlt className="text-3xl text-white" />
+                  <FaShield className="text-3xl text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-[#001e3c] mb-3">Trusted Partners</h3>
                 <p className="text-gray-600">Only accredited institutions and programs</p>

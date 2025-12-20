@@ -1,39 +1,37 @@
 'use client';
-import React, { useState, useEffect, FC } from 'react';
-import { AnimatePresence } from 'framer-motion';
 import PageContent from '@/components/PageContent/PageContent';
+import { AnimatePresence } from 'framer-motion';
+import { FC, useEffect, useState } from 'react';
 
+import AccreditationSection from '@/components/AccreditationSection';
+import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
+import HeroSection from '@/components/HeroSection';
+import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Image from 'next/image';
 import {
-  FaBookOpen,
-  FaUserTie,
-  FaPhone,
-  FaRobot,
-  FaUserGraduate,
-  FaLaptop,
-  FaRupeeSign,
-  FaBriefcase,
-  FaClock,
-  FaChalkboardTeacher,
-  FaLaptopCode,
-  FaUsers,
-  FaGlobe,
-  FaBook,
-  FaUniversity,
-  FaHandsHelping,
-  
-  FaClipboardCheck,
   FaBars,
   FaTimes,
-} from "react-icons/fa6";
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import Head from 'next/head';
-import EnquireCard from '@/components/EnquireCard';
-import HeroSection from '@/components/HeroSection';
-import AccreditationSection from '@/components/AccreditationSection';
-import AdmissionProcedure from '@/components/AdmissionProcedure';
-import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
-import { Button } from '@/components/ui/button';
+  FaBookOpen,
+  FaBook,
+  FaBriefcase,
+  FaChalkboardTeacher,
+  FaClipboardCheck,
+  FaClock,
+  FaGlobe,
+  FaHandsHelping,
+  FaLaptop,
+  FaLaptopCode,
+  FaPhone,
+  FaRupeeSign,
+  FaUniversity,
+  FaUserGraduate,
+  FaUsers,
+  FaUserTie,
+  FaRobot
+} from "react-icons/fa";
+
 
 interface SectionItem {
   id: string;
