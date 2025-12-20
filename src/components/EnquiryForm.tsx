@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
-import { FaUser, FaPhone, FaEnvelope, FaGraduationCap, FaPaperPlane, FaUniversity, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa6';
+import { FaUser, FaPhone, FaEnvelope, FaGraduationCap, FaPaperPlane, FaBuildingColumns ,FaLocationDot , FaWhatsapp } from 'react-icons/fa6';
 import { toast } from 'sonner';
 import { enquiryAPI } from '@/lib/axios';
 import { useForm } from 'react-hook-form';
@@ -214,7 +214,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
             Location <span className="text-red-500">*</span>
           </Label>
           <div className="relative">
-            <FaMapMarkerAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+            <FaLocationDot className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
             <Select value={city} onValueChange={onCityChange}>
               <SelectTrigger className="pl-10 h-11 sm:h-10">
                 <SelectValue placeholder="Select your location" />
@@ -237,7 +237,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
             University <span className="text-red-500">*</span>
           </Label>
           <div className="relative">
-            <FaUniversity className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+            <FaBuildingColumns className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
             <Select value={selectedUniversity} onValueChange={onUniversityChange}>
               <SelectTrigger className="pl-10 h-11 sm:h-10">
                 <SelectValue placeholder="Select university" />

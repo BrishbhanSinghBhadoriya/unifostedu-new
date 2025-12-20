@@ -16,42 +16,40 @@ declare module 'react-icons/fa6' {
     export const FaUsers: IconType;
     export const FaPalette: IconType;
     export const FaLaptopCode: IconType;
-    export const FaUniversity: IconType;
-    export const FaMapMarkerAlt: IconType;
+    export const FaMapMarkert: IconType;
     export const FaArrowRight: IconType;
-    export const FaCheckCircle: IconType;
+    export const FaCheck: IconType;
     export const FaPlay: IconType;
     export const FaStar: IconType;
-    export const FaBalanceScaleLeft :IconType;
+    export const FaBalanceScaleLeft: IconType;
     export const FaUniversity: IconType;
     export const FaMapMarkerAlt: IconType;
-    export const FaArrowRight: IconType;
-    export const FaCheckCircle: IconType;
+
     export const FaStar: IconType;
-    export const FaBalanceScaleLeft :IconType;
+    export const FaBalanceScaleLeft: IconType;
     export const FaUniversity: IconType;
     export const FaUser: IconType;
     export const FaPhone: IconType;
     export const FaEnvelope: IconType;
     export const FaPaperPlane: IconType;
     export const FaWhatsapp: IconType;
-    export const FaBookOpen:IconType;
-    export const FaChevronDown:IconType;
-    export const FaChevronUp:IconType;
-    export const FaArrowFaMoneyBillWaveRight:IconType;
-    export const FaMoneyBillWave:IconType;
-    export const FaBars:IconType;
-    export const FaGlobe:IconType;
-    export const FaLightbulb:IconType
-    export const FaClock:IconType;
-    export const FaSearch:IconType;
-    export const FaCalendarAlt:IconType;
-    export const FaBookOpen:IconType;
-    export const FaTimes:IconType;
- 
-    
-    
-    
+    export const FaBookOpen: IconType;
+    export const FaChevronDown: IconType;
+    export const FaChevronUp: IconType;
+    export const FaArrowFaMoneyBillWaveRight: IconType;
+    export const FaMoneyBillWave: IconType;
+    export const FaBars: IconType;
+    export const FaGlobe: IconType;
+    export const FaLightbulb: IconType
+    export const FaClock: IconType;
+    export const FaSearch: IconType;
+    export const FaCalendarAlt: IconType;
+    export const FaBookOpen: IconType;
+    export const FaTimes: IconType;
+
+
+
+
     // Add more icons as needed
 }
 
@@ -78,7 +76,7 @@ declare module 'lucide-react' {
     export const CheckCircle: LucideIcon;
     export const ChevronDown: LucideIcon;
     export const X: LucideIcon;
-    export const Menu :LucideIcon;
+    export const Menu: LucideIcon;
     export const FaTimes: LucideIcon;
     export const FaBars: LucideIcon;
     // Add more lucide-react icons as needed

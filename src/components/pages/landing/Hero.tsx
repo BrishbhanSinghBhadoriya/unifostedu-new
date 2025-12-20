@@ -5,13 +5,13 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import {
   FaArrowRight,
-  FaCheckCircle,
+  FaCheck,
   FaGraduationCap,
   FaPlay,
   FaUsers,
-  FaLocationDot,
+  
   FaStar,
-  FaMapMarkerAlt
+  FaLocationDot 
 } from "react-icons/fa6";
 import { MdPeople } from "react-icons/md";
 import { HeroProps } from "types/LandingPageTypes";
@@ -216,7 +216,7 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                   className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto lg:mx-0"
                 >
                   {[
-                    { icon: FaCheckCircle, text: "UGC Approved" },
+                    { icon: FaCheck, text: "UGC Approved" },
                     { icon: MdPeople, text: "Expert Counseling" },
                     { icon: FaGraduationCap, text: "25+ Universities" }
                   ].map((feature, index) => (
@@ -370,7 +370,7 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6  ">
               {[
                 {
-                  icon: FaMapMarkerAlt,
+                  icon: FaLocationDot ,
                   title: "Find Universities",
                   desc: "Discover top online universities near you",
                   action: () => scrollToId("top-partner-universities")
