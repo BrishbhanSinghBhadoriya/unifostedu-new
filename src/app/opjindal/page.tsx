@@ -20,11 +20,11 @@ import {
   FaBook,
   FaUniversity,
   FaHandsHelping,
-  FaUserFriends,
+  
   FaClipboardCheck,
   FaBars,
   FaTimes,
-} from "react-icons/fa";
+} from "react-icons/fa6";
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Head from 'next/head';
