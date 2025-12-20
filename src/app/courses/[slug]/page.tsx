@@ -4,17 +4,19 @@ import courseData from '@/data/courseData.json';
 
 
 import {
-  FaSearch,
+  FaMagnifyingGlass
+,
 
   FaGraduationCap,
 
   FaClock,
   FaMoneyBillWave,
-  FaCheckCircle,
+  FaCircleCheck,
 
-  FaUniversity,
+  FaBuildingColumns,
 
-  FaCalendarAlt
+  FaCalendarDays
+
 } from "react-icons/fa6";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -269,7 +271,7 @@ export default async function CoursePage({ params }: { params: { slug: string } 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <Card className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <FaCheckCircle className="w-5 h-5 text-[#00ffe0] mr-2" />
+                    <FaCircleCheck className="w-5 h-5 text-[#00ffe0] mr-2" />
                     Key Features
                   </h3>
                   <ul className="space-y-3">
@@ -284,7 +286,7 @@ export default async function CoursePage({ params }: { params: { slug: string } 
 
                 <Card className="p-6">
                   <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <FaUniversity className="w-5 h-5 text-[#00ffe0] mr-2" />
+                    <FaBuildingColumns className="w-5 h-5 text-[#00ffe0] mr-2" />
                     Why Choose Online {course.title}?
                   </h2>
                   <ul className="space-y-3">
@@ -327,7 +329,7 @@ export default async function CoursePage({ params }: { params: { slug: string } 
                   asChild
                 >
                   <Link href="/bookdemo">
-                    <FaCalendarAlt className="w-5 h-5 mr-2" />
+                    <FaCalendarDays className="w-5 h-5 mr-2" />
                     Book Free Demo
                   </Link>
                 </Button>
@@ -337,7 +339,8 @@ export default async function CoursePage({ params }: { params: { slug: string } 
                   asChild
                 >
                   <Link href="/coursesearch">
-                    <FaSearch className="w-5 h-5 mr-2" />
+                    <FaMagnifyingGlass
+                      className="w-5 h-5 mr-2" />
                     Explore More Courses
                   </Link>
                 </Button>

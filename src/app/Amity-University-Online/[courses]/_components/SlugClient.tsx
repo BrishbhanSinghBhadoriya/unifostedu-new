@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react'
 import Headers from '../../_components/Headers';
 import Footer from '../../_components/Footer';
