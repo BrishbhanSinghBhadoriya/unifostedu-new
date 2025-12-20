@@ -40,10 +40,10 @@ const About = ({ openmodel, setOpenModal }) => {
           <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-5 md:mb-6">
             Our mission is to make quality online education
             accessible to all — whether someone is
-            searching for the <Link href="/Best-online-MBA-for-working-professionals-India-2025" className="font-bold">best online MBA in India</Link>, top online MBA
+            searching for the <Link href="/best-online-mba-for-working-professionals-india-2025" className="font-bold">best online MBA in India</Link>, top online MBA
             for working professionals, or affordable online degree
             programs. Amity Online provides AI-driven tools, live online classes,
-            recorded lectures, personalized mentorship, and <Link href="//Best-online-MBA-for-working-professionals-India-2025" className="font-bold">career support</Link>.
+            recorded lectures, personalized mentorship, and <Link href="/Best-online-MBA-for-working-professionals-India-2025" className="font-bold">career support</Link>.
           </p>
 
           <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-5 md:mb-6">

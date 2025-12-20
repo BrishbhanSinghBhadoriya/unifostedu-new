@@ -20,7 +20,7 @@ import {
   FaBook,
   FaUniversity,
   FaHandsHelping,
-  FaUserFriends,
+  
   FaClipboardCheck,
   FaBars,
   FaTimes,
