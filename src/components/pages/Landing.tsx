@@ -18,10 +18,9 @@ import {
   FaBriefcase,
   FaCompass,
   FaGlobe,
-  FaHome,
-  FaUserTie,
-  FaVideo
+ 
 } from "react-icons/fa";
+import { MdVideoCall, MdHome,MdVerifiedUser } from "react-icons/md";
 import Stats from "./landing/Stats";
 
 import EnquiryForm from "@/components/EnquiryForm";
@@ -38,9 +37,8 @@ import { AllCourses } from "./AllCourses";
 import CompareOnline from "./CompareOnline";
 import { LandingPageProps } from "types/LandingPageTypes";
 
-// Icon mapping with proper typing
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  FaUserTie,
+
   FaCompass,
   FaGlobe,
   FaBriefcase,
@@ -68,7 +66,7 @@ const Landing = ({ data }: LandingPageProps) => {
   const [selectedUniversities, setSelectedUniversities] = useState<string[]>([]);
 
   const slugify = (name: string): string => name.toLowerCase().replace(/\s+/g, "-");
-  
+
   const toggleUniversity = (name: string): void => {
     const slug = slugify(name);
     setSelectedUniversities((prev) =>
@@ -93,9 +91,9 @@ const Landing = ({ data }: LandingPageProps) => {
       <Stats />
       <AllCourses courses={courses} />
 
-      <CompareOnline 
-        colleges={colleges} 
-        selectedUniversities={selectedUniversities} 
+      <CompareOnline
+        colleges={colleges}
+        selectedUniversities={selectedUniversities}
         toggleUniversity={toggleUniversity}
       />
 
@@ -168,7 +166,7 @@ const Landing = ({ data }: LandingPageProps) => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {features.map((feature, index) => {
-              const Icon = iconMap[feature.iconKey] || FaUserTie;
+              const Icon = iconMap[feature.iconKey] || MdVerifiedUser;
               return (
                 <div
                   key={feature._id}
@@ -259,7 +257,7 @@ const Landing = ({ data }: LandingPageProps) => {
             >
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-cyan-600 flex items-center justify-center">
-                  <FaVideo className="text-white text-xl" />
+                  <MdVideoCall className="text-white text-xl" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-semibold text-[#001e3c]">
                   Video Call Counseling
@@ -284,7 +282,7 @@ const Landing = ({ data }: LandingPageProps) => {
             >
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-cyan-600 flex items-center justify-center">
-                  <FaHome className="text-white text-xl" />
+                  <MdHome className="text-white text-xl" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-semibold text-[#001e3c]">
                   Home Demo Counseling

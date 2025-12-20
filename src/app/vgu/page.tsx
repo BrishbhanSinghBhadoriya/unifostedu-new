@@ -15,7 +15,7 @@ import {
   FaGlobe,
   FaLightbulb,
   FaUserTie
-} from "react-icons/fa";
+} from "react-icons/fa6";
 const Vgu = () => {
   const selectionItem = [
     { id: "introduction", label: "Introduction" },

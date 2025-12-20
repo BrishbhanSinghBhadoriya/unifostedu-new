@@ -13,7 +13,7 @@ import {
   FaClock,
   FaGraduationCap,
   FaMoneyBillWave
-} from 'react-icons/fa';
+} from 'react-icons/fa6';
 
 const EnquireCard = ({ 
   course, 

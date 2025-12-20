@@ -5,12 +5,13 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
-import { FaUser, FaPhone, FaEnvelope, FaGraduationCap, FaPaperPlane, FaUniversity, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa';
+import { FaUser, FaPhone, FaEnvelope, FaGraduationCap, FaPaperPlane, FaUniversity, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa6';
 import { toast } from 'sonner';
 import { enquiryAPI } from '@/lib/axios';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { EnquiryFormValues } from 'types/ApplyEnquiryModalTypes';
 
 interface EnquiryFormProps {
 
@@ -54,7 +55,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
 
   // Popular cities for dropdown
   const popularCities = [
-    'Delhi', 'Mumbai', 'Bangalore', 'Chennai', 'Hyderabad', 
+    'Delhi', 'Mumbai', 'Bangalore', 'Chennai', 'Hyderabad',
     'Pune', 'Kolkata', 'Ahmedabad', 'Jaipur', 'Lucknow',
     'Chandigarh', 'Bhopal', 'Indore', 'Nagpur', 'Surat',
     'Kochi', 'Coimbatore', 'Visakhapatnam', 'Patna', 'Bhubaneswar'
@@ -68,20 +69,20 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
         .matches(/^\d{10}$/, { message: 'Enter 10 digit phone number', excludeEmptyString: true })
         .required('Phone number is required'),
       email: yup.string().trim().email('Please provide a valid email address').required('Email is required'),
-      Course: yup.string().trim().required('Course is required'),
-      Univeristy: yup.string().trim().required('University is required'),
+      course: yup.string().trim().required('Course is required'),
+      university: yup.string().trim().required('University is required'),
       location: yup.string().trim().required('Location is required'),
     });
   }, []);
 
-  const { register, handleSubmit, formState, setValue, getValues } = useForm({
+  const { register, handleSubmit, formState, setValue, getValues } = useForm<EnquiryFormValues>({
     resolver: yupResolver(schema),
     defaultValues: {
       name: '',
       email: '',
       mobile: '',
-      Univeristy: universityName || '',
-      Course: defaultProgram || program || '',
+      university: universityName || '',
+      course: defaultProgram || program || '',
       location: '',
     },
     mode: 'onSubmit',
@@ -89,20 +90,20 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
   });
 
   // Sync local select states into RHF values
-  const onCityChange = (val) => {
+  const onCityChange = (val: string) => {
     setCity(val);
     setValue('location', val, { shouldDirty: true, shouldTouch: true });
   };
-  const onUniversityChange = (val) => {
+  const onUniversityChange = (val: string) => {
     setSelectedUniversity(val);
-    setValue('Univeristy', val, { shouldDirty: true, shouldTouch: true });
+    setValue('university', val, { shouldDirty: true, shouldTouch: true });
   };
-  const onProgramChange = (val) => {
+  const onProgramChange = (val: string) => {
     setProgram(val);
-    setValue('Course', val, { shouldDirty: true, shouldTouch: true });
+    setValue('course', val, { shouldDirty: true, shouldTouch: true });
   };
 
-  const onSubmit = async (values) => {
+  const onSubmit = async (values: any) => {
     try {
       setLoading(true);
       const requestBody = {
@@ -110,27 +111,27 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
         mobile: values.mobile,
         email: values.email,
         location: values.location || city,
-        university: values.Univeristy || selectedUniversity,
-        course: values.Course || program,
+        university: values.university || selectedUniversity,
+        course: values.course || program,
       };
       const response = await enquiryAPI.general(requestBody);
-     
+
 
       toast.success('Enquiry submitted successfully!');
-      
+
       if (autoCloseOnSuccess && onSubmitted) {
         setTimeout(() => {
           onSubmitted();
         }, 800);
       }
-    } catch (err) {
+    } catch (err:any) {
       const data = err?.response?.data;
       const parsedMessage =
         (data && typeof data === 'object' && (data.message || data.error)) ||
         (Array.isArray(data?.errors)
           ? (typeof data.errors[0] === 'string'
-              ? data.errors[0]
-              : (data.errors[0]?.msg || data.errors[0]?.message))
+            ? data.errors[0]
+            : (data.errors[0]?.msg || data.errors[0]?.message))
           : undefined) ||
         (typeof data === 'string' ? data : undefined) ||
         err?.message;
@@ -150,8 +151,8 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
       values.mobile ? `Mobile: ${values.mobile}` : null,
       values.email ? `Email: ${values.email}` : null,
       (values.location || city) ? `Location: ${values.location || city}` : null,
-      (values.Univeristy || selectedUniversity) ? `University: ${values.Univeristy || selectedUniversity}` : null,
-      (values.Course || program) ? `Course: ${values.Course || program}` : null,
+      (values.university || selectedUniversity) ? `University: ${values.university || selectedUniversity}` : null,
+      (values.course || program) ? `Course: ${values.course || program}` : null,
     ].filter(Boolean).join('%0A');
 
     const url = `https://wa.me/${targetNumber}?text=${composed}`;
@@ -162,10 +163,10 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
 
   return (
     <form className="space-y-4 sm:space-y-5 relative z-[20002]" onSubmit={handleSubmit(onSubmit)}>
-      <input type="hidden" {...register('Course')} value={program} readOnly />
-      <input type="hidden" {...register('Univeristy')} value={selectedUniversity} readOnly />
+      <input type="hidden" {...register('course')} value={program} readOnly />
+      <input type="hidden" {...register('university')} value={selectedUniversity} readOnly />
       <input type="hidden" {...register('location')} value={city} readOnly />
-      
+
       {universityName && (
         <div className="rounded-lg p-3 sm:p-4 bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] text-[#001e3c]">
           <p className="text-xs sm:text-sm">University</p>
@@ -207,7 +208,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
             {formState.errors.email && (<p className="text-red-600 text-xs mt-1">{formState.errors.email.message}</p>)}
           </div>
         </div>
-        
+
         <div className="space-y-1.5">
           <Label htmlFor="location" className="flex items-center gap-1">
             Location <span className="text-red-500">*</span>
@@ -247,10 +248,10 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
                 ))}
               </SelectContent>
             </Select>
-            {formState.errors.Univeristy && (<p className="text-red-600 text-xs mt-1">{formState.errors.Univeristy.message}</p>)}
+            {formState.errors.university && (<p className="text-red-600 text-xs mt-1">{formState.errors.university.message}</p>)}
           </div>
         </div>
-        
+
         <div className="space-y-1.5">
           <Label className="flex items-center gap-1">
             Course <span className="text-red-500">*</span>
@@ -272,17 +273,17 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
                 <SelectItem value="BA">BA</SelectItem>
               </SelectContent>
             </Select>
-            {formState.errors.Course && (
-              <p className="text-red-600 text-xs mt-1">{formState.errors.Course.message}</p>
+            {formState.errors.course && (
+              <p className="text-red-600 text-xs mt-1">{formState.errors.course.message}</p>
             )}
           </div>
         </div>
       </div>
 
       <div className="flex flex-col sm:flex-row gap-3">
-        <Button 
-          type="submit" 
-          disabled={loading} 
+        <Button
+          type="submit"
+          disabled={loading}
           className="flex-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] font-bold relative z-[20002] py-3 sm:py-2.5 text-sm sm:text-base"
         >
           <FaPaperPlane className="mr-2" />

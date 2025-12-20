@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { GraduationCap, Clock, DollarSign, Target, Users, Briefcase, Code, Globe, Rocket, Award, BookOpen, CheckCircle, ChevronDown, Menu, X } from 'lucide-react';
+import { GraduationCap, Clock, DollarSign, Target, Briefcase, Code, Globe, Rocket,  CheckCircle, ChevronDown, Menu, X } from 'lucide-react';
 import Image from "next/image";
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 export default function OnlineBCAPage() {

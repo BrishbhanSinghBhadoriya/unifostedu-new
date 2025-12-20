@@ -1,6 +1,7 @@
 // Centralized data and helpers for the Landing page
 
-import { FaBook, FaUniversity, FaGraduationCap, FaBriefcase, FaBookOpen, FaUsers, FaGlobe, FaUserTie, FaCompass } from "react-icons/fa";
+import { FaBook, FaUniversity, FaGraduationCap, FaBriefcase, FaBookOpen, FaGlobe, FaUserTie, FaCompass } from "react-icons/fa";
+import { MdPeople } from "react-icons/md";
 
 export const heroSlides = [
   {
@@ -48,7 +49,7 @@ export const courses = [
   { title: "M.Com Online", desc: "Deepen commerce expertise", tag: "Best Value", icon: FaBriefcase, duration: "2 Years", students: "PG", color: "from-orange-500 to-red-600" },
   { title: "MA Online", desc: "Explore diverse specializations", tag: "Literature", icon: FaBookOpen, duration: "2 Years", students: "PG", color: "from-purple-500 to-pink-600" },
   { title: "MAJMC Online", desc: "Master journalism and mass communication", tag: "Media", icon: FaGlobe, duration: "2 Years", students: "PG", color: "from-indigo-500 to-blue-600" },
-  { title: "BBA Online", desc: "Management fundamentals for the digital age", tag: "Career Starter", icon: FaUsers, duration: "3 Years", students: "UG", color: "from-emerald-500 to-green-600" },
+  { title: "BBA Online", desc: "Management fundamentals for the digital age", tag: "Career Starter", icon: MdPeople, duration: "3 Years", students: "UG", color: "from-emerald-500 to-green-600" },
   { title: "BCA Online", desc: "Build a career in software development", tag: "Trending", icon: FaBook, duration: "3 Years", students: "UG", color: "from-cyan-500 to-blue-600" },
   { title: "B.Com Online", desc: "Commerce education for business world", tag: "Business", icon: FaBriefcase, duration: "3 Years", students: "UG", color: "from-amber-500 to-orange-600" },
   { title: "BA Online", desc: "Liberal arts foundation for diverse careers", tag: "Arts", icon: FaBookOpen, duration: "3 Years", students: "UG", color: "from-rose-500 to-pink-600" },
@@ -56,10 +57,10 @@ export const courses = [
 ];
 
 export const stats = [
-  { number: "5K+", label: "Students Enrolled", icon: FaUsers, color: "from-blue-500 to-teal-600" },
+  { number: "5K+", label: "Students Enrolled", icon: MdPeople, color: "from-blue-500 to-teal-600" },
   { number: "25+", label: "Partner Universities", icon: FaUniversity, color: "from-blue-500 to-teal-600" },
   { number: "100%", label: "Success Rate", icon: FaUniversity, color: "from-blue-500 to-teal-600" },
-  { number: "24/7", label: "Support Available", icon: FaUsers, color: "from-blue-500 to-teal-600" },
+  { number: "24/7", label: "Support Available", icon: MdPeople, color: "from-blue-500 to-teal-600" },
 ];
 
 export const features = [

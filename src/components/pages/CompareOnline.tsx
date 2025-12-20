@@ -1,23 +1,29 @@
 import React from 'react'
 import { motion, AnimatePresence } from "framer-motion";
-import { FaArrowRight, FaBalanceScaleLeft, FaCompass, FaStar, FaCheckCircle } from 'react-icons/fa';
+import { FaArrowRight, FaBalanceScale, FaCompass, FaStar, FaCheckCircle } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
 import { colleges as staticColleges, slugify, getUniversityHref } from "./landing/data.js";
 import { Badge } from "@/components/ui/badge";
 import Image from 'next/image.js';
 import { UniversityList } from '../../data/UniversityList';
+import { College } from 'types/LandingPageTypes.js';
 
-const CompareOnline = ({ colleges: collegesFromProps, selectedUniversities, toggleUniversity }) => {
+interface CompareOnlineProps {
+  colleges: College[];
+  selectedUniversities: string[];
+  toggleUniversity: (slug: string) => void;
+}
+const CompareOnline = ({ colleges: collegesFromProps, selectedUniversities, toggleUniversity }: CompareOnlineProps) => {
   // Use colleges from props if available, otherwise fallback to static data
-  const colleges = (collegesFromProps && collegesFromProps.length > 0) 
-    ? collegesFromProps 
-    : (staticColleges && staticColleges.length > 0) 
-    ? staticColleges 
-    : UniversityList;
+  const colleges = (collegesFromProps && collegesFromProps.length > 0)
+    ? collegesFromProps
+    : (staticColleges && staticColleges.length > 0)
+      ? staticColleges
+      : UniversityList;
 
   const router = useRouter();
   const canCompare = selectedUniversities.length >= 2 && selectedUniversities.length <= 3;
-  
+
   const startCompare = () => {
     if (!canCompare) return;
     router.push(`/compare?u=${selectedUniversities.join(",")}`);
@@ -66,11 +72,10 @@ const CompareOnline = ({ colleges: collegesFromProps, selectedUniversities, togg
             <button
               disabled={!canCompare}
               onClick={startCompare}
-              className={`group px-6 sm:px-8 py-3 rounded-full font-bold flex items-center gap-2 transition-all text-sm sm:text-base ${
-                canCompare 
+              className={`group px-6 sm:px-8 py-3 rounded-full font-bold flex items-center gap-2 transition-all text-sm sm:text-base ${canCompare
                   ? "bg-gradient-to-r from-blue-600 to-indigo-700 text-white hover:from-blue-700 hover:to-indigo-800 shadow-lg hover:shadow-xl transform hover:scale-105"
                   : "bg-gray-300 text-gray-500 cursor-not-allowed"
-              }`}
+                }`}
             >
               <FaArrowRight
                 className={
@@ -88,16 +93,15 @@ const CompareOnline = ({ colleges: collegesFromProps, selectedUniversities, togg
             {colleges.map((college, idx) => {
               const slug = slugify(college.name);
               const isSelected = selectedUniversities.includes(slug);
-              
+
               return (
                 <MotionDiv
                   key={idx}
                   whileHover={{ y: -5 }}
-                  className={`group relative rounded-2xl overflow-hidden transition-all duration-300 ${
-                    isSelected 
+                  className={`group relative rounded-2xl overflow-hidden transition-all duration-300 ${isSelected
                       ? "ring-2 ring-blue-500 shadow-xl"
                       : "border border-blue-100 shadow-md hover:shadow-xl"
-                  } bg-gradient-to-b from-white to-blue-50`}
+                    } bg-gradient-to-b from-white to-blue-50`}
                 >
                   {/* Selection Indicator */}
                   {isSelected && (
@@ -107,48 +111,40 @@ const CompareOnline = ({ colleges: collegesFromProps, selectedUniversities, togg
                       </div>
                     </div>
                   )}
-                  
+
                   {/* Decorative Corner */}
                   <div className="absolute top-0 right-0 w-16 h-16 overflow-hidden">
                     <div className="absolute transform rotate-45 translate-x-8 -translate-y-8 bg-gradient-to-r from-blue-500/20 to-indigo-600/20 w-20 h-8"></div>
                   </div>
-                  
+
                   {/* Card Content */}
                   <div className="p-5 sm:p-6">
                     {/* University Header */}
                     <div className="flex items-start gap-4 mb-4">
                       <div
-                        className={`flex-shrink-0 h-16 w-16 sm:h-20 sm:w-20 rounded-xl bg-white border border-blue-200 flex items-center justify-center p-2 ${
-                          isSelected ? "ring-2 ring-blue-500/30" : ""
-                        }`}
-                      > 
-                        <Image 
-                          src={college.logo} 
-                          alt={`${college.name} logo`} 
+                        className={`flex-shrink-0 h-16 w-16 sm:h-20 sm:w-20 rounded-xl bg-white border border-blue-200 flex items-center justify-center p-2 ${isSelected ? "ring-2 ring-blue-500/30" : ""
+                          }`}
+                      >
+                        <Image
+                          src={college.logo}
+                          alt={`${college.name} logo`}
                           width={80}
                           height={80}
                           loading="lazy"
-                          className="max-h-10 sm:max-h-12 w-auto object-contain" 
+                          className="max-h-10 sm:max-h-12 w-auto object-contain"
                         />
                       </div>
-                      
+
                       <div className="flex-1 min-w-0">
                         <h3 className="text-lg font-bold text-[#1a365d] mb-1 line-clamp-2 leading-tight">
                           {college.name}
                         </h3>
-                        
+
                         <div className="flex items-center gap-2 mb-2">
                           <Badge className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white border-0 text-xs font-medium">
                             {college.ranking}
                           </Badge>
-                          {college.rating && (
-                            <div className="flex items-center gap-1 text-sm text-amber-600">
-                              <FaStar className="fill-amber-400" />
-                              <span className="font-semibold">
-                                {college.rating}
-                              </span>
-                            </div>
-                          )}
+
                         </div>
                       </div>
                     </div>
@@ -181,20 +177,19 @@ const CompareOnline = ({ colleges: collegesFromProps, selectedUniversities, togg
 
                     {/* Action Buttons */}
                     <div className="flex items-center justify-between gap-3">
-                      <a 
-                        href={getUniversityHref(college.name)} 
+                      <a
+                        href={getUniversityHref(college.name)}
                         className="flex-1 text-center text-sm font-semibold text-blue-600 hover:text-blue-800 px-3 py-2 rounded-lg hover:bg-blue-100 transition-colors flex items-center justify-center"
                       >
                         View Details
                       </a>
-                      
+
                       <button
                         onClick={() => toggleUniversity(college.name)}
-                        className={`flex-1 px-4 py-2 rounded-lg text-sm font-semibold transition-all flex items-center justify-center ${
-                          isSelected 
+                        className={`flex-1 px-4 py-2 rounded-lg text-sm font-semibold transition-all flex items-center justify-center ${isSelected
                             ? "bg-gradient-to-r from-blue-600 to-indigo-700 text-white hover:from-blue-700 hover:to-indigo-800"
                             : "bg-blue-100 text-blue-800 hover:bg-blue-200"
-                        }`}
+                          }`}
                       >
                         {isSelected ? (
                           <>
@@ -203,7 +198,7 @@ const CompareOnline = ({ colleges: collegesFromProps, selectedUniversities, togg
                           </>
                         ) : (
                           <>
-                            <FaBalanceScaleLeft className="mr-1" />
+                            <FaBalanceScale className="mr-1" />
                             Compare
                           </>
                         )}

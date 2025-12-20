@@ -1,12 +1,18 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
+import { UniversityLogo } from "types/LandingPageTypes";
 
-const UniversityLogoSlider = ({ universityLogos = [] }) => {
+interface UniversityLogoSliderProps {
+  universityLogos?: UniversityLogo[];
+}
+
+const UniversityLogoSlider = ({ universityLogos = [] }: UniversityLogoSliderProps) => {
   const [itemsToShow, setItemsToShow] = useState(6);
   const [isPaused, setIsPaused] = useState(false);
+  const controls = useAnimation();
 
   useEffect(() => {
     const handleResize = () => setItemsToShow(6);
@@ -15,16 +21,40 @@ const UniversityLogoSlider = ({ universityLogos = [] }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    if (!universityLogos.length) return;
+
+    if (isPaused) {
+      controls.stop(); // ✅ pause animation
+    } else {
+      controls.start({
+        x: [0, `-${100 * (universityLogos.length / itemsToShow)}%`],
+        transition: {
+          ease: "linear",
+          duration: 40,
+          repeat: Infinity,
+        },
+      });
+    }
+  }, [isPaused, universityLogos.length, itemsToShow, controls]);
+
   if (!universityLogos.length) return null;
-  const MotionDiv=motion('div');
 
   return (
     <section className="py-1 bg-white">
       <div className="max-w-7xl mx-auto px-1">
-        <div className="relative overflow-hidden" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
-          <MotionDiv className="flex" animate={{ x: [0, -100 * (universityLogos.length / itemsToShow) + "%"] }} transition={{ ease: "linear", duration: 40, repeat: Infinity, repeatType: "loop", pause: isPaused }}>
+        <div
+          className="relative overflow-hidden"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <motion.div className="flex" animate={controls}>
             {[...universityLogos, ...universityLogos].map((university, index) => (
-              <MotionDiv key={`${university.name}-${index}`} className="flex-shrink-0 flex items-center justify-center" style={{ width: `${100 / itemsToShow}%` }}>
+              <div
+                key={`${university.name}-${index}`}
+                className="flex-shrink-0 flex items-center justify-center"
+                style={{ width: `${100 / itemsToShow}%` }}
+              >
                 <div className="h-24 w-full flex items-center justify-center px-2">
                   <Image
                     src={university.logo}
@@ -38,9 +68,9 @@ const UniversityLogoSlider = ({ universityLogos = [] }) => {
                     style={{ width: "auto", height: "auto" }}
                   />
                 </div>
-              </MotionDiv>
+              </div>
             ))}
-          </MotionDiv>
+          </motion.div>
         </div>
       </div>
     </section>
@@ -48,5 +78,3 @@ const UniversityLogoSlider = ({ universityLogos = [] }) => {
 };
 
 export default UniversityLogoSlider;
-
-

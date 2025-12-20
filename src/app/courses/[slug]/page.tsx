@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import courseData from '@/data/courseData.json';
@@ -6,23 +5,45 @@ import courseData from '@/data/courseData.json';
 
 import {
   FaSearch,
-  
+
   FaGraduationCap,
-  
+
   FaClock,
   FaMoneyBillWave,
   FaCheckCircle,
-  
+
   FaUniversity,
-  
+
   FaCalendarAlt
-} from "react-icons/fa";
+} from "react-icons/fa6";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 import CourseUniversitiesBrowser from '@/components/CourseUniversitiesBrowser';
 
-// Generate static params at build time (ISR)
+export interface University {
+  name: string;
+  location: string;
+  NIRF?: string;
+  rating: number;
+  image: string;
+  specializations: string[];
+  fee: string;
+  duration: string;
+  accreditation: string;
+  features: string[];
+}
+export interface CourseDetail {
+  title: string;
+  subtitle: string;
+  description: string;
+  duration: string;
+  fee: string;
+  eligibility: string;
+  features: string[];
+  universities: University[];
+}
+
 export async function generateStaticParams() {
   return Object.keys(courseData).map((slug) => ({
     slug,
@@ -30,10 +51,10 @@ export async function generateStaticParams() {
 }
 
 // Generate metadata for course pages
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }: { params: { slug: string } }) {
   const { slug } = await params;
-  const course = courseData[slug];
-  
+  const course = (courseData as Record<string, CourseDetail>)[slug];
+
   if (!course) {
     return {
       title: 'Course Not Found | UNIFOST',
@@ -44,14 +65,14 @@ export async function generateMetadata({ params }) {
       },
     };
   }
-  
+
   const courseTitle = course.title || `Online ${course.subtitle || slug} Programs in India`;
   const courseDescription = course.description || `Explore ${courseTitle} from top UGC-approved universities in India. Compare fees, eligibility, and career prospects.`;
-  
+
   return {
     title: `${courseTitle} | UNIFOST`,
     description: courseDescription,
-    keywords: course.keywords || [],
+
     alternates: {
       canonical: `https://unifostedu.com/courses/${slug}`,
     },
@@ -60,21 +81,14 @@ export async function generateMetadata({ params }) {
       description: courseDescription,
       url: `https://unifostedu.com/courses/${slug}`,
       siteName: "UNIFOST",
-      images: [
-        {
-          url: course.image || "https://unifostedu.com/images/default-course.webp",
-          width: 1200,
-          height: 630,
-          alt: courseTitle,
-        },
-      ],
+
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
       title: courseTitle,
       description: courseDescription,
-      images: [course.image || "https://unifostedu.com/images/default-course.webp"],
+
     },
     robots: {
       index: true,
@@ -94,18 +108,18 @@ export async function generateMetadata({ params }) {
 export const revalidate = 86400; // Revalidate every 24 hours
 export const dynamicParams = true; // Allow dynamic params not in generateStaticParams
 
-function slugify(input) {
+function slugify(input: string) {
   return input
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '');
 }
 
-export default async function CoursePage({ params }) {
+export default async function CoursePage({ params }: { params: { slug: string } }) {
   try {
     const { slug } = await params;
     // Try direct key match first
-    let course = courseData[slug];
+    let course: CourseDetail | undefined = (courseData as Record<string, CourseDetail>)[slug];
 
     // Fallback: match by slugifying known course labels (title/subtitle)
     if (!course) {
@@ -178,7 +192,7 @@ export default async function CoursePage({ params }) {
         '@type': 'Thing',
         name: feature
       })),
-      teaches: course.universities.flatMap(uni => 
+      teaches: course.universities.flatMap(uni =>
         Array.isArray(uni.specializations) ? uni.specializations : [uni.specializations]
       ).filter(Boolean).map(spec => ({
         '@type': 'Thing',
@@ -195,7 +209,7 @@ export default async function CoursePage({ params }) {
             __html: JSON.stringify(structuredData)
           }}
         />
-        
+
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
           <section className="bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -297,7 +311,7 @@ export default async function CoursePage({ params }) {
           </section>
 
           {/* Compare Online Universities Section */}
-         
+
           {/* Call to Action Section */}
           <section className="py-16 bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white">
             <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -308,7 +322,7 @@ export default async function CoursePage({ params }) {
                 Get personalized guidance and book a free demo session with our education experts
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
+                <Button
                   className="bg-[#00ffe0] text-[#001e3c] hover:bg-[#00e6cc] px-8 py-3 text-lg font-semibold"
                   asChild
                 >
@@ -317,8 +331,8 @@ export default async function CoursePage({ params }) {
                     Book Free Demo
                   </Link>
                 </Button>
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   className="border-[#00ffe0] text-[#00ffe0] hover:bg-[#00ffe0] hover:text-[#001e3c] px-8 py-3 text-lg font-semibold"
                   asChild
                 >

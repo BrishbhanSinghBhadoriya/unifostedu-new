@@ -60,7 +60,7 @@ const steps = [
 const MotionDiv=motion('div');
 
 // Animated Cap Component with better positioning
-const AnimatedCap = ({ start, delay = 0 }) => (
+const AnimatedCap = ({ start, delay = 0 }: { start: number; delay?: number }) => (
   <MotionDiv
     className="absolute top-0 left-0 z-10"
     initial={{ offsetDistance: `${start}%` }}
@@ -83,7 +83,7 @@ const AnimatedCap = ({ start, delay = 0 }) => (
   </MotionDiv>
 );
 
-export default function WorkflowRoadmap({ onGetStartedClick }) {
+export default function WorkflowRoadmap({ onGetStartedClick }: { onGetStartedClick: () => void }) {
   const iconsRef = useRef([]);
 
   useEffect(() => {

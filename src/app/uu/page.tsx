@@ -5,7 +5,7 @@ import {
   
   FaTimes,
   FaBars,
-} from "react-icons/fa";
+} from "react-icons/fa6";
 import * as Tabs from '@radix-ui/react-tabs';
 import { Button } from '@/components/ui/button';
 import EnquireCard from '@/components/EnquireCard';

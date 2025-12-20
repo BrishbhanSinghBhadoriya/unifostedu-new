@@ -1,30 +1,20 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  FaBookOpen,
-  FaUserTie,
-  FaRobot,
-  FaBriefcase,
-  FaBook,
-  FaUniversity,
-  FaUserFriends,
-  FaClipboardCheck,
-  FaCheckCircle,
-  FaFileAlt,
-  FaGraduationCap,
-  FaAward,
-  FaGlobe,
-} from "react-icons/fa";
-import * as Tabs from '@radix-ui/react-tabs';
-import { Button } from '@/components/ui/button';
+import AccreditationSection from '@/components/AccreditationSection';
+import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import EnquireCard from '@/components/EnquireCard';
+import HeroSection from '@/components/HeroSection';
+import { Button } from '@/components/ui/button';
+import * as Tabs from '@radix-ui/react-tabs';
+import { AnimatePresence, motion } from 'framer-motion';
 import Head from 'next/head';
 import Image from 'next/image';
-import HeroSection from '@/components/HeroSection';
-import AccreditationSection from '@/components/AccreditationSection';
-import AdmissionProcedure from '@/components/AdmissionProcedure';
-import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
+import { useEffect, useState } from 'react';
+import {
+  FaBookOpen,
+  FaGlobe,
+  FaGraduationCap,
+  FaUserTie
+} from "react-icons/fa6";
 const Upes = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeTab, setActiveTab] = useState('all');

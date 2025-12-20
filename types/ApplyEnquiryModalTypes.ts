@@ -11,3 +11,11 @@ type ModalProps={
 
 }
 export type {ModalProps}
+export type EnquiryFormValues = {
+  name: string;
+  email: string;
+  mobile: string;
+  university: string;
+  course: string;
+  location: string;
+};

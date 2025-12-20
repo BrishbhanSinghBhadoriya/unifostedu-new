@@ -32,7 +32,7 @@ function DialogClose({
 }
 
 function DialogOverlay({
-  className,
+  className = "",
   ...props
 }) {
   return (
@@ -48,7 +48,7 @@ function DialogOverlay({
 }
 
 function DialogContent({
-  className,
+  className = "",
   children,
   showCloseButton = true,
   ...props
@@ -79,7 +79,7 @@ function DialogContent({
   )
 }
 
-function DialogHeader({ className, ...props }) {
+function DialogHeader({ className = "", ...props }) {
   return (
     <div
       data-slot="dialog-header"
@@ -89,7 +89,7 @@ function DialogHeader({ className, ...props }) {
   )
 }
 
-function DialogFooter({ className, ...props }) {
+function DialogFooter({ className = "", ...props }) {
   return (
     <div
       data-slot="dialog-footer"
@@ -103,7 +103,7 @@ function DialogFooter({ className, ...props }) {
 }
 
 function DialogTitle({
-  className,
+  className = "",
   ...props
 }) {
   return (
@@ -116,7 +116,7 @@ function DialogTitle({
 }
 
 function DialogDescription({
-  className,
+  className = "",
   ...props
 }) {
   return (
