@@ -199,10 +199,7 @@ const Scholarship = ({ setOpenModal, openModal}) => {
                                     <strong>January Intake:</strong> Applications open
                                     in <strong>December</strong>
                                   </li>
-                                  <li>
-                                    <strong>April Intake:</strong> Applications open in{" "}
-                                    <strong>March</strong>
-                                  </li>
+                                 
                                   <li>
                                     <strong>July Intake:</strong> Applications open in{" "}
                                     <strong>June</strong>
@@ -307,7 +304,7 @@ const Scholarship = ({ setOpenModal, openModal}) => {
                         <div className="max-w-5xl mx-auto text-center">
                           {/* Title Section */}
                           <motion.h2
-                            initial={{ opacity: 0, y: 30 }}
+                            initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                             viewport={{ once: true }}
@@ -348,26 +345,10 @@ const Scholarship = ({ setOpenModal, openModal}) => {
                                 <strong>Applications now open</strong> for the January
                                 2026 intake. Secure your spot in India’s top-ranked
                                 online university.
+                                <strong>Specially Designed for Working Professionals</strong>
                               </p>
                             </motion.div>
         
-                            {/* Card 2 */}
-                            <motion.div
-                              initial={{ opacity: 0, y: 20 }}
-                              whileInView={{ opacity: 1, y: 0 }}
-                              transition={{ delay: 0.4 }}
-                              viewport={{ once: true }}
-                              className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300"
-                            >
-                              <Clock className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
-                              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                                April 2026 Batch
-                              </h3>
-                              <p className="text-gray-600">
-                                <strong>Pre-registration ongoing</strong>. Get early
-                                access and stay ahead in your learning goals.
-                              </p>
-                            </motion.div>
         
                             {/* Card 3 */}
                             <motion.div

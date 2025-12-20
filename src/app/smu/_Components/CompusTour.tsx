@@ -1,8 +1,16 @@
-import { optimizeCloudinary } from '@/utils/cloudinary'
-import React from 'react'
-import Image from 'next/image'
+import Image from 'next/image';
+import React from 'react';
+import { optimizeCloudinary } from '@/utils/cloudinary';
+type OpenModalState = {
+  type: 'apply' | 'enquire';
+  program?: string;
+} | null;
 
-const CompusTour = ({ setOpenModal }) => {
+type IntroducationProps = {
+  setOpenModal: React.Dispatch<React.SetStateAction<OpenModalState>>;
+};
+
+const CompusTour: React.FC<IntroducationProps> = ({ setOpenModal }) => {
   return (
     <section id="campus-tour" className="bg-gray-50 py-16 px-6 md:px-16 lg:px-24">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">

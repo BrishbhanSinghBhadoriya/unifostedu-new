@@ -220,7 +220,12 @@ const toggleFAQ = (index: number) => {
 
  
   const [modalType, setModalType] = useState('getStarted');
- const [openModal, setOpenModal] = useState<{ type:string ,program?:string } |null >(null);
+ type OpenModalState = {
+  type: 'apply' | 'enquire';
+  program?: string;
+} | null;
+
+const [openModal, setOpenModal] = useState<OpenModalState>(null);
 
   const [activeTab, setActiveTab] = useState('all');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -340,15 +345,15 @@ const toggleFAQ = (index: number) => {
 
 
               {/* Hero Section */}
-              <Introducation setOpenModal={setOpenModal} openModal={openModal} />
+              <Introducation setOpenModal={setOpenModal}  />
 
 
               {/* Quick Action Panel */}
 
-              <SmuOnlineContent setOpenModal={setOpenModal} openModal={openModal} />
+              <SmuOnlineContent setOpenModal={setOpenModal} />
 
 
-              <CompusTour setOpenModal={setOpenModal} openModal={openModal} />
+              <CompusTour setOpenModal={setOpenModal}/>
 
 
 
@@ -357,21 +362,21 @@ const toggleFAQ = (index: number) => {
 
 
               {/* Professional Rankings & Accreditations Section */}
-              <Recognitions setOpenModal={setOpenModal} openModal={openModal} />
+              <Recognitions setOpenModal={setOpenModal} />
 
-              <DatesSession setOpenModal={setOpenModal} openModal={openModal} />
+              <DatesSession setOpenModal={setOpenModal}/>
 
 
               {/* Enhanced Courses Section */}
               <ExploreCourses ugCourses={ugCourses} pgCourses={pgCourses} setOpenModal={setOpenModal} openModal={openModal} />
 
-              <FeesSMU setOpenModal={setOpenModal} openModal={openModal} />
+              <FeesSMU setOpenModal={setOpenModal}/>
               {/* Modern 360 Advantage */}
 
 
 
               {/* Why Choose Section */}
-              <AdvantageWhyChoose setOpenModal={setOpenModal} openModal={openModal} />
+              <AdvantageWhyChoose setOpenModal={setOpenModal}/>
               <section className="w-full bg-white text-gray-800 py-12">
                 <div className="max-w-5xl mx-auto space-y-10 px-4">
 
@@ -464,7 +469,7 @@ const toggleFAQ = (index: number) => {
 
               {/* Certificate Section */}
 
-              <LegacyAdmissionCertificate setOpenModal={setOpenModal} openModal={openModal} />
+              <LegacyAdmissionCertificate setOpenModal={setOpenModal}/>
 
 
 
@@ -472,7 +477,7 @@ const toggleFAQ = (index: number) => {
 
 
               {/* Professional FAQ Section */}
-              <KeyhighlightFaq setOpenModal={setOpenModal} openModal={openModal} />
+              <KeyhighlightFaq setOpenModal={setOpenModal} />
 
 
 
@@ -480,23 +485,35 @@ const toggleFAQ = (index: number) => {
 
 
               {/* Professional Hiring Partners Section */}
-              <PlacementRecordPartnersReview setOpenModal={setOpenModal} openModal={openModal} />
-              <Review setOpenModal={setOpenModal} openModal={openModal} />
+              <PlacementRecordPartnersReview setOpenModal={setOpenModal} />
+              <Review setOpenModal={setOpenModal} />
 
               {/* Premium Footer */}
-              <Footer setOpenModal={setOpenModal} openModal={openModal} />
-         {openModal && (
-                               <ApplyEnquiryModal
-                                 open={!!openModal}
-                                 onOpenChange={(v) => !v && setOpenModal(null)}
-                                 title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
-                                 subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-                                 imageSrc={optimizeCloudinary("https://res.cloudinary.com/didkrwhbu/image/upload/v1762327725/online-manipal-form_nz7yft.webp")}
-                                 universityName="Sikkim Manipal University"
-                                 defaultProgram="MBA"
-                                 formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
-                               />
-                             )}
+              <Footer setOpenModal={setOpenModal}/>
+       {openModal && (
+  <ApplyEnquiryModal
+    open={true}
+    onOpenChange={(v) => {
+      if (!v) setOpenModal(null);
+    }}
+    title={
+      openModal.type === 'apply'
+        ? 'Start Your Application'
+        : 'Enquire Now'
+    }
+    subtitle={
+      openModal.type === 'apply'
+        ? 'Fill the quick form to begin your admission process'
+        : 'Share your details and our counselor will reach out'
+    }
+    imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327725/online-manipal-form_nz7yft.webp"
+    universityName="Sikkim Manipal University"
+    defaultProgram={openModal.program ?? 'MBA'}
+    formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
+    showImage
+  />
+)}
+
 
 
             </div>

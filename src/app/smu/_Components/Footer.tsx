@@ -1,10 +1,19 @@
-import { optimizeCloudinary } from '@/utils/cloudinary'
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { FaPhone } from 'react-icons/fa';
 
-import { FaPhone } from 'react-icons/fa'
-import { motion } from 'framer-motion'  
-const Footer = ({setOpenModal, openModal}) => {
+import { optimizeCloudinary } from '@/utils/cloudinary';
+type OpenModalState = {
+  type: 'apply' | 'enquire';
+  program?: string;
+} | null;
+
+type IntroducationProps = {
+  setOpenModal: React.Dispatch<React.SetStateAction<OpenModalState>>;
+};
+
+const Footer: React.FC<IntroducationProps> = ({ setOpenModal }) => {
   return (
     <footer className="bg-gradient-to-br from-gray-900 to-slate-900 text-gray-300 pt-20 pb-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,7 +44,7 @@ const Footer = ({setOpenModal, openModal}) => {
                 <ul className="space-y-3">
                   {['Online MBA', 'MCA', 'B.Com', 'B.A.', 'M.Com', 'M.A.'].map((program, i) => (
                     <li key={i}>
-                      <a onClick={() => setOpenModal({ type: 'enquary' })} className="text-gray-400 hover:text-orange-400 transition-colors cursor-pointer">
+                      <a onClick={() => setOpenModal({ type: 'apply' })} className="text-gray-400 hover:text-orange-400 transition-colors cursor-pointer">
                         {program}
                       </a>
                     </li>

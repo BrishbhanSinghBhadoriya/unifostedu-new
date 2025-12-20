@@ -1,6 +1,15 @@
-import {useState, useEffect} from 'react'
+import { useState } from 'react';
+type OpenModalState = {
+  type: 'apply' | 'enquire';
+  program?: string;
+} | null;
 
-const KeyhighlightFaq = ({setOpenModal, openModal}) => {
+type IntroducationProps = {
+  setOpenModal: React.Dispatch<React.SetStateAction<OpenModalState>>;
+};
+
+const KeyhighlightFaq: React.FC<IntroducationProps> = ({ setOpenModal }) => {
+
      const faqData = [
       
       {
@@ -69,12 +78,11 @@ const KeyhighlightFaq = ({setOpenModal, openModal}) => {
     
       }
     ];
-      const [openIndex, setOpenIndex] = useState(null);
-    
-      const toggleFAQ = (index) => {
-        if (openIndex === index) setOpenIndex(null);
-        else setOpenIndex(index);
-      };
+      const [openIndex, setOpenIndex] = useState<number | null>(null);
+     
+     const toggleFAQ = (index: number) => {
+       setOpenIndex(prev => (prev === index ? null : index));
+     };
   return (
     <section id="key-highlights" className="w-full bg-white py-14 text-gray-800">
   <div className="max-w-6xl mx-auto px-4">

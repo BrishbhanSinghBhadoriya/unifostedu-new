@@ -1,9 +1,18 @@
-import React from 'react'
-import Image from 'next/image'
-import { optimizeCloudinary } from '@/utils/cloudinary'
-import ApplyEnquiryModal from '@/components/ApplyEnquiryModal'
+import React from 'react';
+import Image from 'next/image';
+import { optimizeCloudinary } from '@/utils/cloudinary';
 
-const PlacementRecordPartnersReview = ({setOpenModal, openModal}) => {
+type OpenModalState = {
+  type: 'apply' | 'enquire';
+  program?: string;
+} | null;
+
+type IntroducationProps = {
+  setOpenModal: React.Dispatch<React.SetStateAction<OpenModalState>>;
+};
+
+const PlacementRecordPartnersReview: React.FC<IntroducationProps> = ({ setOpenModal }) => {
+
     const testimonials = [
     {
       name: "Priya Sharma",
@@ -192,19 +201,7 @@ const PlacementRecordPartnersReview = ({setOpenModal, openModal}) => {
                           </div>
                          </div>
                       </div>
-                      
-                      {openModal && (
-                        <ApplyEnquiryModal
-                          open={!!openModal}
-                          onOpenChange={(v) => !v && setOpenModal(null)}
-                          title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
-                          subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-                          imageSrc={optimizeCloudinary("https://res.cloudinary.com/didkrwhbu/image/upload/v1762327725/online-manipal-form_nz7yft.webp")}
-                          universityName="Sikkim Manipal University"
-                          defaultProgram="MBA"
-                          formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
-                        />
-                      )}
+                    
                     </section>
           </section>
 </section>

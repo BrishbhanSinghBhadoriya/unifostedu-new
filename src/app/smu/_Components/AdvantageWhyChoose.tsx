@@ -1,7 +1,16 @@
-import React from 'react'
-import { FaBuilding, FaCertificate, FaStar, FaUsers } from 'react-icons/fa'
+import React from 'react';
+import { FaBuilding, FaCertificate, FaStar, FaUsers } from 'react-icons/fa';
 
-const AdvantageWhyChoose = ({setOpenModal, openModal}) => {
+type OpenModalState = {
+  type: 'apply' | 'enquire';
+  program?: string;
+} | null;
+
+type IntroducationProps = {
+  setOpenModal: React.Dispatch<React.SetStateAction<OpenModalState>>;
+};
+
+const AdvantageWhyChoose: React.FC<IntroducationProps> = ({ setOpenModal }) => {
   return (
    <section className="relative py-20 bg-gradient-to-br from-red-50 via-white to-blue-50">
           <div className="pointer-events-none absolute inset-0" style={{background:"radial-gradient(1200px 300px at 10% -10%, rgba(242,103,34,.09), transparent), radial-gradient(1200px 300px at 90% 110%, rgba(59,130,246,.08), transparent)"}} />
