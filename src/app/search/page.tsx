@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, useEffect, Suspense, FC } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -14,14 +14,34 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
+type ModalType = "getStarted" | "videoCall" | "homeDemo" | null;
+
+interface SearchResultItem {
+  type: 'course';
+  title: string;
+  description: string;
+  tag: string;
+}
+
+interface UniversityItem {
+  name: string;
+  href: string;
+  img: string;
+  rating: string;
+}
+
+interface SearchContentProps {
+  onOpenModal: (type: "getStarted") => void;
+}
+
 /* ------------------ CHILD ------------------ */
-function SearchContent({ onOpenModal }) {
+function SearchContent({ onOpenModal }: SearchContentProps) {
   const searchParams = useSearchParams();
   const query = searchParams.get('query') || '';
-  const [searchResults, setSearchResults] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [searchResults, setSearchResults] = useState<SearchResultItem[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
 
-  const allResults = [
+  const allResults: SearchResultItem[] = [
     { type: 'course', title: 'MBA Online', description: 'Master of Business Administration program with specializations in Finance, HR, Marketing, and IT.', tag: "Popular" },
     { type: 'course', title: 'MCA Online', description: 'Master of Computer Applications with AI, Cloud, and Data Science electives.', tag: "Top Rated" },
     { type: 'course', title: 'M.Com Online', description: 'Deepen commerce expertise with advanced finance and accounting modules.', tag: "Best Value" },
@@ -42,7 +62,7 @@ function SearchContent({ onOpenModal }) {
     }
   }, [query]);
 
-  const performSearch = (searchQuery) => {
+  const performSearch = (searchQuery: string) => {
     setLoading(true);
     const results = allResults.filter(item =>
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -251,7 +271,7 @@ function SearchContent({ onOpenModal }) {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {[
+              {( [
                 { name: 'Amity University', href: '/Amity-University-Online', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp', rating: '4.8' },
                 { name: 'Manipal University', href: '/manipal', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp', rating: '4.7' },
                 { name: 'NMIMS University', href: '/nmims', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327721/nmims_os8kn9.webp', rating: '4.9' },
@@ -268,7 +288,7 @@ function SearchContent({ onOpenModal }) {
                 { name: 'Kurukshetra University', href: '/ku-online', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku_xu5nkx.webp', rating: '4.3' },
                 { name: 'OP Jindal University', href: '/opjindal', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/opjindal_jdl7az.webp', rating: '4.6' },
                 { name: 'Chandigarh University', href: '/cuOnline', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp', rating: '4.4' },
-              ].map((university, idx) => (
+              ] as UniversityItem[]).map((university, idx) => (
                 <div key={idx} className="group">
                   <Link 
                     href={university.href} 
@@ -391,9 +411,11 @@ function SearchContent({ onOpenModal }) {
 /* ------------------ PARENT ------------------ */
 export default function Search() {
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
-  const [modalType, setModalType] = useState(null);
+ const [modalType, setModalType] =
+  useState<EnquiryFormType>("getStarted")
 
-  const handleOpenModal = (type) => {
+
+  const handleOpenModal = (type: "getStarted") => {
     setModalType(type);
     setShowEnquiryModal(true);
   };

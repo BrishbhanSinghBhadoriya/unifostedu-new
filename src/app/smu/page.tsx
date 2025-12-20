@@ -1,6 +1,7 @@
 'use client';
 import PageContent from '@/components/PageContent/PageContent';
-import Head from 'next/head';
+import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
+import { optimizeCloudinary } from '@/utils/cloudinary';
 import { useEffect, useState } from 'react';
 import { FaBars, FaPhone } from "react-icons/fa";
 import AdvantageWhyChoose from "./_Components/AdvantageWhyChoose";
@@ -211,18 +212,21 @@ const SMU = () => {
   ];
 
 
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+ const [openIndex, setOpenIndex] = useState<number | null>(null);
 
- const toggleFAQ = (index:number | null) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+const toggleFAQ = (index: number) => {
+  setOpenIndex(prev => (prev === index ? null : index));
+};
 
-  const [showEnquiryModal, setShowEnquiryModal] = useState(false);
+ 
   const [modalType, setModalType] = useState('getStarted');
- const [openModal, setOpenModal] = useState<{
-  type: string;
+ type OpenModalState = {
+  type: 'apply' | 'enquire';
   program?: string;
-} | null>(null);
+} | null;
+
+const [openModal, setOpenModal] = useState<OpenModalState>(null);
+
   const [activeTab, setActiveTab] = useState('all');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -260,35 +264,6 @@ const SMU = () => {
 
   return (
     <>
-      <Head>
-        <title>Sikkim Manipal University Online | UGC Approved UG & PG Courses - UNIFOST</title>
-        <meta name="description" content="Explore UGC-recognized online programs from Sikkim Manipal University. Flexible learning, expert mentorship, and career-focused degrees with UGC & AICTE approvals." />
-        <meta name="keywords" content="SMU Online, Sikkim Manipal University, SMU Distance Learning, MBA in SMU Online, MCA in SMU Online, B.Com in SMU Online, BA in SMU Online, M.Com in SMU Online, MA in SMU Online, Online Degrees India, UGC Approved, AICTE Approved" />
-        <meta name="author" content="Sikkim Manipal University Online" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://unifostedu.com/smu" />
-        <link href="https://fonts.cdnfonts.com/css/queens" rel="stylesheet" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
-        />
-
-        {/* Open Graph */}
-        <meta property="og:title" content="Sikkim Manipal University Online | UGC Approved Online Degrees" />
-        <meta property="og:description" content="UGC-recognized online undergraduate and postgraduate programs with flexible, industry-relevant learning from Sikkim Manipal University." />
-        <meta property="og:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.onlinedegree.in/smu" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sikkim Manipal University Online | UGC Approved Online Degrees" />
-        <meta name="twitter:description" content="Enroll in UGC and AICTE approved online courses at Sikkim Manipal University. Learn with flexibility and global recognition." />
-        <meta name="twitter:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp" />
-
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-      </Head>
-
       <style jsx>{`
         .font-queens {
           font-family: 'Queens', serif;
@@ -370,15 +345,15 @@ const SMU = () => {
 
 
               {/* Hero Section */}
-              <Introducation setOpenModal={setOpenModal} openModal={openModal} />
+              <Introducation setOpenModal={setOpenModal}  />
 
 
               {/* Quick Action Panel */}
 
-              <SmuOnlineContent setOpenModal={setOpenModal} openModal={openModal} />
+              <SmuOnlineContent setOpenModal={setOpenModal} />
 
 
-              <CompusTour setOpenModal={setOpenModal} openModal={openModal} />
+              <CompusTour setOpenModal={setOpenModal}/>
 
 
 
@@ -387,21 +362,21 @@ const SMU = () => {
 
 
               {/* Professional Rankings & Accreditations Section */}
-              <Recognitions setOpenModal={setOpenModal} openModal={openModal} />
+              <Recognitions setOpenModal={setOpenModal} />
 
-              <DatesSession setOpenModal={setOpenModal} openModal={openModal} />
+              <DatesSession setOpenModal={setOpenModal}/>
 
 
               {/* Enhanced Courses Section */}
               <ExploreCourses ugCourses={ugCourses} pgCourses={pgCourses} setOpenModal={setOpenModal} openModal={openModal} />
 
-              <FeesSMU setOpenModal={setOpenModal} openModal={openModal} />
+              <FeesSMU setOpenModal={setOpenModal}/>
               {/* Modern 360 Advantage */}
 
 
 
               {/* Why Choose Section */}
-              <AdvantageWhyChoose setOpenModal={setOpenModal} openModal={openModal} />
+              <AdvantageWhyChoose setOpenModal={setOpenModal}/>
               <section className="w-full bg-white text-gray-800 py-12">
                 <div className="max-w-5xl mx-auto space-y-10 px-4">
 
@@ -494,7 +469,7 @@ const SMU = () => {
 
               {/* Certificate Section */}
 
-              <LegacyAdmissionCertificate setOpenModal={setOpenModal} openModal={openModal} />
+              <LegacyAdmissionCertificate setOpenModal={setOpenModal}/>
 
 
 
@@ -502,7 +477,7 @@ const SMU = () => {
 
 
               {/* Professional FAQ Section */}
-              <KeyhighlightFaq setOpenModal={setOpenModal} openModal={openModal} />
+              <KeyhighlightFaq setOpenModal={setOpenModal} />
 
 
 
@@ -510,23 +485,35 @@ const SMU = () => {
 
 
               {/* Professional Hiring Partners Section */}
-              <PlacementRecordPartnersReview setOpenModal={setOpenModal} openModal={openModal} />
-              <Review setOpenModal={setOpenModal} openModal={openModal} />
+              <PlacementRecordPartnersReview setOpenModal={setOpenModal} />
+              <Review setOpenModal={setOpenModal} />
 
               {/* Premium Footer */}
-              <Footer setOpenModal={setOpenModal} openModal={openModal} />
-         {openModal && (
-                               <ApplyEnquiryModal
-                                 open={!!openModal}
-                                 onOpenChange={(v) => !v && setOpenModal(null)}
-                                 title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
-                                 subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-                                 imageSrc={optimizeCloudinary("https://res.cloudinary.com/didkrwhbu/image/upload/v1762327725/online-manipal-form_nz7yft.webp")}
-                                 universityName="Sikkim Manipal University"
-                                 defaultProgram="MBA"
-                                 formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
-                               />
-                             )}
+              <Footer setOpenModal={setOpenModal}/>
+       {openModal && (
+  <ApplyEnquiryModal
+    open={true}
+    onOpenChange={(v) => {
+      if (!v) setOpenModal(null);
+    }}
+    title={
+      openModal.type === 'apply'
+        ? 'Start Your Application'
+        : 'Enquire Now'
+    }
+    subtitle={
+      openModal.type === 'apply'
+        ? 'Fill the quick form to begin your admission process'
+        : 'Share your details and our counselor will reach out'
+    }
+    imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327725/online-manipal-form_nz7yft.webp"
+    universityName="Sikkim Manipal University"
+    defaultProgram={openModal.program ?? 'MBA'}
+    formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
+    showImage
+  />
+)}
+
 
 
             </div>

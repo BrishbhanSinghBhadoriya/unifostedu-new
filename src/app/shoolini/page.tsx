@@ -1,37 +1,63 @@
 'use client';
-import React from 'react';
-import { useState, useEffect } from 'react';
-import {
-  FaBookOpen,FaAward,FaQuestionCircle,FaComments, FaStar,FaQuoteLeft,FaCalendarAlt,FaBuilding,FaUserGraduate,FaChartLine, FaClock, FaMoneyBillWave, FaUserTie, FaRobot, FaBriefcase, FaBook, FaUniversity,FaGraduationCap,FaGlobe,
-  FaUserFriends, FaClipboardCheck, FaHome, FaInfoCircle, FaCheckCircle, FaRupeeSign, FaPhoneAlt, FaBars, FaTimes
-} from "react-icons/fa";
-import * as Tabs from '@radix-ui/react-tabs';
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-import EnquireCard from '@/components/EnquireCard';
-import Image from 'next/image';
-import HeroSection from '@/components/HeroSection';
-import AccreditationSection from '@/components/AccreditationSection';
-import { Button } from '@/components/ui/button';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
+import HeroSection from '@/components/HeroSection';
+import { Button } from '@/components/ui/button';
+import * as Tabs from '@radix-ui/react-tabs';
+import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import {
+  FaAward,
+  FaBars,
+  FaBookOpen,
+  FaBriefcase,
+  FaBuilding,
+  FaChartLine,
+  FaClipboardCheck,
+  FaClock,
+  FaComments,
+  FaGlobe,
+  FaGraduationCap,
+  FaInfoCircle,
+  FaMoneyBillWave,
+  FaQuestionCircle,
+  FaQuoteLeft,
+  FaRobot,
+  FaRupeeSign,
+  FaStar,
+  FaTimes,
+  FaUniversity,
+  FaUserFriends,
+  FaUserGraduate,
+  FaUserTie
+} from "react-icons/fa";
+import { motion } from 'framer-motion';
+
+type ModalState = { type: 'apply' | 'Enquire Now', program?: string } | null;
+
+const menuItems = [
+  { id: "introduction", icon: <FaInfoCircle className="mr-2" />, text: "Introduction", link: "#introduction" },
+  { id: "campus-tour", icon: <FaUniversity className="mr-2" />, text: "Campus Tour", link: "#campus-tour" },
+  { id: "explore-courses", icon: <FaBookOpen className="mr-2" />, text: "Explore Online Courses", link: "#explore-courses" },
+  { id: "key-highlights", icon: <FaStar className="mr-2" />, text: "Key Highlights", link: "#key-highlights" },
+  { id: "fee-structure", icon: <FaRupeeSign className="mr-2" />, text: "Fee Structure", link: "#fee-structure" },
+  { id: "admission-process", icon: <FaClipboardCheck className="mr-2" />, text: "Admission Process", link: "#admission-process" },
+  { id: "upcoming-sessions", icon: <FaClock className="mr-2" />, text: "Upcoming Sessions", link: "#upcoming-sessions" },
+  { id: "placement-partners", icon: <FaBuilding className="mr-2" />, text: "Placement Partners", link: "#placement-partners" },
+  { id: "placement-records", icon: <FaChartLine className="mr-2" />, text: "Placement Records", link: "#placement-records" },
+  { id: "student-reviews", icon: <FaUserGraduate className="mr-2" />, text: "Student Reviews", link: "#student-reviews" },
+  { id: "faq", icon: <FaQuestionCircle className="mr-2" />, text: "FAQs", link: "#faq" },
+  { id: "shoolini-reviews", icon: <FaComments className="mr-2" />, text: "Shoolini University Reviews", link: "#shoolini-reviews" }
+];
+
+interface SidebarProps {
+  isOpen: boolean;
+  toggleSidebar: () => void;
+  onApplyNowClick: () => void;
+}
  
 // Sidebar Component
-const Sidebar = ({ isOpen, toggleSidebar, onApplyNowClick }) => {
-  const menuItems =  [
-  { icon: <FaInfoCircle className="mr-2" />, text: "Introduction", link: "#" },
-  { icon: <FaUniversity className="mr-2" />, text: "Campus Tour", link: "#campus-tour" },
-  { icon: <FaBookOpen className="mr-2" />, text: "Explore Online Courses", link: "#explore-courses" },
-  { icon: <FaStar className="mr-2" />, text: "Key Highlights", link: "#key-highlights" },
-  { icon: <FaRupeeSign className="mr-2" />, text: "Fee Structure", link: "#fee-structure" },
-  { icon: <FaClipboardCheck className="mr-2" />, text: "Admission Process", link: "#admission-process" },
-  { icon: <FaClock className="mr-2" />, text: "Upcoming Sessions", link: "#upcoming-sessions" },
-  { icon: <FaBuilding className="mr-2" />, text: "Placement Partners", link: "#placement-partners" },
-  { icon: <FaChartLine className="mr-2" />, text: "Placement Records", link: "#placement-records" },
-  { icon: <FaUserGraduate className="mr-2" />, text: "Student Reviews", link: "#student-reviews" },
-  { icon: <FaQuestionCircle className="mr-2" />, text: "FAQs", link: "#faq" },
-  { icon: <FaComments className="mr-2" />, text: "Shoolini University Reviews", link: "#shoolini-reviews" }
-];
+const Sidebar = ({ isOpen, toggleSidebar, onApplyNowClick }: SidebarProps) => {
 
   return (
     <>
@@ -44,7 +70,7 @@ const Sidebar = ({ isOpen, toggleSidebar, onApplyNowClick }) => {
       )}
       
       {/* Sidebar */}
-      <div className={`fixed top-0 left-0 h-full bg-white shadow-lg z-50 transition-all duration-300 ease-in-out w-64 transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:sticky lg:top-20 lg:h-[calc(100vh-5rem)] lg:translate-x-0 flex flex-col overflow-y-auto border-r border-gray-200`}>
+      <div className={`fixed top-0 left-0 h-full bg-white shadow-lg z-50 transition-all duration-300 ease-in-out w-64 transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:fixed lg:top-20 lg:h-[calc(100vh-5rem)] lg:translate-x-0 flex flex-col overflow-y-auto border-r border-gray-200`}>
         <div className="p-4 border-b flex justify-between items-center">
           <div className="flex items-center">
 
@@ -60,8 +86,8 @@ const Sidebar = ({ isOpen, toggleSidebar, onApplyNowClick }) => {
         
         <nav className="p-4">
           <ul className="space-y-2">
-            {menuItems.map((item, index) => (
-              <li key={index}>
+            {menuItems.map((item) => (
+              <li key={item.id}>
                 <Link 
                   href={item.link}
                   className="flex items-center p-2 text-gray-700 hover:bg-red-50 hover:text-red-600 rounded-md transition-colors"
@@ -174,8 +200,12 @@ const ShooliniIntroduction = () => {
   );
 };
 
+interface WhyChooseShooliniProps {
+  setOpenModal: (state: ModalState) => void;
+}
+
 // Why Choose Shoolini University Online Section
-const WhyChooseShoolini = ({ setOpenModal }) => {
+const WhyChooseShoolini = ({ setOpenModal }: WhyChooseShooliniProps) => {
   return (
     <section id="why-choose" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -426,21 +456,19 @@ const WhyChooseShoolini = ({ setOpenModal }) => {
 
         <div className="mt-12 text-center">
           <button 
-            
-            className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-red-500/25 transform hover:scale-105 transition-all duration-300 cursor-pointer" onClick={() => setOpenModal({ type: 'apply' })}
+            className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-red-500/25 transform hover:scale-105 transition-all duration-300 cursor-pointer" 
+            onClick={() => setOpenModal({ type: 'apply' })}
           >
             Apply Now for Shoolini Online Programs
           </button>
         </div>
       </div>
     </section>
-
-    
   );
 };
 
 const ShooliniFAQ = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+const [openIndex, setOpenIndex] = useState<number | null>(null);
   
   const faqs = [
     {
@@ -505,18 +533,16 @@ const ShooliniFAQ = () => {
     }
   ];
 
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+   const toggleFAQ = (index: number) => {
+       setOpenIndex(prev => (prev === index ? null : index));
+     };
 
   return (
-    <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
+    <section id="faq" className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">
-            <svg className="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+            <FaQuestionCircle className="w-8 h-8 text-red-500" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Frequently Asked Questions
@@ -542,13 +568,9 @@ const ShooliniFAQ = () => {
                 </h3>
                 <div className="flex-shrink-0">
                   {openIndex === index ? (
-                    <svg className="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-                    </svg>
+                    <ChevronUpIcon className="w-6 h-6 text-red-500" />
                   ) : (
-                    <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
+                    <ChevronDownIcon className="w-6 h-6 text-gray-400" />
                   )}
                 </div>
               </button>
@@ -580,11 +602,9 @@ const ShooliniFAQ = () => {
             >
               📞 Call: +91 7042646766
             </a>
-            <button className="inline-flex items-center justify-center px-8 py-3 bg-white text-red-500 font-semibold rounded-full border-2 border-red-500 hover:bg-red-50 transition-all duration-300">
-              <a href="https://wa.me/917042867717" target="_blank" rel="noopener noreferrer">
-                💬 Chat with Counselor
-              </a>
-            </button>
+            <a href="https://wa.me/917042867717" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-3 bg-white text-red-500 font-semibold rounded-full border-2 border-red-500 hover:bg-red-50 transition-all duration-300">
+              💬 Chat with Counselor
+            </a>
           </div>
         </div>
       </div>
@@ -592,16 +612,34 @@ const ShooliniFAQ = () => {
   );
 };
 
+const ChevronUpIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg {...props} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+  </svg>
+);
+
+const ChevronDownIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg {...props} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+  </svg>
+);
+
+type ActiveTab = 'all' | 'ug' | 'pg';
 
 const Shoolini = () => {
-  const [openModal, setOpenModal] = useState(null);
+  const [openModal, setOpenModal] = useState<ModalState>(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-   const [activeTab, setActiveTab] = useState("overview");
-   const [expandedCourses, setExpandedCourses] = useState({});
+  const [activeTab, setActiveTab] = useState<ActiveTab>("all");
+  const [expandedCourses, setExpandedCourses] = useState<Record<number, boolean>>({});
+  
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
   
+  const handleTabChange = (value: string) => {
+    setActiveTab(value as ActiveTab);
+  };
+
   const ugCourses = [
     {
       course: "Bachelor of Commerce (B.Com)",
@@ -689,48 +727,20 @@ const Shoolini = () => {
   ];
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setOpenModal(true);
-    }, 3000);
+         
+   
+    const timer= setTimeout(()=>{
+    setOpenModal({ type: 'apply' } as any)
+    },3000)
     return () => clearTimeout(timer);
-  }, []);
+   
+          
+   },[])
 
   return (
     <>
-      
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-        <Head>
-        <title>Shoolini University Online Programs | Fees, Courses & Admission</title>
-        <meta name="description" content="Explore UG & PG online programs at Shoolini University. Check eligibility, fees, placements & apply online." />
-        <meta name="keywords" content="Shoolini University Online, Shoolini MBA Online, Shoolini BBA Online, Shoolini BCA Online, Shoolini Online Courses, Shoolini Admission, Shoolini Fees" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-      </Head>
-        
-         <style jsx>{`
-    .roboto { 
-      font-family: 'Roboto', sans-serif; 
-    }
-    * { 
-      box-sizing: border-box; 
-    }
-    body { 
-      overflow-x: hidden; 
-    }
-    
-    .main-content {
-      margin-top: 64px;
-      width: 100%;
-      overflow-y: auto;
-      height: calc(100vh - 64px);
-    }
-    
-    @media (min-width: 1024px) {
-      .main-content {
-        padding-right: 40px;
-      }
-    }
-  `}</style>
-         <div className="roboto overflow-x-hidden flex flex-col h-screen">
+      {/* Page-specific fonts can be loaded in layout.tsx using next/font */}
+      <div className="overflow-x-hidden flex flex-col min-h-screen">
         <header className="w-full bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 fixed top-0 left-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16 lg:h-20">
@@ -758,6 +768,7 @@ const Shoolini = () => {
                   href="tel:+917042867717"
                   className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-orange-600 transition-colors"
                 > 
+                  {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
                   <span className="text-lg">📞</span>
                   <span className="hidden lg:inline">+91 7042646766</span>
                   <span className="lg:hidden">Call Now</span>
@@ -767,8 +778,10 @@ const Shoolini = () => {
                 <a
                   href="tel:+917042867717"
                   className="sm:hidden flex items-center justify-center w-10 h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
+                  aria-label="Call Now"
                 >
-                  📞
+                  {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
+                  <span role="img" aria-label="phone">📞</span>
                 </a>
                 
                 {/* Apply Button */}
@@ -785,12 +798,12 @@ const Shoolini = () => {
         </header>
  
         {/* Main Content with Sidebar */}
-         <div className="flex flex-col lg:flex-row pt-0 ">
+         <div className="flex flex-col lg:flex-row pt-16 lg:pt-20">
            <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} onApplyNowClick={() => setOpenModal({ type: 'apply' })} />           
             {/* Main Content - Scrollable */}
-            <main className="main-content flex-1 overflow-x-hidden px-4 lg:px-8 pb-10 mt-0">
+            <main className="flex-1 overflow-x-hidden px-4 lg:px-8 pb-10 lg:pl-64">
 
-        <section id="About" className="relative w-full min-h-[450px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] overflow-hidden mt-0">
+        <section id="About" className="relative w-full min-h-[450px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] overflow-hidden">
   {/* Background Image with Gradient Overlay */}
   <div className="absolute inset-0">
     <Image
@@ -798,7 +811,7 @@ const Shoolini = () => {
       alt="Shoolini University Campus"
       fill
       className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden mt-0"
-      priority
+      priority={true}
     />
     <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
@@ -851,7 +864,7 @@ const Shoolini = () => {
    
    { /* About Shoolini University Hero Section */}
    <section id='campus-tour'></section>
-   <HeroSection id="#campus-tour"
+   <HeroSection 
   universityName=" About Shoolini University Online"
   universityNameClass="text-red-500"
   location="Solan, Himachal Pradesh, India"
@@ -894,7 +907,12 @@ const Shoolini = () => {
                    </p>
                  </div>
      
-                 <Tabs.Root value={activeTab} onValueChange={setActiveTab} className="space-y-12">
+                 <Tabs.Root
+                           value={activeTab}
+                           onValueChange={handleTabChange}
+                            className="space-y-12"
+                             >
+
                    {/* Tab Buttons */}
                    <div className="flex justify-center">
                      <Tabs.List className="inline-flex bg-gray-100/80 backdrop-blur-sm rounded-2xl p-2 shadow-lg border border-gray-200">
@@ -961,7 +979,7 @@ const Shoolini = () => {
                                  <div className="flex items-start gap-2 text-gray-600">
                                    <span className="mt-1">⭐</span>
                                    <div className="text-sm">
-                                    <strong>Specialization:</strong>
+                                    <strong>Specialization:</strong> 
                                     {course.specialization.split(',').length > 1 ? (
                                       <>
                                         {' '}{course.specialization.split(',')[0]}
@@ -1281,7 +1299,7 @@ const Shoolini = () => {
        </div>
 </section>
      
-         {/* Admission Procedure */}
+         {/* Admission Procedure */} 
                <section id='admission-process' className="relative py-20 bg-white">
                  {/* Decorative Blobs */}
                  <div className="absolute -top-20 -left-20 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
@@ -1379,7 +1397,7 @@ const Shoolini = () => {
       {/* Certificate + Benefits */}
       <section className="bg-[#003366] py-12 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <div className="flex-1">
+          <div className="flex-1"> 
             <Image width={100} height={100} loading="lazy" src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327858/shoolini-ccertificate_hw3lvb.webp" alt="Shoolini Certificate" className="w-full max-w-md mx-auto rounded shadow-lg" />
           </div>
           <div className="flex-1 text-white">
@@ -1496,7 +1514,7 @@ const Shoolini = () => {
     </p>
   </div>
 </section>
-         <section id='student-reviews' className="py-16 bg-white">
+         <section id='student-reviews' className="py-16 bg-white"> 
   <div className="max-w-5xl mx-auto px-6">
     <h2 className="text-3xl font-bold text-gray-800 text-center mb-10">
       Student Reviews
@@ -1544,7 +1562,7 @@ const Shoolini = () => {
        </div>
 </section>
 
-        <section id='faq'><ShooliniFAQ /></section>
+        <ShooliniFAQ />
 
       <section id='placement-records' className="py-12 bg-gray-50">
   <div className="max-w-5xl mx-auto px-6">
@@ -1691,7 +1709,7 @@ const Shoolini = () => {
                       <div className="flex items-center gap-3 mb-4">
                         <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327282/logo_shoolini_cgz1an.webp" alt="Shoolini University Logo" className="h-10 w-auto bg-white" />
                         <span className="text-xl font-bold text-red">shoolini</span>
-                      </div>
+                      </div> 
                       <p className="text-sm text-gray-400 leading-relaxed">
                         UGC-entitled, NAAC A+ accredited online degrees designed for modern learners. 
                         Transform your career with globally recognized programs.
@@ -1773,15 +1791,15 @@ const Shoolini = () => {
                       <div className="space-y-3">
                         <div className="flex items-center gap-3">
                           
-                          <a href="tel:+917042867717" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us"  aria-label="Email us at info@unifostedu.com">
+                          <a href="tel:+917042867717" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us"  aria-label="Call us at +91 7042646766">
                                        
                                        <span className="text-orange-400">📞</span>
                                       </a>
                           <span className="text-sm">+91 7042646766</span>
                         </div>
                         <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
-                            <span className="text-orange-400">✉️</span>
+                          <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center" aria-hidden="true">
+                            <span className="text-orange-400">✉️</span> 
                           </div>
                           <a href="mailto:info@unifostedu.com" className='p-2 rounded-lg hover:bg-slate-100 transition-all duration-200' title='Email us' aria-label='Email us at info@unifostedu.com'>
                           <span className="text-sm">info@unifostedu.com</span>
@@ -1877,7 +1895,7 @@ const Shoolini = () => {
               <ApplyEnquiryModal
                 open={!!openModal}
                 onOpenChange={(v) => !v && setOpenModal(null)}
-                title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
+                title={openModal?.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
                 subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
                 imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327859/shoolini_form1_lsfmyo.png"
                 universityName="Shoolini Online University"

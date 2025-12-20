@@ -1,8 +1,18 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import { optimizeCloudinary } from '@/utils/cloudinary'
-import Image from 'next/image'
-const LegacyAdmissionCertificate = ({setOpenModal, openModal}) => {
+import React from 'react';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { optimizeCloudinary } from '@/utils/cloudinary';
+type OpenModalState = {
+  type: 'apply' | 'enquire';
+  program?: string;
+} | null;
+
+type IntroducationProps = {
+  setOpenModal: React.Dispatch<React.SetStateAction<OpenModalState>>;
+};
+
+const LegacyAdmissionCertificate: React.FC<IntroducationProps> = ({ setOpenModal }) => {
+
   return (
      <section className="w-full bg-white text-gray-800 py-12">
   <div className="max-w-5xl mx-auto space-y-10 px-4">

@@ -1,6 +1,15 @@
-import React from 'react'
+import React from 'react';
+type OpenModalState = {
+  type: 'apply' | 'enquire';
+  program?: string;
+} | null;
 
-const Review = ({setOpenModal, openModal}) => {
+type IntroducationProps = {
+  setOpenModal: React.Dispatch<React.SetStateAction<OpenModalState>>;
+};
+
+const Review: React.FC<IntroducationProps> = ({ setOpenModal }) => {
+
   return (
    <section id="reviews" className="bg-gradient-to-b from-black-50 via-white to-black-50 py-16 px-6 md:px-16">
     <div className="max-w-6xl mx-auto">

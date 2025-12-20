@@ -1,8 +1,8 @@
 'use client';
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, FC } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import PageContent from '@/components/PageContent/PageContent';
+import { IconType } from 'react-icons';
 import {
   FaBookOpen,
   FaUserTie,
@@ -36,23 +36,117 @@ import { MdOutlineImageNotSupported } from 'react-icons/md';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import { Button } from '@/components/ui/button';
 
-const OPJindal = () => {
-  const sectionItem = [
-              { id: "Home", label: "Introduction" },
-              { id: "campus-tour", label: "Campus Tour (Images & Videos)" },
-              { id: "opju-online-courses", label: "Explore Online Courses" },
-              { id: "key-highlights", label: "Key Highlights" },
-              { id: "admission-dates", label: "Admission Dates for UG & PG Programs" },
-              { id: "fees-structure", label: "Fees Structure" },
-              { id: "Admission", label: "Admission Process" },
-              { id: "sessions-details", label: "Details of Upcoming & Ongoing Sessions" },
-              { id: "placement-partners", label: "Placement Partners" },
-              { id: "placement-record", label: "Placement Record" },
-              { id: "student-reviews", label: "Student Reviews" },
-              { id: "faq", label: "FAQs" },
-              { id: "opju-reviews", label: "OP Jindal University Online Reviews" },
-            ]
-  const [activeSection, setActiveSection] = useState(sectionItem[0]?.id ?? null);
+interface SectionItem {
+  id: string;
+  label: string;
+}
+
+interface Course {
+  course: string;
+  duration: string;
+  eligibility: string;
+  fees: string;
+  specialization: string;
+  image: string;
+  alt: string;
+}
+
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+type ModalState = {
+  type: 'apply' | 'enquiry';
+  program?: string;
+} | null;
+
+const sectionItem: SectionItem[] = [
+  { id: "Home", label: "Introduction" },
+  { id: "campus-tour", label: "Campus Tour (Images & Videos)" },
+  { id: "opju-online-courses", label: "Explore Online Courses" },
+  { id: "key-highlights", label: "Key Highlights" },
+  { id: "admission-dates", label: "Admission Dates for UG & PG Programs" },
+  { id: "fees-structure", label: "Fees Structure" },
+  { id: "Admission", label: "Admission Process" },
+  { id: "sessions-details", label: "Details of Upcoming & Ongoing Sessions" },
+  { id: "placement-partners", label: "Placement Partners" },
+  { id: "placement-record", label: "Placement Record" },
+  { id: "student-reviews", label: "Student Reviews" },
+  { id: "faq", label: "FAQs" },
+  { id: "opju-reviews", label: "OP Jindal University Online Reviews" },
+];
+
+const ugCourses: Course[] = [
+  {
+    course: "BBA (4 Specialization)",
+    duration: "3 Years",
+    eligibility: "10+2 Pass, Applicants less than 50% marks in 10+2 will be required to appear for the Jindal Scholastic Aptitude Test (JSAT)",
+    fees: "₹2,00,000 /-",
+    specialization: "Finance, Marketing, Human Resources, Operation Management Supply Chain",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
+    alt: "BBA in OP Jindal University",
+  },
+  {
+    course: "B.Sc in Psycology(Blended)",
+    duration: "3 Years",
+    eligibility: "10+2 Pass, If less than 50%: Must clear JSAT (min 50%) or submit, SAT/ACT/LNAT-UK score or complete a JGU MOOC",
+    specialization: "Psychology",
+    fees: "₹3,00,000 /-",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327851/op-psycology_ae5kax.png",
+    alt: "B.Sc in Psycology(Blended) in OP Jindal University",
+  },
+  {
+    course: "B.Sc in Risk Management",
+    duration: "3 Years",
+    eligibility: "Minimum 50% in Class 12, with either Maths, Physics, Business Maths, Statistics, or IT / MIS as one of the subjects.Exemptions from JSAT for students scoring: SAT (≥1100) ACT (≥27) UGAT/CUET (≥60 percentile)",
+    specialization: "Risk Management",
+    fees: "₹3,00,000 /-",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327851/op-psycology_ae5kax.png",
+    alt: "B.Sc in Psycology in OP Jindal University",
+  },
+  {
+    course: "B.Com in International Accounting & Finance",
+    duration: "3 Years",
+    eligibility: "Eligibility: Minimum 50% in Class 12, with either of Maths, Physics, Business Maths, Statistics, or IT / MIS as one of the subjects",
+    specialization: "International Accounting & Finance",
+    fees: "₹3,00,000 /-",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327851/op-psycology_ae5kax.png",
+    alt: "B.Sc in Psycology in OP Jindal University",
+  },
+];
+
+const faqs: FaqItem[] = [
+  {
+    question: "Are OP Jindal University Online degrees recognized?",
+    answer:
+      "Yes, OP Jindal University Online offers UGC-entitled degrees that hold the same value as regular on-campus programs.",
+  },
+  {
+    question: "Can working professionals apply for online programs?",
+    answer:
+      "Absolutely. The online format of Jindal Online University is designed for working professionals seeking flexibility and career advancement.",
+  },
+  {
+    question: "What learning resources are provided?",
+    answer:
+      "Students receive access to e-books, recorded lectures, digital libraries, discussion forums, and continuous faculty support throughout their learning journey.",
+  },
+  {
+    question: "Does OPJU Online offer placement support?",
+    answer:
+      "Yes, OP Jindal University Online provides dedicated career counseling, resume assistance, and placement guidance to help students achieve professional success.",
+  },
+  {
+    question: "Is the fee affordable?",
+    answer:
+      "Yes, the fee structure is transparent, affordable, and designed to make quality education accessible to all learners.",
+  },
+];
+
+
+const OPJindal: FC = () => {
+  const [activeSection, setActiveSection] = useState<string | null>(sectionItem[0]?.id ?? null);
 
                       
            useEffect(() => {
@@ -89,25 +183,21 @@ const OPJindal = () => {
                                        observer.disconnect();
                                      };
                                       }, [sectionItem]);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [openModal, setOpenModal] = useState(null);
-  const [openIndex, setOpenIndex] = useState(null);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [openModal, setOpenModal] = useState<ModalState>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   
 
-  const toggleFAQ = (index) => {
+  const toggleFAQ = (index: number) => {
    setOpenIndex(openIndex === index ? null : index);
 };
-  useEffect(() => {
-      
-
-      const timer= setTimeout(()=>{
-       setOpenModal(true)
-      },3000)
-      return () => clearTimeout(timer);
-
-       
-},[])
+ useEffect(() => {
+     const timer = setTimeout(() => {
+       setOpenModal({ type: 'apply' });
+     }, 3000);
+     return () => clearTimeout(timer);
+   }, []);
 
    const sliderImages = [
       
@@ -121,7 +211,7 @@ const OPJindal = () => {
     useEffect(() => {
       const timer = setInterval(() => {
         setCurrentSlide((prev) => (prev === sliderImages.length - 1 ? 0 : prev + 1));
-      }, 3000); // Change slide every 5 seconds
+      }, 3000); 
   
       return () => {
         clearInterval(timer);
@@ -131,49 +221,8 @@ const OPJindal = () => {
 
       setOpenModal({ type: 'enquiry' });
     };
-  const ugCourses = [
-    
-    {
-      course: "BBA (4 Specialization)",
-      duration: "3 Years",
-      eligibility: "10+2 Pass, Applicants less than 50% marks in 10+2 will be required to appear for the Jindal Scholastic Aptitude Test (JSAT)",
-      fees: "₹2,00,000 /-",
-      specialization: "Finance, Marketing, Human Resources, Operation Management Supply Chain",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
-      alt: "BBA in OP Jindal University",
-    },
-    {
-      course: "B.Sc in Psycology(Blended)",
-      duration: "3 Years",
-      eligibility: "10+2 Pass, If less than 50%: Must clear JSAT (min 50%) or submit, SAT/ACT/LNAT-UK score or complete a JGU MOOC",
-      specialization: "Psychology",
-      fees: "₹3,00,000 /-",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327851/op-psycology_ae5kax.png",
-      alt: "B.Sc in Psycology(Blended) in OP Jindal University",
-    },
 
-     {
-      course: "B.Sc in Risk Management",
-      duration: "3 Years",
-      eligibility: "Minimum 50% in Class 12, with either Maths, Physics, Business Maths, Statistics, or IT / MIS as one of the subjects.Exemptions from JSAT for students scoring: SAT (≥1100) ACT (≥27) UGAT/CUET (≥60 percentile)",
-      specialization: "Risk Management",
-      fees: "₹3,00,000 /-",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327851/op-psycology_ae5kax.png",
-      alt: "B.Sc in Psycology in OP Jindal University",
-    },
-        {
-      course: "B.Com in International Accounting & Finance",
-      duration: "3 Years",
-      eligibility: "Eligibility: Minimum 50% in Class 12, with either of Maths, Physics, Business Maths, Statistics, or IT / MIS as one of the subjects",
-      specialization: "International Accounting & Finance",
-      fees: "₹3,00,000 /-",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327851/op-psycology_ae5kax.png",
-      alt: "B.Sc in Psycology in OP Jindal University",
-    },
-    
-  ];
-
-  const pgCourses = [
+  const pgCourses: Course[] = [
     
     {
       course: "MA in Teaching English to Speakers of Other languages (TESOL)",
@@ -359,34 +408,6 @@ const OPJindal = () => {
       fees: "₹1,80,000/-",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
       alt: "MBA  in OP Jindal University",
-    },
-  ];
-
-  const faqs = [
-    {
-      question: "Are OP Jindal University Online degrees recognized?",
-      answer:
-        "Yes, OP Jindal University Online offers UGC-entitled degrees that hold the same value as regular on-campus programs.",
-    },
-    {
-      question: "Can working professionals apply for online programs?",
-      answer:
-        "Absolutely. The online format of Jindal Online University is designed for working professionals seeking flexibility and career advancement.",
-    },
-    {
-      question: "What learning resources are provided?",
-      answer:
-        "Students receive access to e-books, recorded lectures, digital libraries, discussion forums, and continuous faculty support throughout their learning journey.",
-    },
-    {
-      question: "Does OPJU Online offer placement support?",
-      answer:
-        "Yes, OP Jindal University Online provides dedicated career counseling, resume assistance, and placement guidance to help students achieve professional success.",
-    },
-    {
-      question: "Is the fee affordable?",
-      answer:
-        "Yes, the fee structure is transparent, affordable, and designed to make quality education accessible to all learners.",
     },
   ];
 
@@ -1249,7 +1270,7 @@ const OPJindal = () => {
                                 </motion.div>
                               </div>
                             </section> 
-        <section id='fees' className="bg-gray-50 py-16 px-6 md:px-20" id="OP Jindal-admission">
+        <section  className="bg-gray-50 py-16 px-6 md:px-20" id="OP Jindal-admission">
            <div className="max-w-6xl mx-auto">
              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-6">
                OP Jindal Online Admission Process
