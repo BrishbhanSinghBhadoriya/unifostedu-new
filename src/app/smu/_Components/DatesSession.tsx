@@ -1,6 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-const DatesSession = ({setOpenModal, openModal}) => {
+type OpenModalState = {
+  type: 'apply' | 'enquire';
+  program?: string;
+} | null;
+
+type IntroducationProps = {
+  setOpenModal: React.Dispatch<React.SetStateAction<OpenModalState>>;
+};
+
+const DatesSession: React.FC<IntroducationProps> = ({ setOpenModal }) => {
   return (
   <section id="dates and session" className="bg-gray-50 py-16 px-6 md:px-16 lg:px-24">
     <div className="max-w-6xl mx-auto space-y-16">

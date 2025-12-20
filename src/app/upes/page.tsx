@@ -14,7 +14,11 @@ import {
   FaGlobe,
   FaGraduationCap,
   FaUserTie
+<<<<<<< HEAD
 } from "react-icons/fa6";
+=======
+} from "react-icons/fa";
+>>>>>>> 5657e32959e133e1ed85a88d4d9f77c1800d427f
 const Upes = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeTab, setActiveTab] = useState('all');

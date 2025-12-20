@@ -1,6 +1,14 @@
-import React from 'react'
+import React from 'react';
+type OpenModalState = {
+  type: 'apply' | 'enquire';
+  program?: string;
+} | null;
 
-const FeesSMU = ({setOpenModal, openModal}) => {
+type IntroducationProps = {
+  setOpenModal: React.Dispatch<React.SetStateAction<OpenModalState>>;
+};
+
+const FeesSMU: React.FC<IntroducationProps> = ({ setOpenModal }) => {
   return (
    <section id="fees" className="bg-gray-50 py-16 px-6 lg:px-20">
       <div className="max-w-7xl mx-auto">

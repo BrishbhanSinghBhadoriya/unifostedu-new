@@ -40,7 +40,7 @@
     "**/*.mts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/app/smu/layout.jsx"  ],
   "exclude": [
     "node_modules"
   ]

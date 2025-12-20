@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, FC } from 'react';
 import { FaRocket, FaGraduationCap, FaHome, FaRoute, FaVideo, FaGlobe, FaClock, FaShieldAlt, FaDollarSign, FaCalendarAlt, FaCheckCircle, FaArrowRight, FaStar, FaUsers, FaAward, FaHeadset } from 'react-icons/fa';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -9,13 +9,38 @@ import { Badge } from "@/components/ui/badge";
 import EnquiryForm from "@/components/EnquiryForm";
 import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
+import { IconType } from 'react-icons';
 
+type ModalType = 'getStarted' | 'videoCall';
+
+interface ServiceHighlight {
+  icon: IconType;
+  text: string;
+  subtitle: string;
+}
+
+interface Service {
+  id: 'video-counseling' | 'home-demo' | 'career-planning';
+  title: string;
+  subtitle: string;
+  icon: IconType;
+  color: string;
+  badge: string;
+  ctaButton: string;
+  features: string[];
+  highlights: ServiceHighlight[];
+}
+
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
 
 export default function Services() {
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
-  const [modalType, setModalType] = useState('getStarted');
+  const [modalType, setModalType] = useState<ModalType>('getStarted');
 
-  const services = [
+  const services: Service[] = [
     {
       id: 'video-counseling',
       title: 'Video Call Counseling',
@@ -87,12 +112,12 @@ export default function Services() {
     }
   ];
 
-  const openModal = (type) => {
+  const openModal = (type: ModalType) => {
     setModalType(type);
     setShowEnquiryModal(true);
   };
 
-  const breadcrumbItems = [
+  const breadcrumbItems: BreadcrumbItem[] = [
     { name: 'Services', url: '/services' }
   ];
 
