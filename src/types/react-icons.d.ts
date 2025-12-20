@@ -46,14 +46,49 @@ declare module 'react-icons/fa6' {
     export const FaCalendarAlt: IconType;
     export const FaBookOpen: IconType;
     export const FaTimes: IconType;
+    export const   FaCheckCircle: IconType;
+    export const FaAward: IconType;
+    export const FaBuilding: IconType;
+    export const FaClipboardCheck:IconType
+    export const FaComments:IconType
+    export const FaInfoCircle:IconType
+    export const FaQuestionCircle:IconType
+    export const FaQuoteLeft:IconType
+    export const FaRobot:IconType
+    export const FaRupeeSign:IconType
+    export const FaStar:IconType
+    export const FaTimes:IconType
+    export const FaUserGraduate:IconType
+    export const FaUserTie:IconType
+    export const FaUserFriends:IconType
+    export const FaUser:IconType
+    export const FaUsers:IconType
+    export const FaVideo:IconType
+    export const FaWallet:IconType
+    export const FaXmark:IconType
+    export const FaX:IconType
+    export const FaCertificate:IconType
+    export const FaRocket:IconType
+    export const FaHome:IconType
+    export const FaRoute :IconType
+    export const FaVideo:IconType
+    export const FaGlobe:IconType
+    export const FaClock:IconType
+    export const FaShieldAlt:IconType
+    export const FaDollarSign:IconType
+    export const FaCalendarAlt:IconType
+    export const FaCheckCircle:IconType
+    export const FaHeadset:IconType
+    export const FaChalkboardTeacher:IconType
+    export const FaHandsHelping:IconType
 
 
 
 
-    // Add more icons as needed
+    
 }
 
-// Type declarations for lucide-react
+
 declare module 'lucide-react' {
     import { ComponentType, SVGProps } from 'react';
 
@@ -79,5 +114,5 @@ declare module 'lucide-react' {
     export const Menu: LucideIcon;
     export const FaTimes: LucideIcon;
     export const FaBars: LucideIcon;
-    // Add more lucide-react icons as needed
+    
 }

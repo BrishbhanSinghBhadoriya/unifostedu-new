@@ -1714,18 +1714,18 @@
           "Passport Size Photograph"
         ]
       },
-      "specializations": {
-        "journalism_mass_communication": {
+      "specializations":[{
+       
           "name": "MA Journalism and Mass Communication",
           "fee": "₹1,70,000",
           "description": "Advanced program in journalism, media studies, digital media, broadcasting, PR, advertising, and mass communication theories"
-        },
-        "public_policy_governance": {
+        },{
+      
           "name": "Public Policy & Governance",
           "fee": "₹1,30,000",
           "description": "Specialized program focusing on policy analysis, governance, public administration, development studies, and policy formulation"
-        }
-      },
+        
+      }],
       "courseFees": {
         "feeRange": "₹1,30,000 - ₹1,70,000",
         "semesterWiseApprox": "₹32,500 - ₹42,500",
@@ -1917,13 +1917,13 @@
           "Passport Size Photograph"
         ]
       },
-      "specializations": {
-        "data_science": {
+      "specializations":[ {
+       
           "name": "M.Sc Data Science",
           "fee": "₹2,50,000",
           "description": "Comprehensive data science program covering statistics, machine learning, deep learning, big data, data visualization, and predictive analytics"
-        }
-      },
+        
+      }],
       "courseFees": {
         "feeRange": "₹2,50,000",
         "semesterWiseApprox": "₹62,500",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBuilding, FaCertificate, FaStar, FaUsers } from 'react-icons/fa';
+import { FaBuilding, FaCertificate, FaStar, FaUsers } from 'react-icons/fa6';
 
 type OpenModalState = {
   type: 'apply' | 'enquire';

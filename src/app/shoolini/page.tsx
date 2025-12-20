@@ -12,6 +12,7 @@ import {
   FaBookOpen,
   FaBriefcase,
   FaBuilding,
+  FaBuildingColumns,
   FaChartLine,
   FaClipboardCheck,
   FaClock,
@@ -26,18 +27,17 @@ import {
   FaRupeeSign,
   FaStar,
   FaTimes,
-  FaUniversity,
-  FaUserFriends,
-  FaUserGraduate,
+  FaUsers,
   FaUserTie
-} from "react-icons/fa";
+} from "react-icons/fa6";
+
 import { motion } from 'framer-motion';
 
 type ModalState = { type: 'apply' | 'Enquire Now', program?: string } | null;
 
 const menuItems = [
   { id: "introduction", icon: <FaInfoCircle className="mr-2" />, text: "Introduction", link: "#introduction" },
-  { id: "campus-tour", icon: <FaUniversity className="mr-2" />, text: "Campus Tour", link: "#campus-tour" },
+  { id: "campus-tour", icon: <FaBuildingColumns  className="mr-2" />, text: "Campus Tour", link: "#campus-tour" },
   { id: "explore-courses", icon: <FaBookOpen className="mr-2" />, text: "Explore Online Courses", link: "#explore-courses" },
   { id: "key-highlights", icon: <FaStar className="mr-2" />, text: "Key Highlights", link: "#key-highlights" },
   { id: "fee-structure", icon: <FaRupeeSign className="mr-2" />, text: "Fee Structure", link: "#fee-structure" },
@@ -45,7 +45,7 @@ const menuItems = [
   { id: "upcoming-sessions", icon: <FaClock className="mr-2" />, text: "Upcoming Sessions", link: "#upcoming-sessions" },
   { id: "placement-partners", icon: <FaBuilding className="mr-2" />, text: "Placement Partners", link: "#placement-partners" },
   { id: "placement-records", icon: <FaChartLine className="mr-2" />, text: "Placement Records", link: "#placement-records" },
-  { id: "student-reviews", icon: <FaUserGraduate className="mr-2" />, text: "Student Reviews", link: "#student-reviews" },
+  { id: "student-reviews", icon: <FaGraduationCap className="mr-2" />, text: "Student Reviews", link: "#student-reviews" },
   { id: "faq", icon: <FaQuestionCircle className="mr-2" />, text: "FAQs", link: "#faq" },
   { id: "shoolini-reviews", icon: <FaComments className="mr-2" />, text: "Shoolini University Reviews", link: "#shoolini-reviews" }
 ];
@@ -139,7 +139,7 @@ const ShooliniIntroduction = () => {
               <div className="bg-white p-5 rounded-xl shadow-md hover:shadow-lg transition-all">
                 <div className="flex items-center mb-3">
                   <div className="bg-red-100 p-3 rounded-full mr-3">
-                    <FaUniversity className="text-red-600 text-xl" />
+                    <FaBuildingColumns  className="text-red-600 text-xl" />
                   </div>
                   <h3 className="font-semibold text-lg">UGC-DEB Approved</h3>
                 </div>
@@ -401,7 +401,7 @@ const WhyChooseShoolini = ({ setOpenModal }: WhyChooseShooliniProps) => {
             <div className="p-6 md:p-8">
               <div className="flex items-center mb-4">
                 <div className="bg-red-100 p-3 rounded-full mr-4">
-                  <FaUserFriends className="text-red-600 text-xl" />
+                  <FaUsers  className="text-red-600 text-xl" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900">Personalized Student Support</h3>
               </div>

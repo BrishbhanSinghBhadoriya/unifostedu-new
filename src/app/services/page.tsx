@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, FC } from 'react';
-import { FaRocket, FaGraduationCap, FaHome, FaRoute, FaVideo, FaGlobe, FaClock, FaShieldAlt, FaDollarSign, FaCalendarAlt, FaCheckCircle, FaArrowRight, FaStar, FaUsers, FaAward, FaHeadset } from 'react-icons/fa';
+import { FaRocket, FaGraduationCap, FaHome, FaRoute, FaVideo, FaGlobe, FaClock, FaShieldAlt, FaDollarSign, FaCalendarAlt, FaCheckCircle, FaArrowRight, FaStar, FaUsers, FaAward, FaHeadset } from 'react-icons/fa6';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,27 +9,13 @@ import { Badge } from "@/components/ui/badge";
 import EnquiryForm from "@/components/EnquiryForm";
 import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
-import { IconType } from 'react-icons';
+import { ServiceCard } from 'types/ServicesTypes';
+
 
 type ModalType = 'getStarted' | 'videoCall';
 
-interface ServiceHighlight {
-  icon: IconType;
-  text: string;
-  subtitle: string;
-}
 
-interface Service {
-  id: 'video-counseling' | 'home-demo' | 'career-planning';
-  title: string;
-  subtitle: string;
-  icon: IconType;
-  color: string;
-  badge: string;
-  ctaButton: string;
-  features: string[];
-  highlights: ServiceHighlight[];
-}
+
 
 interface BreadcrumbItem {
   name: string;
@@ -40,7 +26,7 @@ export default function Services() {
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
   const [modalType, setModalType] = useState<ModalType>('getStarted');
 
-  const services: Service[] = [
+  const services:ServiceCard[] = [
     {
       id: 'video-counseling',
       title: 'Video Call Counseling',

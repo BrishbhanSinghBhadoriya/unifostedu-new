@@ -2,7 +2,7 @@
 import React, { useState, useEffect, FC } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import PageContent from '@/components/PageContent/PageContent';
-import { IconType } from 'react-icons';
+
 import {
   FaBookOpen,
   FaUserTie,
@@ -24,7 +24,7 @@ import {
   FaClipboardCheck,
   FaBars,
   FaTimes,
-} from "react-icons/fa";
+} from "react-icons/fa6";
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Head from 'next/head';
@@ -32,7 +32,6 @@ import EnquireCard from '@/components/EnquireCard';
 import HeroSection from '@/components/HeroSection';
 import AccreditationSection from '@/components/AccreditationSection';
 import AdmissionProcedure from '@/components/AdmissionProcedure';
-import { MdOutlineImageNotSupported } from 'react-icons/md';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import { Button } from '@/components/ui/button';
 

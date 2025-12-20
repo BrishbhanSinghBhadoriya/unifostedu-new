@@ -338,7 +338,6 @@ function SearchContent({ onOpenModal }: SearchContentProps) {
               ))}
             </div>
 
-            {/* View All Universities CTA */}
             <div className="text-center mt-12">
               <Link
                 href="/University-List"
@@ -408,11 +407,11 @@ function SearchContent({ onOpenModal }: SearchContentProps) {
   );
 }
 
-/* ------------------ PARENT ------------------ */
+
 export default function Search() {
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
  const [modalType, setModalType] =
-  useState<EnquiryFormType>("getStarted")
+  useState("getStarted")
 
 
   const handleOpenModal = (type: "getStarted") => {
@@ -424,7 +423,7 @@ export default function Search() {
     <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
       <SearchContent onOpenModal={handleOpenModal} />
 
-      {/* ✅ Enquiry Modal */}
+    
       <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
         <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 p-4 sm:p-6 z-[30001]">
           <DialogHeader>
