@@ -22,6 +22,7 @@
         ]
       },
       "approval": {
+        "image": "/images/icons/aicte.webp",
         "ugc_deb": {
           "status": "Approved",
           "description": "Approved by University Grants Commission – Distance Education Bureau. Degree is equivalent to a regular BBA."
@@ -32,7 +33,8 @@
         },
         "aicte": {
           "status": "Recognized",
-          "description": "Recognized by AICTE for management education."
+          "description": "Recognized by AICTE for management education.",
+          "icon": "/images/icons/aicte.webp"
         },
         "aiu": {
           "status": "Member",
@@ -111,7 +113,8 @@
         ]
       },
       "certifications": {
-        "degreeAwarded": "Bachelor of Business Administration (BBA)",
+        "image": "/images/certificate-cu.webp",
+        "degreeAwarded": "Bachelor of Business Administration  (BBA)",
         "degreeModeMentioned": "No",
         "certificateValidity": [
           "Government Jobs",
@@ -159,6 +162,7 @@
         }
       },
       "placementPartners": {
+        "image": "/images/career.webp",
         "topRecruiters": [
           "TCS",
           "Infosys",
@@ -190,6 +194,7 @@
           "Job Portal Access"
         ]
       },
+      "faqImage": "/images/amity/mbaherosection.jpeg",
       "faq": [
         {
           "question": "Is Amity Online BBA valid?",
@@ -228,9 +233,10 @@
 
     "bca-online": {
       "about": {
+        "heroImage": "/images/amity/bca5.png",
         "title": "Amity Online BCA",
         "university": "Amity University Online",
-        "description": "Amity Online BCA is a UGC-approved undergraduate program in computer applications designed for students aspiring to build careers in IT and software development. The program covers programming languages, database management, web technologies, software engineering, and computer networks. Students gain practical coding skills and theoretical knowledge through live classes, coding labs, and industry projects to become job-ready IT professionals.",
+        "description": "The BCA Online (Bachelor of Computer Applications) program offered by Amity University Online is created for students who want to build a strong career in the growing field of information technology and digital innovation. This program helps learners understand computers, software, and modern IT tools in a clear and practical way.The online BCA degree from Amity gives students both theoretical knowledge and practical exposure. The curriculum includes important subjects such as programming languages, database management systems, operating systems, computer networks, software engineering, web technologies, and new digital tools. This helps students understand how computer science concepts are used in real life and in the industry.One of the biggest benefits of choosing a BCA online program is flexibility. The online degree in Amity allows students to study anytime and from anywhere. This makes it a great option for fresh 12th-pass students, working professionals, and learners who want to manage their studies along with jobs or personal responsibilities.Students learn through live interactive classes, recorded video lectures, digital study materials, assignments, and regular assessments. This learning system makes the course easy to follow, engaging, and effective.The BCA Online program at Amity University Online is taught by experienced faculty members who have strong academic knowledge and real industry experience. Along with technical skills, the program also helps students develop problem-solving abilities, logical thinking, and professional skills needed for today’s job market.The online BCA degree from Amity University is UGC-entitled and has the same value as a regular on-campus degree. After completing the program, students can apply for jobs in IT, software development, data analysis, and related fields. They can also choose to pursue higher education such as MCA or MBA.",
         "duration": "3 Years (6 Semesters)",
         "mode": "100% Online",
         "learningMethod": [
@@ -250,17 +256,18 @@
         ]
       },
       "approval": {
+          "image": "/images/amity/bca6.png",
         "ugc_deb": {
           "status": "Approved",
-          "description": "Approved by University Grants Commission – Distance Education Bureau. Degree is equivalent to a regular BCA."
+          "description": "Approved by University Grants Commission – Distance Education Bureau. Degree is equivalent to a regular BCA.Amity University Online is UGC-entitled, which means the online degree in Amity is officially recognized by the University Grants Commission (UGC). The BCA Online degree from Amity has the same value as a regular on-campus degree, making it valid for higher education, government jobs, and private-sector employment in India and abroad (as per eligibility norms)."
         },
         "naac": {
           "grade": "A+",
-          "description": "NAAC A+ accredited university ensuring high-quality education."
+          "description": "NAAC A+ accredited university ensuring high-quality education.The university is also NAAC accredited, showing its commitment to quality education, strong academic standards, and reliable learning systems. This accreditation assures students that the online BCA program meets national benchmarks in curriculum design, teaching methods, student evaluation, and learner support."
         },
         "aiu": {
           "status": "Member",
-          "description": "Member of Association of Indian Universities."
+          "description": "Member of Association of Indian Universities.In addition, Amity University is recognized by various national and international bodies, which improves the global acceptance of its degrees. The BCA Online degree is suitable for students planning careers in IT, software development, data analytics, and related technology fields. It also provides a strong foundation for higher studies such as MCA, MBA, or other professional programs."
         },
         "degreeRecognition": [
           "Valid for Government IT Jobs",
@@ -270,6 +277,8 @@
         ]
       },
       "whoCanApply": {
+        "image": "/images/amity/bca3.png",
+        "description": "The BCA Online (Bachelor of Computer Applications) program by Amity University Online is open to learners from diverse backgrounds. If you are curious about technology and want to build a future in IT, this program is designed for you.If you have completed 10+2 (or equivalent) from a recognized board and are interested in computers, programming, or digital technologies, the BCA Online is a perfect starting point. A background in mathematics is helpful but not mandatory—your willingness to learn matters most.Already working and planning to upgrade your skills or shift to a tech career? The online degree in Amity allows you to study alongside your job with flexible schedules, recorded lectures, and self-paced learning.If you are from a non-technical background but want to move into the IT field, the BCA Online program offers structured learning that helps you build strong fundamentals step by step.Running your own business or working independently? This program helps you understand technology better, enabling you to build, manage, and scale tech-driven solutions with confidence.Planning to pursue MCA, MBA, or other advanced programs in the future? The online BCA degree from Amity provides a solid academic foundation to support your higher education goals.",
         "eligibility": "10+2 from a recognized board",
         "minimumMarks": "50% (45% for SC/ST)",
         "preferredSubjects": "Mathematics/Computer Science (preferred but not mandatory)",
@@ -289,53 +298,65 @@
           "ID Proof (Aadhar/PAN)",
           "Passport Size Photograph",
           "Category Certificate (if applicable)"
+        ],
+        "whyChooseSpecilization":[
+        "Choosing a specialization in the BCA Online at Amity University Onlin helps students",
+        "Gain industry-relevant skills",
+        "Focus on a specific career path",
+        "Improve job readiness",
+        "Stand out in the competitive IT market",
+        "By selecting the right specialization, learners increase the value of their online BCA degree from Amity and align their education with future career opportunities in the technology-driven world."
         ]
       },
+      "specializationImage": "/images/amity/bca7.png",
       "specializations": [
         {
           "name": "BCA General",
           "fee": "₹1,50,000",
-          "description": "Comprehensive computer applications program covering programming, databases, web development, and software engineering."
+          "description": "Comprehensive computer applications program covering programming, databases, web development, and software engineering.The BCA Online (Bachelor of Computer Applications) program at Amity University Online offers career-focused specializations that help students learn according to their interests and current industry needs. These specializations allow learners to gain in-depth knowledge and practical skills in high-demand technology fields while earning a recognized online degree in Amity."
         },
         {
           "name": "Cloud and Security (In collaboration with TCS iON)",
           "fee": "₹2,25,000",
-          "description": "Specialized program focusing on cloud computing and cybersecurity with TCS iON partnership. Learn AWS, Azure, network security, and ethical hacking."
+          "description": "The Cloud and Security specialization focuses on modern IT infrastructure, cloud-based technologies, and digital security practices. Students learn about cloud platforms, virtualization, and scalable systems that support today’s digital applications. The specialization also covers how cloud environments are designed, managed, and optimized to ensure performance, reliability, and scalability in real-world scenarios.Along with cloud computing concepts, this specialization is designed for students interested in digital safety and data protection. It introduces core concepts of network security, ethical hacking, and information security, helping learners understand cyber threats, vulnerabilities, and security practices used to protect systems and data.This specialization prepares learners for roles related to cloud support and infrastructure management while also opening career paths in cyber security and IT risk management. By combining cloud technologies with security fundamentals, students gain a strong foundation to manage, secure, and maintain modern cloud-based IT systems effectively."
         },
         {
           "name": "Data Analytics (In collaboration with TCS iON)",
           "fee": "₹2,25,000",
-          "description": "Data analytics specialization with TCS iON focusing on statistical analysis, data visualization, and business intelligence."
+          "description": "The Cloud and Security specialization focuses on modern IT infrastructure, cloud-based technologies, and digital security practices. Students learn about cloud platforms, virtualization, and scalable systems that support today’s digital applications. The specialization also covers how cloud environments are designed, managed, and optimized to ensure performance, reliability, and scalability in real-world scenarios.Along with cloud computing concepts, this specialization is designed for students interested in digital safety and data protection. It introduces core concepts of network security, ethical hacking, and information security, helping learners understand cyber threats, vulnerabilities, and security practices used to protect systems and data.This specialization prepares learners for roles related to cloud support and infrastructure management while also opening career paths in cyber security and IT risk management. By combining cloud technologies with security fundamentals, students gain a strong foundation to manage, secure, and maintain modern cloud-based IT systems effectively."
         },
         {
           "name": "Data Engineering (In collaboration with HCL Tech)",
           "fee": "₹2,25,000",
-          "description": "Industry-partnered program with HCL Tech focusing on data engineering, big data technologies, ETL processes, and data pipelines."
+          "description": "Industry-partnered program with HCL Tech focusing on data engineering, big data technologies, ETL processes, and data pipeline development. The program provides in-depth exposure to data collection, transformation, storage, and processing using modern big data frameworks and tools. Learners gain hands-on experience in building scalable data pipelines, managing large datasets, and implementing efficient ETL workflows aligned with real-world industry use cases and enterprise data systems."
         },
         {
           "name": "Software Engineering (In collaboration with HCL Tech)",
           "fee": "₹2,25,000",
-          "description": "Software engineering specialization with HCL Tech covering SDLC, agile methodologies, and enterprise application development."
+          "description": "Software engineering specialization with HCL Tech covering SDLC, agile methodologies, and enterprise application development.This specialization focuses on website and application development using modern programming tools and frameworks. Students gain hands-on knowledge of front-end and back-end development, enabling them to build real-world software solutions."
         },
         {
           "name": "Financial Technology And AI (In collaboration with Paytm)",
           "fee": "₹2,50,000",
-          "description": "Cutting-edge program with Paytm focusing on fintech, payment systems, blockchain, AI in finance, and digital banking."
+          "description": "A cutting-edge program developed in collaboration with Paytm that focuses on Financial Technology (FinTech) and Artificial Intelligence applications in the financial ecosystem. The program covers digital payment systems, mobile wallets, UPI infrastructure, blockchain technology, and modern digital banking solutions. Students gain insights into how AI is used for fraud detection, risk assessment, credit scoring, personalized financial services, and automation in finance. The curriculum is designed to align with real-world fintech industry requirements, preparing learners for careers in digital finance, payment technology, and AI-driven financial innovation."
+
         },
         {
           "name": "Professional Certificate in Applied Data Engineering (In collaboration with KPMG)",
           "fee": "₹2,25,000",
-          "description": "Premium program with KPMG offering professional certification in applied data engineering and enterprise data solutions."
+          "description": "A premium program developed in collaboration with KPMG that offers a professional certification in applied data engineering and enterprise data solutions. The program focuses on designing, building, and managing large-scale data systems, including data integration, ETL pipelines, data warehousing, and cloud-based data platforms. Learners gain practical exposure to real-world enterprise data architectures, analytics-ready data models, and best practices used by global consulting and technology firms. The curriculum is tailored to industry requirements, preparing professionals for roles in data engineering, enterprise analytics, and data-driven decision-making."
+
         }
       ],
       "courseFees": {
-        "feeRange": "₹1,50,000 - ₹2,50,000",
-        "semesterWiseApprox": "₹25,000 - ₹41,666",
+        "feeRange": "₹1,50,000 - ₹2,50,000   The complete 3-year BCA Online degree in Amity costs approximately depending on the selected payment plan",
+        "semesterWiseApprox": "Students may pay around-  ₹25,000 - ₹41,666  , making the program financially manageable.",
         "paymentOptions": [
           "One-Time Payment (Discount Available)",
           "Semester-Wise Payment",
           "No-Cost EMI Options",
-          "Education Loan"
+          "Education Loan",
+          "Flexible Payment Options:Learners can choose semester-wise or yearly payment plans EMI and education loan options are also available to make fee payment easier."
         ],
         "loanPartners": [
           "HDFC Credila",
@@ -358,12 +379,15 @@
       },
       "certifications": {
         "degreeAwarded": "Bachelor of Computer Applications (BCA)",
-        "degreeModeMentioned": "No",
+        "description": "After successfully completing the BCA Online (Bachelor of Computer Applications) program, students receive a recognized degree certificate from Amity University Online.",
         "certificateValidity": [
-          "IT Industry Jobs",
+          "Corporates & MNCs",
+          "Startups & IT firms",
           "Government IT Jobs",
-          "Higher Studies (MCA/M.Tech)",
-          "International IT Jobs"
+          "International IT Jobs",
+          "Approved by the University Grants Commission (UGC)",
+          "Accepted for government jobs, private sector roles, and higher education",
+          "Valid for pursuing MCA, MBA, MSc (IT) and other postgraduate programs in India and abroad (as per eligibility norms)"
         ],
         "additionalCertificates": [
           "Provisional Certificate",
@@ -372,35 +396,60 @@
           "Digital Degree",
           "Industry Partner Certification (TCS iON/HCL/Paytm/KPMG for collaboration programs)"
         ],
-        "verification": "Online verification via university portal"
+        "verification": "Online verification via university portal",
+        "whyThisCertificateMatters":[
+      "Adds strong academic credibility to your profile",
+      "Improves employability in IT and tech roles",
+      "Supports career growth and higher studies",
+      "Reflects learning from a reputed and recognized university"
+
+        ]
       },
       "syllabus_curriculum": {
         "year1": [
-          "Programming in C",
-          "Computer Fundamentals",
-          "Digital Electronics",
-          "Mathematics",
-          "Communication Skills",
-          "Web Technologies (HTML/CSS)"
+         "-> In the first year, students learn the basic concepts that form the foundation of computer applications:",
+         "Computer Fundamentals",
+         "Programming in C",
+         "Digital Electronics",
+         "Mathematics for Computing",
+         "Business Communication",
+         "Introduction to IT & Systems",
+         "Environmental Studies",
+         "Focus: Logical thinking, basic programming skills, and IT awareness"
+
         ],
         "year2": [
-          "Programming in C++",
-          "Java Programming",
-          "Database Management Systems",
-          "Data Structures",
-          "Operating Systems",
-          "Software Engineering",
-          "Specialization Core Subjects"
+        "-> The second year builds deeper technical knowledge and introduces structured programming and system-level concepts:",
+        "Data Structures",
+        "Object-Oriented Programming (C++ / Java)",
+        "Database Management Systems (DBMS)",
+        "Operating Systems",
+        "Software Engineering",
+        "Web Technologies (HTML, CSS, JavaScript)",
+        "Python Programming",
+        "Focus: Application development, problem-solving, and database skills"
+
         ],
         "year3": [
-          "Python Programming",
+          "->The final year prepares students for industry roles and higher studies through advanced subjects and specialization-based learning:",
           "Computer Networks",
-          "Web Development",
-          "Cloud Computing/Security/Analytics (based on specialization)",
-          "Advanced Specialization Subjects",
-          "BCA Project",
-          "Final Dissertation"
+          "Cloud Computing / Cyber Security / Data Analytics / Web Development",
+          "Advanced Web & Application Development",
+          "Information Security Basics",
+          "Elective Subjects (based on chosen specialization)",
+          "Major Project / Capstone Project",
+          "Focus: Industry readiness, specialization expertise, and real-world projects"
+
         ],
+         
+        "curriculumHighlights":[
+        "Updated according to latest industry trends",
+	      "Strong focus on programming, analytics, and digital technologies",
+        "Skill-based and job-oriented course structure",
+        "Balanced mix of theory and practical learning",
+        "Suitable for both beginners and tech enthusiasts"
+        ],
+        
         "evaluationPattern": {
           "internalAssessment": "30%",
           "finalExam": "70%",
@@ -408,6 +457,7 @@
         }
       },
       "placementPartners": {
+        "description":"The BCA Online (Bachelor of Computer Applications) program at Amity University Online comes with strong placement support and access to a wide network of hiring partners across multiple industries. Through Amity’s dedicated career services, online students receive end-to-end support to help them start their careers confidently after completing their online degree in Amity.Students get access to job opportunities, virtual placement drives, resume assistance, interview preparation, and industry networking, all designed to improve employability. Amity University Online has partnerships with 500+ leading hiring companies across sectors such as IT, finance, consulting, retail, and digital services. These organizations actively participate in placement drives and recruitment activities for online learners.",
         "topRecruiters": [
           "TCS",
           "Infosys",
@@ -442,31 +492,85 @@
           "Portfolio Development",
           "Job Portal Access",
           "Industry Mentor Connect"
+        ],
+        "placementHighlights":[
+         "->  Students receive continuous career support, including:",
+         "Career guidance and mentorship to identify suitable job roles",
+         "Resume building and interview preparation sessions",
+         "Virtual job fairs and placement drives",
+         "AI-powered career services for job matching and alerts",
+         "Networking opportunities with recruiters and industry professionals"
         ]
       },
+      "faqImage": "/images/amity/bca5.png",
       "faq": [
         {
-          "question": "Is mathematics mandatory for BCA?",
-          "answer": "Mathematics in 10+2 is preferred but not mandatory for admission to Amity Online BCA."
+          "question": "Is the BCA Online degree from Amity University Online recognized?",
+          "answer": "Yes. The BCA Online degree offered by Amity University Online is UGC-entitled and holds the same value as a regular on-campus degree. It is accepted for higher education and employment in both public and private sectors."
         },
         {
-          "question": "Can I pursue MCA after online BCA?",
-          "answer": "Yes, you can pursue MCA from any recognized university after completing online BCA."
+          "question": "Will the degree mention “Online” on the certificate?",
+          "answer": "No. The final BCA degree certificate issued by Amity University does not mention “Online”, ensuring equal recognition and credibility."
         },
         {
-          "question": "What is the benefit of industry collaboration programs?",
-          "answer": "Industry collaboration programs (TCS iON, HCL, Paytm, KPMG) provide additional certifications, industry exposure, real-world projects, and enhanced placement opportunities."
+          "question": "Who is eligible to apply for the BCA Online program?",
+          "answer": "Students who have completed 10+2 (or equivalent) from a recognized board can apply. There is no age limit, making this program suitable for fresh students, working professionals, and career switchers."
         },
         {
-          "question": "Do I need programming knowledge before joining?",
-          "answer": "No prior programming knowledge is required. The program teaches all necessary skills from basics."
+          "question": "How are classes conducted in the BCA Online program?",
+          "answer": "Classes are delivered through a mix of live interactive sessions, recorded video lectures, digital study material, and discussion forums, allowing flexible and effective learning."
         },
         {
-          "question": "Are exams online?",
-          "answer": "Yes, all exams are conducted online with remote proctoring."
+          "question": "What is the examination pattern for BCA Online?",
+          "answer": "The evaluation includes continuous internal assessments (assignments, quizzes, projects) and online end-term examinations conducted semester-wise with secure proctoring."
+        },
+        {
+          "question": "Are there specialization options available in BCA Online?",
+          "answer": "Yes. Students can choose from industry-relevant specializations such as Data Analytics, Cloud Computing, Cyber Security, and Web & Software Development, depending on availability."
+        },
+        {
+          "question": "Does Amity University Online provide placement support?",
+          "answer": "Yes. Amity University Online offers career and placement support, including resume building, interview preparation, virtual job fairs, and access to a wide network of hiring partners."
+        },
+        {
+          "question": "Can working professionals pursue this BCA Online degree?",
+          "answer": "Absolutely. The online degree in Amity is designed with flexibility in mind, making it ideal for working professionals who want to study alongside their jobs."
+        },
+        {
+          "question": "Is there any education loan or EMI facility available?",
+          "answer": "Yes. Students can opt for easy EMI and education loan options through partnered financial institutions to make the course financially accessible."
+        },
+        {
+          "question": "What can I do after completing BCA Online from Amity?",
+          "answer": "After completing the BCA Online degree, graduates can pursue careers in IT, software development, data analysis, or continue higher education such as MCA, MBA, or other postgraduate programs."
         }
       ],
       "studentReview": {
+        "image": "/images/aman.webp",
+        "studentsHand": [
+          {
+            "name": "Rohan K",
+            "rating": 5,
+            "review": "“Flexible and Supportive!” -- The BCA Online program gave me the perfect balance between my job and studies. I could attend live classes and watch recorded lectures at my convenience. The faculty was supportive, and the curriculum was very relevant to today’s IT industry." 
+
+          },
+          {
+            "name": "Priya S.",
+            "rating": 4,
+            "review": "“Great Learning Experience!”--“I always wanted to pursue computer applications, but couldn’t attend regular college due to family commitments. Amity’s online BCA helped me achieve my dream with its user-friendly platform and interactive sessions.”"
+          },
+          {
+            "name": "Aditya M.",
+            "rating": 4.5,
+            "review": " “Practical & Industry-Oriented!”--“The projects and assignments helped me understand real-world applications. The specialization options like Data Analytics made my profile stronger for job roles after graduation.” "
+          },
+          {
+            "name": "Sneha R.",
+            "rating": 4.5,
+            "review": "“Good Placement Support!”--“I received career guidance and interview support from the placement team. The online career workshops helped me prepare better for interviews and job opportunities.”"
+          }
+
+        ],
         "averageRating": 4.5,
         "positiveFeedback": [
           "Good Programming Training",
