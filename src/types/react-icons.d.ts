@@ -137,4 +137,7 @@ declare module 'lucide-react' {
     export const MapMarkert: LucideIcon;
     export const Building2: LucideIcon;
     export const MapPin: LucideIcon;
+    export const HelpCircle: LucideIcon;
+    export const FileText: LucideIcon;
+
 }

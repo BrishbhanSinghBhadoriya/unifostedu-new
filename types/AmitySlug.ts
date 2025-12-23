@@ -23,11 +23,14 @@ export interface CourseDetails {
   syllabus_curriculum: SyllabusCurriculum;
   placementPartners: PlacementPartners;
   faq: FAQ[];
+  faqImage?: string;
   studentReview: StudentReview;
+  specializationImage?: string;
 }
 
 // About Section
 export interface About {
+  heroImage?: string;
   title: string;
   university: string;
   description: string;
@@ -39,16 +42,19 @@ export interface About {
 
 // Approval Section
 export interface Approval {
+
   ugc_deb: ApprovalBody;
   naac: NaacGrade;
   aicte?: ApprovalBody;
   aiu?: ApprovalBody;
   degreeRecognition: string[];
+  image?: string;
 }
 
 export interface ApprovalBody {
   status: string;
   description: string;
+  icon?: string;
 }
 
 export interface NaacGrade {
@@ -58,6 +64,7 @@ export interface NaacGrade {
 
 // Who Can Apply Section
 export interface WhoCanApply {
+  description: string;
   eligibility: string;
   minimumMarks: string;
   entranceExam?: string;
@@ -66,6 +73,8 @@ export interface WhoCanApply {
   preferredBackground?: string;
   idealCandidates: string[];
   documentsRequired: string[];
+  whyChooseSpecilization?: string[];
+  image?: string;
 }
 
 // Specialization
@@ -82,26 +91,31 @@ export interface CourseFees {
   paymentOptions?: string[];
   loanPartners?: string[];
   feeIncludes?: string[];
+  image?: string;
 }
 
 // Certifications
 export interface Certifications {
   degreeAwarded: string;
-  degreeModeMentioned: string;
+  description: string;
   certificateValidity: string[];
   additionalCertificates?: string[];
   verification?: string;
+  whyThisCertificateMatters?: string[];
+  image?: string;
 }
 
 // Syllabus & Curriculum
 export interface SyllabusCurriculum {
+  image?: string;
   year1?: string[];
   year2?: string[];
-  year3?: string[];
+  year3?: string[]; 
   semester1?: string[];
   semester2?: string[];
   semester3?: string[];
   semester4?: string[];
+  curriculumHighlights?: string[]; 
   evaluationPattern: EvaluationPattern;
 }
 
@@ -113,10 +127,14 @@ export interface EvaluationPattern {
 
 // Placement Partners
 export interface PlacementPartners {
+  image?: string;
+  title: string;
+  description: string;
   topRecruiters: string[];
   jobRoles?: string[];
   averageSalary: string;
   careerSupport?: string[];
+  placementHighlights?:string[];
 }
 
 // FAQ
@@ -127,9 +145,16 @@ export interface FAQ {
 
 // Student Review
 export interface StudentReview {
+  studentsHand: {
+      name: string;
+      course: string;
+      rating: number;
+      review: string;
+    }[];
   averageRating: number;
   positiveFeedback: string[];
   studentCount?: string;
+  image?: string;
 }
 
 // Integrated Programs
@@ -228,6 +253,7 @@ export interface SpecializationListProps {
 
 export interface FAQListProps {
   faqs: FAQ[];
+  
 }
 
 export interface PlacementInfoProps {
