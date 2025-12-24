@@ -1,34 +1,50 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  FaBookOpen,
-  FaUserTie,
-  FaGraduationCap,
-  FaGlobe,
-  FaAward,
-  FaCertificate,
-  FaUsers,
-  FaStar,
-  FaLaptop,
-  FaHeadset,
-  FaBuilding,
-} from "react-icons/fa";
-import * as Tabs from '@radix-ui/react-tabs';
-import { Button } from '@/components/ui/button';
+import AccreditationSection from '@/components/AccreditationSection';
+import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import EnquireCard from '@/components/EnquireCard';
+import HeroSection from '@/components/HeroSection';
+import { Button } from '@/components/ui/button';
+import * as Tabs from '@radix-ui/react-tabs';
+import { AnimatePresence, motion } from 'framer-motion';
 import Head from 'next/head';
 import Image from 'next/image';
-import HeroSection from '@/components/HeroSection';
-import AccreditationSection from '@/components/AccreditationSection';
-import AdmissionProcedure from '@/components/AdmissionProcedure';
-import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
+import { useEffect, useState } from 'react';
+import {
+  FaAward,
+  FaCertificate,
+  FaStar,
+  FaUsers
+} from "react-icons/fa6";
+interface SectionItem {
+  id: string;
+  label: string;
+}
+
+interface Course {
+  course: string;
+  duration: string;
+  eligibility: string;
+  fees: string;
+  specialization: string;
+  image: string;
+  alt: string;
+}
+
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+type ModalState = {
+  type: 'apply' | 'enquiry';
+  program?: string;
+} | null;
 
 const Nmims = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+    const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [activeTab, setActiveTab] = useState('all');
-  const [openModal, setOpenModal] = useState(null);
-  const [openIndex, setOpenIndex] = useState(null);
+ const [openModal, setOpenModal] = useState<ModalState>(null);
+ const [openIndex, setOpenIndex] = useState<number | null>(null);
 useEffect(() => {
     const timer = setTimeout(() => {
       setOpenModal({ type: 'apply' });
@@ -52,13 +68,15 @@ useEffect(() => {
 
   
 
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+  const toggleFAQ = (index: number): void => {
+    if (openIndex === index) setOpenIndex(null);
+    else setOpenIndex(index);
   };
 
-  const handleOnclickEnquiry = (programName) => {
-    setOpenModal({ type: 'enquiry', program: programName });
-  };
+   const handleOnclickEnquiry = () => {
+
+      setOpenModal({ type: 'enquiry' });
+    };
 
   const ugCourses = [
     {
@@ -410,7 +428,7 @@ useEffect(() => {
                       <td className="px-4 py-3 text-gray-700">{course.specialization}</td>
                       <td className="px-4 py-3">
                         <button
-                          onClick={() => handleOnclickEnquiry(course.course)}
+                            onClick={() => setOpenModal({ type: 'enquiry', program: course.course })}
                           className="bg-[#7b1fa2] text-white px-3 py-1 rounded-md hover:bg-purple-700 transition-colors text-sm cursor-pointer"
                         >
                           Enquire
@@ -932,7 +950,7 @@ useEffect(() => {
             onOpenChange={(v) => !v && setOpenModal(null)}
             title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
             subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-            imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327723/nmims_form_iaqoru.webp"
+            imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1766467891/nmimsenquary_exxyyv.png"
             universityName="NMIMS Global Online"
             defaultProgram={openModal.program || "MBA"}
             formType={openModal.type === 'apply' ? 'getStarted' : 'general'}

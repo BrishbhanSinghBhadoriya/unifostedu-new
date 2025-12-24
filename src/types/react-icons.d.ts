@@ -88,7 +88,9 @@ declare module 'react-icons/fa6' {
     export const FaCircleCheck:IconType
     export const FaHouse:IconType
     export const FaQuestion:IconType
-
+    export const  FaBrain:IconType
+    export const FaCloud:IconType
+    export const FaGears:IconType
     
 }
 

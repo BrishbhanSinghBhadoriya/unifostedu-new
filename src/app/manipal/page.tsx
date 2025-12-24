@@ -1,45 +1,37 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from "framer-motion";
-import Link from 'next/link';
-import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck, FaBars, FaStar, FaCertificate, FaBuilding, FaUsers, FaPhone, FaWhatsapp } from "react-icons/fa";
-import { FaLaptop, FaBook, FaGraduationCap, FaIndustry, FaUserCircle, FaUniversity, FaMoneyBillWave, FaTimes } from "react-icons/fa";
-import EnquireCard from '@/components/EnquireCard';
-import AccreditationSection from '@/components/AccreditationSection';
-import AdmissionProcedure from '@/components/AdmissionProcedure';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import EnquiryForm from '@/components/EnquiryForm';
+import PageContent from '@/components/PageContent/PageContent';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { optimizeCloudinary } from '@/utils/cloudinary';
 import Head from 'next/head';
 import Image from 'next/image';
-import * as Tabs from '@radix-ui/react-tabs';
-import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
-import { Button } from '@/components/ui/button';
-import { ArrowRight } from "lucide-react";
-import LazySection from '@/components/LazySection';
-import PageContent from '@/components/PageContent/PageContent';
-import Introduction from './_components/Introduction';
-import Hero from './_components/Hero';
-import WhyChoose from './_components/WhyChoose';
-import ExploreClasses from './_components/ExploreClasses';
-import CampusTour from './_components/CampusTour';
-import AdvantageManipal from './_components/AdvantageManipal';
-import RankingAccreditionsManipal from './_components/RankingAccreditionsManipal';
-import WhyChooseManipal from './_components/WhyChooseManipal';
-import Courses from './_components/Courses';
-import KeyHighlights from './_components/KeyHighlights';
-import AdmissionDatesManipal from './_components/AdmissionDatesManipal';
-import AdvantagesManipal from './_components/AdvantagesManipal';
+import { useEffect, useState } from 'react';
+import { FaBars } from "react-icons/fa6";
 import About from './_components/About';
-import ProgramBenefit from './_components/ProgramBenefit';
+import AdmissionDatesManipal from './_components/AdmissionDatesManipal';
 import AdmissionFeesProcessSessions from './_components/AdmissionFeesProcessSessions';
-import PlacementPartners from './_components/PlacementPartners';
-import PlacementRecord from './_components/PlacementRecord';
+import AdvantageManipal from './_components/AdvantageManipal';
+import AdvantagesManipal from './_components/AdvantagesManipal';
+import CampusTour from './_components/CampusTour';
 import CertificateLocation from './_components/CertificateLocation';
 import ComparisonStudentReviews from './_components/ComparisonStudentReviews';
-import FooterManipal from './_components/FooterManipal';
-import { optimizeCloudinary } from '@/utils/cloudinary';
+import Courses from './_components/Courses';
+import ExploreClasses from './_components/ExploreClasses';
 import FaqReviewsHiring from './_components/FaqReviewsHiring';
-
+import FooterManipal from './_components/FooterManipal';
+import Hero from './_components/Hero';
+import Introduction from './_components/Introduction';
+import KeyHighlights from './_components/KeyHighlights';
+import PlacementPartners from './_components/PlacementPartners';
+import PlacementRecord from './_components/PlacementRecord';
+import ProgramBenefit from './_components/ProgramBenefit';
+import RankingAccreditionsManipal from './_components/RankingAccreditionsManipal';
+import WhyChooseManipal from './_components/WhyChooseManipal';
+type ModalState = {
+  type: 'apply' | 'enquiry';
+  program?: string;
+};
 
 const Manipal = () => {
 
@@ -166,7 +158,7 @@ useEffect(() => {
       
 
       const timer= setTimeout(()=>{
-       setOpenModal(true)
+       setOpenModal(type => type === null ? { type: 'enquiry' } : type);
       },3000)
       return () => clearTimeout(timer);
 
@@ -179,16 +171,16 @@ useEffect(() => {
 
   
 
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleFAQ = (index) => {
+  const toggleFAQ = (index: number): void => {
     if (openIndex === index) setOpenIndex(null);
     else setOpenIndex(index);
   };
 
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
   const [modalType, setModalType] = useState('getStarted');
-  const [openModal, setOpenModal] = useState(null);
+  const [openModal, setOpenModal] = useState<ModalState | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
    const sectionItems = [
     { id: "HeroSection", label: "Introduction" },
@@ -215,7 +207,7 @@ useEffect(() => {
         <meta name="robots" content="index, follow" />
          <link rel="canonical" href="https://unifostedu.com/manipal" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link rel="preconnect" href="https://fonts.gstatic.com"  />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
          
         {/* Open Graph */}

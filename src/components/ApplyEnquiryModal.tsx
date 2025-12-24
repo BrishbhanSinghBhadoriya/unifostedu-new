@@ -16,6 +16,10 @@ export default function ApplyEnquiryModal({
   formType = 'general',
   showImage = true,
 }:ModalProps) {
+  const isNmims = universityName?.toLowerCase()?.includes('nmims');
+  const isManipal = universityName?.toLowerCase() === 'manipal university online';
+  const bgColor = isManipal ? 'bg-[#ff7a36]' : (isNmims ? 'bg-white' : 'bg-[#f8c100]');
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-5xl md:max-w-6xl p-0 h-[95vh] md:h-[90vh] flex flex-col">
@@ -24,7 +28,7 @@ export default function ApplyEnquiryModal({
           {showImage && (
             <div className={`
               w-full md:w-2/5 
-              ${universityName?.toLowerCase() === 'manipal university online' ? 'bg-[#ff7a36]' : 'bg-[#f8c100]'}
+              ${bgColor}
               relative 
               h-[180px] sm:h-[200px] md:h-full
               flex-shrink-0
@@ -35,7 +39,7 @@ export default function ApplyEnquiryModal({
                   src={imageSrc} 
                   alt={title}
                   fill
-                  className="object-cover object-center"
+                  className={`${isNmims ? 'object-contain' : 'object-cover'} object-center`}
                   sizes="(max-width: 768px) 100vw, 40vw"
                   priority
                 />

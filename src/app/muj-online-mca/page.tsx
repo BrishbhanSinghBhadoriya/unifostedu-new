@@ -1,20 +1,36 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
+import PageContent from '@/components/PageContent/PageContent';
 import { Button } from '@/components/ui/button';
-import { motion, AnimatePresence } from "framer-motion";
 import * as Tabs from '@radix-ui/react-tabs';
-import { 
-  FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck, FaBars, FaStar, 
-  FaCertificate, FaBuilding, FaUsers, FaPhone, FaTimes, FaCheckCircle, 
-  FaGraduationCap, FaMoneyBillWave, FaClock, FaLaptop, FaChartLine, 
-  FaHandshake, FaAward, FaChevronDown, FaBrain, FaCloud, FaShieldAlt, FaCogs
-} from "react-icons/fa";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronDown } from 'lucide-react';
 import Head from 'next/head';
 import Image from 'next/image';
-import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
-import { ChevronDown } from 'lucide-react';
-import PageContent from '@/components/PageContent/PageContent';
-
+import { useEffect, useState } from 'react';
+import {
+  FaAward,
+  FaBars,
+  FaBookOpen,
+  FaBrain,
+  FaBriefcase,
+  FaCertificate,
+  FaChartLine,
+  
+  FaClock,
+  FaCloud,
+  FaGears,
+  FaGraduationCap, FaMoneyBillWave,
+  FaPhone,
+  FaShield,
+  FaUsers,
+  FaUserTie
+} from "react-icons/fa6";
+import { X } from "lucide-react";
+type ModalState = {
+  type: 'apply' | 'enquiry';
+  program?: string;
+} | null;
 const MUJOnlineMCAPage = () => {
   const sectionItem = [
               { id: "overview", label: "Overview" },
@@ -64,8 +80,8 @@ const MUJOnlineMCAPage = () => {
                                                  observer.disconnect();
                                                };
                                                 }, [sectionItem]);
-  const [openModal, setOpenModal] = useState(null);
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openModal, setOpenModal] = useState<ModalState>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -75,8 +91,9 @@ const MUJOnlineMCAPage = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+   const toggleFAQ = (index: number): void => {
+    if (openIndex === index) setOpenIndex(null);
+    else setOpenIndex(index);
   };
 
   const faqData = [
@@ -116,7 +133,7 @@ const MUJOnlineMCAPage = () => {
     { 
         name: "AI & ML",
         description: "Master advanced neural networks, computer vision, NLP, and reinforcement learning.",
-        icon: FaCogs,
+        icon: FaGears,
         careers: "AI Specialist, ML Engineer, NLP Scientist"
     },
     { 
@@ -128,7 +145,7 @@ const MUJOnlineMCAPage = () => {
     { 
         name: "Cybersecurity",
         description: "Learn ethical hacking, network security, cryptography, and digital forensics.",
-        icon: FaShieldAlt,
+        icon: FaShield,
         careers: "Cybersecurity Analyst, Security Consultant, Ethical Hacker"
     },
   ];
@@ -189,7 +206,7 @@ const MUJOnlineMCAPage = () => {
       desc: "0% or low-cost EMI plans available through partner financial institutions."
     },
     {
-      icon: FaCheckCircle,
+      icon: X,
       title: "All-Inclusive Pricing",
       desc: "Includes LMS access, e-content, examination fees, and student support."
     },
@@ -340,7 +357,7 @@ const MUJOnlineMCAPage = () => {
                   <div className="flex flex-wrap gap-4 sm:gap-6 text-sm sm:text-base">
                     {["2 Years • 4 Semesters", "Live + Recorded Classes", "EMI Options Available", "Placement Support"].map((item) => (
                       <span key={item} className="flex items-center gap-2">
-                        <FaCheckCircle className="text-orange-400" />
+                        <X className="text-orange-400" />
                         {item}
                       </span>
                     ))}
@@ -483,7 +500,7 @@ const MUJOnlineMCAPage = () => {
                            <div className="grid sm:grid-cols-2 gap-4">
                                 {subjects.map((subject, index) => (
                                     <div key={index} className="flex items-center gap-3">
-                                        <FaCheckCircle className="text-orange-500 flex-shrink-0" />
+                                        <X className="text-orange-500 flex-shrink-0" />
                                         <span className="text-gray-700">{subject}</span>
                                     </div>
                                 ))}
@@ -576,7 +593,7 @@ const MUJOnlineMCAPage = () => {
                   </div>
                    <div>
                       <Image
-                        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327092/company_y7yrwi.webp"
+                        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1766473759/muj-carrer_e52xkh.png"
                         alt="Career opportunities"
                         width={600}
                         height={400}
@@ -669,7 +686,7 @@ const MUJOnlineMCAPage = () => {
             </div>
           </section>
            {/* Enhanced Footer */}
-                  <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-gray-300 pt-12 sm:pt-16 relative overflow-hidden mt-8 lg:ml-64">
+                  <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-gray-300 pt-12 sm:pt-16 relative overflow-hidden mt-8">
                     {/* Background Pattern */}
                     <div className="absolute inset-0 opacity-50" style={{
                       backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
@@ -686,9 +703,9 @@ const MUJOnlineMCAPage = () => {
                             viewport={{ once: true }}
                             className="space-y-4"
                           >
-                            <div className="flex items-center gap-3 mb-4">
+                            <div className="flex items-center gap-3 mb-4 bg-white rounded-full p-3">
                               <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" alt="Manipal" className="h-10 w-auto" />
-                              <span className="text-xl font-bold text-white">Online Manipal</span>
+                             
                             </div>
                             <p className="text-sm text-gray-400 leading-relaxed">
                               UGC-entitled, NAAC A+ accredited online degrees designed for modern learners. 

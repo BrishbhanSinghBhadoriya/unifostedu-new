@@ -1,14 +1,17 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
+import PageContent from '@/components/PageContent/PageContent';
 import { Button } from '@/components/ui/button';
-import { motion, AnimatePresence } from "framer-motion";
-import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck, FaBars, FaStar, FaCertificate, FaBuilding, FaUsers, FaPhone, FaTimes, FaCheckCircle, FaGraduationCap, FaMoneyBillWave, FaClock, FaLaptop, FaChartLine, FaHandshake, FaAward,FaChevronDown } from "react-icons/fa";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronDown } from 'lucide-react';
 import Head from 'next/head';
 import Image from 'next/image';
-import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
-import AccreditationSection from '@/components/AccreditationSection';
-import { ChevronDown } from 'lucide-react';
-import PageContent from '@/components/PageContent/PageContent';
+import { useEffect, useState } from 'react';
+import { FaAward, FaBars, FaBriefcase, FaBuilding, FaCertificate, FaChartLine, FaCircleCheck, FaClock, FaGraduationCap, FaLaptop, FaMoneyBillWave, FaPhone } from "react-icons/fa6";
+type ModalState = {
+  type: 'apply' | 'enquiry';
+  program?: string;
+} | null;
 const MUJBBAPage = () => {
   const sectionItem = [
               { id: "overview", label: "Overview" },
@@ -59,8 +62,8 @@ const MUJBBAPage = () => {
                                      observer.disconnect();
                                    };
                                     }, [sectionItem]);
-  const [openModal, setOpenModal] = useState(null);
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openModal, setOpenModal] = useState<ModalState>(null);
+   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -70,7 +73,8 @@ const MUJBBAPage = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const toggleFAQ = (index) => {
+
+   const toggleFAQ = (index: number): void => {
     if (openIndex === index) setOpenIndex(null);
     else setOpenIndex(index);
   };
@@ -330,7 +334,7 @@ const MUJBBAPage = () => {
                   <p className="text-gray-600 text-sm">₹1,35,000</p>
                 </div>
                 <div className="bg-white rounded-xl p-4 shadow-md">
-                  <FaCheckCircle className="text-orange-600 text-3xl mb-2" />
+                  <FaCircleCheck className="text-orange-600 text-3xl mb-2" />
                   <h4 className="font-semibold text-gray-900 mb-1">Eligibility</h4>
                   <p className="text-gray-600 text-sm">10+2 (40% minimum)</p>
                 </div>
@@ -1935,28 +1939,28 @@ const MUJBBAPage = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-4">At UNIFOST, we help you:</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <FaCheckCircle className="text-orange-600 text-xl flex-shrink-0 mt-1" />
+                    < FaCircleCheck className="text-orange-600 text-xl flex-shrink-0 mt-1" />
                     <div>
                       <p className="text-gray-700 font-semibold mb-1">1. Check UGC & NAAC approvals</p>
                       <p className="text-gray-600 text-sm">of universities you're considering (no confusion, only verified info).</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <FaCheckCircle className="text-orange-600 text-xl flex-shrink-0 mt-1" />
+                    < FaCircleCheck className="text-orange-600 text-xl flex-shrink-0 mt-1" />
                     <div>
                       <p className="text-gray-700 font-semibold mb-1">2. Compare Manipal Online BBA with other top online BBA options</p>
                       <p className="text-gray-600 text-sm">on Fees, Specializations, Career services, Flexibility</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <FaCheckCircle className="text-orange-600 text-xl flex-shrink-0 mt-1" />
+                    < FaCircleCheck className="text-orange-600 text-xl flex-shrink-0 mt-1" />
                     <div>
                       <p className="text-gray-700 font-semibold mb-1">3. Choose the right specialization</p>
                       <p className="text-gray-600 text-sm">(Marketing, HR, Finance, Analytics, etc.) based on your goals.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <FaCheckCircle className="text-orange-600 text-xl flex-shrink-0 mt-1" />
+                    < FaCircleCheck className="text-orange-600 text-xl flex-shrink-0 mt-1" />
                     <div>
                       <p className="text-gray-700 font-semibold mb-1">4. Get step-by-step support in the admission process</p>
                       <p className="text-gray-600 text-sm">from shortlisting to document upload and fee planning.</p>

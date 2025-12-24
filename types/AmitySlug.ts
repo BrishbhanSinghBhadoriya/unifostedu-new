@@ -64,7 +64,7 @@ export interface NaacGrade {
 
 // Who Can Apply Section
 export interface WhoCanApply {
-  description: string;
+  description?: string;
   eligibility: string;
   minimumMarks: string;
   entranceExam?: string;
@@ -97,7 +97,7 @@ export interface CourseFees {
 // Certifications
 export interface Certifications {
   degreeAwarded: string;
-  description: string;
+  description?: string;
   certificateValidity: string[];
   additionalCertificates?: string[];
   verification?: string;
@@ -128,8 +128,8 @@ export interface EvaluationPattern {
 // Placement Partners
 export interface PlacementPartners {
   image?: string;
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   topRecruiters: string[];
   jobRoles?: string[];
   averageSalary: string;
@@ -145,9 +145,8 @@ export interface FAQ {
 
 // Student Review
 export interface StudentReview {
-  studentsHand: {
+  studentsHand?: {
       name: string;
-      course: string;
       rating: number;
       review: string;
     }[];

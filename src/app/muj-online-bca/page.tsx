@@ -1,15 +1,23 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
+import PageContent from '@/components/PageContent/PageContent';
 import { Button } from '@/components/ui/button';
-import { motion, AnimatePresence } from "framer-motion";
-import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck, FaBars, FaStar, FaCertificate, FaBuilding, FaUsers, FaPhone, FaTimes, FaCheckCircle, FaGraduationCap, FaMoneyBillWave, FaClock, FaLaptop, FaChartLine, FaHandshake, FaAward, FaChevronDown } from "react-icons/fa";
+import { motion } from "framer-motion";
 import Head from 'next/head';
 import Image from 'next/image';
-import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
-import AccreditationSection from '@/components/AccreditationSection';
-import PageContent from '@/components/PageContent/PageContent';
+import { useEffect, useState } from 'react';
+import { FaAward, FaBars, FaCircleCheck, FaGraduationCap, FaMoneyBillWave, FaPhone } from "react-icons/fa6";
+type ModalState = {
+  type: 'apply' | 'enquiry';
+  program?: string;
+  title?: string;
+  subtitle?: string;
+
+  
+} | null;
+
 const MUJBCAPage = () => {
-  const [openModal, setOpenModal] = useState(null);
+  const [openModal, setOpenModal] = useState<ModalState>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -211,7 +219,7 @@ const MUJBCAPage = () => {
                 <p className="text-gray-600 text-sm">₹1,35,000</p>
               </div>
               <div className="bg-white rounded-xl p-4 shadow-md">
-                <FaCheckCircle className="text-orange-600 text-3xl mb-2" />
+                <FaCircleCheck className="text-orange-600 text-3xl mb-2" />
                 <h4 className="font-semibold text-gray-900 mb-1">Eligibility</h4>
                 <p className="text-gray-600 text-sm">10+2 (40% minimum)</p>
               </div>
@@ -838,9 +846,9 @@ const MUJBCAPage = () => {
                                       viewport={{ once: true }}
                                       className="space-y-4"
                                     >
-                                      <div className="flex items-center gap-3 mb-4">
+                                      <div className="flex items-center gap-3 mb-4 bg-white rounded-full p-3">
                                         <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" alt="Manipal" className="h-10 w-auto" />
-                                        <span className="text-xl font-bold text-white">Online Manipal</span>
+                                        
                                       </div>
                                       <p className="text-sm text-gray-400 leading-relaxed">
                                         UGC-entitled, NAAC A+ accredited online degrees designed for modern learners. 
