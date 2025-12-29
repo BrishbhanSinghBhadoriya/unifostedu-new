@@ -1,8 +1,8 @@
 type ModalProps={
  open:boolean,
   onOpenChange:(value:boolean)=>void,
-  title :string,
-  subtitle:string,
+  title? :string,
+  subtitle?:string,
   imageSrc? :string,
   universityName?:string,
   defaultProgram : string,

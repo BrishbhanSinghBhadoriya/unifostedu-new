@@ -3,11 +3,11 @@ import React from 'react';
 import Image from 'next/image';
 import { OpenModalState } from 'types/Modal';
 
-type RecognitionsProps = {
+type IntroducationProps = {
   setOpenModal: React.Dispatch<React.SetStateAction<OpenModalState>>;
 };
 
-const Recognitions: React.FC<RecognitionsProps> = ({ setOpenModal }) => {
+const Recognitions: React.FC<IntroducationProps> = ({ setOpenModal }) => {
   return (
     <section className="py-16 bg-gradient-to-r from-slate-50 to-blue-50">
       

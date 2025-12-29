@@ -88,8 +88,13 @@ declare module 'react-icons/fa6' {
     export const FaCircleCheck:IconType
     export const FaHouse:IconType
     export const FaQuestion:IconType
-
-    
+    export const  FaBrain:IconType
+    export const FaCloud:IconType
+    export const FaGears:IconType
+    export const FaLinkedin:IconType
+    export const FaTools:IconType
+    export const FaBullseye:IconType
+    export const FaScrewdriverWrench:IconType
 }
 
 
@@ -139,5 +144,28 @@ declare module 'lucide-react' {
     export const MapPin: LucideIcon;
     export const HelpCircle: LucideIcon;
     export const FileText: LucideIcon;
-
+    export const BarChart: LucideIcon;
+    export const Calendar: LucideIcon;
+    export const ChevronRight: LucideIcon;
+    export const Cloud: LucideIcon;
+    export const Cpu: LucideIcon;
+    export const Database: LucideIcon;
+    export const ExternalLink: LucideIcon;
+    export const FileCode: LucideIcon;
+    export const Lock: LucideIcon;
+    export const Check: LucideIcon;
+    export const MessageSquare: LucideIcon;
+    export const Network: LucideIcon;
+    export const Server: LucideIcon;
+    export const Smartphone: LucideIcon;
+    export const Video: LucideIcon;
+    export const Zap: LucideIcon;
+    export const StarIcon: LucideIcon;
+    export const Laptop2: LucideIcon;
+    export const CreditCard: LucideIcon;
+    export const Wallet: LucideIcon;
+    export const Gift: LucideIcon;
+    export const ChevronUp: LucideIcon;
+    export const CalendarDays: LucideIcon;
+  
 }
