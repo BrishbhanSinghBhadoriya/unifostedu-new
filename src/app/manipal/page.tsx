@@ -28,10 +28,7 @@ import PlacementRecord from './_components/PlacementRecord';
 import ProgramBenefit from './_components/ProgramBenefit';
 import RankingAccreditionsManipal from './_components/RankingAccreditionsManipal';
 import WhyChooseManipal from './_components/WhyChooseManipal';
-type ModalState = {
-  type: 'apply' | 'enquiry';
-  program?: string;
-};
+import { OpenModalState } from '../../../types/Modal';
 
 const Manipal = () => {
 
@@ -158,18 +155,12 @@ useEffect(() => {
       
 
       const timer= setTimeout(()=>{
-       setOpenModal(type => type === null ? { type: 'enquiry' } : type);
+       setOpenModal((type: OpenModalState) => type === null ? { type: 'enquire' } : type);
       },3000)
       return () => clearTimeout(timer);
 
        
 },[])
-
-
-
-
-
-  
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -180,7 +171,7 @@ useEffect(() => {
 
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
   const [modalType, setModalType] = useState('getStarted');
-  const [openModal, setOpenModal] = useState<ModalState | null>(null);
+  const [openModal, setOpenModal] = useState<OpenModalState>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
    const sectionItems = [
     { id: "HeroSection", label: "Introduction" },
@@ -566,7 +557,7 @@ useEffect(() => {
           Start your journey today with Manipal Online!
         </p>
         <button 
-          onClick={() => setOpenModal({ type: 'enquiry' })}
+          onClick={() => setOpenModal({ type: 'enquire' })}
           className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 cursor-pointer transform hover:scale-105 text-base sm:text-lg shadow-lg hover:shadow-xl"
         >
           Apply Now
@@ -592,7 +583,7 @@ useEffect(() => {
           <WhyChooseManipal/>
 
           {/* Enhanced Courses Section */}
-          <Courses ugCourses={ugCourses} pgCourses={pgCourses}/>
+          <Courses ugCourses={ugCourses} pgCourses={pgCourses} setOpenModal={setOpenModal} openModal={openModal}/>
 
           {/* Key Highlights Section */}
           <KeyHighlights setOpenModal={setOpenModal} openModal={openModal}/>

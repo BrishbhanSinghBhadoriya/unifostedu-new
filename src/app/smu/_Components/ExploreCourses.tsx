@@ -25,13 +25,13 @@ type ExploreCoursesProps = {
   ugCourses: Course[];
   pgCourses: Course[];
   setOpenModal: React.Dispatch<React.SetStateAction<OpenModalState>>;
-  openModal: OpenModalState;
 };
 
 const ExploreCourses: React.FC<ExploreCoursesProps> = ({
   ugCourses,
   pgCourses,
   setOpenModal,
+  
 }) => {
   const [activeTab, setActiveTab] = useState<'all' | 'ug' | 'pg'>('all');
 

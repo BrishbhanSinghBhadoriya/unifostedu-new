@@ -7,8 +7,8 @@ export interface CourseDataFromJSON {
   "mba-online": CourseDetails;
   "mca-online": CourseDetails;
   "mcom-online": CourseDetails;
-  "ma": CourseDetails;
-  "msc": CourseDetails;
+  "ma-online": CourseDetails;
+  "msc-online": CourseDetails;
   "integrated_programs": IntegratedProgramDetails;
 }
 
@@ -42,12 +42,16 @@ export interface About {
 
 // Approval Section
 export interface Approval {
-
-  ugc_deb: ApprovalBody;
-  naac: NaacGrade;
+  ugc_deb?: ApprovalBody;
+  naac?: NaacGrade;
   aicte?: ApprovalBody;
   aiu?: ApprovalBody;
-  degreeRecognition: string[];
+  dec?: ApprovalBody;
+  wes?: ApprovalBody;
+  nirf?: ApprovalBody;
+  qs?: ApprovalBody;
+  ugc?: ApprovalBody;
+  degreeRecognition?: string[];
   image?: string;
 }
 
@@ -85,13 +89,29 @@ export interface Specialization {
 }
 
 // Course Fees
+
+export interface CourseFeeSpecialization {
+  specialization: string;
+  duration: string;
+  totalFee: string;
+  semesterFee: string;
+  description?: string;
+}
+
 export interface CourseFees {
   feeRange?: string;
+  feeDescription?: string;
+
   semesterWiseApprox?: string;
+  semesterDescription?: string;
+
   paymentOptions?: string[];
   loanPartners?: string[];
   feeIncludes?: string[];
+
   image?: string;
+
+  specializations?: CourseFeeSpecialization[];
 }
 
 // Certifications

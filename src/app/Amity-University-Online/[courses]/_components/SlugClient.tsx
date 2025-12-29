@@ -1,5 +1,7 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import ApplyEnquiryModal from "@/components/ApplyEnquiryModal";
+
 import Headers from '../../_components/Headers';
 import Footer from '../../_components/Footer';
 import { CourseDetails, IntegratedProgramDetails, Specialization } from 'types/AmitySlug';
@@ -21,6 +23,12 @@ import {
     ArrowRight
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+type ModalType = "apply" | "enquire";
+
+interface ModalState {
+  type: ModalType;
+  course?: string;
+}
 
 interface SlugClientProps {
     courseData: CourseDetails | IntegratedProgramDetails;
@@ -52,7 +60,8 @@ const SpecCard = ({ spec }: { spec: Specialization }) => {
 };
 
 const SlugClient = ({ courseData }: SlugClientProps) => {
-    const [openModal, setOpenModal] = useState<{ type: string } | null>(null);
+   const [openModal, setOpenModal] = useState<ModalState | null>(null);
+
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     if (!courseData) {
@@ -72,10 +81,54 @@ const SlugClient = ({ courseData }: SlugClientProps) => {
                         </p>
                     </div>
                 </main>
-                <Footer setOpenModal={setOpenModal} openModal={openModal} />
+                <Footer openModal={openModal} setOpenModal={setOpenModal}/>
             </div>
         );
     }
+const approvalConfig = {
+  ugc_deb: {
+    label: "UGC-DEB",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp",
+    status: "Approved by UGC",
+  },
+
+  aicte: {
+    label: "AICTE",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp",
+    status: "Recognized",
+  },
+
+  naac: {
+    label: "NAAC",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1763124771/NAAC-A_g3pb34.webp",
+    status: "Grade A+",
+  },
+
+  nirf: {
+    label: "NIRF",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nirf_f5xen9.webp",
+    status: "Ranked Institution",
+  },
+
+  qs: {
+    label: "QS World Ranking",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/qs_k5hl4c.webp",
+    status: "Globally Ranked",
+  },
+
+  wes: {
+    label: "WES",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/wes_zuxwfs.webp",
+    status: "International Evaluation",
+  },
+
+  dec: {
+    label: "DEC",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1766569432/download_nupfgp.jpg",
+    status: "Digital Education Council",
+  },
+};
+
 
     const { about, approval, whoCanApply, specializations, courseFees, certifications, syllabus_curriculum, placementPartners, faq, faqImage, studentReview, specializationImage } = courseData as CourseDetails;
 
@@ -95,14 +148,15 @@ const SlugClient = ({ courseData }: SlugClientProps) => {
                         </h4>
                     </div>
                     <ul className="space-y-2 text-sm text-gray-600">
-                        {Array.isArray(subjects) &&
-                            subjects.map((subject) => (
-                                <li key={subject} className="flex items-start gap-2">
-                                    <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-400" />
-                                    <span>{subject}</span>
-                                </li>
-                            ))}
-                    </ul>
+  {Array.isArray(subjects) &&
+    [...new Set(subjects.filter(Boolean))].map((subject) => (
+      <li key={subject} className="flex items-start gap-2">
+        <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-400" />
+        <span>{subject}</span>
+      </li>
+    ))}
+</ul>
+
                 </div>
             ));
     };
@@ -133,81 +187,40 @@ const SlugClient = ({ courseData }: SlugClientProps) => {
                                             />
                                         ))}
                                     </div>
-                                    <span className="text-yellow-600 font-semibold hover:underline cursor-pointer">
-                                        (667 Reviews)
-                                    </span>
+                                   
                                 </div>
 
                                 {/* Approvals Logos with Icons */}
-                                <div className="mb-6">
-                                    <p className="text-xs text-gray-500 font-semibold uppercase tracking-wide mb-3">Recognized & Approved By</p>
-                                    <div className="flex items-center gap-4 flex-wrap">
-                                        {approval?.ugc_deb && (
-                                            <div className="flex flex-col items-center gap-2 bg-white/80 backdrop-blur-sm p-3 rounded-xl border border-yellow-200/50 shadow-sm hover:shadow-md transition-all">
-                                                <div className="w-16 h-16 sm:w-18 sm:h-18 bg-yellow-50 rounded-xl flex items-center justify-center border-2 border-yellow-300 shadow-sm">
-                                                    <Image 
-                                                        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp" 
-                                                        alt="UGC DEB" 
-                                                        width={50} 
-                                                        height={50} 
-                                                        className="object-contain"
-                                                    />
-                                                </div>
-                                                <span className="text-xs text-gray-700 font-semibold text-center">UGC DEB</span>
-                                                <span className="text-[10px] text-gray-500 text-center">Approved</span>
-                                            </div>
-                                        )}
-                                        {approval?.aicte && (
-                                            <div className="flex flex-col items-center gap-2 bg-white/80 backdrop-blur-sm p-3 rounded-xl border border-yellow-200/50 shadow-sm hover:shadow-md transition-all">
-                                                <div className="w-16 h-16 sm:w-18 sm:h-18 bg-yellow-50 rounded-xl flex items-center justify-center border-2 border-yellow-300 shadow-sm">
-                                                    <Image 
-                                                        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp" 
-                                                        alt="AICTE" 
-                                                        width={50} 
-                                                        height={50} 
-                                                        className="object-contain"
-                                                    />
-                                                </div>
-                                                <span className="text-xs text-gray-700 font-semibold text-center">AICTE</span>
-                                                <span className="text-[10px] text-gray-500 text-center">Recognized</span>
-                                            </div>
-                                        )}
-                                        <div className="flex flex-col items-center gap-2 bg-white/80 backdrop-blur-sm p-3 rounded-xl border border-yellow-200/50 shadow-sm hover:shadow-md transition-all">
-                                            <div className="w-16 h-16 sm:w-18 sm:h-18 bg-yellow-50 rounded-xl flex items-center justify-center border-2 border-yellow-300 shadow-sm">
-                                                <Image 
-                                                    src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nirf_f5xen9.webp" 
-                                                    alt="NIRF" 
-                                                    width={50} 
-                                                    height={50} 
-                                                    className="object-contain"
-                                                />
-                                            </div>
-                                            <span className="text-xs text-gray-700 font-semibold text-center">NIRF</span>
-                                            <span className="text-[10px] text-gray-500 text-center">Ranked 32nd</span>
-                                        </div>
-                                        {approval?.naac && (
-                                            <div className="flex flex-col items-center gap-2 bg-white/80 backdrop-blur-sm p-3 rounded-xl border border-yellow-200/50 shadow-sm hover:shadow-md transition-all">
-                                                <div className="w-16 h-16 sm:w-18 sm:h-18 bg-yellow-50 rounded-xl flex items-center justify-center border-2 border-yellow-300 shadow-sm">
-                                                    <Image 
-                                                        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1763124771/NAAC-A_g3pb34.webp" 
-                                                        alt="NAAC" 
-                                                        width={50} 
-                                                        height={50} 
-                                                        className="object-contain"
-                                                    />
-                                                </div>
-                                                <span className="text-xs text-gray-700 font-semibold text-center">NAAC</span>
-                                                <span className="text-[10px] text-gray-500 text-center">Grade {approval.naac.grade}</span>
-                                            </div>
-                                        )}
-                                    </div>
-                                    <p className="text-xs text-gray-600 mt-3 leading-relaxed">
-                                        Amity University Online is recognized by top regulatory bodies ensuring your degree is valid, respected, and valued globally for government jobs, private sector employment, and higher education.
-                                    </p>
-                                </div>
+                                <div className="flex items-center gap-4 flex-wrap">
+  {Object.values(approvalConfig).map((item, index) => (
+    <div
+      key={index}
+      className="flex flex-col items-center gap-2 bg-white/80 backdrop-blur-sm p-3 rounded-xl border border-yellow-200/50 shadow-sm hover:shadow-md transition-all"
+    >
+      <div className="w-16 h-16 bg-yellow-50 rounded-xl flex items-center justify-center border-2 border-yellow-300 shadow-sm">
+        <Image
+          src={item.image}
+          alt={item.label}
+          width={50}
+          height={50}
+          className="object-contain"
+        />
+      </div>
+
+      <span className="text-xs text-gray-700 font-semibold text-center">
+        {item.label}
+      </span>
+
+      <span className="text-[10px] text-gray-500 text-center">
+        {item.status}
+      </span>
+    </div>
+  ))}
+</div>
+
 
                                 {/* CTA Buttons */}
-                                <div className="flex flex-col sm:flex-row gap-3 mb-4">
+                                <div className="flex flex-col sm:flex-row gap-3 mt-8">
                                     <Button
                                         onClick={() => setOpenModal({ type: 'apply' })}
                                         className="bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all"
@@ -216,32 +229,19 @@ const SlugClient = ({ courseData }: SlugClientProps) => {
                                         <ArrowRight className="w-4 h-4" />
                                     </Button>
                                     <Button
-                                        onClick={() => setOpenModal({ type: 'enquiry' })}
+                                        onClick={() => setOpenModal({ type: 'apply' })}
                                         variant="outline"
                                         className="border-2 border-yellow-500 text-yellow-600 hover:bg-yellow-50 px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all"
                                     >
-                                        <Phone className="w-4 h-4" />
+                                        <Phone className="w-4 h-4 " />
                                         Talk to University
                                     </Button>
                                 </div>
 
-                                {/* Offers */}
-                                <div className="space-y-2">
-                                    <div className="flex items-center gap-2 text-green-600 font-semibold">
-                                        <span>Subsidy Cashback Available* ₹5,000</span>
-                                        <HelpCircle className="w-4 h-4" />
-                                    </div>
-                                    <div className="text-orange-600 font-medium text-sm">
-                                        Offer* valid till December 30th, 11 PM
-                                    </div>
-                                </div>
-
+                              
                                 {/* Additional Links */}
-                                <div className="flex flex-wrap gap-4 pt-2">
-                                    <button className="text-yellow-600 hover:text-yellow-700 font-medium flex items-center gap-1 text-sm transition-colors">
-                                        <span className="text-lg">+</span>
-                                        Add to Compare
-                                    </button>
+                                <div className="flex flex-wrap gap-4 pt-2 mt-4">
+                                    
                                     <button className="text-yellow-600 hover:text-yellow-700 font-medium flex items-center gap-1 text-sm transition-colors">
                                         <ArrowRight className="w-4 h-4 rotate-[-90deg]" />
                                         Download Brochure
@@ -285,46 +285,6 @@ const SlugClient = ({ courseData }: SlugClientProps) => {
                                 )}
                             </div>
 
-                            {/* Content Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60 flex flex-col justify-between p-6 sm:p-8">
-                                <div className="flex justify-between items-start">
-                                    <div className="bg-yellow-500 px-4 py-2 rounded-lg font-bold text-sm text-white shadow-lg">
-                                        AMITY UNIVERSITY ONLINE
-                                    </div>
-                                    <div className="flex flex-col gap-2">
-                                        <div className="bg-yellow-500/90 backdrop-blur-sm px-3 py-1.5 rounded text-xs font-semibold text-white">
-                                            Subsidy Cashback Available*
-                                        </div>
-                                        <div className="bg-green-600 px-3 py-1.5 rounded text-xs font-semibold text-white">
-                                            Admission On Going
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div className="text-center text-white">
-                                    <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-2">
-                                        RANKED AMONGST THE
-                                    </div>
-                                    <div className="text-5xl sm:text-6xl md:text-7xl font-black mb-2 bg-gradient-to-r from-yellow-300 to-yellow-100 bg-clip-text text-transparent">
-                                        TOP 3%
-                                    </div>
-                                    <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold">
-                                        UNIVERSITIES GLOBALLY
-                                    </div>
-                                    <p className="text-sm sm:text-base font-semibold mt-4 opacity-90">
-                                        BE PART OF UNIVERSITY RANKED AMONGST THE TOP 3% UNIVERSITY GLOBALLY
-                                    </p>
-                                </div>
-
-                                <div className="flex justify-center gap-3">
-                                    <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/30">
-                                        <span className="text-xs font-bold text-white">QS WORLD UNIVERSITY RANKINGS</span>
-                                    </div>
-                                    <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/30">
-                                        <span className="text-xs font-bold text-white">THE Times Higher Education</span>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -333,190 +293,132 @@ const SlugClient = ({ courseData }: SlugClientProps) => {
             <main className="flex-1 pb-16">
 
                 {/* Hero Section */}
-                <section className="relative bg-gradient-to-br from-white via-yellow-50/40 via-orange-50/30 to-yellow-50/20 pb-16 sm:pb-20 pt-12 sm:pt-16 overflow-hidden">
-                    {/* Animated Background Elements */}
-                    <div className="absolute inset-0 overflow-hidden">
-                        <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-200/20 rounded-full blur-3xl animate-pulse"></div>
-                        <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-200/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-yellow-200/10 rounded-full blur-3xl"></div>
-                    </div>
-                    
-                    {/* Grid Pattern Overlay */}
-                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-30"></div>
-                    
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-                            {/* Left Content */}
-                            <div className="space-y-6 sm:space-y-8 order-2 lg:order-1">
-                                {/* Badge */}
-                                <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-orange-500/10 via-orange-400/10 to-yellow-400/10 backdrop-blur-sm text-orange-700 text-xs font-bold uppercase tracking-wider border border-orange-200/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                                    <Award className="w-4 h-4" />
-                                    <span>Amity University Online</span>
-                                </div>
+        <section className="relative bg-gradient-to-br from-white via-yellow-50/40 via-orange-50/30 to-yellow-50/20 pb-16 sm:pb-20 pt-12 sm:pt-16 overflow-hidden">
+  {/* Animated Background Elements */}
+  <div className="absolute inset-0 overflow-hidden">
+    <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-200/20 rounded-full blur-3xl animate-pulse"></div>
+    <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-200/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-yellow-200/10 rounded-full blur-3xl"></div>
+  </div>
 
-                                {/* Main Title */}
-                                <div className="space-y-3">
-                                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1]">
-                                        <span className="block bg-gradient-to-r from-yellow-600 via-orange-600 to-yellow-500 bg-clip-text text-transparent">
-                                            {about?.title || "Amity Online Program"}
-                                        </span>
-                                    </h1>
-                                    <div className="flex items-center gap-3 pt-2">
-                                        <div className="flex items-center gap-1">
-                                            {[...Array(5)].map((_, i) => (
-                                                <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
-                                            ))}
-                                        </div>
-                                        <span className="text-gray-600 font-semibold">4.5/5</span>
-                                        <span className="text-gray-400">•</span>
-                                        <span className="text-yellow-600 font-medium hover:underline cursor-pointer">667 Reviews</span>
-                                    </div>
-                                </div>
+  {/* Grid Pattern Overlay */}
+  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-30"></div>
 
-                                {/* Description */}
-                                <p className="text-lg sm:text-xl text-gray-700 leading-relaxed max-w-2xl font-medium">
-                                    {about?.description}
-                                </p>
+  <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div className="flex justify-center items-center">
+      
+      {/* Center Content */}
+      <div className="flex flex-col justify-center items-center text-center space-y-6 sm:space-y-8 w-full">
+        
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-orange-500/10 via-orange-400/10 to-yellow-400/10 backdrop-blur-sm text-orange-700 text-xs font-bold uppercase tracking-wider border border-orange-200/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+          <Award className="w-4 h-4" />
+          <span>Amity University Online</span>
+        </div>
 
-                                {/* Stats Cards */}
-                                <div className="grid grid-cols-2 gap-4 pt-2">
-                                    {about?.duration && (
-                                        <div className="group relative bg-white/80 backdrop-blur-md rounded-2xl border border-gray-200/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 p-4">
-                                            <div className="absolute inset-0 bg-gradient-to-br from-yellow-50/50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                            <div className="relative flex items-center gap-3">
-                                                <div className="p-2.5 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl shadow-md">
-                                                    <Clock className="w-5 h-5 text-white" />
-                                                </div>
-                                                <div>
-                                                    <p className="text-xs text-gray-500 font-semibold uppercase tracking-wide">Duration</p>
-                                                    <p className="text-base font-bold text-gray-900 mt-0.5">{about.duration}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )}
-                                    {about?.mode && (
-                                        <div className="group relative bg-white/80 backdrop-blur-md rounded-2xl border border-gray-200/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 p-4">
-                                            <div className="absolute inset-0 bg-gradient-to-br from-orange-50/50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                            <div className="relative flex items-center gap-3">
-                                                <div className="p-2.5 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl shadow-md">
-                                                    <Globe className="w-5 h-5 text-white" />
-                                                </div>
-                                                <div>
-                                                    <p className="text-xs text-gray-500 font-semibold uppercase tracking-wide">Mode</p>
-                                                    <p className="text-base font-bold text-gray-900 mt-0.5">{about.mode}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
+        {/* Main Title */}
+        <div className="space-y-3">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1]">
+            <span className="block bg-gradient-to-r from-yellow-600 via-orange-600 to-yellow-500 bg-clip-text text-transparent">
+              {about?.title || "Amity Online Program"}
+            </span>
+          </h1>
+          <div className="flex items-center justify-center gap-3 pt-2">
+            <div className="flex items-center gap-1">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+              ))}
+            </div>
+            <span className="text-gray-600 font-semibold">4.5/5</span>
+            <span className="text-gray-400">•</span>
+            <span className="text-yellow-600 font-medium hover:underline cursor-pointer">667 Reviews</span>
+          </div>
+        </div>
 
-                                {/* Key Benefits */}
-                                {about?.keyBenefits && Array.isArray(about.keyBenefits) && (
-                                    <div className="pt-4">
-                                        <h3 className="text-sm font-bold text-gray-900 mb-4 uppercase tracking-wider flex items-center gap-2">
-                                            <span className="w-8 h-0.5 bg-gradient-to-r from-orange-500 to-yellow-500"></span>
-                                            Key Benefits
-                                        </h3>
-                                        <div className="grid sm:grid-cols-2 gap-3">
-                                            {about.keyBenefits.map((benefit: string, idx) => (
-                                                <div key={idx} className="group flex items-start gap-3 text-sm text-gray-700 bg-white/70 backdrop-blur-sm px-4 py-3 rounded-xl border border-gray-200/50 shadow-sm hover:shadow-md hover:border-orange-300 transition-all duration-300">
-                                                    <div className="mt-0.5 p-1 bg-gradient-to-br from-orange-400 to-orange-500 rounded-lg group-hover:scale-110 transition-transform">
-                                                        <CheckCircle className="w-3.5 h-3.5 text-white" />
-                                                    </div>
-                                                    <span className="leading-relaxed font-medium">{benefit}</span>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                )}
+        {/* Description */}
+        <p className="text-lg sm:text-xl text-gray-700 leading-relaxed font-medium">
+          {about?.description}
+        </p>
 
-                                {/* CTA Buttons */}
-                                <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                    <Button
-                                        onClick={() => setOpenModal({ type: 'apply' })}
-                                        className="group bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-white px-8 py-6 rounded-xl font-bold text-base shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
-                                    >
-                                        Apply Now
-                                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                    </Button>
-                                    <Button
-                                        onClick={() => setOpenModal({ type: 'enquiry' })}
-                                        variant="outline"
-                                        className="border-2 border-gray-300 hover:border-yellow-500 text-gray-700 hover:text-yellow-600 hover:bg-yellow-50 px-8 py-6 rounded-xl font-bold text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
-                                    >
-                                        <Phone className="w-5 h-5" />
-                                        Talk to Expert
-                                    </Button>
-                                </div>
-                            </div>
+        {/* Stats Cards */}
+        <div className="grid grid-cols-2 gap-4 pt-2 w-full max-w-4xl mx-auto">
+          {about?.duration && (
+            <div className="group relative bg-white/80 backdrop-blur-md rounded-2xl border border-gray-200/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 p-4">
+              <div className="absolute inset-0 bg-gradient-to-br from-yellow-50/50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="relative flex items-center gap-3">
+                <div className="p-2.5 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl shadow-md">
+                  <Clock className="w-5 h-5 text-white" />
+                </div>
+                <div className="text-left">
+                  <p className="text-xs text-gray-500 font-semibold uppercase tracking-wide">Duration</p>
+                  <p className="text-base font-bold text-gray-900 mt-0.5">{about.duration}</p>
+                </div>
+              </div>
+            </div>
+          )}
+          {about?.mode && (
+            <div className="group relative bg-white/80 backdrop-blur-md rounded-2xl border border-gray-200/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 p-4">
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-50/50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="relative flex items-center gap-3">
+                <div className="p-2.5 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl shadow-md">
+                  <Globe className="w-5 h-5 text-white" />
+                </div>
+                <div className="text-left">
+                  <p className="text-xs text-gray-500 font-semibold uppercase tracking-wide">Mode</p>
+                  <p className="text-base font-bold text-gray-900 mt-0.5">{about.mode}</p>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
 
-                            {/* Right Image Section */}
-                            <div className="relative order-1 lg:order-2 mb-8 lg:mb-0">
-                                {/* Decorative Background Shapes */}
-                                <div className="absolute -inset-4 sm:-inset-6 bg-gradient-to-tr from-orange-200/40 via-blue-200/40 to-purple-200/40 rounded-[2.5rem] transform rotate-3 blur-xl"></div>
-                                <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-br from-orange-100/60 via-blue-100/60 to-purple-100/60 rounded-3xl transform -rotate-2"></div>
-                                
-                                {/* Main Image Container */}
-                                <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
-                                    {about?.heroImage ? (
-                                        <Image
-                                            src={about.heroImage}
-                                            alt={about?.title || "Course Overview"}
-                                            width={800}
-                                            height={600}
-                                            priority
-                                            className="w-full h-auto max-h-[550px] sm:max-h-[650px] object-cover rounded-3xl transform group-hover:scale-105 transition-transform duration-700"
-                                        />
-                                    ) : (
-                                        <Image
-                                            src="/images/amity/mbaherosection.jpeg"
-                                            alt="Hero Placeholder"
-                                            width={800}
-                                            height={600}
-                                            className="w-full h-auto max-h-[550px] sm:max-h-[650px] object-cover rounded-3xl"
-                                        />
-                                    )}
-                                    
-                                    {/* Overlay Gradient */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-3xl"></div>
-                                </div>
+        {/* Key Benefits */}
+        {about?.keyBenefits && Array.isArray(about.keyBenefits) && (
+          <div className="pt-4 w-full">
+            <h3 className="text-sm font-bold text-gray-900 mb-4 uppercase tracking-wider flex items-center justify-center gap-2">
+              <span className="w-8 h-0.5 bg-gradient-to-r from-orange-500 to-yellow-500"></span>
+              Key Benefits
+              <span className="w-8 h-0.5 bg-gradient-to-r from-yellow-500 to-orange-500"></span>
+            </h3>
+            <div className="grid sm:grid-cols-2 gap-3 w-full max-w-4xl mx-auto">
+              {about.keyBenefits.map((benefit: string, idx) => (
+                <div key={idx} className="group flex items-start gap-3 text-sm text-gray-700 bg-white/70 backdrop-blur-sm px-4 py-3 rounded-xl border border-gray-200/50 shadow-sm hover:shadow-md hover:border-orange-300 transition-all duration-300">
+                  <div className="mt-0.5 p-1 bg-gradient-to-br from-orange-400 to-orange-500 rounded-lg group-hover:scale-110 transition-transform">
+                    <CheckCircle className="w-3.5 h-3.5 text-white" />
+                  </div>
+                  <span className="leading-relaxed font-medium text-left">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
-                                {/* Floating Stats Cards */}
-                                <div className="absolute -bottom-6 sm:-bottom-8 -left-6 sm:-left-8 bg-white/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-2xl border border-yellow-200 max-w-[220px] sm:max-w-[260px] hidden md:block hover:scale-105 transition-transform duration-300">
-                                    <div className="flex items-center gap-3 mb-3">
-                                        <div className="p-2 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl shadow-lg">
-                                            <Award className="w-5 h-5 text-white" />
-                                        </div>
-                                        <p className="font-bold text-gray-900 text-sm">UGC Approved</p>
-                                    </div>
-                                    <div className="flex gap-2 flex-wrap">
-                                        {approval?.aicte?.icon && (
-                                            <div className="p-2 bg-yellow-50 rounded-lg border border-yellow-200">
-                                                <Image src={approval.aicte.icon} alt="AICTE" width={32} height={32} className="object-contain" />
-                                            </div>
-                                        )}
-                                        {approval?.ugc_deb?.icon && (
-                                            <div className="p-2 bg-yellow-50 rounded-lg border border-yellow-200">
-                                                <Image src={approval.ugc_deb.icon} alt="UGC" width={32} height={32} className="object-contain" />
-                                            </div>
-                                        )}
-                                    </div>
-                                    <p className="text-xs text-gray-600 mt-2 leading-tight">
-                                        Recognized by top regulatory bodies
-                                    </p>
-                                </div>
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+          <Button
+            onClick={() => setOpenModal({ type: 'apply' })}
+            className="group bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-white px-8 py-6 rounded-xl font-bold text-base shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+          >
+            Apply Now
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Button>
+          <Button
+            onClick={() => setOpenModal({ type: 'apply' })}
+            variant="outline"
+            className="border-2 border-gray-300 hover:border-yellow-500 text-gray-700 hover:text-yellow-600 hover:bg-yellow-50 px-8 py-6 rounded-xl font-bold text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+          >
+            <Phone className="w-5 h-5" />
+            Talk to Expert
+          </Button>
+        </div>
 
-                                {/* Top Right Badge */}
-                                <div className="absolute -top-4 sm:-top-6 -right-4 sm:-right-6 bg-gradient-to-br from-orange-500 to-yellow-500 text-white px-4 py-2 rounded-full shadow-xl font-bold text-xs sm:text-sm hidden lg:block animate-bounce">
-                                    <span className="flex items-center gap-1">
-                                        <Star className="w-4 h-4 fill-white" />
-                                        Top Rated
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
                 {/* Approvals Section (Detailed) */}
                 <section className="py-12 sm:py-16 bg-white">
@@ -770,89 +672,164 @@ const SlugClient = ({ courseData }: SlugClientProps) => {
                 )}
 
                 {/* Course Fees */}
-                {courseFees && (
-                    <section className="py-12 sm:py-16 bg-gray-50 overflow-hidden">
-                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-12 sm:py-16 bg-gray-50 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+        {/* Heading */}
+        <div className="flex items-center gap-3 mb-6">
+          <div className="p-2 bg-green-50 rounded-lg">
+            <IndianRupee className="w-5 h-5 sm:w-6 sm:h-6 text-green-600" />
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+            Course Fees
+          </h2>
+        </div>
 
-                            <div className="flex items-center gap-3 mb-6">
-                                <div className="p-2 bg-green-50 rounded-lg">
-                                    <IndianRupee className="w-5 h-5 sm:w-6 sm:h-6 text-green-600" />
-                                </div>
-                                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Course Fees</h2>
-                            </div>
+        {/* Main Fees Card */}
+        <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-200 p-6 shadow-sm relative">
+          <div className="absolute top-4 right-4 w-24 h-24 opacity-10">
+            <Image
+              src="/images/icons/ai-application.png"
+              alt="Fees"
+              width={100}
+              height={100}
+            />
+          </div>
 
-                            <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-200 p-6 shadow-sm relative">
-                                {/* Decorative Image */}
-                                <div className="absolute top-4 right-4 w-24 h-24 opacity-10">
-                                    <Image src="/images/icons/ai-application.webp" alt="Fees" width={100} height={100} />
-                                </div>
+          <div className="space-y-6 relative z-10">
+            {/* Total Fee */}
+            <div className="border-b border-gray-200 pb-4">
+              <p className="text-sm text-gray-500 font-medium uppercase mb-1">
+                Total Program Fee
+              </p>
+              <p className="text-3xl font-bold text-gray-900">
+                {courseFees.feeRange ?? "On Request"}
+              </p>
+              {courseFees.feeDescription && (
+                <p className="text-sm text-gray-600 mt-1">
+                  {courseFees.feeDescription}
+                </p>
+              )}
+            </div>
 
-                                <div className="space-y-6 relative z-10">
-                                    <div className="flex justify-between items-end border-b border-gray-200 pb-4">
-                                        <div>
-                                            <p className="text-sm text-gray-500 font-medium uppercase mb-1">Total Program Fee</p>
-                                            <p className="text-3xl font-bold text-gray-900">{courseFees.feeRange || "On Request"}</p>
-                                        </div>
-                                    </div>
+            {/* Semester Fee */}
+            {courseFees.semesterWiseApprox && (
+              <div className="bg-green-50 rounded-xl p-4 flex items-center gap-4">
+                <div className="bg-white p-2 rounded-full shadow-sm">
+                  <IndianRupee className="w-5 h-5 text-green-600" />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-600 font-semibold uppercase">
+                    Per Semester
+                  </p>
+                  <p className="font-bold text-green-800">
+                    {courseFees.semesterWiseApprox}
+                  </p>
+                  {courseFees.semesterDescription && (
+                    <p className="text-xs text-gray-600">
+                      {courseFees.semesterDescription}
+                    </p>
+                  )}
+                </div>
+              </div>
+            )}
 
-                                    {courseFees.semesterWiseApprox && (
-                                        <div className="bg-green-50 rounded-xl p-4 flex items-center gap-4">
-                                            <div className="bg-white p-2 rounded-full shadow-sm">
-                                                <IndianRupee className="w-5 h-5 text-green-600" />
-                                            </div>
-                                            <div>
-                                                <p className="text-xs text-gray-600 font-semibold uppercase">Per Semester</p>
-                                                <p className="font-bold text-green-800">{courseFees.semesterWiseApprox}</p>
-                                            </div>
-                                        </div>
-                                    )}
+            {/* Payment Options */}
+            {Array.isArray(courseFees.paymentOptions) && courseFees.paymentOptions.length > 0 && (
+              <div>
+                <h4 className="font-bold text-gray-900 mb-3 text-sm">
+                  Payment Options
+                </h4>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {courseFees.paymentOptions.map((opt, i) => (
+                    <li
+                      key={i}
+                      className="text-sm text-gray-600 flex items-center gap-2"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                      {opt}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
-                                    {courseFees.paymentOptions && (
-                                        <div>
-                                            <h4 className="font-bold text-gray-900 mb-3 text-sm">Payment Options</h4>
-                                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                                                {courseFees.paymentOptions.map((opt, i) => (
-                                                    <li key={i} className="text-sm text-gray-600 flex items-center gap-2">
-                                                        <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
-                                                        {opt}
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    )}
+            {/* Loan Partners */}
+            {Array.isArray(courseFees.loanPartners) && courseFees.loanPartners.length > 0 && (
+              <div>
+                <p className="text-xs text-gray-400 font-bold uppercase mb-2">
+                  Education Loan Partners
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {courseFees.loanPartners.map((partner, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1.5 bg-gray-100 rounded-lg text-xs font-medium text-gray-700 border"
+                    >
+                      {partner}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
 
-                                    {courseFees.loanPartners && (
-                                        <div className="pt-2">
-                                            <p className="text-xs text-gray-400 font-bold uppercase mb-2">Education Loan Partners</p>
-                                            <div className="flex flex-wrap gap-2">
-                                                {courseFees.loanPartners.map((partner, i) => (
-                                                    <span key={i} className="px-3 py-1.5 bg-gray-100 rounded-lg text-xs font-medium text-gray-700 border border-gray-200">
-                                                        {partner}
-                                                    </span>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
+        {/* Specialization Table */}
+        {Array.isArray(courseFees.specializations) && courseFees.specializations.length > 0 && (
+          <div className="mt-10">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">
+              Specialization-wise Fees
+            </h3>
 
-                            {courseFees?.image && (
-                                <div className="mt-6 rounded-2xl overflow-hidden h-48 relative">
-                                    <Image
-                                        src={courseFees.image}
-                                        alt="Financial Aid"
-                                        fill
-                                        className="object-cover"
-                                    />
-                                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-6 text-center">
-                                        <p className="text-white font-bold text-lg">Invest in your future with flexible payment plans</p>
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-                    </section>
-                )}
+            <div className="overflow-x-auto rounded-xl border border-gray-200">
+              <table className="w-full min-w-[600px] text-sm">
+                <thead className="bg-gray-100 text-gray-700">
+                  <tr>
+                    <th className="px-4 py-3 text-left">Specialization</th>
+                    <th className="px-4 py-3 text-left">Duration</th>
+                    <th className="px-4 py-3 text-left">Total Fees</th>
+                    <th className="px-4 py-3 text-left">Per Semester</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y">
+                  {courseFees.specializations?.map((item, i) => (
+                    <tr key={i} className="hover:bg-gray-50">
+                      <td className="px-4 py-3 font-medium">
+                        {item.specialization}
+                      </td>
+                      <td className="px-4 py-3">{item.duration}</td>
+                      <td className="px-4 py-3 font-semibold text-green-700">
+                        {item.totalFee}
+                      </td>
+                      <td className="px-4 py-3">{item.semesterFee}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+
+        {/* Bottom Image */}
+        {courseFees.image && (
+          <div className="mt-6 rounded-2xl overflow-hidden h-48 relative">
+            <Image
+              src={courseFees.image}
+              alt="Financial Aid"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-6 text-center">
+              <p className="text-white font-bold text-lg">
+                Invest in your future with flexible payment plans
+              </p>
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+
 
                 {/* Sample Certificate */}
                 {certifications && (
@@ -866,7 +843,7 @@ const SlugClient = ({ courseData }: SlugClientProps) => {
                             </div>
 
                             <div className="relative group perspective-1000">
-                                <div className="absolute inset-0 bg-purple-100 rounded-2xl transform rotate-3 transition-transform group-hover:rotate-6"></div>
+                               
                                 <div className="relative bg-white rounded-2xl border border-gray-100 p-6 sm:p-8 shadow-xl">
                                     <div className="flex flex-col md:flex-row gap-6 items-center">
                                         <div className="flex-1 space-y-4">
@@ -1178,9 +1155,23 @@ const SlugClient = ({ courseData }: SlugClientProps) => {
                     </section>
                 )}
 
+                
+                        {openModal && (
+                          <ApplyEnquiryModal
+                            open={!!openModal}
+                            onOpenChange={(v) => !v && setOpenModal(null)}
+                            title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
+                            subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
+                            imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/amityForm_xdbvvf.webp"
+                            universityName="Amity University Online"
+                            defaultProgram={about?.title || "MBA"}
+                            formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
+                          />
+                        )}
+
             </main>
 
-            <Footer setOpenModal={setOpenModal} openModal={openModal} />
+            <Footer openModal={openModal} setOpenModal={setOpenModal} />
         </div>
     )
 }

@@ -368,7 +368,7 @@ const [openModal, setOpenModal] = useState<OpenModalState>(null);
 
 
               {/* Enhanced Courses Section */}
-              <ExploreCourses ugCourses={ugCourses} pgCourses={pgCourses} setOpenModal={setOpenModal} openModal={openModal} />
+              <ExploreCourses ugCourses={ugCourses} pgCourses={pgCourses} setOpenModal={setOpenModal}  />
 
               <FeesSMU setOpenModal={setOpenModal}/>
               {/* Modern 360 Advantage */}

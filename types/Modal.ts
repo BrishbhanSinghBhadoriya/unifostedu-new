@@ -1,4 +1,4 @@
 export type OpenModalState = {
-  type: 'apply' | 'enquire';
+  type: 'apply' |  'enquire';
   program?: string;
 } | null;
