@@ -1,12 +1,14 @@
 import React from 'react'
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Button } from '@/components/ui/button';
-import { ArrowRight, BookOpen, Globe, GraduationCap, Star, StarIcon } from 'lucide-react';
-import { Card, CardContent } from "@/components/ui/card";
-import { OpenModalState } from '../../../../types/Modal'
+import { ArrowRight, BookOpen, Globe, GraduationCap, StarIcon } from 'lucide-react';
 
+type OpenModalState = {
+  type: 'apply' | 'enquire';
+  program?: string;
+} | null;
 
-const Feature = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalState) => void; openModal: OpenModalState }) => {
+const Feature = ({ setOpenModal }: { setOpenModal: (state: OpenModalState) => void; openModal?: OpenModalState }) => {
      const features = [
         {
           icon: GraduationCap,
@@ -205,8 +207,8 @@ const Feature = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalS
                               viewport={{ once: true }}
                               whileHover={{ y: -5 }}
                             >
-                              <Card className="h-full hover:shadow-lg transition-all duration-300 border-0 shadow-sm">
-                                <CardContent className="p-4 md:p-6 text-center">
+                              <div className="bg-white rounded-2xl h-full hover:shadow-lg transition-all duration-300 border-0 shadow-sm">
+                                <div className="p-4 md:p-6 text-center">
                                   <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mx-auto mb-1 md:mb-1">
                                     <feature.icon className="w-6 h-6 md:w-8 md:h-8 text-blue-600" />
                                   </div>
@@ -216,8 +218,8 @@ const Feature = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalS
                                   <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
                                     {feature.description}
                                   </p>
-                                </CardContent>
-                              </Card>
+                                </div>
+                              </div>
                             </motion.div>
                           ))}
                         </div>

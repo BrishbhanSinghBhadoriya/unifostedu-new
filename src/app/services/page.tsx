@@ -216,15 +216,15 @@ export default function Services() {
                         </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                           {service.highlights.map((highlight, index) => (
-                            <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow">
-                              <CardContent className="p-4 text-center">
+                            <div key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow">
+                              <div className="p-4 text-center">
                                 <div className={`bg-gradient-to-br ${service.color} w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3`}>
                                   <highlight.icon className="text-white text-xl" />
                                 </div>
                                 <h4 className="font-bold text-[#001e3c] mb-1">{highlight.text}</h4>
                                 <p className="text-sm text-gray-600">{highlight.subtitle}</p>
-                              </CardContent>
-                            </Card>
+                              </div>
+                            </div>
                           ))}
                         </div>
                       </div>
@@ -270,45 +270,45 @@ export default function Services() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center">
-              <CardContent className="p-6">
+            <div className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center">
+              <div className="p-6">
                 <div className="bg-gradient-to-br from-[#00ffe0] to-[#00d4c4] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <FaUsers className="text-3xl text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-[#001e3c] mb-3">Expert Counselors</h3>
                 <p className="text-gray-600">Qualified professionals with years of experience</p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
             
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center">
-              <CardContent className="p-6">
+            <div className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center">
+              <div className="p-6">
                 <div className="bg-gradient-to-br from-[#00ffe0] to-[#00d4c4] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <FaShield className="text-3xl text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-[#001e3c] mb-3">Trusted Partners</h3>
                 <p className="text-gray-600">Only accredited institutions and programs</p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
             
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center">
-              <CardContent className="p-6">
+            <div className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center">
+              <div className="p-6">
                 <div className="bg-gradient-to-br from-[#00ffe0] to-[#00d4c4] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <FaClock className="text-3xl text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-[#001e3c] mb-3">24/7 Support</h3>
                 <p className="text-gray-600">Round-the-clock assistance when you need it</p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
             
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center">
-              <CardContent className="p-6">
+            <div className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center">
+              <div className="p-6">
                 <div className="bg-gradient-to-br from-[#00ffe0] to-[#00d4c4] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <FaAward className="text-3xl text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-[#001e3c] mb-3">Proven Results</h3>
                 <p className="text-gray-600">Thousands of successful student placements</p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>

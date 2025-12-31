@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion, AnimatePresence } from "framer-motion";
-import { FaArrowRight, FaBalanceScale, FaCompass, FaStar, FaCheckCircle } from 'react-icons/fa';
+import { FaArrowRight, FaScaleBalanced, FaCompassDrafting, FaStar, FaCircleCheck } from 'react-icons/fa6';
 import { useRouter } from 'next/navigation';
 import { colleges as staticColleges, slugify, getUniversityHref } from "./landing/data.js";
 import { Badge } from "@/components/ui/badge";
@@ -49,7 +49,7 @@ const CompareOnline = ({ colleges: collegesFromProps, selectedUniversities, togg
           <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row items-center justify-between gap-4 bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-2xl border border-blue-200 shadow-lg">
             <div className="flex items-center gap-4">
               <div className="bg-gradient-to-r from-blue-500 to-indigo-600 p-3 rounded-xl shadow-md text-white">
-                <FaCompass className="text-2xl" />
+                <FaCompassDrafting className="text-2xl" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-[#1a365d]">
@@ -107,7 +107,7 @@ const CompareOnline = ({ colleges: collegesFromProps, selectedUniversities, togg
                   {isSelected && (
                     <div className="absolute top-3 right-3 z-10">
                       <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg">
-                        <FaCheckCircle className="text-sm" />
+                        <FaCircleCheck className="text-sm" />
                       </div>
                     </div>
                   )}
@@ -193,12 +193,12 @@ const CompareOnline = ({ colleges: collegesFromProps, selectedUniversities, togg
                       >
                         {isSelected ? (
                           <>
-                            <FaCheckCircle className="mr-1" />
+                            <FaCircleCheck className="mr-1" />
                             Selected
                           </>
                         ) : (
                           <>
-                            <FaBalanceScale className="mr-1" />
+                            <FaScaleBalanced className="mr-1" />
                             Compare
                           </>
                         )}
