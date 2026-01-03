@@ -23,7 +23,7 @@ declare module 'react-icons/fa6' {
     export const FaStar: IconType;
     export const FaBalanceScaleLeft: IconType;
     export const FaUniversity: IconType;
-    export const FaMapMarkerAlt: IconType;
+    export const FaLocationDot: IconType;
     export const FaXmark : IconType;
     export const FaStar: IconType;
     export const FaBalanceScaleLeft: IconType;
@@ -42,7 +42,7 @@ declare module 'react-icons/fa6' {
     export const FaGlobe: IconType;
     export const FaLightbulb: IconType
     export const FaClock: IconType;
-    export const FaSearch: IconType;
+    export const FaMagnifyingGlass: IconType;
     export const FaCalendarAlt: IconType;
     export const FaBookOpen: IconType;
     export const FaTimes: IconType;
@@ -95,6 +95,21 @@ declare module 'react-icons/fa6' {
     export const FaTools:IconType
     export const FaBullseye:IconType
     export const FaScrewdriverWrench:IconType
+    export const FaBolt:IconType
+    export const FaTrophy:IconType
+    export const FaArrowUp:IconType
+    export const FaArrowDown:IconType
+    export const FaArrowLeft:IconType
+    export const FaArrowRight:IconType
+    export const FaGear:IconType
+    export const FaCircleInfo:IconType
+    export const FaLocationDot:IconType
+    export const FaMapMarkerAlt:IconType
+    export const FaMapPin:IconType
+    export const FaRegEye:IconType
+    export const FaScaleBalanced:IconType
+    export const FaCompassDrafting:IconType
+    
 }
 
 
@@ -167,5 +182,9 @@ declare module 'lucide-react' {
     export const Gift: LucideIcon;
     export const ChevronUp: LucideIcon;
     export const CalendarDays: LucideIcon;
-  
+    export const Send:LucideIcon;
+    export const Handshake:LucideIcon;
+    export const ClipboardList:LucideIcon;
+    export const MonitorCheck:LucideIcon;
+
 }

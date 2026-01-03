@@ -269,7 +269,7 @@ export default async function CoursePage({ params }: { params: { slug: string } 
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <Card className="p-6">
+                <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
                     <FaCircleCheck className="w-5 h-5 text-[#00ffe0] mr-2" />
                     Key Features
@@ -282,9 +282,9 @@ export default async function CoursePage({ params }: { params: { slug: string } 
                       </li>
                     ))}
                   </ul>
-                </Card>
+                </div>
 
-                <Card className="p-6">
+                <div className="p-6">
                   <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
                     <FaBuildingColumns className="w-5 h-5 text-[#00ffe0] mr-2" />
                     Why Choose Online {course.title}?
@@ -307,7 +307,7 @@ export default async function CoursePage({ params }: { params: { slug: string } 
                       <span className="text-gray-700">Placement assistance</span>
                     </li>
                   </ul>
-                </Card>
+                </div>
               </div>
             </div>
           </section>

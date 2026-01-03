@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { FaGraduationCap, FaArrowRight, FaCheckCircle } from 'react-icons/fa';
+import { FaGraduationCap, FaArrowRight, FaCircleCheck } from 'react-icons/fa6';
 import gsap from "gsap";
 
 
@@ -248,7 +248,7 @@ export default function WorkflowRoadmap({ onGetStartedClick }: { onGetStartedCli
                   viewport={{ once: true }}
                   className={`mt-2 sm:mt-3 md:mt-4 ${step.id === 1 || step.id === 3 || step.id === 5 ? '-rotate-180' : ''}`}
                 >
-                  <FaCheckCircle className="text-green-500 text-sm sm:text-base md:text-lg lg:text-xl" />
+                  <FaCircleCheck className="text-green-500 text-sm sm:text-base md:text-lg lg:text-xl" />
                 </MotionDiv>
               </MotionDiv>
             ))}

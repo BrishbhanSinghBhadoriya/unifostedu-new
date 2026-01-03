@@ -1,25 +1,22 @@
 'use client';
 
-import React, { useMemo, useState, useEffect } from 'react';
-import { Suspense } from "react";
+import { Suspense, useEffect, useMemo, useState } from 'react';
 
-import { useSearchParams, useRouter } from 'next/navigation';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import EnquiryForm from '@/components/EnquiryForm';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, } from '@/components/ui/dialog';
-import EnquiryForm from '@/components/EnquiryForm';
-import {
-  FaUniversity,
-  FaMapMarkerAlt,
-  FaStar,
-  FaCalendarAlt,
-  FaMoneyBillWave,
-  FaCheckCircle,
-  FaTimes,
-  FaArrowLeft,
-} from 'react-icons/fa';
 import Image from 'next/image';
+import { useRouter, useSearchParams } from 'next/navigation';
+import {
+  FaArrowLeft,
+  FaCircleCheck,
+  FaLocationDot,
+  FaStar,
+  FaXmark,
+  FaBuilding
+} from 'react-icons/fa6';
 
 interface University {
   key: string;
@@ -535,21 +532,21 @@ function CompareContent() {
           {/* Comparison Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {selectedUniversities.map((u) => (
-              <Card key={u.key} className="border-2 hover:border-[#00ffe0] transition-all">
-                <CardHeader className="pb-0">
+              <div key={u.key} className="border-2 hover:border-[#00ffe0] transition-all">
+                <div className="pb-0">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-[#00ffe0] to-[#00e6cc] flex items-center justify-center">
-                      <FaUniversity className="w-6 h-6 text-[#001e3c]" />
+                      <FaBuilding className="w-6 h-6 text-[#001e3c]" />
                     </div>
                     <div>
-                      <CardTitle className="text-lg">{u.name}</CardTitle>
+                      <div className="text-lg">{u.name}</div>
                       <div className="text-sm text-gray-600 flex items-center gap-2">
-                        <FaMapMarkerAlt className="w-3.5 h-3.5 text-[#00ffe0]" /> {u.location}
+                        <FaLocationDot className="w-3.5 h-3.5 text-[#00ffe0]" /> {u.location}
                       </div>
                     </div>
                   </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
+                </div>
+                <div className="space-y-4">
                  {/* Aligned Parameters */}
                  {/* Parameters Section */}
 <div className="space-y-3 text-sm">
@@ -634,30 +631,30 @@ function CompareContent() {
                   <div className="space-y-2 text-sm">
                     <div className="flex items-center gap-2">
                       {u.placementSupport ? (
-                        <FaCheckCircle className="text-green-500" />
+                        <FaCircleCheck className="text-green-500" />
                       ) : (
-                        <FaTimes className="text-red-500" />
+                        <FaXmark className="text-red-500" />
                       )}
                       <span>Placement Support</span>
                     </div>
                     <div className="flex items-center gap-2">
                       {u.wesApproved ? (
-                        <FaCheckCircle className="text-green-500" />
+                        <FaCircleCheck className="text-green-500" />
                       ) : (
-                        <FaTimes className="text-red-500" />
+                        <FaXmark className="text-red-500" />
                       )}
                       <span>WES Approved</span>
                     </div>
                     <div className="flex items-center gap-2">
                       {u.emiOption ? (
-                        <FaCheckCircle className="text-green-500" />
+                        <FaCircleCheck className="text-green-500" />
                       ) : (
-                        <FaTimes className="text-red-500" />
+                        <FaXmark className="text-red-500" />
                       )}
                       <span>EMI Option</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <FaCheckCircle className="text-green-500" />
+                      <FaCircleCheck className="text-green-500" />
                       <span>Examination Mode: {u.examMode ?? 'Online'}</span>
                     </div>
                   </div>
@@ -683,8 +680,8 @@ function CompareContent() {
                       ))}
                     </ul>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             ))}
           </div>
 

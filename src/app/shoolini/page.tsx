@@ -1459,10 +1459,11 @@ const Shoolini = () => {
     </div>
 
     <p className="text-gray-700 mt-8 text-center leading-relaxed">
-      Students can apply anytime on this <span className="font-semibold"><div className="flex justify-center mt-10">
+      Students can apply anytime on this <span className="font-semibold">
    
-       </div></span> and receive timely updates via <span className="font-semibold">email or SMS</span>.
+       </span> and receive timely updates via <span className="font-semibold">email or SMS</span>.
     </p>
+    <div className="flex justify-center mt-10"></div>
        <Button 
         onClick={() => setOpenModal({ type: 'apply' })}
         className="w-20px bg-red-500 h text-white font-bold px-6 py-3 rounded-full shadow-lg  transform duration-300 cursor-pointer"
