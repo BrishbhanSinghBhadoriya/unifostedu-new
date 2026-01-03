@@ -19,13 +19,13 @@ export default async function sitemap() {
       url: `${baseUrl}/services`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/compare`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/coursesearch`,
@@ -43,7 +43,7 @@ export default async function sitemap() {
       url: `${baseUrl}/bookdemo`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.5,
     },
     {
       url: `${baseUrl}/faqs`,
@@ -55,7 +55,7 @@ export default async function sitemap() {
       url: `${baseUrl}/privacy`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
-      priority: 0.5,
+      priority: 0.4,
     },
   ];
 
@@ -76,8 +76,24 @@ export default async function sitemap() {
     url: `${baseUrl}/courses/${course}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
-    priority: 0.9,
+    priority: 0.8,
   }));
+const amityRoutes = [
+    'mba-online', 
+    'mca-online', 
+    'bba-online', 
+    'bca-online', 
+    'mcom-online', 
+    'bcom-online', 
+    'ma-online', 
+    'ba-online', 
+    'msc-online',
+].map((courseRoute) => ({
+  url: `${baseUrl}/Amity-University-Online${courseRoute}`,
+  lastModified: new Date(),
+  changeFrequency: 'weekly',
+  priority: 0.9,
+}));
 
   // University routes (updated with correct slugs)
   const universityRoutes = [
@@ -85,6 +101,9 @@ export default async function sitemap() {
     'manipal',
     'muj-online-bba',
     'muj-online-bca',
+    'muj-online-ba',
+    'muj-online-mba',
+    'muj-online-mca',
     'mahe-online',
     'lpu-online',
     'ku-online',
@@ -105,7 +124,19 @@ export default async function sitemap() {
     changeFrequency: 'weekly',
     priority: 0.9,
   }));
-
+  const workingProfessional =[
+    'best-online-mba-for-working-professionals-in-india-2025',
+    'best-online-mca-for-working-professionals-in-india',
+    'amity-online-mba',
+    'amity-online-mba-total-fees',
+    'best-online-mca-university-in-india',
+    'top-online-bca-university-in-india',
+  ].map((wx) => ({
+    url: `${baseUrl}/${wx}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.9,
+  }));
   // Blog routes (static blog posts)
   const blogRoutes = [
     'mba-online-vs-distance',
@@ -149,8 +180,10 @@ export default async function sitemap() {
   return [
     ...staticRoutes,
     ...universityRoutes,
+    ...amityRoutes,
     ...courseRoutes,
     ...blogRoutes,
+    ...workingProfessional,
     ...dynamicBlogRoutes,
   ];
 }

@@ -150,13 +150,43 @@ const handleApplyNowClick = () => {
             </Badge>
 
             {/* Heading - Critical for LCP */}
-            <h1
-              className={`${playfair?.className || ''} text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-2 sm:mb-3`}
-            >
-                Amity University Online Degree Programs | Courses, Eligibility & Fees 2026              <span className="block text-transparent bg-clip-text bg-yellow-600">
-                UGC-Entitled NAAC A+ Programs for 2026
-              </span>
-            </h1>
+         <h1
+  className={`${playfair?.className || ""} text-2xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-5xl font-bold text-yellow-600 leading-tight mb-2 sm:mb-3`}
+>
+  Amity University Online
+
+  {/* CIRCLED TEXT */}
+  <div className="relative inline-block my-2 sm:my-3">
+    <span
+      className="
+        relative z-10
+        px-6 py-2
+        text-blue-700
+        text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl
+        font-bold
+      "
+    >
+      Courses, Eligibility And Fees 2026
+    </span>
+
+    {/* Yellow Circle */}
+    <span
+      className="
+        absolute left-1/2 top-1/2
+        -translate-x-1/2 -translate-y-1/2
+        w-[100%] h-[100%]
+        bg-white
+        rounded-full
+        -z-0 border-2 border-yellow-600
+      "
+    ></span>
+  </div>
+
+  <span className="block text-transparent bg-clip-text bg-yellow-600">
+    UGC-Entitled NAAC A+ Programs for 2026
+  </span>
+</h1>
+
 
             {/* Description */}
             <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-4 sm:mb-5 md:mb-6 max-w-2xl leading-relaxed">

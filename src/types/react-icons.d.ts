@@ -183,4 +183,8 @@ declare module 'lucide-react' {
     export const ChevronUp: LucideIcon;
     export const CalendarDays: LucideIcon;
     export const Send:LucideIcon;
+    export const Handshake:LucideIcon;
+    export const ClipboardList:LucideIcon;
+    export const MonitorCheck:LucideIcon;
+
 }

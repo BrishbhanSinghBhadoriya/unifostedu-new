@@ -316,7 +316,7 @@ const Header = () => {
 
   return (
     showHeader && (
-      <header className="w-full font-sans">
+      <header className="w-full font-sans sticky top-0 z-50">
         {/* Tagline Banner - Modern gradient design */}
         <div className="bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 py-3 px-4 text-center border-b border-blue-800/30">
           <p className="text-white text-sm sm:text-base font-medium tracking-wide">
@@ -333,7 +333,7 @@ const Header = () => {
 
         {/* Main Navbar - Clean professional design */}
         <div
-          className={`sticky top-0 z-50 transition-all duration-300 ${
+          className={`transition-all duration-300 ${
             scrolled
               ? "bg-white/85 backdrop-blur-lg shadow-lg"
               : "bg-slate-100/85 backdrop-blur-lg shadow-lg"
