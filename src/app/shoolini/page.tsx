@@ -27,7 +27,7 @@ import {
   FaRupeeSign,
   FaStar,
   FaXmark ,
-  FaUsers,
+  FaUser,
   FaUserTie
 } from "react-icons/fa6";
 
@@ -401,7 +401,7 @@ const WhyChooseShoolini = ({ setOpenModal }: WhyChooseShooliniProps) => {
             <div className="p-6 md:p-8">
               <div className="flex items-center mb-4">
                 <div className="bg-red-100 p-3 rounded-full mr-4">
-                  <FaUsers  className="text-red-600 text-xl" />
+                  <FaUser  className="text-red-600 text-xl" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900">Personalized Student Support</h3>
               </div>

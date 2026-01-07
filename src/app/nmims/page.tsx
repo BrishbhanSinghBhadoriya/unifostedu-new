@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Phone, Mail, MapPin, Star, Users, Award, GraduationCap, Clock, CheckCircle, ArrowRight, Menu, X } from 'lucide-react';
-import { OpenModalState } from 'types/Modal';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import Image from 'next/image';
 import AboutMoreInfo from './_Componets/AboutMoreInfo';
@@ -13,7 +12,16 @@ import MagnifyCareer from './_Componets/MagnifyCareer';
 import FeeNotes from './_Componets/FeeNotes';
 import CareerAccelerationSlider from './_Componets/CareerAccelerationSlider';
 import ExaminationPatternNMIMS from './_Componets/ExaminationPatternNMIMS';
+import CoursesTable from './_Componets/CoursesTable';
+import Link from 'next/link';
+import Header from './_Componets/Header';
+type OpenModalState = {
+  type: "apply" | "enquire";
+  program?: string;
+  source?: string;
+} | null;
 
+  
 const NMIMSLandingPage = () => {
   const [activeTab, setActiveTab] = useState('all');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -179,76 +187,10 @@ const NMIMSLandingPage = () => {
   return (
     <div className="font-sans bg-white">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="w-48 h-24 rounded-full overflow-hidden">
-              <Image
-                src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762329088/nmimslogo_blukfn.jpg"
-                alt="NMIMS Logo"
-                width={400}
-                height={200}
-                className="object-cover"
-              />
-            </div>
-
-          </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6">
-            {navigationLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={(e) => handleScroll(e, link.href)}
-                className="text-gray-700 hover:text-purple-600 transition-colors font-medium cursor-pointer"
-              >
-                {link.name}
-              </a>
-            ))}
-          </nav>
-
-          <div className="flex items-center space-x-4">
-            <a href="tel:+917042646766" className="hidden sm:flex items-center space-x-2 text-purple-600 font-semibold">
-              <Phone size={18} />
-              <span>+91 7042646766</span>
-            </a>
-            <button
-              onClick={() => setOpenModal({ type: 'apply' })}
-              className="bg-white border-2 border-purple-600 text-purple-600 px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all"
-            >
-              Register Now
-            </button>
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden text-gray-700"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-white border-t">
-            <nav className="flex flex-col p-4 space-y-3">
-              {navigationLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={(e) => {
-                    handleScroll(e, link.href);
-                    setIsMenuOpen(false);
-                  }}
-                  className="text-gray-700 hover:text-purple-600 py-2 font-medium"
-                >
-                  {link.name}
-                </a>
-              ))}
-            </nav>
-          </div>
-        )}
-      </header>
+     <Header
+        navigationLinks={navigationLinks}
+        setOpenModal={setOpenModal}
+      />
 
       {/* Hero Slider */}
       <section id="home" className="relative h-[500px] mt-16 overflow-hidden">
@@ -424,7 +366,7 @@ const NMIMSLandingPage = () => {
         </div>
       </section>
       <CareerAccelerationSlider/>
-    <WhoCanApply/>
+    <WhoCanApply setOpenModal={setOpenModal} openModal={openModal}/>
 
       {/* Specializations */}
       <section className="py-16 bg-white">
@@ -506,6 +448,11 @@ const NMIMSLandingPage = () => {
         </div>
       </section>
       <FeeNotes/>
+      <CoursesTable
+  ugCourses={ugCourses}
+  pgCourses={pgCourses}
+  setOpenModal={setOpenModal}
+/>
       {/* Admission Process */}
       <section id="admission" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
@@ -539,6 +486,20 @@ const NMIMSLandingPage = () => {
       </section>
       <CertificatePrograms/>
       <KeyHighlights/>
+     
+    <Link href="/enterprise">
+      <div className="cursor-pointer">
+        <Image
+          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1767597485/nmims_workforse_o2ylmu.png"   
+          alt="Explore Programs"
+          width={1600}
+          height={800}
+          className="rounded-xl hover:opacity-90 transition"
+        />
+      </div>
+    </Link>
+
+
       <ExaminationPatternNMIMS/>
       {/* Accreditation */}
       <section id="accreditation" className="py-20 bg-gradient-to-br from-purple-900 to-purple-700 text-white">
@@ -643,61 +604,94 @@ const NMIMSLandingPage = () => {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-300 py-12">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <h3 className="text-white font-bold text-lg mb-4">NMIMS Global</h3>
-              <p className="text-sm mb-4">
-                UGC Approved & NAAC A++ Accredited Online Education
-              </p>
-              <div className="flex space-x-3">
-                {['📘', '📷', '🐦', '💼'].map((icon, idx) => (
-                  <div key={idx} className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors cursor-pointer">
-                    {icon}
-                  </div>
-                ))}
-              </div>
+  <div className="max-w-7xl mx-auto px-4">
+    <div className="grid md:grid-cols-4 gap-8 mb-8">
+      
+      {/* Column 1 */}
+      <div>
+        <h3 className="text-white font-bold text-lg mb-4">NMIMS Global</h3>
+        <p className="text-sm mb-4">
+          UGC Approved & NAAC A++ Accredited Online Education
+        </p>
+        <div className="flex space-x-3">
+          {['📘', '📷', '🐦', '💼'].map((icon, idx) => (
+            <div
+              key={idx}
+              className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors cursor-pointer"
+            >
+              {icon}
             </div>
+          ))}
+        </div>
+      </div>
 
-            <div>
-              <h4 className="text-white font-bold mb-4">Programs</h4>
-              <ul className="space-y-2 text-sm">
-                {['MBA', 'MBA (WX)', 'BBA', 'B.Com'].map((prog, idx) => (
-                  <li key={idx} className="hover:text-purple-400 cursor-pointer">{prog}</li>
-                ))}
-              </ul>
-            </div>
+      {/* Column 2 - Programs */}
+      <div>
+        <h4 className="text-white font-bold mb-4">Programs</h4>
+        <ul className="space-y-2 text-sm">
+          {['MBA', 'MBA (WX)', 'BBA', 'B.Com'].map((prog, idx) => (
+            <li
+              key={idx}
+              className="hover:text-purple-400 cursor-pointer"
+              onClick={() =>
+                setOpenModal({ type: "apply", source: prog })
+              }
+            >
+              {prog}
+            </li>
+          ))}
+        </ul>
+      </div>
 
-            <div>
-              <h4 className="text-white font-bold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-sm">
-                {['About', 'Courses', 'Admissions', 'FAQ', 'Contact'].map((link, idx) => (
-                  <li key={idx} className="hover:text-purple-400 cursor-pointer">{link}</li>
-                ))}
-              </ul>
-            </div>
+      {/* Column 3 - Quick Links */}
+      <div>
+        <h4 className="text-white font-bold mb-4">Quick Links</h4>
+        <ul className="space-y-2 text-sm">
+          {['About', 'Courses', 'Admissions', 'FAQ', 'Contact'].map(
+            (link, idx) => (
+              <li
+                key={idx}
+                className="hover:text-purple-400 cursor-pointer"
+                onClick={() =>
+                  setOpenModal({ type: "apply", source: link })
+                }
+              >
+                {link}
+              </li>
+            )
+          )}
+        </ul>
+      </div>
 
-            <div>
-              <h4 className="text-white font-bold mb-4">Contact</h4>
-              <div className="space-y-3 text-sm">
-                <div className="flex items-center space-x-2">
-                  <Phone size={16} className="text-purple-400" />
-                  <span>+91 7042646766</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Mail size={16} className="text-purple-400" />
-                  <span>info@unifostedu.com</span>
-                </div>
-              </div>
-            </div>
+      {/* Column 4 - Contact */}
+      <div>
+        <h4 className="text-white font-bold mb-4">Contact</h4>
+        <div className="space-y-3 text-sm">
+          <div className="flex items-center space-x-2">
+            <Phone size={16} className="text-purple-400" />
+            <span>+91 7042646766</span>
           </div>
-
-          <div className="border-t border-gray-800 pt-8 text-center text-sm">
-            <p>&copy; {new Date().getFullYear()} NMIMS Global Online. All rights reserved.</p>
-            <p className="mt-2 text-xs text-gray-500">UGC Entitled | NAAC A++ Accredited</p>
+          <div className="flex items-center space-x-2">
+            <Mail size={16} className="text-purple-400" />
+            <span>info@unifostedu.com</span>
           </div>
         </div>
-      </footer>
+      </div>
+
+    </div>
+
+    {/* Bottom bar */}
+    <div className="border-t border-gray-800 pt-8 text-center text-sm">
+      <p>
+        &copy; {new Date().getFullYear()} NMIMS Global Online. All rights reserved.
+      </p>
+      <p className="mt-2 text-xs text-gray-500">
+        UGC Entitled | NAAC A++ Accredited
+      </p>
+    </div>
+  </div>
+</footer>
+
 
       {/* Modal */}
       {openModal && (

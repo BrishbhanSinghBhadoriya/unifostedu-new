@@ -2,7 +2,7 @@
 import React, { useState,useEffect } from 'react';
 
 import EnquireCard from '@/components/EnquireCard';
-import { FaBookOpen, FaUserTie,FaTimes, FaBriefcase, FaClipboardCheck, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaBookOpen, FaUserTie,FaTimes, FaBriefcase, FaClipboardCheck, FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import Image from 'next/image';
 import Head from 'next/head';
 import HeroSection from '@/components/HeroSection';

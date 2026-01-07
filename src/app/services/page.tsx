@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, FC } from 'react';
-import { FaRocket, FaGraduationCap, FaHouse, FaRoute, FaVideo, FaGlobe, FaClock, FaShield, FaDollarSign, FaCalendarAlt, FaCircleCheck, FaArrowRight, FaStar, FaUsers, FaAward, FaHeadset } from 'react-icons/fa6';
+import { FaRocket, FaGraduationCap, FaHouse, FaRoute, FaVideo, FaGlobe, FaClock, FaShield, FaDollarSign, FaCalendarAlt, FaCircleCheck, FaArrowRight, FaStar, FaUser, FaAward, FaHeadset } from 'react-icons/fa6';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -68,7 +68,7 @@ export default function Services() {
       ],
       highlights: [
         { icon: FaHouse, text: 'Home Comfort', subtitle: 'Learn in your familiar environment' },
-        { icon: FaUsers, text: 'Family Involvement', subtitle: 'Include family in decisions' },
+        { icon: FaUser, text: 'Family Involvement', subtitle: 'Include family in decisions' },
         { icon: FaVideo, text: 'Live Demonstrations', subtitle: 'See platforms in action' },
         { icon: FaHeadset, text: 'Personal Attention', subtitle: 'Undivided counselor focus' }
       ]
@@ -93,7 +93,7 @@ export default function Services() {
         { icon: FaRoute, text: 'Strategic Roadmap', subtitle: 'Clear path to your goals' },
         { icon: FaCircleCheck, text: 'Skill Assessment', subtitle: 'Identify and bridge gaps' },
         { icon: FaStar, text: 'Industry Insights', subtitle: 'Stay ahead of trends' },
-        { icon: FaUsers, text: 'Expert Mentorship', subtitle: 'Guidance from industry professionals' }
+        { icon: FaUser, text: 'Expert Mentorship', subtitle: 'Guidance from industry professionals' }
       ]
     }
   ];
@@ -273,7 +273,7 @@ export default function Services() {
             <div className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center">
               <div className="p-6">
                 <div className="bg-gradient-to-br from-[#00ffe0] to-[#00d4c4] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <FaUsers className="text-3xl text-white" />
+                  <FaUser className="text-3xl text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-[#001e3c] mb-3">Expert Counselors</h3>
                 <p className="text-gray-600">Qualified professionals with years of experience</p>

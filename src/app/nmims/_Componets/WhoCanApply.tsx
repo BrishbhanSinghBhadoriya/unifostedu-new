@@ -6,14 +6,24 @@ import {
   Building2,
   CheckCircle,
 } from "lucide-react";
+import { OpenModalState } from "types/Modal";
 
-const WhoCanApply: React.FC = () => {
+const WhoCanApply= ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalState) => void; openModal: OpenModalState }) => {
   return (
     <section className="w-full py-14 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
 
         {/* Heading */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-4">
+           <div className="flex justify-center mt-2">
+           <button
+          className="bg-white border-2 border-orange-600 text-orange-600 px-10 py-4 rounded-full font-bold text-lg  shadow-xl inline-flex items-center space-x-2"
+          onClick={() => setOpenModal({ type: "apply" })}
+           >
+         <span className="hidden sm:inline">Apply Now</span>
+         <span className="sm:hidden">Apply</span>
+        </button>
+        </div>
           <h2 className="text-3xl md:text-4xl font-bold text-orange-600">
             Who Can Apply?
           </h2>
@@ -112,6 +122,7 @@ const WhoCanApply: React.FC = () => {
               value.
             </p>
           </div>
+         
 
         </div>
       </div>

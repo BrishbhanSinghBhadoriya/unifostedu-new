@@ -18,7 +18,7 @@ import {
   FaBullseye,
   FaLocationDot, 
   FaBuildingColumns,
-  FaUsers,
+  FaUser,
   FaUserTie,
   FaVideo
 } from "react-icons/fa6";
@@ -208,7 +208,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[ 
-              { icon: <FaUsers className="text-3xl text-white" />, number: "5,000+", text: "Students Guided" },
+              { icon: <FaUser className="text-3xl text-white" />, number: "5,000+", text: "Students Guided" },
               { icon: <FaBuildingColumns className="text-3xl text-white" />, number: "25+", text: "Partner Institutions" },
               { icon: <FaLocationDot  className="text-3xl text-white" />, number: "50+", text: "Cities Covered" },
               { icon: <FaHeadset className="text-3xl text-white" />, number: "24/7", text: "Support Available" }

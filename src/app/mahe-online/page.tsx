@@ -1,7 +1,7 @@
 'use client';
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useState, useEffect, use } from 'react';
-import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck, FaStar, FaCertificate, FaBuilding, FaUsers, FaPhone, FaWhatsapp, FaTimes } from "react-icons/fa";
+import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck, FaStar, FaCertificate, FaBuilding, FaUser, FaPhone, FaWhatsapp, FaTimes } from "react-icons/fa";
 import { FaLaptop, FaBook, FaGraduationCap, FaIndustry, FaUserCircle, FaUniversity, FaMoneyBillWave } from "react-icons/fa";
 import EnquireCard from '@/components/EnquireCard';
 import AccreditationSection from '@/components/AccreditationSection';

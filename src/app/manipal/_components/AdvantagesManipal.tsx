@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaBuilding, FaCertificate, FaStar, FaUsers } from 'react-icons/fa'
+import { FaBuilding, FaCertificate, FaStar, FaUser } from 'react-icons/fa'
 
 const AdvantagesManipal = () => {
   return (
@@ -64,7 +64,7 @@ const AdvantagesManipal = () => {
                 <p className="text-gray-600">Access UGC-entitled online degrees that are at par with on-campus degrees and accepted for govt. or corporate jobs and higher education.</p>
               </div>
               <div className="bg-white p-6 rounded-lg border border-gray-200 transition-all transform hover:scale-[1.02]">
-                <FaUsers className="text-green-500 text-3xl mb-4" />
+                <FaUser className="text-green-500 text-3xl mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Experienced Faculty & Mentors</h3>
                 <p className="text-gray-600">Acquire quality education and guidance from esteemed faculty and mentors who share their expertise and practical knowledge.</p>
               </div>

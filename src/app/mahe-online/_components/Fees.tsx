@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaBuilding, FaCertificate, FaStar, FaUsers } from 'react-icons/fa'
+import { FaBuilding, FaCertificate, FaStar, FaUser } from 'react-icons/fa'
 import { OpenModalState } from '../../../../types/Modal'
 const Fees = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalState) => void; openModal: OpenModalState }) => {
 
@@ -86,7 +86,7 @@ const Fees = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalStat
                           <p className="text-gray-600 text-sm sm:text-base md:text-lg">Access UGC-entitled online degrees that are at par with on-campus degrees and accepted for govt. or corporate jobs and higher education.</p>
                         </div>
                         <div className="bg-white p-5 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                          <FaUsers className="text-green-500 text-3xl sm:text-4xl mb-4 sm:mb-6" />
+                          <FaUser className="text-green-500 text-3xl sm:text-4xl mb-4 sm:mb-6" />
                           <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4">Experienced Faculty & Mentors</h3>
                           <p className="text-gray-600 text-sm sm:text-base md:text-lg">Acquire quality education and guidance from esteemed faculty and mentors who share their expertise and practical knowledge.</p>
                         </div>

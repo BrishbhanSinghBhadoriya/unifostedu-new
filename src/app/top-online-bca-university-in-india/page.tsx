@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { GraduationCap, Clock, DollarSign, Target, Briefcase, Code, Globe, Rocket,  CheckCircle, ChevronDown, Menu, X } from 'lucide-react';
 import Image from "next/image";
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
+import { OpenModalState } from 'types/Modal';
 export default function OnlineBCAPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string | null>(null);
- const [openModal, setOpenModal] =
-  useState<{ type: string; program?: string } | null>(null);
+  const [openModal, setOpenModal] = useState<OpenModalState>(null); 
 
 
  useEffect(() => {
@@ -67,9 +67,9 @@ export default function OnlineBCAPage() {
                 </button>
               ))}
               
-            <button onClick={() => setOpenModal(null)}
+            <button onClick={()=> setOpenModal({ type: 'apply' })}
               
-               className="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-purple-700 transition-colors">
+               className="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-purple-700 transition-colors cursor-pointer">
                 Apply Now
               </button>
             </div>
@@ -144,7 +144,7 @@ export default function OnlineBCAPage() {
               { icon: <DollarSign className="w-12 h-12" />, value: '₹30K+', label: 'Starting Salary' },
               { icon: <Clock className="w-12 h-12" />, value: '24/7', label: 'Learning Access' }
             ].map((stat, idx) => (
-              <div key={idx} className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-6 text-center hover:bg-opacity-20 transition-all transform hover:scale-105">
+              <div key={idx} className="bg-white bg-opacity-10 backdrop-blur-lg border border-white/20 shadow-lg rounded-2xl p-6 text-center hover:bg-opacity-20 transition-all transform hover:scale-105">
                 <div className="flex justify-center mb-4">{stat.icon}</div>
                 <div className="text-3xl font-bold mb-2">{stat.value}</div>
                 <div className="text-sm opacity-90">{stat.label}</div>
@@ -701,19 +701,18 @@ export default function OnlineBCAPage() {
           </div>
         </div>
       </footer>
-          {openModal && (
-  <ApplyEnquiryModal
-    open={true}
-    onOpenChange={(v) => {
-      if (!v) setOpenModal(null);
-    }}
-    title="Enquire Now"
-    subtitle="Share your details and our counselor will reach out"
-    defaultProgram="BCA"
-    formType="general"
-    showImage={false}
-  />
-)}
+    {openModal && (
+                 <ApplyEnquiryModal
+                   open={!!openModal}
+                   onOpenChange={(v) => !v && setOpenModal(null)}
+                   title={openModal?.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
+                   subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
+                   imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327859/shoolini_form1_lsfmyo.png"
+                   universityName="Top Online BCA Universities in India"
+                   defaultProgram="BCA"
+                   formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
+                 />
+               )}
 
     </div>
   );

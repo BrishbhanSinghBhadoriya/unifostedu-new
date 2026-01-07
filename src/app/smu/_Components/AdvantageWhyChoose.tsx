@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBuilding, FaCertificate, FaStar, FaUsers } from 'react-icons/fa6';
+import { FaBuilding, FaCertificate, FaStar, FaUser } from 'react-icons/fa6';
 
 type OpenModalState = {
   type: 'apply' | 'enquire';
@@ -229,7 +229,7 @@ const AdvantageWhyChoose: React.FC<IntroducationProps> = ({ setOpenModal }) => {
                         <p className="text-gray-600 text-lg">All online degrees are UGC-entitled and hold the same value as regular on-campus degrees.</p>
                       </div>
                       <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <FaUsers className="text-green-500 text-4xl mb-6" />
+                        <FaUser className="text-green-500 text-4xl mb-6" />
                         <h3 className="text-2xl font-semibold mb-4">Experienced Faculty</h3>
                         <p className="text-gray-600 text-lg">Learn from highly qualified faculty members with extensive academic and industry experience.</p>
                       </div>

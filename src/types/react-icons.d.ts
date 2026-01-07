@@ -13,7 +13,7 @@ declare module 'react-icons/fa6' {
     export const FaBuildingColumns: IconType;
     export const FaUserTie: IconType;
     export const FaLocationDot: IconType;
-    export const FaUsers: IconType;
+    export const FaUser: IconType;
     export const FaPalette: IconType;
     export const FaLaptopCode: IconType;
     export const FaMapMarkert: IconType;
@@ -62,7 +62,7 @@ declare module 'react-icons/fa6' {
     export const FaUserTie:IconType
     export const FaUserFriends:IconType
     export const FaUser:IconType
-    export const FaUsers:IconType
+    export const FaUser:IconType
     export const FaVideo:IconType
     export const FaWallet:IconType
     export const FaXmark:IconType
