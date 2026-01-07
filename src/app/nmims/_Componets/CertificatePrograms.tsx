@@ -11,7 +11,7 @@ import {
 
 const CertificatePrograms: React.FC = () => {
   return (
-    <section className="w-full py-16 bg-gradient-to-br from-blue-50 to-orange-50">
+    <section className="w-full py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
 
         {/* Header */}

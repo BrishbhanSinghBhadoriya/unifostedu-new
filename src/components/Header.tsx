@@ -264,6 +264,8 @@ const Header = () => {
       "/muj-online-ba",
       "/muj-online-mba",
       "/muj-online-mca",
+      "/best-online-mca-for-working-professionals-in-india",
+      "/top-online-bca-university-in-india",
     ];
 
     const shouldHide = hideHeaderRoutes.some(

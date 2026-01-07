@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion, Variants } from "framer-motion";
-import { FaBook, FaBookOpen, FaBriefcase, FaClipboardCheck, FaRobot, FaUniversity, FaUserFriends, FaUserTie } from 'react-icons/fa';
+import { FaBook, FaBookOpen, FaBriefcase, FaClipboardCheck, FaRobot, FaBuilding, FaUsers, FaUserTie } from 'react-icons/fa6';
+
 
 interface ResourcesProps {
   fadeIn?: Variants;
@@ -52,12 +53,12 @@ const Resources: React.FC<ResourcesProps> = ({ fadeIn, staggerChildren }) => {
                       text: "Only online university delivering physical books.",
                     },
                     {
-                      icon: <FaUniversity className="text-2xl" />,
+                      icon: <FaBuilding className="text-2xl" />,
                       title: "Metaverse Campus",
                       text: "Explore campus in metaverse.",
                     },
                     {
-                      icon: <FaUserFriends className="text-2xl" />,
+                      icon: <FaUsers className="text-2xl" />,
                       title: "Offline Experiences",
                       text: "On-campus orientation and peer bonding.",
                     },

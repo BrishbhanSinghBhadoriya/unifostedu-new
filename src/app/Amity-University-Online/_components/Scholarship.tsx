@@ -1,7 +1,6 @@
-import React from 'react'
-import { motion, AnimatePresence } from "framer-motion";
 import { Button } from '@/components/ui/button';
-import { CalendarDays, Clock, GraduationCap } from 'lucide-react';
+import { motion } from "framer-motion";
+import { CalendarDays, GraduationCap } from 'lucide-react';
 import { OpenModalState } from 'types/Modal';
 
 

@@ -2,7 +2,7 @@
 
 const FeeNotes = () => {
   return (
-    <section className="w-full mt-1 bg-gray-50">
+    <section className="w-full mt-6 bg-white ">
       <div className="max-w-5xl mx-auto px-4">
         
        
