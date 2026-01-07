@@ -109,6 +109,7 @@ declare module 'react-icons/fa6' {
     export const FaRegEye:IconType
     export const FaScaleBalanced:IconType
     export const FaCompassDrafting:IconType
+    export const FaUserGroup :IconType
     
 }
 
