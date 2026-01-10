@@ -251,15 +251,15 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle,}:
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 ">
         {filtered.map((university, index) => {
           const hasSubmitted = submittedUniversities.has(university.name);
           
           return (
-            <div key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#00ffe0] bg-white overflow-hidden">
+            <div key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#00ffe0] bg-white overflow-hidden p-5">
               <div className="h-full border-0 shadow-none flex flex-col">
                 <div className="relative">
-                  <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                  <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center p-5">
                     <ImageWithFallback src={university.image} alt={university.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   </div>
                   <Badge className="absolute top-3 left-3 bg-blue-600 text-white border-0">

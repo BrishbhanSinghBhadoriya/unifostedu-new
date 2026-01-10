@@ -8,7 +8,7 @@ import {
   FaCheck,
   FaGraduationCap,
   FaPlay,
-  FaUsers,
+  FaUser,
   
   FaStar,
   FaLocationDot 

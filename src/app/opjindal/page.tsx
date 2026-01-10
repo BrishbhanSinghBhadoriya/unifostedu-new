@@ -27,7 +27,7 @@ import {
   FaRupeeSign,
   FaUniversity,
   FaUserGraduate,
-  FaUsers,
+  FaUser,
   FaUserTie,
   FaRobot
 } from "react-icons/fa";
@@ -585,7 +585,7 @@ const OPJindal: FC = () => {
           </div>
 
           <div className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition">
-            <FaUsers className="text-4xl text-blue-700 mx-auto mb-4" />
+            <FaUser className="text-4xl text-blue-700 mx-auto mb-4" />
             <h3 className="font-semibold text-lg mb-2">Expert Faculty</h3>
             <p className="text-gray-600 text-sm">
               Industry-experienced mentors bridge theory with real-world practice.
@@ -1065,7 +1065,7 @@ const OPJindal: FC = () => {
 
           {/* 8 */}
           <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
-            <FaUsers className="text-blue-700 text-4xl mb-4" />
+            <FaUser className="text-blue-700 text-4xl mb-4" />
             <h3 className="text-xl font-semibold text-blue-800 mb-2">
               Global Networking Opportunities
             </h3>

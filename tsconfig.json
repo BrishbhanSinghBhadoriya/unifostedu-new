@@ -25,6 +25,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    
     "jsx": "react-jsx",
     "types": [],
     "plugins": [
@@ -40,7 +41,7 @@
     "**/*.mts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/smu/layout.jsx", "src/app/layout.jsx"  ],
+, "src/app/smu/layout.jsx", "src/app/layout.jsx", "src/components/ChatBox.jsx"  ],
   "exclude": [
     "node_modules"
   ]

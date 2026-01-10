@@ -8,14 +8,16 @@ import {
   FaBriefcase,
   FaClipboardCheck,
   FaGraduationCap,
-  FaUsers,
+  FaUser,
   FaChalkboardTeacher,
   FaRupeeSign,
+  FaBuilding,
+  FaBook,
 } from "react-icons/fa";
 import { MdSupportAgent } from "react-icons/md";
-import { BiBookContent } from "react-icons/bi";
-import { BsBuildingCheck } from "react-icons/bs";
-import { AiOutlineSchedule } from "react-icons/ai";
+// import { BiBookContent } from "react-icons/bi";
+// import { BsBuildingCheck } from "react-icons/bs";
+// import { AiOutlineSchedule } from "react-icons/ai";
 import Head from 'next/head';
 import Image from 'next/image';
 import * as Tabs from '@radix-ui/react-tabs';
@@ -116,7 +118,7 @@ const KU = () => {
       ]
     },
     {
-      icon: <BsBuildingCheck className="text-blue-600 text-4xl" />,
+      icon: <FaBuilding className="text-blue-600 text-4xl" />,
       title: "NAAC A++ Accredited",
       points: [
         "Highest accreditation grade from NAAC ensuring quality education.",
@@ -132,7 +134,7 @@ const KU = () => {
       ]
     },
     {
-      icon: <AiOutlineSchedule className="text-blue-600 text-4xl" />,
+      icon: <FaBook className="text-blue-600 text-4xl" />,
       title: "Flexible Learning Schedule",
       points: [
         "Study at your own pace with recorded lectures.",
@@ -140,7 +142,7 @@ const KU = () => {
       ]
     },
     {
-      icon: <FaUsers className="text-blue-600 text-4xl" />,
+      icon: <FaUser className="text-blue-600 text-4xl" />,
       title: "Career & Placement Assistance",
       points: [
         "Networking opportunities and career guidance.",
@@ -164,7 +166,7 @@ const KU = () => {
       ]
     },
     {
-      icon: <BiBookContent className="text-blue-600 text-4xl" />,
+      icon: <FaBookOpen className="text-blue-600 text-4xl" />,
       title: "Advanced Learning Management System",
       points: [
         "User-friendly LMS for seamless learning experience.",

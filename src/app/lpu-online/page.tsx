@@ -1,7 +1,7 @@
 'use client';
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useState, useEffect } from 'react';
-import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck, FaStar, FaCertificate, FaBuilding, FaUsers, FaPhone, FaWhatsapp, FaLaptop, FaBook, FaGraduationCap, FaIndustry, FaUserCircle, FaUniversity, FaMoneyBillWave, FaRupeeSign, FaChalkboardTeacher, FaBars, FaTimes } from "react-icons/fa";
+import { FaBookOpen, FaUserTie, FaBriefcase, FaClipboardCheck, FaStar, FaCertificate, FaBuilding, FaUser, FaPhone, FaWhatsapp, FaLaptop, FaBook, FaGraduationCap, FaIndustry, FaUserCircle, FaUniversity, FaMoneyBillWave, FaRupeeSign, FaChalkboardTeacher, FaBars, FaTimes } from "react-icons/fa";
 import EnquireCard from '@/components/EnquireCard';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -14,9 +14,9 @@ import Head from 'next/head';
 import Image from 'next/image';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import { MdSupportAgent } from "react-icons/md";
-import { BiBookContent } from "react-icons/bi";
-import { BsBuildingCheck } from "react-icons/bs";
-import { AiOutlineSchedule } from "react-icons/ai";
+// import { BiBookContent } from "react-icons/bi";
+// import { BsBuildingCheck } from "react-icons/bs";
+// import { AiOutlineSchedule } from "react-icons/ai";
 import { ChevronDown } from "lucide-react";
 import PageContent from "@/components/PageContent/PageContent";
 import { OpenModalState } from '../../../types/Modal';
@@ -646,7 +646,7 @@ const [showEnquiryModal, setShowEnquiryModal] = useState(false);
                     { icon: FaCertificate, title: "UGC & NAAC Recognized", desc: "Globally recognized degrees" },
                     { icon: FaLaptop, title: "Advanced LMS Platform", desc: "Interactive learning system" },
                     { icon: FaIndustry, title: "Industry-Oriented", desc: "Career-focused curriculum" },
-                    { icon: FaUsers, title: "Expert Faculty", desc: "Experienced mentors" },
+                    { icon: FaUser, title: "Expert Faculty", desc: "Experienced mentors" },
                     { icon: FaClipboardCheck, title: "AI Proctored Exams", desc: "Secure online assessments" },
                     { icon: FaBriefcase, title: "Placement Support", desc: "Career assistance" }
                   ].map((feature, index) => (
@@ -1480,7 +1480,7 @@ const [showEnquiryModal, setShowEnquiryModal] = useState(false);
                 <p className="text-gray-600 text-lg">Access UGC-entitled online degrees that are at par with on-campus degrees and accepted for govt. or corporate jobs and higher education.</p>
               </div>
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                <FaUsers className="text-green-500 text-4xl mb-6" />
+                <FaUser className="text-green-500 text-4xl mb-6" />
                 <h3 className="text-2xl font-semibold mb-4">Experienced Faculty & Mentors</h3>
                 <p className="text-gray-600 text-lg">Acquire quality education and guidance from esteemed faculty and mentors who share their expertise and practical knowledge.</p>
               </div>
@@ -2015,7 +2015,7 @@ const [showEnquiryModal, setShowEnquiryModal] = useState(false);
                       <FaWhatsapp className="text-green-400 text-sm sm:text-base" />
                   </div>
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-orange-500 hover:scale-110 transition-all duration-300 cursor-pointer border border-gray-700">
-                      <FaUsers className="text-blue-400 text-sm sm:text-base" />
+                      <FaUser className="text-blue-400 text-sm sm:text-base" />
                 </div>
                   </div>
                 </motion.div>
@@ -2062,7 +2062,7 @@ const [showEnquiryModal, setShowEnquiryModal] = useState(false);
                     { name: 'Scholarships', href: '#Scholarship', icon: FaStar },
                     { name: 'Career Services', href: '#Partners', icon: FaBriefcase },
                     { name: 'About Us', href: '#About', icon: FaUserCircle },
-                    { name: 'FAQs', href: '#Faq', icon: FaUsers }
+                    { name: 'FAQs', href: '#Faq', icon: FaUser }
                   ].map((link, i) => (
                     <div key={i} className="group">
                       <a href={link.href} className="text-gray-400 hover:text-orange-400 transition-all duration-300 flex items-center gap-2 sm:gap-3 group-hover:translate-x-2">

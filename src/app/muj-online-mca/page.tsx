@@ -23,7 +23,7 @@ import {
   FaGraduationCap, FaMoneyBillWave,
   FaPhone,
   FaShield,
-  FaUsers,
+  FaUser,
   FaUserTie
 } from "react-icons/fa6";
 import { X } from "lucide-react";
@@ -188,7 +188,7 @@ const MUJOnlineMCAPage = () => {
       desc: "Weekend live sessions and recorded lectures for flexible learning."
     },
     {
-      icon: FaUsers,
+      icon: FaUser,
       title: "Dedicated Student Support",
       desc: "Academic mentors, career coaches, and a technical help desk."
     }

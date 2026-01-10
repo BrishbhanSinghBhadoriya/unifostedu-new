@@ -118,7 +118,7 @@
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/opjindal_jdl7az.webp",
         "specializations": ["Finance", "Marketing", "Human Resources", "Operations", "International Business", "Business Analytics"],
         "fee": "₹2,00,000 - ₹3,00,000",
-        "duration": "1 Year - 2 Years",
+        "duration": "2 Years",
         "accreditation": "UGC Approved",
         "features": ["Global Perspective", "Industry Partnerships", "Career Services"]
       },
@@ -178,7 +178,7 @@
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgu1_ieijw9.webp",
         "specializations": ["Finance", "Marketing", "Human Resources", "Operations", "Business Analytics", "Information Technology Management", "Helthcare Management", "Agribusiness Management", "International Business"],
         "fee": "₹1,50,000 - 2,40,000",
-        "duration": "2 Years",
+        "duration": "3 Years",
         "accreditation": "UGC Approved",
         "features": ["Quality Education", "Industry Projects", "Career Support"]
       },
@@ -303,7 +303,7 @@
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgu1_ieijw9.webp",
         "specializations": ["Software Engineering & Development", "Data Science & Analytics", "Cyber Security", "Cloud & Devops", "web & App Development", "Blockchain & Emerging Technologies", "Database Management"],
         "fee": "₹1,50,000",
-        "duration": "2 Years",
+        "duration": "3 Years",
         "accreditation": "UGC Approved",
         "features": ["Quality Education", "Industry Projects", "Career Support"]
       },
@@ -327,7 +327,7 @@
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327281/k-uni_xnjbyz.webp",
         "specializations": ["Computer Science", "Data Science", "AI & ML", "Software Engineering"],
         "fee": "₹76,667",
-        "duration": "2 Years",
+        "duration": "3 Years",
         "accreditation": "UGC Approved",
         "features": ["Affordable Education", "Quality Learning", "Career Guidance"]
       },
@@ -1314,4 +1314,3 @@
   
 
   
-

@@ -11,16 +11,15 @@ import "swiper/css/pagination";
 import PageContent from "@/components/PageContent/PageContent";
 import {
   FaGraduationCap,
-  FaUsers,
+  FaUser,
   FaChalkboardTeacher,
   FaRupeeSign,
   FaPhone,
   FaTimes,
+  FaBook,
 } from "react-icons/fa";
 import { MdSupportAgent } from "react-icons/md";
-import { BiBookContent } from "react-icons/bi";
-import { BsBuildingCheck } from "react-icons/bs";
-import { AiOutlineSchedule } from "react-icons/ai";
+
 import { ChevronDown } from "lucide-react";
 import ApplyEnquiryModal from "@/components/ApplyEnquiryModal";
 import Head from "next/head";
@@ -213,7 +212,7 @@ const CuOnline = () => {
       ],
     },
     {
-      icon: <BsBuildingCheck className="text-red-500 text-4xl" />,
+      icon: <FaUser className="text-red-500 text-4xl" />,
       title: "HBPE & KPMG Empowered Courses",
       points: [
         "Backed by prestigious universities and globally renowned courses.",
@@ -229,7 +228,7 @@ const CuOnline = () => {
       ],
     },
     {
-      icon: <AiOutlineSchedule className="text-red-500 text-4xl" />,
+      icon: <FaBook className="text-red-500 text-4xl" />,
       title: "Interactive Industry Expert Sessions",
       points: [
         "Engage in real-time discussions with industry leaders.",
@@ -237,7 +236,7 @@ const CuOnline = () => {
       ],
     },
     {
-      icon: <FaUsers className="text-red-500 text-4xl" />,
+      icon: <FaUser className="text-red-500 text-4xl" />,
       title: "Career & Placement Assistance",
       points: [
         "Networking opportunities, internships & job placements.",
@@ -261,7 +260,7 @@ const CuOnline = () => {
       ],
     },
     {
-      icon: <BiBookContent className="text-red-500 text-4xl" />,
+      icon: <FaBook className="text-red-500 text-4xl" />,
       title: "World Class Learning Management System (LMS)",
       points: [
         "Advanced LMS for seamless learning.",

@@ -7,7 +7,7 @@ import { ChevronDown } from 'lucide-react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { FaAward, FaBars, FaBookOpen, FaBriefcase, FaBuilding, FaCertificate, FaChartLine, FaCircleCheck, FaClock, FaGraduationCap, FaLaptop, FaMoneyBillWave, FaPhone, FaUsers, FaUserTie } from "react-icons/fa6";
+import { FaAward, FaBars, FaBookOpen, FaBriefcase, FaBuilding, FaCertificate, FaChartLine, FaCircleCheck, FaClock, FaGraduationCap, FaLaptop, FaMoneyBillWave, FaPhone, FaUser, FaUserTie } from "react-icons/fa6";
 import { X } from "lucide-react";
 type ModalState = {
   type: 'apply' | 'enquiry';
@@ -160,7 +160,7 @@ const MUJOnlineMBAPage = () => {
       desc: "Weekend live sessions + recorded lectures for flexible learning."
     },
     {
-      icon: FaUsers,
+      icon: FaUser,
       title: "Dedicated Student Support",
       desc: "Academic mentors, career coaches, and technical help desk."
     }

@@ -10,12 +10,12 @@ import {
   FaBolt,
   FaTrophy
 } from 'react-icons/fa6';
-import { IconType } from 'react-icons';
+// import type { IconType } from 'react-icons';
 
 interface DegreeOption {
   id: string;
   label: string;
-  icon: IconType;
+  // icon: IconType;
 }
 
 interface Badge {
