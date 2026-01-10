@@ -45,7 +45,7 @@
         "rating": 4.7,
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327721/nmims_os8kn9.webp",
         "specializations": ["Applied Finance", "Business Administration", "Business Analytics", "Digital Marketing", "Finance", "Marketing", "Operations", "Human Resources"],
-        "fee": "₹1,96,000",
+        "fee": "₹2,20,000",
         "duration": "2 Years",
         "accreditation": "UGC Approved",
         "features": ["Industry Connect", "Placement Assistance", "Quality Education"]
@@ -57,7 +57,7 @@
         "rating": 4.4,
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp",
         "specializations": ["Human Resource Management and Finance, Finance and Marketing, Marketing and Resource Management, Marketing and Business Analytics, Finance and Business Analytics, Human Resource and Business Analytics, Project Management, Retail Management and Quick Commerce, Information Technology Management, Healthcare Management, Supply Chain, Production and Operations Management, Business Intelligence and Analytics, Entrepreneurship and Venture Creation, International Finance, Data Science and Analytics, E-commerce, Artificial Intelligence and Human Resource Management, Digital Marketing, Banking and Finance, Technology Management, General Management, AI-Driven Marketing, AI-Driven Finance, AI-Driven Business Strategy, AI-Driven Human Resource Management,"],
-        "fee": "₹1,96,000 - ₹2,16,000",
+        "fee": "₹1,96,000 - ₹2,50,000",
         "duration": "2 Years",
         "accreditation": "UGC Approved",
         "features": ["Modern Curriculum", "Industry Projects", "Career Support"]
@@ -81,7 +81,7 @@
         "rating": 4.3,
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/upes_uzkkmm.webp",
         "specializations": ["Oil and Gas Management,Power Management,Logistics and Supply Chain Management, Business Analytics,Infrastructure Management,International Business,Marketing Management,Human Resource Management,Operations Management,Financial Management ,Digital Business"],
-        "fee": "₹1,75,000 - ₹2,20,000",
+        "fee": "₹1,90,920 - ₹2,40,000",
         "duration": "2 Years",
         "accreditation": "UGC Approved",
         "features": ["Industry Focused", "Expert Faculty", "Placement Support"]
@@ -128,8 +128,8 @@
         "NIRF": "36",
         "rating": 4.4,
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp",
-        "specializations": ["Finance", "Marketing", "Human Resources", "Information Technology", "Operations Management", "International Business"],
-        "fee": "₹2,00,000 - ₹2,10,000",
+        "specializations": ["Business Analytics with KPMG","Finance", "Marketing", "Human Resources", "Information Technology", "Operations Management", "International Business"],
+        "fee": "₹2,00,000 - ₹2,20,000",
         "duration": "2 Years",
         "accreditation": "UGC Approved",
         "features": ["Modern Curriculum", "Industry Projects", "Placement Assistance"]
@@ -141,8 +141,8 @@
         "rating": 4.2,
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp",
         "specializations": ["Data Science & Analytics", "Finance", "Marketing", "Human Resources Management", "Sales and Marketing", "Healthcare and Hospital Administration"],
-        "fee": "₹1,00,000 - ₹1,60,000",
-        "duration": "3 Years",
+        "fee": "₹1,40,000 - ₹1,96,000",
+        "duration": "2 Years",
         "accreditation": "UGC Approved",
         "features": ["Experienced Faculty", "Industry Exposure", "Career Guidance"]
       },
@@ -189,7 +189,7 @@
         "rating": 4.2,
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp",
         "specializations": ["Marketing", "Digital ","Human Resource","Business Analytics","Finance Management","International Business","Information Technology ","Logistics and Supply Chain Management"],
-        "fee": "₹1,40,000",
+        "fee": "₹98,000",
         "duration": "2 Years",
         "accreditation": "UGC Approved",
         "features": ["Quality Education", "Industry Projects", "Career Support"]
@@ -254,7 +254,7 @@
         "rating": 4.3,
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/upes_uzkkmm.webp",
         "specializations": ["Artificial Intelligence and Machine Learning, Cyber Security and Forensics, Data Science"],
-        "fee": "₹1,70,000",
+        "fee": "₹1,85,448",
         "duration": "2 Years",
         "accreditation": "UGC Approved",
         "features": ["Cyber Security","Data Science", "Blockchain", "AI/ML", "Networking"]
@@ -266,7 +266,7 @@
         "rating": 4.3,
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp",
         "specializations": ["Computer Science", "Data Science", "Software Engineering", "AI & ML","more"],
-        "fee": "₹1,40,000",
+        "fee": "₹1,55,000",
         "duration": "2 Years",
         "accreditation": "UGC Approved",
         "features": ["Quality Education", "Industry Projects", "Career Support"]
@@ -278,7 +278,7 @@
         "rating": 4.4,
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp",
         "specializations": ["DevOps", "Natuaral Language Processing & Large Language Models Development", "Computer Science and IT", "Data Analytics", "Cyber Security","Full Stack Development","Cloud Computing","Data Science","Artificial Intelligence"],
-        "fee": "₹1,60,000",
+        "fee": "₹1,60,000-₹2,00,000",
         "duration": "2 Years",
         "accreditation": "UGC Approved",
         "features": ["Modern Curriculum", "Industry Projects", "Career Services"]
@@ -314,8 +314,8 @@
         "rating": 4.2,
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp",
         "specializations": ["Data Science , Computer Science and Information Technology"],
-        "fee": "₹1,00,000",
-        "duration": "3 Years",
+        "fee": "₹1,20,000",
+        "duration": "2 Years",
         "accreditation": "UGC Approved",
         "features": ["Experienced Faculty", "Industry Exposure", "Career Guidance"]
       },
@@ -350,8 +350,8 @@
         "rating": 4.1,
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp",
         "specializations": ["General"],
-        "fee": "₹1,20,000",
-        "duration": "3 Years",
+        "fee": "₹92,000",
+        "duration": "2 Years",
         "accreditation": "UGC Approved",
         "features": ["Quality Education", "Industry Projects", "Career Support"]
       }
@@ -403,7 +403,7 @@
         "rating": 4.3,
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp",
         "specializations": ["Data Science", "Mathematics"],
-        "fee": "₹1,00,000 - ₹1,46,668",
+        "fee": "₹1,00,000 - ₹1,10,000",
         "duration": "2 Years",
         "accreditation": "UGC Approved",
         "features": ["Quality Education", "Research Projects", "Career Support"]
@@ -510,8 +510,8 @@
         "location": "Greater Noida, Uttar Pradesh",
         "rating": 4.3,
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp",
-        "specializations": ["Public Accounting"],
-        "fee": "₹50,000",
+        "specializations": ["Public Accounting,Accounting and Finance"],
+        "fee": "₹50,000-₹1,40,000",
         "duration": "2 Years",
         "accreditation": "UGC Approved",
         "features": ["Experienced Faculty", "Industry Exposure", "Counselling"]
@@ -582,8 +582,8 @@
         "location": "Mohali, Punjab",
         "rating": 4.2,
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp",
-        "specializations": ["Psychology", "English", "Economics"],
-        "fee": "₹1,00,000",
+        "specializations": ["MA-JMC", "English", "Economics"],
+        "fee": "₹1,00,000-₹1,45,000",
         "duration": "2 Years",
         "accreditation": "UGC Approved",
         "features": ["Quality Education", "Research Projects", "Career Support"]
@@ -708,7 +708,18 @@
         "duration": "2 Years",
         "accreditation": "UGC Approved",
         "features": ["Quality Education", "Industry Projects", "Career Support"]
-      }
+      },
+      {
+              "name": "Chandigarh University",
+              "location": "Mohali, Punjab",
+              "rating": 4.2,
+              "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp",
+              "specializations": ["Journalism and Mass Communication"],
+              "fee": "₹1,45,000",
+              "duration": "2 Years",
+              "accreditation": "UGC Approved",
+              "features": ["Quality Education", "Industry Projects", "Career Support"]
+            }
     ]
   },
 
@@ -782,7 +793,7 @@
           "rating": 4.4,
           "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp",
           "specializations": ["General"],
-          "fee": "₹1,05,000",
+          "fee": "₹1,20,000",
           "duration": "3 Years",
           "accreditation": "UGC Approved",
           "features": ["Quality Education", "Industry Connect", "Career Support"]
@@ -794,7 +805,7 @@
           "rating": 4.7,
           "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327721/nmims_os8kn9.webp",
           "specializations": ["General"],
-          "fee": "₹1,45,000",
+          "fee": "₹1,50,000-₹1,80,000",
           "duration": "3 Years",
           "accreditation": "UGC Approved",
           "features": ["Industry Connect", "Placement Assistance", "Quality Education"]
@@ -818,7 +829,7 @@
           "rating": 4.3,
           "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/upes_uzkkmm.webp",
           "specializations": ["Operations Management, Financial Management, Human Resource Management, Marketing Management, BBA in Digital Business, BBA in Logistics and Supply Chain, BBA in International Business"],
-          "fee": "₹1,50,000",
+          "fee": "₹1,68,786",
           "duration": "3 Years",
           "accreditation": "UGC Approved",
           "features": ["Industry Focused", "Expert Faculty", "Placement Support"]
@@ -828,8 +839,8 @@
           "location": "Mohali, Punjab",
           "rating": 4.3,
           "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp",
-          "specializations": ["Business Management", "Finance", "Marketing", "Human Resources", "International Business"],
-          "fee": "₹1,26,000",
+          "specializations": ["Entrepreneurship","Human Resource Management (HRM)","Marketing","International Business","Family Business","Digital Marketing","Fin-Tech","Retail and E-Commerce","Artificial Intelligence","HealthCare Management","Logistics and Supply Chain Management","Foreign Exchange Management","Travel & Tourism Management","Event Management","Banking and Finance"," Business Analytics with KPMG"],
+          "fee": "₹1,75,000",
           "duration": "3 Years",
           "accreditation": "UGC Approved",
           "features": ["Quality Education", "Industry Projects", "Career Support"]
@@ -913,7 +924,7 @@
           "rating": 4.1,
           "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp",
           "specializations": ["General"],
-          "fee": "₹1,20,000",
+          "fee": "₹96,000",
           "duration": "3 Years",
           "accreditation": "UGC Approved",
           "features": ["Quality Education", "Industry Projects", "Career Support"]
@@ -990,7 +1001,7 @@
           "rating": 4.3,
           "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp",
           "specializations": ["Computer Science and IT, Data Science and Analytics, Cyber Security, Artificial Intelligence, Cloud Computing"],
-          "fee": "₹80K - ₹1.6L",
+          "fee": "₹1,35,000-₹1,65,000",
           "duration": "3 Years",
           "accreditation": "UGC Approved",
           "features": ["Modern Curriculum", "Industry Projects", "Career Services"]
@@ -1028,7 +1039,7 @@
           "rating": 4.2,
           "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/upes_uzkkmm.webp",
           "specializations": ["New Age Technology, Cloud Computing & Cyber Security, Data Analytics"],
-          "fee": "₹1,50,000",
+          "fee": "₹1,68,768",
           "duration": "3 Years",
           "accreditation": "UGC Approved",
           "features": ["Domain Focus", "Industry Connect", "Career Support"]
@@ -1040,7 +1051,7 @@
           "rating": 4.1,
           "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp",
           "specializations": ["General"],
-          "fee": "₹1,05,000",
+          "fee": "₹1,20,000",
           "duration": "3 Years",
           "accreditation": "UGC Approved",
           "features": ["Experienced Faculty", "Industry Exposure", "Career Guidance"]
@@ -1052,7 +1063,7 @@
           "rating": 4.0,
           "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp",
           "specializations": ["General"],
-          "fee": "₹1,20,000",
+          "fee": "₹96,000",
           "duration": "3 Years",
           "accreditation": "UGC Approved",
           "features": ["Quality Education", "Industry Projects", "Career Support"]
@@ -1114,7 +1125,7 @@
         "rating": 4.3,
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp",
         "specializations": ["Online Bachelor of Commerce", "Corporate Accounting"],
-        "fee": "₹1,27,500",
+        "fee": "₹1,20,000-₹2,28,000(ACCA)",
         "duration": "3 Years",
         "accreditation": "UGC Approved",
         "features": ["Modern Curriculum", "Industry Projects", "Career Services"]
@@ -1159,7 +1170,7 @@
         "rating": 4.7,
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327721/nmims_os8kn9.webp",
         "specializations": ["General"],
-        "fee": "₹94,000",
+        "fee": "₹1,08,000",
         "duration": "3 Years",
         "accreditation": "UGC Approved",
         "features": ["Industry Connect", "Placement Assistance", "Quality Education"]
@@ -1250,7 +1261,7 @@
           "rating": 4.0,
           "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp",
           "specializations": ["General"],
-          "fee": "₹72,000",
+          "fee": "₹61,200",
           "duration": "3 Years",
           "accreditation": "UGC Approved",
           "features": ["Quality Education", "Industry Projects", "Career Support"]
@@ -1290,8 +1301,8 @@
               "location": "Mohali, Punjab",
               "rating": 4.2,
               "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp",
-              "specializations": ["Journalism", "Mass Communication", "Digital Media", "Advertising & PR"],
-              "fee": "₹1,66,668",
+              "specializations": ["Journalism and Mass Communication"],
+              "fee": "₹1,75,000",
               "duration": "3 Years",
               "accreditation": "UGC Approved",
               "features": ["Quality Education", "Industry Projects", "Career Support"]

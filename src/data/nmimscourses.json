@@ -1,0 +1,754 @@
+{
+  "university": {
+    "name": "Narsee Monjee Institute of Management Studies",
+    "shortName": "NMIMS",
+    "type": "Deemed-to-be University",
+    "accreditation": {
+      "naac": "A+",
+      "ugc": "Approved",
+      "aiu": "Member"
+    }
+  },
+  
+  "programs": {
+    "bba-online": {
+      "name": "Online BBA",
+      "fullName": "Bachelor of Business Administration",
+      "duration": "3 Years",
+      "mode": "100% Online",
+      "totalFee": "₹1,45,000",
+      
+      "about": {
+        "description": "The Narsee Monjee Institute of Management Studies Online BBA is a well-structured undergraduate program created for students who want to study business administration through flexible online learning. The program allows learners to gain strong business knowledge without attending a physical campus.",
+        "highlights": [
+          "UGC-entitled degree",
+          "Same value as on-campus degree",
+          "Flexible online learning",
+          "Industry-aligned curriculum",
+          "Updated regularly for relevance"
+        ]
+      },
+      
+      "approval": {
+        "ugcDeb": {
+          "status": "Approved",
+          "description": "Approved by University Grants Commission – Distance Education Bureau. Degree is equivalent to a regular BBA."
+        },
+        "naac": {
+          "grade": "A+",
+          "description": "NAAC A+ accredited university ensuring high-quality education"
+        },
+        "degreeRecognition": [
+          "Valid for Government Jobs",
+          "Valid for Private Jobs",
+          "Eligible for MBA/PGDM",
+          "International Recognition"
+        ]
+      },
+      
+      "eligibility": {
+        "qualification": "10+2 from a recognized board",
+        "minimumMarks": "Not specified",
+        "streams": ["Commerce", "Science", "Arts"],
+        "entranceExam": "Not Required",
+        "ageLimit": "No Age Limit",
+        "idealCandidates": [
+          "Students who have completed Class 12",
+          "Learners from Commerce, Science, or Arts backgrounds",
+          "Students planning to pursue MBA after BBA",
+          "Individuals seeking flexible education",
+          "Candidates comfortable with online learning"
+        ],
+        "documentsRequired": [
+          "10th Marksheet",
+          "12th Marksheet",
+          "12th Certificate",
+          "ID Proof (Aadhar/PAN)",
+          "Passport Size Photograph"
+        ]
+      },
+      
+      "specializations": [
+        {
+          "name": "Marketing Management",
+          "description": "Focuses on marketing principles, consumer behavior, branding, sales management, and digital marketing concepts. Helps students understand how businesses promote products and services in competitive markets."
+        },
+        {
+          "name": "Finance Management",
+          "description": "Covers financial accounting, corporate finance, financial planning, and basic investment concepts. Suitable for students interested in finance-related roles."
+        },
+        {
+          "name": "Human Resource Management",
+          "description": "Focuses on recruitment, training, employee management, and organizational behavior. Helps learners understand workforce planning and people management."
+        },
+        {
+          "name": "Operations and Supply Chain Management",
+          "description": "Emphasizes operations planning, logistics, quality management, and process optimization. Supports students aiming to understand business operations."
+        },
+        {
+          "name": "International Business",
+          "description": "Introduces global business practices, international trade, and cross-cultural management. Suitable for students interested in global business environments."
+        }
+      ],
+      
+      "curriculum": {
+        "coreSubjects": [
+          "Principles of Management",
+          "Financial Accounting and Management",
+          "Marketing Management",
+          "Business Economics",
+          "Human Resource Management",
+          "Business Communication",
+          "Operations & Supply Chain Concepts",
+          "Entrepreneurship and Business Strategy"
+        ],
+        "learningApproach": [
+          "Online lectures",
+          "Digital study materials",
+          "Assessments",
+          "Academic resources"
+        ]
+      },
+      
+      "courseFees": {
+        "totalFee": "₹1,45,000",
+        "feeIncludes": [
+          "Access to online learning content",
+          "Academic resources",
+          "Assessments",
+          "Digital learning platform"
+        ]
+      },
+      
+      "certificate": {
+        "degreeAwarded": "Bachelor of Business Administration (BBA)",
+        "issuedBy": "Narsee Monjee Institute of Management Studies",
+        "validity": [
+          "Same academic value as conventional degree",
+          "Valid for higher education",
+          "Valid for employment",
+          "Valid for professional growth"
+        ],
+        "features": [
+          "Certificate mentions program name and institution",
+          "Recognized degree for career growth",
+          "Suitable for MBA and postgraduate programs"
+        ]
+      },
+      
+      "admissionLoan": {
+        "available": true,
+        "description": "Students can explore education loan options through banks and financial institutions as per individual eligibility.",
+        "coverage": [
+          "Full or partial program fees",
+          "Program-related academic expenses"
+        ],
+        "features": [
+          "Flexible repayment options",
+          "Loan tenure as per lender",
+          "Interest rates defined by institution"
+        ],
+        "note": "Institution provides necessary admission documents for loan processing"
+      },
+      
+      "examinationPattern": {
+        "components": [
+          "Online internal assessments (quizzes, assignments, case-based evaluations)",
+          "End-term examinations conducted as per academic calendar",
+          "Subject-wise evaluation aligned with syllabus"
+        ],
+        "weightage": "Distributed between internal and term-end assessments",
+        "platform": "Secure online platform",
+        "features": [
+          "Remote examination",
+          "Academic integrity maintained",
+          "Advance notification of schedules"
+        ]
+      },
+      
+      "faqs": [
+        {
+          "question": "What is the Narsee Monjee Institute of Management Studies Online BBA?",
+          "answer": "It is an undergraduate business administration program offered in online mode, allowing students to study business concepts through flexible digital learning."
+        },
+        {
+          "question": "Who is eligible to apply?",
+          "answer": "Students who have completed 10+2 or equivalent from a recognized board. Students from Commerce, Science, or Arts backgrounds can apply."
+        },
+        {
+          "question": "What is included in the curriculum?",
+          "answer": "Core business subjects such as management principles, marketing, finance, economics, human resources, and business communication."
+        },
+        {
+          "question": "What are the total fees?",
+          "answer": "₹1,45,000 for the complete course."
+        },
+        {
+          "question": "Is the degree recognized?",
+          "answer": "Yes, it follows approved academic guidelines and can be used for higher education and employment."
+        },
+        {
+          "question": "How are examinations conducted?",
+          "answer": "Through an online assessment system including internal assessments and end-term examinations."
+        },
+        {
+          "question": "Can students apply for education loan?",
+          "answer": "Yes, students may apply through banks or financial institutions."
+        },
+        {
+          "question": "Can students pursue higher studies after BBA?",
+          "answer": "Yes, students can apply for MBA or other postgraduate programs."
+        }
+      ]
+    },
+    
+    "bcom-online": {
+      "name": "Online B.Com",
+      "fullName": "Bachelor of Commerce",
+      "duration": "3 Years",
+      "mode": "100% Online",
+      "totalFee": "₹1,45,000",
+      
+      "about": {
+        "description": "The Online BCom program is an ideal choice for students who want to build a strong foundation in commerce through flexible learning. It is designed to meet the needs of students who wish to pursue higher education without attending regular on-campus classes.",
+        "highlights": [
+          "UGC-entitled degree",
+          "NAAC accredited",
+          "Same value as regular degree",
+          "Flexible learning",
+          "Suitable for BCom after 12"
+        ]
+      },
+      
+      "approval": {
+        "ugcDeb": {
+          "status": "Approved",
+          "description": "Follows approved academic guidelines for online education. Structured framework ensuring quality learning, transparent evaluation, and academic credibility."
+        },
+        "naac": {
+          "grade": "A+",
+          "description": "NAAC accredited reflecting commitment to high academic quality and consistent learning outcomes."
+        },
+        "features": [
+          "Approved admission norms",
+          "Structured evaluation systems",
+          "Certification processes",
+          "Secure digital learning platform"
+        ]
+      },
+      
+      "eligibility": {
+        "qualification": "Class 12 or equivalent from recognized board",
+        "streams": ["Commerce", "Other relevant streams"],
+        "ageLimit": "No Age Limit",
+        "idealCandidates": [
+          "Students who have completed Class 12",
+          "Learners planning BCom after 12",
+          "Students interested in accounting, finance, and commerce",
+          "Individuals preferring online mode",
+          "Learners looking for recognized NMIMS degree"
+        ]
+      },
+      
+      "specializations": [
+        {
+          "name": "Accounting and Finance",
+          "description": "Focuses on financial accounting, cost accounting, taxation basics, and financial management. Suitable for careers in accounting and finance."
+        },
+        {
+          "name": "Banking and Financial Services",
+          "description": "Introduces banking operations, financial services, risk management, and regulatory basics. For careers in banking and financial institutions."
+        },
+        {
+          "name": "Business Management",
+          "description": "Focuses on management principles, organizational behavior, and business operations. For broader business understanding."
+        },
+        {
+          "name": "Economics and Analytics",
+          "description": "Covers economic theory, business economics, and basic analytical concepts. Develops analytical and decision-making skills."
+        }
+      ],
+      
+      "curriculum": {
+        "coreSubjects": [
+          "Financial Accounting",
+          "Business Economics",
+          "Business Law",
+          "Corporate Accounting",
+          "Cost and Management Accounting",
+          "Business Communication",
+          "Principles of Management",
+          "Financial Management",
+          "Entrepreneurship and Business Environment"
+        ],
+        "learningMethods": [
+          "Online lectures",
+          "Digital study materials",
+          "Assessments",
+          "Continuous learning support"
+        ]
+      },
+      
+      "courseFees": {
+        "totalFee": "₹1,45,000",
+        "coverage": [
+          "Complete curriculum access",
+          "Digital lecture content",
+          "Assessments",
+          "Academic support services",
+          "Certification upon completion"
+        ]
+      },
+      
+      "certificate": {
+        "degreeAwarded": "Bachelor of Commerce (B.Com)",
+        "issuedBy": "Narsee Monjee Institute of Management Studies",
+        "features": [
+          "Formal degree certificate",
+          "Approved academic framework",
+          "NAAC accredited",
+          "Valid for higher studies",
+          "Valid for employment"
+        ]
+      },
+      
+      "admissionLoan": {
+        "available": true,
+        "description": "Education loan options available through banks and financial institutions",
+        "coverage": [
+          "Course fees",
+          "Academic-related expenses"
+        ],
+        "features": [
+          "Flexible repayment options",
+          "Loan tenure based on lender",
+          "Institution provides required documents"
+        ]
+      },
+      
+      "examinationPattern": {
+        "components": [
+          "Internal assessments (online quizzes, assignments, case-based evaluations)",
+          "End-term examinations as per academic calendar",
+          "Subject-wise evaluation"
+        ],
+        "platform": "Online examination system",
+        "features": [
+          "Remote assessment",
+          "Academic integrity",
+          "Clear instructions and timelines"
+        ]
+      },
+      
+      "faqs": [
+        {
+          "question": "What is the Online BCom program?",
+          "answer": "An undergraduate commerce program for students who want to study accounting, finance, economics, and business subjects through online mode."
+        },
+        {
+          "question": "Who can apply?",
+          "answer": "Students who have completed Class 12 or equivalent from a recognized board. Suitable for planning BCom after 12."
+        },
+        {
+          "question": "Is the degree recognized?",
+          "answer": "Yes, it is NAAC accredited and follows approved academic guidelines, ensuring quality and credibility."
+        },
+        {
+          "question": "What subjects are covered?",
+          "answer": "Financial Accounting, Business Economics, Corporate Accounting, Cost Accounting, Business Law, Management Principles, and Financial Management."
+        },
+        {
+          "question": "How are examinations conducted?",
+          "answer": "Through online system including internal assessments and end-term examinations."
+        },
+        {
+          "question": "What is the benefit of NAAC accreditation?",
+          "answer": "Ensures quality standards in teaching, curriculum, and assessment, adding value to the degree."
+        },
+        {
+          "question": "Can students pursue higher studies?",
+          "answer": "Yes, students can apply for MCom or MBA programs after completion."
+        },
+        {
+          "question": "Is it suitable for flexible learning?",
+          "answer": "Yes, allows students to study from anywhere while following structured schedule."
+        }
+      ]
+    },
+    
+    "mba-wx": {
+      "name": "MBA WX (Working Executives)",
+      "fullName": "Master of Business Administration for Working Executives",
+      "duration": "2 Years",
+      "mode": "Flexible Online/Blended",
+      "totalFee": "₹4,00,000",
+      
+      "about": {
+        "description": "The MBA WX (Working Executives) program is designed for professionals who want to grow in their careers while continuing their jobs. Specially created for individuals with corporate experience who aim to move into managerial and leadership roles without taking a career break.",
+        "highlights": [
+          "For working professionals",
+          "No career break required",
+          "Industry-focused structure",
+          "Real business challenges",
+          "Strategic thinking development",
+          "Leadership development"
+        ]
+      },
+      
+      "approval": {
+        "deemedUniversity": {
+          "status": "Yes",
+          "description": "Deemed-to-be University status gives academic authority to design and deliver advanced management programs."
+        },
+        "ugc": {
+          "status": "Recognized",
+          "description": "UGC recognition confirms degree is valid and accepted for employment, promotions, and further studies."
+        },
+        "naac": {
+          "grade": "Accredited",
+          "description": "Reflects overall quality of education, faculty, infrastructure, governance, and learner support."
+        },
+        "acceptance": "Widely accepted across industries due to NMIMS reputation"
+      },
+      
+      "eligibility": {
+        "idealCandidates": [
+          "Working Professionals in corporate/private/public sector",
+          "Professionals with relevant full-time work experience",
+          "Graduates from any discipline",
+          "Corporate Managers & Team Leads",
+          "Entrepreneurs & Business Owners",
+          "Professionals from any location"
+        ],
+        "workExperience": "Required (relevant full-time experience)",
+        "education": "Bachelor's degree from recognized university",
+        "suitability": [
+          "Mid-level and senior-level executives",
+          "Those seeking career growth and leadership roles",
+          "Team managers and department heads",
+          "Business owners wanting structured management knowledge",
+          "Professionals aiming for promotions"
+        ]
+      },
+      
+      "specializations": [
+        {
+          "name": "MBA WX in Finance",
+          "description": "Focuses on corporate finance, financial strategy, and risk management. Covers investment analysis, financial planning, and business valuation. Suitable for finance, banking, accounting, and consulting roles."
+        },
+        {
+          "name": "MBA WX in Marketing",
+          "description": "Emphasizes strategic marketing, brand management, and customer insights. Covers digital marketing, sales strategy, and market analytics. Ideal for marketing, sales, and business development."
+        },
+        {
+          "name": "MBA WX in Human Resource Management",
+          "description": "Focuses on strategic HR, talent management, and leadership development. Covers organizational behaviour, performance management, and HR analytics. Suitable for HR professionals and people managers."
+        },
+        {
+          "name": "MBA WX in Operations Management",
+          "description": "Covers supply chain strategy, operations planning, and process improvement. Focuses on quality management, logistics, and project management. Ideal for operations, manufacturing, and service industries."
+        },
+        {
+          "name": "MBA WX in Business Analytics",
+          "description": "Emphasizes data-driven decision-making and business intelligence. Covers analytics tools, data interpretation, and predictive analysis. Suitable for analytics, strategy, and consulting."
+        }
+      ],
+      
+      "curriculum": {
+        "coreSubjects": [
+          "Strategic Management",
+          "Financial Management",
+          "Marketing Management",
+          "Operations and Supply Chain Management",
+          "Organizational Behaviour",
+          "Business Economics",
+          "Leadership Decision-Making"
+        ],
+        "additionalComponents": [
+          "Executive case studies",
+          "Projects and assignments",
+          "Real workplace application",
+          "Specialization-based courses"
+        ]
+      },
+      
+      "courseFees": {
+        "totalFee": "₹4,00,000",
+        "includes": [
+          "Tuition charges",
+          "Digital learning resources",
+          "Online academic support",
+          "NMIMS learning platforms access"
+        ],
+        "paymentOptions": [
+          "Installment-based payment available",
+          "Secure online payment methods"
+        ]
+      },
+      
+      "certificate": {
+        "degreeAwarded": "MBA degree from NMIMS",
+        "features": [
+          "Same academic value as other MBA degrees",
+          "Does NOT mention mode of study",
+          "No 'online' or 'executive' mentioned",
+          "Equal recognition across industries",
+          "Specialization clearly mentioned"
+        ],
+        "validity": [
+          "Career advancement",
+          "Leadership roles",
+          "Promotions",
+          "Senior management opportunities",
+          "Widely accepted in private, public, and multinational organizations"
+        ]
+      },
+      
+      "admissionLoan": {
+        "available": true,
+        "description": "NMIMS provides guidance and assistance for education loans to support learners financially.",
+        "coverage": [
+          "Total program fee of ₹4,00,000",
+          "Academic expenses related to course"
+        ],
+        "features": [
+          "Flexible repayment options",
+          "Repayment after course completion or as per terms",
+          "Required documents provided by NMIMS",
+          "Apply through banks and financial institutions"
+        ]
+      },
+      
+      "examinationPattern": {
+        "components": [
+          "Continuous assessment (assignments, quizzes, case studies, project work)",
+          "End-term examinations as per NMIMS guidelines"
+        ],
+        "assessmentTypes": [
+          "Multiple-choice questions",
+          "Short answers",
+          "Case-based questions"
+        ],
+        "grading": "Combination of continuous assessment and end-term exam performance"
+      },
+      
+      "faqs": [
+        {
+          "question": "What is MBA WX?",
+          "answer": "Master of Business Administration for Working Executives - a management program for professionals who want to upgrade skills without leaving jobs."
+        },
+        {
+          "question": "Who offers the program?",
+          "answer": "Narsee Monjee Institute of Management Studies (NMIMS), a well-recognized institution in management education."
+        },
+        {
+          "question": "Is the degree valid and recognized?",
+          "answer": "Yes, it holds strong acceptance in corporate sector and is suitable for career growth and leadership roles."
+        },
+        {
+          "question": "Can working professionals pursue without quitting job?",
+          "answer": "Yes, the program is designed for working executives with flexible structure to balance work and studies."
+        },
+        {
+          "question": "Is MBA WX available in Pune?",
+          "answer": "Yes, professionals can pursue without relocation due to flexible learning model."
+        },
+        {
+          "question": "What is the total fee?",
+          "answer": "₹4,00,000 for the complete program."
+        },
+        {
+          "question": "Is it suitable for career growth?",
+          "answer": "Yes, considered one of the best MBA WX for working professionals in India for moving into senior positions."
+        }
+      ]
+    },
+    
+    "mba-online": {
+      "name": "Online MBA",
+      "fullName": "Master of Business Administration (Online)",
+      "duration": "2 Years",
+      "mode": "100% Online",
+      "totalFee": "₹1,44,000",
+      
+      "about": {
+        "description": "The online MBA program is designed for learners who want a flexible and career-focused management degree from a reputed institution. Ideal for working professionals, fresh graduates, and entrepreneurs who wish to upgrade skills without leaving jobs or relocating.",
+        "highlights": [
+          "Strong academic framework",
+          "Industry-relevant curriculum",
+          "Leadership, analytical, and strategic skills",
+          "Same quality as on-campus programs",
+          "Nationwide recognition",
+          "Professional credibility"
+        ]
+      },
+      
+      "approval": {
+        "deemedUniversity": "Yes - Recognized Deemed-to-be University",
+        "ugc": {
+          "status": "Approved",
+          "description": "UGC approval ensures program validity, recognition, and acceptance for employment, higher education, and competitive examinations."
+        },
+        "naac": {
+          "status": "Accredited",
+          "description": "Reflects institution's commitment to quality education, curriculum quality, teaching methodology, and learner support."
+        },
+        "aiu": {
+          "status": "Recognized",
+          "description": "Ensures equivalence of degrees across Indian universities for higher education and government jobs."
+        },
+        "compliance": "Complies with latest UGC guidelines for online and distance learning"
+      },
+      
+      "eligibility": {
+        "education": "Bachelor's degree from recognized university",
+        "streams": ["Commerce", "Science", "Arts", "Engineering", "Any other"],
+        "idealCandidates": [
+          "Graduates from any discipline",
+          "Working professionals in private/public/government organizations",
+          "Fresh graduates wanting strong career foundation",
+          "Entrepreneurs & Business Owners",
+          "Career switchers & aspiring managers"
+        ],
+        "workExperience": "Not mandatory",
+        "location": "Available from any city in India"
+      },
+      
+      "specializations": [
+        {
+          "name": "MBA in Finance",
+          "description": "Corporate finance, financial management, and investment analysis. Risk management, banking concepts, and strategic financial planning. Suitable for finance, accounting, banking, and consulting careers."
+        },
+        {
+          "name": "Online MBA in Marketing",
+          "description": "Consumer behavior, brand management, and sales strategy. Digital marketing, social media marketing, and market research. Ideal for marketing, advertising, business development, and sales roles."
+        },
+        {
+          "name": "Online MBA HR NMIMS (Human Resource Management)",
+          "description": "Talent acquisition, employee engagement, and performance management. Training & development, organizational behavior, and HR analytics. Suitable for HR managers, recruiters, and people operations."
+        },
+        {
+          "name": "MBA Data Analytics Online",
+          "description": "Business analytics, data interpretation, and decision-making tools. Business intelligence, predictive analytics, and data-driven strategies. Ideal for analytics, consulting, operations, and management roles."
+        },
+        {
+          "name": "Online MBA in Operations Management",
+          "description": "Supply chain management, logistics, and operations planning. Quality management, process optimization, and productivity improvement. Suitable for manufacturing, services, and operations leadership."
+        }
+      ],
+      
+      "curriculum": {
+        "coreSubjects": [
+          "Principles of Management",
+          "Organizational Behaviour",
+          "Marketing Management",
+          "Financial Management",
+          "Operations Management",
+          "Business Economics",
+          "Strategic Management",
+          "Business Ethics & Corporate Governance"
+        ],
+        "specializationSubjects": "Advanced subjects based on chosen specialization",
+        "learningMethodology": [
+          "Live online lectures by experienced faculty",
+          "Recorded sessions for flexible learning",
+          "Digital study material and e-books",
+          "Assignments, case studies, and projects",
+          "Online examinations and continuous evaluation"
+        ]
+      },
+      
+      "courseFees": {
+        "totalFee": "₹1,44,000",
+        "includes": [
+          "Tuition fees",
+          "Digital learning resources",
+          "Online lectures and assessments",
+          "NMIMS learning management system access"
+        ],
+        "paymentOptions": [
+          "Pay in installments",
+          "Easy online payment methods"
+        ],
+        "note": "Fees are indicative and subject to change as per university guidelines"
+      },
+      
+      "certificate": {
+        "degreeAwarded": "MBA degree from Narsee Monjee Institute of Management Studies",
+        "features": [
+          "Recognized and respected certification",
+          "Equivalent to on-campus MBA",
+          "Mode of study (online) NOT mentioned on certificate",
+          "Full academic and professional recognition"
+        ],
+        "validity": [
+          "Accepted by corporate employers, MNCs, and startups",
+          "Valid for government and private sector jobs",
+          "Eligible for higher education and professional growth"
+        ],
+        "specializationMention": "Certificate clearly reflects chosen specialization"
+      },
+      
+      "admissionLoan": {
+        "available": true,
+        "description": "Education loans available for eligible students to manage finances easily",
+        "coverage": [
+          "Tuition fees",
+          "Academic expenses related to program"
+        ],
+        "features": [
+          "Flexible repayment options based on lender policies",
+          "Repayment generally starts after course completion",
+          "Reduces upfront financial burden",
+          "Easy documentation process"
+        ],
+        "support": "NMIMS provides necessary support documents for loan application"
+      },
+      
+      "examinationPattern": {
+        "components": [
+          "Continuous Assessment (assignments, quizzes, case studies, projects)",
+          "End-Term Examinations (online, as per guidelines)"
+        ],
+        "format": [
+          "Multiple-choice questions (MCQs)",
+          "Short and descriptive answers",
+          "Case-based or application-oriented questions"
+        ],
+        "grading": [
+          "Structured grading system",
+          "Based on continuous assessment + end-term performance",
+          "Minimum passing criteria in each subject"
+        ],
+        "platform": "Secure digital platform, time-bound exams"
+      },
+      
+      "faqs": [
+        {
+          "question": "Is the NMIMS online MBA degree valid and recognized?",
+          "answer": "Yes, fully valid and recognized. Holds same value as on-campus MBA. Accepted by employers, universities, and institutions across India."
+        },
+        {
+          "question": "Who should choose the online MBA at NMIMS?",
+          "answer": "Working professionals wanting career growth, fresh graduates improving employability, entrepreneurs seeking management skills, and learners wanting flexibility."
+        },
+        {
+          "question": "Can I pursue from any city?",
+          "answer": "Yes, 100% online program. Suitable for students in Mumbai, Pune, or any other city. No relocation required."
+        },
+        {
+          "question": "What specializations are available?",
+          "answer": "MBA in Finance, Online MBA in Marketing, Online MBA HR NMIMS, MBA Data Analytics Online, Online MBA in Operations Management."
+        },
+        {
+          "question": "Does NMIMS provide placement assistance?",
+          "answer": "Yes, includes career guidance, skill development support, and industry exposure. Outcomes depend on experience and specialization."
+        },
+        {
+          "question": "Are exams conducted online?",
+          "answer": "Yes, all examinations online including continuous assessments and end-term exams through secure platform."
+        }
+      ]
+    }
+  }
+}

@@ -327,7 +327,7 @@ const Scholarship = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenMo
                           </motion.p>
         
                           {/* Session Cards */}
-                          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {/* Card 1 */}
                             <motion.div
                               initial={{ opacity: 0, y: 20 }}

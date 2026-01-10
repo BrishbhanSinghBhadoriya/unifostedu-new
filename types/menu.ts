@@ -1,1 +1,1 @@
-export type MenuKey = 'blogs' | 'careers' |'explore'| 'courses' | null;
+export type MenuKey = 'blogs' | 'careers' |'explore'| 'courses' |'string'|null;
