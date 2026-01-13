@@ -37,14 +37,14 @@ export const metadata = {
 
   metadataBase: new URL("https://unifostedu.com"),
   alternates: {
-    canonical: "https://unifostedu.com/nmims"
+    canonical: "https://unifostedu.com/nmims{courseSlug}"
   },
 
   openGraph: {
     title: "NMIMS Online | NAAC A++ Accredited Online Degrees",
     description:
       "Study UGC-approved online UG & PG programs from NMIMS Online with flexible schedules, industry-aligned curriculum, and career support.",
-    url: "https://unifostedu.com/nmims",
+    url: "https://unifostedu.com/nmims/{courseSlug}",
     siteName: "UNIFOST",
     images: [
       {
@@ -94,7 +94,7 @@ const organizationSchema = {
   "@type": "EducationalOrganization",
   name: "NMIMS Online",
   alternateName: "SVKM's NMIMS Online",
-  url: "https://unifostedu.com/nmims",
+  url: "https://unifostedu.com/nmims/{courseSlug}",
   logo: "https://unifostedu.com/nmims.svg",
   contactPoint: {
     "@type": "ContactPoint",
