@@ -8,9 +8,9 @@ import {
 } from "@/lib/blogApi";
 import SharePanel from "@/components/blog/SharePanel";
 type BlogPageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 const FALLBACK_BLOG_IMAGE =
@@ -25,14 +25,14 @@ export async function generateStaticParams() {
     return blogs
       .map((blog: any) => blog.slug)
       .filter(Boolean)
-      .map((slug: string) => ({ slug: slug.toString()}));
+      .map((slug: string) => ({ slug: slug.toString() }));
   } catch {
     return [];
   }
 }
 
 export async function generateMetadata({ params }: BlogPageProps) {
-  const { slug } = params;
+  const { slug } = await params;
 
   try {
     const blog = await fetchBlogBySlug(slug);
@@ -133,7 +133,7 @@ function stripHtml(html = "") {
 }
 
 function decodeHtmlEntities(text = "") {
-  const entities : Record<string, string> = {
+  const entities: Record<string, string> = {
     "&nbsp;": " ",
     "&amp;": "&",
     "&lt;": "<",
@@ -168,7 +168,7 @@ function calculateReadingTime(text = "") {
 }
 
 export default async function BlogPage({ params }: BlogPageProps) {
-  const { slug } = params;
+  const { slug } = await params;
   const blog = await fetchBlogBySlug(slug);
 
   if (!blog) {
@@ -183,7 +183,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-16 md:py-20">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <article className="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
           <div className="relative h-56 sm:h-72 md:h-96 w-full">
             <Image
