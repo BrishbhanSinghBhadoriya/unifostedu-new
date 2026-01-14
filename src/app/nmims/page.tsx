@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
+import { useRouter } from "next/navigation";
 import { ChevronDown, Phone, Mail, MapPin, Star, Users, Award, GraduationCap, Clock, CheckCircle, ArrowRight, Menu, X } from 'lucide-react';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import Image from 'next/image';
@@ -21,6 +22,10 @@ type OpenModalState = {
   source?: string;
 } | null;
 
+type Program = {
+  name: string;
+  path: string;
+};
   
 const NMIMSLandingPage = () => {
   const [activeTab, setActiveTab] = useState('all');
@@ -28,14 +33,14 @@ const NMIMSLandingPage = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [openModal, setOpenModal] = useState<OpenModalState | null>(null);
-
-  // Auto-open modal after 3 seconds
+    const router = useRouter();
+  
   useEffect(() => {
     const timer = setTimeout(() => setOpenModal({ type: 'enquire' }), 3000);
     return () => clearTimeout(timer);
   }, []);
 
-  // Image slider auto-play
+  
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
@@ -66,7 +71,13 @@ const NMIMSLandingPage = () => {
     { name: 'Accreditation', href: '#accreditation' },
     { name: 'FAQ', href: '#faq' }
   ];
-
+ const programs: Program[] = [
+    { name: "MBA", path: "/nmims/mba-online" },
+    { name: "MBA (WX)", path: "/nmims/mba-wx" },
+    { name: "BBA", path: "/nmims/bba-online" },
+    { name: "B.Com", path: "/nmims/bcom-online" },
+    
+  ];
   const ugCourses = [
     {
       name: 'Bachelor of Business Administration (BBA)',
@@ -626,22 +637,20 @@ const NMIMSLandingPage = () => {
       </div>
 
       {/* Column 2 - Programs */}
-      <div>
-        <h4 className="text-white font-bold mb-4">Programs</h4>
-        <ul className="space-y-2 text-sm">
-          {['MBA', 'MBA (WX)', 'BBA', 'B.Com'].map((prog, idx) => (
-            <li
-              key={idx}
-              className="hover:text-purple-400 cursor-pointer"
-              onClick={() =>
-                setOpenModal({ type: "apply", source: prog })
-              }
-            >
-              {prog}
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div>
+      <h4 className="text-white font-bold mb-4">Programs</h4>
+      <ul className="space-y-2 text-sm">
+        {programs.map((prog, idx) => (
+          <li
+            key={idx}
+            className="hover:text-purple-400 cursor-pointer"
+            onClick={() => router.push(prog.path)}
+          >
+            {prog.name}
+          </li>
+        ))}
+      </ul>
+    </div>
 
       {/* Column 3 - Quick Links */}
       <div>

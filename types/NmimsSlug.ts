@@ -1,11 +1,18 @@
-
 export interface Specialization {
   name: string;
   description: string;
   fee?: string;
-}
+  image?: string;
+  highlights?:string[]
 
+  suitability?:string
+}
+export interface CourseData {
+   title?: string;
+  image?: string;
+}
 export interface Eligibility {
+  description: string;
   qualification?: string;
   minimumMarks?: string;
   streams?: string[];
@@ -17,6 +24,33 @@ export interface Eligibility {
   education?: string;
   suitability?: string[];
 }
+// ===== Fee Policy Interfaces =====
+export interface FeeNotes {
+  noteText: string;
+  fullFee: string;
+  points: string[];
+}
+
+export interface FeeScholarshipPolicy {
+  title: string;
+  description: string;
+}
+
+export interface FeeCancellationPolicy {
+  title: string;
+  description: string;
+}
+
+export interface FeePolicy {
+  notes: FeeNotes;
+  scholarship: FeeScholarshipPolicy;
+  cancellation: FeeCancellationPolicy;
+}
+
+export interface SemesterCurriculum {
+  semester: string;
+  subjects: string[];
+}
 
 export interface Curriculum {
   coreSubjects?: string[];
@@ -26,8 +60,17 @@ export interface Curriculum {
   [key: string]: any;
 }
 
+export interface FeeStructure {
+  type: string;
+  amount: string;
+  description: string;
+}
+
 export interface CourseFees {
-  totalFee: string;
+  totalFee?:string;
+  total?: string;
+  annual?:string;
+  semester?:string;
   feeIncludes?: string[];
   coverage?: string[];
   includes?: string[];
@@ -47,6 +90,7 @@ export interface AdmissionLoan {
   coverage?: string[];
   features?: string[];
   note?: string;
+  support?: string;
 }
 
 export interface ExaminationPattern {
@@ -56,6 +100,7 @@ export interface ExaminationPattern {
   weightage?: string;
   assessmentTypes?: string[];
   grading?: string | string[];
+  format?: string[];
 }
 
 export interface FAQ {
@@ -64,7 +109,7 @@ export interface FAQ {
 }
 
 export interface About {
-  description: string;
+  description?: string;
   highlights?: string[];
   heroImage?: string; 
   title?: string;     
@@ -80,7 +125,7 @@ export interface ApprovalData {
 export interface Approval {
   ugcDeb?: ApprovalData;
   naac?: ApprovalData;
-  deemedUniversity?: ApprovalData;
+  deemedUniversity?: ApprovalData | string;
   ugc?: ApprovalData;
   aicte?: ApprovalData;
   nirf?: ApprovalData;
@@ -90,6 +135,8 @@ export interface Approval {
   degreeRecognition?: string[];
   acceptance?: string;
   features?: string[];
+  compliance?: string;
+  aiu?: ApprovalData;
   [key: string]: any;
 }
 
@@ -99,28 +146,24 @@ export interface Scholarship {
 }
 
 export interface Program {
+  slug: string;
   name: string;
-  fullName: string;
-  duration: string;
-  mode: string;
-  totalFee: string;
-  about: About;
-  approval?: Approval;
-  eligibility?: Eligibility;
+  fullName?: string;
+  image?: string;
+  duration?: string;
+  samesters?: string[];
+  mode?: string;
+  totalFee?: string;
+  about?: About | string;
+  approval?: Approval | string;
+  eligibility?: Eligibility | string;
   specializations?: Specialization[];
-  curriculum?: Curriculum;
+  curriculum?: Curriculum | SemesterCurriculum[];
   courseFees?: CourseFees;
-  certificate?: Certificate;
-  admissionLoan?: AdmissionLoan;
-  examinationPattern?: ExaminationPattern;
-  faqs: FAQ[];
+  faqs?: FAQ[];
   scholarship?: Scholarship;
-  
-  // Optional fields for UI
-  placementPartners?: any[];
-  studentReview?: any[];
-  faqImage?: string;
-  specializationImage?: string;
+  [key: string]: any;
+   feePolicy?: FeePolicy;
 }
 
 export type Programs = {

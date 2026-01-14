@@ -187,5 +187,8 @@ declare module 'lucide-react' {
     export const Handshake:LucideIcon;
     export const ClipboardList:LucideIcon;
     export const MonitorCheck:LucideIcon;
+    export const ChevronLeft:LucideIcon;
+    export const ChevronRight:LucideIcon;
+    export const PlayCircle:LucideIcon;
 
 }

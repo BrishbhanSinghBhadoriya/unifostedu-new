@@ -4,17 +4,12 @@ import { Dispatch, SetStateAction, useState } from 'react';
 import Image from 'next/image';
 import { Phone, Menu, X } from 'lucide-react';
 import { OpenModalState } from 'types/Modal';
-
-export type NavLink = {
-  name: string;
-  href: string;
-};
-
-
+import { NavLink } from "types/navigation";
 
 type HeaderProps = {
   navigationLinks: NavLink[];
-  setOpenModal: Dispatch<SetStateAction<OpenModalState>>;
+  
+  setOpenModal: Dispatch<SetStateAction<OpenModalState | null>>;
 };
 
 
@@ -35,7 +30,7 @@ const Header = ({ navigationLinks, setOpenModal }: HeaderProps) => {
       {/* Desktop */}
       <div className="hidden md:flex max-w-7xl mx-auto px-4 py-4 items-center justify-between">
         <Image
-          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762329088/nmimslogo_blukfn.jpg"
+          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1768213881/nmimslogo_qkyd09.png"
           alt="NMIMS Logo"
           width={160}
           height={80}

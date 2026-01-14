@@ -12,53 +12,22 @@
   
   "programs": {
     "bba-online": {
-      "name": "Online BBA",
-      "fullName": "Bachelor of Business Administration",
-      "duration": "3 Years",
-      "mode": "100% Online",
-      "totalFee": "₹1,45,000",
+    "slug": "bba-online",
+    "name": "Online BBA",
+    "fullName": "Bachelor of Business Administration",
+    "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
+
+    "duration": "3 Years",
+    "samesters": "6",
+    "mode": "100% Online",
+    "totalFee": "₹1,45,000",
       
-      "about": {
-        "description": "The Narsee Monjee Institute of Management Studies Online BBA is a well-structured undergraduate program created for students who want to study business administration through flexible online learning. The program allows learners to gain strong business knowledge without attending a physical campus.",
-        "highlights": [
-          "UGC-entitled degree",
-          "Same value as on-campus degree",
-          "Flexible online learning",
-          "Industry-aligned curriculum",
-          "Updated regularly for relevance"
-        ]
-      },
+      "about": "The Narsee Monjee Institute of Management Studies Online BBA is a well-structured undergraduate program created for students who want to study business administration through flexible online learning. The Narsee Monjee Institute of Management Studies Online BBA allows learners to gain strong business knowledge without attending a physical campus. With the increasing demand for Online BBA programs, the Narsee Monjee Institute of Management Studies Online BBA stands out as a trusted option for quality education. Many students today prefer an Online BBA because it offers flexibility, affordability, and career-focused learning. The Narsee Monjee Institute of Management Studies Online BBA is designed to meet these expectations while maintaining academic excellence. Students choosing the Narsee Monjee Institute of Management Studies Online BBA benefit from a curriculum that focuses on real-world business concepts. The Narsee Monjee Institute of Management Studies Online BBA curriculum includes subjects that help learners understand management, finance, marketing, economics, and communication skills. The Narsee Monjee Institute of Management Studies Online BBA curriculum is updated regularly so that students gain relevant and industry-aligned knowledge. Through the Online BBA, learners develop analytical thinking, leadership skills, and a strong understanding of how businesses operate in today’s competitive environment.The Narsee Monjee Institute of Management Studies BBA eligibility criteria are simple and inclusive. Students who have completed their 10+2 education from a recognized board can apply, making the Narsee Monjee Institute of Management Studies BBA eligibility suitable for learners from different academic backgrounds. The flexible Narsee Monjee Institute of Management Studies BBA eligibility ensures that more students can access the Online BBA and begin their journey in business education without unnecessary barriers. This makes the Narsee Monjee Institute of Management Studies Online BBA a popular choice among fresh students as well as those planning their careers early.One of the key advantages of pursuing an Online BBA is affordability, and the Online BBA fees at NMIMS are structured to provide value for money. The Online BBA fees are designed to be more affordable compared to traditional on-campus programs, while still delivering high-quality education. Transparent Online BBA fees help students plan their finances with confidence. Many learners choose the Online BBA because the Online BBA fees combined with flexible learning make higher education more accessible. The Online BBA NMIMS degree carries strong recognition and credibility. Students enrolling in the Online BBA NMIMS program gain the advantage of studying under a reputed institution known for academic excellence. The Online BBA NMIMS program supports students through digital learning platforms, recorded lectures, and academic assistance. Completing the Narsee Monjee Institute of Management Studies Online BBA helps students build a solid academic profile that can support career growth or further studies.The Narsee Monjee Institute of Management Studies Online BBA curriculum focuses on developing practical business skills along with theoretical knowledge. This ensures that students completing the Online BBA are prepared for entry-level roles in management, marketing, finance, and operations. The Narsee Monjee Institute of Management Studies Online BBA curriculum also helps learners improve communication skills and business decision-making abilities. As industries evolve, the Online BBA remains relevant by aligning learning outcomes with current market needs.Overall, the Narsee Monjee Institute of Management Studies Online BBA offers a balanced learning experience that combines flexibility, affordability, and academic quality. With clear Narsee Monjee Institute of Management Studies BBA eligibility, reasonable Online BBA fees, and a strong Narsee Monjee Institute of Management Studies Online BBA curriculum, this Online BBA program is ideal for students seeking a recognized and career-oriented business degree. Choosing the Online BBA NMIMS program means choosing a future-ready education that supports long-term professional growth.",
       
-      "approval": {
-        "ugcDeb": {
-          "status": "Approved",
-          "description": "Approved by University Grants Commission – Distance Education Bureau. Degree is equivalent to a regular BBA."
-        },
-        "naac": {
-          "grade": "A+",
-          "description": "NAAC A+ accredited university ensuring high-quality education"
-        },
-        "degreeRecognition": [
-          "Valid for Government Jobs",
-          "Valid for Private Jobs",
-          "Eligible for MBA/PGDM",
-          "International Recognition"
-        ]
-      },
+      "approval": "The Narsee Monjee Institute of Management Studies Online BBA is offered by a reputed institution known for maintaining high academic standards in higher education. The Online BBA program follows all required academic guidelines and quality benchmarks set for online learning in India. The Narsee Monjee Institute of Management Studies Online BBA is designed to ensure that students receive structured, credible, and recognized education through a digital learning platform. The Online BBA program follows approved academic frameworks, making it suitable for students seeking a trusted and valid online degree.The Narsee Monjee Institute of Management Studies Online BBA curriculum is developed in alignment with industry requirements and academic standards. The Narsee Monjee Institute of Management Studies Online BBA curriculum ensures a balance between theoretical knowledge and practical understanding of business and management concepts. Regular academic reviews are conducted to keep the Online BBA curriculum updated and relevant. This structured approach ensures that the Narsee Monjee Institute of Management Studies Online BBA maintains consistency, quality, and credibility throughout the program duration.The Narsee Monjee Institute of Management Studies BBA eligibility criteria are clearly defined and follow standard admission norms. The Narsee Monjee Institute of Management Studies BBA eligibility allows students who have completed their higher secondary education or equivalent qualification from a recognized board to apply. Transparent Narsee Monjee Institute of Management Studies BBA eligibility guidelines ensure fair access to the Online BBA for students from different academic streams. This clarity in eligibility supports compliance with academic approval requirements.The Online BBA fees are structured in a transparent and student-friendly manner. The Online BBA fees are communicated clearly to learners before enrollment, ensuring there are no hidden charges. The affordability of the Online BBA fees makes the program accessible while maintaining the quality of education delivered. The structured Online BBA fees align with institutional policies and regulatory expectations for online degree programs.The Online BBA NMIMS program is delivered through a secure and well-organized digital learning system. Academic content, assessments, and evaluations in the Online BBA NMIMS program follow approved processes to ensure academic integrity. The Online BBA NMIMS structure supports continuous learning through online lectures, learning resources, and evaluation methods that meet institutional standards. This ensures that the Narsee Monjee Institute of Management Studies Online BBA remains compliant with academic and regulatory expectations.",
       
       "eligibility": {
-        "qualification": "10+2 from a recognized board",
-        "minimumMarks": "Not specified",
-        "streams": ["Commerce", "Science", "Arts"],
-        "entranceExam": "Not Required",
-        "ageLimit": "No Age Limit",
-        "idealCandidates": [
-          "Students who have completed Class 12",
-          "Learners from Commerce, Science, or Arts backgrounds",
-          "Students planning to pursue MBA after BBA",
-          "Individuals seeking flexible education",
-          "Candidates comfortable with online learning"
-        ],
+        "description": "10+2 from a recognized board in Commerce, Science, or Arts stream. No entrance exam required and no age limit. Ideal for students who have completed Class 12, learners from any background, students planning to pursue MBA after BBA, individuals seeking flexible education, and candidates comfortable with online learning.",
         "documentsRequired": [
           "10th Marksheet",
           "12th Marksheet",
@@ -68,103 +37,224 @@
         ]
       },
       
-      "specializations": [
+     "specializations" : [
+  {
+    "name": "Marketing Management",
+    "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
+    "description":
+      "Focuses on marketing principles, consumer behavior, branding, sales management, and digital marketing concepts. Helps students understand how businesses promote products and services in competitive markets.",
+    "highlights": [
+      "Understand consumer behavior and market trends",
+      "Learn branding and digital marketing strategies",
+      "Develop practical skills in sales management",
+      "Integration with Online BBA NMIMS curriculum"
+    ],
+    "suitability":
+      "Ideal for students interested in marketing roles, brand management, digital marketing, and business promotion."
+  },
+  {
+    "name": "Finance Management",
+    "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
+    "description":
+      "Covers financial accounting, corporate finance, financial planning, and basic investment concepts. Suitable for students interested in finance-related roles.",
+    "highlights": [
+      "Learn financial accounting and reporting",
+      "Understand corporate finance and planning",
+      "Develop basic investment analysis skills",
+      "Applied knowledge integrated into Online BBA NMIMS program"
+    ],
+    "suitability":
+      "Suitable for students aiming for careers in finance, accounting, corporate planning, and investment roles."
+  },
+  {
+    "name": "Human Resource Management",
+    "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
+    "description":
+      "Focuses on recruitment, training, employee management, and organizational behavior. Helps learners understand workforce planning and people management.",
+    "highlights": [
+      "Learn recruitment and selection processes",
+      "Understand training and development strategies",
+      "Manage employee performance and engagement",
+      "Integration with Online BBA NMIMS curriculum"
+    ],
+    "suitability":
+      "Ideal for students interested in HR roles, talent management, and organizational development."
+  },
+  {
+    "name": "Operations and Supply Chain Management",
+    "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327392/mca_unsxdf.jpg",
+    "description":
+      "Emphasizes operations planning, logistics, quality management, and process optimization. Supports students aiming to understand business operations.",
+    "highlights": [
+      "Understand operations management principles",
+      "Learn logistics and supply chain strategies",
+      "Focus on quality and process optimization",
+      "Practical integration with Online BBA NMIMS curriculum"
+    ],
+    "suitability":
+      "Suitable for students aiming for careers in operations, logistics, and supply chain management."
+  },
+  {
+    "name": "International Business",
+    "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_1_tikcaa.webp",
+    "description":
+      "Introduces global business practices, international trade, and cross-cultural management. Suitable for students interested in global business environments.",
+    "highlights": [
+      "Learn international trade and commerce",
+      "Understand cross-cultural management",
+      "Study global business strategies",
+      "Integrated into Online BBA NMIMS curriculum"
+    ],
+    "suitability":
+      "Ideal for students interested in global business, international trade, and multinational corporations."
+  }
+],
+      
+      "curriculum": [
         {
-          "name": "Marketing Management",
-          "description": "Focuses on marketing principles, consumer behavior, branding, sales management, and digital marketing concepts. Helps students understand how businesses promote products and services in competitive markets."
+          "semester": "Semester 1",
+          "subjects": [
+            "Principles of Management",
+            "Business Communication",
+            "Financial Accounting", 
+            "Micro Economics",
+            "Organisation Behaviour & HRM",
+            "Essentials of IT"
+
+          ]
         },
         {
-          "name": "Finance Management",
-          "description": "Covers financial accounting, corporate finance, financial planning, and basic investment concepts. Suitable for students interested in finance-related roles."
+          "semester": "Semester 2",
+          "subjects": [
+            "Cost and Management Accounting",
+            "Principles of Marketing",
+            "Operations Research",
+            "Macro Economics",
+            "Business Statistics for Decision Making",
+            "Introduction to Analytics"
+          ]
         },
         {
-          "name": "Human Resource Management",
-          "description": "Focuses on recruitment, training, employee management, and organizational behavior. Helps learners understand workforce planning and people management."
+          "semester": "Semester 3",
+          "subjects": [
+            "Business and Allied Law",
+            "Digital Marketing",
+            "Financial Management",
+            "Consumer Behaviour",
+            "International Business & Export Import Management",
+            "Sales Management"
+          ]
         },
         {
-          "name": "Operations and Supply Chain Management",
-          "description": "Emphasizes operations planning, logistics, quality management, and process optimization. Supports students aiming to understand business operations."
+          "semester": "Semester 4",
+          "subjects": [
+            "Production & Total Quality Management",
+            "Research Methodology",
+
+            "Electives (Marketing)",
+            "Performance Management System",
+            "Environment and Disaster Management",
+            "Retail Management",
+            "Fundamentals of Taxation",
+
+            "Electives (Finance)",
+           "Performance Management System",
+           "Environment and Disaster Management",
+           "Retail Management",
+           "Fundamentals of Taxation",
+
+          "Electives (Business analytics)",
+          "Introduction to Python",
+          "Machine Learning –I",
+          "Data Visualisation with Tableau", 
+          "Multivariate Techniques"
+          ]
         },
         {
-          "name": "International Business",
-          "description": "Introduces global business practices, international trade, and cross-cultural management. Suitable for students interested in global business environments."
+          "semester": "Semester 5",
+          "subjects": [
+            "Entrepreneurship Management",
+             "Project",
+            "Customer Relationship Management",
+
+            "Electives (Marketing)",
+            "Rural Marketing",
+            "Strategic Brand Management",
+            "Financial Statement Analysis",
+
+            "Electives (Finance)",
+            "Financial Institutions & Markets",
+            "Corporate Finance",
+            "Financial Statement Analysis",
+
+           "Electives (Business Analytics)",
+           "Analytics in Business domains",
+           "Data Management",
+           "Machine Learning -II"
+          ]
+        },
+        {
+          "semester": "Semester 6",
+          "subjects": [
+            "Business Ethics and Corporate Governance",
+            "Strategic Management",
+            "Operations and Supply Chain Management",
+            "Project Management",
+
+           "Electives (Marketing)",
+           "Integrated Marketing communications",
+           "International Marketing",
+
+           "Electives (Finance)",
+           "Investment Analysis and Portfolio Management",
+           "Financial Modeling",
+
+           "Electives (Business analytics)",
+           "Introduction to Big Data Technologies",
+           "Time Series Forecasting"
+          ]
         }
       ],
       
-      "curriculum": {
-        "coreSubjects": [
-          "Principles of Management",
-          "Financial Accounting and Management",
-          "Marketing Management",
-          "Business Economics",
-          "Human Resource Management",
-          "Business Communication",
-          "Operations & Supply Chain Concepts",
-          "Entrepreneurship and Business Strategy"
-        ],
-        "learningApproach": [
-          "Online lectures",
-          "Digital study materials",
-          "Assessments",
-          "Academic resources"
-        ]
-      },
       
       "courseFees": {
-        "totalFee": "₹1,45,000",
-        "feeIncludes": [
-          "Access to online learning content",
-          "Academic resources",
-          "Assessments",
-          "Digital learning platform"
+      "total": "₹1,31,000-₹1,45,000",
+      "annual": "₹47,000-₹56,400",
+     "semester": "₹25,000-₹30,000"
+},
+
+   "feePolicy": {
+      "notes": {
+        "noteText":
+          "To get a detailed understanding of the fee structure, contact a student counsellor.",
+        "fullFee": "₹1,50,000/-",
+        "points": [
+       " Admission Processing Fee of ₹1,200/- applicable for all admissions.",
+       " An initial amount of ₹10,000/- from the program fee will be collected at the time of registration.",
+       "  Exam fee : ₹800/- per subject per attempt ",
+       " Project fee : ₹800/- per attempt ",
+       " Students also have the option to pay the full program fee of ₹131,000 for the BBA program with Marketing and Finance electives if they prefer.",
+       " Students also have the option to pay the full program fee of ₹145,000 for the BBA program with Business Analytics  electives if they prefer.",
+       " The above-mentioned fee structure is subject to change at the discretion of the University.",
+       " Any payment made via Demand Draft should be made in favour of “SVKM’s NMIMS” payable at Mumbai.",
+       " Now avail loan facility to pay fees for the Program even without a credit card.",
+       " Finance Options Available with No Cost Emi*. Please contact a counsellor to know more. "
+
         ]
       },
-      
-      "certificate": {
-        "degreeAwarded": "Bachelor of Business Administration (BBA)",
-        "issuedBy": "Narsee Monjee Institute of Management Studies",
-        "validity": [
-          "Same academic value as conventional degree",
-          "Valid for higher education",
-          "Valid for employment",
-          "Valid for professional growth"
-        ],
-        "features": [
-          "Certificate mentions program name and institution",
-          "Recognized degree for career growth",
-          "Suitable for MBA and postgraduate programs"
-        ]
+
+      "scholarship": {
+        "title": "Scholarship Policy",
+        "description":
+          "The University offers special incentives to our armed forces, Defence Personnel and their immediate family with a 20% Defence Scholarship on the program fee."
       },
-      
-      "admissionLoan": {
-        "available": true,
-        "description": "Students can explore education loan options through banks and financial institutions as per individual eligibility.",
-        "coverage": [
-          "Full or partial program fees",
-          "Program-related academic expenses"
-        ],
-        "features": [
-          "Flexible repayment options",
-          "Loan tenure as per lender",
-          "Interest rates defined by institution"
-        ],
-        "note": "Institution provides necessary admission documents for loan processing"
-      },
-      
-      "examinationPattern": {
-        "components": [
-          "Online internal assessments (quizzes, assignments, case-based evaluations)",
-          "End-term examinations conducted as per academic calendar",
-          "Subject-wise evaluation aligned with syllabus"
-        ],
-        "weightage": "Distributed between internal and term-end assessments",
-        "platform": "Secure online platform",
-        "features": [
-          "Remote examination",
-          "Academic integrity maintained",
-          "Advance notification of schedules"
-        ]
-      },
+
+      "cancellation": {
+        "title": "Cancellation / Refund Policy",
+        "description":
+          "Please contact a student counsellor for detailed cancellation and refund guidelines."
+      }
+    },
       
       "faqs": [
         {
@@ -203,142 +293,152 @@
     },
     
     "bcom-online": {
+      "slug": "bcom-online",
       "name": "Online B.Com",
+      "image":"https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
       "fullName": "Bachelor of Commerce",
       "duration": "3 Years",
+      "samesters": "6",
       "mode": "100% Online",
       "totalFee": "₹1,45,000",
       
-      "about": {
-        "description": "The Online BCom program is an ideal choice for students who want to build a strong foundation in commerce through flexible learning. It is designed to meet the needs of students who wish to pursue higher education without attending regular on-campus classes.",
-        "highlights": [
-          "UGC-entitled degree",
-          "NAAC accredited",
-          "Same value as regular degree",
-          "Flexible learning",
-          "Suitable for BCom after 12"
-        ]
-      },
+      "about": "The Online BCom program is an ideal choice for students who want to build a strong foundation in commerce through flexible learning. It is designed to meet the needs of students who wish to pursue higher education without attending regular on-campus classes. This UGC-entitled, NAAC accredited degree has the same value as a regular degree and is suitable for BCom after 12th standard.",
       
-      "approval": {
-        "ugcDeb": {
-          "status": "Approved",
-          "description": "Follows approved academic guidelines for online education. Structured framework ensuring quality learning, transparent evaluation, and academic credibility."
-        },
-        "naac": {
-          "grade": "A+",
-          "description": "NAAC accredited reflecting commitment to high academic quality and consistent learning outcomes."
-        },
-        "features": [
-          "Approved admission norms",
-          "Structured evaluation systems",
-          "Certification processes",
-          "Secure digital learning platform"
-        ]
-      },
+      "approval": "Follows approved academic guidelines for online education with a structured framework ensuring quality learning, transparent evaluation, and academic credibility. NAAC A+ accredited reflecting commitment to high academic quality and consistent learning outcomes. Features approved admission norms, structured evaluation systems, certification processes, and secure digital learning platform.",
       
       "eligibility": {
-        "qualification": "Class 12 or equivalent from recognized board",
-        "streams": ["Commerce", "Other relevant streams"],
-        "ageLimit": "No Age Limit",
-        "idealCandidates": [
-          "Students who have completed Class 12",
-          "Learners planning BCom after 12",
-          "Students interested in accounting, finance, and commerce",
-          "Individuals preferring online mode",
-          "Learners looking for recognized NMIMS degree"
-        ]
+        "description": "Class 12 or equivalent from recognized board in Commerce or other relevant streams. No age limit. Ideal for students who have completed Class 12, learners planning BCom after 12, students interested in accounting, finance, and commerce, individuals preferring online mode, and learners looking for recognized NMIMS degree."
       },
       
       "specializations": [
         {
           "name": "Accounting and Finance",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
           "description": "Focuses on financial accounting, cost accounting, taxation basics, and financial management. Suitable for careers in accounting and finance."
         },
         {
           "name": "Banking and Financial Services",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
           "description": "Introduces banking operations, financial services, risk management, and regulatory basics. For careers in banking and financial institutions."
         },
         {
           "name": "Business Management",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
           "description": "Focuses on management principles, organizational behavior, and business operations. For broader business understanding."
         },
         {
           "name": "Economics and Analytics",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327392/mca_unsxdf.jpg",
           "description": "Covers economic theory, business economics, and basic analytical concepts. Develops analytical and decision-making skills."
         }
       ],
       
-      "curriculum": {
-        "coreSubjects": [
-          "Financial Accounting",
-          "Business Economics",
-          "Business Law",
-          "Corporate Accounting",
-          "Cost and Management Accounting",
-          "Business Communication",
-          "Principles of Management",
-          "Financial Management",
-          "Entrepreneurship and Business Environment"
-        ],
-        "learningMethods": [
-          "Online lectures",
-          "Digital study materials",
-          "Assessments",
-          "Continuous learning support"
-        ]
-      },
-      
+      "curriculum": [
+        {
+          "semester": "Semester 1",
+          "subjects": [
+            "Principles of Management",
+            "Business Communication",
+            "Financial Accounting",
+            "Micro Economics",
+            "Organisation Behaviour & HRM",
+            "Essentials of IT"
+
+
+
+          ]
+        },
+        {
+          "semester": "Semester 2",
+          "subjects": [
+            "Cost and Management Accounting",
+            "Principles of Marketing",
+            "Operations Research",
+            "Macro Economics",
+            "Business Statistics for Decision Making",
+            "Introduction to Analytics"
+          ]
+        },
+        {
+          "semester": "Semester 3",
+          "subjects": [
+            "Business and Allied Law",
+            "Banking and Insurance",
+            "Financial Management",
+            "Advanced Financial Accounting", 
+             "Audit-1",
+            "International Business & Export Import Management"
+          ]
+        },
+        {
+          "semester": "Semester 4",
+          "subjects": [
+            "Corporate & Information Technology Law",
+            "Environment and Disaster Management",
+            "Fundamentals of Taxation",
+            "Research Methodology",
+            "Audit - II",
+            "Management Accounting"
+          ]
+        },
+        {
+          "semester": "Semester 5",
+          "subjects": [
+           "Financial Institutions & Markets",
+           "Financial Statement Analysis",
+           "Indian Accounting Standards",
+           "Investment Products & Analysis",
+           "Entrepreneurship Management",
+           "Project"
+          ]
+        },
+        {
+          "semester": "Semester 6",
+          "subjects": [
+            "Business Ethics and Corporate Governance",
+            "Strategic Management",
+            "Financial Modelling",
+            "Emerging Trends in Accountancy",
+            "Corporate Finance",
+           "Portfolio Management"
+          ]
+        }
+      ],
       "courseFees": {
-        "totalFee": "₹1,45,000",
-        "coverage": [
-          "Complete curriculum access",
-          "Digital lecture content",
-          "Assessments",
-          "Academic support services",
-          "Certification upon completion"
+        "total": "₹94,000",
+        "annual": "₹33,000",
+        "semester": "₹18,000"
+        },
+       "feePolicy": {
+      "notes": {
+        "noteText":
+          "To get a detailed understanding of the fee structure, contact a student counsellor.",
+        "fullFee": "₹1,50,000/-",
+        "points": [
+          "Admission Processing Fee of ₹1,200/- applicable for all admissions.",
+          "An initial amount of ₹10,000/- from the program fee will be collected at the time of registration.",
+          "Exam fee : ₹800/- per subject per attempt", 
+          "Project fee : ₹800/- per attempt ",
+          "Students also have the option to pay the full program fee of ₹94,000/- for the B.Com. program if they prefer.",
+          "The above-mentioned fee structure is subject to change at the discretion of the University.",
+          "Any payment made via Demand Draft should be made in favour of “SVKM’s NMIMS” payable at Mumbai.",
+          "Finance Options Available with No Cost Emi*. Please contact a counsellor to know more." 
+
         ]
       },
-      
-      "certificate": {
-        "degreeAwarded": "Bachelor of Commerce (B.Com)",
-        "issuedBy": "Narsee Monjee Institute of Management Studies",
-        "features": [
-          "Formal degree certificate",
-          "Approved academic framework",
-          "NAAC accredited",
-          "Valid for higher studies",
-          "Valid for employment"
-        ]
+
+      "scholarship": {
+        "title": "Scholarship Policy",
+        "description":
+          "The University offers special incentives to our armed forces, Defence Personnel and their immediate family with a 20% Defence Scholarship on the program fee."
       },
-      
-      "admissionLoan": {
-        "available": true,
-        "description": "Education loan options available through banks and financial institutions",
-        "coverage": [
-          "Course fees",
-          "Academic-related expenses"
-        ],
-        "features": [
-          "Flexible repayment options",
-          "Loan tenure based on lender",
-          "Institution provides required documents"
-        ]
-      },
-      
-      "examinationPattern": {
-        "components": [
-          "Internal assessments (online quizzes, assignments, case-based evaluations)",
-          "End-term examinations as per academic calendar",
-          "Subject-wise evaluation"
-        ],
-        "platform": "Online examination system",
-        "features": [
-          "Remote assessment",
-          "Academic integrity",
-          "Clear instructions and timelines"
-        ]
-      },
+
+      "cancellation": {
+        "title": "Cancellation / Refund Policy",
+        "description":
+          "Please contact a student counsellor for detailed cancellation and refund guidelines."
+      }
+    },
       
       "faqs": [
         {
@@ -377,160 +477,196 @@
     },
     
     "mba-wx": {
+      "slug": "mba-wx",
       "name": "MBA WX (Working Executives)",
+      "image":"https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
       "fullName": "Master of Business Administration for Working Executives",
       "duration": "2 Years",
+      "terms": "8",
       "mode": "Flexible Online/Blended",
       "totalFee": "₹4,00,000",
       
-      "about": {
-        "description": "The MBA WX (Working Executives) program is designed for professionals who want to grow in their careers while continuing their jobs. Specially created for individuals with corporate experience who aim to move into managerial and leadership roles without taking a career break.",
-        "highlights": [
-          "For working professionals",
-          "No career break required",
-          "Industry-focused structure",
-          "Real business challenges",
-          "Strategic thinking development",
-          "Leadership development"
-        ]
-      },
+      "about": "The MBA WX (Working Executives) program is designed for professionals who want to grow in their careers while continuing their jobs. Specially created for individuals with corporate experience who aim to move into managerial and leadership roles without taking a career break. This program is focused on industry challenges, develops strategic thinking and leadership skills, and offers the same quality education as traditional MBA programs.",
       
-      "approval": {
-        "deemedUniversity": {
-          "status": "Yes",
-          "description": "Deemed-to-be University status gives academic authority to design and deliver advanced management programs."
-        },
-        "ugc": {
-          "status": "Recognized",
-          "description": "UGC recognition confirms degree is valid and accepted for employment, promotions, and further studies."
-        },
-        "naac": {
-          "grade": "Accredited",
-          "description": "Reflects overall quality of education, faculty, infrastructure, governance, and learner support."
-        },
-        "acceptance": "Widely accepted across industries due to NMIMS reputation"
-      },
+      "approval": "Deemed-to-be University status gives academic authority to design and deliver advanced management programs. UGC recognition confirms the degree is valid and accepted for employment, promotions, and further studies. NAAC accredited reflecting overall quality of education, faculty, infrastructure, governance, and learner support. Widely accepted across industries due to NMIMS reputation.",
       
       "eligibility": {
-        "idealCandidates": [
-          "Working Professionals in corporate/private/public sector",
-          "Professionals with relevant full-time work experience",
-          "Graduates from any discipline",
-          "Corporate Managers & Team Leads",
-          "Entrepreneurs & Business Owners",
-          "Professionals from any location"
-        ],
-        "workExperience": "Required (relevant full-time experience)",
-        "education": "Bachelor's degree from recognized university",
-        "suitability": [
-          "Mid-level and senior-level executives",
-          "Those seeking career growth and leadership roles",
-          "Team managers and department heads",
-          "Business owners wanting structured management knowledge",
-          "Professionals aiming for promotions"
-        ]
+        "description": "Ideal for Working Professionals in corporate/private/public sector, professionals with relevant full-time work experience, graduates from any discipline, Corporate Managers & Team Leads, Entrepreneurs & Business Owners, and professionals from any location. Bachelor's degree from recognized university required along with relevant full-time work experience."
       },
       
       "specializations": [
         {
           "name": "MBA WX in Finance",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
           "description": "Focuses on corporate finance, financial strategy, and risk management. Covers investment analysis, financial planning, and business valuation. Suitable for finance, banking, accounting, and consulting roles."
         },
         {
           "name": "MBA WX in Marketing",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
           "description": "Emphasizes strategic marketing, brand management, and customer insights. Covers digital marketing, sales strategy, and market analytics. Ideal for marketing, sales, and business development."
         },
         {
           "name": "MBA WX in Human Resource Management",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
           "description": "Focuses on strategic HR, talent management, and leadership development. Covers organizational behaviour, performance management, and HR analytics. Suitable for HR professionals and people managers."
         },
         {
           "name": "MBA WX in Operations Management",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327392/mca_unsxdf.jpg",
           "description": "Covers supply chain strategy, operations planning, and process improvement. Focuses on quality management, logistics, and project management. Ideal for operations, manufacturing, and service industries."
         },
         {
           "name": "MBA WX in Business Analytics",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_1_tikcaa.webp",
           "description": "Emphasizes data-driven decision-making and business intelligence. Covers analytics tools, data interpretation, and predictive analysis. Suitable for analytics, strategy, and consulting."
         }
       ],
       
-      "curriculum": {
-        "coreSubjects": [
-          "Strategic Management",
-          "Financial Management",
-          "Marketing Management",
-          "Operations and Supply Chain Management",
-          "Organizational Behaviour",
-          "Business Economics",
-          "Leadership Decision-Making"
-        ],
-        "additionalComponents": [
-          "Executive case studies",
-          "Projects and assignments",
-          "Real workplace application",
-          "Specialization-based courses"
+     "curriculum": [
+  {
+    "term": "Foundation Module (HBPE)",
+    "subjects": [
+      "Management Communication",
+      "Financial Accounting",
+      "Quantitative Methods",
+      "Mathematics for Management",
+      "Finance",
+      "Spreadsheet Modelling – Excel 2013"
+    ]
+  },
+  {
+    "term": "Term 1 (Core)",
+    "subjects": [
+      "Financial Accounting: Information for Decisions",
+      "Organisational Behaviour",
+      "Marketing Management",
+      "Business Statistics for Decision Makers",
+      "Quantitative Methods Online Course – HBR",
+      "Spreadsheet Modeling Online Course: Excel 2013 – HBR",
+      "Financial Accounting Online Course – HBR"
+    ]
+  },
+  {
+    "term": "Term 2 (Core)",
+    "subjects": [
+      "Information Systems for Managers",
+      "Operations Management",
+      "Business Communication",
+      "Corporate Finance",
+      "Management Communication: Complete Online Course – HBR",
+      "Mathematics for Management Online Course – HBR",
+      "Finance Online Course – HBR"
+    ]
+  },
+  {
+    "term": "Term 3 (Core)",
+    "subjects": [
+      "Managerial Economics",
+      "Strategic Management"
+    ]
+  },
+  {
+    "term": "Term 3 / 4 / 5 (Electives)",
+    "subjects": [
+      "Electives (Marketing)",
+      "Consumer Behaviour",
+      "Customer Relationship Management",
+      "Strategic Brand Management",
+      "Marketing in a Digital World",
+      "Marketing and Web Social Media Analytics",
+      "Crafting and Providing Marketing Services",
+      "Integrated Marketing Communications",
+      "Sales Management",
+      "Marketing Research",
+
+      "Electives (Leadership & Strategy)",
+      "Strategic HRM: Gaining a Competitive Advantage",
+      "Managing Organization Change",
+      "Strategic Performance Management",
+      "Innovation by Design: Strategic Thinking & Entrepreneurial Leadership",
+      "Strategic Knowledge Management",
+      "Strategic Business Process Management",
+      "Art of Leadership",
+      "HR Analytics",
+
+      "Electives (Operations & Supply Chain)",
+      "Supply Chain Management",
+      "Service Operations Management",
+      "Supply Chain and Logistics Analytics",
+      "Total Quality Management",
+      "Procurement Management",
+      "Logistics Management",
+      "Project Management",
+
+      "Electives (Applied Finance)",
+      "Quantitative Methods: Concepts & Applications",
+      "Financial Reporting and Analysis",
+      "Security Analysis and Portfolio Management I",
+      "Fraud and Risk Analytics",
+      "Security Analysis and Portfolio Management II",
+      "Financial Engineering: Derivatives",
+      "Personal Finance: Turning Money into Wealth",
+      "Managerial Accounting: Decision Making and Performance Management",
+
+      "Electives (Digital Marketing)",
+      "Social Media and Content Marketing",
+      "Search Engine Optimisation & Search Engine Marketing",
+      "Mobile and Email Marketing"
+    ]
+  },
+  {
+    "term": "Term 6",
+    "subjects": [
+      "Capstone Project"
+    ]
+  },
+  {
+    "term": "Term 7",
+    "subjects": [
+      "Project or Industry Experience"
+    ]
+  },
+  {
+    "term": "Term 8",
+    "subjects": [
+      "Project or Industry Experience"
+    ]
+  }
+],
+
+      
+     "courseFees": {
+          "total": "₹4,00,000"
+         
+              },
+       "feePolicy": {
+      "notes": {
+        "noteText":
+          "To get a detailed understanding of the fee structure, contact a student counsellor.",
+        "fullFee": "₹1,50,000/-",
+        "points": [
+          "Admission Processing Fee of ₹1,500/- applicable for all admissions.",
+          "An initial amount of ₹20,000/- from the program fee will be collected at the time of registration.",
+          " Re-Exam fee : ₹2,500/- per subject.",
+          " The above-mentioned fee structure is subject to change at the discretion of the University.",
+          " Any payment made via Demand Draft should be made in favour of “SVKM’s NMIMS” payable at Mumbai. To get a detailed understanding of the fee structure,",
+          " fill the Enquire Now form and our student counsellor will reach out to you.",
+          " Convenient Fee Finance options available"
         ]
       },
-      
-      "courseFees": {
-        "totalFee": "₹4,00,000",
-        "includes": [
-          "Tuition charges",
-          "Digital learning resources",
-          "Online academic support",
-          "NMIMS learning platforms access"
-        ],
-        "paymentOptions": [
-          "Installment-based payment available",
-          "Secure online payment methods"
-        ]
+
+      "scholarship": {
+        "title": "Scholarship Policy",
+        "description":
+          "The University offers special incentives to our armed forces, Defence Personnel and their immediate family with a 20% Defence Scholarship on the program fee."
       },
-      
-      "certificate": {
-        "degreeAwarded": "MBA degree from NMIMS",
-        "features": [
-          "Same academic value as other MBA degrees",
-          "Does NOT mention mode of study",
-          "No 'online' or 'executive' mentioned",
-          "Equal recognition across industries",
-          "Specialization clearly mentioned"
-        ],
-        "validity": [
-          "Career advancement",
-          "Leadership roles",
-          "Promotions",
-          "Senior management opportunities",
-          "Widely accepted in private, public, and multinational organizations"
-        ]
-      },
-      
-      "admissionLoan": {
-        "available": true,
-        "description": "NMIMS provides guidance and assistance for education loans to support learners financially.",
-        "coverage": [
-          "Total program fee of ₹4,00,000",
-          "Academic expenses related to course"
-        ],
-        "features": [
-          "Flexible repayment options",
-          "Repayment after course completion or as per terms",
-          "Required documents provided by NMIMS",
-          "Apply through banks and financial institutions"
-        ]
-      },
-      
-      "examinationPattern": {
-        "components": [
-          "Continuous assessment (assignments, quizzes, case studies, project work)",
-          "End-term examinations as per NMIMS guidelines"
-        ],
-        "assessmentTypes": [
-          "Multiple-choice questions",
-          "Short answers",
-          "Case-based questions"
-        ],
-        "grading": "Combination of continuous assessment and end-term exam performance"
-      },
+
+      "cancellation": {
+        "title": "Cancellation / Refund Policy",
+        "description":
+          "Please contact a student counsellor for detailed cancellation and refund guidelines."
+      }
+    },
       
       "faqs": [
         {
@@ -564,164 +700,182 @@
       ]
     },
     
-    "mba-online": {
+    "mba-online": { 
+      "slug": "mba-online",
       "name": "Online MBA",
+      "image":"https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
       "fullName": "Master of Business Administration (Online)",
       "duration": "2 Years",
+      "samesters": "4",
       "mode": "100% Online",
       "totalFee": "₹1,44,000",
       
-      "about": {
-        "description": "The online MBA program is designed for learners who want a flexible and career-focused management degree from a reputed institution. Ideal for working professionals, fresh graduates, and entrepreneurs who wish to upgrade skills without leaving jobs or relocating.",
-        "highlights": [
-          "Strong academic framework",
-          "Industry-relevant curriculum",
-          "Leadership, analytical, and strategic skills",
-          "Same quality as on-campus programs",
-          "Nationwide recognition",
-          "Professional credibility"
-        ]
-      },
+      "about": "The online MBA program is designed for learners who want a flexible and career-focused management degree from a reputed institution. Ideal for working professionals, fresh graduates, and entrepreneurs who wish to upgrade skills without leaving jobs or relocating. The program features a strong academic framework with industry-relevant curriculum that develops leadership, analytical, and strategic skills with the same quality as on-campus programs, nationwide recognition, and professional credibility.",
       
-      "approval": {
-        "deemedUniversity": "Yes - Recognized Deemed-to-be University",
-        "ugc": {
-          "status": "Approved",
-          "description": "UGC approval ensures program validity, recognition, and acceptance for employment, higher education, and competitive examinations."
-        },
-        "naac": {
-          "status": "Accredited",
-          "description": "Reflects institution's commitment to quality education, curriculum quality, teaching methodology, and learner support."
-        },
-        "aiu": {
-          "status": "Recognized",
-          "description": "Ensures equivalence of degrees across Indian universities for higher education and government jobs."
-        },
-        "compliance": "Complies with latest UGC guidelines for online and distance learning"
-      },
+      "approval": "Recognized Deemed-to-be University. UGC approved ensuring program validity, recognition, and acceptance for employment, higher education, and competitive examinations. NAAC accredited reflecting institution's commitment to quality education, curriculum quality, teaching methodology, and learner support. AIU recognized ensuring equivalence of degrees across Indian universities. Complies with latest UGC guidelines for online and distance learning.",
       
       "eligibility": {
-        "education": "Bachelor's degree from recognized university",
-        "streams": ["Commerce", "Science", "Arts", "Engineering", "Any other"],
-        "idealCandidates": [
-          "Graduates from any discipline",
-          "Working professionals in private/public/government organizations",
-          "Fresh graduates wanting strong career foundation",
-          "Entrepreneurs & Business Owners",
-          "Career switchers & aspiring managers"
-        ],
-        "workExperience": "Not mandatory",
-        "location": "Available from any city in India"
+        "description": "Bachelor's degree from recognized university in Commerce, Science, Arts, Engineering, or any other discipline. Ideal for graduates from any discipline, working professionals in private/public/government organizations, fresh graduates wanting strong career foundation, Entrepreneurs & Business Owners, and career switchers & aspiring managers. Work experience is not mandatory and available from any city in India."
       },
       
       "specializations": [
         {
           "name": "MBA in Finance",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
           "description": "Corporate finance, financial management, and investment analysis. Risk management, banking concepts, and strategic financial planning. Suitable for finance, accounting, banking, and consulting careers."
         },
         {
           "name": "Online MBA in Marketing",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
           "description": "Consumer behavior, brand management, and sales strategy. Digital marketing, social media marketing, and market research. Ideal for marketing, advertising, business development, and sales roles."
         },
         {
           "name": "Online MBA HR NMIMS (Human Resource Management)",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
           "description": "Talent acquisition, employee engagement, and performance management. Training & development, organizational behavior, and HR analytics. Suitable for HR managers, recruiters, and people operations."
         },
         {
           "name": "MBA Data Analytics Online",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327392/mca_unsxdf.jpg",
           "description": "Business analytics, data interpretation, and decision-making tools. Business intelligence, predictive analytics, and data-driven strategies. Ideal for analytics, consulting, operations, and management roles."
         },
         {
           "name": "Online MBA in Operations Management",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_1_tikcaa.webp",
           "description": "Supply chain management, logistics, and operations planning. Quality management, process optimization, and productivity improvement. Suitable for manufacturing, services, and operations leadership."
         }
       ],
       
-      "curriculum": {
-        "coreSubjects": [
-          "Principles of Management",
-          "Organizational Behaviour",
-          "Marketing Management",
-          "Financial Management",
-          "Operations Management",
-          "Business Economics",
-          "Strategic Management",
-          "Business Ethics & Corporate Governance"
-        ],
-        "specializationSubjects": "Advanced subjects based on chosen specialization",
-        "learningMethodology": [
-          "Live online lectures by experienced faculty",
-          "Recorded sessions for flexible learning",
-          "Digital study material and e-books",
-          "Assignments, case studies, and projects",
-          "Online examinations and continuous evaluation"
-        ]
-      },
+     "curriculum": [
+  {
+    "semester": "Semester 1",
+    "subjects": [
+      "Business Communication",
+      "Financial Accounting",
+      "Micro Economics & Macro Economics",
+      "Organisational Behaviour",
+      "Marketing Management",
+      "Quantitative Methods – I"
+    ]
+  },
+  {
+    "semester": "Semester 2",
+    "subjects": [
+      "Cost & Management Accounting",
+      "Human Resource Management",
+      "Strategic Management",
+      "Business Analytics",
+      "Legal Aspect of Business",
+      "Operations Management"
+    ]
+  },
+  {
+    "semester": "Semester 3",
+    "subjects": [
+      "Corporate Finance",
+      "Research Methodology",
+      "Project Pre-work",
+
+      "Electives (Marketing)",
+      "Brand Management",
+      "Consumer Behaviour",
+      "Integrated Marketing Communications",
+      "Sales Management",
+
+      "Electives (Business Management)",
+      "Information Systems for Management",
+      "Organisational Theory, Structure and Design",
+      "Supply Chain Management",
+
+      "Electives (Finance)",
+      "Capital Market and Portfolio Management",
+      "Business Valuation",
+      "Financial Derivatives",
+      "Strategic Cost Management",
+
+      "Electives (HR)",
+      "Compensation & Benefits",
+      "Industrial Relations & Labour Laws",
+      "Manpower Planning, Recruitment and Selection",
+      "Organisational Development & Change",
+
+      "Electives (Operations & Data Sciences)",
+      "Project Management",
+      "Strategic Applications of IoT and Big Data",
+      "Strategic Sourcing and E-Procurement"
+    ]
+  },
+  {
+    "semester": "Semester 4",
+    "subjects": [
+      "Indian Ethos & Ethics",
+      "Corporate Sustainability",
+      "International Business",
+      "Project",
+
+      "Electives (Marketing)",
+      "International Marketing",
+      "Services Marketing",
+      "Digital Marketing",
+
+      "Electives (Business Management)",
+      "Entrepreneurship and Venture Capital Management",
+      "Project Management",
+
+      "Electives (Finance)",
+      "Corporate Tax Planning",
+      "Investment Banking",
+      "International Finance",
+
+      "Electives (HR)",
+      "Performance Management System",
+      "Learning & Development",
+      "Emotional Intelligence",
+
+      "Electives (Operations & Data Sciences)",
+      "EDA and Data Visualization",
+      "Operations Analytics",
+      "Total Quality Management"
+    ]
+  }
+],
+
       
       "courseFees": {
-        "totalFee": "₹1,44,000",
-        "includes": [
-          "Tuition fees",
-          "Digital learning resources",
-          "Online lectures and assessments",
-          "NMIMS learning management system access"
-        ],
-        "paymentOptions": [
-          "Pay in installments",
-          "Easy online payment methods"
-        ],
-        "note": "Fees are indicative and subject to change as per university guidelines"
+         "total": "₹1,96,000",
+         "annual": "₹1,05,000",
+         "semester": "₹55,000"
+         },
+        "feePolicy": {
+      "notes": {
+        "noteText":
+          "To get a detailed understanding of the fee structure, contact a student counsellor.",
+        "fullFee": "₹1,50,000/-",
+        "points": [
+          "Admission Processing Fee of ₹1,200/- applicable for all admissions.",
+          "An initial amount of ₹10,000/- from the program fee will be collected at the time of registration.",
+          "Exam fee : ₹800/- per subject, per attempt.",
+          "Project fee : ₹800/- per attempt.",
+          "Students also have the option to pay the full program fee of {FULL_FEE} if they prefer.",
+          "The above-mentioned fee structure is subject to change at the discretion of the University.",
+          "Any payment made via Demand Draft should be made in favour of “SVKM’s NMIMS” payable at Mumbai.",
+          "Now avail loan facility to pay fees for the Program even without a credit card.",
+          "Finance Options Available with No Cost EMI*. Please contact a counsellor to know more."
+        ]
       },
-      
-      "certificate": {
-        "degreeAwarded": "MBA degree from Narsee Monjee Institute of Management Studies",
-        "features": [
-          "Recognized and respected certification",
-          "Equivalent to on-campus MBA",
-          "Mode of study (online) NOT mentioned on certificate",
-          "Full academic and professional recognition"
-        ],
-        "validity": [
-          "Accepted by corporate employers, MNCs, and startups",
-          "Valid for government and private sector jobs",
-          "Eligible for higher education and professional growth"
-        ],
-        "specializationMention": "Certificate clearly reflects chosen specialization"
+
+      "scholarship": {
+        "title": "Scholarship Policy",
+        "description":
+          "The University offers special incentives to our armed forces, Defence Personnel and their immediate family with a 20% Defence Scholarship on the program fee."
       },
-      
-      "admissionLoan": {
-        "available": true,
-        "description": "Education loans available for eligible students to manage finances easily",
-        "coverage": [
-          "Tuition fees",
-          "Academic expenses related to program"
-        ],
-        "features": [
-          "Flexible repayment options based on lender policies",
-          "Repayment generally starts after course completion",
-          "Reduces upfront financial burden",
-          "Easy documentation process"
-        ],
-        "support": "NMIMS provides necessary support documents for loan application"
-      },
-      
-      "examinationPattern": {
-        "components": [
-          "Continuous Assessment (assignments, quizzes, case studies, projects)",
-          "End-Term Examinations (online, as per guidelines)"
-        ],
-        "format": [
-          "Multiple-choice questions (MCQs)",
-          "Short and descriptive answers",
-          "Case-based or application-oriented questions"
-        ],
-        "grading": [
-          "Structured grading system",
-          "Based on continuous assessment + end-term performance",
-          "Minimum passing criteria in each subject"
-        ],
-        "platform": "Secure digital platform, time-bound exams"
-      },
+
+      "cancellation": {
+        "title": "Cancellation / Refund Policy",
+        "description":
+          "Please contact a student counsellor for detailed cancellation and refund guidelines."
+      }
+    },
       
       "faqs": [
         {
