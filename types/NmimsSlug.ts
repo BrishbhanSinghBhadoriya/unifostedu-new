@@ -3,12 +3,12 @@ export interface Specialization {
   description: string;
   fee?: string;
   image?: string;
-  highlights?:string[]
+  highlights?: string[]
 
-  suitability?:string
+  suitability?: string
 }
 export interface CourseData {
-   title?: string;
+  title?: string;
   image?: string;
 }
 export interface Eligibility {
@@ -67,10 +67,10 @@ export interface FeeStructure {
 }
 
 export interface CourseFees {
-  totalFee?:string;
+  totalFee?: string;
   total?: string;
-  annual?:string;
-  semester?:string;
+  annual?: string;
+  semester?: string;
   feeIncludes?: string[];
   coverage?: string[];
   includes?: string[];
@@ -111,9 +111,9 @@ export interface FAQ {
 export interface About {
   description?: string;
   highlights?: string[];
-  heroImage?: string; 
-  title?: string;     
-  keyBenefits?: string[]; 
+  heroImage?: string;
+  title?: string;
+  keyBenefits?: string[];
 }
 
 export interface ApprovalData {
@@ -151,7 +151,7 @@ export interface Program {
   fullName?: string;
   image?: string;
   duration?: string;
-  samesters?: string[];
+  samesters?: string;
   mode?: string;
   totalFee?: string;
   about?: About | string;
@@ -163,7 +163,7 @@ export interface Program {
   faqs?: FAQ[];
   scholarship?: Scholarship;
   [key: string]: any;
-   feePolicy?: FeePolicy;
+  feePolicy?: FeePolicy;
 }
 
 export type Programs = {
