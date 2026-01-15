@@ -1,6 +1,6 @@
 export default async function sitemap() {
   const baseUrl = 'https://unifostedu.com';
-  
+
   // Static routes
   const staticRoutes = [
     {
@@ -59,7 +59,7 @@ export default async function sitemap() {
     },
   ];
 
-  // Course routes
+  // Course routes (dynamic [slug] handles these)
   const courseRoutes = [
     'mba-online',
     'mca-online',
@@ -78,24 +78,26 @@ export default async function sitemap() {
     changeFrequency: 'weekly',
     priority: 0.8,
   }));
-const amityRoutes = [
-    'mba-online', 
-    'mca-online', 
-    'bba-online', 
-    'bca-online', 
-    'mcom-online', 
-    'bcom-online', 
-    'ma-online', 
-    'ba-online', 
-    'msc-online',
-].map((courseRoute) => ({
-  url: `${baseUrl}/Amity-University-Online${courseRoute}`,
-  lastModified: new Date(),
-  changeFrequency: 'weekly',
-  priority: 0.9,
-}));
 
-  // University routes (updated with correct slugs)
+  // Amity University course routes - FIXED: Added "/" separator
+  const amityRoutes = [
+    'mba-online',
+    'mca-online',
+    'bba-online',
+    'bca-online',
+    'mcom-online',
+    'bcom-online',
+    'ma-online',
+    'ba-online',
+    'msc-online',
+  ].map((courseRoute) => ({
+    url: `${baseUrl}/Amity-University-Online/${courseRoute}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.9,
+  }));
+
+  // University routes (only routes that exist in project)
   const universityRoutes = [
     'Amity-University-Online',
     'manipal',
@@ -124,12 +126,11 @@ const amityRoutes = [
     changeFrequency: 'weekly',
     priority: 0.9,
   }));
-  const workingProfessional =[
-    'best-online-mba-for-working-professionals-in-india-2025',
+
+  // Working professional routes - FIXED: Corrected folder name
+  const workingProfessional = [
+    'best-online-mba-for-working-professionals-india-2025',
     'best-online-mca-for-working-professionals-in-india',
-    'amity-online-mba',
-    'amity-online-mba-total-fees',
-    'best-online-mca-university-in-india',
     'top-online-bca-university-in-india',
   ].map((wx) => ({
     url: `${baseUrl}/${wx}`,
@@ -137,20 +138,32 @@ const amityRoutes = [
     changeFrequency: 'weekly',
     priority: 0.9,
   }));
-  // Blog routes (static blog posts)
+
+  // Amity sub-routes that exist
+  const amitySubRoutes = [
+    'amity-online-mba',
+    'amity-online-mba-total-fees',
+    'best-online-mca-university-in-india',
+  ].map((route) => ({
+    url: `${baseUrl}/Amity-University-Online/${route}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.9,
+  }));
+
+  // Blog routes - FIXED: Using actual folder names (PascalCase)
   const blogRoutes = [
-    'mba-online-vs-distance',
-    'best-online-bba-2025',
-    'manipal-vs-amity-online-mba',
-    'lpu-online-review',
-    'jain-ugc-approval',
-    'career-after-online-mba',
-    'choose-online-university',
-    'jain-ugc-approval',
-    'scholarship-and-emi',
-    'working-mba',
-    'unifost-special',
-    'special-blog',
+    'MBADistanceVsOnline',
+    'BestOnlineBBA2025',
+    'ManipalVsAmityOnlineMBA',
+    'LPUOnlineReview',
+    'JainUGCApproval',
+    'CareerAfterOnlineMBA',
+    'ChooseOnlineUniversity',
+    'ScholarshipAndEMI',
+    'WorkingMBA',
+    'UnifostSpecial',
+    'SpecialBlog',
   ].map((blog) => ({
     url: `${baseUrl}/blog/${blog}`,
     lastModified: new Date(),
@@ -158,33 +171,13 @@ const amityRoutes = [
     priority: 0.7,
   }));
 
-  // Try to fetch dynamic blog posts from API (if available)
-  let dynamicBlogRoutes = [];
-  try {
-    // If you have an API endpoint for blog slugs
-    // const blogPosts = await fetch(
-    //   `${baseUrl}/api/blog/slugs`,
-    //   { next: { revalidate: 3600 } }
-    // ).then((res) => res.json()).catch(() => []);
-    
-    // dynamicBlogRoutes = blogPosts.map((post) => ({
-    //   url: `${baseUrl}/blog/${post.slug}`,
-    //   lastModified: new Date(post.updatedAt || post.createdAt),
-    //   changeFrequency: 'monthly',
-    //   priority: 0.7,
-    // }));
-  } catch (error) {
-    // Silently fail if API is not available
-  }
-
   return [
     ...staticRoutes,
     ...universityRoutes,
     ...amityRoutes,
+    ...amitySubRoutes,
     ...courseRoutes,
     ...blogRoutes,
     ...workingProfessional,
-    ...dynamicBlogRoutes,
   ];
 }
-
