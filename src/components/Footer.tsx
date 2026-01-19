@@ -307,7 +307,7 @@ const Footer = () => {
                           <div className="p-2 bg-cyan-500/20 rounded-lg group-hover/item:bg-cyan-500/30 transition-colors">
                             <FaPhone className="text-cyan-400 text-sm" />
                           </div>
-                          <span className="flex-1 text-sm">+91 7042646766</span>
+                          <span className="flex-1 text-sm">+91 7042143820</span>
                         </li>
                         <li className="flex items-center gap-3 group/item">
                           <div className="p-2 bg-cyan-500/20 rounded-lg group-hover/item:bg-cyan-500/30 transition-colors">
@@ -333,7 +333,7 @@ const Footer = () => {
                               <MdEmail className="text-sm" /> info@unifostedu.com
                             </a>
                             <a href="https://wa.me/917042646766" className="flex items-center gap-1 text-green-600 hover:text-green-800 transition-colors text-xs">
-                              <FaWhatsapp className="text-sm" />+91 7042646766
+                              <FaWhatsapp className="text-sm" />+91 7042143820
                             </a>
                           </div>
                         </div>
@@ -346,7 +346,7 @@ const Footer = () => {
                               <MdEmail className="text-sm" /> info@unifostedu.com
                             </a>
                             <a href="https://wa.me/917042646766" className="flex items-center gap-1 text-green-600 hover:text-green-800 transition-colors text-xs">
-                              <FaWhatsapp className="text-sm" /> +91 7042646766
+                              <FaWhatsapp className="text-sm" /> +91 7042143820
                             </a>
                           </div>
                         </div>
