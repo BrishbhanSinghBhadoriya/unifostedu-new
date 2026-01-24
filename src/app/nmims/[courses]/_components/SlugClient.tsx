@@ -9,12 +9,71 @@ import {
 import AnimatedCounter from '../../_Componets/AnimatedCounter';
 import { OpenModalState } from 'types/Modal';
 import Header from "../../_Componets/Header";
+
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import { NavLink } from "types/navigation";
-import FeeNotes from '../../_Componets/FeeNotes';
+import Footer from '../../_Componets/Footer';
 interface SlugClientProps {
   courseData: Program;
 }
+
+const SpecializationCard = ({ spec }: { spec: Specialization }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div
+      className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 transition-all"
+    >
+      {/* Top Purple Area: Image + Arrow */}
+      <div
+        className="bg-gradient-to-br from-purple-600 to-purple-700 p-6 text-white relative h-48 flex items-center justify-center cursor-pointer"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {/* Image */}
+        {spec.image && (
+          <img
+            src={spec.image}
+            alt={spec.name}
+            className="relative z-10 fill object-contain bg-white/10 p-2 rounded-xl"
+          />
+        )}
+
+        {/* Arrow */}
+        <div
+          className="absolute bottom-4 right-4 text-2xl transform transition-transform duration-300"
+          style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
+        >
+          ▼
+        </div>
+      </div>
+
+      {/* Bottom Content: Expandable */}
+      <div
+        className={`p-6 transition-all duration-500 ${
+          isOpen ? "max-h-full" : "max-h-0 overflow-hidden"
+        }`}
+      >
+        <h3 className="text-xl font-bold text-gray-900 mb-2">{spec.name}</h3>
+
+        {spec.description && (
+          <p className="text-gray-700 mb-2 text-sm">{spec.description}</p>
+        )}
+
+        {Array.isArray(spec.highlights) && spec.highlights.length > 0 && (
+          <ul className="list-disc pl-5 mb-2 text-gray-700 text-sm">
+            {spec.highlights.map((h: string, i: number) => (
+              <li key={i}>{h}</li>
+            ))}
+          </ul>
+        )}
+
+        {spec.suitability && (
+          <p className="text-gray-600 italic text-sm">{spec.suitability}</p>
+        )}
+      </div>
+    </div>
+  );
+};
 
 const SlugClient = ({ courseData }: SlugClientProps) => {
   const [activeFAQ, setActiveFAQ] = useState<number | null>(null);
@@ -54,6 +113,13 @@ const navigationLinks: NavLink[] = sectionMap
     name: label,
     href: id,
   }));
+
+  const programs = [
+    { name: "MBA", path: "/nmims/mba-online" },
+    { name: "MBA (WX)", path: "/nmims/mba-wx" },
+    { name: "BBA", path: "/nmims/bba-online" },
+    { name: "B.Com", path: "/nmims/bcom-online" },
+  ];
 
   interface HighlightItem {
     number: string;
@@ -131,7 +197,7 @@ const navigationLinks: NavLink[] = sectionMap
       description: "Assessment of your cognitive and behavioural skills through aptitude and psychometric tests to identify the most suitable career path."
     }
   ];
- const [openModal, setOpenModal] = useState<OpenModalState>({ type: 'apply' });
+ const [openModal, setOpenModal] = useState<OpenModalState>(null);
   const registrationSteps = [
     {
       step: "1",
@@ -400,64 +466,9 @@ const navigationLinks: NavLink[] = sectionMap
 
       {/* Specializations Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {specializations.map((spec, idx) => {
-          const [isOpen, setIsOpen] = useState(false); 
-
-          return (
-            <div
-              key={idx}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 transition-all"
-            >
-              {/* Top Purple Area: Image + Arrow */}
-              <div
-                className="bg-gradient-to-br from-purple-600 to-purple-700 p-6 text-white relative h-48 flex items-center justify-center cursor-pointer"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                {/* Image */}
-                {spec.image && (
-                  <img
-                    src={spec.image}
-                    alt={spec.name}
-                    className="relative z-10 fill object-contain bg-white/10 p-2 rounded-xl"
-                  />
-                )}
-
-                {/* Arrow */}
-                <div
-                  className="absolute bottom-4 right-4 text-2xl transform transition-transform duration-300"
-                  style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
-                >
-                  ▼
-                </div>
-              </div>
-
-              {/* Bottom Content: Expandable */}
-              <div
-                className={`p-6 transition-all duration-500 ${
-                  isOpen ? "max-h-full" : "max-h-0 overflow-hidden"
-                }`}
-              >
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{spec.name}</h3>
-
-                {spec.description && (
-                  <p className="text-gray-700 mb-2 text-sm">{spec.description}</p>
-                )}
-
-                {Array.isArray(spec.highlights) && spec.highlights.length > 0 && (
-                  <ul className="list-disc pl-5 mb-2 text-gray-700 text-sm">
-                    {spec.highlights.map((h: string, i: number) => (
-                      <li key={i}>{h}</li>
-                    ))}
-                  </ul>
-                )}
-
-                {spec.suitability && (
-                  <p className="text-gray-600 italic text-sm">{spec.suitability}</p>
-                )}
-              </div>
-            </div>
-          );
-        })}
+        {specializations.map((spec, idx) => (
+          <SpecializationCard key={idx} spec={spec} />
+        ))}
       </div>
     </div>
   </section>
@@ -577,38 +588,35 @@ const navigationLinks: NavLink[] = sectionMap
           </div>
         </div>
       </section>
-
-      {/* Program Certificate Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 via-purple-600 to-orange-600">
+ <section className="py-16 bg-gradient-to-r from-blue-600 via-purple-600 to-orange-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+            {/* Left Content */}
             <div className="text-white">
-              <h2 className="text-4xl font-bold mb-4">Program Certificate</h2>
+              <h2 className="text-4xl font-bold mb-4">
+                Program Certificate
+              </h2>
               <p className="text-lg leading-relaxed">
-                Celebrate your achievement with an official certificate from NMIMS CDOE, marking your commitment to excellence and knowledge
+                {courseData.certificateDescription}
               </p>
             </div>
-            <div className="bg-white rounded-2xl p-8 shadow-2xl">
-              <div className="text-center">
-                <div className="mb-4 text-gray-400 text-sm">SAMPLE</div>
-                <div className="w-20 h-20 bg-gray-300 mx-auto mb-4 rounded"></div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">XXXXXX XXXXXX</h3>
-                <p className="text-sm text-gray-600 mb-4">
-                  Has successfully completed all academic requirements<br />
-                  for the award of the degree of
-                </p>
-                <p className="text-lg font-bold text-purple-600 mb-6">
-                  Master of Business Administration<br />
-                  (Specialization)
-                </p>
-                <div className="border-t pt-4">
-                  <p className="text-xs text-gray-500">Official Signature</p>
-                </div>
-              </div>
-            </div>
+
+            {/* Certificate Card */}
+           <div className="flex justify-center">
+            <div className="flex justify-center">
+           <img
+             src={courseData.certificateImage}
+             alt="Program Certificate"
+             className="rounded-2xl shadow-2xl max-w-full h-auto"
+             />
+           </div>
+          </div>
           </div>
         </div>
       </section>
+      
+      
 
       {/* Career Services Section with Carousel */}
       <section className="py-16 bg-gray-50">
@@ -805,7 +813,7 @@ const navigationLinks: NavLink[] = sectionMap
           {/* Eligibility */}
           <div className="mb-12">
             <h3 className="text-2xl font-bold text-purple-600 mb-6">Eligibility</h3>
-            <div id="eligibility" className="bg-gray-50 rounded-2xl p-8 grid md:grid-cols-2 gap-8 items-center">
+            <div id="eligibility" className="bg-purple-500 rounded-2xl p-8 grid md:grid-cols-2 gap-8 items-center">
               <div className="text-center text-orange-500 text-6xl">✓</div>
               <div>
                 <p className="text-lg font-bold mb-4">The {courseData.name} program eligibility:</p>
@@ -1052,29 +1060,7 @@ const navigationLinks: NavLink[] = sectionMap
         </section>
       )}
 
-      {/* Footer */}
-      <footer className="py-12 bg-white border-t">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h4 className="font-bold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-gray-600 text-sm">
-                <li>Student Portal</li>
-                <li>All Programs</li>
-                <li>Admission Process</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">NMIMS CDOE</h4>
-              <ul className="space-y-2 text-gray-600 text-sm">
-                <li>About NMIMS</li>
-                <li>Faculty</li>
-                <li>Blog</li>
-              </ul>
-            </div>
-          </div>
-       </div>
-       </footer>
+     <Footer programs={programs} setOpenModal={(data) => console.log(data)}/>
        {openModal && (
         <ApplyEnquiryModal
           open={!!openModal}

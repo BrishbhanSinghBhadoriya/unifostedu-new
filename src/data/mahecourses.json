@@ -1,0 +1,2742 @@
+{
+  "courses": [
+    {
+      "id": "online-mba-mahe",
+      "courseType": "masters",
+      "title": "Online MBA for Working Professionals",
+      "subtitle": "(Master Of Business Administration)",
+      "rating": 4.9,
+      "duration": "24 months",
+      "semesters": 4,
+      "semesterFee": 73000,
+      "courseFee": 292000,
+      "emiStarting": 12167,
+      "seatsFilledPercent": 87,
+      "lastAdmissionDate": "21st January 2026",
+      "nirf": {
+        "rank": 3,
+        "year": 2025
+      },
+      "university": {
+        "name": "MANIPAL ACADEMY OF HIGHER EDUCATION",
+        "logo": "/images/manipallogo.jpg",
+        "description": "Established in 1953 under a public-private partnership model, Manipal Academy of Higher Education (MAHE) has evolved into a third-ranked university in India (NIRF). Over the decades, this NAAC A++ university was granted Deemed to be University status and recognized as an Institution of Eminence.",
+        "established": 1953,
+        "studentNationalities": 67,
+        "facultyCount": 3000,
+        "studentsWorldwide": 35000,
+        "yearsOfExcellence": 70
+      },
+      "specializations": [
+        "Finance",
+        "Marketing",
+        "Operations Management",
+        "Helthcare Management",
+        "Pharmaceutical Management",
+        "Business Analytics",
+        "Data Science",
+        "Human Resource Management",
+        "Logistics & Supply Chain Management"
+      ],
+      "accreditations": [
+        {
+          "name": "Amongst India's Top 3 Universities (2025)",
+          "description": "NIRF Ranking"
+        },
+        {
+          "name": "Institution of Eminence",
+          "description": "By Government of India"
+        },
+        {
+          "name": "A++ Grade by NAAC",
+          "description": "Highest Accreditation Grade"
+        },
+        {
+          "name": "AICTE Approved Programs",
+          "description": "All programs approved"
+        },
+        {
+          "name": "UGC-entitled Online Degrees",
+          "description": "Equivalent to Campus Degree"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Fast-Tracked Career Progression",
+          "description": "Pursue and take up positions with high earning potential across domains & sectors. Elevate your role in the organization by taking up positions like senior product manager, HR director, finance officer, and operations manager.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067752/benefit1_ymelck.png"
+        },
+        {
+          "title": "Career-Oriented Skills",
+          "description": "Master skills like decision making, problem solving, and networking skills to manage & solve organizational challenges. Learn key subjects such as business communication, financial statement analysis, IT for business, entrepreneurship & innovation, and business statistics from expert faculty.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067752/benefit2_kmxmag.png"
+        },
+        {
+          "title": "Prestigious MAHE Alumni Status",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit3_cjjfx8.png"
+        },
+         {
+          "title": "wide range of specialization",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit4_fh9ugx.png"
+        },
+         {
+          "title": "Real-World case studies",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067754/benefit5_nsctjx.png"
+        },
+         {
+          "title": "Full Online Experience with Campus Immersion",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit6_cf2zgz.png"
+        }
+
+      ],
+      "courseraPartners": [
+        {
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uov_bhmaok.png",
+        "name": "University of Virginia"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082882/uom_kusv12.png", 
+        "name": "University of Michigan"     
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uor_keopjv.png", 
+        "name": "University of Rochester"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uol_kautea.png",  
+        "name": "University of Illinois"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uom2_qaxgcj.png",  
+        "name": "University of Minnesota"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082882/uoc_dgsbxy.png",  
+        "name": "University of Callifornia,Irvine"
+        },
+        {
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uoj_shkxbt.png",
+        "name": "University of Johns Hopkins"      
+        }
+        
+      ],
+      "essentialDomains": [
+       {
+        "title": "Business Strategy",
+        "description": ""
+      },
+      { 
+        "title": "Human Resources", 
+        "description": ""
+      },
+     {
+       "title": "Language Learning",
+       "description": ""
+     },
+
+     {
+       "title": "Leadership and Management",
+       "description": ""
+     },
+    {
+      "title": "Finance",
+      "description": ""
+    },
+    { 
+      "title": "Business Essentials",
+      "description": ""
+    },
+
+   {
+     "title": "Economics",
+     "description": ""
+  },
+   {
+     "title": "Personal Development", 
+     "description": ""
+    },
+  {
+     "title": "Social Sciences",
+    "description": ""
+   }
+      ],
+  "learnSkills": [
+       {
+        "title": "Strategic Management",
+        "description": ""
+      },
+      { 
+        "title": "Cost Accounting", 
+        "description": ""
+      },
+     {
+       "title": "Leadership",
+       "description": ""
+     },
+
+     {
+       "title": "General Statistics",
+       "description": ""
+     },
+    {
+      "title": "Business Communication",
+      "description": ""
+    },
+    { 
+      "title": "Computer Programming",
+      "description": ""
+    },
+
+   {
+     "title": "Recruitment",
+     "description": ""
+  },
+   {
+     "title": "Business Writing", 
+     "description": ""
+    }
+      ],
+      "skills": [
+        "Leadership",
+        "Strategic Thinking",
+        "Data Analysis",
+        "Financial Management",
+        "Marketing Strategy",
+        "Operations Management"
+      ],
+      "curriculum": {
+        "year1": {
+          "semester1": [
+            "Managing People & Organizations",
+            "Financial Reporting & Statement Analysis",
+            "Managerial Economics",
+            "Business Communication",
+            "Business Statistics"
+          ],
+          "semester2": [
+            "Financial Management",
+            "Marketing Management",
+            "Strategic Management",
+            "IT for Business",
+            "Business Leadership",
+            "Research Methodology"
+          ]
+        },
+        "year2": {
+          "semester3": [
+            "Management Accounting",
+            "Legal Aspects of Business",
+            "International Financial Management",
+            "Security Analysis and Portfolio Management",
+            "Mergers and Acquisitions",
+            "Elective Subject"
+          ],
+          "semester4": [
+            "Entrepreneurship and Innovation",
+            "Sustainability",
+            "Capstone Project",
+            "Fintech: Emerging Technologies in Finance",
+            "Financial Analytics",
+            "Financial Derivatives",
+            "Elective Subject"
+          ]
+        }
+      },
+    "hiringPartners": [
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/320px-Google_2015_logo.svg.png",
+    "alt": "Google"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/320px-Amazon_logo.svg.png",
+    "alt": "Amazon"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/320px-IBM_logo.svg.png",
+    "alt": "IBM"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/320px-Microsoft_logo.svg.png",
+    "alt": "Microsoft"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/Diageo_-_Copy_mcsec8.png",
+    "alt": "DIEGEO"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/320px-Infosys_logo.svg.png",
+    "alt": "Infosys"
+  },
+  
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/Accenture_-_Copy_rngzja.png",
+    "alt": "Accenture"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/320px-Microsoft_logo_%282012%29.svg.png",
+    "alt": "Cognizant"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/cardekho_-_Copy_lazkwl.png",
+    "alt": "CARDEKHO"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/TeamLease_xjjyel.png",
+    "alt": "TeamLease"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/LTMIndtree_rj1s1g.png",
+    "alt": "LTMIndtree"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/320px-Wipro_Primary_Logo_Color_RGB.svg.png",
+    "alt": "Wipro"
+  },
+   {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/lansKart_oe5izy.png",
+    "alt": "LanceKart"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/ey_-_Copy_rcogd1.png",
+    "alt": "EY"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/sportDunia_fwjrhv.png",
+    "alt": "SportDunia"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/kreedo_w0mhk5.png",
+    "alt": "Kreedo"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/jogo_ky5og3.png",
+    "alt": "jogo"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/prehrad_qzpwfk.png",
+    "alt": "prehard"
+  },
+  
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/teleperformance_zhw6er.png",
+    "alt": "Teleperformance"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/russelltobin_hewfel.png",
+    "alt": "Russelltobin"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/intellipaat_qcljxz.png",
+    "alt": "intellipaat"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/fincatre_alh08t.png",
+    "alt": "Fincartre"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171086/hexahealth_vlylmr.png",
+    "alt": "hexahealth"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171086/hdfcAgro_unickn.png",
+    "alt": "HDFCAgro"
+  }
+  
+  
+],
+      "careerOptions": {
+        "jobProfiles": [
+          "Marketing Management",
+          "Human Resources",
+          "Financial Analysis",
+          "Process Improvement",
+          "Product Management"
+        ],
+        "industries": [
+          "Business Consulting",
+          "Consumer Goods",
+          "Advertising",
+          "Retail & E-commerce",
+          "Transportation"
+        ]
+      },
+      "features": [
+        {
+          "title": "Upskilling & Certifications",
+          "description": "Boost your career opportunities by building in-demand skills and earning recognized certifications."
+        },
+        {
+          "title": "Industry Interaction",
+          "description": "Live industry interaction sessions to connect learners to experts who share real world insights & experiences, career tips, and current industry trends."
+        },
+        {
+          "title": "Self-Paced Learning",
+          "description": "Learn anytime, anywhere, with our recorded modules focused on improving verbal & communication skills, resume writing & professional etiquette development."
+        },
+        {
+          "title": "Employability Skill Assessment",
+          "description": "Identify your strengths and weaknesses through skill assessment and build competencies to improve your employability quotient."
+        }
+      ],
+      "eligibility": {
+        "indian": {
+          "education": {
+            "title": "Educational qualification",
+            "description": "Candidates must have a 10 + 2 + 3-year bachelor's degree from a recognized university/institution."
+          },
+          "grades": {
+            "title": "Grades",
+            "description": "Candidates must have a minimum of 50% marks in aggregate in graduation."
+          },
+          "experience": {
+            "title": "Work experience",
+            "description": "Work experience in reputed organizations is required. Fresh graduates must submit a Statement of Purpose (SOP) video to apply."
+          }
+        },
+        "international": {
+          "education": {
+            "title": "Educational qualification",
+            "description": "Candidates must have a bachelor's degree from a recognized university/institution equivalent to Indian standards."
+          },
+          "grades": {
+            "title": "Grades",
+            "description": "Candidates must have equivalent academic standing with minimum 50% marks or equivalent grade."
+          },
+          "experience": {
+            "title": "Work experience",
+            "description": "Relevant work experience is preferred. Fresh graduates may apply with additional documentation."
+          }
+        }
+      },
+      "admissionProcess": [
+        {
+          "step": 1,
+          "title": "Application",
+          "description": "Submit your basic, education, and work experience details or SOP video (for fresh graduates) and pay the application fee to register."
+        },
+        {
+          "step": 2,
+          "title": "Fee payment",
+          "description": "Pay the admission fee for the first semester/year or full program."
+        },
+        {
+          "step": 3,
+          "title": "Document upload",
+          "description": "Upload supporting documents & submit your application."
+        },
+        {
+          "step": 4,
+          "title": "University approval",
+          "description": "The university will evaluate your documents to confirm your admission."
+        }
+      ],
+      "faqs": [
+        {
+          "category": "program",
+          "question": "How is an MBA for working professionals different from a regular MBA?",
+          "answer": "An MBA for working professionals is designed specifically for individuals who want to pursue higher education while maintaining their current job. It offers flexible learning schedules, online or weekend classes, and curriculum that's relevant to practical business challenges."
+        },
+        {
+          "category": "program",
+          "question": "Why choose an online MBA degree from Manipal universities?",
+          "answer": "Manipal Academy of Higher Education is India's 3rd-ranked university (NIRF 2025) with Institution of Eminence status. The online MBA offers the same academic rigor and recognition as on-campus programs, with added flexibility for working professionals."
+        },
+        {
+          "category": "program",
+          "question": "Are online degrees by Manipal Academy of Higher Education credible and valid?",
+          "answer": "Yes, absolutely. The online degrees from MAHE are UGC-entitled and are equivalent to on-campus degrees. They carry the same value and recognition in the job market and for further studies."
+        },
+        {
+          "category": "admission",
+          "question": "Will learners receive placement assistance?",
+          "answer": "Yes, students receive comprehensive placement assistance including resume building, interview preparation, industry connections, and job placement support through our dedicated placement cell."
+        },
+        {
+          "category": "program",
+          "question": "Will I have access to Manipal Academy of Higher Education's alumni network?",
+          "answer": "Yes, upon successful completion of the program, you'll gain access to MAHE's 1 million+ strong global alumni network, opening doors to networking and career opportunities worldwide."
+        }
+      ]
+    },
+    {
+      "id": "online-mca-mahe",
+      "courseType": "masters",
+      "title": "Online MCA",
+      "subtitle": "(Master of Computer Applications)",
+      "rating": 4.8,
+      "duration": "24 months",
+      "semesters": 4,
+      "semesterFee": 55000,
+      "courseFee": 220000,
+      "emiStarting": 9167 ,
+      "seatsFilledPercent": 82,
+      "lastAdmissionDate": "21st January 2026",
+      "nirf": {
+        "rank": 3,
+        "year": 2025
+      },
+      "university": {
+        "name": "MANIPAL ACADEMY OF HIGHER EDUCATION",
+        "logo": "/images/manipallogo.jpg",
+        "description": "Established in 1953 under a public-private partnership model, Manipal Academy of Higher Education (MAHE) has evolved into a third-ranked university in India (NIRF). Over the decades, this NAAC A++ university was granted Deemed to be University status and recognized as an Institution of Eminence.",
+        "established": 1953,
+        "studentNationalities": 67,
+        "facultyCount": 3000,
+        "studentsWorldwide": 35000,
+        "yearsOfExcellence": 70
+      },
+      "specializations": [
+        "Artificial Intelligence & Machine Learning",
+        "Cloud Computing",
+        "Cyber Security",
+        "Full Stack Development"
+        
+      ],
+      "accreditations": [
+        {
+          "name": "Amongst India's Top 3 Universities (2025)",
+          "description": "NIRF Ranking"
+        },
+        {
+          "name": "Institution of Eminence",
+          "description": "By Government of India"
+        },
+        {
+          "name": "A++ Grade by NAAC",
+          "description": "Highest Accreditation Grade"
+        },
+        {
+          "name": "AICTE Approved Programs",
+          "description": "All programs approved"
+        },
+        {
+          "name": "UGC-entitled Online Degrees",
+          "description": "Equivalent to Campus Degree"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Fast-Tracked Career Progression",
+          "description": "Pursue and take up positions with high earning potential across domains & sectors. Elevate your role in the organization by taking up positions like senior product manager, HR director, finance officer, and operations manager.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067752/benefit1_ymelck.png"
+        },
+        {
+          "title": "Career-Oriented Skills",
+          "description": "Master skills like decision making, problem solving, and networking skills to manage & solve organizational challenges. Learn key subjects such as business communication, financial statement analysis, IT for business, entrepreneurship & innovation, and business statistics from expert faculty.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067752/benefit2_kmxmag.png"
+        },
+        {
+          "title": "Prestigious MAHE Alumni Status",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit3_cjjfx8.png"
+        },
+         {
+          "title": "wide range of specialization",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit4_fh9ugx.png"
+        },
+         {
+          "title": "Real-World case studies",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067754/benefit5_nsctjx.png"
+        },
+         {
+          "title": "Full Online Experience with Campus Immersion",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit6_cf2zgz.png"
+        }
+
+      ],
+      "courseraPartners": [
+        {
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uov_bhmaok.png",
+        "name": "University of Virginia"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082882/uom_kusv12.png", 
+        "name": "University of Michigan"     
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uor_keopjv.png", 
+        "name": "University of Rochester"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uol_kautea.png",  
+        "name": "University of Illinois"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uom2_qaxgcj.png",  
+        "name": "University of Minnesota"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082882/uoc_dgsbxy.png",  
+        "name": "University of Callifornia,Irvine"
+        },
+        {
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uoj_shkxbt.png",
+        "name": "University of Johns Hopkins"      
+        }
+        
+      ],
+      "skills": [
+        "Programming Languages",
+        "Software Development",
+        "Database Management",
+        "Cloud Computing",
+        "Machine Learning",
+        "Cybersecurity"
+      ],
+      "curriculum": {
+        "year1": {
+          "semester1": [
+            "Programming in C & Data Structures",
+            "Computer Organization & Architecture",
+            "Discrete Mathematics",
+            "Database Management Systems",
+            "Object-Oriented Programming with Java"
+          ],
+          "semester2": [
+            "Operating Systems",
+            "Software Engineering",
+            "Computer Networks",
+            "Web Technologies",
+            "Design & Analysis of Algorithms",
+            "Python Programming"
+          ]
+        },
+        "year2": {
+          "semester1": [
+            "Specialization Subjects",
+            "Cloud Computing",
+            "Machine Learning",
+            "Elective Courses",
+            "Mini Project"
+          ],
+          "semester2": [
+            "Advanced Specialization",
+            "Mobile Application Development",
+            "Major Project",
+            "Industry Internship"
+          ]
+        }
+      },
+       "hiringPartners": [
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/320px-Google_2015_logo.svg.png",
+    "alt": "Google"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/320px-Amazon_logo.svg.png",
+    "alt": "Amazon"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/320px-IBM_logo.svg.png",
+    "alt": "IBM"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/320px-Microsoft_logo.svg.png",
+    "alt": "Microsoft"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/Diageo_-_Copy_mcsec8.png",
+    "alt": "DIEGEO"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/320px-Infosys_logo.svg.png",
+    "alt": "Infosys"
+  },
+  
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/Accenture_-_Copy_rngzja.png",
+    "alt": "Accenture"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/320px-Microsoft_logo_%282012%29.svg.png",
+    "alt": "Cognizant"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/cardekho_-_Copy_lazkwl.png",
+    "alt": "CARDEKHO"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/TeamLease_xjjyel.png",
+    "alt": "TeamLease"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/LTMIndtree_rj1s1g.png",
+    "alt": "LTMIndtree"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/320px-Wipro_Primary_Logo_Color_RGB.svg.png",
+    "alt": "Wipro"
+  },
+   {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/lansKart_oe5izy.png",
+    "alt": "LanceKart"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/ey_-_Copy_rcogd1.png",
+    "alt": "EY"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/sportDunia_fwjrhv.png",
+    "alt": "SportDunia"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/kreedo_w0mhk5.png",
+    "alt": "Kreedo"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/jogo_ky5og3.png",
+    "alt": "jogo"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/prehrad_qzpwfk.png",
+    "alt": "prehard"
+  },
+  
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/teleperformance_zhw6er.png",
+    "alt": "Teleperformance"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/russelltobin_hewfel.png",
+    "alt": "Russelltobin"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/intellipaat_qcljxz.png",
+    "alt": "intellipaat"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/fincatre_alh08t.png",
+    "alt": "Fincartre"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171086/hexahealth_vlylmr.png",
+    "alt": "hexahealth"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171086/hdfcAgro_unickn.png",
+    "alt": "HDFCAgro"
+  }
+  
+  
+],
+      "careerOptions": {
+        "jobProfiles": [
+          "Software Developer",
+          "Systems Analyst",
+          "Database Administrator",
+          "Cloud Solutions Architect",
+          "Data Scientist",
+          "Cybersecurity Analyst"
+        ],
+        "industries": [
+          "Information Technology",
+          "Software Development",
+          "Cloud Services",
+          "E-commerce",
+          "Banking & Finance"
+        ]
+      },
+      "features": [
+        {
+          "title": "Hands-on Coding Labs",
+          "description": "Access to virtual labs and coding platforms for practical implementation of concepts learned in theory classes."
+        },
+        {
+          "title": "Industry Projects",
+          "description": "Work on real-world industry projects to build your portfolio and gain practical experience."
+        },
+        {
+          "title": "Certification Programs",
+          "description": "Earn additional certifications in trending technologies like AWS, Azure, and Google Cloud alongside your degree."
+        },
+        {
+          "title": "Hackathons & Coding Contests",
+          "description": "Participate in regular hackathons and coding competitions to sharpen your problem-solving skills."
+        }
+      ],
+      "eligibility": {
+        "indian": {
+          "education": {
+            "title": "Educational qualification",
+            "description": "Bachelor's degree in any discipline with Mathematics/Statistics at 10+2 or Graduation level from a recognized university."
+          },
+          "grades": {
+            "title": "Grades",
+            "description": "Minimum 50% marks in aggregate in graduation."
+          },
+          "experience": {
+            "title": "Work experience",
+            "description": "No mandatory work experience required. Fresh graduates can apply directly."
+          }
+        },
+        "international": {
+          "education": {
+            "title": "Educational qualification",
+            "description": "Bachelor's degree equivalent to Indian standards with Mathematics background."
+          },
+          "grades": {
+            "title": "Grades",
+            "description": "Equivalent academic standing with minimum 50% marks or equivalent grade."
+          },
+          "experience": {
+            "title": "Work experience",
+            "description": "No mandatory work experience required."
+          }
+        }
+      },
+      "admissionProcess": [
+        {
+          "step": 1,
+          "title": "Application",
+          "description": "Fill the online application form with your academic details and pay the application fee."
+        },
+        {
+          "step": 2,
+          "title": "Fee payment",
+          "description": "Pay the admission fee for the first semester/year or full program."
+        },
+        {
+          "step": 3,
+          "title": "Document upload",
+          "description": "Upload all required academic documents and certificates."
+        },
+        {
+          "step": 4,
+          "title": "University approval",
+          "description": "The university will verify your documents and confirm your admission."
+        }
+      ],
+      "faqs": [
+        {
+          "category": "program",
+          "question": "What is the difference between MCA and B.Tech in Computer Science?",
+          "answer": "MCA is a postgraduate program focused on application development and software engineering, while B.Tech is an undergraduate engineering degree. MCA is ideal for students from non-engineering backgrounds who want to enter the IT industry."
+        },
+        {
+          "category": "program",
+          "question": "Can I pursue MCA without a computer science background?",
+          "answer": "Yes, you can pursue MCA from any background as long as you have studied Mathematics or Statistics at 10+2 or graduation level. The program is designed to accommodate students from diverse academic backgrounds."
+        },
+        {
+          "category": "admission",
+          "question": "What are the career prospects after completing Online MCA?",
+          "answer": "MCA graduates have excellent career prospects in software development, data science, cloud computing, cybersecurity, and system analysis roles with competitive salaries in top IT companies."
+        },
+        {
+          "category": "program",
+          "question": "Is the online MCA degree valid for government jobs?",
+          "answer": "Yes, the online MCA degree from MAHE is UGC-entitled and is valid for government jobs, higher education, and employment in private sector companies."
+        }
+      ]
+    },
+    {
+      "id": "online-bba-honors-mahe",
+      "courseType": "bachelors",
+      "title": "Online BBA (Honors)",
+      "subtitle": "(Bachelor of Business Administration)",
+      "rating": 4.7,
+      "duration": "36 months",
+      "semesters": 8,
+      "semesterFee": 30000,
+      "courseFee": 240000,
+      "emiStarting": 5000,
+      "seatsFilledPercent": 78,
+      "lastAdmissionDate": "21st January 2026",
+      "nirf": {
+        "rank": 3,
+        "year": 2025
+      },
+      "university": {
+        "name": "MANIPAL ACADEMY OF HIGHER EDUCATION",
+        "logo": "/images/manipallogo.jpg",
+        "description": "Established in 1953 under a public-private partnership model, Manipal Academy of Higher Education (MAHE) has evolved into a third-ranked university in India (NIRF). Over the decades, this NAAC A++ university was granted Deemed to be University status and recognized as an Institution of Eminence.",
+        "established": 1953,
+        "studentNationalities": 67,
+        "facultyCount": 3000,
+        "studentsWorldwide": 35000,
+        "yearsOfExcellence": 70
+      },
+      "specializations": [
+         "Helthcare Management",
+         "Business Analytics",
+         "Human Resource Management",
+         "Financial Technology",
+         "Marketing Management"
+      ],
+      "accreditations": [
+        {
+          "name": "Amongst India's Top 3 Universities (2025)",
+          "description": "NIRF Ranking"
+        },
+        {
+          "name": "Institution of Eminence",
+          "description": "By Government of India"
+        },
+        {
+          "name": "A++ Grade by NAAC",
+          "description": "Highest Accreditation Grade"
+        },
+        {
+          "name": "AICTE Approved Programs",
+          "description": "All programs approved"
+        },
+        {
+          "name": "UGC-entitled Online Degrees",
+          "description": "Equivalent to Campus Degree"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Fast-Tracked Career Progression",
+          "description": "Pursue and take up positions with high earning potential across domains & sectors. Elevate your role in the organization by taking up positions like senior product manager, HR director, finance officer, and operations manager.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067752/benefit1_ymelck.png"
+        },
+        {
+          "title": "Career-Oriented Skills",
+          "description": "Master skills like decision making, problem solving, and networking skills to manage & solve organizational challenges. Learn key subjects such as business communication, financial statement analysis, IT for business, entrepreneurship & innovation, and business statistics from expert faculty.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067752/benefit2_kmxmag.png"
+        },
+        {
+          "title": "Prestigious MAHE Alumni Status",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit3_cjjfx8.png"
+        },
+         {
+          "title": "wide range of specialization",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit4_fh9ugx.png"
+        },
+         {
+          "title": "Real-World case studies",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067754/benefit5_nsctjx.png"
+        },
+         {
+          "title": "Full Online Experience with Campus Immersion",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit6_cf2zgz.png"
+        }
+
+      ],
+      "courseraPartners": [
+        {
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uov_bhmaok.png",
+        "name": "University of Virginia"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082882/uom_kusv12.png", 
+        "name": "University of Michigan"     
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uor_keopjv.png", 
+        "name": "University of Rochester"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uol_kautea.png",  
+        "name": "University of Illinois"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uom2_qaxgcj.png",  
+        "name": "University of Minnesota"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082882/uoc_dgsbxy.png",  
+        "name": "University of Callifornia,Irvine"
+        },
+        {
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uoj_shkxbt.png",
+        "name": "University of Johns Hopkins"      
+        }
+        
+      ],
+      "skills": [
+        "Business Communication",
+        "Financial Analysis",
+        "Marketing Strategy",
+        "Leadership",
+        "Data Analytics",
+        "Project Management"
+      ],
+      "curriculum": {
+        "year1": {
+          "semester1": [
+            "Principles of Management",
+            "Business Economics",
+            "Financial Accounting",
+            "Business Communication",
+            "Business Mathematics"
+          ],
+          
+          "semester2": [
+            "Management Accounting",
+            "Income Tax Law & Practice - II",
+            "Banking & Insurance",
+            "Goods & Services Tax (GST)",
+            "Financial Management",
+            "Summer Training"
+          ]
+        },
+        "year2": {
+          "semester3": [
+            "Cost Accounting",
+            "Corporate Accounting",
+            "Business Law",
+            "Marketing Management",
+            "Human Resource Management"
+          ],
+          "semester4": [
+            "Financial Market Operations",
+            "International Business",
+            "Research Methodology",
+            "Operation Management",
+            "Entrepreneurship Development"
+          ]
+        },
+        "year3": {
+          "semester5": [
+            "Auditing & Assurance",
+            "Corporate Tax Planning",
+            "Financial Markets & Services",
+            "Specialization Subject 1",
+            "E-Commerce & Digital Business"
+          ],
+          "semester6": [
+            "Advanced Accounting",
+            "Indirect Taxation",
+            "Specialization Subject 2",
+            "Project Work",
+            "Comprehensive Viva"
+          ]
+        },
+         "year4": {
+          "semester7": [
+            "Auditing & Assurance",
+            "Corporate Tax Planning",
+            "Financial Markets & Services",
+            "Specialization Subject 1",
+            "E-Commerce & Digital Business"
+          ],
+          "semester8": [
+            "Advanced Accounting",
+            "Indirect Taxation",
+            "Specialization Subject 2",
+            "Project Work",
+            "Comprehensive Viva"
+          ]
+        }
+      },
+     "hiringPartners": [
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/320px-Google_2015_logo.svg.png",
+    "alt": "Google"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/320px-Amazon_logo.svg.png",
+    "alt": "Amazon"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/320px-IBM_logo.svg.png",
+    "alt": "IBM"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/320px-Microsoft_logo.svg.png",
+    "alt": "Microsoft"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/Diageo_-_Copy_mcsec8.png",
+    "alt": "DIEGEO"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/320px-Infosys_logo.svg.png",
+    "alt": "Infosys"
+  },
+  
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/Accenture_-_Copy_rngzja.png",
+    "alt": "Accenture"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/320px-Microsoft_logo_%282012%29.svg.png",
+    "alt": "Cognizant"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/cardekho_-_Copy_lazkwl.png",
+    "alt": "CARDEKHO"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/TeamLease_xjjyel.png",
+    "alt": "TeamLease"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/LTMIndtree_rj1s1g.png",
+    "alt": "LTMIndtree"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/320px-Wipro_Primary_Logo_Color_RGB.svg.png",
+    "alt": "Wipro"
+  },
+   {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/lansKart_oe5izy.png",
+    "alt": "LanceKart"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/ey_-_Copy_rcogd1.png",
+    "alt": "EY"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/sportDunia_fwjrhv.png",
+    "alt": "SportDunia"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/kreedo_w0mhk5.png",
+    "alt": "Kreedo"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/jogo_ky5og3.png",
+    "alt": "jogo"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/prehrad_qzpwfk.png",
+    "alt": "prehard"
+  },
+  
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/teleperformance_zhw6er.png",
+    "alt": "Teleperformance"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/russelltobin_hewfel.png",
+    "alt": "Russelltobin"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/intellipaat_qcljxz.png",
+    "alt": "intellipaat"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/fincatre_alh08t.png",
+    "alt": "Fincartre"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171086/hexahealth_vlylmr.png",
+    "alt": "hexahealth"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171086/hdfcAgro_unickn.png",
+    "alt": "HDFCAgro"
+  }
+  
+  
+],
+      "careerOptions": {
+        "jobProfiles": [
+          "Accountant",
+          "Tax Consultant",
+          "Financial Analyst",
+          "Auditor",
+          "Banking Officer",
+          "Investment Analyst"
+        ],
+        "industries": [
+          "Accounting Firms",
+          "Banking & Finance",
+          "Taxation Services",
+          "Corporate Finance",
+          "Insurance"
+        ]
+      },
+      "features": [
+        {
+          "title": "CA Foundation Preparation",
+          "description": "Special modules to help students prepare for CA Foundation exam alongside their degree."
+        },
+        {
+          "title": "Tally & Excel Training",
+          "description": "Hands-on training in Tally ERP, MS Excel, and other accounting software used in industry."
+        },
+        {
+          "title": "Live Taxation Updates",
+          "description": "Regular sessions on latest tax laws, GST updates, and regulatory changes in Indian commerce."
+        },
+        {
+          "title": "Professional Certifications",
+          "description": "Access to additional professional certification courses in accounting and finance."
+        }
+      ],
+      "eligibility": {
+        "indian": {
+          "education": {
+            "title": "Educational qualification",
+            "description": "10+2 or equivalent from a recognized board. Commerce stream students preferred but all streams accepted."
+          },
+          "grades": {
+            "title": "Grades",
+            "description": "Minimum 50% marks in aggregate in 10+2 (45% for reserved categories)."
+          },
+          "experience": {
+            "title": "Age & Experience",
+            "description": "No age limit. Fresh 12th pass students can apply."
+          }
+        },
+        "international": {
+          "education": {
+            "title": "Educational qualification",
+            "description": "12 years of schooling equivalent to Indian 10+2 system."
+          },
+          "grades": {
+            "title": "Grades",
+            "description": "Minimum 50% marks or equivalent grade."
+          },
+          "experience": {
+            "title": "Age & Experience",
+            "description": "No age limit or work experience required."
+          }
+        }
+      },
+      "admissionProcess": [
+        {
+          "step": 1,
+          "title": "Application",
+          "description": "Fill the application form with academic details and pay application fee."
+        },
+        {
+          "step": 2,
+          "title": "Fee payment",
+          "description": "Pay semester/annual fee or opt for installment payment."
+        },
+        {
+          "step": 3,
+          "title": "Document upload",
+          "description": "Submit 10+2 marksheet, TC, and identity documents online."
+        },
+        {
+          "step": 4,
+          "title": "University approval",
+          "description": "Verification and admission confirmation within 5-7 days."
+        }
+      ],
+      "faqs": [
+        {
+          "category": "program",
+          "question": "What is the difference between B.Com and B.Com Professional?",
+          "answer": "B.Com Professional includes additional industry-oriented subjects, practical training, software skills, and professional certifications making graduates more job-ready compared to regular B.Com."
+        },
+        {
+          "category": "program",
+          "question": "Can I pursue CA/CS along with B.Com Professional?",
+          "answer": "Yes, this program is designed to complement professional courses like CA, CS, and CMA. Many students pursue these certifications alongside their degree."
+        },
+        {
+          "category": "admission",
+          "question": "Do I need to have Commerce in 12th to apply?",
+          "answer": "No, students from all streams (Commerce, Science, Arts) can apply. However, commerce background students may find some subjects more familiar."
+        },
+        {
+          "category": "program",
+          "question": "What career options are available after B.Com Professional?",
+          "answer": "Graduates can work as accountants, tax consultants, financial analysts, or pursue higher studies like M.Com, MBA, or professional certifications like CA, CMA, CS."
+        }
+      ]
+    },
+    {
+      "id": "online-bba-mahe",
+      "courseType": "bachelors",
+      "title": "Online BBA ",
+      "subtitle": "(Bachelor of Business Administration)",
+      "rating": 4.7,
+      "duration": "36 months",
+      "semesters": 6,
+      "semesterFee": 30000,
+      "courseFee": 180000,
+      "emiStarting": 5000,
+      "seatsFilledPercent": 78,
+      "lastAdmissionDate": "21st January 2026",
+      "nirf": {
+        "rank": 3,
+        "year": 2025
+      },
+      "university": {
+        "name": "MANIPAL ACADEMY OF HIGHER EDUCATION",
+        "logo": "/images/manipallogo.jpg",
+        "description": "Established in 1953 under a public-private partnership model, Manipal Academy of Higher Education (MAHE) has evolved into a third-ranked university in India (NIRF). Over the decades, this NAAC A++ university was granted Deemed to be University status and recognized as an Institution of Eminence.",
+        "established": 1953,
+        "studentNationalities": 67,
+        "facultyCount": 3000,
+        "studentsWorldwide": 35000,
+        "yearsOfExcellence": 70
+      },
+      "specializations": [
+        "Helthcare Management",
+        "Business Analytics",
+        "Human Resource Management",
+        "Financial Technology",
+        "Marketing Management"
+        
+      ],
+      "accreditations": [
+        {
+          "name": "Amongst India's Top 3 Universities (2025)",
+          "description": "NIRF Ranking"
+        },
+        {
+          "name": "Institution of Eminence",
+          "description": "By Government of India"
+        },
+        {
+          "name": "A++ Grade by NAAC",
+          "description": "Highest Accreditation Grade"
+        },
+        {
+          "name": "AICTE Approved Programs",
+          "description": "All programs approved"
+        },
+        {
+          "name": "UGC-entitled Online Degrees",
+          "description": "Equivalent to Campus Degree"
+        }
+      ],
+     "benefits": [
+        {
+          "title": "Fast-Tracked Career Progression",
+          "description": "Pursue and take up positions with high earning potential across domains & sectors. Elevate your role in the organization by taking up positions like senior product manager, HR director, finance officer, and operations manager.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067752/benefit1_ymelck.png"
+        },
+        {
+          "title": "Career-Oriented Skills",
+          "description": "Master skills like decision making, problem solving, and networking skills to manage & solve organizational challenges. Learn key subjects such as business communication, financial statement analysis, IT for business, entrepreneurship & innovation, and business statistics from expert faculty.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067752/benefit2_kmxmag.png"
+        },
+        {
+          "title": "Prestigious MAHE Alumni Status",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit3_cjjfx8.png"
+        },
+         {
+          "title": "wide range of specialization",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit4_fh9ugx.png"
+        },
+         {
+          "title": "Real-World case studies",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067754/benefit5_nsctjx.png"
+        },
+         {
+          "title": "Full Online Experience with Campus Immersion",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit6_cf2zgz.png"
+        }
+
+      ],
+      "courseraPartners": [
+        {
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uov_bhmaok.png",
+        "name": "University of Virginia"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082882/uom_kusv12.png", 
+        "name": "University of Michigan"     
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uor_keopjv.png", 
+        "name": "University of Rochester"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uol_kautea.png",  
+        "name": "University of Illinois"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uom2_qaxgcj.png",  
+        "name": "University of Minnesota"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082882/uoc_dgsbxy.png",  
+        "name": "University of Callifornia,Irvine"
+        },
+        {
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uoj_shkxbt.png",
+        "name": "University of Johns Hopkins"      
+        }
+        
+      ],
+      "skills": [
+        "Business Communication",
+        "Financial Analysis",
+        "Marketing Strategy",
+        "Leadership",
+        "Data Analytics",
+        "Project Management"
+      ],
+      "curriculum": {
+        "year1": {
+          "semester1": [
+            "Principles of Management",
+            "Business Economics",
+            "Financial Accounting",
+            "Business Communication",
+            "Business Mathematics"
+          ],
+          
+          "semester2": [
+            "Management Accounting",
+            "Income Tax Law & Practice - II",
+            "Banking & Insurance",
+            "Goods & Services Tax (GST)",
+            "Financial Management",
+            "Summer Training"
+          ]
+        },
+        "year2": {
+          "semester3": [
+            "Cost Accounting",
+            "Corporate Accounting",
+            "Business Law",
+            "Marketing Management",
+            "Human Resource Management"
+          ],
+          "semester4": [
+            "Financial Market Operations",
+            "International Business",
+            "Research Methodology",
+            "Operation Management",
+            "Entrepreneurship Development"
+          ]
+        },
+        "year3": {
+          "semester5": [
+            "Auditing & Assurance",
+            "Corporate Tax Planning",
+            "Financial Markets & Services",
+            "Specialization Subject 1",
+            "E-Commerce & Digital Business"
+          ],
+          "semester6": [
+            "Advanced Accounting",
+            "Indirect Taxation",
+            "Specialization Subject 2",
+            "Project Work",
+            "Comprehensive Viva"
+          ]
+        }
+      },
+        "hiringPartners": [
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/320px-Google_2015_logo.svg.png",
+    "alt": "Google"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/320px-Amazon_logo.svg.png",
+    "alt": "Amazon"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/320px-IBM_logo.svg.png",
+    "alt": "IBM"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/320px-Microsoft_logo.svg.png",
+    "alt": "Microsoft"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/Diageo_-_Copy_mcsec8.png",
+    "alt": "DIEGEO"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/320px-Infosys_logo.svg.png",
+    "alt": "Infosys"
+  },
+  
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/Accenture_-_Copy_rngzja.png",
+    "alt": "Accenture"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/320px-Microsoft_logo_%282012%29.svg.png",
+    "alt": "Cognizant"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/cardekho_-_Copy_lazkwl.png",
+    "alt": "CARDEKHO"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/TeamLease_xjjyel.png",
+    "alt": "TeamLease"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/LTMIndtree_rj1s1g.png",
+    "alt": "LTMIndtree"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/320px-Wipro_Primary_Logo_Color_RGB.svg.png",
+    "alt": "Wipro"
+  },
+   {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/lansKart_oe5izy.png",
+    "alt": "LanceKart"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/ey_-_Copy_rcogd1.png",
+    "alt": "EY"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/sportDunia_fwjrhv.png",
+    "alt": "SportDunia"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/kreedo_w0mhk5.png",
+    "alt": "Kreedo"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/jogo_ky5og3.png",
+    "alt": "jogo"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/prehrad_qzpwfk.png",
+    "alt": "prehard"
+  },
+  
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/teleperformance_zhw6er.png",
+    "alt": "Teleperformance"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/russelltobin_hewfel.png",
+    "alt": "Russelltobin"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/intellipaat_qcljxz.png",
+    "alt": "intellipaat"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/fincatre_alh08t.png",
+    "alt": "Fincartre"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171086/hexahealth_vlylmr.png",
+    "alt": "hexahealth"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171086/hdfcAgro_unickn.png",
+    "alt": "HDFCAgro"
+  }
+  
+  
+],
+      "careerOptions": {
+        "jobProfiles": [
+          "Accountant",
+          "Tax Consultant",
+          "Financial Analyst",
+          "Auditor",
+          "Banking Officer",
+          "Investment Analyst"
+        ],
+        "industries": [
+          "Accounting Firms",
+          "Banking & Finance",
+          "Taxation Services",
+          "Corporate Finance",
+          "Insurance"
+        ]
+      },
+      "features": [
+        {
+          "title": "CA Foundation Preparation",
+          "description": "Special modules to help students prepare for CA Foundation exam alongside their degree."
+        },
+        {
+          "title": "Tally & Excel Training",
+          "description": "Hands-on training in Tally ERP, MS Excel, and other accounting software used in industry."
+        },
+        {
+          "title": "Live Taxation Updates",
+          "description": "Regular sessions on latest tax laws, GST updates, and regulatory changes in Indian commerce."
+        },
+        {
+          "title": "Professional Certifications",
+          "description": "Access to additional professional certification courses in accounting and finance."
+        }
+      ],
+      "eligibility": {
+        "indian": {
+          "education": {
+            "title": "Educational qualification",
+            "description": "10+2 or equivalent from a recognized board. Commerce stream students preferred but all streams accepted."
+          },
+          "grades": {
+            "title": "Grades",
+            "description": "Minimum 50% marks in aggregate in 10+2 (45% for reserved categories)."
+          },
+          "experience": {
+            "title": "Age & Experience",
+            "description": "No age limit. Fresh 12th pass students can apply."
+          }
+        },
+        "international": {
+          "education": {
+            "title": "Educational qualification",
+            "description": "12 years of schooling equivalent to Indian 10+2 system."
+          },
+          "grades": {
+            "title": "Grades",
+            "description": "Minimum 50% marks or equivalent grade."
+          },
+          "experience": {
+            "title": "Age & Experience",
+            "description": "No age limit or work experience required."
+          }
+        }
+      },
+      "admissionProcess": [
+        {
+          "step": 1,
+          "title": "Application",
+          "description": "Fill the application form with academic details and pay application fee."
+        },
+        {
+          "step": 2,
+          "title": "Fee payment",
+          "description": "Pay semester/annual fee or opt for installment payment."
+        },
+        {
+          "step": 3,
+          "title": "Document upload",
+          "description": "Submit 10+2 marksheet, TC, and identity documents online."
+        },
+        {
+          "step": 4,
+          "title": "University approval",
+          "description": "Verification and admission confirmation within 5-7 days."
+        }
+      ],
+      "faqs": [
+        {
+          "category": "program",
+          "question": "What is the difference between B.Com and B.Com Professional?",
+          "answer": "B.Com Professional includes additional industry-oriented subjects, practical training, software skills, and professional certifications making graduates more job-ready compared to regular B.Com."
+        },
+        {
+          "category": "program",
+          "question": "Can I pursue CA/CS along with B.Com Professional?",
+          "answer": "Yes, this program is designed to complement professional courses like CA, CS, and CMA. Many students pursue these certifications alongside their degree."
+        },
+        {
+          "category": "admission",
+          "question": "Do I need to have Commerce in 12th to apply?",
+          "answer": "No, students from all streams (Commerce, Science, Arts) can apply. However, commerce background students may find some subjects more familiar."
+        },
+        {
+          "category": "program",
+          "question": "What career options are available after B.Com Professional?",
+          "answer": "Graduates can work as accountants, tax consultants, financial analysts, or pursue higher studies like M.Com, MBA, or professional certifications like CA, CMA, CS."
+        }
+      ]
+    },
+    {
+      "id": "online-msc-data-science-mahe",
+      "courseType": "masters",
+      "title": "Online M.Sc. in Data Science",
+      "subtitle": "(Master of Science in Data Science)",
+      "rating": 4.9,
+      "duration": "24 months",
+      "semesters": 4,
+      "semesterFee": 70000,
+      "courseFee": 280000,
+      "emiStarting": 11667,
+      "seatsFilledPercent": 85,
+      "lastAdmissionDate": "21st January 2026",
+      "nirf": {
+        "rank": 3,
+        "year": 2025
+      },
+      "university": {
+        "name": "MANIPAL ACADEMY OF HIGHER EDUCATION",
+        "logo": "/images/manipallogo.jpg",
+        "description": "Established in 1953 under a public-private partnership model, Manipal Academy of Higher Education (MAHE) has evolved into a third-ranked university in India (NIRF). Over the decades, this NAAC A++ university was granted Deemed to be University status and recognized as an Institution of Eminence.",
+        "established": 1953,
+        "studentNationalities": 67,
+        "facultyCount": 3000,
+        "studentsWorldwide": 35000,
+        "yearsOfExcellence": 70
+      },
+      "specializations": [
+        "data-science"
+      ],
+      "accreditations": [
+        {
+          "name": "Amongst India's Top 3 Universities (2025)",
+          "description": "NIRF Ranking"
+        },
+        {
+          "name": "Institution of Eminence",
+          "description": "By Government of India"
+        },
+        {
+          "name": "A++ Grade by NAAC",
+          "description": "Highest Accreditation Grade"
+        },
+        {
+          "name": "UGC-entitled Online Degrees",
+          "description": "Equivalent to Campus Degree"
+        }
+      ],
+     "benefits": [
+        {
+          "title": "Fast-Tracked Career Progression",
+          "description": "Pursue and take up positions with high earning potential across domains & sectors. Elevate your role in the organization by taking up positions like senior product manager, HR director, finance officer, and operations manager.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067752/benefit1_ymelck.png"
+        },
+        {
+          "title": "Career-Oriented Skills",
+          "description": "Master skills like decision making, problem solving, and networking skills to manage & solve organizational challenges. Learn key subjects such as business communication, financial statement analysis, IT for business, entrepreneurship & innovation, and business statistics from expert faculty.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067752/benefit2_kmxmag.png"
+        },
+        {
+          "title": "Prestigious MAHE Alumni Status",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit3_cjjfx8.png"
+        },
+         {
+          "title": "wide range of specialization",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit4_fh9ugx.png"
+        },
+         {
+          "title": "Real-World case studies",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067754/benefit5_nsctjx.png"
+        },
+         {
+          "title": "Full Online Experience with Campus Immersion",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit6_cf2zgz.png"
+        }
+
+      ],
+      "courseraPartners": [
+        {
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uov_bhmaok.png",
+        "name": "University of Virginia"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082882/uom_kusv12.png", 
+        "name": "University of Michigan"     
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uor_keopjv.png", 
+        "name": "University of Rochester"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uol_kautea.png",  
+        "name": "University of Illinois"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uom2_qaxgcj.png",  
+        "name": "University of Minnesota"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082882/uoc_dgsbxy.png",  
+        "name": "University of Callifornia,Irvine"
+        },
+        {
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uoj_shkxbt.png",
+        "name": "University of Johns Hopkins"      
+        }
+        
+      ],
+      "skills": [
+        "Python Programming",
+        "Machine Learning",
+        "Statistical Analysis",
+        "Data Visualization",
+        "Big Data Technologies",
+        "Deep Learning"
+      ],
+      "curriculum": {
+        "year1": {
+          "semester1": [
+            "Python for Data Science",
+            "Probability & Statistics",
+            "Data Structures & Algorithms",
+            "Database Management Systems",
+            "Mathematics for Data Science"
+          ],
+          "semester2": [
+            "Machine Learning",
+            "Data Visualization",
+            "Big Data Analytics",
+            "Statistical Methods",
+            "Data Mining Techniques",
+            "R Programming"
+          ]
+        },
+        "year2": {
+          "semester1": [
+            "Deep Learning",
+            "Natural Language Processing",
+            "Computer Vision",
+            "Time Series Analysis",
+            "Cloud Computing for Data Science"
+          ],
+          "semester2": [
+            "Advanced Machine Learning",
+            "AI Ethics & Governance",
+            "Capstone Project",
+            "Industry Internship",
+            "Research Paper"
+          ]
+        }
+      },
+       "hiringPartners": [
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/320px-Google_2015_logo.svg.png",
+    "alt": "Google"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/320px-Amazon_logo.svg.png",
+    "alt": "Amazon"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/320px-IBM_logo.svg.png",
+    "alt": "IBM"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/320px-Microsoft_logo.svg.png",
+    "alt": "Microsoft"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/Diageo_-_Copy_mcsec8.png",
+    "alt": "DIEGEO"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/320px-Infosys_logo.svg.png",
+    "alt": "Infosys"
+  },
+  
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/Accenture_-_Copy_rngzja.png",
+    "alt": "Accenture"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/320px-Microsoft_logo_%282012%29.svg.png",
+    "alt": "Cognizant"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/cardekho_-_Copy_lazkwl.png",
+    "alt": "CARDEKHO"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/TeamLease_xjjyel.png",
+    "alt": "TeamLease"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/LTMIndtree_rj1s1g.png",
+    "alt": "LTMIndtree"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/320px-Wipro_Primary_Logo_Color_RGB.svg.png",
+    "alt": "Wipro"
+  },
+   {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/lansKart_oe5izy.png",
+    "alt": "LanceKart"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/ey_-_Copy_rcogd1.png",
+    "alt": "EY"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/sportDunia_fwjrhv.png",
+    "alt": "SportDunia"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/kreedo_w0mhk5.png",
+    "alt": "Kreedo"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/jogo_ky5og3.png",
+    "alt": "jogo"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/prehrad_qzpwfk.png",
+    "alt": "prehard"
+  },
+  
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/teleperformance_zhw6er.png",
+    "alt": "Teleperformance"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/russelltobin_hewfel.png",
+    "alt": "Russelltobin"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/intellipaat_qcljxz.png",
+    "alt": "intellipaat"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/fincatre_alh08t.png",
+    "alt": "Fincartre"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171086/hexahealth_vlylmr.png",
+    "alt": "hexahealth"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171086/hdfcAgro_unickn.png",
+    "alt": "HDFCAgro"
+  }
+  
+  
+],
+      "careerOptions": {
+        "jobProfiles": [
+          "Data Scientist",
+          "Machine Learning Engineer",
+          "AI Specialist",
+          "Business Analyst",
+          "Data Engineer",
+          "Research Scientist"
+        ],
+        "industries": [
+          "Technology",
+          "E-commerce",
+          "Finance & Banking",
+          "Healthcare",
+          "Retail Analytics"
+        ]
+      },
+      "features": [
+        {
+          "title": "Industry Tools Access",
+          "description": "Get access to premium tools like Tableau, Power BI, AWS, Azure, and Google Cloud Platform."
+        },
+        {
+          "title": "Kaggle Competitions",
+          "description": "Participate in data science competitions and hackathons to build your competitive edge."
+        },
+        {
+          "title": "Research Opportunities",
+          "description": "Option to work on research projects in collaboration with MAHE's research centers."
+        },
+        {
+          "title": "Portfolio Development",
+          "description": "Build a comprehensive project portfolio showcasing your data science capabilities to employers."
+        }
+      ],
+      "eligibility": {
+        "indian": {
+          "education": {
+            "title": "Educational qualification",
+            "description": "Bachelor's degree in Science, Engineering, Technology, or related field with Mathematics/Statistics background."
+          },
+          "grades": {
+            "title": "Grades",
+            "description": "Minimum 50% marks in aggregate in graduation."
+          },
+          "experience": {
+            "title": "Work experience",
+            "description": "No mandatory work experience. Both fresh graduates and working professionals can apply."
+          }
+        },
+        "international": {
+          "education": {
+            "title": "Educational qualification",
+            "description": "Bachelor's degree equivalent to Indian standards in relevant field with quantitative background."
+          },
+          "grades": {
+            "title": "Grades",
+            "description": "Minimum 50% marks or equivalent grade."
+          },
+          "experience": {
+            "title": "Work experience",
+            "description": "No mandatory work experience required."
+          }
+        }
+      },
+      "admissionProcess": [
+        {
+          "step": 1,
+          "title": "Application",
+          "description": "Submit application with academic credentials and pay application fee."
+        },
+        {
+          "step": 2,
+          "title": "Fee payment",
+          "description": "Complete semester/annual fee payment or opt for EMI."
+        },
+        {
+          "step": 3,
+          "title": "Document upload",
+          "description": "Upload graduation marksheets, certificates, and required documents."
+        },
+        {
+          "step": 4,
+          "title": "University approval",
+          "description": "Document verification and admission confirmation by university."
+        }
+      ],
+      "faqs": [
+        {
+          "category": "program",
+          "question": "Do I need programming experience to join this program?",
+          "answer": "Basic programming knowledge is helpful but not mandatory. The program starts with foundational Python programming and gradually builds to advanced topics."
+        },
+        {
+          "category": "program",
+          "question": "What is the difference between M.Sc. Data Science and MBA in Business Analytics?",
+          "answer": "M.Sc. Data Science focuses on technical aspects, programming, algorithms, and model building. MBA Business Analytics focuses on business applications and strategic decision-making with analytics."
+        },
+        {
+          "category": "admission",
+          "question": "Can I pursue this program while working full-time?",
+          "answer": "Yes, the program is designed for flexibility with online classes, recorded sessions, and weekend interactions allowing you to balance work and studies."
+        },
+        {
+          "category": "program",
+          "question": "What tools and technologies will I learn?",
+          "answer": "You'll learn Python, R, SQL, Tableau, Power BI, TensorFlow, PyTorch, Hadoop, Spark, and cloud platforms like AWS and Azure."
+        }
+      ]
+    },
+    {
+      "id": "online-msc-business-analytics-mahe",
+      "courseType": "masters",
+      "title": "Online M.Sc. in Business Analytics",
+      "subtitle": "(Master of Science in Business Analytics)",
+      "rating": 4.8,
+      "duration": "24 months",
+      "semesters": 4,
+      "semesterFee": 68000,
+      "courseFee": 272000,
+      "emiStarting": 11334,
+      "seatsFilledPercent": 80,
+      "lastAdmissionDate": "21st January 2026",
+      "nirf": {
+        "rank": 3,
+        "year": 2025
+      },
+      "university": {
+        "name": "MANIPAL ACADEMY OF HIGHER EDUCATION",
+        "logo": "/images/manipallogo.jpg",
+        "description": "Established in 1953 under a public-private partnership model, Manipal Academy of Higher Education (MAHE) has evolved into a third-ranked university in India (NIRF). Over the decades, this NAAC A++ university was granted Deemed to be University status and recognized as an Institution of Eminence.",
+        "established": 1953,
+        "studentNationalities": 67,
+        "facultyCount": 3000,
+        "studentsWorldwide": 35000,
+        "yearsOfExcellence": 70
+      },
+      "specializations": [
+        "Business Analytics"
+      ],
+      "accreditations": [
+        {
+          "name": "Amongst India's Top 3 Universities (2025)",
+          "description": "NIRF Ranking"
+        },
+        {
+          "name": "Institution of Eminence",
+          "description": "By Government of India"
+        },
+        {
+          "name": "A++ Grade by NAAC",
+          "description": "Highest Accreditation Grade"
+        },
+        {
+          "name": "UGC-entitled Online Degrees",
+          "description": "Equivalent to Campus Degree"
+        }
+      ],
+    "benefits": [
+        {
+          "title": "Fast-Tracked Career Progression",
+          "description": "Pursue and take up positions with high earning potential across domains & sectors. Elevate your role in the organization by taking up positions like senior product manager, HR director, finance officer, and operations manager.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067752/benefit1_ymelck.png"
+        },
+        {
+          "title": "Career-Oriented Skills",
+          "description": "Master skills like decision making, problem solving, and networking skills to manage & solve organizational challenges. Learn key subjects such as business communication, financial statement analysis, IT for business, entrepreneurship & innovation, and business statistics from expert faculty.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067752/benefit2_kmxmag.png"
+        },
+        {
+          "title": "Prestigious MAHE Alumni Status",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit3_cjjfx8.png"
+        },
+         {
+          "title": "wide range of specialization",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit4_fh9ugx.png"
+        },
+         {
+          "title": "Real-World case studies",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067754/benefit5_nsctjx.png"
+        },
+         {
+          "title": "Full Online Experience with Campus Immersion",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit6_cf2zgz.png"
+        }
+
+      ],
+      "courseraPartners": [
+        {
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uov_bhmaok.png",
+        "name": "University of Virginia"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082882/uom_kusv12.png", 
+        "name": "University of Michigan"     
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uor_keopjv.png", 
+        "name": "University of Rochester"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uol_kautea.png",  
+        "name": "University of Illinois"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uom2_qaxgcj.png",  
+        "name": "University of Minnesota"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082882/uoc_dgsbxy.png",  
+        "name": "University of Callifornia,Irvine"
+        },
+        {
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uoj_shkxbt.png",
+        "name": "University of Johns Hopkins"      
+        }
+        
+      ],
+      "skills": [
+        "Business Intelligence",
+        "Predictive Analytics",
+        "Data Visualization",
+        "Statistical Modeling",
+        "SQL & Database",
+        "Excel Advanced Analytics"
+      ],
+      "curriculum": {
+        "year1": {
+          "semester1": [
+            "Business Statistics",
+            "Introduction to Business Analytics",
+            "Database Management & SQL",
+            "Excel for Business Analytics",
+            "Business Communication"
+          ],
+          "semester2": [
+            "Predictive Analytics",
+            "Marketing Analytics",
+            "Financial Analytics",
+            "Data Visualization with Tableau",
+            "R Programming for Analytics",
+            "Research Methodology"
+          ]
+        },
+        "year2": {
+          "semester1": [
+            "Supply Chain Analytics",
+            "HR Analytics",
+            "Customer Analytics",
+            "Advanced Business Intelligence",
+            "Python for Business Analytics"
+          ],
+          "semester2": [
+            "Specialization Subjects",
+            "Strategic Analytics",
+            "Business Capstone Project",
+            "Industry Project",
+            "Analytics Internship"
+          ]
+        }
+      },
+       "hiringPartners": [
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/320px-Google_2015_logo.svg.png",
+    "alt": "Google"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/320px-Amazon_logo.svg.png",
+    "alt": "Amazon"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/320px-IBM_logo.svg.png",
+    "alt": "IBM"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/320px-Microsoft_logo.svg.png",
+    "alt": "Microsoft"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/Diageo_-_Copy_mcsec8.png",
+    "alt": "DIEGEO"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/320px-Infosys_logo.svg.png",
+    "alt": "Infosys"
+  },
+  
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/Accenture_-_Copy_rngzja.png",
+    "alt": "Accenture"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/320px-Microsoft_logo_%282012%29.svg.png",
+    "alt": "Cognizant"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/cardekho_-_Copy_lazkwl.png",
+    "alt": "CARDEKHO"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/TeamLease_xjjyel.png",
+    "alt": "TeamLease"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/LTMIndtree_rj1s1g.png",
+    "alt": "LTMIndtree"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/320px-Wipro_Primary_Logo_Color_RGB.svg.png",
+    "alt": "Wipro"
+  },
+   {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/lansKart_oe5izy.png",
+    "alt": "LanceKart"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/ey_-_Copy_rcogd1.png",
+    "alt": "EY"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/sportDunia_fwjrhv.png",
+    "alt": "SportDunia"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/kreedo_w0mhk5.png",
+    "alt": "Kreedo"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/jogo_ky5og3.png",
+    "alt": "jogo"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/prehrad_qzpwfk.png",
+    "alt": "prehard"
+  },
+  
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/teleperformance_zhw6er.png",
+    "alt": "Teleperformance"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/russelltobin_hewfel.png",
+    "alt": "Russelltobin"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/intellipaat_qcljxz.png",
+    "alt": "intellipaat"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/fincatre_alh08t.png",
+    "alt": "Fincartre"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171086/hexahealth_vlylmr.png",
+    "alt": "hexahealth"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171086/hdfcAgro_unickn.png",
+    "alt": "HDFCAgro"
+  }
+  
+  
+],
+      "careerOptions": {
+        "jobProfiles": [
+          "Business Analyst",
+          "Analytics Consultant",
+          "Data Analyst",
+          "Market Research Analyst",
+          "Business Intelligence Analyst",
+          "Analytics Manager"
+        ],
+        "industries": [
+          "Consulting",
+          "E-commerce",
+          "Banking & Finance",
+          "Retail",
+          "Market Research"
+        ]
+      },
+      "features": [
+        {
+          "title": "Business Case Analysis",
+          "description": "Work on real business problems and develop analytics solutions for actual companies."
+        },
+        {
+          "title": "Visualization Tools",
+          "description": "Master Tableau, Power BI, and other leading visualization platforms used in industry."
+        },
+        {
+          "title": "Industry Certifications",
+          "description": "Opportunity to earn certifications in Tableau, SAS, and other analytics tools."
+        },
+        {
+          "title": "Consulting Projects",
+          "description": "Participate in live consulting projects with companies to gain practical experience."
+        }
+      ],
+      "eligibility": {
+        "indian": {
+          "education": {
+            "title": "Educational qualification",
+            "description": "Bachelor's degree in any discipline from a recognized university. No specific background required."
+          },
+          "grades": {
+            "title": "Grades",
+            "description": "Minimum 50% marks in aggregate in graduation."
+          },
+          "experience": {
+            "title": "Work experience",
+            "description": "Work experience preferred but not mandatory. Fresh graduates with strong quantitative skills can apply."
+          }
+        },
+        "international": {
+          "education": {
+            "title": "Educational qualification",
+            "description": "Bachelor's degree equivalent to Indian standards in any field."
+          },
+          "grades": {
+            "title": "Grades",
+            "description": "Minimum 50% marks or equivalent grade."
+          },
+          "experience": {
+            "title": "Work experience",
+            "description": "Work experience preferred but not mandatory."
+          }
+        }
+      },
+      "admissionProcess": [
+        {
+          "step": 1,
+          "title": "Application",
+          "description": "Complete online application form with academic and professional details."
+        },
+        {
+          "step": 2,
+          "title": "Fee payment",
+          "description": "Pay the admission fee as per chosen payment plan."
+        },
+        {
+          "step": 3,
+          "title": "Document upload",
+          "description": "Submit graduation certificates and other required documents."
+        },
+        {
+          "step": 4,
+          "title": "University approval",
+          "description": "University reviews application and confirms admission."
+        }
+      ],
+      "faqs": [
+        {
+          "category": "program",
+          "question": "What's the difference between M.Sc. Data Science and M.Sc. Business Analytics?",
+          "answer": "Data Science is more technical focusing on algorithms and model building. Business Analytics focuses on applying analytics to solve business problems with emphasis on strategy and decision-making."
+        },
+        {
+          "category": "program",
+          "question": "Can non-technical graduates pursue this program?",
+          "answer": "Yes! This program is designed for graduates from all backgrounds. Basic quantitative aptitude is helpful, and the program builds technical skills from scratch."
+        },
+        {
+          "category": "admission",
+          "question": "Do I need work experience to apply?",
+          "answer": "Work experience is preferred but not mandatory. Fresh graduates with interest in analytics and business can apply."
+        },
+        {
+          "category": "program",
+          "question": "What career roles can I target after this program?",
+          "answer": "Business Analyst, Analytics Consultant, Market Research Analyst, BI Analyst, Data Analyst roles across consulting, e-commerce, banking, and retail sectors."
+        }
+      ]
+    },      
+    {
+      "id": "online-bcom-professional-mahe",
+      "courseType": "bachelors",
+      "title": "Online B.Com (Professional)",
+      "subtitle": "(Bachelor of Commerce)",
+      "rating": 4.6,
+      "duration": "36 months",
+      "semesters": 6,
+
+      "semesterFee": 49000,
+      "courseFee": 294000,
+      "emiStarting": 8167,
+      "seatsFilledPercent": 75,
+      "lastAdmissionDate": "21st January 2026",
+      "nirf": {
+        "rank": 3,
+        "year": 2025
+      },
+      "university": {
+        "name": "MANIPAL ACADEMY OF HIGHER EDUCATION",
+        "logo": "/images/manipallogo.jpg",
+        "description": "Established in 1953 under a public-private partnership model, Manipal Academy of Higher Education (MAHE) has evolved into a third-ranked university in India (NIRF). Over the decades, this NAAC A++ university was granted Deemed to be University status and recognized as an Institution of Eminence.",
+        "established": 1953,
+        "studentNationalities": 67,
+        "facultyCount": 3000,
+        "studentsWorldwide": 35000,
+        "yearsOfExcellence": 70
+      },
+      "specializations": [
+        "Project Management",
+        "Indian Taxation",
+        "Operations Management",
+        "Advanced Financial Management",
+        "Entrepreneurship and Startup Ecosystem"
+      ],
+      "accreditations": [
+        {
+          "name": "Amongst India's Top 3 Universities (2025)",
+          "description": "NIRF Ranking"
+        },
+        {
+          "name": "Institution of Eminence",
+          "description": "By Government of India"
+        },
+        {
+          "name": "A++ Grade by NAAC",
+          "description": "Highest Accreditation Grade"
+        },
+        {
+          "name": "UGC-entitled Online Degrees",
+          "description": "Equivalent to Campus Degree"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Fast-Tracked Career Progression",
+          "description": "Pursue and take up positions with high earning potential across domains & sectors. Elevate your role in the organization by taking up positions like senior product manager, HR director, finance officer, and operations manager.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067752/benefit1_ymelck.png"
+        },
+        {
+          "title": "Career-Oriented Skills",
+          "description": "Master skills like decision making, problem solving, and networking skills to manage & solve organizational challenges. Learn key subjects such as business communication, financial statement analysis, IT for business, entrepreneurship & innovation, and business statistics from expert faculty.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067752/benefit2_kmxmag.png"
+        },
+        {
+          "title": "Prestigious MAHE Alumni Status",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit3_cjjfx8.png"
+        },
+         {
+          "title": "wide range of specialization",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit4_fh9ugx.png"
+        },
+         {
+          "title": "Real-World case studies",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067754/benefit5_nsctjx.png"
+        },
+         {
+          "title": "Full Online Experience with Campus Immersion",
+          "description": "Network with industry leaders and engage with alumni in global classrooms to gain valuable insights into current work practices. Get access to Manipal Academy of Higher Education's 1 million strong alumni network.",
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769067753/benefit6_cf2zgz.png"
+        }
+
+      ],
+      "courseraPartners": [
+        {
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uov_bhmaok.png",
+        "name": "University of Virginia"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082882/uom_kusv12.png", 
+        "name": "University of Michigan"     
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uor_keopjv.png", 
+        "name": "University of Rochester"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uol_kautea.png",  
+        "name": "University of Illinois"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uom2_qaxgcj.png",  
+        "name": "University of Minnesota"
+        },
+        { 
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082882/uoc_dgsbxy.png",  
+        "name": "University of Callifornia,Irvine"
+        },
+        {
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769082883/uoj_shkxbt.png",
+        "name": "University of Johns Hopkins"      
+        }
+        
+      ],  
+      "skills": [
+        "Financial Accounting",
+        "Taxation",
+        "Auditing",
+        "Business Law",
+        "Cost Management",
+        "Financial Analysis"
+      ],
+      "curriculum": {
+        "year1": {
+          "semester1": [
+            "Financial Accounting - I",
+            "Business Economics - I",
+            "Business Mathematics",
+            "Principles of Management",
+            "Business Communication"
+          ],
+          "semester2": [
+            "Financial Accounting - II",
+            "Business Economics - II",
+            "Corporate Law",
+            "Computer Applications in Business",
+            "Business Statistics",
+            "Environmental Studies"
+          ]
+        },
+        "year2": {
+          "semester1": [
+            "Corporate Accounting",
+            "Income Tax Law & Practice - I",
+            "Cost Accounting",
+             "Business Capstone Project",
+            "Industry Project",
+            "Analytics Internship"
+          ]
+        }
+      },
+        "hiringPartners": [
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/320px-Google_2015_logo.svg.png",
+    "alt": "Google"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/320px-Amazon_logo.svg.png",
+    "alt": "Amazon"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/320px-IBM_logo.svg.png",
+    "alt": "IBM"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/320px-Microsoft_logo.svg.png",
+    "alt": "Microsoft"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/Diageo_-_Copy_mcsec8.png",
+    "alt": "DIEGEO"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/320px-Infosys_logo.svg.png",
+    "alt": "Infosys"
+  },
+  
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/Accenture_-_Copy_rngzja.png",
+    "alt": "Accenture"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/320px-Microsoft_logo_%282012%29.svg.png",
+    "alt": "Cognizant"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171089/cardekho_-_Copy_lazkwl.png",
+    "alt": "CARDEKHO"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/TeamLease_xjjyel.png",
+    "alt": "TeamLease"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/LTMIndtree_rj1s1g.png",
+    "alt": "LTMIndtree"
+  },
+  {
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/320px-Wipro_Primary_Logo_Color_RGB.svg.png",
+    "alt": "Wipro"
+  },
+   {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/lansKart_oe5izy.png",
+    "alt": "LanceKart"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/ey_-_Copy_rcogd1.png",
+    "alt": "EY"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/sportDunia_fwjrhv.png",
+    "alt": "SportDunia"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/kreedo_w0mhk5.png",
+    "alt": "Kreedo"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/jogo_ky5og3.png",
+    "alt": "jogo"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/prehrad_qzpwfk.png",
+    "alt": "prehard"
+  },
+  
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/teleperformance_zhw6er.png",
+    "alt": "Teleperformance"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171088/russelltobin_hewfel.png",
+    "alt": "Russelltobin"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/intellipaat_qcljxz.png",
+    "alt": "intellipaat"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171087/fincatre_alh08t.png",
+    "alt": "Fincartre"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171086/hexahealth_vlylmr.png",
+    "alt": "hexahealth"
+  },
+  {
+    "images": "https://res.cloudinary.com/didkrwhbu/image/upload/v1769171086/hdfcAgro_unickn.png",
+    "alt": "HDFCAgro"
+  } 
+],
+      "careerOptions": {
+        "jobProfiles": [
+          "Business Analyst",
+          "Analytics Consultant",
+          "Data Analyst",
+          "Market Research Analyst",
+          "Business Intelligence Analyst",
+          "Analytics Manager"
+        ],
+        "industries": [
+          "Consulting",
+          "E-commerce",
+          "Banking & Finance",
+          "Retail",
+          "Market Research"
+        ]
+      },
+      "features": [
+        {
+          "title": "Business Case Analysis",
+          "description": "Work on real business problems and develop analytics solutions for actual companies."
+        },
+        {
+          "title": "Visualization Tools",
+          "description": "Master Tableau, Power BI, and other leading visualization platforms used in industry."
+        },
+        {
+          "title": "Industry Certifications",
+          "description": "Opportunity to earn certifications in Tableau, SAS, and other analytics tools."
+        },
+        {
+          "title": "Consulting Projects",
+          "description": "Participate in live consulting projects with companies to gain practical experience."
+        }
+      ],
+      "eligibility": {
+        "indian": {
+          "education": {
+            "title": "Educational qualification",
+            "description": "Bachelor's degree in any discipline from a recognized university. No specific background required."
+          },
+          "grades": {
+            "title": "Grades",
+            "description": "Minimum 50% marks in aggregate in graduation."
+          },
+          "experience": {
+            "title": "Work experience",
+            "description": "Work experience preferred but not mandatory. Fresh graduates with strong quantitative skills can apply."
+          }
+        },
+        "international": {
+          "education": {
+            "title": "Educational qualification",
+            "description": "Bachelor's degree equivalent to Indian standards in any field."
+          },
+          "grades": {
+            "title": "Grades",
+            "description": "Minimum 50% marks or equivalent grade."
+          },
+          "experience": {
+            "title": "Work experience",
+            "description": "Work experience preferred but not mandatory."
+          }
+        }
+      },
+      "admissionProcess": [
+        {
+          "step": 1,
+          "title": "Application",
+          "description": "Complete online application form with academic and professional details."
+        },
+        {
+          "step": 2,
+          "title": "Fee payment",
+          "description": "Pay the admission fee as per chosen payment plan."
+        },
+        {
+          "step": 3,
+          "title": "Document upload",
+          "description": "Submit graduation certificates and other required documents."
+        },
+        {
+          "step": 4,
+          "title": "University approval",
+          "description": "University reviews application and confirms admission."
+        }
+      ],
+      "faqs": [
+        {
+          "category": "program",
+          "question": "What's the difference between M.Sc. Data Science and M.Sc. Business Analytics?",
+          "answer": "Data Science is more technical focusing on algorithms and model building. Business Analytics focuses on applying analytics to solve business problems with emphasis on strategy and decision-making."
+        },
+        {
+          "category": "program",
+          "question": "Can non-technical graduates pursue this program?",
+          "answer": "Yes! This program is designed for graduates from all backgrounds. Basic quantitative aptitude is helpful, and the program builds technical skills from scratch."
+        },
+        {
+          "category": "admission",
+          "question": "Do I need work experience to apply?",
+          "answer": "Work experience is preferred but not mandatory. Fresh graduates with interest in analytics and business can apply."
+        },
+        {
+          "category": "program",
+          "question": "What career roles can I target after this program?",
+          "answer": "Business Analyst, Analytics Consultant, Market Research Analyst, BI Analyst, Data Analyst roles across consulting, e-commerce, banking, and retail sectors."
+        }
+      ]
+    }
+  
+           
+   ]
+   }
+       

@@ -30,7 +30,7 @@ const Faq = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalState
                    },
                    {
                      question: 'Are MAHE Online Degrees valid for jobs and higher studies?',
-                     answer: 'Absolutely. All MAHE Online Programs, including the MAHE Online MBA, MAHE Online BCA, MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, and MAHE Online BCom, are valid for government jobs, corporate roles, and further education like PhD or professional certifications.'
+                     answer: 'Absolutely. All MAHE Online Programs, including the MAHE Online MBA,  MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, and MAHE Online BCom, are valid for government jobs, corporate roles, and further education like PhD or professional certifications.'
                    },
                    {
                      question: 'How does the online learning process work at MAHE?',
@@ -38,7 +38,7 @@ const Faq = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalState
                    },
                    {
                      question: 'What are the eligibility criteria for MAHE Online Courses?',
-                     answer: 'Eligibility varies by program: MAHE Online BCA / BBA / BCom – 10+2 from a recognised board; MAHE Online MBA / MCom / MCA – Bachelor\'s degree from a recognised university. Specific program requirements are mentioned in each course description.'
+                     answer: 'Eligibility varies by program: MAHE Online BBA / BCom – 10+2 from a recognised board; MAHE Online MBA / MCom / MCA – Bachelor\'s degree from a recognised university. Specific program requirements are mentioned in each course description.'
                    },
                    {
                      question: 'What is the fee structure for MAHE Online Programs?',
@@ -66,13 +66,13 @@ const Faq = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalState
                    </div>
                  ))}
                </div>
-               <div className="text-center mt-8 sm:mt-12">
+               <div className="text-center mt-6 mb-4 sm:mt-12">
                    <button 
                      onClick={() => setOpenModal({ type: 'apply' })}
-                     className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                     className="w-1/2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
                    >
                      <span className="hidden sm:inline">Apply Now</span>
-                     <span className="sm:hidden">Apply</span>
+                     <span className="sm:hidden">Apply Now</span>
                    </button>
                </div>
              </div>
@@ -83,16 +83,16 @@ const Faq = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalState
             </h2>
             <div className="prose prose-lg max-w-none text-center">
               <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-                MAHE University Online stands as one of the <strong>best online universities in India</strong>, offering high-quality education through flexible and industry-focused <strong>MAHE Online Courses</strong>, <strong>MAHE Online Programs</strong>, and UGC-entitled <strong>MAHE Online Degrees</strong>. Whether you choose the <strong>MAHE Online MBA</strong>, <strong>MAHE Online BCA</strong>, <strong>MAHE Online MCA</strong>, <strong>MAHE Online BBA</strong>, <strong>MAHE Online MCom</strong>, or <strong>MAHE Online BCom</strong>, each program is designed to build real-world skills, support career growth, and provide a future-ready learning experience.
+                MAHE University Online stands as one of the <strong>best online universities in India</strong>, offering high-quality education through flexible and industry-focused <strong>MAHE Online Courses</strong>, <strong>MAHE Online Programs</strong>, and UGC-entitled <strong>MAHE Online Degrees</strong>. Whether you choose the <strong>MAHE Online MBA</strong>, <strong>MAHE Online MCA</strong>, <strong>MAHE Online BBA</strong>, <strong>MAHE Online MCom</strong>, or <strong>MAHE Online BCom</strong>, each program is designed to build real-world skills, support career growth, and provide a future-ready learning experience.
               </p>
             </div>
             <div className="text-center mt-8 sm:mt-12">
                 <button 
                   onClick={() => setOpenModal({ type: 'apply' })}
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                  className="w-1/2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
                 >
                   <span className="hidden sm:inline">Apply Now</span>
-                  <span className="sm:hidden">Apply</span>
+                  <span className="sm:hidden ">Apply Now</span>
                 </button>
             </div>
           </div>

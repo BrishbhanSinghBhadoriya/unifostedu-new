@@ -5,9 +5,9 @@ import { OpenModalState } from '../../../../types/Modal'
 
 const Accreditations = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalState) => void; openModal: OpenModalState }) => {
   return (
-    <section className="py-6 sm:py-8 md:py-12 lg:py-16 bg-gradient-to-r from-slate-50 to-blue-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 lg:gap-8">
+    <section className="bg-gradient-to-r from-slate-50 to-blue-50">
+          <div className="max-w-7xl mx-auto mt-4 px-4 sm:px-6 md:px-6 lg:px-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5  md:gap-6 lg:gap-8">
               {[
                 {
                   icon: '⏱️',
@@ -40,14 +40,15 @@ const Accreditations = ({ setOpenModal, openModal }: { setOpenModal: (state: Ope
                   </div>
                 </div>
               ))}
+              
             </div>
-            <div className="text-center mt-8 sm:mt-12">
+            <div className="text-center mb-4 mt-4">
                 <button 
                   onClick={() => setOpenModal({ type: 'apply' })}
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                  className="w-1/2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
                 >
                   <span className="hidden sm:inline">Apply Now</span>
-                  <span className="sm:hidden">Apply</span>
+                  <span className="sm:hidden">Apply now</span>
                 </button>
             </div>
           </div>
@@ -96,7 +97,7 @@ const Accreditations = ({ setOpenModal, openModal }: { setOpenModal: (state: Ope
                       <div className="text-center mt-8 sm:mt-12">
                           <button 
                             onClick={() => setOpenModal({ type: 'apply' })}
-                            className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                            className="w-1/2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
                           >
                             <span className="hidden sm:inline">Apply Now</span>
                             <span className="sm:hidden">Apply</span>

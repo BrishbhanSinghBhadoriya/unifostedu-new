@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 
 
@@ -8,6 +9,7 @@ type Course = {
   fees: string;
   eligibility: string;
   specializations: string;
+  Link: string;
 };
 
 type OpenModalState =
@@ -44,6 +46,7 @@ const CoursesTable: React.FC<CoursesTableProps> = ({
               <th className="border px-4 py-2 text-orange-600">Eligibility</th>
               <th className="border px-4 py-2 text-orange-600">Specializations</th>
               <th className="border px-4 py-2 text-orange-600">Action</th>
+              <th className="border px-4 py-2 text-orange-600">View Details</th>
             </tr>
           </thead>
 
@@ -77,6 +80,11 @@ const CoursesTable: React.FC<CoursesTableProps> = ({
                   >
                     Enquire
                   </button>
+                </td>
+                <td className="border px-4 py-2 text-center">
+                  <Link href={course.Link} className="bg-white border border-blue-500 text-blue-500 px-3 py-1 rounded-full text-xs cursor-pointer">
+                    Click
+                  </Link>
                 </td>
               </tr>
             ))}

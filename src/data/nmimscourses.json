@@ -21,6 +21,9 @@
     "samesters": "6",
     "mode": "100% Online",
     "totalFee": "₹1,45,000",
+    "certificateDescription": "Upon successful completion of the Narsee Monjee Institute of Management Studies Online BBA, students are awarded a formal degree certificate issued by Narsee Monjee Institute of Management Studies. This certificate confirms that the student has successfully completed the Online BBA program in accordance with the approved academic structure and evaluation process. The certificate holds the same academic value as a degree awarded through conventional modes of learning, as it follows the prescribed Narsee Monjee Institute of Management Studies Online BBA curriculum.The certificate awarded after completing the Online BBA clearly mentions the program name and the institution, ensuring transparency and credibility. Students completing the Online BBA NMIMS program receive a recognized degree that can be used for higher education, employment, and professional growth. The certification reflects the student’s academic achievement and successful fulfillment of all course and assessment requirements.The Narsee Monjee Institute of Management Studies Online BBA certificate is issued only after students meet all academic obligations, including examinations and internal assessments, as defined in the curriculum. This ensures that the certificate maintains academic integrity and institutional standards. The structured learning process and evaluation methods ensure that students earning the certificate have acquired the required business knowledge and skills.The certificate awarded under the Online BBA NMIMS program supports students in pursuing further studies such as MBA or other postgraduate programs, subject to eligibility criteria. It also helps learners apply for entry-level roles in business, management, marketing, finance, and related fields. The credibility of the certificate strengthens the academic profile of students who complete the Online BBA.",
+    "certificateImage": "/images/certificates/nmimsbba.png",
+    "specializationLabel": "(Specialization)",
       
       "about": "The Narsee Monjee Institute of Management Studies Online BBA is a well-structured undergraduate program created for students who want to study business administration through flexible online learning. The Narsee Monjee Institute of Management Studies Online BBA allows learners to gain strong business knowledge without attending a physical campus. With the increasing demand for Online BBA programs, the Narsee Monjee Institute of Management Studies Online BBA stands out as a trusted option for quality education. Many students today prefer an Online BBA because it offers flexibility, affordability, and career-focused learning. The Narsee Monjee Institute of Management Studies Online BBA is designed to meet these expectations while maintaining academic excellence. Students choosing the Narsee Monjee Institute of Management Studies Online BBA benefit from a curriculum that focuses on real-world business concepts. The Narsee Monjee Institute of Management Studies Online BBA curriculum includes subjects that help learners understand management, finance, marketing, economics, and communication skills. The Narsee Monjee Institute of Management Studies Online BBA curriculum is updated regularly so that students gain relevant and industry-aligned knowledge. Through the Online BBA, learners develop analytical thinking, leadership skills, and a strong understanding of how businesses operate in today’s competitive environment.The Narsee Monjee Institute of Management Studies BBA eligibility criteria are simple and inclusive. Students who have completed their 10+2 education from a recognized board can apply, making the Narsee Monjee Institute of Management Studies BBA eligibility suitable for learners from different academic backgrounds. The flexible Narsee Monjee Institute of Management Studies BBA eligibility ensures that more students can access the Online BBA and begin their journey in business education without unnecessary barriers. This makes the Narsee Monjee Institute of Management Studies Online BBA a popular choice among fresh students as well as those planning their careers early.One of the key advantages of pursuing an Online BBA is affordability, and the Online BBA fees at NMIMS are structured to provide value for money. The Online BBA fees are designed to be more affordable compared to traditional on-campus programs, while still delivering high-quality education. Transparent Online BBA fees help students plan their finances with confidence. Many learners choose the Online BBA because the Online BBA fees combined with flexible learning make higher education more accessible. The Online BBA NMIMS degree carries strong recognition and credibility. Students enrolling in the Online BBA NMIMS program gain the advantage of studying under a reputed institution known for academic excellence. The Online BBA NMIMS program supports students through digital learning platforms, recorded lectures, and academic assistance. Completing the Narsee Monjee Institute of Management Studies Online BBA helps students build a solid academic profile that can support career growth or further studies.The Narsee Monjee Institute of Management Studies Online BBA curriculum focuses on developing practical business skills along with theoretical knowledge. This ensures that students completing the Online BBA are prepared for entry-level roles in management, marketing, finance, and operations. The Narsee Monjee Institute of Management Studies Online BBA curriculum also helps learners improve communication skills and business decision-making abilities. As industries evolve, the Online BBA remains relevant by aligning learning outcomes with current market needs.Overall, the Narsee Monjee Institute of Management Studies Online BBA offers a balanced learning experience that combines flexibility, affordability, and academic quality. With clear Narsee Monjee Institute of Management Studies BBA eligibility, reasonable Online BBA fees, and a strong Narsee Monjee Institute of Management Studies Online BBA curriculum, this Online BBA program is ideal for students seeking a recognized and career-oriented business degree. Choosing the Online BBA NMIMS program means choosing a future-ready education that supports long-term professional growth.",
       
@@ -256,40 +259,49 @@
       }
     },
       
-      "faqs": [
-        {
-          "question": "What is the Narsee Monjee Institute of Management Studies Online BBA?",
-          "answer": "It is an undergraduate business administration program offered in online mode, allowing students to study business concepts through flexible digital learning."
-        },
-        {
-          "question": "Who is eligible to apply?",
-          "answer": "Students who have completed 10+2 or equivalent from a recognized board. Students from Commerce, Science, or Arts backgrounds can apply."
-        },
-        {
-          "question": "What is included in the curriculum?",
-          "answer": "Core business subjects such as management principles, marketing, finance, economics, human resources, and business communication."
-        },
-        {
-          "question": "What are the total fees?",
-          "answer": "₹1,45,000 for the complete course."
-        },
-        {
-          "question": "Is the degree recognized?",
-          "answer": "Yes, it follows approved academic guidelines and can be used for higher education and employment."
-        },
-        {
-          "question": "How are examinations conducted?",
-          "answer": "Through an online assessment system including internal assessments and end-term examinations."
-        },
-        {
-          "question": "Can students apply for education loan?",
-          "answer": "Yes, students may apply through banks or financial institutions."
-        },
-        {
-          "question": "Can students pursue higher studies after BBA?",
-          "answer": "Yes, students can apply for MBA or other postgraduate programs."
-        }
-      ]
+     "faqs": [
+  {
+    "question": "What is the Narsee Monjee Institute of Management Studies Online BBA?",
+    "answer": "The Narsee Monjee Institute of Management Studies Online BBA is an undergraduate business administration program offered in online mode. It allows students to study business concepts through flexible digital learning while following the approved academic structure of Narsee Monjee Institute of Management Studies."
+  },
+  {
+    "question": "Who is eligible to apply for the Online BBA program?",
+    "answer": "As per the Narsee Monjee Institute of Management Studies BBA eligibility, students who have completed 10+2 or equivalent education from a recognized board are eligible to apply. Students from Commerce, Science, or Arts backgrounds can apply for the Online BBA."
+  },
+  {
+    "question": "What is included in the Narsee Monjee Institute of Management Studies Online BBA curriculum?",
+    "answer": "The Narsee Monjee Institute of Management Studies Online BBA curriculum includes core business subjects such as management principles, marketing, finance, economics, human resources, and business communication. The curriculum is structured to provide both theoretical and practical business knowledge."
+  },
+  {
+    "question": "What are the Online BBA fees?",
+    "answer": "The total Online BBA fees for the Narsee Monjee Institute of Management Studies Online BBA program are ₹1,45,000 for the complete course. The Online BBA fees are transparent and communicated clearly to students at the time of admission."
+  },
+  {
+    "question": "Is the Online BBA NMIMS degree recognized?",
+    "answer": "Yes, the Online BBA NMIMS degree is awarded by a reputed institution and follows approved academic guidelines. The degree can be used for higher education and employment, subject to eligibility requirements of employers or institutions."
+  },
+  {
+    "question": "How are examinations conducted for the Online BBA?",
+    "answer": "Examinations for the Narsee Monjee Institute of Management Studies Online BBA are conducted through an online assessment system. The examination pattern includes internal assessments and end-term examinations aligned with the curriculum."
+  },
+  {
+    "question": "Can students apply for an education loan for Online BBA fees?",
+    "answer": "Yes, students may apply for education loans through banks or financial institutions to manage the Online BBA fees. Loan approval depends on the lender’s policies and the applicant’s eligibility."
+  },
+  {
+    "question": "Can students pursue higher studies after completing the Online BBA?",
+    "answer": "Yes, after completing the Narsee Monjee Institute of Management Studies Online BBA, students can apply for postgraduate programs such as MBA or other higher education courses, subject to eligibility criteria."
+  },
+  {
+    "question": "Is the Online BBA suitable for students who want flexible learning?",
+    "answer": "Yes, the Online BBA is designed for students who want flexible learning options. The Online BBA NMIMS program allows learners to study from anywhere while following a structured academic schedule."
+  },
+  {
+    "question": "Where can students get support during the Online BBA program?",
+    "answer": "Students enrolled in the Narsee Monjee Institute of Management Studies Online BBA receive academic support through digital learning resources, online lectures, and assessment guidance as per institutional guidelines."
+  }
+]
+
     },
     
     "bcom-online": {
@@ -301,37 +313,19 @@
       "samesters": "6",
       "mode": "100% Online",
       "totalFee": "₹1,45,000",
+      "certificateDescription": "After successful completion of the Online BCom program, students are awarded a formal degree certificate issued by Narsee Monjee Institute of Management Studies. This certificate confirms that the learner has completed the Bachelor of Commerce program through online mode in accordance with the approved academic framework. The certificate represents the successful completion of an NMIMS online degree and follows institutional guidelines.The NMIMS Online BCom certificate carries academic credibility and reflects the institution’s commitment to quality education. As the program is a NAAC accredited Online BCom, the certificate is supported by structured curriculum delivery, defined evaluation processes, and academic integrity. This ensures that the certificate holds value for further education and professional use.Students who enroll in the Online BCom after meeting eligibility requirements and complete all academic and assessment criteria are awarded the certificate. The certificate clearly mentions the program name and the awarding institution, ensuring transparency and recognition. Learners planning BCom after 12 benefit from receiving a recognized degree that supports long-term academic growth.The NMIMS Online BCom certificate can be used for pursuing higher studies such as postgraduate programs, subject to eligibility conditions of the respective institutions. It can also support applications for entry-level roles in commerce, accounting, finance, and business-related fields. The recognition associated with an NMIMS online degree enhances the academic profile of students.The certificate is issued only after students successfully complete all required subjects and assessments as defined in the Online BCom curriculum. This ensures that academic standards are maintained consistently across all learners. The structured assessment process followed in the NAAC accredited Online BCom supports the credibility of the awarded certificate.Overall, the certificate awarded under the Online BCom program represents academic achievement, institutional trust, and quality learning. With the reputation of Narsee Monjee Institute of Management Studies, the value of a NAAC accredited Online BCom, and the flexibility of an NMIMS online degree, the certificate supports students planning BCom after 12 in achieving their academic and professional goals.",
+      "certificateImage": "/images/certificates/nmimsbcom.png",
+      "specializationLabel": "(Specialization)",
       
-      "about": "The Online BCom program is an ideal choice for students who want to build a strong foundation in commerce through flexible learning. It is designed to meet the needs of students who wish to pursue higher education without attending regular on-campus classes. This UGC-entitled, NAAC accredited degree has the same value as a regular degree and is suitable for BCom after 12th standard.",
+      "about": "The Online BCom program is an ideal choice for students who want to build a strong foundation in commerce through flexible learning. The NMIMS Online BCom is offered by Narsee Monjee Institute of Management Studies, a reputed institution known for academic excellence. This NMIMS online degree is designed to meet the needs of students who wish to pursue higher education without attending regular on-campus classes.The Online BCom program is especially suitable for students planning BCom after 12, as it allows them to continue their education in commerce while managing time effectively. With growing demand for online education, the Narsee Monjee Institute of Management Studies Online BCom provides a structured learning experience that follows approved academic standards. Students choosing BCom after 12 benefit from a curriculum that focuses on accounting, finance, economics, and business fundamentals.The Narsee Monjee Institute of Management Studies offers the NAAC accredited Online BCom, ensuring academic quality and institutional credibility. Being a NAAC accredited Online BCom, the program follows defined academic processes and evaluation systems. This accreditation adds trust and recognition to the NMIMS online degree, making it suitable for higher education and career opportunities.The Online BCom program is designed to help students understand core commerce concepts in a simple and practical manner. Students enrolling in the NMIMS Online BCom gain access to digital learning resources, online lectures, and assessments that support independent learning. The flexibility of the NMIMS online degree allows students to study from anywhere while following a structured academic schedule.For students looking to pursue BCom after 12, the Online BCom provides an accessible path to higher education. The program is open to students from commerce and other relevant streams who want to develop business and financial knowledge. The Narsee Monjee Institute of Management Studies ensures that the Narsee Monjee Institute of Management Studies Online BCom maintains academic consistency and quality throughout the course duration.The NAAC accredited Online BCom focuses on developing analytical skills, financial understanding, and professional competence. Through the Online BCom, students learn subjects that are relevant to today’s business environment. The NMIMS Online BCom curriculum supports career readiness by combining theoretical knowledge with practical application.The NMIMS online degree in commerce is designed for students who want flexibility without compromising on academic standards. Many students choose the Online BCom because it offers convenience along with the credibility of the Narsee Monjee Institute of Management Studies. The structured learning approach of the Narsee Monjee Institute of Management Studies Online BCom ensures that students receive consistent academic support.With increasing acceptance of online education, the NAAC accredited Online BCom is a valuable option for learners seeking recognized qualifications. The Online BCom from Narsee Monjee Institute of Management Studies follows approved guidelines and evaluation methods. This makes the NMIMS online degree suitable for employment, professional growth, and further studies.Overall, the Online BCom offered by Narsee Monjee Institute of Management Studies provides a balanced learning experience for students planning BCom after 12. With the credibility of a NAAC accredited Online BCom, the flexibility of an NMIMS online degree, and a learner-focused approach, the NMIMS Online BCom supports academic development and long-term career goals. This Online BCom program is a reliable choice for students seeking quality, recognition, and flexibility in commerce education.",
       
-      "approval": "Follows approved academic guidelines for online education with a structured framework ensuring quality learning, transparent evaluation, and academic credibility. NAAC A+ accredited reflecting commitment to high academic quality and consistent learning outcomes. Features approved admission norms, structured evaluation systems, certification processes, and secure digital learning platform.",
+      "approval": "The Online BCom offered by Narsee Monjee Institute of Management Studies is designed in accordance with established academic standards for online education.  The NMIMS Online BCom is part of the NMIMS(Narsee Monjee Institute of Management Studies) online degree offerings, which are developed to provide students with flexible and recognized higher education.The NAAC accredited Online BCom reflects the institution’s commitment to maintaining high academic quality and consistent learning outcomes. Being a NAAC accredited Online BCom, the program adheres to defined academic processes, curriculum standards, and assessment methods. This accreditation adds trust and value to the NMIMS Online BCom and assures learners that the degree meets recognized quality benchmarks.The Online BCom program is structured to support students planning BCom after 12 by providing a clear academic pathway in commerce education. The curriculum, assessments, and learning delivery are aligned with institutional policies and approved academic guidelines. The Narsee Monjee Institute of Management Studies online degree framework ensures that all academic activities are conducted in a transparent and regulated manner.The Narsee Monjee Institute of Management Studies ensures that the NMIMS Online BCom follows approved admission norms, evaluation systems, and certification processes. Students who meet eligibility requirements and successfully complete the Online BCom are awarded a degree that reflects compliance with academic and institutional standards. This makes the NMIMS online degree suitable for further education and professional use, subject to individual eligibility requirements.The NAAC accredited Online BCom is delivered through a secure digital learning platform that supports structured teaching, learning resources, and assessments. Academic integrity is maintained through defined evaluation methods aligned with the approved curriculum. The Online BCom assessment process is designed to ensure fairness and consistency for all enrolled students.Overall, the Online BCom from Narsee Monjee Institute of Management Studies meets the expected academic and quality requirements for an online undergraduate commerce program. With the credibility of a NAAC accredited Online BCom, the structured framework of the NMIMS(Narsee Monjee Institute of Management Studies) Online BCom, and the recognition associated with an NMIMS online degree, the program offers confidence to students, institutions, and approval authorities. This ensures that learners pursuing BCom after 12 receive a reliable, approved, and quality-focused online commerce education.",
       
       "eligibility": {
         "description": "Class 12 or equivalent from recognized board in Commerce or other relevant streams. No age limit. Ideal for students who have completed Class 12, learners planning BCom after 12, students interested in accounting, finance, and commerce, individuals preferring online mode, and learners looking for recognized NMIMS degree."
       },
       
-      "specializations": [
-        {
-          "name": "Accounting and Finance",
-          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
-          "description": "Focuses on financial accounting, cost accounting, taxation basics, and financial management. Suitable for careers in accounting and finance."
-        },
-        {
-          "name": "Banking and Financial Services",
-          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
-          "description": "Introduces banking operations, financial services, risk management, and regulatory basics. For careers in banking and financial institutions."
-        },
-        {
-          "name": "Business Management",
-          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
-          "description": "Focuses on management principles, organizational behavior, and business operations. For broader business understanding."
-        },
-        {
-          "name": "Economics and Analytics",
-          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327392/mca_unsxdf.jpg",
-          "description": "Covers economic theory, business economics, and basic analytical concepts. Develops analytical and decision-making skills."
-        }
-      ],
+     
       
       "curriculum": [
         {
@@ -439,41 +433,41 @@
           "Please contact a student counsellor for detailed cancellation and refund guidelines."
       }
     },
-      
       "faqs": [
-        {
-          "question": "What is the Online BCom program?",
-          "answer": "An undergraduate commerce program for students who want to study accounting, finance, economics, and business subjects through online mode."
-        },
-        {
-          "question": "Who can apply?",
-          "answer": "Students who have completed Class 12 or equivalent from a recognized board. Suitable for planning BCom after 12."
-        },
-        {
-          "question": "Is the degree recognized?",
-          "answer": "Yes, it is NAAC accredited and follows approved academic guidelines, ensuring quality and credibility."
-        },
-        {
-          "question": "What subjects are covered?",
-          "answer": "Financial Accounting, Business Economics, Corporate Accounting, Cost Accounting, Business Law, Management Principles, and Financial Management."
-        },
-        {
-          "question": "How are examinations conducted?",
-          "answer": "Through online system including internal assessments and end-term examinations."
-        },
-        {
-          "question": "What is the benefit of NAAC accreditation?",
-          "answer": "Ensures quality standards in teaching, curriculum, and assessment, adding value to the degree."
-        },
-        {
-          "question": "Can students pursue higher studies?",
-          "answer": "Yes, students can apply for MCom or MBA programs after completion."
-        },
-        {
-          "question": "Is it suitable for flexible learning?",
-          "answer": "Yes, allows students to study from anywhere while following structured schedule."
-        }
-      ]
+  {
+    "question": "What is the Online BCom program?",
+    "answer": "The Online BCom is an undergraduate commerce program designed for students who want to study accounting, finance, economics, and business subjects through online mode. The NMIMS Online BCom allows learners to pursue a commerce degree with flexibility while following an approved academic structure."
+  },
+  {
+    "question": "Who can apply for Online BCom?",
+    "answer": "Students who have completed their Class 12 or equivalent education from a recognized board can apply for the Online BCom. The program is suitable for students planning BCom after 12 and looking for a recognized NMIMS online degree."
+  },
+  {
+    "question": "Is the NMIMS Online BCom a recognized degree?",
+    "answer": "Yes, the NMIMS Online BCom is offered by Narsee Monjee Institute of Management Studies and follows approved academic guidelines. It is a NAAC accredited Online BCom, which ensures academic quality and credibility."
+  },
+  {
+    "question": "What subjects are covered in the Online BCom curriculum?",
+    "answer": "The Online BCom curriculum includes subjects such as Financial Accounting, Business Economics, Corporate Accounting, Cost Accounting, Business Law, Management Principles, and Financial Management. The syllabus is designed to provide a strong foundation in commerce."
+  },
+  {
+    "question": "How are examinations conducted for Online BCom?",
+    "answer": "Examinations for the NMIMS Online BCom include internal assessments and end-term examinations conducted through an online system. The examination pattern is structured to ensure fair and transparent evaluation."
+  },
+  {
+    "question": "What is the benefit of choosing a NAAC accredited Online BCom?",
+    "answer": "A NAAC accredited Online BCom ensures that the program follows quality standards in teaching, curriculum, and assessment. This adds value to the NMIMS online degree and supports higher education and career opportunities."
+  },
+  {
+    "question": "Can students pursue higher studies after completing Online BCom?",
+    "answer": "Yes, after completing the Online BCom, students can apply for postgraduate programs such as MCom or MBA, subject to eligibility criteria of the respective institution."
+  },
+  {
+    "question": "Is Online BCom suitable for students who want flexible learning?",
+    "answer": "Yes, the Online BCom is ideal for students who prefer flexible learning. The NMIMS Online BCom allows learners to study from anywhere while following a structured academic schedule."
+  }
+]
+
     },
     
     "mba-wx": {
@@ -485,6 +479,9 @@
       "terms": "8",
       "mode": "Flexible Online/Blended",
       "totalFee": "₹4,00,000",
+      "certificateDescription": "After successful completion of the Online BCom program, students are awarded a formal degree certificate issued by Narsee Monjee Institute of Management Studies. This certificate confirms that the learner has completed the Bachelor of Commerce program through online mode in accordance with the approved academic framework. The certificate represents the successful completion of an NMIMS online degree and follows institutional guidelines.The NMIMS Online BCom certificate carries academic credibility and reflects the institution’s commitment to quality education. As the program is a NAAC accredited Online BCom, the certificate is supported by structured curriculum delivery, defined evaluation processes, and academic integrity. This ensures that the certificate holds value for further education and professional use.Students who enroll in the Online BCom after meeting eligibility requirements and complete all academic and assessment criteria are awarded the certificate. The certificate clearly mentions the program name and the awarding institution, ensuring transparency and recognition. Learners planning BCom after 12 benefit from receiving a recognized degree that supports long-term academic growth.The NMIMS Online BCom certificate can be used for pursuing higher studies such as postgraduate programs, subject to eligibility conditions of the respective institutions. It can also support applications for entry-level roles in commerce, accounting, finance, and business-related fields. The recognition associated with an NMIMS online degree enhances the academic profile of students.The certificate is issued only after students successfully complete all required subjects and assessments as defined in the Online BCom curriculum. This ensures that academic standards are maintained consistently across all learners. The structured assessment process followed in the NAAC accredited Online BCom supports the credibility of the awarded certificate.Overall, the certificate awarded under the Online BCom program represents academic achievement, institutional trust, and quality learning. With the reputation of Narsee Monjee Institute of Management Studies, the value of a NAAC accredited Online BCom, and the flexibility of an NMIMS online degree, the certificate supports students planning BCom after 12 in achieving their academic and professional goals.",
+      "certificateImage": "/images/certificates/nmimsmba-wx.png",
+      "specializationLabel": "(Specialization)",
       
       "about": "The MBA WX (Working Executives) program is designed for professionals who want to grow in their careers while continuing their jobs. Specially created for individuals with corporate experience who aim to move into managerial and leadership roles without taking a career break. This program is focused on industry challenges, develops strategic thinking and leadership skills, and offers the same quality education as traditional MBA programs.",
       
@@ -668,36 +665,37 @@
       }
     },
       
-      "faqs": [
-        {
-          "question": "What is MBA WX?",
-          "answer": "Master of Business Administration for Working Executives - a management program for professionals who want to upgrade skills without leaving jobs."
-        },
-        {
-          "question": "Who offers the program?",
-          "answer": "Narsee Monjee Institute of Management Studies (NMIMS), a well-recognized institution in management education."
-        },
-        {
-          "question": "Is the degree valid and recognized?",
-          "answer": "Yes, it holds strong acceptance in corporate sector and is suitable for career growth and leadership roles."
-        },
-        {
-          "question": "Can working professionals pursue without quitting job?",
-          "answer": "Yes, the program is designed for working executives with flexible structure to balance work and studies."
-        },
-        {
-          "question": "Is MBA WX available in Pune?",
-          "answer": "Yes, professionals can pursue without relocation due to flexible learning model."
-        },
-        {
-          "question": "What is the total fee?",
-          "answer": "₹4,00,000 for the complete program."
-        },
-        {
-          "question": "Is it suitable for career growth?",
-          "answer": "Yes, considered one of the best MBA WX for working professionals in India for moving into senior positions."
-        }
-      ]
+     "faqs": [
+  {
+    "question": "What is MBA WX?",
+    "answer": "The full form of MBA WX is Master of Business Administration for Working Executives. It is a management program designed for professionals who want to upgrade their skills without leaving their jobs."
+  },
+  {
+    "question": "Who offers the MBA WX program?",
+    "answer": "The MBA WX (Working Executives) is offered by Narsee Monjee Institute of Management Studies (NMIMS), a well-recognized institution in management education."
+  },
+  {
+    "question": "Is the MBA WX degree valid and recognized?",
+    "answer": "Yes, the MBA WX degree for corporate professionals is valid and recognized. It holds strong acceptance in the corporate sector and is suitable for career growth and leadership roles."
+  },
+  {
+    "question": "Can working professionals pursue MBA WX without quitting their job?",
+    "answer": "Yes, the program is designed especially for working executives. The flexible structure allows professionals to balance work and studies easily."
+  },
+  {
+    "question": "Is MBA WX available for students in Pune?",
+    "answer": "Yes, professionals looking for an MBA WX in Pune can pursue the program without relocation, as the learning model is flexible and executive-friendly."
+  },
+  {
+    "question": "What is the total fee for the MBA WX program?",
+    "answer": "The total program fee for MBA WX (Working Executives) is ₹4,00,000."
+  },
+  {
+    "question": "Is MBA WX suitable for career growth?",
+    "answer": "Yes, it is considered one of the best MBA WX programs for working professionals in India, helping executives move into senior and leadership positions."
+  }
+]
+
     },
     
     "mba-online": { 
@@ -709,6 +707,8 @@
       "samesters": "4",
       "mode": "100% Online",
       "totalFee": "₹1,44,000",
+      "certificateDescription": "On successful completion of the online MBA program, learners receive a recognized and respected MBA degree from Narsee Monjee Institute of Management Studies (NMIMS). The certification is designed to add strong academic and professional value to a learner's career. MBA Degree Certificate from Narsee Monjee Institute of Management Studies. Degree is equivalent to the on-campus MBA. Mode of study (online) is NOT mentioned on the certificate. Holds full academic and professional recognition across India. Accepted by corporate employers, MNCs, and startups. Valid for government and private sector jobs. Eligible for higher education and professional growth. Suitable for learners pursuing an online MBA in Mumbai, online MBA in Pune, or any other city. Specialization mentioned on certificate: MBA in Finance, Online MBA in Marketing, Online MBA HR NMIMS, MBA Data Analytics Online, Online MBA in Operations Management. Each certificate clearly reflects the chosen specialization, highlighting the learner’s domain expertise. Enhances credibility and professional profile. Supports career advancement and leadership roles. Adds long-term value for those seeking the best online MBA degree.",    "certificateImage": "/images/certificates/nmimsmba.png",
+      "specializationLabel": "(Specialization)",
       
       "about": "The online MBA program is designed for learners who want a flexible and career-focused management degree from a reputed institution. Ideal for working professionals, fresh graduates, and entrepreneurs who wish to upgrade skills without leaving jobs or relocating. The program features a strong academic framework with industry-relevant curriculum that develops leadership, analytical, and strategic skills with the same quality as on-campus programs, nationwide recognition, and professional credibility.",
       
@@ -876,33 +876,33 @@
           "Please contact a student counsellor for detailed cancellation and refund guidelines."
       }
     },
-      
       "faqs": [
-        {
-          "question": "Is the NMIMS online MBA degree valid and recognized?",
-          "answer": "Yes, fully valid and recognized. Holds same value as on-campus MBA. Accepted by employers, universities, and institutions across India."
-        },
-        {
-          "question": "Who should choose the online MBA at NMIMS?",
-          "answer": "Working professionals wanting career growth, fresh graduates improving employability, entrepreneurs seeking management skills, and learners wanting flexibility."
-        },
-        {
-          "question": "Can I pursue from any city?",
-          "answer": "Yes, 100% online program. Suitable for students in Mumbai, Pune, or any other city. No relocation required."
-        },
-        {
-          "question": "What specializations are available?",
-          "answer": "MBA in Finance, Online MBA in Marketing, Online MBA HR NMIMS, MBA Data Analytics Online, Online MBA in Operations Management."
-        },
-        {
-          "question": "Does NMIMS provide placement assistance?",
-          "answer": "Yes, includes career guidance, skill development support, and industry exposure. Outcomes depend on experience and specialization."
-        },
-        {
-          "question": "Are exams conducted online?",
-          "answer": "Yes, all examinations online including continuous assessments and end-term exams through secure platform."
-        }
-      ]
+  {
+    "question": "Is the NMIMS online MBA degree valid and recognized?",
+    "answer": "Yes, the NMIMS online MBA degree is fully valid and recognized. The degree holds the same value as an on-campus MBA and is accepted by employers, universities, and institutions across India."
+  },
+  {
+    "question": "Who should choose the online MBA at NMIMS?",
+    "answer": "The online MBA at NMIMS is suitable for working professionals who want career growth without leaving their job, fresh graduates looking to improve employability, entrepreneurs and business owners seeking management skills, and learners searching for a flexible and recognized online MBA degree."
+  },
+  {
+    "question": "Can I pursue this online MBA from any city?",
+    "answer": "Yes, the program is 100% online and can be pursued from any city. It is suitable for students looking for an online MBA in Mumbai, Pune, or any other location, with no relocation or campus visits required."
+  },
+  {
+    "question": "What specializations are available in the NMIMS online MBA?",
+    "answer": "The NMIMS online MBA offers specializations such as MBA in Finance, Online MBA in Marketing, Online MBA in Human Resource Management, MBA in Data Analytics, and Online MBA in Operations Management."
+  },
+  {
+    "question": "Does NMIMS provide placement assistance for the online MBA?",
+    "answer": "Yes, the NMIMS online MBA includes placement assistance such as career guidance sessions, skill development support, and industry exposure opportunities. Placement outcomes may vary based on a student’s experience and chosen specialization."
+  },
+  {
+    "question": "Are exams conducted online for the NMIMS online MBA?",
+    "answer": "Yes, all examinations for the NMIMS online MBA are conducted online. The assessment process includes continuous evaluations and end-term examinations, which are time-bound and conducted through a secure online platform."
+  }
+]
+
     }
   }
 }

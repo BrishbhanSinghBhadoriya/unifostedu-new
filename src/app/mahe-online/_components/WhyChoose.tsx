@@ -2,13 +2,13 @@ import React from 'react'
 import { OpenModalState } from '../../../../types/Modal'
 const WhyChoose = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalState) => void; openModal: OpenModalState }) => {
   return (
-     <section id="WhyChoose" className="relative  py-mt-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+     <section id="WhyChoose" className="relative  sm:py-10 md:py-10 lg:py-12 bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
               {/* Subtle grid pattern */}
               <div className="pointer-events-none absolute inset-0 opacity-[0.08]" style={{backgroundImage:"linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)", backgroundSize:"40px 40px"}} />
     
               <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Stats Row */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-10 mb-8 sm:mb-10 md:mb-14">
+                <div className="grid grid-cols-1 mt-4 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-10 mb-8 sm:mb-10 md:mb-14">
                   {[
                     {value:'60+', label:'Countries and 2000+ towns &\ncities- our students span the globe'},
                     {value:'100k+', label:'Learners have been empowered through Online Manipal'},
@@ -36,7 +36,7 @@ const WhyChoose = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModa
                       <span className="text-xl sm:text-2xl">🎓</span>
                     </div>
                     <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">1. UGC-Entitled MAHE Online Degrees</h4>
-                    <p className="text-gray-600 text-xs sm:text-sm">All major MAHE Online Programs—including the MAHE Online MBA, MAHE Online BCA, MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, and MAHE Online BCom—are fully UGC-approved. These online degrees have full academic value and are accepted by companies, government sectors, and private organisations.</p>
+                    <p className="text-gray-600 text-xs sm:text-sm">All major MAHE Online Programs—including the MAHE Online MBA, MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, and MAHE Online BCom—are fully UGC-approved. These online degrees have full academic value and are accepted by companies, government sectors, and private organisations.</p>
                   </div>
     
                   {/* Card 2: Best Online Universities in India */}
@@ -54,7 +54,7 @@ const WhyChoose = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModa
                       <span className="text-xl sm:text-2xl">📚</span>
                     </div>
                     <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">3. Wide Range of UG & PG Online Courses by MAHE</h4>
-                    <p className="text-gray-600 text-xs sm:text-sm">MAHE offers many programs to match different career goals. Popular MAHE Online Courses include MAHE Online MBA, MAHE Online BCA, MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, and MAHE Online BCom. Each program prepares students with real-world skills and future-ready knowledge.</p>
+                    <p className="text-gray-600 text-xs sm:text-sm">MAHE offers many programs to match different career goals. Popular MAHE Online Courses include MAHE Online MBA,MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, and MAHE Online BCom. Each program prepares students with real-world skills and future-ready knowledge.</p>
                   </div>
     
                   {/* Card 4: Flexible & Convenient Learning */}
@@ -81,7 +81,7 @@ const WhyChoose = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModa
                       <span className="text-xl sm:text-2xl">👨‍🏫</span>
                     </div>
                     <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2">6. Experienced Faculty & Modern Tools</h4>
-                    <p className="text-gray-600 text-xs sm:text-sm">Students in MAHE Online MBA, MAHE Online BCA, MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, and MAHE Online BCom are taught by highly experienced professors and industry mentors. MAHE provides virtual classrooms, e-learning modules, AI-enabled tools, and 24/7 academic support.</p>
+                    <p className="text-gray-600 text-xs sm:text-sm">Students in MAHE Online MBA, MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, and MAHE Online BCom are taught by highly experienced professors and industry mentors. MAHE provides virtual classrooms, e-learning modules, AI-enabled tools, and 24/7 academic support.</p>
                   </div>
     
                   {/* Card 7: Excellent Placement & Career Support */}
@@ -102,10 +102,10 @@ const WhyChoose = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModa
                     <p className="text-gray-600 text-xs sm:text-sm">MAHE ensures its MAHE Online Courses and MAHE Online Degrees are affordable for all. With premium quality and reasonable pricing, MAHE remains the Best online university in India for thousands of learners.</p>
                   </div>
                 </div>
-                <div className="text-center mt-8 sm:mt-12">
+                <div className="text-center mt-6 mb-4 ">
                     <button 
                       onClick={() => setOpenModal({ type: 'apply' })}
-                      className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                      className="w-1/2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
                     >
                       <span className="hidden sm:inline">Apply Now</span>
                       <span className="sm:hidden">Apply</span>

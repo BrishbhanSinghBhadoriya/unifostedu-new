@@ -118,6 +118,7 @@ const specializations: Specialization[] = [
     url: "/Amity-University-Online/bca-online",
   },
 ];
+
 const handleApplyNowClick = () => {
   console.log(openModal,setOpenModal);
   console.log("Apply Now clicked");
@@ -150,42 +151,29 @@ const handleApplyNowClick = () => {
             </Badge>
 
             {/* Heading - Critical for LCP */}
-         <h1
-  className={`${playfair?.className || ""} text-2xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-5xl font-bold text-yellow-600 leading-tight mb-2 sm:mb-3`}
->
-  Amity University Online
+            <h1
+              className={`${playfair?.className || ""} text-2xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-5xl font-bold text-yellow-600 leading-tight mb-2 sm:mb-3`}
+            >
+              Amity University Online
 
-  {/* CIRCLED TEXT */}
-  <div className="relative inline-block my-2 sm:my-3">
-    <span
-      className="
-        relative z-10
-        px-6 py-2
-        text-blue-700
-        text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl
-        font-bold
-      "
-    >
-      Courses, Eligibility And Fees 2026
-    </span>
+              {/* CIRCLED TEXT */}
+              <div className="relative inline-block my-3 sm:my-4 w-full">
+                <span
+                  className="relative z-10 block px-3 py-3 sm:px-4 sm:py-3 md:px-6 md:py-4 text-blue-700 text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-center leading-tight"
+                >
+                  Courses, Eligibility And Fees 2026
+                </span>
 
-    {/* Yellow Circle */}
-    <span
-      className="
-        absolute left-1/2 top-1/2
-        -translate-x-1/2 -translate-y-1/2
-        w-[100%] h-[100%]
-        bg-white
-        rounded-full
-        -z-0 border-2 border-yellow-600
-      "
-    ></span>
-  </div>
+                {/* Yellow Circle */}
+                <span
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[120%] sm:w-[102%] sm:h-[115%] md:w-[100%] md:h-[110%] bg-transparent rounded-full border-2 sm:border-3 border-yellow-600 -z-10"
+                ></span>
+              </div>
 
-  <span className="block text-transparent bg-clip-text bg-yellow-600">
-    UGC-Entitled NAAC A+ Programs for 2026
-  </span>
-</h1>
+              <span className="block text-transparent bg-clip-text bg-yellow-600">
+                UGC-Entitled NAAC A+ Programs for 2026
+              </span>
+            </h1>
 
 
             {/* Description */}
@@ -197,16 +185,16 @@ const handleApplyNowClick = () => {
             </p>
 
             {/* Program Cards - No animations for faster render */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4 lg:gap-6 mb-4 sm:mb-5 md:mb-6 lg:mb-8">
-        {specializations.map((item, index) => (
-        <ProgramCard
-        key={index}
-        item={item}
-        index={index}
-        onClick={() => router.push(item.url)}
-       />
-       ))}
-       </div>
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4 lg:gap-6 mb-4 sm:mb-5 md:mb-6 lg:mb-8">
+              {specializations.map((item, index) => (
+                <ProgramCard
+                  key={index}
+                  item={item}
+                  index={index}
+                  onClick={() => router.push(item.url)}
+                />
+              ))}
+            </div>
 
 
             {/* CTA Buttons - Simplified for mobile */}

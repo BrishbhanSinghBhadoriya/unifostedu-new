@@ -30,26 +30,27 @@ import Faq from "./_components/Faq";
 import HiringPartners from "./_components/HiringPartners";
 import { OpenModalState } from '../../../types/Modal';
 
+const selectionItem = [
+  { id: "HeroSection", label: "Introduction" },
+  { id: "Introduction", label: "About MAHE" },
+  { id: "AboutUs", label: "About Us" },
+  { id: "FutureReady", label: "Future-Ready Platform" },
+  { id: "UGCApproved", label: "UGC-Approved Degrees" },
+  { id: "Leader", label: "Leader Among Universities" },
+  { id: "WhyChoose", label: "Why Choose MAHE" },
+  { id: "CampusTour", label: "Campus Tour" },
+  { id: "ExploreCourses", label: "Explore Courses" },
+  { id: "KeyHighlights", label: "Key Highlights" },
+  { id: "FeeStructure", label: "Fee Structure" },
+  { id: "AdmissionProcess", label: "Admission Process" },
+  { id: "PlacementPartners", label: "Placement Partners" },
+  { id: "PlacementRecords", label: "Placement Records" },
+  { id: "StudentReviews", label: "Student Reviews" },
+  { id: "Faq", label: "FAQs" },
+  { id: "Conclusion", label: "Conclusion" },
+];
+
 const Manipal = () => {
-const selectionItem=[
-              { id: "HeroSection", label: "Introduction" },
-              { id: "Introduction", label: "About MAHE" },
-              { id: "AboutUs", label: "About Us" },
-              { id: "FutureReady", label: "Future-Ready Platform" },
-              { id: "UGCApproved", label: "UGC-Approved Degrees" },
-              { id: "Leader", label: "Leader Among Universities" },
-              { id: "WhyChoose", label: "Why Choose MAHE" },
-              { id: "CampusTour", label: "Campus Tour" },
-              { id: "ExploreCourses", label: "Explore Courses" },
-              { id: "KeyHighlights", label: "Key Highlights" },
-              { id: "FeeStructure", label: "Fee Structure" },
-              { id: "AdmissionProcess", label: "Admission Process" },
-              { id: "PlacementPartners", label: "Placement Partners" },
-              { id: "PlacementRecords", label: "Placement Records" },
-              { id: "StudentReviews", label: "Student Reviews" },
-              { id: "Faq", label: "FAQs" },
-              { id: "Conclusion", label: "Conclusion" },
-            ];
             const [activeSection, setActiveSection] = useState(selectionItem[0]?.id ?? null);
          
            useEffect(() => {
@@ -90,18 +91,32 @@ const selectionItem=[
  const ugCourses = [
    
       {
+      id: "online-bba-honors-mahe",
       course: "Bachelor of Business Administration (Hons.)",
       duration: "4 Years",
       eligibility: "10+2, 10+3 Minimum 50%",
-      fees: "1,80,000",
+      fees: "2,40,000",
       specialization: "Healthcare Management, Business Analytics, Financial Technology, Marketing Management, human resource Management ",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
       university: "Manipal Academy of Higher Education(MAHE))",
       universityShort: "MAHE",
       alt: "Bachelor of Business Administration (BBA) in Manipal Online",
     },
+     {
+      id: "online-bba-mahe",
+      course: "Bachelor of Business Administration ",
+      duration: "3 Years",
+      eligibility: "10+2, 10+3 Minimum 50%",
+      fees: "1,80,000",
+      specialization: "Healthcare Management, Business Analytics, Financial Technology, Marketing Management, human resource Management ",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
+      university: "Manipal Academy of Higher Education(MAHE))",
+      universityShort: "MAHE",
+      alt: "Bachelor of Business Administration (BBA) in Manipal Online",
+    },
    
     {
+      id: "online-bcom-professional-mahe",
       course: "Bachelor of Commerce (B.Com)(Professional)",
       duration: "3 Years",
       eligibility: "10+2,10+3 Minimum 50%",
@@ -116,6 +131,7 @@ const selectionItem=[
 
   const pgCourses = [
     {
+      id: "online-mba-mahe",
       course: "Master of Business Administration (MBA)",
       duration: "2 Years",
       eligibility: "Working Professionals with min 50% in graduation",
@@ -127,6 +143,7 @@ const selectionItem=[
       alt: "Master of Business Administration (MBA) in Manipal Online",
     },
     {
+      id: "online-mca-mahe",
       course: "Master of Computer Applications (MCA)",
       duration: "2 Years",
       eligibility: "50% Graduation",
@@ -138,18 +155,29 @@ const selectionItem=[
       alt: "Master of Computer Applications (MCA) in Manipal Online",
     },
     {
-      course: "Master of Science (M.Sc)",
+      id: "online-msc-data-science-mahe",
+      course: "Master of Science (M.Sc) - Data Science",
       duration: "2 Years",
       eligibility: "min 50% Graduation",
       fees: "2,80,000",
-      specialization: "Business Analytics, Data Science", 
+      specialization: "Data Science", 
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/m.com_libbpo.webp",
       university: "Manipal Academy of Higher Education(MAHE))",
       universityShort: "MAHE",
-      alt: "Master of Science (M.Sc) in Manipal Online",
+      alt: "Master of Science (M.Sc) Data Science in Manipal Online",
     },
-  
-
+    {
+      id: "online-msc-business-analytics-mahe",
+      course: "Master of Science (M.Sc) - Business Analytics",
+      duration: "2 Years",
+      eligibility: "min 50% Graduation",
+      fees: "2,72,000",
+      specialization: "Business Analytics", 
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
+      university: "Manipal Academy of Higher Education(MAHE))",
+      universityShort: "MAHE",
+      alt: "Master of Science (M.Sc) Business Analytics in Manipal Online",
+    },
   ];
     
     
@@ -171,7 +199,7 @@ const selectionItem=[
   {
     question: "What online programs are offered by Manipal Academy of Higher Education(MAHE))?",
     answer:
-      "Manipal Online University offers a wide range of online programs at MAHE, including Management, MBA, BBA, Computer Science, Data Science, BCA, MCA, and professional certificate courses. By enrolling in online courses from Manipal Academy of Higher Education(MAHE)), students can access flexible learning schedules while earning a degree from a top-ranked university.",
+      "Manipal Online University offers a wide range of online programs at MAHE, including Management, MBA, BBA, Computer Science, Data Science, MCA, and professional certificate courses. By enrolling in online courses from Manipal Academy of Higher Education(MAHE)), students can access flexible learning schedules while earning a degree from a top-ranked university.",
   },
   {
     question: "Are online degrees from Manipal Academy of Higher Education(MAHE)) valid for government jobs?",
@@ -255,9 +283,9 @@ const selectionItem=[
     },
     {
       name: "Priya Sharma",
-      course: "BCA",
+      course: "MCA",
       university: "MAHE",
-      text: "The online BCA program at MAHE is structured perfectly for students who want to balance studies with other commitments. The curriculum is up-to-date with industry standards."
+      text: "The online MCA program at MAHE is structured perfectly for students who want to balance studies with other commitments. The curriculum is up-to-date with industry standards."
     },
     {
       name: "Vikram Singh",
@@ -290,10 +318,10 @@ const selectionItem=[
       <Head>
         <title> "Manipal Academy of Higher Education Online Degrees | MAHE UG & PG Courses - UNIFOST",</title>
         <meta name="description" content="Explore globally recognized online programs from Manipal Academy of Higher Education Online. Flexible learning, expert mentorship, and career-focused degrees with UGC & AICTE approvals." />
-        <meta name="keywords" content="Manipal Online, Manipal Academy of Higher Education(MAHE)), MAHE Online, BBA in MAHE Online, BCA in MAHE Online, B.Com in MAHE Online, MBA in MAHE Online, MCA in MAHE Online, M.Com in MAHE Online, MA in MAHE Online, Manipal Online, Online Degrees India, Distance Learning, UGC Approved, AICTE Approved" />
+        <meta name="keywords" content="Manipal Online, Manipal Academy of Higher Education(MAHE)), MAHE Online, BBA in MAHE Online, B.Com in MAHE Online, MBA in MAHE Online, MCA in MAHE Online, M.Com in MAHE Online, MA in MAHE Online, Manipal Online, Online Degrees India, Distance Learning, UGC Approved, AICTE Approved" />
         <meta name="author" content="Manipal Academy of Higher Education Online Degrees" />
         <meta name="robots" content="index, follow" /> 
-        <link rel="canonical" href="https://unifostedu.com/manipal" />
+        <link rel="canonical" href="https://unifostedu.com/mahe-online" />
         <link href="https://fonts.cdnfonts.com/css/queens" rel="stylesheet" />
         <link
           rel="stylesheet"
@@ -305,7 +333,7 @@ const selectionItem=[
         <meta property="og:description" content="Globally recognized online undergraduate and postgraduate programs with flexible, industry-relevant learning." />
         <meta property="og:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.onlinedegree.in/manipal" />
+        <meta property="og:url" content="https://unifostedu.com/mahe-online" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -343,17 +371,7 @@ const selectionItem=[
               </div>
 
               {/* Right Side - Responsive */}
-              <div className="flex items-center gap-1.5 sm:gap-2 md:gap-4 flex-1 justify-end">
-                {/* Mobile Menu Button */}
-                <button
-                  onClick={() => setIsMobileMenuOpen(true)}
-                  aria-label="Open menu"
-                  aria-expanded={isMobileMenuOpen}
-                  className="lg:hidden inline-flex items-center p-2 rounded-md border hover:bg-gray-50 cursor-pointer mr-2"
-                >
-                  <span className="text-xl">☰</span>
-                </button>
-
+              <div className="flex items-center gap-1.5 sm:gap-2 md:gap-4 flex-1 justify-end">             
                 {/* Phone - Hidden on small screens */}
                 <a
                   href="tel:+917042867717"
@@ -379,6 +397,16 @@ const selectionItem=[
                 >
                   <span className="hidden sm:inline">Apply Now</span>
                   <span className="sm:hidden">Apply</span>
+                </button>
+
+                {/* Mobile Menu Button */}
+                <button
+                  onClick={() => setIsMobileMenuOpen(true)}
+                  aria-label="Open menu"
+                  aria-expanded={isMobileMenuOpen}
+                  className="lg:hidden inline-flex items-center p-2 rounded-md border hover:bg-gray-50 cursor-pointer mr-2"
+                >
+                  <span className="text-xl">☰</span>
                 </button>
               </div>
             </div>
@@ -406,14 +434,6 @@ const selectionItem=[
         {/* Introduction to MAHE University Online */}
        <Interoducation openModal={openModal} setOpenModal={setOpenModal} />
 
-
-        {/* About Us - MAHE University Online */}
-       
-
-        {/* A Future-Ready Online Learning Platform */}
-       
-
-        {/* UGC-Approved Online Degrees */}
           {/* A Leader Among Online Universities in India */}
       <AboutUs openModal={openModal} setOpenModal={setOpenModal} />
 
@@ -498,7 +518,7 @@ const selectionItem=[
               <div>
                 <h4 className="text-white font-bold text-lg mb-6">Programs</h4>
                 <ul className="space-y-3">
-                  {['Online MBA', 'BBA', 'MCA', 'BCA', 'M.Com', 'B.Com', 'MA JMC'].map((program, i) => (
+                  {['Online MBA', 'BBA', 'MCA',  'M.Com', 'B.Com', 'MA JMC'].map((program, i) => (
                     <li key={i}>
                       <a onClick={() => setOpenModal ({ type: 'apply' })} className="text-gray-400 hover:text-orange-400 transition-colors cursor pointer">
                         {program}
@@ -566,9 +586,7 @@ const selectionItem=[
                                          "BBA Data Analytics - MAHE Online",
                                          "BBA Retail & E-commerce Management - MAHE Online",
 
-                                         "BCA Data Science and Analytics - MAHE Online",
-                                         "BCA Cyber Security - MAHE Online",
-                                         "BCA Cloud Computing - MAHE Online",
+                                      
 
                                          "B.Com General - MAHE Online",
 

@@ -30,7 +30,7 @@ const Footer = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalSt
               <div>
                 <h4 className="text-white font-bold text-lg mb-6">Programs</h4>
                 <ul className="space-y-3">
-                  {['Online MBA', 'BBA', 'MCA', 'BCA', 'M.Com', 'B.Com', 'MA JMC'].map((program, i) => (
+                  {['Online MBA', 'BBA', 'MCA', 'M.Com', 'B.Com', 'MA JMC'].map((program, i) => (
                     <li key={i}>
                       <a onClick={() => setOpenModal ({ type: 'apply' })} className="text-gray-400 hover:text-orange-400 transition-colors cursor pointer">
                         {program}
@@ -98,9 +98,6 @@ const Footer = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalSt
                                          "BBA Data Analytics - MAHE Online",
                                          "BBA Retail & E-commerce Management - MAHE Online",
 
-                                         "BCA Data Science and Analytics - MAHE Online",
-                                         "BCA Cyber Security - MAHE Online",
-                                         "BCA Cloud Computing - MAHE Online",
 
                                          "B.Com General - MAHE Online",
 

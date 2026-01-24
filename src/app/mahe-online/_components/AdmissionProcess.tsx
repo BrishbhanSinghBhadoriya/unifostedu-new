@@ -6,7 +6,7 @@ const AdmissionProcess = ({ setOpenModal, openModal }: { setOpenModal: (state: O
    <section>
 
          <div>
-           <section className="relative py-20 bg-white">
+           <section className="relative mt-01 bg-white">
              {/* Decorative Blobs */}
              <div className="absolute -top-20 -left-20 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
              <div className="absolute -bottom-32 -right-32 w-72 h-72 bg-gray-100 rounded-full blur-3xl animate-pulse"></div>
@@ -50,7 +50,7 @@ const AdmissionProcess = ({ setOpenModal, openModal }: { setOpenModal: (state: O
                      {
                        number: "01",
                        title: "Choose Your MAHE Online Program",
-                       desc: "Select from MAHE Online MBA, MAHE Online BCA, MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, or MAHE Online BCom.",
+                       desc: "Select from MAHE Online MBA, MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, or MAHE Online BCom.",
                      },
                      {
                        number: "02",
@@ -88,10 +88,10 @@ const AdmissionProcess = ({ setOpenModal, openModal }: { setOpenModal: (state: O
                    ))}
                  </div>
                </motion.div>
-               <div className="text-center mt-8 sm:mt-12">
+               <div className="text-center mt-6 mb-4 sm:mt-8">
                    <button 
                      onClick={() => setOpenModal({ type: 'apply' })}
-                     className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                     className="w-1/2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
                    >
                      <span className="hidden sm:inline">Apply Now</span>
                      <span className="sm:hidden">Apply</span>

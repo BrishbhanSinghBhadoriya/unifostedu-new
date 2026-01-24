@@ -2,7 +2,7 @@ import React from 'react'
 import { OpenModalState } from '../../../../types/Modal'
 const AdvantageHighlights = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalState) => void; openModal: OpenModalState }) => {
   return (
-   <section className="relative py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-orange-50 via-white to-blue-50">
+   <section className="relative py-0 sm:py-0 md:py-0 lg:py-0 bg-gradient-to-br from-orange-50 via-white to-blue-50">
           <div className="pointer-events-none absolute inset-0" style={{background:"radial-gradient(1200px 300px at 10% -10%, rgba(255,122,54,.09), transparent), radial-gradient(1200px 300px at 90% 110%, rgba(59,130,246,.08), transparent)"}} />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 sm:mb-10 md:mb-14">
@@ -40,10 +40,10 @@ const AdvantageHighlights = ({ setOpenModal, openModal }: { setOpenModal: (state
                 <p className="text-blue-100 text-sm sm:text-base md:text-lg">Exclusive scholarships for defense personnel, govt. employees, differently-abled & meritorious students.</p>
               </div>
             </div>
-            <div className="text-center mt-8 sm:mt-12">
+            <div className="text-center mt-8 mb-4 sm:mt-8 sm:mb-4">
                 <button 
                   onClick={() => setOpenModal({ type: 'apply' })}
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                  className="w-1/2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
                 >
                   <span className="hidden sm:inline">Apply Now</span>
                   <span className="sm:hidden">Apply</span>
@@ -65,14 +65,14 @@ const AdvantageHighlights = ({ setOpenModal, openModal }: { setOpenModal: (state
                   title: 'UGC-Entitled MAHE Online Degrees',
                   points: [
                     'All MAHE Online Courses and MAHE Online Programs are fully UGC-approved.',
-                    'Degrees such as the MAHE Online MBA, MAHE Online BCA, MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, and MAHE Online BCom hold the same value as regular on-campus degrees.'
+                    'Degrees such as the MAHE Online MBA, MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, and MAHE Online BCom hold the same value as regular on-campus degrees.'
                   ]
                 },
                 {
                   title: 'Wide Range of UG & PG Online Courses by MAHE',
                   points: [
                     'Students can choose from industry-focused online programs in business, IT, commerce, and management.',
-                    'Popular programs include the MAHE Online MBA, MAHE Online BCA, MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, and MAHE Online BCom.'
+                    'Popular programs include the MAHE Online MBA, MAHE Online MCA, MAHE Online BBA, MAHE Online MCom, and MAHE Online BCom.'
                   ]
                 },
                 {
@@ -130,13 +130,13 @@ const AdvantageHighlights = ({ setOpenModal, openModal }: { setOpenModal: (state
                 </div>
               ))}
             </div>
-            <div className="text-center mt-8 sm:mt-12">
+            <div className="text-center mb-1 mt-4 sm:mt-6 sm:mb-1">
                 <button 
                   onClick={() => setOpenModal({ type: 'apply' })}
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                  className="w-1/2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
                 >
                   <span className="hidden sm:inline">Apply Now</span>
-                  <span className="sm:hidden">Apply</span>
+                  <span className="sm:hidden">Apply Now</span>
                 </button>
             </div>
           </div>

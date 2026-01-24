@@ -1,4 +1,4 @@
-// File: src/pages/blogs/ManipalVsAmityOnlineMBA.jsx
+
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -7,7 +7,7 @@ import Link from "next/link";
 const ManipalVsAmityOnlineMBA = () => {
   return (
     <main className="max-w-6xl mx-auto px-4 py-12 text-dark-blue-900  leading-relaxed">
-      {/* SEO Meta Tags */}
+ 
       
         <title>Manipal vs Amity: Which Online MBA is Better? | UniFost Blog</title>
         <meta
