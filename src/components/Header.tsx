@@ -752,7 +752,7 @@ ${uploadedResumeURL || "Not uploaded"}
                 </Link>
 
                 <Link
-                  href="https://wa.me/917042646766"
+                  href="https://wa.me/917042646766?text=Hi%20Unifost,%20I%20want%20to%20know%20more%20about%20courses.%20My%20Name%20is:%20"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2.5 rounded-lg bg-green-50 text-green-600 hover:bg-green-100 transition-all duration-200 flex-shrink-0"
@@ -1127,7 +1127,7 @@ ${uploadedResumeURL || "Not uploaded"}
                         <span>Call</span>
                       </a>
                       <a
-                        href="https://wa.me/917042646766"
+                        href="https://wa.me/917042646766?text=Hi%20Unifost,%20I%20want%20to%20know%20more%20about%20courses.%20My%20Name%20is:%20"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg text-white font-bold text-sm hover:scale-105 transition">
