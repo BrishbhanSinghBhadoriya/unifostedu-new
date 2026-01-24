@@ -33,8 +33,8 @@ const About = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalSta
             online degree programs designed for learners, working
             professionals, and entrepreneurs who aim to enhance their
             skills and advance their careers in the future. It is ranked
-            among the <Link href="/Amity-University-Online/mba-online" className="font-bold">best online universities in India</Link>, Amity Online
-            offers globally recognized <Link href="/Amity-University-Online/mba-online" className="font-bold">online MBA in India 2025</Link>, <Link href="/Amity-University-Online/bba-online" className="font-bold">online BBA</Link>, <Link href="/Amity-University-Online/mca-online" className="font-bold">online MCA</Link>, <Link href="/Amity-University-Online/mcom-online" className="font-bold">online M.Com,</Link> <Link href="/Amity-University-Online/mcom-online" className="font-bold"> online B.Com,</Link> <Link href="/Amity-University-Online/ma-online" className="font-bold">online MA,</Link>, and <Link href="/Amity-University-Online/bca-online" className="font-bold">online BCA,</Link> programs and <Link href="/Amity-University-Online/bca-online" className="font-bold">online BCA,</Link> programs.
+            among the <Link href="/amity/mba-online" className="font-bold">best online universities in India</Link>, Amity Online
+            offers globally recognized <Link href="/amity/mba-online" className="font-bold">online MBA in India 2025</Link>, <Link href="/amity/bba-online" className="font-bold">online BBA</Link>, <Link href="/amity/mca-online" className="font-bold">online MCA</Link>, <Link href="/amity/mcom-online" className="font-bold">online M.Com,</Link> <Link href="/amity/bcom-online" className="font-bold"> online B.Com,</Link> <Link href="/amity/ma-online" className="font-bold">online MA,</Link>, and <Link href="/amity/bca-online" className="font-bold">online BCA,</Link> programs and <Link href="/amity/bca-online" className="font-bold">online BCA,</Link> programs.
           </p>
 
           <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-5 md:mb-6">
@@ -47,24 +47,24 @@ const About = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalSta
           </p>
 
           <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-5 md:mb-6">
-            Amity Online's <Link href="Amity-University-Online/mba-online" className="font-bold">MBA program</Link> is designed for both fresh graduates and working professionals.
-            Our AICTE and UGC-approved courses specialize in HR, Finance, Marketing, Analytics, 
-            International Business, and Digital Marketing — making Amity one of the <Link href="/Amity-University-Online" className="font-bold">best universities for online education</Link>.
+            Amity Online's <Link href="/amity/mba-online" className="font-bold">MBA program</Link> is designed for both fresh graduates and working professionals.
+            Our AICTE and UGC-approved courses specialize in HR, Finance, Marketing, Analytics,
+            International Business, and Digital Marketing — making Amity one of the <Link href="/amity" className="font-bold">best universities for online education</Link>.
           </p>
 
           {/* Quick Links Section */}
           <div className="mt-6 pt-6 border-t border-gray-200">
             <p className="text-gray-600 text-sm mb-4 font-medium">Explore More:</p>
             <div className="flex flex-wrap gap-2">
-              <Link href="/Amity-University-Online/mba-online" className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs hover:bg-blue-100 transition-colors">MBA Online</Link>
-              <Link href="/Amity-University-Online/bba-online" className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs hover:bg-blue-100 transition-colors">BBA Online</Link>
-              <Link href="/Amity-University-Online/mca-online" className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs hover:bg-blue-100 transition-colors">MCA Online</Link>
-              <Link href="/Amity-University-Online/bca-online" className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs hover:bg-blue-100 transition-colors">BCA Online</Link>
-              <Link href="/Amity-University-Online/mcom-online" className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs hover:bg-blue-100 transition-colors">MCOM Online</Link>
-               <Link href="/Amity-University-Online/bcom-online" className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs hover:bg-blue-100 transition-colors">BCOM Online</Link>
-              <Link href="/Amity-University-Online/ma-online" className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs hover:bg-blue-100 transition-colors">MA Online</Link>
-               <Link href="/Amity-University-Online/ba-online" className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs hover:bg-blue-100 transition-colors">BA Online</Link>
-                <Link href="/Amity-University-Online/msc-online" className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs hover:bg-blue-100 transition-colors">M Sc Online</Link>
+              <Link href="/amity/mba-online" className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs hover:bg-blue-100 transition-colors">MBA Online</Link>
+              <Link href="/amity/bba-online" className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs hover:bg-blue-100 transition-colors">BBA Online</Link>
+              <Link href="/amity/mca-online" className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs hover:bg-blue-100 transition-colors">MCA Online</Link>
+              <Link href="/amity/bca-online" className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs hover:bg-blue-100 transition-colors">BCA Online</Link>
+              <Link href="/amity/mcom-online" className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs hover:bg-blue-100 transition-colors">MCOM Online</Link>
+              <Link href="/amity/bcom-online" className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs hover:bg-blue-100 transition-colors">BCOM Online</Link>
+              <Link href="/amity/ma-online" className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs hover:bg-blue-100 transition-colors">MA Online</Link>
+              <Link href="/amity/ba-online" className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs hover:bg-blue-100 transition-colors">BA Online</Link>
+              <Link href="/amity/msc-online" className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs hover:bg-blue-100 transition-colors">M Sc Online</Link>
             </div>
           </div>
         </div>
@@ -88,7 +88,7 @@ const About = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalSta
               className="border-2 border-gray-300 hover:border-blue-400 px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base md:text-lg rounded-full w-full sm:w-auto"
               onClick={() => setOpenModal({ type: "enquire" })}
             >
-              
+
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Enquire Now
             </Button>

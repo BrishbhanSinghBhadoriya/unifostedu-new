@@ -44,14 +44,14 @@ export const metadata = {
 
   metadataBase: new URL("https://unifostedu.com"),
   alternates: {
-    canonical: "https://unifostedu.com/Amity-University-Online"
+    canonical: "https://unifostedu.com/amity"
   },
 
   openGraph: {
     title: "Amity University Online | Accredited Online Degrees",
     description:
       "Globally recognized online undergraduate and postgraduate programs with flexible, industry-relevant learning from Amity University.",
-    url: "https://unifostedu.com/Amity-University-Online",
+    url: "https://unifostedu.com/amity",
     siteName: "UNIFOST",
     images: [
       {
@@ -98,7 +98,7 @@ const organizationSchema = {
   "@type": "EducationalOrganization",
   name: "Amity University Online",
   alternateName: "Amity Online",
-  url: "https://unifostedu.com/amity-university-online",
+  url: "https://unifostedu.com/amity",
   logo: "https://unifostedu.com/amity.svg",
   contactPoint: {
     "@type": "ContactPoint",

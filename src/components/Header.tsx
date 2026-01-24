@@ -67,7 +67,7 @@ const Header = () => {
   const universities = [
     {
       name: "Amity University Online",
-      link: "/Amity-University-Online",
+      link: "/amity",
       logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp",
     },
     {
@@ -336,7 +336,7 @@ ${uploadedResumeURL || "Not uploaded"}
 
   useEffect(() => {
     const hideHeaderRoutes = [
-      "/Amity-University-Online",
+      "/amity",
       "/lpu-online",
       "/manipal",
       "/cuOnline",
@@ -416,63 +416,63 @@ ${uploadedResumeURL || "Not uploaded"}
       <header className="w-full font-sans sticky top-0 z-50">
         {/* Tagline Banner - Modern gradient design */}
         <div className="bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 py-3 px-4 border-b border-blue-800/30">
-  <div className="relative flex items-center justify-end">
+          <div className="relative flex items-center justify-end">
 
-    {/* CENTER : Title */}
-    <div className="absolute left-1/2 -translate-x-1/2 text-center">
-      <p className="text-white text-sm sm:text-base font-medium tracking-wide whitespace-nowrap">
-        <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent font-bold">
-          Unifost
-        </span>{" "}
-        – University{" "}
-        <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent font-bold">
-          For
-        </span>{" "}
-        Students
-      </p>
-    </div>
-
-    {/* RIGHT : Search Bar */}
-    <div className="hidden md:flex relative max-w-xs lg:max-w-sm xl:max-w-md">
-      <div className="flex items-center bg-slate-100 rounded-full px-3 lg:px-4 py-2 ring-1 ring-slate-200 focus-within:ring-2 focus-within:ring-blue-400 transition-all w-full">
-        <FaMagnifyingGlass className="text-slate-400 text-sm flex-shrink-0" />
-        <input
-          type="text"
-          placeholder="Search courses, universities..."
-          className="outline-none bg-transparent text-slate-700 px-2 w-full text-sm placeholder:text-slate-400"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
-      </div>
-
-      {searchQuery && (
-        <div className="absolute right-0 mt-2 w-full bg-white rounded-xl shadow-2xl border border-slate-200 z-[9999] max-h-80 overflow-auto">
-          {filtered.map((item, idx) => (
-            <button
-              key={idx}
-              onClick={() => handleSuggestionClick(item.href)}
-              className="block w-full text-left px-4 py-3 hover:bg-slate-50 border-b border-slate-100 last:border-0"
-            >
-              <div className="text-sm font-medium text-slate-900">
-                {item.title}
-              </div>
-              <div className="text-xs text-slate-500 capitalize mt-0.5">
-                {item.type}
-              </div>
-            </button>
-          ))}
-
-          {filtered.length === 0 && (
-            <div className="px-4 py-4 text-sm text-slate-500 text-center">
-              No results found
+            {/* CENTER : Title */}
+            <div className="absolute left-1/2 -translate-x-1/2 text-center">
+              <p className="text-white text-sm sm:text-base font-medium tracking-wide whitespace-nowrap">
+                <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent font-bold">
+                  Unifost
+                </span>{" "}
+                – University{" "}
+                <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent font-bold">
+                  For
+                </span>{" "}
+                Students
+              </p>
             </div>
-          )}
-        </div>
-      )}
-    </div>
 
-  </div>
-</div>
+            {/* RIGHT : Search Bar */}
+            <div className="hidden md:flex relative max-w-xs lg:max-w-sm xl:max-w-md">
+              <div className="flex items-center bg-slate-100 rounded-full px-3 lg:px-4 py-2 ring-1 ring-slate-200 focus-within:ring-2 focus-within:ring-blue-400 transition-all w-full">
+                <FaMagnifyingGlass className="text-slate-400 text-sm flex-shrink-0" />
+                <input
+                  type="text"
+                  placeholder="Search courses, universities..."
+                  className="outline-none bg-transparent text-slate-700 px-2 w-full text-sm placeholder:text-slate-400"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+              </div>
+
+              {searchQuery && (
+                <div className="absolute right-0 mt-2 w-full bg-white rounded-xl shadow-2xl border border-slate-200 z-[9999] max-h-80 overflow-auto">
+                  {filtered.map((item, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => handleSuggestionClick(item.href)}
+                      className="block w-full text-left px-4 py-3 hover:bg-slate-50 border-b border-slate-100 last:border-0"
+                    >
+                      <div className="text-sm font-medium text-slate-900">
+                        {item.title}
+                      </div>
+                      <div className="text-xs text-slate-500 capitalize mt-0.5">
+                        {item.type}
+                      </div>
+                    </button>
+                  ))}
+
+                  {filtered.length === 0 && (
+                    <div className="px-4 py-4 text-sm text-slate-500 text-center">
+                      No results found
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+
+          </div>
+        </div>
 
 
         {/* Main Navbar - Clean professional design */}
@@ -728,7 +728,7 @@ ${uploadedResumeURL || "Not uploaded"}
 
               </nav>
 
-         
+
 
 
               {/* Action Buttons */}
@@ -746,10 +746,10 @@ ${uploadedResumeURL || "Not uploaded"}
 
                 <Link
                   href="tel:+917042646766"
-                  className="p-2.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 flex-shrink-0"
                   title="Call us">
                   <FaPhone className="text-lg" />
                 </Link>
+
 
                 <Link
                   href="https://wa.me/917042646766"
@@ -813,385 +813,386 @@ ${uploadedResumeURL || "Not uploaded"}
                     info@unifostedu.com
                   </a>
                 </div>
+                <Link href="/university-list" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Universities</Link>
               </div>
             </div>
           </div>
-         </div>
+        </div>
 
-          {/* Mobile Menu - Enhanced design */}
-          {
-            mobileMenuOpen && (
-              <div className="lg:hidden fixed top-0 left-0 w-full h-screen z-[9999] bg-white flex flex-col pointer-events-auto">
-                {/* Mobile Header */}
-                <div className="flex items-center justify-between p-6 border-b border-slate-100 flex-shrink-0">
-                  <Image
-                    width={120}
-                    height={48}
-                    src="https://res.cloudinary.com/didkrwhbu/image/upload/v1764316067/uniLogoo_nc6vhs.png"
-                    alt="Unifost"
-                    className="h-12 w-auto"
-                  />
-                  <button
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="p-2 rounded-lg bg-slate-100 text-slate-700">
-                    <FaXmark className="text-xl" />
-                  </button>
-                </div>
+        {/* Mobile Menu - Enhanced design */}
+        {
+          mobileMenuOpen && (
+            <div className="lg:hidden fixed top-0 left-0 w-full h-screen z-[9999] bg-white flex flex-col pointer-events-auto">
+              {/* Mobile Header */}
+              <div className="flex items-center justify-between p-6 border-b border-slate-100 flex-shrink-0">
+                <Image
+                  width={120}
+                  height={48}
+                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1764316067/uniLogoo_nc6vhs.png"
+                  alt="Unifost"
+                  className="h-12 w-auto"
+                />
+                <button
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-2 rounded-lg bg-slate-100 text-slate-700">
+                  <FaXmark className="text-xl" />
+                </button>
+              </div>
 
-                {/* Scrollable Content */}
-                <div className="flex-1 overflow-y-auto p-6">
-                  {/* Mobile Search */}
-                  <div className="mb-6">
-                    <div className="flex items-center bg-slate-100 rounded-lg px-4 py-3 border border-black">
-                      <FaMagnifyingGlass className="text-slate-400 text-sm" />
-                      <input
-                        type="text"
-                        placeholder="Search..."
-                        className="outline-none bg-transparent text-slate-700 px-3 w-full text-sm"
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                      />
-                    </div>
-                    {searchQuery && filtered.length > 0 && (
-                      <div className="mt-2 bg-white rounded-lg shadow-lg border border-slate-200 max-h-60 overflow-auto">
-                        {filtered.map((item, idx) => (
-                          <button
-                            key={idx}
-                            onClick={() => {
-                              handleSuggestionClick(item.href);
-                              setMobileMenuOpen(false);
-                            }}
-                            className="block w-full text-left px-4 py-3 hover:bg-slate-50 border-b border-slate-100 last:border-0">
-                            <div className="text-sm font-medium text-slate-900">
-                              {item.title}
-                            </div>
-                            <div className="text-xs text-slate-500 capitalize">
-                              {item.type}
-                            </div>
-                          </button>
-                        ))}
-                      </div>
-                    )}
+              {/* Scrollable Content */}
+              <div className="flex-1 overflow-y-auto p-6">
+                {/* Mobile Search */}
+                <div className="mb-6">
+                  <div className="flex items-center bg-slate-100 rounded-lg px-4 py-3 border border-black">
+                    <FaMagnifyingGlass className="text-slate-400 text-sm" />
+                    <input
+                      type="text"
+                      placeholder="Search..."
+                      className="outline-none bg-transparent text-slate-700 px-3 w-full text-sm"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                    />
                   </div>
-
-                  {/* Mobile Navigation */}
-                  <div className="space-y-6">
-                    <div className="space-y-2">
-                      <h3 className="text-slate-400 font-bold text-xs uppercase tracking-wider px-2">
-                        Main Menu
-                      </h3>
-                      {[
-                        { label: "Home", path: "/", icon: FaHouse },
-                        { label: "About", path: "/about", icon: FaCircleInfo },
-                        {
-                          label: "Courses",
-                          path: "/coursesearch",
-                          icon: FaGraduationCap,
-                        },
-                        {
-                          label: "Universities",
-                          path: "/University-List",
-                          icon: FaBuildingColumns,
-                        },
-                        { label: "Services", path: "/services", icon: FaGear },
-                      ].map((link, i) => (
-                        <Link
-                          key={i}
-                          href={link.path}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className="flex items-center gap-3 p-4 rounded-lg bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 transition-all">
-                          <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white">
-                            <link.icon className="text-lg" />
+                  {searchQuery && filtered.length > 0 && (
+                    <div className="mt-2 bg-white rounded-lg shadow-lg border border-slate-200 max-h-60 overflow-auto">
+                      {filtered.map((item, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => {
+                            handleSuggestionClick(item.href);
+                            setMobileMenuOpen(false);
+                          }}
+                          className="block w-full text-left px-4 py-3 hover:bg-slate-50 border-b border-slate-100 last:border-0">
+                          <div className="text-sm font-medium text-slate-900">
+                            {item.title}
                           </div>
-                          <span className="font-semibold text-slate-700">
-                            {link.label}
-                          </span>
-                          <FaArrowRight className="ml-auto text-blue-500 text-sm" />
-                        </Link>
+                          <div className="text-xs text-slate-500 capitalize">
+                            {item.type}
+                          </div>
+                        </button>
                       ))}
                     </div>
+                  )}
+                </div>
 
-                    {/* Mobile Careers Section */}
-                    <div className="space-y-2">
-                      <h3 className="text-slate-400 font-bold text-xs uppercase tracking-wider px-2">
-                        Careers
-                      </h3>
-                      <div className="bg-slate-50 rounded-lg border border-slate-200 p-4 space-y-4">
-                        {/* Sales Intern */}
-                        <div className="border-l-[3px] border-blue-500 pl-3">
-                          <p className="font-bold text-blue-800 mb-1 text-xs">
-                            Sales Intern (0–1 Year Experience)
-                          </p>
-                          <p className="text-xs text-slate-600 mb-2">
-                            Eligibility: Graduate (Passed or Pursuing)
-                          </p>
-                          <button
-                            onClick={() => setShowSalesForm(!showSalesForm)}
-                            className="text-xs bg-blue-600 text-white px-3 py-1.5 rounded hover:bg-blue-700 transition-colors">
-                            {showSalesForm ? "Close Form" : "Apply Now"}
-                          </button>
-                          {showSalesForm && (
-                            <form
-                              onSubmit={(e) => handleSubmit(e, "Sales Intern")}
-                              className="mt-3 bg-white border border-slate-200 p-3 rounded-lg space-y-2 shadow-sm"
-                              encType="multipart/form-data">
-                              <input
-                                type="text"
-                                name="name"
-                                placeholder="Full Name"
-                                required
-                                className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-blue-500"
-                              />
-                              <input
-                                type="email"
-                                name="email"
-                                placeholder="Email Address"
-                                required
-                                className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-blue-500"
-                              />
-                              <input
-                                type="tel"
-                                name="phone"
-                                placeholder="Mobile Number"
-                                required
-                                className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-blue-500"
-                              />
-                              <div className="space-y-1">
-                                <label className="text-[10px] uppercase font-bold text-slate-500">
-                                  Upload CV / Resume
-                                </label>
-                                <input
-                                  type="file"
-                                  name="resume"
-                                  required
-                                  accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
-                                  className="w-full text-xs text-slate-500 file:mr-2 file:py-1 file:px-2 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
-                                />
-                              </div>
-                              <button
-                                type="submit"
-                                className="w-full bg-blue-600 text-white py-2 rounded text-xs font-semibold hover:bg-blue-700 transition-colors">
-                                Submit Application
-                              </button>
-                              {result && (
-                                <p className="text-xs text-center mt-2 text-green-600 font-medium">
-                                  {result}
-                                </p>
-                              )}
-                            </form>
-                          )}
+                {/* Mobile Navigation */}
+                <div className="space-y-6">
+                  <div className="space-y-2">
+                    <h3 className="text-slate-400 font-bold text-xs uppercase tracking-wider px-2">
+                      Main Menu
+                    </h3>
+                    {[
+                      { label: "Home", path: "/", icon: FaHouse },
+                      { label: "About", path: "/about", icon: FaCircleInfo },
+                      {
+                        label: "Courses",
+                        path: "/coursesearch",
+                        icon: FaGraduationCap,
+                      },
+                      {
+                        label: "Universities",
+                        path: "/university-list",
+                        icon: FaBuildingColumns,
+                      },
+                      { label: "Services", path: "/services", icon: FaGear },
+                    ].map((link, i) => (
+                      <Link
+                        key={i}
+                        href={link.path}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="flex items-center gap-3 p-4 rounded-lg bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 transition-all">
+                        <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white">
+                          <link.icon className="text-lg" />
                         </div>
+                        <span className="font-semibold text-slate-700">
+                          {link.label}
+                        </span>
+                        <FaArrowRight className="ml-auto text-blue-500 text-sm" />
+                      </Link>
+                    ))}
+                  </div>
 
-                        {/* Admission Counsellor */}
-                        <div className="border-l-[3px] border-blue-500 pl-3">
-                          <p className="font-bold text-blue-800 mb-1 text-xs">
-                            Admission Counsellor (0–1 Year Experience)
-                          </p>
-                          <p className="text-xs text-slate-600 mb-2">
-                            Eligibility: Minimum 45% in Graduation
-                          </p>
-                          <button
-                            onClick={() => setShowAdmissionForm(!showAdmissionForm)}
-                            className="text-xs bg-blue-600 text-white px-3 py-1.5 rounded hover:bg-blue-700 transition-colors">
-                            {showAdmissionForm ? "Close Form" : "Apply Now"}
-                          </button>
-                          {showAdmissionForm && (
-                            <form
-                              onSubmit={(e) =>
-                                handleSubmit(e, "Admission Counsellor")
-                              }
-                              className="mt-3 bg-white border border-slate-200 p-3 rounded-lg space-y-2 shadow-sm"
-                              encType="multipart/form-data">
+                  {/* Mobile Careers Section */}
+                  <div className="space-y-2">
+                    <h3 className="text-slate-400 font-bold text-xs uppercase tracking-wider px-2">
+                      Careers
+                    </h3>
+                    <div className="bg-slate-50 rounded-lg border border-slate-200 p-4 space-y-4">
+                      {/* Sales Intern */}
+                      <div className="border-l-[3px] border-blue-500 pl-3">
+                        <p className="font-bold text-blue-800 mb-1 text-xs">
+                          Sales Intern (0–1 Year Experience)
+                        </p>
+                        <p className="text-xs text-slate-600 mb-2">
+                          Eligibility: Graduate (Passed or Pursuing)
+                        </p>
+                        <button
+                          onClick={() => setShowSalesForm(!showSalesForm)}
+                          className="text-xs bg-blue-600 text-white px-3 py-1.5 rounded hover:bg-blue-700 transition-colors">
+                          {showSalesForm ? "Close Form" : "Apply Now"}
+                        </button>
+                        {showSalesForm && (
+                          <form
+                            onSubmit={(e) => handleSubmit(e, "Sales Intern")}
+                            className="mt-3 bg-white border border-slate-200 p-3 rounded-lg space-y-2 shadow-sm"
+                            encType="multipart/form-data">
+                            <input
+                              type="text"
+                              name="name"
+                              placeholder="Full Name"
+                              required
+                              className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-blue-500"
+                            />
+                            <input
+                              type="email"
+                              name="email"
+                              placeholder="Email Address"
+                              required
+                              className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-blue-500"
+                            />
+                            <input
+                              type="tel"
+                              name="phone"
+                              placeholder="Mobile Number"
+                              required
+                              className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-blue-500"
+                            />
+                            <div className="space-y-1">
+                              <label className="text-[10px] uppercase font-bold text-slate-500">
+                                Upload CV / Resume
+                              </label>
                               <input
-                                type="text"
-                                name="name"
-                                placeholder="Full Name"
+                                type="file"
+                                name="resume"
                                 required
-                                className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-blue-500"
+                                accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
+                                className="w-full text-xs text-slate-500 file:mr-2 file:py-1 file:px-2 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
                               />
-                              <input
-                                type="email"
-                                name="email"
-                                placeholder="Email Address"
-                                required
-                                className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-blue-500"
-                              />
-                              <input
-                                type="tel"
-                                name="phone"
-                                placeholder="Mobile Number"
-                                required
-                                className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-blue-500"
-                              />
-                              <div className="space-y-1">
-                                <label className="text-[10px] uppercase font-bold text-slate-500">
-                                  Upload CV / Resume
-                                </label>
-                                <input
-                                  type="file"
-                                  name="resume"
-                                  required
-                                  accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
-                                  className="w-full text-xs text-slate-500 file:mr-2 file:py-1 file:px-2 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
-                                />
-                              </div>
-                              <button
-                                type="submit"
-                                className="w-full bg-blue-600 text-white py-2 rounded text-xs font-semibold hover:bg-blue-700 transition-colors">
-                                Submit Application
-                              </button>
-                              {result && (
-                                <p className="text-xs text-center mt-2 text-green-600 font-medium">
-                                  {result}
-                                </p>
-                              )}
-                            </form>
-                          )}
-                        </div>
+                            </div>
+                            <button
+                              type="submit"
+                              className="w-full bg-blue-600 text-white py-2 rounded text-xs font-semibold hover:bg-blue-700 transition-colors">
+                              Submit Application
+                            </button>
+                            {result && (
+                              <p className="text-xs text-center mt-2 text-green-600 font-medium">
+                                {result}
+                              </p>
+                            )}
+                          </form>
+                        )}
+                      </div>
 
-                        {/* Senior Career Counsellor */}
-                        <div className="border-l-[3px] border-emerald-500 pl-3">
-                          <p className="font-bold text-emerald-800 mb-1 text-xs">
-                            Senior Career Counsellor (2+ Years Experience)
-                          </p>
-                          <p className="text-xs text-slate-600 mb-2">
-                            Minimum 1 Year of Experience in EdTech Industry
-                          </p>
-                          <button
-                            onClick={() => setShowSeniorForm(!showSeniorForm)}
-                            className="text-xs bg-emerald-600 text-white px-3 py-1.5 rounded hover:bg-emerald-700 transition-colors">
-                            {showSeniorForm ? "Close Form" : "Apply Now"}
-                          </button>
-                          {showSeniorForm && (
-                            <form
-                              onSubmit={(e) =>
-                                handleSubmit(e, "Senior Career Counsellor")
-                              }
-                              className="mt-3 bg-white border border-slate-200 p-3 rounded-lg space-y-2 shadow-sm"
-                              encType="multipart/form-data">
+                      {/* Admission Counsellor */}
+                      <div className="border-l-[3px] border-blue-500 pl-3">
+                        <p className="font-bold text-blue-800 mb-1 text-xs">
+                          Admission Counsellor (0–1 Year Experience)
+                        </p>
+                        <p className="text-xs text-slate-600 mb-2">
+                          Eligibility: Minimum 45% in Graduation
+                        </p>
+                        <button
+                          onClick={() => setShowAdmissionForm(!showAdmissionForm)}
+                          className="text-xs bg-blue-600 text-white px-3 py-1.5 rounded hover:bg-blue-700 transition-colors">
+                          {showAdmissionForm ? "Close Form" : "Apply Now"}
+                        </button>
+                        {showAdmissionForm && (
+                          <form
+                            onSubmit={(e) =>
+                              handleSubmit(e, "Admission Counsellor")
+                            }
+                            className="mt-3 bg-white border border-slate-200 p-3 rounded-lg space-y-2 shadow-sm"
+                            encType="multipart/form-data">
+                            <input
+                              type="text"
+                              name="name"
+                              placeholder="Full Name"
+                              required
+                              className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-blue-500"
+                            />
+                            <input
+                              type="email"
+                              name="email"
+                              placeholder="Email Address"
+                              required
+                              className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-blue-500"
+                            />
+                            <input
+                              type="tel"
+                              name="phone"
+                              placeholder="Mobile Number"
+                              required
+                              className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-blue-500"
+                            />
+                            <div className="space-y-1">
+                              <label className="text-[10px] uppercase font-bold text-slate-500">
+                                Upload CV / Resume
+                              </label>
                               <input
-                                type="text"
-                                name="name"
-                                placeholder="Full Name"
+                                type="file"
+                                name="resume"
                                 required
-                                className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-emerald-500"
+                                accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
+                                className="w-full text-xs text-slate-500 file:mr-2 file:py-1 file:px-2 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
                               />
+                            </div>
+                            <button
+                              type="submit"
+                              className="w-full bg-blue-600 text-white py-2 rounded text-xs font-semibold hover:bg-blue-700 transition-colors">
+                              Submit Application
+                            </button>
+                            {result && (
+                              <p className="text-xs text-center mt-2 text-green-600 font-medium">
+                                {result}
+                              </p>
+                            )}
+                          </form>
+                        )}
+                      </div>
+
+                      {/* Senior Career Counsellor */}
+                      <div className="border-l-[3px] border-emerald-500 pl-3">
+                        <p className="font-bold text-emerald-800 mb-1 text-xs">
+                          Senior Career Counsellor (2+ Years Experience)
+                        </p>
+                        <p className="text-xs text-slate-600 mb-2">
+                          Minimum 1 Year of Experience in EdTech Industry
+                        </p>
+                        <button
+                          onClick={() => setShowSeniorForm(!showSeniorForm)}
+                          className="text-xs bg-emerald-600 text-white px-3 py-1.5 rounded hover:bg-emerald-700 transition-colors">
+                          {showSeniorForm ? "Close Form" : "Apply Now"}
+                        </button>
+                        {showSeniorForm && (
+                          <form
+                            onSubmit={(e) =>
+                              handleSubmit(e, "Senior Career Counsellor")
+                            }
+                            className="mt-3 bg-white border border-slate-200 p-3 rounded-lg space-y-2 shadow-sm"
+                            encType="multipart/form-data">
+                            <input
+                              type="text"
+                              name="name"
+                              placeholder="Full Name"
+                              required
+                              className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-emerald-500"
+                            />
+                            <input
+                              type="email"
+                              name="email"
+                              placeholder="Email Address"
+                              required
+                              className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-emerald-500"
+                            />
+                            <input
+                              type="tel"
+                              name="phone"
+                              placeholder="Mobile Number"
+                              required
+                              className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-emerald-500"
+                            />
+                            <div className="space-y-1">
+                              <label className="text-[10px] uppercase font-bold text-slate-500">
+                                Upload CV / Resume
+                              </label>
                               <input
-                                type="email"
-                                name="email"
-                                placeholder="Email Address"
+                                type="file"
+                                name="resume"
                                 required
-                                className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-emerald-500"
+                                accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
+                                className="w-full text-xs text-slate-500 file:mr-2 file:py-1 file:px-2 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100"
                               />
-                              <input
-                                type="tel"
-                                name="phone"
-                                placeholder="Mobile Number"
-                                required
-                                className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-emerald-500"
-                              />
-                              <div className="space-y-1">
-                                <label className="text-[10px] uppercase font-bold text-slate-500">
-                                  Upload CV / Resume
-                                </label>
-                                <input
-                                  type="file"
-                                  name="resume"
-                                  required
-                                  accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
-                                  className="w-full text-xs text-slate-500 file:mr-2 file:py-1 file:px-2 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100"
-                                />
-                              </div>
-                              <button
-                                type="submit"
-                                className="w-full bg-emerald-600 text-white py-2 rounded text-xs font-semibold hover:bg-emerald-700 transition-colors">
-                                Submit Application
-                              </button>
-                              {result && (
-                                <p className="text-xs text-center mt-2 text-green-600 font-medium">
-                                  {result}
-                                </p>
-                              )}
-                            </form>
-                          )}
-                        </div>
+                            </div>
+                            <button
+                              type="submit"
+                              className="w-full bg-emerald-600 text-white py-2 rounded text-xs font-semibold hover:bg-emerald-700 transition-colors">
+                              Submit Application
+                            </button>
+                            {result && (
+                              <p className="text-xs text-center mt-2 text-green-600 font-medium">
+                                {result}
+                              </p>
+                            )}
+                          </form>
+                        )}
                       </div>
                     </div>
+                  </div>
 
-                    {/* Contact Buttons */}
-                    <div className="grid grid-cols-3 gap-3">
-                      <a
-                        href="tel:+917042646766"
-                        className="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg text-white font-bold text-sm hover:scale-105 transition">
-                        <FaPhone className="text-xl" />
-                        <span>Call</span>
-                      </a>
-                      <a
-                        href="https://wa.me/917042646766"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg text-white font-bold text-sm hover:scale-105 transition">
-                        <FaWhatsapp className="text-xl" />
-                        <span>WhatsApp</span>
-                      </a>
-                      <button
-                        onClick={() => {
-                          router.push("/bookdemo");
-                          setMobileMenuOpen(false);
-                        }}
-                        className="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg text-white font-bold text-sm hover:scale-105 transition">
-                        <FaVideo className="text-xl" />
-                        <span>Demo</span>
-                      </button>
-                    </div>
+                  {/* Contact Buttons */}
+                  <div className="grid grid-cols-3 gap-3">
+                    <a
+                      href="tel:+917042646766"
+                      className="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg text-white font-bold text-sm hover:scale-105 transition">
+                      <FaPhone className="text-xl" />
+                      <span>Call</span>
+                    </a>
+                    <a
+                      href="https://wa.me/917042646766"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg text-white font-bold text-sm hover:scale-105 transition">
+                      <FaWhatsapp className="text-xl" />
+                      <span>WhatsApp</span>
+                    </a>
+                    <button
+                      onClick={() => {
+                        router.push("/bookdemo");
+                        setMobileMenuOpen(false);
+                      }}
+                      className="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg text-white font-bold text-sm hover:scale-105 transition">
+                      <FaVideo className="text-xl" />
+                      <span>Demo</span>
+                    </button>
+                  </div>
 
-                    {/* Contact Info */}
-                    <div className="bg-slate-50 rounded-lg p-4 space-y-3 border border-slate-200">
-                      <div className="flex items-center gap-3 text-slate-700">
-                        <FaPhone className="text-blue-500 text-lg" />
-                        <div>
-                          <p className="text-xs text-slate-500">Phone</p>
-                          <p className="font-semibold">+91 7042143820</p>
-                        </div>
+                  {/* Contact Info */}
+                  <div className="bg-slate-50 rounded-lg p-4 space-y-3 border border-slate-200">
+                    <div className="flex items-center gap-3 text-slate-700">
+                      <FaPhone className="text-blue-500 text-lg" />
+                      <div>
+                        <p className="text-xs text-slate-500">Phone</p>
+                        <p className="font-semibold">+91 7042143820</p>
                       </div>
-                      <div className="flex items-center gap-3 text-slate-700">
-                        <FaEnvelope className="text-blue-500 text-lg" />
-                        <div>
-                          <p className="text-xs text-slate-500">Email</p>
-                          <a
-                            href="mailto:info@unifostedu.com"
-                            className="font-semibold hover:text-blue-600 transition">
-                            info@unifostedu.com
-                          </a>
-                        </div>
+                    </div>
+                    <div className="flex items-center gap-3 text-slate-700">
+                      <FaEnvelope className="text-blue-500 text-lg" />
+                      <div>
+                        <p className="text-xs text-slate-500">Email</p>
+                        <a
+                          href="mailto:info@unifostedu.com"
+                          className="font-semibold hover:text-blue-600 transition">
+                          info@unifostedu.com
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            )
-          }
+            </div>
+          )
+        }
 
-          {/* Enquiry Modal */}
-          {
-            showEnquiryModal && (
-              <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal}>
-                <DialogContent className="max-w-2xl">
-                  <DialogHeader>
-                    <DialogTitle className="text-2xl font-bold text-slate-900">
-                      {modalType === "videoCall" && "Book a Video Call"}
-                      {modalType === "homeDemo" && "Book a Home Demo"}
-                      {modalType === "getStarted" && "Get Started with Unifost"}
-                    </DialogTitle>
-                  </DialogHeader>
-                  <EnquiryForm
-                    onSubmitted={() => setShowEnquiryModal(false)}
-                    formType={modalType}
-                  />
-                </DialogContent>
-              </Dialog>
-            )
-          }
+        {/* Enquiry Modal */}
+        {
+          showEnquiryModal && (
+            <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal}>
+              <DialogContent className="max-w-2xl">
+                <DialogHeader>
+                  <DialogTitle className="text-2xl font-bold text-slate-900">
+                    {modalType === "videoCall" && "Book a Video Call"}
+                    {modalType === "homeDemo" && "Book a Home Demo"}
+                    {modalType === "getStarted" && "Get Started with Unifost"}
+                  </DialogTitle>
+                </DialogHeader>
+                <EnquiryForm
+                  onSubmitted={() => setShowEnquiryModal(false)}
+                  formType={modalType}
+                />
+              </DialogContent>
+            </Dialog>
+          )
+        }
       </header >
     )
   );

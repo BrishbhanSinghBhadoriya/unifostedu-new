@@ -2,7 +2,7 @@ import { ChildrenProps } from "types/ChildrenProps";
 export const metadata = {
   title: "Manipal University Jaipur Online",
   description: "Explore flexible, career-focused UG and PG programs from Manipal University Online, a NAAC A+ accredited institution for quality learning.",
- 
+
   metadataBase: new URL("https://unifostedu.com"),
   alternates: {
     canonical: "https://unifostedu.com/manipal",
@@ -41,11 +41,11 @@ export const metadata = {
     "best online ma in india manipal university",
     "best online courses in india manipal university",
     "best online courses in india manipal university",
-    
+
 
   ],
 
-   icons: [
+  icons: [
     { url: "images/logos/manipal/favicon.ico" },
     { url: "images/logos/manipal/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     { url: "images/logos/manipal/favicon-16x16.png", sizes: "16x16", type: "image/png" },

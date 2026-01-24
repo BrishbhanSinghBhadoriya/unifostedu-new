@@ -87,42 +87,42 @@ const Introduction = ({ inter, playfair, openModal, setOpenModal }: Introduction
     { number: "100%", label: "Placement Assistance", icon: CheckCircle },
     { number: "200+", label: "Corporate Partners", icon: Globe },
   ];
- 
-const specializations: Specialization[] = [
-  {
-    program: "MBA",
-    count: "18+ Specializations",
-    color: "bg-blue-50 border-blue-200 text-blue-800",
-    image: "https://res.cloudinary.com/didkrwhbu/image/upload/w_200,q_auto,f_auto/v1762327391/mbaSpecialization_ubxfpt.webp",
-    url: "/Amity-University-Online/mba-online",
-  },
-  {
-    program: "BBA",
-    count: "2 Specializations",
-    color: "bg-green-50 border-green-200 text-green-800",
-    image: "https://res.cloudinary.com/didkrwhbu/image/upload/w_200,q_auto,f_auto/v1762327057/bbaSpecialization_zjisuk.webp",
-    url: "/Amity-University-Online/bba-online",
-  },
-  {
-    program: "MCA",
-    count: "5+ Specializations",
-    color: "bg-purple-50 border-purple-200 text-purple-800",
-    image: "https://res.cloudinary.com/didkrwhbu/image/upload/w_200,q_auto,f_auto/v1762327468/mcaSpecialization_bp7v01.webp",
-    url: "/Amity-University-Online/mca-online",
-  },
-  {
-    program: "BCA",
-    count: "6 Specializations",
-    color: "bg-orange-50 border-orange-200 text-orange-800",
-    image: "https://res.cloudinary.com/didkrwhbu/image/upload/w_200,q_auto,f_auto/v1762327068/bcaSpecialization_uwowv1.webp",
-    url: "/Amity-University-Online/bca-online",
-  },
-];
-const handleApplyNowClick = () => {
-  console.log(openModal,setOpenModal);
-  console.log("Apply Now clicked");
-  setOpenModal({ type: "apply" });
-};
+
+  const specializations: Specialization[] = [
+    {
+      program: "MBA",
+      count: "18+ Specializations",
+      color: "bg-blue-50 border-blue-200 text-blue-800",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/w_200,q_auto,f_auto/v1762327391/mbaSpecialization_ubxfpt.webp",
+      url: "/amity/mba-online",
+    },
+    {
+      program: "BBA",
+      count: "2 Specializations",
+      color: "bg-green-50 border-green-200 text-green-800",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/w_200,q_auto,f_auto/v1762327057/bbaSpecialization_zjisuk.webp",
+      url: "/amity/bba-online",
+    },
+    {
+      program: "MCA",
+      count: "5+ Specializations",
+      color: "bg-purple-50 border-purple-200 text-purple-800",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/w_200,q_auto,f_auto/v1762327468/mcaSpecialization_bp7v01.webp",
+      url: "/amity/mca-online",
+    },
+    {
+      program: "BCA",
+      count: "6 Specializations",
+      color: "bg-orange-50 border-orange-200 text-orange-800",
+      image: "https://res.cloudinary.com/didkrwhbu/image/upload/w_200,q_auto,f_auto/v1762327068/bcaSpecialization_uwowv1.webp",
+      url: "/amity/bca-online",
+    },
+  ];
+  const handleApplyNowClick = () => {
+    console.log(openModal, setOpenModal);
+    console.log("Apply Now clicked");
+    setOpenModal({ type: "apply" });
+  };
 
 
   return (
@@ -150,28 +150,28 @@ const handleApplyNowClick = () => {
             </Badge>
 
             {/* Heading - Critical for LCP */}
-         <h1
-  className={`${playfair?.className || ""} text-2xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-5xl font-bold text-yellow-600 leading-tight mb-2 sm:mb-3`}
->
-  Amity University Online
+            <h1
+              className={`${playfair?.className || ""} text-2xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-5xl font-bold text-yellow-600 leading-tight mb-2 sm:mb-3`}
+            >
+              Amity University Online
 
-  {/* CIRCLED TEXT */}
-  <div className="relative inline-block my-2 sm:my-3">
-    <span
-      className="
+              {/* CIRCLED TEXT */}
+              <div className="relative inline-block my-2 sm:my-3">
+                <span
+                  className="
         relative z-10
         px-6 py-2
         text-blue-700
         text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl
         font-bold
       "
-    >
-      Courses, Eligibility And Fees 2026
-    </span>
+                >
+                  Courses, Eligibility And Fees 2026
+                </span>
 
-    {/* Yellow Circle */}
-    <span
-      className="
+                {/* Yellow Circle */}
+                <span
+                  className="
         absolute left-1/2 top-1/2
         -translate-x-1/2 -translate-y-1/2
         w-[100%] h-[100%]
@@ -179,34 +179,34 @@ const handleApplyNowClick = () => {
         rounded-full
         -z-0 border-2 border-yellow-600
       "
-    ></span>
-  </div>
+                ></span>
+              </div>
 
-  <span className="block text-transparent bg-clip-text bg-yellow-600">
-    UGC-Entitled NAAC A+ Programs for 2026
-  </span>
-</h1>
+              <span className="block text-transparent bg-clip-text bg-yellow-600">
+                UGC-Entitled NAAC A+ Programs for 2026
+              </span>
+            </h1>
 
 
             {/* Description */}
             <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-4 sm:mb-5 md:mb-6 max-w-2xl leading-relaxed">
-              Explore the Amity University <Link href="/Amity-University-Online/mba-online" className="font-bold"> MBA,</Link> <Link href="/Amity-University-Online/bba-online" className="font-bold"> BBA,</Link> <Link href="/Amity-University-Online/mca-online" className="font-bold"> MCA,</Link> <Link href="/Amity-University-Online/bca-online" className="font-bold"> BCA,</Link> <Link href="/Amity-University-Online/mcom-online" className="font-bold"> M.Com,</Link> <Link href="/Amity-University-Online/bcom-online" className="font-bold"> B.Com,</Link> <Link href="/Amity-University-Online/ma-online" className="font-bold"> MA,</Link> and <Link href="/Amity-University-Online/msc-online" className="font-bold"> MSc</Link> programmes designed for working
+              Explore the Amity University <Link href="/amity/mba-online" className="font-bold"> MBA,</Link> <Link href="/amity/bba-online" className="font-bold"> BBA,</Link> <Link href="/amity/mca-online" className="font-bold"> MCA,</Link> <Link href="/amity/bca-online" className="font-bold"> BCA,</Link> <Link href="/amity/mcom-online" className="font-bold"> M.Com,</Link> <Link href="/amity/bcom-online" className="font-bold"> B.Com,</Link> <Link href="/amity/ma-online" className="font-bold"> MA,</Link> and <Link href="/amity/msc-online" className="font-bold"> MSc</Link> programmes designed for working
               professionals across India.{" "}
               <span className="font-semibold">Join 1.6 lakh+</span>{" "}
               learners leveraging flexible online degrees, live mentoring, and placement assistance.
             </p>
 
             {/* Program Cards - No animations for faster render */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4 lg:gap-6 mb-4 sm:mb-5 md:mb-6 lg:mb-8">
-        {specializations.map((item, index) => (
-        <ProgramCard
-        key={index}
-        item={item}
-        index={index}
-        onClick={() => router.push(item.url)}
-       />
-       ))}
-       </div>
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4 lg:gap-6 mb-4 sm:mb-5 md:mb-6 lg:mb-8">
+              {specializations.map((item, index) => (
+                <ProgramCard
+                  key={index}
+                  item={item}
+                  index={index}
+                  onClick={() => router.push(item.url)}
+                />
+              ))}
+            </div>
 
 
             {/* CTA Buttons - Simplified for mobile */}
@@ -256,7 +256,7 @@ const handleApplyNowClick = () => {
           </div>
         </div>
       </div>
-      
+
     </section>
   )
 }

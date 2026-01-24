@@ -8,35 +8,35 @@ const ManipalVsAmityOnlineMBA = () => {
   return (
     <main className="max-w-6xl mx-auto px-4 py-12 text-dark-blue-900  leading-relaxed">
       {/* SEO Meta Tags */}
-      
-        <title>Manipal vs Amity: Which Online MBA is Better? | UniFost Blog</title>
-        <meta
-          name="description"
-          content="Compare Manipal Online MBA and Amity Online MBA in terms of fees, rankings, faculty, placements, and more to choose the best online MBA in India."
-        />
-        <meta
-          name="keywords"
-          content="Manipal Online MBA, Amity Online MBA, Manipal vs Amity, Online MBA comparison, Best Online MBA India, UniFost Blog"
-        />
-        <link rel="canonical" href="https://unifostedu.com/blog/manipal-vs-amity-online-mba" />
-        <meta property="og:title" content="Manipal vs Amity: Which Online MBA is Better?" />
-        <meta
-          property="og:description"
-          content="Compare Manipal Online MBA and Amity Online MBA in terms of fees, rankings, faculty, placements, and more to choose the best online MBA in India."
-        />
-        <meta property="og:image" content="https://www.unifost.com/images/blogs/manipal-vs-amity.webp" />
-        <meta property="og:url" content="https://www.unifost.com/blog/manipal-vs-amity-online-mba" />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Manipal vs Amity: Which Online MBA is Better?" />
-        <meta name="twitter:description" content="Compare Manipal and Amity's Online MBA programs on UniFost Blog." />
-        <meta name="twitter:image" content="https://www.unifost.com/images/blogs/manipal-vs-amity.webp" />
-      
+
+      <title>Manipal vs Amity: Which Online MBA is Better? | UniFost Blog</title>
+      <meta
+        name="description"
+        content="Compare Manipal Online MBA and Amity Online MBA in terms of fees, rankings, faculty, placements, and more to choose the best online MBA in India."
+      />
+      <meta
+        name="keywords"
+        content="Manipal Online MBA, Amity Online MBA, Manipal vs Amity, Online MBA comparison, Best Online MBA India, UniFost Blog"
+      />
+      <link rel="canonical" href="https://unifostedu.com/blog/manipal-vs-amity-online-mba" />
+      <meta property="og:title" content="Manipal vs Amity: Which Online MBA is Better?" />
+      <meta
+        property="og:description"
+        content="Compare Manipal Online MBA and Amity Online MBA in terms of fees, rankings, faculty, placements, and more to choose the best online MBA in India."
+      />
+      <meta property="og:image" content="https://www.unifost.com/images/blogs/manipal-vs-amity.webp" />
+      <meta property="og:url" content="https://www.unifost.com/blog/manipal-vs-amity-online-mba" />
+      <meta property="og:type" content="article" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Manipal vs Amity: Which Online MBA is Better?" />
+      <meta name="twitter:description" content="Compare Manipal and Amity's Online MBA programs on UniFost Blog." />
+      <meta name="twitter:image" content="https://www.unifost.com/images/blogs/manipal-vs-amity.webp" />
+
 
       {/* Blog Layout */}
       <div className="flex flex-col md:flex-row gap-10">
         {/* Blog Content */}
-       <article className="flex-1 prose prose-lg max-w-none leading-relaxed">
+        <article className="flex-1 prose prose-lg max-w-none leading-relaxed">
           <h1 className="text-4xl font-extrabold text-blue-900 mb-2 font-serif">
             Manipal vs Amity: Which Online MBA is Better?
           </h1>
@@ -175,9 +175,9 @@ const ManipalVsAmityOnlineMBA = () => {
             </div>
           </section>
         </aside>
-      
+
       </div>
-            <div className="flex justify-center mt-12 ">
+      <div className="flex justify-center mt-12 ">
         <Link href="/manipal">
           <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition cursor-pointer ">
             more Information about MUJ
@@ -185,8 +185,8 @@ const ManipalVsAmityOnlineMBA = () => {
         </Link>
       </div>
 
-          <div className="flex justify-center mt-12 ">
-        <Link href="/Amity-University-Online">
+      <div className="flex justify-center mt-12 ">
+        <Link href="/amity">
           <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition cursor-pointer ">
             more Information about Amity
           </button>

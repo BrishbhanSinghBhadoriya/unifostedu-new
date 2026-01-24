@@ -4,7 +4,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatbotWidget from "@/components/ChatbotWidget";
 import OrganizationSchema from "@/components/OrganizationSchema";
-import Canonical from "@/components/Canonical";
 import { Toaster as SonnerToaster } from "sonner";
 import { ChildrenProps } from "types/ChildrenProps";
 const inter = Inter({ subsets: ["latin"] });
@@ -19,7 +18,7 @@ export const metadata = {
     "Virtual Learning Guidance",
     "Best Career Planning Services",
     "EdTech Solutions India",
-    
+
     // Course Keywords
     "Online MBA India",
     "Online BBA",
@@ -37,7 +36,7 @@ export const metadata = {
     "Online PG Diploma",
     "Online PG Certificate",
     "Online PG Degree",
-    
+
     // College Keywords
     "Online MBA Colleges in India",
     "Online BBA Colleges in India",
@@ -54,7 +53,7 @@ export const metadata = {
     "Online PG Diploma Colleges in India",
     "Online PG Certificate Colleges in India",
     "Online PG Degree Colleges in India",
-    
+
     // University Keywords
     "Online Amity University",
     "Online Lovely Professional University",
@@ -68,7 +67,7 @@ export const metadata = {
     "Online Chandigarh University",
     "Online OP Jindal University",
     "Online JMI University",
-    
+
     // Short University Keywords
     "Online Amity",
     "Online Manipal",
@@ -82,7 +81,7 @@ export const metadata = {
     "Online Chandigarh",
     "Online OP Jindal",
     "Online JMI",
-    
+
     // UGC Keywords
     "UGC-DEB Accredited Universities",
     "UGC Approved Online Courses",
@@ -115,17 +114,17 @@ export default function RootLayout({ children }: ChildrenProps) {
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="UNIFOST" />
         <meta name="application-name" content="UNIFOST" />
-        
+
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
+
         {/* Favicon and app icons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link rel="shortcut icon" href="/favicon.ico" sizes="32x32" />
-        <link rel="apple-touch-icon" href="/favicon.ico" sizes="32x32"/>
-        <link rel="apple-touch-icon" href="/favicon.ico" sizes="32*32"/>
+        <link rel="apple-touch-icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/favicon.ico" sizes="32*32" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico" />
@@ -133,10 +132,10 @@ export default function RootLayout({ children }: ChildrenProps) {
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="msapplication-TileImage" content="/favicon.ico" />
         <meta name="theme-color" content="#001e3c" />
-        
+
         {/* Organization Schema */}
         <OrganizationSchema />
-        
+
         {/* Educational Organization Schema */}
         <script
           type="application/ld+json"
@@ -166,7 +165,7 @@ export default function RootLayout({ children }: ChildrenProps) {
             })
           }}
         />
-        
+
         {/* Structured Data - WebSite */}
         <script
           type="application/ld+json"
@@ -209,7 +208,7 @@ export default function RootLayout({ children }: ChildrenProps) {
         />
       </head>
       <body className={inter.className}>
-        <Canonical />
+
         <Header />
         <main>{children}</main>
         <Footer />

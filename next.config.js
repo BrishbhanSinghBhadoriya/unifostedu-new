@@ -51,16 +51,58 @@ const nextConfig = {
     ];
   },
 
-  // ✅ Compression and React strict mode
+  // Compression and React strict mode
   compress: true,
   reactStrictMode: true,
 
-  // ✅ Reduce bundle size
-  swcMinify: true,
+  // Reduce bundle size
 
-  // ✅ Redirects for broken URLs (4xx errors)
+  // Redirects for broken URLs and Domain Canonicalisation
   async redirects() {
     return [
+      // Force non-www
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.unifostedu.com',
+          },
+        ],
+        destination: 'https://unifostedu.com/:path*',
+        permanent: true,
+      },
+      // Legacy/Alternate URLs
+      {
+        source: '/Best-online-MBA-for-working-professionals-India-2025',
+        destination: '/best-online-mba-for-working-professionals-india-2025',
+        permanent: true,
+      },
+      {
+        source: '/universities/manipal-university-online',
+        destination: '/manipal',
+        permanent: true,
+      },
+      {
+        source: '/amity-university-online/:path*',
+        destination: '/amity/:path*',
+        permanent: true,
+      },
+      {
+        source: '/university-list',
+        destination: '/university-list',
+        permanent: true,
+      },
+      {
+        source: '/vgu-university',
+        destination: '/vgu',
+        permanent: true,
+      },
+      {
+        source: '/uttaranchal-university',
+        destination: '/uu',
+        permanent: true,
+      },
       // Fix course slugs with dots
       {
         source: '/courses/m.com-online',

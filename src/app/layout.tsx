@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatBoxWrapper from '@/components/ChatBoxWrapper';
 import OrganizationSchema from "@/components/OrganizationSchema";
-import Canonical from "@/components/Canonical";
 import { Toaster as SonnerToaster } from "sonner";
 import Script from 'next/script';
 import LenisProvider from "@/components/LenisProvider";
@@ -52,7 +51,7 @@ export const metadata = {
   },
   metadataBase: new URL('https://unifostedu.com'),
   alternates: {
-    canonical: '/',
+    canonical: './',
   },
   openGraph: {
     type: 'website',
@@ -172,7 +171,7 @@ export default function RootLayout({ children }: ChildrenProps) {
             }),
           }}
         />
-        
+
         {/* Google tag (gtag.js) - load lazily to reduce main-thread work */}
         <Script src="https://www.googletagmanager.com/gtag/js?id=AW-17612528759" strategy="lazyOnload" />
         <Script id="gtag-init" strategy="lazyOnload">
@@ -186,22 +185,21 @@ export default function RootLayout({ children }: ChildrenProps) {
         </Script>
       </head>
       <body
-  className={`${inter.className} ${baskervville.variable} overflow-x-hidden`}
->
-  <Canonical />
-  <LenisProvider>
-  <Header />
-  <main>{children}</main>
-  <Footer />
-  </LenisProvider>
-  <ChatBoxWrapper />
-  <SonnerToaster
-    position="top-center"
-    richColors
-    expand={false}
-    duration={3500}
-  />
-</body>
+        className={`${inter.className} ${baskervville.variable} overflow-x-hidden`}
+      >
+        <LenisProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </LenisProvider>
+        <ChatBoxWrapper />
+        <SonnerToaster
+          position="top-center"
+          richColors
+          expand={false}
+          duration={3500}
+        />
+      </body>
     </html>
   );
 }

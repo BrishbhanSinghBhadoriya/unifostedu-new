@@ -8,8 +8,8 @@ export const metadata = {
     description: "Explore our comprehensive list of top online universities and colleges. Find the best accredited institutions for your online degree programs.",
     images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp"],
   },
-    alternates: {
-    canonical: "https://unifostedu.com/University-List",
+  alternates: {
+    canonical: "https://unifostedu.com/university-list",
   },
 };
 
