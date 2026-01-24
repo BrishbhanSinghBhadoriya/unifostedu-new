@@ -156,7 +156,7 @@ const handleApplyNowClick = () => {
             >
               Amity University Online
 
-              {/* CIRCLED TEXT */}
+              
               <div className="relative inline-block my-3 sm:my-4 w-full">
                 <span
                   className="relative z-10 block px-3 py-3 sm:px-4 sm:py-3 md:px-6 md:py-4 text-blue-700 text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-center leading-tight"
