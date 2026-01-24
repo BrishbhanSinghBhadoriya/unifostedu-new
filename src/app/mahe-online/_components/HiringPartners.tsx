@@ -41,16 +41,16 @@ const HiringPartners = ({ setOpenModal, openModal }: { setOpenModal: (state: Ope
                 <p className="text-base sm:text-lg md:text-xl text-orange-100 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
                   Start your journey with Manipal Academy of Higher Education Online and unlock endless career opportunities
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+                <div className="mb-4 flex gap-4 justify-center flex-wrap">
                   <button 
                     onClick={() => setOpenModal({ type: 'apply' })}
-                    className="bg-white text-orange-600 font-semibold px-8 sm:px-10 md:px-12 py-3 sm:py-3.5 md:py-4 rounded-full hover:bg-orange-50 transition-all duration-300 transform hover:scale-105 shadow-2xl text-sm sm:text-base md:text-lg"
+                    className="w-1/2 bg-white text-orange-600 font-semibold px-8 sm:px-10 md:px-12 py-3 sm:py-3.5 md:py-4 rounded-full hover:bg-orange-50 transition-all duration-300 transform hover:scale-105 shadow-2xl text-sm sm:text-base md:text-lg"
                   >
-                    Apply Now
+                    Apply Mahe Online
                   </button>
                   <button 
                     onClick={() => setOpenModal({ type: 'enquire' })}
-                    className="border-2 border-white text-white font-semibold px-8 sm:px-10 md:px-12 py-3 sm:py-3.5 md:py-4 rounded-full hover:bg-white/10 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base md:text-lg"
+                    className="w-1/2 bg-white text-orange-600 font-semibold px-8 sm:px-10 md:px-12 py-3 sm:py-3.5 md:py-4 rounded-full hover:bg-orange-50 transition-all duration-300 transform hover:scale-105 shadow-2xl text-sm sm:text-base md:text-lg"
                   >
                     Download Brochure
                   </button>

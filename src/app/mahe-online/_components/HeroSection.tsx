@@ -18,18 +18,19 @@ const HeroSection = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenMo
   };
   return (
      <section
-          id="HeroSection"
-          className="relative min-h-[520px] sm:min-h-[560px] md:min-h-[680px] lg:min-h-screen overflow-hidden bg-[#030616] pt-16 sm:pt-20"
+        id="HeroSection"
+          className="relative min-h-[480px] sm:min-h-[480px] md:min-h-[480px] lg:min-h-[calc(100vh-60px)] overflow-hidden bg-[#030616]"
         >
+
           {/* Animated Background */}
           <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/mahe-uni_dvnm1d.webp')] bg-cover bg-center opacity-30"></div>
+            
             <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/85 to-purple-900/80"></div>
-            <div className="absolute -top-32 -left-24 h-80 w-80 rounded-full bg-orange-500/25 blur-[140px]" />
+            <div className="absolute inset-0 -left-24 h-80 w-80 rounded-full bg-orange-500/25 blur-[140px]" />
             <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-500/20 blur-[160px]" />
           </div>
 
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-6 lg:px-8 py-8 sm:py-10 md:py-14 lg:py-24 xl:py-28">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-6 lg:px-8 pb-8 pt-4 sm:pb-10 sm:pt-6 md:pb-14 md:pt-10 lg:pb-24 lg:pt-16 xl:pb-28 xl:pt-20">
             <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-center">
               {/* Left Content */}
               <div className="text-white space-y-5 sm:space-y-6 md:space-y-7 lg:space-y-9">
@@ -82,7 +83,7 @@ const HeroSection = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenMo
                 <div className="flex flex-col sm:flex-row gap-3 pt-2">
                   <button 
                     onClick={() => setOpenModal({ type: 'apply' })}
-                    className="group bg-gradient-to-r from-orange-500 via-rose-500 to-pink-600 hover:from-orange-500 hover:via-orange-600 hover:to-rose-600 text-white font-semibold px-5 sm:px-8 md:px-10 py-3 sm:py-3.5 md:py-4 rounded-2xl transition-all duration-300 hover:-translate-y-0.5 shadow-[0_20px_45px_rgba(249,115,22,0.35)] flex items-center justify-center gap-3 text-sm sm:text-base lg:text-lg w-full sm:w-auto"
+                    className="w-1/2 group bg-gradient-to-r from-orange-500 via-rose-500 to-pink-600 hover:from-orange-500 hover:via-orange-600 hover:to-rose-600 text-white font-semibold px-5 sm:px-8 md:px-10 py-3 sm:py-3.5 md:py-4 rounded-2xl transition-all duration-300 hover:-translate-y-0.5 shadow-[0_20px_45px_rgba(249,115,22,0.35)] flex items-center justify-center gap-3 text-sm sm:text-base lg:text-lg w-full sm:w-auto"
                   >
                     <span>Apply Now</span>
                     <svg className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -92,7 +93,7 @@ const HeroSection = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenMo
                   
                   <button 
                     onClick={() => setOpenModal({ type: 'enquire' })}
-                    className="border border-white/30 hover:border-white/60 text-white font-semibold px-5 sm:px-8 py-3 sm:py-3.5 rounded-2xl transition-all duration-300 hover:bg-white/10 backdrop-blur text-sm sm:text-base w-full sm:w-auto"
+                    className="w-1/2 border border-white/30 hover:border-white/60 text-white font-semibold px-5 sm:px-8 py-3 sm:py-3.5 rounded-2xl transition-all duration-300 hover:bg-white/10 backdrop-blur text-sm sm:text-base w-full sm:w-auto"
                   >
                     Download Brochure
                   </button>
@@ -207,6 +208,7 @@ const HeroSection = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenMo
             </div>
           </div>
         </div>
+      
         </section>
   )
 }

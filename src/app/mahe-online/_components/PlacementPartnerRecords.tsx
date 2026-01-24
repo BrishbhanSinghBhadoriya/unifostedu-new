@@ -54,10 +54,10 @@ const PlacementPartnerRecords = ({ setOpenModal, openModal }: { setOpenModal: (s
                 ))}
               </div>
             </div>
-            <div className="text-center mt-8 sm:mt-12">
+            <div className="text-center mb-4 mt-6 sm:mt-6">
                 <button 
                   onClick={() => setOpenModal({ type: 'apply' })}
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                  className="w-1/2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
                 >
                   <span className="hidden sm:inline">Apply Now</span>
                   <span className="sm:hidden">Apply</span>
@@ -76,7 +76,7 @@ const PlacementPartnerRecords = ({ setOpenModal, openModal }: { setOpenModal: (s
                   'High placement success rate across all MAHE Online Programs',
                   'Students hired in top companies like Deloitte, TCS, Infosys, HCL, Wipro, EY, IBM, Amazon & more',
                   'Strong outcomes for graduates of MAHE Online MBA in management, marketing, HR, and finance',
-                  'Excellent results for MAHE Online BCA and MAHE Online MCA students in software, IT services, cloud, and data roles',
+                  'Excellent results for MAHE Online MCA students in software, IT services, cloud, and data roles',
                   'Commerce programs such as MAHE Online MCom and MAHE Online BCom see strong placements in banking, finance, and accounting',
                   'Students from MAHE Online BBA secure roles in sales, operations, business development, and corporate support',
                   'Many learners experience career upgrades, salary hikes, and industry transitions after completing MAHE Online Degrees'
@@ -94,7 +94,7 @@ const PlacementPartnerRecords = ({ setOpenModal, openModal }: { setOpenModal: (s
             <div className="text-center mt-8 sm:mt-12">
                 <button 
                   onClick={() => setOpenModal({ type: 'apply' })}
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                  className="w-1/2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
                 >
                   <span className="hidden sm:inline">Apply Now</span>
                   <span className="sm:hidden">Apply</span>

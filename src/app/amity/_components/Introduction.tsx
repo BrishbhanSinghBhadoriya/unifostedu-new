@@ -87,42 +87,43 @@ const Introduction = ({ inter, playfair, openModal, setOpenModal }: Introduction
     { number: "100%", label: "Placement Assistance", icon: CheckCircle },
     { number: "200+", label: "Corporate Partners", icon: Globe },
   ];
+ 
+const specializations: Specialization[] = [
+  {
+    program: "MBA",
+    count: "18+ Specializations",
+    color: "bg-blue-50 border-blue-200 text-blue-800",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/w_200,q_auto,f_auto/v1762327391/mbaSpecialization_ubxfpt.webp",
+    url: "/Amity-University-Online/mba-online",
+  },
+  {
+    program: "BBA",
+    count: "2 Specializations",
+    color: "bg-green-50 border-green-200 text-green-800",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/w_200,q_auto,f_auto/v1762327057/bbaSpecialization_zjisuk.webp",
+    url: "/Amity-University-Online/bba-online",
+  },
+  {
+    program: "MCA",
+    count: "5+ Specializations",
+    color: "bg-purple-50 border-purple-200 text-purple-800",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/w_200,q_auto,f_auto/v1762327468/mcaSpecialization_bp7v01.webp",
+    url: "/Amity-University-Online/mca-online",
+  },
+  {
+    program: "BCA",
+    count: "6 Specializations",
+    color: "bg-orange-50 border-orange-200 text-orange-800",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/w_200,q_auto,f_auto/v1762327068/bcaSpecialization_uwowv1.webp",
+    url: "/Amity-University-Online/bca-online",
+  },
+];
 
-  const specializations: Specialization[] = [
-    {
-      program: "MBA",
-      count: "18+ Specializations",
-      color: "bg-blue-50 border-blue-200 text-blue-800",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/w_200,q_auto,f_auto/v1762327391/mbaSpecialization_ubxfpt.webp",
-      url: "/amity/mba-online",
-    },
-    {
-      program: "BBA",
-      count: "2 Specializations",
-      color: "bg-green-50 border-green-200 text-green-800",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/w_200,q_auto,f_auto/v1762327057/bbaSpecialization_zjisuk.webp",
-      url: "/amity/bba-online",
-    },
-    {
-      program: "MCA",
-      count: "5+ Specializations",
-      color: "bg-purple-50 border-purple-200 text-purple-800",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/w_200,q_auto,f_auto/v1762327468/mcaSpecialization_bp7v01.webp",
-      url: "/amity/mca-online",
-    },
-    {
-      program: "BCA",
-      count: "6 Specializations",
-      color: "bg-orange-50 border-orange-200 text-orange-800",
-      image: "https://res.cloudinary.com/didkrwhbu/image/upload/w_200,q_auto,f_auto/v1762327068/bcaSpecialization_uwowv1.webp",
-      url: "/amity/bca-online",
-    },
-  ];
-  const handleApplyNowClick = () => {
-    console.log(openModal, setOpenModal);
-    console.log("Apply Now clicked");
-    setOpenModal({ type: "apply" });
-  };
+const handleApplyNowClick = () => {
+  console.log(openModal,setOpenModal);
+  console.log("Apply Now clicked");
+  setOpenModal({ type: "apply" });
+};
 
 
   return (
@@ -156,29 +157,16 @@ const Introduction = ({ inter, playfair, openModal, setOpenModal }: Introduction
               Amity University Online
 
               {/* CIRCLED TEXT */}
-              <div className="relative inline-block my-2 sm:my-3">
+              <div className="relative inline-block my-3 sm:my-4 w-full">
                 <span
-                  className="
-        relative z-10
-        px-6 py-2
-        text-blue-700
-        text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl
-        font-bold
-      "
+                  className="relative z-10 block px-3 py-3 sm:px-4 sm:py-3 md:px-6 md:py-4 text-blue-700 text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-center leading-tight"
                 >
                   Courses, Eligibility And Fees 2026
                 </span>
 
                 {/* Yellow Circle */}
                 <span
-                  className="
-        absolute left-1/2 top-1/2
-        -translate-x-1/2 -translate-y-1/2
-        w-[100%] h-[100%]
-        bg-white
-        rounded-full
-        -z-0 border-2 border-yellow-600
-      "
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[120%] sm:w-[102%] sm:h-[115%] md:w-[100%] md:h-[110%] bg-transparent rounded-full border-2 sm:border-3 border-yellow-600 -z-10"
                 ></span>
               </div>
 

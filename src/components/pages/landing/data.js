@@ -71,15 +71,15 @@ export const features = [
 ];
 
 export const colleges = [
-  { name: "Amity University Online", ranking: "NIRF-29", fee: "₹0.99L - ₹3.45L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp", rating: 4.8 },
-  { name: "Manipal University Online", ranking: "NIRF-73", fee: "0.99L - ₹2.92L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal1_ako6mq.webp", rating: 4.6 },
-  { name: "Lovely Professional University Online", ranking: "NIRF-38", fee: "₹0.80L - ₹2.0L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp", rating: 4.1 },
-  { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-41", fee: "₹1.50L - ₹2.20L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/upes_uzkkmm.webp", rating: 4.4 },
-  { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-21", fee: "₹0.94L - ₹4.0L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327721/nmims_os8kn9.webp", rating: 4.5 },
+  { name: "Amity University Online", ranking: "NIRF-22", fee: "₹0.99L - ₹3.45L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp", rating: 4.8 },
+  { name: "Manipal University Online", ranking: "NIRF-58", fee: "0.99L - ₹2.92L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal1_ako6mq.webp", rating: 4.6 },
+  { name: "Lovely Professional University Online", ranking: "NIRF-31", fee: "₹0.80L - ₹2.0L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp", rating: 4.1 },
+  { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-36", fee: "₹1.50L - ₹2.20L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/upes_uzkkmm.webp", rating: 4.4 },
+  { name: "Narsee Monjee Institute of Management Studies Online", ranking: "NIRF-24", fee: "₹0.94L - ₹4.0L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327721/nmims_os8kn9.webp", rating: 4.5 },
   { name: "Sharda University Online", ranking: "NIRF-87", fee: "₹1.05L - ₹1.60L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp", rating: 4.1 },
-  { name: "Dr. DY Patil Online", ranking: "NIRF-63", fee: "₹1.40L - ₹1.90L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dypatil_tbbpf9.webp", rating: 4.4 },
-  { name: "Jain University Online", ranking: "NIRF-77", fee: "₹1.30L - ₹2.16L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp", rating: 4.5 },
-  { name: "Chandigarh University Online", ranking: "NIRF-36", fee: "₹1.0L - ₹2.10L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp", rating: 4.7 },
+  { name: "Dr. DY Patil Online", ranking: "NIRF-41", fee: "₹1.40L - ₹1.90L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dypatil_tbbpf9.webp", rating: 4.4 },
+  { name: "Jain University Online", ranking: "NIRF-62", fee: "₹1.30L - ₹2.16L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp", rating: 4.5 },
+  { name: "Chandigarh University Online", ranking: "NIRF-32", fee: "₹1.0L - ₹2.10L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp", rating: 4.7 },
 ];
 
 export const cities = [
@@ -147,6 +147,7 @@ export const getUniversityHref = (name) => {
   const n = name.toLowerCase();
   if (n.includes("amity")) return "/amity";
   if (n.includes("manipal")) return "/manipal";
+  if (n.includes("mahe")) return "/mahe-online";
   if (n.includes("lovely professional") || n.includes("lpu")) return "/lpu";
   if (n.includes("petroleum") || n.includes("upes")) return "/upes";
   if (n.includes("narsee monjee") || n.includes("nmims")) return "/nmims";
@@ -154,6 +155,9 @@ export const getUniversityHref = (name) => {
   if (n.includes("dy patil") || n.includes("d.y.")) return "/dypatil";
   if (n.includes("jain")) return "/jain";
   if (n.includes("chandigarh")) return "/chandigarh";
+  if (n.includes("smu")) return "/smu";
+  if (n.includes("ku")) return "/ku-online";
+  if (n.includes("uttarchal") || n.includes("uu")) return "/uu";
   if (n.includes("jindal")) return "/opjindal";
   if (n.includes("vivekananda global") || n.includes("vgu")) return "/vgu";
   if (n.includes("shoolini")) return "/shoolini";

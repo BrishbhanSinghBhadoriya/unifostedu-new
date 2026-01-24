@@ -2,7 +2,7 @@ import React from 'react'
 import { OpenModalState } from '../../../../types/Modal'
 const CampusTour = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalState) => void; openModal: OpenModalState }) => {
   return (
-  <section id="CampusTour" className="py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-white to-gray-50">
+  <section id="CampusTour" className="py-4 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-white to-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 font-queens">
               <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Campus Tour</span>
@@ -12,7 +12,7 @@ const CampusTour = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenMod
                 Welcome to the MAHE University Online Campus Tour, a simple and friendly walk-through that helps you understand the vibrant and inspiring learning environment MAHE offers. Even though students study through <strong>MAHE Online Courses</strong> and <strong>MAHE Online Programs</strong>, MAHE provides the same level of academic quality, support, and innovation as an on-campus experience. Whether you explore from home or plan to visit, this tour shows you the energy, diversity, and excellence that make MAHE one of the <strong>Best online universities in India</strong>.
               </p>
               <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-                From modern classrooms to advanced digital learning spaces, every part of the MAHE environment is designed to support students pursuing <strong>MAHE Online Degrees</strong> like the <strong>MAHE Online MBA</strong>, <strong>MAHE Online BCA</strong>, <strong>MAHE Online MCA</strong>, <strong>MAHE Online BBA</strong>, <strong>MAHE Online MCom</strong>, and <strong>MAHE Online BCom</strong>. MAHE creates a space where learning, creativity, and personal growth come together.
+                From modern classrooms to advanced digital learning spaces, every part of the MAHE environment is designed to support students pursuing <strong>MAHE Online Degrees</strong> like the <strong>MAHE Online MBA</strong>, <strong>MAHE Online MCA</strong>, <strong>MAHE Online BBA</strong>, <strong>MAHE Online MCom</strong>, and <strong>MAHE Online BCom</strong>. MAHE creates a space where learning, creativity, and personal growth come together.
               </p>
             </div>
             
@@ -55,7 +55,7 @@ const CampusTour = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenMod
             <div className="text-center mt-8 sm:mt-12">
                 <button 
                   onClick={() => setOpenModal({ type: 'apply' })}
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
+                  className="w-1/2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap"
                 >
                   <span className="hidden sm:inline">Apply Now</span>
                   <span className="sm:hidden">Apply</span>

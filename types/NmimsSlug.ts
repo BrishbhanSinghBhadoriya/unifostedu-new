@@ -77,11 +77,12 @@ export interface CourseFees {
   paymentOptions?: string[];
 }
 
-export interface Certificate {
-  degreeAwarded: string;
-  issuedBy?: string;
-  features?: string[];
-  validity?: string[];
+export interface Program {
+  slug: string;
+  name: string;
+  certificateDescription: string;
+  
+  specializationLabel?: string;
 }
 
 export interface AdmissionLoan {

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from "next/navigation";
 import { ChevronDown, Phone, Mail, MapPin, Star, Users, Award, GraduationCap, Clock, CheckCircle, ArrowRight, Menu, X } from 'lucide-react';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
+import Footer from './_Componets/Footer';
 import Image from 'next/image';
 import AboutMoreInfo from './_Componets/AboutMoreInfo';
 import ApprovalsMoreInfo from './_Componets/ApprovalsMoreInfo';
@@ -84,21 +85,24 @@ const NMIMSLandingPage = () => {
       duration: '3 Years',
       fees: '₹1,50,000',
       eligibility: 'HSC (10+2) in any discipline from a recognised board with minimum 50% (45% for SC/ST/OBC/PwD).',
-      specializations: 'Finance Management, Marketing Management'
+      specializations: 'Finance Management, Marketing Management',
+      Link: '/nmims/bba-online'
     },
     {
       name: 'Bachelor of Business Administration (BBA)',
       duration: '3 Years',
       fees: '₹1,80,000',
       eligibility: 'HSC (10+2) in any discipline from a recognised board with minimum 50% (45% for SC/ST/OBC/PwD).',
-      specializations: 'Business Analytics'
+      specializations: 'Business Analytics',
+      Link: '/nmims/bba-online'
     },
     {
       name: 'Bachelor of Commerce (B.Com)',
       duration: '3 Years',
       fees: '₹1,08,000',
       eligibility: 'HSC (10+2) in any discipline from a recognised board with minimum 50% (45% for SC/ST/OBC/PwD).',
-      specializations: 'Accounting'
+      specializations: 'Accounting',
+      Link: '/nmims/bcom-online'
     }
   ];
 
@@ -108,14 +112,16 @@ const NMIMSLandingPage = () => {
       duration: '2 Years',
       fees: '₹2,20,000',
       eligibility: 'Bachelor’s Degree (10+2+3) in any discipline from recognised University or an equivalent degree recognised by Association of Indian Universities (AIU) with minimum 50% marks at Graduation Level. (45% for SC/ST/OBC/PwD).',
-      specializations: 'MBA In Marketing Management, MBA in Business Management, MBA in Finance Management, MBA in Human Resources Management, MBA in Operations and data Science Management'
+      specializations: 'MBA In Marketing Management, MBA in Business Management, MBA in Finance Management, MBA in Human Resources Management, MBA in Operations and data Science Management',
+      Link: '/nmims/mba-online'
     },
     {
       name: 'Master of Business Administration (MBA WX)',
       duration: '2 Years',
       fees: '₹4,00,000',
       eligibility: 'Bachelor’s Degree (10+2+3) in any discipline from recognised University or an equivalent degree recognised by Association of Indian Universities (AIU) with a minimum of 55% and 3 + years of Work Experience (50% for SC/ST/OBC/PwD).',
-      specializations: 'Marketing Management, Leadership & Strategy, Operations & Supply Chain Management, Applied Finance, Digital Marketing'
+      specializations: 'Marketing Management, Leadership & Strategy, Operations & Supply Chain Management, Applied Finance, Digital Marketing',
+      Link: '/nmims/mba-wx'
     }
   ];
 
@@ -614,92 +620,10 @@ const NMIMSLandingPage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 py-12">
-  <div className="max-w-7xl mx-auto px-4">
-    <div className="grid md:grid-cols-4 gap-8 mb-8">
-      
-      {/* Column 1 */}
-      <div>
-        <h3 className="text-white font-bold text-lg mb-4">NMIMS Global</h3>
-        <p className="text-sm mb-4">
-          UGC Approved & NAAC A++ Accredited Online Education
-        </p>
-        <div className="flex space-x-3">
-          {['📘', '📷', '🐦', '💼'].map((icon, idx) => (
-            <div
-              key={idx}
-              className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors cursor-pointer"
-            >
-              {icon}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Column 2 - Programs */}
-    <div>
-      <h4 className="text-white font-bold mb-4">Programs</h4>
-      <ul className="space-y-2 text-sm">
-        {programs.map((prog, idx) => (
-          <li
-            key={idx}
-            className="hover:text-purple-400 cursor-pointer"
-            onClick={() => router.push(prog.path)}
-          >
-            {prog.name}
-          </li>
-        ))}
-      </ul>
-    </div>
-
-      {/* Column 3 - Quick Links */}
-      <div>
-        <h4 className="text-white font-bold mb-4">Quick Links</h4>
-        <ul className="space-y-2 text-sm">
-          {['About', 'Courses', 'Admissions', 'FAQ', 'Contact'].map(
-            (link, idx) => (
-              <li
-                key={idx}
-                className="hover:text-purple-400 cursor-pointer"
-                onClick={() =>
-                  setOpenModal({ type: "apply", source: link })
-                }
-              >
-                {link}
-              </li>
-            )
-          )}
-        </ul>
-      </div>
-
-      {/* Column 4 - Contact */}
-      <div>
-        <h4 className="text-white font-bold mb-4">Contact</h4>
-        <div className="space-y-3 text-sm">
-          <div className="flex items-center space-x-2">
-            <Phone size={16} className="text-purple-400" />
-            <span>+91 7042646766</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Mail size={16} className="text-purple-400" />
-            <span>info@unifostedu.com</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    {/* Bottom bar */}
-    <div className="border-t border-gray-800 pt-8 text-center text-sm">
-      <p>
-        &copy; {new Date().getFullYear()} NMIMS Global Online. All rights reserved.
-      </p>
-      <p className="mt-2 text-xs text-gray-500">
-        UGC Entitled | NAAC A++ Accredited
-      </p>
-    </div>
-  </div>
-</footer>
+         <Footer
+        programs={programs}
+        setOpenModal={(data) => console.log(data)}
+      />
 
 
       {/* Modal */}

@@ -13,12 +13,35 @@ interface CompareOnlineProps {
   selectedUniversities: string[];
   toggleUniversity: (slug: string) => void;
 }
+
+const getUniversityLink = (name: string) => {
+  const n = name.toLowerCase();
+  if (n.includes("amity")) return "/Amity-University-Online";
+  if (n.includes("lovely") || n.includes("lpu")) return "/lpu-online";
+  if (n.includes("manipal university jaipur") || n.includes("muj") || n.includes("online manipal")) return "/manipal";
+  if (n.includes("mahe") || n.includes("manipal academy") || n.includes("manipal academic")) return "/mahe-online";
+  if (n.includes("sikkim") || n.includes("smu")) return "/smu";
+  if (n.includes("uttaranchal") || n.includes("uu")) return "/uu";
+  if (n.includes("chandigarh") || n.includes("cu")) return "/cuOnline";
+  if (n.includes("jain")) return "/jain";
+  if (n.includes("dy patil") || n.includes("dypatil")) return "/dypatil";
+  if (n.includes("jindal") || n.includes("op jindal")) return "/opjindal";
+  if (n.includes("kurukshetra") || n.includes("ku")) return "/ku-online";
+  if (n.includes("shoolini")) return "/shoolini";
+  if (n.includes("vivekananda") || n.includes("vgu")) return "/vgu";
+  if (n.includes("upes")) return "/upes";
+  if (n.includes("sharda")) return "/sharda";
+  if (n.includes("nmims") || n.includes("narsee")) return "/nmims";
+  
+  return `/university/${slugify(name)}`;
+};
+
 const CompareOnline = ({ colleges: collegesFromProps, selectedUniversities, toggleUniversity }: CompareOnlineProps) => {
   // Use colleges from props if available, otherwise fallback to static data
-  const colleges = (collegesFromProps && collegesFromProps.length > 0)
-    ? collegesFromProps
-    : (staticColleges && staticColleges.length > 0)
-      ? staticColleges
+  const colleges = (staticColleges && staticColleges.length > 0)
+    ? staticColleges
+    : (collegesFromProps && collegesFromProps.length > 0)
+      ? collegesFromProps
       : UniversityList;
 
   const router = useRouter();
@@ -178,7 +201,7 @@ const CompareOnline = ({ colleges: collegesFromProps, selectedUniversities, togg
                     {/* Action Buttons */}
                     <div className="flex items-center justify-between gap-3">
                       <a
-                        href={getUniversityHref(college.name)}
+                        href={getUniversityLink(college.name)}
                         className="flex-1 text-center text-sm font-semibold text-blue-600 hover:text-blue-800 px-3 py-2 rounded-lg hover:bg-blue-100 transition-colors flex items-center justify-center"
                       >
                         View Details

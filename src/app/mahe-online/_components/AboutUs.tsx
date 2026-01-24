@@ -1,11 +1,23 @@
 import React from 'react'
 import { OpenModalState } from '../../../../types/Modal'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+
 const AboutUs = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalState) => void; openModal: OpenModalState }) => {
+  const courses = [
+  { name: "MAHE Online MBA", slug: "online-mba-mahe" },
+  { name: "MAHE Online BBA", slug: "online-bba-honors-mahe" },
+  { name: "MAHE Online MCA", slug: "online-mca-mahe" },
+  { name: "MAHE Online BCom", slug: "online-bcom-professional-mahe" },
+  { name: "MAHE Online MSc.(Data Analytics)", slug: "online-msc-data-science-mahe" },
+  { name: "MAHE Online MSc.(Business Analytics)", slug: "online-mcom-business-analytics-mahe" },  
+];
+
   return (
-  <section id="AboutWrapper" className="bg-white">
+  <section id="AboutWrapper" className="bg-white mb-0">
 
   {/* ABOUT US */}
-  <div id="AboutUs" className="py-10 sm:py-12 md:py-16 lg:py-20">
+  <div id="AboutUs" className="py-2 sm:py-2 md:py-6 lg:py-4">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 font-queens">
         About Us –{" "}
@@ -33,7 +45,7 @@ const AboutUs = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalS
   {/* FUTURE READY */}
   <div
     id="FutureReady"
-    className="py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-orange-50 to-white"
+    className="bg-gradient-to-br from-orange-50 to-white"
   >
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-queens">
@@ -76,29 +88,31 @@ const AboutUs = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalS
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-6">
-        {[
-          "MAHE Online MBA",
-          "MAHE Online BBA",
-          "MAHE Online BCA",
-          "MAHE Online MCA",
-          "MAHE Online BCom",
-          "MAHE Online MCom",
-        ].map((course, i) => (
-          <div
-            key={i}
-            className="bg-orange-50 p-5 rounded-xl shadow border"
-          >
-            <h3 className="font-bold text-orange-600">{course}</h3>
-          </div>
-        ))}
+  {courses.map((course, i) => (
+    <Link
+      key={i}
+      href={`/mahe-online/${course.slug}`}
+      className="group bg-orange-50 p-5 rounded-xl shadow border hover:shadow-lg transition cursor-pointer"
+    >
+      <div className="flex items-center justify-between">
+        <h3 className="font-bold text-orange-600">
+          {course.name}
+        </h3>
+
+        <span className="flex items-center text-sm text-orange-600 font-semibold group-hover:translate-x-1 transition">
+          More <ArrowRight className="ml-1 w-4 h-4" />
+        </span>
       </div>
+    </Link>
+  ))}
+</div>
     </div>
   </div>
 
   {/* LEADER */}
   <div
     id="Leader"
-    className="py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white"
+    className="py-5 sm:py-6 md:py-8 lg:py-10 bg-gradient-to-br from-gray-50 to-white"
   >
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-queens">
@@ -114,10 +128,8 @@ const AboutUs = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalS
         universities in India.
       </p>
     </div>
-  </div>
-
-  {/* FINAL CTA */}
-  <div className="py-12 bg-white text-center">
+    {/* FINAL CTA */}
+  <div className="mt-6 mb-4 bg-white text-center">
     <button
       onClick={() => setOpenModal({ type: "apply" })}
       className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
@@ -125,6 +137,9 @@ const AboutUs = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalS
       Apply Now for MAHE Online Programs
     </button>
   </div>
+  </div>
+
+  
 
 </section>
 
