@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { ArrowRight, BookOpen, GraduationCap, Users, Building2, FileText, Award } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import { OpenModalState } from 'types/Modal';
@@ -27,7 +28,7 @@ const ResourceLinks = ({ setOpenModal, openModal }: { setOpenModal: (state: Open
       icon: GraduationCap,
     },
     {
-      href: "/Amity-University-Online#Scholarship",
+      href: "/amity#Scholarship",
       label: "Scholarships and financing tips for Amity University Online degrees",
       icon: FileText,
     },
@@ -43,7 +44,7 @@ const ResourceLinks = ({ setOpenModal, openModal }: { setOpenModal: (state: Open
     { label: "Online BBA Programs", href: "/courses/bba" },
     { label: "Online MCA Programs", href: "/courses/mca" },
     { label: "Online BCA Programs", href: "/courses/bca" },
-    { label: "All University List", href: "/University-List" },
+    { label: "All University List", href: "/university-list" },
     { label: "Search Courses", href: "/coursesearch" },
   ];
 
@@ -118,12 +119,12 @@ const ResourceLinks = ({ setOpenModal, openModal }: { setOpenModal: (state: Open
             {quickLinks.map((link, index) => (
               <React.Fragment key={link.href}>
                 {index > 0 && <span className="text-slate-600">|</span>}
-                <button
-                  onClick={() => setOpenModal({ type: 'apply' })}
+                <Link // Changed to Link
+                  href={link.href} // Used link.href
                   className="pointer-events-auto text-slate-300 hover:text-yellow-400 transition-colors"
                 >
                   {link.label}
-                </button>
+                </Link>
               </React.Fragment>
             ))}
           </div>

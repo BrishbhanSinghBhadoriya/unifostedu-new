@@ -156,7 +156,7 @@ const handleApplyNowClick = () => {
             >
               Amity University Online
 
-              {/* CIRCLED TEXT */}
+              
               <div className="relative inline-block my-3 sm:my-4 w-full">
                 <span
                   className="relative z-10 block px-3 py-3 sm:px-4 sm:py-3 md:px-6 md:py-4 text-blue-700 text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-center leading-tight"
@@ -178,7 +178,7 @@ const handleApplyNowClick = () => {
 
             {/* Description */}
             <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-4 sm:mb-5 md:mb-6 max-w-2xl leading-relaxed">
-              Explore the Amity University <Link href="/Amity-University-Online/mba-online" className="font-bold"> MBA,</Link> <Link href="/Amity-University-Online/bba-online" className="font-bold"> BBA,</Link> <Link href="/Amity-University-Online/mca-online" className="font-bold"> MCA,</Link> <Link href="/Amity-University-Online/bca-online" className="font-bold"> BCA,</Link> <Link href="/Amity-University-Online/mcom-online" className="font-bold"> M.Com,</Link> <Link href="/Amity-University-Online/bcom-online" className="font-bold"> B.Com,</Link> <Link href="/Amity-University-Online/ma-online" className="font-bold"> MA,</Link> and <Link href="/Amity-University-Online/msc-online" className="font-bold"> MSc</Link> programmes designed for working
+              Explore the Amity University <Link href="/amity/mba-online" className="font-bold"> MBA,</Link> <Link href="/amity/bba-online" className="font-bold"> BBA,</Link> <Link href="/amity/mca-online" className="font-bold"> MCA,</Link> <Link href="/amity/bca-online" className="font-bold"> BCA,</Link> <Link href="/amity/mcom-online" className="font-bold"> M.Com,</Link> <Link href="/amity/bcom-online" className="font-bold"> B.Com,</Link> <Link href="/amity/ma-online" className="font-bold"> MA,</Link> and <Link href="/amity/msc-online" className="font-bold"> MSc</Link> programmes designed for working
               professionals across India.{" "}
               <span className="font-semibold">Join 1.6 lakh+</span>{" "}
               learners leveraging flexible online degrees, live mentoring, and placement assistance.
@@ -244,7 +244,7 @@ const handleApplyNowClick = () => {
           </div>
         </div>
       </div>
-      
+
     </section>
   )
 }

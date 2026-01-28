@@ -75,13 +75,13 @@ function SearchContent({ onOpenModal }: SearchContentProps) {
 
   // Define proper page title and H1 content
   const getPageTitle = () => {
-    return query 
+    return query
       ? `Search results for "${query}" | UniFost`
       : 'Search Online Courses & Universities | UniFost';
   };
 
   const getH1Content = () => {
-    return query 
+    return query
       ? `Search Results for "${query}"`
       : 'Find Your Perfect Online Courses & Universities';
   };
@@ -103,10 +103,10 @@ function SearchContent({ onOpenModal }: SearchContentProps) {
       <div className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-20 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23e0e7ff%22%20fill-opacity%3D%220.3%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            
+
             <div className="mb-8">
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
                 {getH1Content()}
@@ -191,7 +191,7 @@ function SearchContent({ onOpenModal }: SearchContentProps) {
                         </span>
                       </div>
                     </div>
-                    
+
                     {/* Course Type Badge */}
                     <div className="flex items-center gap-2 mb-6">
                       <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
@@ -272,8 +272,8 @@ function SearchContent({ onOpenModal }: SearchContentProps) {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {( [
-                { name: 'Amity University', href: '/Amity-University-Online', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp', rating: '4.8' },
+              {([
+                { name: 'Amity University', href: '/amity', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp', rating: '4.8' },
                 { name: 'Manipal University', href: '/manipal', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp', rating: '4.7' },
                 { name: 'NMIMS University', href: '/nmims', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327721/nmims_os8kn9.webp', rating: '4.9' },
                 { name: 'Dr. D Y Patil University', href: '/dypatil', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dypatil_tbbpf9.webp', rating: '4.6' },
@@ -291,20 +291,20 @@ function SearchContent({ onOpenModal }: SearchContentProps) {
                 { name: 'Chandigarh University', href: '/cuOnline', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp', rating: '4.4' },
               ] as UniversityItem[]).map((university, idx) => (
                 <div key={idx} className="group">
-                  <Link 
-                    href={university.href} 
+                  <Link
+                    href={university.href}
                     className="relative block rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-white"
                   >
                     {/* University Image */}
                     <div className="relative h-48 overflow-hidden">
-                      <Image 
-                        src={university.img} 
-                        alt={university.name} 
+                      <Image
+                        src={university.img}
+                        alt={university.name}
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                      
+
                       {/* Rating Badge */}
                       <div className="absolute top-4 right-4">
                         <div className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-1">
@@ -341,7 +341,7 @@ function SearchContent({ onOpenModal }: SearchContentProps) {
 
             <div className="text-center mt-12">
               <Link
-                href="/University-List"
+                href="/university-list"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105"
               >
                 View All Universities
@@ -362,7 +362,7 @@ function SearchContent({ onOpenModal }: SearchContentProps) {
                 <p className="text-xl text-gray-600 leading-relaxed mb-8">
                   The Unifost course and university search tool helps students and professionals quickly explore accredited online programs. Our comprehensive database includes MBA, BBA, MCA, and BCA programs from top universities like Amity, Manipal, and Jain.
                 </p>
-                
+
                 <div className="grid md:grid-cols-3 gap-8 mb-12">
                   <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -373,7 +373,7 @@ function SearchContent({ onOpenModal }: SearchContentProps) {
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">UGC Approved</h3>
                     <p className="text-gray-600 text-sm">All programs are UGC-DEB approved ensuring quality education</p>
                   </div>
-                  
+
                   <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -383,7 +383,7 @@ function SearchContent({ onOpenModal }: SearchContentProps) {
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Quick Search</h3>
                     <p className="text-gray-600 text-sm">Find your perfect course or university in seconds</p>
                   </div>
-                  
+
                   <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
                     <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -394,7 +394,7 @@ function SearchContent({ onOpenModal }: SearchContentProps) {
                     <p className="text-gray-600 text-sm">Get personalized career counseling and support</p>
                   </div>
                 </div>
-                
+
                 <p className="text-lg text-gray-600 leading-relaxed">
                   Whether you're seeking a Finance MBA, Data Science MCA, or affordable BBA, Unifost ensures transparency and credibility with UGC-DEB approved universities. Discover trending online degrees, compare institutions, and shape your career path with confidence using Unifost's trusted platform.
                 </p>
@@ -411,8 +411,8 @@ function SearchContent({ onOpenModal }: SearchContentProps) {
 
 export default function Search() {
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
- const [modalType, setModalType] =
-  useState("getStarted")
+  const [modalType, setModalType] =
+    useState("getStarted")
 
 
   const handleOpenModal = (type: "getStarted") => {
@@ -424,7 +424,7 @@ export default function Search() {
     <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
       <SearchContent onOpenModal={handleOpenModal} />
 
-    
+
       <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
         <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 p-4 sm:p-6 z-[30001]">
           <DialogHeader>

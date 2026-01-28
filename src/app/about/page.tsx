@@ -442,7 +442,7 @@ export default function About() {
       </p>
     </div>
   {/* Founder 1 */}
-    
+   
 
     {/* Founder 2 */}
     <div className="grid md:grid-cols-2 gap-12 items-center">

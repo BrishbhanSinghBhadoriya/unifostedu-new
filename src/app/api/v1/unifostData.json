@@ -3,7 +3,10 @@
     "name": "Unifost – University For Students",
     "website": "https://unifostedu.com/",
     "contact": {
-      "phone": ["+91 7042646766", "+91 93547 35410"],
+      "phone": [
+        "+91 7042646766",
+        "+91 93547 35410"
+      ],
       "email": "info@unifostedu.com",
       "location": "Noida, Uttar Pradesh, India"
     },
@@ -23,7 +26,7 @@
       "nirf_ranking": "29",
       "rating": "4.8",
       "fees": "₹0.99L - ₹3.45L",
-      "website": "https://unifostedu.com/Amity-University-Online"
+      "website": "https://unifostedu.com/amity"
     },
     {
       "name": "Manipal University Online",
@@ -208,28 +211,54 @@
           "duration": "3 Years",
           "eligibility": "10+2 Pass",
           "fees": "₹1,65,000- ₹2,25,000",
-          "specializations": ["General", "Data Analytics", "Travel And Tourism Management", "Professional Certificate in Business Analytics"]
+          "specializations": [
+            "General",
+            "Data Analytics",
+            "Travel And Tourism Management",
+            "Professional Certificate in Business Analytics"
+          ]
         },
         {
           "name": "Bachelor of Computer Applications (BCA)",
           "duration": "3 Years",
           "eligibility": "10+2 Pass",
           "fees": "₹1,50,000 - ₹2,25,000",
-          "specializations": ["General", "Cloud and Security", "Software Engineering", "Data Science", "Data Engineering(HCL Tech)", "Data Analytics", "Software Engineering(HCL Tech)"]
+          "specializations": [
+            "General",
+            "Cloud and Security",
+            "Software Engineering",
+            "Data Science",
+            "Data Engineering(HCL Tech)",
+            "Data Analytics",
+            "Software Engineering(HCL Tech)"
+          ]
         },
         {
           "name": "Bachelor of Commerce (B.Com)",
           "duration": "3 Years",
           "eligibility": "10+2 Pass",
           "fees": "₹99,000 - ₹2,50,000",
-          "specializations": ["General", "Hons", "International Finance & Accounting"]
+          "specializations": [
+            "General",
+            "Hons",
+            "International Finance & Accounting"
+          ]
         },
         {
           "name": "Bachelor of Arts (BA)",
           "duration": "3 Years",
           "eligibility": "10+2 Pass",
           "fees": "₹99,000 - ₹1,70,000",
-          "specializations": ["General", "Journalism and Mass Communication", "Native Languages(Kannada,Malayalam, Tamil, Telugu)", "Psychology", "English", "Sociology", "Political Science", "Economics"]
+          "specializations": [
+            "General",
+            "Journalism and Mass Communication",
+            "Native Languages(Kannada,Malayalam, Tamil, Telugu)",
+            "Psychology",
+            "English",
+            "Sociology",
+            "Political Science",
+            "Economics"
+          ]
         }
       ],
       "postgraduate": [
@@ -238,35 +267,74 @@
           "duration": "2 Years",
           "eligibility": "Graduation",
           "fees": "₹1,99,000 - ₹2,99,000",
-          "specializations": ["General", "Information Technology Management", "Dual Specialization", "Human Resource Analytics", "Data Science", "Business Analytics", "International Business Management", "Hospital Management", "Digital Entrepreneurship", "Digital Marketing Management", "Entrepreneurship & Leadership Management", "Finance & Accounting Management", "Hospitality Management", "Global Finance Market", "Insurance Management", "Marketing & Sales Management", "Petroleum & Natural Gas", "Production and Operations Management", "Retail Management"]
+          "specializations": [
+            "General",
+            "Information Technology Management",
+            "Dual Specialization",
+            "Human Resource Analytics",
+            "Data Science",
+            "Business Analytics",
+            "International Business Management",
+            "Hospital Management",
+            "Digital Entrepreneurship",
+            "Digital Marketing Management",
+            "Entrepreneurship & Leadership Management",
+            "Finance & Accounting Management",
+            "Hospitality Management",
+            "Global Finance Market",
+            "Insurance Management",
+            "Marketing & Sales Management",
+            "Petroleum & Natural Gas",
+            "Production and Operations Management",
+            "Retail Management"
+          ]
         },
         {
           "name": "Master of Computer Applications (MCA)",
           "duration": "2 Years",
           "eligibility": "Graduation in BCA/B.Sc(IT)",
           "fees": "₹170,000- ₹2,50,000",
-          "specializations": ["General", "Cyber Security", "Blockchain Technology", "Machine Learning and Artificial Intelligence", "Augmented Reality and Virtual Reality", "Software Engineering"]
+          "specializations": [
+            "General",
+            "Cyber Security",
+            "Blockchain Technology",
+            "Machine Learning and Artificial Intelligence",
+            "Augmented Reality and Virtual Reality",
+            "Software Engineering"
+          ]
         },
         {
           "name": "Master of Commerce (M.Com)",
           "duration": "2 Years",
           "eligibility": "Graduation in Commerce",
           "fees": "₹1,20,000",
-          "specializations": ["General", "Financial Management", "Financial Technology"]
+          "specializations": [
+            "General",
+            "Financial Management",
+            "Financial Technology"
+          ]
         },
         {
           "name": "Master of Arts (MA)",
           "duration": "2 Years",
           "eligibility": "Graduation",
           "fees": "₹1,30,000 - ₹2,50,000",
-          "specializations": ["Psychology", "Journalism and Mass Communication", "Public Policy & Governance", "English", "Sociology"]
+          "specializations": [
+            "Psychology",
+            "Journalism and Mass Communication",
+            "Public Policy & Governance",
+            "English",
+            "Sociology"
+          ]
         },
         {
           "name": "Master of Science (M.Sc)",
           "duration": "2 Years",
           "eligibility": "Graduation",
           "fees": "₹2,50,000",
-          "specializations": ["Data Science"]
+          "specializations": [
+            "Data Science"
+          ]
         }
       ]
     },

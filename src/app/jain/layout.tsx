@@ -5,7 +5,7 @@ export const metadata = {
     "Jain University Online Explore undergraduate (BBA, BCA, B.Com) and postgraduate (MBA, MCA, M.Com, MA) programs offered by Jain University Online, a NAAC A++ accredited university in Bengaluru. Flexible, career-focused education for students and working professionals.",
   keywords:
     "Jain University Online, BBA Online, BCA Online, B.Com Online, MBA Online, MCA Online, M.Com Online, MA Online, NAAC A++ University, Online Degree Programs India, Online Courses, Distance Learning",
-  metadataBase: new URL("https://unifostedu.com"),
+
   alternates: {
     canonical: "https://unifostedu.com/jain",
   },

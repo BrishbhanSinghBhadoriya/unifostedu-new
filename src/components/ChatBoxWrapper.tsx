@@ -4,9 +4,9 @@ import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 
-const ChatBox = dynamic(() => import('@/components/ChatBox'), { 
-  loading: () => null, 
-  ssr: false 
+const ChatBox = dynamic(() => import('@/components/ChatBox'), {
+  loading: () => null,
+  ssr: false
 });
 
 export default function ChatBoxWrapper() {
@@ -14,7 +14,7 @@ export default function ChatBoxWrapper() {
   const [showChatBox, setShowChatBox] = useState(true);
   useEffect(() => {
     const hideHeaderRoutes = [
-      "/Amity-University-Online",
+      "/amity",
       "/lpu-online",
       "/manipal",
       "/cuOnline",
@@ -30,7 +30,7 @@ export default function ChatBoxWrapper() {
       "/opjindal",
       "/nmims",
       "/uu",
-      
+
       "/amity-online-mba-total-fees",
       "/best-online-mca-university-in-india",
       "/muj-online-bba",

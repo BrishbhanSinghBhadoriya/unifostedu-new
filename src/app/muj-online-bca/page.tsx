@@ -13,7 +13,7 @@ type ModalState = {
   title?: string;
   subtitle?: string;
 
-  
+
 } | null;
 
 const MUJBCAPage = () => {
@@ -41,54 +41,47 @@ const MUJBCAPage = () => {
     { id: 'faq', label: 'FAQs' },
   ];
 
-   const [activeSection, setActiveSection] = useState(navSections[0]?.id ?? null);
-          
-                      
-           useEffect(() => {
-                                     if (!navSections.length) return undefined;
-                                 
-                                     const observerOptions = {
-                                       root: null,
-                                       threshold: 0.25,
-                                       rootMargin: "-45% 0px -45% 0px",
-                                     };
-                                 
-                                     const observer = new IntersectionObserver((entries) => {
-                                       entries.forEach((entry) => {
-                                         if (entry.isIntersecting) {
-                                           setActiveSection(entry.target.id);
-                                         }
-                                       });
-                                     }, observerOptions);
-                                 
-                                     navSections.forEach((section) => {
-                                       const element = document.getElementById(section.id);
-                                       if (element) {
-                                         observer.observe(element);
-                                       }
-                                     });
-                                 
-                                     return () => {
-                                       navSections.forEach((section) => {
-                                         const element = document.getElementById(section.id);
-                                         if (element) {
-                                           observer.unobserve(element);
-                                         }
-                                       });
-                                       observer.disconnect();
-                                     };
-                                      }, [navSections]);
+  const [activeSection, setActiveSection] = useState(navSections[0]?.id ?? null);
+
+
+  useEffect(() => {
+    if (!navSections.length) return undefined;
+
+    const observerOptions = {
+      root: null,
+      threshold: 0.25,
+      rootMargin: "-45% 0px -45% 0px",
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    navSections.forEach((section) => {
+      const element = document.getElementById(section.id);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      navSections.forEach((section) => {
+        const element = document.getElementById(section.id);
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+      observer.disconnect();
+    };
+  }, [navSections]);
 
   return (
     <div className="poppins overflow-x-hidden flex">
-      <Head>
-        <title>Manipal Online BCA | Bachelor of Computer Applications | MUJ Online</title>
-        <meta name="description" content="Explore UGC-approved Online BCA from Manipal University Jaipur. Flexible, affordable, and industry-relevant program for future-ready tech careers. Free UNIFOST counseling." />
-        <meta name="keywords" content="Manipal Online BCA, MUJ BCA Online, Online BCA, Bachelor of Computer Applications, UGC Approved BCA, NAAC A+ BCA" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://unifostedu.com/muj-bca-online" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-      </Head>
+
       {/* Header */}
       <header className="w-full fixed top-0 left-0 bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 z-50">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
@@ -96,7 +89,7 @@ const MUJBCAPage = () => {
             <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-4 flex-shrink-0">
               <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" alt="Manipal University Logo" className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto" />
               <h1 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-orange-600">
-                
+
               </h1>
             </div>
             <div className="flex items-center gap-1.5 sm:gap-2 md:gap-4 flex-1 justify-end">
@@ -123,9 +116,9 @@ const MUJBCAPage = () => {
       {/* Modal */}
       <ApplyEnquiryModal open={!!openModal} onOpenChange={(o) => setOpenModal(o ? { type: 'apply' } : null)} universityName="Manipal University Online" defaultProgram="BCA" formType="general" imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327725/online-manipal-form_nz7yft.webp" />
 
-     <PageContent sectionItems={navSections} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
+      <PageContent sectionItems={navSections} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
 
-     
+
       {/* --- End Sidebars --- */}
 
       <main className="flex-1 min-w-0 lg:pl-64">
@@ -198,7 +191,7 @@ const MUJBCAPage = () => {
             </div>
             {/* Right Hero Banner Image */}
             <div className="hidden lg:block flex-shrink-0 w-96 rounded-3xl overflow-hidden shadow-2xl border border-blue-100">
-              <Image  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp" alt="Online BCA - Student" width={500} height={630} className="object-cover" />
+              <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp" alt="Online BCA - Student" width={500} height={630} className="object-cover" />
             </div>
           </div>
         </section>
@@ -350,696 +343,696 @@ const MUJBCAPage = () => {
             </div>
             <div className="mt-10 mx-auto max-w-3xl text-left text-sm text-blue-800 bg-blue-50 p-5 rounded-xl">
               <p>
-                <strong>Is Manipal Online BCA Worth It?</strong><br/>
+                <strong>Is Manipal Online BCA Worth It?</strong><br />
                 Yes – Manipal Online BCA is UGC-approved, delivered by a NAAC A+ university, industry-aligned, and globally recognized. The flexible online format, trending specializations, and strong placement ecosystem make it one of the best online BCA choices in India.
-                <br/><br/>
-                <strong>Still unsure which program or specialization is right for you?</strong><br/>
+                <br /><br />
+                <strong>Still unsure which program or specialization is right for you?</strong><br />
                 Book a free UNIFOST counseling session and get professional, unbiased advice before taking the next step in your career.
               </p>
             </div>
           </div>
         </section>
 
-      
-              {/* Final Thoughts Section */}
-              <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-orange-600 to-orange-700 text-white">
-                <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-                  <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Final Thoughts</h2>
-                    <p className="text-lg sm:text-xl leading-relaxed mb-6">
-                      The Manipal Online BCA is a strong choice for students and professionals who want:
-                    </p>
-                    <ul className="list-disc list-inside space-y-2 text-lg mb-8 text-left max-w-2xl mx-auto">
-                      <li>A recognized, flexible degree</li>
-                      <li>Business fundamentals + modern digital skills</li>
-                      <li>Reasonable fees compared to many private on-campus programs</li>
-                      <li>The option to work, intern or pursue side projects while studying</li>
-                    </ul>
-                    <p className="text-lg sm:text-xl leading-relaxed mb-8">
-                      But every learner is different. The best choice depends on:
-                    </p>
-                    <ul className="list-disc list-inside space-y-2 text-lg mb-8 text-left max-w-2xl mx-auto">
-                      <li>Your budget</li>
-                      <li>Your career goal</li>
-                      <li>Your current stage (student / working / break year)</li>
-                    </ul>
-                    <p className="text-xl sm:text-2xl font-semibold">
-                      That's where platforms like UNIFOST make a difference - by helping you turn a confusing decision into a clear, confident one.
-                    </p>
-                    <div className="mt-8">
-                      <button 
-                        onClick={() => setOpenModal({ type: 'apply' })}
-                        className="bg-white text-orange-600 font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer"
-                      >
-                        Apply Now
-                      </button>
+
+        {/* Final Thoughts Section */}
+        <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-orange-600 to-orange-700 text-white">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Final Thoughts</h2>
+              <p className="text-lg sm:text-xl leading-relaxed mb-6">
+                The Manipal Online BCA is a strong choice for students and professionals who want:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-lg mb-8 text-left max-w-2xl mx-auto">
+                <li>A recognized, flexible degree</li>
+                <li>Business fundamentals + modern digital skills</li>
+                <li>Reasonable fees compared to many private on-campus programs</li>
+                <li>The option to work, intern or pursue side projects while studying</li>
+              </ul>
+              <p className="text-lg sm:text-xl leading-relaxed mb-8">
+                But every learner is different. The best choice depends on:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-lg mb-8 text-left max-w-2xl mx-auto">
+                <li>Your budget</li>
+                <li>Your career goal</li>
+                <li>Your current stage (student / working / break year)</li>
+              </ul>
+              <p className="text-xl sm:text-2xl font-semibold">
+                That's where platforms like UNIFOST make a difference - by helping you turn a confusing decision into a clear, confident one.
+              </p>
+              <div className="mt-8">
+                <button
+                  onClick={() => setOpenModal({ type: 'apply' })}
+                  className="bg-white text-orange-600 font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer"
+                >
+                  Apply Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Accreditation Section */}
+        <section className="py-12 sm:py-16 lg:py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-queens">
+                Rankings & <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Accreditations</span>
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+                Recognized by leading accreditation bodies and ranked among India's top universities
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+              {[
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp', title: 'NAAC A+ Accredited University' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp', title: 'UGC-entitled Online Degrees' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nirf_f5xen9.webp', title: "Amongst India's top 60 Universities in 2025" },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp', title: 'AICTE Norms Compliant' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/wes_zuxwfs.webp', title: 'Globally Recognized Online Degrees' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/acu_oyjzvj.webp', title: 'Member of ACU' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327200/icas_wyryup.webp', title: 'ICAS Canada' },
+                { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327238/iqas_bieryy.webp', title: 'IQAS' },
+              ].map((item, i) => (
+                <div key={i} className="group">
+                  <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4 sm:p-6">
+                      <Image
+                        src={item.img}
+                        alt={item.title}
+                        width={400}
+                        height={260}
+                        className="w-full h-full max-h-24 sm:max-h-32 object-contain group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="px-3 py-4 sm:px-4 sm:py-5">
+                      <p className="text-xs sm:text-sm font-medium text-gray-800 text-center leading-tight group-hover:text-orange-600 transition-colors duration-300">
+                        {item.title}
+                      </p>
                     </div>
                   </div>
                 </div>
-              </section>
-      
-              {/* Accreditation Section */}
-              <section className="py-12 sm:py-16 lg:py-20 bg-white">
-                      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center mb-12 sm:mb-16">
-                          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-queens">
-                            Rankings & <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Accreditations</span>
-                          </h2>
-                          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-                            Recognized by leading accreditation bodies and ranked among India's top universities
-                          </p>
-                        </div>
-                        
-                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-                          {[
-                            { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp', title: 'NAAC A+ Accredited University' },
-                            { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp', title: 'UGC-entitled Online Degrees' },
-                            { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nirf_f5xen9.webp', title: "Amongst India's top 60 Universities in 2025" },
-                            { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp', title: 'AICTE Norms Compliant' },
-                            { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/wes_zuxwfs.webp', title: 'Globally Recognized Online Degrees' },
-                            { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/acu_oyjzvj.webp', title: 'Member of ACU' },
-                            { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327200/icas_wyryup.webp', title: 'ICAS Canada' },
-                            { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327238/iqas_bieryy.webp', title: 'IQAS' },
-                          ].map((item, i)=>(
-                            <div key={i} className="group">
-                              <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                                <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4 sm:p-6">
-                                  <Image 
-                                    src={item.img} 
-                                    alt={item.title} 
-                                    width={400} 
-                                    height={260} 
-                                    className="w-full h-full max-h-24 sm:max-h-32 object-contain group-hover:scale-105 transition-transform duration-300" 
-                                  />
-                                </div>
-                                <div className="px-3 py-4 sm:px-4 sm:py-5">
-                                  <p className="text-xs sm:text-sm font-medium text-gray-800 text-center leading-tight group-hover:text-orange-600 transition-colors duration-300">
-                                    {item.title}
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </section>
-                 <section className="py-16 bg-gradient-to-br from-blue-50 to-orange-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Online Manipal Programs <span className="text-orange-600">Available Across India</span>
-          </h2>
-          
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {[
-              'Delhi NCR', 'Mumbai', 'Bangalore', 'Hyderabad', 
-              'Chennai', 'Kolkata', 'Pune', 'Ahmedabad',
-              'Jaipur', 'Lucknow', 'Chandigarh', 'Indore'
-            ].map(city => (
-              <div key={city} className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all text-center">
-                <div className="text-2xl mb-2">📍</div>
-                <h3 className="font-bold text-sm">{city}</h3>
-                <p className="text-xs text-gray-600">Online Programs</p>
-              </div>
-            ))}
-                  </div>
-          
-          <p className="text-center mt-8 text-gray-600 max-w-3xl mx-auto">
-            Manipal University Jaipur's online programs are accessible from anywhere in India. 
-            Students from Delhi, Mumbai, Bangalore, and 2000+ cities trust MUJ for quality online education.
-          </p>
-        </div>
-      </section>
-      
-      
-            {/*  Add Quick Comparison Table */}
-      <section id='QuickComparison' className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            <span className="text-orange-600">Online vs Regular</span> Degree Comparison
-          </h2>
-          
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="bg-orange-500 text-white">
-                  <th className="p-4 text-left">Feature</th>
-                  <th className="p-4 text-center">Online Manipal</th>
-                  <th className="p-4 text-center">Regular Campus</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ['UGC Recognition', '✅ Yes', '✅ Yes'],
-                  ['Degree Validity', '✅ Same as Campus', '✅ Valid'],
-                  ['Flexibility', '✅ Study Anytime', '❌ Fixed Schedule'],
-                  ['Location', '✅ From Anywhere', '❌ Campus Only'],
-                  ['Cost', '✅ More Affordable', '❌ Higher Fees'],
-                  ['Placement Support', '✅ 100% Assistance', '✅ Available']
-                ].map(([feature, online, regular], i) => (
-                  <tr key={i} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                    <td className="p-4 font-semibold">{feature}</td>
-                    <td className="p-4 text-center">{online}</td>
-                    <td className="p-4 text-center">{regular}</td>
+              ))}
+            </div>
+          </div>
+        </section>
+        <section className="py-16 bg-gradient-to-br from-blue-50 to-orange-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-12">
+              Online Manipal Programs <span className="text-orange-600">Available Across India</span>
+            </h2>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+              {[
+                'Delhi NCR', 'Mumbai', 'Bangalore', 'Hyderabad',
+                'Chennai', 'Kolkata', 'Pune', 'Ahmedabad',
+                'Jaipur', 'Lucknow', 'Chandigarh', 'Indore'
+              ].map(city => (
+                <div key={city} className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all text-center">
+                  <div className="text-2xl mb-2">📍</div>
+                  <h3 className="font-bold text-sm">{city}</h3>
+                  <p className="text-xs text-gray-600">Online Programs</p>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-center mt-8 text-gray-600 max-w-3xl mx-auto">
+              Manipal University Jaipur's online programs are accessible from anywhere in India.
+              Students from Delhi, Mumbai, Bangalore, and 2000+ cities trust MUJ for quality online education.
+            </p>
+          </div>
+        </section>
+
+
+        {/*  Add Quick Comparison Table */}
+        <section id='QuickComparison' className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-12">
+              <span className="text-orange-600">Online vs Regular</span> Degree Comparison
+            </h2>
+
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-orange-500 text-white">
+                    <th className="p-4 text-left">Feature</th>
+                    <th className="p-4 text-center">Online Manipal</th>
+                    <th className="p-4 text-center">Regular Campus</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-              </div>
-            </section>
-                    {/* Placement Record Section */}
-      <section id="PlacementRecord" className="py-16 bg-gradient-to-br from-gray-50 to-orange-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-              <span className="text-orange-600">Placement Record</span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Manipal Online has achieved impressive placement outcomes across domains. Graduates from online MBA, online MCA, and online BCA programs have secured roles in management, IT, consulting, finance, and marketing.
-            </p>
-          </div>
-      
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Placement Highlights</h3>
-              
-              <div className="space-y-6">
-                <div className="bg-white rounded-xl p-6 shadow-lg">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center">
-                      <span className="text-white text-2xl font-bold">90%</span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg text-gray-900">Employability Rate</h4>
-                      <p className="text-gray-600 text-sm">For postgraduates across all programs</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="bg-white rounded-xl p-6 shadow-lg">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xl font-bold">500+</span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg text-gray-900">Recruiters Associated</h4>
-                      <p className="text-gray-600 text-sm">With Manipal University Jaipur Online</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="bg-white rounded-xl p-6 shadow-lg">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center">
-                      <span className="text-white text-lg font-bold">₹7 LPA</span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg text-gray-900">Average MBA Salary</h4>
-                      <p className="text-gray-600 text-sm">Competitive compensation packages</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="bg-white rounded-xl p-6 shadow-lg">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
-                      <span className="text-white text-lg font-bold">24/7</span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg text-gray-900">Placement Portal</h4>
-                      <p className="text-gray-600 text-sm">Real-time job listings and opportunities</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-            <div className="bg-white rounded-2xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Success Domains</h3>
-              
-              <div className="space-y-4 mb-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-sm">💼</span>
-                  </div>
-                  <span className="text-gray-700 font-semibold">Management Roles</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-sm">💻</span>
-                  </div>
-                  <span className="text-gray-700 font-semibold">IT & Technology</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-sm">📊</span>
-                  </div>
-                  <span className="text-gray-700 font-semibold">Consulting</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-sm">💰</span>
-                  </div>
-                  <span className="text-gray-700 font-semibold">Finance & Banking</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-sm">📈</span>
-                  </div>
-                  <span className="text-gray-700 font-semibold">Marketing & Sales</span>
-                </div>
-              </div>
-              
-              <div className="bg-gradient-to-r from-orange-50 to-blue-50 rounded-lg p-4 mb-6">
-                <h4 className="font-bold text-gray-900 mb-2">Career Development Focus</h4>
-                <p className="text-gray-600 text-sm">
-                  MUJ Online's strong focus on career development ensures every learner is job-ready upon graduation 
-                  with practical skills and industry knowledge.
-                </p>
-              </div>
-              
-              <button 
-                onClick={() => setOpenModal({ type: 'enquiry' })}
-                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
-              >
-                View Placement Statistics
-              </button>
+                </thead>
+                <tbody>
+                  {[
+                    ['UGC Recognition', '✅ Yes', '✅ Yes'],
+                    ['Degree Validity', '✅ Same as Campus', '✅ Valid'],
+                    ['Flexibility', '✅ Study Anytime', '❌ Fixed Schedule'],
+                    ['Location', '✅ From Anywhere', '❌ Campus Only'],
+                    ['Cost', '✅ More Affordable', '❌ Higher Fees'],
+                    ['Placement Support', '✅ 100% Assistance', '✅ Available']
+                  ].map(([feature, online, regular], i) => (
+                    <tr key={i} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                      <td className="p-4 font-semibold">{feature}</td>
+                      <td className="p-4 text-center">{online}</td>
+                      <td className="p-4 text-center">{regular}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
-        </div>
-      </section>
-      
-      <section id="PlacementPartners" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-              <span className="text-orange-600">Placement Partners</span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Manipal University Jaipur Online partners with leading national and multinational organizations to offer extensive placement and internship opportunities.
-            </p>
-          </div>
-      
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Top Placement Partners</h3>
-              
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 text-center">
-                  <div className="text-2xl mb-2">💼</div>
-                  <div className="font-semibold text-gray-800">Infosys</div>
-                </div>
-                <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 text-center">
-                  <div className="text-2xl mb-2">🏢</div>
-                  <div className="font-semibold text-gray-800">Wipro</div>
-                </div>
-                <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-4 text-center">
-                  <div className="text-2xl mb-2">🎯</div>
-                  <div className="font-semibold text-gray-800">Accenture</div>
-                </div>
-                <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 text-center">
-                  <div className="text-2xl mb-2">📊</div>
-                  <div className="font-semibold text-gray-800">TCS</div>
-                </div>
-                <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-4 text-center">
-                  <div className="text-2xl mb-2">🔍</div>
-                  <div className="font-semibold text-gray-800">Deloitte</div>
-                </div>
-                <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-xl p-4 text-center">
-                  <div className="text-2xl mb-2">⚡</div>
-                  <div className="font-semibold text-gray-800">Capgemini</div>
-                </div>
-              </div>
-              
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </div>
-                  <span className="text-gray-700">Cognizant</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </div>
-                  <span className="text-gray-700">Amazon</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </div>
-                  <span className="text-gray-700">EY</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </div>
-                  <span className="text-gray-700">HDFC Bank</span>
-                </div>
-              </div>
+        </section>
+        {/* Placement Record Section */}
+        <section id="PlacementRecord" className="py-16 bg-gradient-to-br from-gray-50 to-orange-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                <span className="text-orange-600">Placement Record</span>
+              </h2>
+              <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                Manipal Online has achieved impressive placement outcomes across domains. Graduates from online MBA, online MCA, and online BCA programs have secured roles in management, IT, consulting, finance, and marketing.
+              </p>
             </div>
-      
-            <div className="bg-gradient-to-br from-orange-50 to-blue-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Career Services Division</h3>
-              
-              <div className="space-y-4 mb-6">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white text-sm">📝</span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-1">Resume Building</h4>
-                    <p className="text-gray-600 text-sm">Professional resume crafting and optimization</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white text-sm">🎤</span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-1">Mock Interviews</h4>
-                    <p className="text-gray-600 text-sm">Practice sessions with industry experts</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white text-sm">🤝</span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-1">Professional Networking</h4>
-                    <p className="text-gray-600 text-sm">Connect with industry professionals and alumni</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white text-sm">💼</span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-1">Job Placements</h4>
-                    <p className="text-gray-600 text-sm">Direct placement opportunities with partner companies</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-white rounded-lg p-4 mb-6">
-                <h4 className="font-bold text-gray-900 mb-2">Global Recognition</h4>
-                <p className="text-gray-600 text-sm">
-                  MUJ Online's collaboration with global brands ensures every online degree holder gains real career value 
-                  and recognition in the competitive job market.
-                </p>
-              </div>
-              
-              <button 
-                onClick={() => setOpenModal({ type: 'enquiry' })}
-                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
-              >
-                Explore Career Opportunities
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      
-               {/* Professional Hiring Partners Section */}
-                    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-100 to-gray-200">
-                      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center mb-12 sm:mb-16">
-                          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-queens">
-                            Our Students Work At <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Top Companies</span>
-                          </h2>
-                          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-                            Join the ranks of successful graduates working at leading organizations worldwide
-                          </p>
-                        </div>
-                        
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
-                          {["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company_vjgouc.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company1_tktbp7.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327090/company9_p4pgg3.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327088/com10_cm37v8.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany4_h5nana.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company6_rnuajo.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany5_qs6bgc.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/adove_jtmiou.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/samsung_sosfqv.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327152/ey_ph2bsx.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327173/ibm_ced3ir.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327172/hp_b4ylow.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327860/tata_n9jnwt.png", "/images/apple.jpg","https://res.cloudinary.com/didkrwhbu/image/upload/v1762327171/hero_krubph.webp"].map((src, i) => (
-                            <div key={i} className="group">
-                              <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-                                <div className="aspect-square flex items-center justify-center">
-                                  <Image 
-                                    width={100} 
-                                    height={100} 
-                                    src={src} 
-                                    alt="Company" 
-                                    className="h-12 sm:h-16 w-auto object-contain group-hover:scale-110 transition-transform duration-300" 
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                        
-                        {/* Final CTA */}
-                        <div className="text-center mt-12 sm:mt-16">
-                          <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-3xl p-8 sm:p-12 text-white max-w-4xl mx-auto">
-                            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Ready to Join Them?</h3>
-                            <p className="text-lg sm:text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-                              Start your journey with Manipal University Online and unlock endless career opportunities
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                              <button 
-                                onClick={() => setOpenModal({ type: 'apply' })}
-                                className="bg-white text-orange-600 font-semibold px-8 py-4 rounded-full hover:bg-orange-50 transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base cursor-pointer"
-                              >
-                                Apply Now
-                              </button>
-                            
-                            </div>
-                          </div>
-                        </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Placement Highlights</h3>
+
+                <div className="space-y-6">
+                  <div className="bg-white rounded-xl p-6 shadow-lg">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center">
+                        <span className="text-white text-2xl font-bold">90%</span>
                       </div>
-                      
-                      {openModal && (
-                        <ApplyEnquiryModal
-                          open={!!openModal}
-                          onOpenChange={(v) => !v && setOpenModal(null)}
-                          title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
-                          subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-                          imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327725/online-manipal-form_nz7yft.webp"
-                          universityName="Manipal University Online"
-                          defaultProgram="MBA"
-                          formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
-                        />
-                      )}
-                    </section>
-                     {/* Enhanced Footer */}
-                     <div>
-                            <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-gray-300 pt-12 sm:pt-16 relative overflow-hidden mt-8">
-                              {/* Background Pattern */}
-                              <div className="absolute inset-0 opacity-50" style={{
-                                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-                              }}></div>
-                              
-                              <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-white/10">
-                                  {/* Company Info */}
-                                  <div className="col-span-1 sm:col-span-2 lg:col-span-1">
-                                    <motion.div
-                                      initial={{ opacity: 0, y: 20 }}
-                                      whileInView={{ opacity: 1, y: 0 }}
-                                      transition={{ duration: 0.6 }}
-                                      viewport={{ once: true }}
-                                      className="space-y-4"
-                                    >
-                                      <div className="flex items-center gap-3 mb-4 bg-white rounded-full p-3">
-                                        <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" alt="Manipal" className="h-10 w-auto" />
-                                        
-                                      </div>
-                                      <p className="text-sm text-gray-400 leading-relaxed">
-                                        UGC-entitled, NAAC A+ accredited online degrees designed for modern learners. 
-                                        Transform your career with globally recognized programs.
-                                      </p>
-                                      
-                                      {/* Social Media */}
-                                      <div className="flex space-x-4">
-                                        {[
-                                          { icon: '📘', label: 'Facebook' },
-                                          { icon: '📷', label: 'Instagram' },
-                                          { icon: '🐦', label: 'Twitter' },
-                                          { icon: '💼', label: 'LinkedIn' }
-                                        ].map((social, i) => (
-                                          <div key={i} className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors cursor-pointer">
-                                            <span className="text-lg">{social.icon}</span>
-                                          </div>
-                                        ))}
-                                      </div>
-                                    </motion.div>
-                                  </div>
-                    
-                                  {/* Programs */}
-                                  <div>
-                                    <motion.div
-                                      initial={{ opacity: 0, y: 20 }}
-                                      whileInView={{ opacity: 1, y: 0 }}
-                                      transition={{ duration: 0.6, delay: 0.1 }}
-                                      viewport={{ once: true }}
-                                    >
-                                      <h4 className="text-white font-bold mb-4 text-lg">Programs</h4>
-                                      <ul className="space-y-3 text-sm">
-                                        {['MBA', 'BBA', 'MCA', 'BCA', 'M.Com', 'B.Com', 'MAJMC'].map((program, i) => (
-                                          <li onClick={() => setOpenModal({ type: 'apply' })} key={i} className="hover:text-orange-400 transition-colors cursor-pointer">
-                                            {program}
-                                          </li>
-                                        ))}
-                                      </ul>
-                                    </motion.div>
-                                  </div>
-                    
-                                  {/* Resources */}
-                                  <div>
-                                    <motion.div
-                                      initial={{ opacity: 0, y: 20 }}
-                                      whileInView={{ opacity: 1, y: 0 }}
-                                      transition={{ duration: 0.6, delay: 0.2 }}
-                                      viewport={{ once: true }}
-                                    >
-                                      <h4 className="text-white font-bold mb-4 text-lg">Resources</h4>
-                                      <ul className="space-y-3 text-sm">
-                                        {[
-                                          { name: 'Admissions', href: '#Admission' },
-                                          { name: 'Scholarships', href: '#' },
-                                          { name: 'Placements', href: '#' },
-                                          { name: 'FAQs', href: '#Faq' },
-                                          { name: 'Quick Comparison', href: '#QuickComparison' },
-                                          { name: 'Fees Structure', href: '#Fees' }
-                                        ].map((link, i) => (
-                                          <li key={i}>
-                                            <a href={link.href} className="hover:text-orange-400 transition-colors">
-                                              {link.name}
-                                            </a>
-                                          </li>
-                                        ))}
-                                      </ul>
-                                    </motion.div>
-                                  </div>
-                    
-                                  {/* Contact */}
-                                  <div>
-                                    <motion.div
-                                      initial={{ opacity: 0, y: 20 }}
-                                      whileInView={{ opacity: 1, y: 0 }}
-                                      transition={{ duration: 0.6, delay: 0.3 }}
-                                      viewport={{ once: true }}
-                                      className="space-y-4"
-                                    >
-                                      <h4 className="text-white font-bold mb-4 text-lg">Contact Us</h4>
-                                      <div className="space-y-3">
-                                        <div className="flex items-center gap-3">
-                                          <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
-                                            <span className="text-orange-400">📞</span>
-                                          </div>
-                                          <span className="text-sm">+91 7042646766</span>
-                                        </div>
-                                        <div className="flex items-center gap-3">
-                                          <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
-                                            <span className="text-orange-400">✉️</span>
-                                          </div>
-                                          <span className="text-sm">info@unifostedu.com</span>
-                                        </div>
-                                      </div>
-                                      
-                                      <Button 
-                                        onClick={() => setOpenModal({ type: 'apply' })}
-                                        className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold px-6 py-3 rounded-full shadow-lg hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300"
-                                      >
-                                        Apply Now
-                                      </Button>
-                                    </motion.div>
-                                  </div>
-                                </div>
-                              {/* Popular Programs & Specializations - MUJ */}
-                                {/* Popular Programs Section */}
-                                <motion.div
-                                  initial={{ opacity: 0, y: 20 }}
-                                  whileInView={{ opacity: 1, y: 0 }}
-                                  transition={{ duration: 0.6, delay: 0.4 }}
-                                  viewport={{ once: true }}
-                                  className="border-t border-white/10 pt-8 mb-8"
-                                >
-                                  <h4 className="text-lg font-bold mb-6 text-white text-center">
-                                    Popular Programs & Specializations – Manipal University Jaipur (MUJ)
-                                  </h4>
-                    
-                                  <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
-                                    {[
-                                      // UG Courses
-                                      "BBA General - MUJ Online",
-                                      "BBA Finance & Accounting - MUJ Online",
-                                      "BBA Digital Marketing - MUJ Online",
-                                      "BBA Marketing -MUJ Online",
-                                      "BBA Entrepreneurship & Family Business - MUJ Online",
-                                      "BBA Human Resource Management - MUJ Online",
-                                      "BBA Data Analytics - MUJ Online",
-                                      "BBA Retail & E-commerce Management - MUJ Online",
-                                      "BCA General - MUJ Online",
-                                      "BCA Data Science & Analytics - MUJ Online",
-                                      "BCA Cyber Security - MUJ Online",
-                                      "BCA Cloud Computing - MUJ Online",
-                                      "B.Com General - MUJ Online",
-                                      // PG Courses
-                                      "MBA General - MUJ Online",
-                                      "MBA HR & Finance - MUJ Online",
-                                      "MBA Finance & Marketing - MUJ Online",
-                                      "MBA Marketing & HR - MUJ Online",
-                                      "MBA Marketing & Business Analytics - MUJ Online",
-                                      "MBA Finance & Business Analytics - MUJ Online",
-                                      "MBA Project Management - MUJ Online",
-                                      "MBA Retail Management & Quick Commerce - MUJ Online",
-                                      "MBA Artificial Intelligence in Banking & Finance - MUJ Online",
-                                      "MCA AI & Data Science - MUJ Online",
-                                      "MCA Cyber Security - MUJ Online",
-                                      "MCA Cloud Computing - MUJ Online",
-                                      "MCA Comprehensive Emerging Technologies - MUJ Online",
-                                      "MCA Artificial Intelligence & Machine Learning - MUJ Online",
-                                      "M.Com General - MUJ Online",
-                                      "MA Economics - MUJ Online",
-                                      "MA Journalism & Mass Communication - MUJ Online"
-                                    ].map((keyword, index) => (
-                                      <span
-                                        key={index} 
-                                        className="bg-white/10 backdrop-blur-sm text-gray-300 px-3 py-2 rounded-full text-xs sm:text-sm hover:bg-orange-500 hover:text-white transition-all duration-300 cursor-pointer border border-white/20 hover:border-orange-500"
-                                        title={keyword}
-                                        onClick={() => {
-                                              setOpenModal({ type: "apply" });
-                                            }}
-                                      >
-                                        {keyword.length > 25 ? `${keyword.substring(0, 25)}...` : keyword}
-                                      </span>
-                                    ))}
-                                  </div>
-                                </motion.div>
-                    
-                                {/* Copyright */}
-                                <motion.div
-                                  initial={{ opacity: 0 }}
-                                  whileInView={{ opacity: 1 }}
-                                  transition={{ duration: 0.6, delay: 0.5 }}
-                                  viewport={{ once: true }}
-                                  className="pt-8 pb-6 text-center text-sm text-gray-400 border-t border-white/10"
-                                >
-                                  <p>&copy; {new Date().getFullYear()} Manipal University Online. All rights reserved.</p>
-                                  <p className="mt-2 text-xs">UGC-entitled | NAAC A+ Accredited | Globally Recognized</p>
-                                </motion.div>
-                              </div>
-                            </footer>
-                             </div>
-                     {openModal && (
-                              <ApplyEnquiryModal
-                                open={!!openModal}
-                                onOpenChange={(v) => !v && setOpenModal(null)}
-                                title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
-                                subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-                                imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327725/online-manipal-form_nz7yft.webp"
-                                universityName="Manipal University Jaipur"
-                                defaultProgram="MBA"
-                                formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
-                              />
-                            )}
+                      <div>
+                        <h4 className="font-bold text-lg text-gray-900">Employability Rate</h4>
+                        <p className="text-gray-600 text-sm">For postgraduates across all programs</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6 shadow-lg">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                        <span className="text-white text-xl font-bold">500+</span>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg text-gray-900">Recruiters Associated</h4>
+                        <p className="text-gray-600 text-sm">With Manipal University Jaipur Online</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6 shadow-lg">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center">
+                        <span className="text-white text-lg font-bold">₹7 LPA</span>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg text-gray-900">Average MBA Salary</h4>
+                        <p className="text-gray-600 text-sm">Competitive compensation packages</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6 shadow-lg">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
+                        <span className="text-white text-lg font-bold">24/7</span>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg text-gray-900">Placement Portal</h4>
+                        <p className="text-gray-600 text-sm">Real-time job listings and opportunities</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-xl">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Success Domains</h3>
+
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm">💼</span>
+                    </div>
+                    <span className="text-gray-700 font-semibold">Management Roles</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm">💻</span>
+                    </div>
+                    <span className="text-gray-700 font-semibold">IT & Technology</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm">📊</span>
+                    </div>
+                    <span className="text-gray-700 font-semibold">Consulting</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm">💰</span>
+                    </div>
+                    <span className="text-gray-700 font-semibold">Finance & Banking</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm">📈</span>
+                    </div>
+                    <span className="text-gray-700 font-semibold">Marketing & Sales</span>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-orange-50 to-blue-50 rounded-lg p-4 mb-6">
+                  <h4 className="font-bold text-gray-900 mb-2">Career Development Focus</h4>
+                  <p className="text-gray-600 text-sm">
+                    MUJ Online's strong focus on career development ensures every learner is job-ready upon graduation
+                    with practical skills and industry knowledge.
+                  </p>
+                </div>
+
+                <button
+                  onClick={() => setOpenModal({ type: 'enquiry' })}
+                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
+                >
+                  View Placement Statistics
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="PlacementPartners" className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                <span className="text-orange-600">Placement Partners</span>
+              </h2>
+              <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                Manipal University Jaipur Online partners with leading national and multinational organizations to offer extensive placement and internship opportunities.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Top Placement Partners</h3>
+
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 text-center">
+                    <div className="text-2xl mb-2">💼</div>
+                    <div className="font-semibold text-gray-800">Infosys</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 text-center">
+                    <div className="text-2xl mb-2">🏢</div>
+                    <div className="font-semibold text-gray-800">Wipro</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-4 text-center">
+                    <div className="text-2xl mb-2">🎯</div>
+                    <div className="font-semibold text-gray-800">Accenture</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 text-center">
+                    <div className="text-2xl mb-2">📊</div>
+                    <div className="font-semibold text-gray-800">TCS</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-4 text-center">
+                    <div className="text-2xl mb-2">🔍</div>
+                    <div className="font-semibold text-gray-800">Deloitte</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-xl p-4 text-center">
+                    <div className="text-2xl mb-2">⚡</div>
+                    <div className="font-semibold text-gray-800">Capgemini</div>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-xs">✓</span>
+                    </div>
+                    <span className="text-gray-700">Cognizant</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-xs">✓</span>
+                    </div>
+                    <span className="text-gray-700">Amazon</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-xs">✓</span>
+                    </div>
+                    <span className="text-gray-700">EY</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-xs">✓</span>
+                    </div>
+                    <span className="text-gray-700">HDFC Bank</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-orange-50 to-blue-50 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Career Services Division</h3>
+
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-white text-sm">📝</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-1">Resume Building</h4>
+                      <p className="text-gray-600 text-sm">Professional resume crafting and optimization</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-white text-sm">🎤</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-1">Mock Interviews</h4>
+                      <p className="text-gray-600 text-sm">Practice sessions with industry experts</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-white text-sm">🤝</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-1">Professional Networking</h4>
+                      <p className="text-gray-600 text-sm">Connect with industry professionals and alumni</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-white text-sm">💼</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-1">Job Placements</h4>
+                      <p className="text-gray-600 text-sm">Direct placement opportunities with partner companies</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-lg p-4 mb-6">
+                  <h4 className="font-bold text-gray-900 mb-2">Global Recognition</h4>
+                  <p className="text-gray-600 text-sm">
+                    MUJ Online's collaboration with global brands ensures every online degree holder gains real career value
+                    and recognition in the competitive job market.
+                  </p>
+                </div>
+
+                <button
+                  onClick={() => setOpenModal({ type: 'enquiry' })}
+                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
+                >
+                  Explore Career Opportunities
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        {/* Professional Hiring Partners Section */}
+        <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-100 to-gray-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-queens">
+                Our Students Work At <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Top Companies</span>
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+                Join the ranks of successful graduates working at leading organizations worldwide
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
+              {["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company_vjgouc.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company1_tktbp7.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327090/company9_p4pgg3.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327088/com10_cm37v8.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany4_h5nana.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company6_rnuajo.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/companany5_qs6bgc.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/adove_jtmiou.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/samsung_sosfqv.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327152/ey_ph2bsx.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327173/ibm_ced3ir.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327172/hp_b4ylow.webp", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327860/tata_n9jnwt.png", "/images/apple.jpg", "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327171/hero_krubph.webp"].map((src, i) => (
+                <div key={i} className="group">
+                  <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                    <div className="aspect-square flex items-center justify-center">
+                      <Image
+                        width={100}
+                        height={100}
+                        src={src}
+                        alt="Company"
+                        className="h-12 sm:h-16 w-auto object-contain group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Final CTA */}
+            <div className="text-center mt-12 sm:mt-16">
+              <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-3xl p-8 sm:p-12 text-white max-w-4xl mx-auto">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Ready to Join Them?</h3>
+                <p className="text-lg sm:text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+                  Start your journey with Manipal University Online and unlock endless career opportunities
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button
+                    onClick={() => setOpenModal({ type: 'apply' })}
+                    className="bg-white text-orange-600 font-semibold px-8 py-4 rounded-full hover:bg-orange-50 transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base cursor-pointer"
+                  >
+                    Apply Now
+                  </button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {openModal && (
+            <ApplyEnquiryModal
+              open={!!openModal}
+              onOpenChange={(v) => !v && setOpenModal(null)}
+              title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
+              subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
+              imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327725/online-manipal-form_nz7yft.webp"
+              universityName="Manipal University Online"
+              defaultProgram="MBA"
+              formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
+            />
+          )}
+        </section>
+        {/* Enhanced Footer */}
+        <div>
+          <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-gray-300 pt-12 sm:pt-16 relative overflow-hidden mt-8">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-50" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+            }}></div>
+
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-white/10">
+                {/* Company Info */}
+                <div className="col-span-1 sm:col-span-2 lg:col-span-1">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                    className="space-y-4"
+                  >
+                    <div className="flex items-center gap-3 mb-4 bg-white rounded-full p-3">
+                      <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" alt="Manipal" className="h-10 w-auto" />
+
+                    </div>
+                    <p className="text-sm text-gray-400 leading-relaxed">
+                      UGC-entitled, NAAC A+ accredited online degrees designed for modern learners.
+                      Transform your career with globally recognized programs.
+                    </p>
+
+                    {/* Social Media */}
+                    <div className="flex space-x-4">
+                      {[
+                        { icon: '📘', label: 'Facebook' },
+                        { icon: '📷', label: 'Instagram' },
+                        { icon: '🐦', label: 'Twitter' },
+                        { icon: '💼', label: 'LinkedIn' }
+                      ].map((social, i) => (
+                        <div key={i} className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors cursor-pointer">
+                          <span className="text-lg">{social.icon}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
+                </div>
+
+                {/* Programs */}
+                <div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <h4 className="text-white font-bold mb-4 text-lg">Programs</h4>
+                    <ul className="space-y-3 text-sm">
+                      {['MBA', 'BBA', 'MCA', 'BCA', 'M.Com', 'B.Com', 'MAJMC'].map((program, i) => (
+                        <li onClick={() => setOpenModal({ type: 'apply' })} key={i} className="hover:text-orange-400 transition-colors cursor-pointer">
+                          {program}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                </div>
+
+                {/* Resources */}
+                <div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    viewport={{ once: true }}
+                  >
+                    <h4 className="text-white font-bold mb-4 text-lg">Resources</h4>
+                    <ul className="space-y-3 text-sm">
+                      {[
+                        { name: 'Admissions', href: '#Admission' },
+                        { name: 'Scholarships', href: '#' },
+                        { name: 'Placements', href: '#' },
+                        { name: 'FAQs', href: '#Faq' },
+                        { name: 'Quick Comparison', href: '#QuickComparison' },
+                        { name: 'Fees Structure', href: '#Fees' }
+                      ].map((link, i) => (
+                        <li key={i}>
+                          <a href={link.href} className="hover:text-orange-400 transition-colors">
+                            {link.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                </div>
+
+                {/* Contact */}
+                <div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    viewport={{ once: true }}
+                    className="space-y-4"
+                  >
+                    <h4 className="text-white font-bold mb-4 text-lg">Contact Us</h4>
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
+                          <span className="text-orange-400">📞</span>
+                        </div>
+                        <span className="text-sm">+91 7042646766</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
+                          <span className="text-orange-400">✉️</span>
+                        </div>
+                        <span className="text-sm">info@unifostedu.com</span>
+                      </div>
+                    </div>
+
+                    <Button
+                      onClick={() => setOpenModal({ type: 'apply' })}
+                      className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold px-6 py-3 rounded-full shadow-lg hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300"
+                    >
+                      Apply Now
+                    </Button>
+                  </motion.div>
+                </div>
+              </div>
+              {/* Popular Programs & Specializations - MUJ */}
+              {/* Popular Programs Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="border-t border-white/10 pt-8 mb-8"
+              >
+                <h4 className="text-lg font-bold mb-6 text-white text-center">
+                  Popular Programs & Specializations – Manipal University Jaipur (MUJ)
+                </h4>
+
+                <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+                  {[
+                    // UG Courses
+                    "BBA General - MUJ Online",
+                    "BBA Finance & Accounting - MUJ Online",
+                    "BBA Digital Marketing - MUJ Online",
+                    "BBA Marketing -MUJ Online",
+                    "BBA Entrepreneurship & Family Business - MUJ Online",
+                    "BBA Human Resource Management - MUJ Online",
+                    "BBA Data Analytics - MUJ Online",
+                    "BBA Retail & E-commerce Management - MUJ Online",
+                    "BCA General - MUJ Online",
+                    "BCA Data Science & Analytics - MUJ Online",
+                    "BCA Cyber Security - MUJ Online",
+                    "BCA Cloud Computing - MUJ Online",
+                    "B.Com General - MUJ Online",
+                    // PG Courses
+                    "MBA General - MUJ Online",
+                    "MBA HR & Finance - MUJ Online",
+                    "MBA Finance & Marketing - MUJ Online",
+                    "MBA Marketing & HR - MUJ Online",
+                    "MBA Marketing & Business Analytics - MUJ Online",
+                    "MBA Finance & Business Analytics - MUJ Online",
+                    "MBA Project Management - MUJ Online",
+                    "MBA Retail Management & Quick Commerce - MUJ Online",
+                    "MBA Artificial Intelligence in Banking & Finance - MUJ Online",
+                    "MCA AI & Data Science - MUJ Online",
+                    "MCA Cyber Security - MUJ Online",
+                    "MCA Cloud Computing - MUJ Online",
+                    "MCA Comprehensive Emerging Technologies - MUJ Online",
+                    "MCA Artificial Intelligence & Machine Learning - MUJ Online",
+                    "M.Com General - MUJ Online",
+                    "MA Economics - MUJ Online",
+                    "MA Journalism & Mass Communication - MUJ Online"
+                  ].map((keyword, index) => (
+                    <span
+                      key={index}
+                      className="bg-white/10 backdrop-blur-sm text-gray-300 px-3 py-2 rounded-full text-xs sm:text-sm hover:bg-orange-500 hover:text-white transition-all duration-300 cursor-pointer border border-white/20 hover:border-orange-500"
+                      title={keyword}
+                      onClick={() => {
+                        setOpenModal({ type: "apply" });
+                      }}
+                    >
+                      {keyword.length > 25 ? `${keyword.substring(0, 25)}...` : keyword}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Copyright */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="pt-8 pb-6 text-center text-sm text-gray-400 border-t border-white/10"
+              >
+                <p>&copy; {new Date().getFullYear()} Manipal University Online. All rights reserved.</p>
+                <p className="mt-2 text-xs">UGC-entitled | NAAC A+ Accredited | Globally Recognized</p>
+              </motion.div>
+            </div>
+          </footer>
+        </div>
+        {openModal && (
+          <ApplyEnquiryModal
+            open={!!openModal}
+            onOpenChange={(v) => !v && setOpenModal(null)}
+            title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
+            subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
+            imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327725/online-manipal-form_nz7yft.webp"
+            universityName="Manipal University Jaipur"
+            defaultProgram="MBA"
+            formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
+          />
+        )}
       </main>
     </div>
   );

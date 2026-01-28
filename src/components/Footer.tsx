@@ -2,7 +2,7 @@
 import React, { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import { toast } from "sonner";
 import { usePathname } from 'next/navigation';
-import { FaEnvelope, FaPhone, FaArrowUp,FaLocationDot, FaWhatsapp, FaUser, FaGraduationCap, FaBuildingColumns } from "react-icons/fa6";
+import { FaEnvelope, FaPhone, FaArrowUp, FaLocationDot, FaWhatsapp, FaUser, FaGraduationCap, FaBuildingColumns } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
 type FormData = {
@@ -44,7 +44,7 @@ const Footer = () => {
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [newsletterDone, setNewsletterDone] = useState(false);
 
-  
+
   // Mock search params functionality
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -69,12 +69,12 @@ const Footer = () => {
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>): void => {
     const { name, value } = e.target;
-    
+
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
-    
+
     // Clear error when user starts typing
     if (errors[name as keyof FormErrors]) {
       setErrors((prev) => ({
@@ -86,14 +86,14 @@ const Footer = () => {
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
-    
+
     // Name validation
     if (!formData.name.trim()) {
       newErrors.name = "Full name is required";
     } else if (formData.name.trim().length < 2) {
       newErrors.name = "Name must be at least 2 characters long";
     }
-    
+
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email.trim()) {
@@ -101,7 +101,7 @@ const Footer = () => {
     } else if (!emailRegex.test(formData.email)) {
       newErrors.email = "Please enter a valid email address";
     }
-    
+
     // Phone validation
     const phoneRegex = /^[0-9]{10}$/;
     if (!formData.phone.trim()) {
@@ -109,27 +109,27 @@ const Footer = () => {
     } else if (!phoneRegex.test(formData.phone.replace(/\D/g, '').slice(-10))) {
       newErrors.phone = "Please enter a valid 10-digit phone number";
     }
-    
+
     // City validation
     if (!formData.city.trim()) {
       newErrors.city = "City is required";
     }
-    
+
     // University validation
     if (!formData.university.trim()) {
       newErrors.university = "University is required";
     }
-    
+
     // Program validation
     if (!formData.program.trim()) {
       newErrors.program = "Program is required";
     }
-    
+
     // Qualification validation
     if (!formData.qualification.trim()) {
       newErrors.qualification = "Highest qualification is required";
     }
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -138,11 +138,11 @@ const Footer = () => {
     if (!validateForm()) {
       return;
     }
-    
+
     try {
       // Use the same API call as "Get Started Today"
       const { enquiryAPI } = await import('@/lib/axios');
-      
+
       const requestBody = {
         name: formData.name,
         email: formData.email,
@@ -153,9 +153,9 @@ const Footer = () => {
         qualification: formData.qualification,
         message: ""
       };
-      
+
       await enquiryAPI.general(requestBody);
-      
+
       setSubmitted(true);
       setFormData({
         name: "",
@@ -167,7 +167,7 @@ const Footer = () => {
         qualification: "",
       });
       setErrors({});
-      
+
       // Reset success message after 5 seconds
       setTimeout(() => setSubmitted(false), 5000);
     } catch (error) {
@@ -192,9 +192,9 @@ const Footer = () => {
   const scrollToTop = (): void => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  
+
   const hideFooterRoutes = [
-    "/Amity-University-Online",
+    "/amity",
     "/lpu-online",
     "/manipal",
     "/cuOnline",
@@ -221,12 +221,12 @@ const Footer = () => {
     "/best-online-mca-for-working-professionals-in-india",
     "/top-online-bca-university-in-india",
   ];
-  
+
   // Check if current pathname starts with any of the hide routes
-  const shouldHide = hideFooterRoutes.some(route => 
+  const shouldHide = hideFooterRoutes.some(route =>
     pathname === route || pathname.startsWith(route + '/')
   );
-  
+
   if (shouldHide) {
     return null;
   }
@@ -237,7 +237,7 @@ const Footer = () => {
       <div className="relative w-full bg-transparent">
         <svg className="w-full h-12 text-blue-900" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 40C160 80 320 0 480 0C640 0 800 80 960 80C1120 80 1280 0 1440 40V80H0V40Z" fill="currentColor" opacity="0.25" />
-          <path d="M0 50C160 90 320 10 480 10C640 10 800 90 960 90C1120 90 1280 10 1440 50" stroke="currentColor" strokeOpacity="0.2"/>
+          <path d="M0 50C160 90 320 10 480 10C640 10 800 90 960 90C1120 90 1280 10 1440 50" stroke="currentColor" strokeOpacity="0.2" />
         </svg>
       </div>
       <footer className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-gray-100 overflow-hidden">
@@ -262,7 +262,7 @@ const Footer = () => {
                     </p>
                     <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 mx-auto rounded-full"></div>
                   </div>
-                  
+
                   <p className="text-gray-200 text-sm leading-relaxed text-center mb-6">
                     UNIFOST is a premier <span className="text-cyan-300 font-medium">EdTech platform</span> helping students choose the right path through <span className="text-cyan-300 font-medium">online education</span>, expert counseling, and demo sessions.
                   </p>
@@ -277,7 +277,7 @@ const Footer = () => {
                       </span>
                       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-700 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
                     </button>
-                    
+
                     <button
                       onClick={() => setShowHiringInfo(!showHiringInfo)}
                       className="group/btn relative overflow-hidden bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-5 py-2.5 rounded-full font-medium text-sm shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 hover:scale-[1.02]"
@@ -311,7 +311,7 @@ const Footer = () => {
                         </li>
                         <li className="flex items-center gap-3 group/item">
                           <div className="p-2 bg-cyan-500/20 rounded-lg group-hover/item:bg-cyan-500/30 transition-colors">
-                          <FaLocationDot className="text-cyan-400 text-sm" />
+                            <FaLocationDot className="text-cyan-400 text-sm" />
                           </div>
                           <span className="flex-1 text-sm">Noida, Uttar Pradesh, India</span>
                         </li>
@@ -323,7 +323,7 @@ const Footer = () => {
                   <div className={`mt-5 transition-all duration-500 ${showHiringInfo ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
                     <div className="bg-white/95 backdrop-blur-sm text-gray-800 p-5 rounded-xl shadow-lg border border-white/20">
                       <h4 className="text-center text-blue-800 font-bold mb-4 text-sm">Join Our Team!</h4>
-                      
+
                       <div className="space-y-4">
                         <div className="border-l-3 border-blue-500 pl-3">
                           <p className="font-bold text-blue-800 mb-1 text-xs">Freshers (0–1 year)</p>
@@ -337,7 +337,7 @@ const Footer = () => {
                             </a>
                           </div>
                         </div>
-                        
+
                         <div className="border-l-3 border-emerald-500 pl-3">
                           <p className="font-bold text-emerald-800 mb-1 text-xs">Senior Career Counsellor (2+ years)</p>
                           <p className="text-xs text-gray-600 mb-2">Minimum 2 years EdTech industry experience</p>
@@ -364,7 +364,7 @@ const Footer = () => {
                       Contact With Us
                     </h3>
                     <h2 className="text-xl font-bold text-white leading-tight">
-                      Don't Hesitate, Tell Us About Your 
+                      Don't Hesitate, Tell Us About Your
                       <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"> Requirement</span>
                     </h2>
                     <div className="w-12 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 mx-auto mt-3 rounded-full"></div>
@@ -559,7 +559,7 @@ const Footer = () => {
               <div className="lg:col-span-3 group">
                 <div className="h-full bg-white/5 backdrop-blur-xl p-6 rounded-2xl shadow-xl border border-white/10 hover:border-white/20 transition-all duration-300">
                   <div className="grid grid-cols-2 gap-6">
-                    
+
                     {/* Quick Links */}
                     <div className="col-span-1">
                       <h3 className="text-lg font-bold mb-4 text-white flex items-center gap-2">
@@ -571,12 +571,12 @@ const Footer = () => {
                           { href: "/", label: "Home" },
                           { href: "/about", label: "About" },
                           { href: "/services", label: "Services" },
-                          { href: "/University-List", label: "Explore Colleges" },
+                          { href: "/university-list", label: "Explore Colleges" },
                           { href: "/search", label: "Blogs" }
                         ].map((link, index) => (
                           <li key={index}>
-                            <a 
-                              href={link.href} 
+                            <a
+                              href={link.href}
                               className="group/link flex items-center  text-cyan-300 hover:text-white transition-all duration-300 hover:translate-x-1 text-sm"
                             >
                               <span className="w-1 h-1 bg-cyan-400 rounded-full mr-2 group-hover/link:w-2 transition-all duration-300"></span>
@@ -586,49 +586,49 @@ const Footer = () => {
                         ))}
                       </ul>
                     </div>
-{/* Popular Courses */}
-<div className="col-span-1">
-  <h3 className="text-lg font-bold mb-4 text-white flex items-center gap-2">
-    <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-    Popular Courses
-  </h3>
+                    {/* Popular Courses */}
+                    <div className="col-span-1">
+                      <h3 className="text-lg font-bold mb-4 text-white flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                        Popular Courses
+                      </h3>
 
-  <div className="grid grid-cols-2 gap-3">
-    {[
-      { href: "/courses/mba-online", label: "MBA" },
-      { href: "/courses/bba-online", label: "BBA" },
-      { href: "/courses/mca-online", label: "MCA" },
-      { href: "/courses/bca-online", label: "BCA" },
-      { href: "/courses/mcom-online", label: "M.Com" },
-      { href: "/courses/bcom-online", label: "B.Com" },
-      { href: "/courses/ma-online", label: "MA" },
-      { href: "/courses/ba-online", label: "BA" },
-      { href: "/courses/bajmc-online", label: "BAJMC" },
-      { href: "/courses/majmc-online", label: "MAJMC" },
-    ].map((course, index) => (
-    <a
-         key={index}
-         href={course.href}
-         className="group/course block p-2 rounded-lg transition-all duration-300"
-      >
-        <span className="text-cyan-300 font-medium group-hover/course:text-white transition-colors text-sm">
-        {course.label}
-        </span>
-      </a>
+                      <div className="grid grid-cols-2 gap-3">
+                        {[
+                          { href: "/courses/mba-online", label: "MBA" },
+                          { href: "/courses/bba-online", label: "BBA" },
+                          { href: "/courses/mca-online", label: "MCA" },
+                          { href: "/courses/bca-online", label: "BCA" },
+                          { href: "/courses/mcom-online", label: "M.Com" },
+                          { href: "/courses/bcom-online", label: "B.Com" },
+                          { href: "/courses/ma-online", label: "MA" },
+                          { href: "/courses/ba-online", label: "BA" },
+                          { href: "/courses/bajmc-online", label: "BAJMC" },
+                          { href: "/courses/majmc-online", label: "MAJMC" },
+                        ].map((course, index) => (
+                          <a
+                            key={index}
+                            href={course.href}
+                            className="group/course block p-2 rounded-lg transition-all duration-300"
+                          >
+                            <span className="text-cyan-300 font-medium group-hover/course:text-white transition-colors text-sm">
+                              {course.label}
+                            </span>
+                          </a>
 
-    ))}
-  </div>
-</div>
+                        ))}
+                      </div>
+                    </div>
 
                   </div>
 
                   {/* Newsletter */}
-                 
-                        
-                  </div>
+
+
                 </div>
               </div>
-            
+            </div>
+
 
             {/* Highlights */}
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -653,19 +653,19 @@ const Footer = () => {
             </div>
 
             {/* Bottom Section */}
-           <div className="mt-12 pt-6 border-t border-gray-300">
-  <div className="flex flex-col justify-center items-center gap-3 text-center">
-    <div>
-      <p className="text-white text-xs">
-        © {new Date().getFullYear()} UNIFOST. All rights reserved.
-      </p>
-      <p className="text-white text-xs mt-1">
-        Empowering education through technology
-      </p>
-    </div>
-  
+            <div className="mt-12 pt-6 border-t border-gray-300">
+              <div className="flex flex-col justify-center items-center gap-3 text-center">
+                <div>
+                  <p className="text-white text-xs">
+                    © {new Date().getFullYear()} UNIFOST. All rights reserved.
+                  </p>
+                  <p className="text-white text-xs mt-1">
+                    Empowering education through technology
+                  </p>
+                </div>
 
-                
+
+
                 <div className="flex items-center gap-3">
                   <div className="flex gap-2">
                     <a href="mailto:info@unifostedu.com" className="relative p-2.5 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group" aria-label="Email us at info@unifostedu.com" title="Email us at info@unifostedu.com">

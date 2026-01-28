@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
 import ApplyEnquiryModal from "@/components/ApplyEnquiryModal";
-const BestOnlineMBA = () =>{
+const BestOnlineMBA = () => {
   const [openModal, setOpenModal] = React.useState(false);
   return (
     <div className="bg-white min-h-screen w-full text-[#222]">
@@ -18,7 +18,7 @@ const BestOnlineMBA = () =>{
         />
         <h1 className="text-4xl md:text-5xl font-extrabold text-slate-800 mt-6 tracking-tight">Best Online MBA for Working Professionals in India 2025</h1>
         <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-600 leading-relaxed">Boost your career without leaving your job! Compare India’s top UGC-accredited online MBA programs for working professionals. Flexible, affordable, and high-quality options for 2025.</p>
-        <button onClick={()=> setOpenModal(true) } className="mt-4 inline-block btn-primary text-lg px-10 py-3 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">Enquire Now</button>
+        <button onClick={() => setOpenModal(true)} className="mt-4 inline-block btn-primary text-lg px-10 py-3 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">Enquire Now</button>
       </section>
 
       {/* SECTIONS */}
@@ -66,11 +66,11 @@ const BestOnlineMBA = () =>{
               <li>Industry links, live/recorded sessions</li>
             </ul>
             <Link
-                href="/Amity-University-Online"
-                className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition"
-                  >
-                More Info
-                </Link>
+              href="/amity"
+              className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition"
+            >
+              More Info
+            </Link>
 
           </div>
 
@@ -227,15 +227,15 @@ const BestOnlineMBA = () =>{
             <li>Healthcare Management</li>
           </ul>
         </div>
-</section>
-     
+      </section>
+
       {/* CTA Section */}
       <div className="flex flex-col items-center text-center mt-12 mb-8 bg-gradient-to-r from-blue-50 to-indigo-50 py-12 rounded-2xl">
         <h3 className="text-3xl md:text-4xl font-bold mb-6 text-slate-800">
           Ready to Upgrade Your Career?
         </h3>
-        <button 
-          onClick={() => setOpenModal(true)} 
+        <button
+          onClick={() => setOpenModal(true)}
           className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-10 py-4 rounded-full text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer"
         >
           Get Free Counseling
@@ -245,112 +245,112 @@ const BestOnlineMBA = () =>{
       {/* Rich Content Section */}
       <div className="mt-12 px-4 md:px-8 lg:px-12 max-w-6xl mx-auto">
         <article className="prose prose-xl max-w-none prose-slate prose-headings:font-bold prose-h1:text-4xl md:prose-h1:text-5xl prose-h1:text-slate-900 prose-h1:mb-8 prose-h1:leading-tight prose-h2:text-3xl md:prose-h2:text-4xl prose-h2:text-slate-800 prose-h2:mt-16 prose-h2:mb-8 prose-h2:border-b-4 prose-h2:border-blue-500 prose-h2:pb-4 prose-h3:text-2xl md:prose-h3:text-3xl prose-h3:text-blue-700 prose-h3:mt-10 prose-h3:mb-5 prose-h3:font-semibold prose-p:text-lg prose-p:text-slate-700 prose-p:leading-relaxed prose-p:mb-5 prose-li:text-lg prose-li:text-slate-700 prose-li:mb-3 prose-li:leading-relaxed prose-strong:text-slate-900 prose-strong:font-semibold prose-a:text-blue-600 prose-a:font-medium hover:prose-a:text-blue-500 hover:prose-a:underline prose-ul:my-6 prose-ul:space-y-3 prose-ul:ml-6">
-          
+
           <h1>Best Online MBA for Working Professionals in India 2025</h1>
-          
+
           <p className="text-xl text-slate-600 mb-8">
             Are you a working professional looking to boost your career without leaving your job? An online MBA might be exactly what you need. In 2025, many top universities in India offer flexible, quality MBA programs that you can complete from home. This guide will help you understand everything about online MBAs and choose the best program for your career goals.
           </p>
 
-         <section className="py-10 sm:py-16 bg-white">
-  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <section className="py-10 sm:py-16 bg-white">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    {/* Section Heading */}
-    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-      Why Choose an <span className="bg-gradient-to-r from-pink-600 to-red-600 bg-clip-text text-transparent">Online MBA?</span>
-    </h2>
+              {/* Section Heading */}
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Why Choose an <span className="bg-gradient-to-r from-pink-600 to-red-600 bg-clip-text text-transparent">Online MBA?</span>
+              </h2>
 
-    <p className="text-lg text-gray-700 leading-relaxed mb-10">
-      Before exploring the top universities, it’s important to understand why an Online MBA has become the most popular choice among working professionals and fresh graduates.
-    </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-10">
+                Before exploring the top universities, it’s important to understand why an Online MBA has become the most popular choice among working professionals and fresh graduates.
+              </p>
 
-    {/* 1. Flexibility */}
-    <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4"> Flexibility That Fits Your Life</h3>
-    <p className="text-gray-700 leading-relaxed mb-6">
-      The biggest advantage of an Online MBA is <strong>flexibility</strong>. Study anytime—early morning, late night, or on weekends. 
-      No compulsory attendance, no travelling, and no fixed classroom timings. 
-      You can learn through recorded lectures, submit assignments, and take exams at your convenience.
-    </p>
+              {/* 1. Flexibility */}
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4"> Flexibility That Fits Your Life</h3>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                The biggest advantage of an Online MBA is <strong>flexibility</strong>. Study anytime—early morning, late night, or on weekends.
+                No compulsory attendance, no travelling, and no fixed classroom timings.
+                You can learn through recorded lectures, submit assignments, and take exams at your convenience.
+              </p>
 
-    {/* 2. Keep Earning */}
-    <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4"> Keep Earning While Learning</h3>
-    <p className="text-gray-700 leading-relaxed mb-6">
-      A regular MBA often forces students to quit their jobs. But with an Online MBA, you continue your career while studying.  
-      You also apply what you learn directly in your job—making the program more practical and rewarding.
-    </p>
+              {/* 2. Keep Earning */}
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4"> Keep Earning While Learning</h3>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                A regular MBA often forces students to quit their jobs. But with an Online MBA, you continue your career while studying.
+                You also apply what you learn directly in your job—making the program more practical and rewarding.
+              </p>
 
-    {/* 3. Lower Costs */}
-    <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4"> Lower Costs</h3>
-    <p className="text-gray-700 leading-relaxed mb-6">
-      Online MBA programs are more affordable, with no hostel fees, commuting charges, or relocation expenses.  
-      Many universities also provide <strong>EMI options</strong> and semester-wise fee payments.
-    </p>
+              {/* 3. Lower Costs */}
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4"> Lower Costs</h3>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Online MBA programs are more affordable, with no hostel fees, commuting charges, or relocation expenses.
+                Many universities also provide <strong>EMI options</strong> and semester-wise fee payments.
+              </p>
 
-    {/* 4. Learn at Your Pace */}
-    <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4"> Learn at Your Own Pace</h3>
-    <p className="text-gray-700 leading-relaxed mb-6">
-      Online programs allow you to learn slowly or quickly as per your comfort.  
-      Replay lectures, revise topics anytime, and take your time to absorb concepts—making learning smooth and stress-free.
-    </p>
+              {/* 4. Learn at Your Pace */}
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4"> Learn at Your Own Pace</h3>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Online programs allow you to learn slowly or quickly as per your comfort.
+                Replay lectures, revise topics anytime, and take your time to absorb concepts—making learning smooth and stress-free.
+              </p>
 
-    {/* What to Look for */}
-    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mt-16 mb-6">
-      What Should You Look for in an <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Online MBA?</span>
-    </h2>
+              {/* What to Look for */}
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mt-16 mb-6">
+                What Should You Look for in an <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Online MBA?</span>
+              </h2>
 
-    <p className="text-lg text-gray-700 leading-relaxed mb-10">
-      Not all Online MBA programs offer the same value. Here are the most important things to check before choosing a university.
-    </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-10">
+                Not all Online MBA programs offer the same value. Here are the most important things to check before choosing a university.
+              </p>
 
-    {/* Accreditation */}
-    <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">✔ Accreditation & Recognition</h3>
-    <p className="text-gray-700 leading-relaxed mb-6">
-      Make sure the university is <strong>UGC-entitled</strong>, <strong>AICTE approved</strong>, and preferably <strong>NAAC accredited</strong>.  
-      A valid and recognized degree ensures strong career growth and acceptance in India & abroad.
-    </p>
+              {/* Accreditation */}
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">✔ Accreditation & Recognition</h3>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Make sure the university is <strong>UGC-entitled</strong>, <strong>AICTE approved</strong>, and preferably <strong>NAAC accredited</strong>.
+                A valid and recognized degree ensures strong career growth and acceptance in India & abroad.
+              </p>
 
-    {/* Curriculum */}
-    <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">✔ Updated & Industry-Relevant Curriculum</h3>
-    <p className="text-gray-700 leading-relaxed mb-6">
-      The curriculum should cover essential management subjects like Marketing, Finance, HR, Operations, Strategy, and Analytics.  
-      Choose a university that offers modern specializations aligned with industry demand.
-    </p>
+              {/* Curriculum */}
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">✔ Updated & Industry-Relevant Curriculum</h3>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                The curriculum should cover essential management subjects like Marketing, Finance, HR, Operations, Strategy, and Analytics.
+                Choose a university that offers modern specializations aligned with industry demand.
+              </p>
 
-    {/* Faculty */}
-    <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">✔ Experienced Faculty</h3>
-    <p className="text-gray-700 leading-relaxed mb-6">
-      Faculty with real corporate experience help you learn practical and industry-ready concepts.  
-      Check if the university includes industry mentors, global faculties, or corporate trainers.
-    </p>
+              {/* Faculty */}
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">✔ Experienced Faculty</h3>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Faculty with real corporate experience help you learn practical and industry-ready concepts.
+                Check if the university includes industry mentors, global faculties, or corporate trainers.
+              </p>
 
-    {/* LMS */}
-    <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">✔ User-Friendly Learning Platform</h3>
-    <p className="text-gray-700 leading-relaxed mb-6">
-      A good LMS should include recorded lectures, downloadable materials, quizzes, discussion forums, and 24×7 access—all optimized for mobile & laptop use.
-    </p>
+              {/* LMS */}
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">✔ User-Friendly Learning Platform</h3>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                A good LMS should include recorded lectures, downloadable materials, quizzes, discussion forums, and 24×7 access—all optimized for mobile & laptop use.
+              </p>
 
-    {/* Placement Support */}
-    <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">✔ Placement & Career Support</h3>
-    <p className="text-gray-700 leading-relaxed mb-6">
-      Look for universities offering resume-building, interview training, career counselling, and tie-ups with top companies.
-    </p>
+              {/* Placement Support */}
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">✔ Placement & Career Support</h3>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Look for universities offering resume-building, interview training, career counselling, and tie-ups with top companies.
+              </p>
 
-    {/* Alumni */}
-    <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">✔ Strong Alumni Network</h3>
-    <p className="text-gray-700 leading-relaxed mb-10">
-      A strong alumni network helps you with job referrals, networking, mentorship, and industry insights—boosting long-term career success.
-    </p>
+              {/* Alumni */}
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">✔ Strong Alumni Network</h3>
+              <p className="text-gray-700 leading-relaxed mb-10">
+                A strong alumni network helps you with job referrals, networking, mentorship, and industry insights—boosting long-term career success.
+              </p>
 
-    {/* Top Universities Section */}
-    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mt-16 mb-6">
-      Top Universities Offering <span className="bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">Online MBA in India (2025)</span>
-    </h2>
+              {/* Top Universities Section */}
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mt-16 mb-6">
+                Top Universities Offering <span className="bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">Online MBA in India (2025)</span>
+              </h2>
 
-    <p className="text-lg text-gray-700 leading-relaxed">
-      Here are India’s leading universities offering high-quality Online MBA programs suitable for working professionals, fresh graduates, and entrepreneurs.
-    </p>
-  </div>
-</section>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Here are India’s leading universities offering high-quality Online MBA programs suitable for working professionals, fresh graduates, and entrepreneurs.
+              </p>
+            </div>
+          </section>
 
 
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl my-8 shadow-lg">
@@ -366,21 +366,21 @@ const BestOnlineMBA = () =>{
               <li>✅ Access to Amity's large alumni network across India and abroad</li>
             </ul>
             <p>The program is designed to help you balance work and study effectively. You get access to comprehensive study materials, case studies, and practical projects that mirror real business challenges.</p>
-             <div className="flex justify-center gap-4 mt-6">
-             <Link
-             href="/Amity-University-Online"
-             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
-  >
-             More Info
-            </Link>
-
-             <button
-             onClick={() => setOpenModal(true)}
-             className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+            <div className="flex justify-center gap-4 mt-6">
+              <Link
+                href="/amity"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
               >
-             Enquire Now
-            </button>
-           </div>
+                More Info
+              </Link>
+
+              <button
+                onClick={() => setOpenModal(true)}
+                className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </div>
 
           </div>
 
@@ -397,21 +397,21 @@ const BestOnlineMBA = () =>{
               <li>✅ Extensive placement assistance with tie-ups with many companies</li>
             </ul>
             <p>LPU focuses on practical learning with industry projects and case studies. Their online platform is user-friendly and makes learning easy even for those not very tech-savvy.</p>
-              <div className="flex justify-center gap-4 mt-6">
-             <Link
-             href="/lpu-online"
-             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
-  >
-             More Info
-            </Link>
-
-             <button
-             onClick={() => setOpenModal(true)}
-             className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+            <div className="flex justify-center gap-4 mt-6">
+              <Link
+                href="/lpu-online"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
               >
-             Enquire Now
-            </button>
-           </div>
+                More Info
+              </Link>
+
+              <button
+                onClick={() => setOpenModal(true)}
+                className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </div>
           </div>
 
           <div className="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-2xl my-8 shadow-lg">
@@ -427,21 +427,21 @@ const BestOnlineMBA = () =>{
               <li>✅ Multiple specialization options including Finance, Marketing, HR, Operations, and Business Analytics</li>
             </ul>
             <p>Manipal's online MBA is known for its rigorous curriculum and comprehensive learning approach. They provide continuous support through mentors and academic advisors.</p>
-             <div className="flex justify-center gap-4 mt-6">
-             <Link
-             href="/manipal"
-             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
-  >
-             More Info
-            </Link>
-
-             <button
-             onClick={() => setOpenModal(true)}
-             className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+            <div className="flex justify-center gap-4 mt-6">
+              <Link
+                href="/manipal"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
               >
-             Enquire Now
-            </button>
-           </div>
+                More Info
+              </Link>
+
+              <button
+                onClick={() => setOpenModal(true)}
+                className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </div>
           </div>
 
           <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl my-8 shadow-lg">
@@ -458,20 +458,20 @@ const BestOnlineMBA = () =>{
             </ul>
             <p>CU Online emphasizes practical knowledge through projects, case studies, and assignments that relate to real business scenarios. Their learning platform is interactive and engaging.</p>
             <div className="flex justify-center gap-4 mt-6">
-             <Link
-             href="/cuOnline"
-             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
-  >
-             More Info
-            </Link>
-
-             <button
-             onClick={() => setOpenModal(true)}
-             className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              <Link
+                href="/cuOnline"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
               >
-             Enquire Now
-            </button>
-           </div>
+                More Info
+              </Link>
+
+              <button
+                onClick={() => setOpenModal(true)}
+                className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </div>
           </div>
 
           <div className="bg-gradient-to-br from-red-50 to-rose-50 p-8 rounded-2xl my-8 shadow-lg">
@@ -486,24 +486,24 @@ const BestOnlineMBA = () =>{
               <li>✅ Regular assessments to track your progress</li>
               <li>✅ Strong alumni network in various industries</li>
             </ul>
-           
-           <p>MAHE Online is ideal for professionals who want a prestigious degree with comprehensive learning support. Their program emphasizes leadership skills and strategic thinking.</p>
-             <div className="flex justify-center gap-4 mt-6">
-             <Link
-             href="/mahe-online"
-             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
-  >
-             More Info
-            </Link>
 
-             <button
-             onClick={() => setOpenModal(true)}
-             className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+            <p>MAHE Online is ideal for professionals who want a prestigious degree with comprehensive learning support. Their program emphasizes leadership skills and strategic thinking.</p>
+            <div className="flex justify-center gap-4 mt-6">
+              <Link
+                href="/mahe-online"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
               >
-             Enquire Now
-            </button>
-           </div>
-         </div>
+                More Info
+              </Link>
+
+              <button
+                onClick={() => setOpenModal(true)}
+                className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </div>
+          </div>
 
           <div className="bg-gradient-to-br from-cyan-50 to-sky-50 p-8 rounded-2xl my-8 shadow-lg">
             <h3 className="!text-cyan-800 !mt-0">6. Kurukshetra University (KU) Online</h3>
@@ -518,21 +518,21 @@ const BestOnlineMBA = () =>{
               <li>✅ Government university backing adds credibility</li>
             </ul>
             <p>KU Online provides quality education at reasonable costs, making it accessible to more working professionals who want to advance their careers.</p>
-             <div className="flex justify-center gap-4 mt-6">
-             <Link
-             href="/ku-online"
-             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
-  >
-             More Info
-            </Link>
-
-             <button
-             onClick={() => setOpenModal(true)}
-             className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+            <div className="flex justify-center gap-4 mt-6">
+              <Link
+                href="/ku-online"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
               >
-             Enquire Now
-            </button>
-           </div>
+                More Info
+              </Link>
+
+              <button
+                onClick={() => setOpenModal(true)}
+                className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </div>
           </div>
 
           <div className="bg-gradient-to-br from-violet-50 to-purple-50 p-8 rounded-2xl my-8 shadow-lg">
@@ -548,22 +548,22 @@ const BestOnlineMBA = () =>{
               <li>✅ Multiple exam centers across India</li>
             </ul>
             <p>SMU's long experience in distance education means they understand the challenges working professionals face and have systems in place to support them effectively.</p>
-             <div className="flex justify-center gap-4 mt-6">
-             <Link
-             href="/smu"
-             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
-  >
-             More Info
-            </Link>
-
-             <button
-             onClick={() => setOpenModal(true)}
-             className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+            <div className="flex justify-center gap-4 mt-6">
+              <Link
+                href="/smu"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
               >
-             Enquire Now
-            </button>
-           </div>
-           </div>
+                More Info
+              </Link>
+
+              <button
+                onClick={() => setOpenModal(true)}
+                className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </div>
+          </div>
 
           <div className="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-2xl my-8 shadow-lg">
             <h3 className="!text-indigo-800 !mt-0">8. JAIN Online</h3>
@@ -578,21 +578,21 @@ const BestOnlineMBA = () =>{
               <li>✅ Multiple specializations aligned with industry needs</li>
             </ul>
             <p>JAIN Online is particularly good for professionals interested in entrepreneurship and innovative business practices. Their curriculum reflects current market trends.</p>
-          <div className="flex justify-center gap-4 mt-6">
-             <Link
-             href="/jain"
-             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
-  >
-             More Info
-            </Link>
-
-             <button
-             onClick={() => setOpenModal(true)}
-             className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+            <div className="flex justify-center gap-4 mt-6">
+              <Link
+                href="/jain"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
               >
-             Enquire Now
-            </button>
-           </div>
+                More Info
+              </Link>
+
+              <button
+                onClick={() => setOpenModal(true)}
+                className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </div>
           </div>
 
           <div className="bg-gradient-to-br from-emerald-50 to-green-50 p-8 rounded-2xl my-8 shadow-lg">
@@ -608,21 +608,21 @@ const BestOnlineMBA = () =>{
               <li>✅ Placement assistance and career guidance</li>
             </ul>
             <p>If you're working in healthcare or related industries, DY Patil's specializations can be particularly valuable for your career growth.</p>
-         <div className="flex justify-center gap-4 mt-6">
-             <Link
-             href="/dypatil"
-             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
-  >
-             More Info
-            </Link>
-
-             <button
-             onClick={() => setOpenModal(true)}
-             className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+            <div className="flex justify-center gap-4 mt-6">
+              <Link
+                href="/dypatil"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
               >
-             Enquire Now
-            </button>
-           </div>
+                More Info
+              </Link>
+
+              <button
+                onClick={() => setOpenModal(true)}
+                className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </div>
           </div>
 
           <div className="bg-gradient-to-br from-fuchsia-50 to-pink-50 p-8 rounded-2xl my-8 shadow-lg">
@@ -638,21 +638,21 @@ const BestOnlineMBA = () =>{
               <li>✅ Placement support and alumni network</li>
             </ul>
             <p>Sharda's international perspective can be valuable for professionals looking to work in global companies or international markets.</p>
-         <div className="flex justify-center gap-4 mt-6">
-             <Link
-             href="/sharda"
-             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
-  >
-             More Info
-            </Link>
-
-             <button
-             onClick={() => setOpenModal(true)}
-             className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+            <div className="flex justify-center gap-4 mt-6">
+              <Link
+                href="/sharda"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
               >
-             Enquire Now
-            </button>
-           </div>
+                More Info
+              </Link>
+
+              <button
+                onClick={() => setOpenModal(true)}
+                className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </div>
           </div>
 
           <div className="bg-gradient-to-br from-lime-50 to-green-50 p-8 rounded-2xl my-8 shadow-lg">
@@ -668,21 +668,21 @@ const BestOnlineMBA = () =>{
               <li>✅ Modern learning management system</li>
             </ul>
             <p>Shoolini is a good choice for tech-savvy professionals who want to blend business education with technology understanding.</p>
-          <div className="flex justify-center gap-4 mt-6">
-             <Link
-             href="/shoolini"
-             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
-  >
-             More Info
-            </Link>
-
-             <button
-             onClick={() => setOpenModal(true)}
-             className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+            <div className="flex justify-center gap-4 mt-6">
+              <Link
+                href="/shoolini"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
               >
-             Enquire Now
-            </button>
-           </div>
+                More Info
+              </Link>
+
+              <button
+                onClick={() => setOpenModal(true)}
+                className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </div>
           </div>
 
           <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl my-8 shadow-lg">
@@ -698,21 +698,21 @@ const BestOnlineMBA = () =>{
               <li>✅ Support services for working professionals</li>
             </ul>
             <p>VGU focuses on overall personality development along with business knowledge, preparing you for leadership roles.</p>
-          <div className="flex justify-center gap-4 mt-6">
-             <Link
-             href="/vgu"
-             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
-  >
-             More Info
-            </Link>
-
-             <button
-             onClick={() => setOpenModal(true)}
-             className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+            <div className="flex justify-center gap-4 mt-6">
+              <Link
+                href="/vgu"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
               >
-             Enquire Now
-            </button>
-           </div>
+                More Info
+              </Link>
+
+              <button
+                onClick={() => setOpenModal(true)}
+                className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </div>
           </div>
 
           <div className="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-2xl my-8 shadow-lg">
@@ -728,21 +728,21 @@ const BestOnlineMBA = () =>{
               <li>✅ Modern learning platform with comprehensive resources</li>
             </ul>
             <p>If you work in or want to enter energy, power, or infrastructure sectors, UPES offers specialized knowledge that can give you a competitive advantage.</p>
-         <div className="flex justify-center gap-4 mt-6">
-             <Link
-             href="/upes"
-             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
-  >
-             More Info
-            </Link>
-
-             <button
-             onClick={() => setOpenModal(true)}
-             className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+            <div className="flex justify-center gap-4 mt-6">
+              <Link
+                href="/upes"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
               >
-             Enquire Now
-            </button>
-           </div>
+                More Info
+              </Link>
+
+              <button
+                onClick={() => setOpenModal(true)}
+                className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </div>
           </div>
 
           <div className="bg-gradient-to-br from-rose-50 to-red-50 p-8 rounded-2xl my-8 shadow-lg">
@@ -758,21 +758,21 @@ const BestOnlineMBA = () =>{
               <li>✅ Good networking opportunities through alumni</li>
             </ul>
             <p>OP Jindal is ideal for professionals seeking a premium MBA experience with emphasis on values and leadership.</p>
-           <div className="flex justify-center gap-4 mt-6">
-             <Link
-             href="/opjindal"
-             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
-  >
-             More Info
-            </Link>
-
-             <button
-             onClick={() => setOpenModal(true)}
-             className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+            <div className="flex justify-center gap-4 mt-6">
+              <Link
+                href="/opjindal"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
               >
-             Enquire Now
-            </button>
-           </div>
+                More Info
+              </Link>
+
+              <button
+                onClick={() => setOpenModal(true)}
+                className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </div>
           </div>
 
           <div className="bg-gradient-to-br from-amber-50 to-yellow-50 p-8 rounded-2xl my-8 shadow-lg">
@@ -788,21 +788,21 @@ const BestOnlineMBA = () =>{
               <li>✅ Valuable alumni network across industries</li>
             </ul>
             <p>NMIMS Online MBA carries significant weight in the job market due to the institution's strong reputation. However, it typically comes at a premium price point.</p>
-             <div className="flex justify-center gap-4 mt-6">
-             <Link
-             href="/nmims"
-             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
-  >
-             More Info
-            </Link>
-
-             <button
-             onClick={() => setOpenModal(true)}
-             className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+            <div className="flex justify-center gap-4 mt-6">
+              <Link
+                href="/nmims"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
               >
-             Enquire Now
-            </button>
-           </div>
+                More Info
+              </Link>
+
+              <button
+                onClick={() => setOpenModal(true)}
+                className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </div>
           </div>
 
           <div className="bg-gradient-to-br from-sky-50 to-blue-50 p-8 rounded-2xl my-8 shadow-lg">
@@ -818,26 +818,26 @@ const BestOnlineMBA = () =>{
               <li>✅ Career guidance and placement support</li>
             </ul>
             <p>UU is a good option for those looking for quality education at reasonable costs without compromising on curriculum quality.</p>
-              <div className="flex justify-center gap-4 mt-6">
-             <Link
-             href="/uu"
-             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
-  >
-             More Info
-            </Link>
-
-             <button
-             onClick={() => setOpenModal(true)}
-             className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+            <div className="flex justify-center gap-4 mt-6">
+              <Link
+                href="/uu"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
               >
-             Enquire Now
-            </button>
-           </div>
-           </div>
+                More Info
+              </Link>
+
+              <button
+                onClick={() => setOpenModal(true)}
+                className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                Enquire Now
+              </button>
+            </div>
+          </div>
 
           <h2>How to Choose the Right Online MBA for You</h2>
           <p>With so many options, choosing the right program can feel overwhelming. Here's a simple process to make your decision easier.</p>
-          
+
           <div className="grid md:grid-cols-2 gap-6 my-10">
             <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500">
               <h3 className="!text-2xl !mt-0 !mb-3">Step 1: Define Your Career Goals</h3>
@@ -872,13 +872,13 @@ const BestOnlineMBA = () =>{
 
           <h2>Final Thoughts</h2>
           <p className="text-xl font-medium text-slate-800">An online MBA is an excellent investment for working professionals in India who want to advance their careers without pressing pause on their current jobs. With so many quality universities offering flexible programs, you have plenty of choices.</p>
-          
+
           <p>Remember to choose based on your specific career goals, budget, and learning preferences rather than just brand names. The best MBA for you is one that aligns with your aspirations and fits your life circumstances.</p>
-          
+
           <p>Take time to research each university, verify their credentials, read reviews, and if possible, talk to alumni. Your MBA journey will require commitment and hard work, but the rewards - career growth, higher income, and expanded opportunities - make it worthwhile.</p>
-          
+
           <p className="text-lg font-semibold text-blue-700">Start by shortlisting 3-4 universities that interest you, compare their programs, and make an informed decision. Your future self will thank you for taking this step toward professional growth.</p>
-          
+
           <p className="text-xl font-bold text-slate-900">Good luck with your online MBA journey in 2025!</p>
         </article>
       </div>
@@ -891,28 +891,28 @@ const BestOnlineMBA = () =>{
         <p className="text-xl text-blue-100 mb-8 max-w-2xl">
           Connect with our education counselors and find the perfect online MBA program for your career goals.
         </p>
-        <button 
+        <button
           onClick={() => setOpenModal(true)}
           className="bg-white text-blue-600 hover:bg-blue-50 font-bold px-12 py-5 rounded-full text-xl shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
         >
           Schedule Free Consultation
         </button>
       </div>
-   
-  {/* Apply / Enquiry Modal */}
-              {openModal && (
-                <ApplyEnquiryModal
-                  open={!!openModal}
-                  onOpenChange={(v) => !v && setOpenModal(false)}
-                  title="Enquire Now"
-                  subtitle="Share your details and our counselor will reach out"
-                  defaultProgram="MBA"
-                  formType="general"
-                  showImage={false}
-                />
-              )}
+
+      {/* Apply / Enquiry Modal */}
+      {openModal && (
+        <ApplyEnquiryModal
+          open={!!openModal}
+          onOpenChange={(v) => !v && setOpenModal(false)}
+          title="Enquire Now"
+          subtitle="Share your details and our counselor will reach out"
+          defaultProgram="MBA"
+          formType="general"
+          showImage={false}
+        />
+      )}
     </div>
-     
+
   );
 };
 export default BestOnlineMBA;

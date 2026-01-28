@@ -44,7 +44,7 @@ const RAW_UNIVERSITIES: University[] = [
   {
     key: 'amity-university-online',
     name: 'Amity University Online',
-    logo: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp',
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762314545/amity_oipmzk.webp",
     location: 'Noida, Uttar Pradesh',
 
     established: '2005',
@@ -67,7 +67,7 @@ const RAW_UNIVERSITIES: University[] = [
     name: 'Online Manipal University',
     logo: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp',
     location: 'jaipur, Rajastan',
-    
+
     established: '1953',
     fee: '₹99K - ₹2.92L',
     courses: ['MBA', 'BBA', 'BCA', 'MCA', 'M.Com', 'B.Com'],
@@ -130,7 +130,7 @@ const RAW_UNIVERSITIES: University[] = [
     location: 'Mumbai, Maharashtra',
     established: '1981',
     fee: '₹0.94L - ₹4.0L',
-    courses: ['MBA', 'BBA', 'B.Com',  'Mba(WX)'],
+    courses: ['MBA', 'BBA', 'B.Com', 'Mba(WX)'],
     features: ['Industry connect', 'Placement assistance', 'Quality education', 'NAAC A+'],
     approvals: ['UGC', 'NAAC A++'],
     rating: 4.7,
@@ -190,7 +190,7 @@ const RAW_UNIVERSITIES: University[] = [
     location: 'Pune, Maharashtra',
     established: '2003',
     fee: '₹1.40L - ₹1.90L',
-    courses: ['MBA', 'BBA', 'MCA', ],
+    courses: ['MBA', 'BBA', 'MCA',],
     features: ['Placement support', 'EMI options', 'WES approved', 'Industry connect'],
     approvals: ['UGC', 'AICTE', 'NAAC'],
     rating: 4.4,
@@ -210,7 +210,7 @@ const RAW_UNIVERSITIES: University[] = [
     location: 'Greater Noida, Uttar Pradesh',
     established: '2009',
     fee: '₹1.05L - ₹1.60L',
-    courses: ['MBA', 'BBA', 'MCA','BCA', 'BA'],
+    courses: ['MBA', 'BBA', 'MCA', 'BCA', 'BA'],
     features: ['Quality education', 'Industry connect', 'Career support'],
     approvals: ['UGC', 'NAAC'],
     rating: 4.1,
@@ -394,140 +394,139 @@ function CompareContent() {
     }
   }, [selectedUniversities, router]);
 
-  const noop = () => {};
+  const noop = () => { };
 
   return (
 
-    
+
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12 md:mt-20 px-4 sm:px-6 lg:px-8">
-             {/* Enquiry gating */}
-              <Dialog open={!enquiryDone} onOpenChange={(open) => {
-                if (!open) {
-                  // Redirect to home when the enquiry modal is closed via cross/overlay
-                  router.replace('/');
-                }
-              }}>
-          <DialogContent
-            className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-6 md:my-12 p-4 sm:p-6"
-            
-          >
-           <DialogHeader className="px-4 sm:px-6">
-             <DialogTitle className="text-lg sm:text-xl font-bold text-center">Quick Enquiry before Comparison</DialogTitle>
-           </DialogHeader>
-           <div className="px-4 sm:px-6 pb-4">
-             <EnquiryForm onSubmitted={() => setEnquiryDone(true)} />
-           </div>
-          
-         </DialogContent>
-       </Dialog>
+      {/* Enquiry gating */}
+      <Dialog open={!enquiryDone} onOpenChange={(open) => {
+        if (!open) {
+          // Redirect to home when the enquiry modal is closed via cross/overlay
+          router.replace('/');
+        }
+      }}>
+        <DialogContent
+          className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-6 md:my-12 p-4 sm:p-6"
+
+        >
+          <DialogHeader className="px-4 sm:px-6">
+            <DialogTitle className="text-lg sm:text-xl font-bold text-center">Quick Enquiry before Comparison</DialogTitle>
+          </DialogHeader>
+          <div className="px-4 sm:px-6 pb-4">
+            <EnquiryForm onSubmitted={() => setEnquiryDone(true)} />
+          </div>
+
+        </DialogContent>
+      </Dialog>
 
       {enquiryDone && (
         <div className="max-w-7xl mx-auto">
-                     {/* Header */}
-           <div className="mb-6 flex items-center justify-between">
-             <Button
-               variant="outline"
-               onClick={() => router.back()}
-               className="flex items-center gap-2 border-[#00ffe0] text-[#00ffe0] hover:bg-[#00ffe0] hover:text-[#001e3c]"
-             >
-               <FaArrowLeft /> Back
-             </Button>
-             <div className="text-right">
-               <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Compare Online Universities</h1>
-               <p className="text-gray-600">Selected: {selectedUniversities.length} of {RAW_UNIVERSITIES.length} available</p>
-             </div>
-           </div>
+          {/* Header */}
+          <div className="mb-6 flex items-center justify-between">
+            <Button
+              variant="outline"
+              onClick={() => router.back()}
+              className="flex items-center gap-2 border-[#00ffe0] text-[#00ffe0] hover:bg-[#00ffe0] hover:text-[#001e3c]"
+            >
+              <FaArrowLeft /> Back
+            </Button>
+            <div className="text-right">
+              <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Compare Online Universities</h1>
+              <p className="text-gray-600">Selected: {selectedUniversities.length} of {RAW_UNIVERSITIES.length} available</p>
+            </div>
+          </div>
 
-           {/* All Available Universities Section */}
-           <div className="mb-8">
-             <div className="flex items-center justify-between mb-4">
-               <h2 className="text-xl font-bold text-gray-800">Select Universities to Compare</h2>
-               <div className="text-right">
-                 <Badge className="bg-blue-100 text-blue-800 text-sm font-medium">
-                   Total: {RAW_UNIVERSITIES.length} Universities Available
-                 </Badge>
-               </div>
-             </div>
-             <p className="text-gray-600 mb-4">Click on any university below to add it to your comparison. You can compare up to 4 universities at once.</p>
-             
-             {/* University Count Display */}
-             <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-               <p className="text-sm text-gray-700">
-                 <strong>Available Universities:</strong> {RAW_UNIVERSITIES.length} | 
-                 <strong>Selected:</strong> {selectedUniversities.length} | 
-                 <strong>Can Select:</strong> {4 - selectedUniversities.length} more
-               </p>
-             </div>
-             
-             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-               {RAW_UNIVERSITIES.map((university, index) => {
-                 const isSelected = selectedUniversities.some(u => u.key === university.key);
-                 return (
-                   <div
-                     key={university.key}
-                     onClick={() => {
-                       if (isSelected) {
-                         // Remove from selection
-                         const newKeys = selectedKeysArray.filter(k => k !== university.key);
-                         router.push(`/compare?u=${newKeys.join(',')}`);
-                       } else if (selectedUniversities.length < 3) {
-                         // Add to selection
-                         const newKeys = [...selectedKeysArray, university.key];
-                         router.push(`/compare?u=${newKeys.join(',')}`);
-                       }
-                     }}
-                     className={`p-4 rounded-lg border-2 cursor-pointer transition-all hover:shadow-md relative ${
-                       isSelected 
-                         ? 'border-[#00ffe0] bg-[#00ffe0]/10' 
-                         : 'border-gray-200 hover:border-[#00ffe0]/50'
-                     }`}
-                   >
-                     <div className="text-center">
-                       {/* University Number */}
-                       <div className="absolute top-2 left-2 w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center text-xs font-bold text-gray-600">
-                         {index + 1}
-                       </div>
-                       
-                       <div className="w-12 h-12 mx-auto mb-2 rounded-lg overflow-hidden">
-                         <Image
-                           src={university.logo} 
-                           alt={university.name} 
-                           width={100}
-                           height={100}
-                           loading='lazy'
-                           className="w-full h-full object-contain"
-                         />
-                       </div>
-                       <h3 className="font-semibold text-sm text-gray-800 mb-1 line-clamp-2">
-                         {university.name}
-                       </h3>
-                       <div className="flex items-center justify-center gap-1 mb-2">
-                         <FaStar className="text-yellow-500 text-xs" />
-                         <span className="text-xs text-gray-600">{university.rating}</span>
-                       </div>
-                       <div className="text-xs text-gray-500 mb-2">{university.location}</div>
-                       <div className="text-xs font-medium text-gray-700">{university.fee}</div>
-                       {isSelected && (
-                         <div className="mt-2">
-                           <Badge className="bg-[#00ffe0] text-[#001e3c] text-xs">
-                             Selected
-                           </Badge>
-                         </div>
-                       )}
-                     </div>
-                   </div>
-                 );
-               })}
-             </div>
-             
-             <div className="mt-4 text-center">
-               <p className="text-sm text-gray-600">
-                 <strong>Total Universities Displayed:</strong> {RAW_UNIVERSITIES.length} | 
-                 <strong>Currently Selected:</strong> {selectedUniversities.length} | 
-                 {selectedUniversities.length < 2 && ' Select at least 2 universities to compare.'}
-               </p>
-             </div>
-           </div>
+          {/* All Available Universities Section */}
+          <div className="mb-8">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-bold text-gray-800">Select Universities to Compare</h2>
+              <div className="text-right">
+                <Badge className="bg-blue-100 text-blue-800 text-sm font-medium">
+                  Total: {RAW_UNIVERSITIES.length} Universities Available
+                </Badge>
+              </div>
+            </div>
+            <p className="text-gray-600 mb-4">Click on any university below to add it to your comparison. You can compare up to 4 universities at once.</p>
+
+            {/* University Count Display */}
+            <div className="mb-4 p-3 bg-gray-50 rounded-lg">
+              <p className="text-sm text-gray-700">
+                <strong>Available Universities:</strong> {RAW_UNIVERSITIES.length} |
+                <strong>Selected:</strong> {selectedUniversities.length} |
+                <strong>Can Select:</strong> {4 - selectedUniversities.length} more
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+              {RAW_UNIVERSITIES.map((university, index) => {
+                const isSelected = selectedUniversities.some(u => u.key === university.key);
+                return (
+                  <div
+                    key={university.key}
+                    onClick={() => {
+                      if (isSelected) {
+                        // Remove from selection
+                        const newKeys = selectedKeysArray.filter(k => k !== university.key);
+                        router.push(`/compare?u=${newKeys.join(',')}`);
+                      } else if (selectedUniversities.length < 3) {
+                        // Add to selection
+                        const newKeys = [...selectedKeysArray, university.key];
+                        router.push(`/compare?u=${newKeys.join(',')}`);
+                      }
+                    }}
+                    className={`p-4 rounded-lg border-2 cursor-pointer transition-all hover:shadow-md relative ${isSelected
+                      ? 'border-[#00ffe0] bg-[#00ffe0]/10'
+                      : 'border-gray-200 hover:border-[#00ffe0]/50'
+                      }`}
+                  >
+                    <div className="text-center">
+                      {/* University Number */}
+                      <div className="absolute top-2 left-2 w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center text-xs font-bold text-gray-600">
+                        {index + 1}
+                      </div>
+
+                      <div className="w-12 h-12 mx-auto mb-2 rounded-lg overflow-hidden">
+                        <Image
+                          src={university.logo}
+                          alt={university.name}
+                          width={100}
+                          height={100}
+                          loading='lazy'
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <h3 className="font-semibold text-sm text-gray-800 mb-1 line-clamp-2">
+                        {university.name}
+                      </h3>
+                      <div className="flex items-center justify-center gap-1 mb-2">
+                        <FaStar className="text-yellow-500 text-xs" />
+                        <span className="text-xs text-gray-600">{university.rating}</span>
+                      </div>
+                      <div className="text-xs text-gray-500 mb-2">{university.location}</div>
+                      <div className="text-xs font-medium text-gray-700">{university.fee}</div>
+                      {isSelected && (
+                        <div className="mt-2">
+                          <Badge className="bg-[#00ffe0] text-[#001e3c] text-xs">
+                            Selected
+                          </Badge>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="mt-4 text-center">
+              <p className="text-sm text-gray-600">
+                <strong>Total Universities Displayed:</strong> {RAW_UNIVERSITIES.length} |
+                <strong>Currently Selected:</strong> {selectedUniversities.length} |
+                {selectedUniversities.length < 2 && ' Select at least 2 universities to compare.'}
+              </p>
+            </div>
+          </div>
 
           {/* Comparison Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -547,69 +546,69 @@ function CompareContent() {
                   </div>
                 </div>
                 <div className="space-y-4">
-                 {/* Aligned Parameters */}
-                 {/* Parameters Section */}
-<div className="space-y-3 text-sm">
-  {u.rating && (
-    <div className="flex justify-between items-center">
-     <span className="flex items-center gap-2 px-3 py-1 rounded-md bg-blue-100 text-blue-800 font-medium shadow-sm">
-       ⭐ Rating
-     </span>
+                  {/* Aligned Parameters */}
+                  {/* Parameters Section */}
+                  <div className="space-y-3 text-sm">
+                    {u.rating && (
+                      <div className="flex justify-between items-center">
+                        <span className="flex items-center gap-2 px-3 py-1 rounded-md bg-blue-100 text-blue-800 font-medium shadow-sm">
+                          ⭐ Rating
+                        </span>
 
-      <span className="font-semibold">{u.rating.toFixed(1)} ★</span>
-    </div>
-  )}
+                        <span className="font-semibold">{u.rating.toFixed(1)} ★</span>
+                      </div>
+                    )}
 
-  <div className="flex justify-between items-center">
-    <span className="flex items-center gap-2 px-3 py-1 rounded-md bg-orange-100 text-orange-800 font-bold shadow-sm">
-      📅 Established
-    </span>
-    <span>{u.established}</span>
-  </div>
+                    <div className="flex justify-between items-center">
+                      <span className="flex items-center gap-2 px-3 py-1 rounded-md bg-orange-100 text-orange-800 font-bold shadow-sm">
+                        📅 Established
+                      </span>
+                      <span>{u.established}</span>
+                    </div>
 
-  <div className="flex justify-between items-center">
-    <span className="flex items-center gap-2 px-3 py-1 rounded-md bg-green-100 text-green-800 font-bold shadow-sm">
-      💰 Fee
-    </span>
-    <span>{u.fee}</span>
-  </div>
+                    <div className="flex justify-between items-center">
+                      <span className="flex items-center gap-2 px-3 py-1 rounded-md bg-green-100 text-green-800 font-bold shadow-sm">
+                        💰 Fee
+                      </span>
+                      <span>{u.fee}</span>
+                    </div>
 
-  {u.eligibility && (
-    <div className="flex justify-between items-center">
-      <span className="flex items-center gap-2 px-3 py-1 rounded-md bg-blue-100 text-blue-800 font-bold shadow-sm">
-        🎓 Eligibility
-      </span>
-      <span>{u.eligibility}</span>
-    </div>
-  )}
+                    {u.eligibility && (
+                      <div className="flex justify-between items-center">
+                        <span className="flex items-center gap-2 px-3 py-1 rounded-md bg-blue-100 text-blue-800 font-bold shadow-sm">
+                          🎓 Eligibility
+                        </span>
+                        <span>{u.eligibility}</span>
+                      </div>
+                    )}
 
-  {u.nirfRank !== undefined && (
-    <div className="flex justify-between items-center">
-      <span className="flex items-center gap-2 px-3 py-1 rounded-md bg-pink-100 text-pink-800 font-bold shadow-sm">
-        🏆 NIRF Ranking
-      </span>
-      <span>{u.nirfRank}</span>
-    </div>
-  )}
+                    {u.nirfRank !== undefined && (
+                      <div className="flex justify-between items-center">
+                        <span className="flex items-center gap-2 px-3 py-1 rounded-md bg-pink-100 text-pink-800 font-bold shadow-sm">
+                          🏆 NIRF Ranking
+                        </span>
+                        <span>{u.nirfRank}</span>
+                      </div>
+                    )}
 
-  {u.naacGrade && (
-    <div className="flex justify-between items-center">
-      <span className="flex items-center gap-2 px-3 py-1 rounded-md bg-indigo-100 text-indigo-800 font-bold shadow-sm">
-        🥇 NAAC Grade
-      </span>
-      <span>{u.naacGrade}</span>
-    </div>
-  )}
+                    {u.naacGrade && (
+                      <div className="flex justify-between items-center">
+                        <span className="flex items-center gap-2 px-3 py-1 rounded-md bg-indigo-100 text-indigo-800 font-bold shadow-sm">
+                          🥇 NAAC Grade
+                        </span>
+                        <span>{u.naacGrade}</span>
+                      </div>
+                    )}
 
-  {u.classType && (
-    <div className="flex justify-between items-center">
-      <span className="flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-100 text-cyan-800 font-bold shadow-sm">
-        🖥️ Class Type
-      </span>
-      <span>{u.classType}</span>
-    </div>
-  )}
-</div>
+                    {u.classType && (
+                      <div className="flex justify-between items-center">
+                        <span className="flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-100 text-cyan-800 font-bold shadow-sm">
+                          🖥️ Class Type
+                        </span>
+                        <span>{u.classType}</span>
+                      </div>
+                    )}
+                  </div>
 
 
 

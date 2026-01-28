@@ -9,14 +9,14 @@ const Footer = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalSt
   const router = useRouter();
 
   const quickLinks = [
-    { label: "MBA Program", href: "/Amity-University-Online/mba-online" },
-    { label: "MCA Program", href: "/Amity-University-Online/mca-online" },
-    { label: "MCom Program", href: "/Amity-University-Online/mcom-online" },
-    { label: "MSc Program", href: "/Amity-University-Online/msc-online" },
-    { label: "MA Program", href: "/Amity-University-Online/ma-online" },
-    { label: "BBA Program", href: "/Amity-University-Online/bba-online" },
-    { label: "BCA Program", href: "/Amity-University-Online/bca-online" },
-    { label: "Home", href: "/Amity-University-Online" },
+    { label: "MBA Program", href: "/amity/mba-online" },
+    { label: "MCA Program", href: "/amity/mca-online" },
+    { label: "MCom Program", href: "/amity/mcom-online" },
+    { label: "MSc Program", href: "/amity/msc-online" },
+    { label: "MA Program", href: "/amity/ma-online" },
+    { label: "BBA Program", href: "/amity/bba-online" },
+    { label: "BCA Program", href: "/amity/bca-online" },
+    { label: "Home", href: "/amity" },
   ];
 
   const resourceLinks = [

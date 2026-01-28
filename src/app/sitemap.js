@@ -34,7 +34,7 @@ export default async function sitemap() {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/University-List`,
+      url: `${baseUrl}/university-list`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
@@ -79,7 +79,7 @@ export default async function sitemap() {
     priority: 0.8,
   }));
 
-  // Amity University course routes - FIXED: Added "/" separator
+  // Amity University course routes
   const amityRoutes = [
     'mba-online',
     'mca-online',
@@ -91,7 +91,7 @@ export default async function sitemap() {
     'ba-online',
     'msc-online',
   ].map((courseRoute) => ({
-    url: `${baseUrl}/Amity-University-Online/${courseRoute}`,
+    url: `${baseUrl}/amity/${courseRoute}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.9,
@@ -99,7 +99,7 @@ export default async function sitemap() {
 
   // University routes (only routes that exist in project)
   const universityRoutes = [
-    'Amity-University-Online',
+    'amity',
     'manipal',
     'muj-online-bba',
     'muj-online-bca',
@@ -145,7 +145,7 @@ export default async function sitemap() {
     'amity-online-mba-total-fees',
     'best-online-mca-university-in-india',
   ].map((route) => ({
-    url: `${baseUrl}/Amity-University-Online/${route}`,
+    url: `${baseUrl}/amity/${route}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.9,
