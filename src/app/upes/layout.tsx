@@ -16,9 +16,7 @@ export const metadata = {
 
       ],
   },
-    alternates: {
-    canonical: "https://unifostedu.com/upes",
-  },
+    
 };
 
 export default function UPESLayout({ children }: ChildrenProps) {

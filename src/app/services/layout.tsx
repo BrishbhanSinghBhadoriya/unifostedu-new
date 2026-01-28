@@ -55,9 +55,9 @@ export const metadata = {
   publisher: "UNIFOST",
 };
 
-// Force static generation (SSG) for Services page
+
 export const dynamic = 'force-static';
-export const revalidate = 604800; // Revalidate every 7 days
+export const revalidate = 604800; 
 
 export default function ServicesLayout({ children }: ChildrenProps) {
   return children;

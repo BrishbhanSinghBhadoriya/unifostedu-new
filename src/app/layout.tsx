@@ -50,9 +50,7 @@ export const metadata = {
     telephone: false,
   },
   metadataBase: new URL('https://unifostedu.com'),
-  alternates: {
-    canonical: './',
-  },
+  
   openGraph: {
     type: 'website',
     locale: 'en_IN',
@@ -100,7 +98,7 @@ export const metadata = {
     ],
   },
   verification: {
-    google: "verification_token", // Placeholder, user should provide if they have one
+    google: "verification_token", 
   },
 };
 
@@ -108,7 +106,7 @@ export default function RootLayout({ children }: ChildrenProps) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head>
-        {/* Preconnect to external domains for performance */}
+      
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -116,7 +114,6 @@ export default function RootLayout({ children }: ChildrenProps) {
           crossOrigin="anonymous"
         />
 
-        {/* Organization Schema */}
         <OrganizationSchema />
 
         {/* Educational Organization Schema */}

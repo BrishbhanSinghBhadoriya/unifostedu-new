@@ -14,7 +14,7 @@ const HeroSection = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenMo
   ];
    const openWhatsAppSupport = () => {
     if (typeof window === "undefined") return;
-    window.open("https://wa.me/917042646766", "_blank", "noopener,noreferrer");
+    window.open("https://wa.me/917042646766?text=Hi%20Unifost,%20I%20want%20to%20know%20more%20about%20courses.%20My%20Name%20is:%20", "_blank", "noopener,noreferrer");
   };
   return (
      <section

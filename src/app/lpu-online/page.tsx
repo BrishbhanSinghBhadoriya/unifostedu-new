@@ -14,9 +14,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import { MdSupportAgent } from "react-icons/md";
-// import { BiBookContent } from "react-icons/bi";
-// import { BsBuildingCheck } from "react-icons/bs";
-// import { AiOutlineSchedule } from "react-icons/ai";
+
 import { ChevronDown } from "lucide-react";
 import PageContent from "@/components/PageContent/PageContent";
 import { OpenModalState } from '../../../types/Modal';

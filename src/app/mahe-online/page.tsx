@@ -333,7 +333,7 @@ const Manipal = () => {
         <meta property="og:description" content="Globally recognized online undergraduate and postgraduate programs with flexible, industry-relevant learning." />
         <meta property="og:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://unifostedu.com/mahe-online" />
+       
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />

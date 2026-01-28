@@ -15,9 +15,7 @@ import {
   FaBook,
 } from "react-icons/fa";
 import { MdSupportAgent } from "react-icons/md";
-// import { BiBookContent } from "react-icons/bi";
-// import { BsBuildingCheck } from "react-icons/bs";
-// import { AiOutlineSchedule } from "react-icons/ai";
+
 import Head from 'next/head';
 import Image from 'next/image';
 import * as Tabs from '@radix-ui/react-tabs';
@@ -303,7 +301,7 @@ useEffect(() => {
         <meta property="og:description" content="Explore online undergraduate and postgraduate programs offered by Kurukshetra University Online, NAAC A++ accredited, Haryana, India." />
         <meta property="og:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku_xu5nkx.webp" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.kurukshetrauniversityonline.com" />
+      
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />

@@ -46,7 +46,7 @@ const LPUOnlineReview = () => {
             <li>Affordable tuition fees and EMI options</li>
           </ul>
 
-          <h2 className="text-2xl text-blue-800 font-semibold mt-6">❌ Cons of LPU Online MBA</h2>
+          <h2 className="text-2xl text-blue-800 font-semibold mt-6"> Cons of LPU Online MBA</h2>
           <ul className="list-disc pl-6">
             <li>Less international exposure compared to IIMs</li>
             <li>Fewer niche specializations compared to peers</li>

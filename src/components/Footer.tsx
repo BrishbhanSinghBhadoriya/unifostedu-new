@@ -672,7 +672,7 @@ const Footer = () => {
                       <span className="absolute inset-0 rounded-full bg-cyan-400/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
                       <FaEnvelope className="relative text-cyan-400 group-hover:text-white transition-colors text-sm" />
                     </a>
-                    <a href="https://wa.me/917042646766" className="relative p-2.5 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group" aria-label="Chat with us on WhatsApp at +91 93547 35410" title="WhatsApp: +91 93547 35410">
+                    <a href="https://wa.me/917042646766?text=Hi%20Unifost,%20I%20want%20to%20know%20more%20about%20courses.%20My%20Name%20is:%20" className="relative p-2.5 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group" aria-label="Chat with us on WhatsApp at +91 93547 35410" title="WhatsApp: +91 93547 35410">
                       <span className="absolute inset-0 rounded-full bg-green-400/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
                       <FaWhatsapp className="relative text-green-400 group-hover:text-white transition-colors text-sm" />
                     </a>
