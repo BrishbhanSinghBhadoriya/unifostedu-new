@@ -50,9 +50,7 @@ export const metadata = {
     telephone: false,
   },
   metadataBase: new URL('https://unifostedu.com'),
-  alternates: {
-    canonical: './',
-  },
+  
   openGraph: {
     type: 'website',
     locale: 'en_IN',
