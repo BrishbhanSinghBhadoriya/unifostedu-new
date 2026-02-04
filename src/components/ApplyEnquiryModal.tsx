@@ -11,11 +11,12 @@ export default function ApplyEnquiryModal({
   title = 'Start Your Application',
   subtitle,
   imageSrc = 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/amityForm_xdbvvf.webp',
+  mobileImageSrc,
   universityName,
   defaultProgram = 'MBA',
   formType = 'general',
   showImage = true,
-}:ModalProps) {
+}:ModalProps & { mobileImageSrc?: string }) {
   const isNmims = universityName?.toLowerCase()?.includes('nmims');
   const isManipal = universityName?.toLowerCase() === 'manipal university online';
   const bgColor = isManipal ? 'bg-[#ff7a36]' : (isNmims ? 'bg-white' : 'bg-[#f8c100]');
@@ -47,7 +48,7 @@ export default function ApplyEnquiryModal({
               <div className="md:hidden w-full h-full relative flex items-center justify-center p-3">
                 <div className="relative w-full h-full max-w-sm mx-auto">
                   <Image 
-                    src={imageSrc} 
+                    src={mobileImageSrc || imageSrc} 
                     alt={title}
                     fill
                     className="object-contain"

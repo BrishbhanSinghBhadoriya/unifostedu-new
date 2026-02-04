@@ -65,7 +65,7 @@ const ExploreCourses: React.FC<ExploreCoursesProps> = ({
       : pgCourses;
 
   return (
-    <section id="ExploreCourses" className="sm:py-4 md:py-6 lg:py-5 bg-white">
+    <section id="ExploreCourses" className="mt-4 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}

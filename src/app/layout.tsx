@@ -117,36 +117,20 @@ export default function RootLayout({ children }: ChildrenProps) {
         <OrganizationSchema />
 
         {/* Educational Organization Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "EducationalOrganization",
-              name: "Unifost",
-              url: "https://unifostedu.com",
-              description:
-                "Online university degrees and career counseling platform in India",
-              address: {
-                "@type": "PostalAddress",
-                addressCountry: "IN",
-                addressLocality: "Noida",
-                addressRegion: "Uttar Pradesh",
-              },
-              offers: {
-                "@type": "Offer",
-                name: "Online Degree Programs",
-                description:
-                  "UGC-approved online university degrees with career counseling",
-              },
-              sameAs: [
-                "https://www.linkedin.com/company/unifost",
-                "https://www.facebook.com/unifost",
-                "https://www.instagram.com/unifost",
-              ],
-            }),
-          }}
-        />
+       {/* Google Ads Global Site Tag */}
+<Script
+  src="https://www.googletagmanager.com/gtag/js?id=AW-17800709438"
+  strategy="afterInteractive"
+/>
+<Script id="gtag-init" strategy="afterInteractive">
+{`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17800709438');
+`}
+</Script>
+
 
         {/* Structured Data - WebSite */}
         <script
@@ -170,16 +154,17 @@ export default function RootLayout({ children }: ChildrenProps) {
         />
 
         {/* Google tag (gtag.js) - load lazily to reduce main-thread work */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-17612528759" strategy="lazyOnload" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-17800709438" strategy="lazyOnload" />
         <Script id="gtag-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);} 
             gtag('js', new Date());
 
-            gtag('config', 'AW-17612528759');
+            gtag('config', 'AW-17800709438');
           `}
         </Script>
+      
       </head>
       <body
         className={`${inter.className} ${baskervville.variable} overflow-x-hidden`}

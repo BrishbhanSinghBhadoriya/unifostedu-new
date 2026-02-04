@@ -30,7 +30,7 @@ export default function ChatBoxWrapper() {
       "/opjindal",
       "/nmims",
       "/uu",
-
+      "/amrita",
       "/amity-online-mba-total-fees",
       "/best-online-mca-university-in-india",
       "/muj-online-bba",

@@ -294,7 +294,7 @@ export default function About() {
       {service.desc}
     </p>
 
-    {/* ✅ Button hamesha dikhega */}
+    
     <div className="mt-6">
       <button
         onClick={openGetStarted}
