@@ -77,7 +77,7 @@ const Interoducation = ({
               href="/mahe-online/online-msc-business-analytics-mahe"
               className="text-orange-600 font-semibold hover:underline"
             >
-              MAHE Online MSc.(Data Science)
+              MAHE Online MSc.(Business Analytics)
             </Link>{' '}
             and{' '}
             <Link

@@ -2,10 +2,10 @@ import React from 'react'
 import { OpenModalState } from '../../../../types/Modal'
 const AdvantageHighlights = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalState) => void; openModal: OpenModalState }) => {
   return (
-   <section className="relative py-0 sm:py-0 md:py-0 lg:py-0 bg-gradient-to-br from-orange-50 via-white to-blue-50">
+   <section className="relative py-0 sm:py-0 md:py-0 lg:py-0 bg-white">
           <div className="pointer-events-none absolute inset-0" style={{background:"radial-gradient(1200px 300px at 10% -10%, rgba(255,122,54,.09), transparent), radial-gradient(1200px 300px at 90% 110%, rgba(59,130,246,.08), transparent)"}} />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-8 sm:mb-10 md:mb-14">
+            <div className="text-center mb-4 sm:mb-4 md:mb-4">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-queens font-bold text-gray-900">Unlock The 360° Advantage</h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 mt-3 sm:mt-4 max-w-3xl mx-auto px-2">Comprehensive benefits designed to support your learning journey and career growth.</p>
             </div>

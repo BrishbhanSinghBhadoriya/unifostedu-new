@@ -2081,7 +2081,7 @@ const Dypatil = () => {
                 title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
                 subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
                 imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dpu_c3ija5.png"
-                universityName="Jain University Online"
+                universityName="Dy Patil University Online"
                 defaultProgram="MBA"
                 formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
               />

@@ -97,6 +97,15 @@ const CuOnline = () => {
   ];
 
   const pgCourses = [
+     {
+      title: "Master of Arts (MA)",
+      duration: "2 Years",
+      eligibility: "Graduation in any discipline or BA(Hons.)",
+      fees: "₹1,00,000",
+      specialization: " English, Economics",
+      image:
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
+    },
     {
       title:
         "Master of Business Administration - Business Analytics (MBA - KPMG)",
@@ -127,15 +136,7 @@ const CuOnline = () => {
       image:
         "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
     },
-    {
-      title: "Master of Science - Data Science",
-      duration: "2 Years",
-      eligibility: "Bachelor's in BA/BCA/B.Sc/BE/B.Tech",
-      fees: "₹1,46,668",
-      specialization: "Data Science",
-      image:
-        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
-    },
+   
     {
       title: "Master of Computer Applications - Cloud Computing (AWS Academy)",
       duration: "2 Years",
@@ -174,13 +175,13 @@ const CuOnline = () => {
         "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
     },
     {
-      title: "Master of Arts (MA)",
+      title: "Master of Science - Data Science",
       duration: "2 Years",
-      eligibility: "Graduation in any discipline or BA(Hons.)",
-      fees: "₹1,00,000",
-      specialization: " English, Economics",
+      eligibility: "Bachelor's in BA/BCA/B.Sc/BE/B.Tech",
+      fees: "₹1,46,668",
+      specialization: "Data Science",
       image:
-        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
+        "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
     },
   ];
 

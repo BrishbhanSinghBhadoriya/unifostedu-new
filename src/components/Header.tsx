@@ -47,6 +47,7 @@ type SearchItem = {
   title: string;
   type: string;
   href: string;
+  logo?: string;
 };
 
 const Header = () => {
@@ -152,12 +153,14 @@ const Header = () => {
       title: i.title,
       type: i.type,
       href: i.href,
+      logo: undefined,
     }));
     const fromCourses = Object.keys(courseData as Record<string, any>).map(
       (slug) => ({
         title: (courseData as any)[slug]?.title || slug,
         type: "course",
         href: `/courses/${slug}`,
+        logo: undefined,
       })
     );
 
@@ -165,11 +168,20 @@ const Header = () => {
       title: u.name,
       type: "university",
       href: u.link,
+      logo: u.logo,
     }));
 
-    const map = new Map();
-    [...fromJson, ...fromCourses, ...fromUniversities].forEach((item) => {
-      if (!map.has(item.href)) map.set(item.href, item);
+    const map = new Map<string, SearchItem>();
+    // Add universities first so they take priority if there are duplicates
+    [...fromUniversities, ...fromJson, ...fromCourses].forEach((item) => {
+      const existing = map.get(item.href);
+      // If university exists, preserve it; otherwise add the item
+      if (!existing || existing.type === "university") {
+        map.set(item.href, item);
+      } else if (item.type === "university") {
+        // University should override non-university items
+        map.set(item.href, item);
+      }
     });
     return Array.from(map.values());
   }, [universities]);
@@ -216,8 +228,18 @@ const Header = () => {
     const q = (searchQuery || "").toLowerCase();
     return suggestions
       .filter((item) => item.title.toLowerCase().includes(q))
-      .slice(0, 10);
-  }, [searchQuery, suggestions]);
+      .slice(0, 10)
+      .map((item) => {
+        // Ensure logo is set for universities
+        if (item.type === "university" && !item.logo) {
+          const university = universities.find((u) => u.link === item.href);
+          if (university) {
+            return { ...item, logo: university.logo };
+          }
+        }
+        return item;
+      });
+  }, [searchQuery, suggestions, universities]);
 
   const handleSuggestionClick = (href: string) => {
     router.push(href);
@@ -352,6 +374,7 @@ ${uploadedResumeURL || "Not uploaded"}
       "/opjindal",
       "/nmims",
       "/uu",
+      "/amrita",
       "/amity-online-mba-total-fees",
       "/best-online-mca-university-in-india",
       "/muj-online-bba",
@@ -416,10 +439,10 @@ ${uploadedResumeURL || "Not uploaded"}
       <header className="w-full font-sans sticky top-0 z-50">
         {/* Tagline Banner - Modern gradient design */}
         <div className="bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 py-3 px-4 border-b border-blue-800/30">
-          <div className="relative flex items-center justify-end">
+          <div className="flex items-center justify-center md:justify-between gap-4">
 
             {/* CENTER : Title */}
-            <div className="absolute left-1/2 -translate-x-1/2 text-center">
+            <div className="text-center flex-shrink-0">
               <p className="text-white text-sm sm:text-base font-medium tracking-wide whitespace-nowrap">
                 <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent font-bold">
                   Unifost
@@ -433,43 +456,68 @@ ${uploadedResumeURL || "Not uploaded"}
             </div>
 
             {/* RIGHT : Search Bar */}
-            <div className="hidden md:flex relative max-w-xs lg:max-w-sm xl:max-w-md">
-              <div className="flex items-center bg-slate-100 rounded-full px-3 lg:px-4 py-2 ring-1 ring-slate-200 focus-within:ring-2 focus-within:ring-blue-400 transition-all w-full">
-                <FaMagnifyingGlass className="text-slate-400 text-sm flex-shrink-0" />
-                <input
-                  type="text"
-                  placeholder="Search courses, universities..."
-                  className="outline-none bg-transparent text-slate-700 px-2 w-full text-sm placeholder:text-slate-400"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                />
-              </div>
+            <div className="hidden md:flex relative w-full max-w-md lg:max-w-lg xl:max-w-xl">
+  <div className="flex items-center bg-slate-100 rounded-full px-4 lg:px-5 py-3 ring-1 ring-slate-200 focus-within:ring-2 focus-within:ring-blue-500 transition-all w-full shadow-sm">
+    
+    <FaMagnifyingGlass className="text-slate-400 text-base flex-shrink-0" />
 
-              {searchQuery && (
-                <div className="absolute right-0 mt-2 w-full bg-white rounded-xl shadow-2xl border border-slate-200 z-[9999] max-h-80 overflow-auto">
-                  {filtered.map((item, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => handleSuggestionClick(item.href)}
-                      className="block w-full text-left px-4 py-3 hover:bg-slate-50 border-b border-slate-100 last:border-0"
-                    >
-                      <div className="text-sm font-medium text-slate-900">
-                        {item.title}
-                      </div>
-                      <div className="text-xs text-slate-500 capitalize mt-0.5">
-                        {item.type}
-                      </div>
-                    </button>
-                  ))}
+    <input
+      type="text"
+      placeholder="Search courses, universities..."
+      className="outline-none bg-transparent text-slate-700 px-3 w-full text-base placeholder:text-slate-400"
+      value={searchQuery}
+      onChange={(e) => setSearchQuery(e.target.value)}
+    />
+  </div>
 
-                  {filtered.length === 0 && (
-                    <div className="px-4 py-4 text-sm text-slate-500 text-center">
-                      No results found
-                    </div>
-                  )}
+  {searchQuery && (
+    <div className="absolute left-0 top-full mt-2 w-full bg-white rounded-xl shadow-2xl border border-slate-200 z-[9999] max-h-80 overflow-auto">
+      {filtered.map((item, idx) => {
+        // Get logo for universities
+        const universityLogo = item.type === "university" 
+          ? (item.logo || universities.find((u) => u.link === item.href)?.logo)
+          : null;
+        
+        return (
+          <button
+            key={idx}
+            onClick={() => handleSuggestionClick(item.href)}
+            className="block w-full text-left px-4 py-3 hover:bg-slate-50 border-b border-slate-100 last:border-0 transition"
+          >
+            <div className="flex items-center gap-3">
+              {universityLogo && (
+                <div className="flex-shrink-0 w-10 h-10 bg-white rounded-lg flex items-center justify-center overflow-hidden shadow-sm border border-slate-200">
+                  <Image
+                    src={universityLogo}
+                    alt={item.title}
+                    width={40}
+                    height={40}
+                    className="max-h-full max-w-full object-contain p-1"
+                  />
                 </div>
               )}
+              <div className="flex-1 min-w-0">
+                <div className="text-sm font-semibold text-slate-900">
+                  {item.title}
+                </div>
+                <div className="text-xs text-slate-500 capitalize mt-0.5">
+                  {item.type}
+                </div>
+              </div>
             </div>
+          </button>
+        );
+      })}
+
+      {filtered.length === 0 && (
+        <div className="px-4 py-4 text-sm text-slate-500 text-center">
+          No results found
+        </div>
+      )}
+    </div>
+  )}
+</div>
+
 
           </div>
         </div>
@@ -813,7 +861,7 @@ ${uploadedResumeURL || "Not uploaded"}
                     info@unifostedu.com
                   </a>
                 </div>
-                <Link href="/university-list" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Universities</Link>
+        
               </div>
             </div>
           </div>
@@ -855,22 +903,44 @@ ${uploadedResumeURL || "Not uploaded"}
                   </div>
                   {searchQuery && filtered.length > 0 && (
                     <div className="mt-2 bg-white rounded-lg shadow-lg border border-slate-200 max-h-60 overflow-auto">
-                      {filtered.map((item, idx) => (
-                        <button
-                          key={idx}
-                          onClick={() => {
-                            handleSuggestionClick(item.href);
-                            setMobileMenuOpen(false);
-                          }}
-                          className="block w-full text-left px-4 py-3 hover:bg-slate-50 border-b border-slate-100 last:border-0">
-                          <div className="text-sm font-medium text-slate-900">
-                            {item.title}
-                          </div>
-                          <div className="text-xs text-slate-500 capitalize">
-                            {item.type}
-                          </div>
-                        </button>
-                      ))}
+                      {filtered.map((item, idx) => {
+                        // Get logo for universities
+                        const universityLogo = item.type === "university" 
+                          ? (item.logo || universities.find((u) => u.link === item.href)?.logo)
+                          : null;
+                        
+                        return (
+                          <button
+                            key={idx}
+                            onClick={() => {
+                              handleSuggestionClick(item.href);
+                              setMobileMenuOpen(false);
+                            }}
+                            className="block w-full text-left px-4 py-3 hover:bg-slate-50 border-b border-slate-100 last:border-0">
+                            <div className="flex items-center gap-3">
+                              {universityLogo && (
+                                <div className="flex-shrink-0 w-10 h-10 bg-white rounded-lg flex items-center justify-center overflow-hidden shadow-sm border border-slate-200">
+                                  <Image
+                                    src={universityLogo}
+                                    alt={item.title}
+                                    width={40}
+                                    height={40}
+                                    className="max-h-full max-w-full object-contain p-1"
+                                  />
+                                </div>
+                              )}
+                              <div className="flex-1 min-w-0">
+                                <div className="text-sm font-medium text-slate-900">
+                                  {item.title}
+                                </div>
+                                <div className="text-xs text-slate-500 capitalize">
+                                  {item.type}
+                                </div>
+                              </div>
+                            </div>
+                          </button>
+                        );
+                      })}
                     </div>
                   )}
                 </div>

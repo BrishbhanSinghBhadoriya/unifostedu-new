@@ -191,5 +191,6 @@ declare module 'lucide-react' {
     export const ChevronRight:LucideIcon;
     export const PlayCircle:LucideIcon;
     export const Download:LucideIcon;
+    export const UserCheck:LucideIcon;
 
 }

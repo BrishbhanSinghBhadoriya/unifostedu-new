@@ -17,7 +17,7 @@ const AboutUs = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalS
   <section id="AboutWrapper" className="bg-white mb-0">
 
   {/* ABOUT US */}
-  <div id="AboutUs" className="py-2 sm:py-2 md:py-6 lg:py-4">
+  <div id="AboutUs" className="mt-8 sm:mt-8 md:mt-8 lg:mt-8 ">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 font-queens">
         About Us –{" "}

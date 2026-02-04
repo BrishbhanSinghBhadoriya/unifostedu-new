@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { ChevronRight, Star, Calendar, Users, BookOpen, CreditCard, GraduationCap, Clock, TrendingUp, Award, Globe, Check, Download, Play } from 'lucide-react';
 import { OpenModalState } from 'types/Modal';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
+import { useRouter } from 'next/navigation';
+import maheCoursesData from '@/data/mahecourses.json';
 export interface CourseData {
   id: string;
   title: string;
@@ -38,13 +40,14 @@ export interface CourseData {
     name: string;
     logo: string;
     description: string;
+    whyChoseUS: string;
     established: number;
     studentNationalities: number;
     facultyCount: number;
     studentsWorldwide: number;
     yearsOfExcellence: number;
   };
-  specializations: string[];
+  specializations: string[] | Array<{ name?: string; code?: string; fullName?: string; description?: string }>;
   accreditations: Array<{
     name: string;
     description: string;
@@ -86,6 +89,7 @@ export interface CourseData {
   faqs: Array<{
     question: string;
     answer: string;
+    category?: string;
   }>;
 }
 
@@ -95,9 +99,11 @@ interface SlugClientsProps {
 }
 
 const CourseSlugPage: React.FC<SlugClientsProps> = ({ courseData }) => {
+  const router = useRouter();
   const [activeTab, setActiveTab] = useState('year1');
   const [activeFeeTab, setActiveFeeTab] = useState('indian');
   const [activeEligibilityTab, setActiveEligibilityTab] = useState('indian');
+  const [activeFaqCategory, setActiveFaqCategory] = useState('Program');
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
   const [openModal, setOpenModal] = useState<OpenModalState>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -105,6 +111,84 @@ const CourseSlugPage: React.FC<SlugClientsProps> = ({ courseData }) => {
   const [activeSection, setActiveSection] = useState('hero');
   
   const course = courseData;
+
+  // Mapping function to get course ID from course name
+  const getCourseId = (courseName: string): string | null => {
+    const courseMap: Record<string, string> = {
+      'Online MBA': 'online-mba-mahe',
+      'MCA': 'online-mca-mahe',
+      'BBA': 'online-bba-mahe',
+      'BBA(Hons.)': 'online-bba-honors-mahe',
+      'M.Com': 'online-mcom-mahe',
+      'B.Com(Professional)': 'online-bcom-professional-mahe',
+      'MSc(Data Science)': 'online-msc-data-science-mahe',
+      'MSc(Business Analytics)': 'online-msc-business-analytics-mahe',
+      // Popular Programs mappings
+      'BBA Finance & Accounting - MAHE Online': 'online-bba-mahe',
+      'BBA Digital Marketing - MAHE Online': 'online-bba-mahe',
+      'BBA Enterepreneurship Management & Family Business - MAHE Online': 'online-bba-mahe',
+      'BBA Human Resource Management - MAHE Online': 'online-bba-mahe',
+      'BBA Data Analytics - MAHE Online': 'online-bba-mahe',
+      'BBA Retail & E-commerce Management - MAHE Online': 'online-bba-mahe',
+      'BBA(Hons.) Finance & Accounting - MAHE Online': 'online-bba-honors-mahe',
+      'BBA(Hons.) Digital Marketing - MAHE Online': 'online-bba-honors-mahe',
+      'BBA(Hons.) Enterepreneurship Management & Family Business - MAHE Online': 'online-bba-honors-mahe',
+      'BBA(Hons.) Human Resource Management - MAHE Online': 'online-bba-honors-mahe',
+      'BBA(Hons.) Data Analytics - MAHE Online': 'online-bba-honors-mahe',
+      'BBA(Hons.) Retail & E-commerce Management - MAHE Online': 'online-bba-honors-mahe',
+      'B.Com(Professional) - MAHE Online': 'online-bcom-professional-mahe',
+      'MBA Human Resource Management and Finance - MAHE Online': 'online-mba-mahe',
+      'MBA Finance and Marketing - MAHE Online': 'online-mba-mahe',
+      'MBA Marketing and Human Resource Management - MAHE Online': 'online-mba-mahe',
+      'MBA Marketing and Business Analytics - MAHE Online': 'online-mba-mahe',
+      'MBA Finance and Business Analytics - MAHE Online': 'online-mba-mahe',
+      'MBA Human Resource and Business Analytics - MAHE Online': 'online-mba-mahe',
+      'MBA Project Management - MAHE Online': 'online-mba-mahe',
+      'MBA Retail Management and Quick Commerce - MAHE Online': 'online-mba-mahe',
+      'MBA Artificial Intelligence Banking and Finance - MAHE Online': 'online-mba-mahe',
+      'MBA Other Fields (15+) - MAHE Online': 'online-mba-mahe',
+      'MCA AI & Data Science - MAHE Online': 'online-mca-mahe',
+      'MCA Cyber Security - MAHE Online': 'online-mca-mahe',
+      'MCA Cloud Computing - MAHE Online': 'online-mca-mahe',
+      'MCA Comprehensive Emerging Technologies - MAHE Online': 'online-mca-mahe',
+      'MCA AI & ML - MAHE Online': 'online-mca-mahe',
+      'M.Com General - MAHE Online': 'online-mcom-mahe',
+      'MSc(Data Science) - MAHE Online': 'online-msc-data-science-mahe',
+      'MSc(Business Analytics) - MAHE Online': 'online-msc-business-analytics-mahe',
+    };
+
+    // Try exact match first
+    if (courseMap[courseName]) {
+      return courseMap[courseName];
+    }
+
+    // Try to find by matching title in JSON
+    const course = maheCoursesData.courses.find((c: any) => 
+      c.title?.toLowerCase().includes(courseName.toLowerCase()) ||
+      courseName.toLowerCase().includes(c.title?.toLowerCase() || '')
+    );
+
+    return course?.id || null;
+  };
+
+  // Handler function to open modal and navigate after 5 seconds
+  const handleCourseClick = (courseName: string) => {
+    const courseId = getCourseId(courseName);
+    
+    if (courseId) {
+      // Open modal
+      setOpenModal({ type: 'apply' });
+      
+      // Navigate after 5 seconds
+      setTimeout(() => {
+        setOpenModal(null); // Close modal before navigation
+        router.push(`/mahe-online/${courseId}`);
+      }, 5000);
+    } else {
+      // If course not found, just open modal
+      setOpenModal({ type: 'apply' });
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -239,58 +323,7 @@ const CourseSlugPage: React.FC<SlugClientsProps> = ({ courseData }) => {
       <div id="hero" className="bg-gradient-to-br from-blue-50 to-blue-100 px-4 py-12">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <div className="flex items-center gap-4 mb-6">
-                <div className="bg-white p-3 rounded-lg shadow-sm">
-                  <img src="/images/manipallogo.jpg" alt="MANIPAL" className="w-30 h-30" />
-                </div>
-                <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">
-                      <Award className="w-4 h-4 inline mr-1" />
-                      Rank {course.nirf.rank}
-                    </span>
-                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
-                      TOP UNIVERSITY IN INDIA
-                    </span>
-                  </div>
-                  <p className="text-sm text-gray-600">NIRF {course.nirf.year}</p>
-                </div>
-              </div>
-
-              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
-                {course.title}
-              </h1>
-              <p className="text-2xl text-gray-700 mb-4">{course.subtitle}</p>
-              
-              <div className="flex items-center gap-2 mb-6">
-                <div className="flex items-center bg-green-100 px-3 py-1 rounded-full">
-                  <span className="text-2xl font-bold text-gray-900">{course.rating}</span>
-                  <Star className="w-5 h-5 text-yellow-500 fill-yellow-500 ml-1" />
-                </div>
-              </div>
-
-              <p className="text-gray-700 text-lg mb-6">
-                {isDescriptionExpanded
-                  ? course.university.description
-                  : `${course.university.description.substring(0, 200)}...`}
-                {course.university.description.length > 200 && (
-                  <button
-                    onClick={() => setIsDescriptionExpanded(!isDescriptionExpanded)}
-                    className="text-blue-600 font-semibold ml-2"
-                  >
-                    {isDescriptionExpanded ? 'Read less' : 'Read more'}
-                  </button>
-                )}
-              </p>
-
-              <button  onClick={() => setOpenModal({ type: 'apply' })} className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors">
-                <Download className="w-5 h-5 inline mr-2" />
-                Download Brochure
-              </button>
-            </div>
-
-            {/* Info Card */}
+           {/* Info Card */}
             <div className="bg-white rounded-2xl shadow-lg p-6">
               <div className="bg-blue-600 text-white px-4 py-2 rounded-lg mb-4 inline-block">
                 Admissions Open
@@ -336,7 +369,61 @@ const CourseSlugPage: React.FC<SlugClientsProps> = ({ courseData }) => {
                   Avail a 15% scholarship on this program
                 </p>
               </div>
+              <button  onClick={() => setOpenModal({ type: 'apply' })} className="mt-4 bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors">
+                <Download className="w-5 h-5 inline mr-2" />
+                Download Brochure
+              </button>
             </div>
+            
+            <div>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="bg-white p-3 rounded-lg shadow-sm">
+                  <img src="/images/manipallogo.jpg" alt="MANIPAL" className="w-30 h-30" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">
+                      <Award className="w-4 h-4 inline mr-1" />
+                      Rank {course.nirf.rank}
+                    </span>
+                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+                      TOP UNIVERSITY IN INDIA
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-600">NIRF {course.nirf.year}</p>
+                </div>
+              </div>
+
+              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
+                {course.title}
+              </h1>
+              <p className="text-2xl text-gray-700 mb-4">{course.subtitle}</p>
+              
+              <div className="flex items-center gap-2 mb-6">
+                <div className="flex items-center bg-green-100 px-3 py-1 rounded-full">
+                  <span className="text-2xl font-bold text-gray-900">{course.rating}</span>
+                  <Star className="w-5 h-5 text-yellow-500 fill-yellow-500 ml-1" />
+                </div>
+              </div>
+
+              <p className="text-gray-700 text-lg mb-6">
+                {isDescriptionExpanded
+                  ? course.university.description
+                  : `${course.university.description.substring(0, 200)}...`}
+                {course.university.description.length > 200 && (
+                  <button
+                    onClick={() => setIsDescriptionExpanded(!isDescriptionExpanded)}
+                    className="text-blue-600 font-semibold ml-2"
+                  >
+                    {isDescriptionExpanded ? 'Read less' : 'Read more'}
+                  </button>
+                )}
+              </p>
+
+              
+            </div>
+
+           
           </div>
         </div>
       </div>
@@ -346,14 +433,19 @@ const CourseSlugPage: React.FC<SlugClientsProps> = ({ courseData }) => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-gray-900 mb-12">Specializations Offered</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {course.specializations.map((spec, index) => (
-              <div key={index} className="bg-gray-50 hover:bg-gray-100 p-6 rounded-xl transition-colors cursor-pointer border border-gray-200">
-                <div className="flex items-start gap-3">
-                  <BookOpen className="w-6 h-6 text-gray-900 flex-shrink-0 mt-1" />
-                  <h3 className="font-bold text-lg text-gray-900">{spec}</h3>
+            {course.specializations.map((spec, index) => {
+              const specName = typeof spec === 'string' 
+                ? spec 
+                : spec?.name || spec?.fullName || '';
+              return (
+                <div key={index} className="bg-gray-50 hover:bg-gray-100 p-6 rounded-xl transition-colors cursor-pointer border border-gray-200">
+                  <div className="flex items-start gap-3">
+                    <BookOpen className="w-6 h-6 text-gray-900 flex-shrink-0 mt-1" />
+                    <h3 className="font-bold text-lg text-gray-900">{specName}</h3>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -539,9 +631,9 @@ const CourseSlugPage: React.FC<SlugClientsProps> = ({ courseData }) => {
       <section id="curriculum" className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="mb-8">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Online MBA Course curriculum</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{course.title}</h2>
             <p className="text-gray-600 mb-6">
-              Explore list of all subjects (semester wise) covered in our MBA program
+              Explore list of all subjects (semester wise) covered in our {course.title} program
             </p>
             <div className="flex gap-4 text-sm text-gray-600">
               <div className="flex items-center gap-2">
@@ -703,7 +795,7 @@ const CourseSlugPage: React.FC<SlugClientsProps> = ({ courseData }) => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-8">
-                Get a Prestigious MBA Degree
+                Get a Prestigious {course.title} Degree
               </h2>
               
               <div className="space-y-6">
@@ -733,7 +825,7 @@ const CourseSlugPage: React.FC<SlugClientsProps> = ({ courseData }) => {
               <div className="bg-gradient-to-br from-orange-100 to-orange-50 p-8 rounded-2xl">
                 <div className="bg-white p-8 rounded-xl shadow-lg">
                   <div className="flex items-center gap-4 mb-6">
-                    <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/mahe-uni_dvnm1d.webp" alt="MANIPAL" className="w-20 h-20" />
+                    <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipallogo_yduega.jpg" alt="MANIPAL" className="w-20 h-20" />
                     <div>
                       <h4 className="font-bold text-lg">MANIPAL</h4>
                       <p className="text-sm text-gray-600">ACADEMY OF HIGHER EDUCATION</p>
@@ -745,10 +837,10 @@ const CourseSlugPage: React.FC<SlugClientsProps> = ({ courseData }) => {
                     <p className="text-xl font-bold text-gray-900 mb-4">SAMPLE NAME</p>
                     <p className="text-sm text-gray-600 mb-2">has been conferred</p>
                     <p className="text-2xl font-bold text-gray-900 mb-2">
-                      Master of Business Administration (MBA)
+                      {course.title}
                     </p>
-                    <p className="text-sm text-gray-600 mb-1">Specialization - XXXXXXXXXXXXX</p>
-                    <p className="text-xs text-gray-500 mb-4">(Duration: 2 Years - Online mode)</p>
+                    <p className="text-sm text-gray-600 mb-1">Specialization</p>
+                    <p className="text-xs text-gray-500 mb-4">(Duration: {course.duration} - Online mode)</p>
                     <p className="text-sm text-gray-600">
                       having fulfilled the prescribed requirements in August 2026
                     </p>
@@ -776,8 +868,8 @@ const CourseSlugPage: React.FC<SlugClientsProps> = ({ courseData }) => {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Why Choose Online MBA From MAHE?
           </h2>
-          <p className="text-gray-600 mb-12 max-w-4xl">
-            {course.university.description}
+          <p className="text-black-600 mb-12 max-full ">
+            {course.university.whyChoseUS}
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
@@ -1122,23 +1214,29 @@ const CourseSlugPage: React.FC<SlugClientsProps> = ({ courseData }) => {
             Learn More About Our MBA Program (FAQs)
           </h2>
 
-          <div className="flex gap-4 mb-8">
-            <button className="px-6 py-2 bg-gray-900 text-white rounded-full font-semibold">
-              Program
-            </button>
-            <button className="px-6 py-2 text-gray-600 hover:bg-gray-100 rounded-full">
-              Admission
-            </button>
-            <button className="px-6 py-2 text-gray-600 hover:bg-gray-100 rounded-full">
-              Fee
-            </button>
-            <button className="px-6 py-2 text-gray-600 hover:bg-gray-100 rounded-full">
-              Academics
-            </button>
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8">
+            {['Program', 'Admission', 'Fee', 'Academics'].map((category) => (
+              <button
+                key={category}
+                onClick={() => {
+                  setActiveFaqCategory(category);
+                  setExpandedFaq(null);
+                }}
+                className={`px-6 py-2 rounded-full font-semibold transition-colors ${
+                  activeFaqCategory === category
+                    ? 'bg-gray-900 text-white'
+                    : 'text-gray-600 hover:bg-gray-100'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
           </div>
 
           <div className="space-y-4">
-            {course.faqs.map((faq, index) => (
+            {course.faqs
+              .filter((faq) => (faq.category || 'Program') === activeFaqCategory)
+              .map((faq, index) => (
               <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
                 <button
                   onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
@@ -1208,9 +1306,9 @@ const CourseSlugPage: React.FC<SlugClientsProps> = ({ courseData }) => {
               <div>
                 <h4 className="text-white font-bold text-lg mb-6">Programs</h4>
                 <ul className="space-y-3">
-                  {['Online MBA', 'MCA', 'BBA', 'M.Com', 'B.Com', 'MA JMC'].map((program, i) => (
+                  {['Online MBA', 'MCA', 'BBA','BBA(Hons.)', 'M.Com', 'B.Com(Professional)', 'MSc(Data Science)','MSc(Business Analytics)'].map((program, i) => (
                     <li key={i}>
-                      <a onClick={() => setOpenModal ({ type: 'apply' })} className="text-gray-400 hover:text-orange-400 transition-colors cursor pointer">
+                      <a onClick={() => handleCourseClick(program)} className="text-gray-400 hover:text-orange-400 transition-colors cursor-pointer">
                         {program}
                       </a>
                     </li>
@@ -1275,9 +1373,14 @@ const CourseSlugPage: React.FC<SlugClientsProps> = ({ courseData }) => {
                                          "BBA Human Resource Management - MAHE Online",
                                          "BBA Data Analytics - MAHE Online",
                                          "BBA Retail & E-commerce Management - MAHE Online",
-                                      
-                                         "B.Com General - MAHE Online",
-
+                                         "BBA(Hons.) Finance & Accounting - MAHE Online",
+                                         "BBA(Hons.) Digital Marketing - MAHE Online",
+                                         "BBA(Hons.) Enterepreneurship Management & Family Business - MAHE Online",
+                                         "BBA(Hons.) Human Resource Management - MAHE Online",
+                                         "BBA(Hons.) Data Analytics - MAHE Online",
+                                         "BBA(Hons.) Retail & E-commerce Management - MAHE Online",
+                                         
+                                         "B.Com(Professional) - MAHE Online",
                                          "MBA Human Resource Management and Finance - MAHE Online",
                                          "MBA Finance and Marketing - MAHE Online",
                                          "MBA Marketing and Human Resource Management - MAHE Online",
@@ -1296,14 +1399,13 @@ const CourseSlugPage: React.FC<SlugClientsProps> = ({ courseData }) => {
                                         "MCA AI & ML - MAHE Online",
 
                                          "M.Com General - MAHE Online",
-
-                                         "MA Economics - MAHE Online",
-                                         "MA Journalism and Mass Communication - MAHE Online"
+                                         "MSc(Data Science) - MAHE Online",
+                                         "MSc(Business Analytics) - MAHE Online",
                                          ]
 
                                     .map((keyword, index) => (
                                         <span
-                                          key={index} onClick = {() => setOpenModal({ type: 'apply',})}
+                                          key={index} onClick={() => handleCourseClick(keyword)}
                                           className="bg-white/10 backdrop-blur-sm text-gray-300 px-3 py-2 rounded-full text-xs sm:text-sm hover:bg-[#821812] hover:text-white transition-all duration-300 cursor-pointer border border-white/20 hover:border-orange-500"
                                           title={keyword}
                                         >

@@ -156,18 +156,12 @@ const handleApplyNowClick = () => {
             >
               Amity University Online
 
-              
-              <div className="relative inline-block my-3 sm:my-4 w-full">
+              <div className="my-3 sm:my-4">
                 <span
-                  className="relative z-10 block px-3 py-3 sm:px-4 sm:py-3 md:px-6 md:py-4 text-blue-700 text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-center leading-tight"
+                  className={`${playfair?.className || ""} text-2xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-5xl font-bold text-blue-700 leading-tight block`}
                 >
-                  Courses, Eligibility And Fees 2026
+                  Courses, Eligibility And Fees
                 </span>
-
-                {/* Yellow Circle */}
-                <span
-                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[120%] sm:w-[102%] sm:h-[115%] md:w-[100%] md:h-[110%] bg-transparent rounded-full border-2 sm:border-3 border-yellow-600 -z-10"
-                ></span>
               </div>
 
               <span className="block text-transparent bg-clip-text bg-yellow-600">
