@@ -15,7 +15,7 @@ import {
   FaBook,
 } from "react-icons/fa";
 import { MdSupportAgent } from "react-icons/md";
-
+import UniversityDateSlider from '@/components/UniversityDateSlider';
 import Head from 'next/head';
 import Image from 'next/image';
 import * as Tabs from '@radix-ui/react-tabs';
@@ -366,7 +366,16 @@ useEffect(() => {
 </header>
 
           {/*hero section*/}
-      <section className="relative w-full h-[75vh] md:h-[85vh] mt-[90px] mb-[20px] font-[Poppins]">
+      <section className="relative w-full h-[75vh] md:h-[85vh] mt-[60px] mb-[20px] font-[Poppins]">
+        <UniversityDateSlider
+        currentDate="January 2026 Session"
+        nextUpdateDate="Applications Closing on 07 Feb 2026"
+        information="Limited Seats Available - Apply Now!"
+        special="Average of 50% salary growth"
+        color="#dc2626"
+        backgroundColor="#fee2e2"
+        textColor="#991b1b"
+      />
   <Swiper
     modules={[Autoplay, Navigation, Pagination]}
     spaceBetween={0}

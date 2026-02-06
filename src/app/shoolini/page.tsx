@@ -30,7 +30,7 @@ import {
   FaUser,
   FaUserTie
 } from "react-icons/fa6";
-
+import UniversityDateSlider from '@/components/UniversityDateSlider';
 import { motion } from 'framer-motion';
 
 type ModalState = { type: 'apply' | 'Enquire Now', program?: string } | null;
@@ -799,10 +799,19 @@ const Shoolini = () => {
  
         {/* Main Content with Sidebar */}
          <div className="flex flex-col lg:flex-row pt-16 lg:pt-20">
-           <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} onApplyNowClick={() => setOpenModal({ type: 'apply' })} />           
+           <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} onApplyNowClick={() => setOpenModal({ type: 'apply' })} /> 
+                    
             {/* Main Content - Scrollable */}
             <main className="flex-1 overflow-x-hidden px-4 lg:px-8 pb-10 lg:pl-64">
-
+                            <UniversityDateSlider
+                                currentDate="January 2026 Session"
+                                nextUpdateDate="Applications Closing on 07 Feb 2026"
+                                information="Limited Seats Available - Apply Now!"
+                                special="Average of 50% salary growth"
+                                color="#dc2626"
+                                backgroundColor="#fee2e2"
+                                textColor="#991b1b"
+                              /> 
         <section id="About" className="relative w-full min-h-[450px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] overflow-hidden">
   {/* Background Image with Gradient Overlay */}
   <div className="absolute inset-0">

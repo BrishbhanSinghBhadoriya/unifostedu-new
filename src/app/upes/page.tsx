@@ -15,6 +15,7 @@ import {
   FaGraduationCap,
   FaUserTie
 } from "react-icons/fa6";
+import UniversityDateSlider from '@/components/UniversityDateSlider';
 const Upes = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeTab, setActiveTab] = useState('all');
@@ -210,8 +211,20 @@ const Upes = () => {
             </div>
           </div>
         </header>
+        <div className="pt-16 lg:pt-20">
+          <UniversityDateSlider
+            currentDate="January 2026 Session"
+            nextUpdateDate="Applications Closing on 07 Feb 2026"
+            information="Limited Seats Available - Apply Now!"
+            special="Average of 50% salary growth"
+            color="#dc2626"
+            backgroundColor="#fee2e2"
+            textColor="#991b1b"
+          />  
+        </div>
       {/* Image Slider Section */}
-      <section id='Home' className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden mt-16">
+      <section id='Home' className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
+        
         <AnimatePresence initial={false}>
           <motion.div
             key={currentSlide}

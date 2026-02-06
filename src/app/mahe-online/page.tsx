@@ -29,7 +29,7 @@ import StudentReviews from "./_components/StudentReviews";
 import Faq from "./_components/Faq";
 import HiringPartners from "./_components/HiringPartners";
 import { OpenModalState } from '../../../types/Modal';
-
+import UniversityDateSlider from '@/components/UniversityDateSlider';
 const selectionItem = [
   { id: "HeroSection", label: "Introduction" },
   { id: "Introduction", label: "About MAHE" },
@@ -416,8 +416,16 @@ const Manipal = () => {
         {/* Add padding to the top of the first section to account for fixed header */}
               <PageContent sectionItems={selectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
 
-        <div className="pt-16 overflow-x-hidden break-words hyphens-auto lg:ml-64">
-             
+        <div className="pt-16 overflow-x-hidden break-words hyphens-auto lg:ml-64 mt-4">
+            <UniversityDateSlider
+                   currentDate="January 2026 Session"
+                   nextUpdateDate="Applications Closing on 07 Feb 2026"
+                   information="Limited Seats Available - Apply Now!"
+                   special="Average of 50% salary growth"
+                   color="#dc2626"
+                   backgroundColor="#fee2e2"
+                   textColor="#991b1b"
+                 />  
 
         {/* Premium Hero Section - Fully Responsive */}
         <HeroSection openModal={openModal} setOpenModal={setOpenModal}/>

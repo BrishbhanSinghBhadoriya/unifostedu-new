@@ -14,7 +14,7 @@ import Image from 'next/image';
 
 import AccreditationSection from '@/components/AccreditationSection';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
-
+import UniversityDateSlider from '@/components/UniversityDateSlider';
 interface Benefit {
   title: string;
   description: string;
@@ -294,7 +294,17 @@ const UttaranchalUniversity = () => {
             </div>
           </div>
         </header>
-
+       <div className="pt-16 lg:pt-20">
+                <UniversityDateSlider
+                  currentDate="January 2026 Session"
+                  nextUpdateDate="Applications Closing on 07 Feb 2026"
+                  information="Limited Seats Available - Apply Now!"
+                  special="Average of 50% salary growth"
+                  color="#dc2626"
+                  backgroundColor="#fee2e2"
+                  textColor="#991b1b"
+                />  
+              </div>
         {/* Mobile Sidebar Overlay */}
         {isSidebarOpen && (
           <div

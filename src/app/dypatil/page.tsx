@@ -13,6 +13,7 @@ import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import { motion, AnimatePresence } from 'framer-motion';
 import PageContent from "@/components/PageContent/PageContent";
 import { OpenModalState } from '../../../types/Modal';
+import UniversityDateSlider from '@/components/UniversityDateSlider';
 const Dypatil = () => {
   const selectionItem = [
     { id: "HeroSection", label: "Introduction" },
@@ -407,16 +408,24 @@ const Dypatil = () => {
           </Dialog>
         )}
       </header>
-
+       
       {/* Add padding to account for fixed header */}
       <div className="pt-16 overflow-x-hidden break-words hyphens-auto w-full">
-
+         <UniversityDateSlider
+                currentDate="January 2026 Session"
+                nextUpdateDate="Applications Closing on 07 Feb 2026"
+                information="Limited Seats Available - Apply Now!"
+                special="Average of 50% salary growth"
+                color="#dc2626"
+                backgroundColor="#fee2e2"
+                textColor="#991b1b"
+              />
         <div className="max-w-screen-2xl mx-auto flex w-full">
           {/* Left Sidebar */}
           {/* Add padding to the top of the first section to account for fixed header */}
           <PageContent sectionItems={selectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
 
-
+        
 
 
 
@@ -467,7 +476,7 @@ const Dypatil = () => {
                         setModalType('apply');
                       }}
                       className="text-xl sm:text-2xl font-semibold bg-white text-[#0c254a] inline-block px-4 py-2 rounded shadow-lg cursor-pointer">
-                      Admissions Open 2025
+                      Admissions Open 2026
 
                     </button>
                   </div>
@@ -484,7 +493,7 @@ const Dypatil = () => {
               </div>
             </div>
 
-            {/* Rest of your existing sections */}
+           
             {/* AI Tools Section */}
             <section
               className="w-full py-16"

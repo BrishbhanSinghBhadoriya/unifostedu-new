@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import UniversityDateSlider from "@/components/UniversityDateSlider";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import PageContent from "@/components/PageContent/PageContent";
@@ -422,13 +423,23 @@ const CuOnline = () => {
             </Dialog>
           )}
         </header>
-
         <PageContent sectionItems={sectionItems} activeSection={activeSection} ismobilemenuopen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-
+        
 
 
 
         <main className="pt-24 pb-16 lg:pl-64">
+          <div className="mb-6">
+            <UniversityDateSlider
+              currentDate="January 2026 Session"
+              nextUpdateDate="Applications Closing on 07 Feb 2026"
+              information="Limited Seats Available - Apply Now!"
+              special="Average of 50% salary growth"
+              color="#fa0606"
+              backgroundColor="#dc3b26"
+              textColor="#020203"
+            />
+          </div>
           {/* Hero Banner */}
           <section
             id="HeroSection"
@@ -813,7 +824,37 @@ const CuOnline = () => {
             title="Why Choose Chandigarh University Online?"
             description="Learn flexibly with expert mentorship, AI-driven LMS, and career support — all with globally recognized UGC-entitled degrees."
             stats={[]}
-            benefits={[]}
+            benefits={[
+
+               {
+                    title: "UGC-Approved & Accredited",
+                    description: "Recognized by UGC and accredited by NAAC A+.",
+                    iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M4 19h16V5H4v14zm0 0v2h16v-2H4z"></path>
+                          </svg>`,
+                  },
+                  {
+                    title: "Experienced Faculty",
+                    description: "Learn from top educators and industry experts.",
+                    iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                          </svg>`,
+                  },
+                  {
+                    title: "Career Services",
+                    description: "Internships, workshops & job readiness programs.",
+                    iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M16 6V4H8v2H2v14h20V6h-6zM8 4h8v2H8V4zm12 16H4V8h16v12z"></path>
+                          </svg>`,
+                  },
+                  {
+                    title: "Placement Support",
+                    description: "Placement help for your dream job.",
+                    iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7h20L12 2zm0 2.18L18.9 7H5.1L12 4.18zM4 9v11h16V9H4zm2 2h12v7H6v-7z"></path>
+                          </svg>`,
+                  },
+            ]}
             accreditations={[
               {
                 src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp",
@@ -839,7 +880,7 @@ const CuOnline = () => {
             internationalRecognition={[]}
             successStories={[]}
           />
-          <div className="text-center mt-8 sm:mt-12">
+          <div className="text-center mt-2 sm:mt-2">
             <button
               onClick={() => {
                 setOpenModal({ type: "apply" });

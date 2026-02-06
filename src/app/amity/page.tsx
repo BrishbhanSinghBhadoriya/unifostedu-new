@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import UniversityDateSlider from "@/components/UniversityDateSlider";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
@@ -425,66 +426,51 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
 
   return (
     <React.Fragment>
-      <div className="min-h-screen bg-white relative" style={{ overflowX: "hidden" }}>
+      <div className="min-h-screen bg-white" style={{ overflowX: "hidden" }}>
 
        <Headers setOpenModal={setOpenModal} setIsMobileMenuOpen={setIsMobileMenuOpen}/>
 
+        <PageContent
+          sectionItems={sectionItems}
+          activeSection={activeSection}
+          ismobilemenuopen={isMobileMenuOpen}
+          onClose={() => setIsMobileMenuOpen(false)}
+        />
 
-        <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 py-2 sm:py-2.5 md:py-3 mt-[56px] sm:mt-[64px] md:mt-[70px] mb-0">
-          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 text-center">
-            <motion.div
-              className="font-semibold flex flex-wrap items-center justify-center gap-x-2 sm:gap-x-3 gap-y-1 text-xs sm:text-sm md:text-base"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-            >
-              <div className="flex items-center space-x-1.5 sm:space-x-2">
-                <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0" />
-                <span className="whitespace-nowrap">August 2025 Admissions Open</span>
+        <main className="lg:pl-64">
+          <div className="pt-[56px] sm:pt-[64px] md:pt-[70px]">
+            <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 py-2 sm:py-2.5 md:py-3 mb-0">
+              <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 text-center">
+                <UniversityDateSlider
+                  currentDate="January 2026 Session"
+                  nextUpdateDate="Applications Closing on 07 Feb 2026"
+                  information="Limited Seats Available - Apply Now!"
+                  special="Average of 50% salary growth"
+                  color="#dcd926"
+                  backgroundColor="#dcd926"
+                  textColor="#281b99"
+                />
               </div>
-              <span className="hidden sm:inline text-gray-700">•</span>
-              <span className="whitespace-nowrap">Scholarships up to 15% Available</span>
-              <span className="hidden sm:inline text-gray-700">•</span>
-              <span className="whitespace-nowrap">Limited Time Offer</span>
-            </motion.div>
-          </div>
-        </div>
-
-        <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row">
-          <PageContent
-            sectionItems={sectionItems}
-            activeSection={activeSection}
-            ismobilemenuopen={isMobileMenuOpen}
-            onClose={() => setIsMobileMenuOpen(false)}
-          />
-
-
-          <main className="flex-1 min-w-0 lg:pl-64">
-
+            </div>
             <Introduction inter={inter} playfair={playfair} openModal={openModal} setOpenModal={setOpenModal}/>
-
             <About openModal={openModal} setOpenModal={setOpenModal}/>
             <Courses ugCourses={ugCourses} pgCourses={pgCourses} ug_pgCourses={ug_pgCourses} openModal={openModal} setOpenModal={setOpenModal}/>
-              <Highlights openModal={openModal} setOpenModal={setOpenModal}/>
-             <Accreditation/>
-             <FeeStructure ugCourses={ugCourses} pgCourses={pgCourses} ug_pgCourses={ug_pgCourses} openModal={openModal} setOpenModal={setOpenModal}/>
-           <Feature setOpenModal={setOpenModal} openModal={openModal}/>
+            <Highlights openModal={openModal} setOpenModal={setOpenModal}/>
+            <Accreditation/>
+            <FeeStructure ugCourses={ugCourses} pgCourses={pgCourses} ug_pgCourses={ug_pgCourses} openModal={openModal} setOpenModal={setOpenModal}/>
+            <Feature setOpenModal={setOpenModal} openModal={openModal}/>
             <OnlineRegular/>
             <Resources fadeIn={fadeIn} staggerChildren={staggerChildren}/>
             <Achievements/> 
-           
            <Scholarship setOpenModal={setOpenModal} openModal={openModal}/>
            <Certificate setOpenModal={setOpenModal} openModal={openModal}/>
            <Placements/>
            <OutReach
-               cityHighlights={cityHighlights}
-               setOpenModal={setOpenModal}
-               openModal={openModal}
-               />
-
-
+              cityHighlights={cityHighlights}
+              setOpenModal={setOpenModal}
+              openModal={openModal}
+            />
             <HiringPartners fadeIn={fadeIn} staggerChildren={staggerChildren}  setOpenModal={setOpenModal}/>
-            
             <CTA/>
             <ResourceLinks setOpenModal={setOpenModal} openModal={openModal}/>
             <Faq
@@ -492,9 +478,8 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
               setOpenModal={setOpenModal}
             />
             <Footer setOpenModal={setOpenModal} openModal={openModal} />
-          </main>
-         
-        </div>
+          </div>
+        </main>
         {openModal && (
                       <ApplyEnquiryModal
                         open={!!openModal}

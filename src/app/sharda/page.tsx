@@ -7,9 +7,10 @@ import { motion } from "framer-motion";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import Image from 'next/image';
+import { i } from 'node_modules/framer-motion/dist/types.d-DagZKalS';
 import React, { useEffect, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
-
+import UniversityDateSlider from '@/components/UniversityDateSlider';
 const inter = Inter({ subsets: ["latin"] });
 
 // Type definitions
@@ -331,14 +332,14 @@ const UniversityPage: React.FC = () => {
         <meta name="keywords" content={`${universityData.name} Online, Online Degrees, UGC Approved, Distance Learning`} />
         <meta name="author" content={universityData.name} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://yourdomain.com/university" />
+        <link rel="canonical" href="https://www.unifostedu.com/sharda" />
 
         {/* Open Graph */}
         <meta property="og:title" content={`${universityData.name} Online Degrees | Accredited Online Degrees`} />
         <meta property="og:description" content="Globally recognized online undergraduate and postgraduate programs with flexible, industry-relevant learning." />
         <meta property="og:image" content={universityData.heroImage} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourdomain.com/university" />
+        <meta property="og:url" content="https://www.unifostedu.com/sharda" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -406,16 +407,25 @@ const UniversityPage: React.FC = () => {
             </div>
           </div>
         </header>
-        
+         
         <PageContent 
           sectionItems={sectionItem} 
           activeSection={activeSection} 
           ismobilemenuopen={isMobileMenuOpen} 
-          onClose={() => setIsMobileMenuOpen(false)} 
+          onClose={() => setIsMobileMenuOpen(false) } 
         />
-        
-        <div className="max-w-screen-2xl mx-auto flex">
+        <UniversityDateSlider
+          currentDate="January 2026 Session"
+          nextUpdateDate="Applications Closing on 07 Feb 2026"
+          information="Limited Seats Available - Apply Now!"
+          special="Average of 50% salary growth"
+          color="#dc2626"
+          backgroundColor="#fee2e2"
+          textColor="#991b1b"
+        />
+        <div className="max-w-screen-2xl mx-auto flex">        
           <main className="flex-1 min-w-0 lg:pl-64">
+            
             <div className="overflow-x-hidden">
 
 

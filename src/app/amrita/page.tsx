@@ -23,7 +23,7 @@ import {
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import { OpenModalState } from '../../../types/Modal';
 import EnquiryForm from '@/components/EnquiryForm';
-
+import UniversityDateSlider from '@/components/UniversityDateSlider';
 export default function AmritaOnlinePage() {
   const [activeTab, setActiveTab] = useState('general');
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -274,7 +274,15 @@ export default function AmritaOnlinePage() {
           )}
         </div>
       </header>
-
+       <UniversityDateSlider
+        currentDate="January 2026 Session"
+        nextUpdateDate="Applications Closing on 07 Feb 2026"
+        information="Limited Seats Available - Apply Now!"
+        special="Average of 50% salary growth"
+        color="#dc2626"
+        backgroundColor="#fee2e2"
+        textColor="#991b1b"
+      />
       {/* Hero Section */}
       <section className="relative py-16 lg:py-24 overflow-hidden">
         
@@ -435,20 +443,21 @@ export default function AmritaOnlinePage() {
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-[#B8164A] mb-3">Top-Ranked University</h3>
               <ul className="space-y-2 text-gray-600">
-                <li>• Ranked #8 in India by NIRF 2025</li>
-                <li>• NAAC A++ accreditation (highest grade)</li>
+                <li>• <strong className='text-[#B8164A]'>Ranked 8</strong> in India by NIRF 2025</li>
+                <li>• <strong className='text-[#B8164A]'>NAAC A++ </strong>accreditation (Highest Grade)</li>
                 <li>• Global Top 50 (THE Impact Rankings 2025)</li>
-                <li>• #1 private university in India for research</li>
-                <li>• Trusted by students from 50+ countries</li>
+                <li>• <strong className='text-[#B8164A]'>1 private university </strong>in India for research</li>
+                <li>• Trusted by students from <strong className='text-[#B8164A]'> 50+ countries</strong></li>
               </ul>
             </div>
 
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-[#B8164A] mb-3">Accredited Online Degrees</h3>
               <ul className="space-y-2 text-gray-600">
-                <li>• UGC-entitled programs (recognized nationwide)</li>
-                <li>• AICTE approved technical programs</li>
-                <li>• WES equivalence for USA and Canada</li>
+                <li>•<strong className='text-[#B8164A]'>UGC-entitled</strong>  programs (Recognized Nationwide)</li>
+                <li>• <strong className='text-[#B8164A]'>AICTE</strong> approved technical programs</li>
+                <li>• <strong className='text-[#B8164A]'>WES</strong> equivalent for USA and Canada</li>
+               
                 <li>• Globally recognized degrees</li>
                 <li>• Same status as regular campus-based degrees</li>
               </ul>
@@ -457,7 +466,7 @@ export default function AmritaOnlinePage() {
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-[#B8164A] mb-3">Student Success Outcomes</h3>
               <ul className="space-y-2 text-gray-600">
-                <li>• 50% average salary increase post-graduation</li>
+                <li>•<strong className='text-[#B8164A]'> 50% average salary increase </strong>post-graduation</li>
                 <li>• Alumni in top IT & finance companies</li>
                 <li>• Full-fledged career services</li>
                 <li>• Mock interviews by industry experts</li>
@@ -524,42 +533,42 @@ export default function AmritaOnlinePage() {
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="mb-4 flex justify-center">
-                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770013884/ranking-group-naac_oape2r.svg" alt="NAAC A++ Accredited" className="h-32" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770013884/ranking-group-naac_oape2r.svg" alt="NAAC A++ Accredited" className="h-20" />
               </div>
               <p className="font-semibold">NAAC A++ Grade</p>
               <p className="text-sm text-gray-600">Highest Accreditation</p>
             </div>
             <div className="text-center">
               <div className="mb-4 flex justify-center">
-                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014184/nirf-logo-2025_i2ftca.svg" alt="NIRF Ranking" className="h-32" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014184/nirf-logo-2025_i2ftca.svg" alt="NIRF Ranking" className="h-20" />
               </div>
               <p className="font-semibold">NIRF Ranking #8</p>
               <p className="text-sm text-gray-600">Top Private University in India</p>
             </div>
             <div className="text-center">
               <div className="mb-4 flex justify-center">
-                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014184/global_xoo0ud.svg" alt="Global Top 50" className="h-32" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014184/global_xoo0ud.svg" alt="Global Top 50" className="h-20" />
               </div>
               <p className="font-semibold">Global Top 50</p>
               <p className="text-sm text-gray-600">THE Impact Rankings 2025</p>
             </div>
             <div className="text-center">
               <div className="mb-4 flex justify-center">
-                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014185/wur_yt2xei.svg" alt="#1 for International faculty" className="h-32" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014185/wur_yt2xei.svg" alt="#1 for International faculty" className="h-20" />
               </div>
               <p className="font-semibold">#1 International Faculty</p>
               <p className="text-sm text-gray-600">Leading in Global Expertise</p>
             </div>
             <div className="text-center">
               <div className="mb-4 flex justify-center">
-                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014184/ugc_dfjvyk.svg" alt="#1 for International faculty" className="h-32" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014184/ugc_dfjvyk.svg" alt="#1 for International faculty" className="h-20" />
               </div>
               <p className="font-semibold">By UGC for highest Standards</p>
               <p className="text-sm text-gray-600">UGC Grant</p>
             </div>
             <div className="text-center">
               <div className="mb-4 flex justify-center">
-                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014184/private_r0jlvw.svg" alt="#1 for International faculty" className="h-32" />
+                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014184/private_r0jlvw.svg" alt="#1 for International faculty" className="h-20" />
               </div>
               <p className="font-semibold">World University Ranking 2020</p>
               <p className="text-sm text-gray-600"> No-1 in Private university</p>
@@ -992,7 +1001,7 @@ export default function AmritaOnlinePage() {
 
               <div className="mt-8 bg-yellow-50 border-l-4 border-yellow-400 p-4">
                 <p className="text-sm font-semibold text-gray-800">Important Deadline</p>
-                <p className="text-sm text-gray-600">Application deadline: January 31, 2026. Limited seats available!</p>
+                <p className="text-sm text-gray-600">Application deadline: <strong className='text'>Closing Soon</strong> Limited seats available!</p>
               </div>
             </div>
 

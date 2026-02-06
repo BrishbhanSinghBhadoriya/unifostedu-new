@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import UniversityDateSlider from '@/components/UniversityDateSlider';
 import {
   FaBars,
   FaBookOpen,
@@ -320,9 +321,21 @@ const Vgu = () => {
         </header>
         {/* Hero Section */}
         <div className="flex">
+      
           {/* Desktop Sidebar */}
           <PageContent sectionItems={selectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
           <main className="flex-1 min-w-0 lg:pl-64 ">
+              <div className="pt-16 lg:pt-20">
+                        <UniversityDateSlider
+                          currentDate="January 2026 Session"
+                          nextUpdateDate="Applications Closing on 07 Feb 2026"
+                          information="Limited Seats Available - Apply Now!"
+                          special="Average of 50% salary growth"
+                          color="#dc2626"
+                          backgroundColor="#fee2e2"
+                          textColor="#991b1b"
+                        />  
+                      </div>
             <div className="overflow-x-hidden pt-0">
 
               <section

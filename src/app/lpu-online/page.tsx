@@ -14,7 +14,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import { MdSupportAgent } from "react-icons/md";
-
+import UniversityDateSlider from '@/components/UniversityDateSlider';
 import { ChevronDown } from "lucide-react";
 import PageContent from "@/components/PageContent/PageContent";
 import { OpenModalState } from '../../../types/Modal';
@@ -377,7 +377,15 @@ const LpuOnline = () => {
             </header>
 
 
-
+           <UniversityDateSlider
+                  currentDate="January 2026 Session"
+                  nextUpdateDate="Applications Closing on 07 Feb 2026"
+                  information="Limited Seats Available - Apply Now!"
+                  special="Average of 50% salary growth"
+                  color="#dc2626"
+                  backgroundColor="#fee2e2"
+                  textColor="#991b1b"
+                />
             {/* Premium Hero Section */}
             <section id="introduction" className="relative w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] overflow-hidden">
               {/* Background with Gradient Overlay */}

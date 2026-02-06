@@ -17,6 +17,7 @@ import ExaminationPatternNMIMS from './_Componets/ExaminationPatternNMIMS';
 import CoursesTable from './_Componets/CoursesTable';
 import Link from 'next/link';
 import Header from './_Componets/Header';
+import UniversityDateSlider from '@/components/UniversityDateSlider';
 type OpenModalState = {
   type: "apply" | "enquire";
   program?: string;
@@ -208,438 +209,448 @@ const NMIMSLandingPage = () => {
         navigationLinks={navigationLinks}
         setOpenModal={setOpenModal}
       />
+      <main className="pt-16 lg:pt-20">
+        <UniversityDateSlider
+          currentDate="January 2026 Session"
+          nextUpdateDate="Applications Closing on 07 Feb 2026"
+          information="Limited Seats Available - Apply Now!"
+          special="Average of 50% salary growth"
+          color="#dc2626"
+          backgroundColor="#fee2e2"
+          textColor="#991b1b"
+        />
 
-      {/* Hero Slider */}
-      <section id="home" className="relative h-[500px] mt-16 overflow-hidden">
-        <div className="absolute inset-0">
-          {sliderImages.map((img, idx) => (
-            <div
-              key={idx}
-              className={`absolute inset-0 transition-opacity duration-1000 ${idx === currentSlide ? 'opacity-100' : 'opacity-0'
-                }`}
-            >
-              <img src={img} alt={`Slide ${idx + 1}`} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-900/80 to-purple-600/60" />
-            </div>
-          ))}
-        </div>
+        {/* Hero Slider */}
+        <section id="home" className="relative h-[500px] overflow-hidden">
 
-        <div className="relative h-full flex items-center justify-center text-center text-white px-4">
-          <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Transform Your Future with NMIMS Online
-            </h1>
-            <p className="text-xl md:text-2xl mb-8">
-              UGC Approved | NAAC A++ Accredited | 1.25L+ Students
-            </p>
-            <button
-              onClick={() => setOpenModal({ type: 'apply' })}
-              className="bg-white text-purple-800 px-8 py-4 rounded-full font-bold text-lg hover:bg-purple-50 transition-all shadow-xl"
-            >
-              Start Your Journey
-            </button>
-          </div>
-        </div>
-
-        {/* Slide Indicators */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2">
-          {sliderImages.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setCurrentSlide(idx)}
-              className={`w-3 h-3 rounded-full transition-all ${idx === currentSlide ? 'bg-white w-8' : 'bg-white/50'
-                }`}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section
-        id="about"
-        className="w-full py-24 bg-gradient-to-b from-gray-50 to-white"
-      >
-        {/* FULL WIDTH CONTAINER */}
-        <div className="w-full px-6 lg:px-20">
-          <div className="grid lg:grid-cols-12 gap-16 items-start">
-
-            {/* LEFT CONTENT – TEXT (WIDER) */}
-            <div className="lg:col-span-7">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8 leading-tight">
-               <span className="text-orange-600">About</span> <span className="text-purple-600">NMIMS Global Online</span>
-              </h2>
-
-              <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
-                <p>
-                  NMIMS (Narsee Monjee Institute of Management Studies) is one of India’s most respected and well-established institutions, known for its academic excellence, innovation, and industry-focused education. Over the years, NMIMS has built a strong reputation by delivering high-quality education that prepares students for real-world challenges. With the introduction of Narsee Monjee Institute of Management Studies Online, the university has extended its legacy into the digital space, making quality education accessible to learners across India and beyond.
-                </p>
-
-                <p>
-                  With the introduction of <strong>Narsee Monjee Institute of Management Studies Online</strong>,
-                 Through NMIMS Distance & Online Education, the university offers flexible learning opportunities designed to suit the needs of modern students and working professionals. NMIMS Distance & Online Education allows learners to pursue higher education without disrupting their jobs, businesses, or personal responsibilities. This learning model reflects NMIMS’s commitment to inclusivity, accessibility, and lifelong learning, ensuring that education is no longer limited by location or time constraints
-                </p>
-
-                <p>
-                 The foundation of online learning at NMIMS is the advanced NMIMS Online Learning Platform, which delivers a structured yet flexible academic experience. The NMIMS Online Learning Platform enables students to attend live lectures, access recorded sessions, download digital study materials, and participate in interactive discussions. With continuous academic support and regular assessments, the NMIMS Online Learning Platform ensures that learners remain engaged and academically motivated throughout their journey.
-                </p>
-
-              
-              </div>
-
-
-            </div>
-
-            {/* RIGHT IMAGE – STICKY FEEL */}
-            <div className="lg:col-span-5 relative">
-              <div className="sticky top-28">
-                <img
-                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1767172316/nmims_about_nflafi.png"
-                  alt="NMIMS Campus"
-                  className="rounded-2xl shadow-2xl w-full object-cover"
-                />
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-       <section className="w-full bg-white mb-1">
-  <div className="max-w-6xl mx-auto">
-    <AboutMoreInfo />
-  </div>
-</section>
-      <MagnifyCareer/>
-      </section>
-      <section id="approvals" className="w-full bg-white mt-1">
-        <div className="max-w-7xl mx-auto px-4">
-
-          {/* Section Header */}
-          <div className="text-center mb-14">
-            <h2 className="text-4xl font-bold text-gray-900">
-              Approvals & <span className="text-purple-600">Recognition</span>
-            </h2>
-            <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-              NMIMS Online programs are built on strong academic governance, regulatory
-              compliance, and national-level recognition—ensuring your degree holds
-              long-term value.
-            </p>
-          </div>
-
-          {/* Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-
-            {/* Left Content */}
-            <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
-              <p>
-                <strong>NMIMS (Narsee Monjee Institute of Management Studies)</strong> NMIMS  is a highly recognized and trusted institution in India’s higher education ecosystem. The university follows strict academic and regulatory standards to ensure that learners receive credible, valid, and industry-accepted qualifications. Through Narsee Monjee Institute of Management Studies Online, NMIMS extends this credibility to digital education, offering learners complete confidence in the authenticity of their degrees.
-              </p>
-
-              <p>
-              All programs offered under NMIMS Distance & Online Education are structured in accordance with national education regulations. A major strength of NMIMS lies in its commitment to offering NMIMS online programs approved by UGC, which ensures that online degrees hold the same value and recognition as traditional on-campus programs. Choosing NMIMS online programs approved by UGC allows students to confidently use their qualifications for employment, higher education, and professional advancement across India.
-              </p>
-              
-             
-            </div>
-
-            {/* Right Highlights */}
-            {/* STATS */}
-            <div className="bg-gray-50 border rounded-xl p-6 shadow-sm hover:shadow-md transition">
-              <h4 className="text-xl font-semibold text-purple-700 mb-2">
-                UGC Approved Programs
-              </h4>
-              <p className="text-gray-600">
-                All NMIMS online programs are UGC-approved, ensuring national acceptance
-                for jobs, higher education, and professional growth.
-              </p>
-
-
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-12">
-                {[
-                  { icon: Users, value: "1.25L+", label: "Students" },
-                  { icon: MapPin, value: "600+", label: "Cities" },
-                  { icon: Star, value: "4.7/5", label: "Student Rating" },
-                  { icon: Award, value: "NAAC A++", label: "Accreditation" },
-                ].map((item, i) => (
-                  <div
-                    key={i}
-                    className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
-                  >
-                    <item.icon className="text-purple-600 mb-3" size={34} />
-                    <p className="text-2xl font-bold text-gray-900">{item.value}</p>
-                    <p className="text-gray-600 text-sm">{item.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-            <ApprovalsMoreInfo />
-          {/* CTA */}
-          <div className="text-center mt-6 mb-6">
-            <button className="bg-gradient-to-r from-purple-600 to-purple-800 text-white px-8 py-3 rounded-full text-lg font-semibold hover:shadow-xl transition" onClick={() => setOpenModal({ type: 'apply' })}>
-              Apply for NMIMS Online Course
-            </button>
-          </div>
-
-        </div>
-      </section>
-      <CareerAccelerationSlider/>
-    <WhoCanApply setOpenModal={setOpenModal} openModal={openModal}/>
-
-      {/* Specializations */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">
-           <span className="text-orange-600">Choose Your</span> <span className="text-purple-600">Specialization</span>
-          </h2>
-          <p className="text-center text-gray-600 mb-12 text-lg">
-            Career-focused specializations designed for industry needs
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {specializations.map((spec, idx) => (
+          <div className="absolute inset-0">
+            {sliderImages.map((img, idx) => (
               <div
                 key={idx}
-                className="bg-gradient-to-br from-purple-50 to-white border border-purple-100 p-6 rounded-xl hover:shadow-lg transition-all cursor-pointer group"
+                className={`absolute inset-0 transition-opacity duration-1000 ${idx === currentSlide ? 'opacity-100' : 'opacity-0'
+                  }`}
               >
-                <GraduationCap className="text-purple-600 mb-3 group-hover:scale-110 transition-transform" size={32} />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{spec}</h3>
-                 <button onClick={() => setOpenModal({ type: 'apply' })} className="text-gray-600 text-sm cursor-pointer">Learn more about this specialization
-                  </button>
+                <img src={img} alt={`Slide ${idx + 1}`} className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-900/80 to-purple-600/60" />
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Courses Section */}
-      <section id="courses" className="mt-2 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">
-            Our <span className="text-purple-600">Programs</span>
-          </h2>
-          <p className="text-center text-gray-600 mb-5 text-lg">
-            UGC Approved & NAAC A++ Accredited Online Degree Programs
-          </p>
+          <div className="relative h-full flex items-center justify-center text-center text-white px-4">
+            <div className="max-w-4xl">
+              <h1 className="text-4xl md:text-6xl font-bold mb-4">
+                Transform Your Future with NMIMS Online
+              </h1>
+              <p className="text-xl md:text-2xl mb-8">
+                UGC Approved | NAAC A++ Accredited | 1.25L+ Students
+              </p>
+              <button
+                onClick={() => setOpenModal({ type: 'apply' })}
+                className="bg-white text-purple-800 px-8 py-4 rounded-full font-bold text-lg hover:bg-purple-50 transition-all shadow-xl"
+              >
+                Start Your Journey
+              </button>
+            </div>
+          </div>
 
-          {/* Tabs */}
-          <div className="flex justify-center mb-5">
-            <div className="inline-flex bg-white rounded-full p-1 shadow-lg">
-              {['all', 'ug', 'pg'].map((tab) => (
-                <button
-                  key={tab}
-                  onClick={() => setActiveTab(tab)}
-                  className={`px-8 py-3 rounded-full font-semibold transition-all ${activeTab === tab
-                      ? 'bg-gradient-to-r from-purple-600 to-purple-800 text-white shadow-md'
-                      : 'text-gray-700 hover:text-purple-600'
-                    }`}
+          {/* Slide Indicators */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2">
+            {sliderImages.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentSlide(idx)}
+                className={`w-3 h-3 rounded-full transition-all ${idx === currentSlide ? 'bg-white w-8' : 'bg-white/50'
+                  }`}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section
+          id="about"
+          className="w-full py-24 bg-gradient-to-b from-gray-50 to-white"
+        >
+          {/* FULL WIDTH CONTAINER */}
+          <div className="w-full px-6 lg:px-20">
+            <div className="grid lg:grid-cols-12 gap-16 items-start">
+
+              {/* LEFT CONTENT – TEXT (WIDER) */}
+              <div className="lg:col-span-7">
+                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8 leading-tight">
+                  <span className="text-orange-600">About</span> <span className="text-purple-600">NMIMS Global Online</span>
+                </h2>
+
+                <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+                  <p>
+                    NMIMS (Narsee Monjee Institute of Management Studies) is one of India’s most respected and well-established institutions, known for its academic excellence, innovation, and industry-focused education. Over the years, NMIMS has built a strong reputation by delivering high-quality education that prepares students for real-world challenges. With the introduction of Narsee Monjee Institute of Management Studies Online, the university has extended its legacy into the digital space, making quality education accessible to learners across India and beyond.
+                  </p>
+
+                  <p>
+                    With the introduction of <strong>Narsee Monjee Institute of Management Studies Online</strong>,
+                    Through NMIMS Distance & Online Education, the university offers flexible learning opportunities designed to suit the needs of modern students and working professionals. NMIMS Distance & Online Education allows learners to pursue higher education without disrupting their jobs, businesses, or personal responsibilities. This learning model reflects NMIMS’s commitment to inclusivity, accessibility, and lifelong learning, ensuring that education is no longer limited by location or time constraints
+                  </p>
+
+                  <p>
+                    The foundation of online learning at NMIMS is the advanced NMIMS Online Learning Platform, which delivers a structured yet flexible academic experience. The NMIMS Online Learning Platform enables students to attend live lectures, access recorded sessions, download digital study materials, and participate in interactive discussions. With continuous academic support and regular assessments, the NMIMS Online Learning Platform ensures that learners remain engaged and academically motivated throughout their journey.
+                  </p>
+
+
+                </div>
+
+
+              </div>
+
+              {/* RIGHT IMAGE – STICKY FEEL */}
+              <div className="lg:col-span-5 relative">
+                <div className="sticky top-28">
+                  <img
+                    src="https://res.cloudinary.com/didkrwhbu/image/upload/v1767172316/nmims_about_nflafi.png"
+                    alt="NMIMS Campus"
+                    className="rounded-2xl shadow-2xl w-full object-cover"
+                  />
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <section className="w-full bg-white mb-1">
+            <div className="max-w-6xl mx-auto">
+              <AboutMoreInfo />
+            </div>
+          </section>
+          <MagnifyCareer />
+        </section>
+        <section id="approvals" className="w-full bg-white mt-1">
+          <div className="max-w-7xl mx-auto px-4">
+
+            {/* Section Header */}
+            <div className="text-center mb-14">
+              <h2 className="text-4xl font-bold text-gray-900">
+                Approvals & <span className="text-purple-600">Recognition</span>
+              </h2>
+              <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                NMIMS Online programs are built on strong academic governance, regulatory
+                compliance, and national-level recognition—ensuring your degree holds
+                long-term value.
+              </p>
+            </div>
+
+            {/* Content Grid */}
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+
+              {/* Left Content */}
+              <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+                <p>
+                  <strong>NMIMS (Narsee Monjee Institute of Management Studies)</strong> NMIMS  is a highly recognized and trusted institution in India’s higher education ecosystem. The university follows strict academic and regulatory standards to ensure that learners receive credible, valid, and industry-accepted qualifications. Through Narsee Monjee Institute of Management Studies Online, NMIMS extends this credibility to digital education, offering learners complete confidence in the authenticity of their degrees.
+                </p>
+
+                <p>
+                  All programs offered under NMIMS Distance & Online Education are structured in accordance with national education regulations. A major strength of NMIMS lies in its commitment to offering NMIMS online programs approved by UGC, which ensures that online degrees hold the same value and recognition as traditional on-campus programs. Choosing NMIMS online programs approved by UGC allows students to confidently use their qualifications for employment, higher education, and professional advancement across India.
+                </p>
+
+
+              </div>
+
+              {/* Right Highlights */}
+              {/* STATS */}
+              <div className="bg-gray-50 border rounded-xl p-6 shadow-sm hover:shadow-md transition">
+                <h4 className="text-xl font-semibold text-purple-700 mb-2">
+                  UGC Approved Programs
+                </h4>
+                <p className="text-gray-600">
+                  All NMIMS online programs are UGC-approved, ensuring national acceptance
+                  for jobs, higher education, and professional growth.
+                </p>
+
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-12">
+                  {[
+                    { icon: Users, value: "1.25L+", label: "Students" },
+                    { icon: MapPin, value: "600+", label: "Cities" },
+                    { icon: Star, value: "4.7/5", label: "Student Rating" },
+                    { icon: Award, value: "NAAC A++", label: "Accreditation" },
+                  ].map((item, i) => (
+                    <div
+                      key={i}
+                      className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
+                    >
+                      <item.icon className="text-purple-600 mb-3" size={34} />
+                      <p className="text-2xl font-bold text-gray-900">{item.value}</p>
+                      <p className="text-gray-600 text-sm">{item.label}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <ApprovalsMoreInfo />
+            {/* CTA */}
+            <div className="text-center mt-6 mb-6">
+              <button className="bg-gradient-to-r from-purple-600 to-purple-800 text-white px-8 py-3 rounded-full text-lg font-semibold hover:shadow-xl transition" onClick={() => setOpenModal({ type: 'apply' })}>
+                Apply for NMIMS Online Course
+              </button>
+            </div>
+
+          </div>
+        </section>
+        <CareerAccelerationSlider />
+        <WhoCanApply setOpenModal={setOpenModal} openModal={openModal} />
+
+        {/* Specializations */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">
+              <span className="text-orange-600">Choose Your</span> <span className="text-purple-600">Specialization</span>
+            </h2>
+            <p className="text-center text-gray-600 mb-12 text-lg">
+              Career-focused specializations designed for industry needs
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {specializations.map((spec, idx) => (
+                <div
+                  key={idx}
+                  className="bg-gradient-to-br from-purple-50 to-white border border-purple-100 p-6 rounded-xl hover:shadow-lg transition-all cursor-pointer group"
                 >
-                  {tab === 'all' ? 'All Programs' : tab === 'ug' ? 'Undergraduate' : 'Postgraduate'}
-                </button>
+                  <GraduationCap className="text-purple-600 mb-3 group-hover:scale-110 transition-transform" size={32} />
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{spec}</h3>
+                  <button onClick={() => setOpenModal({ type: 'apply' })} className="text-gray-600 text-sm cursor-pointer">Learn more about this specialization
+                  </button>
+                </div>
               ))}
             </div>
           </div>
+        </section>
 
-          {/* UG Courses */}
-          {(activeTab === 'all' || activeTab === 'ug') && (
-            <div className="mb-16">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Undergraduate Programs</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                {ugCourses.map((course, idx) => (
-                  <CourseCard key={idx} course={course} setOpenModal={setOpenModal} />
-                ))}
-              </div>
-            </div>
-          )}
+        {/* Courses Section */}
+        <section id="courses" className="mt-2 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">
+              Our <span className="text-purple-600">Programs</span>
+            </h2>
+            <p className="text-center text-gray-600 mb-5 text-lg">
+              UGC Approved & NAAC A++ Accredited Online Degree Programs
+            </p>
 
-          {/* PG Courses */}
-          {(activeTab === 'all' || activeTab === 'pg') && (
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Postgraduate Programs</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                {pgCourses.map((course, idx) => (
-                  <CourseCard key={idx} course={course} setOpenModal={setOpenModal} />
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-      </section>
-      <FeeNotes/>
-      <CoursesTable
-  ugCourses={ugCourses}
-  pgCourses={pgCourses}
-  setOpenModal={setOpenModal}
-/>
-      {/* Admission Process */}
-      <section id="admission" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">
-            Simple <span className="text-purple-600">Admission Process</span>
-          </h2>
-          <p className="text-center text-gray-600 mb-16 text-lg">
-            Start your journey in just 4 easy steps
-          </p>
-
-          <div className="grid md:grid-cols-4 gap-8 relative">
-            {/* Connection Line */}
-            <div className="hidden md:block absolute top-16 left-0 right-0 h-1 bg-gradient-to-r from-purple-600 to-purple-800" style={{ width: '85%', margin: '0 auto' }} />
-
-            {[
-              { step: '01', title: 'Application Form', desc: 'Fill the online application form' },
-              { step: '02', title: 'Documents & Fee', desc: 'Upload documents and pay fees' },
-              { step: '03', title: 'Confirmation', desc: 'Receive login credentials' },
-              { step: '04', title: 'Enrollment', desc: 'Begin your classes' }
-            ].map((item, idx) => (
-              <div key={idx} className="text-center relative z-10">
-                <div className="w-32 h-32 bg-gradient-to-br from-purple-600 to-purple-800 rounded-full flex items-center justify-center mx-auto mb-6 text-white shadow-xl">
-                  <span className="text-4xl font-bold">{item.step}</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      <CertificatePrograms/>
-      <KeyHighlights/>
-     
-    <Link href="/enterprise">
-      <div className="cursor-pointer">
-        <Image
-          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1767597485/nmims_workforse_o2ylmu.png"   
-          alt="Explore Programs"
-          width={1600}
-          height={800}
-          className="rounded-xl hover:opacity-90 transition"
-        />
-      </div>
-    </Link>
-
-
-      <ExaminationPatternNMIMS/>
-      {/* Accreditation */}
-      <section id="accreditation" className="py-20 bg-gradient-to-br from-purple-900 to-purple-700 text-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-4">
-            Recognized & Accredited
-          </h2>
-          <p className="text-center text-purple-100 mb-16 text-lg">
-            Trusted by students, recognized by regulatory bodies
-          </p>
-
-         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-  {accreditations.map((acc, idx) => (
-    <div
-      key={idx}
-      className="bg-white/10 backdrop-blur-sm p-8 rounded-xl text-center hover:bg-white/20 transition-all"
-    >
-      <div className="flex justify-center mb-4">
-        <Image
-          src={acc.image}
-          alt={acc.name}
-          width={80}
-          height={80}
-          className="object-contain"
-        />
-      </div>
-
-      <h3 className="text-xl font-bold">{acc.name}</h3>
-    </div>
-  ))}
-</div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { icon: <Users size={40} />, title: '1.25L+ Students', desc: 'Across 600+ cities' },
-              { icon: <Star size={40} />, title: '4.7/5 Rating', desc: 'Highly rated by students' },
-              { icon: <Award size={40} />, title: 'NAAC A++', desc: 'Highest accreditation grade' }
-            ].map((item, idx) => (
-              <div key={idx} className="bg-white/10 backdrop-blur-sm p-8 rounded-xl text-center">
-                <div className="flex justify-center mb-4">{item.icon}</div>
-                <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-                <p className="text-purple-100">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section id="faq" className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">
-            Frequently Asked <span className="text-purple-600">Questions</span>
-          </h2>
-          <p className="text-center text-gray-600 mb-12 text-lg">
-            Everything you need to know about NMIMS Online
-          </p>
-
-          <div className="space-y-4">
-            {faqs.map((faq, idx) => (
-              <div key={idx} className="bg-white rounded-xl shadow-md overflow-hidden">
-                <button
-                  onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-purple-50 transition-colors"
-                >
-                  <span className="font-semibold text-gray-900 pr-4">{faq.q}</span>
-                  <ChevronDown
-                    className={`text-purple-600 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''
+            {/* Tabs */}
+            <div className="flex justify-center mb-5">
+              <div className="inline-flex bg-white rounded-full p-1 shadow-lg">
+                {['all', 'ug', 'pg'].map((tab) => (
+                  <button
+                    key={tab}
+                    onClick={() => setActiveTab(tab)}
+                    className={`px-8 py-3 rounded-full font-semibold transition-all ${activeTab === tab
+                        ? 'bg-gradient-to-r from-purple-600 to-purple-800 text-white shadow-md'
+                        : 'text-gray-700 hover:text-purple-600'
                       }`}
-                    size={24}
-                  />
-                </button>
-                {openFaq === idx && (
-                  <div className="px-6 py-4 bg-purple-50 border-t border-purple-100">
-                    <p className="text-gray-700">{faq.a}</p>
-                  </div>
-                )}
+                  >
+                    {tab === 'all' ? 'All Programs' : tab === 'ug' ? 'Undergraduate' : 'Postgraduate'}
+                  </button>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* UG Courses */}
+            {(activeTab === 'all' || activeTab === 'ug') && (
+              <div className="mb-16">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Undergraduate Programs</h3>
+                <div className="grid md:grid-cols-2 gap-8">
+                  {ugCourses.map((course, idx) => (
+                    <CourseCard key={idx} course={course} setOpenModal={setOpenModal} />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* PG Courses */}
+            {(activeTab === 'all' || activeTab === 'pg') && (
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Postgraduate Programs</h3>
+                <div className="grid md:grid-cols-2 gap-8">
+                  {pgCourses.map((course, idx) => (
+                    <CourseCard key={idx} course={course} setOpenModal={setOpenModal} />
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-purple-800 text-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Transform Your Career?
-          </h2>
-          <p className="text-xl mb-8 text-purple-100">
-            Join 1.25L+ students learning with NMIMS Global Online
-          </p>
-          <button
-            onClick={() => setOpenModal({ type: 'apply' })}
-            className="bg-white text-purple-800 px-10 py-4 rounded-full font-bold text-lg hover:bg-purple-50 transition-all shadow-xl inline-flex items-center space-x-2"
-          >
-            <span>Apply for NMIMS Online Course</span>
-            <ArrowRight size={20} />
-          </button>
-        </div>
-      </section>
-
-      {/* Footer */}
-         <Footer
-        programs={programs}
-        setOpenModal={(data) => console.log(data)}
-      />
-
-
-      {/* Modal */}
-      {openModal && (
-        <ApplyEnquiryModal
-          open={!!openModal}
-          onOpenChange={(v) => !v && setOpenModal(null)}
-          title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
-          subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
-          imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1766467891/nmimsenquary_exxyyv.png"
-          universityName="NMIMS Global Online"
-          defaultProgram={openModal.program || "MBA"}
-          formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
+        </section>
+        <FeeNotes />
+        <CoursesTable
+          ugCourses={ugCourses}
+          pgCourses={pgCourses}
+          setOpenModal={setOpenModal}
         />
-      )}
-    </div>
+        {/* Admission Process */}
+        <section id="admission" className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">
+              Simple <span className="text-purple-600">Admission Process</span>
+            </h2>
+            <p className="text-center text-gray-600 mb-16 text-lg">
+              Start your journey in just 4 easy steps
+            </p>
+
+            <div className="grid md:grid-cols-4 gap-8 relative">
+              {/* Connection Line */}
+              <div className="hidden md:block absolute top-16 left-0 right-0 h-1 bg-gradient-to-r from-purple-600 to-purple-800" style={{ width: '85%', margin: '0 auto' }} />
+
+              {[
+                { step: '01', title: 'Application Form', desc: 'Fill the online application form' },
+                { step: '02', title: 'Documents & Fee', desc: 'Upload documents and pay fees' },
+                { step: '03', title: 'Confirmation', desc: 'Receive login credentials' },
+                { step: '04', title: 'Enrollment', desc: 'Begin your classes' }
+              ].map((item, idx) => (
+                <div key={idx} className="text-center relative z-10">
+                  <div className="w-32 h-32 bg-gradient-to-br from-purple-600 to-purple-800 rounded-full flex items-center justify-center mx-auto mb-6 text-white shadow-xl">
+                    <span className="text-4xl font-bold">{item.step}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+                  <p className="text-gray-600">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        <CertificatePrograms />
+        <KeyHighlights />
+
+        <Link href="/enterprise">
+          <div className="cursor-pointer">
+            <Image
+              src="https://res.cloudinary.com/didkrwhbu/image/upload/v1767597485/nmims_workforse_o2ylmu.png"
+              alt="Explore Programs"
+              width={1600}
+              height={800}
+              className="rounded-xl hover:opacity-90 transition"
+            />
+          </div>
+        </Link>
+
+
+        <ExaminationPatternNMIMS />
+        {/* Accreditation */}
+        <section id="accreditation" className="py-20 bg-gradient-to-br from-purple-900 to-purple-700 text-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <h2 className="text-4xl font-bold text-center mb-4">
+              Recognized & Accredited
+            </h2>
+            <p className="text-center text-purple-100 mb-16 text-lg">
+              Trusted by students, recognized by regulatory bodies
+            </p>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+              {accreditations.map((acc, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white/10 backdrop-blur-sm p-8 rounded-xl text-center hover:bg-white/20 transition-all"
+                >
+                  <div className="flex justify-center mb-4">
+                    <Image
+                      src={acc.image}
+                      alt={acc.name}
+                      width={80}
+                      height={80}
+                      className="object-contain"
+                    />
+                  </div>
+
+                  <h3 className="text-xl font-bold">{acc.name}</h3>
+                </div>
+              ))}
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { icon: <Users size={40} />, title: '1.25L+ Students', desc: 'Across 600+ cities' },
+                { icon: <Star size={40} />, title: '4.7/5 Rating', desc: 'Highly rated by students' },
+                { icon: <Award size={40} />, title: 'NAAC A++', desc: 'Highest accreditation grade' }
+              ].map((item, idx) => (
+                <div key={idx} className="bg-white/10 backdrop-blur-sm p-8 rounded-xl text-center">
+                  <div className="flex justify-center mb-4">{item.icon}</div>
+                  <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
+                  <p className="text-purple-100">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section id="faq" className="py-20 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">
+              Frequently Asked <span className="text-purple-600">Questions</span>
+            </h2>
+            <p className="text-center text-gray-600 mb-12 text-lg">
+              Everything you need to know about NMIMS Online
+            </p>
+
+            <div className="space-y-4">
+              {faqs.map((faq, idx) => (
+                <div key={idx} className="bg-white rounded-xl shadow-md overflow-hidden">
+                  <button
+                    onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                    className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-purple-50 transition-colors"
+                  >
+                    <span className="font-semibold text-gray-900 pr-4">{faq.q}</span>
+                    <ChevronDown
+                      className={`text-purple-600 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''
+                        }`}
+                      size={24}
+                    />
+                  </button>
+                  {openFaq === idx && (
+                    <div className="px-6 py-4 bg-purple-50 border-t border-purple-100">
+                      <p className="text-gray-700">{faq.a}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-purple-600 to-purple-800 text-white">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Ready to Transform Your Career?
+            </h2>
+            <p className="text-xl mb-8 text-purple-100">
+              Join 1.25L+ students learning with NMIMS Global Online
+            </p>
+            <button
+              onClick={() => setOpenModal({ type: 'apply' })}
+              className="bg-white text-purple-800 px-10 py-4 rounded-full font-bold text-lg hover:bg-purple-50 transition-all shadow-xl inline-flex items-center space-x-2"
+            >
+              <span>Apply for NMIMS Online Course</span>
+              <ArrowRight size={20} />
+            </button>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <Footer
+          programs={programs}
+          setOpenModal={(data) => console.log(data)}
+        />
+
+        {/* Modal */}
+        {openModal && (
+          <ApplyEnquiryModal
+            open={!!openModal}
+            onOpenChange={(v) => !v && setOpenModal(null)}
+            title={openModal.type === 'apply' ? 'Start Your Application' : 'Enquire Now'}
+            subtitle={openModal.type === 'apply' ? 'Fill the quick form to begin your admission process' : 'Share your details and our counselor will reach out'}
+            imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1766467891/nmimsenquary_exxyyv.png"
+            universityName="NMIMS Global Online"
+            defaultProgram={openModal.program || "MBA"}
+            formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
+          />
+        )}
+      </main>
+    </div >
   );
 };
 

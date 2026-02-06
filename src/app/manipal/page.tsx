@@ -29,6 +29,7 @@ import ProgramBenefit from './_components/ProgramBenefit';
 import RankingAccreditionsManipal from './_components/RankingAccreditionsManipal';
 import WhyChooseManipal from './_components/WhyChooseManipal';
 import { OpenModalState } from '../../../types/Modal';
+import UniversityDateSlider from '@/components/UniversityDateSlider';
 
 const Manipal = () => {
 
@@ -260,6 +261,7 @@ const Manipal = () => {
         </header>
 
         <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row w-full">
+          
           {/* Left Sidebar */}
           <PageContent
             sectionItems={sectionItems}
@@ -267,7 +269,7 @@ const Manipal = () => {
             ismobilemenuopen={isMobileMenuOpen}
             onClose={() => setIsMobileMenuOpen(false)}
           />
-
+          
           {/* Main Content */}
           <main className="flex-1 min-w-0 lg:ml-64 pt-16 sm:pt-18 lg:pt-20">
 
@@ -284,7 +286,15 @@ const Manipal = () => {
                 </DialogContent>
               </Dialog>
             )}
-
+            <UniversityDateSlider
+                  currentDate="January 2026 Session"
+                  nextUpdateDate="Applications Closing on 07 Feb 2026"
+                  information="Limited Seats Available - Apply Now!"
+                  special="Average of 50% salary growth"
+                  color="#dc2626"
+                  backgroundColor="#fee2e2"
+                  textColor="#991b1b"
+                />
             {/* Introduction Hero Section */}
             <Introduction setOpenModal={setOpenModal} openModal={openModal} />
 

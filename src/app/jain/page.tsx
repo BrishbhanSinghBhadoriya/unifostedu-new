@@ -7,6 +7,7 @@ import * as Tabs from '@radix-ui/react-tabs';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Image from 'next/image';
+import UniversityDateSlider from '@/components/UniversityDateSlider';
 import { useEffect, useState } from 'react';
 import {
   FaChevronDown,
@@ -467,11 +468,19 @@ const Jain = () => {
         </div>
       </header>
 
-
-
+       
       <PageContent sectionItems={selectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
       {/* Add padding to the top of the first section to account for fixed header */}
       <div className="pt-16 overflow-x-hidden break-words hyphens-auto lg:ml-64">
+         <UniversityDateSlider
+                      currentDate="January 2026 Session"
+                      nextUpdateDate="Applications Closing on 07 Feb 2026"
+                      information="Limited Seats Available - Apply Now!"
+                      special="Average of 50% salary growth"
+                      color="#1619e4"
+                      backgroundColor="#ebeb12"
+                      textColor="#1a08db"
+                    />
 
 
 
@@ -873,28 +882,28 @@ const Jain = () => {
               benefits={[
                 {
                   title: "Diverse Learning Mediums",
-                  description: "E-books, printed & audio books, videos to cater your preferences & unique learning style.",
+                  description: "We understand that every learner is different. That’s why our programs are delivered through a variety of learning formats including e-books, printed books, audiobooks, and engaging video lectures. Whether you prefer reading, listening, or visual learning, our flexible content delivery ensures you can study in a way that matches your personal learning style, schedule, and pace.",
                   iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M16 6V4H8v2H2v14h20V6h-6zM8 4h8v2H8V4zm12 16H4V8h16v12z"></path>
                     </svg>`,
                 },
                 {
                   title: "Dedicated Academic Advisor",
-                  description: "Dedicated experts and advisors to guide you at every step of your professional career.",
+                  description: "From enrollment to graduation, you are never alone in your journey. Each student is assigned a dedicated academic advisor who provides personalized guidance, helps with course planning, resolves academic queries, and supports you in staying on track. Our advisors are experienced professionals committed to helping you achieve both your academic and career goals.",
                   iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 12c2.67 0 8 1.34 8 4v4H4v-4c0-2.66 5.33-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z"></path>
                     </svg>`,
                 },
                 {
                   title: "Career Services",
-                  description: "Be job-ready with resume building workshops, internships & industry mentorship.",
+                  description: "Our support goes beyond academics. We prepare you for the real world with career-focused training, including resume-building workshops, mock interviews, internship opportunities, and mentorship from industry experts. These services help you develop confidence, professional skills, and workplace readiness required to stand out in today’s competitive job market.",
                   iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M6 22h12V6H6v16zM8 2h8v2H8V2z"></path>
                     </svg>`,
                 },
                 {
                   title: "Placement Opportunities",
-                  description: "Job interview prep, placement assistance & resume building for students to be job-ready.",
+                  description: "We actively assist students in securing job opportunities through our placement assistance programs. From interview preparation and soft skills training to resume optimization and employer connections, we ensure you are fully prepared to step into your professional career. Our goal is to help you transition smoothly from learning to earning.",
                   iconSvg: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2l9 4.5v11L12 22l-9-4.5v-11L12 2z"></path>
                     </svg>`,
