@@ -169,7 +169,13 @@ function calculateReadingTime(text = "") {
 
 export default async function BlogPage({ params }: BlogPageProps) {
   const { slug } = await params;
-  const blog = await fetchBlogBySlug(slug);
+  let blog;
+
+  try {
+    blog = await fetchBlogBySlug(slug);
+  } catch (error) {
+    console.error(`Failed to fetch blog for slug: ${slug}`, error);
+  }
 
   if (!blog) {
     notFound();
