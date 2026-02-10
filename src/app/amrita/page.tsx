@@ -26,6 +26,8 @@ import EnquiryForm from '@/components/EnquiryForm';
 import UniversityDateSlider from '@/components/UniversityDateSlider';
 export default function AmritaOnlinePage() {
   const [activeTab, setActiveTab] = useState('general');
+   
+   const [open, setOpen] = useState(false)
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [activeCourseSlide, setActiveCourseSlide] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -392,21 +394,60 @@ export default function AmritaOnlinePage() {
               </div>
             </div>
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-6">
-                Globally Recognized Online Degrees from Amrita Vishwa Vidyapeetham
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-2">
+                About Amrita Vishwa Vidyapeetham Online Degree
               </h2>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                Amrita Online, formerly Amrita AHEAD, brings the excellence of Amrita Vishwa Vidyapeetham—India's 8th ranked university (NIRF 2025)—to your fingertips. Our UGC-entitled bachelor's and master's programs are designed for learners at every stage—whether you're starting after Class 12th or already advancing as a working professional—you gain a globally respected qualification with the flexibility to balance study, work, and life.
+                Amrita Vishwa Vidyapeetham is one of India’s most respected institutions, and the Amrita Vishwa Vidyapeetham online degree is designed to bring the same academic excellence to learners across the country. The Amrita online university offers flexible, career-focused programs that allow students to earn an online degree from Amrita University without relocating or leaving their current job or responsibilities. With a strong academic foundation, modern digital learning tools, and national recognition, the Amrita online university has become a preferred choice for students seeking quality higher education.              
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                In the current academic environment, it has become more difficult to pursue quality higher education while balancing professional and personal commitments. Amrita Online fills this gap by providing UGC-approved online degree courses that offer the best of both worlds: academic excellence and flexibility.
-              </p>
+               The Amrita Vishwa Vidyapeetham online degree programs are ideal for students, working professionals, and learners who want a trusted and recognized qualification. These programs are delivered through an advanced online learning platform that includes live lectures, recorded sessions, digital study materials, assignments, and assessments. By choosing an online degree from Amrita University, students receive the same academic standards, curriculum depth, and evaluation quality as on-campus programs. </p>
               <a href="#" className="text-[#B8164A] font-semibold underline hover:text-[#9a1240] transition">
                 Explore our Online MBA, MCA, BCA, BBA, B.Com, M.Com and more
               </a>
             </div>
           </div>
         </div>
+          <div className="bg-white rounded-xl shadow-md p-6 text-gray-700 leading-relaxed">
+      
+      {/* Always Visible Short Intro */}
+      <p>
+        As a leading Amrita online university, Amrita ensures that every learner gets access to experienced faculty members, structured learning paths, and continuous academic support.
+      </p>
+
+      {/* Hidden Content */}
+      {open && (
+        <div className="mt-4 space-y-4">
+          <p>
+            Students enrolled in the Amrita Vishwa Vidyapeetham online degree benefit from industry-aligned curriculum that focuses on practical skills, analytical thinking, and real-world application. This makes an online degree from Amrita University valuable for career growth, promotions, and higher education opportunities.
+          </p>
+
+          <p>
+            The UGC approved Amrita online degree assures students that the qualification is valid and recognized across India. In addition, the NAAC A++ Amrita online degree status highlights the institution’s academic quality, infrastructure, and teaching standards.
+          </p>
+
+          <p>
+            With AICTE approved Amrita online programs, students can be confident that the courses meet national technical and professional education guidelines. The Amrita online admission process is simple, transparent, and student-friendly.
+          </p>
+
+          <p>
+            Learners looking for distance education Coimbatore options often choose Amrita because of its national reputation. Students can study from anywhere while earning an online degree from Amrita University that carries the value of a top-ranked institution.
+          </p>
+
+          <p>
+            As an online degree from top university in India, the Amrita Vishwa Vidyapeetham online degree opens doors to better opportunities, professional growth, and lifelong learning.
+          </p>
+        </div>
+      )}
+
+      {/* Button */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="mt-4 text-blue-600 font-semibold hover:underline"
+      >
+        {open ? 'Read Less ▲' : 'Read More ▼'}
+      </button>
+    </div>
       </section>
 
       {/* Why Choose Section */}
@@ -507,9 +548,71 @@ export default function AmritaOnlinePage() {
               </ul>
             </div>
           </div>
+
         </div>
       </section>
+      <section className="bg-gradient-to-b from-blue-50 to-white py-14 px-4">
+      <div className="max-w-6xl mx-auto">
 
+        {/* Heading */}
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-bold text-gray-900">
+            Who Can Apply for Amrita Vishwa Vidyapeetham Online Degree
+          </h2>
+          <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
+            Amrita Vishwa Vidyapeetham offers inclusive and flexible eligibility criteria through its 
+            online degree programs. With UGC approval, NAAC A++ accreditation, and AICTE recognition, 
+            learners from diverse backgrounds can confidently pursue a career-focused qualification.
+          </p>
+        </div>
+
+        {/* Intro Box */}
+        <div className="bg-white shadow-md rounded-xl p-6 mb-10 border-l-4 border-blue-600">
+          <p className="text-gray-700 leading-relaxed">
+            The Amrita online university welcomes students, professionals, and lifelong learners who 
+            want a recognized and flexible academic path. With a simple and transparent admission process, 
+            students from anywhere can earn an online degree from one of the top universities in India.
+          </p>
+        </div>
+
+        {/* Eligibility Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          {[
+            "Undergraduate aspirants who have completed higher secondary education and want to begin their academic journey with an online degree from Amrita.",
+            "Graduates seeking higher education to improve career prospects through a recognized online degree from Amrita University.",
+            "Working professionals aiming to upskill, gain promotions, or switch careers while continuing their jobs.",
+            "Learners looking for distance education options with national-level recognition and academic credibility.",
+            "Entrepreneurs and freelancers who want to strengthen their academic profile with a UGC-approved qualification.",
+            "Students preparing for competitive exams or higher studies who require a valid NAAC A++ accredited degree."
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl shadow-sm hover:shadow-lg transition p-6 border border-gray-100"
+            >
+              <div className="flex items-start gap-3">
+                <div className="text-blue-600 text-xl">✔</div>
+                <p className="text-gray-700 text-sm leading-relaxed">{item}</p>
+              </div>
+            </div>
+          ))}
+
+        </div>
+
+        {/* Closing Highlight */}
+        <div className="mt-12 bg-blue-600 text-white rounded-xl p-8 text-center shadow-lg">
+          <h3 className="text-xl font-semibold mb-2">
+            Study from Anywhere with Confidence
+          </h3>
+          <p className="text-blue-100 max-w-3xl mx-auto">
+            The flexible structure of Amrita’s online programs allows learners from any location to 
+            enroll and study at their convenience. With strong academic support and national approvals, 
+            choosing Amrita means investing in a future backed by quality, recognition, and long-term career growth.
+          </p>
+        </div>
+
+      </div>
+    </section>
       {/* Accreditations Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -542,7 +645,7 @@ export default function AmritaOnlinePage() {
               <div className="mb-4 flex justify-center">
                 <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014184/nirf-logo-2025_i2ftca.svg" alt="NIRF Ranking" className="h-20" />
               </div>
-              <p className="font-semibold">NIRF Ranking #8</p>
+              <p className="font-semibold">NIRF Ranking 8</p>
               <p className="text-sm text-gray-600">Top Private University in India</p>
             </div>
             <div className="text-center">
@@ -556,7 +659,7 @@ export default function AmritaOnlinePage() {
               <div className="mb-4 flex justify-center">
                 <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014185/wur_yt2xei.svg" alt="#1 for International faculty" className="h-20" />
               </div>
-              <p className="font-semibold">#1 International Faculty</p>
+              <p className="font-semibold">1 International Faculty</p>
               <p className="text-sm text-gray-600">Leading in Global Expertise</p>
             </div>
             <div className="text-center">
@@ -576,6 +679,46 @@ export default function AmritaOnlinePage() {
             </div>
           </div>
         </div>
+         <div className="bg-white rounded-xl shadow-md p-6 text-gray-700 leading-relaxed mt-8">
+      
+      {/* Always Visible Intro */}
+      <p>
+        Amrita Vishwa Vidyapeetham is widely recognized for its academic excellence, and the Amrita Vishwa Vidyapeetham online degree carries the same approvals and recognitions as its on-campus programs.
+      </p>
+
+      {/* Hidden Detailed Content */}
+      {open && (
+        <div className="mt-4 space-y-4">
+          <p>
+            The UGC approved Amrita online degree confirms that the qualification is legally valid and recognized across India. A UGC approved Amrita online degree is accepted for government jobs, private sector employment, competitive exams, and higher education.
+          </p>
+
+          <p>
+            Another major highlight is the NAAC A++ Amrita online degree recognition. This top accreditation reflects excellence in teaching quality, research, curriculum design, and student support. The NAAC A++ Amrita online degree significantly improves the credibility of an online degree from Amrita University.
+          </p>
+
+          <p>
+            Amrita also offers AICTE approved Amrita online programs, especially for technical and professional courses. AICTE approval ensures that the Amrita Vishwa Vidyapeetham online degree aligns with industry standards and national technical education requirements.
+          </p>
+
+          <p>
+            For learners searching for distance education Coimbatore, Amrita stands out as a trusted name with national and international recognition. The distance education Coimbatore model ensures flexibility while maintaining strong academic approvals.
+          </p>
+
+          <p>
+            The transparent Amrita online admission process further builds trust. During Amrita online admission, all approvals and recognitions are clearly communicated so students can confidently choose an online degree from top university in India.
+          </p>
+        </div>
+      )}
+
+      {/* Toggle Button */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="mt-4 text-blue-600 font-semibold hover:underline"
+      >
+        {open ? 'Read Less ▲' : 'Read More ▼'}
+      </button>
+    </div>
       </section>
 
       {/* Programs Section */}
@@ -628,7 +771,7 @@ export default function AmritaOnlinePage() {
               </div>
             </div>
           </div>
-
+         
           {/* Courses Carousel */}
           <div className="relative">
             <div className="flex items-center justify-between mb-4">
@@ -682,6 +825,130 @@ export default function AmritaOnlinePage() {
             </div>
           </div>
         </div>
+
+         <section className="py-16 bg-gray-50 px-4">
+      <div className="max-w-7xl mx-auto">
+
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900">
+            Specialisations & Programmes Offered
+          </h2>
+          <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
+            Explore industry-relevant undergraduate and postgraduate programmes under the 
+            Amrita Vishwa Vidyapeetham Online Degree with UGC approval and NAAC A++ accreditation.
+          </p>
+        </div>
+
+        {/* ============ PROGRAMMES OVERVIEW ============ */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {[
+            "MBA – Leadership, management & corporate careers",
+            "M.Com – Advanced finance, accounting & taxation",
+            "MCA – IT, software & digital technologies",
+            "BBA – Business management & marketing foundation",
+            "B.Com – Commerce, finance & corporate careers",
+            "BCA – Computer applications & IT fundamentals"
+          ].map((item, index) => (
+            <div key={index} className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+              <p className="text-gray-700 font-medium">{item}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* ============ SPECIALISATIONS ============ */}
+        <div className="grid md:grid-cols-2 gap-10 mb-16">
+          
+          {/* UG */}
+          <div className="bg-white p-6 rounded-xl shadow">
+            <h3 className="text-xl font-semibold mb-4 text-blue-700">Undergraduate Programmes</h3>
+            <ul className="space-y-2 text-gray-700 text-sm">
+              <li>BCA</li>
+              <li>BCA with AI & Data Science</li>
+              <li>BBA</li>
+              <li>BBA in Data Analytics</li>
+              <li>BBA in Digital Marketing & Sales</li>
+              <li>BBA in Banking & FinTech</li>
+              <li>B.Com</li>
+              <li>B.Com with ACCA</li>
+            </ul>
+          </div>
+
+          {/* PG */}
+          <div className="bg-white p-6 rounded-xl shadow">
+            <h3 className="text-xl font-semibold mb-4 text-purple-700">Postgraduate Programmes</h3>
+            <ul className="space-y-2 text-gray-700 text-sm">
+              <li>MBA (General, HR, Marketing, Finance, Operations)</li>
+              <li>MBA in AI, FinTech, Business Analytics, ESG</li>
+              <li>MBA with ACCA</li>
+              <li>MCA, MCA in AI & ML, MCA in Cybersecurity</li>
+              <li>M.Com, M.Com with CPA</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* ============ FEES TABLE ============ */}
+        <div className="bg-white rounded-xl shadow p-6 overflow-x-auto">
+          <h3 className="text-2xl font-semibold mb-6 text-center text-gray-800">
+            Course Duration & Fees
+          </h3>
+
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-blue-600 text-white">
+                <th className="p-3 text-left">Programme</th>
+                <th className="p-3 text-left">Duration</th>
+                <th className="p-3 text-left">Total Fees</th>
+                <th className="p-3 text-left">Enquiry Now</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700">
+              {[
+                ["Online BCA", "3 Years", "₹1,35,000"],
+                ["BCA AI & Data Science", "3 Years", "₹1,65,000"],
+                ["Online BBA", "3 Years", "₹1,35,000"],
+                ["BBA Data Analytics", "3 Years", "₹1,65,000"],
+                ["BBA Digital Marketing", "3 Years", "₹1,65,000"],
+                ["BBA Banking & FinTech", "3 Years", "₹1,65,000"],
+                ["B.Com", "3 Years", "₹1,35,000"],
+                ["B.Com with ACCA", "3 Years", "₹2,85,000"],
+                ["MBA (General)", "2 Years", "₹1,70,000"],
+                ["MBA AI / HR / Marketing / Finance", "2 Years", "₹2,20,000"],
+                ["MBA FinTech / Analytics / ESG", "2 Years", "₹2,20,000"],
+                ["MBA with ACCA", "2 Years", "₹2,60,000"],
+                ["Online MCA", "2 Years", "₹1,40,000"],
+                ["MCA AI & ML / Cybersecurity", "2 Years", "₹1,95,000"],
+                ["M.Com", "2 Years", "₹90,000"],
+                ["M.Com with CPA", "2 Years", "₹1,20,000"],
+              ].map((course, i) => (
+                <tr key={i} className="border-b hover:bg-gray-50">
+                  <td className="p-3">{course[0]}</td>
+                  <td className="p-3">{course[1]}</td>
+                  <td className="p-3 font-semibold text-blue-700">{course[2]}</td>
+                  <td className="p-3 text-center">
+          <button
+            onClick={() => setOpenModal({ type: 'apply' })} 
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-1.5 rounded-md text-xs font-semibold transition"
+          >
+            Enquire Now
+          </button>
+        </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          {/* Enquiry Button */}
+          <div className="text-center mt-8">
+            <button onClick={() => setOpenModal({ type: 'apply' })}
+             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold shadow-md transition">
+              Enquire Now
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
       </section>
 
       {/* Study Abroad Section */}
@@ -796,7 +1063,63 @@ export default function AmritaOnlinePage() {
           </div>
         </div>
       </section>
+      <section className="py-16 bg-white px-4">
+      <div className="max-w-7xl mx-auto">
 
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900">
+            Placement Partners & Career Support
+          </h2>
+          <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
+            The Amrita Vishwa Vidyapeetham online degree is designed with a strong focus on 
+            employability, career readiness, and long-term professional growth.
+          </p>
+        </div>
+
+        {/* Main Points */}
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          {[
+            "Structured career and placement support to prepare learners for the job market",
+            "Career guidance, resume-building assistance, and interview preparation",
+            "Industry-aligned curriculum under a UGC-approved academic framework",
+            "Strong employer trust backed by NAAC A++ accreditation",
+            "Technical and professional programs aligned with AICTE standards",
+            "National credibility for learners pursuing flexible distance education options"
+          ].map((point, index) => (
+            <div key={index} className="flex items-start gap-3 bg-gray-50 p-5 rounded-lg shadow-sm">
+              <span className="text-blue-600 text-lg">✔</span>
+              <p className="text-gray-700 text-sm leading-relaxed">{point}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Key Highlights Box */}
+        <div className="bg-blue-600 text-white rounded-xl p-8 shadow-lg mb-12">
+          <h3 className="text-xl font-semibold mb-4 text-center">
+            Key Placement & Career Highlights
+          </h3>
+          <ul className="grid md:grid-cols-2 gap-4 text-sm text-blue-100">
+            <li>• Career support sessions & employability skill development</li>
+            <li>• Resume writing & interview preparation workshops</li>
+            <li>• Industry exposure through case studies & live projects</li>
+            <li>• Hiring opportunities across IT, management, finance & analytics</li>
+            <li>• Strong recognition for flexible distance education learners</li>
+            <li>• Degree from a top university in India enhancing career mobility</li>
+          </ul>
+        </div>
+
+        {/* Placement Partners Image */}
+        <div className="text-center">
+          <img
+            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770446440/company_wux9fz.png"
+            alt="Placement Partners"
+            className="mx-auto w-full max-w-5xl rounded-lg shadow-md"
+          />
+        </div>
+
+      </div>
+    </section>
       {/* Testimonials Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
