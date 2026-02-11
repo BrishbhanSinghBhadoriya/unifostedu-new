@@ -404,7 +404,9 @@ ${uploadedResumeURL || "Not uploaded"}
           cache: "no-store",
         });
         if (!response.ok) {
-          throw new Error("Failed to fetch blogs");
+          console.warn(`Header Blog API failed with status: ${response.status}`);
+          setLatestBlogs([]);
+          return;
         }
         const payload = await response.json();
         if (payload?.success && Array.isArray(payload.data)) {

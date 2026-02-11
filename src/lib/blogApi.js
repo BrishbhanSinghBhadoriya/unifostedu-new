@@ -34,7 +34,8 @@ export async function fetchBlogs(options = {}) {
   const response = await fetch(BLOG_API_ENDPOINT, fetchOptions);
 
   if (!response.ok) {
-    throw new Error(`Failed to fetch blogs: ${response.statusText}`);
+    console.error(`Failed to fetch blogs: ${response.status} ${response.statusText}`);
+    return [];
   }
 
   const payload = await response.json();

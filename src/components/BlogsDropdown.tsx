@@ -53,7 +53,9 @@ const BlogsDropdown = ({ menuOpen, setMenuOpen }: BlogsDropdownProps) => {
         });
 
         if (!response.ok) {
-          throw new Error("Failed to fetch blogs");
+          console.warn(`Blog API failed with status: ${response.status}`);
+          setBlogs([]);
+          return;
         }
 
         const payload = await response.json();
