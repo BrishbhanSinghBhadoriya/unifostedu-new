@@ -50,103 +50,101 @@ type SearchItem = {
   logo?: string;
 };
 
+const universities = [
+  {
+    name: "Amity University Online",
+    link: "/amity",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp",
+  },
+  {
+    name: "Lovely Professional University",
+    link: "/lpu-online",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp",
+  },
+  {
+    name: "Manipal University Jaipur",
+    link: "/manipal",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp",
+  },
+  {
+    name: "Manipal Academy of Higher Education",
+    link: "/mahe-online",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/mahe-uni_dvnm1d.webp",
+  },
+  {
+    name: "Sikkim Manipal University",
+    link: "/smu",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp",
+  },
+  {
+    name: "Uttaranchal University",
+    link: "/uu",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp",
+  },
+  {
+    name: "Chandigarh University Online",
+    link: "/cuOnline",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp",
+  },
+  {
+    name: "Jain University",
+    link: "/jain",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp",
+  },
+  {
+    name: "Dr. D Y Patil",
+    link: "/dypatil",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dypatil_tbbpf9.webp",
+  },
+  {
+    name: "OP Jindal University",
+    link: "/opjindal",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/opjindal_jdl7az.webp",
+  },
+  {
+    name: "Kurukshetra University",
+    link: "/ku-online",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku_xu5nkx.webp",
+  },
+  {
+    name: "Shoolini University Online",
+    link: "/shoolini",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327856/shoolini_txvq6k.webp",
+  },
+  {
+    name: "Vivekananda Global University Online",
+    link: "/vgu",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgu1_ieijw9.webp",
+  },
+  {
+    name: "Upes Online",
+    link: "/upes",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/upes_uzkkmm.webp",
+  },
+  {
+    name: "Sharda University Online",
+    link: "/sharda",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp",
+  },
+  {
+    name: "NMIMS University",
+    link: "/nmims",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327721/nmims_os8kn9.webp",
+  },
+];
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState<MenuKey>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const router = useRouter();
   const pathname = usePathname();
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
-  const [loading, setLoading] = useState(false);
   const [modalType, setModalType] = useState<
     "videoCall" | "homeDemo" | "getStarted" | undefined
   >();
-
-  const universities = [
-    {
-      name: "Amity University Online",
-      link: "/amity",
-      logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp",
-    },
-    {
-      name: "Lovely Professional University",
-      link: "/lpu-online",
-      logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp",
-    },
-    {
-      name: "Manipal University Jaipur",
-      link: "/manipal",
-      logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp",
-    },
-    {
-      name: "Manipal Academy of Higher Education",
-      link: "/mahe-online",
-      logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/mahe-uni_dvnm1d.webp",
-    },
-    {
-      name: "Sikkim Manipal University",
-      link: "/smu",
-      logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp",
-    },
-    {
-      name: "Uttaranchal University",
-      link: "/uu",
-      logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp",
-    },
-    {
-      name: "Chandigarh University Online",
-      link: "/cuOnline",
-      logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp",
-    },
-    {
-      name: "Jain University",
-      link: "/jain",
-      logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp",
-    },
-    {
-      name: "Dr. D Y Patil",
-      link: "/dypatil",
-      logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dypatil_tbbpf9.webp",
-    },
-    {
-      name: "OP Jindal University",
-      link: "/opjindal",
-      logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/opjindal_jdl7az.webp",
-    },
-    {
-      name: "Kurukshetra University",
-      link: "/ku-online",
-      logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku_xu5nkx.webp",
-    },
-    {
-      name: "Shoolini University Online",
-      link: "/shoolini",
-      logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327856/shoolini_txvq6k.webp",
-    },
-    {
-      name: "Vivekananda Global University Online",
-      link: "/vgu",
-      logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgu1_ieijw9.webp",
-    },
-    {
-      name: "Upes Online",
-      link: "/upes",
-      logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/upes_uzkkmm.webp",
-    },
-    {
-      name: "Sharda University Online",
-      link: "/sharda",
-      logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp",
-    },
-    {
-      name: "NMIMS University",
-      link: "/nmims",
-      logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327721/nmims_os8kn9.webp",
-    },
-  ];
 
   const suggestions = useMemo(() => {
     const fromJson = (searchIndex as SearchItem[]).map((i) => ({
@@ -176,15 +174,15 @@ const Header = () => {
     [...fromUniversities, ...fromJson, ...fromCourses].forEach((item) => {
       const existing = map.get(item.href);
       // If university exists, preserve it; otherwise add the item
-      if (!existing || existing.type === "university") {
+      if (!existing) {
         map.set(item.href, item);
-      } else if (item.type === "university") {
+      } else if (existing.type !== "university" && item.type === "university") {
         // University should override non-university items
         map.set(item.href, item);
       }
     });
     return Array.from(map.values());
-  }, [universities]);
+  }, []);
 
   const [latestBlogs, setLatestBlogs] = useState<BlogProps[]>([]);
   const [blogsLoading, setBlogsLoading] = useState(false);
@@ -204,7 +202,6 @@ const Header = () => {
         !dropdownRef.current.contains(event.target as Node)
       ) {
         setMenuOpen(null);
-        setActiveDropdown(null);
       }
     };
 
