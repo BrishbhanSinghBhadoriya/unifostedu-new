@@ -56,6 +56,11 @@ const universities = [
     link: "/amity",
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp",
   },
+   {
+    name: "Amrita Vishwa Vidyapeetham",
+    link: "/amrita",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1770874326/amrita_rq4xlg.jpg",
+  },
   {
     name: "Lovely Professional University",
     link: "/lpu-online",
