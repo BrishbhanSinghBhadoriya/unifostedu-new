@@ -118,6 +118,7 @@ export default function RootLayout({ children }: ChildrenProps) {
 
         {/* Educational Organization Schema */}
        {/* Google Ads Global Site Tag */}
+{/* Google Ads Global Site Tag */}
 <Script
   src="https://www.googletagmanager.com/gtag/js?id=AW-17800709438"
   strategy="afterInteractive"
@@ -130,6 +131,7 @@ export default function RootLayout({ children }: ChildrenProps) {
   gtag('config', 'AW-17800709438');
 `}
 </Script>
+
 
 
         {/* Structured Data - WebSite */}
@@ -153,17 +155,7 @@ export default function RootLayout({ children }: ChildrenProps) {
           }}
         />
 
-        {/* Google tag (gtag.js) - load lazily to reduce main-thread work */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-17800709438" strategy="lazyOnload" />
-        <Script id="gtag-init" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);} 
-            gtag('js', new Date());
-
-            gtag('config', 'AW-17800709438');
-          `}
-        </Script>
+        
       
       </head>
       <body
