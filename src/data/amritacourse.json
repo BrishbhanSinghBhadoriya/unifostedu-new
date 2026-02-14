@@ -1,0 +1,206 @@
+{
+  "courses": [
+    {
+      "id": "online-mba",
+      "slug": "online-mba",
+      "title": "Online MBA | Master of Business Administration",
+      "shortTitle": "Online MBA",
+      "tagline": "Average 33.94% salary growth reported by Amrita Online MBA graduates.",
+      "deadline": "February 16, 2026",
+      "seatsLeft": true,
+      "emiPerMonth": 7500,
+      "totalFee": 170000,
+      "semesterFee": 42500,
+      "yearFee": 80750,
+      "studentsCountries": "50+",
+      "indianStates": "28",
+      "ranking": {
+        "position": "8th",
+        "type": "NIRF-UGC",
+        "description": "8th Ranked University"
+      },
+      "accreditations": [
+        {
+          "name": "NAAC A++",
+          "description": "Highest Grade"
+        },
+        {
+          "name": "WES Accredited",
+          "description": "USA & Canada"
+        }
+      ],
+      "highlights": [
+        {
+          "icon": "university",
+          "number": "1",
+          "title": "8th Ranked University",
+          "description": "No 1 Private University in India"
+        },
+        {
+          "icon": "faculty",
+          "number": "2",
+          "title": "World-Class Faculty",
+          "description": "Learn from industry experts"
+        },
+        {
+          "icon": "global",
+          "number": "3",
+          "title": "Study Abroad",
+          "description": "International opportunities"
+        },
+        {
+          "icon": "scholarship",
+          "number": "4",
+          "title": "100% Scholarship",
+          "description": "Merit-based scholarships"
+        }
+      ],
+      "specializations": [
+        {
+          "name": "MBA Artificial Intelligence",
+          "link": "/mba-artificial-intelligence"
+        },
+        {
+          "name": "MBA Business Analytics (with Grant Thornton)",
+          "link": "/mba-business-analytics"
+        },
+        {
+          "name": "MBA FinTech (with Grant Thornton)",
+          "link": "/mba-fintech"
+        },
+        {
+          "name": "MBA ESG (with Grant Thornton)",
+          "link": "/mba-esg"
+        },
+        {
+          "name": "MBA International Finance & Accounting",
+          "link": "/mba-finance-accounting"
+        },
+        {
+          "name": "MBA Marketing",
+          "link": "/mba-marketing"
+        },
+        {
+          "name": "MBA Finance",
+          "link": "/mba-finance"
+        },
+        {
+          "name": "MBA Operations Management",
+          "link": "/mba-operations"
+        },
+        {
+          "name": "MBA Human Resources",
+          "link": "/mba-hr"
+        },
+        {
+          "name": "MBA General Management",
+          "link": "/mba-general"
+        }
+      ],
+      "syllabus": {
+        "semester1": [
+          "Course 1",
+          "Course 2",
+          "Course 3"
+        ],
+        "semester2": [
+          "Course 1",
+          "Course 2"
+        ],
+        "semester3": [
+          "Course 1",
+          "Course 2"
+        ],
+        "semester4": [
+          "Environment Sustainability and Governance",
+          "Project",
+          "Elective 5: Research Methodology",
+          "Elective 6: Mergers and Acquisitions",
+          "Elective 7: Intellectual Property Rights (IPR)"
+        ]
+      },
+      "eligibility": {
+        "ugMarks": "50%",
+        "education": "10 + 2 and undergraduate degree (minimum 3 years)",
+        "finalYear": "Students in final year can apply with last completed semester results",
+        "workExperience": "Candidates with work experience will have an added advantage"
+      },
+      "duration": {
+        "minimum": "2 years",
+        "maximum": "4 years"
+      },
+      "fees": {
+        "indian": {
+          "emi": 7500,
+          "semesterFee": 42500,
+          "yearFee": 80750,
+          "totalFee": 170000
+        },
+        "foreign": {
+          "semesterFee": 50000,
+          "yearFee": 95000,
+          "totalFee": 200000
+        },
+        "additional": {
+          "registration": 500,
+          "examination": 2500
+        }
+      },
+      "studyAbroad": {
+        "programs": [
+          "Student Exchange",
+          "Study Abroad Program",
+          "Summer Program"
+        ],
+        "recognition": "WES-recognized: Globally recognition of our Online MBA- Degrees are recognized in USA & Canada."
+      },
+      "internationalPartners": [
+        {
+          "name": "Oakland University",
+          "logo": "/partners/oakland.png"
+        },
+        {
+          "name": "University of New Mexico",
+          "logo": "/partners/new-mexico.png"
+        },
+        {
+          "name": "Institut Mines-Télécom",
+          "logo": "/partners/imt.png"
+        },
+        {
+          "name": "Universitat de Barcelona",
+          "logo": "/partners/barcelona.png"
+        }
+      ],
+      "placementAssistance": {
+        "mentorship": "Mentorship from Industry experts on important emerging topics",
+        "softSkills": "Soft Skills, Aptitude, Reasoning, Group Discussions & Handling Interview",
+        "resumeBuilding": "Get Amrita Online of the curve with tailored resumes and mock interviews"
+      },
+      "hiringPartners": [
+        "Honeywell",
+        "HDFC Bank",
+        "Amazon",
+        "Deloitte",
+        "Philips",
+        "BNY Mellon",
+        "Apple",
+        "Grant Thornton",
+        "Exide",
+        "HCL Tech",
+        "EY",
+        "Caterpillar",
+        "DHL",
+        "Leadsquared",
+        "Tata Power",
+        "Schneider Electric",
+        "Airtel",
+        "Oracle",
+        "Yamaha",
+        "Tata Capital",
+        "ICICI Bank",
+        "TVS"
+      ]
+    }
+  ]
+}

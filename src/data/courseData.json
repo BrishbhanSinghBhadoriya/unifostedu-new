@@ -409,6 +409,17 @@
         "features": ["Quality Education", "Research Projects", "Career Support"]
       },
       {
+        "name": "Manipal University",
+        "location": "Jaipur, Rajasthan",
+        "rating": 4.5,
+        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp",
+        "specializations": ["Mathematics"],
+        "fee": "₹80,000",
+        "duration": "2 Years",
+        "accreditation": "UGC Approved",
+        "features": ["Expert Faculty", "Industry Connect", "Career Services"]
+      },
+      {
         "name": "Manipal Academy of Higher Education",
         "location": "Manipal, Karnataka",
         "NIRF": "Top 5",
@@ -693,7 +704,7 @@
         "rating": 4.5,
         "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp",
         "specializations": ["Journalism and Mass Communication"],
-        "fee": "₹1,40,000",
+        "fee": "₹80,000",
         "duration": "2 Years",
         "accreditation": "UGC Approved",
         "features": ["Expert Faculty", "Industry Connect", "Career Services"]

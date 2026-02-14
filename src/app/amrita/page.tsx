@@ -77,42 +77,42 @@ export default function AmritaOnlinePage() {
     {
       title: "Online BCA",
       duration: "3 years",
-      fees: "Rs. 1,35,000",
-      description: "Online BCA courses for those interested in IT with latest specializations in Artificial Intelligence and Cybersecurity",
+      fees: "Rs. 1,35,000-1,65,000",
+      description: "Online BCA courses for those interested in IT with latest specializations in Artificial Intelligence and Data Science",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp"
     },
     {
       title: "Online BBA",
       duration: "3 years",
-      fees: "Rs. 1,35,000",
-      description: "Online BBA courses for those interested in business management and entrepreneurship",
+      fees: "Rs. 1,35,000-2,50,000",
+      description: "Online BBA courses for those interested in business management and entrepreneurship with thease specializations in Data Analytics, Digital Marketing & Sales",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp"
     },
     {
       title: "Online MBA",
       duration: "2 years",
-      fees: "Rs. 2,40,000",
+      fees: "Rs. 1,70,000-2,60,000",
       description: "Online MBA courses with specializations in AI, ESG, Finance, Marketing, and HR",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp"
     },
     {
       title: "Online MCA",
       duration: "2 years",
-      fees: "Rs. 2,40,000",
+      fees: "Rs. 1,40,000 -1,95,000",
       description: "Online MCA courses with the latest specializations in Artificial Intelligence and Cybersecurity",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp"
     },
     {
       title: "Online B.Com",
       duration: "3 years",
-      fees: "Rs. 1,35,000",
-      description: "Online B.Com with ACCA for commerce students",
+      fees: "Rs. 1,20,000 - 2,85,000",
+      description: "Online B.Com with ACCA for commerce students And specilizations are Taxation and Finance – Integrated with CA subjects ",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp"
     },
     {
       title: "Online M.Com",
       duration: "2 years",
-      fees: "Rs. 2,40,000",
+      fees: "Rs. 90,000 - 1,20,000",
       description: "Online M.Com with CPA for commerce students",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp"
     }
@@ -782,7 +782,7 @@ export default function AmritaOnlinePage() {
             <div className="overflow-hidden">
               <div 
                 className="flex transition-transform duration-300"
-                style={{ transform: `translateX(-${activeCourseSlide * 100}%)` }}
+                style={{ transform: `translateX(-${activeCourseSlide * (100/3)}%)` }}
               >
                 {courses.map((course, index) => (
                   <div key={index} className="min-w-full lg:min-w-[33.333%] px-4">
@@ -804,6 +804,12 @@ export default function AmritaOnlinePage() {
                         </div>
                         <h4 className="text-xl font-bold text-gray-800 mb-2">{course.title}</h4>
                         <p className="text-sm text-gray-600">{course.description}</p>
+                        <button
+                          onClick={() => setOpenModal({ type: 'apply' })}
+                          className="w-full bg-[#B8164A] text-white py-2 rounded-md hover:bg-[#a11440] transition font-semibold"
+                             >
+                           Enquiry Now
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -910,15 +916,18 @@ export default function AmritaOnlinePage() {
                 ["BBA Data Analytics", "3 Years", "₹1,65,000"],
                 ["BBA Digital Marketing", "3 Years", "₹1,65,000"],
                 ["BBA Banking & FinTech", "3 Years", "₹1,65,000"],
-                ["B.Com", "3 Years", "₹1,35,000"],
+                ["BBA With ACCA", "3 Years", "₹2,50,000"],
+                ["B.Com Taxation And Finance", "3 Years", "₹1,20,000"],
                 ["B.Com with ACCA", "3 Years", "₹2,85,000"],
                 ["MBA (General)", "2 Years", "₹1,70,000"],
-                ["MBA AI / HR / Marketing / Finance", "2 Years", "₹2,20,000"],
-                ["MBA FinTech / Analytics / ESG", "2 Years", "₹2,20,000"],
+                 ["MBA in AI", "2 Years", "₹2,40,000"],
+                ["MBA  HR / Marketing / Finance", "2 Years", "₹2,20,000"],
+                ["MBA FinTech / Analytics ", "2 Years", "₹2,20,000"],
+                 ["MBA in ESG", "2 Years", "₹1,90,000"],
                 ["MBA with ACCA", "2 Years", "₹2,60,000"],
                 ["Online MCA", "2 Years", "₹1,40,000"],
                 ["MCA AI & ML / Cybersecurity", "2 Years", "₹1,95,000"],
-                ["M.Com", "2 Years", "₹90,000"],
+                ["M.Com with Finanace & System", "2 Years", "₹90,000"],
                 ["M.Com with CPA", "2 Years", "₹1,20,000"],
               ].map((course, i) => (
                 <tr key={i} className="border-b hover:bg-gray-50">
