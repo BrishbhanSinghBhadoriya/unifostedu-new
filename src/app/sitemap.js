@@ -100,6 +100,7 @@ export default async function sitemap() {
   // University routes (only routes that exist in project)
   const universityRoutes = [
     'amity',
+    'amrita',
     'manipal',
     'muj-online-bba',
     'muj-online-bca',
