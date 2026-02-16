@@ -12,7 +12,7 @@ type IntroducationProps = {
 
 const CompusTour: React.FC<IntroducationProps> = ({ setOpenModal }) => {
   return (
-    <section id="campus-tour" className="bg-gray-50 py-16 px-6 md:px-16 lg:px-24">
+    <section id="campus-tour" className="bg-gray-50 mt-2 ">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         {/* Left Content */}
         <div>
@@ -48,7 +48,7 @@ const CompusTour: React.FC<IntroducationProps> = ({ setOpenModal }) => {
             </ul>
 
             <p>
-              Learners can also view faculty introduction videos, webinar recordings, and orientation modules that simplify the transition into online education. The virtual campus platform replicates the sense of belonging, academic rigor, and interaction found in traditional university life — ensuring students feel truly connected to a reputed academic institution.
+             The campus of Sikkim Manipal University is located in the scenic surroundings of Gangtok, Sikkim, offering a peaceful and modern learning environment for students. Spread across lush green hills, the university campus features well-equipped classrooms, advanced laboratories, a digital library, hostels, sports facilities, and Wi-Fi connectivity to support academic excellence and student life. Known for its safe infrastructure, experienced faculty, and industry-focused education, the SMU campus provides a perfect blend of natural beauty and modern facilities, making it an ideal destination for higher education in India. The university promotes innovation, research, and holistic development, attracting students from across the country seeking quality distance and on-campus programs.
             </p>
           </div>
 

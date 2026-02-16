@@ -14,7 +14,7 @@ type IntroducationProps = {
 const LegacyAdmissionCertificate: React.FC<IntroducationProps> = ({ setOpenModal }) => {
 
   return (
-     <section className="w-full bg-white text-gray-800 py-12">
+     <section className="w-full bg-white text-gray-800 mt-2">
   <div className="max-w-5xl mx-auto space-y-10 px-4">
 
     {/* Legacy of Quality */}
@@ -182,10 +182,10 @@ const LegacyAdmissionCertificate: React.FC<IntroducationProps> = ({ setOpenModal
                 </div>
               </motion.div>
             </div>
-            <div className="mt-10">
+            <div className="mt-10 ">
             <button 
                       onClick={() => setOpenModal({ type: 'apply' })}
-                      className="w-full bg-gradient-to-r from-orange-500 to-[#f26722] hover:from-[#f26722] hover:to-orange-600 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
+                      className="w-full bg-gradient-to-r from-orange-500 to-[#f26722] hover:from-[#f26722] hover:to-orange-600 text-white font-semibold mb-10 py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
                     >
                       Apply Now
                     </button>

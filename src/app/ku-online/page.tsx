@@ -369,7 +369,7 @@ useEffect(() => {
       <section className="relative w-full h-[75vh] md:h-[85vh] mt-[60px] mb-[20px] font-[Poppins]">
         <UniversityDateSlider
         currentDate="January 2026 Session"
-        nextUpdateDate="Applications Closing on 14 Feb 2026"
+        nextUpdateDate="Applications Closing on 20 Feb 2026"
         information="Limited Seats Available - Apply Now!"
         special="Average of 50% salary growth"
         color="#dc2626"

@@ -645,7 +645,7 @@ const Shoolini = () => {
       course: "Bachelor of Commerce (B.Com)",
       duration: "3 Years",
       eligibility: "10+2 pass with Commerce",
-      fees: "₹1,00,000/-",
+      fees: " 1,00,000/-",
       specialization: "Accounting, Finance , Taxation",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
       alt: "Bachelor of Commerce at Shoolini University",
@@ -655,7 +655,7 @@ const Shoolini = () => {
       course: "Bachelor of Business Administration (BBA)",
       duration: "3 Years",
       eligibility: "10+2 in any discipline with 40% marks in last qualifying examination",
-      fees: "₹ 1,20,000",
+      fees: " 1,20,000",
       specialization: "HR, Marketing, Finance, Digital Marketing, Computer Science, Direct Selling",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327856/shoolini-bba_gqzjmi.webp",
       alt: "Bachelor of Business Administration at Shoolini University",
@@ -665,7 +665,7 @@ const Shoolini = () => {
       course: "Bachelor of Computer Applications (BCA)",
       duration: "3 Years",
       eligibility: "10+2 in any discipline with 40% marks in last qualifying examination. Reservation of seats as per government policies. ",
-      fees: "₹ 1,20,000",
+      fees: " 1,20,000",
       specialization: "Machine Learning & Artificial Intelligence, Data Science, Cyber Secruity, Full Stack Development",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327857/shoolini-bca_zwvncy.webp",
       alt: "Bachelor of Computer Applications at Shoolini University",
@@ -688,7 +688,7 @@ const Shoolini = () => {
       course: "Executive MBA",
       duration: "2 Years",
       eligibility: "Passed Bachelor degree of minimum 3 years duration. Obtained atleast 50% marks.",
-      fees: "₹1,80,000/-",
+      fees: " 1,80,000/-",
       specialization: "Marketing Management, Operation & Supply Chain Management, Agri Business Management, Human Resource Management, IT Management, Biotechnology Management, Financial Management, Tourism Management, Food Technology Management, Digital Marketing, Real Estate Management, Pharma & Health Care Management,Retail Management,Direct Selling Management,Banking & Insurance,Data Science & Business Analytics",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
       alt: "Executive MBA at Shoolini University",
@@ -698,7 +698,7 @@ const Shoolini = () => {
       course: "MSC in Data science ",
       duration: "2 Years",
       eligibility: "Graduation in Life Sciences",
-      fees: "₹1,20,000/-",
+      fees: " 1,20,000/-",
       specialization: "Data Science",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327859/shoolini-mca_pxpsfz.webp",
       alt: "Master of Science in Data Science at Shoolini University",
@@ -708,7 +708,7 @@ const Shoolini = () => {
       course: "MCA ",
       duration: "2 Years",
       eligibility: "Bachelor's degree in 3 years with at least 50% marks (45% for reserved category candidates,) ",
-      fees: "₹2,00,000/-",
+      fees: " 2,00,000/-",
       specialization: "AI & ML, Data Science and Analytics, Full Stack Development",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
       alt: "Master of Science in Data Science at Shoolini University",
@@ -805,7 +805,7 @@ const Shoolini = () => {
             <main className="flex-1 overflow-x-hidden px-4 lg:px-8 pb-10 lg:pl-64">
                             <UniversityDateSlider
                                 currentDate="January 2026 Session"
-                                nextUpdateDate="Applications Closing on 14 Feb 2026"
+                                nextUpdateDate="Applications Closing on 20 Feb 2026"
                                 information="Limited Seats Available - Apply Now!"
                                 special="Average of 50% salary growth"
                                 color="#dc2626"

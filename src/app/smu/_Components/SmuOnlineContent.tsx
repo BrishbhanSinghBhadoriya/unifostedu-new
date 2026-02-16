@@ -11,7 +11,7 @@ type IntroducationProps = {
 const SmuOnlineContent: React.FC<IntroducationProps> = ({ setOpenModal }) => {
 
   return (
-    <section id="smu-online" className="py-14 bg-white">
+    <section id="smu-online" className="mt-2 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-6">
@@ -36,7 +36,7 @@ const SmuOnlineContent: React.FC<IntroducationProps> = ({ setOpenModal }) => {
     </p>
 
   </div>
-<div className="flex justify-center mt-10">
+<div className="flex justify-center mt-2">
      <button
           onClick={() => setOpenModal({ type: "apply" })}
           className="bg-[#f26722] hover:bg-orange-600 text-white font-semibold px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base cursor-pointer"
@@ -70,7 +70,7 @@ const SmuOnlineContent: React.FC<IntroducationProps> = ({ setOpenModal }) => {
         Sikkim Manipal University Online (SMU Online) is part of the well-known Manipal Education Group, which has over 20 years of experience in higher education. The goal of SMU Online is to make quality education accessible to everyone through digital learning.
       </p>
        
-       <p className="text-gray-700 leading-relaxed">
+       <p className="text-gray-700 leading-relaxed mb-2">
          All programs — including BCom, MCom, and the Online MBA from Sikkim Manipal University — 
          are designed in alignment with UGC guidelines and updated to meet modern industry requirements. 
          The university's online learning platform provides a rich academic experience through live and 
@@ -136,7 +136,7 @@ const SmuOnlineContent: React.FC<IntroducationProps> = ({ setOpenModal }) => {
     </div>
     <button 
                     onClick={() => setOpenModal({ type: 'apply' })}
-                    className="w-full bg-gradient-to-r from-orange-500 to-[#f26722] hover:from-[#f26722] hover:to-orange-600 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                    className="w-1/2 bg-gradient-to-r from-orange-500 to-[#f26722] hover:from-[#f26722] hover:to-orange-600 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
                   >
                     Apply Now
                   </button>

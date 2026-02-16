@@ -3,7 +3,7 @@ import PageContent from '@/components/PageContent/PageContent';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 import { optimizeCloudinary } from '@/utils/cloudinary';
 import { useEffect, useState } from 'react';
-import { FaBars, FaPhone } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
 import AdvantageWhyChoose from "./_Components/AdvantageWhyChoose";
 import CompusTour from "./_Components/CompusTour";
 import DatesSession from "./_Components/DatesSession";
@@ -23,15 +23,15 @@ const SMU = () => {
 
     { id: "introduction", label: "Introduction" },
     { id: "campus-tour", label: "Campus Tour" },
-    { id: "dates and session", label: "Admission Dates and Upcoming & Ongoing Sessions" },
-    { id: "explore-courses", label: "Explore Online Courses and Fee Structure" },
+    { id: "dates and session", label: "Admission Dates " },
+    { id: "explore-courses", label: "Courses and Fee Structure" },
     { id: "admission-process", label: "Admission Process" },
-    { id: "key-highlights", label: "Key Highlights" },
+    { id: "key-highlights", label: "Highlights" },
     { id: "faqs", label: "FAQs" },
     { id: "placement-record", label: "Placement Record" },
     { id: "student-review", label: "Student Reviews" },
     { id: "placement-partners", label: "Placement Partners" },
-    { id: "reviews", label: "Sikkim Manipal University Reviews" },
+    { id: "reviews", label: " Reviews" },
     { id: "conclusion", label: "Conclusion" },
 
 
@@ -137,7 +137,7 @@ const SMU = () => {
       duration: "2 Years",
       eligibility: "Graduation in Commerce or equivalent",
       fees: "₹75,000",
-      specialization: "General",
+      specialization: "Finance, Marketing",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
       university: "Sikkim Manipal University",
       universityShort: "SMU",
@@ -228,7 +228,6 @@ const toggleFAQ = (index: number) => {
 const [openModal, setOpenModal] = useState<OpenModalState>(null);
 
   const [activeTab, setActiveTab] = useState('all');
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const openWhatsAppSupport = () => {
     if (typeof window === "undefined") return;
@@ -296,14 +295,6 @@ const [openModal, setOpenModal] = useState<OpenModalState>(null);
 
               {/* Right Side */}
               <div className="flex items-center gap-2 sm:gap-4">
-                {/* Mobile Menu Button */}
-                <button
-                  onClick={() => setIsMobileMenuOpen(true)}
-                  aria-label="Open menu"
-                  className="lg:hidden p-2 border rounded-md hover:bg-gray-100 transition-colors cursor-pointer"
-                >
-                  <FaBars className="w-5 h-5 text-gray-700" />
-                </button>
 
                 {/* Phone (Desktop) */}
                 <a
@@ -337,10 +328,21 @@ const [openModal, setOpenModal] = useState<OpenModalState>(null);
           </div>
         </header>
         
-        <div className="pt-16 lg:pt-20">
+        
+        <PageContent
+          sectionItems={sectionItem}
+          activeSection={activeSection}
+          progressive
+          topOffsetClass="top-16 lg:top-20"
+          scrollOffset={160}
+          mode="breadcrumb"
+          position="fixed"
+        />
+
+        <div className="pt-16 lg:pt-20 mt-10 lg:mt-12">
           <UniversityDateSlider
              currentDate="January 2026 Session"
-             nextUpdateDate="Applications Closing on 14 Feb 2026"
+             nextUpdateDate="Applications Closing on 20 Feb 2026"
              information="Limited Seats Available - Apply Now!"
              special="Average of 50% salary growth"
              color="#dc2626"
@@ -348,10 +350,8 @@ const [openModal, setOpenModal] = useState<OpenModalState>(null);
              textColor="#991b1b"
           /> 
         </div>
-        <PageContent sectionItems={sectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
-        <div className="max-w-screen-2xl mx-auto flex ">
-          {/* Desktop Sidebar */}                                        
-          <main className="flex-1 min-w-0 lg:pl-64 ">
+        <div className="max-w-screen-2xl mx-auto">
+          <main className="flex-1 min-w-0">
             
             <div className="overflow-x-hidden pt-0">
 
@@ -389,7 +389,7 @@ const [openModal, setOpenModal] = useState<OpenModalState>(null);
 
               {/* Why Choose Section */}
               <AdvantageWhyChoose setOpenModal={setOpenModal}/>
-              <section className="w-full bg-white text-gray-800 py-12">
+              <section className="w-full bg-white text-gray-800 mt-2">
                 <div className="max-w-5xl mx-auto space-y-10 px-4">
 
                   {/* Legacy of Quality */}

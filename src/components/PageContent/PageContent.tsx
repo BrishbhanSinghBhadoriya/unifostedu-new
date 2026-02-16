@@ -1,38 +1,35 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import { FaTimes } from "react-icons/fa";
 
 type PageContentProps = {
   sectionItems: { id: string; label: string }[];
   activeSection: string | null;
-  ismobilemenuopen: boolean;
-  onClose?: () => void;
+  progressive?: boolean;
+  topOffsetClass?: string;
+  scrollOffset?: number;
+  mode?: "chips" | "breadcrumb" | "both";
+  position?: "sticky" | "fixed";
 };
 
 const PageContent = ({
   sectionItems,
   activeSection,
-  ismobilemenuopen,
-  onClose,
+  progressive = false,
+  topOffsetClass = "top-[88px] sm:top-[96px] md:top-[104px]",
+  scrollOffset = 100,
+  mode = "chips",
+  position = "sticky",
 }: PageContentProps) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] =
-    useState<boolean>(ismobilemenuopen);
+  const [currentActiveSection, setCurrentActiveSection] = useState<
+    string | null
+  >(activeSection);
+  const [maxIndexReached, setMaxIndexReached] = useState(0);
 
-  const [currentActiveSection, setCurrentActiveSection] =
-    useState<string | null>(activeSection);
-
-  // Sync mobile menu state with parent
-  useEffect(() => {
-    setIsMobileMenuOpen(ismobilemenuopen);
-  }, [ismobilemenuopen]);
-
-  // Scroll spy logic
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 150;
-      let activeId = currentActiveSection;
+      let activeId: string | null = null;
 
       for (let i = 0; i < sectionItems.length; i++) {
         const section = document.getElementById(sectionItems[i].id);
@@ -43,22 +40,31 @@ const PageContent = ({
       }
 
       setCurrentActiveSection(activeId);
+      if (progressive && activeId) {
+        const idx = sectionItems.findIndex((s) => s.id === activeId);
+        if (idx !== -1) {
+          setMaxIndexReached((prev) => (idx > prev ? idx : prev));
+        }
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [sectionItems, currentActiveSection]);
+  }, [sectionItems, progressive]);
 
-  const handleClose = () => {
-    setIsMobileMenuOpen(false);
-    onClose?.();
-  };
+  useEffect(() => {
+    if (!progressive) return;
+    if (!activeSection) return;
+    const idx = sectionItems.findIndex((s) => s.id === activeSection);
+    if (idx !== -1) setMaxIndexReached(idx);
+  }, [activeSection, progressive, sectionItems]);
 
   const handleSectionClick = (itemId: string) => {
     const section = document.getElementById(itemId);
 
     if (section) {
-      const headerOffset = 100;
+      const headerOffset = scrollOffset;
       const elementPosition = section.getBoundingClientRect().top;
       const offsetPosition =
         elementPosition + window.pageYOffset - headerOffset;
@@ -68,100 +74,73 @@ const PageContent = ({
         behavior: "smooth",
       });
     }
-
-    handleClose();
   };
 
+  const visibleItems = (() => {
+    if (!progressive) return sectionItems;
+    const idx = Math.max(maxIndexReached, 0);
+    return sectionItems.slice(0, idx + 1);
+  })();
+
   return (
-    <div>
-      {/* Desktop Sidebar */}
-      <aside className="hidden lg:flex flex-col fixed top-[88px] sm:top-[96px] md:top-[104px] w-64 h-[calc(100vh-6rem)] px-4 py-6 overflow-y-auto border-r border-gray-200 bg-white/95 backdrop-blur-sm z-40">
-        <h3 className="text-base md:text-lg font-bold mb-6 text-indigo-800 border-b-2 border-indigo-200 pb-2">
-          Page Contents
-        </h3>
-
-        <ul className="space-y-3">
-          {sectionItems.map((item) => {
-            const isActive = currentActiveSection === item.id;
-
-            return (
-              <li key={item.id}>
-                <button
-                  onClick={() => handleSectionClick(item.id)}
-                  className={`w-full text-left px-2 py-1.5 rounded transition-colors ${
-                    isActive
-                      ? "text-indigo-700 font-semibold bg-indigo-50 border-l-2 border-indigo-600"
-                      : "text-gray-700 hover:bg-indigo-50 font-medium"
-                  }`}
-                  aria-current={isActive ? "true" : undefined}
-                >
-                  {item.label}
-                </button>
-              </li>
-            );
-          })}
-        </ul>
-      </aside>
-
-      {/* Mobile Sidebar */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-black/40 z-[9998] lg:hidden"
-              onClick={handleClose}
-            />
-
-            <motion.aside
-              initial={{ x: "-100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "-100%" }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="fixed top-0 left-0 w-[85vw] sm:w-72 h-full bg-white shadow-xl z-[9999] p-6 flex flex-col overflow-y-auto lg:hidden"
-            >
-              <div className="flex items-center justify-between mb-8">
-                <h3 className="text-xl font-bold text-orange-600">
-                  Page Contents
-                </h3>
-
-                <button
-                  onClick={handleClose}
-                  className="p-2 rounded-full hover:bg-gray-100 focus:ring-2 focus:ring-orange-500"
-                  aria-label="Close menu"
-                >
-                  <FaTimes className="w-5 h-5 text-gray-600" />
-                </button>
-              </div>
-
-              <ul className="space-y-3 flex-1">
-                {sectionItems.map((item) => {
-                  const isActive = currentActiveSection === item.id;
-
-                  return (
-                    <li key={item.id}>
-                      <button
-                        onClick={() => handleSectionClick(item.id)}
-                        className={`w-full text-left px-3 py-2 rounded-lg transition ${
-                          isActive
-                            ? "text-orange-700 font-semibold bg-orange-50 border-l-2 border-orange-600"
-                            : "text-gray-700 hover:text-orange-600 hover:bg-orange-50 font-medium"
-                        }`}
-                        aria-current={isActive ? "true" : undefined}
-                      >
-                        {item.label}
-                      </button>
-                    </li>
-                  );
-                })}
-              </ul>
-            </motion.aside>
-          </>
+    <div className="w-full">
+      <nav
+        className={`${position} ${topOffsetClass} z-40 bg-white/90 backdrop-blur border-b border-gray-200 shadow-sm ${
+          position === "fixed" ? "left-0 right-0 w-full" : ""
+        }`}
+      >
+        {mode !== "breadcrumb" && (
+          <div className="px-4 py-3">
+            <ul className="flex items-center gap-2 overflow-x-auto">
+              {visibleItems.map((item) => {
+                const isActive = currentActiveSection === item.id;
+                return (
+                  <li key={item.id} className="shrink-0">
+                    <button
+                      onClick={() => handleSectionClick(item.id)}
+                      className={`whitespace-nowrap px-3 py-1.5 rounded-full text-sm transition-colors ${
+                        isActive
+                          ? "bg-indigo-600 text-white"
+                          : "bg-gray-100 text-gray-700 hover:bg-indigo-50 hover:text-indigo-700"
+                      }`}
+                      aria-current={isActive ? "true" : undefined}
+                    >
+                      {item.label}
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         )}
-      </AnimatePresence>
+        {mode !== "chips" && (
+          <div className="px-4 py-2">
+            <div className="flex flex-wrap items-center gap-1">
+              {visibleItems.map((item, idx) => {
+                const isActive = currentActiveSection === item.id;
+                return (
+                  <div key={item.id} className="flex items-center gap-1">
+                    <button
+                      onClick={() => handleSectionClick(item.id)}
+                      className={`text-xs sm:text-sm uppercase tracking-wide ${
+                        isActive
+                          ? "text-indigo-700 font-semibold"
+                          : "text-gray-600 hover:text-indigo-700"
+                      }`}
+                      aria-current={isActive ? "true" : undefined}
+                    >
+                      {item.label}
+                    </button>
+                    {idx < visibleItems.length - 1 && (
+                      <span className="text-gray-400">›</span>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+      </nav>
     </div>
   );
 };
