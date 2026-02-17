@@ -5,11 +5,14 @@ import { useEffect, useState } from "react";
 type PageContentProps = {
   sectionItems: { id: string; label: string }[];
   activeSection: string | null;
+  ismobilemenuopen?: boolean;
+  onClose?: () => void;
   progressive?: boolean;
   topOffsetClass?: string;
   scrollOffset?: number;
   mode?: "chips" | "breadcrumb" | "both";
   position?: "sticky" | "fixed";
+  
 };
 
 const PageContent = ({

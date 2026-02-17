@@ -18,6 +18,9 @@ import Recognitions from "./_Components/Recognitions";
 import Review from "./_Components/Review";
 import SmuOnlineContent from "./_Components/SmuOnlineContent";
 import UniversityDateSlider from '@/components/UniversityDateSlider';
+
+
+
 const SMU = () => {
   const sectionItem = [
 
