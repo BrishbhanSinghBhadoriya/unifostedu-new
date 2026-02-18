@@ -97,6 +97,43 @@ export default async function sitemap() {
     priority: 0.9,
   }));
 
+  
+  
+  
+  
+  // Mahe University course routes
+  const maheRoutes = [
+    'online-mba-mahe',
+    'online-mca-mahe',
+    'online-bba-honors-mahe',
+    'online-bba-mahe',
+    'online-msc-data-science-mahe',
+    'online-msc-business-analytics-mahe',
+    'online-bcom-professional-mahe',
+   
+  ].map((courseRoute) => ({
+    url: `${baseUrl}/mahe-online/${courseRoute}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.9,
+  }));
+
+    // Sikkim Manipal University course routes
+  const smuRoutes = [
+    'mba-online',
+    'mca-online',
+    'ba-online',
+    'mcom-online',
+    'bcom-online',
+    'ma-online',
+   
+   
+  ].map((courseRoute) => ({
+    url: `${baseUrl}/smu/Courses_pages/${courseRoute}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.9,
+  }));
   // University routes (only routes that exist in project)
   const universityRoutes = [
     'amity',
@@ -176,6 +213,8 @@ export default async function sitemap() {
     ...staticRoutes,
     ...universityRoutes,
     ...amityRoutes,
+    ...maheRoutes,
+    ...smuRoutes,
     ...amitySubRoutes,
     ...courseRoutes,
     ...blogRoutes,

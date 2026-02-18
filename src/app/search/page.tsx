@@ -426,19 +426,18 @@ export default function Search() {
 
 
       <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
-        <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 p-4 sm:p-6 z-[30001]">
-          <DialogHeader>
-            <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
-              {modalType === "getStarted" && "Get Started with Unifost"}
-              {modalType === "videoCall" && "Book a Video Call"}
-              {modalType === "homeDemo" && "Book a Home Demo"}
-            </DialogTitle>
-          </DialogHeader>
-          <EnquiryForm
-            onSubmitted={() => setShowEnquiryModal(false)}
-            formType={modalType}
-          />
-        </DialogContent>
+        <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 p-4 sm:p-6 z-[30001]" />
+        <DialogHeader>
+          <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
+            {modalType === "getStarted" && "Get Started with Unifost"}
+            {modalType === "videoCall" && "Book a Video Call"}
+            {modalType === "homeDemo" && "Book a Home Demo"}
+          </DialogTitle>
+        </DialogHeader>
+        <EnquiryForm
+          onSubmitted={() => setShowEnquiryModal(false)}
+          formType={modalType}
+        />
       </Dialog>
     </Suspense>
   );

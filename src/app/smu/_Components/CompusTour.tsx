@@ -18,19 +18,19 @@ const CompusTour: React.FC<IntroducationProps> = ({ setOpenModal }) => {
         <div>
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
             Campus Tour – Virtual Learning Experience
-          </h2>
+          
 
           <div className="space-y-6 text-gray-700 text-lg leading-relaxed text-justify">
-            <p>
+            <h3>
               While <strong>Sikkim Manipal University Online (SMU Online)</strong> operates in
               the digital space, it preserves the vibrancy and engagement of a real university
               environment through immersive virtual experiences.
-            </p>
+            </h3>
 
-            <p>
+            <h3>
               The <strong>SMU Online Virtual Campus Tour</strong> enables prospective learners
               to explore key aspects of the digital campus, including:
-            </p>
+            </h3>
 
             <ul className="list-disc list-inside space-y-3 text-gray-700">
               <li>
@@ -47,11 +47,13 @@ const CompusTour: React.FC<IntroducationProps> = ({ setOpenModal }) => {
               </li>
             </ul>
 
-            <p>
+            <h3>
              The campus of Sikkim Manipal University is located in the scenic surroundings of Gangtok, Sikkim, offering a peaceful and modern learning environment for students. Spread across lush green hills, the university campus features well-equipped classrooms, advanced laboratories, a digital library, hostels, sports facilities, and Wi-Fi connectivity to support academic excellence and student life. Known for its safe infrastructure, experienced faculty, and industry-focused education, the SMU campus provides a perfect blend of natural beauty and modern facilities, making it an ideal destination for higher education in India. The university promotes innovation, research, and holistic development, attracting students from across the country seeking quality distance and on-campus programs.
-            </p>
-          </div>
+            </h3>
 
+            
+          </div>
+        </h2>
           {/* Apply Button */}
           <button 
             onClick={() => setOpenModal({ type: 'apply' })}
@@ -65,17 +67,19 @@ const CompusTour: React.FC<IntroducationProps> = ({ setOpenModal }) => {
         <div className="w-full flex flex-col gap-6">
           <Image
             src={optimizeCloudinary("https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp")}
-            alt="SMU Virtual Classroom"
+            alt="Sikkim Manipal University Online Virtual Classroom — Digital Learning Campus"
             className="rounded-2xl shadow-lg w-full h-auto object-cover"
             width={600}
             height={400}
+            loading='lazy'
           />
           <Image
             src={optimizeCloudinary("https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/smu-class_lc7xcd.webp")}
-            alt="SMU Library"
+            alt="Sikkim Manipal University E-Library and Digital Resources for Online Students"
             className="rounded-2xl shadow-lg w-full h-auto object-cover"
             width={600}
             height={400}
+            loading='lazy'
           />
           <Image
             src={optimizeCloudinary("https://res.cloudinary.com/didkrwhbu/image/upload/v1762327860/smu-campus_u8h6kr.webp")}
@@ -83,6 +87,7 @@ const CompusTour: React.FC<IntroducationProps> = ({ setOpenModal }) => {
             className="rounded-2xl shadow-lg w-full h-auto object-cover"
             width={600}
             height={400}
+            loading='lazy'
           />
         </div>
       </div>

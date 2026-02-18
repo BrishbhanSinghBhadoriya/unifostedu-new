@@ -93,7 +93,7 @@ const KeyhighlightFaq: React.FC<IntroducationProps> = ({ setOpenModal }) => {
     </h2>
 
     {/* Intro Paragraph */}
-    <p className="text-lg leading-relaxed text-gray-700 mb-10 text-center">
+    <p className="text-lg leading-relaxed text-black-700 mb-10 text-center">
       Sikkim Manipal University Online (SMU Online) is one of India's leading universities 
       offering UGC-approved online degrees. With a perfect blend of quality education, modern 
       technology, and global recognition, SMU Online empowers learners through flexible and 
@@ -200,7 +200,7 @@ const KeyhighlightFaq: React.FC<IntroducationProps> = ({ setOpenModal }) => {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-queens">
-                Frequently Asked <span className="bg-gradient-to-r from-orange-500 to-[#f26722] bg-clip-text text-transparent">Questions</span>
+                Frequently Asked <span className="bg-gradient-to-r from-orange-500 to-[#f26722] bg-clip-text text-transparent">Questions Sikkim Manipal University Online</span>
               </h2>
               <p className="text-xl text-gray-600">
                 Everything you need to know about Sikkim Manipal University Online Programs

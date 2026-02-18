@@ -95,7 +95,7 @@ const Introducation: React.FC<IntroducationProps> = ({ setOpenModal }) => {
             </div>
 
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-              Unlock a future-ready career with premium online degrees.
+              Sikkim Manipal University Online
             </h1>
 
             <p className="text-white/80 max-w-xl">

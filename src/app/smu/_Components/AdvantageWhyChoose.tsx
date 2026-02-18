@@ -29,10 +29,11 @@ const AdvantageWhyChoose: React.FC<IntroducationProps> = ({ setOpenModal }) => {
         <div className="text-center">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
             Unlock The SMU Advantage
-          </h2>
-          <p className="text-lg text-gray-600 mt-3 max-w-3xl mx-auto">
+         </h2>
+          <h3 className="text-lg text-gray-600 mt-3 max-w-3xl mx-auto">
             Comprehensive benefits designed to support your learning journey and career growth.
-          </p>
+          </h3>
+           
         </div>
 
         {/* BENEFIT CARDS */}
@@ -53,17 +54,17 @@ const AdvantageWhyChoose: React.FC<IntroducationProps> = ({ setOpenModal }) => {
 
         {/* WHY CHOOSE TEXT BLOCK */}
         <div className="bg-white rounded-2xl shadow-md p-8">
-          <h3 className="text-3xl font-bold text-center mb-6">
+          <h2 className="text-3xl font-bold text-center mb-6">
             Why Choose SMU Online
-          </h3>
-
-          <p className="text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">
+          
+           </h2>
+          <h3 className="text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">
             Sikkim Manipal University Online offers UGC-approved degrees, flexible learning,
             experienced faculty, industry-relevant curriculum, and strong placement support.
             Its advanced LMS, AI-proctored exams, and global alumni network make it one of the
             most trusted online universities in India for career-focused learners.
-          </p>
-
+          </h3>
+        
           <div className="flex justify-center mt-6">
             <button
               onClick={() => setOpenModal({ type: "apply" })}

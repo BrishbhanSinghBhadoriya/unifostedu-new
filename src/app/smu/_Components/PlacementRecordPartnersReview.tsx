@@ -49,7 +49,7 @@ const PlacementRecordPartnersReview: React.FC<IntroducationProps> = ({ setOpenMo
     {/* Placement Record Section */}
     <div className="text-center mb-14">
       <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-        Placement Record
+       Sikkim Manipal University Placement Record
       </h2>
       <p className="text-gray-700 text-lg max-w-4xl mx-auto leading-relaxed">
         With over <span className="font-semibold text-black">two decades of academic excellence</span>, 
@@ -59,7 +59,7 @@ const PlacementRecordPartnersReview: React.FC<IntroducationProps> = ({ setOpenMo
 
     <div className="max-w-5xl mx-auto bg-white shadow-md rounded-2xl border border-gray-100 p-8 mb-12 hover:shadow-lg transition-all">
       <h3 className="text-2xl font-semibold text-black mb-6 text-center">
-        Highlights
+       SMU Highlights
       </h3>
       <ul className="space-y-4 text-lg text-gray-800">
         <li className="flex items-start">

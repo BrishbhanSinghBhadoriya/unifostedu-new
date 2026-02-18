@@ -23,29 +23,10 @@ const DatesSession: React.FC<IntroducationProps> = ({ setOpenModal }) => {
         </p>
   
         <div className="grid md:grid-cols-2 gap-10">
-          {/* January 2026 Intake */}
-          <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-100">
-            <h3 className="text-2xl font-semibold text-black mb-4">
-              January 2026 Intake
-            </h3>
-            <ul className="space-y-2 text-gray-700 text-lg">
-              <li>• Application Opens: <strong>1st November 2025</strong></li>
-              <li>• Last Date to Apply: <strong>Closing Soon</strong></li>
-              <li>• Batch Commences: <strong>Open soon</strong></li>
-            </ul>
-          </div>
+          
+          
   
-          {/* July 2026 Intake */}
-          <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-100">
-            <h3 className="text-2xl font-semibold text-black mb-4">
-              July 2026 Intake
-            </h3>
-            <ul className="space-y-2 text-gray-700 text-lg">
-              <li>• Application Opens: <strong>Not Display</strong></li>
-              <li>• Last Date to Apply: <strong>Not Display</strong></li>
-              <li>• Batch Commences: <strong>Not Display</strong></li>
-            </ul>
-          </div>
+          
         </div>
   
         <p className="text-gray-700 text-lg leading-relaxed mt-8">
@@ -90,6 +71,7 @@ const DatesSession: React.FC<IntroducationProps> = ({ setOpenModal }) => {
                 <td className="py-3 px-6">2 Years</td>
                 <td className="py-3 px-6">₹1,10,000</td>
                 <td className="py-3 px-6">Available</td>
+                <td className="py-3 px-6">more info </td>
               </tr>
                <tr className="border-t">
                 <td className="py-3 px-6">Online MCom</td>
@@ -150,7 +132,7 @@ const DatesSession: React.FC<IntroducationProps> = ({ setOpenModal }) => {
               </div>
   
               {/* Heading */}
-              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-center">Why Students Choose SMU</h3>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-center">Why Students Choose SMU
   
               {/* Feature Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
@@ -159,7 +141,7 @@ const DatesSession: React.FC<IntroducationProps> = ({ setOpenModal }) => {
                   <div className="w-14 h-14 rounded-full bg-orange-100 flex items-center justify-center mb-4">
                     <span className="text-2xl">🏅</span>
                   </div>
-                  <h4 className="text-xl font-semibold mb-2">UGC Approved Degrees</h4>
+                  <h3 className="text-xl font-semibold mb-2">UGC Approved Degrees</h3>
                   <p className="text-gray-600 text-sm">Graduate with UGC-entitled degrees that are recognized by employers and institutions nationwide.</p>
                 </div>
   
@@ -168,7 +150,7 @@ const DatesSession: React.FC<IntroducationProps> = ({ setOpenModal }) => {
                   <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4">
                     <span className="text-2xl">💻</span>
                   </div>
-                  <h4 className="text-xl font-semibold mb-2">Advanced Learning Platform</h4>
+                  <h3 className="text-xl font-semibold mb-2">Advanced Learning Platform</h3>
                   <p className="text-gray-600 text-sm">Access comprehensive study materials, recorded lectures, and interactive sessions online.</p>
                 </div>
   
@@ -177,7 +159,7 @@ const DatesSession: React.FC<IntroducationProps> = ({ setOpenModal }) => {
                   <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mb-4">
                     <span className="text-2xl">👨‍🏫</span>
                   </div>
-                  <h4 className="text-xl font-semibold mb-2">Expert Faculty</h4>
+                  <h3 className="text-xl font-semibold mb-2">Expert Faculty</h3>
                   <p className="text-gray-600 text-sm">Learn from experienced professors and industry experts with decades of teaching experience.</p>
                 </div>
   
@@ -186,7 +168,7 @@ const DatesSession: React.FC<IntroducationProps> = ({ setOpenModal }) => {
                   <div className="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center mb-4">
                     <span className="text-2xl">💼</span>
                   </div>
-                  <h4 className="text-xl font-semibold mb-2">Career Services</h4>
+                  <h3 className="text-xl font-semibold mb-2">Career Services</h3>
                   <p className="text-gray-600 text-sm">Comprehensive placement support including resume building and interview preparation.</p>
                 </div>
   
@@ -195,10 +177,12 @@ const DatesSession: React.FC<IntroducationProps> = ({ setOpenModal }) => {
                   <div className="w-14 h-14 rounded-full bg-purple-100 flex items-center justify-center mb-4">
                     <span className="text-2xl">🌍</span>
                   </div>
-                  <h4 className="text-xl font-semibold mb-2">Global Alumni Network</h4>
+                  <h3 className="text-xl font-semibold mb-2">Global Alumni Network</h3>
                   <p className="text-gray-600 text-sm">Join a network of 50,000+ alumni working in top companies across the world.</p>
                 </div>
               </div>
+
+              </h2>
             </div>
           </section>
            </section>

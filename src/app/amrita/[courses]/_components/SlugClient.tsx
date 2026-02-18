@@ -1,6 +1,7 @@
 "use client";
 import { FaChevronUp, FaSearch, FaBars, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaPhone, FaEnvelope ,FaWhatsapp} from 'react-icons/fa';
-import { i } from 'node_modules/framer-motion/dist/types.d-DagZKalS';
+import { motion, AnimatePresence } from "framer-motion";
+
 import React, { useState } from 'react';
 import ApplyEnquiryModal from "@/components/ApplyEnquiryModal";
 type ModalType = "apply" | "enquire";

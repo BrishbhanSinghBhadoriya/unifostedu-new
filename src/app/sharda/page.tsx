@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import Image from 'next/image';
-import { i } from 'node_modules/framer-motion/dist/types.d-DagZKalS';
 import React, { useEffect, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import UniversityDateSlider from '@/components/UniversityDateSlider';
