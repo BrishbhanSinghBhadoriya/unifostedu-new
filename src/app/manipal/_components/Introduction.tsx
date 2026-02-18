@@ -7,7 +7,7 @@ import { optimizeCloudinary } from '@/utils/cloudinary'
 import { OpenModalState } from '../../../../types/Modal'
 const Introduction = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalState) => void; openModal: OpenModalState }) => {
   return (
-    <div> <section id="HeroSection" className="relative w-full min-h-[450px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] xl:min-h-[800px] overflow-hidden pt-14 sm:pt-16 lg:pt-20 xl:pt-24">
+    <div> <section id="HeroSection" className="relative w-full min-h-[450px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] xl:min-h-[800px] overflow-hidden pt-2 sm:pt-16 lg:pt-20 xl:pt-24">
               {/* Background with Gradient Overlay */}
               <div className="absolute inset-0">
                 <Image

@@ -166,7 +166,7 @@ export default function RootLayout({ children }: ChildrenProps) {
           <main>{children}</main>
           <Footer />
         </LenisProvider>
-       {/* <ChatBoxWrapper /> */} 
+        {/* <ChatBoxWrapper />   */}
         <SonnerToaster
           position="top-center"
           richColors

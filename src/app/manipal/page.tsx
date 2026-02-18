@@ -271,18 +271,24 @@ const Manipal = () => {
           </div>
         </header>
 
-        <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row w-full">
+         
           
           {/* Left Sidebar */}
-          <PageContent
-            sectionItems={sectionItems}
-            activeSection={activeSection}
-            ismobilemenuopen={isMobileMenuOpen}
-            onClose={() => setIsMobileMenuOpen(false)}
-          />
+          <div className="mt-[64px] sm:mt-[72px] md:mt-[80px]">
+            <PageContent
+              sectionItems={sectionItems}
+              activeSection={activeSection}
+              ismobilemenuopen={isMobileMenuOpen}
+              onClose={() => setIsMobileMenuOpen(false)}
+              progressive
+              position="fixed"
+              topOffsetClass="top-[64px] sm:top-[72px] md:top-[80px]"
+              mode="breadcrumb"
+            />
+          </div>
           
           {/* Main Content */}
-          <main className="flex-1 min-w-0 lg:ml-64 pt-16 sm:pt-18 lg:pt-20">
+          <main className="flex-1 min-w-0 pt-32 md:pt-36 lg:pt-40">
 
             {/* Enquiry Modal */}
             {showEnquiryModal && (
@@ -297,24 +303,25 @@ const Manipal = () => {
                 </DialogContent>
               </Dialog>
             )}
-            <UniversityDateSlider
-                  currentDate="January 2026 Session"
-                  nextUpdateDate="Applications Closing on 20 Feb 2026"
-                  information="Limited Seats Available - Apply Now!"
-                  special="Average of 50% salary growth"
-                  color="#dc2626"
-                  backgroundColor="#fee2e2"
-                  textColor="#991b1b"
-                />
             {/* Introduction Hero Section */}
             <Introduction setOpenModal={setOpenModal} openModal={openModal} />
+
+            <UniversityDateSlider
+              currentDate="January 2026 Session"
+              nextUpdateDate="Applications Closing on 20 Feb 2026"
+              information="Limited Seats Available - Apply Now!"
+              special="Average of 50% salary growth"
+              color="#dc2626"
+              backgroundColor="#fee2e2"
+              textColor="#991b1b"
+            />
 
             {/* Welcome Section */}
             <Hero setOpenModal={setOpenModal} openModal={openModal} />
 
             {/* Why Choose Section */}
             <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-gray-50 to-white">
-              <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="w-full px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-10 sm:mb-12">
                   <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
                     Why Choose <span className="text-orange-600">Manipal University Jaipur Online?</span>
@@ -553,7 +560,7 @@ const Manipal = () => {
             <FaqReviewsHiring setOpenModal={setOpenModal} openModal={openModal} />
 
           </main>
-        </div>
+        
 
         {/* Enhanced Footer */}
         <FooterManipal setOpenModal={setOpenModal} openModal={openModal} />
