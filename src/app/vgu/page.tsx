@@ -323,8 +323,9 @@ const Vgu = () => {
         <div className="flex">
       
           {/* Desktop Sidebar */}
-          <PageContent sectionItems={selectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
-          <main className="flex-1 min-w-0 lg:pl-64 ">
+          
+          <main className="flex-1 min-w-0 w-full"> 
+              <PageContent sectionItems={selectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
               <div className="pt-16 lg:pt-20">
                         <UniversityDateSlider
                           currentDate="January 2026 Session"

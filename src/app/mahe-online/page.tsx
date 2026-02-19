@@ -413,10 +413,19 @@ const Manipal = () => {
           </div>
         </header>
 
-        {/* Add padding to the top of the first section to account for fixed header */}
-              <PageContent sectionItems={selectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
-
-        <div className="pt-16 overflow-x-hidden break-words hyphens-auto lg:ml-64 mt-4">
+        <div className="pt-16 overflow-x-hidden break-words hyphens-auto">
+          <PageContent
+            sectionItems={selectionItem}
+            activeSection={activeSection}
+            ismobilemenuopen={isMobileMenuOpen}
+            onClose={() => setIsMobileMenuOpen(false)}
+            mode="breadcrumb"
+            position="sticky"
+            progressive
+            topOffsetClass="top-[calc(3.5rem+6px)] sm:top-[calc(4rem+6px)] lg:top-[calc(5rem+6px)]"
+            scrollOffset={96}
+            breadcrumbPaddingClass="px-0 py-2"
+          />
             <UniversityDateSlider
                    currentDate="January 2026 Session"
                    nextUpdateDate="Applications Closing on 20 Feb 2026"

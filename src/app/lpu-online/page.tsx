@@ -325,11 +325,9 @@ const LpuOnline = () => {
         body { overflow-x: hidden; } // This can be moved to a global stylesheet
       `}</style>
 
-      <div className="max-w-screen-2xl mx-auto flex">
-        {/* Desktop Sidebar */}
-        <PageContent sectionItems={sectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
-        <main className="flex-1 min-w-0 lg:pl-72">
-          <div className="overflow-x-hidden pt-16 lg:pt-20">
+      <div className="max-w-screen-2xl mx-auto">
+        <main className="flex-1 min-w-0">
+          <div className="overflow-x-hidden pt-16 lg:pt-24">
             {/* Professional Responsive Header */}
             <header className="w-full fixed bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 top-0 left-0 right-0 z-50">
               <div className="max-w-screen-2xl mx-auto px-2 sm:px-4 lg:px-8">
@@ -375,6 +373,20 @@ const LpuOnline = () => {
                 </div>
               </div>
             </header>
+
+            {/* Page Content Navigation (Breadcrumb + Progress) */}
+            <div className="mt-[56px] sm:mt-[64px] lg:mt-[80px]">
+              <PageContent
+                sectionItems={sectionItem}
+                activeSection={activeSection}
+                ismobilemenuopen={isMobileMenuOpen}
+                onClose={() => setIsMobileMenuOpen(false)}
+                progressive
+                position="fixed"
+                topOffsetClass="top-[56px] sm:top-[64px] lg:top-[80px]"
+                mode="breadcrumb"
+              />
+            </div>
 
 
            <UniversityDateSlider

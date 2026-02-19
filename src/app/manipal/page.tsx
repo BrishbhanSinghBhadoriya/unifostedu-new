@@ -84,7 +84,7 @@ const Manipal = () => {
     {
       course: "Master of Computer Applications (MCA)",
       duration: "2 Years",
-      eligibility: "50% Graduation",
+      eligibility: " Graduation",
       fees: "1,58,000",
       specialization: "AI & Data Science, Cyber Security, Cloud Computing, Comprehensive Emerging Technologies,AI & ML",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
@@ -95,7 +95,7 @@ const Manipal = () => {
     {
       course: "Master of science (M.Sc.)",
       duration: "2 Years",
-      eligibility: "Graduation in Commerce",
+      eligibility: "Graduation ",
       fees: "80,000",
       specialization: "Mathematics",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1771066433/amrita_overview_t6ofin.png",
@@ -106,7 +106,7 @@ const Manipal = () => {
     {
       course: "Master of Commerce (M.Com)",
       duration: "2 Years",
-      eligibility: "Graduation in Commerce",
+      eligibility: "Graduation in Any Discipline ",
       fees: "1,08,000",
       specialization: "General",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/m.com_libbpo.webp",
@@ -283,7 +283,7 @@ const Manipal = () => {
               progressive
               position="fixed"
               topOffsetClass="top-[64px] sm:top-[72px] md:top-[80px]"
-              mode="breadcrumb"
+              mode="chips"
             />
           </div>
           
@@ -303,18 +303,17 @@ const Manipal = () => {
                 </DialogContent>
               </Dialog>
             )}
+            <UniversityDateSlider
+                  currentDate="January 2026 Session"
+                  nextUpdateDate="Applications Closing on 20 Feb 2026"
+                  information="Limited Seats Available - Apply Now!"
+                  special="Average of 50% salary growth"
+                  color="#dc2626"
+                  backgroundColor="#fee2e2"
+                  textColor="#991b1b"
+                />
             {/* Introduction Hero Section */}
             <Introduction setOpenModal={setOpenModal} openModal={openModal} />
-
-            <UniversityDateSlider
-              currentDate="January 2026 Session"
-              nextUpdateDate="Applications Closing on 20 Feb 2026"
-              information="Limited Seats Available - Apply Now!"
-              special="Average of 50% salary growth"
-              color="#dc2626"
-              backgroundColor="#fee2e2"
-              textColor="#991b1b"
-            />
 
             {/* Welcome Section */}
             <Hero setOpenModal={setOpenModal} openModal={openModal} />

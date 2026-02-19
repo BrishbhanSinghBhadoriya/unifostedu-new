@@ -423,12 +423,23 @@ const CuOnline = () => {
             </Dialog>
           )}
         </header>
-        <PageContent sectionItems={sectionItems} activeSection={activeSection} ismobilemenuopen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
         
 
 
 
-        <main className="pt-24 pb-16 lg:pl-64">
+        <main className="pt-16 lg:pt-20 pb-16">
+          <PageContent
+            sectionItems={sectionItems}
+            activeSection={activeSection}
+            ismobilemenuopen={isSidebarOpen}
+            onClose={() => setIsSidebarOpen(false)}
+            mode="breadcrumb"
+            progressive
+            position="sticky"
+            topOffsetClass="top-[calc(4rem+6px)] lg:top-[calc(5rem+6px)]"
+            scrollOffset={96}
+            breadcrumbPaddingClass="px-0 py-2"
+          />
           <div className="mb-6">
             <UniversityDateSlider
               currentDate="January 2026 Session"
@@ -1487,7 +1498,7 @@ const CuOnline = () => {
           </section>
         </main>
 
-        <footer className="bg-[#1a1a1a] text-gray-300 py-12 lg:pl-64">
+        <footer className="bg-[#1a1a1a] text-gray-300 py-12">
           <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* Important Links */}
             <div>

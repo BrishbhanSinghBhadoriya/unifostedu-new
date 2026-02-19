@@ -423,7 +423,7 @@ const UniversityPage: React.FC = () => {
           textColor="#991b1b"
         />
         <div className="max-w-screen-2xl mx-auto flex">        
-          <main className="flex-1 min-w-0 lg:pl-64">
+          <main className="flex-1 min-w-0 w-full">
             
             <div className="overflow-x-hidden">
 

@@ -423,14 +423,11 @@ const Dypatil = () => {
         <div className="max-w-screen-2xl mx-auto flex w-full">
           {/* Left Sidebar */}
           {/* Add padding to the top of the first section to account for fixed header */}
+          <main className="flex-1 min-w-0 w-full">
           <PageContent sectionItems={selectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
 
-        
-
-
-
           {/* Main Content */}
-          <main className="flex-1 min-w-0 lg:ml-64">
+         
             <div className="overflow-x-hidden relative w-full h-[500px] flex items-center"
               style={{
                 backgroundImage: "url('https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dpu1_wdmyqj.png')",

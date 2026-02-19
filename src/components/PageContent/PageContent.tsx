@@ -12,6 +12,8 @@ type PageContentProps = {
   scrollOffset?: number;
   mode?: "chips" | "breadcrumb" | "both";
   position?: "sticky" | "fixed";
+  chipsPaddingClass?: string;
+  breadcrumbPaddingClass?: string;
   
 };
 
@@ -23,6 +25,8 @@ const PageContent = ({
   scrollOffset = 100,
   mode = "chips",
   position = "sticky",
+  chipsPaddingClass = "px-4 py-3",
+  breadcrumbPaddingClass = "px-4 py-2",
 }: PageContentProps) => {
   const [currentActiveSection, setCurrentActiveSection] = useState<
     string | null
@@ -80,20 +84,39 @@ const PageContent = ({
   };
 
   const visibleItems = (() => {
+    const wantsBreadcrumb = mode === "breadcrumb" || mode === "both";
+    if (wantsBreadcrumb) return sectionItems; // always show full breadcrumb
     if (!progressive) return sectionItems;
     const idx = Math.max(maxIndexReached, 0);
     return sectionItems.slice(0, idx + 1);
   })();
 
+  const progressPercent = (() => {
+    if (!sectionItems.length) return 0;
+    const denom = Math.max(sectionItems.length - 1, 1);
+    const idx = progressive ? maxIndexReached : sectionItems.findIndex((s) => s.id === currentActiveSection);
+    if (idx <= 0) return 0;
+    if (idx >= denom) return 100;
+    return Math.round((idx / denom) * 100);
+  })();
+
   return (
     <div className="w-full">
       <nav
-        className={`${position} ${topOffsetClass} z-40 bg-white/90 backdrop-blur border-b border-gray-200 shadow-sm ${
+        className={`${position} ${topOffsetClass} z-40 w-full bg-white/90 backdrop-blur border-b border-gray-200 shadow-sm ${
           position === "fixed" ? "left-0 right-0 w-full" : ""
         }`}
       >
+        {progressive && (
+          <div className="w-full h-1 bg-gray-200">
+            <div
+              className="h-1 bg-indigo-600 transition-[width] duration-300 ease-out"
+              style={{ width: `${progressPercent}%` }}
+            />
+          </div>
+        )}
         {mode !== "breadcrumb" && (
-          <div className="px-4 py-3">
+          <div className={chipsPaddingClass}>
             <ul className="flex items-center gap-2 overflow-x-auto">
               {visibleItems.map((item) => {
                 const isActive = currentActiveSection === item.id;
@@ -117,8 +140,8 @@ const PageContent = ({
           </div>
         )}
         {mode !== "chips" && (
-          <div className="px-4 py-2">
-            <div className="flex flex-wrap items-center gap-1">
+          <div className={breadcrumbPaddingClass}>
+            <div className="flex flex-wrap items-center gap-1 w-full">
               {visibleItems.map((item, idx) => {
                 const isActive = currentActiveSection === item.id;
                 return (

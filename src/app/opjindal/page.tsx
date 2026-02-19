@@ -505,13 +505,13 @@ const OPJindal: FC = () => {
                   </div>
                 </div>
               </header>
-              
+                <PageContent sectionItems={sectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} /> 
       <div className="max-w-screen-2xl mx-auto flex w-full">
         {/* Desktop Sidebar */}
-       <PageContent sectionItems={sectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} /> 
+       
 
         {/* Main Content Wrapper */}
-        <main className="flex-1 min-w-0 lg:pl-64">
+        <main className="flex-1 min-w-0 w-full">
           <div className="overflow-x-hidden pt-16 lg:pt-20">
            
             

@@ -1,7 +1,7 @@
 import { ChildrenProps } from "types/ChildrenProps";
 export const metadata = {
-  title: "Manipal University Jaipur Online",
-  description: "Explore flexible, career-focused UG and PG programs from Manipal University Online, a NAAC A+ accredited institution for quality learning.",
+  title: "Manipal University Jaipur Online Admission 2026 | Courses, Fees | Unifost",
+  description: "Manipal University Jaipur Online 2026 — UGC Approved, NAAC A+ | MBA, BBA, BCA, MCA online degrees. Fees ₹99K onwards. No entrance exam. Apply via Unifost. Free counseling",
 
   metadataBase: new URL("https://unifostedu.com"),
   alternates: {

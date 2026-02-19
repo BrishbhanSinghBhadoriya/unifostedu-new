@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
@@ -7,7 +8,8 @@ import { optimizeCloudinary } from '@/utils/cloudinary'
 import { OpenModalState } from '../../../../types/Modal'
 const Introduction = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalState) => void; openModal: OpenModalState }) => {
   return (
-    <div> <section id="HeroSection" className="relative w-full min-h-[450px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] xl:min-h-[800px] overflow-hidden pt-2 sm:pt-16 lg:pt-20 xl:pt-24">
+     <section id="HeroSection" className="relative w-full min-h-[450px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] xl:min-h-[800px] overflow-hidden">
+
               {/* Background with Gradient Overlay */}
               <div className="absolute inset-0">
                 <Image
@@ -23,7 +25,7 @@ const Introduction = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenM
             </div>
     
               {/* Content Container */}
-              <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 h-full overflow-x-hidden">
+              <div className="relative z-30 max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 h-full overflow-x-hidden">
                 <div className="flex flex-col lg:flex-row items-center justify-between h-full min-h-[450px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] xl:min-h-[800px] overflow-x-hidden">
                   
                   {/* Left Content */}
@@ -46,9 +48,10 @@ const Introduction = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenM
     
                       {/* Main Heading */}
                       <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                        <span className="block">Transform Your</span>
                         <span className="block bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-                          Future with Manipal
+                          Manipal University Jaipur Online Admission 2026</span>
+                        <span className="block">
+                          UGC Approved Online Degrees
                         </span>
                       </h1>
     
@@ -73,7 +76,7 @@ const Introduction = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenM
                         <Button
                           size="lg"
                           variant="outline"
-                          className="border-2 border-white/70 hover:border-white hover:bg-white/20 text-white font-bold px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg rounded-full transition-all duration-300 w-full sm:w-auto bg-white/20 cursor-pointer"
+                          className="border-2 border-white hover:border-orange-400 hover:bg-orange-400/20 hover:text-white text-white font-bold px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg rounded-full transition-all duration-300 w-full sm:w-auto bg-white/20 cursor-pointer"
                           onClick={() => setOpenModal({ type: 'enquire' })}
                         >
                           <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 mr-2" />
@@ -154,7 +157,7 @@ const Introduction = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenM
                 </div>
               </div>
             </section>
-            </div>
+            
   )
 }
 
