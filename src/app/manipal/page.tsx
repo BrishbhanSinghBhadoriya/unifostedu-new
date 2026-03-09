@@ -242,7 +242,7 @@ const Manipal = () => {
 
                 {/* Phone - Hidden on small screens */}
                 <a
-                  href="tel:+917042867717"
+                  href="tel:+917042646766"
                   className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm md:text-base hover:text-orange-600 transition-colors"
                 >
                   <span className="text-lg">📞</span>
@@ -252,7 +252,7 @@ const Manipal = () => {
 
                 {/* Mobile Phone Icon */}
                 <a
-                  href="tel:+917042867717"
+                  href="tel:+917042646766"
                   className="sm:hidden flex items-center justify-center w-9 h-9 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
                 >
                   <span className="text-base">📞</span>
@@ -288,7 +288,7 @@ const Manipal = () => {
           </div>
           
           {/* Main Content */}
-          <main className="flex-1 min-w-0 pt-32 md:pt-36 lg:pt-40">
+          <main className="flex-1 min-w-0 pt-32 md:pt-36 lg:pt-16">
 
             {/* Enquiry Modal */}
             {showEnquiryModal && (
@@ -305,7 +305,7 @@ const Manipal = () => {
             )}
             <UniversityDateSlider
                   currentDate="January 2026 Session"
-                  nextUpdateDate="Applications Closing on 20 Feb 2026"
+                  nextUpdateDate="Applications Closing on 11 March 2026"
                   information="Limited Seats Available - Apply Now!"
                   special="Average of 50% salary growth"
                   color="#dc2626"

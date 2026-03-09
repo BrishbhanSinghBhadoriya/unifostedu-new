@@ -301,7 +301,7 @@ const [openModal, setOpenModal] = useState<OpenModalState>(null);
 
                 {/* Phone (Desktop) */}
                 <a
-                  href="tel:+917042867717"
+                  href="tel:+917042646766"
                   className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-[#f26722] transition-colors"
                 >
                   <FaPhone className="text-orange-500 rotate-90" />
@@ -311,7 +311,7 @@ const [openModal, setOpenModal] = useState<OpenModalState>(null);
 
                 {/* Phone (Mobile) */}
                 <a
-                  href="tel:+917042867717"
+                  href="tel:+917042646766"
                   className="sm:hidden flex items-center justify-center w-10 h-10 bg-[#f26722]/10 rounded-full text-[#f26722] hover:bg-[#f26722]/20 transition-colors cursor-pointer"
                 >
                   📞
@@ -345,7 +345,7 @@ const [openModal, setOpenModal] = useState<OpenModalState>(null);
         <div className="pt-16 lg:pt-20 mt-10 lg:mt-12">
           <UniversityDateSlider
              currentDate="January 2026 Session"
-             nextUpdateDate="Applications Closing on 20 Feb 2026"
+             nextUpdateDate="Applications Closing on 11 March 2026"
              information="Limited Seats Available - Apply Now!"
              special="Average of 50% salary growth"
              color="#dc2626"

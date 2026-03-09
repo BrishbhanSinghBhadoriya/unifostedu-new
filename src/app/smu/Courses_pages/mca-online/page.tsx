@@ -225,7 +225,7 @@ const MCAOnline: React.FC<MCAOnlineProps> = ({ }) => {
 
                 {/* Phone (Desktop) */}
                 <a
-                  href="tel:+917042867717"
+                  href="tel:+917042646766"
                   className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-[#f26722] transition-colors"
                 >
                   <FaPhone className="text-orange-500 rotate-90" />
@@ -235,7 +235,7 @@ const MCAOnline: React.FC<MCAOnlineProps> = ({ }) => {
 
                 {/* Phone (Mobile) */}
                 <a
-                  href="tel:+917042867717"
+                  href="tel:+917042646766"
                   className="sm:hidden flex items-center justify-center w-10 h-10 bg-[#f26722]/10 rounded-full text-[#f26722] hover:bg-[#f26722]/20 transition-colors cursor-pointer"
                 >
                   📞

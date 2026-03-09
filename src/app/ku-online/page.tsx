@@ -327,7 +327,7 @@ useEffect(() => {
     {/* Desktop Phone + Apply */}
     <div className="hidden sm:flex items-center gap-4">
       <a
-        href="tel:+917042867717"
+        href="tel:+917042646766"
         className="flex items-center gap-2 text-gray-700 font-medium"
       >
         📞 +91 7042646766
@@ -346,7 +346,7 @@ useEffect(() => {
 
       {/* Phone Icon */}
       <a
-        href="tel:+917042867717"
+        href="tel:+917042646766"
         className="flex items-center justify-center w-10 h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
       >
         📞
@@ -369,7 +369,7 @@ useEffect(() => {
       <section className="relative w-full h-[75vh] md:h-[85vh] mt-[60px] mb-[20px] font-[Poppins]">
         <UniversityDateSlider
         currentDate="January 2026 Session"
-        nextUpdateDate="Applications Closing on 20 Feb 2026"
+        nextUpdateDate="Applications Closing on 11 March 2026"
         information="Limited Seats Available - Apply Now!"
         special="Average of 50% salary growth"
         color="#dc2626"

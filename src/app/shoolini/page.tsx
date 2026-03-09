@@ -597,12 +597,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null);
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+917042867717"
+              href="tel:+917042646766"
               className="inline-flex items-center justify-center px-8 py-3 bg-red-500 text-white font-semibold rounded-full hover:bg-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               📞 Call: +91 7042646766
             </a>
-            <a href="https://wa.me/917042867717" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-3 bg-white text-red-500 font-semibold rounded-full border-2 border-red-500 hover:bg-red-50 transition-all duration-300">
+            <a href="https://wa.me/917042646766" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-3 bg-white text-red-500 font-semibold rounded-full border-2 border-red-500 hover:bg-red-50 transition-all duration-300">
               💬 Chat with Counselor
             </a>
           </div>
@@ -765,7 +765,7 @@ const Shoolini = () => {
               <div className="flex items-center gap-2 sm:gap-4">
                 {/* Phone - Hidden on small screens */}
                 <a
-                  href="tel:+917042867717"
+                  href="tel:+917042646766"
                   className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-orange-600 transition-colors"
                 > 
                   {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
@@ -776,7 +776,7 @@ const Shoolini = () => {
                 
                 {/* Mobile Phone Icon */}
                 <a
-                  href="tel:+917042867717"
+                  href="tel:+917042646766"
                   className="sm:hidden flex items-center justify-center w-10 h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
                   aria-label="Call Now"
                 >
@@ -805,7 +805,7 @@ const Shoolini = () => {
             <main className="flex-1 overflow-x-hidden px-4 lg:px-8 pb-10 lg:pl-64">
                             <UniversityDateSlider
                                 currentDate="January 2026 Session"
-                                nextUpdateDate="Applications Closing on 20 Feb 2026"
+                                nextUpdateDate="Applications Closing on 11 March 2026"
                                 information="Limited Seats Available - Apply Now!"
                                 special="Average of 50% salary growth"
                                 color="#dc2626"
@@ -1801,7 +1801,7 @@ const Shoolini = () => {
                       <div className="space-y-3">
                         <div className="flex items-center gap-3">
                           
-                          <a href="tel:+917042867717" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us"  aria-label="Call us at +91 7042646766">
+                          <a href="tel:+917042646766" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us"  aria-label="Call us at +91 7042646766">
                                        
                                        <span className="text-orange-400">📞</span>
                                       </a>

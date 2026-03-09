@@ -378,13 +378,13 @@ const Dypatil = () => {
 
               {/* Call button (text on >=sm, icon on mobile) */}
               <a
-                href="tel:+917042867717"
+                href="tel:+917042646766"
                 className="hidden sm:inline-flex items-center bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-4 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
               >
                 +91 7042646766
               </a>
               <a
-                href="tel:+917042867717"
+                href="tel:+917042646766"
                 className="sm:hidden inline-flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white"
                 aria-label="Call"
               >
@@ -413,7 +413,7 @@ const Dypatil = () => {
       <div className="pt-16 overflow-x-hidden break-words hyphens-auto w-full">
          <UniversityDateSlider
                 currentDate="January 2026 Session"
-                nextUpdateDate="Applications Closing on 20 Feb 2026"
+                nextUpdateDate="Applications Closing on 11 March 2026"
                 information="Limited Seats Available - Apply Now!"
                 special="Average of 50% salary growth"
                 color="#dc2626"
@@ -2144,7 +2144,7 @@ const Dypatil = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <span>📞</span>
-                  <a href="tel:+917042867717" className="hover:text-white transition-colors">+91 7042646766</a>
+                  <a href="tel:+917042646766" className="hover:text-white transition-colors">+91 7042646766</a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <span>📧</span>

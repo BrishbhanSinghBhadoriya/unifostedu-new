@@ -445,13 +445,13 @@ const Jain = () => {
               </button>
 
               {/* Phone Number */}
-              <a href="tel:+917042867717" className="hidden sm:flex items-center gap-2 bg-gradient-to-r from-[#001C54] to-[#b91c1c] text-white rounded-full px-4 py-2 shadow-lg hover:shadow-xl transition-all duration-300">
+              <a href="tel:+917042646766" className="hidden sm:flex items-center gap-2 bg-gradient-to-r from-[#001C54] to-[#b91c1c] text-white rounded-full px-4 py-2 shadow-lg hover:shadow-xl transition-all duration-300">
                 <FaPhone className="text-white text-sm rotate-100" />
-                <span className="font-semibold text-sm whitespace-nowrap">+91 70428 67717</span>
+                <span className="font-semibold text-sm whitespace-nowrap">+91 7042646766</span>
               </a>
               {/* Phone (Mobile) */}
               <a
-                href="tel:+917042867717"
+                href="tel:+917042646766"
                 className="sm:hidden flex items-center justify-center w-10 h-10 bg-white-500 rounded-full text-[#f26722] hover:bg-red-700 transition-colors cursor-pointer"
               >
                 📞
@@ -485,7 +485,7 @@ const Jain = () => {
         />
          <UniversityDateSlider
                       currentDate="January 2026 Session"
-                      nextUpdateDate="Applications Closing on 20 Feb 2026"
+                      nextUpdateDate="Applications Closing on 11 March 2026"
                       information="Limited Seats Available - Apply Now!"
                       special="Average of 50% salary growth"
                       color="#1619e4"

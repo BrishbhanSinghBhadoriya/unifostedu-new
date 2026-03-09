@@ -96,12 +96,12 @@ const MUJBCAPage = () => {
               <button onClick={() => setIsMobileMenuOpen(true)} aria-label="Open menu" className="lg:hidden p-2 border rounded-md hover:bg-gray-100 transition-colors cursor-pointer">
                 <FaBars className="w-5 h-5 text-gray-700" />
               </button>
-              <a href="tel:+917042867717" className="hidden sm:flex items-center gap-1.5 md:gap-2 text-gray-700 font-medium text-xs sm:text-sm md:text-base hover:text-orange-600 transition-colors">
+              <a href="tel:+917042646766" className="hidden sm:flex items-center gap-1.5 md:gap-2 text-gray-700 font-medium text-xs sm:text-sm md:text-base hover:text-orange-600 transition-colors">
                 <FaPhone className="text-base sm:text-lg" />
                 <span className="hidden lg:inline">+91 7042646766</span>
                 <span className="lg:hidden">Call</span>
               </a>
-              <a href="tel:+917042867717" className="sm:hidden flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors">
+              <a href="tel:+917042646766" className="sm:hidden flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors">
                 <FaPhone className="text-base" />
               </a>
               <button onClick={() => setOpenModal({ type: 'apply' })} className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap">
@@ -145,7 +145,7 @@ const MUJBCAPage = () => {
                 </p>
                 <div className="flex flex-wrap gap-3 sm:gap-4">
                   <button onClick={() => setOpenModal({ type: 'apply' })} className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer">Enquire Now</button>
-                  <a href="tel:+917042867717" className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 border border-white/30"><FaPhone className="inline mr-2" />Call Now</a>
+                  <a href="tel:+917042646766" className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 border border-white/30"><FaPhone className="inline mr-2" />Call Now</a>
                 </div>
               </motion.div>
             </div>

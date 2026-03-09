@@ -266,7 +266,7 @@ const CourseSlugPage: React.FC<SlugClientsProps> = ({ courseData }) => {
 
                 {/* Phone - Hidden on small screens */}
                 <a
-                  href="tel:+917042867717"
+                  href="tel:+917042646766"
                   className="hidden sm:flex items-center gap-1.5 md:gap-2 text-gray-700 font-medium text-xs sm:text-sm md:text-base hover:text-orange-600 transition-colors"
                 > 
                   <span className="text-base sm:text-lg">📞</span>
@@ -276,7 +276,7 @@ const CourseSlugPage: React.FC<SlugClientsProps> = ({ courseData }) => {
                 
                 {/* Mobile Phone Icon */}
                 <a
-                  href="tel:+917042867717"
+                  href="tel:+917042646766"
                   className="sm:hidden flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
                 >
                   <span className="text-base">📞</span>

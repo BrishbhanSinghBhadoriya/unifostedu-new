@@ -283,7 +283,7 @@ const Vgu = () => {
               <div className="flex items-center gap-2 sm:gap-4">
                 {/* Phone - Hidden on small screens */}
                 <a
-                  href="tel:+917042867717"
+                  href="tel:+917042646766"
                   className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-orange-600 transition-colors"
                 >
                   <span className="text-lg">📞</span>
@@ -293,7 +293,7 @@ const Vgu = () => {
 
                 {/* Mobile Phone Icon */}
                 <a
-                  href="tel:+917042867717"
+                  href="tel:+917042646766"
                   className="sm:hidden flex items-center justify-center w-10 h-10 bg-[#821812] rounded-full text-white hover:bg-[#821812] transition-colors"
                 >
                   📞
@@ -325,11 +325,11 @@ const Vgu = () => {
           {/* Desktop Sidebar */}
           
           <main className="flex-1 min-w-0 w-full"> 
-              <PageContent sectionItems={selectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
-              <div className="pt-16 lg:pt-20">
+              
+              <div className="pt-10 lg:pt-20">
                         <UniversityDateSlider
                           currentDate="January 2026 Session"
-                          nextUpdateDate="Applications Closing on 20 Feb 2026"
+                          nextUpdateDate="Applications Closing on 11 March 2026"
                           information="Limited Seats Available - Apply Now!"
                           special="Average of 50% salary growth"
                           color="#dc2626"
@@ -2253,7 +2253,7 @@ Through the campus tour, students can explore digital classrooms, study resource
                         <div className="space-y-3">
                           <div className="flex items-center gap-3">
 
-                            <a href="tel:+917042867717" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us" aria-label="Email us at info@unifostedu.com">
+                            <a href="tel:+917042646766" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us" aria-label="Email us at info@unifostedu.com">
 
                               <span className="text-[#821812]-400">📞</span>
                             </a>

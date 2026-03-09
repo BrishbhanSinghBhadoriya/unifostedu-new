@@ -375,7 +375,7 @@ const CuOnline = () => {
                 </button>
 
                 <a
-                  href="tel:+917042867717"
+                  href="tel:+917042646766"
                   className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-[#f26722] transition-colors">
                   <FaPhone className="text-red-500 rotate-90" />
                   <span className="hidden lg:inline">+91 7042646766</span>
@@ -384,7 +384,7 @@ const CuOnline = () => {
 
                 {/* Phone (Mobile) */}
                 <a
-                  href="tel:+917042867717"
+                  href="tel:+917042646766"
                   className="sm:hidden flex items-center justify-center w-10 h-10 bg-white-500 rounded-full text-[#f26722] hover:bg-red-700 transition-colors cursor-pointer">
                   📞
                 </a>
@@ -443,7 +443,7 @@ const CuOnline = () => {
           <div className="mb-6">
             <UniversityDateSlider
               currentDate="January 2026 Session"
-              nextUpdateDate="Applications Closing on 20 Feb 2026"
+              nextUpdateDate="Applications Closing on 11 March 2026"
               information="Limited Seats Available - Apply Now!"
               special="Average of 50% salary growth"
               color="#fa0606"
@@ -591,11 +591,7 @@ const CuOnline = () => {
                     alt="Chandigarh University"
                     className="w-full rounded-2xl shadow-lg"
                   />
-                  <img
-                    src="https://res.cloudinary.com/didkrwhbu/image/upload/v1765002466/images_1_q0mfyu.jpg"
-                    alt="Chandigarh University"
-                    className="w-full rounded-2xl shadow-lg"
-                  />
+                  
 
                   <img
                     src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp"
@@ -637,11 +633,8 @@ const CuOnline = () => {
                       <li>Online BCA (easy <strong>CU Online BCA admission</strong>)</li>
                       <li>Several other <strong>online degrees in Chandigarh</strong> across business, IT, and commerce</li>
                     </ul>
-                  </div>
-                </div>
-              </div>
 
-              <p className="mt-3 text-gray-700">
+                    <p className="mt-3 text-gray-700">
                 Each course is created with a strong academic base, industry guidance, and practical, job-focused skills. Since these programs are <strong>UGC approved online degrees Chandigarh University</strong>, they hold the same value as traditional on-campus degrees. This means students can apply for government jobs, private-sector roles, or higher studies with complete confidence.
               </p>
               <p className="mt-3 text-gray-700">
@@ -660,6 +653,11 @@ const CuOnline = () => {
                   <span className="sm:hidden">Apply</span>
                 </button>
               </div>
+                  </div>
+                </div>
+              </div>
+
+              
             </div>
           </section>
 
@@ -718,6 +716,10 @@ const CuOnline = () => {
                   {
                     title: "Global Recognition & Industry Exposure",
                     content: "As a top online university in Punjab, Chandigarh University Mohali collaborates with global companies, industry experts, and top organizations. Students get exposure through expert talks, internships, real projects, and workshops."
+                  },
+                  {
+                   title: "Dedicated Student Support System",
+                   content: "CU Online Chandigarh provides a strong student support system including academic guidance, technical assistance, doubt-solving sessions, and dedicated counselors. This ensures that every student receives continuous support throughout their learning journey."
                   }
                 ].map((item, index) => (
                   <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
@@ -741,50 +743,61 @@ const CuOnline = () => {
             </div>
           </section>
 
-          {/* What Makes Us Special Section */}
-          <section id="WhatMakesSpecial" className="py-16 bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
-                What Makes Chandigarh University Online Special?
-              </h2>
+        {/* What Makes Us Special Section */}
+<section id="WhatMakesSpecial" className="py-16 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+      What Makes Chandigarh University Online Special?
+    </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {[
-                  {
-                    icon: "🌐",
-                    title: "Modern and Advanced Online Learning System",
-                    content: "CU Online Chandigarh uses advanced online tools, a smart learning platform, and digital classrooms to deliver lessons, assignments, quizzes, and interactive sessions."
-                  },
-                  {
-                    icon: "🎓",
-                    title: "Safe, Recognized, and Trusted Degrees",
-                    content: "Because CU Online offers UGC approved online degrees Chandigarh University, students receive degrees that are trusted across India and globally."
-                  },
-                  {
-                    icon: "👨‍🏫",
-                    title: "Experienced Teachers and Mentors",
-                    content: "Teachers from Chandigarh University Mohali handle the online programs, ensuring high-quality academic delivery and real industry knowledge."
-                  },
-                  {
-                    icon: "📚",
-                    title: "Wide Choice of Online Courses",
-                    content: "Students can choose programs in management, IT, commerce, and other fields. All these programs are considered among the best online degree programs in Punjab."
-                  },
-                  {
-                    icon: "💼",
-                    title: "Strong Career Support",
-                    content: "CU Online Chandigarh provides resume support, interview preparation, career counselling, and placement guidance, making it a trusted learning system for future professionals."
-                  }
-                ].map((item, index) => (
-                  <div key={index} className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                    <div className="text-4xl mb-4">{item.icon}</div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-3">{item.title}</h3>
-                    <p className="text-gray-700">{item.content}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {[
+        {
+          icon: "🌐",
+          title: "Modern and Advanced Online Learning System",
+          content:
+            "CU Online Chandigarh uses advanced online tools, a smart learning platform, and digital classrooms to deliver lessons, assignments, quizzes, and interactive sessions."
+        },
+        {
+          icon: "🎓",
+          title: "Safe, Recognized, and Trusted Degrees",
+          content:
+            "Because CU Online offers UGC approved online degrees Chandigarh University, students receive degrees that are trusted across India and globally."
+        },
+        {
+          icon: "👨‍🏫",
+          title: "Experienced Teachers and Mentors",
+          content:
+            "Teachers from Chandigarh University Mohali handle the online programs, ensuring high-quality academic delivery and real industry knowledge."
+        },
+        {
+          icon: "📚",
+          title: "Wide Choice of Online Courses",
+          content:
+            "Students can choose programs in management, IT, commerce, and other fields. All these programs are considered among the best online degree programs in Punjab."
+        },
+        {
+          icon: "💼",
+          title: "Strong Career Support",
+          content:
+            "CU Online Chandigarh provides resume support, interview preparation, career counselling, and placement guidance, making it a trusted learning system for future professionals."
+        },
+        {
+          icon: "⏰",
+          title: "Flexible Learning for Working Professionals",
+          content:
+            "CU Online allows students and working professionals to learn at their own pace with recorded lectures, weekend classes, and flexible schedules."
+        }
+      ].map((item, index) => (
+        <div key={index} className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+          <div className="text-4xl mb-4">{item.icon}</div>
+          <h3 className="text-xl font-bold text-gray-800 mb-3">{item.title}</h3>
+          <p className="text-gray-700">{item.content}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
           {/* Campus Tour Section */}
           <section id="CampusTour" className="py-16 bg-gray-50">

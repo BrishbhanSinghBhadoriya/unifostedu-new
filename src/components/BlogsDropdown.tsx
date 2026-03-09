@@ -1,12 +1,9 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { FaBookOpen, FaChevronDown } from "react-icons/fa";
-import { BLOG_API_ENDPOINT } from "@/lib/blogApi";
 import { MenuKey } from "types/menu";
-
 
 type Blog = {
   _id?: string;
@@ -24,84 +21,36 @@ type BlogsDropdownProps = {
   setMenuOpen: React.Dispatch<React.SetStateAction<MenuKey>>;
 };
 
-/* ---------------- CONSTANTS ---------------- */
-
-const MAX_DISPLAYED_BLOGS = 8;
-
-const FALLBACK_BLOG_IMAGE =
-  "https://res.cloudinary.com/didkrwhbu/image/upload/v1762932238/blog-images/a8cspd20trzfqocza1jw.png";
-
+const STATIC_BLOG_PAGES: Blog[] = [
+  { slug: "BestOnlineBBA2025", title: "Best Online BBA 2025" },
+  { slug: "CareerAfterOnlineMBA", title: "Career After Online MBA" },
+  { slug: "ChooseOnlineUniversity", title: "Choose Online University" },
+  { slug: "JainUGCApproval", title: "Jain UGC Approval" },
+  { slug: "LPUOnlineReview", title: "LPU Online Review" },
+  { slug: "MBADistanceVsOnline", title: "MBA Online vs Distance" },
+  { slug: "ManipalVsAmityOnlineMBA", title: "Manipal vs Amity Online MBA" },
+  { slug: "ScholarshipAndEMI", title: "Scholarship and EMI" },
+  { slug: "SpecialBlog", title: "Special Blog" },
+  { slug: "UnifostSpecial", title: "Unifost Special" },
+  { slug: "WorkingMBA", title: "Working MBA" },
+];
 
 const BlogsDropdown = ({ menuOpen, setMenuOpen }: BlogsDropdownProps) => {
-  const [blogs, setBlogs] = useState<Blog[]>([]);
-  const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
-
- 
-
-  useEffect(() => {
-    const controller = new AbortController();
-
-    const loadBlogs = async () => {
-      setLoading(true);
-      setError(null);
-
-      try {
-        const response = await fetch(BLOG_API_ENDPOINT, {
-          signal: controller.signal,
-          cache: "no-store",
-        });
-
-        if (!response.ok) {
-          console.warn(`Blog API failed with status: ${response.status}`);
-          setBlogs([]);
-          return;
-        }
-
-        const payload = await response.json();
-
-        if (payload?.success && Array.isArray(payload.data)) {
-          setBlogs(payload.data as Blog[]);
-        } else {
-          setBlogs([]);
-        }
-      } catch (err) {
-        if (err instanceof DOMException && err.name === "AbortError") return;
-
-        console.error("Blog dropdown fetch error:", err);
-        setError("Unable to load blogs right now.");
-        setBlogs([]);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadBlogs();
-
-    return () => controller.abort();
-  }, []);
-
-  /* -------- SORT + LIMIT BLOGS -------- */
+  const [blogs] = useState<Blog[]>([]);
 
   const displayedBlogs = useMemo<Blog[]>(() => {
-    return blogs
+    const merged = [...STATIC_BLOG_PAGES, ...blogs];
+    const uniqueBySlug = Array.from(
+      new Map(merged.map((b) => [b.slug, b])).values()
+    );
+    return uniqueBySlug
       .filter((blog) => Boolean(blog.slug))
-      .sort((a, b) => {
-        const dateA = new Date(a.createdAt || a.updatedAt || 0).getTime();
-        const dateB = new Date(b.createdAt || b.updatedAt || 0).getTime();
-        return dateB - dateA;
-      })
-      .slice(0, MAX_DISPLAYED_BLOGS);
+      .sort((a, b) => a.title.localeCompare(b.title));
   }, [blogs]);
-
-  /* -------- HANDLERS -------- */
 
   const handleToggle = () =>
     setMenuOpen(menuOpen === "blogs" ? null : "blogs");
-
   const handleClose = () => setMenuOpen(null);
-
-  /* -------- UI -------- */
 
   return (
     <div className="relative">
@@ -128,56 +77,24 @@ const BlogsDropdown = ({ menuOpen, setMenuOpen }: BlogsDropdownProps) => {
             </h3>
 
             <div className="space-y-2 max-h-80 overflow-y-auto pr-2">
-              {loading && (
-                <div className="px-3 py-4 text-sm text-slate-500">
-                  Loading latest posts...
-                </div>
-              )}
-
-              {error && !loading && (
-                <div className="px-3 py-4 text-sm text-red-500">
-                  {error}
-                </div>
-              )}
-
-              {!loading && !error && displayedBlogs.length === 0 && (
+              {displayedBlogs.length === 0 && (
                 <div className="px-3 py-4 text-sm text-slate-500">
                   No blogs available yet.
                 </div>
               )}
 
-              {!loading &&
-                !error &&
-                displayedBlogs.map((blog) => (
-                  <Link
-                    key={blog._id ?? blog.slug}
-                    href={`/blog/${blog.slug}`}
-                    onClick={handleClose}
-                    className="group flex items-start gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-blue-50 hover:border-blue-300 transition-all duration-200"
-                  >
-                    <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-lg border border-slate-200">
-                      <Image
-                        src={blog.image || FALLBACK_BLOG_IMAGE}
-                        alt={blog.title}
-                        fill
-                        sizes="48px"
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                    </div>
-
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-slate-700 group-hover:text-blue-600 line-clamp-2 leading-tight">
-                        {blog.title}
-                      </p>
-
-                      {(blog.description || blog.category) && (
-                        <p className="mt-1 text-xs text-slate-500 line-clamp-1">
-                          {blog.description || blog.category}
-                        </p>
-                      )}
-                    </div>
-                  </Link>
-                ))}
+              {displayedBlogs.map((blog) => (
+                <Link
+                  key={blog._id ?? blog.slug}
+                  href={`/blog/${blog.slug}`}
+                  onClick={handleClose}
+                  className="group flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-blue-50 hover:border-blue-300 transition-all duration-200"
+                >
+                  <p className="flex-1 min-w-0 text-sm font-medium text-slate-700 group-hover:text-blue-600 line-clamp-2 leading-tight">
+                    {blog.title}
+                  </p>
+                </Link>
+              ))}
             </div>
 
             <div className="mt-4 pt-3 border-t border-slate-200">
