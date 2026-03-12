@@ -70,7 +70,7 @@ const Headers: React.FC<HeadersProps> = ({
               onClick={() => setIsMobileMenuOpen?.(true)}
               variant="ghost"
               size="icon"
-              className="lg:hidden"
+              className="md:hidden"
             >
               <Menu className="h-6 w-6" />
             </Button>

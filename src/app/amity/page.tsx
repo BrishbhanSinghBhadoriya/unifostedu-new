@@ -132,8 +132,8 @@ const AmityLandingPage = () => {
     {
       course: "Master of Computer Applications (MCA)",
       duration: "2 Years",
-      eligibility: "Graduation in BCA/B.Sc(IT)",
-      fees: "₹170,000- ₹2,50,000",
+      eligibility: "Graduation ",
+      fees: "₹170,000- ₹2,75,000",
       specialization:
         "MCA (General, Cyber Security In collaboration with HCL Tech, Blockchain Technology And Management,Machine Learning and Artificial Intelligence, Machine Learning and Artificial Intelligence In collaboration with TCS iON, Software Engineering,Financial Technology & AI In collaboration with Paytm)",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca-online-image_w3f0sx.webp",
@@ -142,7 +142,7 @@ const AmityLandingPage = () => {
     {
       course: "Master of Commerce (M.Com)",
       duration: "2 Years",
-      eligibility: "Graduation in Commerce",
+      eligibility: "Graduation ",
       fees: "₹1,20,000",
       specialization: "General, Financial Management, Financial Technology",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327469/mcom-online-image_e79tno.webp",
@@ -173,7 +173,7 @@ const AmityLandingPage = () => {
     {
       course: "BBA + MBA",
       duration: "4.5-5 Years",
-      eligibility: "10+2 With minimum 50%",
+      eligibility: "10+2 With recognised boards",
       fees: "₹3,45,800",
       specialization: "BBA + MBA",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
@@ -182,7 +182,7 @@ const AmityLandingPage = () => {
     {
       course: "BCA + MCA",
       duration: "4.5-5 Years",
-      eligibility: "10+2 With minimum 50%",
+      eligibility: "10+2 With recognised boards",
       fees: "₹3,04,000",
       specialization: "BCA + MCA",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca-online-image_w3f0sx.webp",
@@ -191,7 +191,7 @@ const AmityLandingPage = () => {
     {
       course: "B.Com + MBA",
       duration: "4.5-5 Years",
-      eligibility: "10+2 With minimum 50%",
+      eligibility: "10+2 With recognised boards",
       fees: "₹2,83,100 - ₹3,05,000",
       specialization: "B.Com + MBA",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327469/mcom-online-image_e79tno.webp",
@@ -432,7 +432,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
 
        <Headers setOpenModal={setOpenModal} setIsMobileMenuOpen={setIsMobileMenuOpen}/>
 
-        <div className="mt-[56px] sm:mt-[64px] md:mt-[70px]">
+        <div className="hidden md:block mt-[56px] sm:mt-[64px] md:mt-[70px]">
           <PageContent
             sectionItems={sectionItems}
             activeSection={activeSection}
@@ -442,6 +442,16 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
             position="fixed"
             progressive
             topOffsetClass="top-[56px] sm:top-[64px] md:top-[70px]"
+          />
+        </div>
+        
+        <div className="md:hidden">
+          <PageContent
+            sectionItems={sectionItems}
+            activeSection={activeSection}
+            ismobilemenuopen={isMobileMenuOpen}
+            onClose={() => setIsMobileMenuOpen(false)}
+            progressive={false} // Always show all sections in the mobile menu for navigation
           />
         </div>
 

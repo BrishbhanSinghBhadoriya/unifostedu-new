@@ -373,33 +373,36 @@ const LpuOnline = () => {
                 </div>
               </div>
             </header>
-
-            {/* Page Content Navigation (Breadcrumb + Progress) */}
-            <div className="mt-[56px] sm:mt-[64px] lg:mt-[80px]">
-              <PageContent
-                sectionItems={sectionItem}
-                activeSection={activeSection}
-                ismobilemenuopen={isMobileMenuOpen}
-                onClose={() => setIsMobileMenuOpen(false)}
-                progressive
-                position="fixed"
-                topOffsetClass="top-[56px] sm:top-[64px] lg:top-[80px]"
-                mode="breadcrumb"
+            <div className="mt-0 lg:mt-[25px]">
+              <UniversityDateSlider
+                currentDate="January 2026 Session"
+                nextUpdateDate="Applications Closing on 11 March 2026"
+                information="Limited Seats Available - Apply Now!"
+                special="Average of 50% salary growth"
+                color="#e45b1cff"
+                backgroundColor="#e15522ff"
+                textColor="#eae5e1ff"
               />
             </div>
-
-
-           <UniversityDateSlider
-                  currentDate="January 2026 Session"
-                  nextUpdateDate="Applications Closing on 11 March 2026"
-                  information="Limited Seats Available - Apply Now!"
-                  special="Average of 50% salary growth"
-                  color="#dc2626"
-                  backgroundColor="#fee2e2"
-                  textColor="#991b1b"
-                />
             {/* Premium Hero Section */}
-            <section id="introduction" className="relative w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] overflow-hidden">
+            <section id="introduction" className="relative w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] mt-0 overflow-hidden">
+
+              {/* Page Content Navigation (Breadcrumb + Progress) */}
+              <div className="mt-[56px] sm:mt-[64px] lg:mt-[80px]">
+                <PageContent
+                  sectionItems={sectionItem}
+                  activeSection={activeSection}
+                  ismobilemenuopen={isMobileMenuOpen}
+                  onClose={() => setIsMobileMenuOpen(false)}
+                  progressive
+                  position="fixed"
+                  topOffsetClass="top-[56px] sm:top-[64px] lg:top-[80px]"
+                  mode="breadcrumb"
+                />
+             
+              </div>
+
+             
               {/* Background with Gradient Overlay */}
               <div className="absolute inset-0">
                 <Image
@@ -541,11 +544,17 @@ const LpuOnline = () => {
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 
+    text-black font-bold 
+    px-4 py-2 text-sm 
+    sm:px-6 sm:py-3 sm:text-base 
+    lg:px-8 lg:py-4 lg:text-lg 
+    rounded-full shadow-2xl hover:shadow-orange-500/25 
+    transform hover:scale-105 transition-all duration-300 
+    w-auto sm:w-auto cursor-pointer"
                   onClick={() => setOpenModal({ type: 'apply' })}
                 >
                   Apply Now
-
                 </Button>
               </div>
 
@@ -576,11 +585,17 @@ const LpuOnline = () => {
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 
+    text-black font-bold 
+    px-4 py-2 text-sm 
+    sm:px-6 sm:py-3 sm:text-base 
+    lg:px-8 lg:py-4 lg:text-lg 
+    rounded-full shadow-2xl hover:shadow-orange-500/25 
+    transform hover:scale-105 transition-all duration-300 
+    w-auto sm:w-auto cursor-pointer"
                   onClick={() => setOpenModal({ type: 'apply' })}
                 >
                   Apply Now
-
                 </Button>
               </div>
               {/* Academic Excellence Section */}
@@ -716,11 +731,17 @@ const LpuOnline = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 
+    text-black font-bold 
+    px-4 py-2 text-sm 
+    sm:px-6 sm:py-3 sm:text-base 
+    lg:px-8 lg:py-4 lg:text-lg 
+    rounded-full shadow-2xl hover:shadow-orange-500/25 
+    transform hover:scale-105 transition-all duration-300 
+    w-auto sm:w-auto cursor-pointer"
                 onClick={() => setOpenModal({ type: 'apply' })}
               >
                 Apply Now
-
               </Button>
             </div>
             <section className="bg-white py-16 px-6 md:px-20">
@@ -830,11 +851,17 @@ const LpuOnline = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 
+    text-black font-bold 
+    px-4 py-2 text-sm 
+    sm:px-6 sm:py-3 sm:text-base 
+    lg:px-8 lg:py-4 lg:text-lg 
+    rounded-full shadow-2xl hover:shadow-orange-500/25 
+    transform hover:scale-105 transition-all duration-300 
+    w-auto sm:w-auto cursor-pointer"
                 onClick={() => setOpenModal({ type: 'apply' })}
               >
                 Apply Now
-
               </Button>
             </div>
 
@@ -972,11 +999,17 @@ const LpuOnline = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 
+    text-black font-bold 
+    px-4 py-2 text-sm 
+    sm:px-6 sm:py-3 sm:text-base 
+    lg:px-8 lg:py-4 lg:text-lg 
+    rounded-full shadow-2xl hover:shadow-orange-500/25 
+    transform hover:scale-105 transition-all duration-300 
+    w-auto sm:w-auto cursor-pointer"
                 onClick={() => setOpenModal({ type: 'apply' })}
               >
                 Apply Now
-
               </Button>
             </div>
 
@@ -1029,11 +1062,17 @@ const LpuOnline = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 
+    text-black font-bold 
+    px-4 py-2 text-sm 
+    sm:px-6 sm:py-3 sm:text-base 
+    lg:px-8 lg:py-4 lg:text-lg 
+    rounded-full shadow-2xl hover:shadow-orange-500/25 
+    transform hover:scale-105 transition-all duration-300 
+    w-auto sm:w-auto cursor-pointer"
                 onClick={() => setOpenModal({ type: 'apply' })}
               >
                 Apply Now
-
               </Button>
             </div>
 
@@ -1157,8 +1196,8 @@ const LpuOnline = () => {
                           key={tab.value}
                           value={tab.value}
                           className={`px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-xl font-semibold transition-all duration-300 text-sm sm:text-base ${activeTab === tab.value
-                              ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg transform scale-105'
-                              : 'text-gray-700 hover:text-orange-600 hover:bg-orange-50'
+                            ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg transform scale-105'
+                            : 'text-gray-700 hover:text-orange-600 hover:bg-orange-50'
                             }`}
                           data-state-active="true"
                         >
@@ -1236,13 +1275,23 @@ const LpuOnline = () => {
                                 </div>
 
                                 <div className="pt-3 sm:pt-4 border-t border-gray-100">
-                                  <button
+                                  <Button
+                                    size="lg"
+                                    className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 
+    text-black font-bold 
+    px-4 py-2 text-sm 
+    sm:px-6 sm:py-3 sm:text-base 
+    lg:px-8 lg:py-4 lg:text-lg 
+    rounded-full shadow-2xl hover:shadow-orange-500/25 
+    transform hover:scale-105 transition-all duration-300 
+    w-auto sm:w-auto cursor-pointer"
                                     onClick={() => setOpenModal({ type: 'apply', program: course.course })}
-                                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-3 sm:py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base"
                                   >
                                     Apply Now
                                     <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-2 inline" />
-                                  </button>
+                                  </Button>
+
+
                                 </div>
                               </div>
                             </div>
@@ -1305,11 +1354,17 @@ const LpuOnline = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 
+    text-black font-bold 
+    px-4 py-2 text-sm 
+    sm:px-6 sm:py-3 sm:text-base 
+    lg:px-8 lg:py-4 lg:text-lg 
+    rounded-full shadow-2xl hover:shadow-orange-500/25 
+    transform hover:scale-105 transition-all duration-300 
+    w-auto sm:w-auto cursor-pointer"
                 onClick={() => setOpenModal({ type: 'apply' })}
               >
                 Apply Now
-
               </Button>
             </div>
             {/*key highlight*/}
@@ -1394,11 +1449,17 @@ const LpuOnline = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 
+    text-black font-bold 
+    px-4 py-2 text-sm 
+    sm:px-6 sm:py-3 sm:text-base 
+    lg:px-8 lg:py-4 lg:text-lg 
+    rounded-full shadow-2xl hover:shadow-orange-500/25 
+    transform hover:scale-105 transition-all duration-300 
+    w-auto sm:w-auto cursor-pointer"
                 onClick={() => setOpenModal({ type: 'apply' })}
               >
                 Apply Now
-
               </Button>
             </div>
 
@@ -1448,11 +1509,17 @@ const LpuOnline = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 
+    text-black font-bold 
+    px-4 py-2 text-sm 
+    sm:px-6 sm:py-3 sm:text-base 
+    lg:px-8 lg:py-4 lg:text-lg 
+    rounded-full shadow-2xl hover:shadow-orange-500/25 
+    transform hover:scale-105 transition-all duration-300 
+    w-auto sm:w-auto cursor-pointer"
                 onClick={() => setOpenModal({ type: 'apply' })}
               >
                 Apply Now
-
               </Button>
             </div>
 
@@ -1487,11 +1554,17 @@ const LpuOnline = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 
+    text-black font-bold 
+    px-4 py-2 text-sm 
+    sm:px-6 sm:py-3 sm:text-base 
+    lg:px-8 lg:py-4 lg:text-lg 
+    rounded-full shadow-2xl hover:shadow-orange-500/25 
+    transform hover:scale-105 transition-all duration-300 
+    w-auto sm:w-auto cursor-pointer"
                 onClick={() => setOpenModal({ type: 'apply' })}
               >
                 Apply Now
-
               </Button>
             </div>
             {/* Admission Procedure Section */}
@@ -1583,11 +1656,17 @@ const LpuOnline = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 
+    text-black font-bold 
+    px-4 py-2 text-sm 
+    sm:px-6 sm:py-3 sm:text-base 
+    lg:px-8 lg:py-4 lg:text-lg 
+    rounded-full shadow-2xl hover:shadow-orange-500/25 
+    transform hover:scale-105 transition-all duration-300 
+    w-auto sm:w-auto cursor-pointer"
                 onClick={() => setOpenModal({ type: 'apply' })}
               >
                 Apply Now
-
               </Button>
             </div>
             {/* This section seems to be a duplicate of the one above, I'll remove it to avoid redundancy */}
@@ -1635,11 +1714,17 @@ const LpuOnline = () => {
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                    className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 
+    text-black font-bold 
+    px-4 py-2 text-sm 
+    sm:px-6 sm:py-3 sm:text-base 
+    lg:px-8 lg:py-4 lg:text-lg 
+    rounded-full shadow-2xl hover:shadow-orange-500/25 
+    transform hover:scale-105 transition-all duration-300 
+    w-auto sm:w-auto cursor-pointer"
                     onClick={() => setOpenModal({ type: 'apply' })}
                   >
                     Apply Now
-
                   </Button>
                 </div>
 
@@ -1657,11 +1742,17 @@ const LpuOnline = () => {
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                    className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 
+    text-black font-bold 
+    px-4 py-2 text-sm 
+    sm:px-6 sm:py-3 sm:text-base 
+    lg:px-8 lg:py-4 lg:text-lg 
+    rounded-full shadow-2xl hover:shadow-orange-500/25 
+    transform hover:scale-105 transition-all duration-300 
+    w-auto sm:w-auto cursor-pointer"
                     onClick={() => setOpenModal({ type: 'apply' })}
                   >
                     Apply Now
-
                   </Button>
                 </div>
               </div>
@@ -1702,11 +1793,17 @@ const LpuOnline = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 
+    text-black font-bold 
+    px-4 py-2 text-sm 
+    sm:px-6 sm:py-3 sm:text-base 
+    lg:px-8 lg:py-4 lg:text-lg 
+    rounded-full shadow-2xl hover:shadow-orange-500/25 
+    transform hover:scale-105 transition-all duration-300 
+    w-auto sm:w-auto cursor-pointer"
                 onClick={() => setOpenModal({ type: 'apply' })}
               >
                 Apply Now
-
               </Button>
             </div>
             <section id="faq" className="max-w-6xl mx-auto px-4 py-16">
@@ -1811,11 +1908,17 @@ const LpuOnline = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 
+    text-black font-bold 
+    px-4 py-2 text-sm 
+    sm:px-6 sm:py-3 sm:text-base 
+    lg:px-8 lg:py-4 lg:text-lg 
+    rounded-full shadow-2xl hover:shadow-orange-500/25 
+    transform hover:scale-105 transition-all duration-300 
+    w-auto sm:w-auto cursor-pointer"
                 onClick={() => setOpenModal({ type: 'apply' })}
               >
                 Apply Now
-
               </Button>
             </div>
 
@@ -1858,11 +1961,17 @@ const LpuOnline = () => {
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center items-center">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 
+    text-black font-bold 
+    px-4 py-2 text-sm 
+    sm:px-6 sm:py-3 sm:text-base 
+    lg:px-8 lg:py-4 lg:text-lg 
+    rounded-full shadow-2xl hover:shadow-orange-500/25 
+    transform hover:scale-105 transition-all duration-300 
+    w-auto sm:w-auto cursor-pointer"
                   onClick={() => setOpenModal({ type: 'apply' })}
                 >
                   Apply Now
-
                 </Button>
               </div>
             </section>
@@ -1905,12 +2014,20 @@ const LpuOnline = () => {
                       Start your journey with LPU Online and unlock endless career opportunities
                     </p>
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                      <button
+                      <Button
+                        size="lg"
+                        className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 
+    text-black font-bold 
+    px-4 py-2 text-sm 
+    sm:px-6 sm:py-3 sm:text-base 
+    lg:px-8 lg:py-4 lg:text-lg 
+    rounded-full shadow-2xl hover:shadow-orange-500/25 
+    transform hover:scale-105 transition-all duration-300 
+    w-auto sm:w-auto cursor-pointer"
                         onClick={() => setOpenModal({ type: 'apply' })}
-                        className="bg-white text-orange-600 font-semibold px-12 py-4 rounded-full hover:bg-orange-50 transition-all duration-300 transform hover:scale-105 shadow-2xl text-lg cursor-pointer"
                       >
                         Apply Now
-                      </button>
+                      </Button>
                       <button
                         onClick={() => setOpenModal({ type: 'enquire' })}
                         className="border-2 border-white text-white font-semibold px-12 py-4 rounded-full hover:bg-white/10 transition-all duration-300 transform hover:scale-105 text-lg"

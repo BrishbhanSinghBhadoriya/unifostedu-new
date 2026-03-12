@@ -1367,7 +1367,7 @@ export default function AmritaOnlinePage() {
               <div className="space-y-1 text-gray-600">
                 <div className="flex items-center">
                   <FaPhone className="mr-2" size={14} />
-                  <span>+91 7042143820</span>
+                  <span>+91 7042646766</span>
                 </div>
                 <div className="flex items-center">
                   <FaPhone className="mr-2" size={14} />

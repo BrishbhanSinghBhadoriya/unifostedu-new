@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 type PageContentProps = {
   sectionItems: { id: string; label: string }[];
@@ -14,12 +16,13 @@ type PageContentProps = {
   position?: "sticky" | "fixed";
   chipsPaddingClass?: string;
   breadcrumbPaddingClass?: string;
-  
 };
 
 const PageContent = ({
   sectionItems,
   activeSection,
+  ismobilemenuopen = false,
+  onClose,
   progressive = false,
   topOffsetClass = "top-[88px] sm:top-[96px] md:top-[104px]",
   scrollOffset = 100,
@@ -64,7 +67,7 @@ const PageContent = ({
     if (!progressive) return;
     if (!activeSection) return;
     const idx = sectionItems.findIndex((s) => s.id === activeSection);
-    if (idx !== -1) setMaxIndexReached(idx);
+    if (idx !== -1) setMaxIndexReached((prev) => (idx > prev ? idx : prev));
   }, [activeSection, progressive, sectionItems]);
 
   const handleSectionClick = (itemId: string) => {
@@ -80,12 +83,11 @@ const PageContent = ({
         top: offsetPosition,
         behavior: "smooth",
       });
+      if (onClose) onClose();
     }
   };
 
   const visibleItems = (() => {
-    const wantsBreadcrumb = mode === "breadcrumb" || mode === "both";
-    if (wantsBreadcrumb) return sectionItems; // always show full breadcrumb
     if (!progressive) return sectionItems;
     const idx = Math.max(maxIndexReached, 0);
     return sectionItems.slice(0, idx + 1);
@@ -102,8 +104,9 @@ const PageContent = ({
 
   return (
     <div className="w-full">
+      {/* Desktop Navigation */}
       <nav
-        className={`${position} ${topOffsetClass} z-40 w-full bg-white/90 backdrop-blur border-b border-gray-200 shadow-sm ${
+        className={`hidden md:block ${position} ${topOffsetClass} z-40 w-full bg-white/90 backdrop-blur border-b border-gray-200 shadow-sm ${
           position === "fixed" ? "left-0 right-0 w-full" : ""
         }`}
       >
@@ -142,31 +145,93 @@ const PageContent = ({
         {mode !== "chips" && (
           <div className={breadcrumbPaddingClass}>
             <div className="flex flex-wrap items-center gap-1 w-full">
-              {visibleItems.map((item, idx) => {
-                const isActive = currentActiveSection === item.id;
-                return (
-                  <div key={item.id} className="flex items-center gap-1">
-                    <button
-                      onClick={() => handleSectionClick(item.id)}
-                      className={`text-xs sm:text-sm uppercase tracking-wide ${
-                        isActive
-                          ? "text-indigo-700 font-semibold"
-                          : "text-gray-600 hover:text-indigo-700"
-                      }`}
-                      aria-current={isActive ? "true" : undefined}
+              <AnimatePresence mode="popLayout">
+                {visibleItems.map((item, idx) => {
+                  const isActive = currentActiveSection === item.id;
+                  return (
+                    <motion.div
+                      key={item.id}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, scale: 0.9 }}
+                      transition={{ duration: 0.3 }}
+                      className="flex items-center gap-1"
                     >
-                      {item.label}
-                    </button>
-                    {idx < visibleItems.length - 1 && (
-                      <span className="text-gray-400">›</span>
-                    )}
-                  </div>
-                );
-              })}
+                      <button
+                        onClick={() => handleSectionClick(item.id)}
+                        className={`text-xs sm:text-sm uppercase tracking-wide transition-colors duration-200 ${
+                          isActive
+                            ? "text-indigo-700 font-bold scale-105"
+                            : "text-gray-500 hover:text-indigo-700"
+                        }`}
+                        aria-current={isActive ? "true" : undefined}
+                      >
+                        {item.label}
+                      </button>
+                      {idx < visibleItems.length - 1 && (
+                        <span className="text-gray-300">›</span>
+                      )}
+                    </motion.div>
+                  );
+                })}
+              </AnimatePresence>
             </div>
           </div>
         )}
       </nav>
+
+      {/* Mobile Navigation Sidebar/Modal */}
+      <AnimatePresence>
+        {ismobilemenuopen && (
+          <div className="fixed inset-0 z-[100] md:hidden">
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={onClose}
+              className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            />
+            
+            {/* Drawer */}
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="absolute right-0 top-0 bottom-0 w-3/4 max-w-sm bg-white shadow-xl overflow-y-auto"
+            >
+              <div className="p-4 border-b flex items-center justify-between">
+                <h2 className="font-bold text-lg">Quick Navigation</h2>
+                <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-full">
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+              <div className="p-4">
+                <ul className="space-y-2">
+                  {visibleItems.map((item) => {
+                    const isActive = currentActiveSection === item.id;
+                    return (
+                      <li key={item.id}>
+                        <button
+                          onClick={() => handleSectionClick(item.id)}
+                          className={`w-full text-left px-4 py-3 rounded-lg text-sm transition-colors ${
+                            isActive
+                              ? "bg-indigo-600 text-white font-medium"
+                              : "bg-gray-50 text-gray-700 hover:bg-gray-100"
+                          }`}
+                        >
+                          {item.label}
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

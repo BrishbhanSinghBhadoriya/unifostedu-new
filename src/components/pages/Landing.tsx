@@ -32,6 +32,7 @@ import {
 } from "@/components/ui/dialog";
 import AOS from "aos";
 import FAQ from "../FAQ";
+import TestimonialSlider from "@/components/Testimonialslider";
 import { TopOnlineUniversity } from "../University/TopOnlineUniversity";
 import { AllCourses } from "./AllCourses";
 import CompareOnline from "./CompareOnline";
@@ -371,7 +372,7 @@ const Landing = ({ data }: LandingPageProps) => {
           </div>
         </div>
       </section>
-
+      <TestimonialSlider />
       {showEnquiryModal && (
         <Dialog
           open={showEnquiryModal}

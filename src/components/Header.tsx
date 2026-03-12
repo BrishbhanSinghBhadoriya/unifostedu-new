@@ -854,7 +854,7 @@ ${uploadedResumeURL || "Not uploaded"}
                 <div className="flex items-center gap-1.5 lg:gap-2 text-slate-600">
                   <FaPhone className="text-blue-500 text-xs lg:text-sm" />
                   <span className="font-medium whitespace-nowrap">
-                    +91 7042143820
+                    +91 7042646766
                   </span>
                 </div>
                 <div className="flex items-center gap-1.5 lg:gap-2 text-slate-600">
@@ -1226,7 +1226,7 @@ ${uploadedResumeURL || "Not uploaded"}
                       <FaPhone className="text-blue-500 text-lg" />
                       <div>
                         <p className="text-xs text-slate-500">Phone</p>
-                        <p className="font-semibold">+91 7042143820</p>
+                        <p className="font-semibold">+91 7042646766</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3 text-slate-700">

@@ -161,7 +161,7 @@ export const getUniversityHref = (name) => {
   if (n.includes("jindal")) return "/opjindal";
   if (n.includes("vivekananda global") || n.includes("vgu")) return "/vgu";
   if (n.includes("shoolini")) return "/shoolini";
-  return "/university-list";
+  return "/University-List";
 };
 
 

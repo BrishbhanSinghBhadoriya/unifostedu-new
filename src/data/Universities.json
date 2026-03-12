@@ -1,0 +1,1849 @@
+{
+  "universities": [
+
+    {
+      "id": 1,
+      "name": "Amity University",
+      "location": "Noida, Uttar Pradesh",
+      "rating": 4.7,
+      "reviews": 4200,
+      "NIRF": "29",
+      "accreditation": "UGC Approved",
+      "emiAvailable": true,
+      "highlights": ["NIRF Rank 29", "Live Classes", "Placement Support", "Industry Projects"],
+      "color": "#e8f5e9",
+      "accent": "#2e7d32",
+      "modal": {
+        "title": "Apply to Amity University Online",
+        "subtitle": "India's top ranked online university – NAAC A+, NIRF #29.",
+        "imageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp",
+        "mobileImageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp",
+        "formType": "general",
+        "showImage": true
+      },
+      "filters": {
+        "categories": ["PG Courses", "UG Courses"],
+        "qualifications": ["Postgraduate", "College Graduate", "Completed 12th", "Diploma Holder"],
+        "scores": ["50% - 60%", "60% - 70%", "70% - 80%", "80% - 90%", "Above 90%"]
+      },
+      "courses": [
+        {
+          "id": "Online MBA",
+          "label": "Online MBA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MBA",
+          "baseFees": { "min": 199000, "max": 299000 },
+         "specializations": [
+  { "name": "General Management", "fees": { "min": 199000, "max": 199000 } },
+  { "name": "Dual Specialization", "fees": { "min": 299000, "max": 299000 } },
+  { "name": "Human Resource Management", "fees": { "min": 199000, "max": 199000 } },
+  { "name": "Human Resource Analytics", "fees": { "min": 199000, "max": 199000 } },
+  { "name": "Finance & Accounting Management", "fees": { "min": 199000, "max": 199000 } },
+  { "name": "Global Finance Management", "fees": { "min": 199000, "max": 199000 } },
+  { "name": "International Finance (ACCA)", "fees": { "min": 299000, "max": 299000 } },
+  { "name": "Marketing & Sales Management", "fees": { "min": 199000, "max": 199000 } },
+  { "name": "International Business Management", "fees": { "min": 199000, "max": 199000 } },
+  { "name": "Information Technology Management", "fees": { "min": 199000, "max": 199000 } },
+  { "name": "Production & Operations Management", "fees": { "min": 199000, "max": 199000 } },
+  { "name": "Retail Management", "fees": { "min": 199000, "max": 199000 } },
+  { "name": "Insurance Management", "fees": { "min": 199000, "max": 199000 } },
+  { "name": "Petroleum & Natural Gas Management", "fees": { "min": 199000, "max": 199000 } },
+  { "name": "Entrepreneurship & Leadership", "fees": { "min": 199000, "max": 199000 } },
+  { "name": "Digital Marketing Management", "fees": { "min": 199000, "max": 199000 } },
+  { "name": "Digital Entrepreneurship", "fees": { "min": 199000, "max": 199000 } },
+  { "name": "Business Analytics", "fees": { "min": 199000, "max": 199000 } },
+  { "name": "Data Science", "fees": { "min": 199000, "max": 199000 } },
+  { "name": "Hospitality Management", "fees": { "min": 199000, "max": 199000 } }
+]
+        },
+        {
+          "id": "Online MCA",
+          "label": "Online MCA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MCA",
+          "baseFees": { "min": 170000, "max": 250000 },
+          "specializations": [
+            { "name": "Cyber Security",          "fees": { "min": 170000, "max": 250000 } },
+            { "name": "Data Science",            "fees": { "min": 170000, "max": 250000 } },
+            { "name": "Blockchain",              "fees": { "min": 170000, "max": 250000 } },
+            { "name": "AI & ML",                 "fees": { "min": 170000, "max": 250000 } },
+            { "name": "Networking",              "fees": { "min": 170000, "max": 250000 } }
+          ]
+        },
+        {
+          "id": "Online MSc",
+          "label": "Online M.Sc",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MSc",
+          "baseFees": { "min": 280000, "max": 280000 },
+          "specializations": [
+            { "name": "Data Science", "fees": { "min": 280000, "max": 280000 } }
+          ]
+        },
+        {
+          "id": "Online MCom",
+          "label": "Online M.Com",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MCom",
+          "baseFees": { "min": 120000, "max": 120000 },
+          "specializations": [
+            { "name": "Accounting", "fees": { "min": 120000, "max": 120000 } },
+            { "name": "Finance",    "fees": { "min": 120000, "max": 120000 } },
+            { "name": "Economics",  "fees": { "min": 120000, "max": 120000 } },
+            { "name": "Banking",    "fees": { "min": 120000, "max": 120000 } }
+          ]
+        },
+        {
+          "id": "Online MA",
+          "label": "Online MA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MA",
+          "baseFees": { "min": 99000, "max": 250000 },
+          "specializations": [
+            { "name": "English",       "fees": { "min": 99000,  "max": 150000 } },
+            { "name": "Public Policy", "fees": { "min": 120000, "max": 200000 } },
+            { "name": "Psychology",    "fees": { "min": 130000, "max": 250000 } }
+          ]
+        },
+        {
+          "id": "Online MAJMC",
+          "label": "Online MAJMC",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MAJMC",
+          "baseFees": { "min": 170000, "max": 170000 },
+          "specializations": [
+            { "name": "Journalism and Mass Communication", "fees": { "min": 170000, "max": 170000 } }
+          ]
+        },
+        {
+          "id": "Online BBA",
+          "label": "Online BBA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BBA",
+          "baseFees": { "min": 165000, "max": 225000 },
+          "specializations": [
+            { "name": "General Management",    "fees": { "min": 165000, "max": 225000 } },
+            { "name": "Finance",               "fees": { "min": 165000, "max": 225000 } },
+            { "name": "Marketing",             "fees": { "min": 165000, "max": 225000 } },
+            { "name": "Human Resources",       "fees": { "min": 165000, "max": 225000 } },
+            { "name": "International Business","fees": { "min": 165000, "max": 225000 } }
+          ]
+        },
+        {
+          "id": "Online BCA",
+          "label": "Online BCA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BCA",
+          "baseFees": { "min": 150000, "max": 225000 },
+          "specializations": [
+            { "name": "BCA General",                                            "fees": { "min": 150000, "max": 175000 } },
+            { "name": "Cloud and Security (TCS iON)",                           "fees": { "min": 175000, "max": 225000 } },
+            { "name": "Data Analytics (TCS iON)",                               "fees": { "min": 175000, "max": 225000 } },
+            { "name": "Data Engineering (HCL Tech)",                            "fees": { "min": 175000, "max": 225000 } },
+            { "name": "Software Engineering (HCL Tech)",                        "fees": { "min": 175000, "max": 225000 } },
+            { "name": "Financial Technology and AI (Paytm)",                    "fees": { "min": 175000, "max": 225000 } },
+            { "name": "Professional Certificate in Applied Data Eng (KPMG)",    "fees": { "min": 175000, "max": 225000 } }
+          ]
+        },
+        {
+          "id": "Online BCom",
+          "label": "Online B.Com",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BCom",
+          "baseFees": { "min": 170000, "max": 250000 },
+          "specializations": [
+            { "name": "Honours",                          "fees": { "min": 170000, "max": 220000 } },
+            { "name": "International Finance & Accounting","fees": { "min": 200000, "max": 250000 } }
+          ]
+        },
+        {
+          "id": "Online BA",
+          "label": "Online BA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BA",
+          "baseFees": { "min": 99000, "max": 99000 },
+          "specializations": [
+            { "name": "Malayalam", "fees": { "min": 99000, "max": 99000 } },
+            { "name": "Tamil",     "fees": { "min": 99000, "max": 99000 } },
+            { "name": "Hindi",     "fees": { "min": 99000, "max": 99000 } },
+            { "name": "Kannada",   "fees": { "min": 99000, "max": 99000 } },
+            { "name": "Telugu",    "fees": { "min": 99000, "max": 99000 } }
+          ]
+        },
+        {
+          "id": "Online BAJMC",
+          "label": "Online BAJMC",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BAJMC",
+          "baseFees": { "min": 170000, "max": 170000 },
+          "specializations": [
+            { "name": "Digital Media",        "fees": { "min": 170000, "max": 170000 } },
+            { "name": "Advertising & PR",     "fees": { "min": 170000, "max": 170000 } },
+            { "name": "Broadcast Journalism", "fees": { "min": 170000, "max": 170000 } }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "name": "Manipal University",
+      "location": "Jaipur, Rajasthan",
+      "rating": 4.6,
+      "reviews": 3800,
+      "NIRF": "73",
+      "accreditation": "UGC Approved",
+      "emiAvailable": true,
+      "highlights": ["NIRF Rank 73", "Expert Faculty", "Career Services", "Flexible Learning"],
+      "color": "#e3f2fd",
+      "accent": "#1565c0",
+      "modal": {
+        "title": "Apply to Manipal University Online",
+        "subtitle": "NIRF #73 – Expert faculty, strong placements and flexible learning.",
+        "imageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp",
+        "mobileImageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp",
+        "formType": "general",
+        "showImage": true
+      },
+      "filters": {
+        "categories": ["PG Courses", "UG Courses"],
+        "qualifications": ["Postgraduate", "College Graduate", "Completed 12th", "Diploma Holder"],
+        "scores": ["50% - 60%", "60% - 70%", "70% - 80%", "80% - 90%", "Above 90%"]
+      },
+      "courses": [
+        {
+          "id": "Online MBA",
+          "label": "Online MBA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MBA",
+          "baseFees": { "min": 175000, "max": 175000 },
+          "specializations": [
+            { "name": "Human Resource Management and Finance",   "fees": { "min": 175000, "max": 175000 } },
+            { "name": "Finance and Marketing",                   "fees": { "min": 175000, "max": 175000 } },
+            { "name": "Marketing and Human Resource Management", "fees": { "min": 175000, "max": 175000 } },
+            { "name": "Marketing and Business Analytics",        "fees": { "min": 175000, "max": 175000 } },
+            { "name": "Finance and Business Analytics",          "fees": { "min": 175000, "max": 175000 } },
+            { "name": "Human Resource and Business Analytics",   "fees": { "min": 175000, "max": 175000 } },
+            { "name": "Project Management",                      "fees": { "min": 175000, "max": 175000 } },
+            { "name": "Retail Management and Quick Commerce",    "fees": { "min": 175000, "max": 175000 } },
+            { "name": "AI Banking and Finance",                  "fees": { "min": 175000, "max": 175000 } }
+          ]
+        },
+        {
+          "id": "Online MCA",
+          "label": "Online MCA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MCA",
+          "baseFees": { "min": 158000, "max": 158000 },
+          "specializations": [
+            { "name": "AI & Data Science",                  "fees": { "min": 158000, "max": 158000 } },
+            { "name": "Cyber Security",                     "fees": { "min": 158000, "max": 158000 } },
+            { "name": "Cloud Computing",                    "fees": { "min": 158000, "max": 158000 } },
+            { "name": "Comprehensive Emerging Technologies","fees": { "min": 158000, "max": 158000 } },
+            { "name": "AI & ML",                            "fees": { "min": 158000, "max": 158000 } }
+          ]
+        },
+        {
+          "id": "Online MSc",
+          "label": "Online M.Sc",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MSc",
+          "baseFees": { "min": 80000, "max": 80000 },
+          "specializations": [
+            { "name": "Mathematics", "fees": { "min": 80000, "max": 80000 } }
+          ]
+        },
+        {
+          "id": "Online MCom",
+          "label": "Online M.Com",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MCom",
+          "baseFees": { "min": 108000, "max": 108000 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 108000, "max": 108000 } }
+          ]
+        },
+        {
+          "id": "Online MAJMC",
+          "label": "Online MAJMC",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MAJMC",
+          "baseFees": { "min": 80000, "max": 80000 },
+          "specializations": [
+            { "name": "Journalism and Mass Communication", "fees": { "min": 80000, "max": 80000 } }
+          ]
+        },
+        {
+          "id": "Online BBA",
+          "label": "Online BBA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BBA",
+          "baseFees": { "min": 135000, "max": 135000 },
+          "specializations": [
+            { "name": "Finance & Accounting",                       "fees": { "min": 135000, "max": 135000 } },
+            { "name": "Digital Marketing",                          "fees": { "min": 135000, "max": 135000 } },
+            { "name": "Entrepreneurship Management & Family Business","fees": { "min": 135000, "max": 135000 } },
+            { "name": "Human Resource Management",                  "fees": { "min": 135000, "max": 135000 } },
+            { "name": "Data Analytics",                             "fees": { "min": 135000, "max": 135000 } },
+            { "name": "Retail & E-commerce Management",             "fees": { "min": 135000, "max": 135000 } }
+          ]
+        },
+        {
+          "id": "Online BCA",
+          "label": "Online BCA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BCA",
+          "baseFees": { "min": 135000, "max": 135000 },
+          "specializations": [
+            { "name": "Data Science and Analytics","fees": { "min": 135000, "max": 135000 } },
+            { "name": "Cyber Security",            "fees": { "min": 135000, "max": 135000 } },
+            { "name": "Cloud Computing",           "fees": { "min": 135000, "max": 135000 } }
+          ]
+        },
+        {
+          "id": "Online BCom",
+          "label": "Online B.Com",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BCom",
+          "baseFees": { "min": 99000, "max": 99000 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 99000, "max": 99000 } }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 3,
+      "name": "Manipal Academy of Higher Education",
+      "location": "Manipal, Karnataka",
+      "rating": 4.6,
+      "reviews": 2900,
+      "NIRF": "Top 5",
+      "accreditation": "UGC Approved",
+      "emiAvailable": true,
+      "highlights": ["NIRF Top 5", "Expert Faculty", "Research Excellence", "Career Services"],
+      "color": "#e8eaf6",
+      "accent": "#283593",
+      "modal": {
+        "title": "Apply to MAHE Online",
+        "subtitle": "NIRF Top 5 – Premium education with world-class research excellence.",
+        "imageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/mahe-uni_dvnm1d.webp",
+        "mobileImageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/mahe-uni_dvnm1d.webp",
+        "formType": "general",
+        "showImage": true
+      },
+      "filters": {
+        "categories": ["PG Courses", "UG Courses"],
+        "qualifications": ["Postgraduate", "College Graduate", "Completed 12th"],
+        "scores": ["50% - 60%", "60% - 70%", "70% - 80%", "80% - 90%", "Above 90%"]
+      },
+      "courses": [
+        {
+          "id": "Online MSc",
+          "label": "Online M.Sc",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MSc",
+          "baseFees": { "min": 280000, "max": 280000 },
+          "specializations": [
+            { "name": "Data Science",       "fees": { "min": 280000, "max": 280000 } },
+            { "name": "Business Analytics", "fees": { "min": 280000, "max": 280000 } }
+          ]
+        },
+        {
+          "id": "Online BBA",
+          "label": "Online BBA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BBA",
+          "baseFees": { "min": 180000, "max": 180000 },
+          "specializations": [
+            { "name": "Healthcare Management",          "fees": { "min": 180000, "max": 180000 } },
+            { "name": "Business Analytics",             "fees": { "min": 180000, "max": 180000 } },
+            { "name": "Financial Technology (FinTech)", "fees": { "min": 180000, "max": 180000 } },
+            { "name": "Marketing Management",           "fees": { "min": 180000, "max": 180000 } },
+            { "name": "Human Resource Management",      "fees": { "min": 180000, "max": 180000 } }
+          ]
+        },
+        {
+          "id": "Online BBA Hons",
+          "label": "Online BBA (Hons)",
+          "category": "UG Courses",
+          "duration": "4 Years",
+          "defaultProgram": "BBA",
+          "baseFees": { "min": 240000, "max": 240000 },
+          "specializations": [
+            { "name": "Healthcare Management (Hons)",          "fees": { "min": 240000, "max": 240000 } },
+            { "name": "Business Analytics (Hons)",             "fees": { "min": 240000, "max": 240000 } },
+            { "name": "Financial Technology - FinTech (Hons)", "fees": { "min": 240000, "max": 240000 } }
+          ]
+        },
+        {
+          "id": "Online BCom",
+          "label": "Online B.Com",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BCom",
+          "baseFees": { "min": 294000, "max": 294000 },
+          "specializations": [
+            { "name": "B.Com Professional", "fees": { "min": 294000, "max": 294000 } }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 4,
+      "name": "NMIMS",
+      "location": "Mumbai, Maharashtra",
+      "rating": 4.7,
+      "reviews": 4200,
+      "NIRF": "21",
+      "accreditation": "UGC Approved",
+      "emiAvailable": true,
+      "highlights": ["NIRF Rank 21", "Industry Connect", "Placement Assistance", "Quality Education"],
+      "color": "#fce4ec",
+      "accent": "#880e4f",
+      "modal": {
+        "title": "Apply to NMIMS Global Access",
+        "subtitle": "NIRF #21 – Premium programs from India's top business school.",
+        "imageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327721/nmims_os8kn9.webp",
+        "mobileImageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327721/nmims_os8kn9.webp",
+        "formType": "general",
+        "showImage": true
+      },
+      "filters": {
+        "categories": ["PG Courses", "UG Courses"],
+        "qualifications": ["Postgraduate", "College Graduate", "Completed 12th"],
+        "scores": ["50% - 60%", "60% - 70%", "70% - 80%", "80% - 90%", "Above 90%"]
+      },
+      "courses": [
+        {
+          "id": "Online MBA",
+          "label": "Online MBA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MBA",
+          "baseFees": { "min": 220000, "max": 220000 },
+          "specializations": [
+            { "name": "Applied Finance",        "fees": { "min": 220000, "max": 220000 } },
+            { "name": "Business Administration","fees": { "min": 220000, "max": 220000 } },
+            { "name": "Business Analytics",     "fees": { "min": 220000, "max": 220000 } },
+            { "name": "Digital Marketing",      "fees": { "min": 220000, "max": 220000 } },
+            { "name": "Finance",                "fees": { "min": 220000, "max": 220000 } },
+            { "name": "Marketing",              "fees": { "min": 220000, "max": 220000 } },
+            { "name": "Operations",             "fees": { "min": 220000, "max": 220000 } },
+            { "name": "Human Resources",        "fees": { "min": 220000, "max": 220000 } }
+          ]
+        },
+        {
+          "id": "Online BBA",
+          "label": "Online BBA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BBA",
+          "baseFees": { "min": 150000, "max": 180000 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 150000, "max": 180000 } }
+          ]
+        },
+        {
+          "id": "Online BCom",
+          "label": "Online B.Com",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BCom",
+          "baseFees": { "min": 108000, "max": 108000 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 108000, "max": 108000 } }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 5,
+      "name": "Jain University",
+      "location": "Bangalore, Karnataka",
+      "rating": 4.4,
+      "reviews": 2100,
+      "NIRF": "77",
+      "accreditation": "UGC Approved",
+      "emiAvailable": true,
+      "highlights": ["NIRF Rank 77", "Modern Curriculum", "Industry Projects", "Career Support"],
+      "color": "#f3e5f5",
+      "accent": "#6a1b9a",
+      "modal": {
+        "title": "Apply to Jain University Online",
+        "subtitle": "NAAC A++ | Modern curriculum with 25+ specializations.",
+        "imageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp",
+        "mobileImageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp",
+        "formType": "general",
+        "showImage": true
+      },
+      "filters": {
+        "categories": ["PG Courses", "UG Courses"],
+        "qualifications": ["Postgraduate", "College Graduate", "Completed 12th", "Diploma Holder"],
+        "scores": ["Below 50%", "50% - 60%", "60% - 70%", "70% - 80%", "80% - 90%", "Above 90%"]
+      },
+      "courses": [
+        {
+          "id": "Online MBA",
+          "label": "Online MBA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MBA",
+          "baseFees": { "min": 196000, "max": 250000 },
+          "specializations": [
+            { "name": "Human Resource Management and Finance",    "fees": { "min": 196000, "max": 250000 } },
+            { "name": "Finance and Marketing",                    "fees": { "min": 196000, "max": 250000 } },
+            { "name": "Marketing and Resource Management",        "fees": { "min": 196000, "max": 250000 } },
+            { "name": "Marketing and Business Analytics",         "fees": { "min": 196000, "max": 250000 } },
+            { "name": "Finance and Business Analytics",           "fees": { "min": 196000, "max": 250000 } },
+            { "name": "Human Resource and Business Analytics",    "fees": { "min": 196000, "max": 250000 } },
+            { "name": "Project Management",                       "fees": { "min": 196000, "max": 250000 } },
+            { "name": "Retail Management and Quick Commerce",     "fees": { "min": 196000, "max": 250000 } },
+            { "name": "Information Technology Management",        "fees": { "min": 196000, "max": 250000 } },
+            { "name": "Healthcare Management",                    "fees": { "min": 196000, "max": 250000 } },
+            { "name": "Supply Chain",                             "fees": { "min": 196000, "max": 250000 } },
+            { "name": "Production and Operations Management",     "fees": { "min": 196000, "max": 250000 } },
+            { "name": "Business Intelligence and Analytics",      "fees": { "min": 196000, "max": 250000 } },
+            { "name": "Entrepreneurship and Venture Creation",    "fees": { "min": 196000, "max": 250000 } },
+            { "name": "International Finance",                    "fees": { "min": 196000, "max": 250000 } },
+            { "name": "Data Science and Analytics",               "fees": { "min": 196000, "max": 250000 } },
+            { "name": "E-commerce",                               "fees": { "min": 196000, "max": 250000 } },
+            { "name": "AI and Human Resource Management",         "fees": { "min": 196000, "max": 250000 } },
+            { "name": "Digital Marketing",                        "fees": { "min": 196000, "max": 250000 } },
+            { "name": "Banking and Finance",                      "fees": { "min": 196000, "max": 250000 } },
+            { "name": "Technology Management",                    "fees": { "min": 196000, "max": 250000 } },
+            { "name": "General Management",                       "fees": { "min": 196000, "max": 250000 } },
+            { "name": "AI-Driven Marketing",                      "fees": { "min": 196000, "max": 250000 } },
+            { "name": "AI-Driven Finance",                        "fees": { "min": 196000, "max": 250000 } },
+            { "name": "AI-Driven Business Strategy",              "fees": { "min": 196000, "max": 250000 } },
+            { "name": "AI-Driven Human Resource Management",      "fees": { "min": 196000, "max": 250000 } }
+          ]
+        },
+        {
+          "id": "Online MCA",
+          "label": "Online MCA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MCA",
+          "baseFees": { "min": 160000, "max": 200000 },
+          "specializations": [
+            { "name": "DevOps",                                                          "fees": { "min": 160000, "max": 200000 } },
+            { "name": "Natural Language Processing & Large Language Models Development", "fees": { "min": 160000, "max": 200000 } },
+            { "name": "Computer Science and IT",                                         "fees": { "min": 160000, "max": 200000 } },
+            { "name": "Data Analytics",                                                  "fees": { "min": 160000, "max": 200000 } },
+            { "name": "Cyber Security",                                                  "fees": { "min": 160000, "max": 200000 } },
+            { "name": "Full Stack Development",                                          "fees": { "min": 160000, "max": 200000 } },
+            { "name": "Cloud Computing",                                                 "fees": { "min": 160000, "max": 200000 } },
+            { "name": "Data Science",                                                    "fees": { "min": 160000, "max": 200000 } },
+            { "name": "Artificial Intelligence",                                         "fees": { "min": 160000, "max": 200000 } }
+          ]
+        },
+        {
+          "id": "Online MCom",
+          "label": "Online M.Com",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MCom",
+          "baseFees": { "min": 110000, "max": 110000 },
+          "specializations": [
+            { "name": "Accounting and Finance", "fees": { "min": 110000, "max": 110000 } }
+          ]
+        },
+        {
+          "id": "Online MA",
+          "label": "Online MA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MA",
+          "baseFees": { "min": 190000, "max": 190000 },
+          "specializations": [
+            { "name": "Jainology in Comparative Religion and Philosophy","fees": { "min": 190000, "max": 190000 } },
+            { "name": "English",       "fees": { "min": 190000, "max": 190000 } },
+            { "name": "Economics",     "fees": { "min": 190000, "max": 190000 } },
+            { "name": "Public Policy", "fees": { "min": 190000, "max": 190000 } }
+          ]
+        },
+        {
+          "id": "Online BBA",
+          "label": "Online BBA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BBA",
+          "baseFees": { "min": 150000, "max": 150000 },
+          "specializations": [
+            { "name": "Business Administration",   "fees": { "min": 150000, "max": 150000 } },
+            { "name": "Digital Marketing",         "fees": { "min": 150000, "max": 150000 } },
+            { "name": "Healthcare Management",     "fees": { "min": 150000, "max": 150000 } },
+            { "name": "Data Science and Analytics","fees": { "min": 150000, "max": 150000 } }
+          ]
+        },
+        {
+          "id": "Online BCA",
+          "label": "Online BCA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BCA",
+          "baseFees": { "min": 135000, "max": 165000 },
+          "specializations": [
+            { "name": "Computer Science and IT",  "fees": { "min": 135000, "max": 165000 } },
+            { "name": "Data Science and Analytics","fees": { "min": 135000, "max": 165000 } },
+            { "name": "Cyber Security",           "fees": { "min": 135000, "max": 165000 } },
+            { "name": "Artificial Intelligence",  "fees": { "min": 135000, "max": 165000 } },
+            { "name": "Cloud Computing",          "fees": { "min": 135000, "max": 165000 } }
+          ]
+        },
+        {
+          "id": "Online BCom",
+          "label": "Online B.Com",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BCom",
+          "baseFees": { "min": 120000, "max": 228000 },
+          "specializations": [
+            { "name": "Online Bachelor of Commerce","fees": { "min": 120000, "max": 120000 } },
+            { "name": "Corporate Accounting (ACCA)","fees": { "min": 120000, "max": 228000 } }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 6,
+      "name": "LPU Online",
+      "location": "Punjab",
+      "rating": 4.5,
+      "reviews": 3200,
+      "NIRF": "38",
+      "accreditation": "UGC Approved",
+      "emiAvailable": true,
+      "highlights": ["NIRF Rank 38", "Affordable Education", "Quality Learning", "Career Guidance"],
+      "color": "#fff3e0",
+      "accent": "#e65100",
+      "modal": {
+        "title": "Apply to LPU Online",
+        "subtitle": "NIRF #38 – Affordable, quality education for every aspiring professional.",
+        "imageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp",
+        "mobileImageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp",
+        "formType": "general",
+        "showImage": true
+      },
+      "filters": {
+        "categories": ["PG Courses", "UG Courses"],
+        "qualifications": ["Postgraduate", "College Graduate", "Completed 12th", "Completed 10th", "Diploma Holder"],
+        "scores": ["Below 50%", "50% - 60%", "60% - 70%", "70% - 80%", "80% - 90%", "Above 90%"]
+      },
+      "courses": [
+        {
+          "id": "Online MBA",
+          "label": "Online MBA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MBA",
+          "baseFees": { "min": 200000, "max": 200000 },
+          "specializations": [
+            { "name": "Human Resource Management",         "fees": { "min": 200000, "max": 200000 } },
+            { "name": "Finance",                           "fees": { "min": 200000, "max": 200000 } },
+            { "name": "Marketing",                         "fees": { "min": 200000, "max": 200000 } },
+            { "name": "Operations Management",             "fees": { "min": 200000, "max": 200000 } },
+            { "name": "Business Analytics",                "fees": { "min": 200000, "max": 200000 } },
+            { "name": "Digital Marketing",                 "fees": { "min": 200000, "max": 200000 } },
+            { "name": "Data Science",                      "fees": { "min": 200000, "max": 200000 } },
+            { "name": "Information Technology",            "fees": { "min": 200000, "max": 200000 } },
+            { "name": "International Business",            "fees": { "min": 200000, "max": 200000 } },
+            { "name": "Banking & Financial Services",      "fees": { "min": 200000, "max": 200000 } },
+            { "name": "Hospital & Healthcare Management",  "fees": { "min": 200000, "max": 200000 } },
+            { "name": "Logistics & Supply Chain Management","fees": { "min": 200000, "max": 200000 } }
+          ]
+        },
+        {
+          "id": "Online MCA",
+          "label": "Online MCA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MCA",
+          "baseFees": { "min": 148000, "max": 148000 },
+          "specializations": [
+            { "name": "Machine Learning & Artificial Intelligence","fees": { "min": 148000, "max": 148000 } },
+            { "name": "Data Science",                              "fees": { "min": 148000, "max": 148000 } },
+            { "name": "Cybersecurity",                             "fees": { "min": 148000, "max": 148000 } },
+            { "name": "Full Stack Web Development",                "fees": { "min": 148000, "max": 148000 } },
+            { "name": "AR/VR & Game Development",                  "fees": { "min": 148000, "max": 148000 } }
+          ]
+        },
+        {
+          "id": "Online MSc",
+          "label": "Online M.Sc",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MSc",
+          "baseFees": { "min": 80000, "max": 80000 },
+          "specializations": [
+            { "name": "Mathematics", "fees": { "min": 80000, "max": 80000 } },
+            { "name": "Economics",   "fees": { "min": 80000, "max": 80000 } }
+          ]
+        },
+        {
+          "id": "Online MCom",
+          "label": "Online M.Com",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MCom",
+          "baseFees": { "min": 100000, "max": 100000 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 100000, "max": 100000 } }
+          ]
+        },
+        {
+          "id": "Online MA",
+          "label": "Online MA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MA",
+          "baseFees": { "min": 80000, "max": 80000 },
+          "specializations": [
+            { "name": "English",          "fees": { "min": 80000, "max": 80000 } },
+            { "name": "History",          "fees": { "min": 80000, "max": 80000 } },
+            { "name": "Sociology",        "fees": { "min": 80000, "max": 80000 } },
+            { "name": "Political Science","fees": { "min": 80000, "max": 80000 } }
+          ]
+        },
+        {
+          "id": "Online BBA",
+          "label": "Online BBA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BBA",
+          "baseFees": { "min": 150000, "max": 150000 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 150000, "max": 150000 } }
+          ]
+        },
+        {
+          "id": "Online BCA",
+          "label": "Online BCA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BCA",
+          "baseFees": { "min": 150000, "max": 150000 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 150000, "max": 150000 } }
+          ]
+        },
+        {
+          "id": "Online BA",
+          "label": "Online BA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BA",
+          "baseFees": { "min": 120000, "max": 120000 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 120000, "max": 120000 } }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 7,
+      "name": "UPES Online",
+      "location": "Dehradun, Uttarakhand",
+      "rating": 4.3,
+      "reviews": 1600,
+      "NIRF": "41",
+      "accreditation": "UGC Approved",
+      "emiAvailable": true,
+      "highlights": ["NIRF Rank 41", "Domain Specializations", "Expert Faculty", "Placement Support"],
+      "color": "#e0f7fa",
+      "accent": "#00695c",
+      "modal": {
+        "title": "Apply to UPES Online",
+        "subtitle": "NIRF #41 – Unique domain-focused specializations for industry readiness.",
+        "imageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/upes_uzkkmm.webp",
+        "mobileImageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/upes_uzkkmm.webp",
+        "formType": "general",
+        "showImage": true
+      },
+      "filters": {
+        "categories": ["PG Courses", "UG Courses"],
+        "qualifications": ["Postgraduate", "College Graduate", "Completed 12th", "Diploma Holder"],
+        "scores": ["50% - 60%", "60% - 70%", "70% - 80%", "80% - 90%", "Above 90%"]
+      },
+      "courses": [
+        {
+          "id": "Online MBA",
+          "label": "Online MBA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MBA",
+          "baseFees": { "min": 190920, "max": 240000 },
+          "specializations": [
+            { "name": "Oil and Gas Management",              "fees": { "min": 190920, "max": 240000 } },
+            { "name": "Power Management",                    "fees": { "min": 190920, "max": 240000 } },
+            { "name": "Logistics and Supply Chain Management","fees": { "min": 190920, "max": 240000 } },
+            { "name": "Business Analytics",                  "fees": { "min": 190920, "max": 240000 } },
+            { "name": "Infrastructure Management",           "fees": { "min": 190920, "max": 240000 } },
+            { "name": "International Business",              "fees": { "min": 190920, "max": 240000 } },
+            { "name": "Marketing Management",                "fees": { "min": 190920, "max": 240000 } },
+            { "name": "Human Resource Management",           "fees": { "min": 190920, "max": 240000 } },
+            { "name": "Operations Management",               "fees": { "min": 190920, "max": 240000 } },
+            { "name": "Financial Management",                "fees": { "min": 190920, "max": 240000 } },
+            { "name": "Digital Business",                    "fees": { "min": 190920, "max": 240000 } }
+          ]
+        },
+        {
+          "id": "Online MCA",
+          "label": "Online MCA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MCA",
+          "baseFees": { "min": 185448, "max": 185448 },
+          "specializations": [
+            { "name": "Artificial Intelligence and Machine Learning","fees": { "min": 185448, "max": 185448 } },
+            { "name": "Cyber Security and Forensics",                "fees": { "min": 185448, "max": 185448 } },
+            { "name": "Data Science",                                "fees": { "min": 185448, "max": 185448 } }
+          ]
+        },
+        {
+          "id": "Online BBA",
+          "label": "Online BBA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BBA",
+          "baseFees": { "min": 168786, "max": 168786 },
+          "specializations": [
+            { "name": "Operations Management",      "fees": { "min": 168786, "max": 168786 } },
+            { "name": "Financial Management",       "fees": { "min": 168786, "max": 168786 } },
+            { "name": "Human Resource Management",  "fees": { "min": 168786, "max": 168786 } },
+            { "name": "Marketing Management",       "fees": { "min": 168786, "max": 168786 } },
+            { "name": "Digital Business",           "fees": { "min": 168786, "max": 168786 } },
+            { "name": "Logistics and Supply Chain", "fees": { "min": 168786, "max": 168786 } },
+            { "name": "International Business",     "fees": { "min": 168786, "max": 168786 } }
+          ]
+        },
+        {
+          "id": "Online BCA",
+          "label": "Online BCA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BCA",
+          "baseFees": { "min": 168768, "max": 168768 },
+          "specializations": [
+            { "name": "New Age Technology",               "fees": { "min": 168768, "max": 168768 } },
+            { "name": "Cloud Computing & Cyber Security", "fees": { "min": 168768, "max": 168768 } },
+            { "name": "Data Analytics",                   "fees": { "min": 168768, "max": 168768 } }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 8,
+      "name": "DY Patil University",
+      "location": "Pune, Maharashtra",
+      "rating": 4.5,
+      "reviews": 1400,
+      "NIRF": "N/A",
+      "accreditation": "UGC Approved",
+      "emiAvailable": true,
+      "highlights": ["Industry Connect", "Placement Support", "Expert Faculty", "Quality Education"],
+      "color": "#fff8e1",
+      "accent": "#ff8f00",
+      "modal": {
+        "title": "Apply to DY Patil University Online",
+        "subtitle": "Industry-connect programs with 14+ specializations and strong placements.",
+        "imageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dypatil_tbbpf9.webp",
+        "mobileImageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dypatil_tbbpf9.webp",
+        "formType": "general",
+        "showImage": true
+      },
+      "filters": {
+        "categories": ["PG Courses", "UG Courses"],
+        "qualifications": ["Postgraduate", "College Graduate", "Completed 12th", "Diploma Holder"],
+        "scores": ["50% - 60%", "60% - 70%", "70% - 80%", "80% - 90%", "Above 90%"]
+      },
+      "courses": [
+        {
+          "id": "Online MBA",
+          "label": "Online MBA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MBA",
+          "baseFees": { "min": 189400, "max": 189400 },
+          "specializations": [
+            { "name": "Marketing Management",                             "fees": { "min": 189400, "max": 189400 } },
+            { "name": "Human Resource Management",                        "fees": { "min": 189400, "max": 189400 } },
+            { "name": "Finance Management",                               "fees": { "min": 189400, "max": 189400 } },
+            { "name": "IT Management",                                    "fees": { "min": 189400, "max": 189400 } },
+            { "name": "Project Management",                               "fees": { "min": 189400, "max": 189400 } },
+            { "name": "Operations Management",                            "fees": { "min": 189400, "max": 189400 } },
+            { "name": "Hospital Administration & Healthcare Management",  "fees": { "min": 189400, "max": 189400 } },
+            { "name": "International Business Management",                "fees": { "min": 189400, "max": 189400 } },
+            { "name": "FinTech Management",                               "fees": { "min": 189400, "max": 189400 } },
+            { "name": "Business Analytics Management",                    "fees": { "min": 189400, "max": 189400 } },
+            { "name": "Artificial Intelligence & Machine Learning Management","fees": { "min": 189400, "max": 189400 } },
+            { "name": "Logistics, Materials & Supply Chain Management",   "fees": { "min": 189400, "max": 189400 } },
+            { "name": "Blockchain Management",                            "fees": { "min": 189400, "max": 189400 } },
+            { "name": "Digital Marketing Management",                     "fees": { "min": 189400, "max": 189400 } },
+            { "name": "Agri-Business Management",                         "fees": { "min": 189400, "max": 189400 } }
+          ]
+        },
+        {
+          "id": "Online MCA",
+          "label": "Online MCA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MCA",
+          "baseFees": { "min": 140000, "max": 140000 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 140000, "max": 140000 } }
+          ]
+        },
+        {
+          "id": "Online BBA",
+          "label": "Online BBA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BBA",
+          "baseFees": { "min": 145400, "max": 145400 },
+          "specializations": [
+            { "name": "IT & System Management",                    "fees": { "min": 145400, "max": 145400 } },
+            { "name": "International Business Management",         "fees": { "min": 145400, "max": 145400 } },
+            { "name": "Retail Management",                         "fees": { "min": 145400, "max": 145400 } },
+            { "name": "Banking, Financial Services and Insurance", "fees": { "min": 145400, "max": 145400 } },
+            { "name": "Shipping & Logistics Management",           "fees": { "min": 145400, "max": 145400 } },
+            { "name": "Marketing Management",                      "fees": { "min": 145400, "max": 145400 } },
+            { "name": "Human Resource Management",                 "fees": { "min": 145400, "max": 145400 } },
+            { "name": "Finance Management",                        "fees": { "min": 145400, "max": 145400 } },
+            { "name": "E-commerce Management",                     "fees": { "min": 145400, "max": 145400 } }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 9,
+      "name": "Chandigarh University",
+      "location": "Mohali, Punjab",
+      "rating": 4.4,
+      "reviews": 2800,
+      "NIRF": "36",
+      "accreditation": "UGC Approved",
+      "emiAvailable": true,
+      "highlights": ["NIRF Rank 36", "Modern Curriculum", "Industry Projects", "Placement Assistance"],
+      "color": "#e8f5e9",
+      "accent": "#1b5e20",
+      "modal": {
+        "title": "Apply to Chandigarh University Online",
+        "subtitle": "NIRF #36 – Live projects, hackathons & 1000+ placement recruiters.",
+        "imageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp",
+        "mobileImageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp",
+        "formType": "general",
+        "showImage": true
+      },
+      "filters": {
+        "categories": ["PG Courses", "UG Courses"],
+        "qualifications": ["Postgraduate", "College Graduate", "Completed 12th", "Diploma Holder"],
+        "scores": ["50% - 60%", "60% - 70%", "70% - 80%", "80% - 90%", "Above 90%"]
+      },
+      "courses": [
+        {
+          "id": "Online MBA",
+          "label": "Online MBA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MBA",
+          "baseFees": { "min": 200000, "max": 220000 },
+          "specializations": [
+            { "name": "Business Analytics with KPMG","fees": { "min": 220000, "max": 220000 } },
+            { "name": "Finance",                     "fees": { "min": 200000, "max": 220000 } },
+            { "name": "Marketing",                   "fees": { "min": 200000, "max": 220000 } },
+            { "name": "Human Resources",             "fees": { "min": 200000, "max": 220000 } },
+            { "name": "Information Technology",      "fees": { "min": 200000, "max": 220000 } },
+            { "name": "Operations Management",       "fees": { "min": 200000, "max": 220000 } },
+            { "name": "International Business",      "fees": { "min": 200000, "max": 220000 } }
+          ]
+        },
+        {
+          "id": "Online MCA",
+          "label": "Online MCA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MCA",
+          "baseFees": { "min": 155000, "max": 155000 },
+          "specializations": [
+            { "name": "Computer Science",     "fees": { "min": 155000, "max": 155000 } },
+            { "name": "Data Science",         "fees": { "min": 155000, "max": 155000 } },
+            { "name": "Software Engineering", "fees": { "min": 155000, "max": 155000 } },
+            { "name": "AI & ML",              "fees": { "min": 155000, "max": 155000 } }
+          ]
+        },
+        {
+          "id": "Online MSc",
+          "label": "Online M.Sc",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MSc",
+          "baseFees": { "min": 100000, "max": 110000 },
+          "specializations": [
+            { "name": "Data Science", "fees": { "min": 110000, "max": 110000 } },
+            { "name": "Mathematics",  "fees": { "min": 100000, "max": 100000 } }
+          ]
+        },
+        {
+          "id": "Online MA",
+          "label": "Online MA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MA",
+          "baseFees": { "min": 100000, "max": 145000 },
+          "specializations": [
+            { "name": "MA-JMC",    "fees": { "min": 145000, "max": 145000 } },
+            { "name": "English",   "fees": { "min": 100000, "max": 100000 } },
+            { "name": "Economics", "fees": { "min": 100000, "max": 100000 } }
+          ]
+        },
+        {
+          "id": "Online MAJMC",
+          "label": "Online MAJMC",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MAJMC",
+          "baseFees": { "min": 145000, "max": 145000 },
+          "specializations": [
+            { "name": "Journalism and Mass Communication", "fees": { "min": 145000, "max": 145000 } }
+          ]
+        },
+        {
+          "id": "Online BBA",
+          "label": "Online BBA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BBA",
+          "baseFees": { "min": 175000, "max": 175000 },
+          "specializations": [
+            { "name": "Entrepreneurship",             "fees": { "min": 175000, "max": 175000 } },
+            { "name": "Human Resource Management",    "fees": { "min": 175000, "max": 175000 } },
+            { "name": "Marketing",                    "fees": { "min": 175000, "max": 175000 } },
+            { "name": "International Business",       "fees": { "min": 175000, "max": 175000 } },
+            { "name": "Family Business",              "fees": { "min": 175000, "max": 175000 } },
+            { "name": "Digital Marketing",            "fees": { "min": 175000, "max": 175000 } },
+            { "name": "FinTech",                      "fees": { "min": 175000, "max": 175000 } },
+            { "name": "Retail and E-Commerce",        "fees": { "min": 175000, "max": 175000 } },
+            { "name": "Artificial Intelligence",      "fees": { "min": 175000, "max": 175000 } },
+            { "name": "Healthcare Management",        "fees": { "min": 175000, "max": 175000 } },
+            { "name": "Logistics and Supply Chain",   "fees": { "min": 175000, "max": 175000 } },
+            { "name": "Foreign Exchange Management",  "fees": { "min": 175000, "max": 175000 } },
+            { "name": "Travel & Tourism Management",  "fees": { "min": 175000, "max": 175000 } },
+            { "name": "Event Management",             "fees": { "min": 175000, "max": 175000 } },
+            { "name": "Banking and Finance",          "fees": { "min": 175000, "max": 175000 } },
+            { "name": "Business Analytics with KPMG","fees": { "min": 175000, "max": 175000 } }
+          ]
+        },
+        {
+          "id": "Online BCA",
+          "label": "Online BCA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BCA",
+          "baseFees": { "min": 177000, "max": 177000 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 177000, "max": 177000 } }
+          ]
+        },
+        {
+          "id": "Online BAJMC",
+          "label": "Online BAJMC",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BAJMC",
+          "baseFees": { "min": 175000, "max": 175000 },
+          "specializations": [
+            { "name": "Journalism and Mass Communication", "fees": { "min": 175000, "max": 175000 } }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 10,
+      "name": "Shoolini University",
+      "location": "Solan, Himachal Pradesh",
+      "rating": 4.6,
+      "reviews": 1200,
+      "NIRF": "89",
+      "accreditation": "UGC Approved",
+      "emiAvailable": false,
+      "highlights": ["Pay After Placement", "NIRF Rank 89", "Research Focus", "Industry Connect"],
+      "color": "#f3e5f5",
+      "accent": "#7b1fa2",
+      "modal": {
+        "title": "Apply to Shoolini University Online",
+        "subtitle": "Unique Pay-After-Placement model – risk-free career-first education.",
+        "imageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327856/shoolini_txvq6k.webp",
+        "mobileImageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327856/shoolini_txvq6k.webp",
+        "formType": "general",
+        "showImage": true
+      },
+      "filters": {
+        "categories": ["PG Courses", "UG Courses"],
+        "qualifications": ["Postgraduate", "College Graduate", "Completed 12th", "Diploma Holder"],
+        "scores": ["Below 50%", "50% - 60%", "60% - 70%", "70% - 80%", "80% - 90%", "Above 90%"]
+      },
+      "courses": [
+        {
+          "id": "Online MBA",
+          "label": "Online MBA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MBA",
+          "baseFees": { "min": 98000, "max": 140000 },
+          "feesNote": "₹42,000 to be paid only after placement",
+          "specializations": [
+            { "name": "Marketing Management",              "fees": { "min": 98000, "max": 140000 } },
+            { "name": "Operation & Supply Chain Management","fees": { "min": 98000, "max": 140000 } },
+            { "name": "Agri Business Management",          "fees": { "min": 98000, "max": 140000 } },
+            { "name": "Human Resource Management",         "fees": { "min": 98000, "max": 140000 } },
+            { "name": "IT Management",                     "fees": { "min": 98000, "max": 140000 } },
+            { "name": "Biotechnology Management",          "fees": { "min": 98000, "max": 140000 } },
+            { "name": "Financial Management",              "fees": { "min": 98000, "max": 140000 } },
+            { "name": "Tourism Management",                "fees": { "min": 98000, "max": 140000 } },
+            { "name": "Food Technology Management",        "fees": { "min": 98000, "max": 140000 } },
+            { "name": "Digital Marketing",                 "fees": { "min": 98000, "max": 140000 } },
+            { "name": "Real Estate Management",            "fees": { "min": 98000, "max": 140000 } },
+            { "name": "Pharma & Health Care Management",   "fees": { "min": 98000, "max": 140000 } },
+            { "name": "Retail Management",                 "fees": { "min": 98000, "max": 140000 } },
+            { "name": "Direct Selling Management",         "fees": { "min": 98000, "max": 140000 } },
+            { "name": "Banking & Insurance",               "fees": { "min": 98000, "max": 140000 } },
+            { "name": "Data Science & Business Analytics", "fees": { "min": 98000, "max": 140000 } }
+          ]
+        },
+        {
+          "id": "Online MSc",
+          "label": "Online M.Sc",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MSc",
+          "baseFees": { "min": 120000, "max": 120000 },
+          "specializations": [
+            { "name": "Data Science", "fees": { "min": 120000, "max": 120000 } }
+          ]
+        },
+        {
+          "id": "Online MA",
+          "label": "Online MA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MA",
+          "baseFees": { "min": 42000, "max": 42000 },
+          "specializations": [
+            { "name": "English Literature", "fees": { "min": 42000, "max": 42000 } }
+          ]
+        },
+        {
+          "id": "Online MAJMC",
+          "label": "Online MAJMC",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MAJMC",
+          "baseFees": { "min": 100000, "max": 100000 },
+          "specializations": [
+            { "name": "Journalism and Mass Communication", "fees": { "min": 100000, "max": 100000 } }
+          ]
+        },
+        {
+          "id": "Online BBA",
+          "label": "Online BBA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BBA",
+          "baseFees": { "min": 63000, "max": 90000 },
+          "feesNote": "₹27,000 to be paid only after placement",
+          "specializations": [
+            { "name": "HR",             "fees": { "min": 63000, "max": 90000 } },
+            { "name": "Marketing",      "fees": { "min": 63000, "max": 90000 } },
+            { "name": "Finance",        "fees": { "min": 63000, "max": 90000 } },
+            { "name": "Digital Marketing","fees": { "min": 63000, "max": 90000 } },
+            { "name": "Computer Science","fees": { "min": 63000, "max": 90000 } },
+            { "name": "Direct Selling", "fees": { "min": 63000, "max": 90000 } }
+          ]
+        },
+        {
+          "id": "Online BCA",
+          "label": "Online BCA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BCA",
+          "baseFees": { "min": 63000, "max": 90000 },
+          "feesNote": "₹27,000 to be paid only after placement",
+          "specializations": [
+            { "name": "Machine Learning",       "fees": { "min": 63000, "max": 90000 } },
+            { "name": "Data Science",           "fees": { "min": 63000, "max": 90000 } },
+            { "name": "Cyber Security",         "fees": { "min": 63000, "max": 90000 } },
+            { "name": "Artificial Intelligence","fees": { "min": 63000, "max": 90000 } }
+          ]
+        },
+        {
+          "id": "Online BCom",
+          "label": "Online B.Com",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BCom",
+          "baseFees": { "min": 75000, "max": 75000 },
+          "specializations": [
+            { "name": "Accounting",          "fees": { "min": 75000, "max": 75000 } },
+            { "name": "Finance and Taxation","fees": { "min": 75000, "max": 75000 } }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 11,
+      "name": "OP Jindal Global University",
+      "location": "Sonipat, Haryana",
+      "rating": 4.6,
+      "reviews": 1800,
+      "NIRF": "N/A",
+      "accreditation": "UGC Approved",
+      "emiAvailable": true,
+      "highlights": ["Global Perspective", "Industry Partnerships", "Research Excellence", "Career Services"],
+      "color": "#eceff1",
+      "accent": "#37474f",
+      "modal": {
+        "title": "Apply to OP Jindal Global University",
+        "subtitle": "Global perspective with world-class industry partnerships and research.",
+        "imageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/opjindal_jdl7az.webp",
+        "mobileImageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/opjindal_jdl7az.webp",
+        "formType": "general",
+        "showImage": true
+      },
+      "filters": {
+        "categories": ["PG Courses", "UG Courses"],
+        "qualifications": ["Postgraduate", "College Graduate", "Completed 12th"],
+        "scores": ["50% - 60%", "60% - 70%", "70% - 80%", "80% - 90%", "Above 90%"]
+      },
+      "courses": [
+        {
+          "id": "Online MBA",
+          "label": "Online MBA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MBA",
+          "baseFees": { "min": 200000, "max": 300000 },
+          "specializations": [
+            { "name": "Finance",               "fees": { "min": 200000, "max": 300000 } },
+            { "name": "Marketing",             "fees": { "min": 200000, "max": 300000 } },
+            { "name": "Human Resources",       "fees": { "min": 200000, "max": 300000 } },
+            { "name": "Operations",            "fees": { "min": 200000, "max": 300000 } },
+            { "name": "International Business","fees": { "min": 200000, "max": 300000 } },
+            { "name": "Business Analytics",    "fees": { "min": 200000, "max": 300000 } }
+          ]
+        },
+        {
+          "id": "Online MA",
+          "label": "Online MA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MA",
+          "baseFees": { "min": 90000, "max": 160000 },
+          "specializations": [
+            { "name": "Teaching English to Speakers of Other Languages","fees": { "min": 90000,  "max": 130000 } },
+            { "name": "Public Policy",                                   "fees": { "min": 110000, "max": 160000 } }
+          ]
+        },
+        {
+          "id": "Online BBA",
+          "label": "Online BBA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BBA",
+          "baseFees": { "min": 200000, "max": 200000 },
+          "specializations": [
+            { "name": "Business Administration","fees": { "min": 200000, "max": 200000 } },
+            { "name": "Finance",               "fees": { "min": 200000, "max": 200000 } },
+            { "name": "Marketing",             "fees": { "min": 200000, "max": 200000 } },
+            { "name": "Human Resources",       "fees": { "min": 200000, "max": 200000 } },
+            { "name": "International Business","fees": { "min": 200000, "max": 200000 } }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 12,
+      "name": "Sharda University",
+      "location": "Greater Noida, Uttar Pradesh",
+      "rating": 4.2,
+      "reviews": 980,
+      "NIRF": "N/A",
+      "accreditation": "UGC Approved",
+      "emiAvailable": true,
+      "highlights": ["Global Exposure", "500+ Companies", "Industry Exposure", "Career Guidance"],
+      "color": "#fce4ec",
+      "accent": "#c2185b",
+      "modal": {
+        "title": "Apply to Sharda University Online",
+        "subtitle": "500+ hiring companies, global exposure and industry-focused skill labs.",
+        "imageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp",
+        "mobileImageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp",
+        "formType": "general",
+        "showImage": true
+      },
+      "filters": {
+        "categories": ["PG Courses", "UG Courses"],
+        "qualifications": ["Postgraduate", "College Graduate", "Completed 12th", "Diploma Holder"],
+        "scores": ["Below 50%", "50% - 60%", "60% - 70%", "70% - 80%", "80% - 90%", "Above 90%"]
+      },
+      "courses": [
+        {
+          "id": "Online MBA",
+          "label": "Online MBA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MBA",
+          "baseFees": { "min": 140000, "max": 196000 },
+          "specializations": [
+            { "name": "Data Science & Analytics",              "fees": { "min": 196000, "max": 196000 } },
+            { "name": "Finance",                               "fees": { "min": 140000, "max": 196000 } },
+            { "name": "Marketing",                             "fees": { "min": 140000, "max": 196000 } },
+            { "name": "Human Resources Management",            "fees": { "min": 140000, "max": 196000 } },
+            { "name": "Sales and Marketing",                   "fees": { "min": 140000, "max": 196000 } },
+            { "name": "Healthcare and Hospital Administration","fees": { "min": 140000, "max": 196000 } }
+          ]
+        },
+        {
+          "id": "Online MCA",
+          "label": "Online MCA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MCA",
+          "baseFees": { "min": 120000, "max": 120000 },
+          "specializations": [
+            { "name": "Data Science",                         "fees": { "min": 120000, "max": 120000 } },
+            { "name": "Computer Science and Information Technology","fees": { "min": 120000, "max": 120000 } }
+          ]
+        },
+        {
+          "id": "Online MCom",
+          "label": "Online M.Com",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MCom",
+          "baseFees": { "min": 50000, "max": 140000 },
+          "specializations": [
+            { "name": "Public Accounting",      "fees": { "min": 50000,  "max": 100000 } },
+            { "name": "Accounting and Finance", "fees": { "min": 80000,  "max": 140000 } }
+          ]
+        },
+        {
+          "id": "Online BBA",
+          "label": "Online BBA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BBA",
+          "baseFees": { "min": 120000, "max": 120000 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 120000, "max": 120000 } }
+          ]
+        },
+        {
+          "id": "Online BCA",
+          "label": "Online BCA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BCA",
+          "baseFees": { "min": 120000, "max": 120000 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 120000, "max": 120000 } }
+          ]
+        },
+        {
+          "id": "Online BCom",
+          "label": "Online B.Com",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BCom",
+          "baseFees": { "min": 120000, "max": 120000 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 120000, "max": 120000 } }
+          ]
+        },
+        {
+          "id": "Online BA",
+          "label": "Online BA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BA",
+          "baseFees": { "min": 105000, "max": 105000 },
+          "specializations": [
+            { "name": "Honours",          "fees": { "min": 105000, "max": 105000 } },
+            { "name": "Political Science","fees": { "min": 105000, "max": 105000 } }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 13,
+      "name": "Kurukshetra University",
+      "location": "Kurukshetra, Haryana",
+      "rating": 4.2,
+      "reviews": 870,
+      "NIRF": "N/A",
+      "accreditation": "UGC Approved",
+      "emiAvailable": false,
+      "highlights": ["Govt University", "Affordable Fees", "Quality Learning", "Career Guidance"],
+      "color": "#fffde7",
+      "accent": "#f57f17",
+      "modal": {
+        "title": "Apply to Kurukshetra University",
+        "subtitle": "Government university – quality education at highly affordable fees.",
+        "imageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327281/k-uni_xnjbyz.webp",
+        "mobileImageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327281/k-uni_xnjbyz.webp",
+        "formType": "general",
+        "showImage": true
+      },
+      "filters": {
+        "categories": ["PG Courses", "UG Courses"],
+        "qualifications": ["Postgraduate", "College Graduate", "Completed 12th", "Completed 10th", "Diploma Holder"],
+        "scores": ["Below 50%", "50% - 60%", "60% - 70%", "70% - 80%", "80% - 90%", "Above 90%"]
+      },
+      "courses": [
+        {
+          "id": "Online MBA",
+          "label": "Online MBA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MBA",
+          "baseFees": { "min": 98545, "max": 119845 },
+          "specializations": [
+            { "name": "Finance",                          "fees": { "min": 98545, "max": 119845 } },
+            { "name": "Marketing",                        "fees": { "min": 98545, "max": 119845 } },
+            { "name": "Human Resources",                  "fees": { "min": 98545, "max": 119845 } },
+            { "name": "Information Technology Management","fees": { "min": 98545, "max": 119845 } },
+            { "name": "Business Analytics",               "fees": { "min": 98545, "max": 119845 } }
+          ]
+        },
+        {
+          "id": "Online MCA",
+          "label": "Online MCA",
+          "category": "PG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "MCA",
+          "baseFees": { "min": 76667, "max": 76667 },
+          "specializations": [
+            { "name": "Computer Science",     "fees": { "min": 76667, "max": 76667 } },
+            { "name": "Data Science",         "fees": { "min": 76667, "max": 76667 } },
+            { "name": "AI & ML",              "fees": { "min": 76667, "max": 76667 } },
+            { "name": "Software Engineering", "fees": { "min": 76667, "max": 76667 } }
+          ]
+        },
+        {
+          "id": "Online MCom",
+          "label": "Online M.Com",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MCom",
+          "baseFees": { "min": 54036, "max": 54036 },
+          "specializations": [
+            { "name": "Accounting", "fees": { "min": 54036, "max": 54036 } },
+            { "name": "Finance",    "fees": { "min": 54036, "max": 54036 } },
+            { "name": "Economics",  "fees": { "min": 54036, "max": 54036 } },
+            { "name": "Banking",    "fees": { "min": 54036, "max": 54036 } }
+          ]
+        },
+        {
+          "id": "Online MA",
+          "label": "Online MA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MA",
+          "baseFees": { "min": 54036, "max": 54036 },
+          "specializations": [
+            { "name": "English",   "fees": { "min": 54036, "max": 54036 } },
+            { "name": "Sociology", "fees": { "min": 54036, "max": 54036 } },
+            { "name": "Economics", "fees": { "min": 54036, "max": 54036 } }
+          ]
+        },
+        {
+          "id": "Online BBA",
+          "label": "Online BBA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BBA",
+          "baseFees": { "min": 72661, "max": 72661 },
+          "specializations": [
+            { "name": "Business Administration","fees": { "min": 72661, "max": 72661 } },
+            { "name": "Finance",               "fees": { "min": 72661, "max": 72661 } },
+            { "name": "Marketing",             "fees": { "min": 72661, "max": 72661 } },
+            { "name": "Human Resources",       "fees": { "min": 72661, "max": 72661 } },
+            { "name": "Operations",            "fees": { "min": 72661, "max": 72661 } }
+          ]
+        },
+        {
+          "id": "Online BCom",
+          "label": "Online B.Com",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BCom",
+          "baseFees": { "min": 72661, "max": 72661 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 72661, "max": 72661 } }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 14,
+      "name": "Sikkim Manipal University",
+      "location": "Gangtok, Sikkim",
+      "rating": 4.3,
+      "reviews": 1100,
+      "NIRF": "N/A",
+      "accreditation": "UGC Approved",
+      "emiAvailable": false,
+      "highlights": ["Expert Faculty", "Career Services", "Flexible Learning", "UGC Approved"],
+      "color": "#e0f2f1",
+      "accent": "#00695c",
+      "modal": {
+        "title": "Apply to Sikkim Manipal University",
+        "subtitle": "Flexible UGC-approved programs with expert faculty and career services.",
+        "imageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp",
+        "mobileImageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp",
+        "formType": "general",
+        "showImage": true
+      },
+      "filters": {
+        "categories": ["PG Courses", "UG Courses"],
+        "qualifications": ["Postgraduate", "College Graduate", "Completed 12th", "Completed 10th", "Diploma Holder"],
+        "scores": ["Below 50%", "50% - 60%", "60% - 70%", "70% - 80%", "80% - 90%", "Above 90%"]
+      },
+      "courses": [
+        {
+          "id": "Online MBA",
+          "label": "Online MBA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MBA",
+          "baseFees": { "min": 110000, "max": 110000 },
+          "specializations": [
+            { "name": "Dual Specialization – Marketing",                "fees": { "min": 110000, "max": 110000 } },
+            { "name": "Dual Specialization – Finance",                  "fees": { "min": 110000, "max": 110000 } },
+            { "name": "Dual Specialization – HR Systems",               "fees": { "min": 110000, "max": 110000 } },
+            { "name": "Dual Specialization – Operations & Supply Chain","fees": { "min": 110000, "max": 110000 } },
+            { "name": "Dual Specialization – Healthcare Management",    "fees": { "min": 110000, "max": 110000 } }
+          ]
+        },
+        {
+          "id": "Online MCA",
+          "label": "Online MCA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MCA",
+          "baseFees": { "min": 98000, "max": 98000 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 98000, "max": 98000 } }
+          ]
+        },
+        {
+          "id": "Online MCom",
+          "label": "Online M.Com",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MCom",
+          "baseFees": { "min": 75000, "max": 75000 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 75000, "max": 75000 } }
+          ]
+        },
+        {
+          "id": "Online MA",
+          "label": "Online MA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MA",
+          "baseFees": { "min": 75000, "max": 75000 },
+          "specializations": [
+            { "name": "English",          "fees": { "min": 75000, "max": 75000 } },
+            { "name": "Sociology",        "fees": { "min": 75000, "max": 75000 } },
+            { "name": "Political Science","fees": { "min": 75000, "max": 75000 } }
+          ]
+        },
+        {
+          "id": "Online BCom",
+          "label": "Online B.Com",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BCom",
+          "baseFees": { "min": 75000, "max": 75000 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 75000, "max": 75000 } }
+          ]
+        },
+        {
+          "id": "Online BA",
+          "label": "Online BA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BA",
+          "baseFees": { "min": 75000, "max": 75000 },
+          "specializations": [
+            { "name": "English",          "fees": { "min": 75000, "max": 75000 } },
+            { "name": "Sociology",        "fees": { "min": 75000, "max": 75000 } },
+            { "name": "Political Science","fees": { "min": 75000, "max": 75000 } }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 15,
+      "name": "VGU",
+      "location": "Jaipur, Rajasthan",
+      "rating": 4.0,
+      "reviews": 680,
+      "NIRF": "N/A",
+      "accreditation": "UGC Approved",
+      "emiAvailable": false,
+      "highlights": ["51+ BA Combinations", "Industry Projects", "Career Support", "Flexible Learning"],
+      "color": "#fff8e1",
+      "accent": "#f9a825",
+      "modal": {
+        "title": "Apply to VGU Online",
+        "subtitle": "Unique 51+ BA subject combinations and industry-focused programs.",
+        "imageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgu1_ieijw9.webp",
+        "mobileImageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgu1_ieijw9.webp",
+        "formType": "general",
+        "showImage": true
+      },
+      "filters": {
+        "categories": ["PG Courses", "UG Courses"],
+        "qualifications": ["Postgraduate", "College Graduate", "Completed 12th", "Completed 10th", "Diploma Holder"],
+        "scores": ["Below 50%", "50% - 60%", "60% - 70%", "70% - 80%", "80% - 90%", "Above 90%"]
+      },
+      "courses": [
+        {
+          "id": "Online MBA",
+          "label": "Online MBA",
+          "category": "PG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "MBA",
+          "baseFees": { "min": 150000, "max": 240000 },
+          "specializations": [
+            { "name": "Finance",                       "fees": { "min": 150000, "max": 240000 } },
+            { "name": "Marketing",                     "fees": { "min": 150000, "max": 240000 } },
+            { "name": "Human Resources",               "fees": { "min": 150000, "max": 240000 } },
+            { "name": "Operations",                    "fees": { "min": 150000, "max": 240000 } },
+            { "name": "Business Analytics",            "fees": { "min": 150000, "max": 240000 } },
+            { "name": "Information Technology Management","fees": { "min": 150000, "max": 240000 } },
+            { "name": "Healthcare Management",         "fees": { "min": 150000, "max": 240000 } },
+            { "name": "Agribusiness Management",       "fees": { "min": 150000, "max": 240000 } },
+            { "name": "International Business",        "fees": { "min": 150000, "max": 240000 } }
+          ]
+        },
+        {
+          "id": "Online MCA",
+          "label": "Online MCA",
+          "category": "PG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "MCA",
+          "baseFees": { "min": 150000, "max": 150000 },
+          "specializations": [
+            { "name": "Software Engineering & Development",  "fees": { "min": 150000, "max": 150000 } },
+            { "name": "Data Science & Analytics",            "fees": { "min": 150000, "max": 150000 } },
+            { "name": "Cyber Security",                      "fees": { "min": 150000, "max": 150000 } },
+            { "name": "Cloud & DevOps",                      "fees": { "min": 150000, "max": 150000 } },
+            { "name": "Web & App Development",               "fees": { "min": 150000, "max": 150000 } },
+            { "name": "Blockchain & Emerging Technologies",  "fees": { "min": 150000, "max": 150000 } },
+            { "name": "Database Management",                 "fees": { "min": 150000, "max": 150000 } }
+          ]
+        },
+        {
+          "id": "Online MSc",
+          "label": "Online M.Sc",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MSc",
+          "baseFees": { "min": 72000, "max": 72000 },
+          "specializations": [
+            { "name": "Mathematics", "fees": { "min": 72000, "max": 72000 } }
+          ]
+        },
+        {
+          "id": "Online MAJMC",
+          "label": "Online MAJMC",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MAJMC",
+          "baseFees": { "min": 72000, "max": 72000 },
+          "specializations": [
+            { "name": "Journalism and Mass Communication", "fees": { "min": 72000, "max": 72000 } }
+          ]
+        },
+        {
+          "id": "Online BBA",
+          "label": "Online BBA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BBA",
+          "baseFees": { "min": 132000, "max": 132000 },
+          "specializations": [
+            { "name": "General",          "fees": { "min": 132000, "max": 132000 } },
+            { "name": "Digital Marketing","fees": { "min": 132000, "max": 132000 } },
+            { "name": "Retail Management","fees": { "min": 132000, "max": 132000 } },
+            { "name": "FinTech",          "fees": { "min": 132000, "max": 132000 } }
+          ]
+        },
+        {
+          "id": "Online BCA",
+          "label": "Online BCA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BCA",
+          "baseFees": { "min": 132000, "max": 132000 },
+          "specializations": [
+            { "name": "Full Stack Development",           "fees": { "min": 132000, "max": 132000 } },
+            { "name": "AI & Machine Learning",            "fees": { "min": 132000, "max": 132000 } },
+            { "name": "Data Science & Analytics",         "fees": { "min": 132000, "max": 132000 } },
+            { "name": "Cloud Computing & Cyber Security", "fees": { "min": 132000, "max": 132000 } },
+            { "name": "UX Design",                        "fees": { "min": 132000, "max": 132000 } },
+            { "name": "Blockchain",                       "fees": { "min": 132000, "max": 132000 } }
+          ]
+        },
+        {
+          "id": "Online BA",
+          "label": "Online BA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BA",
+          "baseFees": { "min": 72000, "max": 72000 },
+          "specializations": [
+            { "name": "Economics + Public Policy + Computer Applications",       "fees": { "min": 72000, "max": 72000 } },
+            { "name": "Public Policy + English",                                 "fees": { "min": 72000, "max": 72000 } },
+            { "name": "English + History + Political Science",                   "fees": { "min": 72000, "max": 72000 } },
+            { "name": "Computer Applications + Public Policy/IR",                "fees": { "min": 72000, "max": 72000 } },
+            { "name": "Political Science + International Relations + Public Policy","fees": { "min": 72000, "max": 72000 } },
+            { "name": "51+ Combinations Available",                              "fees": { "min": 72000, "max": 72000 } }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 16,
+      "name": "Uttaranchal University",
+      "location": "Dehradun, Uttarakhand",
+      "rating": 4.2,
+      "reviews": 760,
+      "NIRF": "N/A",
+      "accreditation": "UGC Approved",
+      "emiAvailable": true,
+      "highlights": ["Budget Friendly", "Quality Education", "Industry Projects", "Career Support"],
+      "color": "#e8f5e9",
+      "accent": "#388e3c",
+      "modal": {
+        "title": "Apply to Uttaranchal University Online",
+        "subtitle": "Budget-friendly degrees with quality education and career support.",
+        "imageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp",
+        "mobileImageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp",
+        "formType": "general",
+        "showImage": true
+      },
+      "filters": {
+        "categories": ["PG Courses", "UG Courses"],
+        "qualifications": ["Postgraduate", "College Graduate", "Completed 12th", "Completed 10th", "Diploma Holder"],
+        "scores": ["Below 50%", "50% - 60%", "60% - 70%", "70% - 80%", "80% - 90%", "Above 90%"]
+      },
+      "courses": [
+        {
+          "id": "Online MBA",
+          "label": "Online MBA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MBA",
+          "baseFees": { "min": 98000, "max": 98000 },
+          "specializations": [
+            { "name": "Marketing",                       "fees": { "min": 98000, "max": 98000 } },
+            { "name": "Digital Marketing",               "fees": { "min": 98000, "max": 98000 } },
+            { "name": "Human Resource",                  "fees": { "min": 98000, "max": 98000 } },
+            { "name": "Business Analytics",              "fees": { "min": 98000, "max": 98000 } },
+            { "name": "Finance Management",              "fees": { "min": 98000, "max": 98000 } },
+            { "name": "International Business",          "fees": { "min": 98000, "max": 98000 } },
+            { "name": "Information Technology",          "fees": { "min": 98000, "max": 98000 } },
+            { "name": "Logistics and Supply Chain Management","fees": { "min": 98000, "max": 98000 } }
+          ]
+        },
+        {
+          "id": "Online MCA",
+          "label": "Online MCA",
+          "category": "PG Courses",
+          "duration": "2 Years",
+          "defaultProgram": "MCA",
+          "baseFees": { "min": 92000, "max": 92000 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 92000, "max": 92000 } }
+          ]
+        },
+        {
+          "id": "Online BBA",
+          "label": "Online BBA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BBA",
+          "baseFees": { "min": 96000, "max": 96000 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 96000, "max": 96000 } }
+          ]
+        },
+        {
+          "id": "Online BCA",
+          "label": "Online BCA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BCA",
+          "baseFees": { "min": 96000, "max": 96000 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 96000, "max": 96000 } }
+          ]
+        },
+        {
+          "id": "Online BA",
+          "label": "Online BA",
+          "category": "UG Courses",
+          "duration": "3 Years",
+          "defaultProgram": "BA",
+          "baseFees": { "min": 61200, "max": 61200 },
+          "specializations": [
+            { "name": "General", "fees": { "min": 61200, "max": 61200 } }
+          ]
+        }
+      ]
+    }
+
+  ]
+}

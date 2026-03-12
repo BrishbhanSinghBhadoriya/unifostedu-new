@@ -146,7 +146,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
     const values = getValues();
     const targetNumber = '917042646766';
     const composed = [
-      `Hello Unifost, I would like to connect with a counselor via WhatsApp.`,
+      `Hello Sir/ Madam, I would like to connect with a counselor via WhatsApp.`,
       values.name ? `Name: ${values.name}` : `Name: `,
       values.mobile ? `Mobile: ${values.mobile}` : null,
       values.email ? `Email: ${values.email}` : null,

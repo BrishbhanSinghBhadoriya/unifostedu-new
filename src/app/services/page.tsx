@@ -109,7 +109,7 @@ export default function Services() {
 
   return (
     <>
-      <Breadcrumb items={breadcrumbItems} />
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50"> 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">

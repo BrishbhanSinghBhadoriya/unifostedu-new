@@ -36,7 +36,7 @@ export default function UniversityDateSlider({
             </span>
 
             {nextUpdateDate && (
-              <span className="text-xs opacity-75" style={{ color: textColor }}>
+              <span className="font-bold" style={{ color: textColor }}>
                 Next Deadline: {nextUpdateDate}
               </span>
             )}

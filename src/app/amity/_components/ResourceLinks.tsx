@@ -44,7 +44,7 @@ const ResourceLinks = ({ setOpenModal, openModal }: { setOpenModal: (state: Open
     { label: "Online BBA Programs", href: "/courses/bba" },
     { label: "Online MCA Programs", href: "/courses/mca" },
     { label: "Online BCA Programs", href: "/courses/bca" },
-    { label: "All University List", href: "/university-list" },
+    { label: "All University List", href: "/University-List" },
     { label: "Search Courses", href: "/coursesearch" },
   ];
 

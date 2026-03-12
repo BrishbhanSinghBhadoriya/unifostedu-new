@@ -308,7 +308,7 @@ const Footer = () => {
                           <div className="p-2 bg-cyan-500/20 rounded-lg group-hover/item:bg-cyan-500/30 transition-colors">
                             <FaPhone className="text-cyan-400 text-sm" />
                           </div>
-                          <span className="flex-1 text-sm">+91 7042143820</span>
+                          <span className="flex-1 text-sm">+91 7042646766</span>
                         </li>
                         <li className="flex items-center gap-3 group/item">
                           <div className="p-2 bg-cyan-500/20 rounded-lg group-hover/item:bg-cyan-500/30 transition-colors">
@@ -334,7 +334,7 @@ const Footer = () => {
                               <MdEmail className="text-sm" /> info@unifostedu.com
                             </a>
                             <a href="https://wa.me/917042646766" className="flex items-center gap-1 text-green-600 hover:text-green-800 transition-colors text-xs">
-                              <FaWhatsapp className="text-sm" />+91 7042143820
+                              <FaWhatsapp className="text-sm" />+91 7042646766
                             </a>
                           </div>
                         </div>
@@ -347,7 +347,7 @@ const Footer = () => {
                               <MdEmail className="text-sm" /> info@unifostedu.com
                             </a>
                             <a href="https://wa.me/917042646766" className="flex items-center gap-1 text-green-600 hover:text-green-800 transition-colors text-xs">
-                              <FaWhatsapp className="text-sm" /> +91 7042143820
+                              <FaWhatsapp className="text-sm" /> +91 7042646766
                             </a>
                           </div>
                         </div>
@@ -673,7 +673,7 @@ const Footer = () => {
                       <span className="absolute inset-0 rounded-full bg-cyan-400/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
                       <FaEnvelope className="relative text-cyan-400 group-hover:text-white transition-colors text-sm" />
                     </a>
-                    <a href="https://wa.me/917042646766?text=Hi%20Unifost,%20I%20want%20to%20know%20more%20about%20courses.%20My%20Name%20is:%20" className="relative p-2.5 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group" aria-label="Chat with us on WhatsApp at +91 93547 35410" title="WhatsApp: +91 93547 35410">
+                    <a href="https://wa.me/917042646766?text=Hi%20Unifost,%20I%20want%20to%20know%20more%20about%20courses.%20My%20Name%20is:%20" className="relative p-2.5 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group" aria-label="Chat with us on WhatsApp at +91 7042646766" title="WhatsApp: +91 7042646766">
                       <span className="absolute inset-0 rounded-full bg-green-400/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
                       <FaWhatsapp className="relative text-green-400 group-hover:text-white transition-colors text-sm" />
                     </a>
