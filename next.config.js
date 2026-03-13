@@ -88,11 +88,7 @@ const nextConfig = {
         destination: '/amity/:path*',
         permanent: true,
       },
-      {
-        source: '/university-list',
-        destination: '/university-list',
-        permanent: true,
-      },
+
       {
         source: '/vgu-university',
         destination: '/vgu',
