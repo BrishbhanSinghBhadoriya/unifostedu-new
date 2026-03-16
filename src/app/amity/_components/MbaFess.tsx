@@ -128,7 +128,7 @@ const MbaFees = () => {
   };
 
   return (
-    <div>
+    <div className="bg-gray-50">
       <Headers />
         <div className="min-h-screen bg-white pt-24 md:pt-20">
       {/* Top Section Nav */}
@@ -180,7 +180,7 @@ const MbaFees = () => {
 
      
 
-      <div className="max-w-screen-2xl mx-auto flex flex-col gap-6">
+      <div className="max-w-screen-3xl mx-auto flex flex-col gap-6">
 
        
 

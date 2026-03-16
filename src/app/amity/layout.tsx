@@ -10,7 +10,7 @@ export const metadata = {
     "amity university online bca",
     "amity university online bba",
     "amity university online bcom",
-    "amity university online ma psychology",
+    "amity university online ma ",
     "amity university online mca",
     "amity university online courses list",
     "amity university online ugc approved degrees",

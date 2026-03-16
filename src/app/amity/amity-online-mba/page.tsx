@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import {
   GraduationCap,
@@ -19,18 +19,25 @@ import {
   Phone,
   Mail
 } from 'lucide-react';
+import Headers from '../_components/Headers';
+import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 
-const ApplyButton = ({ text = "Apply Now - Limited Seats" }) => (
-  <button className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-lg text-lg transition-all transform hover:scale-105 shadow-lg">
+const ApplyButton = ({ text = "Apply Now - Limited Seats", onClick }: { text?: string; onClick?: () => void }) => (
+  <button 
+    onClick={onClick}
+    className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-lg text-lg transition-all transform hover:scale-105 shadow-lg cursor-pointer"
+  >
     {text}
   </button>
 );
 
 export default function AmityOnlineMBA() {
+  const [openModal, setOpenModal] = useState<{ type: "apply" | "enquire" } | null>(null);
+
   return (
     
     <div className="min-h-screen bg-gray-50">
-      
+      <Headers />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-900 to-indigo-800 text-white py-20">
         <div className="container mx-auto px-4">
@@ -56,7 +63,7 @@ export default function AmityOnlineMBA() {
                   <span>₹1,99,000 Total Fee</span>
                 </div>
               </div>
-              <ApplyButton />
+              <ApplyButton onClick={() => setOpenModal({ type: 'apply' })} />
             </div>
             <div className="hidden md:block">
               <Image 
@@ -101,7 +108,7 @@ export default function AmityOnlineMBA() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <Image 
-                src="/images/amity/mba1.png" 
+                src="/images/amity/mba12.png" 
                 alt="UGC Approved Online MBA Program" 
                 width={400}
                 height={200}
@@ -136,7 +143,7 @@ export default function AmityOnlineMBA() {
                   <span className="text-gray-700">Valid for govt jobs</span>
                 </div>
               </div>
-              <ApplyButton text="Get Free Admission Counseling" />
+              <ApplyButton text="Get Free Admission Counseling" onClick={() => setOpenModal({ type: 'enquire' })} />
             </div>
           </div>
         </div>
@@ -223,7 +230,7 @@ export default function AmityOnlineMBA() {
                 <span>International Jobs</span>
               </div>
             </div>
-            <ApplyButton text="Apply for Recognized MBA Degree" />
+            <ApplyButton text="Apply for Recognized MBA Degree" onClick={() => setOpenModal({ type: 'apply' })} />
           </div>
         </div>
       </section>
@@ -292,7 +299,7 @@ export default function AmityOnlineMBA() {
                 </div>
               </div>
 
-              <ApplyButton text="Check Your Eligibility Now" />
+              <ApplyButton text="Check Your Eligibility Now" onClick={() => setOpenModal({ type: 'enquire' })} />
             </div>
             <div>
               <Image 
@@ -399,7 +406,7 @@ export default function AmityOnlineMBA() {
           </div>
 
           <div className="text-center">
-            <ApplyButton text="Explore All Specializations" />
+            <ApplyButton text="Explore All Specializations" onClick={() => setOpenModal({ type: 'enquire' })} />
           </div>
         </div>
       </section>
@@ -505,7 +512,7 @@ export default function AmityOnlineMBA() {
                 </div>
               </div>
 
-              <ApplyButton text="Get Fee Breakup & Discounts" />
+              <ApplyButton text="Get Fee Breakup & Discounts" onClick={() => setOpenModal({ type: 'enquire' })} />
             </div>
             <div>
               <Image 
@@ -909,7 +916,7 @@ export default function AmityOnlineMBA() {
             </div>
           </div>
 
-          <ApplyButton text="Apply Now - Get Free Counseling" />
+          <ApplyButton text="Apply Now - Get Free Counseling" onClick={() => setOpenModal({ type: 'apply' })} />
 
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm">
             <div className="flex items-center gap-2">
@@ -931,7 +938,26 @@ export default function AmityOnlineMBA() {
           </div>
         </div>
       </section>
- 
+        {openModal && (
+                      <ApplyEnquiryModal
+                        open={!!openModal}
+                        onOpenChange={(v) => !v && setOpenModal(null)}
+                        title={
+                          openModal?.type === "apply"
+                            ? "Start Your Application"
+                            : "Enquire Now"
+                        }
+                        subtitle={
+                          openModal?.type === "apply"
+                            ? "Fill the quick form to begin your admission process"
+                            : "Share your details and our counselor will reach out"
+                        }
+                        imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/amityForm_xdbvvf.webp"
+                        universityName="Amity University Online"
+                        defaultProgram="MBA"
+                        formType={openModal?.type === "apply" ? "getStarted" : "general"}
+                      />
+                    )}
      
     </div>
   );

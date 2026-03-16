@@ -122,7 +122,7 @@ const universities = [
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgu1_ieijw9.webp",
   },
   {
-    name: "Upes Online",
+    name: "UPES Online",
     link: "/upes",
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/upes_uzkkmm.webp",
   },
