@@ -1,11 +1,16 @@
 import { ChildrenProps } from "types/ChildrenProps";
+
 export const metadata = {
   title: "Manipal Online MCA | Master of Computer Applications | MUJ Online",
+
   description:
-    "Get complete details about Manipal University Jaipur's UGC-approved Online MCA program — syllabus, eligibility, fees, career scope, placement support, and flexible digital learning.",
+    "Explore UGC-approved Online MCA from Manipal University Jaipur (NAAC A+). Learn about eligibility, fees, syllabus, and specializations like AI, Data Science, Cybersecurity, and Cloud Computing.",
+
   keywords:
-    "MUJ Online MCA, Online MCA in Manipal, MUJ Online MCA Fees, MUJ MCA, MCA Online Admission, Manipal University Fees Structure, Manipal MCA Syllabus, MUJ Online MCA Specializations, Cloud Computing, Cybersecurity, AI & ML,Manipal Online MBA, Online MBA Manipal, Manipal University Online MBA, Manipal Online Degree MBA, Manipal MBA Fees, Online Manipal MBA Eligibility, Best Online MBA in India, UGC-Approved Online MBA, Manipal Online MBA Syllabus, Online MBA Specializations Manipal, Manipal University Jaipur Online Courses, Online Manipal Login, Manipal MBA Review, Online MBA for Working Professionals, Is Manipal Online MBA Valid, Manipal Online MBA Placement Support, Which Specialization Is Best in Manipal Online MBA, Is Manipal Online MBA Worth It, Affordable Online MBA with EMI, Manipal Online MBA Job Opportunities",
+    "Manipal Online MCA, MUJ MCA Online, Online MCA India, UGC Approved MCA, Online MCA Fees India, MCA for Working Professionals, MCA Data Science, MCA Cybersecurity, MCA Cloud Computing, Best Online MCA India",
+
   metadataBase: new URL("https://unifostedu.com"),
+
   alternates: {
     canonical: "https://unifostedu.com/muj-online-mca",
   },
@@ -13,7 +18,7 @@ export const metadata = {
   openGraph: {
     title: "Manipal Online MCA | MUJ Online | Master of Computer Applications",
     description:
-      "Explore Manipal Online MCA — eligibility, fees, admission process, syllabus, and program features for IT and software professionals.",
+      "Complete details of Manipal Online MCA — eligibility, fees, syllabus, and IT career opportunities.",
     url: "https://unifostedu.com/muj-online-mca",
     siteName: "UNIFOST",
     images: [
@@ -30,9 +35,9 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Manipal Online MCA | MUJ Online | UGC Approved Online MCA",
+    title: "Manipal Online MCA | MUJ Online | UGC Approved MCA",
     description:
-      "Learn about the Manipal Online MCA course: NAAC A+ accredited university, advanced curriculum, flexible learning, fees, and career opportunities.",
+      "Learn about Manipal Online MCA: NAAC A+ university, advanced IT curriculum, flexible learning, and career scope.",
     images: ["https://unifostedu.com/images/manipal-mca.webp"],
   },
 
@@ -56,11 +61,172 @@ export const metadata = {
     address: false,
     telephone: false,
   },
+
+  other: {
+    "geo.region": "IN",
+    "geo.country": "India",
+    "language": "en-IN",
+    "revisit-after": "7 days",
+  },
 };
 
 export const dynamic = "force-static";
-export const revalidate = 604800; // 7 days
+export const revalidate = 604800;
+
+// ─── SCHEMA ─────────────────────────────────
+
+// Organization
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://unifostedu.com/#organization",
+  name: "UNIFOST",
+  url: "https://unifostedu.com",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://unifostedu.com/images/logo.png",
+    width: 200,
+    height: 60,
+  },
+};
+
+// University
+const universitySchema = {
+  "@context": "https://schema.org",
+  "@type": "CollegeOrUniversity",
+  "@id": "https://manipal.edu/#university",
+  name: "Manipal University Jaipur",
+  alternateName: ["MUJ", "Online Manipal"],
+  url: "https://www.manipal.edu",
+  logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Jaipur",
+    addressRegion: "Rajasthan",
+    addressCountry: "IN",
+  },
+};
+
+// Course Schema (MCA)
+const courseSchema = {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "@id": "https://unifostedu.com/muj-online-mca/#course",
+  name: "Online MCA – Master of Computer Applications",
+
+  description:
+    "UGC-approved Online MCA from Manipal University Jaipur (NAAC A+). Specializations include AI, Data Science, Cybersecurity, and Cloud Computing.",
+
+  url: "https://unifostedu.com/muj-online-mca",
+  image: "https://unifostedu.com/images/manipal-mca.webp",
+
+  provider: {
+    "@type": "CollegeOrUniversity",
+    name: "Manipal University Jaipur",
+    sameAs: "https://www.manipal.edu",
+  },
+
+  courseMode: "online",
+  educationalLevel: "Postgraduate",
+  timeRequired: "P2Y",
+  inLanguage: "en-IN",
+
+  teaches: [
+    "Data Structures",
+    "Algorithms",
+    "Database Management",
+    "Cloud Computing",
+    "Cybersecurity",
+    "Artificial Intelligence",
+    "Full Stack Development",
+  ],
+
+  coursePrerequisites:
+    "Bachelor’s degree with Mathematics at 10+2 or graduation level",
+
+  offers: {
+    "@type": "Offer",
+    category: "Online Degree",
+    priceCurrency: "INR",
+    availability: "https://schema.org/InStock",
+    url: "https://unifostedu.com/muj-online-mca",
+  },
+};
+
+// FAQ Schema
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://unifostedu.com/muj-online-mca/#faq",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Is Manipal Online MCA valid?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, it is UGC-entitled and NAAC A+ accredited, valid for jobs and higher education.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the duration of MCA?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The duration is 2 years (4 semesters).",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can working professionals do MCA?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, it is fully online and flexible for working professionals.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are career options after MCA?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You can become Software Developer, Backend Engineer, Data Scientist, Cloud Engineer, or Cybersecurity Expert.",
+      },
+    },
+  ],
+};
+
+// Breadcrumb
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "https://unifostedu.com/muj-online-mca/#breadcrumb",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://unifostedu.com" },
+    { "@type": "ListItem", position: 2, name: "Manipal University Jaipur", item: "https://unifostedu.com/manipal-university-jaipur" },
+    { "@type": "ListItem", position: 3, name: "Online MCA", item: "https://unifostedu.com/muj-online-mca" },
+  ],
+};
+
+const allSchemas = [
+  organizationSchema,
+  universitySchema,
+  courseSchema,
+  faqSchema,
+  breadcrumbSchema,
+];
+
+// ─── Layout ─────────────────────────────────
 
 export default function Layout({ children }: ChildrenProps) {
-  return <div className="min-h-screen bg-white">{children}</div>;
+  return (
+    <div className="min-h-screen bg-white">
+      {allSchemas.map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+      {children}
+    </div>
+  );
 }

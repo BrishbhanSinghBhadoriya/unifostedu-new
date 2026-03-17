@@ -148,7 +148,7 @@ const MUJBBAPage = () => {
         body { overflow-x: hidden; }
       `}</style>
 
-      <div className="poppins overflow-x-hidden flex">
+      <div className="poppins overflow-x-hidden">
         {/* Header */}
         <header className="w-full fixed top-0 left-0 bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 z-50">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
@@ -204,7 +204,7 @@ const MUJBBAPage = () => {
         {/* Desktop Sidebar */}
         <PageContent sectionItems={sectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
 
-        <main className="flex-1 min-w-0 lg:pl-64">
+        <main className="flex-1 min-w-0">
 
 
           {/* Hero Section */}
@@ -212,11 +212,13 @@ const MUJBBAPage = () => {
             <div className="absolute inset-0">
               <Image
                 src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp"
-                alt="Manipal Online BBA"
-                fill
+                alt="A student learning with Manipal's Online BBA Program"
+              
                 className="object-cover object-center"
                 priority
                 sizes="100vw"
+                width={1920}
+                height={1080}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
@@ -233,16 +235,16 @@ const MUJBBAPage = () => {
                   <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 border border-white/30">
                     <img
                       src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg"
-                      alt="Manipal Logo"
+                      alt="Manipal University Jaipur Logo"
                       className="h-6 sm:h-8 w-auto"
                     />
 
                   </div>
 
                   <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                    <span className="block">Online BBA</span>
+                    <span className="block">Online BBA Degree Program</span>
                     <span className="block bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-                      Transform Your Career
+                      Manipal University Jaipur
                     </span>
                   </h1>
 
@@ -283,7 +285,7 @@ const MUJBBAPage = () => {
                 <div>
                   <Image
                     src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp"
-                    alt="Manipal University Jaipur"
+                    alt="Manipal University Jaipur Campus"
                     width={600}
                     height={400}
                     className="w-full rounded-2xl shadow-lg"

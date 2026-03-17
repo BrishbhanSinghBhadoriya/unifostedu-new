@@ -461,7 +461,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
               <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 text-center">
                 <UniversityDateSlider
                   currentDate="January 2026 Session"
-                  nextUpdateDate="Applications Closing on 11 March 2026"
+                  nextUpdateDate="Applications Closing on 20 March 2026"
                   information="Limited Seats Available - Apply Now!"
                   special="Average of 50% salary growth"
                   color="#3526dc"

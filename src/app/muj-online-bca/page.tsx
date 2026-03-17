@@ -80,7 +80,7 @@ const MUJBCAPage = () => {
   }, [navSections]);
 
   return (
-    <div className="poppins overflow-x-hidden flex">
+    <div className="poppins overflow-x-hidden">
 
       {/* Header */}
       <header className="w-full fixed top-0 left-0 bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 z-50">
@@ -121,11 +121,11 @@ const MUJBCAPage = () => {
 
       {/* --- End Sidebars --- */}
 
-      <main className="flex-1 min-w-0 lg:pl-64">
+      <main className="flex-1 min-w-0">
         {/* Hero Section */}
         <section className="relative w-full min-h-[450px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] overflow-hidden pt-14 sm:pt-16 lg:pt-20">
           <div className="absolute inset-0">
-            <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bca-online-image_awhemy.webp" alt="Manipal Online BCA" fill className="object-cover object-center" priority sizes="100vw" />
+            <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bca-online-image_awhemy.webp" alt="A student learning with Manipal's Online BCA Program"  className="object-cover object-center" priority sizes="100vw" width={1920} height={1080} />
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
           </div>
@@ -133,12 +133,12 @@ const MUJBCAPage = () => {
             <div className="flex-1 max-w-2xl lg:max-w-3xl text-white py-6 sm:py-8 md:py-12 lg:py-20">
               <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="space-y-3 sm:space-y-4 md:space-y-6">
                 <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 border border-white/30">
-                  <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" alt="Manipal Logo" className="h-6 sm:h-8 w-auto" />
+                  <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" alt="Manipal University Jaipur Logo" className="h-6 sm:h-8 w-auto" />
                   <span className="font-semibold tracking-wider">Online BCA</span>
                 </div>
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                  <span className="block">Manipal Online BCA</span>
-                  <span className="block bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">Everything You Need to Know</span>
+                  <span className="block">Online BCA Degree Program</span>
+                  <span className="block bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">Manipal University Jaipur</span>
                 </h1>
                 <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
                   UGC-approved, 3-year online BCA program with trending specializations, 24x7 student support and industry-ready digital learning experience from NAAC A+ accredited Manipal University Jaipur.
@@ -191,7 +191,7 @@ const MUJBCAPage = () => {
             </div>
             {/* Right Hero Banner Image */}
             <div className="hidden lg:block flex-shrink-0 w-96 rounded-3xl overflow-hidden shadow-2xl border border-blue-100">
-              <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp" alt="Online BCA - Student" width={500} height={630} className="object-cover" />
+              <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp" alt="Manipal University Jaipur Campus" width={500} height={630} className="object-cover" />
             </div>
           </div>
         </section>

@@ -239,7 +239,7 @@ const MUJOnlineMCAPage = () => {
         }
       `}</style>
        
-      <div className="poppins overflow-x-hidden flex">
+      <div className="poppins overflow-x-hidden">
         {/* Header */}
         <header className="w-full fixed top-0 left-0 bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 z-50">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
@@ -292,20 +292,22 @@ const MUJOnlineMCAPage = () => {
         {/* Desktop Sidebar */}
  <PageContent sectionItems={sectionItem} activeSection={activeSection} ismobilemenuopen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />      
 
-        <main className="flex-1 min-w-0 lg:pl-64">
+        <main className="flex-1 min-w-0">
           
 
           {/* Hero Section */}
           <section className="relative w-full min-h-[450px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] overflow-hidden pt-14 sm:pt-16 lg:pt-20">
             <div className="absolute inset-0">
               <Image
-                src="https://res.cloudinary.com/didkrwhbu/image/upload/v1764067290/mca-online-image_p1t8pf.webp"
-                alt="Manipal Online MCA"
-                fill
-                className="object-cover object-center"
-                priority
-                sizes="100vw"
-              />
+                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1764067290/mca-online-image_p1t8pf.webp"
+                  alt="A student learning with Manipal's Online MCA Program"
+                  
+                  className="object-cover object-center"
+                  priority
+                  sizes="100vw"
+                  width={1920}
+                  height={1080}
+                />
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
             </div>
@@ -321,18 +323,16 @@ const MUJOnlineMCAPage = () => {
                   <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 border border-white/30">
                     <img 
                       src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" 
-                      alt="Manipal Logo" 
+                      alt="Manipal University Jaipur Logo" 
                       className="h-6 sm:h-8 w-auto" 
                     />
                     <span className="text-sm sm:text-base">UGC-Entitled • NAAC A+</span>
                   </div>
 
                   <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                    <span className="block">Online MCA</span>
-                    <span className="block bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-                      Your Gateway to a Tech Career
-                    </span>
-                  </h1>
+                  <span className="block">Online MCA Degree Program</span>
+                  <span className="block bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">Manipal University Jaipur</span>
+                </h1>
 
                   <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
                     UGC-approved 2-year online Master of Computer Applications program with flexible learning, industry-aligned specializations, and career support from NAAC A+ accredited Manipal University Jaipur.
