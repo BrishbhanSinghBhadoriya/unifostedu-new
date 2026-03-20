@@ -71,14 +71,14 @@ const Faq = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalState
                           >
                             <button
                               type="button"
-                              className="w-full text-left flex justify-between items-center font-semibold text-sm sm:text-base md:text-lg lg:text-xl gap-2 cursor-pointer transition-colors hover:text-indigo-600"
+                              className="w-full text-left flex justify-between items-center font-semibold text-sm sm:text-base md:text-lg lg:text-xl gap-2 cursor-pointer transition-colors hover:text-blue-900"
                               onClick={() => setOpenIndex((prev) => (prev === index ? null : index))}
                               aria-expanded={openIndex === index}
                               aria-controls={`faq-answer-${index}`}
                               id={`faq-question-${index}`}
                             >
                               <span className="flex-1">{faq.question}</span>
-                              <span className="ml-2 text-indigo-500 text-lg sm:text-xl md:text-2xl flex-shrink-0">
+                              <span className="ml-2 text-blue-900 text-lg sm:text-xl md:text-2xl flex-shrink-0">
                                 {openIndex === index ? "-" : "+"}
                               </span>
                             </button>
@@ -120,7 +120,7 @@ const Faq = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalState
             onClick={() => setOpenModal({ type: "apply" })}
             size="lg"
             className="bg-yellow-400 text-black border border-black 
-                       hover:text-white hover:bg-[#452971] 
+                       hover:text-white hover:bg-blue-900 
                        text-sm sm:text-base px-6 sm:px-8 py-2.5 
                        rounded-lg shadow-md transition-all duration-300
                        hover:scale-105 cursor-pointer"

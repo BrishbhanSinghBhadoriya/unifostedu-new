@@ -146,6 +146,34 @@ const Header = () => {
   const router = useRouter();
   const pathname = usePathname();
   const dropdownRef = useRef<HTMLDivElement | null>(null);
+  const uniScrollRef = useRef<HTMLDivElement | null>(null);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const container = uniScrollRef.current;
+    if (!container) return;
+
+    const rect = container.getBoundingClientRect();
+    const mouseY = e.clientY - rect.top;
+    const containerHeight = rect.height;
+
+    // We only scroll if mouse is within the container
+    if (mouseY < 0 || mouseY > containerHeight) return;
+
+    // Sensitivity: how much area at top/bottom should trigger faster scroll
+    // Here we use a linear mapping for precise control by cursor position
+    const scrollHeight = container.scrollHeight;
+    const maxScroll = scrollHeight - containerHeight;
+
+    // percentage of container height
+    const percentage = mouseY / containerHeight;
+    
+    // Smooth scroll to target position
+    container.scrollTo({
+      top: percentage * maxScroll,
+      behavior: 'auto' // 'auto' is faster for mouse follow, 'smooth' can be laggy
+    });
+  };
+
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
   const [modalType, setModalType] = useState<
     "videoCall" | "homeDemo" | "getStarted" | undefined
@@ -213,18 +241,6 @@ const Header = () => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
-  useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [mobileMenuOpen]);
 
   const filtered = useMemo(() => {
     const q = (searchQuery || "").toLowerCase();
@@ -571,11 +587,11 @@ ${uploadedResumeURL || "Not uploaded"}
                 ))}
 
 
-                <div className="relative">
+                <div
+                  className="relative"
+                  onMouseEnter={() => setMenuOpen("explore")}
+                  onMouseLeave={() => setMenuOpen(null)}>
                   <button
-                    onClick={() =>
-                      setMenuOpen(menuOpen === "explore" ? null : "explore")
-                    }
                     className="group relative px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg text-slate-700 hover:text-blue-600 font-medium text-sm transition-all duration-200 flex items-center gap-2 whitespace-nowrap">
                     <FaBuildingColumns className="text-sm flex-shrink-0" />
                     <span>Universities</span>
@@ -591,7 +607,10 @@ ${uploadedResumeURL || "Not uploaded"}
                           <FaBuildingColumns className="text-blue-500 text-sm lg:text-base xl:text-lg" />
                           <span>Partner Universities</span>
                         </h3>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4 max-h-[60vh] lg:max-h-96 overflow-y-auto pr-2">
+                        <div
+                          ref={uniScrollRef}
+                          onMouseMove={handleMouseMove}
+                          className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4 max-h-[60vh] lg:max-h-96 overflow-y-auto pr-2 scroll-smooth no-scrollbar">
                           {universities.map((uni, idx) => (
                             <Link
                               key={idx}
@@ -627,13 +646,12 @@ ${uploadedResumeURL || "Not uploaded"}
                 </div>
 
                 {/* Careers Dropdown */}
-                <div className="relative">
+                <div
+                  className="relative"
+                  onMouseEnter={() => setMenuOpen("careers")}
+                  onMouseLeave={() => setMenuOpen(null)}>
                   <button
-                    onClick={() =>
-                      setMenuOpen(menuOpen === "careers" ? null : "careers")
-                    }
-                    className="group relative px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg text-slate-700 hover:text-blue-600 font-medium text-sm transition-all duration-200 flex items-center gap-2 whitespace-nowrap"
-                  >
+                    className="group relative px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg text-slate-700 hover:text-blue-600 font-medium text-sm transition-all duration-200 flex items-center gap-2 whitespace-nowrap">
                     <FaUser className="text-sm flex-shrink-0" />
                     <span>Careers</span>
                     <FaChevronDown
@@ -874,25 +892,26 @@ ${uploadedResumeURL || "Not uploaded"}
         {/* Mobile Menu - Enhanced design */}
         {
           mobileMenuOpen && (
-            <div className="lg:hidden fixed top-0 left-0 w-full h-screen z-[9999] bg-white flex flex-col pointer-events-auto">
-              {/* Mobile Header */}
-              <div className="flex items-center justify-between p-6 border-b border-slate-100 flex-shrink-0">
-                <Image
-                  width={120}
-                  height={48}
-                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1764316067/uniLogoo_nc6vhs.png"
-                  alt="Unifost"
-                  className="h-12 w-auto"
-                />
-                <button
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="p-2 rounded-lg bg-slate-100 text-slate-700">
-                  <FaXmark className="text-xl" />
-                </button>
-              </div>
+            <div className="lg:hidden fixed inset-0 z-[9999] bg-black/20 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)}>
+              <div className="fixed top-0 left-0 w-[85%] max-w-sm h-full bg-white flex flex-col shadow-2xl" onClick={(e) => e.stopPropagation()}>
+                {/* Mobile Header */}
+                <div className="flex items-center justify-between p-5 border-b border-slate-100 flex-shrink-0">
+                  <Image
+                    width={120}
+                    height={48}
+                    src="https://res.cloudinary.com/didkrwhbu/image/upload/v1764316067/uniLogoo_nc6vhs.png"
+                    alt="Unifost"
+                    className="h-10 w-auto"
+                  />
+                  <button
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="p-2 rounded-lg bg-slate-100 text-slate-700">
+                    <FaXmark className="text-xl" />
+                  </button>
+                </div>
 
-              {/* Scrollable Content */}
-              <div className="flex-1 overflow-y-auto p-6">
+                {/* Scrollable Content */}
+                <div className="flex-1 overflow-y-auto p-5">
                 {/* Mobile Search */}
                 <div className="mb-6">
                   <div className="flex items-center bg-slate-100 rounded-lg px-4 py-3 border border-black">
@@ -973,7 +992,11 @@ ${uploadedResumeURL || "Not uploaded"}
                       <Link
                         key={i}
                         href={link.path}
-                        onClick={() => setMobileMenuOpen(false)}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          router.push(link.path);
+                          setMobileMenuOpen(false);
+                        }}
                         className="flex items-center gap-3 p-4 rounded-lg bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 transition-all">
                         <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white">
                           <link.icon className="text-lg" />
@@ -1037,7 +1060,7 @@ ${uploadedResumeURL || "Not uploaded"}
                               </label>
                               <input
                                 type="file"
-                                name="resume"
+                                name="resumeFile"
                                 required
                                 accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
                                 className="w-full text-xs text-slate-500 file:mr-2 file:py-1 file:px-2 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
@@ -1104,7 +1127,7 @@ ${uploadedResumeURL || "Not uploaded"}
                               </label>
                               <input
                                 type="file"
-                                name="resume"
+                                name="resumeFile"
                                 required
                                 accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
                                 className="w-full text-xs text-slate-500 file:mr-2 file:py-1 file:px-2 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
@@ -1171,7 +1194,7 @@ ${uploadedResumeURL || "Not uploaded"}
                               </label>
                               <input
                                 type="file"
-                                name="resume"
+                                name="resumeFile"
                                 required
                                 accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
                                 className="w-full text-xs text-slate-500 file:mr-2 file:py-1 file:px-2 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100"
@@ -1244,9 +1267,11 @@ ${uploadedResumeURL || "Not uploaded"}
                 </div>
               </div>
             </div>
+            </div>
+            
           )
-        }
-
+        
+}
         {/* Enquiry Modal */}
         {
           showEnquiryModal && (
@@ -1267,9 +1292,9 @@ ${uploadedResumeURL || "Not uploaded"}
             </Dialog>
           )
         }
-      </header >
+      
+      </header>
     )
   );
-};
-
+}
 export default Header;

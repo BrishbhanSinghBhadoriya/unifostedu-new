@@ -83,7 +83,7 @@ const OutReach: React.FC<OutReachProps> = ({ cityHighlights = [], setOpenModal }
             onClick={() => setOpenModal({ type: "enquiry" })}
             size="lg"
             className="bg-yellow-400 text-black border border-black 
-                       hover:text-white hover:bg-[#452971] 
+                       hover:text-white hover:bg-blue-900 
                        text-sm sm:text-base px-6 sm:px-8 py-2.5 
                        rounded-lg shadow-md transition-all duration-300
                        hover:scale-105 cursor-pointer"

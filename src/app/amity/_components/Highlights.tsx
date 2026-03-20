@@ -51,7 +51,7 @@ const HighlightCard = memo(
 
     return (
       <div className="bg-white p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-200">
-        <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-indigo-600 mb-3 sm:mb-4 mx-auto" />
+        <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-blue-900 mb-3 sm:mb-4 mx-auto" />
         <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mb-2">
           {card.title}
         </h3>

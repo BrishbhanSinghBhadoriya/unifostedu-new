@@ -87,10 +87,10 @@ const Feature = ({ setOpenModal }: { setOpenModal: (state: OpenModalState) => vo
                                 degree programs in India that are designed for today’s
                                 digital world.
                               </p>
-                              <p className="text-blue-700 text-lg leading-relaxed mb-6">
+                              <p className="text-blue-900 text-lg leading-relaxed mb-6">
                                 1. UGC-Approved and Globally Recognized
                               </p>
-                              <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                              <p className="text-black text-lg leading-relaxed mb-6">
                                 Amity University Online is a UGC-entitled and
                                 NAAC-accredited online university in India, ensuring
                                 that every online degree programs, online MBA, or online BBA you
@@ -99,10 +99,10 @@ const Feature = ({ setOpenModal }: { setOpenModal: (state: OpenModalState) => vo
                                 education set by the Government of India and are
                                 accepted by top organizations worldwide.
                               </p>
-                              <p className="text-blue-700 text-lg leading-relaxed mb-6">
+                              <p className="text-blue-900 text-lg leading-relaxed mb-6">
                                 2. Flexible Learning for Everyone
                               </p>
-                              <p className="text-gray-700 text-lg leading-relaxed">
+                              <p className="text-black text-lg leading-relaxed">
                                 If you’re a working professional, a fresh graduate, or a
                                 career switcher, Amity Online gives you complete
                                 learning flexibility at your doorstep. You can study at
@@ -114,10 +114,10 @@ const Feature = ({ setOpenModal }: { setOpenModal: (state: OpenModalState) => vo
                                 with maximum convenience and flexibility.
                               </p>
         
-                              <p className="text-blue-700 text-lg leading-relaxed mb-6">
+                              <p className="text-blue-900 text-lg leading-relaxed mb-6">
                                 3. Industry-Driven Curriculum
                               </p>
-                              <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                              <p className="text-black text-lg leading-relaxed mb-6">
                                 All online courses are designed by academic experts and
                                 industry leaders to ensure practical knowledge and
                                 real-world application at Amity University Online. Our
@@ -127,7 +127,7 @@ const Feature = ({ setOpenModal }: { setOpenModal: (state: OpenModalState) => vo
                                 Data Science — ensuring you stay ahead in the
                                 competitive job market and build your future.
                               </p>
-                              <p className="text-blue-700 text-lg leading-relaxed mb-6">
+                              <p className="text-blue-900 text-lg leading-relaxed mb-6">
                                 4. Global Exposure and Expert Faculty
                               </p>
                               <p className="text-gray-700 text-lg leading-relaxed mb-6">
@@ -141,7 +141,7 @@ const Feature = ({ setOpenModal }: { setOpenModal: (state: OpenModalState) => vo
                                 will help in future not only in India but in foreign
                                 too.
                               </p>
-                              <p className="text-blue-700 text-lg leading-relaxed mb-6">
+                              <p className="text-blue-900 text-lg leading-relaxed mb-6">
                                 5. Career Guidance and Placement Support
                               </p>
                               <p className="text-gray-700 text-lg leading-relaxed mb-6">
@@ -155,7 +155,7 @@ const Feature = ({ setOpenModal }: { setOpenModal: (state: OpenModalState) => vo
                                 alumni now work in Fortune 500 companies, startups, and
                                 multinational organizations.{" "}
                               </p>
-                              <p className="text-blue-700 text-lg leading-relaxed mb-6">
+                              <p className="text-blue-900 text-lg leading-relaxed mb-6">
                                 6. Technology-Enabled Learning Experience
                               </p>
                               <p className="text-gray-700 text-lg leading-relaxed mb-6">
@@ -176,7 +176,7 @@ const Feature = ({ setOpenModal }: { setOpenModal: (state: OpenModalState) => vo
                               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <Button
                                   size="lg"
-                                  className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-3 text-lg rounded-full cursor-pointer"
+                                  className="bg-yellow-400 hover:bg-blue-900 text-black px-8 py-3 text-lg rounded-full cursor-pointer"
                                   onClick={() => setOpenModal({ type: "apply" })}
                                 >
                                   Apply Now
@@ -210,7 +210,7 @@ const Feature = ({ setOpenModal }: { setOpenModal: (state: OpenModalState) => vo
                               <div className="bg-white rounded-2xl h-full hover:shadow-lg transition-all duration-300 border-0 shadow-sm">
                                 <div className="p-4 md:p-6 text-center">
                                   <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mx-auto mb-1 md:mb-1">
-                                    <feature.icon className="w-6 h-6 md:w-8 md:h-8 text-blue-600" />
+                                    <feature.icon className="w-6 h-6 md:w-8 md:h-8 text-blue-900" />
                                   </div>
                                   <h3 className="text-base md:text-lg font-semibold text-gray-900  md:mb-1">
                                     {feature.title}

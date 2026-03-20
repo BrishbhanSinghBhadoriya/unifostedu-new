@@ -82,7 +82,7 @@ const AmityLandingPage = () => {
       eligibility: "10+2 Pass",
       fees: "₹1,65,000- ₹2,25,000",
       specialization:
-        "BBA (General, Data Analytics In collaboration with HCL Tech, Travel And Tourism Management, Professional Certificate in Business Analytics In collaboration with KPMG)",
+        "BBA -General, Data Analytics In collaboration with HCL Tech, Travel And Tourism Management",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
       alt: "BBA from amity online university",
     },
@@ -92,7 +92,7 @@ const AmityLandingPage = () => {
       eligibility: "10+2 Pass",
       fees: "₹1,50,000 - ₹2,25,000",
       specialization:
-        "BCA (General, Cloud and Security In collaboration with TCS iON, Data Analytics In collaboration with TCS iON, Data Engineering In collaboration with HCL Tech, Software Engineering In collaboration with HCL Tech, Financial Technology And AI In collaboration withpaytm,Professional Certificate in Applied Data EngineeringIn collaboration with KPMG)",
+        "BCA-General, Cloud and Security In collaboration with TCS iON, Data Analytics In collaboration with TCS iON, Data Engineering In collaboration with HCL Tech, Software Engineering In collaboration with HCL Tech, Financial Technology And AI In collaboration withpaytm",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bca-online-image_awhemy.webp",
       alt: "BCA from amity online university",
     },
@@ -102,7 +102,7 @@ const AmityLandingPage = () => {
       eligibility: "10+2 Pass",
       fees: "₹99,000 - ₹2,50,000",
       specialization:
-        "B.Com (General, Hons, International Finance & Accounting)",
+        "B.Com-General, Hons, International Finance & Accounting",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
       alt: "B.Com from amity online university",
     },
@@ -112,7 +112,7 @@ const AmityLandingPage = () => {
       eligibility: "10+2 Pass",
       fees: "₹85,000 - ₹1,70,000",
       specialization:
-        "BA (General, Journalism and Mass Communication, Native Languages(Kannada,Malayalam, Tamil, Telugu), English, Sociology, Political Science, Economics)",
+        "BA-General, Journalism and Mass Communication, Vernacular Languages, English, Sociology, Political Science, Economics)",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
       alt: "BA from amity online university",
     },
@@ -125,7 +125,7 @@ const AmityLandingPage = () => {
       eligibility: "Graduation",
       fees: "₹1,99,000 - ₹2,99,000",
       specialization:
-        "MBA (General Management, Information Technology Management, Dual Specialization, Human Resource Analytics, Data Science, Business Analytics, International Finance Management,Hospital and Healthcare Management In collaboration with Medersity / Appollo Hospital , Digital Entrepreneurship, Digital Marketing Management, Entrepreneurship & Leadership Management, Finance & Accounting Management, Hospitality Management, Global Finance Market, Insurance Management, Marketing & Sales Management, Petroleum & Natural Gas, Production and Operations Management, Retail Management)",
+        "MBA -General, Information Technology Management, Dual Specialization, Data Science, Business Analytics, International Finance Management,Hospital and Healthcare Management In collaboration with Medersity / Appollo Hospital , Digital Marketing Management, Entrepreneurship & Leadership Management, Finance & Accounting Management,   Marketing & Sales Management, Petroleum & Natural Gas, Production and Operations Management, Retail Management",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
       alt: "MBA from amity online university",
     },
@@ -135,7 +135,7 @@ const AmityLandingPage = () => {
       eligibility: "Graduation ",
       fees: "₹170,000- ₹2,75,000",
       specialization:
-        "MCA (General, Cyber Security In collaboration with HCL Tech, Blockchain Technology And Management,Machine Learning and Artificial Intelligence, Machine Learning and Artificial Intelligence In collaboration with TCS iON, Software Engineering,Financial Technology & AI In collaboration with Paytm)",
+        "MCA-General, Cyber Security In collaboration with HCL Tech, Blockchain Technology And Management,Machine Learning and Artificial Intelligence, Machine Learning and Artificial Intelligence In collaboration with TCS iON, Software Engineering,Financial Technology & AI In collaboration with Paytm",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca-online-image_w3f0sx.webp",
       alt: "MCA from amity online university",
     },
@@ -432,28 +432,9 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
 
        <Headers setOpenModal={setOpenModal} setIsMobileMenuOpen={setIsMobileMenuOpen}/>
 
-        <div className="hidden md:block mt-[56px] sm:mt-[64px] md:mt-[70px]">
-          <PageContent
-            sectionItems={sectionItems}
-            activeSection={activeSection}
-            ismobilemenuopen={isMobileMenuOpen}
-            onClose={() => setIsMobileMenuOpen(false)}
-            mode="breadcrumb"
-            position="fixed"
-            progressive
-            topOffsetClass="top-[56px] sm:top-[64px] md:top-[70px]"
-          />
-        </div>
+       
         
-        <div className="md:hidden">
-          <PageContent
-            sectionItems={sectionItems}
-            activeSection={activeSection}
-            ismobilemenuopen={isMobileMenuOpen}
-            onClose={() => setIsMobileMenuOpen(false)}
-            progressive={false} // Always show all sections in the mobile menu for navigation
-          />
-        </div>
+       
 
         <main className="w-full">
           <div className="pt-[56px] sm:pt-[58px] md:pt-[58px]">
@@ -464,8 +445,8 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
                   nextUpdateDate="Applications Closing on 20 March 2026"
                   information="Limited Seats Available - Apply Now!"
                   special="Average of 50% salary growth"
-                  color="#3526dc"
-                  backgroundColor="#3526dc"
+                  color="blue-900"
+                  backgroundColor="blue-900"
                   textColor="#f4f4f8"
                 />
               </div>

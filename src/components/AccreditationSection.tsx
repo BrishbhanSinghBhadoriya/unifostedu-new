@@ -60,7 +60,7 @@ const AccreditationSection: React.FC<AccreditationSectionProps> = ({
           {/* BENEFITS */}
           {benefits.length > 0 && (
             <motion.div
-              className="bg-gradient-to-r from-gray-800 to-purple-800 rounded-2xl p-8 text-white mb-12"
+              className="bg-blue-900 rounded-2xl p-8 text-white mb-12"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.7 }}

@@ -61,7 +61,7 @@ const ResourceLinks = ({ setOpenModal, openModal }: { setOpenModal: (state: Open
   return (
     <section
       id="ResourceLinks"
-      className="py-14 bg-slate-900 text-white relative z-20 pointer-events-auto"
+      className="py-14 bg-blue-900 text-white relative z-20 pointer-events-auto"
     >
       <div className="max-w-6xl mx-auto px-6">
 

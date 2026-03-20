@@ -28,7 +28,7 @@ const OnlineRegular = () => {
         
                         <div className="overflow-x-auto">
                           <table className="w-full border border-gray-200 bg-white rounded-2xl shadow-sm">
-                            <thead className="bg-yellow-100 text-gray-900">
+                            <thead className="bg-blue-900 text-white">
                               <tr>
                                 <th className="px-4 py-3 text-left text-sm md:text-base font-semibold border border-gray-200">
                                   Key Factors

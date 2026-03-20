@@ -192,7 +192,7 @@ export default async function sitemap() {
   // Blog routes - FIXED: Using actual folder names (PascalCase)
   const blogRoutes = [
     'MBADistanceVsOnline',
-    'BestOnlineBBA2025',
+    'BestOnlineBBA2026',
     'ManipalVsAmityOnlineMBA',
     'LPUOnlineReview',
     'JainUGCApproval',

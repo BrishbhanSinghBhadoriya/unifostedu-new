@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useRef } from "react";
 import Link from "next/link";
 import { FaBookOpen, FaChevronDown } from "react-icons/fa";
 import { MenuKey } from "types/menu";
@@ -22,7 +22,7 @@ type BlogsDropdownProps = {
 };
 
 const STATIC_BLOG_PAGES: Blog[] = [
-  { slug: "BestOnlineBBA2025", title: "Best Online BBA 2025" },
+  { slug: "BestOnlineBBA2026", title: "Best Online BBA 2026" },
   { slug: "CareerAfterOnlineMBA", title: "Career After Online MBA" },
   { slug: "ChooseOnlineUniversity", title: "Choose Online University" },
   { slug: "JainUGCApproval", title: "Jain UGC Approval" },
@@ -37,6 +37,27 @@ const STATIC_BLOG_PAGES: Blog[] = [
 
 const BlogsDropdown = ({ menuOpen, setMenuOpen }: BlogsDropdownProps) => {
   const [blogs] = useState<Blog[]>([]);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const rect = container.getBoundingClientRect();
+    const mouseY = e.clientY - rect.top;
+    const containerHeight = rect.height;
+
+    if (mouseY < 0 || mouseY > containerHeight) return;
+
+    const scrollHeight = container.scrollHeight;
+    const maxScroll = scrollHeight - containerHeight;
+    const percentage = mouseY / containerHeight;
+
+    container.scrollTo({
+      top: percentage * maxScroll,
+      behavior: 'auto'
+    });
+  };
 
   const displayedBlogs = useMemo<Blog[]>(() => {
     const merged = [...STATIC_BLOG_PAGES, ...blogs];
@@ -53,11 +74,12 @@ const BlogsDropdown = ({ menuOpen, setMenuOpen }: BlogsDropdownProps) => {
   const handleClose = () => setMenuOpen(null);
 
   return (
-    <div className="relative">
+    <div
+      className="relative"
+      onMouseEnter={() => setMenuOpen("blogs")}
+      onMouseLeave={handleClose}>
       <button
-        onClick={handleToggle}
-        className="group relative px-4 py-2 rounded-lg text-slate-700 hover:text-blue-600 font-medium text-sm transition-all duration-200 flex items-center gap-2"
-      >
+        className="group relative px-4 py-2 rounded-lg text-slate-700 hover:text-blue-600 font-medium text-sm transition-all duration-200 flex items-center gap-2">
         <FaBookOpen className="text-sm" />
         <span>Blogs</span>
         <FaChevronDown
@@ -76,7 +98,10 @@ const BlogsDropdown = ({ menuOpen, setMenuOpen }: BlogsDropdownProps) => {
               Blog Articles
             </h3>
 
-            <div className="space-y-2 max-h-80 overflow-y-auto pr-2">
+            <div
+              ref={scrollRef}
+              onMouseMove={handleMouseMove}
+              className="space-y-2 max-h-80 overflow-y-auto pr-2 no-scrollbar scroll-smooth">
               {displayedBlogs.length === 0 && (
                 <div className="px-3 py-4 text-sm text-slate-500">
                   No blogs available yet.

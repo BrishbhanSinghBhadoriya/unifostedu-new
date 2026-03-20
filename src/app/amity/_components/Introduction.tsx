@@ -152,19 +152,19 @@ const handleApplyNowClick = () => {
 
             {/* Heading - Critical for LCP */}
             <h1
-              className={`${playfair?.className || ""} text-2xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-5xl font-bold text-yellow-600 leading-tight mb-2 sm:mb-3`}
+              className={`${playfair?.className || ""} text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-6xl font-bold text-blue-900 leading-tight mb-2 sm:mb-3`}
             >
               Amity University Online
 
               <div className="my-3 sm:my-4">
                 <span
-                  className={`${playfair?.className || ""} text-2xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-5xl font-bold text-blue-700 leading-tight block`}
+                  className={`${playfair?.className || ""} text-1xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-4xl font-bold text-blue-900 leading-tight block`}
                 >
                   Courses, Eligibility And Fees
                 </span>
               </div>
 
-              <span className="block text-transparent bg-clip-text bg-yellow-600">
+              <span className={`${playfair?.className || ""} text-1xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-4xl font-bold text-blue-900 leading-tight block`}>
                 UGC-Entitled NAAC A+ Programs for 2026
               </span>
             </h1>
@@ -172,7 +172,7 @@ const handleApplyNowClick = () => {
 
             {/* Description */}
             <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-4 sm:mb-5 md:mb-6 max-w-2xl leading-relaxed">
-              Explore the Amity University <Link href="/amity/mba-online" className="font-bold"> MBA,</Link> <Link href="/amity/bba-online" className="font-bold"> BBA,</Link> <Link href="/amity/mca-online" className="font-bold"> MCA,</Link> <Link href="/amity/bca-online" className="font-bold"> BCA,</Link> <Link href="/amity/mcom-online" className="font-bold"> M.Com,</Link> <Link href="/amity/bcom-online" className="font-bold"> B.Com,</Link> <Link href="/amity/ma-online" className="font-bold"> MA,</Link> and <Link href="/amity/msc-online" className="font-bold"> MSc</Link> programmes designed for working
+              Explore the Amity University <Link href="/amity/mba-online" className="font-bold text-blue-900 "> MBA,</Link> <Link href="/amity/bba-online" className="font-bold text-blue-900"> BBA,</Link> <Link href="/amity/mca-online" className="font-bold text-blue-900"> MCA,</Link> <Link href="/amity/bca-online" className="font-bold text-blue-900"> BCA,</Link> <Link href="/amity/mcom-online" className="font-bold text-blue-900"> M.Com,</Link> <Link href="/amity/bcom-online" className="font-bold text-blue-900"> B.Com,</Link> <Link href="/amity/ma-online" className="font-bold text-blue-900"> MA,</Link> and <Link href="/amity/msc-online" className="font-bold text-blue-900"> MSc</Link> programmes designed for working
               professionals across India.{" "}
               <span className="font-semibold">Join 1.6 lakh+</span>{" "}
               learners leveraging flexible online degrees, live mentoring, and placement assistance.
@@ -204,7 +204,7 @@ const handleApplyNowClick = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="cursor-pointer border-2 border-gray-300 hover:border-blue-400 px-4 sm:px-6 md:px-8 lg:px-9 py-2 sm:py-2.5 md:py-3 lg:py-6 text-sm sm:text-base md:text-lg rounded-full w-full sm:w-auto"
+                className="cursor-pointer border-2 border-gray-300 hover:border-blue-900 px-4 sm:px-6 md:px-8 lg:px-9 py-2 sm:py-2.5 md:py-3 lg:py-6 text-sm sm:text-base md:text-lg rounded-full w-full sm:w-auto"
                 onClick={() => setOpenModal({ type: "enquire" })}
               >
                 <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 mr-2 rotate-180 sm:rotate-0" />
