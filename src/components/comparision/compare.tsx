@@ -7,16 +7,13 @@ import universitiesData from '@/data/Universities.json';
 import Image from 'next/image';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import EnquiryForm from '@/components/EnquiryForm';
+import Link from 'next/link';
 
-// ─────────────────────────────────────────────────────────────
-// Types
-// ─────────────────────────────────────────────────────────────
+
 interface Badge  { text: string; type: 'roi' | 'trending' | 'global' | 'new' }
 interface Course { id: string; label: string; icon: string; specialization?: string; jobGuarantee?: boolean; badge?: Badge }
 
-// ─────────────────────────────────────────────────────────────
-// Helpers
-// ─────────────────────────────────────────────────────────────
+
 const formatFee = (n: number) =>
   n >= 100000 ? `₹${(n / 100000).toFixed(1)} L` : `₹${(n / 1000).toFixed(0)}K`;
 
@@ -28,9 +25,7 @@ const StarRating = ({ rating }: { rating: number }) => (
   </span>
 );
 
-// ─────────────────────────────────────────────────────────────
-// Filter util — per-course, per-specialization aware
-// ─────────────────────────────────────────────────────────────
+
 function getFilteredUniversities(selection: {
   category: string; course: string; specialization: string;
   budget: string; qualification: string; score: string;
@@ -44,8 +39,9 @@ function getFilteredUniversities(selection: {
     const matchedCourse = uni.courses?.find((c: any) => c.id === course);
     if (!matchedCourse) return;
 
-    // 2. Category check
-    if (!uni.filters.categories.includes(category)) return;
+    // 2. Category check (Check both university level and course level)
+    const isCategoryMatch = uni.filters.categories.includes(category) || matchedCourse.category === category;
+    if (!isCategoryMatch) return;
 
     // 3. Find matched specialization (if user selected one)
     let matchedSpec: any = null;
@@ -87,26 +83,58 @@ function getFilteredUniversities(selection: {
     });
   });
 
-  // Fallback: at least 3 results
-  if (results.length < 3) {
-    const fallback = (universitiesData.universities as any[])
-      .map((uni) => {
-        const fc = uni.courses?.[0];
-        return {
-          ...uni,
-          fees:          fc?.baseFees ?? { min: 0, max: 0 },
-          duration:      fc?.duration ?? '2 Years',
-          matchedCourse: fc?.label ?? '',
-          matchedSpec:   null,
-          defaultProgram: fc?.defaultProgram ?? 'MBA',
-        };
-      })
-      .sort((a, b) => b.rating - a.rating)
-      .slice(0, 4);
-    return fallback;
+  // If we have at least 1 exact match, return it. Don't force 3 results if it means showing wrong courses.
+  if (results.length > 0) {
+    return results.sort((a, b) => b.rating - a.rating);
   }
 
-  return results.sort((a, b) => b.rating - a.rating);
+  // Fallback 1: If 0 results, try to find universities that AT LEAST offer the selected course (ignore budget/score)
+  const courseMatches: any[] = [];
+  (universitiesData.universities as any[]).forEach((uni) => {
+    const matchedCourse = uni.courses?.find((c: any) => c.id === course);
+    if (!matchedCourse) return;
+
+    let matchedSpec: any = null;
+    if (specialization && specialization !== 'Not decided yet') {
+      matchedSpec = matchedCourse.specializations?.find(
+        (s: any) =>
+          s.name.toLowerCase().includes(specialization.toLowerCase()) ||
+          specialization.toLowerCase().includes(s.name.toLowerCase())
+      );
+    }
+
+    const feesToShow = matchedSpec ? matchedSpec.fees : matchedCourse.baseFees;
+
+    courseMatches.push({
+      ...uni,
+      fees:            feesToShow,
+      duration:        matchedSpec?.duration ?? matchedCourse.duration,
+      matchedCourse:   matchedCourse.label,
+      matchedSpec:     matchedSpec?.name ?? null,
+      defaultProgram:  matchedCourse.defaultProgram,
+    });
+  });
+
+  if (courseMatches.length > 0) {
+    return courseMatches.sort((a, b) => b.rating - a.rating);
+  }
+
+  // Fallback 2: Generic fallback if the course itself is not found anywhere
+  const fallback = (universitiesData.universities as any[])
+    .map((uni) => {
+      const fc = uni.courses?.[0];
+      return {
+        ...uni,
+        fees:          fc?.baseFees ?? { min: 0, max: 0 },
+        duration:      fc?.duration ?? '2 Years',
+        matchedCourse: fc?.label ?? '',
+        matchedSpec:   null,
+        defaultProgram: fc?.defaultProgram ?? 'MBA',
+      };
+    })
+    .sort((a, b) => b.rating - a.rating)
+    .slice(0, 4);
+  return fallback;
 }
 
 // Budget range helper
@@ -154,7 +182,7 @@ const pgCourses = useMemo<Course[]>(() => [
     icon: '🎓',
     badge: { text: 'Most Popular', type: 'roi' },
     desc: 'Develop leadership, business strategy, marketing and finance skills for managerial roles.',
-    specialization: "General Management, Business Management, Marketing & Sales Management, Digital Marketing, Digital Marketing Management,  Finance & Accounting Management, Financial Management , Finance, International Finance, Insurance Management, Applied Finance, Banking and Insurance, Banking & Finance, Human Resource Management, Human Resource Analytics, Operations Management, Production and Operations Management, Supply Chain, Logistics & Supply Chain Management, Business Analytic, Data Science & Business Analytics, Data Scienc, Information Technology Management, IT Management,IT & FinTech,FinTech Management,AI & Machine Learning Management, Blockchain Management, Information System Management, International Business Management, International Business, International Relations, Healthcare Management, Hospital Management,Hospital Administration & Healthcare Management, Entrepreneurship & Leadership Management, Entrepreneurship & Venture Creation, Digital Entrepreneurship, Entrepreneurship, Leadership & Strategy, Retail Management, Retail Management & Quick Commerce, E-Commerce, Project Management, Hospitality Management-, Travel and Tourism Management, Airlines & Airport Management,Petroleum & Natural Gas, Oil & Gas Management, Power Management, Infrastructure Management, Agri-Business Management, Media Management, Event Management, Disaster Management , BFSI,Business Law, Biotech, Food Tech, Tourism, AI-Driven Finance, AI-Driven Marketing, AI-Driven Human Resources, AI-Driven Business Strategy ,Dual: HR & Finance, Dual: Finance & Marketing, Dual: Marketing & HR, Dual: Marketing & Business Analytics , Dual: Finance & Business Analytics , Dual: HR & Business Analytics , Dual: International Finance"
+    specialization: "General Management, Marketing Management, Digital Marketing, Finance Management, Banking & Insurance, HR Management, Operations & Supply Chain, Business Analytics, Data Science, IT & FinTech Management, AI & ML Management, Blockchain, Information Systems Management , International Business, Healthcare & Hospital Management, Entrepreneurship & Leadership , Retail & E-Commerce Management, Project Management , Hospitality & Tourism , Aviation Management, Oil & Gas , Power & Infrastructure, Agri-Business , Media & Event Management , Disaster Management , Business Law , Biotechnology, Food Technology , AI in Finance, AI in Marketing ,AI in HR, AI in Strategy, Dual Specialization"
   },
 
   {
@@ -683,13 +711,26 @@ const ugCourses = useMemo<Course[]>(() => [
                 </div>
 
                 {/* CTA */}
-                <button
-                  onClick={() => openModal(u)}
-                  className="w-full py-3 text-sm font-bold text-white rounded-xl transition-opacity hover:opacity-90"
-                  style={{ background: `linear-gradient(135deg, ${u.accent}, ${u.accent}bb)` }}
-                >
-                  Apply Now →
-                </button>
+                <div className="flex flex-col gap-2">
+                  <button
+                    onClick={() => openModal(u)}
+                    className="w-full py-3 text-sm font-bold text-white rounded-xl transition-opacity hover:opacity-90"
+                    style={{ background: `linear-gradient(135deg, ${u.accent}, ${u.accent}bb)` }}
+                  >
+                    Apply Now →
+                  </button>
+                  <Link
+                    href={u.pageLink || "#"}
+                    className="w-full py-2.5 text-xs font-bold text-center rounded-xl border-2 transition-all"
+                    style={{ 
+                      borderColor: `${u.accent}40`, 
+                      color: u.accent,
+                      backgroundColor: `${u.accent}05`
+                    }}
+                  >
+                    Know more about university
+                  </Link>
+                </div>
               </div>
             </div>
           ))}

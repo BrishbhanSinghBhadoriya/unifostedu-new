@@ -5,6 +5,7 @@
       "id": 1,
       "name": "Amity University",
       "location": "Noida, Uttar Pradesh",
+      "pageLink": "/amity",
       "rating": 4.7,
       "reviews": 4200,
       "NIRF": "29",
@@ -192,13 +193,60 @@
             { "name": "Advertising & PR",     "fees": { "min": 170000, "max": 170000 } },
             { "name": "Broadcast Journalism", "fees": { "min": 170000, "max": 170000 } }
           ]
-        }
+        },
+         {
+    "id": "BCA+MCA",
+    "label": "BCA + MCA Integrated",
+    "category": "UG+PG Courses",
+    "duration": "5 Years",
+    "defaultProgram": "BCA+MCA",
+    "baseFees": { "min": 250000, "max": 400000 },
+    "badge": { "text": "Saves 6 Months", "type": "roi" },
+    "description": "Integrated computer application program that saves time and accelerates IT career growth.",
+    "specializations": [
+      { "name": "General", "fees": { "min": 250000, "max": 400000 } },
+      { "name": "Data Science", "fees": { "min": 250000, "max": 400000 } },
+      { "name": "AI & ML", "fees": { "min": 250000, "max": 400000 } }
+    ]
+  },
+  {
+    "id": "BBA+MBA",
+    "label": "BBA + MBA Integrated",
+    "category": "UG+PG Courses",
+    "duration": "5 Years",
+    "defaultProgram": "BBA+MBA",
+    "baseFees": { "min": 300000, "max": 500000 },
+    "badge": { "text": "Saves 6 Months", "type": "roi" },
+    "description": "Combined business program for fast-track management career development.",
+    "specializations": [
+      { "name": "Marketing", "fees": { "min": 300000, "max": 500000 } },
+      { "name": "Finance", "fees": { "min": 300000, "max": 500000 } },
+      { "name": "HR", "fees": { "min": 300000, "max": 500000 } },
+      { "name": "Business Analytics", "fees": { "min": 300000, "max": 500000 } }
+    ]
+  },
+  {
+    "id": "BCom+MBA",
+    "label": "B.Com + MBA Integrated",
+    "category": "UG+PG Courses",
+    "duration": "5 Years",
+    "defaultProgram": "BCom+MBA",
+    "baseFees": { "min": 280000, "max": 450000 },
+    "badge": { "text": "Saves 6 Months", "type": "roi" },
+    "description": "Integrated commerce and management program for finance and corporate leadership.",
+    "specializations": [
+      { "name": "Finance", "fees": { "min": 280000, "max": 450000 } },
+      { "name": "Accounting", "fees": { "min": 280000, "max": 450000 } },
+      { "name": "Banking & Insurance", "fees": { "min": 280000, "max": 450000 } }
+    ]
+  }
       ]
     },
 
     {
       "id": 2,
       "name": "Manipal University",
+      "pageLink": "/manipal",
       "location": "Jaipur, Rajasthan",
       "rating": 4.6,
       "reviews": 3800,
@@ -335,6 +383,7 @@
     {
       "id": 3,
       "name": "Manipal Academy of Higher Education",
+      "pageLink": "/mahe-online",
       "location": "Manipal, Karnataka",
       "rating": 4.6,
       "reviews": 2900,
@@ -415,6 +464,7 @@
     {
       "id": 4,
       "name": "NMIMS",
+      "pageLink": "/nmims",
       "location": "Mumbai, Maharashtra",
       "rating": 4.7,
       "reviews": 4200,
@@ -484,6 +534,7 @@
     {
       "id": 5,
       "name": "Jain University",
+      "pageLink": "/jain",
       "location": "Bangalore, Karnataka",
       "rating": 4.4,
       "reviews": 2100,
@@ -634,6 +685,7 @@
     {
       "id": 6,
       "name": "LPU Online",
+      "pageLink": "/lpu-online",
       "location": "Punjab",
       "rating": 4.5,
       "reviews": 3200,
@@ -770,6 +822,7 @@
     {
       "id": 7,
       "name": "UPES Online",
+      "pageLink": "/upes",
       "location": "Dehradun, Uttarakhand",
       "rating": 4.3,
       "reviews": 1600,
@@ -863,6 +916,7 @@
     {
       "id": 8,
       "name": "DY Patil University",
+      "pageLink": "/dypatil",
       "location": "Pune, Maharashtra",
       "rating": 4.5,
       "reviews": 1400,
@@ -947,6 +1001,7 @@
     {
       "id": 9,
       "name": "Chandigarh University",
+      "pageLink": "/cuOnline",
       "location": "Mohali, Punjab",
       "rating": 4.4,
       "reviews": 2800,
@@ -1091,6 +1146,7 @@
     {
       "id": 10,
       "name": "Shoolini University",
+      "pageLink": "/shoolini",
       "location": "Solan, Himachal Pradesh",
       "rating": 4.6,
       "reviews": 1200,
@@ -1224,6 +1280,7 @@
     {
       "id": 11,
       "name": "OP Jindal Global University",
+      "pageLink": "/opjindal",
       "location": "Sonipat, Haryana",
       "rating": 4.6,
       "reviews": 1800,
@@ -1296,6 +1353,7 @@
     {
       "id": 12,
       "name": "Sharda University",
+      "pageLink": "/sharda",
       "location": "Greater Noida, Uttar Pradesh",
       "rating": 4.2,
       "reviews": 980,
@@ -1410,6 +1468,7 @@
     {
       "id": 13,
       "name": "Kurukshetra University",
+      "pageLink": "/ku-online",
       "location": "Kurukshetra, Haryana",
       "rating": 4.2,
       "reviews": 870,
@@ -1521,6 +1580,7 @@
     {
       "id": 14,
       "name": "Sikkim Manipal University",
+      "pageLink": "/smu",
       "location": "Gangtok, Sikkim",
       "rating": 4.3,
       "reviews": 1100,
@@ -1624,6 +1684,7 @@
     {
       "id": 15,
       "name": "VGU",
+      "pageLink": "/vgu",
       "location": "Jaipur, Rajasthan",
       "rating": 4.0,
       "reviews": 680,
@@ -1757,6 +1818,7 @@
     {
       "id": 16,
       "name": "Uttaranchal University",
+      "pageLink": "/uu",
       "location": "Dehradun, Uttarakhand",
       "rating": 4.2,
       "reviews": 760,
