@@ -71,7 +71,7 @@ export const features = [
 ];
 
 export const colleges = [
-  { name: "Amity University Online", ranking: "NIRF-22", fee: "₹0.99L - ₹3.45L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp", rating: 4.8 },
+  { name: "Amity University Online", ranking: "NIRF-29", fee: "₹0.99L - ₹3.45L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp", rating: 4.8 },
   { name: "Manipal University Online", ranking: "NIRF-58", fee: "0.99L - ₹2.92L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal1_ako6mq.webp", rating: 4.6 },
   { name: "Lovely Professional University Online", ranking: "NIRF-31", fee: "₹0.80L - ₹2.0L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp", rating: 4.1 },
   { name: "University of Petroleum and Energy Studies Online", ranking: "NIRF-36", fee: "₹1.50L - ₹2.20L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/upes_uzkkmm.webp", rating: 4.4 },
@@ -79,7 +79,7 @@ export const colleges = [
   { name: "Sharda University Online", ranking: "NIRF-87", fee: "₹1.05L - ₹1.60L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp", rating: 4.1 },
   { name: "Dr. DY Patil Online", ranking: "NIRF-41", fee: "₹1.40L - ₹1.90L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dypatil_tbbpf9.webp", rating: 4.4 },
   { name: "Jain University Online", ranking: "NIRF-62", fee: "₹1.30L - ₹2.16L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp", rating: 4.5 },
-  { name: "Chandigarh University Online", ranking: "NIRF-32", fee: "₹1.0L - ₹2.10L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp", rating: 4.7 },
+  { name: "Chandigarh University Online", ranking: "NIRF-19", fee: "₹1.0L - ₹2.10L", logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp", rating: 4.7 },
 ];
 
 export const cities = [
