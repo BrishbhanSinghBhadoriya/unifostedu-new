@@ -22,6 +22,9 @@ import {
   FaGear,
   FaUser,
   FaArrowRight,
+  FaScrewdriverWrench,
+  FaCalculator,
+  FaBriefcase,
 } from "react-icons/fa6";
 import {
   Dialog,
@@ -36,6 +39,7 @@ import searchIndex from "@/data/searchIndex.json";
 import courseData from "@/data/courseData.json";
 import { BLOG_API_ENDPOINT } from "@/lib/blogApi";
 import { MenuKey } from "types/menu";
+import { Shield } from "lucide-react";
 
 
 type BlogProps = {
@@ -138,6 +142,31 @@ const universities = [
   },
 ];
 
+// Tools Menu Items
+const toolsMenuItems = [
+  {
+    title: "Career Suitability Test",
+    description: "Find your perfect career path",
+    icon: FaGraduationCap,
+    href: "/career-test",
+    color: "from-blue-500 to-cyan-500",
+  },
+  {
+    title: "Unifost Services",
+    description: "Explore our range of services",
+    icon: FaGear,
+    href: "/services",
+    color: "from-purple-500 to-pink-500",
+  },
+  {
+    title: "Internship Portal",
+    description: "Explore internship opportunities",
+    icon: FaBriefcase,
+    href: "/internship-portal",
+    color: "from-emerald-500 to-teal-500",
+  },
+];
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState<MenuKey>(null);
   const [searchQuery, setSearchQuery] = useState("");
@@ -156,21 +185,16 @@ const Header = () => {
     const mouseY = e.clientY - rect.top;
     const containerHeight = rect.height;
 
-    // We only scroll if mouse is within the container
     if (mouseY < 0 || mouseY > containerHeight) return;
 
-    // Sensitivity: how much area at top/bottom should trigger faster scroll
-    // Here we use a linear mapping for precise control by cursor position
     const scrollHeight = container.scrollHeight;
     const maxScroll = scrollHeight - containerHeight;
 
-    // percentage of container height
     const percentage = mouseY / containerHeight;
     
-    // Smooth scroll to target position
     container.scrollTo({
       top: percentage * maxScroll,
-      behavior: 'auto' // 'auto' is faster for mouse follow, 'smooth' can be laggy
+      behavior: 'auto'
     });
   };
 
@@ -203,14 +227,11 @@ const Header = () => {
     }));
 
     const map = new Map<string, SearchItem>();
-    // Add universities first so they take priority if there are duplicates
     [...fromUniversities, ...fromJson, ...fromCourses].forEach((item) => {
       const existing = map.get(item.href);
-      // If university exists, preserve it; otherwise add the item
       if (!existing) {
         map.set(item.href, item);
       } else if (existing.type !== "university" && item.type === "university") {
-        // University should override non-university items
         map.set(item.href, item);
       }
     });
@@ -248,7 +269,6 @@ const Header = () => {
       .filter((item) => item.title.toLowerCase().includes(q))
       .slice(0, 10)
       .map((item) => {
-        // Ensure logo is set for universities
         if (item.type === "university" && !item.logo) {
           const university = universities.find((u) => u.link === item.href);
           if (university) {
@@ -264,113 +284,12 @@ const Header = () => {
     setSearchQuery("");
   };
 
-
-
-  const [showSalesForm, setShowSalesForm] = useState<boolean>(false);
-  const [showAdmissionForm, setShowAdmissionForm] = useState<boolean>(false);
-  const [showSeniorForm, setShowSeniorForm] = useState<boolean>(false);
-
-  const [result, setResult] = useState<string>("");
-  const [resumeURL, setResumeURL] = useState("");
-
-  const handleSubmit = async (
-    event: React.FormEvent<HTMLFormElement>,
-    jobTitle: string
-  ) => {
-    event.preventDefault();
-
-    const form = event.currentTarget;
-    const fileInput = form.querySelector<HTMLInputElement>(
-      'input[name="resumeFile"]'
-    );
-
-    let uploadedResumeURL = "";
-
-
-    if (fileInput?.files?.length) {
-      try {
-        const uploadData = new FormData();
-        uploadData.append("resume", fileInput.files[0]);
-
-        const uploadRes = await fetch("/api/v1/upload", {
-          method: "POST",
-          body: uploadData,
-        });
-
-        const uploadResult = await uploadRes.json();
-
-        if (!uploadRes.ok) {
-          throw new Error(uploadResult.error || "Upload failed");
-        }
-
-        uploadedResumeURL = uploadResult.url;
-
-        console.log("Uploaded CV URL:", uploadedResumeURL);
-
-      } catch (err: any) {
-        console.error("CV upload error:", err);
-        setResult(`❌ Failed to upload CV: ${err.message}`);
-        return;
-      }
-    }
-
-
-    const name = (form.querySelector('input[name="name"]') as HTMLInputElement).value;
-    const email = (form.querySelector('input[name="email"]') as HTMLInputElement).value;
-    const phone = (form.querySelector('input[name="phone"]') as HTMLInputElement).value;
-
-    const formData = new FormData();
-    formData.append("access_key", "77f309ec-009f-44bc-9e7d-6c94beb50897");
-    formData.append(
-      "email_to",
-      "brishbhansinghraja@gmail.com, hr@unifostedu.com"
-    );
-    formData.append("from_name", name);
-    formData.append("subject", `Application - ${jobTitle}`);
-
-    formData.append(
-      "message",
-      `
-New Job Application
-
-Name: ${name}
-Email: ${email}
-Phone: ${phone}
-Position: ${jobTitle}
-
-Resume Link:
-${uploadedResumeURL || "Not uploaded"}
-    `
-    );
-
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setResult("✅ Application sent successfully!");
-        form.reset();
-      } else {
-        setResult(`❌ ${data.message || "Something went wrong."}`);
-      }
-    } catch (error) {
-      console.error("Web3Forms error:", error);
-      setResult("❌ Network error. Please try later.");
-    }
-  };
-
-
   const openModal = (
     type: "videoCall" | "homeDemo" | "getStarted"
   ) => {
     setModalType(type);
     setShowEnquiryModal(true);
   };
-
 
   const [showHeader, setShowHeader] = useState(true);
 
@@ -493,7 +412,6 @@ ${uploadedResumeURL || "Not uploaded"}
   {searchQuery && (
     <div className="absolute left-0 top-full mt-2 w-full bg-white rounded-xl shadow-2xl border border-slate-200 z-[9999] max-h-80 overflow-auto">
       {filtered.map((item, idx) => {
-        // Get logo for universities
         const universityLogo = item.type === "university" 
           ? (item.logo || universities.find((u) => u.link === item.href)?.logo)
           : null;
@@ -538,10 +456,8 @@ ${uploadedResumeURL || "Not uploaded"}
   )}
 </div>
 
-
           </div>
         </div>
-
 
         {/* Main Navbar - Clean professional design */}
         <div
@@ -574,7 +490,7 @@ ${uploadedResumeURL || "Not uploaded"}
                 {[
                   { label: "Home", path: "/", icon: FaHouse },
                   { label: "About", path: "/about", icon: FaCircleInfo },
-                  { label: "Services", path: "/services", icon: FaGear },
+              
                 ].map((link, i) => (
                   <Link
                     key={i}
@@ -586,12 +502,10 @@ ${uploadedResumeURL || "Not uploaded"}
                   </Link>
                 ))}
 
-
-                <div
-                  className="relative"
-                  onMouseEnter={() => setMenuOpen("explore")}
-                  onMouseLeave={() => setMenuOpen(null)}>
+                {/* Universities Dropdown */}
+                <div className="relative">
                   <button
+                    onClick={() => setMenuOpen(menuOpen === "explore" ? null : "explore")}
                     className="group relative px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg text-slate-700 hover:text-blue-600 font-medium text-sm transition-all duration-200 flex items-center gap-2 whitespace-nowrap">
                     <FaBuildingColumns className="text-sm flex-shrink-0" />
                     <span>Universities</span>
@@ -637,176 +551,63 @@ ${uploadedResumeURL || "Not uploaded"}
                   )}
                 </div>
 
-                {/* Blogs Dropdown */}
+                {/* ✨ NEW: Tools Dropdown */}
                 <div className="relative">
-                  <BlogsDropdown
-                    menuOpen={menuOpen}
-                    setMenuOpen={setMenuOpen}
-                  />
-                </div>
-
-                {/* Careers Dropdown */}
-                <div
-                  className="relative"
-                  onMouseEnter={() => setMenuOpen("careers")}
-                  onMouseLeave={() => setMenuOpen(null)}>
                   <button
+                    onClick={() => setMenuOpen(menuOpen === "tools" ? null : "tools")}
                     className="group relative px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg text-slate-700 hover:text-blue-600 font-medium text-sm transition-all duration-200 flex items-center gap-2 whitespace-nowrap">
-                    <FaUser className="text-sm flex-shrink-0" />
-                    <span>Careers</span>
+                    <FaScrewdriverWrench className="text-sm flex-shrink-0" />
+                    <span>Tools</span>
                     <FaChevronDown
-                      className={`text-xs transition-transform duration-300 flex-shrink-0 ${menuOpen === "careers" ? "rotate-180" : ""
+                      className={`text-xs transition-transform duration-300 flex-shrink-0 ${menuOpen === "tools" ? "rotate-180" : ""
                         }`}
                     />
                   </button>
 
-                  {menuOpen === "careers" && (
-                    <div className="absolute left-0 top-full mt-2 w-80 bg-white/95 backdrop-blur-sm text-gray-800 p-5 rounded-xl shadow-lg border border-white/20 z-[9999]">
-                      <h4 className="text-center text-blue-800 font-bold mb-4 text-sm">
-                        Join Our Team!
-                      </h4>
-
-                      <div className="space-y-4">
-
-                        {/* Sales Intern Form */}
-                        <div className="border-l-3 border-blue-500 pl-3">
-                          <p className="font-bold text-blue-800 mb-1 text-xs">Sales Intern (0–1 Year Experience)</p>
-                          <p className="text-xs text-gray-600 mb-2">Eligibility: Graduate (Passed or Pursuing)</p>
-                          <button
-                            onClick={() => setShowSalesForm(!showSalesForm)}
-                            className="text-xs bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700"
-                          >
-                            Apply Now
-                          </button>
-
-                          {showSalesForm && (
-                            <form
-                              onSubmit={(e) => handleSubmit(e, "Sales Intern")}
-                              className="mt-3 bg-gray-50 border p-3 rounded space-y-2"
-                              encType="multipart/form-data"
-                            >
-                              <input type="text" name="name" placeholder="Full Name" required className="w-full border p-2 rounded text-xs" />
-                              <input type="email" name="email" placeholder="Email Address" required className="w-full border p-2 rounded text-xs" />
-                              <input type="tel" name="phone" placeholder="Mobile Number" required className="w-full border p-2 rounded text-xs" />
-
-                              <label className="text-xs text-gray-600">Upload CV / Resume</label>
-                              <input
-                                type="file"
-                                name="resumeFile"
-                                required
-                                accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
-                                className="w-full border p-2 rounded text-xs"
-                              />
-
-
-                              <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded text-xs hover:bg-blue-700">
-                                Submit Application
-                              </button>
-
-                              {result && <p className="text-xs text-center mt-2 text-green-600">{result}</p>}
-                            </form>
-                          )}
+                  {menuOpen === "tools" && (
+                    <div className="absolute left-0 top-full mt-2 w-96 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-[9999]">
+                      <div className="p-5 xl:p-6">
+                        <h3 className="text-slate-900 font-bold text-base lg:text-lg mb-4 flex items-center gap-2">
+                          <FaScrewdriverWrench className="text-blue-500" />
+                          <span>Explore Tools</span>
+                        </h3>
+                        <div className="space-y-3">
+                          {toolsMenuItems.map((tool, idx) => {
+                            const IconComponent = tool.icon;
+                            return (
+                              <Link
+                                key={idx}
+                                href={tool.href}
+                                onClick={() => setMenuOpen(null)}
+                                className="group flex items-start gap-3 p-4 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100 hover:from-blue-50 hover:to-cyan-50 hover:border-blue-300 transition-all duration-200">
+                                <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${tool.color} flex items-center justify-center flex-shrink-0 shadow-md`}>
+                                  <IconComponent className="text-white text-lg" />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <p className="text-sm font-semibold text-slate-900 group-hover:text-blue-600 transition">
+                                    {tool.title}
+                                  </p>
+                                  <p className="text-xs text-slate-600 mt-1">
+                                    {tool.description}
+                                  </p>
+                                </div>
+                                <FaArrowRight className="text-slate-400 group-hover:text-blue-600 transition flex-shrink-0 mt-1" />
+                              </Link>
+                            );
+                          })}
                         </div>
-
-                        {/* Admission Counsellor Form */}
-                        <div className="border-l-3 border-blue-500 pl-3">
-                          <p className="font-bold text-blue-800 mb-1 text-xs">Admission Counsellor (0–1 Year Experience)</p>
-                          <p className="text-xs text-gray-600 mb-2">Eligibility: Minimum 45% in Graduation</p>
-                          <button
-                            onClick={() => setShowAdmissionForm(!showAdmissionForm)}
-                            className="text-xs bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700"
-                          >
-                            Apply Now
-                          </button>
-
-                          {showAdmissionForm && (
-                            <form
-                              onSubmit={(e) => handleSubmit(e, "Admission Counsellor")}
-                              className="mt-3 bg-gray-50 border p-3 rounded space-y-2"
-                              encType="multipart/form-data"
-                            >
-                              <input type="text" name="name" placeholder="Full Name" required className="w-full border p-2 rounded text-xs" />
-                              <input type="email" name="email" placeholder="Email Address" required className="w-full border p-2 rounded text-xs" />
-                              <input type="tel" name="phone" placeholder="Mobile Number" required className="w-full border p-2 rounded text-xs" />
-
-                              <label className="text-xs text-gray-600">Upload CV / Resume</label>
-                              <input
-                                type="file"
-                                name="resumeFile"
-                                required
-                                accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
-                                className="w-full border p-2 rounded text-xs"
-                              />
-
-
-                              <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded text-xs hover:bg-blue-700">
-                                Submit Application
-                              </button>
-
-                              {result && <p className="text-xs text-center mt-2 text-green-600">{result}</p>}
-                            </form>
-                          )}
-                        </div>
-
-                        {/* Senior Career Counsellor Form */}
-                        <div className="border-l-3 border-emerald-500 pl-3">
-                          <p className="font-bold text-emerald-800 mb-1 text-xs">Senior Career Counsellor (2+ Years Experience)</p>
-                          <p className="text-xs text-gray-600 mb-2">Minimum 1 Year of Experience in EdTech Industry</p>
-                          <button
-                            onClick={() => setShowSeniorForm(!showSeniorForm)}
-                            className="text-xs bg-emerald-600 text-white px-3 py-1 rounded hover:bg-emerald-700"
-                          >
-                            Apply Now
-                          </button>
-
-                          {showSeniorForm && (
-                            <form
-                              onSubmit={(e) => handleSubmit(e, "Senior Career Counsellor")}
-                              className="mt-3 bg-gray-50 border p-3 rounded space-y-2"
-                              encType="multipart/form-data"
-                            >
-                              <input type="text" name="name" placeholder="Full Name" required className="w-full border p-2 rounded text-xs" />
-                              <input type="email" name="email" placeholder="Email Address" required className="w-full border p-2 rounded text-xs" />
-                              <input type="tel" name="phone" placeholder="Mobile Number" required className="w-full border p-2 rounded text-xs" />
-
-                              <label className="text-xs text-gray-600">Upload CV / Resume</label>
-                              <input
-                                type="file"
-                                name="resumeFile"
-                                required
-                                accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
-                                className="w-full border p-2 rounded text-xs"
-                              />
-
-
-                              <button type="submit" className="w-full bg-emerald-600 text-white py-2 rounded text-xs hover:bg-emerald-700">
-                                Submit Application
-                              </button>
-
-                              {result && <p className="text-xs text-center mt-2 text-green-600">{result}</p>}
-                            </form>
-                          )}
-                        </div>
-
                       </div>
                     </div>
                   )}
                 </div>
 
-
-
-
               </nav>
-
-
-
 
               {/* Action Buttons */}
               <div className="hidden lg:flex items-center gap-2 lg:gap-3 flex-shrink-0">
                 <button
                   onClick={() => router.push("/comapre-university")}
                   className="relative flex items-center gap-2 px-4 lg:px-5 py-2 lg:py-2.5 rounded-lg bg-white text-orange-600 font-semibold text-sm shadow-sm hover:shadow-md hover:scale-[1.04] transition-all duration-200 cursor-pointer whitespace-nowrap">
-                  {/* AI Powered Tag */}
                   <span className="absolute -top-1 -right-1 bg-orange-500 text-white text-[7px] lg:text-[8px] font-bold px-1.5 py-[1px] rounded-sm shadow-md">
                     AI
                   </span>
@@ -819,7 +620,6 @@ ${uploadedResumeURL || "Not uploaded"}
                   title="Call us">
                   <FaPhone className="text-lg" />
                 </Link>
-
 
                 <Link
                   href="https://wa.me/917042646766?text=Hi%20Unifost,%20I%20want%20to%20know%20more%20about%20courses.%20My%20Name%20is:%20"
@@ -843,11 +643,9 @@ ${uploadedResumeURL || "Not uploaded"}
                 <button
                   onClick={() => router.push("/comapre-university")}
                   className="relative flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-orange-600 font-semibold text-xs shadow-sm hover:shadow-md hover:scale-[1.03] transition-all duration-200 cursor-pointer whitespace-nowrap">
-                  {/* AI Badge */}
                   <span className="absolute -top-1 -right-1 bg-rose-600 text-white text-[8px] font-bold px-1.5 py-0.5 rounded-md shadow-md">
                     AI
                   </span>
-
                   <FaCompass className="text-xs text-orange-500 bg-orange-100 rounded-full p-1 flex-shrink-0" />
                   <span>Compare</span>
                 </button>
@@ -883,7 +681,6 @@ ${uploadedResumeURL || "Not uploaded"}
                     info@unifostedu.com
                   </a>
                 </div>
-        
               </div>
             </div>
           </div>
@@ -927,7 +724,6 @@ ${uploadedResumeURL || "Not uploaded"}
                   {searchQuery && filtered.length > 0 && (
                     <div className="mt-2 bg-white rounded-lg shadow-lg border border-slate-200 max-h-60 overflow-auto">
                       {filtered.map((item, idx) => {
-                        // Get logo for universities
                         const universityLogo = item.type === "university" 
                           ? (item.logo || universities.find((u) => u.link === item.href)?.logo)
                           : null;
@@ -987,7 +783,7 @@ ${uploadedResumeURL || "Not uploaded"}
                         path: "/university-list",
                         icon: FaBuildingColumns,
                       },
-                      { label: "Services", path: "/services", icon: FaGear },
+                    
                     ].map((link, i) => (
                       <Link
                         key={i}
@@ -1009,210 +805,35 @@ ${uploadedResumeURL || "Not uploaded"}
                     ))}
                   </div>
 
-                  {/* Mobile Careers Section */}
+                  {/* ✨ NEW: Mobile Tools Section */}
                   <div className="space-y-2">
                     <h3 className="text-slate-400 font-bold text-xs uppercase tracking-wider px-2">
-                      Careers
+                      Tools & Resources
                     </h3>
-                    <div className="bg-slate-50 rounded-lg border border-slate-200 p-4 space-y-4">
-                      {/* Sales Intern */}
-                      <div className="border-l-[3px] border-blue-500 pl-3">
-                        <p className="font-bold text-blue-800 mb-1 text-xs">
-                          Sales Intern (0–1 Year Experience)
-                        </p>
-                        <p className="text-xs text-slate-600 mb-2">
-                          Eligibility: Graduate (Passed or Pursuing)
-                        </p>
-                        <button
-                          onClick={() => setShowSalesForm(!showSalesForm)}
-                          className="text-xs bg-blue-600 text-white px-3 py-1.5 rounded hover:bg-blue-700 transition-colors">
-                          {showSalesForm ? "Close Form" : "Apply Now"}
-                        </button>
-                        {showSalesForm && (
-                          <form
-                            onSubmit={(e) => handleSubmit(e, "Sales Intern")}
-                            className="mt-3 bg-white border border-slate-200 p-3 rounded-lg space-y-2 shadow-sm"
-                            encType="multipart/form-data">
-                            <input
-                              type="text"
-                              name="name"
-                              placeholder="Full Name"
-                              required
-                              className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-blue-500"
-                            />
-                            <input
-                              type="email"
-                              name="email"
-                              placeholder="Email Address"
-                              required
-                              className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-blue-500"
-                            />
-                            <input
-                              type="tel"
-                              name="phone"
-                              placeholder="Mobile Number"
-                              required
-                              className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-blue-500"
-                            />
-                            <div className="space-y-1">
-                              <label className="text-[10px] uppercase font-bold text-slate-500">
-                                Upload CV / Resume
-                              </label>
-                              <input
-                                type="file"
-                                name="resumeFile"
-                                required
-                                accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
-                                className="w-full text-xs text-slate-500 file:mr-2 file:py-1 file:px-2 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
-                              />
+                    <div className="space-y-2">
+                      {toolsMenuItems.map((tool, idx) => {
+                        const IconComponent = tool.icon;
+                        return (
+                          <Link
+                            key={idx}
+                            href={tool.href}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="flex items-center gap-3 p-4 rounded-lg bg-gradient-to-br from-slate-50 to-slate-100 hover:from-blue-50 hover:to-cyan-50 border border-slate-200 hover:border-blue-300 transition-all">
+                            <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${tool.color} flex items-center justify-center text-white flex-shrink-0`}>
+                              <IconComponent className="text-lg" />
                             </div>
-                            <button
-                              type="submit"
-                              className="w-full bg-blue-600 text-white py-2 rounded text-xs font-semibold hover:bg-blue-700 transition-colors">
-                              Submit Application
-                            </button>
-                            {result && (
-                              <p className="text-xs text-center mt-2 text-green-600 font-medium">
-                                {result}
+                            <div className="flex-1 min-w-0">
+                              <p className="text-sm font-semibold text-slate-700">
+                                {tool.title}
                               </p>
-                            )}
-                          </form>
-                        )}
-                      </div>
-
-                      {/* Admission Counsellor */}
-                      <div className="border-l-[3px] border-blue-500 pl-3">
-                        <p className="font-bold text-blue-800 mb-1 text-xs">
-                          Admission Counsellor (0–1 Year Experience)
-                        </p>
-                        <p className="text-xs text-slate-600 mb-2">
-                          Eligibility: Minimum 45% in Graduation
-                        </p>
-                        <button
-                          onClick={() => setShowAdmissionForm(!showAdmissionForm)}
-                          className="text-xs bg-blue-600 text-white px-3 py-1.5 rounded hover:bg-blue-700 transition-colors">
-                          {showAdmissionForm ? "Close Form" : "Apply Now"}
-                        </button>
-                        {showAdmissionForm && (
-                          <form
-                            onSubmit={(e) =>
-                              handleSubmit(e, "Admission Counsellor")
-                            }
-                            className="mt-3 bg-white border border-slate-200 p-3 rounded-lg space-y-2 shadow-sm"
-                            encType="multipart/form-data">
-                            <input
-                              type="text"
-                              name="name"
-                              placeholder="Full Name"
-                              required
-                              className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-blue-500"
-                            />
-                            <input
-                              type="email"
-                              name="email"
-                              placeholder="Email Address"
-                              required
-                              className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-blue-500"
-                            />
-                            <input
-                              type="tel"
-                              name="phone"
-                              placeholder="Mobile Number"
-                              required
-                              className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-blue-500"
-                            />
-                            <div className="space-y-1">
-                              <label className="text-[10px] uppercase font-bold text-slate-500">
-                                Upload CV / Resume
-                              </label>
-                              <input
-                                type="file"
-                                name="resumeFile"
-                                required
-                                accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
-                                className="w-full text-xs text-slate-500 file:mr-2 file:py-1 file:px-2 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
-                              />
+                              <p className="text-xs text-slate-600">
+                                {tool.description}
+                              </p>
                             </div>
-                            <button
-                              type="submit"
-                              className="w-full bg-blue-600 text-white py-2 rounded text-xs font-semibold hover:bg-blue-700 transition-colors">
-                              Submit Application
-                            </button>
-                            {result && (
-                              <p className="text-xs text-center mt-2 text-green-600 font-medium">
-                                {result}
-                              </p>
-                            )}
-                          </form>
-                        )}
-                      </div>
-
-                      {/* Senior Career Counsellor */}
-                      <div className="border-l-[3px] border-emerald-500 pl-3">
-                        <p className="font-bold text-emerald-800 mb-1 text-xs">
-                          Senior Career Counsellor (2+ Years Experience)
-                        </p>
-                        <p className="text-xs text-slate-600 mb-2">
-                          Minimum 1 Year of Experience in EdTech Industry
-                        </p>
-                        <button
-                          onClick={() => setShowSeniorForm(!showSeniorForm)}
-                          className="text-xs bg-emerald-600 text-white px-3 py-1.5 rounded hover:bg-emerald-700 transition-colors">
-                          {showSeniorForm ? "Close Form" : "Apply Now"}
-                        </button>
-                        {showSeniorForm && (
-                          <form
-                            onSubmit={(e) =>
-                              handleSubmit(e, "Senior Career Counsellor")
-                            }
-                            className="mt-3 bg-white border border-slate-200 p-3 rounded-lg space-y-2 shadow-sm"
-                            encType="multipart/form-data">
-                            <input
-                              type="text"
-                              name="name"
-                              placeholder="Full Name"
-                              required
-                              className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-emerald-500"
-                            />
-                            <input
-                              type="email"
-                              name="email"
-                              placeholder="Email Address"
-                              required
-                              className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-emerald-500"
-                            />
-                            <input
-                              type="tel"
-                              name="phone"
-                              placeholder="Mobile Number"
-                              required
-                              className="w-full border border-slate-300 p-2 rounded text-xs outline-none focus:border-emerald-500"
-                            />
-                            <div className="space-y-1">
-                              <label className="text-[10px] uppercase font-bold text-slate-500">
-                                Upload CV / Resume
-                              </label>
-                              <input
-                                type="file"
-                                name="resumeFile"
-                                required
-                                accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
-                                className="w-full text-xs text-slate-500 file:mr-2 file:py-1 file:px-2 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100"
-                              />
-                            </div>
-                            <button
-                              type="submit"
-                              className="w-full bg-emerald-600 text-white py-2 rounded text-xs font-semibold hover:bg-emerald-700 transition-colors">
-                              Submit Application
-                            </button>
-                            {result && (
-                              <p className="text-xs text-center mt-2 text-green-600 font-medium">
-                                {result}
-                              </p>
-                            )}
-                          </form>
-                        )}
-                      </div>
+                            <FaArrowRight className="text-blue-500 text-sm flex-shrink-0" />
+                          </Link>
+                        );
+                      })}
                     </div>
                   </div>
 
@@ -1268,10 +889,9 @@ ${uploadedResumeURL || "Not uploaded"}
               </div>
             </div>
             </div>
-            
           )
-        
-}
+        }
+
         {/* Enquiry Modal */}
         {
           showEnquiryModal && (

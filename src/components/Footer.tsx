@@ -1,9 +1,24 @@
 'use client';
 import React, { useState, useEffect, ChangeEvent, FormEvent } from "react";
+import Link from "next/link";
 import { toast } from "sonner";
 import { usePathname } from 'next/navigation';
-import { FaEnvelope, FaPhone, FaArrowUp, FaLocationDot, FaWhatsapp, FaUser, FaGraduationCap, FaBuildingColumns } from "react-icons/fa6";
+import { 
+  FaEnvelope, 
+  FaPhone, 
+  FaArrowUp, 
+  FaLocationDot, 
+  FaWhatsapp, 
+  FaUser, 
+  FaGraduationCap, 
+  FaBuildingColumns,
+  FaChevronDown,
+  FaXmark,
+  FaBookOpen
+} from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import BlogsDropdown from "@/components/BlogsDropdown";
+import { MenuKey } from "types/menu";
 
 type FormData = {
   name: string;
@@ -43,6 +58,98 @@ const Footer = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [newsletterDone, setNewsletterDone] = useState(false);
+
+  // States for Blogs and Careers dropdowns
+  const [footerMenuOpen, setFooterMenuOpen] = useState<MenuKey>(null);
+  const [showSalesForm, setShowSalesForm] = useState<boolean>(false);
+  const [showAdmissionForm, setShowAdmissionForm] = useState<boolean>(false);
+  const [showSeniorForm, setShowSeniorForm] = useState<boolean>(false);
+  const [careerSubmitResult, setCareerSubmitResult] = useState<string>("");
+
+  const handleCareerSubmit = async (
+    event: React.FormEvent<HTMLFormElement>,
+    jobTitle: string
+  ) => {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const fileInput = form.querySelector<HTMLInputElement>(
+      'input[name="resumeFile"]'
+    );
+
+    let uploadedResumeURL = "";
+
+    if (fileInput?.files?.length) {
+      try {
+        const uploadData = new FormData();
+        uploadData.append("resume", fileInput.files[0]);
+
+        const uploadRes = await fetch("/api/v1/upload", {
+          method: "POST",
+          body: uploadData,
+        });
+
+        const uploadResult = await uploadRes.json();
+
+        if (!uploadRes.ok) {
+          throw new Error(uploadResult.error || "Upload failed");
+        }
+
+        uploadedResumeURL = uploadResult.url;
+      } catch (err: any) {
+        console.error("CV upload error:", err);
+        setCareerSubmitResult(`❌ Failed to upload CV: ${err.message}`);
+        return;
+      }
+    }
+
+    const name = (form.querySelector('input[name="name"]') as HTMLInputElement).value;
+    const email = (form.querySelector('input[name="email"]') as HTMLInputElement).value;
+    const phone = (form.querySelector('input[name="phone"]') as HTMLInputElement).value;
+
+    const formData = new FormData();
+    formData.append("access_key", "77f309ec-009f-44bc-9e7d-6c94beb50897");
+    formData.append(
+      "email_to",
+      "brishbhansinghraja@gmail.com, hr@unifostedu.com"
+    );
+    formData.append("from_name", name);
+    formData.append("subject", `Application - ${jobTitle}`);
+
+    formData.append(
+      "message",
+      `
+New Job Application
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Position: ${jobTitle}
+
+Resume Link:
+${uploadedResumeURL || "Not uploaded"}
+    `
+    );
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setCareerSubmitResult("✅ Application sent successfully!");
+        form.reset();
+      } else {
+        setCareerSubmitResult(`❌ ${data.message || "Something went wrong."}`);
+      }
+    } catch (error) {
+      console.error("Web3Forms error:", error);
+      setCareerSubmitResult("❌ Network error. Please try later.");
+    }
+  };
 
 
   // Mock search params functionality
@@ -654,31 +761,182 @@ const Footer = () => {
             </div>
 
             {/* Bottom Section */}
-            <div className="mt-12 pt-6 border-t border-gray-300">
-              <div className="flex flex-col justify-center items-center gap-3 text-center">
-                <div>
-                  <p className="text-white text-xs">
-                    © {new Date().getFullYear()} UNIFOST. All rights reserved.
-                  </p>
-                  <p className="text-white text-xs mt-1">
-                    Empowering education through technology
-                  </p>
+            <div className="mt-12 pt-6 border-t border-gray-300 relative">
+              <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+                
+                {/* Left Corner: Blogs Dropup */}
+                <div className="order-2 md:order-1 relative">
+                  <BlogsDropdown
+                    menuOpen={footerMenuOpen}
+                    setMenuOpen={setFooterMenuOpen}
+                    direction="up"
+                    variant="footer"
+                  />
                 </div>
 
+                {/* Center: Copyright */}
+            <div className="order-1 md:order-2 text-center">
+  <p className="text-white text-xs">
+    © {new Date().getFullYear()} UNIFOST. All rights reserved.
+  </p>
+  <p className="text-white text-xs mt-1">
+    Empowering education through technology
+  </p>
 
+  <div className="order-4 flex justify-center items-center gap-3 mt-4 mb-4">
+    <div className="flex gap-2">
+      <a href="mailto:info@unifostedu.com" className="relative p-2.5 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group">
+        <span className="absolute inset-0 rounded-full bg-cyan-400/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
+        <FaEnvelope className="relative text-cyan-400 group-hover:text-white transition-colors text-sm" />
+      </a>
 
-                <div className="flex items-center gap-3">
-                  <div className="flex gap-2">
-                    <a href="mailto:info@unifostedu.com" className="relative p-2.5 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group" aria-label="Email us at info@unifostedu.com" title="Email us at info@unifostedu.com">
-                      <span className="absolute inset-0 rounded-full bg-cyan-400/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
-                      <FaEnvelope className="relative text-cyan-400 group-hover:text-white transition-colors text-sm" />
-                    </a>
-                    <a href="https://wa.me/917042646766?text=Hi%20Unifost,%20I%20want%20to%20know%20more%20about%20courses.%20My%20Name%20is:%20" className="relative p-2.5 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group" aria-label="Chat with us on WhatsApp at +91 7042646766" title="WhatsApp: +91 7042646766">
-                      <span className="absolute inset-0 rounded-full bg-green-400/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
-                      <FaWhatsapp className="relative text-green-400 group-hover:text-white transition-colors text-sm" />
-                    </a>
+      <a href="https://wa.me/917042646766?text=Hi%20Unifost,%20I%20want%20to%20know%20more%20about%20courses.%20My%20Name%20is:%20" className="relative p-2.5 bg-white/10 rounded-full transition-all duration-300 hover:scale-110 group">
+        <span className="absolute inset-0 rounded-full bg-green-400/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
+        <FaWhatsapp className="relative text-green-400 group-hover:text-white transition-colors text-sm" />
+      </a>
+    </div>
+  </div>
+</div>
+
+                {/* Right Corner: Careers Dropup */}
+                <div className="order-3 relative">
+                  <div className="relative">
+                    <button
+                      onClick={() => setFooterMenuOpen(footerMenuOpen === 'careers' ? null : 'careers')}
+                      className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 transition-all text-sm font-medium text-white"
+                    >
+                      <FaUser className="text-blue-400" />
+                      <span>Careers</span>
+                      <FaChevronDown className={`text-[10px] transition-transform duration-300 ${footerMenuOpen === 'careers' ? 'rotate-180' : ''}`} />
+                    </button>
+
+                    {footerMenuOpen === 'careers' && (
+                      <div className="absolute bottom-full right-0 mb-3 w-72 sm:w-80 bg-white text-gray-800 p-5 rounded-2xl shadow-2xl border border-slate-200 z-[100]">
+                        <h4 className="text-center text-blue-800 font-bold mb-4 text-sm">
+                          Join Our Team!
+                        </h4>
+
+                        <div className="space-y-4 max-h-[50vh] overflow-y-auto pr-2 no-scrollbar text-left">
+                          {/* Sales Intern Form */}
+                          <div className="border-l-4 border-blue-500 pl-3">
+                            <p className="font-bold text-blue-800 mb-1 text-xs">Sales Intern (0–1 Year)</p>
+                            <p className="text-[10px] text-gray-600 mb-2">Graduate (Passed or Pursuing)</p>
+                            <button
+                              onClick={() => setShowSalesForm(!showSalesForm)}
+                              className="text-[10px] bg-blue-600 text-white px-3 py-1 rounded-full hover:bg-blue-700 transition-colors"
+                            >
+                              Apply Now
+                            </button>
+
+                            {showSalesForm && (
+                              <form
+                                onSubmit={(e) => handleCareerSubmit(e, "Sales Intern")}
+                                className="mt-3 bg-gray-50 border p-3 rounded-xl space-y-2"
+                                encType="multipart/form-data"
+                              >
+                                <input type="text" name="name" placeholder="Full Name" required className="w-full border p-2 rounded-lg text-xs outline-none focus:ring-1 focus:ring-blue-500" />
+                                <input type="email" name="email" placeholder="Email Address" required className="w-full border p-2 rounded-lg text-xs outline-none focus:ring-1 focus:ring-blue-500" />
+                                <input type="tel" name="phone" placeholder="Mobile Number" required className="w-full border p-2 rounded-lg text-xs outline-none focus:ring-1 focus:ring-blue-500" />
+
+                                <label className="text-[9px] uppercase font-bold text-gray-500">Resume (PDF/DOC)</label>
+                                <input
+                                  type="file"
+                                  name="resumeFile"
+                                  required
+                                  accept=".pdf,.doc,.docx"
+                                  className="w-full text-[10px] text-gray-500 file:mr-2 file:py-1 file:px-2 file:rounded-full file:border-0 file:bg-blue-50 file:text-blue-700"
+                                />
+
+                                <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded-lg text-xs font-bold hover:bg-blue-700 transition-colors">
+                                  Submit
+                                </button>
+                                {careerSubmitResult && <p className="text-[9px] text-center mt-2 text-green-600 font-medium">{careerSubmitResult}</p>}
+                              </form>
+                            )}
+                          </div>
+
+                          {/* Admission Counsellor Form */}
+                          <div className="border-l-4 border-blue-500 pl-3">
+                            <p className="font-bold text-blue-800 mb-1 text-xs">Admission Counsellor</p>
+                            <p className="text-[10px] text-gray-600 mb-2">Min 45% in Graduation</p>
+                            <button
+                              onClick={() => setShowAdmissionForm(!showAdmissionForm)}
+                              className="text-[10px] bg-blue-600 text-white px-3 py-1 rounded-full hover:bg-blue-700 transition-colors"
+                            >
+                              Apply Now
+                            </button>
+
+                            {showAdmissionForm && (
+                              <form
+                                onSubmit={(e) => handleCareerSubmit(e, "Admission Counsellor")}
+                                className="mt-3 bg-gray-50 border p-3 rounded-xl space-y-2"
+                                encType="multipart/form-data"
+                              >
+                                <input type="text" name="name" placeholder="Full Name" required className="w-full border p-2 rounded-lg text-xs outline-none focus:ring-1 focus:ring-blue-500" />
+                                <input type="email" name="email" placeholder="Email Address" required className="w-full border p-2 rounded-lg text-xs outline-none focus:ring-1 focus:ring-blue-500" />
+                                <input type="tel" name="phone" placeholder="Mobile Number" required className="w-full border p-2 rounded-lg text-xs outline-none focus:ring-1 focus:ring-blue-500" />
+
+                                <label className="text-[9px] uppercase font-bold text-gray-500">Resume (PDF/DOC)</label>
+                                <input
+                                  type="file"
+                                  name="resumeFile"
+                                  required
+                                  accept=".pdf,.doc,.docx"
+                                  className="w-full text-[10px] text-gray-500 file:mr-2 file:py-1 file:px-2 file:rounded-full file:border-0 file:bg-blue-50 file:text-blue-700"
+                                />
+
+                                <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded-lg text-xs font-bold hover:bg-blue-700 transition-colors">
+                                  Submit
+                                </button>
+                                {careerSubmitResult && <p className="text-[9px] text-center mt-2 text-green-600 font-medium">{careerSubmitResult}</p>}
+                              </form>
+                            )}
+                          </div>
+
+                          {/* Senior Career Counsellor */}
+                          <div className="border-l-4 border-emerald-500 pl-3">
+                            <p className="font-bold text-emerald-800 mb-1 text-xs">Senior Counsellor (2+ Yrs)</p>
+                            <p className="text-[10px] text-gray-600 mb-2">Min 1 Yr EdTech Exp</p>
+                            <button
+                              onClick={() => setShowSeniorForm(!showSeniorForm)}
+                              className="text-[10px] bg-emerald-600 text-white px-3 py-1 rounded-full hover:bg-emerald-700 transition-colors"
+                            >
+                              Apply Now
+                            </button>
+
+                            {showSeniorForm && (
+                              <form
+                                onSubmit={(e) => handleCareerSubmit(e, "Senior Career Counsellor")}
+                                className="mt-3 bg-gray-50 border p-3 rounded-xl space-y-2"
+                                encType="multipart/form-data"
+                              >
+                                <input type="text" name="name" placeholder="Full Name" required className="w-full border p-2 rounded-lg text-xs outline-none focus:ring-1 focus:ring-emerald-500" />
+                                <input type="email" name="email" placeholder="Email Address" required className="w-full border p-2 rounded-lg text-xs outline-none focus:ring-1 focus:ring-emerald-500" />
+                                <input type="tel" name="phone" placeholder="Mobile Number" required className="w-full border p-2 rounded-lg text-xs outline-none focus:ring-1 focus:ring-emerald-500" />
+
+                                <label className="text-[9px] uppercase font-bold text-gray-500">Resume (PDF/DOC)</label>
+                                <input
+                                  type="file"
+                                  name="resumeFile"
+                                  required
+                                  accept=".pdf,.doc,.docx"
+                                  className="w-full text-[10px] text-gray-500 file:mr-2 file:py-1 file:px-2 file:rounded-full file:border-0 file:bg-emerald-50 file:text-emerald-700"
+                                />
+
+                                <button type="submit" className="w-full bg-emerald-600 text-white py-2 rounded-lg text-xs font-bold hover:bg-emerald-700 transition-colors">
+                                  Submit
+                                </button>
+                                {careerSubmitResult && <p className="text-[9px] text-center mt-2 text-green-600 font-medium">{careerSubmitResult}</p>}
+                              </form>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
+
+               
               </div>
             </div>
           </div>
@@ -686,14 +944,6 @@ const Footer = () => {
       </footer>
 
       {/* Scroll to Top Button */}
-      {showScrollTop && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-3 rounded-full shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105 z-50 group"
-        >
-          <FaArrowUp className="text-base group-hover:animate-bounce" />
-        </button>
-      )}
     </>
   );
 };

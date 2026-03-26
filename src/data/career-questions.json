@@ -1,0 +1,623 @@
+{
+  "meta": {
+    "totalQuestions": 100,
+    "categories": ["career_interest", "career_personality", "career_motivation", "learning_style", "scenario"],
+    "questionsPerCategory": 20,
+    "languages": ["ENGLISH", "HINDI", "TAMIL", "GUJARATI", "MARATHI"]
+  },
+  "questions": {
+    "ENGLISH": [
+      {
+        "id": 1, "category": "career_interest",
+        "question": "Which of the following activities excites you the most?",
+        "options": ["Building software or apps", "Designing graphics or products", "Teaching or mentoring others", "Analyzing data and finding patterns"]
+      },
+      {
+        "id": 2, "category": "career_interest",
+        "question": "If you had a free weekend, what would you most likely do?",
+        "options": ["Code a personal project", "Create art or music", "Volunteer or help people", "Read research papers or books"]
+      },
+      {
+        "id": 3, "category": "career_interest",
+        "question": "Which subject did you enjoy the most in school?",
+        "options": ["Mathematics and Science", "Arts and Literature", "Social Studies and History", "Physical Education and Sports"]
+      },
+      {
+        "id": 4, "category": "career_interest",
+        "question": "What type of content do you enjoy consuming?",
+        "options": ["Tech blogs and tutorials", "Creative writing and podcasts", "News and documentaries", "Scientific journals and research"]
+      },
+      {
+        "id": 5, "category": "career_interest",
+        "question": "Which environment feels most natural to you?",
+        "options": ["A startup office with fast-paced innovation", "A studio with creative freedom", "A school or hospital helping others", "A lab or research center"]
+      },
+      {
+        "id": 6, "category": "career_interest",
+        "question": "What kind of problem would you love to solve professionally?",
+        "options": ["Making technology more efficient", "Making life more beautiful or meaningful", "Making society fairer and kinder", "Understanding how the universe works"]
+      },
+      {
+        "id": 7, "category": "career_interest",
+        "question": "Which of these industries appeals to you the most?",
+        "options": ["Information Technology", "Media and Entertainment", "Healthcare and Education", "Finance and Banking"]
+      },
+      {
+        "id": 8, "category": "career_interest",
+        "question": "How do you feel about working with machines and technology?",
+        "options": ["I love it, it's my passion", "I enjoy it occasionally", "I prefer human interaction more", "I only use it when necessary"]
+      },
+      {
+        "id": 9, "category": "career_interest",
+        "question": "What motivates you most in a career?",
+        "options": ["Innovation and building new things", "Expressing creativity and imagination", "Making a difference in people's lives", "Discovering new knowledge"]
+      },
+      {
+        "id": 10, "category": "career_interest",
+        "question": "Which of these would you choose as a hobby?",
+        "options": ["Programming or robotics", "Painting or music", "Coaching or social work", "Writing research or essays"]
+      },
+      {
+        "id": 11, "category": "career_interest",
+        "question": "How comfortable are you with numbers and statistics?",
+        "options": ["Very comfortable, I enjoy it", "Somewhat comfortable", "Not very comfortable", "I actively avoid it"]
+      },
+      {
+        "id": 12, "category": "career_interest",
+        "question": "Would you rather work on a single complex problem or handle many small tasks?",
+        "options": ["One deep complex problem", "Many varied small tasks", "A mix of both", "I prefer managing people over tasks"]
+      },
+      {
+        "id": 13, "category": "career_interest",
+        "question": "Which skill do you want to develop most?",
+        "options": ["Technical and coding skills", "Design and visual skills", "Communication and leadership", "Research and analytical skills"]
+      },
+      {
+        "id": 14, "category": "career_interest",
+        "question": "How do you feel about public speaking or presentations?",
+        "options": ["I love it", "I'm okay with it", "I prefer one-on-one conversations", "I avoid it whenever possible"]
+      },
+      {
+        "id": 15, "category": "career_interest",
+        "question": "Which celebrity's career inspires you most?",
+        "options": ["Elon Musk (tech entrepreneur)", "A.R. Rahman (musician/artist)", "APJ Abdul Kalam (scientist/teacher)", "Warren Buffett (investor/analyst)"]
+      },
+      {
+        "id": 16, "category": "career_interest",
+        "question": "What kind of output are you most proud to produce?",
+        "options": ["A working product or app", "A beautiful design or artwork", "A positive impact on a person", "An insightful report or discovery"]
+      },
+      {
+        "id": 17, "category": "career_interest",
+        "question": "How do you feel about repetitive, structured tasks?",
+        "options": ["I enjoy routine and structure", "I prefer some variety", "I need constant new challenges", "I adapt to whatever is needed"]
+      },
+      {
+        "id": 18, "category": "career_interest",
+        "question": "Which type of team would you thrive in?",
+        "options": ["A tech-focused engineering team", "A creative design team", "A community or social impact team", "An academic or research team"]
+      },
+      {
+        "id": 19, "category": "career_interest",
+        "question": "What is your relationship with deadlines?",
+        "options": ["I work best under pressure", "I plan ahead and meet them comfortably", "I sometimes struggle with them", "I prefer open-ended timelines"]
+      },
+      {
+        "id": 20, "category": "career_interest",
+        "question": "What is your dream impact on the world?",
+        "options": ["Build technology that changes industries", "Create art that moves people emotionally", "Help millions through social services", "Advance human knowledge through research"]
+      },
+
+      {
+        "id": 21, "category": "career_personality",
+        "question": "In a group project, you usually:",
+        "options": ["Take charge and lead the team", "Come up with creative ideas", "Make sure everyone is happy and heard", "Organize tasks and keep track of progress"]
+      },
+      {
+        "id": 22, "category": "career_personality",
+        "question": "When facing a difficult decision, you tend to:",
+        "options": ["Analyze all data before deciding", "Trust your instincts and feelings", "Ask others for their opinion", "Follow rules and past precedent"]
+      },
+      {
+        "id": 23, "category": "career_personality",
+        "question": "How do you handle failure?",
+        "options": ["Learn from it and adapt quickly", "Feel it deeply but recover slowly", "Talk to someone and seek support", "Analyze what went wrong systematically"]
+      },
+      {
+        "id": 24, "category": "career_personality",
+        "question": "Which word best describes you?",
+        "options": ["Ambitious", "Creative", "Empathetic", "Analytical"]
+      },
+      {
+        "id": 25, "category": "career_personality",
+        "question": "How do you recharge after a tough week?",
+        "options": ["Set new goals and push harder", "Work on a personal creative project", "Spend time with loved ones", "Read, study, or reflect alone"]
+      },
+      {
+        "id": 26, "category": "career_personality",
+        "question": "How do you approach new tasks?",
+        "options": ["Jump in and figure it out", "Research thoroughly before starting", "Ask a mentor for guidance", "Create a detailed plan first"]
+      },
+      {
+        "id": 27, "category": "career_personality",
+        "question": "How do others usually describe you?",
+        "options": ["A go-getter who gets things done", "A visionary who thinks differently", "A warm person others trust", "A careful thinker who rarely makes mistakes"]
+      },
+      {
+        "id": 28, "category": "career_personality",
+        "question": "In a meeting, you are most likely to:",
+        "options": ["Drive the agenda and decisions", "Suggest new and unconventional ideas", "Ensure every team member contributes", "Take detailed notes and ask precise questions"]
+      },
+      {
+        "id": 29, "category": "career_personality",
+        "question": "What is your biggest strength?",
+        "options": ["Determination and drive", "Imagination and creativity", "Patience and compassion", "Logic and precision"]
+      },
+      {
+        "id": 30, "category": "career_personality",
+        "question": "Which feedback motivates you more?",
+        "options": ["'You delivered results fast'", "'Your work was truly original'", "'You made our team feel supported'", "'Your analysis was flawless'"]
+      },
+      {
+        "id": 31, "category": "career_personality",
+        "question": "How do you handle conflicts at work?",
+        "options": ["Assert your position firmly", "Find a creative compromise", "Mediate and seek common ground", "Apply logical reasoning to resolve it"]
+      },
+      {
+        "id": 32, "category": "career_personality",
+        "question": "What does success mean to you?",
+        "options": ["Reaching the top of my field", "Creating something that lasts", "Improving others' lives", "Understanding something deeply"]
+      },
+      {
+        "id": 33, "category": "career_personality",
+        "question": "When starting a new job, you first:",
+        "options": ["Look for opportunities to lead", "Find ways to bring your unique ideas", "Build relationships with teammates", "Learn all the systems and processes"]
+      },
+      {
+        "id": 34, "category": "career_personality",
+        "question": "How important is work-life balance to you?",
+        "options": ["I prioritize work to get ahead", "Balance matters but passion drives me", "Family and personal life come first", "I value structured routines and rest"]
+      },
+      {
+        "id": 35, "category": "career_personality",
+        "question": "Which best describes your communication style?",
+        "options": ["Direct and confident", "Expressive and enthusiastic", "Warm and attentive", "Precise and evidence-based"]
+      },
+      {
+        "id": 36, "category": "career_personality",
+        "question": "When you're stuck on a problem, you:",
+        "options": ["Try multiple solutions quickly", "Think outside the box for new angles", "Collaborate with others to brainstorm", "Break the problem down methodically"]
+      },
+      {
+        "id": 37, "category": "career_personality",
+        "question": "How do you feel about taking risks?",
+        "options": ["I actively seek big opportunities", "I take risks when they feel inspired", "I prefer calculated and safe choices", "I only risk when data supports it"]
+      },
+      {
+        "id": 38, "category": "career_personality",
+        "question": "How competitive are you?",
+        "options": ["Highly competitive — I always want to win", "Competitive but collaborative at heart", "I prefer cooperation over competition", "I compete only with my past self"]
+      },
+      {
+        "id": 39, "category": "career_personality",
+        "question": "What kind of manager would you prefer?",
+        "options": ["A mentor who pushes me hard", "Someone who gives creative freedom", "A supportive and empathetic leader", "A structured and fair decision-maker"]
+      },
+      {
+        "id": 40, "category": "career_personality",
+        "question": "If your team disagrees with your idea, you:",
+        "options": ["Convince them with facts and persistence", "Adapt the idea to include their input", "Step back and support the team's decision", "Re-evaluate the idea with new data"]
+      },
+
+      {
+        "id": 41, "category": "career_motivation",
+        "question": "What gets you out of bed every morning?",
+        "options": ["The chance to achieve something great", "The desire to create something beautiful", "The opportunity to help someone today", "The need to learn something new"]
+      },
+      {
+        "id": 42, "category": "career_motivation",
+        "question": "How important is salary to your career choice?",
+        "options": ["It's the most important factor", "Important, but not the only factor", "Passion matters more than pay", "I want fair pay for quality work"]
+      },
+      {
+        "id": 43, "category": "career_motivation",
+        "question": "What would make you leave a comfortable job?",
+        "options": ["A bigger challenge or opportunity", "A chance to do more creative work", "A role with more social impact", "A role with more intellectual depth"]
+      },
+      {
+        "id": 44, "category": "career_motivation",
+        "question": "Which recognition means the most to you?",
+        "options": ["A promotion or raise", "An award for creative excellence", "Being called a role model by others", "A research paper or patent in your name"]
+      },
+      {
+        "id": 45, "category": "career_motivation",
+        "question": "How do you feel about long-term career planning?",
+        "options": ["I have a clear 10-year roadmap", "I follow inspiration wherever it leads", "I focus on serving others day by day", "I follow the path that keeps me learning"]
+      },
+      {
+        "id": 46, "category": "career_motivation",
+        "question": "What would you sacrifice for career success?",
+        "options": ["Leisure time and social life", "Financial security for passion work", "Personal comfort to help others", "Speed for accuracy and deep understanding"]
+      },
+      {
+        "id": 47, "category": "career_motivation",
+        "question": "Which scenario sounds most fulfilling?",
+        "options": ["Leading a company to global success", "Having millions experience your creative work", "Helping a community transform its future", "Making a scientific breakthrough"]
+      },
+      {
+        "id": 48, "category": "career_motivation",
+        "question": "How do you define meaningful work?",
+        "options": ["Work that builds power and influence", "Work that expresses who I am", "Work that serves a greater good", "Work that expands human knowledge"]
+      },
+      {
+        "id": 49, "category": "career_motivation",
+        "question": "What do you fear most professionally?",
+        "options": ["Being stuck in a low position", "Losing my creative spark", "Failing the people who depend on me", "Being wrong or making uninformed decisions"]
+      },
+      {
+        "id": 50, "category": "career_motivation",
+        "question": "How do you feel about job stability?",
+        "options": ["I'll take risks for big rewards", "I prefer freedom over stability", "Stability allows me to serve others better", "Stability lets me focus on deep work"]
+      },
+      {
+        "id": 51, "category": "career_motivation",
+        "question": "What makes you stay loyal to an employer?",
+        "options": ["Growth and advancement opportunities", "Creative freedom and appreciation", "A culture of care and inclusion", "Access to resources and interesting problems"]
+      },
+      {
+        "id": 52, "category": "career_motivation",
+        "question": "How important is your work's impact on society?",
+        "options": ["Secondary to personal success", "My work should inspire others", "It's the primary reason I work", "Impact should be grounded in evidence"]
+      },
+      {
+        "id": 53, "category": "career_motivation",
+        "question": "How do you respond when your work goes unrecognized?",
+        "options": ["I push harder to prove myself", "I find internal fulfillment in the work", "I check in with others for support", "I review my methods for improvement"]
+      },
+      {
+        "id": 54, "category": "career_motivation",
+        "question": "Would you prefer a high-paying boring job or a low-paying exciting job?",
+        "options": ["High-paying, I'll find excitement outside", "Low-paying if the work is truly meaningful", "I'd look for a creative middle ground", "Depends on the learning opportunities"]
+      },
+      {
+        "id": 55, "category": "career_motivation",
+        "question": "What does career growth mean to you?",
+        "options": ["Getting to higher positions and more power", "Evolving as an artist or creator", "Growing as a mentor or community leader", "Going deeper into expertise and mastery"]
+      },
+      {
+        "id": 56, "category": "career_motivation",
+        "question": "Which of these would motivate you to work overtime?",
+        "options": ["A chance at a big bonus or promotion", "A deadline for something I'm passionate about", "A colleague or person who needs my help", "An unsolved problem I want to crack"]
+      },
+      {
+        "id": 57, "category": "career_motivation",
+        "question": "How important is autonomy in your work?",
+        "options": ["Very important — I want full control", "Important — freedom fuels my creativity", "Somewhat — I prefer collaborative decisions", "Less important — I follow the best process"]
+      },
+      {
+        "id": 58, "category": "career_motivation",
+        "question": "What role does competition play in motivating you?",
+        "options": ["It drives my best performance", "I'm motivated by my own creative goals", "I prefer collaborative motivation", "I'm motivated by intellectual challenges, not people"]
+      },
+      {
+        "id": 59, "category": "career_motivation",
+        "question": "How do you feel about entrepreneurship?",
+        "options": ["I want to build my own company", "I'd love a creative studio or brand", "I'd run a social enterprise or NGO", "I prefer academic or corporate research"]
+      },
+      {
+        "id": 60, "category": "career_motivation",
+        "question": "What is your biggest professional dream?",
+        "options": ["To be a CEO or founder", "To create iconic work that lasts forever", "To change lives at a large scale", "To be known as a leading expert in my field"]
+      },
+
+      {
+        "id": 61, "category": "learning_style",
+        "question": "How do you best understand a new concept?",
+        "options": ["By building or coding something with it", "By seeing a visual diagram or demo", "By discussing it with someone else", "By reading detailed documentation"]
+      },
+      {
+        "id": 62, "category": "learning_style",
+        "question": "Which learning format works best for you?",
+        "options": ["Hands-on workshops and bootcamps", "Video tutorials and visual content", "Group discussions and peer learning", "Books, articles, and research papers"]
+      },
+      {
+        "id": 63, "category": "learning_style",
+        "question": "How do you prefer to take notes?",
+        "options": ["Code snippets and working examples", "Diagrams, mind maps, and sketches", "Conversations and voice memos", "Detailed structured written notes"]
+      },
+      {
+        "id": 64, "category": "learning_style",
+        "question": "When learning a new tool, you:",
+        "options": ["Immediately start experimenting with it", "Watch others use it first", "Ask a more experienced person for tips", "Read the full manual or guide first"]
+      },
+      {
+        "id": 65, "category": "learning_style",
+        "question": "How often do you revisit past material to review?",
+        "options": ["Rarely — I prefer to learn by doing", "Sometimes — if I have a visual reference", "Often — I learn best by teaching others", "Always — I review notes systematically"]
+      },
+      {
+        "id": 66, "category": "learning_style",
+        "question": "What kind of mentor would help you learn best?",
+        "options": ["Someone who gives real projects to work on", "Someone who inspires through examples and demos", "Someone who gives feedback and emotional support", "Someone who provides structured curriculum"]
+      },
+      {
+        "id": 67, "category": "learning_style",
+        "question": "In an online course, which section do you complete first?",
+        "options": ["The lab or coding project", "The video explanations", "The discussion forums", "The reading assignments"]
+      },
+      {
+        "id": 68, "category": "learning_style",
+        "question": "How do you deal with confusion during learning?",
+        "options": ["Try different approaches until it clicks", "Find a better visual explanation", "Ask someone who knows", "Research more deeply until it makes sense"]
+      },
+      {
+        "id": 69, "category": "learning_style",
+        "question": "How quickly do you typically pick up new skills?",
+        "options": ["Fast — I learn by doing immediately", "Moderately — I need some visual context", "I take time — understanding deeply matters", "It depends on how well it's explained"]
+      },
+      {
+        "id": 70, "category": "learning_style",
+        "question": "Which environment helps you focus best?",
+        "options": ["A quiet room with my tools and computer", "A visually inspiring space like a café", "A collaborative team environment", "A library or structured study room"]
+      },
+      {
+        "id": 71, "category": "learning_style",
+        "question": "How do you retain information best?",
+        "options": ["By applying it immediately to real problems", "By visualizing concepts in my mind", "By explaining it to someone else", "By writing detailed summaries"]
+      },
+      {
+        "id": 72, "category": "learning_style",
+        "question": "How do you feel about exams and assessments?",
+        "options": ["I prefer project-based evaluations", "I like portfolio-based reviews", "I prefer group presentations", "I do well in structured written exams"]
+      },
+      {
+        "id": 73, "category": "learning_style",
+        "question": "What is your preferred pace of learning?",
+        "options": ["Rapid and intensive", "Steady with visual checkpoints", "Collaborative at the group's pace", "Self-paced and thorough"]
+      },
+      {
+        "id": 74, "category": "learning_style",
+        "question": "How important is feedback during learning?",
+        "options": ["Critical — I iterate based on results", "I value visual progress indicators", "Very important — I need encouragement", "Very important — I want detailed critique"]
+      },
+      {
+        "id": 75, "category": "learning_style",
+        "question": "When you forget something, you:",
+        "options": ["Jump back in and re-experiment", "Look for a diagram or video to re-watch", "Call a friend who knows it well", "Re-read your original notes"]
+      },
+      {
+        "id": 76, "category": "learning_style",
+        "question": "How do you prepare for a big presentation or interview?",
+        "options": ["Practice by actually doing mock runs", "Visualize and prepare visual aids", "Rehearse with a friend or colleague", "Write and memorize detailed notes"]
+      },
+      {
+        "id": 77, "category": "learning_style",
+        "question": "Which learning resource do you trust most?",
+        "options": ["GitHub repos and live demos", "YouTube and visual explainers", "Mentors and experienced peers", "Wikipedia and academic papers"]
+      },
+      {
+        "id": 78, "category": "learning_style",
+        "question": "How do you typically learn soft skills?",
+        "options": ["By practicing in real situations", "By watching examples and role models", "By joining workshops with others", "By reading psychology and communication books"]
+      },
+      {
+        "id": 79, "category": "learning_style",
+        "question": "How do you track your own learning progress?",
+        "options": ["By the projects I've completed", "By seeing a portfolio grow", "By feedback from people I've helped", "By measuring knowledge against benchmarks"]
+      },
+      {
+        "id": 80, "category": "learning_style",
+        "question": "Which statement resonates with you most?",
+        "options": ["I learn by breaking things and fixing them", "I learn through inspiration and aesthetics", "I learn by working alongside others", "I learn by deep analysis and structure"]
+      },
+
+      {
+        "id": 81, "category": "scenario",
+        "question": "Your team's project deadline is tomorrow, but a critical bug appears. You:",
+        "options": ["Stay up all night to fix it yourself", "Rally the team and solve it together", "Escalate to leadership and ask for help", "Document the issue and provide a workaround"]
+      },
+      {
+        "id": 82, "category": "scenario",
+        "question": "Your manager gives you a creative task with no instructions. You:",
+        "options": ["Start immediately with your own vision", "Ask for examples or past work for reference", "Clarify the objective first before starting", "Research best practices before beginning"]
+      },
+      {
+        "id": 83, "category": "scenario",
+        "question": "A colleague takes credit for your idea in a meeting. You:",
+        "options": ["Calmly correct the record publicly", "Find creative ways to assert ownership later", "Talk to them privately after the meeting", "Document your contributions going forward"]
+      },
+      {
+        "id": 84, "category": "scenario",
+        "question": "You're offered a promotion that requires relocating. You:",
+        "options": ["Accept immediately — opportunity first", "Negotiate for a hybrid arrangement", "Consult your family before deciding", "Evaluate long-term career impact carefully"]
+      },
+      {
+        "id": 85, "category": "scenario",
+        "question": "You're leading a project and a team member underperforms. You:",
+        "options": ["Give them a direct, honest conversation", "Reassign them to tasks that suit their strengths", "Offer mentorship and emotional support", "Review performance metrics and set clear goals"]
+      },
+      {
+        "id": 86, "category": "scenario",
+        "question": "You have two job offers — one high-paying but boring, one exciting but lower pay. You:",
+        "options": ["Take the high-paying one to invest for later", "Take the exciting one without hesitation", "Negotiate for the best of both worlds", "Research the long-term growth of each role"]
+      },
+      {
+        "id": 87, "category": "scenario",
+        "question": "During a team brainstorm, nobody likes your idea. You:",
+        "options": ["Push for it with confidence and data", "Modify and evolve the idea based on feedback", "Support the team's chosen direction instead", "Withdraw to evaluate if the idea truly has merit"]
+      },
+      {
+        "id": 88, "category": "scenario",
+        "question": "You discover an ethical issue in your company. You:",
+        "options": ["Immediately escalate it to leadership", "Find a creative way to address it internally", "Talk to trusted colleagues first for advice", "Document the issue carefully before acting"]
+      },
+      {
+        "id": 89, "category": "scenario",
+        "question": "Your workload suddenly doubles. You:",
+        "options": ["Power through with extra hours", "Find creative shortcuts to maintain quality", "Delegate tasks to teammates", "Prioritize ruthlessly and communicate clearly"]
+      },
+      {
+        "id": 90, "category": "scenario",
+        "question": "A client is unhappy with your work. You:",
+        "options": ["Offer to fix it fast and exceed expectations", "Present a revised creative direction", "Apologize sincerely and listen to their concerns", "Review the brief and explain what was delivered"]
+      },
+      {
+        "id": 91, "category": "scenario",
+        "question": "You are asked to present to 200 people on short notice. You:",
+        "options": ["Prepare a few key points and go confidently", "Create a visually stunning deck quickly", "Rely on team support and co-present", "Spend every minute preparing detailed notes"]
+      },
+      {
+        "id": 92, "category": "scenario",
+        "question": "Your company wants to implement an idea you think is wrong. You:",
+        "options": ["Challenge it directly with alternatives", "Propose a creative pilot test first", "Express concerns then support the team's decision", "Present data-backed evidence against it"]
+      },
+      {
+        "id": 93, "category": "scenario",
+        "question": "A new technology disrupts your field overnight. You:",
+        "options": ["Jump in and master it immediately", "Explore how to creatively use it", "Discuss its implications with colleagues", "Study it deeply before forming an opinion"]
+      },
+      {
+        "id": 94, "category": "scenario",
+        "question": "You're mentoring a junior colleague who is struggling. You:",
+        "options": ["Give them tough challenges to grow fast", "Share inspiring examples and your creative journey", "Listen first, offer patience and emotional support", "Build a structured learning plan for them"]
+      },
+      {
+        "id": 95, "category": "scenario",
+        "question": "You receive harsh feedback on your best work. You:",
+        "options": ["Use it as fuel to do even better", "Appreciate the critique and revise creatively", "Seek clarity on what specifically didn't work", "Analyze the feedback point by point objectively"]
+      },
+      {
+        "id": 96, "category": "scenario",
+        "question": "You have to choose between finishing your project or attending an important event. You:",
+        "options": ["Finish the project — work comes first", "Find a creative way to do both", "Attend the event and make up time later", "Evaluate impact and make a logical choice"]
+      },
+      {
+        "id": 97, "category": "scenario",
+        "question": "Your team wins a major award. You:",
+        "options": ["Celebrate and immediately set a bigger goal", "Cherish the recognition and reflect on the journey", "Share gratitude with every team member publicly", "Analyze what made this work to replicate it"]
+      },
+      {
+        "id": 98, "category": "scenario",
+        "question": "You're in a meeting that is going completely off track. You:",
+        "options": ["Take charge and redirect the conversation", "Inject a creative reframe of the discussion", "Gently remind the group of the meeting objective", "Note the issues and suggest a follow-up structure"]
+      },
+      {
+        "id": 99, "category": "scenario",
+        "question": "You feel burnt out from work. You:",
+        "options": ["Push through — rest is for later", "Take a creative break to refresh", "Talk to a trusted friend or mentor", "Schedule proper rest and review your workload systematically"]
+      },
+      {
+        "id": 100, "category": "scenario",
+        "question": "You are given unlimited resources to solve one world problem. You choose:",
+        "options": ["Build an AI system to solve global inefficiencies", "Create media that changes how people see the world", "Fund healthcare and education for all", "Build the world's largest open research institute"]
+      }
+    ],
+
+    "HINDI": [
+      { "id": 1, "category": "career_interest", "question": "निम्न में से कौन सी गतिविधि आपको सबसे अधिक उत्साहित करती है?", "options": ["सॉफ्टवेयर या ऐप बनाना", "ग्राफिक्स या उत्पाद डिज़ाइन करना", "दूसरों को पढ़ाना या मार्गदर्शन करना", "डेटा का विश्लेषण करना"] },
+      { "id": 2, "category": "career_interest", "question": "यदि आपके पास खाली वीकेंड हो, तो आप क्या करना पसंद करेंगे?", "options": ["व्यक्तिगत प्रोजेक्ट कोड करना", "कला या संगीत बनाना", "स्वयंसेवा करना या लोगों की मदद करना", "शोध पत्र या किताबें पढ़ना"] },
+      { "id": 3, "category": "career_interest", "question": "स्कूल में आपको कौन सा विषय सबसे अधिक पसंद था?", "options": ["गणित और विज्ञान", "कला और साहित्य", "सामाजिक अध्ययन और इतिहास", "शारीरिक शिक्षा और खेल"] },
+      { "id": 4, "category": "career_interest", "question": "आप किस प्रकार की सामग्री पढ़ना/देखना पसंद करते हैं?", "options": ["तकनीकी ब्लॉग और ट्यूटोरियल", "रचनात्मक लेखन और पॉडकास्ट", "समाचार और वृत्तचित्र", "वैज्ञानिक पत्रिकाएं और शोध"] },
+      { "id": 5, "category": "career_interest", "question": "आपको कौन सा वातावरण सबसे स्वाभाविक लगता है?", "options": ["तेज़ गति वाला स्टार्टअप ऑफिस", "रचनात्मक स्वतंत्रता वाला स्टूडियो", "स्कूल या अस्पताल जहाँ लोगों की मदद हो", "प्रयोगशाला या अनुसंधान केंद्र"] },
+      { "id": 6, "category": "career_interest", "question": "आप पेशेवर रूप से किस समस्या को हल करना पसंद करेंगे?", "options": ["तकनीक को अधिक कुशल बनाना", "जीवन को अधिक सुंदर बनाना", "समाज को अधिक न्यायपूर्ण बनाना", "यह समझना कि ब्रह्मांड कैसे काम करता है"] },
+      { "id": 7, "category": "career_interest", "question": "आपको कौन सा उद्योग सबसे अधिक आकर्षित करता है?", "options": ["सूचना प्रौद्योगिकी", "मीडिया और मनोरंजन", "स्वास्थ्य सेवा और शिक्षा", "वित्त और बैंकिंग"] },
+      { "id": 8, "category": "career_interest", "question": "आप मशीनों और तकनीक के साथ काम करने के बारे में कैसा महसूस करते हैं?", "options": ["मुझे यह बहुत पसंद है, यह मेरा जुनून है", "मैं इसे कभी-कभी पसंद करता हूँ", "मैं मानवीय संवाद अधिक पसंद करता हूँ", "मैं इसे केवल तभी उपयोग करता हूँ जब जरूरी हो"] },
+      { "id": 9, "category": "career_interest", "question": "करियर में आपको सबसे अधिक क्या प्रेरित करता है?", "options": ["नवाचार और नई चीजें बनाना", "रचनात्मकता और कल्पना व्यक्त करना", "लोगों के जीवन में अंतर लाना", "नया ज्ञान खोजना"] },
+      { "id": 10, "category": "career_interest", "question": "आप शौक के रूप में इनमें से क्या चुनेंगे?", "options": ["प्रोग्रामिंग या रोबोटिक्स", "चित्रकारी या संगीत", "कोचिंग या सामाजिक कार्य", "शोध लेखन या निबंध"] },
+      { "id": 11, "category": "career_interest", "question": "आप संख्याओं और आँकड़ों के साथ कितने सहज हैं?", "options": ["बहुत सहज, मुझे यह पसंद है", "कुछ हद तक सहज", "बहुत सहज नहीं", "मैं सक्रिय रूप से इससे बचता हूँ"] },
+      { "id": 12, "category": "career_interest", "question": "क्या आप एक जटिल समस्या पर काम करेंगे या कई छोटे कार्यों को संभालेंगे?", "options": ["एक गहरी जटिल समस्या", "कई विविध छोटे कार्य", "दोनों का मिश्रण", "मैं कार्यों के बजाय लोगों का प्रबंधन करना पसंद करता हूँ"] },
+      { "id": 13, "category": "career_interest", "question": "आप सबसे अधिक कौन सा कौशल विकसित करना चाहते हैं?", "options": ["तकनीकी और कोडिंग कौशल", "डिज़ाइन और दृश्य कौशल", "संचार और नेतृत्व", "शोध और विश्लेषणात्मक कौशल"] },
+      { "id": 14, "category": "career_interest", "question": "आप सार्वजनिक बोलने या प्रस्तुतियों के बारे में कैसा महसूस करते हैं?", "options": ["मुझे यह बहुत पसंद है", "मैं इसके साथ ठीक हूँ", "मैं आमने-सामने बातचीत पसंद करता हूँ", "मैं इससे जितना हो सके बचता हूँ"] },
+      { "id": 15, "category": "career_interest", "question": "किस हस्ती का करियर आपको सबसे अधिक प्रेरित करता है?", "options": ["एलन मस्क (तकनीकी उद्यमी)", "ए.आर. रहमान (संगीतकार/कलाकार)", "एपीजे अब्दुल कलाम (वैज्ञानिक/शिक्षक)", "वारेन बफेट (निवेशक/विश्लेषक)"] },
+      { "id": 16, "category": "career_interest", "question": "किस प्रकार के परिणाम पर आपको सबसे अधिक गर्व होता है?", "options": ["एक काम करने वाला उत्पाद या ऐप", "एक सुंदर डिज़ाइन या कलाकृति", "किसी व्यक्ति पर सकारात्मक प्रभाव", "एक अंतर्दृष्टिपूर्ण रिपोर्ट या खोज"] },
+      { "id": 17, "category": "career_interest", "question": "आप दोहराव वाले, संरचित कार्यों के बारे में कैसा महसूस करते हैं?", "options": ["मुझे दिनचर्या और संरचना पसंद है", "मैं कुछ विविधता पसंद करता हूँ", "मुझे लगातार नई चुनौतियां चाहिए", "जो भी जरूरी हो उसके अनुसार ढल जाता हूँ"] },
+      { "id": 18, "category": "career_interest", "question": "आप किस प्रकार की टीम में सफल होंगे?", "options": ["एक तकनीकी-केंद्रित इंजीनियरिंग टीम", "एक रचनात्मक डिज़ाइन टीम", "एक सामुदायिक या सामाजिक प्रभाव टीम", "एक अकादमिक या शोध टीम"] },
+      { "id": 19, "category": "career_interest", "question": "समय-सीमाओं के साथ आपका संबंध कैसा है?", "options": ["मैं दबाव में सबसे अच्छा काम करता हूँ", "मैं पहले से योजना बनाता हूँ और आरामदायक रूप से पूरा करता हूँ", "मुझे कभी-कभी उनके साथ संघर्ष होता है", "मैं खुली समय-सीमाएं पसंद करता हूँ"] },
+      { "id": 20, "category": "career_interest", "question": "दुनिया पर आपका सपने वाला प्रभाव क्या है?", "options": ["ऐसी तकनीक बनाना जो उद्योगों को बदल दे", "ऐसी कला बनाना जो भावनात्मक रूप से छू जाए", "सामाजिक सेवाओं के माध्यम से लाखों की मदद करना", "शोध के माध्यम से मानव ज्ञान को आगे बढ़ाना"] },
+
+      { "id": 21, "category": "career_personality", "question": "समूह परियोजना में आप आमतौर पर:", "options": ["नेतृत्व करते हैं और टीम का नेतृत्व करते हैं", "रचनात्मक विचार लाते हैं", "सभी को खुश और सुना हुआ महसूस कराते हैं", "कार्यों को व्यवस्थित और ट्रैक करते हैं"] },
+      { "id": 22, "category": "career_personality", "question": "कठिन निर्णय का सामना करते समय आप:", "options": ["निर्णय से पहले सभी डेटा का विश्लेषण करते हैं", "अपनी प्रवृत्ति और भावनाओं पर भरोसा करते हैं", "दूसरों से राय माँगते हैं", "नियमों और पिछले उदाहरणों का पालन करते हैं"] },
+      { "id": 23, "category": "career_personality", "question": "आप असफलता को कैसे संभालते हैं?", "options": ["इससे सीखते हैं और तेजी से अनुकूलित होते हैं", "इसे गहराई से महसूस करते हैं लेकिन धीरे-धीरे उबरते हैं", "किसी से बात करते हैं और समर्थन मांगते हैं", "क्या गलत हुआ इसका व्यवस्थित रूप से विश्लेषण करते हैं"] },
+      { "id": 24, "category": "career_personality", "question": "आपका सबसे अच्छा वर्णन कौन सा शब्द करता है?", "options": ["महत्वाकांक्षी", "रचनात्मक", "सहानुभूतिपूर्ण", "विश्लेषणात्मक"] },
+      { "id": 25, "category": "career_personality", "question": "कठिन सप्ताह के बाद आप कैसे रिचार्ज होते हैं?", "options": ["नए लक्ष्य निर्धारित करते हैं और कड़ी मेहनत करते हैं", "किसी व्यक्तिगत रचनात्मक परियोजना पर काम करते हैं", "प्रियजनों के साथ समय बिताते हैं", "अकेले पढ़ते, अध्ययन करते या विचार करते हैं"] },
+      { "id": 26, "category": "career_personality", "question": "नए कार्यों के प्रति आपका दृष्टिकोण कैसा है?", "options": ["तुरंत शुरू करके सीखते हैं", "शुरू करने से पहले गहराई से शोध करते हैं", "मार्गदर्शन के लिए मेंटर से पूछते हैं", "पहले एक विस्तृत योजना बनाते हैं"] },
+      { "id": 27, "category": "career_personality", "question": "दूसरे लोग आपको आमतौर पर कैसे वर्णित करते हैं?", "options": ["एक ऐसा व्यक्ति जो काम पूरा करता है", "एक दूरदर्शी जो अलग तरह से सोचता है", "एक गर्म व्यक्ति जिस पर लोग भरोसा करते हैं", "एक सावधान विचारक जो शायद ही कभी गलती करता है"] },
+      { "id": 28, "category": "career_personality", "question": "बैठक में आप सबसे अधिक संभावना:", "options": ["एजेंडा और निर्णयों को आगे बढ़ाते हैं", "नए और अपरंपरागत विचार सुझाते हैं", "यह सुनिश्चित करते हैं कि हर टीम सदस्य योगदान करे", "विस्तृत नोट्स लेते हैं और सटीक प्रश्न पूछते हैं"] },
+      { "id": 29, "category": "career_personality", "question": "आपकी सबसे बड़ी ताकत क्या है?", "options": ["दृढ़ संकल्प और प्रेरणा", "कल्पना और रचनात्मकता", "धैर्य और करुणा", "तर्क और सटीकता"] },
+      { "id": 30, "category": "career_personality", "question": "कौन सी प्रतिक्रिया आपको अधिक प्रेरित करती है?", "options": ["'आपने परिणाम तेज़ी से दिए'", "'आपका काम वास्तव में मौलिक था'", "'आपने हमारी टीम को समर्थित महसूस कराया'", "'आपका विश्लेषण त्रुटिहीन था'"] },
+      { "id": 31, "category": "career_personality", "question": "काम पर संघर्षों को आप कैसे संभालते हैं?", "options": ["दृढ़ता से अपनी स्थिति का दावा करते हैं", "रचनात्मक समझौता खोजते हैं", "मध्यस्थता करते हैं और आम जमीन खोजते हैं", "इसे हल करने के लिए तार्किक तर्क लागू करते हैं"] },
+      { "id": 32, "category": "career_personality", "question": "आपके लिए सफलता का क्या अर्थ है?", "options": ["अपने क्षेत्र में शीर्ष पर पहुँचना", "कुछ ऐसा बनाना जो टिके", "दूसरों के जीवन को बेहतर बनाना", "किसी चीज़ को गहराई से समझना"] },
+      { "id": 33, "category": "career_personality", "question": "नई नौकरी शुरू करते समय आप पहले:", "options": ["नेतृत्व के अवसर खोजते हैं", "अपने अनूठे विचार लाने के तरीके खोजते हैं", "टीम के सदस्यों के साथ संबंध बनाते हैं", "सभी प्रणालियों और प्रक्रियाओं को सीखते हैं"] },
+      { "id": 34, "category": "career_personality", "question": "कार्य-जीवन संतुलन आपके लिए कितना महत्वपूर्ण है?", "options": ["मैं आगे बढ़ने के लिए काम को प्राथमिकता देता हूँ", "संतुलन मायने रखता है लेकिन जुनून मुझे आगे बढ़ाता है", "परिवार और व्यक्तिगत जीवन पहले आते हैं", "मैं संरचित दिनचर्या और आराम को महत्व देता हूँ"] },
+      { "id": 35, "category": "career_personality", "question": "आपकी संचार शैली का सबसे अच्छा वर्णन कौन सा है?", "options": ["सीधा और आत्मविश्वास से भरा", "अभिव्यंजक और उत्साही", "गर्म और ध्यान देने वाला", "सटीक और साक्ष्य-आधारित"] },
+      { "id": 36, "category": "career_personality", "question": "जब आप किसी समस्या पर अटक जाते हैं, तो आप:", "options": ["तेजी से कई समाधान आज़माते हैं", "नए कोणों के लिए बॉक्स के बाहर सोचते हैं", "विचार-मंथन के लिए दूसरों के साथ सहयोग करते हैं", "समस्या को व्यवस्थित रूप से तोड़ते हैं"] },
+      { "id": 37, "category": "career_personality", "question": "जोखिम लेने के बारे में आप कैसा महसूस करते हैं?", "options": ["मैं सक्रिय रूप से बड़े अवसरों की तलाश करता हूँ", "मैं तब जोखिम लेता हूँ जब वे प्रेरित लगते हैं", "मैं गणना किए गए और सुरक्षित विकल्पों को पसंद करता हूँ", "मैं केवल तभी जोखिम लेता हूँ जब डेटा समर्थन करता है"] },
+      { "id": 38, "category": "career_personality", "question": "आप कितने प्रतिस्पर्धी हैं?", "options": ["बहुत प्रतिस्पर्धी - मैं हमेशा जीतना चाहता हूँ", "प्रतिस्पर्धी लेकिन दिल से सहयोगी", "मैं प्रतिस्पर्धा की बजाय सहयोग पसंद करता हूँ", "मैं केवल अपने पिछले स्व से प्रतिस्पर्धा करता हूँ"] },
+      { "id": 39, "category": "career_personality", "question": "आप किस प्रकार के प्रबंधक को पसंद करेंगे?", "options": ["एक मेंटर जो मुझे कड़ी मेहनत करवाता है", "कोई जो रचनात्मक स्वतंत्रता देता है", "एक सहायक और सहानुभूतिपूर्ण नेता", "एक संरचित और निष्पक्ष निर्णय लेने वाला"] },
+      { "id": 40, "category": "career_personality", "question": "यदि आपकी टीम आपके विचार से असहमत है, तो आप:", "options": ["तथ्यों और दृढ़ता के साथ उन्हें समझाते हैं", "उनके इनपुट को शामिल करने के लिए विचार को अनुकूलित करते हैं", "पीछे हट जाते हैं और टीम के निर्णय का समर्थन करते हैं", "नए डेटा के साथ विचार का पुनर्मूल्यांकन करते हैं"] },
+
+      { "id": 41, "category": "career_motivation", "question": "हर सुबह आपको क्या उठाता है?", "options": ["कुछ महान हासिल करने का मौका", "कुछ सुंदर बनाने की इच्छा", "आज किसी की मदद करने का अवसर", "कुछ नया सीखने की जरूरत"] },
+      { "id": 42, "category": "career_motivation", "question": "करियर चुनाव में वेतन कितना महत्वपूर्ण है?", "options": ["यह सबसे महत्वपूर्ण कारक है", "महत्वपूर्ण, लेकिन एकमात्र कारक नहीं", "जुनून वेतन से अधिक मायने रखता है", "मैं गुणवत्तापूर्ण काम के लिए उचित वेतन चाहता हूँ"] },
+      { "id": 43, "category": "career_motivation", "question": "एक आरामदायक नौकरी छोड़ने पर क्या मजबूर करेगा?", "options": ["एक बड़ी चुनौती या अवसर", "अधिक रचनात्मक काम करने का मौका", "अधिक सामाजिक प्रभाव वाली भूमिका", "अधिक बौद्धिक गहराई वाली भूमिका"] },
+      { "id": 44, "category": "career_motivation", "question": "आपके लिए सबसे अधिक मायने रखने वाली मान्यता कौन सी है?", "options": ["पदोन्नति या वेतन वृद्धि", "रचनात्मक उत्कृष्टता के लिए पुरस्कार", "दूसरों द्वारा एक आदर्श कहलाना", "आपके नाम पर शोध पत्र या पेटेंट"] },
+      { "id": 45, "category": "career_motivation", "question": "दीर्घकालिक करियर योजना के बारे में आप कैसा महसूस करते हैं?", "options": ["मेरे पास एक स्पष्ट 10 साल का रोडमैप है", "मैं प्रेरणा जहाँ ले जाए वहाँ जाता हूँ", "मैं रोजाना दूसरों की सेवा पर ध्यान देता हूँ", "मैं उस रास्ते पर चलता हूँ जो सीखते रहने देता है"] },
+      { "id": 46, "category": "career_motivation", "question": "करियर सफलता के लिए आप क्या बलिदान करेंगे?", "options": ["अवकाश समय और सामाजिक जीवन", "जुनून के काम के लिए वित्तीय सुरक्षा", "दूसरों की मदद के लिए व्यक्तिगत आराम", "गहरी समझ के लिए गति से समझौता"] },
+      { "id": 47, "category": "career_motivation", "question": "कौन सा परिदृश्य सबसे संतोषजनक लगता है?", "options": ["किसी कंपनी को वैश्विक सफलता की ओर ले जाना", "लाखों लोगों को आपके रचनात्मक काम का अनुभव कराना", "किसी समुदाय को बदलने में मदद करना", "वैज्ञानिक सफलता पाना"] },
+      { "id": 48, "category": "career_motivation", "question": "आप सार्थक काम को कैसे परिभाषित करते हैं?", "options": ["काम जो शक्ति और प्रभाव बनाता है", "काम जो मैं हूँ उसे व्यक्त करता है", "काम जो एक बड़े भले की सेवा करता है", "काम जो मानव ज्ञान का विस्तार करता है"] },
+      { "id": 49, "category": "career_motivation", "question": "पेशेवर रूप से आप सबसे अधिक क्या डरते हैं?", "options": ["निम्न पद में फँसे रहना", "अपनी रचनात्मक चिंगारी खोना", "जो लोग मुझ पर निर्भर हैं उन्हें निराश करना", "गलत होना या अज्ञानी निर्णय लेना"] },
+      { "id": 50, "category": "career_motivation", "question": "नौकरी की स्थिरता के बारे में आप कैसा महसूस करते हैं?", "options": ["बड़े पुरस्कारों के लिए जोखिम लूँगा", "स्थिरता की बजाय स्वतंत्रता पसंद करता हूँ", "स्थिरता मुझे दूसरों की बेहतर सेवा करने देती है", "स्थिरता मुझे गहरे काम पर ध्यान केंद्रित करने देती है"] },
+      { "id": 51, "category": "career_motivation", "question": "किसी नियोक्ता के प्रति आपको वफादार क्या बनाता है?", "options": ["विकास और उन्नति के अवसर", "रचनात्मक स्वतंत्रता और सराहना", "देखभाल और समावेश की संस्कृति", "संसाधनों और रोचक समस्याओं तक पहुँच"] },
+      { "id": 52, "category": "career_motivation", "question": "समाज पर आपके काम का प्रभाव कितना महत्वपूर्ण है?", "options": ["व्यक्तिगत सफलता से द्वितीयक", "मेरे काम को दूसरों को प्रेरित करना चाहिए", "यह काम करने का प्राथमिक कारण है", "प्रभाव साक्ष्य पर आधारित होना चाहिए"] },
+      { "id": 53, "category": "career_motivation", "question": "जब आपका काम अपरिचित रहता है तो आप कैसे प्रतिक्रिया देते हैं?", "options": ["खुद को साबित करने के लिए और मेहनत करता हूँ", "काम में आंतरिक संतुष्टि पाता हूँ", "समर्थन के लिए दूसरों से जाँच करता हूँ", "सुधार के लिए अपने तरीकों की समीक्षा करता हूँ"] },
+      { "id": 54, "category": "career_motivation", "question": "क्या आप अधिक वेतन वाली उबाऊ नौकरी पसंद करेंगे या कम वेतन वाली रोमांचक नौकरी?", "options": ["अधिक वेतन, बाहर से रोमांच खोजूँगा", "कम वेतन अगर काम वास्तव में सार्थक हो", "रचनात्मक मध्य मार्ग खोजूँगा", "सीखने के अवसरों पर निर्भर करता है"] },
+      { "id": 55, "category": "career_motivation", "question": "करियर विकास का आपके लिए क्या अर्थ है?", "options": ["उच्च पदों और अधिक शक्ति की ओर बढ़ना", "कलाकार या निर्माता के रूप में विकसित होना", "एक मेंटर या सामुदायिक नेता के रूप में बढ़ना", "विशेषज्ञता और महारत में गहराई से जाना"] },
+      { "id": 56, "category": "career_motivation", "question": "इनमें से कौन सी बात आपको ओवरटाइम करने के लिए प्रेरित करेगी?", "options": ["बड़े बोनस या पदोन्नति का मौका", "किसी ऐसी चीज़ के लिए समयसीमा जिसके बारे में मैं उत्साहित हूँ", "एक सहयोगी या व्यक्ति जिसे मेरी मदद चाहिए", "एक अनसुलझी समस्या जिसे मैं सुलझाना चाहता हूँ"] },
+      { "id": 57, "category": "career_motivation", "question": "काम में स्वायत्तता कितनी महत्वपूर्ण है?", "options": ["बहुत महत्वपूर्ण - मैं पूरा नियंत्रण चाहता हूँ", "महत्वपूर्ण - स्वतंत्रता मेरी रचनात्मकता को बढ़ावा देती है", "कुछ हद तक - मैं सहयोगी निर्णय पसंद करता हूँ", "कम महत्वपूर्ण - मैं सर्वोत्तम प्रक्रिया का पालन करता हूँ"] },
+      { "id": 58, "category": "career_motivation", "question": "प्रेरणा में प्रतिस्पर्धा क्या भूमिका निभाती है?", "options": ["यह मेरा सर्वश्रेष्ठ प्रदर्शन प्रेरित करती है", "मैं अपने रचनात्मक लक्ष्यों से प्रेरित हूँ", "मैं सहयोगी प्रेरणा पसंद करता हूँ", "मैं बौद्धिक चुनौतियों से प्रेरित हूँ, लोगों से नहीं"] },
+      { "id": 59, "category": "career_motivation", "question": "उद्यमिता के बारे में आप कैसा महसूस करते हैं?", "options": ["मैं अपनी खुद की कंपनी बनाना चाहता हूँ", "मैं एक रचनात्मक स्टूडियो या ब्रांड पसंद करूँगा", "मैं एक सामाजिक उद्यम या एनजीओ चलाऊँगा", "मैं अकादमिक या कॉर्पोरेट शोध पसंद करता हूँ"] },
+      { "id": 60, "category": "career_motivation", "question": "आपका सबसे बड़ा पेशेवर सपना क्या है?", "options": ["सीईओ या संस्थापक बनना", "ऐसा प्रतिष्ठित काम बनाना जो हमेशा रहे", "बड़े पैमाने पर जीवन बदलना", "अपने क्षेत्र के प्रमुख विशेषज्ञ के रूप में जाने जाना"] },
+
+      { "id": 61, "category": "learning_style", "question": "आप एक नई अवधारणा को सबसे अच्छे तरीके से कैसे समझते हैं?", "options": ["इसके साथ कुछ बना कर या कोड कर के", "एक दृश्य आरेख या डेमो देख कर", "किसी के साथ इस पर चर्चा कर के", "विस्तृत दस्तावेज़ीकरण पढ़ कर"] },
+      { "id": 62, "category": "learning_style", "question": "कौन सा सीखने का प्रारूप आपके लिए सबसे अच्छा काम करता है?", "options": ["व्यावहारिक कार्यशालाएँ और बूटकैंप", "वीडियो ट्यूटोरियल और दृश्य सामग्री", "समूह चर्चा और साथियों का सीखना", "किताबें, लेख और शोध पत्र"] },
+      { "id": 63, "category": "learning_style", "question": "आप नोट्स कैसे लेना पसंद करते हैं?", "options": ["कोड स्निपेट और काम करने वाले उदाहरण", "आरेख, माइंड मैप और स्केच", "बातचीत और वॉयस मेमो", "विस्तृत संरचित लिखित नोट्स"] },
+      { "id": 64, "category": "learning_style", "question": "एक नया टूल सीखते समय आप:", "options": ["तुरंत इसके साथ प्रयोग शुरू करते हैं", "पहले दूसरों को इसका उपयोग करते देखते हैं", "टिप्स के लिए अधिक अनुभवी व्यक्ति से पूछते हैं", "पहले पूरा मैनुअल या गाइड पढ़ते हैं"] },
+      { "id": 65, "category": "learning_style", "question": "आप समीक्षा के लिए पिछली सामग्री कितनी बार दोबारा देखते हैं?", "options": ["शायद ही कभी - मैं करके सीखना पसंद करता हूँ", "कभी-कभी - यदि मेरे पास दृश्य संदर्भ है", "अक्सर - मैं दूसरों को पढ़ाकर सबसे अच्छा सीखता हूँ", "हमेशा - मैं व्यवस्थित रूप से नोट्स की समीक्षा करता हूँ"] },
+      { "id": 66, "category": "learning_style", "question": "किस प्रकार का मेंटर आपको सबसे अच्छा सीखने में मदद करेगा?", "options": ["कोई जो काम करने के लिए वास्तविक प्रोजेक्ट देता है", "कोई जो उदाहरणों और डेमो के माध्यम से प्रेरित करता है", "कोई जो प्रतिक्रिया और भावनात्मक समर्थन देता है", "कोई जो संरचित पाठ्यक्रम प्रदान करता है"] },
+      { "id": 67, "category": "learning_style", "question": "ऑनलाइन कोर्स में आप पहले कौन सा अनुभाग पूरा करते हैं?", "options": ["लैब या कोडिंग प्रोजेक्ट", "वीडियो स्पष्टीकरण", "चर्चा मंच", "पठन कार्य"] },
+      { "id": 68, "category": "learning_style", "question": "सीखते समय भ्रम होने पर आप कैसे निपटते हैं?", "options": ["जब तक समझ न आए तब तक विभिन्न दृष्टिकोण आज़माते हैं", "एक बेहतर दृश्य स्पष्टीकरण खोजते हैं", "किसी ऐसे व्यक्ति से पूछते हैं जो जानता हो", "जब तक समझ न आए तब तक और गहराई से शोध करते हैं"] },
+      { "id": 69, "category": "learning_style", "question": "आप आमतौर पर नए कौशल कितनी तेजी से सीखते हैं?", "options": ["तेज़ - मैं तुरंत करके सीखता हूँ", "मध्यम - मुझे कुछ दृश्य संदर्भ चाहिए", "मैं समय लेता हूँ - गहरी समझ मायने रखती है", "यह इस बात पर निर्भर करता है कि इसे कितनी अच्छी तरह समझाया गया है"] },
+      { "id": 70, "category": "learning_style", "question": "कौन सा वातावरण आपको सबसे अच्छे से ध्यान केंद्रित करने में मदद करता है?", "options": ["अपने उपकरणों और कंप्यूटर के साथ एक शांत कमरा", "एक दृश्य रूप से प्रेरणादायक स्थान जैसे कैफे", "एक सहयोगी टीम वातावरण", "एक पुस्तकालय या संरचित अध्ययन कक्ष"] },
+      { "id": 71, "category": "learning_style", "question": "आप जानकारी को सबसे अच्छे तरीके से कैसे बनाए रखते हैं?", "options": ["इसे तुरंत वास्तविक समस्याओं में लागू कर के", "अपने मन में अवधारणाओं को कल्पना कर के", "इसे किसी दूसरे को समझाकर", "विस्तृत सारांश लिखकर"] },
+      { "id": 72, "category": "learning_style", "question": "परीक्षाओं और आकलन के बारे में आप कैसा महसूस करते हैं?", "options": ["मैं परियोजना-आधारित मूल्यांकन पसंद करता हूँ", "मुझे पोर्टफोलियो-आधारित समीक्षाएं पसंद हैं", "मैं समूह प्रस्तुतियाँ पसंद करता हूँ", "मैं संरचित लिखित परीक्षाओं में अच्छा करता हूँ"] },
+      { "id": 73, "category": "learning_style", "question": "सीखने की आपकी पसंदीदा गति क्या है?", "options": ["तेज़ और गहन", "दृश्य चेकपॉइंट के साथ स्थिर", "समूह की गति पर सहयोगी", "स्व-गति और संपूर्ण"] },
+      { "id": 74, "category": "learning_style", "question": "सीखते समय फीडबैक कितना महत्वपूर्ण है?", "options": ["महत्वपूर्ण - मैं परिणामों के आधार पर पुनरावृत्ति करता हूँ", "मैं दृश्य प्रगति संकेतकों को महत्व देता हूँ", "बहुत महत्वपूर्ण - मुझे प्रोत्साहन चाहिए", "बहुत महत्वपूर्ण - मैं विस्तृत आलोचना चाहता हूँ"] },
+      { "id": 75, "category": "learning_style", "question": "जब आप कुछ भूल जाते हैं, तो आप:", "options": ["वापस जाकर फिर से प्रयोग करते हैं", "फिर से देखने के लिए आरेख या वीडियो खोजते हैं", "किसी दोस्त को बुलाते हैं जो इसे अच्छी तरह जानता हो", "अपने मूल नोट्स दोबारा पढ़ते हैं"] },
+      { "id": 76, "category": "learning_style", "question": "एक बड़ी प्रस्तुति या साक्षात्कार के लिए आप कैसे तैयारी करते हैं?", "options": ["वास्तविक मॉक रन करके अभ्यास करते हैं", "कल्पना करते हैं और दृश्य सहायता तैयार करते हैं", "किसी मित्र या सहयोगी के साथ रिहर्सल करते हैं", "विस्तृत नोट्स लिखते और याद करते हैं"] },
+      { "id": 77, "category": "learning_style", "question": "आप किस सीखने के संसाधन पर सबसे अधिक भरोसा करते हैं?", "options": ["GitHub रेपो और लाइव डेमो", "YouTube और दृश्य व्याख्याकर्ता", "मेंटर और अनुभवी साथी", "विकिपीडिया और अकादमिक पत्र"] },
+      { "id": 78, "category": "learning_style", "question": "आप आम तौर पर सॉफ्ट स्किल कैसे सीखते हैं?", "options": ["वास्तविक स्थितियों में अभ्यास करके", "उदाहरणों और रोल मॉडल देखकर", "दूसरों के साथ कार्यशालाओं में शामिल होकर", "मनोविज्ञान और संचार पुस्तकें पढ़कर"] },
+      { "id": 79, "category": "learning_style", "question": "आप अपनी सीखने की प्रगति को कैसे ट्रैक करते हैं?", "options": ["मैंने जो प्रोजेक्ट पूरे किए हैं उनसे", "पोर्टफोलियो बढ़ते देखकर", "मैंने जिन लोगों की मदद की है उनकी प्रतिक्रिया से", "ज्ञान को बेंचमार्क के विरुद्ध मापकर"] },
+      { "id": 80, "category": "learning_style", "question": "आपके साथ कौन सा कथन सबसे अधिक मेल खाता है?", "options": ["मैं चीजों को तोड़कर और ठीक करके सीखता हूँ", "मैं प्रेरणा और सौंदर्यशास्त्र के माध्यम से सीखता हूँ", "मैं दूसरों के साथ मिलकर काम करके सीखता हूँ", "मैं गहरे विश्लेषण और संरचना के माध्यम से सीखता हूँ"] },
+
+      { "id": 81, "category": "scenario", "question": "आपकी टीम की परियोजना की समयसीमा कल है, लेकिन एक गंभीर बग आता है। आप:", "options": ["रात भर जागकर खुद ठीक करते हैं", "टीम को इकट्ठा करते हैं और मिलकर हल करते हैं", "नेतृत्व को बढ़ाते हैं और मदद माँगते हैं", "समस्या का दस्तावेजीकरण करते हैं और वर्कअराउंड प्रदान करते हैं"] },
+      { "id": 82, "category": "scenario", "question": "आपका प्रबंधक आपको बिना किसी निर्देश के एक रचनात्मक कार्य देता है। आप:", "options": ["तुरंत अपनी दृष्टि के साथ शुरू करते हैं", "संदर्भ के लिए उदाहरण या पिछला काम माँगते हैं", "शुरू करने से पहले पहले उद्देश्य स्पष्ट करते हैं", "शुरू करने से पहले सर्वोत्तम प्रथाओं का शोध करते हैं"] },
+      { "id": 83, "category": "scenario", "question": "एक सहयोगी बैठक में आपके विचार का श्रेय ले लेता है। आप:", "options": ["शांतिपूर्वक सार्वजनिक रूप से रिकॉर्ड सुधारते हैं", "बाद में स्वामित्व दावा करने के रचनात्मक तरीके खोजते हैं", "बैठक के बाद उनसे निजी तौर पर बात करते हैं", "आगे अपने योगदान का दस्तावेजीकरण करते हैं"] },
+      { "id": 84, "category": "scenario", "question": "आपको एक ऐसी पदोन्नति की पेशकश की जाती है जिसमें स्थानांतरण की आवश्यकता है। आप:", "options": ["तुरंत स्वीकार करते हैं - अवसर पहले", "हाइब्रिड व्यवस्था के लिए बातचीत करते हैं", "निर्णय लेने से पहले परिवार से परामर्श करते हैं", "दीर्घकालिक करियर प्रभाव का सावधानीपूर्वक मूल्यांकन करते हैं"] },
+      { "id": 85, "category": "scenario", "question": "आप एक परियोजना का नेतृत्व कर रहे हैं और एक टीम सदस्य कम प्रदर्शन करता है। आप:", "options": ["उन्हें एक सीधी, ईमानदार बातचीत देते हैं", "उन्हें उनकी ताकत के अनुकूल कार्यों में पुनः नियुक्त करते हैं", "मार्गदर्शन और भावनात्मक समर्थन प्रदान करते हैं", "प्रदर्शन मेट्रिक्स की समीक्षा करते हैं और स्पष्ट लक्ष्य निर्धारित करते हैं"] },
+      { "id": 86, "category": "scenario", "question": "आपके पास दो नौकरी के प्रस्ताव हैं। आप:", "options": ["बाद में निवेश के लिए अधिक वेतन वाली नौकरी लेते हैं", "बिना झिझक रोमांचक नौकरी लेते हैं", "दोनों का सर्वश्रेष्ठ पाने के लिए बातचीत करते हैं", "प्रत्येक भूमिका के दीर्घकालिक विकास का शोध करते हैं"] },
+      { "id": 87, "category": "scenario", "question": "टीम ब्रेनस्टॉर्म के दौरान, किसी को आपका विचार पसंद नहीं आता। आप:", "options": ["आत्मविश्वास और डेटा के साथ इसके लिए दबाव डालते हैं", "फीडबैक के आधार पर विचार को संशोधित और विकसित करते हैं", "इसके बजाय टीम की चुनी दिशा का समर्थन करते हैं", "यह मूल्यांकन करने के लिए पीछे हट जाते हैं कि क्या विचार में वास्तव में योग्यता है"] },
+      { "id": 88, "category": "scenario", "question": "आप अपनी कंपनी में एक नैतिक समस्या खोजते हैं। आप:", "options": ["तुरंत इसे नेतृत्व के पास बढ़ाते हैं", "इसे आंतरिक रूप से संबोधित करने का रचनात्मक तरीका खोजते हैं", "पहले सलाह के लिए विश्वसनीय सहयोगियों से बात करते हैं", "कार्य करने से पहले समस्या का सावधानीपूर्वक दस्तावेजीकरण करते हैं"] },
+      { "id": 89, "category": "scenario", "question": "आपका कार्यभार अचानक दोगुना हो जाता है। आप:", "options": ["अतिरिक्त घंटों के साथ काम करते हैं", "गुणवत्ता बनाए रखने के लिए रचनात्मक शॉर्टकट खोजते हैं", "टीम के सदस्यों को कार्य सौंपते हैं", "बेरहमी से प्राथमिकता देते हैं और स्पष्ट रूप से संवाद करते हैं"] },
+      { "id": 90, "category": "scenario", "question": "एक ग्राहक आपके काम से नाखुश है। आप:", "options": ["इसे तेज़ी से ठीक करने और अपेक्षाओं से अधिक करने की पेशकश करते हैं", "एक संशोधित रचनात्मक दिशा प्रस्तुत करते हैं", "ईमानदारी से माफी माँगते हैं और उनकी चिंताओं को सुनते हैं", "संक्षिप्त की समीक्षा करते हैं और बताते हैं कि क्या वितरित किया गया था"] },
+      { "id": 91, "category": "scenario", "question": "आपसे कम नोटिस पर 200 लोगों के सामने प्रस्तुत करने के लिए कहा जाता है। आप:", "options": ["कुछ मुख्य बिंदु तैयार करते हैं और आत्मविश्वास के साथ जाते हैं", "तुरंत एक दृश्य रूप से शानदार डेक बनाते हैं", "टीम सहायता पर निर्भर होते हैं और सह-प्रस्तुत करते हैं", "विस्तृत नोट्स तैयार करने में हर मिनट बिताते हैं"] },
+      { "id": 92, "category": "scenario", "question": "आपकी कंपनी एक ऐसा विचार लागू करना चाहती है जिसे आप गलत मानते हैं। आप:", "options": ["विकल्पों के साथ इसे सीधे चुनौती देते हैं", "पहले एक रचनात्मक पायलट परीक्षण का प्रस्ताव करते हैं", "चिंताएं व्यक्त करते हैं फिर टीम के निर्णय का समर्थन करते हैं", "इसके विरुद्ध डेटा-समर्थित साक्ष्य प्रस्तुत करते हैं"] },
+      { "id": 93, "category": "scenario", "question": "एक नई तकनीक रातोंरात आपके क्षेत्र को बाधित करती है। आप:", "options": ["तुरंत इसमें कूदते हैं और इसमें महारत हासिल करते हैं", "इसका रचनात्मक उपयोग कैसे करें यह तलाशते हैं", "सहयोगियों के साथ इसके निहितार्थ पर चर्चा करते हैं", "राय बनाने से पहले इसका गहराई से अध्ययन करते हैं"] },
+      { "id": 94, "category": "scenario", "question": "आप एक जूनियर सहयोगी को मार्गदर्शन दे रहे हैं जो संघर्ष कर रहा है। आप:", "options": ["उन्हें तेजी से बढ़ने के लिए कठिन चुनौतियाँ देते हैं", "प्रेरक उदाहरण और अपनी रचनात्मक यात्रा साझा करते हैं", "पहले सुनते हैं, धैर्य और भावनात्मक समर्थन प्रदान करते हैं", "उनके लिए एक संरचित सीखने की योजना बनाते हैं"] },
+      { "id": 95, "category": "scenario", "question": "आपके सर्वश्रेष्ठ काम पर कठोर प्रतिक्रिया मिलती है। आप:", "options": ["इसे और बेहतर करने के लिए ईंधन के रूप में उपयोग करते हैं", "आलोचना की सराहना करते हैं और रचनात्मक रूप से संशोधित करते हैं", "विशेष रूप से क्या काम नहीं किया इसपर स्पष्टता चाहते हैं", "प्रतिक्रिया को वस्तुनिष्ठ रूप से बिंदु दर बिंदु विश्लेषण करते हैं"] },
+      { "id": 96, "category": "scenario", "question": "आपको अपना प्रोजेक्ट खत्म करने या एक महत्वपूर्ण कार्यक्रम में भाग लेने के बीच चुनना है। आप:", "options": ["प्रोजेक्ट खत्म करते हैं - काम पहले आता है", "दोनों करने का रचनात्मक तरीका खोजते हैं", "कार्यक्रम में भाग लेते हैं और बाद में समय बनाते हैं", "प्रभाव का मूल्यांकन करते हैं और तार्किक चुनाव करते हैं"] },
+      { "id": 97, "category": "scenario", "question": "आपकी टीम एक बड़ा पुरस्कार जीतती है। आप:", "options": ["जश्न मनाते हैं और तुरंत एक बड़ा लक्ष्य निर्धारित करते हैं", "मान्यता को संजोते हैं और यात्रा पर विचार करते हैं", "प्रत्येक टीम सदस्य के साथ सार्वजनिक रूप से कृतज्ञता साझा करते हैं", "इसे दोहराने के लिए विश्लेषण करते हैं कि यह काम क्यों किया"] },
+      { "id": 98, "category": "scenario", "question": "आप एक बैठक में हैं जो पूरी तरह से पटरी से उतर रही है। आप:", "options": ["नेतृत्व करते हैं और बातचीत को पुनर्निर्देशित करते हैं", "चर्चा का रचनात्मक पुनर्रूपण प्रदान करते हैं", "समूह को बैठक के उद्देश्य की याद धीरे से दिलाते हैं", "मुद्दों को नोट करते हैं और अनुवर्ती संरचना का सुझाव देते हैं"] },
+      { "id": 99, "category": "scenario", "question": "आप काम से बर्नआउट महसूस करते हैं। आप:", "options": ["धक्का देते रहते हैं - आराम बाद के लिए है", "रिफ्रेश होने के लिए एक रचनात्मक ब्रेक लेते हैं", "एक विश्वसनीय दोस्त या मेंटर से बात करते हैं", "उचित आराम निर्धारित करते हैं और कार्यभार की व्यवस्थित समीक्षा करते हैं"] },
+      { "id": 100, "category": "scenario", "question": "आपको एक विश्व समस्या हल करने के लिए असीमित संसाधन दिए जाते हैं। आप चुनते हैं:", "options": ["वैश्विक अकुशलताओं को हल करने के लिए एक AI प्रणाली बनाना", "ऐसे मीडिया बनाना जो दुनिया को देखने के तरीके को बदले", "सभी के लिए स्वास्थ्य सेवा और शिक्षा को वित्त देना", "दुनिया का सबसे बड़ा ओपन रिसर्च इंस्टीट्यूट बनाना"] }
+    ]
+  }
+}

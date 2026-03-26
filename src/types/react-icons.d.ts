@@ -92,7 +92,6 @@ declare module 'react-icons/fa6' {
     export const FaCloud:IconType
     export const FaGears:IconType
     export const FaLinkedin:IconType
-    export const FaTools:IconType
     export const FaBullseye:IconType
     export const FaScrewdriverWrench:IconType
     export const FaBolt:IconType
@@ -110,6 +109,7 @@ declare module 'react-icons/fa6' {
     export const FaScaleBalanced:IconType
     export const FaCompassDrafting:IconType
     export const FaUserGroup :IconType
+    export const FaCalculator:IconType
     
 }
 
@@ -118,7 +118,12 @@ declare module 'lucide-react' {
     import { ComponentType, SVGProps } from 'react';
 
     type LucideIcon = ComponentType<SVGProps<SVGSVGElement> & { size?: number | string }>;
-
+    export const Loader2: LucideIcon;
+    export const Sparkles: LucideIcon;
+    export const Brain: LucideIcon;
+    export const Lightbulb: LucideIcon;
+    export const Trophy: LucideIcon;
+    export const RotateCcw: LucideIcon;
     export const CheckIcon: LucideIcon;
     export const ChevronDownIcon: LucideIcon;
     export const ChevronUpIcon: LucideIcon;
@@ -194,5 +199,7 @@ declare module 'lucide-react' {
     export const UserCheck:LucideIcon;
     export const Home:LucideIcon;
     export const ArrowLeft:LucideIcon;
+    export const Shield:LucideIcon;
+
 
 }

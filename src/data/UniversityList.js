@@ -21,11 +21,29 @@ export const UniversityList = [
     description: "One of India's leading private universities with comprehensive online programs.",
     link: "/amity"
   },
+  {
+  name: "Amrita University Online",
+  logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762328966/amritalogo_lswo1a.png",
+  ranking: "NIRF-08",
+  location: "Coimbatore, Tamil Nadu",
+  fee: "₹ 90,000 - ₹2,85,000",
+  courses: [
+    "MBA",
+    "MCA",
+    "M.Com",
+    "BBA",
+    "BCA",
+    "B.Com"
+    
+  ],
+  description: "A top-ranked deemed university in India known for quality education, research, and strong industry-oriented online programs.",
+  link: "/amrita"
+},
 
   {
     name: "Manipal University Online",
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipallogo_yduega.jpg",
-    ranking: "NIRF-73",
+    ranking: "NIRF-58",
     location: "Jaipur, Rajasthan",
     fee: "₹99,000 - ₹1,75,000",
     courses: ["MBA", "MCA", "M.Com", "BBA", "BCA", "B.Com"],
@@ -36,7 +54,7 @@ export const UniversityList = [
   {
     name: "Manipal Academic of Higher Education",
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipallogo_yduega.jpg",
-    ranking: "NIRF-73",
+    ranking: "NIRF-03",
     location: "Jaipur, Rajasthan",
     fee: "₹1,80,000 - ₹2,94,000",
     courses: ["BBA", "B.Com"],
@@ -47,7 +65,7 @@ export const UniversityList = [
   {
     name: "Lovely Professional University Online",
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762329087/lpulogo_vdgb4x.png",
-    ranking: "NIRF-38",
+    ranking: "NIRF-31",
     location: "Phagwara, Punjab",
     fee: "₹80,000 - ₹2,00,000",
     courses: ["MBA", "MCA", "M.Sc", "M.Com", "MA", "BBA", "BCA", "B.Com", "BA"],
@@ -58,7 +76,7 @@ export const UniversityList = [
   {
     name: "University of Petroleum and Energy Studies Online",
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327864/upeslogo_o2apk7.webp",
-    ranking: "NIRF-41",
+    ranking: "NIRF-36",
     location: "Dehradun, Uttarakhand",
     fee: "₹1,50,000 - ₹2,20,000",
     courses: ["MBA", "MCA", "BBA", "BCA"],
@@ -69,7 +87,7 @@ export const UniversityList = [
   {
     name: "Narsee Monjee Institute of Management Studies Online",
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327723/nmimslogo_sqp2fz.webp",
-    ranking: "NIRF-21",
+    ranking: "NIRF-24",
     location: "Mumbai, Maharashtra",
     fee: "₹94,000 - ₹1,96,000",
     courses: ["MBA", "BBA", "B.Com"],
@@ -91,7 +109,7 @@ export const UniversityList = [
   {
     name: "Dr. DY Patil Online",
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dypatillogo_uxdfid.webp",
-    ranking: "NIRF-63",
+    ranking: "NIRF-41",
     location: "Navi Mumbai, Maharashtra",
     fee: "₹1,40,000 - ₹1,89,400",
     courses: ["MBA", "MCA", "BBA"],
@@ -102,7 +120,7 @@ export const UniversityList = [
   {
     name: "Jain University Online",
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327240/jainlogo_ey9e8p.webp",
-    ranking: "NIRF-77",
+    ranking: "NIRF-62",
     location: "Bangalore, Karnataka",
     fee: "₹80,000 - ₹2,16,000",
     courses: [
@@ -122,7 +140,7 @@ export const UniversityList = [
   {
     name: "Chandigarh University Online",
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp",
-    ranking: "NIRF-36",
+    ranking: "NIRF-19",
     location: "Chandigarh",
     fee: "₹75,000 - ₹2,10,000",
     courses: [
@@ -144,7 +162,7 @@ export const UniversityList = [
   {
     name: "Sikkim Manipal University Online",
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp",
-    ranking: "NIRF-73",
+    ranking: "NIRF-100-150",
     location: "Sikkim",
     fee: "₹75,000 - ₹1,10,000",
     courses: ["MBA", "MCA", "M.Com", "MA", "BBA", "BCA", "B.Com", "BA"],
@@ -156,7 +174,7 @@ export const UniversityList = [
   {
     name: "VGU Online",
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgu1_ieijw9.webp",
-    ranking: "NIRF-73",
+    ranking: "NIRF top 200",
     location: "Jaipur, Rajasthan",
     fee: "₹72,000 - ₹2,40,000",
     courses: ["MBA", "MCA", "M.Sc", "BBA", "BCA", "B.Com", "BA", "MAJMC"],
@@ -167,7 +185,7 @@ export const UniversityList = [
   {
     name: "Uttaranchal University Online",
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp",
-    ranking: "NIRF-73",
+    ranking: "NIRF top 200",
     location: "Dehradun, Uttarakhand",
     fee: "₹72,000 - ₹1,40,000",
     courses: ["MBA", "MCA", "BBA", "BCA", "B.Com", "BA", "MA"],
@@ -179,7 +197,7 @@ export const UniversityList = [
   {
     name: "Kurukshetra University Online",
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku_xu5nkx.webp",
-    ranking: "NIRF-73",
+    ranking: "NIRF top 200",
     location: "Kurukshetra, Haryana",
     fee: "₹54,036 - ₹1,19,845",
     courses: ["MBA", "M.Com", "MCA", "MA", "BBA", "BCA", "B.Com", "BA"],
@@ -203,7 +221,7 @@ export const UniversityList = [
   {
     name: "Shoolini University Online",
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327856/shoolini_txvq6k.webp",
-    ranking: "NIRF-73",
+    ranking: "NIRF-69",
     location: "Solan, Himachal Pradesh",
     fee: "₹42,000 - ₹1,40,000",
     courses: [

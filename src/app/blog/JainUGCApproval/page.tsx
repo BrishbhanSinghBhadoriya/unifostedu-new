@@ -56,11 +56,11 @@ const JainUGCApprovalBlog = () => {
   ];
 
   const programs = [
-    { name: 'B.Tech (Engineering)', duration: '4 Years', fee: '₹5-6 L', placement: '96%' },
+    { name: 'BCA', duration: '3 Years', fee: '₹5-6 L', placement: '96%' },
     { name: 'BBA', duration: '3 Years', fee: '₹2.5-3.5 L', placement: '95%' },
     { name: 'B.Com', duration: '3 Years', fee: '₹1.5-2.5 L', placement: '92%' },
     { name: 'MBA', duration: '2 Years', fee: '₹4-8 L', placement: '99%' },
-    { name: 'M.Tech', duration: '2 Years', fee: '₹3-5 L', placement: '95%' },
+    { name: 'MCA', duration: '2 Years', fee: '₹3-5 L', placement: '95%' },
     { name: 'Online MBA', duration: '2 Years', fee: '₹2.5-4 L', placement: '95%' },
   ];
 

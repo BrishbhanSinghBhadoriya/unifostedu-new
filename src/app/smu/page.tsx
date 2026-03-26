@@ -345,7 +345,7 @@ const [openModal, setOpenModal] = useState<OpenModalState>(null);
         <div className="pt-16 lg:pt-20 mt-10 lg:mt-12">
           <UniversityDateSlider
              currentDate="January 2026 Session"
-             nextUpdateDate="Applications Closing on 20 March 2026"
+             nextUpdateDate="Applications Closing SOON"
              information="Limited Seats Available - Apply Now!"
              special="Average of 50% salary growth"
              color="#dc2626"

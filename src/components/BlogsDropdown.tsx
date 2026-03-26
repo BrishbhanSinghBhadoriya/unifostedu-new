@@ -19,6 +19,8 @@ type Blog = {
 type BlogsDropdownProps = {
   menuOpen: MenuKey;
   setMenuOpen: React.Dispatch<React.SetStateAction<MenuKey>>;
+  direction?: "down" | "up";
+  variant?: "header" | "footer";
 };
 
 const STATIC_BLOG_PAGES: Blog[] = [
@@ -35,7 +37,12 @@ const STATIC_BLOG_PAGES: Blog[] = [
   { slug: "WorkingMBA", title: "Working MBA" },
 ];
 
-const BlogsDropdown = ({ menuOpen, setMenuOpen }: BlogsDropdownProps) => {
+const BlogsDropdown = ({ 
+  menuOpen, 
+  setMenuOpen, 
+  direction = "down",
+  variant = "header" 
+}: BlogsDropdownProps) => {
   const [blogs] = useState<Blog[]>([]);
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
@@ -73,25 +80,31 @@ const BlogsDropdown = ({ menuOpen, setMenuOpen }: BlogsDropdownProps) => {
     setMenuOpen(menuOpen === "blogs" ? null : "blogs");
   const handleClose = () => setMenuOpen(null);
 
+  const isUp = direction === "up";
+
   return (
-    <div
-      className="relative"
-      onMouseEnter={() => setMenuOpen("blogs")}
-      onMouseLeave={handleClose}>
+    <div className="relative">
       <button
-        className="group relative px-4 py-2 rounded-lg text-slate-700 hover:text-blue-600 font-medium text-sm transition-all duration-200 flex items-center gap-2">
-        <FaBookOpen className="text-sm" />
+        onClick={handleToggle}
+        className={`group relative flex items-center gap-2 transition-all duration-200 font-medium text-sm ${
+          variant === "header" 
+            ? "px-4 py-2 rounded-lg text-slate-700 hover:text-blue-600" 
+            : "px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-white"
+        }`}>
+        <FaBookOpen className={`text-sm ${variant === "header" ? "" : "text-cyan-400"}`} />
         <span>Blogs</span>
         <FaChevronDown
           className={`text-xs transition-transform duration-300 ${
             menuOpen === "blogs" ? "rotate-180" : ""
           }`}
         />
-        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300" />
+        {variant === "header" && (
+          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300" />
+        )}
       </button>
 
       {menuOpen === "blogs" && (
-        <div className="absolute left-0 top-full mt-2 w-[22rem] bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-50">
+        <div className={`absolute left-0 ${isUp ? "bottom-full mb-3" : "top-full mt-2"} w-[22rem] bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-[100]`}>
           <div className="p-6">
             <h3 className="text-slate-900 font-bold text-lg mb-4 flex items-center gap-2">
               <FaBookOpen className="text-blue-500" />
@@ -101,7 +114,7 @@ const BlogsDropdown = ({ menuOpen, setMenuOpen }: BlogsDropdownProps) => {
             <div
               ref={scrollRef}
               onMouseMove={handleMouseMove}
-              className="space-y-2 max-h-80 overflow-y-auto pr-2 no-scrollbar scroll-smooth">
+              className="space-y-2 max-h-80 overflow-y-auto pr-2 no-scrollbar scroll-smooth text-left">
               {displayedBlogs.length === 0 && (
                 <div className="px-3 py-4 text-sm text-slate-500">
                   No blogs available yet.
