@@ -66,7 +66,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
       name: yup.string().trim().required('Name is required').min(2, 'Name must be at least 2 characters long'),
       mobile: yup
         .string()
-        .matches(/^\d{10}$/, { message: 'Enter 10 digit phone number', excludeEmptyString: true })
+        .matches(/^[6-9]\d{9}$/, { message: 'Enter a valid 10-digit mobile number starting with 6-9', excludeEmptyString: true })
         .required('Phone number is required'),
       email: yup.string().trim().email('Please provide a valid email address').required('Email is required'),
       course: yup.string().trim().required('Course is required'),
@@ -191,7 +191,7 @@ export default function EnquiryForm({ universityName, defaultProgram = 'MBA', on
           </Label>
           <div className="relative">
             <FaPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-            <Input id="mobile" placeholder="10 digit mobile number" className="pl-10 h-11 sm:h-10" aria-invalid={!!formState.errors.mobile} {...register('mobile')} />
+            <Input id="mobile" maxLength={10} placeholder="10 digit mobile number" className="pl-10 h-11 sm:h-10" aria-invalid={!!formState.errors.mobile} {...register('mobile')} />
             {formState.errors.mobile && (<p className="text-red-600 text-xs mt-1">{formState.errors.mobile.message}</p>)}
           </div>
         </div>

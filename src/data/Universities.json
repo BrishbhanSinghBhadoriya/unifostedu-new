@@ -1905,7 +1905,102 @@
           ]
         }
       ]
+    },
+   {
+  "id": 17,
+  "name": "Amrita University",
+  "pageLink": "/amrita",
+  "location": "Coimbatore, Tamil Nadu",
+  "rating": 4.5,
+  "reviews": 1200,
+  "NIRF": "Top Ranked (NIRF)",
+  "accreditation": "UGC Approved, NAAC A++",
+  "emiAvailable": true,
+  "highlights": ["Top Ranked University", "NAAC A++", "Global Recognition", "Strong Placement Support"],
+  "color": "#e3f2fd",
+  "accent": "#1565c0",
+  "modal": {
+    "title": "Apply to Amrita University Online",
+    "subtitle": "Earn a globally recognized degree from a NAAC A++ accredited university.",
+    "imageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/amrita-university.webp",
+    "mobileImageSrc": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/amrita-university.webp",
+    "formType": "general",
+    "showImage": true
+  },
+  "filters": {
+    "categories": ["PG Courses", "UG Courses"],
+    "qualifications": ["Postgraduate", "College Graduate", "Completed 12th", "Completed 10th", "Diploma Holder"],
+    "scores": ["Below 50%", "50% - 60%", "60% - 70%", "70% - 80%", "80% - 90%", "Above 90%"]
+  },
+  "courses": [
+    {
+      "id": "Online MBA",
+      "label": "Online MBA",
+      "category": "PG Courses",
+      "duration": "2 Years",
+      "defaultProgram": "MBA",
+      "baseFees": { "min": 170000, "max": 300000 },
+      "specializations": [
+        { "name": "Marketing", "fees": { "min": 170000, "max": 300000 } },
+        { "name": "Finance", "fees": { "min": 170000, "max": 300000 } },
+        { "name": "Human Resource", "fees": { "min": 170000, "max": 300000 } },
+        { "name": "Operations", "fees": { "min": 170000, "max": 300000 } },
+        { "name": "Business Analytics", "fees": { "min": 170000, "max": 300000 } },
+        { "name": "International Finance", "fees": { "min": 170000, "max": 300000 } }
+      ]
+    },
+    {
+      "id": "Online MCA",
+      "label": "Online MCA",
+      "category": "PG Courses",
+      "duration": "2 Years",
+      "defaultProgram": "MCA",
+      "baseFees": { "min": 140000, "max": 180000 },
+      "specializations": [
+        { "name": "Artificial Intelligence", "fees": { "min": 140000, "max": 180000 } },
+        { "name": "Cyber Security", "fees": { "min": 140000, "max": 180000 } },
+        { "name": "Data Science", "fees": { "min": 140000, "max": 180000 } }
+      ]
+    },
+    {
+      "id": "Online BBA",
+      "label": "Online BBA",
+      "category": "UG Courses",
+      "duration": "3 Years",
+      "defaultProgram": "BBA",
+      "baseFees": { "min": 150000, "max": 210000 },
+      "specializations": [
+        { "name": "General", "fees": { "min": 150000, "max": 210000 } },
+        { "name": "Finance", "fees": { "min": 150000, "max": 210000 } },
+        { "name": "Marketing", "fees": { "min": 150000, "max": 210000 } }
+      ]
+    },
+    {
+      "id": "Online BCA",
+      "label": "Online BCA",
+      "category": "UG Courses",
+      "duration": "3 Years",
+      "defaultProgram": "BCA",
+      "baseFees": { "min": 150000, "max": 210000 },
+      "specializations": [
+        { "name": "General", "fees": { "min": 150000, "max": 210000 } },
+        { "name": "Cloud Computing", "fees": { "min": 150000, "max": 210000 } },
+        { "name": "Data Analytics", "fees": { "min": 150000, "max": 210000 } }
+      ]
+    },
+    {
+      "id": "Online BCom",
+      "label": "Online BCom",
+      "category": "UG Courses",
+      "duration": "3 Years",
+      "defaultProgram": "BCom",
+      "baseFees": { "min": 120000, "max": 180000 },
+      "specializations": [
+        { "name": "General", "fees": { "min": 120000, "max": 180000 } },
+        { "name": "Finance & Accounting", "fees": { "min": 120000, "max": 180000 } }
+      ]
     }
-
+  ]
+}
   ]
 }

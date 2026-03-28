@@ -145,7 +145,7 @@ const universities = [
 // Tools Menu Items
 const toolsMenuItems = [
   {
-    title: "Career Suitability Test",
+    title: "Career Readiness Test",
     description: "Find your perfect career path",
     icon: FaGraduationCap,
     href: "/career-test",
@@ -176,27 +176,6 @@ const Header = () => {
   const pathname = usePathname();
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   const uniScrollRef = useRef<HTMLDivElement | null>(null);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const container = uniScrollRef.current;
-    if (!container) return;
-
-    const rect = container.getBoundingClientRect();
-    const mouseY = e.clientY - rect.top;
-    const containerHeight = rect.height;
-
-    if (mouseY < 0 || mouseY > containerHeight) return;
-
-    const scrollHeight = container.scrollHeight;
-    const maxScroll = scrollHeight - containerHeight;
-
-    const percentage = mouseY / containerHeight;
-    
-    container.scrollTo({
-      top: percentage * maxScroll,
-      behavior: 'auto'
-    });
-  };
 
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
   const [modalType, setModalType] = useState<
@@ -523,8 +502,7 @@ const Header = () => {
                         </h3>
                         <div
                           ref={uniScrollRef}
-                          onMouseMove={handleMouseMove}
-                          className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4 max-h-[60vh] lg:max-h-96 overflow-y-auto pr-2 scroll-smooth no-scrollbar">
+                          className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4 max-h-[60vh] lg:max-h-96 overflow-y-auto pr-2 scroll-smooth">
                           {universities.map((uni, idx) => (
                             <Link
                               key={idx}

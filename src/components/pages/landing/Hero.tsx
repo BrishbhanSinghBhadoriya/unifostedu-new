@@ -15,11 +15,11 @@ import {
 } from "react-icons/fa6";
 import { MdPeople } from "react-icons/md";
 import { HeroProps } from "types/LandingPageTypes";
-
-
-
+import { heroSlides as fallbackSlides } from "./data";
 
 const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
+  // Prioritize the 6 slides from data.js if the API doesn't provide enough slides
+  const slidesToUse = heroSlides.length >= 6 ? heroSlides : fallbackSlides;
 
   const [slide, setSlide] = useState(0);
   const [isFirstRender, setIsFirstRender] = useState(true);
@@ -32,15 +32,15 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
   };
 
   useEffect(() => {
-    if (!heroSlides.length) return;
+    if (!slidesToUse.length) return;
 
     setIsFirstRender(false);
     const id = setInterval(
-      () => setSlide((s) => (s + 1) % heroSlides.length),
-      6000
+      () => setSlide((s) => (s + 1) % slidesToUse.length),
+      10000 // Changed from 6000ms (6s) to 10000ms (10s)
     );
     return () => clearInterval(id);
-  }, [heroSlides.length]);
+  }, [slidesToUse.length]);
   const MotionDiv = motion('div');
   const MotionH1 = motion('h1');
   const MotionP = motion('p');
@@ -83,8 +83,8 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                         <>
                           <Image
                             fill
-                            src={heroSlides[slide].src}
-                            alt={`${heroSlides[slide].title} – ${heroSlides[slide].subtitle} | Online University Degree guidance`}
+                            src={slidesToUse[slide].src}
+                            alt={`${slidesToUse[slide].title} – ${slidesToUse[slide].subtitle} | Online University Degree guidance`}
                             loading="eager"
 
 
@@ -105,8 +105,8 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                           >
                             <Image
                               fill
-                              src={heroSlides[slide].src}
-                              alt={`${heroSlides[slide].title} – ${heroSlides[slide].subtitle} | Online University Degree guidance`}
+                              src={slidesToUse[slide].src}
+                              alt={`${slidesToUse[slide].title} – ${slidesToUse[slide].subtitle} | Online University Degree guidance`}
                               loading={slide === 0 ? "eager" : "lazy"}
                               priority={slide === 0}
                               fetchPriority={slide === 0 ? "high" : undefined}
@@ -120,7 +120,7 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
 
                       {/* Slide Indicators */}
                       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
-                        {heroSlides.map((_, i) => (
+                        {slidesToUse.map((_, i) => (
                           <button
                             key={i}
                             onClick={() => setSlide(i)}
@@ -136,8 +136,8 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                     {/* Content Cards */}
                     <div className="space-y-4">
                       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-xl border border-blue-100">
-                        <h3 className="font-semibold text-gray-900 mb-2">{heroSlides[slide].title}</h3>
-                        <p className="text-sm text-gray-600">{heroSlides[slide].description}</p>
+                        <h3 className="font-semibold text-gray-900 mb-2">{slidesToUse[slide].title}</h3>
+                        <p className="text-sm text-gray-600">{slidesToUse[slide].description}</p>
                       </div>
 
                       <div className="grid grid-cols-2 gap-3">
@@ -280,8 +280,8 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                       <>
                         <Image
                           fill
-                          src={heroSlides[slide].src}
-                          alt={`${heroSlides[slide].title} – ${heroSlides[slide].subtitle} | Online University Degree guidance`}
+                          src={slidesToUse[slide].src}
+                          alt={`${slidesToUse[slide].title} – ${slidesToUse[slide].subtitle} | Online University Degree guidance`}
                           loading="eager"
                           priority
                           fetchPriority="high"
@@ -300,8 +300,8 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                         >
                           <Image
                             fill
-                            src={heroSlides[slide].src}
-                            alt={`${heroSlides[slide].title} – ${heroSlides[slide].subtitle} | Online University Degree guidance`}
+                            src={slidesToUse[slide].src}
+                            alt={`${slidesToUse[slide].title} – ${slidesToUse[slide].subtitle} | Online University Degree guidance`}
                             loading={slide === 0 ? "eager" : "lazy"}
                             priority={slide === 0}
                             fetchPriority={slide === 0 ? "high" : undefined}
@@ -315,7 +315,7 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
 
                     {/* Slide Indicators */}
                     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
-                      {heroSlides.map((_, i) => (
+                      {slidesToUse.map((_, i) => (
                         <button
                           key={i}
                           onClick={() => setSlide(i)}
@@ -331,8 +331,8 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                   {/* Content Cards */}
                   <div className="space-y-4">
                     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-xl border border-blue-100">
-                      <h3 className="font-semibold text-gray-900 mb-2">{heroSlides[slide].title}</h3>
-                      <p className="text-sm text-gray-600">{heroSlides[slide].description}</p>
+                      <h3 className="font-semibold text-gray-900 mb-2">{slidesToUse[slide].title}</h3>
+                      <p className="text-sm text-gray-600">{slidesToUse[slide].description}</p>
                     </div>
 
                     <div className="grid grid-cols-2 gap-3">
