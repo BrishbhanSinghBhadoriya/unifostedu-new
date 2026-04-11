@@ -4,24 +4,24 @@ import { FaBook, FaUniversity, FaGraduationCap, FaBriefcase, FaBookOpen, FaGlobe
 import { MdPeople } from "react-icons/md";
 
 export const heroSlides = [
-  {
-  src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1774595395/unifost_1_jxjmlb.png",
-  alt: "Last 2 Days Admission Open",
-  width: 1200,
-  height: 800,
-  title: "Only 2 Days Left!",
-  subtitle: "Admissions Closing Soon",
-  description: "Hurry up! Last 2 days to secure your seat in top online universities. Apply now and take the first step toward your dream career."
-},
-  {
-  src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1774595391/unifostedu_icwbhm.png",
-  alt: "Affordable Education EMI",
-  width: 1200,
-  height: 800,
-  title: "Study Now, Pay Later",
-  subtitle: "EMI Starting ₹2500/month",
-  description: "Don't let fees stop your dreams. Flexible EMI options available for all major courses like MBA, MCA, BBA, and more."
-},
+//   {
+//   src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1774595395/unifost_1_jxjmlb.png",
+//   alt: "Last 2 Days Admission Open",
+//   width: 1200,
+//   height: 800,
+//   title: "Only 2 Days Left!",
+//   subtitle: "Admissions Closing Soon",
+//   description: "Hurry up! Last 2 days to secure your seat in top online universities. Apply now and take the first step toward your dream career."
+// },
+//   {
+//   src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1774595391/unifostedu_icwbhm.png",
+//   alt: "Affordable Education EMI",
+//   width: 1200,
+//   height: 800,
+//   title: "Study Now, Pay Later",
+//   subtitle: "EMI Starting ₹2500/month",
+//   description: "Don't let fees stop your dreams. Flexible EMI options available for all major courses like MBA, MCA, BBA, and more."
+// },
   {
     src: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327967/slider-1_pjehj7.webp",
     alt: "Compare before you decide",
