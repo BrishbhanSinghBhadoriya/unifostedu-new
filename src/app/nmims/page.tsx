@@ -113,7 +113,7 @@ const NMIMSLandingPage = () => {
       duration: '2 Years',
       fees: '₹2,20,000',
       eligibility: 'Bachelor’s Degree (10+2+3) in any discipline from recognised University or an equivalent degree recognised by Association of Indian Universities (AIU) with minimum 50% marks at Graduation Level. (45% for SC/ST/OBC/PwD).',
-      specializations: 'MBA In Marketing Management, MBA in Business Management, MBA in Finance Management, MBA in Human Resources Management, MBA in Operations and data Science Management',
+      specializations: 'MBA In Marketing Management, MBA in Business Management, MBA in Finance Management, MBA in Human Resources Management, MBA in Operations and data Science Management,MBA in Information Technology Management,MBA in Business Analytics',
       Link: '/nmims/mba-online'
     },
     {

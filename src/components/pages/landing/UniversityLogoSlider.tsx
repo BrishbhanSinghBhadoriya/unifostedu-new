@@ -31,7 +31,7 @@ const UniversityLogoSlider = ({ universityLogos = [] }: UniversityLogoSliderProp
         x: [0, `-${100 * (universityLogos.length / itemsToShow)}%`],
         transition: {
           ease: "linear",
-          duration: 40,
+          duration: 60, // Increased from 40 to 60 for slower movement
           repeat: Infinity,
         },
       });

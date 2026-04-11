@@ -80,9 +80,9 @@ const AmityLandingPage = () => {
       course: "Bachelor of Business Administration (BBA)",
       duration: "3 Years",
       eligibility: "10+2 Pass",
-      fees: "₹1,65,000- ₹2,25,000",
+      fees: "₹1,99,000- ₹2,50,000",
       specialization:
-        "BBA -General, Data Analytics In collaboration with HCL Tech, Travel And Tourism Management",
+        "BBA -General, Data Analytics In collaboration with HCL Tech,Business Analytics in Collaboration with KPMG, Travel And Tourism Management",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
       alt: "BBA from amity online university",
     },
@@ -90,9 +90,9 @@ const AmityLandingPage = () => {
       course: "Bachelor of Computer Applications (BCA)",
       duration: "3 Years",
       eligibility: "10+2 Pass",
-      fees: "₹1,50,000 - ₹2,25,000",
+      fees: "₹1,75,000 - ₹2,50,000",
       specialization:
-        "BCA-General, Cloud and Security In collaboration with TCS iON, Data Analytics In collaboration with TCS iON, Data Engineering In collaboration with HCL Tech, Software Engineering In collaboration with HCL Tech, Financial Technology And AI In collaboration withpaytm",
+        "BCA-General, Cloud and Security In collaboration with TCS iON,Applied Data Engineering In collaboration with KPMG, Data Analytics In collaboration with TCS iON, Data Engineering In collaboration with HCL Tech, Software Engineering In collaboration with HCL Tech, Financial Technology And AI In collaboration withpaytm",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bca-online-image_awhemy.webp",
       alt: "BCA from amity online university",
     },
@@ -100,7 +100,7 @@ const AmityLandingPage = () => {
       course: "Bachelor of Commerce (B.Com)",
       duration: "3 Years",
       eligibility: "10+2 Pass",
-      fees: "₹99,000 - ₹2,50,000",
+      fees: "₹1,15,000 - ₹2,75,000",
       specialization:
         "B.Com-General, Hons, International Finance & Accounting",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
@@ -110,7 +110,7 @@ const AmityLandingPage = () => {
       course: "Bachelor of Arts (BA)",
       duration: "3 Years",
       eligibility: "10+2 Pass",
-      fees: "₹85,000 - ₹1,70,000",
+      fees: "₹1,15,000 - ₹1,90,000",
       specialization:
         "BA-General, Journalism and Mass Communication, Vernacular Languages, English, Sociology, Political Science, Economics)",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
@@ -123,9 +123,9 @@ const AmityLandingPage = () => {
       course: "Master of Business Administration (MBA)",
       duration: "2 Years",
       eligibility: "Graduation",
-      fees: "₹1,99,000 - ₹2,99,000",
+      fees: "₹2,25,000 - ₹3,29,000",
       specialization:
-        "MBA -General, Information Technology Management, Dual Specialization, Data Science, Business Analytics, International Finance Management,Hospital and Healthcare Management In collaboration with Medersity / Appollo Hospital , Digital Marketing Management, Entrepreneurship & Leadership Management, Finance & Accounting Management,   Marketing & Sales Management, Petroleum & Natural Gas, Production and Operations Management, Retail Management",
+      "MBA - Business Analytics, Data Science, Digital Entrepreneurship, Digital Marketing Management, Entrepreneurship and Leadership Management, Finance and Accounting Management, Global Finance Market, Hospitality Management, Human Resource Management, Human Resources Analytics, Information Technology Management, Insurance Management, International Business Management, International Finance (ACCA), Marketing & Sales Management, Production and Operations Management, Retail Management, General Management",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
       alt: "MBA from amity online university",
     },
@@ -133,7 +133,7 @@ const AmityLandingPage = () => {
       course: "Master of Computer Applications (MCA)",
       duration: "2 Years",
       eligibility: "Graduation ",
-      fees: "₹170,000- ₹2,75,000",
+      fees: "₹1,90,000- ₹2,75,000",
       specialization:
         "MCA-General, Cyber Security In collaboration with HCL Tech, Blockchain Technology And Management,Machine Learning and Artificial Intelligence, Machine Learning and Artificial Intelligence In collaboration with TCS iON, Software Engineering,Financial Technology & AI In collaboration with Paytm",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca-online-image_w3f0sx.webp",
@@ -143,7 +143,7 @@ const AmityLandingPage = () => {
       course: "Master of Commerce (M.Com)",
       duration: "2 Years",
       eligibility: "Graduation ",
-      fees: "₹1,20,000",
+      fees: "₹1,50,000",
       specialization: "General, Financial Management, Financial Technology",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327469/mcom-online-image_e79tno.webp",
       alt: "M.Com from amity online university",
@@ -152,7 +152,7 @@ const AmityLandingPage = () => {
       course: "Master of Arts (MA)",
       duration: "2 Years",
       eligibility: "Graduation",
-      fees: "₹1,30,000 - ₹1,70,000",
+      fees: "₹1,50,000 - ₹1,90,000",
       specialization:
         "MA ( Journalism and Mass Communication, Public Policy & Governance)",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
@@ -174,7 +174,7 @@ const AmityLandingPage = () => {
       course: "BBA + MBA",
       duration: "4.5-5 Years",
       eligibility: "10+2 With recognised boards",
-      fees: "₹3,45,800",
+      fees: "₹4,02,800",
       specialization: "BBA + MBA",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
       alt: "BBA + MBA from amity online university",
@@ -183,7 +183,7 @@ const AmityLandingPage = () => {
       course: "BCA + MCA",
       duration: "4.5-5 Years",
       eligibility: "10+2 With recognised boards",
-      fees: "₹3,04,000",
+      fees: "₹3,55,300",
       specialization: "BCA + MCA",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca-online-image_w3f0sx.webp",
       alt: "BCA + MCA from amity online university",
@@ -192,7 +192,7 @@ const AmityLandingPage = () => {
       course: "B.Com + MBA",
       duration: "4.5-5 Years",
       eligibility: "10+2 With recognised boards",
-      fees: "₹2,83,100 - ₹3,05,000",
+      fees: "₹3,23,000",
       specialization: "B.Com + MBA",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327469/mcom-online-image_e79tno.webp",
       alt: "B.Com + MBA from amity online university",
@@ -438,15 +438,15 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
 
         <main className="w-full">
           <div className="pt-[56px] sm:pt-[58px] md:pt-[58px]">
-            <div className="bg-[#3526dc] text-gray-900 py-2 sm:py-2.5 md:py-3 mb-0">
+            <div className="bg-[#1A325D] text-gray-900 py-2 sm:py-2.5 md:py-3 mb-0">
               <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 text-center">
                 <UniversityDateSlider
-                  currentDate="January 2026 Session"
-                  nextUpdateDate="Applications Closing SOON"
+                  currentDate="JULY 2026 Session Admission Start"
+                  nextUpdateDate="Early Bird Discount Available"
                   information="Limited Seats Available - Apply Now!"
-                  special="Average of 50% salary growth"
-                  color="blue-900"
-                  backgroundColor="blue-900"
+                  special="Average of 15% - 40% salary growth"
+                  color="#1A325D"
+                  backgroundColor="#1A325D"
                   textColor="#f4f4f8"
                 />
               </div>

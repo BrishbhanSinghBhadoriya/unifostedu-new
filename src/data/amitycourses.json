@@ -52,7 +52,7 @@
       "image": "/images/amity/bba3.png",
       "description": "The BBA Online (Bachelor of Business Administration) program by Amity University Online is open to learners from diverse backgrounds. If you are interested in business, management, or entrepreneurship and want to build a successful career in the corporate world, this program is designed for you. If you have completed 10+2 (or equivalent) from a recognized board and are interested in business management, marketing, finance, or entrepreneurship, the BBA Online is a perfect starting point. Students from any stream—Commerce, Science, or Arts—can apply and build a strong business foundation. Already working and planning to upgrade your skills or move into management roles? The online degree in Amity allows you to study alongside your job with flexible schedules, recorded lectures, and self-paced learning. If you are from a non-commerce background but want to enter the business world, the BBA Online program offers structured learning that helps you build management fundamentals step by step. Running your own business or planning to start one? This program helps you understand business operations, finance, marketing, and strategy better, enabling you to manage and grow your venture with confidence. Planning to pursue MBA, PGDM, or other advanced management programs in the future? The online BBA degree from Amity provides a solid academic foundation to support your higher education and career advancement goals.",
       "eligibility": "10+2 from a recognized board (Any Stream)",
-      "minimumMarks": "50% (45% for SC/ST)",
+      "minimumMarks": "passed",
       "preferredSubjects": "Commerce/Business Studies (preferred but not mandatory)",
       "entranceExam": "Not Required",
       "ageLimit": "No Age Limit",
@@ -133,7 +133,7 @@
         {
           "specialization": "BBA General",
           "duration": "3 Years",
-          "totalFee": "₹1,65,000",
+          "totalFee": "₹1,99,000",
           "semesterFee": "₹27,500",
           "description": "Comprehensive business administration program covering management, marketing, finance, HR, and organizational behavior."
         },

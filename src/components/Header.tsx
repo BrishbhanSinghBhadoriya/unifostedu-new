@@ -35,6 +35,7 @@ import {
 import EnquiryForm from "@/components/EnquiryForm";
 import BlogsDropdown from "@/components/BlogsDropdown";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 import searchIndex from "@/data/searchIndex.json";
 import courseData from "@/data/courseData.json";
 import { BLOG_API_ENDPOINT } from "@/lib/blogApi";
@@ -493,40 +494,47 @@ const Header = () => {
                         }`}
                     />
                   </button>
-                  {menuOpen === "explore" && (
-                    <div className="absolute left-0 top-full mt-2 w-[90vw] max-w-[28rem] lg:max-w-[32rem] xl:max-w-[36rem] 2xl:max-w-[48rem] bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-[9999]">
-                      <div className="p-4 lg:p-5 xl:p-6">
-                        <h3 className="text-slate-900 font-bold text-base lg:text-lg xl:text-xl mb-3 lg:mb-4 flex items-center gap-2">
-                          <FaBuildingColumns className="text-blue-500 text-sm lg:text-base xl:text-lg" />
-                          <span>Partner Universities</span>
-                        </h3>
-                        <div
-                          ref={uniScrollRef}
-                          className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4 max-h-[60vh] lg:max-h-96 overflow-y-auto pr-2 scroll-smooth">
-                          {universities.map((uni, idx) => (
-                            <Link
-                              key={idx}
-                              href={uni.link}
-                              onClick={() => setMenuOpen(null)}
-                              className="group flex items-center gap-2 lg:gap-3 p-3 lg:p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-blue-50 hover:border-blue-300 transition-all duration-200 min-h-[70px] lg:min-h-[80px]">
-                              <div className="w-12 h-12 lg:w-14 lg:h-14 bg-white rounded-lg flex items-center justify-center overflow-hidden flex-shrink-0 shadow-sm">
-                                <Image
-                                  width={56}
-                                  height={56}
-                                  src={uni.logo}
-                                  alt={uni.name}
-                                  className="max-h-full max-w-full object-contain p-1"
-                                />
-                              </div>
-                              <p className="text-xs lg:text-sm font-medium text-slate-700 group-hover:text-blue-600 line-clamp-2 leading-snug flex-1">
-                                {uni.name}
-                              </p>
-                            </Link>
-                          ))}
+                  <AnimatePresence>
+                    {menuOpen === "explore" && (
+                      <motion.div 
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        className="absolute left-0 top-full mt-2 w-[90vw] max-w-[28rem] lg:max-w-[32rem] xl:max-w-[36rem] 2xl:max-w-[48rem] bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-[9999]">
+                        <div className="p-4 lg:p-5 xl:p-6">
+                          <h3 className="text-slate-900 font-bold text-base lg:text-lg xl:text-xl mb-3 lg:mb-4 flex items-center gap-2">
+                            <FaBuildingColumns className="text-blue-500 text-sm lg:text-base xl:text-lg" />
+                            <span>Partner Universities</span>
+                          </h3>
+                          <div
+                            ref={uniScrollRef}
+                            className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4 max-h-[60vh] lg:max-h-96 overflow-y-auto pr-2 scroll-smooth">
+                            {universities.map((uni, idx) => (
+                              <Link
+                                key={idx}
+                                href={uni.link}
+                                onClick={() => setMenuOpen(null)}
+                                className="group flex items-center gap-2 lg:gap-3 p-3 lg:p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-blue-50 hover:border-blue-300 transition-all duration-200 min-h-[70px] lg:min-h-[80px]">
+                                <div className="w-12 h-12 lg:w-14 lg:h-14 bg-white rounded-lg flex items-center justify-center overflow-hidden flex-shrink-0 shadow-sm">
+                                  <Image
+                                    width={56}
+                                    height={56}
+                                    src={uni.logo}
+                                    alt={uni.name}
+                                    className="max-h-full max-w-full object-contain p-1"
+                                  />
+                                </div>
+                                <p className="text-xs lg:text-sm font-medium text-slate-700 group-hover:text-blue-600 line-clamp-2 leading-snug flex-1">
+                                  {uni.name}
+                                </p>
+                              </Link>
+                            ))}
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                  )}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
 
                 {/* ✨ NEW: Tools Dropdown */}
@@ -542,41 +550,48 @@ const Header = () => {
                     />
                   </button>
 
-                  {menuOpen === "tools" && (
-                    <div className="absolute left-0 top-full mt-2 w-96 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-[9999]">
-                      <div className="p-5 xl:p-6">
-                        <h3 className="text-slate-900 font-bold text-base lg:text-lg mb-4 flex items-center gap-2">
-                          <FaScrewdriverWrench className="text-blue-500" />
-                          <span>Explore Tools</span>
-                        </h3>
-                        <div className="space-y-3">
-                          {toolsMenuItems.map((tool, idx) => {
-                            const IconComponent = tool.icon;
-                            return (
-                              <Link
-                                key={idx}
-                                href={tool.href}
-                                onClick={() => setMenuOpen(null)}
-                                className="group flex items-start gap-3 p-4 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100 hover:from-blue-50 hover:to-cyan-50 hover:border-blue-300 transition-all duration-200">
-                                <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${tool.color} flex items-center justify-center flex-shrink-0 shadow-md`}>
-                                  <IconComponent className="text-white text-lg" />
-                                </div>
-                                <div className="flex-1 min-w-0">
-                                  <p className="text-sm font-semibold text-slate-900 group-hover:text-blue-600 transition">
-                                    {tool.title}
-                                  </p>
-                                  <p className="text-xs text-slate-600 mt-1">
-                                    {tool.description}
-                                  </p>
-                                </div>
-                                <FaArrowRight className="text-slate-400 group-hover:text-blue-600 transition flex-shrink-0 mt-1" />
-                              </Link>
-                            );
-                          })}
+                  <AnimatePresence>
+                    {menuOpen === "tools" && (
+                      <motion.div 
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        className="absolute left-0 top-full mt-2 w-96 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-[9999]">
+                        <div className="p-5 xl:p-6">
+                          <h3 className="text-slate-900 font-bold text-base lg:text-lg mb-4 flex items-center gap-2">
+                            <FaScrewdriverWrench className="text-blue-500" />
+                            <span>Explore Tools</span>
+                          </h3>
+                          <div className="space-y-3">
+                            {toolsMenuItems.map((tool, idx) => {
+                              const IconComponent = tool.icon;
+                              return (
+                                <Link
+                                  key={idx}
+                                  href={tool.href}
+                                  onClick={() => setMenuOpen(null)}
+                                  className="group flex items-start gap-3 p-4 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100 hover:from-blue-50 hover:to-cyan-50 hover:border-blue-300 transition-all duration-200">
+                                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${tool.color} flex items-center justify-center flex-shrink-0 shadow-md`}>
+                                    <IconComponent className="text-white text-lg" />
+                                  </div>
+                                  <div className="flex-1 min-w-0">
+                                    <p className="text-sm font-semibold text-slate-900 group-hover:text-blue-600 transition">
+                                      {tool.title}
+                                    </p>
+                                    <p className="text-xs text-slate-600 mt-1">
+                                      {tool.description}
+                                    </p>
+                                  </div>
+                                  <FaArrowRight className="text-slate-400 group-hover:text-blue-600 transition flex-shrink-0 mt-1" />
+                                </Link>
+                              );
+                            })}
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                  )}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
 
               </nav>

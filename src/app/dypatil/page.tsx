@@ -412,10 +412,10 @@ const Dypatil = () => {
       {/* Add padding to account for fixed header */}
       <div className="pt-16 overflow-x-hidden break-words hyphens-auto w-full">
          <UniversityDateSlider
-                currentDate="January 2026 Session"
-                nextUpdateDate="Applications Closing SOON"
+                currentDate="JULY 2026 Session Admission Start"
+                 nextUpdateDate="Early Bird Discount Available"
                 information="Limited Seats Available - Apply Now!"
-                special="Average of 50% salary growth"
+                special="Average of 15% - 40% salary growth"
                 color="#dc2626"
                 backgroundColor="#fee2e2"
                 textColor="#991b1b"
@@ -1509,7 +1509,7 @@ const Dypatil = () => {
                     <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
                       <span className="text-2xl font-bold text-red-600">2026</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">January 2026 Session</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">JULY 2026 Session Admission Start</h3>
                     <p className="text-gray-600 mb-4">Enrollments Open</p>
                     <div className="bg-green-50 p-4 rounded-lg">
                       <p className="text-sm text-green-700 font-semibold">✓ Ready to Apply</p>

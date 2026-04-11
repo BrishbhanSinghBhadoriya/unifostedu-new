@@ -377,7 +377,7 @@ Rules:
  
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-[95vw] sm:max-w-[90vw] lg:max-w-[80vw] xl:max-w-[900px] w-full p-0 overflow-hidden border-none rounded-2xl shadow-2xl bg-white">
+      <DialogContent className="max-w-[98vw] sm:max-w-[95vw] lg:max-w-[92vw] xl:max-w-[1300px] w-full p-0 overflow-hidden border-none rounded-2xl shadow-2xl bg-white">
 
         {/* ── HIDDEN DIALOG TITLE FOR ACCESSIBILITY ── */}
         <VisuallyHidden>

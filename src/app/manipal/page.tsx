@@ -295,10 +295,10 @@ const Manipal = () => {
           )}
 
           <UniversityDateSlider
-            currentDate="January 2026 Session"
-            nextUpdateDate="Applications Closing SOON"
+            currentDate="JULY 2026 Session Admission Start"
+             nextUpdateDate="Early Bird Discount Available"
             information="Limited Seats Available - Apply Now!"
-            special="Average of 50% salary growth"
+            special="Average of 15% - 40% salary growth"
             color="#dc2626"
             backgroundColor="#fee2e2"
             textColor="#991b1b"

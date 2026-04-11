@@ -37,7 +37,7 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
     setIsFirstRender(false);
     const id = setInterval(
       () => setSlide((s) => (s + 1) % slidesToUse.length),
-      10000 // Changed from 6000ms (6s) to 10000ms (10s)
+      12000 // Increased from 10000ms (10s) to 12000ms (12s)
     );
     return () => clearInterval(id);
   }, [slidesToUse.length]);

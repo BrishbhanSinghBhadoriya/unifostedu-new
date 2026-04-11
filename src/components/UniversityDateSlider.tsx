@@ -16,9 +16,9 @@ export default function UniversityDateSlider({
   nextUpdateDate,
   information,
   special,
-  color = '#3b82f6',
+  color = '#061e45ff',
   backgroundColor = '#eff6ff',
-  textColor = '#1e40af',
+  textColor = '#0a122bff',
 }: UniversityDateSliderProps) {
   return (
     <div

@@ -375,10 +375,10 @@ const LpuOnline = () => {
             </header>
             <div className="mt-0 lg:mt-[25px]">
               <UniversityDateSlider
-                currentDate="January 2026 Session"
-                nextUpdateDate="Applications Closing SOON"
+                currentDate="JULY 2026 Session Admission Start"
+                 nextUpdateDate="Early Bird Discount Available"
                 information="Limited Seats Available - Apply Now!"
-                special="Average of 50% salary growth"
+                special="Average of 15% - 40% salary growth"
                 color="#e45b1cff"
                 backgroundColor="#e15522ff"
                 textColor="#eae5e1ff"
