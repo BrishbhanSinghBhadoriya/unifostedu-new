@@ -1,77 +1,35 @@
+import { UniversityList } from '@/data/UniversityList';
+import { fetchBlogs } from '@/lib/blogApi';
+
 export default async function sitemap() {
   const baseUrl = 'https://unifostedu.com';
 
   // Static routes
   const staticRoutes = [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/compare`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/coursesearch`,
-      lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/university-list`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/bookdemo`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/faqs`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/privacy`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.4,
-    },
+    { url: baseUrl, lastModified: new Date(), changeFrequency: 'daily', priority: 1.0 },
+    { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/services`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/compare`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${baseUrl}/coursesearch`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 },
+    { url: `${baseUrl}/university-list`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/bookdemo`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${baseUrl}/faqs`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/privacy`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.4 },
   ];
 
-  // Course routes (dynamic [slug] handles these)
-  const courseRoutes = [
-    'mba-online',
-    'mca-online',
-    'bba-online',
-    'bca-online',
-    'mcom-online',
-    'bcom-online',
-    'ma-online',
-    'ba-online',
-    'msc-online',
-    'majmc-online',
-    'bajmc-online',
+  // Dynamic University routes from UniversityList
+  const universityRoutes = UniversityList.map((uni) => ({
+    url: `${baseUrl}${uni.link}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.9,
+  }));
+
+  // Course routes (generic)
+  const genericCourseRoutes = [
+    'mba-online', 'mca-online', 'bba-online', 'bca-online', 
+    'mcom-online', 'bcom-online', 'ma-online', 'ba-online', 
+    'msc-online', 'majmc-online', 'bajmc-online',
   ].map((course) => ({
     url: `${baseUrl}/courses/${course}`,
     lastModified: new Date(),
@@ -80,128 +38,56 @@ export default async function sitemap() {
   }));
 
   // Amity University course routes
-  const amityRoutes = [
-    'mba-online',
-    'mca-online',
-    'bba-online',
-    'bca-online',
-    'mcom-online',
-    'bcom-online',
-    'ma-online',
-    'ba-online',
-    'msc-online',
-  ].map((courseRoute) => ({
-    url: `${baseUrl}/amity/${courseRoute}`,
+  const amityCourseRoutes = [
+    'mba-online', 'mca-online', 'bba-online', 'bca-online', 
+    'mcom-online', 'bcom-online', 'ma-online', 'ba-online', 'msc-online',
+  ].map((course) => ({
+    url: `${baseUrl}/amity/${course}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
-    priority: 0.9,
+    priority: 0.8,
   }));
 
-  
-  
-  
-  
   // Mahe University course routes
-  const maheRoutes = [
-    'online-mba-mahe',
-    'online-mca-mahe',
-    'online-bba-honors-mahe',
-    'online-bba-mahe',
-    'online-msc-data-science-mahe',
-    'online-msc-business-analytics-mahe',
-    'online-bcom-professional-mahe',
-   
-  ].map((courseRoute) => ({
-    url: `${baseUrl}/mahe-online/${courseRoute}`,
+  const maheCourseRoutes = [
+    'online-mba-mahe', 'online-mca-mahe', 'online-bba-honors-mahe', 
+    'online-bba-mahe', 'online-msc-data-science-mahe', 
+    'online-msc-business-analytics-mahe', 'online-bcom-professional-mahe',
+  ].map((course) => ({
+    url: `${baseUrl}/mahe-online/${course}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
-    priority: 0.9,
+    priority: 0.8,
   }));
 
-    // Sikkim Manipal University course routes
-  const smuRoutes = [
-    'mba-online',
-    'mca-online',
-    'ba-online',
-    'mcom-online',
-    'bcom-online',
-    'ma-online',
-   
-   
-  ].map((courseRoute) => ({
-    url: `${baseUrl}/smu/Courses_pages/${courseRoute}`,
+  // SMU course routes
+  const smuCourseRoutes = [
+    'mba-online', 'mca-online', 'ba-online', 'mcom-online', 'bcom-online', 'ma-online',
+  ].map((course) => ({
+    url: `${baseUrl}/smu/Courses_pages/${course}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
-    priority: 0.9,
-  }));
-  // University routes (only routes that exist in project)
-  const universityRoutes = [
-    'amity',
-    'amrita',
-    'manipal',
-    'muj-online-bba',
-    'muj-online-bca',
-    'muj-online-ba',
-    'muj-online-mba',
-    'muj-online-mca',
-    'mahe-online',
-    'lpu-online',
-    'ku-online',
-    'cuOnline',
-    'nmims',
-    'smu',
-    'jain',
-    'dypatil',
-    'sharda',
-    'shoolini',
-    'vgu',
-    'upes',
-    'opjindal',
-    'uu',
-  ].map((uni) => ({
-    url: `${baseUrl}/${uni}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: 0.9,
+    priority: 0.8,
   }));
 
-  // Working professional routes - FIXED: Corrected folder name
-  const workingProfessional = [
+  // Working professional special routes
+  const workingProfessionalRoutes = [
     'best-online-mba-for-working-professionals-india-2025',
     'best-online-mca-for-working-professionals-in-india',
     'top-online-bca-university-in-india',
-  ].map((wx) => ({
-    url: `${baseUrl}/${wx}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: 0.9,
-  }));
-
-  // Amity sub-routes that exist
-  const amitySubRoutes = [
-    'amity-online-mba',
-    'amity-online-mba-total-fees',
-    'best-online-mca-university-in-india',
   ].map((route) => ({
-    url: `${baseUrl}/amity/${route}`,
+    url: `${baseUrl}/${route}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.9,
   }));
 
-  // Blog routes - FIXED: Using actual folder names (PascalCase)
-  const blogRoutes = [
-    'MBADistanceVsOnline',
-    'BestOnlineBBA2026',
-    'ManipalVsAmityOnlineMBA',
-    'LPUOnlineReview',
-    'JainUGCApproval',
-    'CareerAfterOnlineMBA',
-    'ChooseOnlineUniversity',
-    'ScholarshipAndEMI',
-    'WorkingMBA',
-    'UnifostSpecial',
-    'SpecialBlog',
+  // Static Blog routes
+  const staticBlogRoutes = [
+    'MBADistanceVsOnline', 'BestOnlineBBA2026', 'ManipalVsAmityOnlineMBA',
+    'LPUOnlineReview', 'JainUGCApproval', 'CareerAfterOnlineMBA',
+    'ChooseOnlineUniversity', 'ScholarshipAndEMI', 'WorkingMBA',
+    'UnifostSpecial', 'SpecialBlog',
   ].map((blog) => ({
     url: `${baseUrl}/blog/${blog}`,
     lastModified: new Date(),
@@ -209,15 +95,30 @@ export default async function sitemap() {
     priority: 0.7,
   }));
 
+  // Dynamic Blog routes from API
+  let dynamicBlogRoutes = [];
+  try {
+    const blogs = await fetchBlogs();
+    dynamicBlogRoutes = blogs.map((blog) => ({
+      url: `${baseUrl}/blog/${blog.slug}`,
+      lastModified: new Date(blog.updatedAt || blog.createdAt),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    }));
+  } catch (error) {
+    console.error('Error fetching blogs for sitemap:', error);
+  }
+
   return [
     ...staticRoutes,
     ...universityRoutes,
-    ...amityRoutes,
-    ...maheRoutes,
-    ...smuRoutes,
-    ...amitySubRoutes,
-    ...courseRoutes,
-    ...blogRoutes,
-    ...workingProfessional,
+    ...genericCourseRoutes,
+    ...amityCourseRoutes,
+    ...maheCourseRoutes,
+    ...smuCourseRoutes,
+    ...workingProfessionalRoutes,
+    ...staticBlogRoutes,
+    ...dynamicBlogRoutes,
   ];
 }
+

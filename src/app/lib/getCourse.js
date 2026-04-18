@@ -5,11 +5,11 @@ const baseUrl =
 
 export async function getLandingData() {
   try {
-    const res = await fetch(`${baseUrl}/api/v1/landingData`, {
+    const res = await fetch(`${baseUrl}/api/unifostData.json`, {
       cache: "no-store", // Ensure dynamic fetching at runtime
     });
 
-    if (!res.ok) {
+if (!res.ok) {
       console.error(`Failed to fetch landing data: ${res.status}`);
       return getFallbackData();
     }

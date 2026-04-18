@@ -16,7 +16,6 @@ const nextConfig = {
   },
 
   experimental: {
-    allowedDevOrigins: ['localhost:3000', '192.168.1.4:3000'],
     optimizePackageImports: [
       'lucide-react',
       'react-icons',
@@ -25,28 +24,37 @@ const nextConfig = {
     ],
   },
 
-  async headers() {
+async headers() {
     return [
       {
         source: '/images/:all*',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          { key: 'Content-Security-Policy', value: "default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' https:; connect-src 'self' https:" },
         ],
       },
       {
-        // Add CORS headers for API routes to allow local frontend at :8081
         source: '/api/:path*',
         headers: [
-          { key: 'Access-Control-Allow-Origin', value: 'http://localhost:8081' },
+          { key: 'Access-Control-Allow-Origin', value: 'https://unifostedu.com' },
           { key: 'Access-Control-Allow-Methods', value: 'GET,POST,PUT,PATCH,DELETE,OPTIONS' },
           { key: 'Access-Control-Allow-Headers', value: 'Content-Type, Authorization' },
+          { key: 'Access-Control-Max-Age', value: '86400' },
         ],
       },
       {
-        // Cache static assets
         source: '/:all*(svg|jpg|jpeg|png|webp|avif|ico|woff|woff2)',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          { key: 'ETag', value: 'immutable' },
+        ],
+      },
+      {
+        source: '/',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
         ],
       },
     ];

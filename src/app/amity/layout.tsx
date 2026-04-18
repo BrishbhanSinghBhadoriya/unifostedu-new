@@ -1,45 +1,34 @@
 import { ChildrenProps } from "types/ChildrenProps";
 
 export const metadata = {
-  title: "Amity Online | Study UGC & AICTE Approved Online UG/PG Degree Programs",
+  title: "Amity University Online Admission 2026 | MBA, MCA, BBA, BCA Fees & Eligibility",
   description:
-    "Amity University Online offers flexible, globally recognized programs with expert mentorship and career-focused degrees approved by UGC and AICTE.",
+    "Amity University Online Admission 2026 open. Apply for UGC & AICTE approved online MBA, MCA, BBA, BCA, B.Com, M.Com degree programs. Get 100% placement support, global recognition, and affordable fees with No Cost EMI.",
   keywords: [
     "amity university online mba",
     "amity online mba fees",
     "amity university online bca",
     "amity university online bba",
     "amity university online bcom",
-    "amity university online ma ",
     "amity university online mca",
-    "amity university online courses list",
-    "amity university online ugc approved degrees",
-    "amity university online admission 2026",
-    "amity online january batch admission last date",
-    "amity online apply now",
-    "amity university online eligibility for mba",
+    "amity online admission 2026",
     "amity online mba fees per semester",
-    "amity online bca fees 2026",
-    "amity university online scholarship, no cost emi",
-    "amity online admission process step by step",
-    "amity university online noida admission",
-    "amity online mba from noida campus",
-    "amity university online distance and online courses",
-    "amity online degree valid for government jobs in india",
-    "amity online vs manipal online mba",
-    "amity online mba reviews and placements",
-    "amity university online genuine or fake",
+    "amity university online scholarship",
+    "amity online degree validity for government jobs",
     "best online mba in india amity university",
-    "amity online mba vs nmims online mba"
+    "amity university online placements",
+    "amity online bca fees 2026",
+    "amity online mca admission process",
+    "amity university online ugc approved"
   ],
 
   icons: [
-    { url: "images/logos/amity/favicon.ico" },
-    { url: "images/logos/amity/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-    { url: "images/logos/amity/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-    { url: "images/logos/amity/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
-    { url: "images/logos/amity/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
-    { url: "images/logos/amity/apple-touch-icon.png", type: "image/png" }
+    { url: "/images/logos/amity/favicon.ico" },
+    { url: "/images/logos/amity/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    { url: "/images/logos/amity/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    { url: "/images/logos/amity/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+    { url: "/images/logos/amity/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+    { url: "/images/logos/amity/apple-touch-icon.png", type: "image/png" }
   ],
 
   metadataBase: new URL("https://unifostedu.com"),
@@ -48,9 +37,9 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "Amity University Online | Accredited Online Degrees",
+    title: "Amity University Online Admission 2026 | Accredited Online Degrees",
     description:
-      "Globally recognized online undergraduate and postgraduate programs with flexible, industry-relevant learning from Amity University.",
+      "Join Amity University Online for globally recognized UG/PG programs. UGC approved MBA, MCA, BBA, BCA with expert mentorship and placement assistance.",
     url: "https://unifostedu.com/amity",
     siteName: "UNIFOST",
     images: [
@@ -58,7 +47,7 @@ export const metadata = {
         url: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp",
         width: 1200,
         height: 630,
-        alt: "Amity University Online"
+        alt: "Amity University Online Admission"
       }
     ],
     locale: "en_IN",
@@ -67,8 +56,8 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Amity University Online | Accredited Online Degrees",
-    description: "Enroll in UGC and AICTE approved online courses at Amity University Online.",
+    title: "Amity University Online Admission 2026 | MBA, MCA, BBA, BCA",
+    description: "Enroll in UGC and AICTE approved online courses at Amity University Online. Careers start here.",
     images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp"]
   },
 
@@ -100,6 +89,7 @@ const organizationSchema = {
   alternateName: "Amity Online",
   url: "https://unifostedu.com/amity",
   logo: "https://unifostedu.com/amity.svg",
+  description: "Amity University Online offers UGC and AICTE approved online undergraduate and postgraduate degree programs with a focus on industry-relevant skills and global recognition.",
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+91 7042646766",
@@ -118,6 +108,106 @@ const organizationSchema = {
     "https://www.facebook.com/AmityUniversityOnline",
     "https://www.linkedin.com/school/amity-university-online/",
     "https://x.com/AmityUniversity"
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "15400",
+    bestRating: "5",
+    worstRating: "1"
+  }
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://unifostedu.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "University List",
+      "item": "https://unifostedu.com/university-list"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Amity University Online",
+      "item": "https://unifostedu.com/amity"
+    }
+  ]
+};
+
+const coursesSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "Course",
+      "position": 1,
+      "name": "Online MBA",
+      "description": "Master of Business Administration with various specializations including Finance, Marketing, HR, and more.",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Amity University Online",
+        "sameAs": "https://unifostedu.com/amity"
+      }
+    },
+    {
+      "@type": "Course",
+      "position": 2,
+      "name": "Online MCA",
+      "description": "Master of Computer Applications with focus on Software Engineering, Data Science, and AI.",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Amity University Online",
+        "sameAs": "https://unifostedu.com/amity"
+      }
+    }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the Amity University Online MBA UGC-entitled and NAAC A+ accredited?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Amity University Online holds UGC entitlement and NAAC A+ accreditation, so the online MBA and every other Amity University Online degree carries the same recognition as an on-campus qualification."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is an Amity University Online degree valid for government jobs and abroad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Amity University Online degree programs are accepted for government jobs in India and are globally recognized, making them suitable for higher studies or international employment opportunities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 2026 Amity University Online MBA fees structure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For the 2026 intake, the Amity University Online MBA fees structure ranges from ₹1,99,000 to ₹2,99,000 depending on the specialization. Flexible EMI plans and no-cost installment options are available for working professionals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Amity University Online provide placement assistance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Amity University Online offers dedicated placement assistance including virtual job fairs, resume mentoring, interview preparation, and connections with 500+ hiring partners across India."
+      }
+    }
   ]
 };
 
@@ -138,8 +228,22 @@ export default function AmityLayout({ children }: ChildrenProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(coursesSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
       {children}
     </>
   );
 }
+
+

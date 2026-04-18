@@ -82,7 +82,7 @@ const Landing = ({ data }: LandingPageProps) => {
     setShowEnquiryModal(true);
   };
 
-  const MotionDiv = motion('div');
+  const MotionDiv = motion.create('div');
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
@@ -170,7 +170,7 @@ const Landing = ({ data }: LandingPageProps) => {
               const Icon = iconMap[feature.iconKey] || MdVerifiedUser;
               return (
                 <div
-                  key={feature._id}
+                  key={`${feature._id ?? feature.title ?? "feature"}-${index}`}
                   className="group"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
@@ -213,7 +213,7 @@ const Landing = ({ data }: LandingPageProps) => {
               {[...Array(2)].flatMap((_, i) =>
                 cities.map((city, idx) => (
                   <MotionDiv
-                    key={`city-${city._id}-${i}`}
+                    key={`city-${city._id ?? city.city ?? "city"}-${idx}-${i}`}
                     whileHover={{ y: -6 }}
                     className="min-w-[150px] flex flex-col items-center text-center bg-white/10 backdrop-blur-xl p-4 rounded-xl border border-white/20 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
                   >

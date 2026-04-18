@@ -80,6 +80,7 @@ const NMIMSLandingPage = () => {
     { name: "B.Com", path: "/nmims/bcom-online" },
     
   ];
+  
   const ugCourses = [
     {
       name: 'Bachelor of Business Administration (BBA)',

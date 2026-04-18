@@ -71,6 +71,8 @@ const inter = Inter({
   weight: ["600", "700"],
 });
 
+import UniversityComparison from '@/components/SEO/UniversityComparison';
+
 const AmityLandingPage = () => {
   const [openModal, setOpenModal] = useState<OpenModalState>(null);
   const sectionItems = SECTION_ITEMS;
@@ -476,7 +478,8 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
               openModal={openModal}
               setOpenModal={setOpenModal}
             />
-            <Footer setOpenModal={setOpenModal} openModal={openModal} />
+            <UniversityComparison currentUni="Amity University Online" />
+        <Footer setOpenModal={setOpenModal} openModal={openModal} />
           </div>
         </main>
         {openModal && (

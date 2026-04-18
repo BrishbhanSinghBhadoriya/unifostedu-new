@@ -97,8 +97,8 @@ export const metadata = {
       { rel: "manifest", url: "/site.webmanifest" },
     ],
   },
-  verification: {
-    google: "verification_token", 
+verification: {
+    google: "google-site-verification=YOUR_ACTUAL_VERIFICATION_CODE",
   },
 };
 

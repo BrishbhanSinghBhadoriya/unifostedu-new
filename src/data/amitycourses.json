@@ -85,24 +85,29 @@
     "specializations": [
       {
         "name": "BBA General",
-        "fee": "₹1,65,000",
+        "fee": "₹1,99,000",
         "description": "Comprehensive business administration program covering management principles, marketing, finance, human resources, operations, and organizational behavior. The BBA Online (Bachelor of Business Administration) program at Amity University Online offers career-focused specializations that help students learn according to their interests and current industry needs. These specializations allow learners to gain in-depth knowledge and practical skills in high-demand business fields while earning a recognized online degree in Amity."
       },
       {
         "name": "Data Analytics (In collaboration with HCL Tech)",
-        "fee": "₹2,25,000",
+        "fee": "₹2,50,000",
         "description": "The Data Analytics specialization focuses on understanding data-driven decision-making in business environments. Students learn about business intelligence, data visualization, statistical analysis, and analytics tools used across industries. This specialization covers how data is collected, processed, analyzed, and presented to support strategic business decisions. Learners gain hands-on experience with analytics software, dashboards, and reporting systems that help organizations understand customer behavior, market trends, operational efficiency, and business performance. The curriculum includes practical exposure to tools like Excel, SQL, Tableau, Power BI, and basic statistical methods used in business analytics. This specialization prepares students for roles in business analytics, market research, operations analytics, and data-driven consulting. By combining business knowledge with analytical skills, students develop the ability to transform raw data into actionable business insights and support organizational growth strategies effectively."
       },
       {
+        "name": "Business Analytics (In collaboration with KPMG)",
+        "fee": "₹2,30,000",
+        "description": "The Business Analytics specialization focuses on understanding Business making in business environments. Students learn about business intelligence, data visualization, statistical analysis, and analytics tools used across industries. This specialization covers how data is collected, processed, analyzed, and presented to support strategic business decisions. Learners gain hands-on experience with analytics software, dashboards, and reporting systems that help organizations understand customer behavior, market trends, operational efficiency, and business performance. The curriculum includes practical exposure to tools like Excel, SQL, Tableau, Power BI, and basic statistical methods used in business analytics. This specialization prepares students for roles in business analytics, market research, operations analytics, and data-driven consulting. By combining business knowledge with analytical skills, students develop the ability to transform raw data into actionable business insights and support organizational growth strategies effectively."
+      },
+      {
         "name": "Travel And Tourism Management",
-        "fee": "₹2,25,000",
+        "fee": "₹1,99,000",
         "description": "The Travel and Tourism Management specialization focuses on the growing hospitality, travel, and tourism industry. Students learn about tourism operations, destination management, travel agency operations, hotel management basics, and customer service excellence. This specialization covers how tourism businesses are managed, how travel experiences are designed, and how the tourism industry contributes to the global economy. Learners gain knowledge about airline operations, tour planning, hospitality services, event management, tourism marketing, and sustainable tourism practices. The curriculum is designed to help students understand both the business side and service side of the tourism sector. This specialization prepares students for careers in travel agencies, tour operators, airlines, hotels, resorts, event management companies, tourism boards, and destination marketing organizations. By combining business management principles with tourism-specific knowledge, students develop skills to manage, promote, and deliver quality tourism experiences in a competitive and fast-evolving industry."
       }
     ],
     "courseFees": {
-      "feeRange": "₹1,65,000 – ₹2,25,000",
+      "feeRange": "₹1,99,000 – ₹2,50,000",
       "feeDescription": "The complete 3-year BBA Online degree in Amity costs approximately depending on the selected payment plan and specialization.",
-      "semesterWiseApprox": "₹27,500 – ₹37,500",
+      "semesterWiseApprox": "₹33,200 – ₹41,700",
       "semesterDescription": "Students may pay semester-wise, making the program financially manageable.",
       "paymentOptions": [
         "One-Time Payment (Discount Available)",
@@ -134,21 +139,28 @@
           "specialization": "BBA General",
           "duration": "3 Years",
           "totalFee": "₹1,99,000",
-          "semesterFee": "₹27,500",
+          "semesterFee": "₹33,200",
           "description": "Comprehensive business administration program covering management, marketing, finance, HR, and organizational behavior."
         },
         {
           "specialization": "Data Analytics (HCL Tech)",
           "duration": "3 Years",
-          "totalFee": "₹2,25,000",
-          "semesterFee": "₹37,500",
+          "totalFee": "₹2,50,000",
+          "semesterFee": "₹41,700",
+          "description": "Industry-aligned program covering business intelligence, data visualization, analytics tools, and data-driven decision-making."
+        },
+         {
+          "specialization": "Business Analytics ( KPMG )",
+          "duration": "3 Years",
+          "totalFee": "₹2,30,000",
+          "semesterFee": "₹38,400",
           "description": "Industry-aligned program covering business intelligence, data visualization, analytics tools, and data-driven decision-making."
         },
         {
           "specialization": "Travel And Tourism Management",
           "duration": "3 Years",
-          "totalFee": "₹2,25,000",
-          "semesterFee": "₹37,500",
+          "totalFee": "₹1,99,000",
+          "semesterFee": "₹33,200",
           "description": "Focuses on tourism operations, hospitality management, travel services, and destination marketing."
         }
       ]
@@ -453,17 +465,17 @@
       "specializations": [
         {
           "name": "BCA General",
-          "fee": "₹1,50,000",
+          "fee": "₹1,75,000",
           "description": "Comprehensive computer applications program covering programming, databases, web development, and software engineering.The BCA Online (Bachelor of Computer Applications) program at Amity University Online offers career-focused specializations that help students learn according to their interests and current industry needs. These specializations allow learners to gain in-depth knowledge and practical skills in high-demand technology fields while earning a recognized online degree in Amity."
         },
         {
           "name": "Cloud and Security (In collaboration with TCS iON)",
-          "fee": "₹2,25,000",
+          "fee": "₹2,50,000",
           "description": "The Cloud and Security specialization focuses on modern IT infrastructure, cloud-based technologies, and digital security practices. Students learn about cloud platforms, virtualization, and scalable systems that support today’s digital applications. The specialization also covers how cloud environments are designed, managed, and optimized to ensure performance, reliability, and scalability in real-world scenarios.Along with cloud computing concepts, this specialization is designed for students interested in digital safety and data protection. It introduces core concepts of network security, ethical hacking, and information security, helping learners understand cyber threats, vulnerabilities, and security practices used to protect systems and data.This specialization prepares learners for roles related to cloud support and infrastructure management while also opening career paths in cyber security and IT risk management. By combining cloud technologies with security fundamentals, students gain a strong foundation to manage, secure, and maintain modern cloud-based IT systems effectively."
         },
         {
           "name": "Data Analytics (In collaboration with TCS iON)",
-          "fee": "₹2,25,000",
+          "fee": "₹2,50,000",
           "description": "The Cloud and Security specialization focuses on modern IT infrastructure, cloud-based technologies, and digital security practices. Students learn about cloud platforms, virtualization, and scalable systems that support today’s digital applications. The specialization also covers how cloud environments are designed, managed, and optimized to ensure performance, reliability, and scalability in real-world scenarios.Along with cloud computing concepts, this specialization is designed for students interested in digital safety and data protection. It introduces core concepts of network security, ethical hacking, and information security, helping learners understand cyber threats, vulnerabilities, and security practices used to protect systems and data.This specialization prepares learners for roles related to cloud support and infrastructure management while also opening career paths in cyber security and IT risk management. By combining cloud technologies with security fundamentals, students gain a strong foundation to manage, secure, and maintain modern cloud-based IT systems effectively."
         },
         {
@@ -473,7 +485,7 @@
         },
         {
           "name": "Software Engineering (In collaboration with HCL Tech)",
-          "fee": "₹2,25,000",
+          "fee": "₹2,50,000",
           "description": "Software engineering specialization with HCL Tech covering SDLC, agile methodologies, and enterprise application development.This specialization focuses on website and application development using modern programming tools and frameworks. Students gain hands-on knowledge of front-end and back-end development, enabling them to build real-world software solutions."
         },
         {
@@ -484,16 +496,22 @@
         },
         {
           "name": "Professional Certificate in Applied Data Engineering (In collaboration with KPMG)",
-          "fee": "₹2,25,000",
+          "fee": "₹2,50,000",
+          "description": "A premium program developed in collaboration with KPMG that offers a professional certification in applied data engineering and enterprise data solutions. The program focuses on designing, building, and managing large-scale data systems, including data integration, ETL pipelines, data warehousing, and cloud-based data platforms. Learners gain practical exposure to real-world enterprise data architectures, analytics-ready data models, and best practices used by global consulting and technology firms. The curriculum is tailored to industry requirements, preparing professionals for roles in data engineering, enterprise analytics, and data-driven decision-making."
+
+        },
+            {
+          "name": "Professional Certificate in Applied Data Engineering (In collaboration with HCL Tech)",
+          "fee": "₹2,30,000",
           "description": "A premium program developed in collaboration with KPMG that offers a professional certification in applied data engineering and enterprise data solutions. The program focuses on designing, building, and managing large-scale data systems, including data integration, ETL pipelines, data warehousing, and cloud-based data platforms. Learners gain practical exposure to real-world enterprise data architectures, analytics-ready data models, and best practices used by global consulting and technology firms. The curriculum is tailored to industry requirements, preparing professionals for roles in data engineering, enterprise analytics, and data-driven decision-making."
 
         }
       ],
       "courseFees": {
-  "feeRange": "₹1,50,000 – ₹2,50,000",
+  "feeRange": "₹1,75,000 – ₹2,50,000",
   "feeDescription": "The complete 3-year BCA Online degree in Amity costs approximately depending on the selected payment plan.",
 
-  "semesterWiseApprox": "₹25,000 – ₹41,666",
+  "semesterWiseApprox": "₹29,200 – ₹41,700",
   "semesterDescription": "Students may pay semester-wise, making the program financially manageable.",
 
   "paymentOptions": [
@@ -528,50 +546,50 @@
     {
       "specialization": "BCA General",
       "duration": "3 Years",
-      "totalFee": "₹1,50,000",
-      "semesterFee": "₹25,000",
+      "totalFee": "₹1,75,000",
+      "semesterFee": "₹29,200",
       "description": "Comprehensive computer applications program covering programming, databases, web development, and software engineering."
     },
     {
       "specialization": "Cloud and Security (TCS iON)",
       "duration": "3 Years",
-      "totalFee": "₹2,25,000",
-      "semesterFee": "₹37,500",
+      "totalFee": "₹2,50,000",
+      "semesterFee": "₹41,700",
       "description": "Focuses on cloud platforms, virtualization, cyber security fundamentals, ethical hacking, and IT infrastructure security."
     },
     {
       "specialization": "Data Analytics (TCS iON)",
       "duration": "3 Years",
-      "totalFee": "₹2,25,000",
-      "semesterFee": "₹37,500",
+      "totalFee": "₹2,50,000",
+      "semesterFee": "₹41,700",
       "description": "Covers data analysis, visualization, statistics, and analytics tools used in modern data-driven industries."
     },
     {
       "specialization": "Data Engineering (HCL Tech)",
       "duration": "3 Years",
-      "totalFee": "₹2,25,000",
+      "totalFee": "₹2,30,000",
       "semesterFee": "₹37,500",
       "description": "Industry-aligned program covering ETL pipelines, big data tools, and enterprise data systems."
     },
     {
       "specialization": "Software Engineering (HCL Tech)",
       "duration": "3 Years",
-      "totalFee": "₹2,25,000",
-      "semesterFee": "₹37,500",
+      "totalFee": "₹2,50,000",
+      "semesterFee": "₹41,700",
       "description": "Covers SDLC, agile practices, and full-stack application development."
     },
     {
       "specialization": "FinTech & AI (Paytm)",
       "duration": "3 Years",
       "totalFee": "₹2,50,000",
-      "semesterFee": "₹41,666",
+      "semesterFee": "₹41,700",
       "description": "Focuses on digital payments, AI-driven finance, fraud detection, blockchain, and fintech platforms."
     },
     {
       "specialization": "Applied Data Engineering (KPMG)",
       "duration": "3 Years",
-      "totalFee": "₹2,25,000",
-      "semesterFee": "₹37,500",
+      "totalFee": "₹2,50,000",
+      "semesterFee": "₹41,700",
       "description": "Professional certification program focusing on enterprise-grade data engineering and consulting practices."
     }
   ]

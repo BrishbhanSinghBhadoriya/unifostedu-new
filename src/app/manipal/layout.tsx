@@ -192,7 +192,7 @@ const websiteSchema = {
   url:        PAGE_URL,
   potentialAction: {
     "@type":       "SearchAction",
-    target:        `${PAGE_URL}?q={search_term_string}`,
+    target:        `${BASE_URL}/search?q={search_term_string}`,
     "query-input": "required name=search_term_string",
   },
 };
@@ -316,8 +316,8 @@ const breadcrumbSchema = {
   "@type":    "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home",                              item: BASE_URL },
-    { "@type": "ListItem", position: 2, name: "Manipal University Jaipur Online",  item: PAGE_URL },
-    { "@type": "ListItem", position: 3, name: "Admission 2026",                    item: PAGE_URL },
+    { "@type": "ListItem", position: 2, name: "University List",                   item: `${BASE_URL}/university-list` },
+    { "@type": "ListItem", position: 3, name: "Manipal University Jaipur Online",  item: PAGE_URL },
   ],
 };
 

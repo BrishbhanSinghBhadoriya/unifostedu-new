@@ -41,9 +41,9 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
     );
     return () => clearInterval(id);
   }, [slidesToUse.length]);
-  const MotionDiv = motion('div');
-  const MotionH1 = motion('h1');
-  const MotionP = motion('p');
+  const MotionDiv = motion.create('div');
+  const MotionH1 = motion.create('h1');
+  const MotionP = motion.create('p');
 
   return (
     <section className="relative min-h-screen flex flex-col bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 overflow-hidden">

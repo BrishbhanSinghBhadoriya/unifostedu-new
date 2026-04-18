@@ -171,7 +171,7 @@ const Manipal = () => {
       course: "Master of Science (M.Sc) - Business Analytics",
       duration: "2 Years",
       eligibility: "min 50% Graduation",
-      fees: "2,72,000",
+      fees: "2,80,000",
       specialization: "Business Analytics", 
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
       university: "Manipal Academy of Higher Education(MAHE))",

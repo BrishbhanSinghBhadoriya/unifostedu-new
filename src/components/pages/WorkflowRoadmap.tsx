@@ -57,7 +57,7 @@ const steps = [
     icon: '🎓'
   },
 ];
-const MotionDiv=motion('div');
+const MotionDiv = motion.create('div');
 
 // Animated Cap Component with better positioning
 const AnimatedCap = ({ start, delay = 0 }: { start: number; delay?: number }) => (

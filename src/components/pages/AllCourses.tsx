@@ -63,7 +63,7 @@ export function AllCourses({ courses = [] }: CourseProps) {
     const Icon = getIcon(course);
     return <Icon className="text-white text-xl sm:text-2xl" />;
   };
-  const MotionDiv = motion('div');
+  const MotionDiv = motion.create('div');
 
 
   return (
