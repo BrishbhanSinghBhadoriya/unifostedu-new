@@ -1,39 +1,147 @@
 [
-
-  { "title": "Manipal University Online", "type": "university", "href": "/manipal" },
-  { "title": "Jain University Online", "type": "university", "href": "/jain" },
-  { "title": "NMIMS University Online", "type": "university", "href": "/nmims" },
-  { "title": "Chandigarh University Online", "type": "university", "href": "/cuOnline" },
-  { "title": "Lovely Professional University Online", "type": "university", "href": "/lpu-online" },
-  { "title": "Manipal Academic of Higher Eduction", "type": "university", "href": "/mahe-online" },
-  { "title": "Dy Patil University", "type": "university", "href": "/dypatil" },
-  { "title": "Jain University Online","type": "university", "href": "/jain" },
-  { "title": "Uttaranchal University","type": "university", "href": "/uu" },
-  { "title": "OP Jindal University","type": "university", "href": "/opjindal" },
-  { "title": "Kurukshetra University ","type": "university", "href": "ku-online" },
-  { "title": "Shoolini University Online","type": "university", "href": "/shoolini" },
-  { "title": "Vivekananda Global University","type": "university", "href": "/vgu" },
-  { "title": "UPES University","type": "university", "href": "/upes" },
-  { "title": "Sharada University Online","type": "university", "href": "/sharda" },
-
-  { "title": "MBA (Master of Business Administration)", "type": "course", "href": "/courses/mba-online" },
-  { "title": "MCA (Master of Computer Applications)", "type": "course", "href": "/courses/mca-online" },
-  { "title": "BBA (Bachelor of Business Administration)", "type": "course", "href": "/courses/bba-online" },
-  { "title": "BCA (Bachelor of Computer Applications)", "type": "course", "href": "/courses/bca-online" },
-  { "title": "B.Com (Bachelor of Commerce)", "type": "course", "href": "/courses/bcom-online" },
-  { "title": "MA (Master of Arts)", "type": "course", "href": "/courses/ma-online" },
-  { "title": "M.com", "type": "course", "href": "/courses/mcom-online" },
-  { "title": "MAJMC", "type": "course", "href": "/courses/majmc-online" },
-  { "title": "BA", "type": "course", "href": "/courses/ba-online" },
-  { "title": "BAJMC", "type": "course", "href": "/courses/bajmc-online" },
- 
- 
- 
-  
-
-  { "title": "About Unifost", "type": "page", "href": "/about" },
-  { "title": "About UniFost", "type": "page", "href": "/about" },
-  { "title": "Unifost About Page", "type": "page", "href": "/about" },
-  { "title": "UNIFOST Company", "type": "page", "href": "/about" },
-  { "title": "What is Unifost?", "type": "page", "href": "/about" }
+  {
+    "title": "Manipal University Online",
+    "type": "university",
+    "href": "/manipal"
+  },
+  {
+    "title": "Jain University Online",
+    "type": "university",
+    "href": "/jain"
+  },
+  {
+    "title": "NMIMS University Online",
+    "type": "university",
+    "href": "/nmims"
+  },
+  {
+    "title": "Chandigarh University Online",
+    "type": "university",
+    "href": "/cuOnline"
+  },
+  {
+    "title": "Lovely Professional University Online",
+    "type": "university",
+    "href": "/lpu-online"
+  },
+  {
+    "title": "Dy Patil University",
+    "type": "university",
+    "href": "/dypatil"
+  },
+  {
+    "title": "Jain University Online",
+    "type": "university",
+    "href": "/jain"
+  },
+  {
+    "title": "Uttaranchal University",
+    "type": "university",
+    "href": "/uu"
+  },
+  {
+    "title": "OP Jindal University",
+    "type": "university",
+    "href": "/opjindal"
+  },
+  {
+    "title": "Kurukshetra University ",
+    "type": "university",
+    "href": "ku-online"
+  },
+  {
+    "title": "Shoolini University Online",
+    "type": "university",
+    "href": "/shoolini"
+  },
+  {
+    "title": "Vivekananda Global University",
+    "type": "university",
+    "href": "/vgu"
+  },
+  {
+    "title": "UPES University",
+    "type": "university",
+    "href": "/upes"
+  },
+  {
+    "title": "Sharada University Online",
+    "type": "university",
+    "href": "/sharda"
+  },
+  {
+    "title": "MBA (Master of Business Administration)",
+    "type": "course",
+    "href": "/courses/mba-online"
+  },
+  {
+    "title": "MCA (Master of Computer Applications)",
+    "type": "course",
+    "href": "/courses/mca-online"
+  },
+  {
+    "title": "BBA (Bachelor of Business Administration)",
+    "type": "course",
+    "href": "/courses/bba-online"
+  },
+  {
+    "title": "BCA (Bachelor of Computer Applications)",
+    "type": "course",
+    "href": "/courses/bca-online"
+  },
+  {
+    "title": "B.Com (Bachelor of Commerce)",
+    "type": "course",
+    "href": "/courses/bcom-online"
+  },
+  {
+    "title": "MA (Master of Arts)",
+    "type": "course",
+    "href": "/courses/ma-online"
+  },
+  {
+    "title": "M.com",
+    "type": "course",
+    "href": "/courses/mcom-online"
+  },
+  {
+    "title": "MAJMC",
+    "type": "course",
+    "href": "/courses/majmc-online"
+  },
+  {
+    "title": "BA",
+    "type": "course",
+    "href": "/courses/ba-online"
+  },
+  {
+    "title": "BAJMC",
+    "type": "course",
+    "href": "/courses/bajmc-online"
+  },
+  {
+    "title": "About Unifost",
+    "type": "page",
+    "href": "/about"
+  },
+  {
+    "title": "About UniFost",
+    "type": "page",
+    "href": "/about"
+  },
+  {
+    "title": "Unifost About Page",
+    "type": "page",
+    "href": "/about"
+  },
+  {
+    "title": "UNIFOST Company",
+    "type": "page",
+    "href": "/about"
+  },
+  {
+    "title": "What is Unifost?",
+    "type": "page",
+    "href": "/about"
+  }
 ]

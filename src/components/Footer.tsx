@@ -305,7 +305,6 @@ ${uploadedResumeURL || "Not uploaded"}
     "/lpu-online",
     "/manipal",
     "/cuOnline",
-    "/mahe-online",
     "/ku-online",
     "/bookdemo",
     "/smu",

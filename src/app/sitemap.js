@@ -48,18 +48,6 @@ export default async function sitemap() {
     priority: 0.8,
   }));
 
-  // Mahe University course routes
-  const maheCourseRoutes = [
-    'online-mba-mahe', 'online-mca-mahe', 'online-bba-honors-mahe', 
-    'online-bba-mahe', 'online-msc-data-science-mahe', 
-    'online-msc-business-analytics-mahe', 'online-bcom-professional-mahe',
-  ].map((course) => ({
-    url: `${baseUrl}/mahe-online/${course}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: 0.8,
-  }));
-
   // SMU course routes
   const smuCourseRoutes = [
     'mba-online', 'mca-online', 'ba-online', 'mcom-online', 'bcom-online', 'ma-online',
@@ -114,7 +102,6 @@ export default async function sitemap() {
     ...universityRoutes,
     ...genericCourseRoutes,
     ...amityCourseRoutes,
-    ...maheCourseRoutes,
     ...smuCourseRoutes,
     ...workingProfessionalRoutes,
     ...staticBlogRoutes,

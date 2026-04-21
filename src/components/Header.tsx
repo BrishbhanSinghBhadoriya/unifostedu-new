@@ -77,11 +77,6 @@ const universities = [
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp",
   },
   {
-    name: "Manipal Academy of Higher Education",
-    link: "/mahe-online",
-    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/mahe-uni_dvnm1d.webp",
-  },
-  {
     name: "Sikkim Manipal University",
     link: "/smu",
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp",
@@ -279,7 +274,6 @@ const Header = () => {
       "/lpu-online",
       "/manipal",
       "/cuOnline",
-      "/mahe-online",
       "/ku-online",
       "/smu",
       "/jain",

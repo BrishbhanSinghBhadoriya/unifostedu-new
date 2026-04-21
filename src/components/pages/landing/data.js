@@ -165,7 +165,6 @@ export const getUniversityHref = (name) => {
   const n = name.toLowerCase();
   if (n.includes("amity")) return "/amity";
   if (n.includes("manipal")) return "/manipal";
-  if (n.includes("mahe")) return "/mahe-online";
   if (n.includes("lovely professional") || n.includes("lpu")) return "/lpu";
   if (n.includes("petroleum") || n.includes("upes")) return "/upes";
   if (n.includes("narsee monjee") || n.includes("nmims")) return "/nmims";

@@ -19,7 +19,6 @@ const getUniversityLink = (name: string) => {
   if (n.includes("amity")) return "/Amity-University-Online";
   if (n.includes("lovely") || n.includes("lpu")) return "/lpu-online";
   if (n.includes("manipal university jaipur") || n.includes("muj") || n.includes("online manipal")) return "/manipal";
-  if (n.includes("mahe") || n.includes("manipal academy") || n.includes("manipal academic")) return "/mahe-online";
   if (n.includes("sikkim") || n.includes("smu")) return "/smu";
   if (n.includes("uttaranchal") || n.includes("uu")) return "/uu";
   if (n.includes("chandigarh") || n.includes("cu")) return "/cuOnline";

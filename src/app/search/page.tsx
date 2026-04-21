@@ -279,7 +279,6 @@ function SearchContent({ onOpenModal }: SearchContentProps) {
                 { name: 'Dr. D Y Patil University', href: '/dypatil', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dypatil_tbbpf9.webp', rating: '4.6' },
                 { name: 'Jain University', href: '/jain', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp', rating: '4.5' },
                 { name: 'Lovely Professional University', href: '/lpu-online', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp', rating: '4.4' },
-                { name: 'Manipal Academy of Higher Education', href: '/mahe-online', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/mahe-uni_dvnm1d.webp', rating: '4.8' },
                 { name: 'Sharda University', href: '/sharda', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp', rating: '4.3' },
                 { name: 'Shoolini University', href: '/shoolini', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327856/shoolini_txvq6k.webp', rating: '4.2' },
                 { name: 'Sikkim Manipal University', href: '/smu', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp', rating: '4.5' },

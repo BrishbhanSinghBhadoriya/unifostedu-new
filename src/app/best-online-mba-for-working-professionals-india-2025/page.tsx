@@ -474,7 +474,7 @@ const BestOnlineMBA = () => {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-red-50 to-rose-50 p-8 rounded-2xl my-8 shadow-lg">
+          {/* <div className="bg-gradient-to-br from-red-50 to-rose-50 p-8 rounded-2xl my-8 shadow-lg">
             <h3 className="!text-red-800 !mt-0">5. Manipal Academy of Higher Education (MAHE) Online</h3>
             <p>MAHE Online offers a premium online MBA experience with the backing of one of India's most respected educational institutions.</p>
             <p><strong>Highlights of MAHE Online MBA:</strong></p>
@@ -489,13 +489,6 @@ const BestOnlineMBA = () => {
 
             <p>MAHE Online is ideal for professionals who want a prestigious degree with comprehensive learning support. Their program emphasizes leadership skills and strategic thinking.</p>
             <div className="flex justify-center gap-4 mt-6">
-              <Link
-                href="/mahe-online"
-                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition cursor-pointer"
-              >
-                More Info
-              </Link>
-
               <button
                 onClick={() => setOpenModal(true)}
                 className="btn-primary px-6 py-3 rounded-lg text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
@@ -503,7 +496,7 @@ const BestOnlineMBA = () => {
                 Enquire Now
               </button>
             </div>
-          </div>
+          </div> */}
 
           <div className="bg-gradient-to-br from-cyan-50 to-sky-50 p-8 rounded-2xl my-8 shadow-lg">
             <h3 className="!text-cyan-800 !mt-0">6. Kurukshetra University (KU) Online</h3>

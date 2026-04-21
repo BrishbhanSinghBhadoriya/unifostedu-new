@@ -18,7 +18,6 @@ export default function ChatBoxWrapper() {
       "/lpu-online",
       "/manipal",
       "/cuOnline",
-      "/mahe-online",
       "/ku-online",
       "/smu",
       "/jain",

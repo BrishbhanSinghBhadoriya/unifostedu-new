@@ -52,17 +52,6 @@ export const UniversityList = [
   },
 
   {
-    name: "Manipal Academic of Higher Education",
-    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipallogo_yduega.jpg",
-    ranking: "NIRF-03",
-    location: "Jaipur, Rajasthan",
-    fee: "₹1,80,000 - ₹2,94,000",
-    courses: ["BBA", "B.Com"],
-    description: "Top-ranked institution offering high-quality online education.",
-    link: "/mahe-online"
-  },
-
-  {
     name: "Lovely Professional University Online",
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762329087/lpulogo_vdgb4x.png",
     ranking: "NIRF-31",
