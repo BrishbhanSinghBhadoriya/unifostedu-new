@@ -8,6 +8,7 @@ import OrganizationSchema from "@/components/OrganizationSchema";
 import { Toaster as SonnerToaster } from "sonner";
 import Script from 'next/script';
 import LenisProvider from "@/components/LenisProvider";
+import ChatBox from "@/components/ChatBox";
 const inter = Inter({ subsets: ["latin"] });
 const baskervville = Baskervville({
   subsets: ["latin"],
@@ -164,6 +165,7 @@ export default function RootLayout({ children }: ChildrenProps) {
         <LenisProvider>
           <Header />
           <main>{children}</main>
+          <ChatBox />
           <Footer />
         </LenisProvider>
         {/* <ChatBoxWrapper />   */}

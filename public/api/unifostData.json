@@ -20,362 +20,100 @@
     "success_rate": "100%",
     "programs": "80+"
   },
+  "heroSlides": [
+    {
+      "src": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327967/slider-1_pjehj7.webp",
+      "alt": "Compare before you decide",
+      "title": "Your Gateway to Success",
+      "subtitle": "Compare • Choose • Succeed",
+      "description": "Find the perfect online degree program from India's top-ranked universities. Get expert guidance to make informed decisions for your academic future."
+    },
+    {
+      "src": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762602023/slider-2_ritvxe.webp",
+      "alt": "Your One-Stop Platform for Online Universities",
+      "title": "Transform Your Future",
+      "subtitle": "Online Education Excellence",
+      "description": "Access world-class education from anywhere, anytime. Study with industry experts and get recognized degrees from UGC-approved universities."
+    }
+  ],
+  "courses": [
+    { "title": "MBA Online", "desc": "Gain strategic skills from top universities", "tag": "Popular", "iconKey": "mba", "duration": "2 Years", "level": "PG", "color": "from-blue-500 to-purple-600" },
+    { "title": "MSC Online", "desc": "Advanced science and technology programs", "tag": "Science", "iconKey": "msc", "duration": "2 Years", "level": "PG", "color": "from-teal-500 to-cyan-600" },
+    { "title": "MCA Online", "desc": "Advance in tech with flexible learning", "tag": "Top Rated", "iconKey": "mca", "duration": "2 Years", "level": "PG", "color": "from-green-500 to-teal-600" },
+    { "title": "M.Com Online", "desc": "Deepen commerce expertise", "tag": "Best Value", "iconKey": "m.com", "duration": "2 Years", "level": "PG", "color": "from-orange-500 to-red-600" },
+    { "title": "MA Online", "desc": "Explore diverse specializations", "tag": "Literature", "iconKey": "ma", "duration": "2 Years", "level": "PG", "color": "from-purple-500 to-pink-600" },
+    { "title": "MAJMC Online", "desc": "Master journalism and mass communication", "tag": "Media", "iconKey": "majmc", "duration": "2 Years", "level": "PG", "color": "from-indigo-500 to-blue-600" },
+    { "title": "BBA Online", "desc": "Management fundamentals for the digital age", "tag": "Career Starter", "iconKey": "bba", "duration": "3 Years", "level": "UG", "color": "from-emerald-500 to-green-600" },
+    { "title": "BCA Online", "desc": "Build a career in software development", "tag": "Trending", "iconKey": "bca", "duration": "3 Years", "level": "UG", "color": "from-cyan-500 to-blue-600" },
+    { "title": "B.Com Online", "desc": "Commerce education for business world", "tag": "Business", "iconKey": "b.com", "duration": "3 Years", "level": "UG", "color": "from-amber-500 to-orange-600" },
+    { "title": "BA Online", "desc": "Liberal arts foundation for diverse careers", "tag": "Arts", "iconKey": "ba", "duration": "3 Years", "level": "UG", "color": "from-rose-500 to-pink-600" },
+    { "title": "BAJMC Online", "desc": "Journalism and mass communication basics", "tag": "Media", "iconKey": "bajmc", "duration": "3 Years", "level": "UG", "color": "from-violet-500 to-purple-600" }
+  ],
+  "features": [
+    { "title": "Expert Counseling", "description": "Get personalized guidance from education experts", "iconKey": "FaUserTie", "color": "from-blue-500 to-teal-600" },
+    { "title": "Compare Programs", "description": "Side-by-side comparison of courses and universities", "iconKey": "FaCompass", "color": "from-blue-500 to-teal-600" },
+    { "title": "Flexible Learning", "description": "Study at your own pace from anywhere", "iconKey": "FaGlobe", "color": "from-blue-500 to-teal-600" },
+    { "title": "Career Support", "description": "Get assistance with job placement and career guidance", "iconKey": "FaBriefcase", "color": "from-blue-500 to-teal-600" }
+  ],
+  "accreditationLogos": [
+    { "_id": "a1", "name": "UGC", "imageUrl": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp" },
+    { "_id": "a2", "name": "NAAC", "imageUrl": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp" },
+    { "_id": "a3", "name": "NIRF", "imageUrl": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nirf_f5xen9.webp" },
+    { "_id": "a4", "name": "AICTE", "imageUrl": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp" },
+    { "_id": "a5", "name": "WASC", "imageUrl": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/wasc_emgnvc.webp" },
+    { "_id": "a6", "name": "AIU", "imageUrl": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327029/aiu_yfa2is.webp" },
+    { "_id": "a7", "name": "IACBE", "imageUrl": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327173/iacbe_pujpjb.webp" },
+    { "_id": "a8", "name": "AACSB", "imageUrl": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327031/aacsb_s1rybc.webp" },
+    { "_id": "a9", "name": "IQAS", "imageUrl": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327238/iqas_bieryy.webp" },
+    { "_id": "a10", "name": "WES", "imageUrl": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/wes_zuxwfs.webp" },
+    { "_id": "a11", "name": "UNWTO", "imageUrl": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/unwto_ddlwkk.webp" },
+    { "_id": "a12", "name": "NABH", "imageUrl": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327582/nabh_uqzuzo.webp" }
+  ],
+  "cities": [
+    { "city": "Delhi", "state": "Delhi", "img": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327127/delhi_lwsbb7.webp", "students": "25K+" },
+    { "city": "Mumbai", "state": "Maharashtra", "img": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327509/mumbai_qa5xkf.webp", "students": "22K+" },
+    { "city": "Bangalore", "state": "Karnataka", "img": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327054/banglore_pbamae.webp", "students": "20K+" },
+    { "city": "Chennai", "state": "Tamil Nadu", "img": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327088/chennai_azdhll.webp", "students": "18K+" },
+    { "city": "Hyderabad", "state": "Telangana", "img": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327173/hyderabad_o0oe5o.webp", "students": "16K+" },
+    { "city": "Pune", "state": "Maharashtra", "img": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327853/pune_iyjiw5.webp", "students": "15K+" },
+    { "city": "Kolkata", "state": "West Bengal", "img": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327279/kolkata_ud7zmw.webp", "students": "14K+" },
+    { "city": "Ahmedabad", "state": "Gujarat", "img": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/ahemdabad_qwi2xy.webp", "students": "12K+" }
+  ],
+  "universityLogos": [
+    { "name": "Amity University", "logo": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762328966/amitylogo_jdzznl.jpg" },
+    { "name": "Manipal University", "logo": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762329087/manipallogo_rxujwr.webp" },
+    { "name": "LPU Online", "logo": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762329087/lpulogo_vdgb4x.png" },
+    { "name": "UPES Online", "logo": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762329092/upeslogo_i1dwgp.png" },
+    { "name": "NMIMS Online", "logo": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762329088/nmimslogo_blukfn.jpg" },
+    { "name": "Sharda University", "logo": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762329091/shardalogo_cmsla3.png" },
+    { "name": "DY Patil", "logo": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762328967/dypatillogo_c8uqm7.png" },
+    { "name": "Jain University", "logo": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762328981/jainlogo_ewfeoy.png" },
+    { "name": "Chandigarh University", "logo": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762328967/cu-logo_gunzgp.png" },
+    { "name": "Shoolini University", "logo": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762329091/shoolinilogo_jxkt71.png" },
+    { "name": "VGU Online", "logo": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762329092/vgulogo_cg5pke.png" },
+    { "name": "OP Jindal University", "logo": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762329099/opjindallogo_vksxpm.png" }
+  ],
   "partner_universities": [
     {
       "name": "Amity University Online",
       "nirf_ranking": "29",
       "rating": "4.8",
       "fees": "₹0.99L - ₹3.45L",
-      "website": "https://unifostedu.com/amity"
+      "logo": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp"
     },
     {
       "name": "Manipal University Online",
       "nirf_ranking": "73",
       "rating": "4.6",
       "fees": "₹0.99L - ₹2.92L",
-      "website": "https://unifostedu.com/manipal"
+      "logo": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal1_ako6mq.webp"
     },
     {
       "name": "Lovely Professional University Online",
       "nirf_ranking": "38",
       "rating": "4.1",
       "fees": "₹0.80L - ₹2.0L",
-      "website": "https://unifostedu.com/lpu-online"
-    },
-    {
-      "name": "University of Petroleum and Energy Studies Online",
-      "nirf_ranking": "41",
-      "rating": "4.4",
-      "fees": "₹1.50L - ₹2.20L",
-      "website": "https://unifostedu.com/upes"
-    },
-    {
-      "name": "Narsee Monjee Institute of Management Studies Online",
-      "nirf_ranking": "21",
-      "rating": "4.5",
-      "fees": "₹0.94L - ₹4.0L",
-      "website": "https://unifostedu.com/nmims"
-    },
-    {
-      "name": "Sharda University Online",
-      "nirf_ranking": "87",
-      "rating": "4.1",
-      "fees": "₹1.05L - ₹1.60L",
-      "website": "https://unifostedu.com/sharda"
-    },
-    {
-      "name": "Dr. DY Patil Online",
-      "nirf_ranking": "63",
-      "rating": "4.4",
-      "fees": "₹1.40L - ₹1.90L",
-      "website": "https://unifostedu.com/dypatil"
-    },
-    {
-      "name": "Jain University Online",
-      "nirf_ranking": "77",
-      "rating": "4.5",
-      "fees": "₹1.30L - ₹2.16L",
-      "website": "https://unifostedu.com/jain"
-    },
-    {
-      "name": "Chandigarh University Online",
-      "nirf_ranking": "36",
-      "rating": "4.7",
-      "fees": "₹1.0L - ₹2.10L",
-      "website": "https://unifostedu.com/cuOnline"
+      "logo": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp"
     }
-  ],
-  "courses": [
-    {
-      "name": "MBA Online",
-      "level": "PG",
-      "description": "Gain strategic skills from top universities",
-      "link": "https://unifostedu.com/courses/mba-online"
-    },
-    {
-      "name": "MSC Online",
-      "level": "PG",
-      "description": "Advanced science and technology programs",
-      "link": "https://unifostedu.com/courses/msc-online"
-    },
-    {
-      "name": "MCA Online",
-      "level": "PG",
-      "description": "Advance in tech with flexible learning",
-      "link": "https://unifostedu.com/courses/mca-online"
-    },
-    {
-      "name": "M.Com Online",
-      "level": "PG",
-      "description": "Deepen commerce expertise",
-      "link": "https://unifostedu.com/courses/mcom-online"
-    },
-    {
-      "name": "MA Online",
-      "level": "PG",
-      "description": "Explore diverse specializations",
-      "link": "https://unifostedu.com/courses/ma-online"
-    },
-    {
-      "name": "MAJMC Online",
-      "level": "PG",
-      "description": "Master journalism and mass communication",
-      "link": "https://unifostedu.com/courses/majmc-online"
-    },
-    {
-      "name": "BBA Online",
-      "level": "UG",
-      "description": "Management fundamentals for the digital age",
-      "link": "https://unifostedu.com/courses/bba-online"
-    },
-    {
-      "name": "BCA Online",
-      "level": "UG",
-      "description": "Build a career in software development",
-      "link": "https://unifostedu.com/courses/bca-online"
-    },
-    {
-      "name": "B.Com Online",
-      "level": "UG",
-      "description": "Commerce education for business world",
-      "link": "https://unifostedu.com/courses/bcom-online"
-    },
-    {
-      "name": "BA Online",
-      "level": "UG",
-      "description": "Liberal arts foundation for diverse careers",
-      "link": "https://unifostedu.com/courses/ba-online"
-    },
-    {
-      "name": "BAJMC Online",
-      "level": "UG",
-      "description": "Journalism and mass communication basics",
-      "link": "https://unifostedu.com/courses/bajmc-online"
-    }
-  ],
-  "features": [
-    {
-      "name": "Expert Counseling",
-      "description": "Get personalized guidance from education experts"
-    },
-    {
-      "name": "Compare Programs",
-      "description": "Side-by-side comparison of courses and universities"
-    },
-    {
-      "name": "Flexible Learning",
-      "description": "Study at your own pace from anywhere"
-    },
-    {
-      "name": "Career Support",
-      "description": "Get assistance with job placement and career guidance"
-    }
-  ],
-  "accreditations": [
-    "UGC",
-    "NAAC",
-    "NIRF",
-    "AICTE",
-    "WASC",
-    "AIU",
-    "IACBE",
-    "AACSB",
-    "IQAS",
-    "WES",
-    "UNWTO",
-    "NABH"
-  ],
-  "cities_served": [
-    "Delhi",
-    "Mumbai",
-    "Bangalore",
-    "Chennai",
-    "Hyderabad",
-    "Pune",
-    "Kolkata",
-    "Ahmedabad"
-  ],
-  "amity_university_details": {
-    "name": "Amity University Online",
-    "description": "India's one of the recognised UGC-approved online university",
-    "statistics": {
-      "students_enrolled": "1.6L+",
-      "years_of_excellence": "25+",
-      "placement_assistance": "100%",
-      "corporate_partners": "200+"
-    },
-    "programs": {
-      "undergraduate": [
-        {
-          "name": "Bachelor of Business Administration (BBA)",
-          "duration": "3 Years",
-          "eligibility": "10+2 Pass",
-          "fees": "₹1,65,000- ₹2,25,000",
-          "specializations": [
-            "General",
-            "Data Analytics",
-            "Travel And Tourism Management",
-            "Professional Certificate in Business Analytics"
-          ]
-        },
-        {
-          "name": "Bachelor of Computer Applications (BCA)",
-          "duration": "3 Years",
-          "eligibility": "10+2 Pass",
-          "fees": "₹1,50,000 - ₹2,25,000",
-          "specializations": [
-            "General",
-            "Cloud and Security",
-            "Software Engineering",
-            "Data Science",
-            "Data Engineering(HCL Tech)",
-            "Data Analytics",
-            "Software Engineering(HCL Tech)"
-          ]
-        },
-        {
-          "name": "Bachelor of Commerce (B.Com)",
-          "duration": "3 Years",
-          "eligibility": "10+2 Pass",
-          "fees": "₹99,000 - ₹2,50,000",
-          "specializations": [
-            "General",
-            "Hons",
-            "International Finance & Accounting"
-          ]
-        },
-        {
-          "name": "Bachelor of Arts (BA)",
-          "duration": "3 Years",
-          "eligibility": "10+2 Pass",
-          "fees": "₹99,000 - ₹1,70,000",
-          "specializations": [
-            "General",
-            "Journalism and Mass Communication",
-            "Native Languages(Kannada,Malayalam, Tamil, Telugu)",
-            "Psychology",
-            "English",
-            "Sociology",
-            "Political Science",
-            "Economics"
-          ]
-        }
-      ],
-      "postgraduate": [
-        {
-          "name": "Master of Business Administration (MBA)",
-          "duration": "2 Years",
-          "eligibility": "Graduation",
-          "fees": "₹1,99,000 - ₹2,99,000",
-          "specializations": [
-            "General",
-            "Information Technology Management",
-            "Dual Specialization",
-            "Human Resource Analytics",
-            "Data Science",
-            "Business Analytics",
-            "International Business Management",
-            "Hospital Management",
-            "Digital Entrepreneurship",
-            "Digital Marketing Management",
-            "Entrepreneurship & Leadership Management",
-            "Finance & Accounting Management",
-            "Hospitality Management",
-            "Global Finance Market",
-            "Insurance Management",
-            "Marketing & Sales Management",
-            "Petroleum & Natural Gas",
-            "Production and Operations Management",
-            "Retail Management"
-          ]
-        },
-        {
-          "name": "Master of Computer Applications (MCA)",
-          "duration": "2 Years",
-          "eligibility": "Graduation in BCA/B.Sc(IT)",
-          "fees": "₹170,000- ₹2,50,000",
-          "specializations": [
-            "General",
-            "Cyber Security",
-            "Blockchain Technology",
-            "Machine Learning and Artificial Intelligence",
-            "Augmented Reality and Virtual Reality",
-            "Software Engineering"
-          ]
-        },
-        {
-          "name": "Master of Commerce (M.Com)",
-          "duration": "2 Years",
-          "eligibility": "Graduation in Commerce",
-          "fees": "₹1,20,000",
-          "specializations": [
-            "General",
-            "Financial Management",
-            "Financial Technology"
-          ]
-        },
-        {
-          "name": "Master of Arts (MA)",
-          "duration": "2 Years",
-          "eligibility": "Graduation",
-          "fees": "₹1,30,000 - ₹2,50,000",
-          "specializations": [
-            "Psychology",
-            "Journalism and Mass Communication",
-            "Public Policy & Governance",
-            "English",
-            "Sociology"
-          ]
-        },
-        {
-          "name": "Master of Science (M.Sc)",
-          "duration": "2 Years",
-          "eligibility": "Graduation",
-          "fees": "₹2,50,000",
-          "specializations": [
-            "Data Science"
-          ]
-        }
-      ]
-    },
-    "scholarships": [
-      {
-        "category": "Divyaang (for Persons with Special Needs)",
-        "discount": "20%",
-        "eligibility": "Valid certificate of disability as per government norms"
-      },
-      {
-        "category": "Defence Personnel",
-        "discount": "20%",
-        "eligibility": "Minimum 2 years of service in the defence forces with valid Identity Card number"
-      },
-      {
-        "category": "Amity University Alumni",
-        "discount": "20%",
-        "eligibility": "Amity University UG/PG alumni"
-      },
-      {
-        "category": "Merit-Based",
-        "discount": "20%",
-        "eligibility": "Academic excellence with minimum 85% aggregate in previous qualification"
-      },
-      {
-        "category": "Sports Scholarship (CHAMPS)",
-        "discount": "30% – 100%",
-        "eligibility": "State, national, or international-level sportspersons with valid sports federation affiliation"
-      }
-    ],
-    "admission_process": [
-      "Application Form - Fill the online application form on the university portal",
-      "Documents & Fee - Upload required documents and pay the application fee",
-      "Confirmation - Receive confirmation and student login credentials",
-      "Enrollment - Complete fee payment and begin your classes"
-    ],
-    "placement_stats": {
-      "employability_rate": "90%",
-      "corporate_partners": "500+",
-      "average_salary": "₹6–8 LPA",
-      "job_fairs": "Dedicated placement events for distance learners"
-    }
-  }
+  ]
 }
