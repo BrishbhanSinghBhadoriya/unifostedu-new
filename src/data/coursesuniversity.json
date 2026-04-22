@@ -1,0 +1,2098 @@
+{
+  "universities": [
+    {
+      "universityId": "amity-online",
+      "universityName": "Amity University Online",
+      "shortName": "AUO",
+      "undergraduateCourses": [
+        {
+          "courseId": "auo-bba-001",
+          "courseName": "Bachelor of Business Administration (BBA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Pass",
+          "fees": {
+            "min": 199000,
+            "max": 250000,
+            "currency": "₹",
+            "display": "₹1,99,000- ₹2,50,000"
+          },
+          "specializations": ["BBA - General", "Data Analytics In collaboration with HCL Tech", "Business Analytics in Collaboration with KPMG", "Travel And Tourism Management"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
+          "alt": "BBA from amity online university"
+        },
+        {
+          "courseId": "auo-bca-001",
+          "courseName": "Bachelor of Computer Applications (BCA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Pass",
+          "fees": {
+            "min": 175000,
+            "max": 250000,
+            "currency": "₹",
+            "display": "₹1,75,000 - ₹2,50,000"
+          },
+          "specializations": ["BCA - General", "Cloud and Security In collaboration with TCS iON", "Applied Data Engineering In collaboration with KPMG", "Data Analytics In collaboration with TCS iON", "Data Engineering In collaboration with HCL Tech", "Software Engineering In collaboration with HCL Tech", "Financial Technology And AI In collaboration with Paytm"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bca-online-image_awhemy.webp",
+          "alt": "BCA from amity online university"
+        },
+        {
+          "courseId": "auo-bcom-001",
+          "courseName": "Bachelor of Commerce (B.Com)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Pass",
+          "fees": {
+            "min": 115000,
+            "max": 275000,
+            "currency": "₹",
+            "display": "₹1,15,000 - ₹2,75,000"
+          },
+          "specializations": ["B.Com - General", "Hons", "International Finance & Accounting"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
+          "alt": "B.Com from amity online university"
+        },
+        {
+          "courseId": "auo-ba-001",
+          "courseName": "Bachelor of Arts (BA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Pass",
+          "fees": {
+            "min": 115000,
+            "max": 190000,
+            "currency": "₹",
+            "display": "₹1,15,000 - ₹1,90,000"
+          },
+          "specializations": ["BA - General", "Journalism and Mass Communication", "Vernacular Languages", "English", "Sociology", "Political Science", "Economics"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
+          "alt": "BA from amity online university"
+        }
+      ],
+      "postgraduateCourses": [
+        {
+          "courseId": "auo-mba-001",
+          "courseName": "Master of Business Administration (MBA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 225000,
+            "max": 329000,
+            "currency": "₹",
+            "display": "₹2,25,000 - ₹3,29,000"
+          },
+          "specializations": ["Business Analytics", "Data Science", "Digital Entrepreneurship", "Digital Marketing Management", "Entrepreneurship and Leadership Management", "Finance and Accounting Management", "Global Finance Market", "Hospitality Management", "Human Resource Management", "Human Resources Analytics", "Information Technology Management", "Insurance Management", "International Business Management", "International Finance (ACCA)", "Marketing & Sales Management", "Production and Operations Management", "Retail Management", "General Management"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
+          "alt": "MBA from amity online university"
+        },
+        {
+          "courseId": "auo-mca-001",
+          "courseName": "Master of Computer Applications (MCA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 190000,
+            "max": 275000,
+            "currency": "₹",
+            "display": "₹1,90,000- ₹2,75,000"
+          },
+          "specializations": ["MCA - General", "Cyber Security In collaboration with HCL Tech", "Blockchain Technology And Management", "Machine Learning and Artificial Intelligence", "Machine Learning and Artificial Intelligence In collaboration with TCS iON", "Software Engineering", "Financial Technology & AI In collaboration with Paytm"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca-online-image_w3f0sx.webp",
+          "alt": "MCA from amity online university"
+        },
+        {
+          "courseId": "auo-mcom-001",
+          "courseName": "Master of Commerce (M.Com)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 150000,
+            "max": 150000,
+            "currency": "₹",
+            "display": "₹1,50,000"
+          },
+          "specializations": ["General", "Financial Management", "Financial Technology"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327469/mcom-online-image_e79tno.webp",
+          "alt": "M.Com from amity online university"
+        },
+        {
+          "courseId": "auo-ma-001",
+          "courseName": "Master of Arts (MA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 150000,
+            "max": 190000,
+            "currency": "₹",
+            "display": "₹1,50,000 - ₹1,90,000"
+          },
+          "specializations": ["Journalism and Mass Communication", "Public Policy & Governance"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
+          "alt": "MA from amity online university"
+        },
+        {
+          "courseId": "auo-msc-001",
+          "courseName": "Master of Science (M.Sc)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 250000,
+            "max": 250000,
+            "currency": "₹",
+            "display": "₹2,50,000"
+          },
+          "specializations": ["Data Science"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327469/mcom-online-image_e79tno.webp",
+          "alt": "M.Sc from amity online university"
+        }
+      ]
+    },
+    {
+      "universityId": "amrita-vishwa",
+      "universityName": "Amrita Vishwa Vidyapeetham",
+      "shortName": "AMRITA",
+      "undergraduateCourses": [
+        {
+          "courseId": "amrita-bca-001",
+          "courseName": "Online BCA",
+          "duration": "3 years",
+          "eligibility": "10+2 Pass",
+          "fees": {
+            "min": 135000,
+            "max": 165000,
+            "currency": "Rs.",
+            "display": "Rs. 1,35,000-1,65,000"
+          },
+          "specializations": ["Artificial Intelligence", "Data Science"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
+          "alt": "Online BCA from Amrita"
+        },
+        {
+          "courseId": "amrita-bba-001",
+          "courseName": "Online BBA",
+          "duration": "3 years",
+          "eligibility": "10+2 Pass",
+          "fees": {
+            "min": 135000,
+            "max": 250000,
+            "currency": "Rs.",
+            "display": "Rs. 1,35,000-2,50,000"
+          },
+          "specializations": ["Data Analytics", "Digital Marketing & Sales"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
+          "alt": "Online BBA from Amrita"
+        },
+        {
+          "courseId": "amrita-bcom-001",
+          "courseName": "Online B.Com",
+          "duration": "3 years",
+          "eligibility": "10+2 Pass",
+          "fees": {
+            "min": 120000,
+            "max": 285000,
+            "currency": "Rs.",
+            "display": "Rs. 1,20,000 - 2,85,000"
+          },
+          "specializations": ["ACCA", "Taxation and Finance - Integrated with CA subjects"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
+          "alt": "Online B.Com from Amrita"
+        }
+      ],
+      "postgraduateCourses": [
+        {
+          "courseId": "amrita-mba-001",
+          "courseName": "Online MBA",
+          "duration": "2 years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 170000,
+            "max": 260000,
+            "currency": "Rs.",
+            "display": "Rs. 1,70,000-2,60,000"
+          },
+          "specializations": ["AI", "ESG", "Finance", "Marketing", "HR"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
+          "alt": "Online MBA from Amrita"
+        },
+        {
+          "courseId": "amrita-mca-001",
+          "courseName": "Online MCA",
+          "duration": "2 years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 140000,
+            "max": 195000,
+            "currency": "Rs.",
+            "display": "Rs. 1,40,000 -1,95,000"
+          },
+          "specializations": ["Artificial Intelligence", "Cybersecurity"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
+          "alt": "Online MCA from Amrita"
+        },
+        {
+          "courseId": "amrita-mcom-001",
+          "courseName": "Online M.Com",
+          "duration": "2 years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 90000,
+            "max": 120000,
+            "currency": "Rs.",
+            "display": "Rs. 90,000 - 1,20,000"
+          },
+          "specializations": ["CPA"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
+          "alt": "Online M.Com from Amrita"
+        }
+      ]
+    },
+    {
+      "universityId": "chandigarh-university",
+      "universityName": "Chandigarh University",
+      "shortName": "CU",
+      "undergraduateCourses": [
+        {
+          "courseId": "cu-ba-jmc-001",
+          "courseName": "Bachelor of Arts - Journalism & Mass Communication (BA-JMC)",
+          "duration": "3 Years (6 Semesters)",
+          "eligibility": "10+2 Pass",
+          "fees": {
+            "min": 175000,
+            "max": 175000,
+            "currency": "₹",
+            "display": "₹1,75,000"
+          },
+          "specializations": ["Journalism", "Media Studies"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327037/ba-jmc_njfsqe.webp",
+          "alt": "BA-JMC from Chandigarh University"
+        },
+        {
+          "courseId": "cu-bba-kpmg-001",
+          "courseName": "Bachelor of Business Administration - Business Analytics (BBA - KPMG)",
+          "duration": "3 Years (6 Semesters)",
+          "eligibility": "10+2 Pass",
+          "fees": {
+            "min": 190000,
+            "max": 190000,
+            "currency": "₹",
+            "display": "₹1,90,000"
+          },
+          "specializations": ["Business Analytics with KPMG"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
+          "alt": "BBA - KPMG from Chandigarh University"
+        },
+        {
+          "courseId": "cu-bba-001",
+          "courseName": "Bachelor of Business Administration (BBA)",
+          "duration": "3 Years (6 Semesters)",
+          "eligibility": "10+2 Pass",
+          "fees": {
+            "min": 168000,
+            "max": 168000,
+            "currency": "₹",
+            "display": "₹1,68,000"
+          },
+          "specializations": ["Marketing", "HRM", "Entrepreneurship", "Digital Marketing", "Fin-Tech", "Artificial Intelligence", "Logistics & Supply Chain Management", "Travel & Tourism", "Banking & Finance", "International Business", "Retail And E-Commerce", "Healthcare Management", "Foreign Exchange Management", "Event Management"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
+          "alt": "BBA from Chandigarh University"
+        },
+        {
+          "courseId": "cu-bca-001",
+          "courseName": "Bachelor of Computer Applications (BCA)",
+          "duration": "3 Years (6 Semesters)",
+          "eligibility": "10+2 or equivalent",
+          "fees": {
+            "min": 177000,
+            "max": 177000,
+            "currency": "₹",
+            "display": "₹1,77,000"
+          },
+          "specializations": ["General"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
+          "alt": "BCA from Chandigarh University"
+        }
+      ],
+      "postgraduateCourses": [
+        {
+          "courseId": "cu-ma-001",
+          "courseName": "Master of Arts (MA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation in any discipline or BA(Hons.)",
+          "fees": {
+            "min": 100000,
+            "max": 100000,
+            "currency": "₹",
+            "display": "₹1,00,000"
+          },
+          "specializations": ["English", "Economics"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
+          "alt": "MA from Chandigarh University"
+        },
+        {
+          "courseId": "cu-mba-kpmg-001",
+          "courseName": "Master of Business Administration - Business Analytics (MBA - KPMG)",
+          "duration": "2 Years (4 Semesters)",
+          "eligibility": "Bachelor degree in any discipline or professional programs (CA/ICWA etc.)",
+          "fees": {
+            "min": 200000,
+            "max": 200000,
+            "currency": "₹",
+            "display": "₹2,00,000"
+          },
+          "specializations": ["Business Analytics with KPMG"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
+          "alt": "MBA - KPMG from Chandigarh University"
+        },
+        {
+          "courseId": "cu-mba-001",
+          "courseName": "Master of Business Administration (MBA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 220000,
+            "max": 220000,
+            "currency": "₹",
+            "display": "₹2,20,000"
+          },
+          "specializations": ["Human Resource Management (HRM)", "Marketing", "International Business (IB)", "Entrepreneurship", "Finance", "Information Technology (IT)", "Logistics and Supply Chain Management (LSCM)", "Retail Management", "Operation Management", "Banking and Insurance", "Hospital Management", "Event Management", "Media Management", "Travel and Tourism Management", "Airlines & Airport Management", "Digital Marketing", "Data Science & Artificial Intelligence", "International Relations", "FinTech", "General Management", "Business Analytics", "Disaster Management", "Brand Management"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
+          "alt": "MBA from Chandigarh University"
+        },
+        {
+          "courseId": "cu-mca-aiml-001",
+          "courseName": "Master of Computer Applications - AI & ML",
+          "duration": "2 Years",
+          "eligibility": "BCA/B.Sc(IT/CS)/B.E/B.Tech",
+          "fees": {
+            "min": 155000,
+            "max": 155000,
+            "currency": "₹",
+            "display": "₹1,55,000"
+          },
+          "specializations": ["AI & ML", "Data Analytics", "Cloud Computing", "Full Stack"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
+          "alt": "MCA - AI & ML from Chandigarh University"
+        },
+        {
+          "courseId": "cu-mca-aws-001",
+          "courseName": "Master of Computer Applications - Cloud Computing (AWS Academy)",
+          "duration": "2 Years",
+          "eligibility": "BCA/B.Sc/BE/B.Tech or any graduation",
+          "fees": {
+            "min": 155000,
+            "max": 155000,
+            "currency": "₹",
+            "display": "₹1,55,000"
+          },
+          "specializations": ["Cloud", "AWS", "DevOps", "Full Stack"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
+          "alt": "MCA - AWS from Chandigarh University"
+        },
+        {
+          "courseId": "cu-mca-da-001",
+          "courseName": "Master of Computer Applications - Data Analytics",
+          "duration": "2 Years",
+          "eligibility": "BCA/B.Sc/BE/B.Tech or any graduation with Math/Stats/Programming",
+          "fees": {
+            "min": 155000,
+            "max": 155000,
+            "currency": "₹",
+            "display": "₹1,55,000"
+          },
+          "specializations": ["Big Data", "Data Mining"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
+          "alt": "MCA - Data Analytics from Chandigarh University"
+        },
+        {
+          "courseId": "cu-mca-001",
+          "courseName": "Master of Computer Applications (MCA)",
+          "duration": "2 Years",
+          "eligibility": "BCA/B.Sc/BE/B.Tech or any graduation",
+          "fees": {
+            "min": 155000,
+            "max": 155000,
+            "currency": "₹",
+            "display": "₹1,55,000"
+          },
+          "specializations": ["General IT", "Software Development"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
+          "alt": "MCA from Chandigarh University"
+        },
+        {
+          "courseId": "cu-msc-math-001",
+          "courseName": "Master of Science (Mathematics)",
+          "duration": "2 Years",
+          "eligibility": "Bachelor's with Math",
+          "fees": {
+            "min": 100000,
+            "max": 100000,
+            "currency": "₹",
+            "display": "₹1,00,000"
+          },
+          "specializations": ["Mathematics"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
+          "alt": "MSc Math from Chandigarh University"
+        },
+        {
+          "courseId": "cu-msc-ds-001",
+          "courseName": "Master of Science - Data Science",
+          "duration": "2 Years",
+          "eligibility": "Bachelor's in BA/BCA/B.Sc/BE/B.Tech",
+          "fees": {
+            "min": 146668,
+            "max": 146668,
+            "currency": "₹",
+            "display": "₹1,46,668"
+          },
+          "specializations": ["Data Science"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
+          "alt": "MSc Data Science from Chandigarh University"
+        }
+      ]
+    },
+    {
+      "universityId": "dr-dy-patil",
+      "universityName": "Dr. D.Y. Patil",
+      "shortName": "DYP",
+      "undergraduateCourses": [
+        {
+          "courseId": "dyp-bba-001",
+          "courseName": "Bachelor of Business Administration (BBA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Pass",
+          "fees": {
+            "min": 145400,
+            "max": 145400,
+            "currency": "₹",
+            "display": "₹1,45,400"
+          },
+          "specializations": ["IT & System Management", "International Business Management", "Retail Management", "Banking, Financial Services and Insurance Management", "Shipping & Logistics Management", "Marketing Management", "Human Resource Management (HRM)", "Finance Management", "E-commerce Management"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
+          "alt": "Bachelor of Business Administration (BBA) in Dy Patil"
+        }
+      ],
+      "postgraduateCourses": [
+        {
+          "courseId": "dyp-mca-001",
+          "courseName": "Master of Computer Applications (MCA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation with 50% Marks",
+          "fees": {
+            "min": 140000,
+            "max": 140000,
+            "currency": "₹",
+            "display": "₹1,40,000"
+          },
+          "specializations": ["General"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
+          "alt": "Master of Computer Applications (MCA) in Dy Patil"
+        },
+        {
+          "courseId": "dyp-mba-001",
+          "courseName": "Master of Business Administration (MBA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 189400,
+            "max": 189400,
+            "currency": "₹",
+            "display": "₹1,89,400"
+          },
+          "specializations": ["Marketing Management", "Human Resource Management", "Finance Management", "IT Management", "Project Management", "Operations Management", "Hospital Administration & Healthcare Management", "International Business Management", "FinTech Management", "Business Analytics Management", "Artificial Intelligence & Machine Learning Management", "Logistics, Materials & Supply Chain Management", "Blockchain Management", "Digital Marketing Management", "Agri-Business Management"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
+          "alt": "Master of Business Administration (MBA) in Dy Patil"
+        }
+      ]
+    },
+    {
+      "universityId": "jain-university-online",
+      "universityName": "Jain University Online",
+      "shortName": "JUO",
+      "undergraduateCourses": [
+        {
+          "courseId": "juo-bba-001",
+          "courseName": "Bachelor of Business Administration (BBA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Pass",
+          "fees": {
+            "min": 150000,
+            "max": 240000,
+            "currency": "₹",
+            "display": "₹1,50,000-2,40,000"
+          },
+          "specializations": ["Finance & Marketing", "Digital Marketing", "HRM", "Data Science and Analytics"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
+          "alt": "Bachelor of Business Administration (BBA) in Jain University Online"
+        },
+        {
+          "courseId": "juo-bca-001",
+          "courseName": "Bachelor of Computer Applications (BCA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Pass",
+          "fees": {
+            "min": 135000,
+            "max": 165000,
+            "currency": "₹",
+            "display": "₹1,35,000 -1,65,000"
+          },
+          "specializations": ["Computer Science and IT", "Data Science and Analytics", "Cyber Security", "Artificial Intelligence", "Cloud Computing"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
+          "alt": "Bachelor of Computer Applications (BCA) in Jain University Online"
+        },
+        {
+          "courseId": "juo-bcom-001",
+          "courseName": "Bachelor of Commerce (B.Com)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Pass",
+          "fees": {
+            "min": 105000,
+            "max": 228000,
+            "currency": "₹",
+            "display": "₹1,05,000- 2,28,000"
+          },
+          "specializations": ["Online Bachelor of Commerce", "Corporate Accounting", "International Finance & Accounting (ACCA)"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
+          "alt": "Bachelor of Commerce (B.Com) in Jain University Online"
+        }
+      ],
+      "postgraduateCourses": [
+        {
+          "courseId": "juo-mba-001",
+          "courseName": "Master of Business Administration (MBA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 196000,
+            "max": 250000,
+            "currency": "₹",
+            "display": "₹1,96,000 - 2,50,000"
+          },
+          "specializations": ["Human Resource Management and Finance", "Finance and Marketing", "Marketing and Resource Management", "Marketing and Business Analytics", "Finance and Business Analytics", "Human Resource and Business Analytics", "Project Management", "Retail Management and Quick Commerce", "Information Technology Management", "Healthcare Management", "Supply Chain", "Production and Operations Management", "Business Intelligence and Analytics", "Entrepreneurship and Venture Creation", "International Finance", "Data Science and Analytics", "E-commerce", "Artificial Intelligence and Human Resource Management", "Digital Marketing", "Banking and Finance", "Technology Management", "General Management", "AI-Driven Marketing", "AI-Driven Finance", "AI-Driven Business Strategy", "AI-Driven Human Resource Management"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
+          "alt": "Master of Business Administration (MBA) in Jain University Online"
+        },
+        {
+          "courseId": "juo-mca-001",
+          "courseName": "Master of Computer Applications (MCA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation in BCA/B.Sc(IT)",
+          "fees": {
+            "min": 160000,
+            "max": 200000,
+            "currency": "₹",
+            "display": "₹1,60,000-2,00,000"
+          },
+          "specializations": ["DevOps", "Natural Language Processing & Large Language Models Development", "Computer Science and IT", "Data Analytics", "Cyber Security", "Full Stack Development", "Cloud Computing", "Data Science", "Artificial Intelligence"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
+          "alt": "Master of Computer Applications (MCA) in Jain University Online"
+        },
+        {
+          "courseId": "juo-mcom-001",
+          "courseName": "Master of Commerce (M.Com)",
+          "duration": "2 Years",
+          "eligibility": "Graduation in Commerce",
+          "fees": {
+            "min": 110000,
+            "max": 181000,
+            "currency": "₹",
+            "display": "₹1,10,000-1,81,000"
+          },
+          "specializations": ["Accounting and Finance", "International Finance (Accredited by ACCA, UK)", "Professional Accounting and Finance (Accredited by CPA, US)"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/m.com_libbpo.webp",
+          "alt": "Master of Commerce (M.Com) in Jain University Online"
+        },
+        {
+          "courseId": "juo-ma-001",
+          "courseName": "Master of Arts (MA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 90000,
+            "max": 90000,
+            "currency": "₹",
+            "display": "₹90,000"
+          },
+          "specializations": ["Jainology in Comparative Religion and Philosophy", "English", "Economics", "Public Policy"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
+          "alt": "Master of Arts (MA) in Jain University Online"
+        }
+      ]
+    },
+    {
+      "universityId": "kurukshetra-university",
+      "universityName": "Kurukshetra University",
+      "shortName": "KU",
+      "undergraduateCourses": [
+        {
+          "courseId": "ku-bba-001",
+          "courseName": "Bachelor of Business Administration (BBA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Pass",
+          "fees": {
+            "min": 72661,
+            "max": 72661,
+            "currency": "₹",
+            "display": "₹72,661"
+          },
+          "specializations": ["Business Administration"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
+          "alt": "BBA from Kurukshetra University"
+        },
+        {
+          "courseId": "ku-bca-001",
+          "courseName": "Bachelor of Computer Applications (BCA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Pass",
+          "fees": {
+            "min": 72661,
+            "max": 72661,
+            "currency": "₹",
+            "display": "₹72,661"
+          },
+          "specializations": ["Computer Applications"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
+          "alt": "BCA from Kurukshetra University"
+        },
+        {
+          "courseId": "ku-bcom-001",
+          "courseName": "Bachelor of Commerce (B.Com)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Pass",
+          "fees": {
+            "min": 72661,
+            "max": 72661,
+            "currency": "₹",
+            "display": "₹72,661"
+          },
+          "specializations": ["Commerce"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
+          "alt": "B.Com from Kurukshetra University"
+        }
+      ],
+      "postgraduateCourses": [
+        {
+          "courseId": "ku-mba-001",
+          "courseName": "Master of Business Administration (MBA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 98545,
+            "max": 98545,
+            "currency": "₹",
+            "display": "₹98,545"
+          },
+          "specializations": ["General Management"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
+          "alt": "MBA from Kurukshetra University"
+        },
+        {
+          "courseId": "ku-mca-001",
+          "courseName": "Master of Computer Applications (MCA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 76667,
+            "max": 76667,
+            "currency": "₹",
+            "display": "₹76,667"
+          },
+          "specializations": ["Computer Applications"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
+          "alt": "MCA from Kurukshetra University"
+        },
+        {
+          "courseId": "ku-mcom-001",
+          "courseName": "Master of Commerce (M.Com)",
+          "duration": "2 Years",
+          "eligibility": "Graduation in Commerce",
+          "fees": {
+            "min": 54036,
+            "max": 54036,
+            "currency": "₹",
+            "display": "₹54,036"
+          },
+          "specializations": ["Commerce"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/m.com_libbpo.webp",
+          "alt": "M.Com from Kurukshetra University"
+        },
+        {
+          "courseId": "ku-ma-001",
+          "courseName": "Master of Arts (MA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 72661,
+            "max": 72661,
+            "currency": "₹",
+            "display": "₹72,661"
+          },
+          "specializations": ["English", "Journalism & Mass Communication", "Political Science"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
+          "alt": "MA from Kurukshetra University"
+        },
+        {
+          "courseId": "ku-mba-spec-001",
+          "courseName": "MBA (Specializations)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 119845,
+            "max": 119845,
+            "currency": "₹",
+            "display": "₹119,845"
+          },
+          "specializations": ["Finance Management", "Information Technology Management", "Human Resource Management", "Marketing", "Business Analytics"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
+          "alt": "MBA Specializations from Kurukshetra University"
+        }
+      ]
+    },
+    {
+      "universityId": "lovely-professional",
+      "universityName": "Lovely Professional University",
+      "shortName": "LPU",
+      "undergraduateCourses": [
+        {
+          "courseId": "lpu-bba-001",
+          "courseName": "Bachelor of Business Administration (BBA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Minimum 40%",
+          "fees": {
+            "min": 150000,
+            "max": 150000,
+            "currency": "₹",
+            "display": "₹1,50,000"
+          },
+          "specializations": ["General"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
+          "alt": "Bachelor of Business Administration (BBA) in LPU Online"
+        },
+        {
+          "courseId": "lpu-bca-001",
+          "courseName": "Bachelor of Computer Applications (BCA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Minimum 40%",
+          "fees": {
+            "min": 150000,
+            "max": 150000,
+            "currency": "₹",
+            "display": "₹1,50,000"
+          },
+          "specializations": ["General"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
+          "alt": "Bachelor of Computer Applications (BCA) in LPU Online"
+        },
+        {
+          "courseId": "lpu-ba-001",
+          "courseName": "Bachelor of Arts (BA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Minimum",
+          "fees": {
+            "min": 80000,
+            "max": 80000,
+            "currency": "₹",
+            "display": "₹80,000"
+          },
+          "specializations": ["General"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
+          "alt": "Bachelor of Arts (BA) in LPU Online"
+        }
+      ],
+      "postgraduateCourses": [
+        {
+          "courseId": "lpu-mba-001",
+          "courseName": "Master of Business Administration (MBA)",
+          "duration": "2 Years",
+          "eligibility": "Bachelor's degree (any discipline) or equivalent",
+          "fees": {
+            "min": 200000,
+            "max": 200000,
+            "currency": "₹",
+            "display": "₹2,00,000"
+          },
+          "specializations": ["HR", "Finance", "Marketing", "Operations", "Analytics", "Digital Marketing", "Data Science", "IT", "International Business", "Banking", "Healthcare", "Logistics"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
+          "alt": "Master of Business Administration (MBA) in LPU Online"
+        },
+        {
+          "courseId": "lpu-mca-001",
+          "courseName": "Master of Computer Applications (MCA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation in BCA/B.Sc(IT) With Mathematics",
+          "fees": {
+            "min": 148000,
+            "max": 148000,
+            "currency": "₹",
+            "display": "₹1,48,000"
+          },
+          "specializations": ["ML & AI", "Data Science", "Cybersecurity", "Full Stack", "AR/VR & Game Development"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
+          "alt": "Master of Computer Applications (MCA) in LPU Online"
+        },
+        {
+          "courseId": "lpu-mcom-001",
+          "courseName": "Master of Commerce (M.Com)",
+          "duration": "2 Years",
+          "eligibility": "Graduation in Commerce",
+          "fees": {
+            "min": 100000,
+            "max": 100000,
+            "currency": "₹",
+            "display": "₹1,00,000"
+          },
+          "specializations": ["General"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/m.com_libbpo.webp",
+          "alt": "Master of Commerce (M.Com) in LPU Online"
+        },
+        {
+          "courseId": "lpu-ma-001",
+          "courseName": "Master of Arts (MA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 80000,
+            "max": 80000,
+            "currency": "₹",
+            "display": "₹80,000"
+          },
+          "specializations": ["Sociology", "English", "Political Science", "History"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/m.com_libbpo.webp",
+          "alt": "Master of Arts(MA) in LPU Online"
+        },
+        {
+          "courseId": "lpu-msc-001",
+          "courseName": "Master of Science (M.Sc)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 80000,
+            "max": 80000,
+            "currency": "₹",
+            "display": "₹80,000"
+          },
+          "specializations": ["Mathematics", "Economics"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327070/bcom-online-image_pdmurc.webp",
+          "alt": "Master of Science(M.Sc) in LPU Online"
+        }
+      ]
+    },
+    {
+      "universityId": "manipal-jaipur",
+      "universityName": "Manipal University Jaipur",
+      "shortName": "MUJ",
+      "undergraduateCourses": [
+        {
+          "courseId": "muj-bba-001",
+          "courseName": "Bachelor of Business Administration (BBA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Minimum 40%",
+          "fees": {
+            "min": 139500,
+            "max": 139500,
+            "currency": "₹",
+            "display": "₹1,39,500"
+          },
+          "specializations": ["Finance & Accounting", "Digital Marketing", "Marketing", "Entrepreneurship Management & Family Business", "Human Resource Management", "Data Analytics", "Retail & E-commerce Management"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
+          "alt": "Bachelor of Business Administration (BBA) in Manipal Online"
+        },
+        {
+          "courseId": "muj-bca-001",
+          "courseName": "Bachelor of Computer Applications (BCA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Minimum 40%",
+          "fees": {
+            "min": 139500,
+            "max": 139500,
+            "currency": "₹",
+            "display": "₹1,39,500"
+          },
+          "specializations": ["Data Science and Analytics", "Cyber Security", "Cloud Computing"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipal-online-mca_moc5om.png",
+          "alt": "Bachelor of Computer Applications (BCA) in Manipal Online"
+        },
+        {
+          "courseId": "muj-bcom-001",
+          "courseName": "Bachelor of Commerce (B.Com)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Minimum 40%",
+          "fees": {
+            "min": 99000,
+            "max": 99000,
+            "currency": "₹",
+            "display": "₹99,000"
+          },
+          "specializations": ["General"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327070/bcom-online-image_pdmurc.webp",
+          "alt": "Bachelor of Commerce (B.Com) in Manipal Online"
+        }
+      ],
+      "postgraduateCourses": [
+        {
+          "courseId": "muj-mba-001",
+          "courseName": "Master of Business Administration (MBA)",
+          "duration": "2 Years",
+          "eligibility": "50% Graduation",
+          "fees": {
+            "min": 180000,
+            "max": 180000,
+            "currency": "₹",
+            "display": "₹1,80,000"
+          },
+          "specializations": ["Super/Dual(Digital Marketing", "Marketing", "Analytics and Data Science", "IT & Fintech", "Finance Management", "Human Resource Management", "BFSI", "Operations Management", "International Business", "Information Systems Management", "Project Management", "Supply Chain Management", "Retail Management)"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
+          "alt": "Master of Business Administration (MBA) in Manipal Online"
+        },
+        {
+          "courseId": "muj-mca-001",
+          "courseName": "Master of Computer Applications (MCA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 158000,
+            "max": 158000,
+            "currency": "₹",
+            "display": "₹1,58,000"
+          },
+          "specializations": ["AI & Data Science", "Cyber Security", "Cloud Computing", "Comprehensive Emerging Technologies", "AI & ML"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
+          "alt": "Master of Computer Applications (MCA) in Manipal Online"
+        },
+        {
+          "courseId": "muj-msc-001",
+          "courseName": "Master of science (M.Sc.)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 80000,
+            "max": 80000,
+            "currency": "₹",
+            "display": "₹80,000"
+          },
+          "specializations": ["Mathematics"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1771066433/amrita_overview_t6ofin.png",
+          "alt": "Master of Commerce (M.Com) in Manipal Online"
+        },
+        {
+          "courseId": "muj-mcom-001",
+          "courseName": "Master of Commerce (M.Com)",
+          "duration": "2 Years",
+          "eligibility": "Graduation in Any Discipline",
+          "fees": {
+            "min": 108000,
+            "max": 108000,
+            "currency": "₹",
+            "display": "₹1,08,000"
+          },
+          "specializations": ["General"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/m.com_libbpo.webp",
+          "alt": "Master of Commerce (M.Com) in Manipal Online"
+        },
+        {
+          "courseId": "muj-ma-001",
+          "courseName": "Master of Arts (MA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation",
+          "fees": {
+            "min": 80000,
+            "max": 80000,
+            "currency": "₹",
+            "display": "₹80,000"
+          },
+          "specializations": ["Economics", "MA (Journalism and Mass Communication)"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
+          "alt": "Master of Arts (MA) in Manipal Online"
+        }
+      ]
+    },
+    {
+      "universityId": "nmims",
+      "universityName": "NMIMS",
+      "shortName": "NMIMS",
+      "undergraduateCourses": [
+        {
+          "courseId": "nmims-bba-001",
+          "courseName": "Bachelor of Business Administration (BBA)",
+          "duration": "3 Years",
+          "eligibility": "HSC (10+2) in any discipline from a recognised board with minimum 50% (45% for SC/ST/OBC/PwD).",
+          "fees": {
+            "min": 150000,
+            "max": 150000,
+            "currency": "₹",
+            "display": "₹1,50,000"
+          },
+          "specializations": ["Finance Management", "Marketing Management"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
+          "alt": "BBA from NMIMS Online"
+        },
+        {
+          "courseId": "nmims-bba-ba-001",
+          "courseName": "Bachelor of Business Administration (BBA)",
+          "duration": "3 Years",
+          "eligibility": "HSC (10+2) in any discipline from a recognised board with minimum 50% (45% for SC/ST/OBC/PwD).",
+          "fees": {
+            "min": 180000,
+            "max": 180000,
+            "currency": "₹",
+            "display": "₹1,80,000"
+          },
+          "specializations": ["Business Analytics"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
+          "alt": "BBA from NMIMS Online"
+        },
+        {
+          "courseId": "nmims-bcom-001",
+          "courseName": "Bachelor of Commerce (B.Com)",
+          "duration": "3 Years",
+          "eligibility": "HSC (10+2) in any discipline from a recognised board with minimum 50% (45% for SC/ST/OBC/PwD).",
+          "fees": {
+            "min": 108000,
+            "max": 108000,
+            "currency": "₹",
+            "display": "₹1,08,000"
+          },
+          "specializations": ["Accounting"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
+          "alt": "B.Com from NMIMS Online"
+        }
+      ],
+      "postgraduateCourses": [
+        {
+          "courseId": "nmims-mba-001",
+          "courseName": "Master of Business Administration (MBA)",
+          "duration": "2 Years",
+          "eligibility": "Bachelor's Degree (10+2+3) in any discipline from recognised University or an equivalent degree recognised by Association of Indian Universities (AIU) with minimum 50% marks at Graduation Level. (45% for SC/ST/OBC/PwD).",
+          "fees": {
+            "min": 220000,
+            "max": 220000,
+            "currency": "₹",
+            "display": "₹2,20,000"
+          },
+          "specializations": ["MBA In Marketing Management", "MBA in Business Management", "MBA in Finance Management", "MBA in Human Resources Management", "MBA in Operations and data Science Management", "MBA in Information Technology Management", "MBA in Business Analytics"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
+          "alt": "MBA from NMIMS Online"
+        },
+        {
+          "courseId": "nmims-mba-wx-001",
+          "courseName": "Master of Business Administration (MBA WX)",
+          "duration": "2 Years",
+          "eligibility": "Bachelor's Degree (10+2+3) in any discipline from recognised University or an equivalent degree recognised by Association of Indian Universities (AIU) with a minimum of 55% and 3 + years of Work Experience (50% for SC/ST/OBC/PwD).",
+          "fees": {
+            "min": 400000,
+            "max": 400000,
+            "currency": "₹",
+            "display": "₹4,00,000"
+          },
+          "specializations": ["Marketing Management", "Leadership & Strategy", "Operations & Supply Chain Management", "Applied Finance", "Digital Marketing"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
+          "alt": "MBA WX from NMIMS Online"
+        }
+      ]
+    },
+    {
+      "universityId": "op-jindal",
+      "universityName": "OP Jindal Global University",
+      "shortName": "OJGU",
+      "undergraduateCourses": [
+        {
+          "courseId": "ojgu-bba-001",
+          "courseName": "BBA (4 Specialization)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Pass, Applicants less than 50% marks in 10+2 will be required to appear for the Jindal Scholastic Aptitude Test (JSAT)",
+          "fees": {
+            "min": 200000,
+            "max": 200000,
+            "currency": "₹",
+            "display": "₹2,00,000 /-"
+          },
+          "specializations": ["Finance", "Marketing", "Human Resources", "Operation Management Supply Chain"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
+          "alt": "BBA in OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-bsc-psych-001",
+          "courseName": "B.Sc in Psycology(Blended)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Pass, If less than 50%: Must clear JSAT (min 50%) or submit, SAT/ACT/LNAT-UK score or complete a JGU MOOC",
+          "fees": {
+            "min": 300000,
+            "max": 300000,
+            "currency": "₹",
+            "display": "₹3,00,000 /-"
+          },
+          "specializations": ["Psychology"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327851/op-psycology_ae5kax.png",
+          "alt": "B.Sc in Psycology(Blended) in OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-bsc-risk-001",
+          "courseName": "B.Sc in Risk Management",
+          "duration": "3 Years",
+          "eligibility": "Minimum 50% in Class 12, with either Maths, Physics, Business Maths, Statistics, or IT / MIS as one of the subjects.Exemptions from JSAT for students scoring: SAT (≥1100) ACT (≥27) UGAT/CUET (≥60 percentile)",
+          "fees": {
+            "min": 300000,
+            "max": 300000,
+            "currency": "₹",
+            "display": "₹3,00,000 /-"
+          },
+          "specializations": ["Risk Management"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327851/op-psycology_ae5kax.png",
+          "alt": "B.Sc in Psycology in OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-bcom-001",
+          "courseName": "B.Com in International Accounting & Finance",
+          "duration": "3 Years",
+          "eligibility": "Eligibility: Minimum 50% in Class 12, with either of Maths, Physics, Business Maths, Statistics, or IT / MIS as one of the subjects",
+          "fees": {
+            "min": 300000,
+            "max": 300000,
+            "currency": "₹",
+            "display": "₹3,00,000 /-"
+          },
+          "specializations": ["International Accounting & Finance"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327851/op-psycology_ae5kax.png",
+          "alt": "B.Sc in Psycology in OP Jindal University"
+        }
+      ],
+      "postgraduateCourses": [
+        {
+          "courseId": "ojgu-ma-tesol-001",
+          "courseName": "MA in Teaching English to Speakers of Other languages (TESOL)",
+          "duration": "12 Months (3 Trimester)",
+          "eligibility": "Bachelor's degree from any recognized university with at least 50% marks Govt. Issued ID Proof (Passport for international applicants)",
+          "fees": {
+            "min": 250000,
+            "max": 250000,
+            "currency": "₹",
+            "display": "₹2,50,000/-"
+          },
+          "specializations": ["Teaching English to Speakers of Other languages (TESOL)"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327837/op-masters2_yj8q41.webp",
+          "alt": "MA i Teaching English to Speakers of Other languages (TESOL) in OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-ma-museology-001",
+          "courseName": "M.A. in Museology & Cultural Heritage",
+          "duration": "12 Months",
+          "eligibility": "Bachelor's degree from any recognized university with at least 50% marks Govt. Issued ID Proof (Passport for international applicants)",
+          "fees": {
+            "min": 250000,
+            "max": 250000,
+            "currency": "₹",
+            "display": "₹2,50,000/-"
+          },
+          "specializations": ["Museology & Cultural Heritage"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327837/op-masters2_yj8q41.webp",
+          "alt": "MA Museology & Cultural Heritage in OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-ma-ir-001",
+          "courseName": "M.A. in International Relations, Security and Strategy",
+          "duration": "12-24 Months",
+          "eligibility": "An undergraduate degree in any discipline from any recognised university in India or abroad.",
+          "fees": {
+            "min": 300000,
+            "max": 300000,
+            "currency": "₹",
+            "display": "₹3,00,000/-"
+          },
+          "specializations": ["International Relations, Security and Strategy"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327840/op-masters4_kgkbhl.webp",
+          "alt": "M.A.  International Relations, Security and Strategy in OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-ma-elig-001",
+          "courseName": "M.A. in Educational Leadership & Governance",
+          "duration": "12 Months",
+          "eligibility": "An undergraduate degree in any discipline from any recognised university in India or abroad.",
+          "fees": {
+            "min": 300000,
+            "max": 300000,
+            "currency": "₹",
+            "display": "₹3,00,000/-"
+          },
+          "specializations": ["Educational Leadership & Governance"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327840/op-masters4_kgkbhl.webp",
+          "alt": "M.A.  Educational Leadership & Governance in OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-msc-env-001",
+          "courseName": "M.Sc in Environmental chnage and Sustainability",
+          "duration": "12 Months",
+          "eligibility": "Bachelor's degree from any recognized university with at least 50% marks Govt. Issued ID Proof (Passport for international applicants)",
+          "fees": {
+            "min": 250000,
+            "max": 250000,
+            "currency": "₹",
+            "display": "₹2,50,000/-"
+          },
+          "specializations": ["Environmental chnage and Sustainability"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327838/op-masters3_amikm8.webp",
+          "alt": "M.Sc in Environmental chnage and Sustainability in OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-msc-design-001",
+          "courseName": "M.Sc. in Design Thinking & Innovation & Strategy",
+          "duration": "12 Months",
+          "eligibility": "Minimum 60% marks in both Class 10 and Class 12.Minimum 50% marks in a bachelor's degree",
+          "fees": {
+            "min": 250000,
+            "max": 250000,
+            "currency": "₹",
+            "display": "₹2,50,000/-"
+          },
+          "specializations": ["Design Thinking & Innovation & Strategy"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327838/op-masters3_amikm8.webp",
+          "alt": "M.Sc Design Thinking & Innovation & Strategy in OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-msc-aif-001",
+          "courseName": "M.Sc. in Artificial Intelligence & Finance",
+          "duration": "12 Months",
+          "eligibility": "Minimum 60% marks in both Class 10 and Class 12.Minimum 50% marks in a bachelor's degree",
+          "fees": {
+            "min": 275000,
+            "max": 275000,
+            "currency": "₹",
+            "display": "₹2,75,000/-"
+          },
+          "specializations": ["Artificial Intelligence & Financ"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327838/op-masters3_amikm8.webp",
+          "alt": "M.Sc Artificial Intelligence & Finance in OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-msc-ghd-001",
+          "courseName": "M.Sc. In Global Health and Development.",
+          "duration": "12 Months",
+          "eligibility": "Bachelor's degree from any recognized university. Govt. Issued ID Proof (Passport for International Applicants)",
+          "fees": {
+            "min": 250000,
+            "max": 250000,
+            "currency": "₹",
+            "display": "₹2,50,000/-"
+          },
+          "specializations": ["Global Health and Development"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327838/op-masters3_amikm8.webp",
+          "alt": "M.Sc  Global Health and Development in OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-msc-grm-001",
+          "courseName": "M.Sc. in Global Risk Management",
+          "duration": "12 Months",
+          "eligibility": "Undergraduate degree with at least 50% marks Candidates with less than 50% marks must: Appear for the JSAT examination, andAttend a mandatory interview",
+          "fees": {
+            "min": 275000,
+            "max": 275000,
+            "currency": "₹",
+            "display": "₹2,75,000/-"
+          },
+          "specializations": ["Global Risk Management"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327838/op-masters3_amikm8.webp",
+          "alt": "M.Sc  Global Risk Management in OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-msc-ds-001",
+          "courseName": "M.Sc. in Development Studies",
+          "duration": "12 Months",
+          "eligibility": "Bachelor's degree from any recognized university. Govt. Issued ID Proof (Passport for International Applicants)",
+          "fees": {
+            "min": 250000,
+            "max": 250000,
+            "currency": "₹",
+            "display": "₹2,50,000/-"
+          },
+          "specializations": ["Development Studies"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327838/op-masters3_amikm8.webp",
+          "alt": "M.Sc  Development Studies in OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-msc-sc-001",
+          "courseName": "M.Sc. in Strategic Communication.",
+          "duration": "12 Months",
+          "eligibility": "Bachelor's degree from any recognized university. Govt. Issued ID Proof (Passport for International Applicants)",
+          "fees": {
+            "min": 250000,
+            "max": 250000,
+            "currency": "₹",
+            "display": "₹2,50,000/-"
+          },
+          "specializations": ["in Strategic Communication"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327838/op-masters3_amikm8.webp",
+          "alt": "M.Sc in in Strategic Communication in OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-msc-iaf-001",
+          "courseName": "M.Sc in International Accounting & Finance from JGU (Accredited by ACCA, UK.)",
+          "duration": "12 Months",
+          "eligibility": "Bachelor's degree from any recognized university. Govt. Issued ID Proof (Passport for International Applicants)",
+          "fees": {
+            "min": 275000,
+            "max": 275000,
+            "currency": "₹",
+            "display": "₹2,75,000/-"
+          },
+          "specializations": ["International Accounting & Finance"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327838/op-masters3_amikm8.webp",
+          "alt": "M.Sc International Accounting & Finance from JGU (Accredited by ACCA, UK.)in OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-msc-aids-001",
+          "courseName": "M.Sc. in Artificial Intelligence and Data Science",
+          "duration": "12 Months",
+          "eligibility": "Bachelor's degree from any recognized university. Govt. Issued ID Proof (Passport for International Applicants)",
+          "fees": {
+            "min": 275000,
+            "max": 275000,
+            "currency": "₹",
+            "display": "₹2,75,000/-"
+          },
+          "specializations": ["Artificial Intelligence and Data Science"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327838/op-masters3_amikm8.webp",
+          "alt": "M.Sc  in Artificial Intelligence and Data Sciencein OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-ma-is-001",
+          "courseName": "M.A. in India Studies",
+          "duration": "12 Months",
+          "eligibility": "An undergraduate degree in any discipline from any recognised university in India or abroad.",
+          "fees": {
+            "min": 250000,
+            "max": 250000,
+            "currency": "₹",
+            "display": "₹2,50,000/-"
+          },
+          "specializations": ["India Studies"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327840/op-masters4_kgkbhl.webp",
+          "alt": "MA India Studies in OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-ma-pp-001",
+          "courseName": "MA in Public Policy",
+          "duration": "12 Months",
+          "eligibility": "An undergraduate degree in any discipline from any recognised university in India or abroad.",
+          "fees": {
+            "min": 300000,
+            "max": 300000,
+            "currency": "₹",
+            "display": "₹3,00,000/-"
+          },
+          "specializations": ["Public Policy"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327840/op-masters4_kgkbhl.webp",
+          "alt": "MA Public Policy in OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-md-ux-001",
+          "courseName": "Master of Design in User Experience",
+          "duration": "12 Months",
+          "eligibility": "An undergraduate degree in any discipline from any recognised university in India or abroad.",
+          "fees": {
+            "min": 500000,
+            "max": 500000,
+            "currency": "₹",
+            "display": "₹5,00,000/-"
+          },
+          "specializations": ["Design in User Experience"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327840/op-masters4_kgkbhl.webp",
+          "alt": "Master of Design in User Experience"
+        },
+        {
+          "courseId": "ojgu-m-efb-001",
+          "courseName": "Master in Enterpreneurship and Family Business",
+          "duration": "1 Years (4 terms)",
+          "eligibility": "A Bachelor's degree, Active involvement as an entrepreneurial family member",
+          "fees": {
+            "min": 275000,
+            "max": 275000,
+            "currency": "₹",
+            "display": "₹2,75,000/-"
+          },
+          "specializations": ["Enterpreneurship and Family Business"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327837/op-masters1_g752dn.webp",
+          "alt": "Master in Enterpreneurship and Family Business in OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-mba-ba-001",
+          "courseName": "MBA in Business Analytics",
+          "duration": "12 Months",
+          "eligibility": "The eligibility criteria for the online MBA in Business Analytics programme require a bachelor's degree from a recognised university in India. A minimum of 50% marks in any discipline is required for graduation.",
+          "fees": {
+            "min": 200000,
+            "max": 200000,
+            "currency": "₹",
+            "display": "₹2,00,000/-"
+          },
+          "specializations": ["Business Analytics"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327851/op-masters5_zkvcwa.webp",
+          "alt": "MBA in Business Analytics in OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-mba-bl-001",
+          "courseName": "MBA in Business & Law",
+          "duration": "12 Months",
+          "eligibility": "Bachelor's degree in any discipline with a minimum 50% aggregate score from a recognized university.",
+          "fees": {
+            "min": 300000,
+            "max": 300000,
+            "currency": "₹",
+            "display": "₹3,00,000/-"
+          },
+          "specializations": ["Business & Law"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
+          "alt": "MBA in Business & Law in OP Jindal University"
+        },
+        {
+          "courseId": "ojgu-mba-001",
+          "courseName": "MBA",
+          "duration": "12 Months",
+          "eligibility": "Bachelor's degree in any discipline with a minimum 50% aggregate score from a recognized university.",
+          "fees": {
+            "min": 180000,
+            "max": 180000,
+            "currency": "₹",
+            "display": "₹1,80,000/-"
+          },
+          "specializations": ["Finance", "Human Resource Management", "Marketing", "Strategy & Leadership", "Supply Chain & Operations", "AI for Business", "Digital Finance"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
+          "alt": "MBA  in OP Jindal University"
+        }
+      ]
+    },
+    {
+      "universityId": "sharda-online",
+      "universityName": "Sharda University Online",
+      "shortName": "SU",
+      "undergraduateCourses": [
+        {
+          "courseId": "su-bba-001",
+          "courseName": "Bachelor of Business Administration (BBA)",
+          "duration": "3 Years",
+          "eligibility": "Passed the (10+2) examination from State Board / CBSE / NIOS / IGCSE / IB /ICSE recognized by the State or Central Government.",
+          "fees": {
+            "min": 120000,
+            "max": 120000,
+            "currency": "₹",
+            "display": "₹1,20,000"
+          },
+          "specializations": ["General"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp",
+          "alt": "Bachelor of Business Administration (BBA)"
+        },
+        {
+          "courseId": "su-bca-001",
+          "courseName": "Bachelor of Computer Applications (BCA)",
+          "duration": "3 Years",
+          "eligibility": "Passed the (10+2) examination from State Board / CBSE / NIOS / IGCSE / IB /ICSE recognized by the State or Central Government.",
+          "fees": {
+            "min": 120000,
+            "max": 120000,
+            "currency": "₹",
+            "display": "₹1,20,000"
+          },
+          "specializations": ["General"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bca-online-image_awhemy.webp",
+          "alt": "Bachelor of Computer Applications (BCA)"
+        },
+        {
+          "courseId": "su-ba-001",
+          "courseName": "Bachelor of Arts (Hons.)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Minimum 40%",
+          "fees": {
+            "min": 105000,
+            "max": 105000,
+            "currency": "₹",
+            "display": "₹1,05,000"
+          },
+          "specializations": ["Political Science"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327070/bcom-online-image_pdmurc.webp",
+          "alt": "Bachelor of Commerce (B.Com)"
+        }
+      ],
+      "postgraduateCourses": [
+        {
+          "courseId": "su-mba-001",
+          "courseName": "Master of Business Administration (MBA)",
+          "duration": "2 Years",
+          "eligibility": "Passed Bachelor's Degree of minimum 3 years duration.",
+          "fees": {
+            "min": 140000,
+            "max": 196000,
+            "currency": "₹",
+            "display": "₹1,40,000 -₹1,96,000"
+          },
+          "specializations": ["Data Science and Analytics", "Marketing", "Healthcare and Hospital Administration", "Human Resource Management", "Finance"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp",
+          "alt": "Master of Business Administration (MBA)"
+        },
+        {
+          "courseId": "su-mca-001",
+          "courseName": "Master of Computer Applications (MCA)",
+          "duration": "2 Years",
+          "eligibility": "Passed BCA/ Bachelor Degree in Computer Science Engineering or equivalent Degree or Passed B.Sc./ B.Com./ B.A. with Mathematics at 10+2 Level or at Graduation Level",
+          "fees": {
+            "min": 120000,
+            "max": 120000,
+            "currency": "₹",
+            "display": "₹1,20,000"
+          },
+          "specializations": ["Computer Science and Information Technology", "Data Science"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca-online-image_w3f0sx.webp",
+          "alt": "Master of Computer Applications (MCA)"
+        },
+        {
+          "courseId": "su-mcom-001",
+          "courseName": "Master of Commerce (M.Com)",
+          "duration": "2 Years",
+          "eligibility": "Graduation in Commerce",
+          "fees": {
+            "min": 50000,
+            "max": 140000,
+            "currency": "₹",
+            "display": "₹50,000-1,40,000"
+          },
+          "specializations": ["public Accounting", "Accounting And Finance"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/m.com_libbpo.webp",
+          "alt": "Master of Commerce (M.Com) in Sharda Online"
+        }
+      ]
+    },
+    {
+      "universityId": "shoolini-online",
+      "universityName": "Shoolini University Online",
+      "shortName": "SHOOLINI",
+      "undergraduateCourses": [
+        {
+          "courseId": "shoolini-bcom-001",
+          "courseName": "Bachelor of Commerce (B.Com)",
+          "duration": "3 Years",
+          "eligibility": "10+2 pass with Commerce",
+          "fees": {
+            "min": 100000,
+            "max": 100000,
+            "currency": "₹",
+            "display": "₹1,00,000/-"
+          },
+          "specializations": ["Accounting", "Finance", "Taxation"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
+          "alt": "Bachelor of Commerce at Shoolini University"
+        },
+        {
+          "courseId": "shoolini-bba-001",
+          "courseName": "Bachelor of Business Administration (BBA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 in any discipline with 40% marks in last qualifying examination",
+          "fees": {
+            "min": 120000,
+            "max": 120000,
+            "currency": "₹",
+            "display": "₹1,20,000"
+          },
+          "specializations": ["HR", "Marketing", "Finance", "Digital Marketing", "Computer Science", "Direct Selling"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327856/shoolini-bba_gqzjmi.webp",
+          "alt": "Bachelor of Business Administration at Shoolini University"
+        },
+        {
+          "courseId": "shoolini-bca-001",
+          "courseName": "Bachelor of Computer Applications (BCA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 in any discipline with 40% marks in last qualifying examination. Reservation of seats as per government policies.",
+          "fees": {
+            "min": 120000,
+            "max": 120000,
+            "currency": "₹",
+            "display": "₹1,20,000"
+          },
+          "specializations": ["Machine Learning & Artificial Intelligence", "Data Science", "Cyber Secruity", "Full Stack Development"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327857/shoolini-bca_zwvncy.webp",
+          "alt": "Bachelor of Computer Applications at Shoolini University"
+        }
+      ],
+      "postgraduateCourses": [
+        {
+          "courseId": "shoolini-mba-001",
+          "courseName": "Master of Business Administration (MBA)",
+          "duration": "2 Years",
+          "eligibility": "Passed Bachelor degree of minimum 3 years duration. Obtained atleast 50% marks.",
+          "fees": {
+            "min": 140000,
+            "max": 140000,
+            "currency": "₹",
+            "display": "(98,000/- + 42,000/-) = ₹1,40,000/- [ ₹42,000/-(Only to be paid after Placement)]"
+          },
+          "specializations": ["Marketing Management", "Operation & Supply Chain Management", "Agri Business Management", "Human Resource Management", "IT Management", "Biotechnology Management", "Financial Management", "Tourism Management", "Food Technology Management", "Digital Marketing", "Real Estate Management", "Pharma & Health Care Management", "Retail Management", "Direct Selling Management", "Banking & Insurance", "Data Science & Business Analytics"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327859/shoolini-mba_dpoger.webp",
+          "alt": "Master of Business Administration at Shoolini University"
+        },
+        {
+          "courseId": "shoolini-emba-001",
+          "courseName": "Executive MBA",
+          "duration": "2 Years",
+          "eligibility": "Passed Bachelor degree of minimum 3 years duration. Obtained atleast 50% marks.",
+          "fees": {
+            "min": 180000,
+            "max": 180000,
+            "currency": "₹",
+            "display": "₹1,80,000/-"
+          },
+          "specializations": ["Marketing Management", "Operation & Supply Chain Management", "Agri Business Management", "Human Resource Management", "IT Management", "Biotechnology Management", "Financial Management", "Tourism Management", "Food Technology Management", "Digital Marketing", "Real Estate Management", "Pharma & Health Care Management", "Retail Management", "Direct Selling Management", "Banking & Insurance", "Data Science & Business Analytics"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
+          "alt": "Executive MBA at Shoolini University"
+        },
+        {
+          "courseId": "shoolini-msc-ds-001",
+          "courseName": "MSC in Data science",
+          "duration": "2 Years",
+          "eligibility": "Graduation in Life Sciences",
+          "fees": {
+            "min": 120000,
+            "max": 120000,
+            "currency": "₹",
+            "display": "₹1,20,000/-"
+          },
+          "specializations": ["Data Science"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327859/shoolini-mca_pxpsfz.webp",
+          "alt": "Master of Science in Data Science at Shoolini University"
+        },
+        {
+          "courseId": "shoolini-mca-001",
+          "courseName": "MCA",
+          "duration": "2 Years",
+          "eligibility": "Bachelor's degree in 3 years with at least 50% marks (45% for reserved category candidates,)",
+          "fees": {
+            "min": 200000,
+            "max": 200000,
+            "currency": "₹",
+            "display": "₹2,00,000/-"
+          },
+          "specializations": ["AI & ML", "Data Science and Analytics", "Full Stack Development"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
+          "alt": "Master of Science in Data Science at Shoolini University"
+        },
+        {
+          "courseId": "shoolini-ma-001",
+          "courseName": "Master of Arts (M.A)",
+          "duration": "2 Years",
+          "eligibility": "Bachelor's degree with any discipline with minimum of 40% marks. 60% marks in case of International Students in the qualifying examination.",
+          "fees": {
+            "min": 84000,
+            "max": 100000,
+            "currency": "₹",
+            "display": "₹84,000-1,00,000"
+          },
+          "specializations": ["English Literature", "journalism and Mass Communication"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327858/shoolini-ma_uokqan.webp",
+          "alt": "Master of Arts in shoolini University"
+        }
+      ]
+    },
+    {
+      "universityId": "sikkim-manipal",
+      "universityName": "Sikkim Manipal University",
+      "shortName": "SMU",
+      "undergraduateCourses": [
+        {
+          "courseId": "smu-ba-001",
+          "courseName": "Bachelor of Arts (BA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 or equivalent",
+          "fees": {
+            "min": 75000,
+            "max": 75000,
+            "currency": "₹",
+            "display": "₹75,000"
+          },
+          "specializations": ["English", "Sociology", "Political Science"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
+          "alt": "Bachelor of Arts (BA) in SMU Online"
+        },
+        {
+          "courseId": "smu-bba-001",
+          "courseName": "Bachelor of Business Administration (BBA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 or equivalent",
+          "fees": {
+            "min": 90000,
+            "max": 90000,
+            "currency": "₹",
+            "display": "₹90,000"
+          },
+          "specializations": ["Business Analytics & Fintech", "Entrepreneurship", "Operations & Supply Chain Management", "Banking & Insurance"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
+          "alt": "Bachelor of Business Administration (BBA) in SMU Online"
+        },
+        {
+          "courseId": "smu-bcom-001",
+          "courseName": "Bachelor of Commerce (B.Com)",
+          "duration": "3 Years",
+          "eligibility": "10+2 or equivalent",
+          "fees": {
+            "min": 75000,
+            "max": 75000,
+            "currency": "₹",
+            "display": "₹75,000"
+          },
+          "specializations": ["General"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
+          "alt": "Bachelor of Commerce (B.Com) in SMU Online"
+        }
+      ],
+      "postgraduateCourses": [
+        {
+          "courseId": "smu-mba-001",
+          "courseName": "Master of Business Administration (MBA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation with minimum 50% marks",
+          "fees": {
+            "min": 120000,
+            "max": 120000,
+            "currency": "₹",
+            "display": "₹1,20,000"
+          },
+          "specializations": ["Dual Specialization (Marketing, Finance, HR, Systems, Operations and Supply Chain Management, Healthcare Management)"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
+          "alt": "Master of Business Administration (MBA) in SMU Online"
+        },
+        {
+          "courseId": "smu-mca-001",
+          "courseName": "Master of Computer Applications (MCA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation with minimum 50% marks",
+          "fees": {
+            "min": 110000,
+            "max": 110000,
+            "currency": "₹",
+            "display": "₹1,10,000"
+          },
+          "specializations": ["General"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
+          "alt": "Master of Computer Applications (MCA) in SMU Online"
+        },
+        {
+          "courseId": "smu-ma-001",
+          "courseName": "Master of Arts (MA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation in relevant stream",
+          "fees": {
+            "min": 75000,
+            "max": 75000,
+            "currency": "₹",
+            "display": "₹75,000"
+          },
+          "specializations": ["English / Sociology / Political Science"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
+          "alt": "Master of Arts (M.A.) in SMU Online"
+        },
+        {
+          "courseId": "smu-mcom-001",
+          "courseName": "Master of Commerce (M.Com)",
+          "duration": "2 Years",
+          "eligibility": "Graduation in Commerce or equivalent",
+          "fees": {
+            "min": 75000,
+            "max": 75000,
+            "currency": "₹",
+            "display": "₹75,000"
+          },
+          "specializations": ["Finance", "Marketing"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bcom_ra3yam.webp",
+          "alt": "Master of Commerce (M.Com) in SMU Online"
+        }
+      ]
+    },
+    {
+      "universityId": "upes",
+      "universityName": "UPES",
+      "shortName": "UPES",
+      "undergraduateCourses": [
+        {
+          "courseId": "upes-bba-001",
+          "courseName": "Bachelor of Business Administration (BBA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Pass",
+          "fees": {
+            "min": 168768,
+            "max": 168768,
+            "currency": "₹",
+            "display": "₹1,68,768"
+          },
+          "specializations": ["Operations Management", "Financial Management", "Human Resource Management", "Marketing Management", "BBA in Digital Business", "BBA in Logistics and Supply Chain", "BBA in International Business"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
+          "alt": "BBA from UPES University Online"
+        },
+        {
+          "courseId": "upes-bca-001",
+          "courseName": "Bachelor of Computer Applications (BCA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 Pass",
+          "fees": {
+            "min": 168768,
+            "max": 168768,
+            "currency": "₹",
+            "display": "₹1,68,768"
+          },
+          "specializations": ["Cloud Computing", "Cyber Security", "Data Analytics", "New age Technology"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
+          "alt": "BCA from UPES University Online"
+        }
+      ],
+      "postgraduateCourses": [
+        {
+          "courseId": "upes-mba-001",
+          "courseName": "Master of Business Administration (MBA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation with  50%",
+          "fees": {
+            "min": 190920,
+            "max": 240000,
+            "currency": "₹",
+            "display": "₹1,90,920- 2,40,000"
+          },
+          "specializations": ["Oil & Gas Management", "Power Management", "Logistics & Supply Chain Management", "Business Analytics", "Finance", "Human Resource Management", "Infrastructure Management", "International Business", "Marketing Management", "Human Resource Management", "Operations Management", "Financial Management", "Digital Business"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
+          "alt": "MBA from UPES University Online"
+        },
+        {
+          "courseId": "upes-mca-001",
+          "courseName": "Master of Computer Applications (MCA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation in BCA/B.Sc(IT)",
+          "fees": {
+            "min": 185448,
+            "max": 185448,
+            "currency": "₹",
+            "display": "₹1,85,448"
+          },
+          "specializations": ["Artificial Intelligence and Machine Learning", "Cyber Security and Forensics", "Data Science"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
+          "alt": "MCA from UPES University Online"
+        }
+      ]
+    },
+    {
+      "universityId": "uttaranchal-university",
+      "universityName": "Uttaranchal University",
+      "shortName": "UU",
+      "undergraduateCourses": [
+        {
+          "courseId": "uu-ba-001",
+          "courseName": "Bachelor of Arts (BA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 pass from a recognized board",
+          "fees": {
+            "min": 72000,
+            "max": 72000,
+            "currency": "₹",
+            "display": "₹72,000"
+          },
+          "specializations": ["General"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
+          "alt": "Bachelor of Arts (BA) in Uttaranchal University Online"
+        },
+        {
+          "courseId": "uu-bba-001",
+          "courseName": "Bachelor of Business Administration (BBA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 pass from a recognized board",
+          "fees": {
+            "min": 120000,
+            "max": 120000,
+            "currency": "₹",
+            "display": "₹1,20,000"
+          },
+          "specializations": ["General"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
+          "alt": "Bachelor of Business Administration (BBA) in Uttaranchal University Online"
+        },
+        {
+          "courseId": "uu-bca-001",
+          "courseName": "Bachelor of Computer Applications (BCA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 pass from a recognized board",
+          "fees": {
+            "min": 120000,
+            "max": 120000,
+            "currency": "₹",
+            "display": "₹1,20,000"
+          },
+          "specializations": ["General"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
+          "alt": "Bachelor of Computer Applications (BCA) in Uttaranchal University Online"
+        }
+      ],
+      "postgraduateCourses": [
+        {
+          "courseId": "uu-mba-001",
+          "courseName": "Master of Business Administration (MBA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation in any field from a recognized university with a minimum of 40% marks in aggregate OR below 40% with eligibility test",
+          "fees": {
+            "min": 140000,
+            "max": 140000,
+            "currency": "₹",
+            "display": "₹1,40,000"
+          },
+          "specializations": ["Marketing", "Digital", "Human Resource", "Business Analytics", "Finance", "International Business", "Information Technology Management", "Logistics & Supply Chain Management"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
+          "alt": "Master of Business Administration (MBA) in Uttaranchal University Online"
+        },
+        {
+          "courseId": "uu-emba-001",
+          "courseName": "Executive MBA",
+          "duration": "2 Years",
+          "eligibility": "Graduation in any field from a recognized university with relevant work experience",
+          "fees": {
+            "min": 310000,
+            "max": 310000,
+            "currency": "₹",
+            "display": "₹3,10,000"
+          },
+          "specializations": ["Business Analytics", "HR Analytics", "Finance Analytics", "Banking and Finance"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
+          "alt": "Executive MBA in Uttaranchal University Online"
+        },
+        {
+          "courseId": "uu-mca-001",
+          "courseName": "Master of Computer Applications (MCA)",
+          "duration": "2 Years",
+          "eligibility": "Graduate in Computer Applications/CS/IT/Engineering with 50% marks (45% reserved) OR Graduate with Mathematics at 10+2 or graduation level",
+          "fees": {
+            "min": 120000,
+            "max": 120000,
+            "currency": "₹",
+            "display": "₹1,20,000"
+          },
+          "specializations": ["General"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp",
+          "alt": "Master of Computer Applications (MCA) in Uttaranchal University Online"
+        }
+      ]
+    },
+    {
+      "universityId": "vivekanandra-global",
+      "universityName": "Vivekanandra Global University",
+      "shortName": "VGU",
+      "undergraduateCourses": [
+        {
+          "courseId": "vgu-bca-001",
+          "courseName": "Bachelor of Computer Applications (BCA)",
+          "duration": "3 Years",
+          "eligibility": "Passed 10+2 examination in any stream from a recognized Board",
+          "fees": {
+            "min": 132000,
+            "max": 132000,
+            "currency": "₹",
+            "display": "₹1,32,000/-"
+          },
+          "specializations": ["General", "Data Science", "Blockchain Technology", "Artificial Intelligence", "Cloud Tehnology & Information Security", "UX"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327057/bca_nafolc.webp",
+          "alt": "BCA In VGU"
+        },
+        {
+          "courseId": "vgu-ba-001",
+          "courseName": "Bachelore of Arts(BA)",
+          "duration": "3 Years",
+          "eligibility": "10+2 in any stream",
+          "fees": {
+            "min": 72000,
+            "max": 72000,
+            "currency": "₹",
+            "display": "₹72,000/-"
+          },
+          "specializations": ["Economics + Public Policy + Computer Applications", "Public Policy + English", "English + History + Political Science", "Computer Applications + Public Policy/IR", "Political Science + International Relations + Public Policy"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327036/ba_hakemz.webp",
+          "alt": "BA In VGU"
+        },
+        {
+          "courseId": "vgu-bba-001",
+          "courseName": "Bachelor of Business Administration (BBA)",
+          "duration": "3 Years",
+          "eligibility": "Passed 10+2 examination in any stream from a recognized Board.",
+          "fees": {
+            "min": 132000,
+            "max": 132000,
+            "currency": "₹",
+            "display": "₹1,32,000/-"
+          },
+          "specializations": ["General", "Digital Marketing", "Retail Management", "Fintech"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
+          "alt": "BBA In VGU"
+        }
+      ],
+      "postgraduateCourses": [
+        {
+          "courseId": "vgu-mba-001",
+          "courseName": "Masters of Business Administration (MBA)",
+          "duration": "2 Years",
+          "eligibility": "Graduation in any stream",
+          "fees": {
+            "min": 150000,
+            "max": 240000,
+            "currency": "₹",
+            "display": "₹1,50,000 - 2,40,000"
+          },
+          "specializations": ["Finance", "Marketing", "Human Resources", "Operations", "Business Analytics", "Information Technology Management", "Helthcare Management", "Agribusiness Management", "International Business"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp",
+          "alt": "MBA In VGU"
+        },
+        {
+          "courseId": "vgu-mca-001",
+          "courseName": "Master of Computer Applications (MCA)",
+          "duration": "2 Years",
+          "eligibility": "Bachelor's Degree from a recognised University.",
+          "fees": {
+            "min": 150000,
+            "max": 150000,
+            "currency": "₹",
+            "display": "₹1,50,000/-"
+          },
+          "specializations": ["General"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mca_bgcbja.webp",
+          "alt": "MCA In VGU"
+        },
+        {
+          "courseId": "vgu-ma-eng-001",
+          "courseName": "Master of Arts (English)",
+          "duration": "2 Years",
+          "eligibility": "Bachelor's Degree from a recognised University.",
+          "fees": {
+            "min": 72000,
+            "max": 72000,
+            "currency": "₹",
+            "display": "₹72,000/-"
+          },
+          "specializations": ["English"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma_ywzsnb.webp",
+          "alt": "MA In VGU"
+        },
+        {
+          "courseId": "vgu-msc-math-001",
+          "courseName": "Master of Science (Maths)",
+          "duration": "2 Years",
+          "eligibility": "Graduates with BA / BSc degree with Mathematics as one of the three main subjects.",
+          "fees": {
+            "min": 72000,
+            "max": 72000,
+            "currency": "₹",
+            "display": "₹72,000/-"
+          },
+          "specializations": ["Mathematics"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
+          "alt": "MSc In VGU"
+        },
+        {
+          "courseId": "vgu-majmc-001",
+          "courseName": "Master of Arts Journalism and Mass Communication (MAJMC)",
+          "duration": "2 Years",
+          "eligibility": "Graduation in any stream",
+          "fees": {
+            "min": 72000,
+            "max": 72000,
+            "currency": "₹",
+            "display": "₹72,000/-"
+          },
+          "specializations": ["Journalism and Mass Communication"],
+          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327388/ma1_rqnrla.webp",
+          "alt": "MAJMC In VGU"
+        }
+      ]
+    }
+  ]
+}

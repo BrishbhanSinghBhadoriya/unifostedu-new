@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const ChatBox = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +14,22 @@ const ChatBox = () => {
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showWelcome, setShowWelcome] = useState(false);
+  
+  // DRAGGABLE STATE
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [hasMoved, setHasMoved] = useState(false);
+
+  const messagesEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages, isLoading]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -21,6 +37,38 @@ const ChatBox = () => {
     }, 1500);
     return () => clearTimeout(timer);
   }, []);
+
+  // DRAG HANDLERS
+  const handlePointerDown = (e) => {
+    setIsDragging(true);
+    setDragStart({ x: e.clientX - position.x, y: e.clientY - position.y });
+    setHasMoved(false);
+    e.target.setPointerCapture(e.pointerId);
+  };
+
+  const handlePointerMove = (e) => {
+    if (!isDragging) return;
+    const newX = e.clientX - dragStart.x;
+    const newY = e.clientY - dragStart.y;
+    
+    // Check if moved enough to be considered a drag
+    if (Math.abs(newX - position.x) > 5 || Math.abs(newY - position.y) > 5) {
+      setHasMoved(true);
+    }
+    
+    setPosition({ x: newX, y: newY });
+  };
+
+  const handlePointerUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleButtonClick = () => {
+    if (!hasMoved) {
+      setIsOpen(true);
+      setShowWelcome(false);
+    }
+  };
 
   const handleSendMessage = async (e) => {
     e.preventDefault();
@@ -74,84 +122,23 @@ const ChatBox = () => {
   return (
     <>
       <style>{`
-        @keyframes bounceRobot {
-          0%, 100% { 
-            transform: translateY(0px) scale(1);
-          }
-          25% { 
-            transform: translateY(-15px) scale(1.05);
-          }
-          50% { 
-            transform: translateY(0px) scale(1.1);
-          }
-          75% { 
-            transform: translateY(-10px) scale(1.02);
-          }
-        }
-
-        @keyframes waveHand {
-          0%, 100% { 
-            transform: rotateZ(0deg);
-            transform-origin: 70% 30%;
-          }
-          25% { 
-            transform: rotateZ(-25deg);
-            transform-origin: 70% 30%;
-          }
-          50% { 
-            transform: rotateZ(0deg);
-            transform-origin: 70% 30%;
-          }
-          75% { 
-            transform: rotateZ(-25deg);
-            transform-origin: 70% 30%;
-          }
-        }
-
-        @keyframes spin3d {
-          0% { 
-            transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
-          }
-          25% { 
-            transform: perspective(1000px) rotateY(15deg) rotateX(-5deg);
-          }
-          50% { 
-            transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
-          }
-          75% { 
-            transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
-          }
-          100% { 
-            transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
-          }
-        }
-
-        @keyframes glowPulse {
-          0%, 100% { 
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-          }
-          50% { 
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-          }
-        }
-
         .robot-button {
           width: 150px;
           height: 150px;
           border: none;
           background: none;
-          cursor: pointer;
+          cursor: grab;
           padding: 0;
-          transition: all 0.3s ease;
-          perspective: 1000px;
-        }
-
-        .robot-button:hover {
-          transform: scale(1.1);
+          transition: transform 0.1s ease-out;
+          touch-action: none;
         }
 
         .robot-button:active {
-          transform: scale(0.95);
+          cursor: grabbing;
+        }
+
+        .robot-button:hover {
+          transform: scale(1.05);
         }
 
         .robot-image-container {
@@ -160,150 +147,119 @@ const ChatBox = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          animation: bounceRobot 2.5s ease-in-out infinite, spin3d 5s ease-in-out infinite;
           position: relative;
-          transform-style: preserve-3d;
         }
 
         .robot-image {
           width: 100%;
           height: 100%;
           object-fit: contain;
-          filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
         }
 
-        @keyframes slideInLeft {
-          from {
-            opacity: 0;
-            transform: translateX(100px) scale(0.5);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0) scale(1);
-          }
-        }
-
-        @keyframes bubbleFloat {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-5px); }
-        }
-
-        .speech-bubble {
+        .cloud-bubble {
           position: absolute;
-          right: 140px;
-          bottom: 60px;
-          background: white;
-          padding: 12px 20px;
-          border-radius: 20px 20px 0 20px;
-          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-          width: 220px;
-          animation: slideInLeft 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards,
-                     bubbleFloat 3s ease-in-out infinite 0.8s;
-          border: 1px solid rgba(0, 0, 0, 0.05);
-          pointer-events: none;
-          z-index: 10000;
-          transform-origin: bottom right;
+          bottom: 140px;
+          right: 30px;
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          padding: 15px 20px;
+          border-radius: 25px;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+          width: 240px;
+          z-index: 10001;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          animation: floatCloud 3s ease-in-out infinite, colorCycle 8s linear infinite;
         }
 
-        .speech-bubble::after {
-          content: '';
+        @keyframes colorCycle {
+          0% { background: rgba(255, 255, 255, 0.4); }
+          25% { background: rgba(230, 243, 255, 0.5); }
+          50% { background: rgba(243, 230, 255, 0.5); }
+          75% { background: rgba(255, 235, 230, 0.5); }
+          100% { background: rgba(255, 255, 255, 0.4); }
+        }
+
+        .thinking-dot {
           position: absolute;
-          right: -10px;
-          bottom: 0;
-          width: 20px;
-          height: 20px;
-          background: white;
-          clip-path: polygon(0 0, 0% 100%, 100% 100%);
-        }
-
-        .speech-bubble-text {
-          color: #001e3c;
-          font-size: 14px;
-          font-weight: 500;
-          line-height: 1.4;
-          margin: 0;
-        }
-
-        .robot-particles {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          pointer-events: none;
-        }
-
-        .particle {
-          position: absolute;
-          width: 4px;
-          height: 4px;
-          background: #64c8ff;
+          backdrop-filter: blur(8px);
           border-radius: 50%;
-          opacity: 0;
-          animation: float 2s ease-in-out infinite;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          animation: colorCycle 8s linear infinite;
         }
 
-        @keyframes float {
-          0% {
-            opacity: 0;
-            transform: translateY(0px) translateX(0px);
-          }
-          50% {
-            opacity: 1;
-          }
-          100% {
-            opacity: 0;
-            transform: translateY(-20px) translateX(var(--tx));
-          }
+        .dot-1 {
+          width: 15px;
+          height: 15px;
+          bottom: -20px;
+          right: 50px;
         }
 
-        .particle:nth-child(1) { --tx: 10px; left: 30%; top: 50%; animation-delay: 0s; }
-        .particle:nth-child(2) { --tx: -10px; left: 70%; top: 50%; animation-delay: 0.3s; }
-        .particle:nth-child(3) { --tx: 15px; left: 40%; top: 60%; animation-delay: 0.6s; }
+        .dot-2 {
+          width: 10px;
+          height: 10px;
+          bottom: -35px;
+          right: 40px;
+        }
+
+        @keyframes floatCloud {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+        }
+
       `}</style>
 
       {/* 🤖 CUTE ROBOT BUTTON */}
       <button
-        onClick={() => {
-          setIsOpen(true);
-          setShowWelcome(false);
-        }}
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onClick={handleButtonClick}
         className="robot-button fixed z-[9999]"
-        style={{ bottom: '20px', right: '20px' }}
+        style={{ 
+          bottom: '20px', 
+          right: '20px', 
+          transform: `translate(${position.x}px, ${position.y}px)` 
+        }}
       >
         {showWelcome && !isOpen && (
-          <div className="speech-bubble">
-            <p className="speech-bubble-text">
+          <div className="cloud-bubble">
+            <p className="text-[#001e3c] text-sm font-semibold leading-tight m-0">
               Hello! 👋 I'm Prof.Unique. How can I help you today?
             </p>
+            <div className="thinking-dot dot-1"></div>
+            <div className="thinking-dot dot-2"></div>
           </div>
         )}
         <div className="robot-image-container">
-          <img
-            src="https://res.cloudinary.com/deht3c1bt/image/upload/q_auto/f_auto/v1776771185/robot-removebg-preview_ag0ftm.png"
-            alt="Cute Robot"
+          <video
+            src="https://res.cloudinary.com/deht3c1bt/video/upload/q_auto/f_auto/v1776842384/a5e9e83fe38a4cddadea17b03907a874_nx6d0i.webm"
+            autoPlay
+            loop
+            muted
+            playsInline
             className="robot-image"
           />
-        </div>
-        <div className="robot-particles">
-          <div className="particle"></div>
-          <div className="particle"></div>
-          <div className="particle"></div>
         </div>
       </button>
 
       {/* Chat Modal */}
       {isOpen && (
         <div 
-          className="fixed z-[9998] w-[calc(100%-40px)] max-w-md"
-          style={{ bottom: '100px', right: '20px' }}
+          className="fixed z-[10002] w-[calc(100%-40px)] max-w-[350px]"
+          style={{ 
+            bottom: '180px', 
+            right: '20px',
+            transform: `translate(${position.x}px, ${position.y}px)`
+          }}
         >
-          <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-2xl border border-gray-100">
+          <div className="bg-white rounded-2xl p-4 shadow-2xl border border-gray-100 flex flex-col h-[450px]">
             <button
               onClick={() => setIsOpen(false)}
-              className="float-right text-gray-400 hover:text-gray-600 transition-colors"
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors z-10"
             >
               <span className="text-2xl">✕</span>
             </button>
-            <div className="flex items-center gap-3 mb-4 border-b pb-3">
+            <div className="flex items-center gap-3 mb-4 border-b pb-3 shrink-0">
               <div className="relative">
                 <img src="/uni.webp" alt="bot" width={40} height={40} className="rounded-full ring-2 ring-blue-100" />
                 <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
@@ -314,29 +270,36 @@ const ChatBox = () => {
               </div>
             </div>
             
-            <div className="flex-1 overflow-y-auto p-2 sm:p-4 bg-gray-50/50 rounded-xl mb-4 h-80 scrollbar-thin scrollbar-thumb-gray-200">
+            <div className="flex-1 overflow-y-auto p-2 sm:p-4 bg-gray-50/50 rounded-xl mb-4 scrollbar-thin scrollbar-thumb-gray-200">
               {messages.map((msg) => (
                 <div key={msg.id} className={`flex mb-3 ${msg.sender === "user" ? "justify-end" : "justify-start"}`}>
                   <div
-                    className={`px-3 py-2 rounded-lg max-w-[75%] text-sm ${
-                      msg.sender === "user" ? "bg-blue-600 text-white" : "bg-gray-200"
+                    className={`px-3 py-2 rounded-lg max-w-[85%] text-sm ${
+                      msg.sender === "user" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-800"
                     }`}
                   >
                     {msg.text}
                   </div>
                 </div>
               ))}
-              {isLoading && <p className="text-sm text-gray-500">Typing...</p>}
+              {isLoading && (
+                <div className="flex justify-start mb-3">
+                  <div className="bg-gray-200 px-3 py-2 rounded-lg text-sm text-gray-500 animate-pulse">
+                    Typing...
+                  </div>
+                </div>
+              )}
+              <div ref={messagesEndRef} />
             </div>
 
-            <form onSubmit={handleSendMessage} className="flex gap-2">
+            <form onSubmit={handleSendMessage} className="flex gap-2 shrink-0">
               <input
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 placeholder="Ask about courses..."
-                className="flex-1 border px-3 py-2 rounded-md text-sm"
+                className="flex-1 border px-3 py-2 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              <button type="submit" disabled={isLoading} className="bg-blue-600 text-white px-4 py-2 rounded-md">
+              <button type="submit" disabled={isLoading} className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
                 Send
               </button>
             </form>
