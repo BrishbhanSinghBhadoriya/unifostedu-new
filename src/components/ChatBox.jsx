@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
+import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 
 const ChatBox = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,12 +9,15 @@ const ChatBox = () => {
       id: 1,
       text: "Hello! 👋 I'm Prof.Unique. How can I help you today?",
       sender: "bot",
-      timestamp: new Date(),
+      timestamp: null,
     },
   ]);
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showWelcome, setShowWelcome] = useState(false);
+  const [openEnquiryModal, setOpenEnquiryModal] = useState(false);
+  const [sessionLead, setSessionLead] = useState(null);
+  const [isMounted, setIsMounted] = useState(false);
   
   // DRAGGABLE STATE
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -32,6 +36,7 @@ const ChatBox = () => {
   }, [messages, isLoading]);
 
   useEffect(() => {
+    setIsMounted(true);
     const timer = setTimeout(() => {
       setShowWelcome(true);
     }, 1500);
@@ -40,6 +45,8 @@ const ChatBox = () => {
 
   // DRAG HANDLERS
   const handlePointerDown = (e) => {
+    e.preventDefault();
+    document.body.classList.add('dragging-chatbox');
     setIsDragging(true);
     setDragStart({ x: e.clientX - position.x, y: e.clientY - position.y });
     setHasMoved(false);
@@ -48,6 +55,7 @@ const ChatBox = () => {
 
   const handlePointerMove = (e) => {
     if (!isDragging) return;
+    e.preventDefault();
     const newX = e.clientX - dragStart.x;
     const newY = e.clientY - dragStart.y;
     
@@ -61,9 +69,17 @@ const ChatBox = () => {
 
   const handlePointerUp = () => {
     setIsDragging(false);
+    document.body.classList.remove('dragging-chatbox');
   };
 
   const handleButtonClick = () => {
+    // On mobile, we open it directly without checking hasMoved to be more reliable
+    if (typeof window !== 'undefined' && window.innerWidth <= 768) {
+      setIsOpen(true);
+      setShowWelcome(false);
+      return;
+    }
+
     if (!hasMoved) {
       setIsOpen(true);
       setShowWelcome(false);
@@ -90,10 +106,22 @@ const ChatBox = () => {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userText }),
+        body: JSON.stringify({ 
+          message: userText,
+          leadData: sessionLead // Pass existing lead data if any
+        }),
       });
+
       const data = await res.json();
       
+      // If AI extracted new lead data, update the session
+      if (data.leadData) {
+        setSessionLead((prev) => ({
+          ...prev,
+          ...data.leadData
+        }));
+      }
+
       setMessages((prev) => [
         ...prev,
         {
@@ -103,6 +131,10 @@ const ChatBox = () => {
           timestamp: new Date(),
         },
       ]);
+
+      if (data.openEnquiry) {
+        setOpenEnquiryModal(true);
+      }
     } catch (error) {
       console.error(error);
       setMessages((prev) => [
@@ -123,6 +155,9 @@ const ChatBox = () => {
     <>
       <style>{`
         .robot-button {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
           width: 150px;
           height: 150px;
           border: none;
@@ -131,6 +166,61 @@ const ChatBox = () => {
           padding: 0;
           transition: transform 0.1s ease-out;
           touch-action: none;
+          user-select: none;
+          -webkit-user-select: none;
+          z-index: 999999 !important;
+          pointer-events: auto !important;
+          display: block !important;
+        }
+
+        .chat-modal-container {
+          position: fixed;
+          bottom: 180px;
+          right: 20px;
+          width: calc(100% - 40px);
+          max-width: 350px;
+          z-index: 1000000;
+        }
+
+        /* Mobile specific adjustments */
+        @media (max-width: 768px) {
+          .robot-button {
+            width: 85px !important;
+            height: 85px !important;
+            bottom: 20px !important;
+            right: 20px !important;
+            transform: none !important; /* Disable dragging transform on mobile to prevent off-screen */
+          }
+          .chat-modal-container {
+            width: 95% !important;
+            max-width: 95% !important;
+            right: 2.5% !important;
+            left: 2.5% !important;
+            bottom: 115px !important;
+            transform: none !important;
+            z-index: 1000000 !important;
+          }
+          .chat-modal-content {
+            height: 75vh !important; /* Take up more height on mobile */
+            max-height: 550px !important;
+          }
+          .cloud-bubble {
+            width: 180px !important;
+            bottom: 90px !important;
+            right: 10px !important;
+            padding: 10px 15px !important;
+          }
+          .cloud-bubble p {
+            font-size: 12px !important;
+          }
+          .dot-1 {
+            right: 30px !important;
+            bottom: -15px !important;
+          }
+          .dot-2 {
+            right: 20px !important;
+            bottom: -25px !important;
+          }
         }
 
         .robot-button:active {
@@ -139,6 +229,13 @@ const ChatBox = () => {
 
         .robot-button:hover {
           transform: scale(1.05);
+        }
+        
+        body.dragging-chatbox {
+          overflow: hidden !important;
+          position: fixed !important;
+          width: 100% !important;
+          height: 100% !important;
         }
 
         .robot-image-container {
@@ -206,6 +303,25 @@ const ChatBox = () => {
           50% { transform: translateY(-10px); }
         }
 
+        .chat-messages-container {
+          scrollbar-width: thin; /* Firefox */
+          scrollbar-color: #cbd5e1 transparent; /* Firefox */
+          scroll-behavior: smooth;
+        }
+        .chat-messages-container::-webkit-scrollbar {
+          width: 6px;
+          display: block;
+        }
+        .chat-messages-container::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        .chat-messages-container::-webkit-scrollbar-thumb {
+          background: #cbd5e1;
+          border-radius: 10px;
+        }
+        .chat-messages-container::-webkit-scrollbar-thumb:hover {
+          background: #94a3b8;
+        }
       `}</style>
 
       {/* 🤖 CUTE ROBOT BUTTON */}
@@ -214,11 +330,11 @@ const ChatBox = () => {
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onClick={handleButtonClick}
-        className="robot-button fixed z-[9999]"
+        className="robot-button fixed"
         style={{ 
-          bottom: '20px', 
-          right: '20px', 
-          transform: `translate(${position.x}px, ${position.y}px)` 
+          transform: isMounted && typeof window !== 'undefined' && window.innerWidth > 768 
+            ? `translate(${position.x}px, ${position.y}px)` 
+            : 'none'
         }}
       >
         {showWelcome && !isOpen && (
@@ -245,14 +361,14 @@ const ChatBox = () => {
       {/* Chat Modal */}
       {isOpen && (
         <div 
-          className="fixed z-[10002] w-[calc(100%-40px)] max-w-[350px]"
+          className="chat-modal-container fixed"
           style={{ 
-            bottom: '180px', 
-            right: '20px',
-            transform: `translate(${position.x}px, ${position.y}px)`
+            transform: isMounted && typeof window !== 'undefined' && window.innerWidth > 768 
+              ? `translate(${position.x}px, ${position.y}px)` 
+              : 'none'
           }}
         >
-          <div className="bg-white rounded-2xl p-4 shadow-2xl border border-gray-100 flex flex-col h-[450px]">
+          <div className="chat-modal-content bg-white rounded-2xl p-4 shadow-2xl border border-gray-100 flex flex-col h-[450px]">
             <button
               onClick={() => setIsOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors z-10"
@@ -270,41 +386,97 @@ const ChatBox = () => {
               </div>
             </div>
             
-            <div className="flex-1 overflow-y-auto p-2 sm:p-4 bg-gray-50/50 rounded-xl mb-4 scrollbar-thin scrollbar-thumb-gray-200">
+            <div className="flex-1 overflow-y-auto p-2 sm:p-4 bg-gray-50/50 rounded-xl mb-4 chat-messages-container">
               {messages.map((msg) => (
                 <div key={msg.id} className={`flex mb-3 ${msg.sender === "user" ? "justify-end" : "justify-start"}`}>
                   <div
-                    className={`px-3 py-2 rounded-lg max-w-[85%] text-sm ${
-                      msg.sender === "user" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-800"
+                    className={`px-4 py-3 rounded-2xl max-w-[90%] text-sm shadow-sm ${
+                      msg.sender === "user" 
+                        ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-tr-none" 
+                        : "bg-white text-gray-800 border border-gray-100 rounded-tl-none"
                     }`}
                   >
-                    {msg.text}
+                    {msg.sender === "bot" ? (
+                      <div className="space-y-2 whitespace-pre-wrap leading-relaxed">
+                        {msg.text.split('\n').map((line, i) => {
+                          if (line.startsWith('# ')) {
+                            return <h1 key={i} className="text-xl font-bold text-blue-800 mb-2 mt-1">{line.replace('# ', '')}</h1>;
+                          }
+                          if (line.startsWith('## ')) {
+                            return <h2 key={i} className="text-lg font-semibold text-gray-800 mb-1 mt-2">{line.replace('## ', '')}</h2>;
+                          }
+                          if (line.startsWith('### ')) {
+                            return <h3 key={i} className="text-md font-semibold text-gray-700 mb-1">{line.replace('### ', '')}</h3>;
+                          }
+                          
+                          // Handle bold text **bold**
+                          const parts = line.split(/(\*\*.*?\*\*)/g);
+                          return (
+                            <p key={i} className="mb-1">
+                              {parts.map((part, j) => {
+                                if (part.startsWith('**') && part.endsWith('**')) {
+                                  return <strong key={j} className="font-bold text-blue-700">{part.slice(2, -2)}</strong>;
+                                }
+                                return part;
+                              })}
+                            </p>
+                          );
+                        })}
+                      </div>
+                    ) : (
+                      msg.text
+                    )}
                   </div>
                 </div>
               ))}
               {isLoading && (
                 <div className="flex justify-start mb-3">
-                  <div className="bg-gray-200 px-3 py-2 rounded-lg text-sm text-gray-500 animate-pulse">
-                    Typing...
+                  <div className="bg-white border border-gray-100 px-4 py-2 rounded-2xl rounded-tl-none text-sm text-gray-500 shadow-sm flex items-center gap-2">
+                    <span className="flex gap-1">
+                      <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></span>
+                      <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce [animation-delay:0.2s]"></span>
+                      <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce [animation-delay:0.4s]"></span>
+                    </span>
+                    Prof.Unique is thinking...
                   </div>
                 </div>
               )}
               <div ref={messagesEndRef} />
             </div>
 
-            <form onSubmit={handleSendMessage} className="flex gap-2 shrink-0">
+            <form onSubmit={handleSendMessage} className="flex gap-2 shrink-0 bg-white p-1 rounded-xl border border-gray-100 shadow-sm">
               <input
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
-                placeholder="Ask about courses..."
-                className="flex-1 border px-3 py-2 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Ask about courses, fees..."
+                className="flex-1 px-4 py-2 text-sm focus:outline-none bg-transparent"
               />
-              <button type="submit" disabled={isLoading} className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
-                Send
+              <button 
+                type="submit" 
+                disabled={isLoading} 
+                className="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
               </button>
             </form>
           </div>
         </div>
+      )}
+
+      {openEnquiryModal && (
+        <ApplyEnquiryModal
+          open={openEnquiryModal}
+          onOpenChange={(v) => !v && setOpenEnquiryModal(false)}
+          title="Speak with Expert Counselor"
+          subtitle="Share your details and our counselor will reach out to you"
+          imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327867/uu_form_ipzqyg.webp"
+          universityName=""
+          defaultProgram=""
+          formType="general"
+        />
       )}
     </>
   );
