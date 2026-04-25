@@ -5,10 +5,9 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
-import { FaUser, FaPhone, FaEnvelope, FaGraduationCap, FaPaperPlane, FaBuildingColumns, FaLocationDot, FaWhatsapp,  FaCheck } from 'react-icons/fa6';
+import { FaUser, FaPhone, FaEnvelope, FaGraduationCap, FaPaperPlane, FaBuildingColumns, FaLocationDot, FaWhatsapp } from 'react-icons/fa6';
 import { toast } from 'sonner';
 import { enquiryAPI } from '@/lib/axios';
-import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -33,32 +32,6 @@ export default function EnquiryForm({
   const [program, setProgram] = useState(defaultProgram);
   const [selectedUniversity, setSelectedUniversity] = useState(universityName || '');
   const [city, setCity] = useState('');
-
-  // OTP States
-  const [showOtpField, setShowOtpField] = useState(false);
-  const [otp, setOtp] = useState('');
-  const [otpSending, setOtpSending] = useState(false);
-  const [otpVerifying, setOtpVerifying] = useState(false);
-  const [phoneVerified, setPhoneVerified] = useState(false);
-  const [timer, setTimer] = useState(0);
-
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-    if (timer > 0) {
-      interval = setInterval(() => {
-        setTimer((prev) => prev - 1);
-      }, 1000);
-    }
-    return () => clearInterval(interval);
-  }, [timer]);
-
-  // OTP States
-  const [otpStep, setOtpStep] = useState('phone'); // 'phone' or 'otp'
-  const [phoneForOTP, setPhoneForOTP] = useState('');
-  const [otpInput, setOtpInput] = useState('');
-  const [otpLoading, setOtpLoading] = useState(false);
-  const [otpTimer, setOtpTimer] = useState(0);
-
 
   const universities = [
     'Amity University Online',
@@ -106,7 +79,7 @@ export default function EnquiryForm({
     });
   }, []);
 
-  const { register, handleSubmit, formState, setValue, getValues, watch } = useForm<EnquiryFormValues>({
+  const { register, handleSubmit, formState, setValue, getValues } = useForm<EnquiryFormValues>({
     resolver: yupResolver(schema),
     defaultValues: {
       name: '',
@@ -119,8 +92,6 @@ export default function EnquiryForm({
     mode: 'onSubmit',
     reValidateMode: 'onBlur',
   });
-
-  const mobileValue = watch('mobile');
 
   const onCityChange = (val: string) => {
     setCity(val);
@@ -137,59 +108,7 @@ export default function EnquiryForm({
     setValue('course', val, { shouldDirty: true, shouldTouch: true });
   };
 
-  // OTP Handlers
-  const handleSendOTP = async () => {
-    const mobile = getValues('mobile');
-    if (!mobile || !/^[6-9]\d{9}$/.test(mobile)) {
-      toast.error('Please enter a valid 10-digit mobile number starting with 6-9');
-      return;
-    }
-
-    try {
-      setOtpSending(true);
-      const response = await axios.post('/api/send-otp', { mobile });
-      
-      if (response.data.success) {
-        toast.success('OTP sent successfully!');
-        setShowOtpField(true);
-        setTimer(60); // 60 seconds cooldown
-      }
-    } catch (error: any) {
-      toast.error(error.response?.data?.message || 'Failed to send OTP');
-    } finally {
-      setOtpSending(false);
-    }
-  };
-
-  const handleVerifyOTP = async () => {
-    if (!otp || otp.length < 6) {
-      toast.error('Please enter a valid 6-digit OTP');
-      return;
-    }
-
-    try {
-      setOtpVerifying(true);
-      const mobile = getValues('mobile');
-      const response = await axios.post('/api/verify-otp', { mobile, otp });
-      
-      if (response.data.success) {
-        toast.success('Phone number verified successfully!');
-        setPhoneVerified(true);
-        setShowOtpField(false);
-      }
-    } catch (error: any) {
-      toast.error(error.response?.data?.message || 'Invalid OTP');
-    } finally {
-      setOtpVerifying(false);
-    }
-  };
-
   const onSubmit = async (values: any) => {
-    if (!phoneVerified) {
-      toast.error('Please verify your phone number with OTP first');
-      return;
-    }
-
     try {
       setLoading(true);
       const requestBody = {
@@ -274,70 +193,20 @@ export default function EnquiryForm({
 
         <div className="space-y-1.5">
           <Label htmlFor="mobile" className="flex items-center gap-1">
-            Mobile <span className="text-red-500">*</span>
-            {phoneVerified && <FaCheck className="text-green-500 ml-2" />}
+            Mobile Number <span className="text-red-500">*</span>
           </Label>
-          <div className="relative flex gap-2">
-            <div className="relative flex-1">
-              <FaPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-              <Input 
-                id="mobile" 
-                maxLength={10} 
-                placeholder="10 digit mobile number" 
-                className={`pl-10 h-11 sm:h-10 ${phoneVerified ? 'border-green-500 bg-green-50' : ''}`} 
-                aria-invalid={!!formState.errors.mobile} 
-                {...register('mobile')} 
-                disabled={phoneVerified}
-              />
-              {phoneVerified && (
-                <FaCheck className="absolute right-3 top-1/2 -translate-y-1/2 text-green-500" />
-              )}
-            </div>
-            {!phoneVerified && (
-              <Button 
-                type="button" 
-                onClick={handleSendOTP}
-                disabled={otpSending || timer > 0 || !/^[6-9]\d{9}$/.test(mobileValue)}
-                className="h-11 sm:h-10 bg-blue-600 hover:bg-blue-700 text-white px-4 disabled:bg-blue-400"
-              >
-                {otpSending ? 'Sending...' : timer > 0 ? `Resend in ${timer}s` : 'Get OTP'}
-              </Button>
-            )}
+          <div className="relative">
+            <FaPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+            <Input 
+              id="mobile" 
+              maxLength={10} 
+              placeholder="10 digit mobile number" 
+              className="pl-10 h-11 sm:h-10" 
+              aria-invalid={!!formState.errors.mobile} 
+              {...register('mobile')} 
+            />
           </div>
-          {formState.errors.mobile && !phoneVerified && (<p className="text-red-600 text-xs mt-1">{formState.errors.mobile.message}</p>)}
-          
-          {/* OTP Input Field */}
-          {showOtpField && !phoneVerified && (
-            <div className="mt-3 space-y-2 animate-in fade-in slide-in-from-top-2">
-              <div className="flex gap-2">
-                <Input 
-                  placeholder="Enter 6-digit OTP" 
-                  maxLength={6}
-                  value={otp}
-                  onChange={(e) => setOtp(e.target.value.replace(/\D/g, ''))}
-                  className="h-11 sm:h-10 text-center tracking-widest font-bold flex-1"
-                />
-                <Button 
-                  type="button" 
-                  onClick={handleVerifyOTP}
-                  disabled={otpVerifying || otp.length < 6}
-                  className="h-11 sm:h-10 bg-green-600 hover:bg-green-700 text-white px-6 disabled:bg-green-400"
-                >
-                  {otpVerifying ? 'Verifying...' : 'Verify'}
-                </Button>
-              </div>
-              {timer === 0 && (
-                <Button 
-                  type="button" 
-                  variant="link"
-                  onClick={handleSendOTP}
-                  className="text-xs h-auto p-0"
-                >
-                  Resend OTP
-                </Button>
-              )}
-            </div>
-          )}
+          {formState.errors.mobile && (<p className="text-red-600 text-xs mt-1">{formState.errors.mobile.message}</p>)}
         </div>
       </div>
 
@@ -427,7 +296,7 @@ export default function EnquiryForm({
       <div className="flex flex-col sm:flex-row gap-3">
         <Button
           type="submit"
-          disabled={loading || !phoneVerified}
+          disabled={loading}
           className="flex-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] font-bold relative z-[20002] py-3 sm:py-2.5 text-sm sm:text-base disabled:opacity-50"
         >
           <FaPaperPlane className="mr-2" />
