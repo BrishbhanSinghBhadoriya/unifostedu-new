@@ -718,7 +718,7 @@ const Shoolini = () => {
       course: "Master of Arts (M.A) ",
       duration: "2 Years",
       eligibility: "Bachelor's degree with any discipline with minimum of 40% marks. 60% marks in case of International Students in the qualifying examination.",
-      fees: "84,000-1,00,000",
+      fees: "84,000-1,33,333",
       specialization: "English Literature, journalism and Mass Communication",
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327858/shoolini-ma_uokqan.webp",
       alt: "Master of Arts in shoolini University",
@@ -1178,7 +1178,7 @@ const Shoolini = () => {
               (60% for International Students)
             </td>
             <td className="border p-3 text-blue-700 font-semibold">
-              ₹42,000 - ₹1,00,000
+              ₹84,000 - ₹1,33,333
             </td>
             <td className="border p-3">
               English Literature, Journalism and Mass Communication

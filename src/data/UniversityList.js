@@ -212,7 +212,7 @@ export const UniversityList = [
     logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327856/shoolini_txvq6k.webp",
     ranking: "NIRF-69",
     location: "Solan, Himachal Pradesh",
-    fee: "₹42,000 - ₹1,40,000",
+    fee: "₹84,000 - ₹1,40,000",
     courses: [
       "MBA",
       "M.Sc",

@@ -200,6 +200,9 @@ declare module 'lucide-react' {
     export const Home:LucideIcon;
     export const ArrowLeft:LucideIcon;
     export const Shield:LucideIcon;
-
+    export const Facebook:LucideIcon;
+    export const Twitter:LucideIcon;
+    export const Linkedin:LucideIcon;
+    export const Instagram:LucideIcon;
 
 }

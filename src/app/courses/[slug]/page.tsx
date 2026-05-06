@@ -131,12 +131,18 @@ export default async function CoursePage({ params }: { params: { slug: string } 
         const subtitleSlug = c.subtitle ? slugify(c.subtitle) : '';
         const combinedTitle = `${c.subtitle ?? ''} ${c.title}`.trim();
         const combinedSlug = slugify(combinedTitle);
+        
+        // Handle reversed slug (e.g., "online-mba" matching "mba-online")
+        const reversedSlug = slug.split('-').reverse().join('-');
+        
         return (
           slug === titleSlug ||
           (!!subtitleSlug && slug === subtitleSlug) ||
           slug === combinedSlug ||
           slug.includes(titleSlug) ||
-          (!!subtitleSlug && slug.includes(subtitleSlug))
+          (!!subtitleSlug && slug.includes(subtitleSlug)) ||
+          reversedSlug === titleSlug ||
+          reversedSlug === subtitleSlug
         );
       });
     }
