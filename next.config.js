@@ -27,9 +27,12 @@ const nextConfig = {
       '@radix-ui/react-icons',
       '@mui/material',
       '@mui/icons-material',
-      'lucide-react',
       'clsx',
-      'tailwind-merge'
+      'tailwind-merge',
+      'gsap',
+      'swiper',
+      'react-slick',
+      'aos'
     ],
   },
 

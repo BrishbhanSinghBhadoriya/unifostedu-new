@@ -46,8 +46,8 @@ const UniversityLogoSlider = dynamic(() => import("./landing/UniversityLogoSlide
 import { FaBriefcase, FaCompass, FaGlobe } from "react-icons/fa";
 import { MdVideoCall, MdHome, MdVerifiedUser } from "react-icons/md";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import AOS from "aos";
 import { LandingPageProps } from "types/LandingPageTypes";
+import { useIsMobile } from "@/utils/hooks";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 
@@ -69,18 +69,21 @@ const Landing = ({ data }: LandingPageProps) => {
   } = data || {};
 
   useEffect(() => {
-    const initAOS = () => {
-      AOS.init({ 
-        duration: 800, 
-        once: true,
-        disable: 'mobile' // Disable on mobile to reduce TBT
-      });
-    };
+    // Only load and init AOS on desktop
+    if (window.innerWidth > 768) {
+      const initAOS = async () => {
+        const AOS = (await import("aos")).default;
+        AOS.init({ 
+          duration: 800, 
+          once: true,
+        });
+      };
 
-    if (window.requestIdleCallback) {
-      window.requestIdleCallback(initAOS);
-    } else {
-      setTimeout(initAOS, 100);
+      if (window.requestIdleCallback) {
+        window.requestIdleCallback(() => initAOS());
+      } else {
+        setTimeout(initAOS, 100);
+      }
     }
   }, []);
 

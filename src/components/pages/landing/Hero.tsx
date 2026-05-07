@@ -17,7 +17,10 @@ import { MdPeople } from "react-icons/md";
 import { HeroProps } from "types/LandingPageTypes";
 import { heroSlides as fallbackSlides } from "./data";
 
+import { useIsMobile } from "@/utils/hooks";
+
 const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
+  const isMobile = useIsMobile();
   // Prioritize the 6 slides from data.js if the API doesn't provide enough slides
   const slidesToUse = heroSlides.length >= 6 ? heroSlides : fallbackSlides;
 
@@ -41,9 +44,6 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
     );
     return () => clearInterval(id);
   }, [slidesToUse.length]);
-  const MotionDiv = motion.create('div');
-  const MotionH1 = motion.create('h1');
-  const MotionP = motion.create('p');
 
   return (
     <section className="relative min-h-screen flex flex-col bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 overflow-hidden">
@@ -71,36 +71,24 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
               {/* Mobile Slider - Show first on mobile */}
               <div className="block lg:hidden order-1">
                 {/* Right Content - Visual Panel for Mobile */}
-                <div
-
-                  className="relative mb-8"
-                >
+                <div className="relative mb-8">
                   {/* Main Visual Container */}
                   <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-4 shadow-2xl border border-white/20">
                     {/* Slider Container */}
                     <div className="relative h-56 sm:h-64 md:h-72 lg:h-80 rounded-2xl overflow-hidden mb-6 bg-gray-100">
-                      <AnimatePresence initial={false} mode="wait">
-                        <motion.div
-                          key={slide}
-                          className="absolute inset-0"
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <Image
-                            fill
-                            src={slidesToUse[slide].src}
-                            alt={`${slidesToUse[slide].title} | UNIFOST`}
-                            priority={slide === 0}
-                            loading={slide === 0 ? "eager" : "lazy"}
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                            className="object-contain rounded-2xl"
-                            decoding="async"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
-                        </motion.div>
-                      </AnimatePresence>
+                      <div className="absolute inset-0">
+                        <Image
+                          fill
+                          src={slidesToUse[slide].src}
+                          alt={`${slidesToUse[slide].title} | UNIFOST`}
+                          priority={slide === 0}
+                          loading={slide === 0 ? "eager" : "lazy"}
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          className="object-contain rounded-2xl"
+                          decoding="async"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
+                      </div>
 
                       {/* Slide Indicators */}
                       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
@@ -149,56 +137,35 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
               </div>
 
               {/* Left Content */}
-              <MotionDiv
-                initial={false}
-
-                animate={false}
-
-                className="text-center lg:text-left space-y-8 order-2 lg:order-none"
-              >
+              <div className="text-center lg:text-left space-y-8 order-2 lg:order-none">
                 {/* Trust Badge */}
-                <MotionDiv
-
-                  className="inline-flex items-center mt-5 gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-blue-200 text-blue-700 text-sm font-medium shadow-lg"
-                >
+                <div className="inline-flex items-center mt-5 gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-blue-200 text-blue-700 text-sm font-medium shadow-lg">
                   <FaStar className="text-yellow-500 " />
                   <span>Trusted by 5,000+ Students</span>
-                </MotionDiv>
+                </div>
 
                 {/* Main Headline */}
                 <div className="space-y-4">
-                  <MotionH1
-
-                    className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
-                  >
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                     <span className="text-gray-900">India's Best Online</span>
                     <br />
                     <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
                       University Degrees
                     </span>
-                  </MotionH1>
+                  </h1>
 
-                  <MotionP
-
-                    className="text-xl sm:text-2xl text-gray-600 font-medium"
-                  >
+                  <p className="text-xl sm:text-2xl text-gray-600 font-medium">
                     Compare, Choose & Succeed with India's Top Online Universities
-                  </MotionP>
+                  </p>
                 </div>
 
                 {/* Description */}
-                <MotionP
-
-                  className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0"
-                >
+                <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                   Get expert guidance to find the perfect online degree program from 25+ UGC-approved universities. Compare University, fees, and rankings to make informed decisions for your future.
-                </MotionP>
+                </p>
 
                 {/* Key Features */}
-                <MotionDiv
-
-                  className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto lg:mx-0"
-                >
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto lg:mx-0">
                   {[
                     { icon: FaCheck, text: "UGC Approved" },
                     { icon: MdPeople, text: "Expert Counseling" },
@@ -209,13 +176,10 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                       <span className="text-sm font-medium">{feature.text}</span>
                     </div>
                   ))}
-                </MotionDiv>
+                </div>
 
                 {/* CTA Buttons */}
-                <MotionDiv
-
-                  className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-                >
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <button
                     onClick={() => onOpenModal("getStarted")}
                     className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
@@ -233,13 +197,10 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                     <FaPlay className="text-blue-600" aria-hidden="true" />
                     <span>Book Home Demo</span>
                   </button>
-                </MotionDiv>
+                </div>
 
                 {/* Stats */}
-                <MotionDiv
-
-                  className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200 max-w-md mx-auto lg:mx-0"
-                >
+                <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200 max-w-md mx-auto lg:mx-0">
                   {[
                     { number: "5K+", label: "Students" },
                     { number: "25+", label: "Universities" },
@@ -250,8 +211,8 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                       <div className="text-sm text-gray-600">{stat.label}</div>
                     </div>
                   ))}
-                </MotionDiv>
-              </MotionDiv>
+                </div>
+              </div>
 
               {/* Right Content - Visual Panel - Desktop Only */}
               <div
@@ -334,12 +295,9 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
         </div>
 
         {/* Bottom Section - Quick Actions */}
-        <MotionDiv
-
-          className="bg-white/60 backdrop-blur-sm border-t border-white/20 py-8 "
-        >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  ">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6  ">
+        <div className="bg-white/60 backdrop-blur-sm border-t border-white/20 py-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               {[
                 {
                   icon: FaLocationDot ,
@@ -386,7 +344,7 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
               ))}
             </div>
           </div>
-        </MotionDiv>
+        </div>
       </div>
     </section>
   );
