@@ -138,11 +138,7 @@ const MobileMenu = ({
                 <Link
                   key={i}
                   href={link.path}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    router.push(link.path);
-                    setMobileMenuOpen(false);
-                  }}
+                  onClick={() => setMobileMenuOpen(false)}
                   className="flex items-center gap-3 p-4 rounded-lg bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 transition-all">
                   <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white">
                     <link.icon className="text-lg" />
