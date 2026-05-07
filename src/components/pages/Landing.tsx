@@ -7,35 +7,46 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Hero from "./landing/Hero";
-const WorkflowRoadmap = dynamic(
-  () => import("@/components/pages/WorkflowRoadmap")
-);
-const UniversityLogoSlider = dynamic(
-  () => import("./landing/UniversityLogoSlider")
-);
+const FAQ = dynamic(() => import("../FAQ"), { 
+  ssr: false,
+  loading: () => <div className="h-96 animate-pulse bg-gray-100 rounded-2xl" /> 
+});
+const TestimonialSlider = dynamic(() => import("@/components/Testimonialslider"), { 
+  ssr: false,
+  loading: () => <div className="h-64 animate-pulse bg-gray-100 rounded-2xl" />
+});
+const CompareOnline = dynamic(() => import("./CompareOnline"), { 
+  ssr: false,
+  loading: () => <div className="h-96 animate-pulse bg-gray-100 rounded-2xl" />
+});
+const Stats = dynamic(() => import("./landing/Stats"), { 
+  ssr: false,
+  loading: () => <div className="h-40 animate-pulse bg-gray-100 rounded-2xl" />
+});
+const TopOnlineUniversity = dynamic(() => import("../University/TopOnlineUniversity").then(mod => mod.TopOnlineUniversity), { 
+  ssr: false,
+  loading: () => <div className="h-96 animate-pulse bg-gray-100 rounded-2xl" />
+});
+const AllCourses = dynamic(() => import("./AllCourses").then(mod => mod.AllCourses), { 
+  ssr: false,
+  loading: () => <div className="h-96 animate-pulse bg-gray-100 rounded-2xl" />
+});
+const EnquiryForm = dynamic(() => import("@/components/EnquiryForm"), { 
+  ssr: false 
+});
+const WorkflowRoadmap = dynamic(() => import("@/components/pages/WorkflowRoadmap"), { 
+  ssr: false,
+  loading: () => <div className="h-96 animate-pulse bg-gray-100 rounded-2xl" />
+});
+const UniversityLogoSlider = dynamic(() => import("./landing/UniversityLogoSlider"), { 
+  ssr: false,
+  loading: () => <div className="h-24 animate-pulse bg-gray-100" />
+});
 
-import {
-  FaBriefcase,
-  FaCompass,
-  FaGlobe,
- 
-} from "react-icons/fa";
-import { MdVideoCall, MdHome,MdVerifiedUser } from "react-icons/md";
-import Stats from "./landing/Stats";
-
-import EnquiryForm from "@/components/EnquiryForm";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle
-} from "@/components/ui/dialog";
+import { FaBriefcase, FaCompass, FaGlobe } from "react-icons/fa";
+import { MdVideoCall, MdHome, MdVerifiedUser } from "react-icons/md";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import AOS from "aos";
-import FAQ from "../FAQ";
-import TestimonialSlider from "@/components/Testimonialslider";
-import { TopOnlineUniversity } from "../University/TopOnlineUniversity";
-import { AllCourses } from "./AllCourses";
-import CompareOnline from "./CompareOnline";
 import { LandingPageProps } from "types/LandingPageTypes";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -58,7 +69,19 @@ const Landing = ({ data }: LandingPageProps) => {
   } = data || {};
 
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    const initAOS = () => {
+      AOS.init({ 
+        duration: 800, 
+        once: true,
+        disable: 'mobile' // Disable on mobile to reduce TBT
+      });
+    };
+
+    if (window.requestIdleCallback) {
+      window.requestIdleCallback(initAOS);
+    } else {
+      setTimeout(initAOS, 100);
+    }
   }, []);
 
   const router = useRouter();
@@ -98,7 +121,7 @@ const Landing = ({ data }: LandingPageProps) => {
         toggleUniversity={toggleUniversity}
       />
 
-      <section id="top-partner-universities" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+      <section id="top-partner-universities" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50 content-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <MotionDiv className="text-center mb-16" data-aos="fade-up">
             <TopOnlineUniversity />
@@ -107,7 +130,7 @@ const Landing = ({ data }: LandingPageProps) => {
       </section>
 
       {/* Accreditation & Recognition */}
-      <section className="py-12 sm:py-16 bg-gradient-to-br from-slate-50 to-blue-50">
+      <section className="py-12 sm:py-16 bg-gradient-to-br from-slate-50 to-blue-50 content-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-10" data-aos="fade-up">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#001e3c] mb-3 sm:mb-4">
@@ -125,14 +148,13 @@ const Landing = ({ data }: LandingPageProps) => {
                   key={`${logo._id}-${idx}`}
                   className="min-w-[80px] sm:min-w-[100px] md:min-w-[140px] rounded-xl p-3 sm:p-4 bg-white shadow-sm border border-gray-100 flex items-center justify-center h-16 sm:h-20 md:h-24"
                 >
-                  <Image
+                    <Image
                     src={logo.imageUrl}
                     alt={logo.name || "Accreditation and recognition logo"}
                     width={100}
                     height={100}
-                    loading="eager"
+                    loading="lazy"
                     decoding="async"
-                    unoptimized
                     className="max-h-10 sm:max-h-12 md:max-h-14 object-contain"
                   />
                 </div>
@@ -169,26 +191,24 @@ const Landing = ({ data }: LandingPageProps) => {
             {features.map((feature, index) => {
               const Icon = iconMap[feature.iconKey] || MdVerifiedUser;
               return (
-                <div
+                <article
                   key={`${feature._id ?? feature.title ?? "feature"}-${index}`}
-                  className="group"
+                  className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 hover:-translate-y-2 transition-all duration-300 border border-gray-100"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                 >
-                  <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 hover:transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 group-hover:shadow-2xl">
-                    <div
-                      className={`bg-gradient-to-br ${feature.color} w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      <Icon className="text-xl sm:text-2xl text-white" />
-                    </div>
-                    <h2 className="text-lg sm:text-xl font-bold text-[#001e3c] mb-3 sm:mb-4">
-                      {feature.title}
-                    </h2>
-                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                      {feature.description}
-                    </p>
+                  <div
+                    className={`bg-gradient-to-br ${feature.color} w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6`}
+                  >
+                    <Icon className="text-xl sm:text-2xl text-white" />
                   </div>
-                </div>
+                  <h3 className="text-lg sm:text-xl font-bold text-[#001e3c] mb-3 sm:mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </article>
               );
             })}
           </div>
@@ -197,7 +217,7 @@ const Landing = ({ data }: LandingPageProps) => {
 
       {/* Study Cities */}
       <section
-        className="bg-[#08223a] py-16 px-6 text-white overflow-hidden relative"
+        className="bg-[#08223a] py-16 px-6 text-white overflow-hidden relative content-auto"
         data-aos="fade-up"
       >
         <div className="max-w-7xl mx-auto text-center">
@@ -209,32 +229,45 @@ const Landing = ({ data }: LandingPageProps) => {
           </p>
 
           <div className="overflow-hidden relative backdrop-blur-md rounded-2xl border border-white/20 p-6">
-            <div className="flex gap-10 animate-[scroll_30s_linear_infinite] whitespace-nowrap">
-              {[...Array(2)].flatMap((_, i) =>
-                cities.map((city, idx) => (
-                  <MotionDiv
-                    key={`city-${city._id ?? city.city ?? "city"}-${idx}-${i}`}
-                    whileHover={{ y: -6 }}
-                    className="min-w-[150px] flex flex-col items-center text-center bg-white/10 backdrop-blur-xl p-4 rounded-xl border border-white/20 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
-                  >
+            <div className="flex gap-10 animate-city-scroll whitespace-nowrap">
+              {[...cities, ...cities].map((city, idx) => (
+                <div
+                  key={`${city.city}-${idx}`}
+                  className="flex flex-col items-center gap-4 group cursor-pointer"
+                >
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white/50 transition-all duration-300">
                     <Image
                       src={city.img}
-                      alt={`${city.city}, ${city.state} study city`}
-                      width={80}
-                      height={80}
+                      alt={city.city}
+                      width={96}
+                      height={96}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       loading="lazy"
-                      className="w-16 h-16 object-contain mb-2 rounded-full border border-white/20 shadow"
                     />
-                    <p className="text-white font-semibold text-sm">
-                      {city.city}
-                    </p>
-                    <p className="text-blue-200 text-xs">{city.state}</p>
-                  </MotionDiv>
-                ))
-              )}
+                  </div>
+                  <span className="text-lg font-medium group-hover:text-[#00ffe0] transition-colors">
+                    {city.city}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
+
+        <style jsx>{`
+          @keyframes city-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .animate-city-scroll {
+            animation: city-scroll 30s linear infinite;
+            display: flex;
+            width: max-content;
+          }
+          .animate-city-scroll:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
       </section>
 
       {/* Services */}

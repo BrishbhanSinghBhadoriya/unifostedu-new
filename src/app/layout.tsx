@@ -8,12 +8,20 @@ import OrganizationSchema from "@/components/OrganizationSchema";
 import { Toaster as SonnerToaster } from "sonner";
 import Script from 'next/script';
 import LenisProvider from "@/components/LenisProvider";
-import ChatBox from "@/components/ChatBox";
-const inter = Inter({ subsets: ["latin"] });
+
+const inter = Inter({ 
+  subsets: ["latin"], 
+  display: 'swap',
+  preload: true,
+  adjustFontFallback: true 
+});
 const baskervville = Baskervville({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-baskervville",
+  display: 'swap',
+  preload: true,
+  adjustFontFallback: true
 });
 
 export const viewport = {
@@ -107,14 +115,6 @@ export default function RootLayout({ children }: ChildrenProps) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head>
-      
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-
         <OrganizationSchema />
 
         {/* Educational Organization Schema */}
@@ -165,10 +165,9 @@ export default function RootLayout({ children }: ChildrenProps) {
         <LenisProvider>
           <Header />
           <main>{children}</main>
-          <ChatBox />
+          <ChatBoxWrapper />
           <Footer />
         </LenisProvider>
-        {/* <ChatBoxWrapper />   */}
         <SonnerToaster
           position="top-center"
           richColors

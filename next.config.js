@@ -12,6 +12,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "res.cloudinary.com",
       },
+      {
+        protocol: "https",
+        hostname: "api.dicebear.com",
+      },
     ],
   },
 
@@ -21,7 +25,20 @@ const nextConfig = {
       'react-icons',
       'framer-motion',
       '@radix-ui/react-icons',
+      '@mui/material',
+      '@mui/icons-material',
+      'lucide-react',
+      'clsx',
+      'tailwind-merge'
     ],
+  },
+
+  // Enable production source maps only if needed
+  productionBrowserSourceMaps: false,
+
+  // Improve performance
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
 
 async headers() {

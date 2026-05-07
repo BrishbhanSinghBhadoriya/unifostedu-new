@@ -34,6 +34,8 @@ const FAQ = ({ faqs, title = "Frequently Asked Questions" }: FAQProps) => {
               <button
                 className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
                 onClick={() => toggleFAQ(index)}
+                aria-expanded={openIndex === index}
+                aria-controls={`faq-answer-${index}`}
               >
                 <h3 className="text-lg font-semibold text-gray-900 pr-4">
                   {faq.question}
@@ -46,7 +48,11 @@ const FAQ = ({ faqs, title = "Frequently Asked Questions" }: FAQProps) => {
               </button>
               
               {openIndex === index && (
-                <div className="px-6 pb-4">
+                <div 
+                  id={`faq-answer-${index}`}
+                  className="px-6 pb-4"
+                  role="region"
+                >
                   <div className="text-gray-700 leading-relaxed">
                     {faq.answer}
                   </div>

@@ -12,10 +12,13 @@ import {
   FaChevronDown,
 } from "react-icons/fa6";
 import BlogsDropdown from "@/components/BlogsDropdown";
-import FooterContact, { FooterHiringInfo } from "./FooterContact";
-import FooterForm from "./FooterForm";
-import FooterLinks from "./FooterLinks";
-import FooterCareer from "./FooterCareer";
+import dynamic from 'next/dynamic';
+
+const FooterContact = dynamic(() => import("./FooterContact"), { ssr: false });
+const FooterHiringInfo = dynamic(() => import("./FooterContact").then(mod => mod.FooterHiringInfo), { ssr: false });
+const FooterForm = dynamic(() => import("./FooterForm"), { ssr: false });
+const FooterLinks = dynamic(() => import("./FooterLinks"), { ssr: false });
+const FooterCareer = dynamic(() => import("./FooterCareer"), { ssr: false });
 import { MenuKey } from "types/menu";
 
 const Footer = () => {

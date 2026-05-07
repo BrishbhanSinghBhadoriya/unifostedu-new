@@ -2,6 +2,8 @@
 import { useState, useEffect, useRef } from 'react';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 
+import Image from 'next/image';
+
 const ChatBox = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
@@ -377,7 +379,7 @@ const ChatBox = () => {
             </button>
             <div className="flex items-center gap-3 mb-4 border-b pb-3 shrink-0">
               <div className="relative">
-                <img src="/uni.webp" alt="bot" width={40} height={40} className="rounded-full ring-2 ring-blue-100" />
+                <Image src="/uni.webp" alt="bot" width={40} height={40} className="rounded-full ring-2 ring-blue-100" />
                 <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
               </div>
               <div>

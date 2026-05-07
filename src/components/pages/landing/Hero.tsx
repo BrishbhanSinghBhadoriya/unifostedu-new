@@ -79,44 +79,28 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                   <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-4 shadow-2xl border border-white/20">
                     {/* Slider Container */}
                     <div className="relative h-56 sm:h-64 md:h-72 lg:h-80 rounded-2xl overflow-hidden mb-6 bg-gray-100">
-                      {isFirstRender && slide === 0 ? (
-                        <>
+                      <AnimatePresence initial={false} mode="wait">
+                        <motion.div
+                          key={slide}
+                          className="absolute inset-0"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                        >
                           <Image
                             fill
                             src={slidesToUse[slide].src}
-                            alt={`${slidesToUse[slide].title} – ${slidesToUse[slide].subtitle} | Online University Degree guidance`}
-                            loading="eager"
-
-
+                            alt={`${slidesToUse[slide].title} | UNIFOST`}
+                            priority={slide === 0}
+                            loading={slide === 0 ? "eager" : "lazy"}
                             sizes="(max-width: 768px) 100vw, 50vw"
-                            className="object-contain rounded-2xl object-center"
+                            className="object-contain rounded-2xl"
+                            decoding="async"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
-                        </>
-                      ) : (
-                        <AnimatePresence initial={false} custom={undefined} onExitComplete={undefined} root={undefined} >
-                          <MotionDiv
-                            key={slide}
-                            className="absolute inset-0"
-                            initial={{ opacity: 0, scale: 1.01 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 1.01 }}
-                            transition={{ duration: 0.2, ease: "easeOut" }}
-                          >
-                            <Image
-                              fill
-                              src={slidesToUse[slide].src}
-                              alt={`${slidesToUse[slide].title} – ${slidesToUse[slide].subtitle} | Online University Degree guidance`}
-                              loading={slide === 0 ? "eager" : "lazy"}
-                              priority={slide === 0}
-                              fetchPriority={slide === 0 ? "high" : undefined}
-                              sizes="(max-width: 768px) 100vw, 50vw"
-                              className="object-contain rounded-2xl object-center"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
-                          </MotionDiv>
-                        </AnimatePresence>
-                      )}
+                        </motion.div>
+                      </AnimatePresence>
 
                       {/* Slide Indicators */}
                       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
@@ -235,16 +219,18 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                   <button
                     onClick={() => onOpenModal("getStarted")}
                     className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                    aria-label="Start Your Journey"
                   >
                     <span>Start Your Journey</span>
-                    <FaArrowRight className="group-hover:translate-x-1 transition-transform " />
+                    <FaArrowRight className="group-hover:translate-x-1 transition-transform " aria-hidden="true" />
                   </button>
 
                   <button
                     onClick={() => onOpenModal("videoCall")}
                     className="group px-8 py-4 bg-white text-gray-700 font-semibold rounded-xl border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                    aria-label="Book a Home Demo"
                   >
-                    <FaPlay className="text-blue-600" />
+                    <FaPlay className="text-blue-600" aria-hidden="true" />
                     <span>Book Home Demo</span>
                   </button>
                 </MotionDiv>
@@ -276,42 +262,28 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                 <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-4 shadow-2xl border border-white/20">
                   {/* Slider Container */}
                   <div className="relative h-56 sm:h-64 md:h-72 lg:h-80 rounded-2xl overflow-hidden mb-6 bg-gray-100">
-                    {isFirstRender && slide === 0 ? (
-                      <>
+                    <AnimatePresence initial={false} mode="wait">
+                      <motion.div
+                        key={slide}
+                        className="absolute inset-0"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                      >
                         <Image
                           fill
                           src={slidesToUse[slide].src}
-                          alt={`${slidesToUse[slide].title} – ${slidesToUse[slide].subtitle} | Online University Degree guidance`}
-                          loading="eager"
-                          priority
-                          fetchPriority="high"
+                          alt={`${slidesToUse[slide].title} | UNIFOST`}
+                          priority={slide === 0}
+                          loading={slide === 0 ? "eager" : "lazy"}
                           sizes="(max-width: 768px) 100vw, 50vw"
-                          className="object-contain rounded-2xl object-center"
+                          className="object-contain rounded-2xl"
+                          decoding="async"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
-                      </>
-                    ) : (
-                      <AnimatePresence initial={false} custom={undefined} onExitComplete={undefined} root={undefined}>
-                        <MotionDiv
-                          key={slide}
-                          className="absolute inset-0"
-
-
-                        >
-                          <Image
-                            fill
-                            src={slidesToUse[slide].src}
-                            alt={`${slidesToUse[slide].title} – ${slidesToUse[slide].subtitle} | Online University Degree guidance`}
-                            loading={slide === 0 ? "eager" : "lazy"}
-                            priority={slide === 0}
-                            fetchPriority={slide === 0 ? "high" : undefined}
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                            className="object-contain rounded-2xl object-center"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
-                        </MotionDiv>
-                      </AnimatePresence>
-                    )}
+                      </motion.div>
+                    </AnimatePresence>
 
                     {/* Slide Indicators */}
                     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">

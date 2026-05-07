@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   GraduationCap, Users, Award, Phone, Mail, MapPin, 
@@ -933,9 +934,11 @@ const MbaFees = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div>
                  <div className="w-32 h-10 bg-white rounded flex items-center justify-center mb-4">
-                 <img 
-                 src="images/logos/amitylogo.jpg" 
+                 <Image 
+                 src="/images/logos/amitylogo.jpg" 
                  alt="Amity Online" 
+                 width={128}
+                 height={40}
                  className="h-8 object-contain"
                  />
                 </div>

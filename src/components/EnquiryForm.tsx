@@ -297,6 +297,8 @@ export default function EnquiryForm({
         <Button
           type="submit"
           disabled={loading}
+          aria-busy={loading}
+          aria-label={loading ? "Submitting form..." : "Submit Enquiry"}
           className="flex-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] font-bold relative z-[20002] py-3 sm:py-2.5 text-sm sm:text-base disabled:opacity-50"
         >
           <FaPaperPlane className="mr-2" />
