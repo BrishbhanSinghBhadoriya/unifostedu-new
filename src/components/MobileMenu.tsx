@@ -131,7 +131,7 @@ const MobileMenu = ({
                 },
                 {
                   label: "Universities",
-                  path: "/university-list",
+                  path: "/University-List",
                   icon: FaBuildingColumns,
                 },
               ].map((link, i) => (
