@@ -597,7 +597,7 @@ const Header = () => {
               {/* Action Buttons */}
               <div className="hidden lg:flex items-center gap-2 lg:gap-3 flex-shrink-0">
                 <button
-                  onClick={() => router.push("/comapre-university")}
+                  onClick={() => router.push("/compare-university")}
                   className="relative flex items-center gap-2 px-4 lg:px-5 py-2 lg:py-2.5 rounded-lg bg-white text-orange-600 font-semibold text-sm shadow-sm hover:shadow-md hover:scale-[1.04] transition-all duration-200 cursor-pointer whitespace-nowrap">
                   <span className="absolute -top-1 -right-1 bg-orange-500 text-white text-[7px] lg:text-[8px] font-bold px-1.5 py-[1px] rounded-sm shadow-md">
                     AI
@@ -632,7 +632,7 @@ const Header = () => {
               {/* Mobile Compare AI + Menu Button */}
               <div className="flex items-center gap-2 lg:hidden flex-shrink-0">
                 <button
-                  onClick={() => router.push("/comapre-university")}
+                  onClick={() => router.push("/compare-university")}
                   className="relative flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-orange-600 font-semibold text-xs shadow-sm hover:shadow-md hover:scale-[1.03] transition-all duration-200 cursor-pointer whitespace-nowrap">
                   <span className="absolute -top-1 -right-1 bg-rose-600 text-white text-[8px] font-bold px-1.5 py-0.5 rounded-md shadow-md">
                     AI
