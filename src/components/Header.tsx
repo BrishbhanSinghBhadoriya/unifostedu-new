@@ -293,7 +293,7 @@ const Header = () => {
       "/best-online-mca-university-in-india",
       "/muj-online-bba",
       "/muj-online-bca",
-      "/muj-online-ba",
+      "/muj-online-ma",
       "/muj-online-mba",
       "/muj-online-mca",
       "/best-online-mca-for-working-professionals-in-india",

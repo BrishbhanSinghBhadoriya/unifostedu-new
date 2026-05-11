@@ -249,22 +249,6 @@ const Vgu = () => {
   return (
     <>
 
-      <title>VGU University - Courses, Admissions, Enquiry</title>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-
-
-      <style jsx>{`
-  .vgu-font { 
-    font-family: 'Montserrat', 'Open Sans', sans-serif; 
-  }
-  * { 
-    box-sizing: border-box; 
-  }
-  body { 
-    overflow-x: hidden; 
-  }
-`}</style>
-
       <div className="vgu-font overflow-x-hidden">
         <header className="w-full bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 fixed top-0 left-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -273,7 +257,7 @@ const Vgu = () => {
               <div className="flex items-center gap-2 lg:gap-4">
                 <img
                   src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgulogo_jrxgjd.webp"
-                  alt="Logo_vgu"
+                  alt="VGU Online Jaipur Logo"
                   className="h-12 w-50 sm:h-10 lg:h-12"
                 />
 
@@ -360,7 +344,7 @@ const Vgu = () => {
                     {/* Desktop - Wide crop */}
                     <img
                       src="https://res.cloudinary.com/didkrwhbu/image/upload/c_fill,g_center,w_1920,h_1080,q_auto,f_auto/v1762327870/vguonline_orn06m.webp"
-                      alt="VGU Online University"
+                      alt="Vivekananda Global University Jaipur Online Campus"
                       className="w-full h-full object-cover object-center"
                     />
                   </picture>
@@ -483,10 +467,9 @@ const Vgu = () => {
               <section id='introduction' className="w-full bg-white py-16 px-6 md:px-12 lg:px-20">
                 <div className="max-w-6xl mx-auto">
 
-                  {/* Heading */}
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                    VGU Online – Vivekananda Global University Online
-                  </h2>
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    VGU Online Jaipur | UGC Approved Courses & Admission 2026
+                  </h1>
 
                   {/* Intro Paragraph */}
                   <p className="text-gray-700 leading-relaxed text-lg mb-8">
@@ -910,14 +893,12 @@ Through the campus tour, students can explore digital classrooms, study resource
               <section id="explore-courses" className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                  <div className="text-center mb-16">
-                    <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                      Explore <span className="bg-[#821812] bg-clip-text text-transparent">Online Programs</span>
-                    </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                      Choose from industry-relevant programs designed for working professionals and fresh graduates
-                    </p>
-                  </div>
+                  <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Explore <span className="bg-[#821812] bg-clip-text text-transparent">VGU Online Programs</span>
+                  </h2>
+                  <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Advance your career with UGC-approved Online MBA, MCA, BBA, and BCA from Vivekananda Global University.
+                  </p>
 
                   <Tabs.Root value={activeTab} onValueChange={setActiveTab} className="space-y-12">
 

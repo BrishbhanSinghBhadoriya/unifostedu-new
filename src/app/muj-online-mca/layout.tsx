@@ -1,13 +1,13 @@
 import { ChildrenProps } from "types/ChildrenProps";
 
 export const metadata = {
-  title: "Manipal Online MCA | Master of Computer Applications | MUJ Online",
-
+  title: "Online MCA - Manipal University Jaipur | UGC Approved, NAAC A+ | 2-Year Program",
+  
   description:
-    "Explore UGC-approved Online MCA from Manipal University Jaipur (NAAC A+). Learn about eligibility, fees, syllabus, and specializations like AI, Data Science, Cybersecurity, and Cloud Computing.",
+    "Manipal University Jaipur's UGC-approved Online MCA (2-year) with AI, Data Science, Cybersecurity, Cloud Computing specializations. NAAC A+ accredited. Flexible learning for working professionals. ₹1.58L with EMI options. Apply now!",
 
   keywords:
-    "Manipal Online MCA, MUJ MCA Online, Online MCA India, UGC Approved MCA, Online MCA Fees India, MCA for Working Professionals, MCA Data Science, MCA Cybersecurity, MCA Cloud Computing, Best Online MCA India",
+    "Online MCA, Manipal Online MCA, MCA for Working Professionals, UGC Approved Online MCA, Best Online MCA India, NAAC A+ MCA, MCA AI Data Science, Online MCA Cybersecurity, MCA Flexible Learning, Online MCA Fees India, Online MCA Admission, MCA Specializations",
 
   metadataBase: new URL("https://unifostedu.com"),
 
@@ -16,17 +16,17 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "Manipal Online MCA | MUJ Online | Master of Computer Applications",
+    title: "Manipal Online MCA | UGC Approved, NAAC A+ | 2-Year Program for IT Professionals",
     description:
-      "Complete details of Manipal Online MCA — eligibility, fees, syllabus, and IT career opportunities.",
+      "Top-ranked Online MCA from Manipal University Jaipur with AI, Data Science, Cybersecurity, Cloud Computing specializations. Perfect for working professionals. ₹1.58L with EMI options.",
     url: "https://unifostedu.com/muj-online-mca",
     siteName: "UNIFOST",
     images: [
       {
-        url: "https://unifostedu.com/images/manipal-mca.webp",
+        url: "https://unifostedu.com/images/muj-online-mca-og.webp",
         width: 1200,
         height: 630,
-        alt: "Manipal University Jaipur Online MCA Program",
+        alt: "Manipal University Jaipur Online MCA - Best Online Master's in Computer Applications",
       },
     ],
     locale: "en_IN",
@@ -35,10 +35,11 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Manipal Online MCA | MUJ Online | UGC Approved MCA",
+    title: "Manipal Online MCA | Best for Working Professionals | UGC Approved",
     description:
-      "Learn about Manipal Online MCA: NAAC A+ university, advanced IT curriculum, flexible learning, and career scope.",
-    images: ["https://unifostedu.com/images/manipal-mca.webp"],
+      "2-Year Online MCA with AI, Data Science, Cybersecurity specializations. Apply Now! ₹1.58L with EMI.",
+    images: ["https://unifostedu.com/images/muj-online-mca-twitter.webp"],
+    creator: "@UNIFOST",
   },
 
   robots: {
@@ -53,7 +54,7 @@ export const metadata = {
     },
   },
 
-  authors: [{ name: "UNIFOST" }],
+  authors: [{ name: "UNIFOST", url: "https://unifostedu.com" }],
   publisher: "UNIFOST",
 
   formatDetection: {
@@ -63,19 +64,23 @@ export const metadata = {
   },
 
   other: {
-    "geo.region": "IN",
+    "geo.region": "IN-RJ",
+    "geo.placename": "Jaipur, Rajasthan",
     "geo.country": "India",
     "language": "en-IN",
     "revisit-after": "7 days",
   },
+
+  viewport: "width=device-width, initial-scale=1.0, maximum-scale=5.0",
+  charset: "utf-8",
 };
 
 export const dynamic = "force-static";
-export const revalidate = 604800;
+export const revalidate = 604800; // 1 week
 
-// ─── SCHEMA ─────────────────────────────────
+// ─── SCHEMA.ORG STRUCTURED DATA ─────────────────────────────────
 
-// Organization
+// 1. Organization Schema
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -88,37 +93,57 @@ const organizationSchema = {
     width: 200,
     height: 60,
   },
+  sameAs: [
+    "https://www.linkedin.com/company/unifost",
+    "https://www.facebook.com/unifost",
+    "https://www.instagram.com/unifost"
+  ],
 };
 
-// University
+// 2. University/Educational Organization Schema
 const universitySchema = {
   "@context": "https://schema.org",
   "@type": "CollegeOrUniversity",
   "@id": "https://manipal.edu/#university",
   name: "Manipal University Jaipur",
-  alternateName: ["MUJ", "Online Manipal"],
+  alternateName: ["MUJ", "Manipal University Online", "Manipal Jaipur"],
   url: "https://www.manipal.edu",
   logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "Jaipur, Rajasthan",
     addressLocality: "Jaipur",
-    addressRegion: "Rajasthan",
+    addressRegion: "RJ",
+    postalCode: "302021",
     addressCountry: "IN",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "Admissions",
+    telephone: "+91-7042646766",
+    email: "info@unifostedu.com",
+  },
+  accreditation: {
+    "@type": "EducationalOccupationalCredential",
+    name: "NAAC A+ Accreditation",
   },
 };
 
-// Course Schema (MCA)
+// 3. Course/Program Schema - MAIN MCA COURSE
 const courseSchema = {
   "@context": "https://schema.org",
   "@type": "Course",
   "@id": "https://unifostedu.com/muj-online-mca/#course",
-  name: "Online MCA – Master of Computer Applications",
-
+  name: "Online Master of Computer Applications (MCA)",
+  alternateName: "Manipal Online MCA",
   description:
-    "UGC-approved Online MCA from Manipal University Jaipur (NAAC A+). Specializations include AI, Data Science, Cybersecurity, and Cloud Computing.",
+    "UGC-approved 2-year Online Master of Computer Applications from Manipal University Jaipur with specializations in AI & Data Science, AI & Machine Learning, Cloud Computing, and Cybersecurity. NAAC A+ accredited. Designed for working professionals.",
 
   url: "https://unifostedu.com/muj-online-mca",
-  image: "https://unifostedu.com/images/manipal-mca.webp",
+  image: [
+    "https://unifostedu.com/images/muj-online-mca.webp",
+    "https://unifostedu.com/images/muj-online-mca-og.webp"
+  ],
 
   provider: {
     "@type": "CollegeOrUniversity",
@@ -126,34 +151,139 @@ const courseSchema = {
     sameAs: "https://www.manipal.edu",
   },
 
-  courseMode: "online",
+  courseMode: "OnlineCoursesMode",
   educationalLevel: "Postgraduate",
   timeRequired: "P2Y",
   inLanguage: "en-IN",
 
   teaches: [
+    "Object-Oriented Programming",
+    "Database Management Systems",
     "Data Structures",
-    "Algorithms",
-    "Database Management",
-    "Cloud Computing",
+    "Operating Systems",
+    "Advanced Java",
+    "Web Technologies",
+    "Software Engineering",
+    "Python Programming",
+    "Machine Learning",
+    "Cloud Architecture",
     "Cybersecurity",
     "Artificial Intelligence",
-    "Full Stack Development",
+    "Full Stack Development"
   ],
 
   coursePrerequisites:
-    "Bachelor’s degree with Mathematics at 10+2 or graduation level",
+    "Bachelor's degree from recognized university with 50% marks. Mathematics at 10+2 or graduation level required.",
 
-  offers: {
-    "@type": "Offer",
-    category: "Online Degree",
-    priceCurrency: "INR",
-    availability: "https://schema.org/InStock",
-    url: "https://unifostedu.com/muj-online-mca",
+  potentialAction: {
+    "@type": "ApplyAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://unifostedu.com/muj-online-mca#apply",
+      actionPlatform: ["DesktopWebPlatform", "MobileWebPlatform"],
+    },
+  },
+
+  offers: [
+    {
+      "@type": "Offer",
+      category: "2-Year Online Degree - Full Program",
+      priceCurrency: "INR",
+      price: "158000",
+      pricingPattern: "https://schema.org/SemesterPricing",
+      availability: "https://schema.org/InStock",
+      url: "https://unifostedu.com/muj-online-mca",
+      description: "Total program fee for 2-year MCA - ₹1,58,000 (₹39,500 per semester)"
+    },
+    {
+      "@type": "Offer",
+      category: "EMI Payment Option",
+      priceCurrency: "INR",
+      price: "6000",
+      pricingPattern: "https://schema.org/SemesterPricing",
+      availability: "https://schema.org/InStock",
+      description: "Monthly EMI starting from ₹6,000 (0% interest available)"
+    }
+  ],
+
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 4.8,
+    ratingCount: 350,
+    bestRating: 5,
+    worstRating: 1
   },
 };
 
-// FAQ Schema
+// 4. Educational Occupational Credential Schema
+const credentialSchema = {
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalCredential",
+  "@id": "https://unifostedu.com/muj-online-mca/#credential",
+  name: "Master of Computer Applications (MCA)",
+  identifier: "NAAC-A-Plus-Accredited-MCA",
+  provider: {
+    "@type": "EducationalOrganization",
+    name: "Manipal University Jaipur",
+  },
+  competencyRequired: "Bachelor's degree with Mathematics",
+  educationalLevel: "Postgraduate",
+  credentialCategory: "Master's Degree",
+};
+
+// 5. Program Specializations Schema
+const specializationsSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: [
+    {
+      "@type": "Course",
+      "@id": "https://unifostedu.com/muj-online-mca/#specialization-ai-ds",
+      name: "MCA - AI & Data Science Specialization",
+      url: "https://unifostedu.com/muj-online-mca#specializations",
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "INR",
+        price: "158000"
+      }
+    },
+    {
+      "@type": "Course",
+      "@id": "https://unifostedu.com/muj-online-mca/#specialization-ai-ml",
+      name: "MCA - AI & Machine Learning Specialization",
+      url: "https://unifostedu.com/muj-online-mca#specializations",
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "INR",
+        price: "158000"
+      }
+    },
+    {
+      "@type": "Course",
+      "@id": "https://unifostedu.com/muj-online-mca/#specialization-cloud",
+      name: "MCA - Cloud Computing Specialization",
+      url: "https://unifostedu.com/muj-online-mca#specializations",
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "INR",
+        price: "158000"
+      }
+    },
+    {
+      "@type": "Course",
+      "@id": "https://unifostedu.com/muj-online-mca/#specialization-cyber",
+      name: "MCA - Cybersecurity Specialization",
+      url: "https://unifostedu.com/muj-online-mca#specializations",
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "INR",
+        price: "158000"
+      }
+    }
+  ]
+};
+
+// 6. FAQ Schema
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -161,64 +291,145 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Is Manipal Online MCA valid?",
+      name: "Is Manipal Online MCA valid and recognized for jobs?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, it is UGC-entitled and NAAC A+ accredited, valid for jobs and higher education.",
+        text: "Yes, Manipal University Jaipur's Online MCA is UGC-entitled and NAAC A+ accredited. It is treated equally with on-campus MCA degrees and recognized by all major employers globally. The degree certificate does not mention 'online' and is valid for job placements and higher education.",
       },
     },
     {
       "@type": "Question",
-      name: "What is the duration of MCA?",
+      name: "What is the total fee for Manipal Online MCA?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The duration is 2 years (4 semesters).",
+        text: "The total program fee is ₹1,58,000 for 2 years (4 semesters), payable at ₹39,500 per semester. EMI options (0% to low-cost) are available through partner financial institutions.",
       },
     },
     {
       "@type": "Question",
-      name: "Can working professionals do MCA?",
+      name: "Can working professionals study while maintaining their job?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, it is fully online and flexible for working professionals.",
+        text: "Yes, the program is specifically designed for working professionals. Classes are conducted on weekends (Saturday-Sunday) with recorded lectures available 24/7. Time commitment is 15-20 hours per week.",
       },
     },
     {
       "@type": "Question",
-      name: "What are career options after MCA?",
+      name: "What specializations are available in Manipal Online MCA?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You can become Software Developer, Backend Engineer, Data Scientist, Cloud Engineer, or Cybersecurity Expert.",
+        text: "Manipal Online MCA offers 4 specializations: (1) AI & Data Science, (2) AI & Machine Learning, (3) Cloud Computing, (4) Cybersecurity. Each specialization has industry-aligned curriculum and expert faculty.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What career support is offered after graduation?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Manipal's career services include resume building, mock interviews, LinkedIn profile optimization, job portal access, and connections to 500+ hiring partners. Alumni report average salary increments of 30-50% post-graduation.",
       },
     },
   ],
 };
 
-// Breadcrumb
+// 7. Breadcrumb Schema
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "@id": "https://unifostedu.com/muj-online-mca/#breadcrumb",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://unifostedu.com" },
-    { "@type": "ListItem", position: 2, name: "Manipal University Jaipur", item: "https://unifostedu.com/manipal-university-jaipur" },
-    { "@type": "ListItem", position: 3, name: "Online MCA", item: "https://unifostedu.com/muj-online-mca" },
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://unifostedu.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Programs",
+      item: "https://unifostedu.com/programs",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Manipal University Jaipur",
+      item: "https://unifostedu.com/manipal-university-jaipur",
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      name: "Online MCA",
+      item: "https://unifostedu.com/muj-online-mca",
+    },
   ],
 };
 
+// 8. Admission Process Schema
+const admissionSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "@id": "https://unifostedu.com/muj-online-mca/#admission",
+  name: "How to Enroll in Manipal Online MCA",
+  description: "Step-by-step guide to apply and enroll in Manipal University Jaipur's Online MCA program",
+  step: [
+    {
+      "@type": "HowToStep",
+      position: 1,
+      name: "Register on Online Manipal Portal",
+      text: "Visit the official website, verify your email/phone, and create an account"
+    },
+    {
+      "@type": "HowToStep",
+      position: 2,
+      name: "Fill Application Form",
+      text: "Provide your academic and professional details accurately"
+    },
+    {
+      "@type": "HowToStep",
+      position: 3,
+      name: "Upload Documents",
+      text: "Upload mark sheets, government ID, and other required documents"
+    },
+    {
+      "@type": "HowToStep",
+      position: 4,
+      name: "Pay Application Fee",
+      text: "Complete application by paying ₹500 application fee online"
+    },
+    {
+      "@type": "HowToStep",
+      position: 5,
+      name: "Receive Offer Letter",
+      text: "Upon selection, receive offer and complete program fee payment"
+    },
+    {
+      "@type": "HowToStep",
+      position: 6,
+      name: "Start Your MCA Journey",
+      text: "Get LMS credentials and join your batch with orientation"
+    }
+  ]
+};
+
+// Combine all schemas
 const allSchemas = [
   organizationSchema,
   universitySchema,
   courseSchema,
+  credentialSchema,
+  specializationsSchema,
   faqSchema,
   breadcrumbSchema,
+  admissionSchema,
 ];
 
-// ─── Layout ─────────────────────────────────
+// ─── LAYOUT COMPONENT ────────────────────────────────────
 
 export default function Layout({ children }: ChildrenProps) {
   return (
     <div className="min-h-screen bg-white">
+      {/* Structured Data JSON-LD */}
       {allSchemas.map((schema, i) => (
         <script
           key={i}
@@ -226,6 +437,7 @@ export default function Layout({ children }: ChildrenProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       ))}
+      
       {children}
     </div>
   );

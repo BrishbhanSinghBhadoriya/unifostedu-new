@@ -7,7 +7,7 @@ import { ChevronDown } from 'lucide-react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { FaAward, FaBars, FaBookOpen, FaBriefcase, FaBuilding, FaCertificate, FaChartLine, FaCircleCheck, FaClock, FaGraduationCap, FaLaptop, FaMoneyBillWave, FaPhone, FaUser, FaUserTie } from "react-icons/fa6";
+import { FaArrowRight, FaAward, FaBars, FaBookOpen, FaBriefcase, FaBuilding, FaCertificate, FaChartLine, FaCircleCheck, FaClock, FaGraduationCap, FaLaptop, FaMoneyBillWave, FaPhone, FaUser, FaUserTie } from "react-icons/fa6";
 import { X } from "lucide-react";
 type ModalState = {
   type: 'apply' | 'enquiry';
@@ -107,13 +107,60 @@ const MUJOnlineMBAPage = () => {
     }
   ];
 
+  // ✅ UPDATED: All 13 Specializations with Professional Descriptions
   const specializations = [
-    { name: "Marketing Management", for: "Branding, digital campaigns, GTM strategies" },
-    { name: "Finance Management", for: "Financial modeling, investments, strategic finance" },
-    { name: "Human Resource Management", for: "Talent strategies, employee engagement, HR analytics" },
-    { name: "Operations Management", for: "Supply chain, process excellence, logistics" },
-    { name: "Information Technology Management", for: "Digital transformation, product strategy, data insights" },
-    { name: "Business Analytics", for: "Predictive analytics, BI tools, data storytelling" }
+    { 
+      name: "Digital Marketing", 
+      for: "Social media strategy, content marketing, SEO/SEM, email campaigns, brand positioning, digital analytics" 
+    },
+    { 
+      name: "Marketing Management", 
+      for: "Branding, market research, GTM strategies, consumer behavior, brand strategy, campaign management" 
+    },
+    { 
+      name: "Analytics & Data Science", 
+      for: "Predictive analytics, BI tools, data storytelling, statistical modeling, AI/ML applications, business intelligence" 
+    },
+    { 
+      name: "IT & FinTech", 
+      for: "Digital transformation, blockchain, payment systems, digital banking, cybersecurity, tech innovation" 
+    },
+    { 
+      name: "Finance Management", 
+      for: "Financial modeling, investments, strategic finance, corporate finance, portfolio management, risk analysis" 
+    },
+    { 
+      name: "Human Resource Management", 
+      for: "Talent acquisition, employee engagement, HR analytics, organizational development, compensation & benefits" 
+    },
+    { 
+      name: "Banking, Financial Services & Insurance (BFSI)", 
+      for: "Banking regulations, insurance products, wealth management, financial advisory, compliance framework" 
+    },
+    { 
+      name: "Operations Management", 
+      for: "Supply chain optimization, process excellence, logistics, lean management, operational efficiency" 
+    },
+    { 
+      name: "International Business", 
+      for: "Global trade, cross-border strategy, export-import, international markets, geopolitical insights" 
+    },
+    { 
+      name: "Information Systems Management", 
+      for: "IT governance, systems strategy, digital infrastructure, cloud computing, enterprise solutions" 
+    },
+    { 
+      name: "Project Management", 
+      for: "PMP certification prep, agile, PRINCE2, stakeholder management, resource planning, risk management" 
+    },
+    { 
+      name: "Supply Chain Management", 
+      for: "Logistics optimization, vendor management, procurement strategy, inventory control, demand planning" 
+    },
+    { 
+      name: "Retail Management & Quick Commerce", 
+      for: "Omnichannel strategy, customer experience, e-commerce, retail analytics, quick commerce models, store operations" 
+    }
   ];
 
   const jobRoles = [
@@ -192,11 +239,11 @@ const MUJOnlineMBAPage = () => {
   return (
     <div>
       <Head>
-        <title>Manipal Online MBA | Master of Business Administration | MUJ Online</title>
-        <meta name="description" content="UGC-approved Online MBA from Manipal University Jaipur. 2-year flexible program with multiple specializations. NAAC A+ accredited. Apply now for career advancement." />
-        <meta name="keywords" content="Manipal Online MBA, MUJ MBA Online, Online MBA, Master of Business Administration Online, UGC Approved MBA, NAAC A+ MBA" />
+        <title>Manipal Online MBA Jaipur | Fees, Specializations & Admission 2026</title>
+        <meta name="description" content="Enroll in Manipal Online MBA from MUJ (UGC-Entitled & NAAC A+). Explore 13+ specializations, flexible EMI options, and dedicated placement support. Apply for the 2026 batch today!" />
+        <meta name="keywords" content="Manipal Online MBA, MUJ Online MBA Jaipur, Online MBA India 2026, Best UGC Approved Online MBA, Manipal University Jaipur MBA Online Fees, Online MBA with Placement Support, NAAC A+ Online MBA University, MUJ MBA Specializations, Manipal Online MBA Admission Process, Working Professionals Online MBA" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://unifostedu.com/muj-mba-online" />
+        <link rel="canonical" href="https://unifostedu.com/muj-online-mba" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
       </Head>
 
@@ -269,17 +316,16 @@ const MUJOnlineMBAPage = () => {
           <section className="relative w-full min-h-[450px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] overflow-hidden pt-14 sm:pt-16 lg:pt-20">
             <div className="absolute inset-0">
               <Image
-                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327064/mba-online-image_zclzst.webp"
-                  alt="A student learning with Manipal's Online MBA Program"
-              
+                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba-online-image_jklc4w.webp"
+                  alt="Professional student pursuing Manipal Online MBA"
                   className="object-cover object-center"
                   priority
                   sizes="100vw"
                   width={1920}
                   height={1080}
                 />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 h-full min-h-[450px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] flex items-center">
@@ -336,34 +382,47 @@ const MUJOnlineMBAPage = () => {
               </div>
             </div>
           </section>
-            <section className=" mx-auto p-6 md:p-10 bg-white rounded-2xl shadow-lg">
-  <h2 className="text-2xl md:text-3xl font-semibold mb-4">
-    Why Manipal Online MBA
-  </h2>
+            <section className="mx-auto p-6 md:p-12 bg-white rounded-3xl shadow-xl border border-gray-100 mt-12 mb-12 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-orange-50 rounded-full -mr-16 -mt-16 opacity-50"></div>
+              <div className="relative z-10">
+                <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 flex items-center gap-3">
+                  <span className="w-2 h-10 bg-orange-600 rounded-full"></span>
+                  Why Manipal Online MBA?
+                </h2>
 
-  <p className="text-gray-700 leading-relaxed mb-4">
-    Online education in India has grown rapidly since 2020, and leading this
-    evolution is the <strong>Manipal Online MBA</strong> from Manipal University
-    Jaipur (MUJ). With <strong>NAAC A+</strong> accreditation, UGC-entitled
-    status, and a strong academic legacy, it is considered one of the most
-    reliable and career-focused online MBA programs in the country.
-  </p>
+                <div className="grid md:grid-cols-2 gap-10 items-center">
+                  <div className="space-y-6">
+                    <p className="text-gray-700 text-lg leading-relaxed">
+                      Online education in India has grown rapidly since 2020, and leading this evolution is the <strong className="text-orange-600">Manipal Online MBA</strong> from Manipal University Jaipur (MUJ). With <strong className="text-gray-900">NAAC A+</strong> accreditation, UGC-entitled status, and a strong academic legacy, it is considered one of the most reliable and career-focused online MBA programs in the country.
+                    </p>
 
-  <p className="text-gray-700 leading-relaxed mb-4">
-    Whether you are a working professional aiming for promotion, a graduate
-    seeking a competitive MBA, or a career switcher preparing for leadership
-    roles, the Manipal Online MBA provides the flexibility, recognition, and
-    industry relevance needed to excel.
-  </p>
+                    <p className="text-gray-700 leading-relaxed">
+                      Whether you are a working professional aiming for promotion, a graduate seeking a competitive MBA, or a career switcher preparing for leadership roles, the Manipal Online MBA provides the flexibility, recognition, and industry relevance needed to excel.
+                    </p>
 
-  <p className="text-gray-700 leading-relaxed">
-    In a highly competitive job market, employers seek candidates who possess
-    modern business skills, strategic thinking, and practical exposure to
-    real-world tools. The Online MBA from Manipal bridges this gap through an
-    updated curriculum, hands-on projects, and a digital-first learning
-    ecosystem designed to meet today’s industry demands.
-  </p>
-</section>
+                    <div className="bg-orange-50 p-6 rounded-2xl border border-orange-100">
+                      <p className="text-gray-800 font-medium italic">
+                        "The Online MBA from Manipal bridges the gap through an updated curriculum, hands-on projects, and a digital-first learning ecosystem designed to meet today's industry demands."
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4">
+                    {[
+                      { label: "NAAC Grade", value: "A+", color: "bg-blue-50 text-blue-700" },
+                      { label: "Accreditation", value: "UGC", color: "bg-orange-50 text-orange-700" },
+                      { label: "Duration", value: "2 Years", color: "bg-green-50 text-green-700" },
+                      { label: "Specializations", value: "13+", color: "bg-purple-50 text-purple-700" }
+                    ].map((stat, i) => (
+                      <div key={i} className={`${stat.color} p-6 rounded-2xl text-center border border-white shadow-sm hover:shadow-md transition-shadow`}>
+                        <div className="text-3xl font-extrabold mb-1">{stat.value}</div>
+                        <div className="text-sm font-semibold opacity-80">{stat.label}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
 
           {/* Overview Section */}
           <section id="overview" className="py-12 sm:py-16 md:py-20 bg-white">
@@ -449,17 +508,25 @@ const MUJOnlineMBAPage = () => {
 
               <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
                 {highlights.map((item, index) => (
-                  <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
-                    <div className="flex items-start gap-4">
-                      <item.icon className="text-orange-600 text-4xl flex-shrink-0" />
+                  <motion.div 
+                    key={index} 
+                    initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-transparent hover:border-orange-100"
+                  >
+                    <div className="flex items-start gap-6">
+                      <div className="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 flex-shrink-0">
+                        <item.icon className="text-3xl" />
+                      </div>
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                        <p className="text-gray-700 leading-relaxed">
+                        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors duration-300">{item.title}</h3>
+                        <p className="text-gray-600 leading-relaxed">
                           {item.desc}
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
 
@@ -487,15 +554,24 @@ const MUJOnlineMBAPage = () => {
 
               <div className="grid md:grid-cols-2 gap-8 mb-12">
                 {feeCards.map((card, index) => (
-                  <div key={index} className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-6 border border-orange-100">
-                    <div className="flex items-start gap-4">
-                      <card.icon className="text-orange-600 text-3xl flex-shrink-0 mt-1" />
+                  <motion.div 
+                    key={index} 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="group bg-gradient-to-br from-white to-orange-50/30 rounded-2xl p-8 border border-orange-100 shadow-sm hover:shadow-xl transition-all duration-300"
+                  >
+                    <div className="flex items-start gap-6">
+                      <div className="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-all duration-500 flex-shrink-0 shadow-inner">
+                        <card.icon className="text-2xl" />
+                      </div>
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">{card.title}</h3>
-                        <p className="text-gray-700">{card.desc}</p>
+                        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors duration-300">{card.title}</h3>
+                        <p className="text-gray-600 leading-relaxed">{card.desc}</p>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
 
@@ -512,14 +588,10 @@ const MUJOnlineMBAPage = () => {
                     <tbody>
                       <tr className="border-b border-gray-200 hover:bg-gray-50">
                         <td className="px-4 py-4 font-semibold text-gray-900">Indian Students</td>
-                        <td className="px-4 py-4 text-gray-700">₹1,50,000 - ₹2,00,000</td>
-                        <td className="px-4 py-4 text-gray-700">₹37,500 - ₹50,000 per semester</td>
+                        <td className="px-4 py-4 text-gray-700">₹1,80,000</td>
+                        <td className="px-4 py-4 text-gray-700">₹45,000 per semester</td>
                       </tr>
-                      <tr className="border-b border-gray-200 hover:bg-gray-50">
-                        <td className="px-4 py-4 font-semibold text-gray-900">NRI Students</td>
-                        <td className="px-4 py-4 text-gray-700">~USD 2,500 - 3,300 total</td>
-                        <td className="px-4 py-4 text-gray-700">USD 625 - 825 per semester</td>
-                      </tr>
+                      
                     </tbody>
                   </table>
                 </div>
@@ -624,45 +696,117 @@ const MUJOnlineMBAPage = () => {
             </div>
           </section>
 
-          {/* Specializations Section */}
+          {/* Specializations Section - MODERNIZED & CLICKABLE */}
           <section id="specializations" className="py-12 sm:py-16 md:py-20 bg-gray-50">
             <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
               <div className="text-center mb-8 sm:mb-12">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Choose Your Specialization
+                  13+ Industry-Ready Specializations
                 </h2>
                 <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                  MUJ lets you personalize the MBA journey by offering high-demand majors. Each pathway features expert
-                  faculty, curated electives, and domain projects.
+                  Tailor your MBA to your career goals. Click on any specialization to get a detailed syllabus and expert counseling.
                 </p>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                 {specializations.map((spec, index) => (
-                  <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{spec.name}</h3>
-                    <p className="text-gray-700 mb-4">{spec.for}</p>
-                    <div className="flex items-center text-sm text-orange-600 font-semibold">
-                      < FaCircleCheck className="mr-2" />
-                      High Demand Field
+                  <motion.div 
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.05 }}
+                    onClick={() => setOpenModal({ type: 'enquiry', program: `MBA - ${spec.name}` })}
+                    className="group bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer border border-transparent hover:border-orange-200 relative overflow-hidden"
+                  >
+                    {/* Background Accent */}
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-orange-50 rounded-bl-full -mr-10 -mt-10 transition-all duration-500 group-hover:bg-orange-100 group-hover:scale-150 opacity-50"></div>
+                    
+                    <div className="relative z-10">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300">
+                          <FaGraduationCap className="text-2xl" />
+                        </div>
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2 py-1 rounded-full border border-orange-100">
+                          Most Popular
+                        </span>
+                      </div>
+                      
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors duration-300">
+                        {spec.name}
+                      </h3>
+                      
+                      <p className="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                        {spec.for}
+                      </p>
+                      
+                      <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                        <div className="flex items-center text-sm text-gray-500 font-medium">
+                          < FaCircleCheck className="text-green-500 mr-2" />
+                          Job-Linked
+                        </div>
+                        <div className="flex items-center text-orange-600 font-bold text-sm group-hover:translate-x-1 transition-transform duration-300">
+                          Enquire Now
+                          <FaArrowRight className="ml-2 w-3 h-3" />
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
 
-              <div className="bg-white rounded-2xl p-6 sm:p-8 border border-orange-100">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">How to Pick the Right Track?</h3>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <ul className="list-disc list-inside space-y-2 text-gray-700">
-                    <li>Map it to your current role or desired career switch</li>
-                    <li>Assess industry demand via LinkedIn and job boards</li>
-                    <li>Consider your long-term career aspirations</li>
-                  </ul>
-                  <ul className="list-disc list-inside space-y-2 text-gray-700">
-                    <li>Evaluate your strengths and interests</li>
-                    <li>Research salary trends and growth opportunities</li>
-                    <li>Leverage MUJ mentors to validate your choice</li>
-                  </ul>
+              {/* Internal Linking / Backlinking Section */}
+              <div className="bg-white rounded-3xl p-8 sm:p-12 border border-orange-100 shadow-xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-orange-50/50 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+                <div className="relative z-10">
+                  <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                      <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Explore More Programs at MUJ</h3>
+                      <p className="text-gray-600 mb-8 leading-relaxed">
+                        Manipal University Jaipur offers a wide range of UGC-approved online degrees. Whether you're looking for undergraduate programs or other postgraduate options, we have the right path for you.
+                      </p>
+                      <div className="flex flex-wrap gap-3">
+                        {[
+                          { name: "Online BCA", href: "/muj-online-bca" },
+                          { name: "Online BBA", href: "/muj-online-bba" },
+                          { name: "Online MCA", href: "/muj-online-mca" },
+                          { name: "Online B.Com", href: "/muj-online-bcom" },
+                          { name: "Online M.Com", href: "/muj-online-mcom" }
+                        ].map((link, i) => (
+                          <a 
+                            key={i}
+                            href={link.href}
+                            className="bg-orange-50 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-orange-600 hover:text-white transition-all duration-300 border border-orange-100"
+                          >
+                            {link.name}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl p-6 sm:p-8 border border-orange-100">
+                      <h4 className="text-xl font-bold text-gray-900 mb-4">Quick Links for MBA Aspirants</h4>
+                      <ul className="space-y-3">
+                        <li>
+                          <a href="/blog/ManipalVsAmityOnlineMBA" className="flex items-center text-gray-700 hover:text-orange-600 transition-colors group">
+                            <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-3 group-hover:scale-150 transition-transform"></div>
+                            Manipal vs Amity: Which Online MBA is Better?
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/blog/CareerAfterOnlineMBA" className="flex items-center text-gray-700 hover:text-orange-600 transition-colors group">
+                            <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-3 group-hover:scale-150 transition-transform"></div>
+                            Top Career Opportunities After Online MBA
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/blog/ScholarshipAndEMI" className="flex items-center text-gray-700 hover:text-orange-600 transition-colors group">
+                            <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-3 group-hover:scale-150 transition-transform"></div>
+                            Guide to Online MBA Scholarships & EMI Options
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -850,23 +994,24 @@ const MUJOnlineMBAPage = () => {
                 </p>
               </div>
 
-              <div className="max-w-4xl mx-auto space-y-4 mb-12">
+              <div className="max-w-4xl mx-auto space-y-6 mb-12">
                 {admissionSteps.map((step, idx) => (
                   <motion.div
                     key={idx}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: idx * 0.1 }}
-                    className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-xl p-6 border border-orange-100 shadow-md"
+                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                    className="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 relative overflow-hidden"
                   >
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                    <div className="absolute top-0 left-0 w-1.5 h-full bg-orange-600 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></div>
+                    <div className="flex items-center gap-6">
+                      <div className="flex-shrink-0 w-14 h-14 bg-orange-600 text-white rounded-2xl flex items-center justify-center font-bold text-2xl shadow-lg group-hover:rotate-12 transition-transform duration-300">
                         {step.step}
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
-                        <p className="text-gray-700">{step.desc}</p>
+                        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors duration-300">{step.title}</h3>
+                        <p className="text-gray-600 leading-relaxed">{step.desc}</p>
                       </div>
                     </div>
                   </motion.div>
@@ -900,55 +1045,62 @@ const MUJOnlineMBAPage = () => {
           </section>
 
           {/* UNIFOST Helps Section */}
-          <section id="unifost" className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-orange-50 to-yellow-50">
+          <section id="unifost" className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-orange-50 via-white to-yellow-50 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-200 to-transparent"></div>
+            
             <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-              <div className="text-center mb-8 sm:mb-12">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  How UNIFOST Helps You with Manipal Online MBA
+              <div className="text-center mb-12 sm:mb-16">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  Expert Guidance from <span className="text-orange-600">UNIFOST</span>
                 </h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  We don't just provide information; we help you build your future with the right educational choices.
+                </p>
               </div>
 
-              <div className="max-w-4xl mx-auto bg-white rounded-2xl p-6 sm:p-8 shadow-lg">
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  Choosing a university is not just about clicking "Apply Now." Students often struggle with:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-700 mb-8">
-                  <li>Comparing Manipal with other UGC-approved online MBAs</li>
-                  <li>Understanding which specialization fits their career</li>
-                  <li>Evaluating fees vs ROI</li>
-                  <li>Managing work + study balance</li>
-                </ul>
+              <div className="max-w-5xl mx-auto">
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                  <div className="space-y-6">
+                    <p className="text-gray-700 text-lg leading-relaxed">
+                      Choosing an online university is a life-changing decision. Students often face confusion when comparing top institutions like Manipal, Amity, and LPU.
+                    </p>
+                    <div className="space-y-4">
+                      {[
+                        "UGC & NAAC approval verification",
+                        "Specialization vs Career goal mapping",
+                        "Fee comparison & ROI analysis",
+                        "Work-study balance strategies"
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-orange-50">
+                          <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center text-orange-600">
+                            < FaCircleCheck className="text-sm" />
+                          </div>
+                          <span className="text-gray-700 font-medium">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
 
-                <div className="bg-orange-50 rounded-xl p-6 border border-orange-100">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">At UNIFOST, we help you:</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      < FaCircleCheck className="text-orange-600 text-xl flex-shrink-0 mt-1" />
-                      <div>
-                        <p className="text-gray-700 font-semibold mb-1">1. Check UGC & NAAC approvals</p>
-                        <p className="text-gray-600 text-sm">of universities you're considering (no confusion, only verified info).</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      < FaCircleCheck className="text-orange-600 text-xl flex-shrink-0 mt-1" />
-                      <div>
-                        <p className="text-gray-700 font-semibold mb-1">2. Compare Manipal Online MBA with other top online MBA options</p>
-                        <p className="text-gray-600 text-sm">on Fees, Specializations, Career services, Flexibility</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      < FaCircleCheck className="text-orange-600 text-xl flex-shrink-0 mt-1" />
-                      <div>
-                        <p className="text-gray-700 font-semibold mb-1">3. Choose the right specialization</p>
-                        <p className="text-gray-600 text-sm">(Marketing, HR, Finance, Analytics, etc.) based on your goals.</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      < FaCircleCheck className="text-orange-600 text-xl flex-shrink-0 mt-1" />
-                      <div>
-                        <p className="text-gray-700 font-semibold mb-1">4. Get step-by-step support in the admission process</p>
-                        <p className="text-gray-600 text-sm">from shortlisting to document upload and fee planning.</p>
-                      </div>
+                  <div className="bg-white rounded-3xl p-8 shadow-2xl border border-orange-100 relative">
+                    <div className="absolute -top-6 -right-6 w-24 h-24 bg-orange-600 rounded-2xl rotate-12 -z-10 opacity-10"></div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-6 border-b border-orange-100 pb-4">Our Commitment</h3>
+                    <div className="space-y-6">
+                      {[
+                        { title: "Verified Information", desc: "No confusion, only UGC & NAAC verified data." },
+                        { title: "Personalized Comparison", desc: "Compare Manipal with top alternatives on all metrics." },
+                        { title: "Goal-Based Selection", desc: "Choose tracks (Marketing, HR, etc.) based on your 5-year plan." },
+                        { title: "End-to-End Support", desc: "From application to document upload and fee planning." }
+                      ].map((help, i) => (
+                        <div key={i} className="flex gap-4">
+                          <div className="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center text-orange-600 flex-shrink-0">
+                            <span className="font-bold">{i+1}</span>
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-gray-900 mb-1">{help.title}</h4>
+                            <p className="text-gray-600 text-sm leading-relaxed">{help.desc}</p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -1159,53 +1311,51 @@ const MUJOnlineMBAPage = () => {
                    className="border-t border-white/10 pt-8 mb-8"
                  >
                    <h4 className="text-lg font-bold mb-6 text-white text-center">
-                     Popular Programs & Specializations – Manipal University Jaipur (MUJ)
+                     Compare Top Online MBA Programs
+                   </h4>
+                   <div className="flex flex-wrap justify-center gap-3 mb-8">
+                     {[
+                       { name: "Amity Online MBA", href: "/amity/amity-online-mba" },
+                       { name: "LPU Online MBA", href: "/lpu-online" },
+                       { name: "Jain Online MBA", href: "/jain" },
+                       { name: "Chandigarh University Online MBA", href: "/cuOnline" },
+                       { name: "Manipal Online MCA", href: "/muj-online-mca" },
+                       { name: "Manipal Online BBA", href: "/muj-online-bba" },
+                       { name: "Manipal Online BCA", href: "/muj-online-bca" }
+                     ].map((link, index) => (
+                       <a
+                         key={index}
+                         href={link.href}
+                         className="bg-white/5 backdrop-blur-sm text-gray-400 px-4 py-2 rounded-lg text-sm hover:bg-orange-600 hover:text-white transition-all duration-300 border border-white/10 hover:border-orange-600"
+                       >
+                         {link.name}
+                       </a>
+                     ))}
+                   </div>
+
+                   <h4 className="text-lg font-bold mb-6 text-white text-center">
+                     Popular Specializations – MUJ Online
                    </h4>
      
                    <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
                      {[
-                       // UG Courses
-                       "BBA General - MUJ Online",
-                       "BBA Finance & Accounting - MUJ Online",
-                       "BBA Digital Marketing - MUJ Online",
-                       "BBA Marketing -MUJ Online",
-                       "BBA Entrepreneurship & Family Business - MUJ Online",
-                       "BBA Human Resource Management - MUJ Online",
-                       "BBA Data Analytics - MUJ Online",
-                       "BBA Retail & E-commerce Management - MUJ Online",
-                       "BCA General - MUJ Online",
-                       "BCA Data Science & Analytics - MUJ Online",
-                       "BCA Cyber Security - MUJ Online",
-                       "BCA Cloud Computing - MUJ Online",
-                       "B.Com General - MUJ Online",
-                       // PG Courses
-                       "MBA General - MUJ Online",
-                       "MBA HR & Finance - MUJ Online",
-                       "MBA Finance & Marketing - MUJ Online",
-                       "MBA Marketing & HR - MUJ Online",
-                       "MBA Marketing & Business Analytics - MUJ Online",
-                       "MBA Finance & Business Analytics - MUJ Online",
+                       "MBA Marketing - MUJ Online",
+                       "MBA Finance - MUJ Online",
+                       "MBA HR - MUJ Online",
+                       "MBA Analytics - MUJ Online",
+                       "MBA IT & FinTech - MUJ Online",
+                       "MBA Operations - MUJ Online",
+                       "MBA International Business - MUJ Online",
                        "MBA Project Management - MUJ Online",
-                       "MBA Retail Management & Quick Commerce - MUJ Online",
-                       "MBA Artificial Intelligence in Banking & Finance - MUJ Online",
-                       "MCA AI & Data Science - MUJ Online",
-                       "MCA Cyber Security - MUJ Online",
-                       "MCA Cloud Computing - MUJ Online",
-                       "MCA Comprehensive Emerging Technologies - MUJ Online",
-                       "MCA Artificial Intelligence & Machine Learning - MUJ Online",
-                       "M.Com General - MUJ Online",
-                       "MA Economics - MUJ Online",
-                       "MA Journalism & Mass Communication - MUJ Online"
+                       "MBA Supply Chain - MUJ Online",
+                       "MBA Retail Management - MUJ Online"
                      ].map((keyword, index) => (
                        <span
                          key={index} 
                          className="bg-white/10 backdrop-blur-sm text-gray-300 px-3 py-2 rounded-full text-xs sm:text-sm hover:bg-orange-500 hover:text-white transition-all duration-300 cursor-pointer border border-white/20 hover:border-orange-500"
-                         title={keyword}
-                         onClick={() => {
-                               setOpenModal({ type: "apply" });
-                             }}
+                         onClick={() => setOpenModal({ type: "enquiry", program: keyword })}
                        >
-                         {keyword.length > 25 ? `${keyword.substring(0, 25)}...` : keyword}
+                         {keyword}
                        </span>
                      ))}
                    </div>

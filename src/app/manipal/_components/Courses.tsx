@@ -81,9 +81,9 @@ const Courses: React.FC<ExploreCoursesProps> = ({
                     </div>
                     
                     <div className="border-l-4 border-green-500 pl-4">
-                      <h4 className="font-bold text-lg text-gray-900 mb-2">3. Online BA (Bachelor of Arts)</h4>
+                      <h4 className="font-bold text-lg text-gray-900 mb-2">3. Online MA (Master of Arts)</h4>
                       <p className="text-gray-600 text-sm">
-                        This flexible and interdisciplinary online BA degree enhances analytical, communication, and creative thinking abilities across humanities and social science subjects.
+                        This flexible and interdisciplinary online MA degree enhances analytical, communication, and creative thinking abilities across humanities and social science subjects.
                       </p>
                        <div>
                        <Link href="/muj-online-ba">

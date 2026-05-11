@@ -32,85 +32,80 @@ const SECTION_ITEMS = [
 
 const FAQ_DATA = [
   {
-    question: "Is Manipal Online BA degree valid?",
+    question: "Is Manipal Online MA degree valid?",
     answer:
-      "Yes. Manipal University Jaipur is UGC-entitled and NAAC A+ accredited, and its online degrees are recognized at par with on-campus degrees in India.",
+      "Yes. Manipal University Jaipur is UGC-entitled and NAAC A+ accredited, and its online MA degrees are recognized at par with on-campus degrees in India.",
   },
   {
-    question: "Can I do Manipal Online BA while working?",
+    question: "Can I do Manipal Online MA while working?",
     answer:
       "Yes. The entire programme is designed for flexible online learning, with recorded lectures and online assessments. Many learners are working professionals.",
   },
   {
-    question: "What is the total fee for Manipal Online BA?",
+    question: "What is the total fee for Manipal Online MA?",
     answer:
-      "For Indian students, the total program fee is affordable with flexible payment options. You should always cross-check the latest fee on the official website before applying.",
+      "For Indian students, the total program fee is affordable (approx. ₹75,000 - ₹1,00,000) with flexible payment options. You should cross-check the latest fee on the official website.",
   },
   {
-    question: "Do I have to visit the campus for classes or exams?",
+    question: "What are the specializations available in MA?",
     answer:
-      "No, it is a fully online programme, including classes and exams, conducted through the Online Manipal platform and proctored systems.",
+      "MUJ Online offers MA in English, Economics, Journalism and Mass Communication, and other trending fields designed for modern careers.",
   },
   {
-    question: "Can I pursue an MA/MBA after Manipal Online BA?",
+    question: "Can I pursue a Ph.D. after Manipal Online MA?",
     answer:
-      "Yes. Since it is a recognized bachelor's degree, you can appear for postgraduate entrance exams or apply for MA, MBA, MSW, B.Ed programs that accept UGC-recognized BA degrees.",
+      "Yes. Since it is a recognized master's degree, you are eligible to appear for UGC-NET and apply for Ph.D. programs globally.",
   },
 ];
 
 const SPECIALIZATIONS = [
-  { name: "English",           for: "Students interested in literature, writing, communication, and teaching careers" },
-  { name: "Political Science", for: "Those aiming for civil services, public policy, law, or political analysis" },
-  { name: "Economics",         for: "Students interested in economic analysis, policy-making, banking, and research" },
-  { name: "Psychology",        for: "Learners interested in human behavior, counseling, HR, and social services" },
-  { name: "Sociology",         for: "Those interested in social research, community development, and NGO work" },
+  { name: "MA English",           for: "Literature enthusiasts, content creators, educators, and communication specialists" },
+  { name: "MA Journalism & Mass Comm", for: "Media professionals, journalists, PR specialists, and digital content managers" },
+  { name: "MA Economics",         for: "Data analysts, policy researchers, financial consultants, and researchers" },
+  { name: "MA Sociology",         for: "Social researchers, NGO leads, and community development specialists" },
+  { name: "MA Political Science", for: "Public policy experts, political analysts, and legal consultants" },
 ];
 
 const JOB_ROLES = [
-  "Content Writer/Editor", "HR Executive", "Social Media Manager",
-  "Public Relations Assistant", "Education & Training Coordinator",
-  "Social Worker", "Research Assistant", "NGO Program Manager",
-  "Customer Success Specialist", "Policy Analyst (entry level)",
-  "Journalism roles (editorial, reporting)",
+  "Senior Content Strategist", "Senior HR Business Partner", "Communication Manager",
+  "PR Lead", "Education Consultant",
+  "Senior Social Researcher", "Research Lead", "NGO Director",
+  "Customer Success Lead", "Policy Consultant",
+  "Editor-in-Chief / Senior Reporter",
 ];
 
 const INDUSTRIES = [
-  "Education & Teaching", "Media & Journalism", "NGOs & Social Development",
-  "Corporate Communications", "Public Administration",
-  "Human Resources", "Content Creation & Digital Media",
-];
-
-const ADMISSION_STEPS = [
-  { step: 1, title: "Fill Application Form",                     desc: "Provide basic details, academic history, and (if applicable) work experience." },
-  { step: 2, title: "Pay Application / Registration Fee",        desc: "This creates your application profile." },
-  { step: 3, title: "Upload Documents",                          desc: "10th & 12th marksheets, ID proof, photo, etc." },
-  { step: 4, title: "Pay Programme Fee (Full or Semester-wise)", desc: "Choose your payment mode (EMI / semester)." },
-  { step: 5, title: "Confirm Admission",                         desc: "Once documents & payment are verified, university issues enrolment confirmation and LMS access." },
+  "Higher Education & Research", "Media Houses & Digital Agencies", "Global NGOs",
+  "Corporate Communications", "Public Policy & Administration",
+  "HR & Organizational Development", "Creative Writing & Publishing",
 ];
 
 const HIGHER_STUDIES = [
-  { title: "MA Programs",        desc: "Specialize in your chosen field" },
-  { title: "MBA",                desc: "Move into management roles" },
-  { title: "MSW",                desc: "Social work and community development" },
-  { title: "B.Ed",               desc: "Teaching and education careers" },
-  { title: "Law (LLB)",          desc: "Legal profession" },
-  { title: "Mass Communication", desc: "Media and journalism" },
-  { title: "Competitive Exams",  desc: "UPSC, SSC, Banking" },
-  { title: "Research Programs",  desc: "M.Phil, Ph.D opportunities" },
+  { title: "Ph.D. / Research",   desc: "Specialize further in your research domain" },
+  { title: "UGC NET / SLET",     desc: "Qualify for Assistant Professorship and JRF" },
+  { title: "Executive MBA",      desc: "Move into top-tier leadership roles" },
+  { title: "Public Policy Courses", desc: "Specialized roles in government and think tanks" },
+  { title: "Civil Services",     desc: "UPSC / State PCS preparations" },
+  { title: "Global Research",    desc: "International research fellowships" },
 ];
 
-const ACCREDITATIONS = [
-  { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp',  title: 'NAAC A+ Accredited University' },
-  { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp',   title: 'UGC-entitled Online Degrees' },
-  { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327720/nirf_f5xen9.webp',  title: "Amongst India's top 60 Universities in 2025" },
-  { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp', title: 'AICTE Norms Compliant' },
-  { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/wes_zuxwfs.webp',   title: 'Globally Recognized Online Degrees' },
-  { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/acu_oyjzvj.webp',   title: 'Member of ACU' },
-  { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327200/icas_wyryup.webp',  title: 'ICAS Canada' },
-  { img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327238/iqas_bieryy.webp',  title: 'IQAS' },
+const FOOTER_PROGRAMS = [
+  "MA English - MUJ Online", "MA Journalism & Mass Communication - MUJ Online",
+  "MA Economics - MUJ Online", "MA Sociology - MUJ Online",
+  "MA Political Science - MUJ Online", "MBA General - MUJ Online",
+  "MCA AI & Data Science - MUJ Online", "M.Com General - MUJ Online",
+  "BBA General - MUJ Online", "BCA General - MUJ Online",
 ];
 
-const COMPANY_LOGOS = [
+const ADMISSION_STEPS = [
+  { step: 1, title: "Counseling & Program Selection", desc: "Speak with our expert counselors to understand the program and choose your specialization." },
+  { step: 2, title: "Application Submission", desc: "Fill out the online application form and upload the required educational documents." },
+  { step: 3, title: "Document Verification", desc: "The university will verify your submitted documents for eligibility." },
+  { step: 4, title: "Fee Payment", desc: "Once approved, pay the program fee using flexible payment options or EMI." },
+  { step: 5, title: "LMS Access & Onboarding", desc: "Receive your login credentials for the Learning Management System and begin your learning journey." },
+];
+
+const companyLogos = [
   "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company_vjgouc.webp",
   "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/company1_tktbp7.webp",
   "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327090/company9_p4pgg3.webp",
@@ -124,32 +119,12 @@ const COMPANY_LOGOS = [
   "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327173/ibm_ced3ir.webp",
   "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327172/hp_b4ylow.webp",
   "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327860/tata_n9jnwt.png",
-  "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327171/hero_krubph.webp",
-];
-
-const FOOTER_PROGRAMS = [
-  "BBA General - MUJ Online", "BBA Finance & Accounting - MUJ Online",
-  "BBA Digital Marketing - MUJ Online", "BBA Marketing - MUJ Online",
-  "BBA Entrepreneurship & Family Business - MUJ Online", "BBA Human Resource Management - MUJ Online",
-  "BBA Data Analytics - MUJ Online", "BBA Retail & E-commerce Management - MUJ Online",
-  "BCA General - MUJ Online", "BCA Data Science & Analytics - MUJ Online",
-  "BCA Cyber Security - MUJ Online", "BCA Cloud Computing - MUJ Online",
-  "B.Com General - MUJ Online", "MBA General - MUJ Online",
-  "MBA HR & Finance - MUJ Online", "MBA Finance & Marketing - MUJ Online",
-  "MBA Marketing & HR - MUJ Online", "MBA Marketing & Business Analytics - MUJ Online",
-  "MBA Finance & Business Analytics - MUJ Online", "MBA Project Management - MUJ Online",
-  "MBA Retail Management & Quick Commerce - MUJ Online",
-  "MBA Artificial Intelligence in Banking & Finance - MUJ Online",
-  "MCA AI & Data Science - MUJ Online", "MCA Cyber Security - MUJ Online",
-  "MCA Cloud Computing - MUJ Online", "MCA Comprehensive Emerging Technologies - MUJ Online",
-  "MCA Artificial Intelligence & Machine Learning - MUJ Online",
-  "M.Com General - MUJ Online", "MA Economics - MUJ Online",
-  "MA Journalism & Mass Communication - MUJ Online",
+  "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327171/hero_krubph.webp"
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
-const ManipalBAPage = () => {
+const ManipalMAPage = () => {
   const [activeSection, setActiveSection]     = useState(SECTION_ITEMS[0]?.id ?? "");
   const [openModal,     setOpenModal]         = useState<ModalState | null>(null);
   const [openIndex,     setOpenIndex]         = useState<number | null>(null);
@@ -246,7 +221,7 @@ const ManipalBAPage = () => {
 
               <button
                 onClick={() => setOpenModal({ type: 'apply' })}
-                aria-label="Apply now for Manipal Online BA"
+                aria-label="Apply now for Manipal Online MA"
                 className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-xs sm:text-sm md:text-base whitespace-nowrap"
               >
                 <span className="hidden sm:inline">Apply Now</span>
@@ -272,27 +247,27 @@ const ManipalBAPage = () => {
         <main
           id="main-content"
           role="main"
-          aria-label="Manipal Online BA program details"
+          aria-label="Manipal Online MA program details"
           className="flex-1 min-w-0"
           // Schema.org microdata on the main content region
           itemScope
           itemType="https://schema.org/Course"
         >
           {/* Hidden microdata fields */}
-          <meta itemProp="name"        content="Online BA – Bachelor of Arts" />
-          <meta itemProp="description" content="UGC-approved 3-year online BA from Manipal University Jaipur (NAAC A+)" />
+          <meta itemProp="name"        content="Online MA – Master of Arts" />
+          <meta itemProp="description" content="UGC-approved 2-year online MA from Manipal University Jaipur (NAAC A+)" />
           <meta itemProp="courseMode"  content="online" />
-          <meta itemProp="educationalLevel" content="Bachelor" />
+          <meta itemProp="educationalLevel" content="Master" />
 
           {/* ──────────────────── HERO ──────────────────── */}
           <section
-            aria-label="Hero banner – Manipal Online BA"
+            aria-label="Hero banner – Manipal Online MA"
             className="relative w-full min-h-[450px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] overflow-hidden"
           >
             <div className="absolute inset-0">
               <Image
                 src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327058/bba-online-image_xxyvt0.webp"
-                alt="A student learning with Manipal's Online BA Program"
+                alt="A student learning with Manipal's Online MA Program"
                 
                 className="object-cover object-center"
                 priority
@@ -323,21 +298,21 @@ const ManipalBAPage = () => {
                   </div>
 
                   <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                    <span className="block">Online BA Degree Program</span>
+                    <span className="block">Online MA Degree Program</span>
                     <span className="block bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
                       Manipal University Jaipur
                     </span>
                   </h1>
 
                   <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
-                    UGC-approved 3-year online BA program with flexible learning, multiple specializations,
+                    UGC-approved 2-year online MA program with flexible learning, multiple specializations (English, Economics, Journalism),
                     and career-focused curriculum from NAAC A+ accredited Manipal University Jaipur.
                   </p>
 
                   <div className="flex flex-wrap gap-3 sm:gap-4">
                     <button
                       onClick={() => setOpenModal({ type: 'apply' })}
-                      aria-label="Apply now for Manipal Online BA"
+                      aria-label="Apply now for Manipal Online MA"
                       className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
                     >
                       Apply Now
@@ -371,7 +346,7 @@ const ManipalBAPage = () => {
                   className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4"
                   itemProp="name"
                 >
-                  Manipal University Jaipur &amp; Online BA Overview
+                  Manipal University Jaipur &amp; Online MA Overview
                 </h2>
               </div>
 
@@ -392,18 +367,18 @@ const ManipalBAPage = () => {
                     It has an <strong>A+ grade from NAAC</strong>. The online programs are entitled by UGC;
                     thus, these programs will carry the same academic value as any on-campus degree.
                   </p>
-                  <p className="text-gray-700 leading-relaxed">The <strong>Online BA</strong> is:</p>
-                  <ul className="list-disc list-inside space-y-2 text-gray-700" aria-label="Online BA key facts">
-                    <li>A 3-year undergraduate degree (6 semesters)</li>
+                  <p className="text-gray-700 leading-relaxed">The <strong>Online MA</strong> is:</p>
+                  <ul className="list-disc list-inside space-y-2 text-gray-700" aria-label="Online MA key facts">
+                    <li>A 2-year postgraduate degree (4 semesters)</li>
                     <li>Offered fully online via the Online Manipal platform</li>
-                    <li>Designed for students after 10+2 and working professionals who want structured arts education with flexibility</li>
+                    <li>Designed for graduates and working professionals who want advanced education in humanities and social sciences</li>
                   </ul>
                   <p className="text-gray-700 leading-relaxed font-semibold mt-4">The programme focuses on:</p>
                   <ul className="list-disc list-inside space-y-2 text-gray-700">
-                    <li>Humanities and social sciences fundamentals</li>
-                    <li>Critical thinking and analytical skills</li>
-                    <li>Communication, research and writing abilities</li>
-                    <li>Modern skill-building for contemporary careers</li>
+                    <li>Advanced study in chosen specialization (English, Journalism, etc.)</li>
+                    <li>Critical analysis and research methodology</li>
+                    <li>Effective communication and academic writing</li>
+                    <li>Real-world application of theoretical knowledge</li>
                   </ul>
                 </div>
               </div>
@@ -411,14 +386,14 @@ const ManipalBAPage = () => {
               {/* At a Glance */}
               <div
                 className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-2xl p-6 sm:p-8 md:p-10 border border-orange-100"
-                aria-label="Manipal Online BA at a glance"
+                aria-label="Manipal Online MA at a glance"
               >
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Manipal Online BA at a Glance</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Manipal Online MA at a Glance</h3>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                   {[
-                    { icon: <FaGraduationCap className="text-orange-600 text-3xl mb-2" />, title: "Duration",    text: "3 Years (6 Semesters)",    itemprop: "timeRequired" },
+                    { icon: <FaGraduationCap className="text-orange-600 text-3xl mb-2" />, title: "Duration",    text: "2 Years (4 Semesters)",    itemprop: "timeRequired" },
                     { icon: <FaMoneyBillWave  className="text-orange-600 text-3xl mb-2" />, title: "Total Fee",  text: "Affordable with EMI options", itemprop: null },
-                    { icon: <FaCircleCheck    className="text-orange-600 text-3xl mb-2" />, title: "Eligibility",text: "10+2 (40% minimum)",        itemprop: "coursePrerequisites" },
+                    { icon: <FaCircleCheck    className="text-orange-600 text-3xl mb-2" />, title: "Eligibility",text: "Graduation (Recognized Univ)", itemprop: "coursePrerequisites" },
                     { icon: <FaAward          className="text-orange-600 text-3xl mb-2" />, title: "Recognition",text: "UGC Entitled, NAAC A+",      itemprop: null },
                   ].map(({ icon, title, text, itemprop }) => (
                     <div key={title} className="bg-white rounded-xl p-4 shadow-md">
@@ -441,7 +416,7 @@ const ManipalBAPage = () => {
             <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
               <div className="text-center mb-8 sm:mb-12">
                 <h2 id="highlights-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Why Choose Manipal Online BA?
+                  Why Choose Manipal Online MA?
                 </h2>
               </div>
 
@@ -454,7 +429,7 @@ const ManipalBAPage = () => {
                       <p className="text-gray-700 leading-relaxed">
                         The entitlement from UGC, combined with NAAC A+ accreditation, makes the degree valid for
                         higher studies, jobs in private and public sectors, and competitive exams where a recognized
-                        bachelor's is required.
+                        master's is required.
                       </p>
                     ),
                   },
@@ -519,7 +494,7 @@ const ManipalBAPage = () => {
             <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
               <div className="text-center mb-8 sm:mb-12">
                 <h2 id="eligibility-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Eligibility Criteria for Manipal Online BA
+                  Eligibility Criteria for Manipal Online MA
                 </h2>
               </div>
 
@@ -528,9 +503,9 @@ const ManipalBAPage = () => {
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Basic Eligibility:</h3>
                     <ul className="list-disc list-inside space-y-2 text-gray-700">
-                      <li>Completed 10+2 from a recognized national or state board in any stream</li>
-                      <li>Minimum marks: 40% aggregate or above</li>
-                      <li>Relaxation for reserved categories (as per university norms)</li>
+                      <li>Completed graduation (3-year bachelor's degree) from a recognized university</li>
+                      <li>Minimum marks: 50% aggregate or above (45% for reserved categories)</li>
+                      <li>Valid proof of identification and educational documents</li>
                     </ul>
                   </div>
                   <div className="mt-4">
@@ -565,8 +540,8 @@ const ManipalBAPage = () => {
                       Duration
                     </h3>
                     <ul className="list-disc list-inside space-y-2 text-gray-700">
-                      <li><strong>Standard Duration:</strong> 3 years (6 semesters)</li>
-                      <li><strong>Maximum Duration:</strong> Up to 6 years (flexible completion)</li>
+                      <li><strong>Standard Duration:</strong> 2 years (4 semesters)</li>
+                      <li><strong>Maximum Duration:</strong> Up to 4 years (flexible completion)</li>
                     </ul>
                   </div>
                   <div>
@@ -606,13 +581,13 @@ const ManipalBAPage = () => {
             <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
               <div className="text-center mb-8 sm:mb-12">
                 <h2 id="fees-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Manipal Online BA Fees &amp; Payment Structure
+                  Manipal Online MA Fees &amp; Payment Structure
                 </h2>
               </div>
 
               <div className="max-w-5xl mx-auto">
                 <div className="overflow-x-auto">
-                  <table className="w-full border-collapse bg-white rounded-xl shadow-lg overflow-hidden" aria-label="Manipal Online BA fee structure">
+                  <table className="w-full border-collapse bg-white rounded-xl shadow-lg overflow-hidden" aria-label="Manipal Online MA fee structure">
                     <thead>
                       <tr className="bg-gradient-to-r from-orange-500 to-orange-600 text-white">
                         <th scope="col" className="px-4 py-4 text-left font-semibold">Category</th>
@@ -660,7 +635,7 @@ const ManipalBAPage = () => {
             <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
               <div className="text-center mb-8 sm:mb-12">
                 <h2 id="syllabus-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Manipal Online BA Syllabus &amp; Specializations (Overview)
+                  Manipal Online MA Syllabus &amp; Specializations (Overview)
                 </h2>
               </div>
 
@@ -679,23 +654,120 @@ const ManipalBAPage = () => {
                   </ul>
                 </div>
 
-                <div className="bg-white rounded-xl p-6 sm:p-8 shadow-lg">
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Specializations</h3>
-                  <div className="space-y-4">
-                    {SPECIALIZATIONS.map((spec) => (
-                      <div key={spec.name} className="border-l-4 border-orange-500 pl-4">
-                        <h4 className="font-semibold text-gray-900 mb-1">{spec.name}</h4>
-                        <p className="text-sm text-gray-600">{spec.for}</p>
+          {/* Specializations Section - MODERNIZED & CLICKABLE */}
+          <section id="specializations" className="py-12 sm:py-16 md:py-20 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+              <div className="text-center mb-8 sm:mb-12">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Industry-Aligned MA Specializations
+                </h2>
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                  Tailor your postgraduate journey to your career goals. Click on any specialization to pre-fill your enquiry.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                {SPECIALIZATIONS.map((spec, index) => (
+                  <motion.div 
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.05 }}
+                    onClick={() => setOpenModal({ type: 'enquiry', program: `MA - ${spec.name}` })}
+                    className="group bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer border border-transparent hover:border-orange-200 relative overflow-hidden"
+                  >
+                    {/* Background Accent */}
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-orange-50 rounded-bl-full -mr-10 -mt-10 transition-all duration-500 group-hover:bg-orange-100 group-hover:scale-150 opacity-50"></div>
+                    
+                    <div className="relative z-10">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300">
+                          <FaGraduationCap className="text-2xl" />
+                        </div>
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2 py-1 rounded-full border border-orange-100">
+                          MA PROGRAM
+                        </span>
                       </div>
-                    ))}
+                      
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors duration-300">
+                        {spec.name}
+                      </h3>
+                      
+                      <p className="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                        {spec.for}
+                      </p>
+                      
+                      <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                        <div className="flex items-center text-sm text-gray-500 font-medium">
+                          < FaCircleCheck className="text-green-500 mr-2" />
+                          UGC Entitled
+                        </div>
+                        <div className="flex items-center text-orange-600 font-bold text-sm group-hover:translate-x-1 transition-transform duration-300">
+                          Enquire Now
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Internal Linking / Backlinking Section */}
+              <div className="bg-white rounded-3xl p-8 sm:p-12 border border-orange-100 shadow-xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-orange-50/50 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+                <div className="relative z-10">
+                  <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                      <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Explore More Programs at MUJ</h3>
+                      <p className="text-gray-600 mb-8 leading-relaxed">
+                        Manipal University Jaipur offers a wide range of UGC-approved online degrees. Whether you're looking for undergraduate programs or other postgraduate options, we have the right path for you.
+                      </p>
+                      <div className="flex flex-wrap gap-3">
+                        {[
+                          { name: "Online MBA", href: "/muj-online-mba" },
+                          { name: "Online MCA", href: "/muj-online-mca" },
+                          { name: "Online BBA", href: "/muj-online-bba" },
+                          { name: "Online BCA", href: "/muj-online-bca" },
+                          { name: "Online M.Com", href: "/muj-online-mcom" }
+                        ].map((link, i) => (
+                          <a 
+                            key={i}
+                            href={link.href}
+                            className="bg-orange-50 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-orange-600 hover:text-white transition-all duration-300 border border-orange-100"
+                          >
+                            {link.name}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl p-6 sm:p-8 border border-orange-100">
+                      <h4 className="text-xl font-bold text-gray-900 mb-4">Quick Links for MA Aspirants</h4>
+                      <ul className="space-y-3">
+                        <li>
+                          <a href="/blog/CareerAfterOnlineMBA" className="flex items-center text-gray-700 hover:text-orange-600 transition-colors group">
+                            <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-3 group-hover:scale-150 transition-transform"></div>
+                            Top Career Opportunities After Online Degrees
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/blog/ScholarshipAndEMI" className="flex items-center text-gray-700 hover:text-orange-600 transition-colors group">
+                            <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-3 group-hover:scale-150 transition-transform"></div>
+                            Guide to Online Scholarships & EMI Options
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </section>
               </div>
 
               <div className="mt-12 bg-white rounded-xl p-6 sm:p-8 shadow-lg">
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 text-center">Semester-Wise Curriculum Overview</h3>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {[1, 2, 3, 4, 5, 6].map((sem) => (
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {[1, 2, 3, 4].map((sem) => (
                     <div key={sem} className="bg-orange-50 rounded-lg p-4 border border-orange-200">
                       <h4 className="font-bold text-orange-700 mb-3">Semester {sem}</h4>
                       <ul className="text-sm text-gray-700 space-y-1" aria-label={`Semester ${sem} topics`}>
@@ -720,7 +792,7 @@ const ManipalBAPage = () => {
             <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
               <div className="text-center mb-8 sm:mb-12">
                 <h2 id="career-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Career Scope After Manipal Online BA
+                  Career Scope After Manipal Online MA
                 </h2>
               </div>
 
@@ -728,7 +800,7 @@ const ManipalBAPage = () => {
                 <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-6 sm:p-8 border border-orange-100">
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                     <FaBriefcase className="text-orange-600" aria-hidden="true" />
-                    Job Roles After Online BA
+                    Job Roles After Online MA
                   </h3>
                   <ul className="list-disc list-inside space-y-2 text-gray-700">
                     {JOB_ROLES.map((role) => <li key={role}>{role}</li>)}
@@ -738,16 +810,16 @@ const ManipalBAPage = () => {
                 <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-6 sm:p-8 border border-orange-100">
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                     <FaBuilding className="text-orange-600" aria-hidden="true" />
-                    Industries That Hire BA Graduates
+                    Industries That Hire MA Graduates
                   </h3>
                   <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6">
                     {INDUSTRIES.map((ind) => <li key={ind}>{ind}</li>)}
                   </ul>
                   <div className="bg-white rounded-lg p-4 border border-orange-200">
-                    <p className="text-gray-700 font-semibold mb-2">Online BA is especially useful for:</p>
+                    <p className="text-gray-700 font-semibold mb-2">Online MA is especially useful for:</p>
                     <ul className="list-disc list-inside space-y-1 text-gray-700">
-                      <li>Students who want to pursue MA/MBA later</li>
-                      <li>UPSC/SSC aspirants</li>
+                      <li>Students who want to pursue Ph.D./MBA later</li>
+                      <li>Academic and research aspirants</li>
                       <li>Working professionals wanting to upgrade qualifications</li>
                       <li>Career switchers moving into education, media, or social work</li>
                     </ul>
@@ -756,7 +828,7 @@ const ManipalBAPage = () => {
               </div>
 
               <div className="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 sm:p-8 border border-blue-200">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 text-center">Higher Studies Options After BA</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 text-center">Higher Studies Options After MA</h3>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                   {HIGHER_STUDIES.map((opt) => (
                     <div key={opt.title} className="bg-white rounded-lg p-4 text-center shadow-sm">
@@ -777,14 +849,14 @@ const ManipalBAPage = () => {
             <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
               <div className="text-center mb-8 sm:mb-12">
                 <h2 id="who-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Who Should Choose Manipal Online BA?
+                  Who Should Choose Manipal Online MA?
                 </h2>
               </div>
               <div className="max-w-4xl mx-auto bg-white rounded-2xl p-6 sm:p-8 shadow-lg">
                 <ul className="list-disc list-inside space-y-3 text-gray-700">
                   <li><strong>Students who want flexibility</strong> – perfect for those who cannot relocate or attend full-time college</li>
-                  <li><strong>UPSC/SSC aspirants</strong> – the subjects support competitive exam preparation</li>
-                  <li><strong>Students aiming for MA/MBA</strong> – strong foundation for postgraduate studies</li>
+                  <li><strong>Academic aspirants</strong> – the subjects support research and teaching preparation</li>
+                  <li><strong>Students aiming for Ph.D./MBA</strong> – strong foundation for postgraduate studies</li>
                   <li><strong>Working professionals</strong> – upgrade your profile while keeping your job</li>
                   <li><strong>Career switchers</strong> – specializations give direction for new opportunities</li>
                   <li><strong>Those interested in humanities</strong> – build a career in writing, research, teaching, or social sciences</li>
@@ -807,7 +879,7 @@ const ManipalBAPage = () => {
               </div>
 
               <ol className="max-w-4xl mx-auto space-y-4" aria-label="Admission steps">
-                {ADMISSION_STEPS.map((step, idx) => (
+                {ADMISSION_STEPS?.map((step: any, idx: number) => (
                   <motion.li
                     key={step.step}
                     initial={{ opacity: 0, y: 20 }}
@@ -843,7 +915,7 @@ const ManipalBAPage = () => {
             <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
               <div className="text-center mb-8 sm:mb-12">
                 <h2 id="unifost-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  How UNIFOST Helps You with Manipal Online BA
+                  How UNIFOST Helps You with Manipal Online MA
                 </h2>
               </div>
               <div className="max-w-4xl mx-auto bg-white rounded-2xl p-6 sm:p-8 shadow-lg">
@@ -851,21 +923,21 @@ const ManipalBAPage = () => {
                   Choosing a university is not just about clicking "Apply Now." Students often struggle with:
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-700 mb-8">
-                  <li>Comparing Manipal with other UGC-approved online BAs</li>
+                  <li>Comparing Manipal with other UGC-approved online MAs</li>
                   <li>Understanding which specialization fits their career goals</li>
-                  <li>Evaluating fees vs ROI for arts degrees</li>
+                  <li>Evaluating fees vs ROI for master's degrees</li>
                   <li>Managing work + study balance</li>
-                  <li>Planning higher studies after BA</li>
+                  <li>Planning higher studies after MA</li>
                 </ul>
                 <div className="bg-orange-50 rounded-xl p-6 border border-orange-100">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">At UNIFOST, we help you:</h3>
                   <div className="space-y-4">
                     {[
                       { title: "Check UGC & NAAC approvals", desc: "of universities you're considering (no confusion, only verified info)." },
-                      { title: "Compare Manipal Online BA with other top online BA options", desc: "on Fees, Specializations, Career services, Flexibility." },
-                      { title: "Choose the right specialization", desc: "(English, Political Science, Economics, Psychology, Sociology) based on your goals." },
+                      { title: "Compare Manipal Online MA with other top online MA options", desc: "on Fees, Specializations, Career services, Flexibility." },
+                      { title: "Choose the right specialization", desc: "(English, Economics, Journalism) based on your goals." },
                       { title: "Get step-by-step support in the admission process", desc: "from shortlisting to document upload and fee planning." },
-                      { title: "Career counseling and roadmap planning", desc: "for higher studies or job opportunities after BA." },
+                      { title: "Career counseling and roadmap planning", desc: "for higher studies or job opportunities after MA." },
                     ].map(({ title, desc }) => (
                       <div key={title} className="flex items-start gap-3">
                         <FaCircleCheck className="text-orange-600 text-xl flex-shrink-0 mt-1" aria-hidden="true" />
@@ -890,7 +962,7 @@ const ManipalBAPage = () => {
             <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
               <div className="text-center mb-8 sm:mb-12">
                 <h2 id="faq-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  FAQs About Manipal Online BA
+                  FAQs About Manipal Online MA
                 </h2>
               </div>
 
@@ -959,14 +1031,14 @@ const ManipalBAPage = () => {
               <div className="max-w-4xl mx-auto text-center">
                 <h2 id="cta-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Final Thoughts</h2>
                 <p className="text-lg sm:text-xl leading-relaxed mb-6">
-                  The Manipal Online BA is a strong choice for students and professionals who want:
+                  The Manipal Online MA is a strong choice for students and professionals who want:
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-lg mb-8 text-left max-w-2xl mx-auto">
-                  <li>A recognized, flexible arts degree</li>
-                  <li>Humanities foundation + modern skill development</li>
+                  <li>A recognized, flexible master's degree</li>
+                  <li>Humanities foundation + advanced specialization</li>
                   <li>Reasonable fees compared to many private on-campus programs</li>
-                  <li>The option to work, prepare for competitive exams, or pursue side projects while studying</li>
-                  <li>Multiple specialization options for targeted career paths</li>
+                  <li>The option to work or pursue research while studying</li>
+                  <li>Multiple specialization options (English, Economics, Journalism)</li>
                 </ul>
                 <p className="text-xl sm:text-2xl font-semibold">
                   That's where platforms like UNIFOST make a difference – by helping you turn a confusing decision into a clear, confident one.
@@ -975,7 +1047,7 @@ const ManipalBAPage = () => {
                   <button
                     onClick={() => setOpenModal({ type: 'apply' })}
                     className="bg-white text-orange-600 font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                    aria-label="Apply now for Manipal Online BA"
+                    aria-label="Apply now for Manipal Online MA"
                   >
                     Apply Now
                   </button>
@@ -999,7 +1071,12 @@ const ManipalBAPage = () => {
                 </p>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-                {ACCREDITATIONS.map((item) => (
+                {[
+                  { img: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/ugclogo_z7h8v9.webp", title: "UGC Approved" },
+                  { img: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/naac_vj8f4x.webp", title: "NAAC A+" },
+                  { img: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/nirf_x9p6h2.webp", title: "NIRF Ranked" },
+                  { img: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/aicte_l8j3w1.webp", title: "AICTE Approved" },
+                ].map((item) => (
                   <div key={item.title} className="group">
                     <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4 sm:p-6">
@@ -1103,7 +1180,7 @@ const ManipalBAPage = () => {
                     {[
                       { pct: "90%",    color: "from-green-500 to-green-600",   title: "Employability Rate",      sub: "For postgraduates across all programs" },
                       { pct: "500+",   color: "from-blue-500 to-blue-600",     title: "Recruiters Associated",   sub: "With Manipal University Jaipur Online" },
-                      { pct: "₹7 LPA", color: "from-orange-500 to-orange-600", title: "Average MBA Salary",     sub: "Competitive compensation packages" },
+                      { pct: "₹7 LPA", color: "from-orange-500 to-orange-600", title: "Average PG Salary",      sub: "Competitive compensation packages" },
                       { pct: "24/7",   color: "from-purple-500 to-purple-600", title: "Placement Portal",       sub: "Real-time job listings and opportunities" },
                     ].map(({ pct, color, title, sub }) => (
                       <div key={title} className="bg-white rounded-xl p-6 shadow-lg">
@@ -1240,7 +1317,7 @@ const ManipalBAPage = () => {
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
-                {COMPANY_LOGOS.map((src, i) => (
+                {companyLogos.map((src: string, i: number) => (
                   <div key={i} className="group">
                     <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
                       <div className="aspect-square flex items-center justify-center">
@@ -1266,7 +1343,7 @@ const ManipalBAPage = () => {
                   <button
                     onClick={() => setOpenModal({ type: 'apply' })}
                     className="bg-white text-orange-600 font-semibold px-8 py-4 rounded-full hover:bg-orange-50 transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base"
-                    aria-label="Apply now for Manipal Online BA"
+                    aria-label="Apply now for Manipal Online MA"
                   >
                     Apply Now
                   </button>
@@ -1368,7 +1445,7 @@ const ManipalBAPage = () => {
                   <Button
                     onClick={() => setOpenModal({ type: 'apply' })}
                     className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold px-6 py-3 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
-                    aria-label="Apply now for Manipal Online BA"
+                    aria-label="Apply now for Manipal Online MA"
                   >
                     Apply Now
                   </Button>
@@ -1417,7 +1494,7 @@ const ManipalBAPage = () => {
             : 'Share your details and our counselor will reach out'}
           imageSrc="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327725/online-manipal-form_nz7yft.webp"
           universityName="Manipal University Jaipur"
-          defaultProgram="BA"
+          defaultProgram="MA"
           formType={openModal.type === 'apply' ? 'getStarted' : 'general'}
         />
       )}
@@ -1425,4 +1502,4 @@ const ManipalBAPage = () => {
   );
 };
 
-export default ManipalBAPage;
+export default ManipalMAPage;
