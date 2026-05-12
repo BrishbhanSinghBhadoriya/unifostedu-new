@@ -110,7 +110,8 @@ const ChatBox = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 
           message: userText,
-          leadData: sessionLead // Pass existing lead data if any
+          leadData: sessionLead, // Pass existing lead data if any
+          history: messages.slice(-5) // Pass last 5 messages for context
         }),
       });
 
@@ -309,17 +310,25 @@ const ChatBox = () => {
           scrollbar-width: thin; /* Firefox */
           scrollbar-color: #cbd5e1 transparent; /* Firefox */
           scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch; /* iOS momentum scrolling */
+          touch-action: pan-y; /* Allow vertical touch panning */
+          overflow-y: auto !important;
+          overflow-x: hidden !important; /* Prevent horizontal sliding */
+          overscroll-behavior: contain; /* Prevent scroll chaining to body */
         }
         .chat-messages-container::-webkit-scrollbar {
-          width: 6px;
-          display: block;
+          width: 8px; /* Slightly wider for easier touch/see */
+          display: block !important;
         }
         .chat-messages-container::-webkit-scrollbar-track {
-          background: transparent;
+          background: rgba(0, 0, 0, 0.05);
+          border-radius: 10px;
         }
         .chat-messages-container::-webkit-scrollbar-thumb {
-          background: #cbd5e1;
+          background: #94a3b8; /* Darker thumb */
           border-radius: 10px;
+          border: 2px solid transparent;
+          background-clip: content-box;
         }
         .chat-messages-container::-webkit-scrollbar-thumb:hover {
           background: #94a3b8;

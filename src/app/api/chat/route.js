@@ -6,7 +6,7 @@ import User from "@/models/User";
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { message, leadData } = body;
+    const { message, leadData, history = [] } = body;
 
     //  Validation
     if (!message || message.trim() === "") {
@@ -123,68 +123,55 @@ export async function POST(req) {
     console.log(`[ChatAPI] Found ${coursesUniversityData.universities.length} universities. Filtered to: ${contextData.universities.length}`);
 
     // Use the AI service with high-precision instructions
+    const aiMessages = [
+      {
+        role: "system",
+        content: `You are Prof.Unique, the official Unifost Assistant. You are a professional and helpful directory for university and course data.
+
+           STRICT LEAD CAPTURE STRATEGY (MANDATORY):
+           Current Lead Status: ${leadData ? JSON.stringify(leadData) : "No details yet"}
+
+           1. DO NOT answer any questions about universities, courses, or fees until you have the user's NAME, MOBILE NUMBER, and COURSE.
+           2. MOBILE NUMBER VALIDATION: 
+              - The mobile number MUST be exactly 10 digits long.
+              - It MUST start with 6, 7, 8, or 9.
+              - IF the user provides an invalid number (e.g., '12345', '0987654321', or 11 digits), politely inform them that the mobile number is invalid and ask for a valid 10-digit Indian mobile number.
+           3. IF any of these 3 details (Name, Mobile, Course) are missing or invalid:
+              - Acknowledge the user's message but DO NOT give the answer yet.
+              - Politely explain that to provide accurate and personalized guidance, you need their Name, valid Mobile Number, and the Course they are interested in.
+              - Ask for the missing/valid details specifically.
+           4. ONLY after you have all 3 valid details (Name, Mobile, Course):
+              - Provide the answer to their question in a professional format.
+              - MANDATORY: Include this exact JSON tag at the VERY END: [SAVE_LEAD: {"name": "...", "mobile": "...", "course": "...", "university": "..."}]
+              - Replace "..." with the actual details.
+
+           RESPONSE FORMATTING:
+           - Use '# [Title]' for main headings.
+           - Use '## [Subheading]' for sub-sections.
+           - Use bullet points and bold labels (**Fees:**, **Duration:**).
+           - Tone: Professional, academic, and very helpful.
+
+          UNIFOST INFO:
+          ${JSON.stringify(unifostInfo)}
+
+          UNIVERSITY DATA:
+          ${JSON.stringify(contextData)}`
+      },
+      ...history.slice(-5).map(msg => ({
+        role: msg.sender === "user" ? "user" : "assistant",
+        content: msg.text
+      })),
+      {
+        role: "user",
+        content: message
+      }
+    ];
+
     const response = await axios.post(
       "https://openrouter.ai/api/v1/chat/completions",
       {
         model: "openai/gpt-4o-mini",
-        messages: [
-          {
-            role: "system",
-            content:
-              `You are Prof.Unique, the official Unifost Assistant. You are a professional and helpful directory for university and course data.
-               
-               FORMAL INTRODUCTION & LEAD CAPTURE:
-               Current Lead Status: ${leadData ? JSON.stringify(leadData) : "No details yet"}
-               
-               1. If the user hasn't shared their Name, Mobile Number, and Course yet:
-                  - Greet them warmly.
-                  - Politely ask for the missing details (Name, Mobile, or Course).
-                  - Explain that this helps in providing personalized guidance.
-               2. Once you have all three details (Name, Mobile, and Course):
-                  - Acknowledge them politely.
-                  - MANDATORY: You MUST include this exact JSON tag at the VERY END of your response: [SAVE_LEAD: {"name": "...", "mobile": "...", "course": "...", "university": "..."}]
-                  - Replace "..." with the actual details. If they mentioned a specific university, capture it. If not, use "Unifost Consultation".
-               
-               STRICT RESPONSE RULES:
-               1. **Knowledge Scope**: 
-                  - ALWAYS prioritize the provided UNIVERSITY DATA for questions about specific universities, courses, fees, or specializations.
-                  - When providing university/course details, be very specific about fees, duration, and eligibility from the DATA.
-                  - **Fee Ranges**: If a user asks for a fee range (e.g., "courses under 2 Lakhs", "budget 1.5L", etc.), filter the DATA using 'min_f' and 'max_f' values and show all matching universities and courses.
-                  - **Fee Categorization**: Instead of just showing the exact fee, categorize courses into ranges. For example, if a course fee is ₹1,00,000, mention it falls in the "₹70K - ₹1.3L" range or similar logical buckets.
-                  - If a user asks about Unifost (who we are, about us, services, etc.), use the UNIFOST INFO below.
-                  - If a user asks a general question (e.g., "What is the capital of India?", "How to prepare for exams?", etc.), answer it professionally using your general knowledge (like a Google search result).
-                  - If you genuinely cannot answer a question, say: "I'm not sure about that. Would you like to speak with one of our expert counselors? Please fill out the enquiry form and we'll help you."
-               2. **Greetings**: If the user says hi/hello/etc, greet them warmly and ask for their details (Name, Mobile, Course) if not already provided.
-               3. **About Unifost**: When asked about Unifost, provide this info:
-                  - Name: ${unifostInfo.name}
-                  - Tagline: ${unifostInfo.tagline}
-                  - About: ${unifostInfo.about}
-                  - Services: ${unifostInfo.services.join(", ")}
-                  - Contact: Email: ${unifostInfo.contact.email}, Phone: ${unifostInfo.contact.phone}, WhatsApp: ${unifostInfo.contact.whatsapp}
-               4. **Formatting**: Structure your response professionally using Markdown headers:
-                  - Use '# [Title]' for main headings (Large size).
-                  - Use '## [Subheading]' for sub-sections (Medium size).
-                  - Use bullet points for lists.
-                  - Use bold for labels like **Budget Range:**, **Fees:**, **Duration:**, **Answer:**.
-               5. **Content**: 
-                  - For university queries: Provide detailed info including **University Name**, **Course**, **Fees**, **Duration**, and **Eligibility** from the DATA.
-                  - For range queries: List all universities and their specific courses that fall within the user's mentioned budget. Use the 'min_f' and 'max_f' fields for accuracy.
-                  - For general queries: Provide a clear, accurate, and professional answer based on general knowledge.
-                  - For Unifost queries: Answer using the UNIFOST INFO provided.
-               6. **Professionalism**: Ensure the tone is academic, helpful, and polite. Use clear spacing between sections.
-               7. **Support**: Provide ${supportInfo.phone} and ${supportInfo.email} if asked for contact/support or if you cannot answer.
-
-              UNIFOST INFO:
-              ${JSON.stringify(unifostInfo)}
-
-              UNIVERSITY DATA:
-              ${JSON.stringify(contextData)}`
-          },
-          {
-            role: "user",
-            content: message
-          }
-        ]
+        messages: aiMessages
       },
       {
         headers: {
@@ -213,19 +200,26 @@ export async function POST(req) {
 
         // --- DIRECT DATABASE SAVE ---
         if (extractedLead.name && extractedLead.mobile && extractedLead.course) {
-          try {
-            await connectToDatabase();
-            await User.create({
-              name: extractedLead.name,
-              mobile: extractedLead.mobile,
-              email: extractedLead.email || `lead_${Date.now()}@unifost.com`,
-              location: "Website Chatbot",
-              university: extractedLead.university || "Direct Inquiry",
-              course: extractedLead.course
-            });
-            console.log("[ChatAPI] Lead saved directly to DB:", extractedLead.name);
-          } catch (dbErr) {
-            console.error("[ChatAPI] DB Save Error:", dbErr.message);
+          // Mobile Validation: 10 digits and starts with 6,7,8,9
+          const mobileRegex = /^[6-9]\d{9}$/;
+          if (!mobileRegex.test(extractedLead.mobile)) {
+            console.log("[ChatAPI] Invalid mobile format extracted:", extractedLead.mobile);
+            // We don't save but the AI will be instructed by the prompt to re-ask in next turn
+          } else {
+            try {
+              await connectToDatabase();
+              await User.create({
+                name: extractedLead.name,
+                mobile: extractedLead.mobile,
+                email: extractedLead.email || `lead_${Date.now()}@unifost.com`,
+                location: "Website Chatbot",
+                university: extractedLead.university || "Direct Inquiry",
+                course: extractedLead.course
+              });
+              console.log("[ChatAPI] Lead saved directly to DB:", extractedLead.name);
+            } catch (dbErr) {
+              console.error("[ChatAPI] DB Save Error:", dbErr.message);
+            }
           }
         }
       } catch (e) {

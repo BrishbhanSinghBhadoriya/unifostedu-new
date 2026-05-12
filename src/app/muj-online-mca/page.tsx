@@ -25,7 +25,7 @@ import {
   FaShield,
   FaUser,
   FaUserTie,
-  FaCheckCircle,
+  FaCheck,
   FaTrophy
 } from "react-icons/fa6";
 import { X } from "lucide-react";
@@ -261,7 +261,7 @@ const MUJOnlineMCAPage = () => {
       desc: "0% or low-cost EMI (6-12 months) through partners. Flexible repayment matched to your salary hikes."
     },
     {
-      icon: FaCheckCircle,
+      icon: FaCheck,
       title: "All-Inclusive Pricing (No Hidden Charges)",
       desc: "Includes LMS access, e-content, exams, certifications, placement support, and student resources."
     },
@@ -499,7 +499,7 @@ const MUJOnlineMCAPage = () => {
                   <div className="flex flex-wrap gap-4 sm:gap-6 text-sm sm:text-base">
                     {["2 Years • 4 Semesters", "Live + Recorded Classes", "EMI Options Available", "Placement Support"].map((item) => (
                       <span key={item} className="flex items-center gap-2">
-                        <FaCheckCircle className="text-orange-400" />
+                        <FaCheck className="text-orange-400" />
                         {item}
                       </span>
                     ))}
@@ -690,7 +690,7 @@ const MUJOnlineMCAPage = () => {
                     <div className="grid sm:grid-cols-2 gap-4">
                       {subjects.map((subject, index) => (
                         <div key={index} className="flex items-start gap-3">
-                          <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1" />
+                          <FaCheck className="text-orange-500 flex-shrink-0 mt-1" />
                           <span className="text-gray-700 font-medium">{subject}</span>
                         </div>
                       ))}
@@ -712,7 +712,7 @@ const MUJOnlineMCAPage = () => {
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 shadow-lg">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <FaCheckCircle className="text-orange-600" />
+                    <FaCheck className="text-orange-600" />
                     Eligibility Requirements
                   </h3>
                   <ul className="list-disc list-inside space-y-3 text-gray-700">
@@ -725,7 +725,7 @@ const MUJOnlineMCAPage = () => {
                 </div>
                 <div className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 shadow-lg">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <FaCheckCircle className="text-orange-600" />
+                    <FaCheck className="text-orange-600" />
                     Required Documents
                   </h3>
                   <ul className="list-disc list-inside space-y-3 text-gray-700">
@@ -805,7 +805,7 @@ const MUJOnlineMCAPage = () => {
                   <div className="grid sm:grid-cols-2 gap-x-4 gap-y-3">
                     {careerRoles.map((role, index) => (
                       <div key={index} className="flex items-center gap-2 text-gray-700 hover:text-orange-600 transition-colors">
-                        <FaCheckCircle className="text-orange-500 flex-shrink-0" />
+                        <FaCheck className="text-orange-500 flex-shrink-0" />
                         <span className="font-medium">{role}</span>
                       </div>
                     ))}
