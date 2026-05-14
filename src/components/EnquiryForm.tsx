@@ -79,7 +79,7 @@ export default function EnquiryForm({
     });
   }, []);
 
-  const { register, handleSubmit, formState, setValue, getValues } = useForm<EnquiryFormValues>({
+  const { register, handleSubmit, formState, setValue, getValues, trigger } = useForm<EnquiryFormValues>({
     resolver: yupResolver(schema),
     defaultValues: {
       name: '',
@@ -108,7 +108,8 @@ export default function EnquiryForm({
     setValue('course', val, { shouldDirty: true, shouldTouch: true });
   };
 
-  const onSubmit = async (values: any) => {
+  const onSubmit = async (values: any, isWhatsApp: boolean | React.BaseSyntheticEvent = false) => {
+    const shouldRedirect = isWhatsApp === true;
     try {
       setLoading(true);
       const requestBody = {
@@ -123,6 +124,24 @@ export default function EnquiryForm({
       const response = await enquiryAPI.general(requestBody);
 
       toast.success('Enquiry submitted successfully!');
+
+      if (shouldRedirect) {
+        const targetNumber = '917042646766';
+        const composed = [
+          `Hello Sir/ Madam, I would like to connect with a counselor via WhatsApp.`,
+          values.name ? `Name: ${values.name}` : `Name: `,
+          values.mobile ? `Mobile: ${values.mobile}` : null,
+          values.email ? `Email: ${values.email}` : null,
+          (values.location || city) ? `Location: ${values.location || city}` : null,
+          (values.university || selectedUniversity) ? `University: ${values.university || selectedUniversity}` : null,
+          (values.course || program) ? `Course: ${values.course || program}` : null,
+        ].filter(Boolean).join('%0A');
+
+        const url = `https://wa.me/${targetNumber}?text=${composed}`;
+        if (typeof window !== 'undefined') {
+          window.open(url, '_blank');
+        }
+      }
 
       if (autoCloseOnSuccess && onSubmitted) {
         setTimeout(() => {
@@ -147,23 +166,14 @@ export default function EnquiryForm({
     }
   };
 
-  const handleWhatsAppConnect = () => {
-    const values = getValues();
-    const targetNumber = '917042646766';
-    const composed = [
-      `Hello Sir/ Madam, I would like to connect with a counselor via WhatsApp.`,
-      values.name ? `Name: ${values.name}` : `Name: `,
-      values.mobile ? `Mobile: ${values.mobile}` : null,
-      values.email ? `Email: ${values.email}` : null,
-      (values.location || city) ? `Location: ${values.location || city}` : null,
-      (values.university || selectedUniversity) ? `University: ${values.university || selectedUniversity}` : null,
-      (values.course || program) ? `Course: ${values.course || program}` : null,
-    ].filter(Boolean).join('%0A');
-
-    const url = `https://wa.me/${targetNumber}?text=${composed}`;
-    if (typeof window !== 'undefined') {
-      window.open(url, '_blank');
+  const handleWhatsAppConnect = async () => {
+    const isValid = await trigger();
+    if (!isValid) {
+      toast.error("Please fill in all required fields.");
+      return;
     }
+    const values = getValues();
+    await onSubmit(values, true);
   };
 
   return (
