@@ -15,9 +15,9 @@ const Faq = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalState
         "Absolutely. Amity University Online degree programs are accepted for government jobs in India and are globally recognized, making them suitable for higher studies or international employment opportunities.",
     },
     {
-      question: "What is the 2026 Amity University Online MBA fees 2026 structure?",
+      question: "What is the 2026 Amity University Online MBA fees structure?",
       answer:
-        "For the 2025 intake, the Amity University Online MBA fees structure ranges from ₹1,99,000 to ₹2,99,000 depending on the specialization. Flexible EMI plans and no-cost installment options are available for working professionals.",
+        "For the 2026 intake, the Amity University Online MBA fees structure ranges from ₹1,99,000 to ₹2,99,000 depending on the specialization. Flexible EMI plans and no-cost installment options are available for working professionals.",
     },
     {
       question: "Does Amity University Online provide placement assistance?",

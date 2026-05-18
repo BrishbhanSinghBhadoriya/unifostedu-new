@@ -172,45 +172,6 @@ const coursesSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is the Amity University Online MBA UGC-entitled and NAAC A+ accredited?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Amity University Online holds UGC entitlement and NAAC A+ accreditation, so the online MBA and every other Amity University Online degree carries the same recognition as an on-campus qualification."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is an Amity University Online degree valid for government jobs and abroad?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Absolutely. Amity University Online degree programs are accepted for government jobs in India and are globally recognized, making them suitable for higher studies or international employment opportunities."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the 2026 Amity University Online MBA fees structure?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For the 2026 intake, the Amity University Online MBA fees structure ranges from ₹1,99,000 to ₹2,99,000 depending on the specialization. Flexible EMI plans and no-cost installment options are available for working professionals."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does Amity University Online provide placement assistance?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Amity University Online offers dedicated placement assistance including virtual job fairs, resume mentoring, interview preparation, and connections with 500+ hiring partners across India."
-      }
-    }
-  ]
-};
-
 export const dynamic = "force-dynamic";
 export const revalidate = 604800;
 
@@ -235,10 +196,6 @@ export default function AmityLayout({ children }: ChildrenProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(coursesSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {children}
