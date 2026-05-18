@@ -7,7 +7,8 @@ const UserSchema = new mongoose.Schema(
     email: { type: String, required: true, trim: true },
     location: { type: String, required: true, trim: true },
     university: { type: String, required: true, trim: true },
-   course: { type: String, required: true, trim: true },
+    course: { type: String, required: true, trim: true },
+    ipAddress: { type: String, trim: true },
   },
   { timestamps: true }
 );

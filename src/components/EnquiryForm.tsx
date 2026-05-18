@@ -32,6 +32,20 @@ export default function EnquiryForm({
   const [program, setProgram] = useState(defaultProgram);
   const [selectedUniversity, setSelectedUniversity] = useState(universityName || '');
   const [city, setCity] = useState('');
+  const [ipAddress, setIpAddress] = useState('');
+
+  useEffect(() => {
+    const fetchIp = async () => {
+      try {
+        const res = await fetch('https://api.ipify.org?format=json');
+        const data = await res.json();
+        setIpAddress(data.ip);
+      } catch (error) {
+        console.error('Error fetching IP:', error);
+      }
+    };
+    fetchIp();
+  }, []);
 
   const universities = [
     'Amity University Online',
@@ -119,6 +133,7 @@ export default function EnquiryForm({
         location: values.location || city,
         university: values.university || selectedUniversity,
         course: values.course || program,
+        ipAddress: ipAddress,
       };
       
       const response = await enquiryAPI.general(requestBody);
