@@ -172,8 +172,7 @@ const coursesSchema = {
   ]
 };
 
-export const dynamic = "force-dynamic";
-export const revalidate = 604800;
+export const revalidate = 604800; // 1 week
 
 export default function AmityLayout({ children }: ChildrenProps) {
   return (

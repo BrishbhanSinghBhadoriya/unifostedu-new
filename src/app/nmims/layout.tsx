@@ -212,7 +212,6 @@ const faqSchema = {
   ]
 };
 
-export const dynamic = "force-dynamic";
 export const revalidate = 604800; // 7 days
 
 export default function NMIMSLayout({ children }: ChildrenProps) {

@@ -32,19 +32,21 @@ export default function EnquiryForm({
   const [program, setProgram] = useState(defaultProgram);
   const [selectedUniversity, setSelectedUniversity] = useState(universityName || '');
   const [city, setCity] = useState('');
-  const [ipAddress, setIpAddress] = useState('');
+  const [trackingData, setTrackingData] = useState({
+    userAgent: '',
+    referer: '',
+    origin: ''
+  });
 
   useEffect(() => {
-    const fetchIp = async () => {
-      try {
-        const res = await fetch('https://api.ipify.org?format=json');
-        const data = await res.json();
-        setIpAddress(data.ip);
-      } catch (error) {
-        console.error('Error fetching IP:', error);
-      }
-    };
-    fetchIp();
+    // Capture tracking data
+    if (typeof window !== 'undefined') {
+      setTrackingData({
+        userAgent: navigator.userAgent,
+        referer: document.referrer || 'Direct',
+        origin: window.location.origin
+      });
+    }
   }, []);
 
   const universities = [
@@ -133,8 +135,12 @@ export default function EnquiryForm({
         location: values.location || city,
         university: values.university || selectedUniversity,
         course: values.course || program,
-        ipAddress: ipAddress,
+        userAgent: trackingData.userAgent,
+        referer: trackingData.referer,
+        origin: trackingData.origin,
       };
+
+      console.log('Submitting Enquiry Data:', requestBody);
       
       const response = await enquiryAPI.general(requestBody);
 

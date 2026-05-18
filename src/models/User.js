@@ -9,6 +9,9 @@ const UserSchema = new mongoose.Schema(
     university: { type: String, required: true, trim: true },
     course: { type: String, required: true, trim: true },
     ipAddress: { type: String, trim: true },
+    userAgent: { type: String, trim: true },
+    referer: { type: String, trim: true },
+    origin: { type: String, trim: true },
   },
   { timestamps: true }
 );

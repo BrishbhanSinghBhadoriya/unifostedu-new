@@ -1,5 +1,7 @@
 import { UniversityList } from '@/data/UniversityList';
 import { fetchBlogs } from '@/lib/blogApi';
+import amritaCourses from '@/data/amritacourse.json';
+import nmimsCourses from '@/data/nmimscourses.json';
 
 export default async function sitemap() {
   const baseUrl = 'https://unifostedu.com';
@@ -15,6 +17,7 @@ export default async function sitemap() {
     { url: `${baseUrl}/bookdemo`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
     { url: `${baseUrl}/faqs`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/privacy`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.4 },
+    { url: `${baseUrl}/compare-university`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
   ];
 
   // Dynamic University routes from UniversityList
@@ -53,6 +56,32 @@ export default async function sitemap() {
     'mba-online', 'mca-online', 'ba-online', 'mcom-online', 'bcom-online', 'ma-online',
   ].map((course) => ({
     url: `${baseUrl}/smu/Courses_pages/${course}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  }));
+
+  // Amrita University course routes
+  const amritaCourseRoutes = amritaCourses.courses.map((course) => ({
+    url: `${baseUrl}/amrita/${course.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  }));
+
+  // NMIMS course routes
+  const nmimsCourseRoutes = Object.keys(nmimsCourses.programs).map((slug) => ({
+    url: `${baseUrl}/nmims/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  }));
+
+  // MUJ Online specific routes
+  const mujOnlineRoutes = [
+    'muj-online-mba', 'muj-online-mca', 'muj-online-bba', 'muj-online-bca', 'muj-online-ma'
+  ].map((route) => ({
+    url: `${baseUrl}/${route}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.8,
@@ -103,6 +132,9 @@ export default async function sitemap() {
     ...genericCourseRoutes,
     ...amityCourseRoutes,
     ...smuCourseRoutes,
+    ...amritaCourseRoutes,
+    ...nmimsCourseRoutes,
+    ...mujOnlineRoutes,
     ...workingProfessionalRoutes,
     ...staticBlogRoutes,
     ...dynamicBlogRoutes,

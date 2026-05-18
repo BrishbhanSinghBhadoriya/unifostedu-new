@@ -82,21 +82,14 @@ export const enquiryAPI = {
       data,
       { headers: { "Content-Type": "application/json" } }
     ),
-  // Submit to both internal API (to store lead) and NeoDove simultaneously
+  // Submit to internal API which handles both DB storage and NeoDove
   general: async (data) => {
-    const [localRes, neoDoveRes] = await Promise.all([
-      axios.post(
-        "/api/v1/enquiry",
-        data,
-        { headers: { "Content-Type": "application/json" } }
-      ),
-      axios.post(
-        "https://25515469-e21f-48a6-93fb-91446641fcda.neodove.com/integration/custom/4fa16adb-e429-4417-a5ba-fc6f77e3fea3/leads",
-        data,
-        { headers: { "Content-Type": "application/json" } }
-      )
-    ]);
-    return { localRes, neoDoveRes };
+    const response = await axios.post(
+      "/api/v1/enquiry",
+      data,
+      { headers: { "Content-Type": "application/json" } }
+    );
+    return response.data;
   },
 };
 

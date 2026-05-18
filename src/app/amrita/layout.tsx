@@ -214,7 +214,6 @@ const faqSchema = {
   ]
 };
 
-export const dynamic = "force-dynamic";
 export const revalidate = 604800;
 
 export default function AmritaLayout({ children }: ChildrenProps) {

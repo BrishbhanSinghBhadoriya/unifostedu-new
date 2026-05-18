@@ -49,8 +49,8 @@ export const metadata = {
 };
 
 
-// Force dynamic rendering so API fetch happens ONLY at runtime
-export const dynamic = "force-dynamic";
+// Use ISR (Incremental Static Regeneration) to revalidate data every hour
+export const revalidate = 3600; 
 
 export default async function Home() {
   const data = await getLandingData();
