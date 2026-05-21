@@ -32,7 +32,7 @@ export async function POST(req) {
       about: "Unifost Education is a premier educational consultancy that helps students find the best online university programs across India. We provide free counseling and admission assistance for various undergraduate and postgraduate courses.",
       services: [
         "Free Career Counseling",
-        "University Selection Guidance", 
+        "University Selection Guidance",
         "Admission Assistance",
         "Course Comparison",
         "Scholarship Information"
@@ -45,21 +45,47 @@ export async function POST(req) {
       }
     };
 
-    // --- DATA FILTERING LOGIC ---
-    // Extract search terms (lowercased)
     const lowerMessage = message.toLowerCase();
 
-    // Check for greetings
+    // --- SERVER-SIDE MOBILE EXTRACTION & VALIDATION (runs FIRST) ---
+    const mobileRegex = /^[6-9]\d{9}$/;
+
+    const extractedMobileFromMsg = (() => {
+      // Strip spaces, +91 or 91 prefix, then find a 10-digit number starting with 6-9
+      const cleaned = message
+        .replace(/\s+/g, "")
+        .replace(/^\+91/, "")
+        .replace(/^91(?=[6-9])/, "");
+      const found = cleaned.match(/(?<!\d)([6-9]\d{9})(?!\d)/);
+      return found ? found[1] : null;
+    })();
+
+    let mobileStatus = "not_provided";
+    let validatedMobile = leadData?.mobile || null;
+
+    if (extractedMobileFromMsg) {
+      if (mobileRegex.test(extractedMobileFromMsg)) {
+        mobileStatus = "valid";
+        validatedMobile = extractedMobileFromMsg;
+      } else {
+        mobileStatus = "invalid";
+      }
+    } else if (validatedMobile && mobileRegex.test(validatedMobile)) {
+      mobileStatus = "already_valid";
+    }
+
+    console.log(`[ChatAPI] Mobile status: ${mobileStatus}, extracted: ${extractedMobileFromMsg}, validated: ${validatedMobile}`);
+
+    // --- DATA FILTERING LOGIC ---
     const greetings = ["hi", "hello", "hey", "hii", "good morning", "good afternoon", "good evening", "namaste"];
     const isGreeting = greetings.some(g => lowerMessage.includes(g)) && lowerMessage.length < 20;
 
-    // Filter universities based on the user's query to stay within optimal prompt limits
     let filteredUniversities = coursesUniversityData.universities.map(u => ({
       university: u.universityName,
       shortName: u.shortName,
       courses: [
-        ...(u.undergraduateCourses || []).map(c => ({ 
-          n: c.courseName, 
+        ...(u.undergraduateCourses || []).map(c => ({
+          n: c.courseName,
           s: c.specializations?.join(", "),
           f: c.fees?.display,
           min_f: c.fees?.min,
@@ -67,8 +93,8 @@ export async function POST(req) {
           d: c.duration,
           e: c.eligibility
         })),
-        ...(u.postgraduateCourses || []).map(c => ({ 
-          n: c.courseName, 
+        ...(u.postgraduateCourses || []).map(c => ({
+          n: c.courseName,
           s: c.specializations?.join(", "),
           f: c.fees?.display,
           min_f: c.fees?.min,
@@ -79,17 +105,19 @@ export async function POST(req) {
       ]
     }));
 
-    // If message mentions a specific university, we prioritize its data
-    const mentionedUniv = filteredUniversities.find(u => 
-      lowerMessage.includes(u.university.toLowerCase()) || 
+    const mentionedUniv = filteredUniversities.find(u =>
+      lowerMessage.includes(u.university.toLowerCase()) ||
       (u.shortName && lowerMessage.includes(u.shortName.toLowerCase()))
     );
 
     // --- SMART PRE-FILTERING ---
-    // Extract budget from message (e.g., "under 2 lakhs", "budget 1.5L", "200000")
+    // IMPORTANT: Only extract budget if message does NOT contain a mobile number
+    // (prevents treating phone digits as budget amount)
     let budgetLimit = null;
     const lakhMatch = lowerMessage.match(/(\d+(\.\d+)?)\s*(lakh|l|lac)/);
-    const numericMatch = lowerMessage.match(/(\d{5,7})/);
+    const numericMatch = !extractedMobileFromMsg
+      ? lowerMessage.match(/(\d{5,7})/)
+      : null;
 
     if (lakhMatch) {
       budgetLimit = parseFloat(lakhMatch[1]) * 100000;
@@ -102,19 +130,16 @@ export async function POST(req) {
     if (mentionedUniv) {
       finalContextUniversities = [mentionedUniv];
     } else if (budgetLimit) {
-      // Filter universities that have at least one course within the budget
-      finalContextUniversities = filteredUniversities.filter(u => 
-        u.courses.some(c => c.min_f <= budgetLimit)
-      ).map(u => ({
-        ...u,
-        // Only include courses within the budget to save tokens
-        courses: u.courses.filter(c => c.min_f <= budgetLimit)
-      }));
+      finalContextUniversities = filteredUniversities
+        .filter(u => u.courses.some(c => c.min_f <= budgetLimit))
+        .map(u => ({
+          ...u,
+          courses: u.courses.filter(c => c.min_f <= budgetLimit)
+        }));
     }
 
-    // If we found a specific university or have a budget filter, we can be much more precise
     const contextData = {
-      universities: finalContextUniversities.slice(0, 5), // Limit to top 5 to avoid token limits
+      universities: finalContextUniversities.slice(0, 5),
       support: supportInfo,
       isFiltered: !!mentionedUniv || !!budgetLimit,
       budgetLimit: budgetLimit
@@ -122,7 +147,7 @@ export async function POST(req) {
 
     console.log(`[ChatAPI] Found ${coursesUniversityData.universities.length} universities. Filtered to: ${contextData.universities.length}`);
 
-    // Use the AI service with high-precision instructions
+    // --- AI MESSAGES ---
     const aiMessages = [
       {
         role: "system",
@@ -131,19 +156,25 @@ export async function POST(req) {
            STRICT LEAD CAPTURE STRATEGY (MANDATORY):
            Current Lead Status: ${leadData ? JSON.stringify(leadData) : "No details yet"}
 
+           IMPORTANT - Mobile Number Validation is handled SERVER-SIDE. Do NOT validate mobile numbers yourself.
+           Server has already checked the mobile number in this message.
+           Mobile Status from Server: "${mobileStatus}"
+           ${validatedMobile ? `Validated Mobile: "${validatedMobile}"` : ""}
+
+           RULES:
            1. DO NOT answer any questions about universities, courses, or fees until you have the user's NAME, MOBILE NUMBER, and COURSE.
-           2. MOBILE NUMBER VALIDATION: 
-              - The mobile number MUST be exactly 10 digits long.
-              - It MUST start with 6, 7, 8, or 9.
-              - IF the user provides an invalid number (e.g., '12345', '0987654321', or 11 digits), politely inform them that the mobile number is invalid and ask for a valid 10-digit Indian mobile number.
-           3. IF any of these 3 details (Name, Mobile, Course) are missing or invalid:
+           2. MOBILE NUMBER:
+              - If mobileStatus is "valid" or "already_valid" — the number is CONFIRMED VALID by the server. Accept it without question.
+              - If mobileStatus is "invalid" — politely ask for a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9.
+              - If mobileStatus is "not_provided" — ask the user to share their mobile number.
+              - DO NOT re-validate or second-guess the server's mobile status decision.
+           3. IF any of these 3 details (Name, Mobile, Course) are missing:
               - Acknowledge the user's message but DO NOT give the answer yet.
-              - Politely explain that to provide accurate and personalized guidance, you need their Name, valid Mobile Number, and the Course they are interested in.
-              - Ask for the missing/valid details specifically.
+              - Ask for the missing details specifically.
            4. ONLY after you have all 3 valid details (Name, Mobile, Course):
               - Provide the answer to their question in a professional format.
-              - MANDATORY: Include this exact JSON tag at the VERY END: [SAVE_LEAD: {"name": "...", "mobile": "...", "course": "...", "university": "..."}]
-              - Replace "..." with the actual details.
+              - MANDATORY: Include this exact JSON tag at the VERY END: [SAVE_LEAD: {"name": "...", "mobile": "${validatedMobile || "..."}", "course": "...", "university": "..."}]
+              - Use the validated mobile number from the server in the SAVE_LEAD tag.
 
            RESPONSE FORMATTING:
            - Use '# [Title]' for main headings.
@@ -183,7 +214,6 @@ export async function POST(req) {
       }
     );
 
-    // ✅ Safe response extraction and formatting
     let reply =
       response?.data?.choices?.[0]?.message?.content ||
       "No response from AI";
@@ -195,16 +225,18 @@ export async function POST(req) {
     if (match) {
       try {
         extractedLead = JSON.parse(match[1]);
-        // Clean up the reply by removing the tag
         reply = reply.replace(leadTagRegex, "").trim();
 
-        // --- DIRECT DATABASE SAVE ---
         if (extractedLead.name && extractedLead.mobile && extractedLead.course) {
-          // Mobile Validation: 10 digits and starts with 6,7,8,9
-          const mobileRegex = /^[6-9]\d{9}$/;
+          // Normalize mobile: strip +91, 91 prefix or spaces
+          const normalizedMobile = String(extractedLead.mobile)
+            .replace(/\s+/g, "")
+            .replace(/^\+91/, "")
+            .replace(/^91(?=[6-9])/, "");
+          extractedLead.mobile = normalizedMobile;
+
           if (!mobileRegex.test(extractedLead.mobile)) {
-            console.log("[ChatAPI] Invalid mobile format extracted:", extractedLead.mobile);
-            // We don't save but the AI will be instructed by the prompt to re-ask in next turn
+            console.log("[ChatAPI] Invalid mobile in SAVE_LEAD tag:", extractedLead.mobile);
           } else {
             try {
               await connectToDatabase();
@@ -216,7 +248,7 @@ export async function POST(req) {
                 university: extractedLead.university || "Direct Inquiry",
                 course: extractedLead.course
               });
-              console.log("[ChatAPI] Lead saved directly to DB:", extractedLead.name);
+              console.log("[ChatAPI] Lead saved to DB:", extractedLead.name, extractedLead.mobile);
             } catch (dbErr) {
               console.error("[ChatAPI] DB Save Error:", dbErr.message);
             }
@@ -227,19 +259,18 @@ export async function POST(req) {
       }
     }
 
-    // Check if the reply contains the enquiry form trigger phrase
     const enquiryTriggerPhrase = "enquiry form";
-    const shouldOpenEnquiry = reply.toLowerCase().includes(enquiryTriggerPhrase) || 
-                              reply.includes("Would you like to speak with one of our expert counselors");
+    const shouldOpenEnquiry =
+      reply.toLowerCase().includes(enquiryTriggerPhrase) ||
+      reply.includes("Would you like to speak with one of our expert counselors");
 
-    return Response.json({ 
+    return Response.json({
       reply,
       openEnquiry: shouldOpenEnquiry,
       leadData: extractedLead
     });
 
   } catch (error) {
-    // ✅ Full Debugging
     console.error("===== ERROR START =====");
     console.error("Message:", error.message);
     console.error("Status:", error.response?.status);
