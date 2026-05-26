@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import ApplyEnquiryModal from "@/components/ApplyEnquiryModal";
 import Headers from "../_components/Headers";
@@ -346,10 +347,13 @@ const AmityMCALandingPage = () => {
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
                   <div className="relative w-full h-96 md:h-[520px]">
-                    <img
+                    <Image
                       src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=800&fit=crop"
                       alt="Amity Online MCA Students"
+                      fill
                       className="w-full h-full object-cover rounded-2xl shadow-2xl"
+                      priority
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
                 </motion.div>
@@ -412,8 +416,15 @@ const AmityMCALandingPage = () => {
                     viewport={{ once: true }}
                     whileHover={{ scale: 1.03 }}
                   >
-                    <div className="h-48 w-full">
-                      <img src={spec.image} alt={spec.name} className="w-full h-full object-cover" />
+                    <div className="relative h-48 w-full">
+                      <Image 
+                        src={spec.image} 
+                        alt={spec.name} 
+                        fill 
+                        className="w-full h-full object-cover" 
+                        loading="lazy"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
                     </div>
                     <div className="p-6 text-center">
                       <h3 className="text-xl font-bold text-gray-900">{spec.name}</h3>
@@ -784,11 +795,14 @@ const AmityMCALandingPage = () => {
             <div className="max-w-7xl mx-auto px-4 md:px-6">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                  <div className="w-32 h-10 bg-white rounded flex items-center justify-center mb-4">
-                 <img 
-                 src="images/logos/amitylogo.jpg" 
+                  <div className="relative w-32 h-10 bg-white rounded flex items-center justify-center mb-4">
+                 <Image 
+                 src="/images/logos/amitylogo.jpg" 
                  alt="Amity Online" 
-                 className="h-8 object-contain"
+                 fill
+                 className="h-8 object-contain p-1"
+                 loading="lazy"
+                 sizes="128px"
                  />
                 </div>
                   <p className="text-gray-400 text-sm">Transforming lives through quality online education</p>

@@ -255,12 +255,15 @@ const Vgu = () => {
             <div className="flex items-center justify-between h-16 lg:h-20">
               {/* Left Logo */}
               <div className="flex items-center gap-2 lg:gap-4">
-                <img
-                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgulogo_jrxgjd.webp"
-                  alt="VGU Online Jaipur Logo"
-                  className="h-12 w-50 sm:h-10 lg:h-12"
-                />
-
+                <div className="relative h-12 w-40 sm:h-10 lg:h-12 sm:w-32 lg:w-48">
+                  <Image
+                    src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgulogo_jrxgjd.webp"
+                    alt="VGU Online Jaipur Logo"
+                    fill
+                    className="object-contain"
+                    loading="eager"
+                  />
+                </div>
               </div>
 
               {/* Right Side - Responsive */}
@@ -329,25 +332,14 @@ const Vgu = () => {
               >
                 {/* Background Image Container with improved responsiveness */}
                 <div className="absolute inset-0">
-                  {/* Picture element for different screen sizes */}
-                  <picture className="w-full h-full">
-                    {/* Mobile - Portrait optimized crop */}
-                    <source
-                      media="(max-width: 640px)"
-                      srcSet="https://res.cloudinary.com/didkrwhbu/image/upload/c_fill,g_center,w_640,h_1000,q_auto,f_auto/v1762327870/vguonline_orn06m.webp"
-                    />
-                    {/* Tablet - Balanced crop */}
-                    <source
-                      media="(max-width: 1024px)"
-                      srcSet="https://res.cloudinary.com/didkrwhbu/image/upload/c_fill,g_center,w_1024,h_800,q_auto,f_auto/v1762327870/vguonline_orn06m.webp"
-                    />
-                    {/* Desktop - Wide crop */}
-                    <img
-                      src="https://res.cloudinary.com/didkrwhbu/image/upload/c_fill,g_center,w_1920,h_1080,q_auto,f_auto/v1762327870/vguonline_orn06m.webp"
-                      alt="Vivekananda Global University Jaipur Online Campus"
-                      className="w-full h-full object-cover object-center"
-                    />
-                  </picture>
+                  <Image
+                    src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327870/vguonline_orn06m.webp"
+                    alt="Vivekananda Global University Jaipur Online Campus"
+                    fill
+                    className="object-cover object-center"
+                    priority
+                    sizes="100vw"
+                  />
 
                   {/* Gradient Overlay - Responsive */}
                   <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/60 sm:from-black/60 sm:via-black/30 sm:to-black/50"></div>

@@ -1,6 +1,7 @@
 'use client';
 import PageContent from '@/components/PageContent/PageContent';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
+import Image from 'next/image';
 import { optimizeCloudinary } from '@/utils/cloudinary';
 import { useEffect, useState } from 'react';
 import { FaPhone } from "react-icons/fa";
@@ -297,11 +298,15 @@ const [openModal, setOpenModal] = useState<OpenModalState>(null);
             <div className="flex items-center justify-between h-16 lg:h-20">
               {/* Left Logo */}
               <div className="flex items-center gap-2 lg:gap-4">
-                <img
-                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipallogo_yduega.jpg"
-                  alt="SMU Logo"
-                  className="h-8 w-auto sm:h-10 lg:h-12"
-                />
+                <div className="relative h-8 w-32 sm:h-10 sm:w-40 lg:h-12 lg:w-48">
+                  <Image
+                    src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipallogo_yduega.jpg"
+                    alt="SMU Logo"
+                    fill
+                    className="object-contain"
+                    loading="eager"
+                  />
+                </div>
                 <h1 className="font-queens text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold">
                   <span className="text-[#f26722]">Online</span>{" "}
                   <span className="text-gray-800">SMU</span>

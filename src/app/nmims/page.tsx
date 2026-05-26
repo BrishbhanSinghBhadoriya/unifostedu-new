@@ -231,7 +231,15 @@ const NMIMSLandingPage = () => {
                 className={`absolute inset-0 transition-opacity duration-1000 ${idx === currentSlide ? 'opacity-100' : 'opacity-0'
                   }`}
               >
-                <img src={img} alt={`Slide ${idx + 1}`} className="w-full h-full object-cover" />
+                <Image 
+                  src={img} 
+                  alt={`Slide ${idx + 1}`} 
+                  fill
+                  className="object-cover" 
+                  priority={idx === 0}
+                  loading={idx === 0 ? "eager" : "lazy"}
+                  sizes="100vw"
+                />
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-900/80 to-purple-600/60" />
               </div>
             ))}
@@ -304,11 +312,14 @@ const NMIMSLandingPage = () => {
 
               {/* RIGHT IMAGE – STICKY FEEL */}
               <div className="lg:col-span-5 relative">
-                <div className="sticky top-28">
-                  <img
+                <div className="sticky top-28 h-[400px] lg:h-[500px]">
+                  <Image
                     src="https://res.cloudinary.com/didkrwhbu/image/upload/v1767172316/nmims_about_nflafi.png"
                     alt="NMIMS Campus"
-                    className="rounded-2xl shadow-2xl w-full object-cover"
+                    fill
+                    className="rounded-2xl shadow-2xl object-cover"
+                    loading="lazy"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
                   />
 
                 </div>

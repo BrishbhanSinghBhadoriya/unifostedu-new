@@ -385,11 +385,15 @@ const MUJOnlineMCAPage = () => {
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
             <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
               <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-4 flex-shrink-0">
-                <img 
-                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" 
-                  alt="Manipal University Jaipur Logo" 
-                  className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto" 
-                />
+                <div className="relative h-6 sm:h-8 md:h-10 lg:h-12 w-32 sm:w-40 md:w-48 lg:w-56">
+                  <Image 
+                    src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" 
+                    alt="Manipal University Jaipur Logo" 
+                    fill
+                    className="object-contain" 
+                    loading="eager"
+                  />
+                </div>
               </div>
 
               <div className="flex items-center gap-1.5 sm:gap-2 md:gap-4 flex-1 justify-end">
@@ -460,11 +464,15 @@ const MUJOnlineMCAPage = () => {
                   className="space-y-3 sm:space-y-4 md:space-y-6"
                 >
                   <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 border border-white/30">
-                    <img 
-                      src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" 
-                      alt="Manipal University Jaipur Logo" 
-                      className="h-6 sm:h-8 w-auto" 
-                    />
+                    <div className="relative h-6 sm:h-8 w-24 sm:w-32">
+                      <Image 
+                        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" 
+                        alt="Manipal University Jaipur Logo" 
+                        fill
+                        className="object-contain" 
+                        loading="eager"
+                      />
+                    </div>
                     <span className="text-sm sm:text-base">UGC-Entitled • NAAC A+</span>
                   </div>
 

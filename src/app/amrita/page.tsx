@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { 
   FaFacebookF, 
   FaInstagram, 
@@ -211,11 +212,15 @@ export default function AmritaOnlinePage() {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex items-center">
-              <img 
-                src="https://res.cloudinary.com/didkrwhbu/image/upload/v1769599002/amiritalogo_th3oxg.png" 
-                alt="Amrita Online Logo" 
-                className="h-12"
-              />
+              <div className="relative h-12 w-48">
+                <Image 
+                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1769599002/amiritalogo_th3oxg.png" 
+                  alt="Amrita Online Logo" 
+                  fill
+                  className="object-contain"
+                  loading="eager"
+                />
+              </div>
             </div>
 
             {/* Desktop Navigation */}
@@ -290,10 +295,13 @@ export default function AmritaOnlinePage() {
         
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img
+          <Image
             src="https://res.cloudinary.com/didkrwhbu/image/upload/v1769666385/amirita-hero2_vph9wy.png"   
             alt="Amrita Online"
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
@@ -635,43 +643,43 @@ export default function AmritaOnlinePage() {
 
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="mb-4 flex justify-center">
-                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770013884/ranking-group-naac_oape2r.svg" alt="NAAC A++ Accredited" className="h-20" />
+              <div className="mb-4 flex justify-center relative h-20">
+                <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770013884/ranking-group-naac_oape2r.svg" alt="NAAC A++ Accredited" fill className="object-contain" loading="lazy" sizes="100px" />
               </div>
               <p className="font-semibold">NAAC A++ Grade</p>
               <p className="text-sm text-gray-600">Highest Accreditation</p>
             </div>
             <div className="text-center">
-              <div className="mb-4 flex justify-center">
-                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014184/nirf-logo-2025_i2ftca.svg" alt="NIRF Ranking" className="h-20" />
+              <div className="mb-4 flex justify-center relative h-20">
+                <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014184/nirf-logo-2025_i2ftca.svg" alt="NIRF Ranking" fill className="object-contain" loading="lazy" sizes="100px" />
               </div>
               <p className="font-semibold">NIRF Ranking 8</p>
               <p className="text-sm text-gray-600">Top Private University in India</p>
             </div>
             <div className="text-center">
-              <div className="mb-4 flex justify-center">
-                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014184/global_xoo0ud.svg" alt="Global Top 50" className="h-20" />
+              <div className="mb-4 flex justify-center relative h-20">
+                <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014184/global_xoo0ud.svg" alt="Global Top 50" fill className="object-contain" loading="lazy" sizes="100px" />
               </div>
               <p className="font-semibold">Global Top 50</p>
               <p className="text-sm text-gray-600">THE Impact Rankings 2025</p>
             </div>
             <div className="text-center">
-              <div className="mb-4 flex justify-center">
-                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014185/wur_yt2xei.svg" alt="#1 for International faculty" className="h-20" />
+              <div className="mb-4 flex justify-center relative h-20">
+                <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014185/wur_yt2xei.svg" alt="#1 for International faculty" fill className="object-contain" loading="lazy" sizes="100px" />
               </div>
               <p className="font-semibold">1 International Faculty</p>
               <p className="text-sm text-gray-600">Leading in Global Expertise</p>
             </div>
             <div className="text-center">
-              <div className="mb-4 flex justify-center">
-                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014184/ugc_dfjvyk.svg" alt="#1 for International faculty" className="h-20" />
+              <div className="mb-4 flex justify-center relative h-20">
+                <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014184/ugc_dfjvyk.svg" alt="#1 for International faculty" fill className="object-contain" loading="lazy" sizes="100px" />
               </div>
               <p className="font-semibold">By UGC for highest Standards</p>
               <p className="text-sm text-gray-600">UGC Grant</p>
             </div>
             <div className="text-center">
-              <div className="mb-4 flex justify-center">
-                <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014184/private_r0jlvw.svg" alt="#1 for International faculty" className="h-20" />
+              <div className="mb-4 flex justify-center relative h-20">
+                <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770014184/private_r0jlvw.svg" alt="#1 for International faculty" fill className="object-contain" loading="lazy" sizes="100px" />
               </div>
               <p className="font-semibold">World University Ranking 2020</p>
               <p className="text-sm text-gray-600"> No-1 in Private university</p>
@@ -995,8 +1003,8 @@ export default function AmritaOnlinePage() {
             </h3>
             <div className="flex flex-wrap justify-center items-center gap-8">
               {(studyAbroadContent[activeStudyAbroadTab] as any).images?.map((imgSrc: string, index: number) => (
-                <div key={index} className="w-32 h-16 bg-white rounded flex items-center justify-center hover:shadow-md transition-shadow p-2 border border-gray-100">
-                  <img src={imgSrc} alt="Partner University" className="max-w-full max-h-full object-contain" />
+                <div key={index} className="w-32 h-16 bg-white rounded relative flex items-center justify-center hover:shadow-md transition-shadow p-2 border border-gray-100">
+                  <Image src={imgSrc} alt="Partner University" fill className="object-contain p-2" loading="lazy" sizes="120px" />
                 </div>
               ))}
             </div>

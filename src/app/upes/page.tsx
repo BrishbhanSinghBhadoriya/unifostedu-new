@@ -168,11 +168,15 @@ const Upes = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16 lg:h-20">
               <div className="flex items-center gap-2 lg:gap-4">
-                <img
-                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327864/upes_logo_nogkrn.png"
-                  alt="UPES University Logo"
-                  className="h-12 w-50 sm:h-10 lg:h-12"
-                />
+                <div className="relative h-12 w-48 sm:h-10 sm:w-40 lg:h-12 lg:w-56">
+                  <Image
+                    src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327864/upes_logo_nogkrn.png"
+                    alt="UPES University Logo"
+                    fill
+                    className="object-contain"
+                    loading="eager"
+                  />
+                </div>
               </div>
 
               <div className="flex items-center gap-2 sm:gap-4">
@@ -784,7 +788,16 @@ const Upes = () => {
                   className="space-y-4"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327864/upes_logo_nogkrn.png" alt="UPES Logo" className="h-10 w-auto bg-white" />
+                    <div className="relative h-10 w-32 bg-white rounded flex items-center justify-center p-1">
+                      <Image
+                        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327864/upes_logo_nogkrn.png"
+                        alt="UPES Logo"
+                        fill
+                        className="object-contain p-1"
+                        loading="lazy"
+                        sizes="128px"
+                      />
+                    </div>
                     <span className="text-xl font-bold text-[#d9235c]">UPES</span>
                   </div>
                   <p className="text-sm text-gray-400 leading-relaxed">

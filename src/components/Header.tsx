@@ -449,7 +449,8 @@ const Header = () => {
                     height={80}
                     sizes="(max-width: 640px) 120px, 160px"
                     className="h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 2xl:h-20 w-auto transition-transform duration-300 group-hover:scale-105"
-                    loading="eager"
+                    priority
+                    fetchPriority="high"
                   />
                 </div>
               </Link>
@@ -477,7 +478,10 @@ const Header = () => {
                 <div className="relative">
                   <button
                     onClick={() => setMenuOpen(menuOpen === "explore" ? null : "explore")}
-                    className="group relative px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg text-slate-700 hover:text-blue-600 font-medium text-sm transition-all duration-200 flex items-center gap-2 whitespace-nowrap">
+                    className="group relative px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg text-slate-700 hover:text-blue-600 font-medium text-sm transition-all duration-200 flex items-center gap-2 whitespace-nowrap"
+                    aria-label="Toggle Universities Menu"
+                    aria-expanded={menuOpen === "explore"}
+                    aria-haspopup="true">
                     <FaBuildingColumns className="text-sm flex-shrink-0" />
                     <span>Universities</span>
                     <FaChevronDown
@@ -532,7 +536,10 @@ const Header = () => {
                 <div className="relative">
                   <button
                     onClick={() => setMenuOpen(menuOpen === "tools" ? null : "tools")}
-                    className="group relative px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg text-slate-700 hover:text-blue-600 font-medium text-sm transition-all duration-200 flex items-center gap-2 whitespace-nowrap">
+                    className="group relative px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg text-slate-700 hover:text-blue-600 font-medium text-sm transition-all duration-200 flex items-center gap-2 whitespace-nowrap"
+                    aria-label="Toggle Tools Menu"
+                    aria-expanded={menuOpen === "tools"}
+                    aria-haspopup="true">
                     <FaScrewdriverWrench className="text-sm flex-shrink-0" />
                     <span>Tools</span>
                     <FaChevronDown
@@ -626,7 +633,8 @@ const Header = () => {
               <div className="flex items-center gap-2 lg:hidden flex-shrink-0">
                 <button
                   onClick={() => router.push("/compare-university")}
-                  className="relative flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-orange-600 font-semibold text-xs shadow-sm hover:shadow-md hover:scale-[1.03] transition-all duration-200 cursor-pointer whitespace-nowrap">
+                  className="relative flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-orange-600 font-semibold text-xs shadow-sm hover:shadow-md hover:scale-[1.03] transition-all duration-200 cursor-pointer whitespace-nowrap"
+                  aria-label="Compare Universities using AI">
                   <span className="absolute -top-1 -right-1 bg-rose-600 text-white text-[8px] font-bold px-1.5 py-0.5 rounded-md shadow-md">
                     AI
                   </span>
@@ -636,7 +644,9 @@ const Header = () => {
 
                 <button
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                  className="p-2.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all duration-200">
+                  className="p-2.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all duration-200"
+                  aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+                  aria-expanded={mobileMenuOpen}>
                   {mobileMenuOpen ? (
                     < FaXmark className="text-xl" />
                   ) : (

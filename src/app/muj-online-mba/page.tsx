@@ -259,11 +259,15 @@ const MUJOnlineMBAPage = () => {
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
             <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
               <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-4 flex-shrink-0">
-                <img 
-                  src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" 
-                  alt="Manipal University Logo" 
-                  className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto" 
-                />
+                <div className="relative h-6 w-32 sm:h-8 sm:w-40 md:h-10 md:w-48 lg:h-12 lg:w-56">
+                  <Image 
+                    src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" 
+                    alt="Manipal University Logo" 
+                    fill
+                    className="object-contain" 
+                    loading="eager"
+                  />
+                </div>
                 <h1 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-orange-600">
                   
                 </h1>
@@ -337,11 +341,15 @@ const MUJOnlineMBAPage = () => {
                   className="space-y-3 sm:space-y-4 md:space-y-6"
                 >
                   <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 border border-white/30">
-                    <img 
-                      src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" 
-                      alt="Manipal University Jaipur Logo" 
-                      className="h-6 sm:h-8 w-auto" 
-                    />
+                    <div className="relative h-6 w-24 sm:h-8 sm:w-32">
+                      <Image 
+                        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" 
+                        alt="Manipal University Jaipur Logo" 
+                        fill
+                        className="object-contain" 
+                        loading="eager"
+                      />
+                    </div>
                     <span className="text-sm sm:text-base">UGC-Entitled • NAAC A+</span>
                   </div>
 
@@ -1196,8 +1204,16 @@ const MUJOnlineMBAPage = () => {
                        className="space-y-4"
                      >
                       <div className="flex items-center gap-3 mb-4 bg-white rounded-full p-3">
-                         <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" alt="Manipal" className="h-10 w-auto" />
-                        
+                         <div className="relative h-10 w-32">
+                           <Image 
+                             src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" 
+                             alt="Manipal" 
+                             fill
+                             className="object-contain" 
+                             loading="lazy"
+                             sizes="128px"
+                           />
+                         </div>
                        </div>
                        <p className="text-sm text-gray-400 leading-relaxed">
                          UGC-entitled, NAAC A+ accredited online degrees designed for modern learners. 

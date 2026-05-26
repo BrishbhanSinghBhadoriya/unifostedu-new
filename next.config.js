@@ -83,6 +83,7 @@ async headers() {
   // Compression and React strict mode
   compress: true,
   reactStrictMode: true,
+  poweredByHeader: false,
 
   // Reduce bundle size
 

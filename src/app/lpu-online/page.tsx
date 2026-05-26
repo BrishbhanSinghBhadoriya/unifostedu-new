@@ -334,11 +334,15 @@ const LpuOnline = () => {
                 <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
                   {/* Left Logo */}
                   <div className="flex items-center gap-1 sm:gap-2 lg:gap-4">
-                    <img
-                      src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327362/LPU-Online-Logo_blodcq.svg"
-                      alt="LPU Online Logo"
-                      className="h-6 w-auto sm:h-8 lg:h-12"
-                    />
+                    <div className="relative h-6 w-24 sm:h-8 sm:w-32 lg:h-12 lg:w-48">
+                      <Image
+                        src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327362/LPU-Online-Logo_blodcq.svg"
+                        alt="LPU Online Logo"
+                        fill
+                        className="object-contain"
+                        loading="eager"
+                      />
+                    </div>
                   </div>
 
                   {/* Right Side - Responsive */}
@@ -430,11 +434,15 @@ const LpuOnline = () => {
                     >
                       {/* University Badge */}
                       <div className="inline-flex items-center gap-1 sm:gap-3 bg-white/20 backdrop-blur-sm rounded-full px-3 sm:px-6 py-1.5 sm:py-3 border border-white/30">
-                        <img
-                          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327362/LPU-Online-Logo_blodcq.svg"
-                          alt="LPU Logo"
-                          className="h-5 sm:h-8 w-auto"
-                        />
+                        <div className="relative h-5 w-12 sm:h-8 sm:w-20">
+                          <Image
+                            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327362/LPU-Online-Logo_blodcq.svg"
+                            alt="LPU Logo"
+                            fill
+                            className="object-contain"
+                            loading="eager"
+                          />
+                        </div>
                         <span className="text-xs sm:text-lg font-semibold">Lovely Professional University</span>
                       </div>
 
@@ -2103,8 +2111,15 @@ const LpuOnline = () => {
                       className="space-y-4 sm:space-y-6"
                     >
                       <div className="flex items-center gap-3 sm:gap-4">
-                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg">
-                          <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327362/LPU-Online-Logo_blodcq.svg" alt="LPU" className="h-8 sm:h-10 w-auto" />
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg relative overflow-hidden">
+                          <Image
+                            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327362/LPU-Online-Logo_blodcq.svg"
+                            alt="LPU"
+                            fill
+                            className="object-contain p-2"
+                            loading="lazy"
+                            sizes="64px"
+                          />
                         </div>
                         <div>
                           <h3 className="text-xl sm:text-2xl font-bold text-white">LPU Online</h3>

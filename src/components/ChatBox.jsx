@@ -342,6 +342,8 @@ const ChatBox = () => {
         onPointerUp={handlePointerUp}
         onClick={handleButtonClick}
         className="robot-button fixed"
+        aria-label={isOpen ? "Close chat assistant" : "Open chat assistant"}
+        aria-expanded={isOpen}
         style={{ 
           transform: isMounted && typeof window !== 'undefined' && window.innerWidth > 768 
             ? `translate(${position.x}px, ${position.y}px)` 
@@ -364,6 +366,8 @@ const ChatBox = () => {
             loop
             muted
             playsInline
+            preload="none"
+            aria-hidden="true"
             className="robot-image"
           />
         </div>
@@ -373,6 +377,9 @@ const ChatBox = () => {
       {isOpen && (
         <div 
           className="chat-modal-container fixed"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Chat with Prof.Unique AI Assistant"
           style={{ 
             transform: isMounted && typeof window !== 'undefined' && window.innerWidth > 768 
               ? `translate(${position.x}px, ${position.y}px)` 
@@ -383,12 +390,13 @@ const ChatBox = () => {
             <button
               onClick={() => setIsOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors z-10"
+              aria-label="Close chat"
             >
-              <span className="text-2xl">✕</span>
+              <span className="text-2xl" aria-hidden="true">✕</span>
             </button>
             <div className="flex items-center gap-3 mb-4 border-b pb-3 shrink-0">
               <div className="relative">
-                <Image src="/uni.webp" alt="bot" width={40} height={40} className="rounded-full ring-2 ring-blue-100" />
+                <Image src="/uni.webp" alt="Prof.Unique AI Assistant" width={40} height={40} className="rounded-full ring-2 ring-blue-100" />
                 <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
               </div>
               <div>
@@ -397,7 +405,7 @@ const ChatBox = () => {
               </div>
             </div>
             
-            <div className="flex-1 overflow-y-auto p-2 sm:p-4 bg-gray-50/50 rounded-xl mb-4 chat-messages-container">
+            <div className="flex-1 overflow-y-auto p-2 sm:p-4 bg-gray-50/50 rounded-xl mb-4 chat-messages-container" aria-live="polite" aria-label="Chat messages" role="log">
               {messages.map((msg) => (
                 <div key={msg.id} className={`flex mb-3 ${msg.sender === "user" ? "justify-end" : "justify-start"}`}>
                   <div
@@ -455,16 +463,20 @@ const ChatBox = () => {
               <div ref={messagesEndRef} />
             </div>
 
-            <form onSubmit={handleSendMessage} className="flex gap-2 shrink-0 bg-white p-1 rounded-xl border border-gray-100 shadow-sm">
+            <form onSubmit={handleSendMessage} className="flex gap-2 shrink-0 bg-white p-1 rounded-xl border border-gray-100 shadow-sm" role="search" aria-label="Chat input">
+              <label htmlFor="chat-input" className="sr-only">Type your message</label>
               <input
+                id="chat-input"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 placeholder="Ask about courses, fees..."
                 className="flex-1 px-4 py-2 text-sm focus:outline-none bg-transparent"
+                aria-label="Type your message"
               />
               <button 
                 type="submit" 
                 disabled={isLoading} 
+                aria-label="Send message"
                 className="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

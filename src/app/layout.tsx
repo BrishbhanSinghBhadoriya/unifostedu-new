@@ -115,16 +115,19 @@ export default function RootLayout({ children }: ChildrenProps) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head>
+        <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <OrganizationSchema />
 
         {/* Educational Organization Schema */}
        {/* Google Ads Global Site Tag */}
-{/* Google Ads Global Site Tag */}
 <Script
   src="https://www.googletagmanager.com/gtag/js?id=AW-17800709438"
-  strategy="lazyOnload"
+  strategy="afterInteractive"
 />
-<Script id="gtag-init" strategy="lazyOnload">
+<Script id="gtag-init" strategy="afterInteractive">
 {`
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}

@@ -86,6 +86,9 @@ const BlogsDropdown = ({
     <div className="relative">
       <button
         onClick={handleToggle}
+        aria-label="Toggle Blogs Menu"
+        aria-expanded={menuOpen === "blogs"}
+        aria-haspopup="true"
         className={`group relative flex items-center gap-2 transition-all duration-200 font-medium text-sm ${
           variant === "header" 
             ? "px-4 py-2 rounded-lg text-slate-700 hover:text-blue-600" 
