@@ -66,29 +66,34 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-              {/* Mobile: Show slider first, then content. Desktop: Show content first, then slider */}
-
-              {/* Mobile Slider - Show first on mobile */}
-              <div className="block lg:hidden order-1">
-                {/* Right Content - Visual Panel for Mobile */}
-                <div className="relative mb-8">
+              {/* Slider Visual - Positioned first on mobile, second on desktop */}
+              <div className="order-1 lg:order-2">
+                {/* Right Content - Visual Panel */}
+                <div className="relative mb-8 lg:mb-0">
                   {/* Main Visual Container */}
                   <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-4 shadow-2xl border border-white/20">
                     {/* Slider Container */}
                     <div className="relative h-56 sm:h-64 md:h-72 lg:h-80 rounded-2xl overflow-hidden mb-6 bg-gray-100">
-                      <div className="absolute inset-0">
-                        <Image
+                      <AnimatePresence initial={slide === 0} mode="wait">
+                        <motion.div
+                          key={slide}
+                          className="absolute inset-0"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <Image
                           fill
                           src={slidesToUse[slide].src}
                           alt={`${slidesToUse[slide].title} | UNIFOST`}
-                          priority={slide === 0}
-                          loading={slide === 0 ? "eager" : "lazy"}
+                          loading="eager"
                           sizes="(max-width: 768px) 100vw, 50vw"
                           className="object-contain rounded-2xl"
-                          decoding="async"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
-                      </div>
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
+                        </motion.div>
+                      </AnimatePresence>
 
                       {/* Slide Indicators */}
                       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
@@ -136,8 +141,8 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                 </div>
               </div>
 
-              {/* Left Content */}
-              <div className="text-center lg:text-left space-y-8 order-2 lg:order-none">
+              {/* Left Content - Positioned second on mobile, first on desktop */}
+              <div className="text-center lg:text-left space-y-8 order-2 lg:order-1">
                 {/* Trust Badge */}
                 <div className="inline-flex items-center mt-5 gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-blue-200 text-blue-700 text-sm font-medium shadow-lg">
                   <FaStar className="text-yellow-500 " />
@@ -213,83 +218,6 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                   ))}
                 </div>
               </div>
-
-              {/* Right Content - Visual Panel - Desktop Only */}
-              <div
-
-                className="relative hidden lg:block lg:order-2"
-              >
-                {/* Main Visual Container */}
-                <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-4 shadow-2xl border border-white/20">
-                  {/* Slider Container */}
-                  <div className="relative h-56 sm:h-64 md:h-72 lg:h-80 rounded-2xl overflow-hidden mb-6 bg-gray-100">
-                    <AnimatePresence initial={false} mode="wait">
-                      <motion.div
-                        key={slide}
-                        className="absolute inset-0"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <Image
-                          fill
-                          src={slidesToUse[slide].src}
-                          alt={`${slidesToUse[slide].title} | UNIFOST`}
-                          priority={slide === 0}
-                          loading={slide === 0 ? "eager" : "lazy"}
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                          className="object-contain rounded-2xl"
-                          decoding="async"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
-                      </motion.div>
-                    </AnimatePresence>
-
-                    {/* Slide Indicators */}
-                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
-                      {slidesToUse.map((_, i) => (
-                        <button
-                          key={i}
-                          onClick={() => setSlide(i)}
-                          className={`h-4 w-4 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 ${i === slide ? "bg-white w-8" : "bg-white/60 hover:bg-white/80"
-                            }`}
-                          aria-label={`Go to slide ${i + 1}`}
-                          aria-pressed={i === slide}
-                        />
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Content Cards */}
-                  <div className="space-y-4">
-                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-xl border border-blue-100">
-                      <h3 className="font-semibold text-gray-900 mb-2">{slidesToUse[slide].title}</h3>
-                      <p className="text-sm text-gray-600">{slidesToUse[slide].description}</p>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="bg-green-100 p-3 rounded-lg border border-green-300 text-center">
-                        <div className="text-green-800 font-bold text-lg">UGC</div>
-                        <div className="text-xs text-green-900">Approved</div>
-                      </div>
-                      <div className="bg-purple-50 p-3 rounded-lg border border-purple-100 text-center">
-                        <div className="text-purple-600 font-bold text-lg">24/7</div>
-                        <div className="text-xs text-purple-700">Support</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Floating Elements */}
-                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center shadow-lg animate-bounce">
-                  <FaGraduationCap className="text-white text-2xl" />
-                </div>
-
-                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-green-400 to-teal-400 rounded-full flex items-center justify-center shadow-lg animate-pulse">
-                  <MdPeople className="text-white text-xl" />
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -300,7 +228,7 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               {[
                 {
-                  icon: FaLocationDot ,
+                  icon: FaLocationDot,
                   title: "Find Universities",
                   desc: "Discover top online universities near you",
                   action: () => scrollToId("top-partner-universities")

@@ -249,6 +249,22 @@ export async function POST(req) {
                 course: extractedLead.course
               });
               console.log("[ChatAPI] Lead saved to DB:", extractedLead.name, extractedLead.mobile);
+
+              // Send to New CRM Sync
+              if (process.env.CRM_API_URL) {
+                axios.post(
+                  process.env.CRM_API_URL,
+                  {
+                    name: extractedLead.name,
+                    phone: extractedLead.mobile,
+                    email: extractedLead.email || "",
+                    source: "website_chatbot",
+                    city: "Website Chatbot",
+                    notes: `Chatbot Inquiry - University: ${extractedLead.university || 'N/A'}, Course: ${extractedLead.course}`
+                  },
+                  { headers: { "Content-Type": "application/json" } }
+                ).catch(err => console.error('[ChatAPI] CRM Sync Error:', err.message));
+              }
             } catch (dbErr) {
               console.error("[ChatAPI] DB Save Error:", dbErr.message);
             }

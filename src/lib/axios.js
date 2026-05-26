@@ -47,21 +47,41 @@ export const authAPI = {
 // 🧩 Demo/Enquiry API
 export const demoAPI = {
   bookDemo: async (data) => {
-    const [localRes, neoDoveRes] = await Promise.all([
-      axios.post(
-        "/api/v1/enquiry",
-        data,
-        { headers: { "Content-Type": "application/json" } }
-      ),
+    const localRes = axios.post(
+      "/api/v1/enquiry",
+      data,
+      { headers: { "Content-Type": "application/json" } }
+    ).catch(err => {
+      console.error('Local API Error:', err.message);
+      return null;
+    });
 
-      axios.post(
-        "https://25515469-e21f-48a6-93fb-91446641fcda.neodove.com/integration/custom/4fa16adb-e429-4417-a5ba-fc6f77e3fea3/leads",
-        data,
-        { headers: { "Content-Type": "application/json" } }
-      )
-    ]);
+    const neoDoveRes = axios.post(
+      "https://25515469-e21f-48a6-93fb-91446641fcda.neodove.com/integration/custom/4fa16adb-e429-4417-a5ba-fc6f77e3fea3/leads",
+      data,
+      { headers: { "Content-Type": "application/json" } }
+    ).catch(err => {
+      console.error('NeoDove Error:', err.message);
+      return null;
+    });
 
-    return { localRes, neoDoveRes };
+    const crmRes = process.env.NEXT_PUBLIC_CRM_API_URL ? axios.post(
+      process.env.NEXT_PUBLIC_CRM_API_URL,
+      {
+        name: data.name,
+        phone: data.phone || data.mobile,
+        email: data.email || "",
+        source: "website",
+        city: data.city || data.location || "",
+        notes: `Book Demo - University: ${data.university}, Course: ${data.course}`
+      },
+      { headers: { "Content-Type": "application/json" } }
+    ).catch(err => {
+      console.error('CRM Sync Error:', err.message);
+      return null;
+    }) : Promise.resolve(null);
+
+    return Promise.all([localRes, neoDoveRes, crmRes]);
   }
 };
 
@@ -70,19 +90,63 @@ const API_ENDPOINT = process.env.NEXT_PUBLIC_API_ENDPOINT || "";
 
 // 🧩 Specific enquiries (absolute URLs as provided)
 export const enquiryAPI = {
-  videoCall: (data) =>
-    axios.post(
+  videoCall: async (data) => {
+    const neoDovePromise = axios.post(
       "https://25515469-e21f-48a6-93fb-91446641fcda.neodove.com/integration/custom/4fa16adb-e429-4417-a5ba-fc6f77e3fea3/leads",
       data,
       { headers: { "Content-Type": "application/json" } }
-    ),
-  homeDemo: (data) =>
-    axios.post(
+    ).catch(err => {
+      console.error('NeoDove Error:', err.message);
+      return null;
+    });
+
+    const crmPromise = process.env.NEXT_PUBLIC_CRM_API_URL ? axios.post(
+      process.env.NEXT_PUBLIC_CRM_API_URL,
+      {
+        name: data.name,
+        phone: data.phone || data.mobile,
+        email: data.email || "",
+        source: "website",
+        city: data.city || data.location || "",
+        notes: `Video Call Request - University: ${data.university}, Course: ${data.course}`
+      },
+      { headers: { "Content-Type": "application/json" } }
+    ).catch(err => {
+      console.error('CRM Sync Error:', err.message);
+      return null;
+    }) : Promise.resolve(null);
+
+    return Promise.all([neoDovePromise, crmPromise]);
+  },
+  homeDemo: async (data) => {
+    const neoDovePromise = axios.post(
       "https://25515469-e21f-48a6-93fb-91446641fcda.neodove.com/integration/custom/4fa16adb-e429-4417-a5ba-fc6f77e3fea3/leads",
       data,
       { headers: { "Content-Type": "application/json" } }
-    ),
-  // Submit to internal API which handles both DB storage and NeoDove
+    ).catch(err => {
+      console.error('NeoDove Error:', err.message);
+      return null;
+    });
+
+    const crmPromise = process.env.NEXT_PUBLIC_CRM_API_URL ? axios.post(
+      process.env.NEXT_PUBLIC_CRM_API_URL,
+      {
+        name: data.name,
+        phone: data.phone || data.mobile,
+        email: data.email || "",
+        source: "website",
+        city: data.city || data.location || "",
+        notes: `Home Demo Request - University: ${data.university}, Course: ${data.course}`
+      },
+      { headers: { "Content-Type": "application/json" } }
+    ).catch(err => {
+      console.error('CRM Sync Error:', err.message);
+      return null;
+    }) : Promise.resolve(null);
+
+    return Promise.all([neoDovePromise, crmPromise]);
+  },
+  // Submit to internal API which handles DB storage, NeoDove and New CRM
   general: async (data) => {
     const response = await axios.post(
       "/api/v1/enquiry",

@@ -179,11 +179,12 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle,}:
       <div className="p-6 shadow-lg">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div className="relative">
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="search-universities" className="block text-sm font-medium text-gray-700 mb-2">
               <FaMagnifyingGlass className="inline w-4 h-4 mr-2" />
               Search Universities
             </label>
             <input
+              id="search-universities"
               type="text"
               placeholder="Search by name or location"
               value={searchTerm}
@@ -193,11 +194,12 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle,}:
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="filter-location" className="block text-sm font-medium text-gray-700 mb-2">
               <FaLocationDot className="inline w-4 h-4 mr-2" />
               Filter by Location
             </label>
             <select
+              id="filter-location"
               value={locationFilter}
               onChange={handleLocationChange}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ffe0] focus:border-transparent"
@@ -211,11 +213,12 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle,}:
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="filter-specialization" className="block text-sm font-medium text-gray-700 mb-2">
               <FaBook className="inline w-4 h-4 mr-2" />
               Filter by Specialization
             </label>
             <select
+              id="filter-specialization"
               value={specializationFilter}
               onChange={handleSpecializationChange}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ffe0] focus:border-transparent"
@@ -229,8 +232,9 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle,}:
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Sort</label>
+            <label htmlFor="sort-universities" className="block text-sm font-medium text-gray-700 mb-2">Sort</label>
             <select
+              id="sort-universities"
               value={sortBy}
               onChange={handleSortChange}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ffe0] focus:border-transparent"

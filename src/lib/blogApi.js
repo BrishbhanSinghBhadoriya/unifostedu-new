@@ -1,11 +1,51 @@
 const BLOG_API_ENDPOINT =
-  process.env.NEXT_PUBLIC_BLOG_API_ENDPOINT ||
-  "https://unifost-edu-blog.vercel.app/api/blogs";
+  typeof window !== "undefined"
+    ? "/api/blogs"
+    : (process.env.NEXT_PUBLIC_BLOG_API_ENDPOINT || "https://unifost-edu-blog.vercel.app/api/blogs");
 
 const DEFAULT_REVALIDATE_SECONDS = 1800; // 30 minutes
 const FETCH_TIMEOUT_MS = 15000; // 15 seconds
-const MAX_RETRIES = 3;
+const MAX_RETRIES = 1; // Reduced from 3 to minimize console noise on server errors
 const RETRY_DELAY_MS = 1000;
+
+// Simple circuit breaker to avoid hitting a known-down API repeatedly in the same session
+let isApiDown = false;
+let lastCheckTime = 0;
+const CIRCUIT_BREAKER_COOLDOWN = 60000; // 1 minute
+
+// Fallback data to use when API is down
+const FALLBACK_BLOGS = [
+  {
+    _id: "fallback-1",
+    title: "How to Choose the Right Online University",
+    slug: "ChooseOnlineUniversity",
+    description: "Expert tips on selecting the best online degree program for your career goals.",
+    category: "Course Guide",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762932238/blog-images/a8cspd20trzfqocza1jw.png",
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    _id: "fallback-2",
+    title: "Top 5 Career Opportunities After an Online MBA",
+    slug: "CareerAfterOnlineMBA",
+    description: "Discover high-paying job roles you can land with an UGC-approved online MBA degree.",
+    category: "Career & Outcomes",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762932238/blog-images/a8cspd20trzfqocza1jw.png",
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    _id: "fallback-3",
+    title: "Is an Online Degree Valid for Government Jobs?",
+    slug: "JainUGCApproval",
+    description: "Everything you need to know about UGC-DEB recognition and its validity in India.",
+    category: "Student Help Guides",
+    image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762932238/blog-images/a8cspd20trzfqocza1jw.png",
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  }
+];
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -22,6 +62,12 @@ export async function fetchBlogs(options = {}) {
     cache,
     signal,
   } = options;
+
+  // Circuit breaker check
+  const now = Date.now();
+  if (isApiDown && now - lastCheckTime < CIRCUIT_BREAKER_COOLDOWN) {
+    return FALLBACK_BLOGS;
+  }
 
   const isServer = typeof window === "undefined";
   const fetchOptions = {};
@@ -54,35 +100,41 @@ export async function fetchBlogs(options = {}) {
       if (response.ok) {
         const payload = await response.json();
         if (payload?.success && Array.isArray(payload.data)) {
+          isApiDown = false; // Reset circuit breaker on success
           return payload.data;
         }
-        return [];
+        return FALLBACK_BLOGS;
       }
 
-      if (response.status >= 500 && attempt < MAX_RETRIES) {
-        await sleep(RETRY_DELAY_MS * attempt);
-        continue;
+      // If we get a 500, trigger the circuit breaker
+      if (response.status >= 500) {
+        isApiDown = true;
+        lastCheckTime = now;
+        
+        if (attempt < MAX_RETRIES) {
+          await sleep(RETRY_DELAY_MS * attempt);
+          continue;
+        }
       }
 
       if (!response.ok) {
-        if (process.env.NODE_ENV === "development") {
-          console.warn(`Blog API returned ${response.status}: ${response.statusText}`);
-        }
-        return [];
+        return FALLBACK_BLOGS;
       }
     } catch (err) {
+      if (err.name === 'AbortError') throw err;
+      
+      isApiDown = true;
+      lastCheckTime = now;
+
       if (attempt < MAX_RETRIES) {
         await sleep(RETRY_DELAY_MS * attempt);
       } else {
-        if (process.env.NODE_ENV === "development") {
-          console.warn("Blog API fetch failed after retries:", err.message);
-        }
-        return [];
+        return FALLBACK_BLOGS;
       }
     }
   }
 
-  return [];
+  return FALLBACK_BLOGS;
 }
 
 /**

@@ -46,7 +46,8 @@ export default async function BlogIndexPage() {
   try {
     blogs = await fetchBlogs();
   } catch (error) {
-    console.error("Failed to load blogs", error);
+    // Silently fallback to empty array (fetchBlogs already handles fallback)
+    blogs = [];
   }
 
   const sortedBlogs = blogs

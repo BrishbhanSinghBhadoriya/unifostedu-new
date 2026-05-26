@@ -260,7 +260,7 @@ export default function EnquiryForm({
           <div className="relative">
             <FaLocationDot className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
             <Select value={city} onValueChange={onCityChange}>
-              <SelectTrigger className="pl-10 h-11 sm:h-10">
+              <SelectTrigger id="location" className="pl-10 h-11 sm:h-10">
                 <SelectValue placeholder="Select your location" />
               </SelectTrigger>
               <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
@@ -277,13 +277,13 @@ export default function EnquiryForm({
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         <div className="space-y-1.5">
-          <Label className="flex items-center gap-1">
+          <Label htmlFor="university" className="flex items-center gap-1">
             University <span className="text-red-500">*</span>
           </Label>
           <div className="relative">
             <FaBuildingColumns className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
             <Select value={selectedUniversity} onValueChange={onUniversityChange}>
-              <SelectTrigger className="pl-10 h-11 sm:h-10">
+              <SelectTrigger id="university" className="pl-10 h-11 sm:h-10">
                 <SelectValue placeholder="Select university" />
               </SelectTrigger>
               <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
@@ -297,13 +297,13 @@ export default function EnquiryForm({
         </div>
 
         <div className="space-y-1.5">
-          <Label className="flex items-center gap-1">
+          <Label htmlFor="course" className="flex items-center gap-1">
             Course <span className="text-red-500">*</span>
           </Label>
           <div className="relative">
             <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
             <Select value={program} onValueChange={onProgramChange}>
-              <SelectTrigger className="pl-10 h-11 sm:h-10">
+              <SelectTrigger id="course" className="pl-10 h-11 sm:h-10">
                 <SelectValue placeholder="Select course" />
               </SelectTrigger>
               <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">

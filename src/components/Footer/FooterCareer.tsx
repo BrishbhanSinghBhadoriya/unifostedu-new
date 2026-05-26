@@ -151,8 +151,9 @@ const FooterCareer: React.FC<CareerFormProps> = ({
               className={`w-full border p-2 rounded-lg text-xs outline-none focus:ring-1 ${focusStyle}`}
             />
 
-            <label className="text-[9px] uppercase font-bold text-gray-500">Resume (PDF/DOC)</label>
+            <label htmlFor="resumeFile" className="text-[9px] uppercase font-bold text-gray-500">Resume (PDF/DOC)</label>
             <input
+              id="resumeFile"
               type="file"
               name="resumeFile"
               required

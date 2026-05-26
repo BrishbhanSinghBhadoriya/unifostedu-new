@@ -202,8 +202,10 @@ const FooterForm = () => {
             {/* Row 1: Name and Email */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="group/input relative">
+                <label htmlFor="footer-name" className="sr-only">Full Name</label>
                 <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
                 <input
+                  id="footer-name"
                   type="text"
                   name="name"
                   value={formData.name}
@@ -219,8 +221,10 @@ const FooterForm = () => {
               </div>
               <div className="group/input">
                 <div className="relative">
+                  <label htmlFor="footer-email" className="sr-only">Email Address</label>
                   <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
                   <input
+                    id="footer-email"
                     type="email"
                     name="email"
                     value={formData.email}
@@ -240,13 +244,15 @@ const FooterForm = () => {
             {/* Row 2: Phone and City */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="relative">
+                <label htmlFor="footer-phone" className="sr-only">Mobile Number</label>
                 <FaPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
                 <input
+                  id="footer-phone"
                   type="tel"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="Phone Number *"
+                  placeholder="Mobile Number *"
                   className={`w-full pl-10 pr-3 py-2.5 rounded-xl bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-md hover:shadow-lg text-sm ${
                     errors.phone ? "ring-2 ring-red-400" : ""
                   }`}

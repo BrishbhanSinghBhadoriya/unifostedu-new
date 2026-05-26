@@ -53,11 +53,28 @@ export async function POST(request) {
       { headers: { "Content-Type": "application/json" } }
     ).catch(err => {
       console.error('NeoDove Error:', err.message);
-      return null; // Don't fail the whole request if NeoDove fails
+      return null;
     });
 
-    // Wait for both to start/finish but respond as soon as DB is done or in parallel
-    const [userEnquiry] = await Promise.all([dbPromise, neoDovePromise]);
+    // Send to CRM Lead Integration (New)
+    const crmPromise = process.env.CRM_API_URL ? axios.post(
+      process.env.CRM_API_URL,
+      {
+        name,
+        phone: mobile,
+        email: email || "",
+        source: "website",
+        city: location || "",
+        notes: `University: ${university}, Course: ${course}`
+      },
+      { headers: { "Content-Type": "application/json" } }
+    ).catch(err => {
+      console.error('CRM Sync Error:', err.message);
+      return null;
+    }) : Promise.resolve(null);
+
+    // Wait for all to start/finish but respond as soon as DB is done or in parallel
+    const [userEnquiry] = await Promise.all([dbPromise, neoDovePromise, crmPromise]);
 
     return NextResponse.json({ success: true, userEnquiry }, { status: 201 });
   } catch (error) {

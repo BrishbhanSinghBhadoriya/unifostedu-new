@@ -30,8 +30,7 @@ const UniversityLogoSlider = ({ universityLogos = [] }: UniversityLogoSliderProp
                     height={60}
                     loading="lazy"
                     sizes="(max-width: 640px) 100px, 140px"
-                    className="max-h-12 max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
-                    style={{ width: "auto", height: "auto" }}
+                    className="h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
                   />
                 </div>
               </div>

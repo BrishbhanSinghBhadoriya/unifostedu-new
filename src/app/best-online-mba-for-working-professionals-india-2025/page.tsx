@@ -39,7 +39,7 @@ const BestOnlineMBA = () => {
             <p className="text-slate-600 mb-6 leading-relaxed">Replay lectures, review at your speed, and go back as needed. Ideal for every type of learner.</p>
             <h3 className="font-semibold text-xl mb-3 text-blue-700">Modern Study Experience</h3>
             <p className="text-slate-600 mb-6 leading-relaxed">Interactive platforms, online forums, mobile apps, and recorded content make modern MBAs dynamic and accessible from anywhere.</p>
-            <Image src="/images/banner.jpg" alt="MBA workspace" width={540} height={220} className="rounded-xl w-full mt-auto object-cover shadow-md" />
+            <Image src="/images/banner.jpg" alt="MBA workspace" width={540} height={220} className="rounded-xl w-full h-auto mt-auto object-cover shadow-md" />
           </div>
         </div>
         {/* What to Look For */}

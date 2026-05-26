@@ -41,7 +41,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import searchIndex from "@/data/searchIndex.json";
 import courseData from "@/data/courseData.json";
-import { BLOG_API_ENDPOINT } from "@/lib/blogApi";
+import { BLOG_API_ENDPOINT, fetchBlogs } from "@/lib/blogApi";
 import { MenuKey } from "types/menu";
 import { Shield } from "lucide-react";
 
@@ -313,18 +313,13 @@ const Header = () => {
     const loadLatestBlogs = async () => {
       setBlogsLoading(true);
       try {
-        const response = await fetch(BLOG_API_ENDPOINT, {
+        const blogs = await fetchBlogs({
           signal: controller.signal,
           cache: "no-store",
         });
-        if (!response.ok) {
-          console.warn(`Header Blog API failed with status: ${response.status}`);
-          setLatestBlogs([]);
-          return;
-        }
-        const payload = await response.json();
-        if (payload?.success && Array.isArray(payload.data)) {
-          const sorted = payload.data
+
+        if (blogs && blogs.length > 0) {
+          const sorted = [...blogs]
             .filter((blog: BlogProps) => blog?.slug)
             .sort((a: BlogProps, b: BlogProps) => {
               const dateA = new Date(a.createdAt || a.updatedAt || 0).getTime();
@@ -336,9 +331,7 @@ const Header = () => {
           setLatestBlogs([]);
         }
       } catch (err: unknown) {
-        if (err instanceof Error && err.name !== "AbortError") {
-          console.error("Header blog fetch error:", err);
-        }
+        // Silently handle errors as fallback is provided by fetchBlogs
         setLatestBlogs([]);
       } finally {
         setBlogsLoading(false);
@@ -456,7 +449,7 @@ const Header = () => {
                     height={80}
                     sizes="(max-width: 640px) 120px, 160px"
                     className="h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 2xl:h-20 w-auto transition-transform duration-300 group-hover:scale-105"
-                    priority
+                    loading="eager"
                   />
                 </div>
               </Link>
