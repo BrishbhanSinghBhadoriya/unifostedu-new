@@ -165,9 +165,14 @@ export default function RootLayout({ children }: ChildrenProps) {
       <body
         className={`${inter.className} ${baskervville.variable} overflow-x-hidden`}
       >
+        {/* Skip to main content link for keyboard navigation */}
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
+        
         <LenisProvider>
           <Header />
-          <main>{children}</main>
+          <main id="main-content">{children}</main>
           <ChatBoxWrapper />
           <Footer />
         </LenisProvider>

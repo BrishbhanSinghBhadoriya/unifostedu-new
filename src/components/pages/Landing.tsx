@@ -160,7 +160,7 @@ const Landing = ({ data }: LandingPageProps) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8" role="list" aria-label="Unifost features">
             {features.map((feature, index) => {
               const Icon = iconMap[feature.iconKey] || MdVerifiedUser;
               return (
@@ -169,9 +169,11 @@ const Landing = ({ data }: LandingPageProps) => {
                   className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 hover:-translate-y-2 transition-all duration-300 border border-gray-100"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
+                  role="listitem"
                 >
                   <div
                     className={`bg-gradient-to-br ${feature.color} w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6`}
+                    aria-hidden="true"
                   >
                     <Icon className="text-xl sm:text-2xl text-white" />
                   </div>
@@ -235,17 +237,17 @@ const Landing = ({ data }: LandingPageProps) => {
             <h2 className="text-3xl sm:text-4xl font-semibold text-[#001e3c] mb-2">
               Career Counseling Online & Virtual Learning Guidance
             </h2>
-            <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-3"></div>
+            <div className="mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] mb-3" aria-hidden="true"></div>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
               Best Career Planning Services with trusted EdTech Solutions in India
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6" role="list" aria-label="Our services">
             {/* Video Call Counseling */}
-            <div className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+            <div className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm" role="listitem">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-cyan-600 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-cyan-600 flex items-center justify-center" aria-hidden="true">
                   <MdVideoCall className="text-white text-xl" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-semibold text-[#001e3c]">
@@ -257,6 +259,7 @@ const Landing = ({ data }: LandingPageProps) => {
               </p>
               <button
                 onClick={() => openModal("videoCall")}
+                aria-label="Book your free video call counseling session"
                 className="w-full bg-[#00d4c4] text-[#001e3c] py-2.5 rounded-xl font-semibold hover:bg-[#00c0b1] transition-colors"
               >
                 Book Your Free Counseling
@@ -264,9 +267,9 @@ const Landing = ({ data }: LandingPageProps) => {
             </div>
 
             {/* Home Demo Counseling */}
-            <div className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+            <div className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm" role="listitem">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-cyan-600 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-cyan-600 flex items-center justify-center" aria-hidden="true">
                   <MdHome className="text-white text-xl" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-semibold text-[#001e3c]">
@@ -278,6 +281,7 @@ const Landing = ({ data }: LandingPageProps) => {
               </p>
               <button
                 onClick={() => openModal("homeDemo")}
+                aria-label="Schedule a home demo counseling session"
                 className="w-full bg-gradient-to-r from-indigo-600 to-cyan-600 text-white py-2.5 rounded-xl font-semibold hover:from-indigo-700 hover:to-cyan-700 transition-colors"
               >
                 Schedule a Home Demo
@@ -285,9 +289,9 @@ const Landing = ({ data }: LandingPageProps) => {
             </div>
 
             {/* Career Planning */}
-            <div className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+            <div className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm" role="listitem">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-cyan-600 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-cyan-600 flex items-center justify-center" aria-hidden="true">
                   <FaCompass className="text-white text-xl" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-semibold text-[#001e3c]">
@@ -299,6 +303,7 @@ const Landing = ({ data }: LandingPageProps) => {
               </p>
               <button
                 onClick={() => openModal("getStarted")}
+                aria-label="Start your career planning journey today"
                 className="w-full bg-slate-900 text-white py-2.5 rounded-xl font-semibold hover:bg-black transition-colors cursor-pointer"
               >
                 Start Your Journey Today
@@ -307,12 +312,12 @@ const Landing = ({ data }: LandingPageProps) => {
           </div>
 
           {/* Trust bar */}
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-            <div className="text-sm text-gray-600">
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center" role="list" aria-label="Trust indicators">
+            <div className="text-sm text-gray-600" role="listitem">
               <span className="font-semibold text-[#001e3c]">UGC-DEB/AICTE/NAAC</span> accredited partners
             </div>
-            <div className="text-sm text-gray-600">Transparent, unbiased guidance</div>
-            <div className="text-sm text-gray-600">Student-friendly support across India</div>
+            <div className="text-sm text-gray-600" role="listitem">Transparent, unbiased guidance</div>
+            <div className="text-sm text-gray-600" role="listitem">Student-friendly support across India</div>
           </div>
         </div>
       </section>
@@ -329,22 +334,24 @@ const Landing = ({ data }: LandingPageProps) => {
       <section className="py-14 bg-gradient-to-r from-[#001e3c] to-[#003b6c] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
               Ready to find your program?
-            </h3>
+            </h2>
             <p className="text-white/80 mt-2">
               Talk to our counselors and get a personalized shortlist.
             </p>
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-3" role="group" aria-label="Call to action buttons">
             <button
               onClick={() => openModal("getStarted")}
+              aria-label="Get started with Unifost"
               className="px-6 py-3 rounded-full bg-[#00d4c4] text-[#001e3c] font-semibold hover:bg-[#00c0b1] transition-colors"
             >
               Get Started
             </button>
             <button
               onClick={() => openModal("videoCall")}
+              aria-label="Book a video call with our counselors"
               className="px-6 py-3 rounded-full border border-white/30 hover:bg-white/10 transition-colors"
             >
               Book a Call

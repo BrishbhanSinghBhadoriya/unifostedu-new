@@ -203,7 +203,7 @@ const FooterForm = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="group/input relative">
                 <label htmlFor="footer-name" className="sr-only">Full Name</label>
-                <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
+                <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" aria-hidden="true" />
                 <input
                   id="footer-name"
                   type="text"
@@ -211,18 +211,20 @@ const FooterForm = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Full Name *"
+                  aria-invalid={!!errors.name}
+                  aria-describedby={errors.name ? "footer-name-error" : undefined}
                   className={`w-full pl-10 pr-3 py-2.5 rounded-xl bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-md hover:shadow-lg text-sm ${
                     errors.name ? "ring-2 ring-red-400" : ""
                   }`}
                 />
                 {errors.name && (
-                  <p className="text-red-400 text-xs mt-1">{errors.name}</p>
+                  <p id="footer-name-error" className="text-red-400 text-xs mt-1" role="alert">{errors.name}</p>
                 )}
               </div>
               <div className="group/input">
                 <div className="relative">
                   <label htmlFor="footer-email" className="sr-only">Email Address</label>
-                  <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
+                  <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" aria-hidden="true" />
                   <input
                     id="footer-email"
                     type="email"
@@ -230,12 +232,14 @@ const FooterForm = () => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Email Address *"
+                    aria-invalid={!!errors.email}
+                    aria-describedby={errors.email ? "footer-email-error" : undefined}
                     className={`w-full pl-10 pr-3 py-2.5 rounded-xl bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white transition-all duration-300 shadow-md hover:shadow-lg text-sm ${
                       errors.email ? "ring-2 ring-red-400" : ""
                     }`}
                   />
                   {errors.email && (
-                    <p className="text-red-400 text-xs mt-1">{errors.email}</p>
+                    <p id="footer-email-error" className="text-red-400 text-xs mt-1" role="alert">{errors.email}</p>
                   )}
                 </div>
               </div>
@@ -430,11 +434,12 @@ const FooterForm = () => {
               <button
                 onClick={handleSubmit}
                 type="button"
+                aria-label="Submit enquiry form"
                 className="group/submit relative overflow-hidden bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:from-cyan-600 hover:via-blue-700 hover:to-indigo-700 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] transform text-sm"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   Submit Enquiry
-                  <span className="group-hover/submit:translate-x-1 transition-transform duration-300">
+                  <span className="group-hover/submit:translate-x-1 transition-transform duration-300" aria-hidden="true">
                     →
                   </span>
                 </span>

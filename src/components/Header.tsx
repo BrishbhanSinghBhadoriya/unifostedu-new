@@ -590,17 +590,19 @@ const Header = () => {
               <div className="hidden lg:flex items-center gap-2 lg:gap-3 flex-shrink-0">
                 <button
                   onClick={() => router.push("/compare-university")}
+                  aria-label="Compare universities using AI technology"
                   className="relative flex items-center gap-2 px-4 lg:px-5 py-2 lg:py-2.5 rounded-lg bg-white text-orange-600 font-semibold text-sm shadow-sm hover:shadow-md hover:scale-[1.04] transition-all duration-200 cursor-pointer whitespace-nowrap">
-                  <span className="absolute -top-1 -right-1 bg-orange-500 text-white text-[7px] lg:text-[8px] font-bold px-1.5 py-[1px] rounded-sm shadow-md">
+                  <span className="absolute -top-1 -right-1 bg-orange-500 text-white text-[7px] lg:text-[8px] font-bold px-1.5 py-[1px] rounded-sm shadow-md" aria-hidden="true">
                     AI
                   </span>
-                  <FaCompass className="text-sm text-orange-500 bg-orange-100 rounded-full p-1 flex-shrink-0" />
+                  <FaCompass className="text-sm text-orange-500 bg-orange-100 rounded-full p-1 flex-shrink-0" aria-hidden="true" />
                   <span>Compare</span>
                 </button>
 
                 <Link
                   href="tel:+917042646766"
-                  title="Call us">
+                  aria-label="Call us at +91 7042646766"
+                  className="p-2.5 rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-100 transition-all duration-200 flex-shrink-0">
                   <FaPhone className="text-lg" />
                 </Link>
 
@@ -609,14 +611,15 @@ const Header = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2.5 rounded-lg bg-green-50 text-green-600 hover:bg-green-100 transition-all duration-200 flex-shrink-0"
-                  title="WhatsApp">
+                  aria-label="Contact us on WhatsApp">
                   <FaWhatsappSquare className="text-lg" />
                 </Link>
 
                 <button
                   onClick={() => openModal("videoCall")}
+                  aria-label="Book a video demo session"
                   className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium text-sm hover:shadow-lg hover:scale-105 transition-all duration-200 whitespace-nowrap">
-                  <FaVideo className="text-sm flex-shrink-0" />
+                  <FaVideo className="text-sm flex-shrink-0" aria-hidden="true" />
                   <span>Book Demo</span>
                 </button>
               </div>

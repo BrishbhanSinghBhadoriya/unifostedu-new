@@ -157,7 +157,7 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                     </span>
                   </h1>
 
-                  <p className="text-xl sm:text-2xl text-gray-600 font-medium">
+                  <p className="text-xl sm:text-2xl text-gray-600 font-medium" role="banner">
                     Compare, Choose & Succeed with India's Top Online Universities
                   </p>
                 </div>
@@ -168,14 +168,14 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                 </p>
 
                 {/* Key Features */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto lg:mx-0">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto lg:mx-0" role="list">
                   {[
                     { icon: FaCheck, text: "UGC Approved" },
                     { icon: MdPeople, text: "Expert Counseling" },
                     { icon: FaGraduationCap, text: "25+ Universities" }
                   ].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-700">
-                      <feature.icon className="text-green-500 text-lg" />
+                    <div key={index} className="flex items-center gap-2 text-gray-700" role="listitem">
+                      <feature.icon className="text-green-500 text-lg" aria-hidden="true" />
                       <span className="text-sm font-medium">{feature.text}</span>
                     </div>
                   ))}
@@ -203,14 +203,14 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                 </div>
 
                 {/* Stats */}
-                <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200 max-w-md mx-auto lg:mx-0">
+                <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200 max-w-md mx-auto lg:mx-0" role="list" aria-label="Unifost statistics">
                   {[
                     { number: "5K+", label: "Students" },
                     { number: "25+", label: "Universities" },
                     { number: "100%", label: "Success Rate" }
                   ].map((stat, index) => (
-                    <div key={index} className="text-center">
-                      <div className="text-2xl font-bold text-gray-900">{stat.number}</div>
+                    <div key={index} className="text-center" role="listitem">
+                      <div className="text-2xl font-bold text-gray-900" aria-label={`${stat.number} ${stat.label}`}>{stat.number}</div>
                       <div className="text-sm text-gray-600">{stat.label}</div>
                     </div>
                   ))}
@@ -223,7 +223,7 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
         {/* Bottom Section - Quick Actions */}
         <div className="bg-white/60 backdrop-blur-sm border-t border-white/20 py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6" role="list" aria-label="Quick action buttons">
               {[
                 {
                   icon: FaLocationDot,
@@ -247,7 +247,8 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                 <button
                   key={index}
                   onClick={item.action}
-                  aria-label={item.title}
+                  aria-label={`${item.title}: ${item.desc}`}
+                  role="listitem"
                   className={`${item.title === "Get Counseling"
                     ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-transparent cursor-pointer"
                     : "bg-white text-gray-800 border-gray-300 cursor-pointer"
@@ -258,14 +259,14 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                       ? "bg-white/20"
                       : "bg-blue-50"
                       } w-10 h-10 rounded-full inline-flex items-center justify-center`}>
-                      <item.icon className={`${item.title === "Get Counseling" ? "text-white" : "text-blue-600"} text-lg`} />
+                      <item.icon className={`${item.title === "Get Counseling" ? "text-white" : "text-blue-600"} text-lg`} aria-hidden="true" />
                     </span>
                     <span className="text-left">
                       <span className={`block font-semibold ${item.title === "Get Counseling" ? "text-white" : "text-gray-900"}`}>{item.title}</span>
                       <span className={`block text-xs ${item.title === "Get Counseling" ? "text-white/90" : "text-gray-600"}`}>{item.desc}</span>
                     </span>
                   </span>
-                  <FaArrowRight className={`${item.title === "Get Counseling" ? "text-white" : "text-blue-600"} text-sm`} />
+                  <FaArrowRight className={`${item.title === "Get Counseling" ? "text-white" : "text-blue-600"} text-sm`} aria-hidden="true" />
                 </button>
               ))}
             </div>

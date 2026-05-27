@@ -216,9 +216,16 @@ export default function EnquiryForm({
             Name <span className="text-red-500">*</span>
           </Label>
           <div className="relative">
-            <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-            <Input id="name" placeholder="Your name" className="pl-10 h-11 sm:h-10" aria-invalid={!!formState.errors.name} {...register('name')} />
-            {formState.errors.name && (<p className="text-red-600 text-xs mt-1">{formState.errors.name.message}</p>)}
+            <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" aria-hidden="true" />
+            <Input 
+              id="name" 
+              placeholder="Your name" 
+              className="pl-10 h-11 sm:h-10" 
+              aria-invalid={!!formState.errors.name} 
+              aria-describedby={formState.errors.name ? "name-error" : undefined}
+              {...register('name')} 
+            />
+            {formState.errors.name && (<p id="name-error" className="text-red-600 text-xs mt-1" role="alert">{formState.errors.name.message}</p>)}
           </div>
         </div>
 
@@ -227,17 +234,18 @@ export default function EnquiryForm({
             Mobile Number <span className="text-red-500">*</span>
           </Label>
           <div className="relative">
-            <FaPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+            <FaPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" aria-hidden="true" />
             <Input 
               id="mobile" 
               maxLength={10} 
               placeholder="10 digit mobile number" 
               className="pl-10 h-11 sm:h-10" 
               aria-invalid={!!formState.errors.mobile} 
+              aria-describedby={formState.errors.mobile ? "mobile-error" : undefined}
               {...register('mobile')} 
             />
           </div>
-          {formState.errors.mobile && (<p className="text-red-600 text-xs mt-1">{formState.errors.mobile.message}</p>)}
+          {formState.errors.mobile && (<p id="mobile-error" className="text-red-600 text-xs mt-1" role="alert">{formState.errors.mobile.message}</p>)}
         </div>
       </div>
 
@@ -247,9 +255,17 @@ export default function EnquiryForm({
             Email <span className="text-red-500">*</span>
           </Label>
           <div className="relative">
-            <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-            <Input id="email" type="email" placeholder="you@example.com" className="pl-10 h-11 sm:h-10" aria-invalid={!!formState.errors.email} {...register('email')} />
-            {formState.errors.email && (<p className="text-red-600 text-xs mt-1">{formState.errors.email.message}</p>)}
+            <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" aria-hidden="true" />
+            <Input 
+              id="email" 
+              type="email" 
+              placeholder="you@example.com" 
+              className="pl-10 h-11 sm:h-10" 
+              aria-invalid={!!formState.errors.email} 
+              aria-describedby={formState.errors.email ? "email-error" : undefined}
+              {...register('email')} 
+            />
+            {formState.errors.email && (<p id="email-error" className="text-red-600 text-xs mt-1" role="alert">{formState.errors.email.message}</p>)}
           </div>
         </div>
 
@@ -258,9 +274,9 @@ export default function EnquiryForm({
             Location <span className="text-red-500">*</span>
           </Label>
           <div className="relative">
-            <FaLocationDot className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+            <FaLocationDot className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" aria-hidden="true" />
             <Select value={city} onValueChange={onCityChange}>
-              <SelectTrigger id="location" className="pl-10 h-11 sm:h-10">
+              <SelectTrigger id="location" className="pl-10 h-11 sm:h-10" aria-describedby={formState.errors.location ? "location-error" : undefined}>
                 <SelectValue placeholder="Select your location" />
               </SelectTrigger>
               <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
@@ -270,7 +286,7 @@ export default function EnquiryForm({
                 <SelectItem value="other">Other</SelectItem>
               </SelectContent>
             </Select>
-            {formState.errors.location && (<p className="text-red-600 text-xs mt-1">{formState.errors.location.message}</p>)}
+            {formState.errors.location && (<p id="location-error" className="text-red-600 text-xs mt-1" role="alert">{formState.errors.location.message}</p>)}
           </div>
         </div>
       </div>
@@ -281,9 +297,9 @@ export default function EnquiryForm({
             University <span className="text-red-500">*</span>
           </Label>
           <div className="relative">
-            <FaBuildingColumns className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+            <FaBuildingColumns className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" aria-hidden="true" />
             <Select value={selectedUniversity} onValueChange={onUniversityChange}>
-              <SelectTrigger id="university" className="pl-10 h-11 sm:h-10">
+              <SelectTrigger id="university" className="pl-10 h-11 sm:h-10" aria-describedby={formState.errors.university ? "university-error" : undefined}>
                 <SelectValue placeholder="Select university" />
               </SelectTrigger>
               <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
@@ -292,7 +308,7 @@ export default function EnquiryForm({
                 ))}
               </SelectContent>
             </Select>
-            {formState.errors.university && (<p className="text-red-600 text-xs mt-1">{formState.errors.university.message}</p>)}
+            {formState.errors.university && (<p id="university-error" className="text-red-600 text-xs mt-1" role="alert">{formState.errors.university.message}</p>)}
           </div>
         </div>
 
@@ -301,9 +317,9 @@ export default function EnquiryForm({
             Course <span className="text-red-500">*</span>
           </Label>
           <div className="relative">
-            <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+            <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" aria-hidden="true" />
             <Select value={program} onValueChange={onProgramChange}>
-              <SelectTrigger id="course" className="pl-10 h-11 sm:h-10">
+              <SelectTrigger id="course" className="pl-10 h-11 sm:h-10" aria-describedby={formState.errors.course ? "course-error" : undefined}>
                 <SelectValue placeholder="Select course" />
               </SelectTrigger>
               <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
@@ -318,7 +334,7 @@ export default function EnquiryForm({
               </SelectContent>
             </Select>
             {formState.errors.course && (
-              <p className="text-red-600 text-xs mt-1">{formState.errors.course.message}</p>
+              <p id="course-error" className="text-red-600 text-xs mt-1" role="alert">{formState.errors.course.message}</p>
             )}
           </div>
         </div>
@@ -329,19 +345,20 @@ export default function EnquiryForm({
           type="submit"
           disabled={loading}
           aria-busy={loading}
-          aria-label={loading ? "Submitting form..." : "Submit Enquiry"}
+          aria-label={loading ? "Submitting enquiry form, please wait" : "Submit enquiry form"}
           className="flex-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] font-bold relative z-[20002] py-3 sm:py-2.5 text-sm sm:text-base disabled:opacity-50"
         >
-          <FaPaperPlane className="mr-2" />
+          <FaPaperPlane className="mr-2" aria-hidden="true" />
           {loading ? 'Submitting...' : 'Submit Enquiry'}
         </Button>
 
         <Button
           type="button"
           onClick={handleWhatsAppConnect}
+          aria-label="Connect with counselor via WhatsApp"
           className="flex-1 bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700 font-semibold py-3 sm:py-2.5 text-sm sm:text-base"
         >
-          <FaWhatsapp className="mr-2" />
+          <FaWhatsapp className="mr-2" aria-hidden="true" />
           Connect Counselor
         </Button>
       </div>
