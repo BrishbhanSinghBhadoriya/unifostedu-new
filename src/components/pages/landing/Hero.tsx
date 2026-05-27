@@ -152,7 +152,7 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                   <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                     <span className="text-gray-900">India's Best Online</span>
                     <br />
-                    <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                    <span className="text-whaite">
                       University Degrees
                     </span>
                   </h1>
@@ -223,7 +223,7 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
         {/* Bottom Section - Quick Actions */}
         <div className="bg-white/60 backdrop-blur-sm border-t border-white/20 py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6" role="list" aria-label="Quick action buttons">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               {[
                 {
                   icon: FaLocationDot,
@@ -247,8 +247,7 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                 <button
                   key={index}
                   onClick={item.action}
-                  aria-label={`${item.title}: ${item.desc}`}
-                  role="listitem"
+                  aria-label={item.title}
                   className={`${item.title === "Get Counseling"
                     ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-transparent cursor-pointer"
                     : "bg-white text-gray-800 border-gray-300 cursor-pointer"
@@ -259,14 +258,14 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                       ? "bg-white/20"
                       : "bg-blue-50"
                       } w-10 h-10 rounded-full inline-flex items-center justify-center`}>
-                      <item.icon className={`${item.title === "Get Counseling" ? "text-white" : "text-blue-600"} text-lg`} aria-hidden="true" />
+                      <item.icon className={`${item.title === "Get Counseling" ? "text-white" : "text-blue-600"} text-lg`} />
                     </span>
                     <span className="text-left">
                       <span className={`block font-semibold ${item.title === "Get Counseling" ? "text-white" : "text-gray-900"}`}>{item.title}</span>
                       <span className={`block text-xs ${item.title === "Get Counseling" ? "text-white/90" : "text-gray-600"}`}>{item.desc}</span>
                     </span>
                   </span>
-                  <FaArrowRight className={`${item.title === "Get Counseling" ? "text-white" : "text-blue-600"} text-sm`} aria-hidden="true" />
+                  <FaArrowRight className={`${item.title === "Get Counseling" ? "text-white" : "text-blue-600"} text-sm`} />
                 </button>
               ))}
             </div>

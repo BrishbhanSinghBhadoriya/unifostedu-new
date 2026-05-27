@@ -198,7 +198,7 @@ export default function EnquiryForm({
   };
 
   return (
-    <form className="space-y-4 sm:space-y-5 relative z-[20002]" onSubmit={handleSubmit(onSubmit)}>
+    <form className="space-y-4 sm:space-y-5 relative" onSubmit={handleSubmit(onSubmit)}>
       <input type="hidden" {...register('course')} value={program} readOnly />
       <input type="hidden" {...register('university')} value={selectedUniversity} readOnly />
       <input type="hidden" {...register('location')} value={city} readOnly />
@@ -279,7 +279,7 @@ export default function EnquiryForm({
               <SelectTrigger id="location" className="pl-10 h-11 sm:h-10" aria-describedby={formState.errors.location ? "location-error" : undefined}>
                 <SelectValue placeholder="Select your location" />
               </SelectTrigger>
-              <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
+              <SelectContent portalled={false} className="max-h-60 overflow-auto">
                 {popularCities.map((cityName) => (
                   <SelectItem key={cityName} value={cityName}>{cityName}</SelectItem>
                 ))}
@@ -302,7 +302,7 @@ export default function EnquiryForm({
               <SelectTrigger id="university" className="pl-10 h-11 sm:h-10" aria-describedby={formState.errors.university ? "university-error" : undefined}>
                 <SelectValue placeholder="Select university" />
               </SelectTrigger>
-              <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
+              <SelectContent portalled={false} className="max-h-60 overflow-auto">
                 {allUniversities.map((u) => (
                   <SelectItem key={u} value={u}>{u}</SelectItem>
                 ))}
@@ -322,7 +322,7 @@ export default function EnquiryForm({
               <SelectTrigger id="course" className="pl-10 h-11 sm:h-10" aria-describedby={formState.errors.course ? "course-error" : undefined}>
                 <SelectValue placeholder="Select course" />
               </SelectTrigger>
-              <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
+              <SelectContent portalled={false} className="max-h-60 overflow-auto">
                 <SelectItem value="MBA">MBA</SelectItem>
                 <SelectItem value="MCA">MCA</SelectItem>
                 <SelectItem value="MCOM">M.Com</SelectItem>
@@ -346,7 +346,7 @@ export default function EnquiryForm({
           disabled={loading}
           aria-busy={loading}
           aria-label={loading ? "Submitting enquiry form, please wait" : "Submit enquiry form"}
-          className="flex-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] font-bold relative z-[20002] py-3 sm:py-2.5 text-sm sm:text-base disabled:opacity-50"
+          className="flex-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] font-bold py-3 sm:py-2.5 text-sm sm:text-base disabled:opacity-50"
         >
           <FaPaperPlane className="mr-2" aria-hidden="true" />
           {loading ? 'Submitting...' : 'Submit Enquiry'}

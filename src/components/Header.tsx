@@ -32,9 +32,9 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import EnquiryForm from "@/components/EnquiryForm";
 import dynamic from 'next/dynamic';
 
-const EnquiryForm = dynamic(() => import("@/components/EnquiryForm"), { ssr: false });
 const BlogsDropdown = dynamic(() => import("@/components/BlogsDropdown"), { ssr: false });
 const MobileMenu = dynamic(() => import("./MobileMenu"), { ssr: false });
 import Image from "next/image";
@@ -691,25 +691,34 @@ const Header = () => {
         </AnimatePresence>
 
         {/* Enquiry Modal */}
-        {
-          showEnquiryModal && (
-            <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal}>
-              <DialogContent className="max-w-2xl">
-                <DialogHeader>
-                  <DialogTitle className="text-2xl font-bold text-slate-900">
-                    {modalType === "videoCall" && "Book a Video Call"}
-                    {modalType === "homeDemo" && "Book a Home Demo"}
-                    {modalType === "getStarted" && "Get Started with Unifost"}
-                  </DialogTitle>
-                </DialogHeader>
+        {showEnquiryModal && (
+          <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal}>
+            <DialogContent 
+              className="w-[95vw] sm:w-[90vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] max-w-2xl max-h-[90vh] overflow-y-auto"
+              style={{
+                position: 'fixed',
+                top: '50vh',
+                left: '50vw',
+                transform: 'translate(-50%, -50%)',
+                margin: 0
+              }}
+            >
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-bold text-slate-900">
+                  {modalType === "videoCall" && "Book a Video Call"}
+                  {modalType === "homeDemo" && "Book a Home Demo"}
+                  {modalType === "getStarted" && "Get Started with Unifost"}
+                </DialogTitle>
+              </DialogHeader>
+              <div className="mt-4">
                 <EnquiryForm
                   onSubmitted={() => setShowEnquiryModal(false)}
                   formType={modalType}
                 />
-              </DialogContent>
-            </Dialog>
-          )
-        }
+              </div>
+            </DialogContent>
+          </Dialog>
+        )}
       
       </header>
     )

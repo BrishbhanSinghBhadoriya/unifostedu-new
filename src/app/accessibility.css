@@ -144,13 +144,76 @@ button:disabled {
   cursor: not-allowed;
 }
 
-/* Better modal accessibility */
-[role="dialog"] {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
+/* UNIVERSAL MODAL CENTERING - FORCE ALL MODALS TO SCREEN CENTER */
+/* Target all possible dialog selectors to ensure comprehensive coverage */
+[role="dialog"],
+[data-slot="dialog-content"],
+[data-radix-dialog-content],
+.radix-dialog-content,
+[data-state="open"][role="dialog"],
+[data-state="open"][data-slot="dialog-content"] {
+  position: fixed !important;
+  top: 50vh !important;
+  left: 50vw !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 9999 !important;
+  background: white !important;
+  border-radius: 12px !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+  margin: 0 !important;
+  max-width: calc(100vw - 2rem) !important;
+}
+
+/* Additional safety selectors for different modal implementations */
+.dialog-content,
+.modal-content,
+[aria-modal="true"],
+[data-dialog="true"] {
+  position: fixed !important;
+  top: 50vh !important;
+  left: 50vw !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 9999 !important;
+  margin: 0 !important;
+}
+
+/* Mobile responsive centering - SCREEN CENTER */
+@media (max-width: 640px) {
+  [data-slot="dialog-content"] {
+    position: fixed !important;
+    top: 50vh !important;
+    left: 50vw !important;
+    transform: translate(-50%, -50%) !important;
+    width: 95vw !important;
+    max-width: 95vw !important;
+    margin: 0 !important;
+  }
+}
+
+/* Tablet responsive centering - SCREEN CENTER */
+@media (min-width: 641px) and (max-width: 1024px) {
+  [data-slot="dialog-content"] {
+    position: fixed !important;
+    top: 50vh !important;
+    left: 50vw !important;
+    transform: translate(-50%, -50%) !important;
+    width: 90vw !important;
+    max-width: 600px !important;
+  }
+}
+
+/* Desktop responsive centering - SCREEN CENTER */
+@media (min-width: 1025px) {
+  [data-slot="dialog-content"] {
+    position: fixed !important;
+    top: 50vh !important;
+    left: 50vw !important;
+    transform: translate(-50%, -50%) !important;
+    width: auto !important;
+    max-width: 700px !important;
+  }
 }
 
 /* Overlay for modals */
@@ -161,7 +224,93 @@ button:disabled {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  z-index: 9998;
+  backdrop-filter: blur(4px);
+}
+
+/* Fix select dropdown z-index in modals */
+[data-slot="dialog-content"] [role="listbox"] {
+  z-index: 10000 !important;
+}
+
+/* Ensure overlay is properly positioned */
+[data-slot="dialog-overlay"] {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(4px) !important;
+  z-index: 9998 !important;
+}
+
+/* Override any conflicting styles that might push modal to top */
+.radix-dialog-content,
+[data-radix-dialog-content] {
+  position: fixed !important;
+  top: 50vh !important;
+  left: 50vw !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0 !important;
+}
+
+/* Prevent modal from being pushed to top by other elements */
+body:has([data-slot="dialog-content"]) {
+  overflow: hidden;
+}
+
+/* Force center positioning even with scroll */
+html:has([data-slot="dialog-content"]) [data-slot="dialog-content"] {
+  position: fixed !important;
+  top: 50vh !important;
+  left: 50vw !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+/* Additional safety for center positioning */
+[role="dialog"][data-slot="dialog-content"] {
+  position: fixed !important;
+  top: 50vh !important;
+  left: 50vw !important;
+  transform: translate(-50%, -50%) !important;
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* FORCE CENTER FOR ALL ENQUIRY MODALS - COMPREHENSIVE COVERAGE */
+/* Target specific modal components that might have custom positioning */
+.enquiry-modal,
+.apply-modal,
+.dialog-modal,
+[data-modal="enquiry"],
+[data-modal="apply"],
+[aria-labelledby*="enquiry"],
+[aria-labelledby*="apply"] {
+  position: fixed !important;
+  top: 50vh !important;
+  left: 50vw !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0 !important;
+}
+
+/* Override any inline styles that might interfere */
+[style*="top:"][role="dialog"],
+[style*="top:"][data-slot="dialog-content"] {
+  top: 50vh !important;
+  left: 50vw !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+/* Ensure modals stay centered during animations */
+[data-state="open"][role="dialog"],
+[data-state="opening"][role="dialog"],
+[data-state="closed"][role="dialog"],
+[data-state="closing"][role="dialog"] {
+  position: fixed !important;
+  top: 50vh !important;
+  left: 50vw !important;
+  transform: translate(-50%, -50%) !important;
 }
 
 /* Improve list accessibility */

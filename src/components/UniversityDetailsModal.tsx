@@ -42,7 +42,16 @@ export default function UniversityDetailsModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[800px] max-h-[90vh] overflow-y-auto">
+      <DialogContent 
+        className="sm:max-w-[800px] max-h-[90vh] overflow-y-auto"
+        style={{
+          position: 'fixed',
+          top: '50vh',
+          left: '50vw',
+          transform: 'translate(-50%, -50%)',
+          margin: 0
+        }}
+      >
         <DialogHeader className="relative">
           <Button
             variant="ghost"

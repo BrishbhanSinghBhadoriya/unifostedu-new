@@ -178,11 +178,31 @@ const ChatBox = () => {
 
         .chat-modal-container {
           position: fixed;
-          bottom: 180px;
+          bottom: 0px;
           right: 20px;
-          width: calc(100% - 40px);
-          max-width: 350px;
+          top: 20px;
+          width: 400px;
+          max-width: 400px;
           z-index: 1000000;
+          height: calc(100vh - 40px);
+        }
+
+        .chatbot-modal {
+          position: fixed !important;
+          bottom: 0px !important;
+          right: 20px !important;
+          top: 20px !important;
+          width: 400px !important;
+          max-width: 400px !important;
+          z-index: 1000000 !important;
+          height: calc(100vh - 40px) !important;
+        }
+
+        .chatbot-modal .chat-modal-content {
+          background: white;
+          border-radius: 16px;
+          box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+          border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         /* Mobile specific adjustments */
@@ -195,17 +215,31 @@ const ChatBox = () => {
             transform: none !important; /* Disable dragging transform on mobile to prevent off-screen */
           }
           .chat-modal-container {
-            width: 95% !important;
-            max-width: 95% !important;
-            right: 2.5% !important;
-            left: 2.5% !important;
-            bottom: 115px !important;
+            width: 95vw !important;
+            max-width: 95vw !important;
+            right: 2.5vw !important;
+            left: 2.5vw !important;
+            bottom: 0px !important;
+            top: 20px !important;
+            height: calc(100vh - 20px) !important;
+            transform: none !important;
+            z-index: 1000000 !important;
+          }
+          .chatbot-modal {
+            width: 95vw !important;
+            max-width: 95vw !important;
+            right: 2.5vw !important;
+            left: 2.5vw !important;
+            bottom: 0px !important;
+            top: 20px !important;
+            height: calc(100vh - 20px) !important;
             transform: none !important;
             z-index: 1000000 !important;
           }
           .chat-modal-content {
-            height: 75vh !important; /* Take up more height on mobile */
-            max-height: 550px !important;
+            height: 100% !important;
+            max-height: 100% !important;
+            width: 100% !important;
           }
           .cloud-bubble {
             width: 180px !important;
@@ -376,17 +410,25 @@ const ChatBox = () => {
       {/* Chat Modal */}
       {isOpen && (
         <div 
-          className="chat-modal-container fixed"
+          className="chatbot-modal fixed"
           role="dialog"
           aria-modal="true"
           aria-label="Chat with Prof.Unique AI Assistant"
           style={{ 
+            position: 'fixed',
+            bottom: '0px',
+            right: '20px',
+            top: '20px',
+            width: typeof window !== 'undefined' && window.innerWidth <= 768 ? '95vw' : '400px',
+            maxWidth: typeof window !== 'undefined' && window.innerWidth <= 768 ? '95vw' : '400px',
+            height: 'calc(100vh - 40px)',
+            zIndex: 1000000,
             transform: isMounted && typeof window !== 'undefined' && window.innerWidth > 768 
               ? `translate(${position.x}px, ${position.y}px)` 
               : 'none'
           }}
         >
-          <div className="chat-modal-content bg-white rounded-2xl p-4 shadow-2xl border border-gray-100 flex flex-col h-[450px]">
+          <div className="chat-modal-content bg-white rounded-2xl p-4 shadow-2xl border border-gray-100 flex flex-col h-full w-full">
             <button
               onClick={() => setIsOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors z-10"

@@ -159,6 +159,98 @@ export default function RootLayout({ children }: ChildrenProps) {
           }}
         />
 
+        {/* Modal Auto-Center Script */}
+        <Script id="modal-auto-center" strategy="afterInteractive">
+          {`
+            // Auto-center all modals when they open
+            const MODAL_SELECTORS = [
+              '[role="dialog"]',
+              '[data-slot="dialog-content"]',
+              '[data-radix-dialog-content]',
+              '.radix-dialog-content',
+              '[aria-modal="true"]',
+              '.dialog-content',
+              '.modal-content',
+              '[data-dialog="true"]'
+            ];
+
+            const centerModal = (element) => {
+              if (!element) return;
+              
+              element.style.position = 'fixed';
+              element.style.top = '50vh';
+              element.style.left = '50vw';
+              element.style.transform = 'translate(-50%, -50%)';
+              element.style.margin = '0';
+              element.style.zIndex = '9999';
+              element.setAttribute('data-auto-centered', 'true');
+            };
+
+            const checkAndCenterModals = () => {
+              MODAL_SELECTORS.forEach(selector => {
+                const modals = document.querySelectorAll(selector);
+                modals.forEach(modal => {
+                  if (!modal.getAttribute('data-auto-centered')) {
+                    centerModal(modal);
+                  }
+                });
+              });
+            };
+
+            // Initialize observer
+            const observer = new MutationObserver((mutations) => {
+              mutations.forEach((mutation) => {
+                mutation.addedNodes.forEach((node) => {
+                  if (node.nodeType === Node.ELEMENT_NODE) {
+                    const isModal = MODAL_SELECTORS.some(selector => 
+                      node.matches && node.matches(selector)
+                    );
+                    
+                    if (isModal) {
+                      centerModal(node);
+                    } else if (node.querySelectorAll) {
+                      setTimeout(checkAndCenterModals, 10);
+                    }
+                  }
+                });
+                
+                if (mutation.type === 'attributes') {
+                  const target = mutation.target;
+                  if (target.nodeType === Node.ELEMENT_NODE) {
+                    const isModal = MODAL_SELECTORS.some(selector => 
+                      target.matches && target.matches(selector)
+                    );
+                    
+                    if (isModal && (
+                      mutation.attributeName === 'data-state' ||
+                      mutation.attributeName === 'aria-modal'
+                    )) {
+                      const isOpen = target.getAttribute('data-state') === 'open' ||
+                                    target.getAttribute('aria-modal') === 'true';
+                      
+                      if (isOpen && !target.getAttribute('data-auto-centered')) {
+                        centerModal(target);
+                      }
+                    }
+                  }
+                }
+              });
+            });
+
+            observer.observe(document.body, {
+              childList: true,
+              subtree: true,
+              attributes: true,
+              attributeFilter: ['data-state', 'aria-modal', 'style', 'class']
+            });
+
+            // Initial check and periodic checks
+            checkAndCenterModals();
+            const intervalCheck = setInterval(checkAndCenterModals, 1000);
+            setTimeout(() => clearInterval(intervalCheck), 30000);
+          `}
+        </Script>
+
         
       
       </head>

@@ -2,6 +2,7 @@ import axios from "axios";
 import coursesUniversityData from "@/data/coursesuniversity.json";
 import { connectToDatabase } from "@/lib/mongoose";
 import User from "@/models/User";
+import { leadSyncManager } from "@/lib/leadSync";
 
 export async function POST(req) {
   try {
@@ -250,21 +251,9 @@ export async function POST(req) {
               });
               console.log("[ChatAPI] Lead saved to DB:", extractedLead.name, extractedLead.mobile);
 
-              // Send to New CRM Sync
-              if (process.env.CRM_API_URL) {
-                axios.post(
-                  process.env.CRM_API_URL,
-                  {
-                    name: extractedLead.name,
-                    phone: extractedLead.mobile,
-                    email: extractedLead.email || "",
-                    source: "website_chatbot",
-                    city: "Website Chatbot",
-                    notes: `Chatbot Inquiry - University: ${extractedLead.university || 'N/A'}, Course: ${extractedLead.course}`
-                  },
-                  { headers: { "Content-Type": "application/json" } }
-                ).catch(err => console.error('[ChatAPI] CRM Sync Error:', err.message));
-              }
+              // Sync to all CRM systems using the new lead sync manager
+              const syncResult = await leadSyncManager.syncLead(extractedLead, 'website_chatbot');
+              console.log('[ChatAPI] CRM sync result:', syncResult);
             } catch (dbErr) {
               console.error("[ChatAPI] DB Save Error:", dbErr.message);
             }

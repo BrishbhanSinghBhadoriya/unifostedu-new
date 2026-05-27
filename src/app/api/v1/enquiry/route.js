@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { connectToDatabase } from '@/lib/mongoose';
 import User from '@/models/User';
-import axios from 'axios';
+import { leadSyncManager } from '@/lib/leadSync';
 
 export async function POST(request) {
   try {
@@ -26,14 +26,26 @@ export async function POST(request) {
     const referer = clientReferer || request.headers.get('referer') || 'Direct';
     const origin = clientOrigin || request.headers.get('origin') || 'Unknown';
 
+    console.log('[ENQUIRY API] Received data:', { name, mobile, email, location, university, course });
+
     if (!name || !mobile || !email || !location || !university || !course) {
       return NextResponse.json({ success: false, message: 'All fields are required' }, { status: 400 });
     }
 
+    // Validate mobile number format
+    const mobileRegex = /^[6-9]\d{9}$/;
+    if (!mobileRegex.test(mobile)) {
+      return NextResponse.json({ 
+        success: false, 
+        message: 'Please enter a valid 10-digit mobile number starting with 6, 7, 8, or 9' 
+      }, { status: 400 });
+    }
+
     await connectToDatabase();
+    console.log('[ENQUIRY API] Database connected successfully');
     
-    // Save to database
-    const dbPromise = User.create({ 
+    // Save to database first (most important)
+    const userEnquiry = await User.create({ 
       name, 
       mobile, 
       email, 
@@ -45,41 +57,42 @@ export async function POST(request) {
       referer,
       origin
     });
+    console.log('[ENQUIRY API] Lead saved to database:', userEnquiry._id);
 
-    // Send to NeoDove (External API)
-    const neoDovePromise = axios.post(
-      "https://25515469-e21f-48a6-93fb-91446641fcda.neodove.com/integration/custom/4fa16adb-e429-4417-a5ba-fc6f77e3fea3/leads",
-      { name, mobile, email, location, university, course },
-      { headers: { "Content-Type": "application/json" } }
-    ).catch(err => {
-      console.error('NeoDove Error:', err.message);
-      return null;
-    });
+    // Sync to all CRM systems
+    const leadData = {
+      name,
+      mobile,
+      email,
+      location,
+      university,
+      course
+    };
 
-    // Send to CRM Lead Integration (New)
-    const crmPromise = process.env.CRM_API_URL ? axios.post(
-      process.env.CRM_API_URL,
-      {
-        name,
-        phone: mobile,
-        email: email || "",
-        source: "website",
-        city: location || "",
-        notes: `University: ${university}, Course: ${course}`
+    const syncResult = await leadSyncManager.syncLead(leadData, 'website_form');
+    console.log('[ENQUIRY API] CRM sync result:', syncResult);
+
+    return NextResponse.json({ 
+      success: true, 
+      userEnquiry: {
+        id: userEnquiry._id,
+        name: userEnquiry.name,
+        mobile: userEnquiry.mobile,
+        email: userEnquiry.email
       },
-      { headers: { "Content-Type": "application/json" } }
-    ).catch(err => {
-      console.error('CRM Sync Error:', err.message);
-      return null;
-    }) : Promise.resolve(null);
+      crmSync: {
+        success: syncResult.success,
+        syncedTo: syncResult.successCount,
+        totalEndpoints: syncResult.totalEndpoints
+      }
+    }, { status: 201 });
 
-    // Wait for all to start/finish but respond as soon as DB is done or in parallel
-    const [userEnquiry] = await Promise.all([dbPromise, neoDovePromise, crmPromise]);
-
-    return NextResponse.json({ success: true, userEnquiry }, { status: 201 });
   } catch (error) {
-    console.error('Enquiry Submission Error:', error);
-    return NextResponse.json({ success: false, message: error.message }, { status: 500 });
+    console.error('[ENQUIRY API] Submission Error:', error);
+    return NextResponse.json({ 
+      success: false, 
+      message: error.message || 'Internal server error'
+    }, { status: 500 });
   }
 }
 

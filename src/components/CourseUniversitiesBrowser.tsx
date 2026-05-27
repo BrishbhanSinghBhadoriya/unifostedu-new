@@ -352,7 +352,16 @@ export default function CourseUniversitiesBrowser({ universities, courseTitle,}:
                   )}
                   
                   <Dialog open={openIndex === index} onOpenChange={(v) => setOpenIndex(v ? index : null)}>
-                    <DialogContent className="sm:max-w-[560px]">
+                    <DialogContent 
+                      className="sm:max-w-[560px]"
+                      style={{
+                        position: 'fixed',
+                        top: '50vh',
+                        left: '50vw',
+                        transform: 'translate(-50%, -50%)',
+                        margin: 0
+                      }}
+                    >
                       <DialogHeader>
                         <DialogTitle>Enquiry for {university.name}</DialogTitle>
                       </DialogHeader>

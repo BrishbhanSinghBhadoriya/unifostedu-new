@@ -29,9 +29,7 @@ const AllCourses = dynamic(() => import("./AllCourses").then(mod => mod.AllCours
   ssr: false,
   loading: () => <div className="h-96 animate-pulse bg-gray-100 rounded-2xl" />
 });
-const EnquiryForm = dynamic(() => import("@/components/EnquiryForm"), { 
-  ssr: false 
-});
+import EnquiryForm from "@/components/EnquiryForm";
 const WorkflowRoadmap = dynamic(() => import("@/components/pages/WorkflowRoadmap"), { 
   ssr: false,
   loading: () => <div className="h-96 animate-pulse bg-gray-100 rounded-2xl" />
@@ -89,6 +87,8 @@ const Landing = ({ data }: LandingPageProps) => {
   const openModal = (type: string): void => {
     setModalType(type);
     setShowEnquiryModal(true);
+    
+    // Modal will open in center automatically
   };
 
   return (
@@ -363,10 +363,24 @@ const Landing = ({ data }: LandingPageProps) => {
       {showEnquiryModal && (
         <Dialog
           open={showEnquiryModal}
-          onOpenChange={setShowEnquiryModal}
-          modal={false}
+          onOpenChange={(open) => {
+            setShowEnquiryModal(open);
+            if (!open) {
+              // Modal closed - no cleanup needed as observer handles it
+            }
+          }}
         >
-          <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-4 md:my-2 lg:my-1 p-4 sm:p-6 z-[30001]">
+          <DialogContent 
+            className="w-[95vw] sm:w-[90vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] max-w-2xl max-h-[90vh] overflow-y-auto p-4 sm:p-6"
+            showCloseButton={true}
+            style={{
+              position: 'fixed',
+              top: '50vh',
+              left: '50vw',
+              transform: 'translate(-50%, -50%)',
+              margin: 0
+            }}
+          >
             <DialogHeader className="space-y-2">
               <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
                 {modalType === "getStarted" && "Get Started with Unifost"}
@@ -374,10 +388,15 @@ const Landing = ({ data }: LandingPageProps) => {
                 {modalType === "homeDemo" && "Book a Home Demo"}
               </DialogTitle>
             </DialogHeader>
-            <EnquiryForm
-              onSubmitted={() => setShowEnquiryModal(false)}
-              formType={modalType}
-            />
+            <div className="mt-4">
+              <EnquiryForm
+                onSubmitted={() => {
+                  setShowEnquiryModal(false);
+                  // Modal will auto-center on next open
+                }}
+                formType={modalType}
+              />
+            </div>
           </DialogContent>
         </Dialog>
       )}

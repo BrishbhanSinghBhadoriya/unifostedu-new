@@ -9,6 +9,133 @@
   font-family: var(--font-baskervville), serif;
 }
 
+/* UNIVERSAL MODAL CENTERING - HIGHEST PRIORITY */
+/* This ensures ALL modals open in the exact center of the screen */
+[role="dialog"],
+[data-slot="dialog-content"],
+[data-radix-dialog-content],
+.radix-dialog-content,
+[aria-modal="true"],
+.dialog-content,
+.modal-content,
+[data-dialog="true"],
+[data-state="open"][role="dialog"],
+[data-state="open"][data-slot="dialog-content"] {
+  position: fixed !important;
+  top: 50vh !important;
+  left: 50vw !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+}
+
+/* Override any inline styles that might interfere */
+[style*="top:"][role="dialog"],
+[style*="top:"][data-slot="dialog-content"],
+[style*="top:"][aria-modal="true"] {
+  top: 50vh !important;
+  left: 50vw !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+/* Ensure modals stay centered during all states */
+[data-state="opening"][role="dialog"],
+[data-state="closing"][role="dialog"],
+[data-state="open"][role="dialog"],
+[data-state="closed"][role="dialog"] {
+  position: fixed !important;
+  top: 50vh !important;
+  left: 50vw !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+/* Additional centering rules for enquiry modal */
+[role="dialog"],
+[aria-modal="true"] {
+  position: fixed !important;
+  top: 50vh !important;
+  left: 50vw !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+}
+
+/* Force center for all dialog content */
+[data-slot="dialog-content"] {
+  position: fixed !important;
+  top: 50vh !important;
+  left: 50vw !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0 !important;
+}
+
+/* Viewport centering with higher specificity */
+html [data-slot="dialog-content"],
+body [data-slot="dialog-content"],
+div[data-slot="dialog-content"] {
+  position: fixed !important;
+  top: 50vh !important;
+  left: 50vw !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0 !important;
+  inset: auto !important;
+}
+
+/* Mobile responsive centering */
+@media (max-width: 768px) {
+  [data-slot="dialog-content"] {
+    position: fixed !important;
+    top: 50vh !important;
+    left: 50vw !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    width: 95vw !important;
+    max-width: 95vw !important;
+    height: 90vh !important;
+    max-height: 90vh !important;
+  }
+}
+
+/* PROFESSIONAL MODAL SYSTEM - CLEAN & CENTERED */
+/* Enquiry Form Modal - Center positioning */
+.enquiry-modal [role="dialog"],
+.enquiry-modal [data-slot="dialog-content"] {
+  position: fixed !important;
+  top: 50vh !important;
+  left: 50vw !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* ChatBot Modal - Bottom right positioning */
+.chatbot-modal [role="dialog"],
+.chatbot-modal [data-slot="dialog-content"] {
+  position: fixed !important;
+  bottom: 180px !important;
+  right: 20px !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  margin: 0 !important;
+  z-index: 1000000 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Default modal centering for other modals */
+[role="dialog"]:not(.chatbot-modal [role="dialog"]):not(.enquiry-modal [role="dialog"]),
+[data-slot="dialog-content"]:not(.chatbot-modal [data-slot="dialog-content"]):not(.enquiry-modal [data-slot="dialog-content"]) {
+  position: fixed !important;
+  top: 50vh !important;
+  left: 50vw !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+}
+
 
 /* Custom responsive utilities for better mobile experience */
 @layer utilities {
