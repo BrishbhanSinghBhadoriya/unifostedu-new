@@ -6,7 +6,7 @@ const baseUrl =
 export async function getLandingData() {
   try {
     const res = await fetch(`${baseUrl}/api/unifostData.json`, {
-      cache: "no-store", // Ensure dynamic fetching at runtime
+      next: { revalidate: 3600 }, // Cache for 1 hour, revalidate in background
     });
 
 if (!res.ok) {

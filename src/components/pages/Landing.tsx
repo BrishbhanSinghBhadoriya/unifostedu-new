@@ -1,7 +1,5 @@
 "use client";
 
-import "aos/dist/aos.css";
-import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -69,22 +67,7 @@ const Landing = ({ data }: LandingPageProps) => {
   } = data || {};
 
   useEffect(() => {
-    // Only load and init AOS on desktop
-    if (window.innerWidth > 768) {
-      const initAOS = async () => {
-        const AOS = (await import("aos")).default;
-        AOS.init({ 
-          duration: 800, 
-          once: true,
-        });
-      };
-
-      if (window.requestIdleCallback) {
-        window.requestIdleCallback(() => initAOS());
-      } else {
-        setTimeout(initAOS, 100);
-      }
-    }
+    // AOS removed - using CSS transitions instead for better mobile performance
   }, []);
 
   const router = useRouter();
@@ -108,8 +91,6 @@ const Landing = ({ data }: LandingPageProps) => {
     setShowEnquiryModal(true);
   };
 
-  const MotionDiv = motion.create('div');
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <Hero onOpenModal={openModal} heroSlides={heroSlides} />
@@ -126,9 +107,9 @@ const Landing = ({ data }: LandingPageProps) => {
 
       <section id="top-partner-universities" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50 content-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <MotionDiv className="text-center mb-16" data-aos="fade-up">
+          <div className="text-center mb-16">
             <TopOnlineUniversity />
-          </MotionDiv>
+          </div>
         </div>
       </section>
 
@@ -164,17 +145,6 @@ const Landing = ({ data }: LandingPageProps) => {
               ))}
             </div>
           </div>
-
-          <style jsx global>{`
-            @keyframes accreditScroll {
-              0% {
-                transform: translateX(0);
-              }
-              100% {
-                transform: translateX(-50%);
-              }
-            }
-          `}</style>
         </div>
       </section>
 
@@ -232,7 +202,7 @@ const Landing = ({ data }: LandingPageProps) => {
           </p>
 
           <div className="overflow-hidden relative backdrop-blur-md rounded-2xl border border-white/20 p-6">
-            <div className="flex gap-10 animate-city-scroll whitespace-nowrap">
+            <div className="animate-city-scroll">
               {[...cities, ...cities].map((city, idx) => (
                 <div
                   key={`${city.city}-${idx}`}
@@ -256,27 +226,12 @@ const Landing = ({ data }: LandingPageProps) => {
             </div>
           </div>
         </div>
-
-        <style jsx>{`
-          @keyframes city-scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-          .animate-city-scroll {
-            animation: city-scroll 30s linear infinite;
-            display: flex;
-            width: max-content;
-          }
-          .animate-city-scroll:hover {
-            animation-play-state: paused;
-          }
-        `}</style>
       </section>
 
       {/* Services */}
       <section className="py-14 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <MotionDiv className="text-center mb-10 sm:mb-14" data-aos="fade-up">
+          <div className="text-center mb-10 sm:mb-14">
             <h2 className="text-3xl sm:text-4xl font-semibold text-[#001e3c] mb-2">
               Career Counseling Online & Virtual Learning Guidance
             </h2>
@@ -284,14 +239,11 @@ const Landing = ({ data }: LandingPageProps) => {
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
               Best Career Planning Services with trusted EdTech Solutions in India
             </p>
-          </MotionDiv>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
             {/* Video Call Counseling */}
-            <MotionDiv
-              className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm"
-              data-aos="fade-up"
-            >
+            <div className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-cyan-600 flex items-center justify-center">
                   <MdVideoCall className="text-white text-xl" />
@@ -309,14 +261,10 @@ const Landing = ({ data }: LandingPageProps) => {
               >
                 Book Your Free Counseling
               </button>
-            </MotionDiv>
+            </div>
 
             {/* Home Demo Counseling */}
-            <MotionDiv
-              className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
+            <div className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-cyan-600 flex items-center justify-center">
                   <MdHome className="text-white text-xl" />
@@ -334,14 +282,10 @@ const Landing = ({ data }: LandingPageProps) => {
               >
                 Schedule a Home Demo
               </button>
-            </MotionDiv>
+            </div>
 
             {/* Career Planning */}
-            <MotionDiv
-              className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
+            <div className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-cyan-600 flex items-center justify-center">
                   <FaCompass className="text-white text-xl" />
@@ -359,7 +303,7 @@ const Landing = ({ data }: LandingPageProps) => {
               >
                 Start Your Journey Today
               </button>
-            </MotionDiv>
+            </div>
           </div>
 
           {/* Trust bar */}

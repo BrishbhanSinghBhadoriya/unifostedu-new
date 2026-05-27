@@ -1,6 +1,5 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import {
@@ -8,15 +7,12 @@ import {
   FaCheck,
   FaGraduationCap,
   FaPlay,
-  FaUser,
-  
   FaStar,
   FaLocationDot 
 } from "react-icons/fa6";
 import { MdPeople } from "react-icons/md";
 import { HeroProps } from "types/LandingPageTypes";
 import { heroSlides as fallbackSlides } from "./data";
-
 import { useIsMobile } from "@/utils/hooks";
 
 const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
@@ -49,10 +45,10 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
     <section className="relative min-h-screen flex flex-col bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 overflow-hidden">
       {/* Hero Background with Animated Elements */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-        {/* Animated background shapes - reduced opacity for better performance */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/15 to-cyan-400/15 rounded-full blur-3xl" style={{animation: 'pulse 4s cubic-bezier(0.4,0,0.6,1) infinite', willChange: 'opacity'}} />
-        <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-indigo-400/15 to-purple-400/15 rounded-full blur-3xl" style={{animation: 'pulse 6s cubic-bezier(0.4,0,0.6,1) infinite 2s', willChange: 'opacity'}} />
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-gradient-to-r from-teal-400/15 to-emerald-400/15 rounded-full blur-3xl" style={{animation: 'pulse 5s cubic-bezier(0.4,0,0.6,1) infinite 1s', willChange: 'opacity'}} />
+        {/* Animated background shapes - hidden on mobile for performance */}
+        <div className="hidden lg:block absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/15 to-cyan-400/15 rounded-full blur-3xl" style={{animation: 'pulse 4s cubic-bezier(0.4,0,0.6,1) infinite', willChange: 'opacity'}} />
+        <div className="hidden lg:block absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-indigo-400/15 to-purple-400/15 rounded-full blur-3xl" style={{animation: 'pulse 6s cubic-bezier(0.4,0,0.6,1) infinite 2s', willChange: 'opacity'}} />
+        <div className="hidden lg:block absolute bottom-20 left-1/3 w-80 h-80 bg-gradient-to-r from-teal-400/15 to-emerald-400/15 rounded-full blur-3xl" style={{animation: 'pulse 5s cubic-bezier(0.4,0,0.6,1) infinite 1s', willChange: 'opacity'}} />
 
         {/* Grid pattern overlay */}
         <div className="absolute inset-0 opacity-40" style={{
@@ -74,27 +70,28 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                   <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-4 shadow-2xl border border-white/20">
                     {/* Slider Container */}
                     <div className="relative h-56 sm:h-64 md:h-72 lg:h-80 rounded-2xl overflow-hidden mb-6 bg-gray-100">
-                      <AnimatePresence initial={slide === 0} mode="wait">
-                        <motion.div
-                          key={slide}
+                      {slidesToUse.map((s, i) => (
+                        <div
+                          key={i}
                           className="absolute inset-0"
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 0.3 }}
+                          style={{
+                            opacity: i === slide ? 1 : 0,
+                            transition: 'opacity 0.4s ease',
+                            pointerEvents: i === slide ? 'auto' : 'none',
+                          }}
                         >
                           <Image
-                          fill
-                          src={slidesToUse[slide].src}
-                          alt={`${slidesToUse[slide].title} | UNIFOST`}
-                          priority={slide === 0}
-                          loading={slide === 0 ? "eager" : "lazy"}
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
-                          className="object-contain rounded-2xl"
-                        />
+                            fill
+                            src={s.src}
+                            alt={`${s.title} | UNIFOST`}
+                            priority={i === 0}
+                            loading={i === 0 ? "eager" : "lazy"}
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+                            className="object-contain rounded-2xl"
+                          />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl" />
-                        </motion.div>
-                      </AnimatePresence>
+                        </div>
+                      ))}
 
                       {/* Slide Indicators */}
                       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
@@ -131,12 +128,12 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                     </div>
                   </div>
 
-                  {/* Floating Elements - decorative only */}
-                  <div aria-hidden="true" className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center shadow-lg animate-bounce">
+                  {/* Floating Elements - decorative only, hidden on mobile */}
+                  <div aria-hidden="true" className="hidden sm:flex absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full items-center justify-center shadow-lg animate-bounce">
                     <FaGraduationCap className="text-white text-2xl" />
                   </div>
 
-                  <div aria-hidden="true" className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-green-400 to-teal-400 rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                  <div aria-hidden="true" className="hidden sm:flex absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-green-400 to-teal-400 rounded-full items-center justify-center shadow-lg animate-pulse">
                     <MdPeople className="text-white text-xl" />
                   </div>
                 </div>

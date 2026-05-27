@@ -1,5 +1,4 @@
 import React from 'react'
-import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowRight, FaScaleBalanced, FaCompassDrafting, FaStar, FaCircleCheck } from 'react-icons/fa6';
 import { useRouter } from 'next/navigation';
 import { colleges as staticColleges, slugify, getUniversityHref } from "./landing/data.js";

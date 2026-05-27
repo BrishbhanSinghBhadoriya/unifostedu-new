@@ -234,7 +234,7 @@ export default function TestimonialSlider() {
                   height={112} 
                   className="object-cover object-top"
                   loading="lazy"
-                  unoptimized
+                  sizes="112px"
                 />
               </div>
             </div>

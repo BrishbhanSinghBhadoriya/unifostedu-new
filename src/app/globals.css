@@ -157,6 +157,26 @@ body {
   animation: scroll 40s linear infinite;
 }
 
+@keyframes accreditScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes city-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-city-scroll {
+  animation: city-scroll 30s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.animate-city-scroll:hover {
+  animation-play-state: paused;
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
