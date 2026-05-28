@@ -173,15 +173,7 @@ const EnquireCard = ({
 
       {/* Enquiry Dialog */}
       <Dialog open={isEnquiryOpen} onOpenChange={setIsEnquiryOpen}>
-        <DialogContent 
-          style={{
-            position: 'fixed',
-            top: '50vh',
-            left: '50vw',
-            transform: 'translate(-50%, -50%)',
-            margin: 0
-          }}
-        >
+        <DialogContent>
           <DialogHeader>
             <DialogTitle>Enquire About {course}</DialogTitle>
           </DialogHeader>

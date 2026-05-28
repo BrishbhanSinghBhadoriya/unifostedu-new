@@ -1,139 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "./accessibility.css";
 
 @custom-variant dark (&:is(.dark *));
 
 /* Font Family Utilities */
 .font-baskervville {
   font-family: var(--font-baskervville), serif;
-}
-
-/* UNIVERSAL MODAL CENTERING - HIGHEST PRIORITY */
-/* This ensures ALL modals open in the exact center of the screen */
-[role="dialog"],
-[data-slot="dialog-content"],
-[data-radix-dialog-content],
-.radix-dialog-content,
-[aria-modal="true"],
-.dialog-content,
-.modal-content,
-[data-dialog="true"],
-[data-state="open"][role="dialog"],
-[data-state="open"][data-slot="dialog-content"] {
-  position: fixed !important;
-  top: 50vh !important;
-  left: 50vw !important;
-  transform: translate(-50%, -50%) !important;
-  margin: 0 !important;
-  z-index: 9999 !important;
-}
-
-/* Override any inline styles that might interfere */
-[style*="top:"][role="dialog"],
-[style*="top:"][data-slot="dialog-content"],
-[style*="top:"][aria-modal="true"] {
-  top: 50vh !important;
-  left: 50vw !important;
-  transform: translate(-50%, -50%) !important;
-}
-
-/* Ensure modals stay centered during all states */
-[data-state="opening"][role="dialog"],
-[data-state="closing"][role="dialog"],
-[data-state="open"][role="dialog"],
-[data-state="closed"][role="dialog"] {
-  position: fixed !important;
-  top: 50vh !important;
-  left: 50vw !important;
-  transform: translate(-50%, -50%) !important;
-}
-
-/* Additional centering rules for enquiry modal */
-[role="dialog"],
-[aria-modal="true"] {
-  position: fixed !important;
-  top: 50vh !important;
-  left: 50vw !important;
-  transform: translate(-50%, -50%) !important;
-  margin: 0 !important;
-  z-index: 9999 !important;
-}
-
-/* Force center for all dialog content */
-[data-slot="dialog-content"] {
-  position: fixed !important;
-  top: 50vh !important;
-  left: 50vw !important;
-  transform: translate(-50%, -50%) !important;
-  margin: 0 !important;
-}
-
-/* Viewport centering with higher specificity */
-html [data-slot="dialog-content"],
-body [data-slot="dialog-content"],
-div[data-slot="dialog-content"] {
-  position: fixed !important;
-  top: 50vh !important;
-  left: 50vw !important;
-  transform: translate(-50%, -50%) !important;
-  margin: 0 !important;
-  inset: auto !important;
-}
-
-/* Mobile responsive centering */
-@media (max-width: 768px) {
-  [data-slot="dialog-content"] {
-    position: fixed !important;
-    top: 50vh !important;
-    left: 50vw !important;
-    transform: translate(-50%, -50%) !important;
-    margin: 0 !important;
-    width: 95vw !important;
-    max-width: 95vw !important;
-    height: 90vh !important;
-    max-height: 90vh !important;
-  }
-}
-
-/* PROFESSIONAL MODAL SYSTEM - CLEAN & CENTERED */
-/* Enquiry Form Modal - Center positioning */
-.enquiry-modal [role="dialog"],
-.enquiry-modal [data-slot="dialog-content"] {
-  position: fixed !important;
-  top: 50vh !important;
-  left: 50vw !important;
-  transform: translate(-50%, -50%) !important;
-  margin: 0 !important;
-  z-index: 9999 !important;
-  border-radius: 16px !important;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
-}
-
-/* ChatBot Modal - Bottom right positioning */
-.chatbot-modal [role="dialog"],
-.chatbot-modal [data-slot="dialog-content"] {
-  position: fixed !important;
-  bottom: 180px !important;
-  right: 20px !important;
-  top: auto !important;
-  left: auto !important;
-  transform: none !important;
-  margin: 0 !important;
-  z-index: 1000000 !important;
-  border-radius: 16px !important;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
-}
-
-/* Default modal centering for other modals */
-[role="dialog"]:not(.chatbot-modal [role="dialog"]):not(.enquiry-modal [role="dialog"]),
-[data-slot="dialog-content"]:not(.chatbot-modal [data-slot="dialog-content"]):not(.enquiry-modal [data-slot="dialog-content"]) {
-  position: fixed !important;
-  top: 50vh !important;
-  left: 50vw !important;
-  transform: translate(-50%, -50%) !important;
-  margin: 0 !important;
-  z-index: 9999 !important;
 }
 
 
@@ -205,15 +77,6 @@ body {
     width: 100%;
   }
 
-  /* Reduce motion for users who prefer it - improves accessibility */
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-    }
-  }
-
   /* Optimized image loading placeholder */
   .img-placeholder {
     background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
@@ -283,26 +146,6 @@ body {
 
 .animate-scroll {
   animation: scroll 40s linear infinite;
-}
-
-@keyframes accreditScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-@keyframes city-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.animate-city-scroll {
-  animation: city-scroll 30s linear infinite;
-  display: flex;
-  width: max-content;
-}
-
-.animate-city-scroll:hover {
-  animation-play-state: paused;
 }
 
 @theme inline {

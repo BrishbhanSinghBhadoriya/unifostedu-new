@@ -32,22 +32,6 @@ export default function EnquiryForm({
   const [program, setProgram] = useState(defaultProgram);
   const [selectedUniversity, setSelectedUniversity] = useState(universityName || '');
   const [city, setCity] = useState('');
-  const [trackingData, setTrackingData] = useState({
-    userAgent: '',
-    referer: '',
-    origin: ''
-  });
-
-  useEffect(() => {
-    // Capture tracking data
-    if (typeof window !== 'undefined') {
-      setTrackingData({
-        userAgent: navigator.userAgent,
-        referer: document.referrer || 'Direct',
-        origin: window.location.origin
-      });
-    }
-  }, []);
 
   const universities = [
     'Amity University Online',
@@ -95,7 +79,7 @@ export default function EnquiryForm({
     });
   }, []);
 
-  const { register, handleSubmit, formState, setValue, getValues, trigger } = useForm<EnquiryFormValues>({
+  const { register, handleSubmit, formState, setValue, getValues } = useForm<EnquiryFormValues>({
     resolver: yupResolver(schema),
     defaultValues: {
       name: '',
@@ -124,8 +108,7 @@ export default function EnquiryForm({
     setValue('course', val, { shouldDirty: true, shouldTouch: true });
   };
 
-  const onSubmit = async (values: any, isWhatsApp: boolean | React.BaseSyntheticEvent = false) => {
-    const shouldRedirect = isWhatsApp === true;
+  const onSubmit = async (values: any) => {
     try {
       setLoading(true);
       const requestBody = {
@@ -135,34 +118,11 @@ export default function EnquiryForm({
         location: values.location || city,
         university: values.university || selectedUniversity,
         course: values.course || program,
-        userAgent: trackingData.userAgent,
-        referer: trackingData.referer,
-        origin: trackingData.origin,
       };
-
-      console.log('Submitting Enquiry Data:', requestBody);
       
       const response = await enquiryAPI.general(requestBody);
 
       toast.success('Enquiry submitted successfully!');
-
-      if (shouldRedirect) {
-        const targetNumber = '917042646766';
-        const composed = [
-          `Hello Sir/ Madam, I would like to connect with a counselor via WhatsApp.`,
-          values.name ? `Name: ${values.name}` : `Name: `,
-          values.mobile ? `Mobile: ${values.mobile}` : null,
-          values.email ? `Email: ${values.email}` : null,
-          (values.location || city) ? `Location: ${values.location || city}` : null,
-          (values.university || selectedUniversity) ? `University: ${values.university || selectedUniversity}` : null,
-          (values.course || program) ? `Course: ${values.course || program}` : null,
-        ].filter(Boolean).join('%0A');
-
-        const url = `https://wa.me/${targetNumber}?text=${composed}`;
-        if (typeof window !== 'undefined') {
-          window.open(url, '_blank');
-        }
-      }
 
       if (autoCloseOnSuccess && onSubmitted) {
         setTimeout(() => {
@@ -187,18 +147,27 @@ export default function EnquiryForm({
     }
   };
 
-  const handleWhatsAppConnect = async () => {
-    const isValid = await trigger();
-    if (!isValid) {
-      toast.error("Please fill in all required fields.");
-      return;
-    }
+  const handleWhatsAppConnect = () => {
     const values = getValues();
-    await onSubmit(values, true);
+    const targetNumber = '917042646766';
+    const composed = [
+      `Hello Sir/ Madam, I would like to connect with a counselor via WhatsApp.`,
+      values.name ? `Name: ${values.name}` : `Name: `,
+      values.mobile ? `Mobile: ${values.mobile}` : null,
+      values.email ? `Email: ${values.email}` : null,
+      (values.location || city) ? `Location: ${values.location || city}` : null,
+      (values.university || selectedUniversity) ? `University: ${values.university || selectedUniversity}` : null,
+      (values.course || program) ? `Course: ${values.course || program}` : null,
+    ].filter(Boolean).join('%0A');
+
+    const url = `https://wa.me/${targetNumber}?text=${composed}`;
+    if (typeof window !== 'undefined') {
+      window.open(url, '_blank');
+    }
   };
 
   return (
-    <form className="space-y-4 sm:space-y-5 relative" onSubmit={handleSubmit(onSubmit)}>
+    <form className="space-y-4 sm:space-y-5 relative z-[20002]" onSubmit={handleSubmit(onSubmit)}>
       <input type="hidden" {...register('course')} value={program} readOnly />
       <input type="hidden" {...register('university')} value={selectedUniversity} readOnly />
       <input type="hidden" {...register('location')} value={city} readOnly />
@@ -216,16 +185,9 @@ export default function EnquiryForm({
             Name <span className="text-red-500">*</span>
           </Label>
           <div className="relative">
-            <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" aria-hidden="true" />
-            <Input 
-              id="name" 
-              placeholder="Your name" 
-              className="pl-10 h-11 sm:h-10" 
-              aria-invalid={!!formState.errors.name} 
-              aria-describedby={formState.errors.name ? "name-error" : undefined}
-              {...register('name')} 
-            />
-            {formState.errors.name && (<p id="name-error" className="text-red-600 text-xs mt-1" role="alert">{formState.errors.name.message}</p>)}
+            <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+            <Input id="name" placeholder="Your name" className="pl-10 h-11 sm:h-10" aria-invalid={!!formState.errors.name} {...register('name')} />
+            {formState.errors.name && (<p className="text-red-600 text-xs mt-1">{formState.errors.name.message}</p>)}
           </div>
         </div>
 
@@ -234,18 +196,17 @@ export default function EnquiryForm({
             Mobile Number <span className="text-red-500">*</span>
           </Label>
           <div className="relative">
-            <FaPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" aria-hidden="true" />
+            <FaPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
             <Input 
               id="mobile" 
               maxLength={10} 
               placeholder="10 digit mobile number" 
               className="pl-10 h-11 sm:h-10" 
               aria-invalid={!!formState.errors.mobile} 
-              aria-describedby={formState.errors.mobile ? "mobile-error" : undefined}
               {...register('mobile')} 
             />
           </div>
-          {formState.errors.mobile && (<p id="mobile-error" className="text-red-600 text-xs mt-1" role="alert">{formState.errors.mobile.message}</p>)}
+          {formState.errors.mobile && (<p className="text-red-600 text-xs mt-1">{formState.errors.mobile.message}</p>)}
         </div>
       </div>
 
@@ -255,17 +216,9 @@ export default function EnquiryForm({
             Email <span className="text-red-500">*</span>
           </Label>
           <div className="relative">
-            <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" aria-hidden="true" />
-            <Input 
-              id="email" 
-              type="email" 
-              placeholder="you@example.com" 
-              className="pl-10 h-11 sm:h-10" 
-              aria-invalid={!!formState.errors.email} 
-              aria-describedby={formState.errors.email ? "email-error" : undefined}
-              {...register('email')} 
-            />
-            {formState.errors.email && (<p id="email-error" className="text-red-600 text-xs mt-1" role="alert">{formState.errors.email.message}</p>)}
+            <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+            <Input id="email" type="email" placeholder="you@example.com" className="pl-10 h-11 sm:h-10" aria-invalid={!!formState.errors.email} {...register('email')} />
+            {formState.errors.email && (<p className="text-red-600 text-xs mt-1">{formState.errors.email.message}</p>)}
           </div>
         </div>
 
@@ -274,55 +227,55 @@ export default function EnquiryForm({
             Location <span className="text-red-500">*</span>
           </Label>
           <div className="relative">
-            <FaLocationDot className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" aria-hidden="true" />
+            <FaLocationDot className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
             <Select value={city} onValueChange={onCityChange}>
-              <SelectTrigger id="location" className="pl-10 h-11 sm:h-10" aria-describedby={formState.errors.location ? "location-error" : undefined}>
+              <SelectTrigger className="pl-10 h-11 sm:h-10">
                 <SelectValue placeholder="Select your location" />
               </SelectTrigger>
-              <SelectContent portalled={false} className="max-h-60 overflow-auto">
+              <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
                 {popularCities.map((cityName) => (
                   <SelectItem key={cityName} value={cityName}>{cityName}</SelectItem>
                 ))}
                 <SelectItem value="other">Other</SelectItem>
               </SelectContent>
             </Select>
-            {formState.errors.location && (<p id="location-error" className="text-red-600 text-xs mt-1" role="alert">{formState.errors.location.message}</p>)}
+            {formState.errors.location && (<p className="text-red-600 text-xs mt-1">{formState.errors.location.message}</p>)}
           </div>
         </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         <div className="space-y-1.5">
-          <Label htmlFor="university" className="flex items-center gap-1">
+          <Label className="flex items-center gap-1">
             University <span className="text-red-500">*</span>
           </Label>
           <div className="relative">
-            <FaBuildingColumns className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" aria-hidden="true" />
+            <FaBuildingColumns className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
             <Select value={selectedUniversity} onValueChange={onUniversityChange}>
-              <SelectTrigger id="university" className="pl-10 h-11 sm:h-10" aria-describedby={formState.errors.university ? "university-error" : undefined}>
+              <SelectTrigger className="pl-10 h-11 sm:h-10">
                 <SelectValue placeholder="Select university" />
               </SelectTrigger>
-              <SelectContent portalled={false} className="max-h-60 overflow-auto">
+              <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
                 {allUniversities.map((u) => (
                   <SelectItem key={u} value={u}>{u}</SelectItem>
                 ))}
               </SelectContent>
             </Select>
-            {formState.errors.university && (<p id="university-error" className="text-red-600 text-xs mt-1" role="alert">{formState.errors.university.message}</p>)}
+            {formState.errors.university && (<p className="text-red-600 text-xs mt-1">{formState.errors.university.message}</p>)}
           </div>
         </div>
 
         <div className="space-y-1.5">
-          <Label htmlFor="course" className="flex items-center gap-1">
+          <Label className="flex items-center gap-1">
             Course <span className="text-red-500">*</span>
           </Label>
           <div className="relative">
-            <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" aria-hidden="true" />
+            <FaGraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
             <Select value={program} onValueChange={onProgramChange}>
-              <SelectTrigger id="course" className="pl-10 h-11 sm:h-10" aria-describedby={formState.errors.course ? "course-error" : undefined}>
+              <SelectTrigger className="pl-10 h-11 sm:h-10">
                 <SelectValue placeholder="Select course" />
               </SelectTrigger>
-              <SelectContent portalled={false} className="max-h-60 overflow-auto">
+              <SelectContent portalled={false} className="z-[30000] max-h-60 overflow-auto">
                 <SelectItem value="MBA">MBA</SelectItem>
                 <SelectItem value="MCA">MCA</SelectItem>
                 <SelectItem value="MCOM">M.Com</SelectItem>
@@ -334,7 +287,7 @@ export default function EnquiryForm({
               </SelectContent>
             </Select>
             {formState.errors.course && (
-              <p id="course-error" className="text-red-600 text-xs mt-1" role="alert">{formState.errors.course.message}</p>
+              <p className="text-red-600 text-xs mt-1">{formState.errors.course.message}</p>
             )}
           </div>
         </div>
@@ -345,20 +298,19 @@ export default function EnquiryForm({
           type="submit"
           disabled={loading}
           aria-busy={loading}
-          aria-label={loading ? "Submitting enquiry form, please wait" : "Submit enquiry form"}
-          className="flex-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] font-bold py-3 sm:py-2.5 text-sm sm:text-base disabled:opacity-50"
+          aria-label={loading ? "Submitting form..." : "Submit Enquiry"}
+          className="flex-1 bg-gradient-to-r from-[#00ffe0] to-[#00d4c4] text-[#001e3c] hover:from-[#00d4c4] hover:to-[#00ffe0] font-bold relative z-[20002] py-3 sm:py-2.5 text-sm sm:text-base disabled:opacity-50"
         >
-          <FaPaperPlane className="mr-2" aria-hidden="true" />
+          <FaPaperPlane className="mr-2" />
           {loading ? 'Submitting...' : 'Submit Enquiry'}
         </Button>
 
         <Button
           type="button"
           onClick={handleWhatsAppConnect}
-          aria-label="Connect with counselor via WhatsApp"
           className="flex-1 bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700 font-semibold py-3 sm:py-2.5 text-sm sm:text-base"
         >
-          <FaWhatsapp className="mr-2" aria-hidden="true" />
+          <FaWhatsapp className="mr-2" />
           Connect Counselor
         </Button>
       </div>
