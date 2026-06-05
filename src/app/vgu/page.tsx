@@ -169,7 +169,7 @@ const Vgu = () => {
     {
       question: "Is VGU Online UGC-approved?",
       answer:
-        "Yes. VGU Online (Vivekananda Global University Online) offers UGC approved online degrees VGU for all its programs, including the Online MBA, Online BBA, Online MCom from VGU, and Online BCom from VGU. All degrees hold the same value as regular on-campus qualifications."
+        "Yes. VGU Online (Vivekananda Global University Online) offers UGC approved online degrees VGU for all its programs, including the Online MBA, Online BBA, Online MCA, Online BCA, Online BA, Online MA (English), Online MSc., and Online MAJMC from VGU. All degrees hold the same value as regular on-campus qualifications."
     },
     {
       question: "Is VGU Online a NAAC-accredited university?",
@@ -179,7 +179,7 @@ const Vgu = () => {
     {
       question: "What online courses does VGU Online offer?",
       answer:
-        "VGU Online Courses include: • Online MBA from Vivekananda Global University • Online BBA from Vivekananda Global University • Online MCom from VGU • Online BCom from VGU • Additional undergraduate and postgraduate online programs"
+        "VGU Online Courses include: • Online MBA from Vivekananda Global University • Online BBA from Vivekananda Global University • Online BCA from VGU • Online BA from VGU • Online MCA from VGU • Online MA English from VGU • Online MSc. from VGU • Online MAJMC from VGU • Additional industry-focused VGU Online programs"
     },
     {
       question: "Is the online degree from Vivekananda Global University valid for jobs?",
@@ -469,8 +469,8 @@ const Vgu = () => {
                     fastest-growing and most trusted platforms for UGC-approved online degrees from VGU.
                     As a NAAC-accredited university, VGU Online is recognized for academic excellence,
                     modern digital learning, and globally accepted qualifications. Students can choose
-                    from industry-focused programs such as the Online MBA, Online BBA, Online MCom, and
-                    Online BCom from VGU—each offering flexibility, affordability, and strong career value.
+                    from industry-focused programs such as the Online MBA, Online BBA, Online MCA, Online BCA,
+                    Online BA, Online MA English, Online MSc., and Online MAJMC from VGU—each offering flexibility, affordability, and strong career value.
                   </p>
 
                   {/* Highlight Box */}
@@ -497,9 +497,12 @@ const Vgu = () => {
                       <ul className="list-disc list-inside text-gray-700 space-y-2 text-lg">
                         <li>Online MBA from Vivekananda Global University</li>
                         <li>Online BBA from Vivekananda Global University</li>
-                        <li>Online MCom from VGU</li>
-                        <li>Online BCom from VGU</li>
-                        <li>Other industry-focused VGU Online courses</li>
+                        <li>Online BCA from VGU</li>
+                        <li>Online BA from VGU</li>
+                        <li>Online MCA from VGU</li>
+                        <li>Online MA English from VGU</li>
+                        <li>Online MSc. from VGU</li>
+                        <li>Online MAJMC from VGU</li>
                       </ul>
                     </div>
                   </div>
@@ -533,10 +536,13 @@ const Vgu = () => {
                       <ul className="list-disc list-inside text-gray-700 space-y-1 mb-4">
                         <li>Online MBA from Vivekananda Global University</li>
                         <li>Online BBA from Vivekananda Global University</li>
-                        <li>Online MCom from VGU</li>
-                        <li>Online BCom from VGU</li>
+                        <li>Online BCA from VGU</li>
+                        <li>Online BA from VGU</li>
+                        <li>Online MCA from VGU</li>
+                        <li>Online MA English from VGU</li>
+                        <li>Online MSc. from VGU</li>
+                        <li>Online MAJMC from VGU</li>
                       </ul>
-
                       <p className="text-gray-700 leading-relaxed mb-2">These online classrooms include advanced features like:</p>
                       <ul className="list-disc list-inside text-gray-700 space-y-1">
                         <li>HD live lectures</li>
@@ -592,8 +598,8 @@ const Vgu = () => {
                       </ul>
 
                       <p className="text-gray-700 leading-relaxed">
-                        Programs like the Online MCom from VGU and Online BCom from VGU benefit greatly from these labs,
-                        as they help students build practical financial and analytical skills.
+                        Programs like the Online MCA from VGU and Online BCA from VGU benefit greatly from these labs,
+                        as they help students build practical technical and analytical skills.
                       </p>
                     </div>
 
@@ -729,8 +735,8 @@ const Vgu = () => {
                       </h3>
                       <p className="text-gray-700 leading-relaxed">
                         All VGU Online Courses follow UGC’s Online Education Regulations. This means every
-                        degree—including the Online MBA from Vivekananda Global University, Online MCom
-                        from VGU, and Online BCom from VGU—is valid and accepted by employers, government
+                        degree—including the Online MBA from Vivekananda Global University, Online MCA
+                        from VGU, and Online BCA from VGU—is valid and accepted by employers, government
                         bodies, and universities worldwide. <br /><br />
                         This is why many students call VGU the best online university in India – VGU Online,
                         especially for affordable UGC approved online degrees in India.
@@ -791,7 +797,7 @@ const Vgu = () => {
                       </ul>
                       <p className="text-gray-700 leading-relaxed mt-4">
                         This flexibility makes VGU ideal for working learners choosing programs like the
-                        Online MBA, Online MCom from VGU, and Online BCom from VGU.
+                        Online MBA, Online MCA from VGU, and Online BCA from VGU.
                       </p>
                     </div>
 
@@ -842,8 +848,8 @@ const Vgu = () => {
                         <li>Placement assistance</li>
                       </ul>
                       <p className="text-gray-700 leading-relaxed mt-4">
-                        This helps students of the Online MBA, Online BBA, Online MCom from VGU, and
-                        Online BCom from VGU become confident and job-ready.
+                        This helps students of the Online MBA, Online BBA, Online MCA from VGU, and
+                        Online BCA from VGU become confident and job-ready.
                       </p>
                     </div>
 
@@ -1177,7 +1183,7 @@ Through the campus tour, students can explore digital classrooms, study resource
                     offer both academic quality and real-world relevance. Students can choose degrees like
                     the <strong>Online MBA from Vivekananda Global University</strong>,
                     <strong> Online BBA from Vivekananda Global University</strong>,
-                    <strong> Online MCom from VGU</strong>, <strong>Online BCom from VGU</strong>,
+                    <strong> Online MCA from VGU</strong>, <strong>Online BCA from VGU</strong>,
                     and many other affordable UGC approved online degrees in India.
                   </p>
 
@@ -1201,13 +1207,24 @@ Through the campus tour, students can explore digital classrooms, study resource
 
                     <div className="p-8 bg-gray-50 rounded-2xl shadow-sm border">
                       <h4 className="text-xl font-semibold text-gray-900 mb-2">
-                        💼 Online BCom from VGU
+                        🎓 Online BCA from VGU
                       </h4>
                       <p className="text-gray-700 leading-relaxed">
-                        The Online BCom from VGU covers accounting, taxation, business analytics, and
-                        corporate finance. It is one of the most affordable UGC approved online degrees
-                        in India, helping students gain skills needed for careers in banking, finance, and
-                        consulting.
+                        The Online BCA program builds a strong base in computer applications, programming,
+                        data structures, and software development. It prepares students for careers in IT
+                        and technology. As part of VGU Online Courses, it offers flexible learning with
+                        virtual workshops and practical projects.
+                      </p>
+                    </div>
+
+                    <div className="p-8 bg-gray-50 rounded-2xl shadow-sm border">
+                      <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                        📚 Online BA from VGU
+                      </h4>
+                      <p className="text-gray-700 leading-relaxed">
+                        The Online BA from VGU covers arts, humanities, social sciences, and public policy.
+                        It is one of the most affordable UGC approved online degrees in India, helping
+                        students gain skills needed for careers in education, civil services, and media.
                       </p>
                     </div>
                   </div>
@@ -1232,13 +1249,13 @@ Through the campus tour, students can explore digital classrooms, study resource
 
                     <div className="p-8 bg-gray-50 rounded-2xl shadow-sm border">
                       <h4 className="text-xl font-semibold text-gray-900 mb-2">
-                        📊 Online MCom from VGU
+                        � Online MCA from VGU
                       </h4>
                       <p className="text-gray-700 leading-relaxed">
-                        The Online MCom from VGU is perfect for graduates who want deeper knowledge in
-                        commerce, finance, and accounting. It includes advanced topics, data tools, and
-                        case studies. As part of Vivekananda Global University Online, the degree is
-                        respected and recognized by employers.
+                        The Online MCA from VGU is perfect for graduates who want advanced knowledge in
+                        computer science, software engineering, and IT management. It includes advanced topics,
+                        programming projects, and case studies. As part of Vivekananda Global University Online,
+                        the degree is respected and recognized by top tech employers.
                       </p>
                     </div>
                   </div>
@@ -1267,7 +1284,7 @@ Through the campus tour, students can explore digital classrooms, study resource
                     </h3>
                     <p className="text-gray-700 leading-relaxed">
                       Whether you want to study for an Online MBA, an undergraduate program like the
-                      Online BCom from VGU, or a management course like the Online BBA from
+                      Online BCA from VGU, or a management course like the Online BBA from
                       Vivekananda Global University, VGU Online offers the right mix of quality,
                       flexibility, and recognition.
                       <br /><br />
@@ -1404,9 +1421,9 @@ Through the campus tour, students can explore digital classrooms, study resource
                     </p>
                     <ul className="list-disc list-inside text-gray-700 space-y-2 mt-2">
                       <li>Online MBA from Vivekananda Global University</li>
-                      <li>Online MCom from VGU</li>
+                      <li>Online MCA from VGU</li>
                       <li>Online BBA from Vivekananda Global University</li>
-                      <li>Online BCom from VGU</li>
+                      <li>Online BCA from VGU</li>
                     </ul>
                   </div>
 
@@ -1493,7 +1510,7 @@ Through the campus tour, students can explore digital classrooms, study resource
                       <h3 className="text-xl font-semibold mb-3">🔹 UGC-Approved Online Degrees</h3>
                       <p className="text-gray-700 leading-relaxed">
                         All online programs — including the Online MBA from Vivekananda Global University, Online BBA,
-                        Online MCom from VGU, and Online BCom from VGU — are approved by UGC-DEB, which means the
+                        Online MCA from VGU, and Online BCA from VGU — are approved by UGC-DEB, which means the
                         degrees are valid all over India and abroad.
                       </p>
                     </div>
@@ -1691,7 +1708,7 @@ Through the campus tour, students can explore digital classrooms, study resource
                   <p className="text-lg leading-relaxed mb-8">
                     The VGU Online (Vivekananda Global University Online) admission process is designed to be fast,
                     simple, and fully digital. Whether you’re applying for the Online MBA from Vivekananda Global
-                    University, Online BBA, Online MCom from VGU, or Online BCom from VGU, the platform ensures a
+                    University, Online BBA, Online MCA from VGU, or Online BCA from VGU, the platform ensures a
                     smooth experience for all learners. As one of the best online universities in India, VGU Online
                     makes enrolling in UGC approved online degrees VGU simple and convenient.
                   </p>
@@ -1865,7 +1882,7 @@ Through the campus tour, students can explore digital classrooms, study resource
 
                     <p>
                       • <strong>High Employability Programs:</strong> Degrees like the Online MBA from
-                      Vivekananda Global University and Online BCom from VGU are designed with real-world skills
+                      Vivekananda Global University and Online BCA from VGU are designed with real-world skills
                       that make graduates job-ready.
                     </p>
 
@@ -1922,12 +1939,12 @@ Through the campus tour, students can explore digital classrooms, study resource
                         “Practical learning with great value”
                       </h3>
                       <p className="text-gray-700 mt-3 leading-relaxed">
-                        I pursued the Online BCom from VGU, and the curriculum gave me exactly
+                        I pursued the Online BCA from VGU, and the curriculum gave me exactly
                         what I needed—finance skills, business basics, and practical exposure.
                         The fee structure is affordable, and the degree is UGC approved, which
                         gives me confidence for future opportunities.
                       </p>
-                      <p className="mt-3 font-semibold text-gray-900">— Priya Singh, BCom Student</p>
+                      <p className="mt-3 font-semibold text-gray-900">— Priya Singh, BCA Student</p>
                     </div>
 
                     {/* Review 3 */}
@@ -1953,7 +1970,7 @@ Through the campus tour, students can explore digital classrooms, study resource
                         interview practice, and internship opportunities. The guidance was extremely
                         helpful in securing my first job.
                       </p>
-                      <p className="mt-3 font-semibold text-gray-900">— Simran Kaur, MCom Student</p>
+                      <p className="mt-3 font-semibold text-gray-900">— Simran Kaur, MCA Student</p>
                     </div>
 
                     {/* Review 5 */}
@@ -2044,9 +2061,9 @@ Through the campus tour, students can explore digital classrooms, study resource
                     <p>
                       Whether you're a fresh graduate looking to build a strong foundation
                       through the <strong>Online BBA from Vivekananda Global University</strong> or
-                      <strong> Online BCom from VGU</strong>, or a working professional aiming to
+                      <strong> Online BCA from VGU</strong>, or a working professional aiming to
                       advance your career with the <strong>Online MBA from Vivekananda Global University</strong> or
-                      <strong> Online MCom from VGU</strong>, VGU Online provides the perfect blend of:
+                      <strong> Online MCA from VGU</strong>, VGU Online provides the perfect blend of:
                     </p>
 
                     <ul className="list-disc pl-6 space-y-2">

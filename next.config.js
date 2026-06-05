@@ -7,6 +7,9 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
     minimumCacheTTL: 31536000, // 1 year
+    dangerouslyAllowSVG: true, // Allow SVG images from trusted sources
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
       {
         protocol: "https",
@@ -103,11 +106,12 @@ async headers() {
         permanent: true,
       },
       // Legacy/Alternate URLs
-      {
-        source: '/Best-online-MBA-for-working-professionals-India-2025',
-        destination: '/best-online-mba-for-working-professionals-india-2025',
-        permanent: true,
-      },
+      // Temporarily disabled to fix redirect loop
+      // {
+      //   source: '/Best-online-MBA-for-working-professionals-India-2025',
+      //   destination: '/best-online-mba-for-working-professionals-india-2025',
+      //   permanent: true,
+      // },
       {
         source: '/universities/manipal-university-online',
         destination: '/manipal',

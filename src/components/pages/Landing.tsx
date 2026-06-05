@@ -204,11 +204,11 @@ const Landing = ({ data }: LandingPageProps) => {
           </p>
 
           <div className="overflow-hidden relative backdrop-blur-md rounded-2xl border border-white/20 p-6">
-            <div className="animate-city-scroll">
-              {[...cities, ...cities].map((city, idx) => (
+            <div className="flex animate-slide-infinite gap-8">
+              {[...cities, ...cities, ...cities].map((city, idx) => (
                 <div
                   key={`${city.city}-${idx}`}
-                  className="flex flex-col items-center gap-4 group cursor-pointer"
+                  className="flex flex-col items-center gap-4 group cursor-pointer flex-shrink-0 w-24 sm:w-28"
                 >
                   <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white/50 transition-all duration-300">
                     <Image
@@ -220,7 +220,7 @@ const Landing = ({ data }: LandingPageProps) => {
                       loading="lazy"
                     />
                   </div>
-                  <span className="text-lg font-medium group-hover:text-[#00ffe0] transition-colors">
+                  <span className="text-sm sm:text-base font-medium group-hover:text-[#00ffe0] transition-colors text-center">
                     {city.city}
                   </span>
                 </div>
