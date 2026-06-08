@@ -370,16 +370,9 @@ const Landing = ({ data }: LandingPageProps) => {
             }
           }}
         >
-          <DialogContent 
+          <DialogContent
             className="w-[95vw] sm:w-[90vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] max-w-2xl max-h-[90vh] overflow-y-auto p-4 sm:p-6"
             showCloseButton={true}
-            style={{
-              position: 'fixed',
-              top: '50vh',
-              left: '50vw',
-              transform: 'translate(-50%, -50%)',
-              margin: 0
-            }}
           >
             <DialogHeader className="space-y-2">
               <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">

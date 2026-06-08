@@ -23,7 +23,7 @@ export default function ApplyEnquiryModal({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-5xl md:max-w-6xl p-0 h-[95vh] md:h-[90vh] flex flex-col">
+      <DialogContent className="max-w-5xl md:max-w-6xl p-0 flex flex-col max-h-[95vh] md:max-h-[90vh] overflow-hidden">
         <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
           {/* Side Image Section */}
           {showImage && (

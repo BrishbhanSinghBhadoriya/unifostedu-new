@@ -1,7 +1,7 @@
 'use client';
 
 import EnquiryForm from '@/components/EnquiryForm';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useCallback, useState } from 'react';
@@ -173,9 +173,10 @@ const EnquireCard = ({
 
       {/* Enquiry Dialog */}
       <Dialog open={isEnquiryOpen} onOpenChange={setIsEnquiryOpen}>
-        <DialogContent>
+        <DialogContent className="flex flex-col items-center justify-center max-h-[95vh] md:max-h-[90vh] overflow-hidden" aria-describedby="enquiry-form-description">
           <DialogHeader>
             <DialogTitle>Enquire About {course}</DialogTitle>
+            <DialogDescription id="enquiry-form-description">Please fill out the form below to enquire about the program.</DialogDescription>
           </DialogHeader>
           <EnquiryForm
             universityName={universityName}

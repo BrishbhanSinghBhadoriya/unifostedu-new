@@ -264,7 +264,7 @@ const Manipal = () => {
         </header>
 
         {/* Left Sidebar */}
-        <div className="mt-[64px] sm:mt-[72px] md:mt-[80px]">
+        <div className="mt-[64px] sm:mt-[72px] md:mt-[80px] hidden lg:block">
           <PageContent
             sectionItems={sectionItems}
             activeSection={activeSection}
