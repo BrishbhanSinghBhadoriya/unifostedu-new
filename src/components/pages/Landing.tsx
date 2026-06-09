@@ -41,7 +41,7 @@ const UniversityLogoSlider = dynamic(() => import("./landing/UniversityLogoSlide
 
 import { FaBriefcase, FaCompass, FaGlobe } from "react-icons/fa";
 import { MdVideoCall, MdHome, MdVerifiedUser } from "react-icons/md";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { LandingPageProps } from "types/LandingPageTypes";
 import { useIsMobile } from "@/utils/hooks";
 
@@ -371,24 +371,26 @@ const Landing = ({ data }: LandingPageProps) => {
           }}
         >
           <DialogContent
-            className="w-[95vw] sm:w-[90vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] max-w-2xl max-h-[90vh] overflow-y-auto p-4 sm:p-6"
+            className="max-h-[90vh] overflow-y-auto"
             showCloseButton={true}
           >
-            <DialogHeader className="space-y-2">
-              <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
-                {modalType === "getStarted" && "Get Started with Unifost"}
-                {modalType === "videoCall" && "Book a Video Call"}
-                {modalType === "homeDemo" && "Book a Home Demo"}
-              </DialogTitle>
-            </DialogHeader>
-            <div className="mt-4">
-              <EnquiryForm
-                onSubmitted={() => {
-                  setShowEnquiryModal(false);
-                  // Modal will auto-center on next open
-                }}
-                formType={modalType}
-              />
+            <div className="p-4 sm:p-6">
+              <DialogHeader className="space-y-2">
+                <DialogTitle className="text-xl sm:text-2xl font-bold text-[#001e3c] text-center">
+                  {modalType === "getStarted" && "Get Started with Unifost"}
+                  {modalType === "videoCall" && "Book a Video Call"}
+                  {modalType === "homeDemo" && "Book a Home Demo"}
+                </DialogTitle>
+              </DialogHeader>
+              <div className="mt-4">
+                <EnquiryForm
+                  onSubmitted={() => {
+                    setShowEnquiryModal(false);
+                    // Modal will auto-center on next open
+                  }}
+                  formType={modalType}
+                />
+              </div>
             </div>
           </DialogContent>
         </Dialog>

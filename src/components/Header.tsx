@@ -693,15 +693,8 @@ const Header = () => {
         {/* Enquiry Modal */}
         {showEnquiryModal && (
           <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal}>
-            <DialogContent 
+            <DialogContent
               className="w-[95vw] sm:w-[90vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] max-w-2xl max-h-[90vh] overflow-y-auto"
-              style={{
-                position: 'fixed',
-                top: '50vh',
-                left: '50vw',
-                transform: 'translate(-50%, -50%)',
-                margin: 0
-              }}
             >
               <DialogHeader>
                 <DialogTitle className="text-2xl font-bold text-slate-900">
