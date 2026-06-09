@@ -135,35 +135,35 @@ const Dypatil = () => {
   const faqData = [
     {
       question: "What is DY Patil University Online?",
-      answer: "DY Patil University Online (DPU Online) is the digital learning platform of Dr. D.Y. Patil Vidyapeeth, Pune. It offers flexible and UGC approved online degrees in management, computer applications, and business studies. Students can study from anywhere with the same quality as campus programs."
+      answer: "DY Patil University Online (DPU Online) is the digital learning platform of Dr. D.Y. Patil Vidyapeeth, Pune. It offers flexible UGC-approved online degrees in MBA, MCA, BBA and BCA. It is recognised as one of the best online universities in India with NAAC A++ accreditation."
     },
     {
-      question: "Are the online degrees from DPU Online valid?",
-      answer: "Yes, all degrees offered by DY Patil University Online are UGC-approved, making them valid for higher studies, government jobs, private-sector jobs, and global opportunities."
+      question: "Are DY Patil University Online degrees UGC approved and valid for government jobs?",
+      answer: "Yes. All degrees offered by DY Patil University Online are UGC-approved, making them valid for higher studies, government jobs, private-sector jobs, and global opportunities."
     },
     {
-      question: "What programs are available at DY Patil University Online?",
-      answer: "DPU Online offers several popular programs, including: Online MBA from DY Patil University, DY Patil Online BBA, DY Patil Online BCA, and Online MCA from DY Patil University. These programs are designed to match industry needs and prepare students for future careers."
+      question: "What programs are available at DY Patil University Online 2026?",
+      answer: "DPU Online offers Online MBA (₹1,89,400 total, 2 years), Online MCA (₹1,40,000 total, 2 years), Online BBA (₹1,45,400 total, 3 years), and Online BCA. The MBA has 15 specializations including Marketing, Finance, HR, IT, Healthcare, Business Analytics, AI & ML, Digital Marketing and more."
     },
     {
-      question: "How do I apply for admission?",
-      answer: "You can apply directly through the official DPU Online website. Register, Fill out the form, Upload documents, Pay the application fee. The admission process is completely online and easy to complete."
+      question: "How do I apply for DY Patil University Online admission 2026?",
+      answer: "The admission process is 100% online. Register on the official DPU Online website, fill the application form, upload your documents, and pay the application fee. Admissions are accepted in January, April, July and October sessions every year."
     },
     {
-      question: "What is the eligibility for online programs?",
-      answer: "BBA & BCA: 10+2 from any recognized board, MBA: Graduation in any stream, MCA: Graduation with Mathematics/Computer Science."
+      question: "What is the eligibility for DY Patil University Online MBA?",
+      answer: "Candidates must have a bachelor's degree from a recognized university with minimum 50% marks (45% for reserved categories). For BBA and BCA programs, 10+2 from any recognized board is sufficient."
     },
     {
-      question: "Does DPU Online offer placement assistance?",
-      answer: "Yes. DY Patil University Online provides full placement support, including resume help, interview training, job updates, and counseling. Many students find strong career opportunities after DY Patil Online MBA and MCA programs."
-    },
-    {
-      question: "Why choose DY Patil University Online?",
-      answer: "Students choose DPU Online because it is one of the best online university in India, offering: UGC approved online degrees, Expert faculty, Flexible schedules, Affordable fees and EMI options, Strong placement assistance, Industry-aligned curriculum."
+      question: "Does DY Patil University Online provide 100% placement assistance?",
+      answer: "Yes. DY Patil University Online provides full placement support including resume building, interview training, mock interviews, networking events and career counselling. Top recruiters include TCS, Infosys, Wipro, Deloitte, Accenture, Amazon, HDFC Bank and more."
     },
     {
       question: "Is the Online MBA from DY Patil University worth it?",
-      answer: "Yes. The Online MBA from DY Patil University is one of the best online MBA universities in India 2025. It offers practical learning, updated subjects, and great placement opportunities for career growth."
+      answer: "Yes. The Online MBA from DY Patil University is one of the best online MBA programs in India 2026. It offers 15 specializations, AI-powered tools training, practical learning, updated curriculum and strong placement opportunities for career growth."
+    },
+    {
+      question: "Are there Zero Cost EMI options for DY Patil University Online?",
+      answer: "Yes. DY Patil University Online offers Zero Cost EMI options for all programs, making quality education affordable. Scholarships up to ₹10,000 are also available for eligible students."
     },
     {
       question: "What kind of learning support is available?",
@@ -178,16 +178,12 @@ const Dypatil = () => {
       answer: "DY Patil offers multiple specializations including Marketing, Finance, HR, IT Management, Business Analytics, AI & ML, Digital Marketing, Healthcare Management, and more."
     },
     {
-      question: "Is there any placement assistance for online students?",
-      answer: "Yes, the university provides comprehensive career support including placement assistance, virtual job fairs, and career counseling services."
+      question: "What is the eligibility criteria for the online BBA?",
+      answer: "For BBA and BCA programs, 10+2 from any recognized board is sufficient."
     },
     {
-      question: "What is the eligibility criteria for the online MBA?",
-      answer: "Candidates must have a bachelor's degree from a recognized university with minimum 50% marks (45% for reserved categories)."
-    },
-    {
-      question: "Are there any EMI options available?",
-      answer: "Yes, DY Patil offers zero-cost EMI options to make education affordable for students."
+      question: "Are there any scholarships available for 2026 admissions?",
+      answer: "Yes, scholarships up to ₹10,000 are available for eligible students along with Zero Cost EMI options."
     },
     {
       question: "How are the online classes conducted?",
@@ -1354,7 +1350,7 @@ const Dypatil = () => {
                       <li>EMI options available</li>
                       <li>Value-based pricing for a globally recognized degree</li>
                     </ul>
-                    <p className="text-gray-700 mt-4">This is one of the reasons the program is listed among the <b>best online MBA universities in India 2025</b>.</p>
+                    <p className="text-gray-700 mt-4">This is one of the reasons the program is listed among the <b>best online MBA universities in India 2026</b>.</p>
                   </div>
 
                   <div className="bg-white p-8 rounded-xl shadow-lg">
@@ -1423,74 +1419,7 @@ const Dypatil = () => {
               </div>
             </section>
 
-            {/* Admission Process Section */}
-            <section id="Admission" className="py-16 bg-white">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                    <span className="text-red-600">Admission Process</span>
-                  </h2>
-                  <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    The Dr. DY Patil University Online admission process is 100% online, quick, and student-friendly.
-                  </p>
-                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                  <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-red-600">
-                    <div className="flex items-center mb-6">
-                      <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">1</div>
-                      <h3 className="text-xl font-bold text-gray-900">Step 1: Register Online</h3>
-                    </div>
-                    <p className="text-gray-700">Register on the official DPU Online website</p>
-                  </div>
-
-                  <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-red-600">
-                    <div className="flex items-center mb-6">
-                      <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">2</div>
-                      <h3 className="text-xl font-bold text-gray-900">Step 2: Fill Out the Application Form</h3>
-                    </div>
-                    <p className="text-gray-700">Complete the online application form with your details</p>
-                  </div>
-
-                  <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-red-600">
-                    <div className="flex items-center mb-6">
-                      <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">3</div>
-                      <h3 className="text-xl font-bold text-gray-900">Step 3: Pay the Application Fee</h3>
-                    </div>
-                    <p className="text-gray-700">Complete payment through secure online gateway</p>
-                  </div>
-
-                  <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-red-600">
-                    <div className="flex items-center mb-6">
-                      <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">4</div>
-                      <h3 className="text-xl font-bold text-gray-900">Step 4: Admission Confirmation</h3>
-                    </div>
-                    <p className="text-gray-700">Receive admission confirmation and student login details</p>
-                  </div>
-                </div>
-
-                <div className="mt-12 bg-gradient-to-r from-red-50 to-red-100 p-8 rounded-xl">
-                  <div className="text-center">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Dedicated Support</h3>
-                    <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                      The process is supported by a dedicated admissions team, ensuring guidance from registration to orientation. Our team is available to help you at every step of your admission journey.
-                    </p>
-                  </div>
-                </div>
-                <div className="text-center mt-8 sm:mt-12">
-                  <button
-                    onClick={() => {
-                      setOpenModal({ type: 'apply' });
-                      setShowEnquiryModal(true);
-                      setModalType('apply');
-                    }}
-                    className="bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-3 sm:px-5 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
-                  >
-                    Apply Now
-                  </button>
-                </div>
-              </div>
-            </section>
 
             {/* Upcoming and Ongoing Sessions Section */}
             <section id="Sessions" className="py-16 bg-gradient-to-br from-blue-50 to-red-50">
@@ -1719,7 +1648,7 @@ const Dypatil = () => {
                 <div className="flex-1">
                   <Image
                     src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dycertificates_oikhoh.webp"
-                    alt="Dr. DY Patil"
+                    alt="Dr. DY Patil University Online degree certificate"
                     width={500}
                     height={300}
                     loading="lazy"
@@ -2192,7 +2121,7 @@ const Dypatil = () => {
           <div className="border-t border-gray-700 pt-6">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-gray-400 text-sm mb-4 md:mb-0">
-                Copyright © 2025 DY Patil Vidyapeeth. All Rights Reserved.
+                Copyright © 2026 DY Patil Vidyapeeth. All Rights Reserved.
               </div>
               <div className="flex space-x-6">
                 <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a>

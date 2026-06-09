@@ -187,7 +187,7 @@ const landingPageSchema = {
   inLanguage:    "en-IN",
   // Freshness signals — critical for "admission 2026" queries
   datePublished: "2026-01-01",
-  dateModified:  "2026-03-16",
+  dateModified:  "2026-06-09",
   publisher: {
     "@type": "EducationalOrganization",
     name:    "Dr. DY Patil University Online",
