@@ -1,4 +1,5 @@
 import { ChildrenProps } from "types/ChildrenProps";
+import Image from "next/image";
 
 export const metadata = {
   title: "Amity Online MBA Fees 2026-27 | Amity University Online",
@@ -64,10 +65,13 @@ export default function Layout({ children }: ChildrenProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3">
-              <img
-                src="images/logos/amitylogo.jpg"
+              <Image
+                src="/images/logos/amitylogo.jpg"
                 alt="Amity University Online"
-                className="h-10 w-auto"
+                width={200}
+                height={80}
+                className="h-10 w-auto object-contain"
+                priority
               />
               <div>
                 <p className="text-sm font-semibold">Amity University Online</p>

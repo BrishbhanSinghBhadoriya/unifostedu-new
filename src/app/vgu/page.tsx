@@ -2159,7 +2159,7 @@ Through the campus tour, students can explore digital classrooms, study resource
                         className="space-y-4"
                       >
                         <div className="flex items-center gap-3 mb-4">
-                          <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/vgu_logo_gctrpo.jpg" alt="vgu University Logo" className="h-10 w-auto bg-white" />
+                          <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/vgu_logo_gctrpo.jpg" alt="VGU University Logo" width={200} height={80} className="h-10 w-auto bg-white object-contain" />
                           <span className="text-xl font-bold text-[#821812]">VGU</span>
                         </div>
                         <p className="text-sm text-gray-400 leading-relaxed">

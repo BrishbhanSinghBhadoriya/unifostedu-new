@@ -338,10 +338,13 @@ const Dypatil = () => {
           <div className="flex items-center justify-between h-16 flex-wrap gap-2">
             {/* Left Logo */}
             <div className="flex items-center min-w-0">
-              <img
+              <Image
                 src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327128/dpulogo_pjp6mc.png"
                 alt="DPU Logo"
-                className="h-10 sm:h-12 md:h-16 w-auto max-w-full"
+                width={300}
+                height={100}
+                className="h-10 sm:h-12 md:h-16 w-auto max-w-full object-contain"
+                priority
               />
             </div>
 
@@ -369,8 +372,8 @@ const Dypatil = () => {
               </button>
 
               {/* Accreditation icons - hide on small screens to prevent overflow */}
-              <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp" alt="UGC Logo" className="hidden sm:block h-8 sm:h-10 w-auto" />
-              <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp" alt="AICTE Logo" className="hidden sm:block h-9 sm:h-12 w-auto" />
+              <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp" alt="UGC Logo" width={100} height={40} className="hidden sm:block h-8 sm:h-10 w-auto object-contain" />
+              <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327027/aicte_ipdzee.webp" alt="AICTE Logo" width={120} height={50} className="hidden sm:block h-9 sm:h-12 w-auto object-contain" />
 
               {/* Call button (text on >=sm, icon on mobile) */}
               <a

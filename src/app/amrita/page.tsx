@@ -388,11 +388,13 @@ export default function AmritaOnlinePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <div className="relative rounded-lg overflow-hidden">
-                <img
+              <div className="relative rounded-lg overflow-hidden aspect-video">
+                <Image
                   src="https://res.cloudinary.com/didkrwhbu/image/upload/v1769766199/amrita_global_diflmj.png"   
                   alt="Amrita Online Programs"
-                  className="w-full h-auto"
+                  fill
+                  className="w-full h-full object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
 
@@ -796,7 +798,7 @@ export default function AmritaOnlinePage() {
                   <div key={index} className="min-w-full lg:min-w-[33.333%] px-4">
                     <div className="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
                       <div className="relative h-48">
-                        <img src={course.image} alt={course.title} className="w-full h-full object-cover" />
+                        <Image src={course.image} alt={course.title} fill className="w-full h-full object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
                         <div className="absolute inset-0 bg-black/40"></div>
                         <h3 className="absolute bottom-4 left-4 text-4xl font-bold text-white">
                           {course.title.split(' ')[1]}
@@ -1128,11 +1130,15 @@ export default function AmritaOnlinePage() {
 
         {/* Placement Partners Image */}
         <div className="text-center">
-          <img
-            src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770446440/company_wux9fz.png"
-            alt="Placement Partners"
-            className="mx-auto w-full max-w-5xl rounded-lg shadow-md"
-          />
+          <div className="relative mx-auto w-full max-w-5xl aspect-[16/9] rounded-lg shadow-md overflow-hidden">
+            <Image
+              src="https://res.cloudinary.com/didkrwhbu/image/upload/v1770446440/company_wux9fz.png"
+              alt="Placement Partners"
+              fill
+              className="object-contain"
+              sizes="(max-width: 1280px) 100vw, 80vw"
+            />
+          </div>
         </div>
 
       </div>
