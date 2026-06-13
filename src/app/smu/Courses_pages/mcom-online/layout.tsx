@@ -1,17 +1,17 @@
 import { ChildrenProps } from "types/ChildrenProps";
 
 export const metadata = {
-  title: "SMU Online MCom 2025-26 | Master of Commerce | Fees ₹75K | NAAC A+ | Sikkim Manipal University",
+  title: "SMU Online MCom 2026-27 | Master of Commerce | Fees ₹75K | NAAC A+ | Sikkim Manipal University",
   description:
-    "Online MCom from Sikkim Manipal University (SMU). India's most affordable MCom — ₹18,750/semester, EMI ₹3,125/month. NAAC A+ accredited, UGC-approved. Corporate Finance, Accounting, Taxation, Investment Management. Jan 2026 batch open. 78% seats filled. Apply free!",
+    "Online MCom from Sikkim Manipal University (SMU). India's most affordable MCom — ₹18,750/semester, EMI ₹3,125/month. NAAC A+ accredited, UGC-approved. Corporate Finance, Accounting, Taxation, Investment Management. July 2026 batch open. 78% seats filled. Apply free!",
   keywords: [
     "SMU Online MCom",
     "Sikkim Manipal University Online MCom",
     "SMU MCom fees",
-    "SMU MCom 2025",
-    "online MCom SMU 2025-26",
+    "SMU MCom 2026",
+    "online MCom SMU 2026-27",
     "online MCom India",
-    "SMU MCom admission 2025",
+    "SMU MCom admission 2026",
     "SMU MCom syllabus",
     "SMU MCom eligibility",
     "online MCom UGC approved",
@@ -29,7 +29,7 @@ export const metadata = {
     "online MCom investment management",
   ],
   openGraph: {
-    title: "SMU Online MCom 2025-26 | ₹75,000 Total | NAAC A+ | Jan 2026 Batch Open | Sikkim Manipal University",
+    title: "SMU Online MCom 2026-27 | ₹75,000 Total | NAAC A+ | July 2026 Batch Open | Sikkim Manipal University",
     description:
       "Earn a UGC-approved Online MCom from Sikkim Manipal University (NAAC A+). India's most affordable MCom — ₹18,750/semester, EMI ₹3,125/month. Corporate Finance, Accounting, Taxation. 100% online, AI-proctored exams. 78% seats filled — Apply now!",
     url: "https://unifostedu.com/smu/mcom",
@@ -50,7 +50,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SMU Online MCom 2025-26 | NAAC A+ | ₹75K Fee | Jan 2026 Batch",
+    title: "SMU Online MCom 2026-27 | NAAC A+ | ₹75K Fee | July 2026 Batch",
     description:
       "Online MCom from Sikkim Manipal University — UGC approved, NAAC A+, ₹18,750/semester, 80 credits, 150+ hiring partners. Corporate Finance, Accounting, Investment Management. Apply free!",
     images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp"],

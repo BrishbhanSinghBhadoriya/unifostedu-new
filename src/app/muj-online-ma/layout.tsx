@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://unifostedu.com"),
   
   // ── Basic SEO Metadata ──
-  title: "Manipal Online MA 2025 | Master of Arts Degree India | UGC Approved",
+  title: "Manipal Online MA 2026 | Master of Arts Degree India | UGC Approved",
   description:
     "Manipal Online MA - UGC-approved Master of Arts program from NAAC A+ Manipal University Jaipur. Specializations in English, Journalism, Sociology. 2-year flexible online degree with 40% scholarship. Direct admissions, no entrance exam. Enroll now!",
   
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     "UGC recognised online degree",
     "NAAC A+ university MA",
     "Online MA admission",
-    "ma online 2025",
+    "ma online 2026",
   ],
 
   // ── Canonical & Alternates ──
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   // ── Twitter Card ──
   twitter: {
     card: "summary_large_image",
-    title: "Manipal Online MA 2025 | Master of Arts Degree",
+    title: "Manipal Online MA 2026 | Master of Arts Degree",
     description:
       "UGC-approved Online MA from Manipal University Jaipur with 40% scholarship. Flexible online learning, direct admissions, career guidance included.",
     images: ["https://unifostedu.com/images/manipal-online-ma-banner.webp"],
@@ -119,7 +119,7 @@ export const metadata: Metadata = {
     "og:type": "website",
     "og:locale:alternate": "en_IN",
     "twitter:domain": "unifostedu.com",
-    "article:published_time": "2025-01-01T00:00:00+05:30",
+    "article:published_time": "2026-01-01T00:00:00+05:30",
     "article:modified_time": new Date().toISOString(),
     "article:publisher": "https://www.facebook.com/unifostedu",
     "theme-color": "#1e40af",
@@ -492,12 +492,12 @@ NGO workers, and those pursuing social work or civil services.`,
     },
 
     admissionDates: {
-      title: "Admission Timeline 2025",
+      title: "Admission Timeline 2026",
       intakes: [
-        { intake: "January 2025", status: "Ongoing", deadline: "30 days before intake" },
-        { intake: "April 2025", status: "Open Soon", deadline: "Announced Soon" },
-        { intake: "July 2025", status: "Open Soon", deadline: "Announced Soon" },
-        { intake: "October 2025", status: "Open Soon", deadline: "Announced Soon" },
+        { intake: "January 2026", status: "Ongoing", deadline: "30 days before intake" },
+        { intake: "April 2026", status: "Open Soon", deadline: "Announced Soon" },
+        { intake: "July 2026", status: "Open Soon", deadline: "Announced Soon" },
+        { intake: "October 2026", status: "Open Soon", deadline: "Announced Soon" },
       ],
     },
   },
@@ -851,7 +851,7 @@ export const SEOKeywords = {
   secondary: [
     "best online ma program",
     "online ma admission",
-    "online ma 2025",
+    "online ma 2026",
     "manipal university online ma",
     "ma online specialization",
   ],
@@ -1022,8 +1022,8 @@ const courseSchema = {
       "@type": "CourseInstance",
       courseMode: "online",
       instructionLanguage: "en-IN",
-      startDate: "2025-01-15",
-      endDate: "2027-01-15",
+      startDate: "2026-01-15",
+      endDate: "2028-01-15",
       inLanguage: "en-IN",
       instructor: {
         "@type": "Organization",
@@ -1043,7 +1043,7 @@ const programSchema = {
   educationalLevel: "Postgraduate",
   programType: "Master Degree",
   timeToComplete: "P2Y",
-  startDate: "2025-01-15",
+  startDate: "2026-01-15",
   numberOfCredits: 120,
   occupationalCategory: [
     "Education",
@@ -1218,7 +1218,7 @@ const webPageSchema = {
   breadcrumb: {
     "@id": "https://unifostedu.com/muj-online-ma/#breadcrumb",
   },
-  datePublished: "2025-01-01T00:00:00+05:30",
+  datePublished: "2026-01-01T00:00:00+05:30",
   dateModified: new Date().toISOString(),
   author: {
     "@type": "Organization",

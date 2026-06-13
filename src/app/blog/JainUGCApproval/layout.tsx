@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowLeft, Home } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Jain University UGC Approved: Complete Guide 2024-2025',
+  title: 'Jain University UGC Approved: Complete Guide 2026-2027',
   description: 'Jain University is UGC approved with 98% placement rate. Explore programs, fees (₹1.5-8 lakhs), campus life, and admission process for engineering, MBA, and online degrees.',
   keywords: [
     'Jain University UGC approved',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'NAAC accredited universities',
   ],
   openGraph: {
-    title: 'Jain University UGC Approved 2024-2025: Complete Guide',
+    title: 'Jain University UGC Approved 2026-2027: Complete Guide',
     description: 'Comprehensive guide to Jain University with placement stats, fee breakdown, and admission process.',
     type: 'article',
     url: 'https://yourdomain.com/blogs/jain-university-ugc-approved',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jain University UGC Approved 2024-2025',
+    title: 'Jain University UGC Approved 2026-2027',
     description: 'Complete guide with placements, fees, and admission details.',
     images: ['https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/jain-university.webp'],
   },

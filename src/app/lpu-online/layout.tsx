@@ -328,14 +328,14 @@ const organizationSchema = {
       author:   { "@type": "Person", name: "Rahul Sharma" },
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       reviewBody:   "The online MBA program at LPU helped me transition from a technical role to a management position. Flexible schedule allowed me to work and study simultaneously.",
-      datePublished: "2025-04-10",
+      datePublished: "2026-04-10",
     },
     {
       "@type":  "Review",
       author:   { "@type": "Person", name: "Neha Gupta" },
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       reviewBody:   "LPU's online MCA program offered the perfect blend of theoretical knowledge and practical skills. Placement assistance helped me land a job with a 60% salary hike.",
-      datePublished: "2025-06-20",
+      datePublished: "2026-06-20",
     },
   ],
 };

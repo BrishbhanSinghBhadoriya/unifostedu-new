@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   // ── Core Meta Tags ──────────────────────────────────────────────────────────
   title: {
-    default: 'How to Choose the University for Online Courses | Complete Guide 2025',
+    default: 'How to Choose the University for Online Courses | Complete Guide 2026',
     template: '%s | UniFost – Online University Guide',
   },
   description:
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'online degree programs India',
     'distance education vs online education',
     'online university accreditation check',
-    'top online universities 2025',
+    'top online universities 2026',
     'choose online course India',
     'online university placement support',
     'AICTE approved online courses',
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     type: 'article',
     siteName: 'UniFost Education',
     url: 'https://unifostedu.com/blog/how-to-choose-university-online-courses',
-    title: 'How to Choose the University for Online Courses – Complete Guide 2025',
+    title: 'How to Choose the University for Online Courses – Complete Guide 2026',
     description:
       'A practical, expert-written guide to selecting the right online university in India. Covers accreditation, faculty quality, placement data, red flags, and a step-by-step decision framework.',
     images: [
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
         url: 'https://unifostedu.com/images/blogs/choose-online-university.webp',
         width: 1200,
         height: 630,
-        alt: 'How to Choose the Right Online University in India – UniFost Guide 2025',
+        alt: 'How to Choose the Right Online University in India – UniFost Guide 2026',
         type: 'image/webp',
       },
       {
@@ -78,8 +78,8 @@ export const metadata: Metadata = {
     ],
     locale: 'en_IN',
     // Article-specific Open Graph fields
-    publishedTime: '2025-03-19T00:00:00.000Z',
-    modifiedTime: '2025-06-01T00:00:00.000Z',
+    publishedTime: '2026-03-19T00:00:00.000Z',
+    modifiedTime: '2026-06-01T00:00:00.000Z',
     section: 'Education',
     tags: [
       'online university',
@@ -96,7 +96,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@unifostedu',
     creator: '@unifostedu',
-    title: 'How to Choose the University for Online Courses | 2025 Guide',
+    title: 'How to Choose the University for Online Courses | 2026 Guide',
     description:
       'Expert tips on picking the right online university in India – accreditation, faculty, placement, and more. Read the full guide.',
     images: {
@@ -160,8 +160,8 @@ const jsonLd = {
         width: 1200,
         height: 630,
       },
-      datePublished: '2025-03-19',
-      dateModified: '2025-06-01',
+      datePublished: '2026-03-19',
+      dateModified: '2026-06-01',
       author: {
         '@type': 'Organization',
         name: 'UniFost',
