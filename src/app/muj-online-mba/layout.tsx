@@ -3,11 +3,11 @@ import { ChildrenProps } from "types/ChildrenProps";
 // ===== ENHANCED SEO METADATA =====
 export const metadata = {
   // ===== TITLE & DESCRIPTION =====
-  title: "Online MBA Degree Program – Manipal University Jaipur (MUJ) | UGC Approved | NAAC A+",
+  title: "Online MBA Degree Program – Manipal University Jaipur (MUJ) 2026 | UGC Approved | NAAC A+",
   description:
-    "Complete Online MBA from Manipal University Jaipur (MUJ) — UGC-approved, NAAC A+ accredited. 2-year flexible program with 13 specializations (Marketing, Finance, IT, Analytics). Fees ₹1.5-2L. Apply now with EMI options!",
+    "Complete Online MBA from Manipal University Jaipur (MUJ) 2026 — UGC-approved, NAAC A+ accredited. 2-year flexible program with 13 specializations (Marketing, Finance, IT, Analytics). Fees ₹1.5-2L. Apply now with EMI options, no entrance exam, 100% placement support!",
   keywords:
-    "Online MBA, Manipal University Jaipur, MUJ Online MBA, UGC approved MBA, NAAC A+ MBA, distance MBA India, MBA specializations, MBA fees India, MBA with EMI, flexible online MBA, working professionals MBA, MBA Marketing, MBA Finance, MBA Analytics, MBA HR, best online MBA India",
+    "Online MBA, Manipal University Jaipur, MUJ Online MBA, UGC approved MBA, NAAC A+ MBA, online MBA for working professionals 2026, online MBA India, MBA specializations, Manipal MBA fees 2026, online MBA with EMI, best online MBA 2026, online MBA Marketing, online MBA Finance, online MBA Analytics, online MBA HR, Manipal Online MBA, MUJ Online admission 2026",
   metadataBase: new URL("https://www.unifostedu.com"),
   alternates: {
     canonical: "https://www.unifostedu.com/muj-online-mba",
@@ -15,9 +15,9 @@ export const metadata = {
 
   // ===== OPEN GRAPH (FACEBOOK, LINKEDIN) =====
   openGraph: {
-    title: "Manipal Online MBA | MUJ Online | UGC Approved, NAAC A+ | 13 Specializations",
+    title: "Manipal Online MBA 2026 | MUJ Online | UGC Approved, NAAC A+ | 13 Specializations",
     description:
-      "Transform your career with Manipal's UGC-approved Online MBA. Flexible 2-year program with 13 specializations, ₹1.5-2L fees, EMI options, 30-50% salary hike. Ideal for working professionals. Apply now!",
+      "Transform your career with Manipal's UGC-approved Online MBA 2026. Flexible 2-year program with 13 specializations, ₹1.5-2L fees, EMI options, 30-50% salary hike. Ideal for working professionals. Apply now!",
     url: "https://www.unifostedu.com/muj-online-mba",
     siteName: "UNIFOST – Online Education Guide",
     images: [
@@ -25,7 +25,7 @@ export const metadata = {
         url: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327064/mba-online-image_zclzst.webp",
         width: 1200,
         height: 630,
-        alt: "Manipal University Jaipur Online MBA Program - NAAC A+ Accredited",
+        alt: "Manipal University Jaipur Online MBA Program - NAAC A+ Accredited 2026",
         type: "image/webp",
       },
       {
@@ -44,9 +44,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@unifostedu",
-    title: "Manipal Online MBA | UGC-Approved, NAAC A+ | 13 Specializations | ₹1.5-2L",
+    title: "Manipal Online MBA 2026 | UGC-Approved, NAAC A+ | 13 Specializations | ₹1.5-2L",
     description:
-      "Flexible 2-year Online MBA from NAAC A+ Manipal University Jaipur. 13 specializations, EMI options, 30-50% avg salary hike. Perfect for working professionals.",
+      "Flexible 2-year Online MBA from NAAC A+ Manipal University Jaipur 2026. 13 specializations, EMI options, 30-50% avg salary hike. Perfect for working professionals, no entrance exam.",
     images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327064/mba-online-image_zclzst.webp"],
     creator: "@unifostedu",
   },
@@ -270,75 +270,75 @@ const courseSchema = {
   syllabusSummary:
     "Semesters 1-2: Business Fundamentals (Economics, Finance, Marketing, HR, Analytics). Semesters 3-4: Advanced courses, specialization electives, capstone project.",
   offers: {
-    "@type": "Offer",
-    category: "Online Degree Program",
-    price: "150000",
-    priceCurrency: "INR",
-    priceValidUntil: "2024-12-31",
-    availability: "https://schema.org/InStock",
-    url: "https://www.unifostedu.com/muj-online-mba",
-    description: "Program fee: ₹1,50,000 - ₹2,00,000 (varies by specialization). EMI options available from ₹4,999/month.",
-    pricingDetails: {
-      "@type": "PriceSpecification",
-      priceCurrency: "INR",
-      price: "150000-200000",
-      description: "Semester-wise payment: ₹37,500 - ₹50,000 per semester",
-    },
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.7",
-    bestRating: "5",
-    worstRating: "1",
-    ratingCount: "1250",
-    reviewCount: "850",
-    description: "Based on student reviews and feedback",
-  },
-  review: [
-    {
-      "@type": "Review",
-      author: {
-        "@type": "Person",
-        name: "Working Professional",
+        "@type": "Offer",
+        category: "Online Degree Program",
+        price: "150000",
+        priceCurrency: "INR",
+        priceValidUntil: "2026-12-31",
+        availability: "https://schema.org/InStock",
+        url: "https://www.unifostedu.com/muj-online-mba",
+        description: "Program fee: ₹1,50,000 - ₹2,00,000 (varies by specialization). EMI options available from ₹4,999/month.",
+        pricingDetails: {
+          "@type": "PriceSpecification",
+          priceCurrency: "INR",
+          price: "150000-200000",
+          description: "Semester-wise payment: ₹37,500 - ₹50,000 per semester",
+        },
       },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.7",
         bestRating: "5",
+        worstRating: "1",
+        ratingCount: "1250",
+        reviewCount: "850",
+        description: "Based on student reviews and feedback",
       },
-      reviewBody: "Perfect balance of flexibility and quality education. Got promoted within 6 months of completing my MBA.",
-      datePublished: "2024-01-15",
-    },
-  ],
-  hasCourseInstance: [
-    {
-      "@type": "CourseInstance",
-      name: "Marketing Management Specialization",
-      description: "Focus on digital marketing, branding, and GTM strategies",
-      courseMode: "Online",
-      duration: "P2Y",
-      startDate: "2024-06-01",
-      endDate: "2026-06-01",
-    },
-    {
-      "@type": "CourseInstance",
-      name: "Finance Management Specialization",
-      description: "Financial modeling, investments, and strategic finance",
-      courseMode: "Online",
-      duration: "P2Y",
-      startDate: "2024-06-01",
-      endDate: "2026-06-01",
-    },
-    {
-      "@type": "CourseInstance",
-      name: "Analytics & Data Science Specialization",
-      description: "Predictive analytics, BI tools, and AI/ML applications",
-      courseMode: "Online",
-      duration: "P2Y",
-      startDate: "2024-06-01",
-      endDate: "2026-06-01",
-    },
-  ],
+      review: [
+        {
+          "@type": "Review",
+          author: {
+            "@type": "Person",
+            name: "Working Professional",
+          },
+          reviewRating: {
+            "@type": "Rating",
+            ratingValue: "5",
+            bestRating: "5",
+          },
+          reviewBody: "Perfect balance of flexibility and quality education. Got promoted within 6 months of completing my MBA.",
+          datePublished: "2026-01-15",
+        },
+      ],
+      hasCourseInstance: [
+        {
+          "@type": "CourseInstance",
+          name: "Marketing Management Specialization",
+          description: "Focus on digital marketing, branding, and GTM strategies",
+          courseMode: "Online",
+          duration: "P2Y",
+          startDate: "2026-07-01",
+          endDate: "2028-07-01",
+        },
+        {
+          "@type": "CourseInstance",
+          name: "Finance Management Specialization",
+          description: "Financial modeling, investments, and strategic finance",
+          courseMode: "Online",
+          duration: "P2Y",
+          startDate: "2026-07-01",
+          endDate: "2028-07-01",
+        },
+        {
+          "@type": "CourseInstance",
+          name: "Analytics & Data Science Specialization",
+          description: "Predictive analytics, BI tools, and AI/ML applications",
+          courseMode: "Online",
+          duration: "P2Y",
+          startDate: "2026-07-01",
+          endDate: "2028-07-01",
+        },
+      ],
   author: {
     "@type": "Organization",
     name: "Manipal University Jaipur",
@@ -536,16 +536,16 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "@id": "https://www.unifostedu.com/muj-online-mba/#article",
-  headline: "Complete Guide to Manipal Online MBA: UGC-Approved, NAAC A+, 13 Specializations",
-  description: "Everything you need to know about Manipal University Jaipur's Online MBA program including fees, eligibility, specializations, career scope, and admission process.",
+  headline: "Complete Guide to Manipal Online MBA 2026: UGC-Approved, NAAC A+, 13 Specializations",
+  description: "Everything you need to know about Manipal University Jaipur's Online MBA program 2026 including fees, eligibility, specializations, career scope, and admission process.",
   image: {
     "@type": "ImageObject",
     url: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327064/mba-online-image_zclzst.webp",
     width: 1200,
     height: 630,
   },
-  datePublished: "2024-06-01",
-  dateModified: "2024-12-31",
+  datePublished: "2026-01-01",
+  dateModified: "2026-06-16",
   author: {
     "@type": "Organization",
     name: "UNIFOST",
@@ -566,10 +566,10 @@ const videoSchema = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://www.unifostedu.com/muj-online-mba/#video",
-  name: "Manipal Online MBA - Complete Overview",
-  description: "Learn about Manipal University Jaipur's UGC-approved Online MBA program, specializations, fees, and career opportunities.",
+  name: "Manipal Online MBA - Complete Overview 2026",
+  description: "Learn about Manipal University Jaipur's UGC-approved Online MBA program 2026, specializations, fees, and career opportunities.",
   thumbnailUrl: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327064/mba-online-image_zclzst.webp",
-  uploadDate: "2024-06-01",
+  uploadDate: "2026-01-01",
   duration: "PT5M",
   contentUrl: "https://www.youtube.com/watch?v=YOUR-VIDEO-ID",
   embedUrl: "https://www.youtube.com/embed/YOUR-VIDEO-ID",

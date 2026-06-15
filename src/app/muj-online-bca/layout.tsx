@@ -1,15 +1,15 @@
 import { ChildrenProps } from "types/ChildrenProps";
 
 export const metadata = {
-  title: "Online BCA Degree (UGC-Approved) | Manipal University Jaipur - NAAC A+ | Flexible Learning",
+  title: "Online BCA Degree (UGC-Approved) 2026 | Manipal University Jaipur - NAAC A+ | Flexible Learning",
   description:
-    "UGC-approved Online BCA from Manipal University Jaipur (NAAC A+). 3-year flexible degree with Data Science, AI & Cybersecurity specializations. ₹1,35,000 total fees. Apply now!",
+    "UGC-approved Online BCA from Manipal University Jaipur (NAAC A+) 2026. 3-year flexible degree with Data Science, AI & Cybersecurity specializations. ₹1,35,000 total fees. Apply now!",
   keywords: `Online BCA degree, Manipal University BCA, UGC approved BCA, NAAC A+ online degree, 
     distance BCA India, Bachelor of Computer Applications online, BCA specializations data science, 
     BCA AI certification, cybersecurity BCA, online computer science degree, affordable BCA program, 
     working professionals BCA, BCA full stack development, virtual labs BCA, BCA Jaipur, 
     BCA career scope, BCA job opportunities, BCA to MCA, BCA placement, 
-    online degree for working professionals, computer science online course`,
+    online degree for working professionals, computer science online course, Manipal online BCA admission 2026, Manipal online BCA 2026, MUJ online BCA 2026`,
   
   metadataBase: new URL("https://www.unifostedu.com"),
   

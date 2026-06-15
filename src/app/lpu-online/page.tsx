@@ -69,14 +69,14 @@ const LpuOnline = () => {
   }, [sectionItem]);
   // Introduction content
   const introductionContent = {
-    title: "About LPU Online: Redefining Education for India 2025",
-    description: `In the dynamic landscape of modern education, LPU Online stands as a beacon of innovation and accessibility. As the digital arm of Lovely Professional University, one of India's largest and most renowned educational institutions, LPU Online is dedicated to delivering high-quality, UGC-entitled degrees to students and working professionals across the country and beyond. The mission of LPU Online is to break down geographical and financial barriers, making world-class education not just a dream, but an achievable reality for everyone. Whether you are searching for the best online MBA in India, a cutting-edge online data science course, or a practical digital marketing certification online, LPU Online provides a robust, flexible, and recognized platform to propel your career forward in 2025 and the future.`,
+    title: "About LPU Online: Redefining Education for India 2026",
+    description: `In the dynamic landscape of modern education, LPU Online stands as a beacon of innovation and accessibility. As the digital arm of Lovely Professional University, one of India's largest and most renowned educational institutions, LPU Online is dedicated to delivering high-quality, UGC-entitled degrees to students and working professionals across the country and beyond. The mission of LPU Online is to break down geographical and financial barriers, making world-class education not just a dream, but an achievable reality for everyone. Whether you are searching for the best online MBA in India, a cutting-edge online data science course, or a practical digital marketing certification online, LPU Online provides a robust, flexible, and recognized platform to propel your career forward in 2026 and the future.`,
     pillars: `The ecosystem at LPU Online is built on three core pillars: Quality, Flexibility, and Recognition. Every online degree and certificate in web development is crafted by industry experts and seasoned academics, ensuring the curriculum is not only theoretically sound but also pragmatically aligned with the demands of the global job market. The learning experience is powered by a state-of-the-art Learning Management System (LMS). This intuitive platform provides students with 24/7 access to engaging video lectures, e-books, interactive assignments, and virtual labs, creating a truly immersive online and distance learning environment. This makes LPU Online a premier choice among the top online universities in India for those who need to balance their education with personal and professional commitments.`
   };
 
   const whyChooseLPU = {
     title: "Why Choose LPU Online? Your Gateway to a Brighter Future",
-    description: `When you compare online universities in India, LPU Online consistently emerges as a top contender. But what exactly sets it apart? The decision to choose LPU Online is an investment in a future-proof career, supported by a multitude of compelling benefits designed for the aspirants of 2025.`,
+    description: `When you compare online universities in India, LPU Online consistently emerges as a top contender. But what exactly sets it apart? The decision to choose LPU Online is an investment in a future-proof career, supported by a multitude of compelling benefits designed for the aspirants of 2026.`,
     reasons: [
       {
         title: "UGC-Entitled and Nationally Recognized Degrees",

@@ -115,16 +115,6 @@ export const metadata: Metadata = {
   // ── App Links / PWA ──────────────────────────────────────────────────────────
   applicationName: 'UniFost',
   referrer: 'origin-when-cross-origin',
-  colorScheme: 'light',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#1e3a8a' },
-    { media: '(prefers-color-scheme: dark)', color: '#1e3a8a' },
-  ],
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-  },
 
   // ── Icons ────────────────────────────────────────────────────────────────────
   icons: {
@@ -141,6 +131,17 @@ export const metadata: Metadata = {
       { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#1e3a8a' },
     ],
   },
+};
+
+export const viewport = {
+  colorScheme: 'light',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#1e3a8a' },
+    { media: '(prefers-color-scheme: dark)', color: '#1e3a8a' },
+  ],
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 // ─── JSON-LD Structured Data ──────────────────────────────────────────────────

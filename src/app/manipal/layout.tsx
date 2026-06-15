@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Manipal University Jaipur Online Admission 2026 open. Apply for NAAC A+ accredited online MBA, MCA, BBA, BCA, B.Com, M.Com, M.Sc, MA programs. UGC-entitled degrees from ₹99,000. No entrance exam. 100% placement support. Free counseling.",
+    "Manipal University Jaipur Online Admission 2026 open. Apply for NAAC A+ accredited online MBA, MCA, BBA, BCA, B.Com, M.Com, M.Sc, MA programs. UGC-entitled degrees from ₹99,000. No entrance exam. 100% placement support. Free counseling. Weekend classes, recorded lectures, and EMI options available.",
 
   keywords: [
     // Core brand
@@ -41,6 +41,11 @@ export const metadata: Metadata = {
     "online manipal university fees structure",
     "online manipal eligibility criteria MBA",
     "online manipal vs other online universities",
+    "online manipal university july 2026 batch",
+    "manipal online university 2026 fees",
+    "manipal online university 2026 eligibility",
+    "online manipal university 2026 placement",
+    "manipal online university 2026 scholarships",
     // MBA
     "online MBA Manipal University Jaipur 2026",
     "online MBA with Manipal 2026",
@@ -53,23 +58,35 @@ export const metadata: Metadata = {
     "online MBA Manipal Finance",
     "online MBA Manipal Healthcare",
     "online MBA Manipal IT Fintech",
+    "online MBA Manipal HRM",
+    "online MBA Manipal Operations Management",
+    "online MBA Manipal Supply Chain Management",
+    "online MBA Manipal Project Management",
+    "online MBA Manipal BFSI",
+    "online MBA Manipal for working professionals 2026",
     // MCA
     "online MCA Manipal University Jaipur 2026",
     "best online MCA India Manipal",
     "online MCA Manipal AI Data Science",
     "online MCA Manipal Cyber Security",
+    "online MCA Manipal Cloud Computing",
+    "online MCA Manipal for working professionals",
     // BBA / BCA
     "online BBA Manipal University Jaipur 2026",
     "online BBA Manipal fees",
     "best online BBA India Manipal",
     "online BCA Manipal University Jaipur 2026",
+    "online BBA Manipal Finance Accounting",
+    "online BBA Manipal Data Analytics",
+    "online BCA Manipal Data Science",
     // Others
     "online B.Com Manipal University Jaipur 2026",
     "online M.Com Manipal University Jaipur 2026",
     "online M.Sc Manipal University Jaipur 2026",
     "online MA Manipal University Jaipur 2026",
     "online MA Journalism Mass Communication Manipal",
-    // City-wise
+    "online MA Economics Manipal University",
+    // City-wise (extended)
     "Manipal Online MBA Jaipur",
     "Manipal Online admission Delhi",
     "Manipal Online MBA Mumbai",
@@ -80,6 +97,30 @@ export const metadata: Metadata = {
     "Manipal Online admission Noida",
     "Manipal Online MBA Pune",
     "Manipal Online admission Lucknow",
+    "Manipal Online MBA Ahmedabad",
+    "Manipal Online admission Surat",
+    "Manipal Online MBA Bhopal",
+    "Manipal Online admission Indore",
+    "Manipal Online MBA Patna",
+    "Manipal Online admission Bhubaneswar",
+    "Manipal Online MBA Guwahati",
+    "Manipal Online admission Dehradun",
+    // Long tail
+    "how to apply for manipal online university 2026",
+    "manipal online university documents required for admission",
+    "manipal online university placement salary",
+    "manipal online university vs amity online",
+    "manipal online university vs nmims online",
+    "manipal online university vs upes online",
+    "is manipal online university worth it 2026",
+    "manipal online university reviews 2026",
+    "manipal online university student reviews",
+    "manipal online university LMS",
+    "manipal online university recorded lectures",
+    "manipal online university live classes",
+    "manipal online university weekend classes",
+    "manipal online university EMI options",
+    "manipal online university zero cost EMI",
   ],
 
   icons: {
@@ -203,11 +244,11 @@ const landingPageSchema = {
   "@type":       ["WebPage", "LandingPage"],
   name:          "Manipal University Jaipur Online Admission 2026 | Apply Now",
   description:
-    "Apply for Manipal University Jaipur Online UG and PG programs. NAAC A+ accredited UGC-entitled degrees with 100% placement support, fees from ₹99,000 and no entrance exam.",
+    "Apply for Manipal University Jaipur Online UG and PG programs. NAAC A+ accredited UGC-entitled degrees with 100% placement support, fees from ₹99,000 and no entrance exam. Weekend classes, recorded lectures, EMI options available.",
   url:           PAGE_URL,
   inLanguage:    "en-IN",
   datePublished: "2026-01-01",
-  dateModified:  "2026-03-16",
+  dateModified:  "2026-06-16",
   publisher: {
     "@type": "EducationalOrganization",
     name:    "Manipal University Jaipur Online",
@@ -216,22 +257,22 @@ const landingPageSchema = {
 };
 
 // ─── Schema: FAQPage ─────────────────────────────────────────────────────────
-// Sourced from faqData[] in page.tsx — all 5 questions
+// Comprehensive FAQ for Manipal University Jaipur Online
 const faqSchema = {
   "@context": "https://schema.org",
   "@type":    "FAQPage",
   mainEntity: [
     {
       "@type": "Question",
-      name:    "Is Manipal University Jaipur Online approved by UGC?",
+      name:    "Is Manipal University Jaipur Online approved by UGC and NAAC accredited?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:   "Yes, Manipal University Jaipur Online is UGC-entitled and NAAC A+ accredited. All online degrees are valid and globally recognized. Degrees are accepted for government jobs, competitive exams, higher education and employment across India and abroad.",
+        text:   "Yes, Manipal University Jaipur Online is UGC-entitled and NAAC A+ accredited. All online degrees are valid and globally recognized for government jobs, competitive exams, higher education, and employment across India and abroad.",
       },
     },
     {
       "@type": "Question",
-      name:    "Are the online MBA and online BCA degrees equivalent to regular programs?",
+      name:    "Are Manipal Online degrees equivalent to regular on-campus programs?",
       acceptedAnswer: {
         "@type": "Answer",
         text:   "Yes, all Manipal University Jaipur Online degrees hold the same recognition as traditional on-campus programs. The degree certificate does not mention the online mode of study.",
@@ -242,48 +283,95 @@ const faqSchema = {
       name:    "Can international students apply for Manipal University Jaipur Online programs?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:   "Yes, students from over 50 countries enroll in Manipal University Jaipur Online each year. The programs are globally recognized and accessible from anywhere in the world.",
+        text:   "Yes, students from over 50 countries enroll in Manipal University Jaipur Online each year. The programs are globally recognized and accessible from anywhere in the world with internet connectivity.",
       },
     },
     {
       "@type": "Question",
-      name:    "What learning support does MUJ Online offer?",
+      name:    "What learning support does MUJ Online offer to students?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:   "Students receive access to 24×7 LMS, live lectures, recorded classes, digital library, virtual labs, and dedicated student support teams. Academic advisors, career counselors and technical support are also available throughout the program.",
+        text:   "Students receive access to 24×7 LMS, live interactive lectures, recorded video classes, digital library, virtual labs, and dedicated student support teams. Academic advisors, career counselors, and technical support are also available throughout the program duration.",
       },
     },
     {
       "@type": "Question",
-      name:    "Does Manipal Online provide placement assistance?",
+      name:    "Does Manipal Online provide placement assistance and career support?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:   "Yes, MUJ Online has a strong placement and career guidance cell offering job connections, industry mentorship, resume building, interview preparation and access to a strong alumni network.",
+        text:   "Yes, MUJ Online has a strong placement and career guidance cell offering job connections, industry mentorship, resume building, interview preparation, and access to a strong alumni network across top companies.",
       },
     },
-    // Extra Q&As from WhyChoose section content in page.tsx
     {
       "@type": "Question",
       name:    "What are the fees for Manipal University Jaipur Online programs?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:   "Fees start from ₹99,000 (B.Com, 3 years). MBA is ₹1,75,000 (2 years), MCA ₹1,58,000 (2 years), BBA ₹1,35,000 (3 years), BCA ₹1,35,000 (3 years), M.Com ₹1,08,000 (2 years), M.Sc ₹80,000 (2 years), MA ₹80,000 (2 years). EMI options and scholarships are available.",
+        text:   "Fees start from ₹99,000 (B.Com, 3 years). MBA: ₹1,75,000 (2 years), MCA: ₹1,58,000 (2 years), BBA: ₹1,35,000 (3 years), BCA: ₹1,35,000 (3 years), M.Com: ₹1,08,000 (2 years), M.Sc: ₹80,000 (2 years), MA: ₹80,000 (2 years). EMI options and scholarships are available for eligible students.",
       },
     },
     {
       "@type": "Question",
-      name:    "Is there an entrance exam for Manipal University Jaipur Online admission?",
+      name:    "Is there an entrance exam required for Manipal University Jaipur Online admission?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:   "No, Manipal University Jaipur Online does not require an entrance exam. Admission is based on academic qualifications. The process is fully online: fill the application form, submit documents, pay fees and receive LMS credentials.",
+        text:   "No, Manipal University Jaipur Online does not require any entrance exam. Admission is based on your academic qualifications. The process is fully online: fill application form, upload documents, pay fees, and receive LMS credentials.",
       },
     },
     {
       "@type": "Question",
-      name:    "What specializations are available in the Manipal University Jaipur Online MBA?",
+      name:    "What specializations are available in Manipal Online MBA?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:   "MUJ Online MBA offers dual/super specializations in Digital Marketing, Marketing, Analytics & Data Science, IT & Fintech, Finance Management, HRM, BFSI, Operations Management, International Business, Information Systems Management, Project Management, Supply Chain Management and Retail Management.",
+        text:   "MUJ Online MBA offers dual/super specializations in Digital Marketing, Marketing Management, Analytics & Data Science, IT & FinTech, Finance Management, Human Resource Management (HRM), Banking Financial Services & Insurance (BFSI), Operations Management, International Business, Information Systems Management, Project Management, Supply Chain Management, and Retail Management & Quick Commerce.",
+      },
+    },
+    {
+      "@type": "Question",
+      name:    "What is the eligibility criteria for Manipal Online MBA?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:   "Eligibility for Manipal Online MBA: Bachelor's degree from a recognized university with a minimum of 50% aggregate marks. Final-year students can also apply provided they submit their degree completion documents before the course start date.",
+      },
+    },
+    {
+      "@type": "Question",
+      name:    "What is the duration of Manipal Online programs?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:   "Undergraduate programs (BBA, BCA, B.Com): 3 years (6 semesters). Postgraduate programs (MBA, MCA, M.Com, M.Sc, MA): 2 years (4 semesters). Flexible extension up to 4 years is available for working professionals.",
+      },
+    },
+    {
+      "@type": "Question",
+      name:    "Does Manipal Online offer EMI or payment flexibility?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:   "Yes, Manipal Online offers semester-wise payment options, EMI plans starting from as low as ₹4,000/month, and scholarships for eligible students. EMI options are available through partner banks and NBFCs with zero or low-cost EMI plans.",
+      },
+    },
+    {
+      "@type": "Question",
+      name:    "Is Manipal Online worth it for working professionals?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:   "Yes! Manipal Online is specifically designed for working professionals with weekend live classes, pre-recorded video lectures accessible 24/7, flexible deadlines, and no career break required. The NAAC A+ accreditation ensures quality, and the career support helps in promotions or career switches.",
+      },
+    },
+    {
+      "@type": "Question",
+      name:    "What documents are required for Manipal Online admission?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:   "Required documents: 10th and 12th mark sheets, graduation mark sheets (for PG programs), photo ID proof (Aadhaar/PAN/Passport), passport-size photograph, work experience certificate (if any).",
+      },
+    },
+    {
+      "@type": "Question",
+      name:    "How does Manipal Online's learning management system (LMS) work?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:   "Manipal Online's learning management system (LMS) is a user-friendly platform that hosts all course materials: recorded lectures, live class schedule, assignments, quiz, discussion forums, gradebook, and more. You can access it via web browser or mobile app anytime, anywhere.",
       },
     },
   ],

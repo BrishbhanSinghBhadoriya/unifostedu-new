@@ -1,15 +1,15 @@
 import { ChildrenProps } from "types/ChildrenProps";
 
 export const metadata = {
-  title: "Online BBA Degree (UGC-Approved) | Manipal University Jaipur - NAAC A+ | Flexible Learning",
+  title: "Online BBA Degree (UGC-Approved) 2026 | Manipal University Jaipur - NAAC A+ | Flexible Learning",
   description:
-    "UGC-approved Online BBA from Manipal University Jaipur (NAAC A+). 3-year flexible degree with Marketing, Finance, HR & Data Analytics specializations. ₹1,35,000 total fees. Apply now!",
+    "UGC-approved Online BBA from Manipal University Jaipur (NAAC A+) 2026. 3-year flexible degree with Marketing, Finance, HR & Data Analytics specializations. ₹1,35,000 total fees. Apply now!",
   keywords: `Online BBA degree, Manipal University BBA, UGC approved BBA, NAAC A+ online degree,
     distance BBA India, Bachelor of Business Administration online, BBA specializations marketing,
     BBA finance accounting, BBA HR management, online business degree, affordable BBA program,
     working professionals BBA, BBA data analytics, BBA entrepreneurship, BBA digital marketing,
     virtual learning BBA, BBA placement, online degree for working professionals, business administration online course,
-    BBA career scope, BBA job opportunities, MBA after BBA, BBA fees India, online business school`,
+    BBA career scope, BBA job opportunities, MBA after BBA, BBA fees India, Manipal online BBA admission 2026, MUJ online BBA 2026, Manipal online BBA 2026`,
   
   metadataBase: new URL("https://www.unifostedu.com"),
   

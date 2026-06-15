@@ -1,13 +1,13 @@
 import { ChildrenProps } from "types/ChildrenProps";
 
 export const metadata = {
-  title: "Online MCA - Manipal University Jaipur | UGC Approved, NAAC A+ | 2-Year Program",
+  title: "Online MCA - Manipal University Jaipur 2026 | UGC Approved, NAAC A+ | 2-Year Program",
   
   description:
-    "Manipal University Jaipur's UGC-approved Online MCA (2-year) with AI, Data Science, Cybersecurity, Cloud Computing specializations. NAAC A+ accredited. Flexible learning for working professionals. ₹1.58L with EMI options. Apply now!",
+    "Manipal University Jaipur's UGC-approved Online MCA (2-year) 2026 with AI, Data Science, Cybersecurity, Cloud Computing specializations. NAAC A+ accredited. Flexible learning for working professionals. ₹1.58L with EMI options. Apply now!",
 
   keywords:
-    "Online MCA, Manipal Online MCA, MCA for Working Professionals, UGC Approved Online MCA, Best Online MCA India, NAAC A+ MCA, MCA AI Data Science, Online MCA Cybersecurity, MCA Flexible Learning, Online MCA Fees India, Online MCA Admission, MCA Specializations",
+    "Online MCA, Manipal Online MCA, MCA for Working Professionals, UGC Approved Online MCA, Best Online MCA India, NAAC A+ MCA, MCA AI Data Science, Online MCA Cybersecurity, MCA Flexible Learning, Online MCA Fees India, Online MCA Admission 2026, MCA Specializations, Manipal Online MCA 2026",
 
   metadataBase: new URL("https://unifostedu.com"),
 
@@ -16,9 +16,9 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "Manipal Online MCA | UGC Approved, NAAC A+ | 2-Year Program for IT Professionals",
+    title: "Manipal Online MCA 2026 | UGC Approved, NAAC A+ | 2-Year Program for IT Professionals",
     description:
-      "Top-ranked Online MCA from Manipal University Jaipur with AI, Data Science, Cybersecurity, Cloud Computing specializations. Perfect for working professionals. ₹1.58L with EMI options.",
+      "Top-ranked Online MCA from Manipal University Jaipur 2026 with AI, Data Science, Cybersecurity, Cloud Computing specializations. Perfect for working professionals. ₹1.58L with EMI options, no entrance exam.",
     url: "https://unifostedu.com/muj-online-mca",
     siteName: "UNIFOST",
     images: [
@@ -26,7 +26,7 @@ export const metadata = {
         url: "https://unifostedu.com/images/muj-online-mca-og.webp",
         width: 1200,
         height: 630,
-        alt: "Manipal University Jaipur Online MCA - Best Online Master's in Computer Applications",
+        alt: "Manipal University Jaipur Online MCA 2026 - Best Online Master's in Computer Applications",
       },
     ],
     locale: "en_IN",
@@ -35,9 +35,9 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Manipal Online MCA | Best for Working Professionals | UGC Approved",
+    title: "Manipal Online MCA 2026 | Best for Working Professionals | UGC Approved",
     description:
-      "2-Year Online MCA with AI, Data Science, Cybersecurity specializations. Apply Now! ₹1.58L with EMI.",
+      "2-Year Online MCA 2026 with AI, Data Science, Cybersecurity specializations. Apply Now! ₹1.58L with EMI.",
     images: ["https://unifostedu.com/images/muj-online-mca-twitter.webp"],
     creator: "@UNIFOST",
   },
@@ -70,9 +70,12 @@ export const metadata = {
     "language": "en-IN",
     "revisit-after": "7 days",
   },
+};
 
-  viewport: "width=device-width, initial-scale=1.0, maximum-scale=5.0",
-  charset: "utf-8",
+export const viewport = {
+  width: "device-width",
+  initialScale: 1.0,
+  maximumScale: 5.0,
 };
 
 export const dynamic = "force-static";

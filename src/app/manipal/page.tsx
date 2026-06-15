@@ -140,29 +140,74 @@ const Manipal = () => {
 
   const faqData = [
     {
-      question: "Is Manipal University Jaipur Online approved by UGC?",
+      question: "Is Manipal University Jaipur Online approved by UGC and NAAC accredited?",
       answer:
-        "Yes, Manipal University Jaipur Online is UGC-entitled and NAAC A+ accredited. All online degrees are valid and globally recognized."
+        "Yes, Manipal University Jaipur Online is UGC-entitled and NAAC A+ accredited. All online degrees are valid and globally recognized for government jobs, competitive exams, higher education, and employment across India and abroad."
     },
     {
-      question: "Are the online MBA and online BCA degrees equivalent to regular programs?",
+      question: "Are Manipal Online degrees equivalent to regular on-campus programs?",
       answer:
-        "Yes, all Manipal Online degrees hold the same recognition as traditional on-campus programs."
+        "Yes, all Manipal University Jaipur Online degrees hold the same recognition as traditional on-campus programs. The degree certificate does not mention the online mode of study."
     },
     {
-      question: "Can international students apply for Manipal Online programs?",
+      question: "Can international students apply for Manipal University Jaipur Online programs?",
       answer:
-        "Yes, students from over 50 countries enroll in Manipal University Jaipur Online each year."
+        "Yes, students from over 50 countries enroll in Manipal University Jaipur Online each year. The programs are globally recognized and accessible from anywhere in the world with internet connectivity."
     },
     {
-      question: "What learning support does MUJ Online offer?",
+      question: "What learning support does MUJ Online offer to students?",
       answer:
-        "Students receive access to 24×7 LMS, live lectures, recorded classes, digital library, and dedicated student support teams."
+        "Students receive access to 24×7 LMS, live interactive lectures, recorded video classes, digital library, virtual labs, and dedicated student support teams. Academic advisors, career counselors, and technical support are also available throughout the program duration."
     },
     {
-      question: "Does Manipal Online provide placement assistance?",
+      question: "Does Manipal Online provide placement assistance and career support?",
       answer:
-        "Yes, MUJ Online has a strong placement and career guidance cell offering job connections and industry mentorship."
+        "Yes, MUJ Online has a strong placement and career guidance cell offering job connections, industry mentorship, resume building, interview preparation, and access to a strong alumni network across top companies."
+    },
+    {
+      question: "What are the fees for Manipal University Jaipur Online programs?",
+      answer:
+        "Fees start from ₹99,000 (B.Com, 3 years). MBA: ₹1,75,000 (2 years), MCA: ₹1,58,000 (2 years), BBA: ₹1,35,000 (3 years), BCA: ₹1,35,000 (3 years), M.Com: ₹1,08,000 (2 years), M.Sc: ₹80,000 (2 years), MA: ₹80,000 (2 years). EMI options and scholarships are available for eligible students."
+    },
+    {
+      question: "Is there an entrance exam required for Manipal University Jaipur Online admission?",
+      answer:
+        "No, Manipal University Jaipur Online does not require any entrance exam. Admission is based on your academic qualifications. The process is fully online: fill application form, upload documents, pay fees, and receive LMS credentials."
+    },
+    {
+      question: "What specializations are available in Manipal Online MBA?",
+      answer:
+        "MUJ Online MBA offers dual/super specializations in Digital Marketing, Marketing Management, Analytics & Data Science, IT & Fintech, Finance Management, Human Resource Management (HRM), Banking Financial Services & Insurance (BFSI), Operations Management, International Business, Information Systems Management, Project Management, Supply Chain Management, and Retail Management & Quick Commerce."
+    },
+    {
+      question: "What is the eligibility criteria for Manipal Online MBA?",
+      answer:
+        "Eligibility for Manipal Online MBA: Bachelor's degree from a recognized university with a minimum of 50% aggregate marks. Final-year students can also apply provided they submit their degree completion documents before the course start date."
+    },
+    {
+      question: "What is the duration of Manipal Online programs?",
+      answer:
+        "Undergraduate programs (BBA, BCA, B.Com): 3 years (6 semesters). Postgraduate programs (MBA, MCA, M.Com, M.Sc, MA): 2 years (4 semesters). Flexible extension up to 4 years is available for working professionals."
+    },
+    {
+      question: "Does Manipal Online offer EMI or payment flexibility?",
+      answer:
+        "Yes, Manipal Online offers semester-wise payment options, EMI plans starting from as low as ₹4,000/month, and scholarships for eligible students. EMI options are available through partner banks and NBFCs with zero or low-cost EMI plans."
+    },
+    {
+      question: "Is Manipal Online worth it for working professionals?",
+      answer:
+        "Yes! Manipal Online is specifically designed for working professionals with weekend live classes, pre-recorded video lectures accessible 24/7, flexible deadlines, and no career break required. The NAAC A+ accreditation ensures quality, and the career support helps in promotions or career switches."
+    },
+    {
+      question: "What documents are required for Manipal Online admission?",
+      answer:
+        "Required documents: 10th and 12th mark sheets, graduation mark sheets (for PG programs), photo ID proof (Aadhaar/PAN/Passport), passport-size photograph, work experience certificate (if any)."
+    },
+    {
+      question: "How does Manipal Online's learning management system (LMS) work?",
+      answer:
+        "Manipal Online's learning management system (LMS) is a user-friendly platform that hosts all course materials: recorded lectures, live class schedule, assignments, quiz, discussion forums, gradebook, and more. You can access it via web browser or mobile app anytime, anywhere."
     }
   ];
 
@@ -263,22 +308,8 @@ const Manipal = () => {
           </div>
         </header>
 
-        {/* Left Sidebar */}
-        <div className="mt-[64px] sm:mt-[72px] md:mt-[80px] hidden lg:block">
-          <PageContent
-            sectionItems={sectionItems}
-            activeSection={activeSection}
-            ismobilemenuopen={isMobileMenuOpen}
-            onClose={() => setIsMobileMenuOpen(false)}
-            progressive
-            position="fixed"
-            topOffsetClass="top-[64px] sm:top-[72px] md:top-[80px]"
-            mode="chips"
-          />
-        </div>
-
         {/* Main Content */}
-        <main className="flex-1 min-w-0 pt-32 md:pt-36 lg:pt-16">
+        <main className="flex-1 min-w-0 pt-16 sm:pt-20">
 
           {/* ✅ FIX: modal prop hata diya — bahar click se accidentally close nahi hoga */}
           {showEnquiryModal && (

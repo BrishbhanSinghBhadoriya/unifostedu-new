@@ -185,7 +185,7 @@ const websiteSchema = {
   },
 };
 
-// ─── Schema: LandingPage ──────────────────────────────────────────────────────
+// ─── Schema: Landing Page ──────────────────────────────────────────────────────
 const landingPageSchema = {
   "@context":    "https://schema.org",
   "@type":       ["WebPage", "LandingPage"],
@@ -195,7 +195,7 @@ const landingPageSchema = {
   url:           PAGE_URL,
   inLanguage:    "en-IN",
   datePublished: "2026-01-01",
-  dateModified:  "2026-03-16",
+  dateModified:  "2026-06-15",
   publisher: {
     "@type": "EducationalOrganization",
     name:    "Kurukshetra University Online",
@@ -204,7 +204,7 @@ const landingPageSchema = {
 };
 
 // ─── Schema: FAQPage ─────────────────────────────────────────────────────────
-// All 10 Q&As sourced from faqs[] in page.tsx
+// All Q&As sourced from faqs[] in page.tsx
 const faqSchema = {
   "@context": "https://schema.org",
   "@type":    "FAQPage",
@@ -214,79 +214,119 @@ const faqSchema = {
       name:    "What is Kurukshetra University Online?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:   "Kurukshetra University Online is the distance and online education wing of Kurukshetra University, established in 1956. It offers UGC-entitled online degree programs designed for working professionals, fresh graduates, and learners who need flexibility. KU Online combines traditional academic excellence with modern digital learning.",
+        text:   "Kurukshetra University Online is the distance and online education wing of Kurukshetra University, established in 1956. It offers UGC-entitled online degree programs designed for working professionals, fresh graduates, and learners who need flexibility. KU Online combines traditional academic excellence with modern digital learning approaches.",
       },
     },
     {
       "@type": "Question",
-      name:    "Is a Kurukshetra University Online degree valid?",
+      name:    "Is Kurukshetra University Online degree valid for government jobs and UPSC?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:   "Yes, Kurukshetra University Online degrees are fully valid and recognized by UGC (University Grants Commission). The university holds NAAC A++ accreditation — the highest grade possible — and its degrees are accepted by employers, government organizations, and other universities across India and abroad.",
+        text:   "Yes, Kurukshetra University Online degrees are fully valid and recognized by UGC (University Grants Commission). The university holds NAAC A++ accreditation — the highest grade possible — and its degrees are accepted by employers, government organizations, UPSC, and other universities across India and abroad for higher education and career opportunities.",
       },
     },
     {
       "@type": "Question",
-      name:    "What courses are offered at Kurukshetra University Online?",
+      name:    "What courses are offered at Kurukshetra University Online in 2026?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:   "Kurukshetra University Online offers UG programs: BBA (₹72,661, 3 years), BCA (₹72,661, 3 years), B.Com (₹72,661, 3 years). PG programs: MBA (₹98,545, 2 years), MBA with specializations (₹1,19,845), MCA (₹76,667, 2 years), M.Com (₹54,036, 2 years), MA in English/Journalism/Political Science (₹72,661, 2 years).",
+        text:   "Kurukshetra University Online offers a range of undergraduate and postgraduate programs in 2026: 🔹 Undergraduate Programs (UG): BBA, BCA, B.Com; 🔹 Postgraduate Programs (PG): MBA (General & Specialized), MCA, M.Com, MA in English, Journalism & Mass Communication, Political Science. All programs are designed with industry relevance and future-ready curriculum.",
       },
     },
     {
       "@type": "Question",
-      name:    "What is the eligibility for Kurukshetra University Online courses?",
+      name:    "What is the eligibility for Kurukshetra University Online MBA?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:   "For UG Programs (BBA, BCA, B.Com): 10+2 pass from a recognized board. For PG Programs (MBA, MCA, M.Com, MA): Bachelor's degree from a recognized university. Some programs may have specific subject requirements.",
+        text:   "For Kurukshetra University Online MBA, you need a Bachelor's degree from a recognized university in any discipline. Final-year students can also apply, provided they complete their graduation before the program starts.",
       },
     },
     {
       "@type": "Question",
-      name:    "What is the fee structure of Kurukshetra University Online?",
+      name:    "What is the fee structure of Kurukshetra University Online MBA and other programs?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:   "KU Online offers an affordable fee structure: UG Programs approximately ₹72,661 for the full program. PG Programs range from ₹54,036 (M.Com) to ₹1,19,845 (MBA with specializations). Scholarships and installment options are available for eligible students.",
+        text:   "Kurukshetra University Online offers affordable fee structures: UG Programs: ₹72,661 for full 3-year program; PG Programs: MBA General ₹98,545 (2 years), MBA with Specializations ₹1,19,845, MCA ₹76,667, M.Com ₹54,036, MA ₹72,661. Scholarships and easy installment options are available for eligible students.",
       },
     },
     {
       "@type": "Question",
-      name:    "Does Kurukshetra University Online provide placement assistance?",
+      name:    "Does Kurukshetra University Online provide placement assistance for working professionals?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:   "Yes, KU Online provides career support including career counseling sessions, resume building workshops, industry interface programs, and placement opportunities with partner companies. The university has a strong alumni network that supports career growth.",
+        text:   "Yes, Kurukshetra University Online provides comprehensive career support including career counseling sessions, resume building workshops, interview preparation, industry interface programs, and placement opportunities with partner companies. The university also has a strong alumni network that helps in career growth and networking.",
       },
     },
     {
       "@type": "Question",
-      name:    "What is the learning method at Kurukshetra University Online?",
+      name:    "Is there an entrance exam required for Kurukshetra University Online admission?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:   "KU Online offers recorded video lectures, digital e-learning materials, online assignments and assessments, discussion forums for peer interaction, and regular doubt-clearing sessions. Learning is self-paced with flexibility to study from anywhere.",
+        text:   "No, there is no entrance exam required for admission to Kurukshetra University Online programs. Admission is based on your academic merit and eligibility criteria. The process is simple, digital, and fully online.",
       },
     },
     {
       "@type": "Question",
-      name:    "Are Kurukshetra University Online degrees accepted abroad?",
+      name:    "Can I do Kurukshetra University Online MBA while working full-time?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:   "Yes, Kurukshetra University degrees are globally recognized. The university is NAAC A++ accredited and its degrees are accepted by employers and educational institutions worldwide. Many alumni have pursued higher education and careers abroad with KU degrees.",
+        text:   "Absolutely! Kurukshetra University Online programs are specifically designed for working professionals. The flexible learning schedule, recorded video lectures, and self-paced study allow you to balance your full-time job while pursuing your degree without any career break.",
       },
     },
     {
       "@type": "Question",
-      name:    "How are exams conducted at Kurukshetra University Online?",
+      name:    "What specializations are available in Kurukshetra University Online MBA?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:   "Examinations at KU Online are conducted through an online proctored examination system with scheduled examination windows. Both objective and subjective type questions are used, along with assignment-based evaluations. Results are declared online and certificates are sent to students.",
+        text:   "Kurukshetra University Online MBA offers specializations in Finance Management, Information Technology Management, Human Resource Management, Marketing, and Business Analytics. You can choose a specialization based on your career goals and interests.",
       },
     },
     {
       "@type": "Question",
-      name:    "How can I apply for Kurukshetra University Online programs?",
+      name:    "Are Kurukshetra University Online degrees accepted abroad for higher studies and jobs?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:   "Apply in 5 steps: 1) Visit the official KU Online portal. 2) Register and fill the application form. 3) Upload documents (marksheets, ID proof, photograph). 4) Pay the application fee online. 5) Submit and wait for confirmation. After verification, you receive login credentials to access the learning portal.",
+        text:   "Yes! Kurukshetra University degrees are globally recognized. The university is NAAC A++ accredited and its degrees are accepted by employers and educational institutions worldwide. Many alumni have pursued higher education and successful careers abroad with KU Online degrees.",
+      },
+    },
+    {
+      "@type": "Question",
+      name:    "How are exams conducted at Kurukshetra University Online in 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:   "Examinations at Kurukshetra University Online in 2026 are conducted through an online proctored examination system with scheduled examination windows. Both objective and subjective type questions are used, along with continuous assignment-based evaluations. Results are declared online and certificates are sent to students by post.",
+      },
+    },
+    {
+      "@type": "Question",
+      name:    "How can I apply for Kurukshetra University Online programs in 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:   "You can apply for Kurukshetra University Online programs in 2026 through these simple steps: 1) Visit the official Kurukshetra University Online portal, 2) Register and fill the application form with required details, 3) Upload necessary documents (marksheets, ID proof, photograph), 4) Pay the application fee online, 5) Submit and wait for confirmation. After verification, you will receive login credentials to access the learning portal.",
+      },
+    },
+    {
+      "@type": "Question",
+      name:    "What is the duration of Kurukshetra University Online BBA and MBA programs?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:   "Kurukshetra University Online Undergraduate programs (BBA, BCA, B.Com) have a duration of 3 years (6 semesters). Postgraduate programs (MBA, MCA, M.Com, MA) have a duration of 2 years (4 semesters). You can complete the program at your own pace within the maximum duration allowed by the university.",
+      },
+    },
+    {
+      "@type": "Question",
+      name:    "Does Kurukshetra University Online offer scholarships for online programs?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:   "Yes, Kurukshetra University Online offers scholarships for eligible students. The university provides financial aid and scholarship opportunities based on academic merit, category, and other criteria. You can also opt for easy installment or EMI options to make the fee payment more manageable.",
+      },
+    },
+    {
+      "@type": "Question",
+      name:    "Is Kurukshetra University Online recognized by UGC-DEB?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:   "Yes! Kurukshetra University Online is recognized by the University Grants Commission - Distance Education Bureau (UGC-DEB). The university also holds NAAC A++ accreditation — the highest grade possible — ensuring that the online degrees are valid and recognized across India and globally.",
       },
     },
   ],

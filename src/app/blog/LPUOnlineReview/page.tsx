@@ -29,7 +29,7 @@ const LPUOnlineReview = () => {
           <h1 className="text-4xl font-extrabold text-blue-900 mb-2 font-serif">
             LPU Online MBA – Pros, Cons & Admissions Process
           </h1>
-          <p className="text-sm text-gray-500 mb-6">Published on June 25, 2025 • UniFost Blog</p>
+          <p className="text-sm text-gray-500 mb-6">Published on June 15, 2026 • UniFost Blog</p>
 
           <p>
             Lovely Professional University (LPU) is one of India's largest private universities. Its online learning division is gaining popularity among working professionals
@@ -121,7 +121,7 @@ const LPUOnlineReview = () => {
               </a>
             </div>
              <div className="flex justify-center mt-12 ">
-        <Link href="/lpu">
+        <Link href="/lpu-online">
           <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition cursor-pointer">
             more Information about LPU
           </button>

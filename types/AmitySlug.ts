@@ -1,4 +1,4 @@
-// Database Types (JSON se aane wala data)
+// Database Types (data from json file)
 export interface CourseDataFromJSON {
   "bba-online": CourseDetails;
   "bca-online": CourseDetails;
