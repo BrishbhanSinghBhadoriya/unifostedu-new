@@ -1,29 +1,50 @@
-// File: src/pages/blogs/MBADistanceVsOnline.jsx
+// File: src/app/blog/MBADistanceVsOnline/page.tsx
 import React from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 
+export const metadata = {
+  title: "MBA Online vs. Distance: What's the Difference? | UniFost Blog",
+  description:
+    "Understand the key differences between Online MBA and Distance MBA programs in India. Learn about their value, recognition, flexibility, and career impact.",
+  keywords: [
+    "MBA Online",
+    "Distance MBA",
+    "Online vs Distance MBA",
+    "Online Education India",
+    "UniFost Blog",
+  ],
+  alternates: {
+    canonical: "https://unifostedu.com/blog/MBADistanceVsOnline",
+  },
+  openGraph: {
+    title: "MBA Online vs. Distance: What's the Difference?",
+    description:
+      "Explore how Online MBA differs from Distance MBA in terms of format, flexibility, and recognition.",
+    url: "https://unifostedu.com/blog/MBADistanceVsOnline",
+    siteName: "UNIFOST",
+    type: "article",
+    images: [
+      {
+        url: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b1_xpmoe1.webp",
+        width: 1200,
+        height: 630,
+        alt: "MBA Online vs Distance Learning",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MBA Online vs. Distance: What's the Difference?",
+    description:
+      "Explore how Online MBA differs from Distance MBA in terms of format, flexibility, and recognition.",
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b1_xpmoe1.webp"],
+  },
+};
 
 const MBADistanceVsOnline = () => {
   return (
     <main className="max-w-6xl mx-auto px-4 py-12 text-gray-800">
-      
-        <title>MBA Online vs. Distance: What’s the Difference? | UniFost Blog</title>
-        <meta name="description" content="Understand the key differences between Online MBA and Distance MBA programs in India. Learn about their value, recognition, flexibility, and career impact." />
-        <meta name="keywords" content="MBA Online, Distance MBA, Online vs Distance MBA, Online Education India, UniFost Blog" />
-        <link rel="canonical" href="https://unifostedu.com/blog/mba-online-vs-distance" />
-        <meta property="og:title" content="MBA Online vs. Distance: What’s the Difference?" />
-        <meta property="og:description" content="Explore how Online MBA differs from Distance MBA in terms of format, flexibility, and recognition." />
-        <meta property="og:image" content="https://www.unifost.com/images/blogs/mba-online-vs-distance.webp" />
-        <meta property="og:url" content="https://www.unifost.com/blog/mba-online-vs-distance" />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="MBA Online vs. Distance: What’s the Difference?" />
-        <meta name="twitter:description" content="Explore how Online MBA differs from Distance MBA in terms of format, flexibility, and recognition." />
-        <meta name="twitter:image" content="https://www.unifost.com/images/blogs/mba-online-vs-distance.webp" />
-    
-
-      <div className="flex flex-col md:flex-row gap-10 items-start">
+<div className="flex flex-col md:flex-row gap-10 items-start">
         {/* Main Article */}
         <div className="flex-1 prose prose-lg max-w-none leading-relaxed">
           <h1 className="text-4xl font-extrabold text-blue-900 mb-2 font-serif">

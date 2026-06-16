@@ -1,27 +1,50 @@
-// File: src/pages/blogs/LPUOnlineReview.jsx
+// File: src/app/blog/LPUOnlineReview/page.tsx
 import React from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from "next/link";
+
+export const metadata = {
+  title: "LPU Online MBA Review – Pros, Cons, and Admission Process | UniFost",
+  description:
+    "Get a detailed review of LPU Online MBA: Explore its pros, cons, fees, faculty, placement, and how to apply. Read before you choose!",
+  keywords: [
+    "LPU Online MBA Review",
+    "LPU Online Pros and Cons",
+    "LPU Online Admission Process",
+    "LPU Online MBA",
+    "UniFost Blog",
+  ],
+  alternates: {
+    canonical: "https://unifostedu.com/blog/LPUOnlineReview",
+  },
+  openGraph: {
+    title: "LPU Online MBA Review – Pros, Cons, and Admission Process",
+    description:
+      "Get a detailed review of LPU Online MBA: Explore its pros, cons, fees, faculty, placement, and how to apply. Read before you choose!",
+    url: "https://unifostedu.com/blog/LPUOnlineReview",
+    siteName: "UNIFOST",
+    type: "article",
+    images: [
+      {
+        url: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b1_xpmoe1.webp",
+        width: 1200,
+        height: 630,
+        alt: "LPU Online MBA Review",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LPU Online MBA Review – Pros, Cons, and Admission Process",
+    description:
+      "Get a detailed review of LPU Online MBA: Explore its pros, cons, fees, faculty, placement, and how to apply. Read before you choose!",
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b1_xpmoe1.webp"],
+  },
+};
 
 const LPUOnlineReview = () => {
   return (
     <main className="max-w-6xl mx-auto px-4 py-12 text-gray-800">
-      
-        <title>LPU Online MBA Review – Pros, Cons, and Admission Process | UniFost</title>
-        <meta name="description" content="Get a detailed review of LPU Online MBA: Explore its pros, cons, fees, faculty, placement, and how to apply. Read before you choose!" />
-        <meta name="keywords" content="LPU Online MBA Review, LPU Online Pros and Cons, LPU Online Admission Process, LPU Online MBA, UniFost Blog" />
-        <link rel="canonical" href="https://unifostedu.com/blog/lpu-online-review" />
-        <meta property="og:title" content="LPU Online MBA Review – Pros, Cons, and Admission Process" />
-        <meta property="og:description" content="Get a detailed review of LPU Online MBA: Explore its pros, cons, fees, faculty, placement, and how to apply. Read before you choose!" />
-        <meta property="og:image" content="https://www.unifost.com/images/blogs/lpu-online-review.webp" />
-        <meta property="og:url" content="https://www.unifost.com/blog/lpu-online-review" />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="LPU Online MBA Review – Pros, Cons, and Admission Process" />
-        <meta name="twitter:description" content="Get a detailed review of LPU Online MBA: Explore its pros, cons, fees, faculty, placement, and how to apply. Read before you choose!" />
-        <meta name="twitter:image" content="https://www.unifost.com/images/blogs/lpu-online-review.webp" />
-      
 
       <div className="flex flex-col md:flex-row gap-10">
         {/* Main Content */}

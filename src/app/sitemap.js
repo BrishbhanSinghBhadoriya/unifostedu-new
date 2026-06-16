@@ -99,6 +99,18 @@ export default async function sitemap() {
     priority: 0.9,
   }));
 
+  // Amity special landing pages
+  const amitySpecialRoutes = [
+    'amity-online-mba',
+    'amity-online-mba-total-fees',
+    'best-online-mca-university-in-india',
+  ].map((route) => ({
+    url: `${baseUrl}/amity/${route}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.9,
+  }));
+
   // Static Blog routes
   const staticBlogRoutes = [
     'MBADistanceVsOnline', 'BestOnlineBBA2026', 'ManipalVsAmityOnlineMBA',
@@ -131,6 +143,7 @@ export default async function sitemap() {
     ...universityRoutes,
     ...genericCourseRoutes,
     ...amityCourseRoutes,
+    ...amitySpecialRoutes,
     ...smuCourseRoutes,
     ...amritaCourseRoutes,
     ...nmimsCourseRoutes,

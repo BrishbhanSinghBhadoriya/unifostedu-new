@@ -1,36 +1,49 @@
-
 import React from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from "next/link";
+
+export const metadata = {
+  title: "Manipal vs Amity: Which Online MBA is Better? | UniFost Blog",
+  description:
+    "Compare Manipal Online MBA and Amity Online MBA in terms of fees, rankings, faculty, placements, and more to choose the best online MBA in India.",
+  keywords: [
+    "Manipal Online MBA",
+    "Amity Online MBA",
+    "Manipal vs Amity",
+    "Online MBA comparison",
+    "Best Online MBA India",
+    "UniFost Blog",
+  ],
+  alternates: {
+    canonical: "https://unifostedu.com/blog/ManipalVsAmityOnlineMBA",
+  },
+  openGraph: {
+    title: "Manipal vs Amity: Which Online MBA is Better?",
+    description:
+      "Compare Manipal Online MBA and Amity Online MBA in terms of fees, rankings, faculty, placements, and more to choose the best online MBA in India.",
+    url: "https://unifostedu.com/blog/ManipalVsAmityOnlineMBA",
+    siteName: "UNIFOST",
+    type: "article",
+    images: [
+      {
+        url: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b3_d52jqi.webp",
+        width: 1200,
+        height: 630,
+        alt: "Manipal vs Amity Online MBA Comparison",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Manipal vs Amity: Which Online MBA is Better?",
+    description: "Compare Manipal and Amity's Online MBA programs on UniFost Blog.",
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327034/b3_d52jqi.webp"],
+  },
+};
 
 const ManipalVsAmityOnlineMBA = () => {
   return (
     <main className="max-w-6xl mx-auto px-4 py-12 text-dark-blue-900  leading-relaxed">
-      {/* SEO Meta Tags */}
-
-      <title>Manipal vs Amity: Which Online MBA is Better? | UniFost Blog</title>
-      <meta
-        name="description"
-        content="Compare Manipal Online MBA and Amity Online MBA in terms of fees, rankings, faculty, placements, and more to choose the best online MBA in India."
-      />
-      <meta
-        name="keywords"
-        content="Manipal Online MBA, Amity Online MBA, Manipal vs Amity, Online MBA comparison, Best Online MBA India, UniFost Blog"
-      />
-      <link rel="canonical" href="https://unifostedu.com/blog/manipal-vs-amity-online-mba" />
-      <meta property="og:title" content="Manipal vs Amity: Which Online MBA is Better?" />
-      <meta
-        property="og:description"
-        content="Compare Manipal Online MBA and Amity Online MBA in terms of fees, rankings, faculty, placements, and more to choose the best online MBA in India."
-      />
-      <meta property="og:image" content="https://www.unifost.com/images/blogs/manipal-vs-amity.webp" />
-      <meta property="og:url" content="https://www.unifost.com/blog/manipal-vs-amity-online-mba" />
-      <meta property="og:type" content="article" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Manipal vs Amity: Which Online MBA is Better?" />
-      <meta name="twitter:description" content="Compare Manipal and Amity's Online MBA programs on UniFost Blog." />
-      <meta name="twitter:image" content="https://www.unifost.com/images/blogs/manipal-vs-amity.webp" />
 
 
       {/* Blog Layout */}

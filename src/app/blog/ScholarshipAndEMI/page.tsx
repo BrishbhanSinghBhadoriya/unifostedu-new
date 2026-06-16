@@ -1,28 +1,49 @@
-// File: src/pages/blogs/ScholarshipAndEMI.jsx
 import React from 'react';
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Scholarship and EMI Options for Online Degrees | UniFost Blog",
+  description:
+    "Learn about available scholarship and EMI financing options for online degrees in India. Discover how to make higher education affordable and accessible.",
+  keywords: [
+    "Scholarship for Online Degree",
+    "EMI Options Online Education",
+    "Affordable Online Degrees",
+    "Finance Online Courses India",
+    "UniFost Blog",
+  ],
+  alternates: {
+    canonical: "https://unifostedu.com/blog/ScholarshipAndEMI",
+  },
+  openGraph: {
+    title: "Scholarship and EMI Options for Online Degrees",
+    description:
+      "Explore various scholarships and flexible EMI options to pursue your online degree without financial burden.",
+    url: "https://unifostedu.com/blog/ScholarshipAndEMI",
+    siteName: "UNIFOST",
+    type: "article",
+    images: [
+      {
+        url: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327035/b7_vymjqj.webp",
+        width: 1200,
+        height: 630,
+        alt: "Scholarship and EMI Options for Online Degrees",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Scholarship and EMI Options for Online Degrees",
+    description:
+      "Explore various scholarships and flexible EMI options to pursue your online degree without financial burden.",
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327035/b7_vymjqj.webp"],
+  },
+};
 
 const ScholarshipAndEMI = () => {
   return (
     <main className="max-w-6xl mx-auto px-5 py-12 font-sans text-gray-800 leading-relaxed">
-      
-        <title>Scholarship and EMI Options for Online Degrees | UniFost Blog</title>
-        <meta name="description" content="Learn about available scholarship and EMI financing options for online degrees in India. Discover how to make higher education affordable and accessible." />
-        <meta name="keywords" content="Scholarship for Online Degree, EMI Options Online Education, Affordable Online Degrees, Finance Online Courses India, UniFost Blog" />
-        <link rel="canonical" href="https://unifostedu.com/blog/scholarship-emi-options-online-degrees" />
-        <meta property="og:title" content="Scholarship and EMI Options for Online Degrees" />
-        <meta property="og:description" content="Explore various scholarships and flexible EMI options to pursue your online degree without financial burden." />
-        <meta property="og:image" content="https://unifostedu.com/images/blogs/scholarship-emi.webp" />
-        <meta property="og:url" content="https://unifostedu.com/blog/scholarship-emi-options-online-degrees" />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Scholarship and EMI Options for Online Degrees" />
-        <meta name="twitter:description" content="Explore various scholarships and flexible EMI options to pursue your online degree without financial burden." />
-        <meta name="twitter:image" content="https://unifostedu.com/images/blogs/scholarship-emi.webp" />
-      
 
       <div className="flex flex-col md:flex-row gap-10">
         {/* Blog Article */}

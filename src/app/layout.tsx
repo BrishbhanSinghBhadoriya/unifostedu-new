@@ -107,7 +107,9 @@ export const metadata = {
     ],
   },
 verification: {
-    google: "google-site-verification=YOUR_ACTUAL_VERIFICATION_CODE",
+    // TODO: Replace with your actual Google Search Console verification code
+    // Get it from: https://search.google.com/search-console
+    // google: "YOUR_GOOGLE_VERIFICATION_CODE_HERE",
   },
 };
 

@@ -1,26 +1,49 @@
-// File: src/pages/blogs/WorkingMBA.jsx
 import React from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
+
+export const metadata = {
+  title: "Can I Do MBA While Working? Here's How | UniFost Blog",
+  description:
+    "Learn how to successfully pursue an MBA while working full-time. Explore flexible MBA formats, tips, and tools for working professionals.",
+  keywords: [
+    "MBA while working",
+    "Online MBA",
+    "Working professionals MBA",
+    "Flexible MBA",
+    "Part-time MBA India",
+    "UniFost Blog",
+  ],
+  alternates: {
+    canonical: "https://unifostedu.com/blog/WorkingMBA",
+  },
+  openGraph: {
+    title: "Can I Do MBA While Working? Here's How",
+    description:
+      "Explore flexible MBA options and tips to manage work and studies together.",
+    url: "https://unifostedu.com/blog/WorkingMBA",
+    siteName: "UNIFOST",
+    type: "article",
+    images: [
+      {
+        url: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327035/b8_xwas04.webp",
+        width: 1200,
+        height: 630,
+        alt: "MBA While Working - Working Professionals Guide",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Can I Do MBA While Working? Here's How",
+    description:
+      "Explore flexible MBA options and tips to manage work and studies together.",
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327035/b8_xwas04.webp"],
+  },
+};
 
 const WorkingMBA = () => {
   return (
     <main className="max-w-6xl mx-auto px-5 py-12 font-sans text-gray-800 leading-relaxed">
-        <title>Can I Do MBA While Working? Here's How | UniFost Blog</title>
-        <meta name="description" content="Learn how to successfully pursue an MBA while working full-time. Explore flexible MBA formats, tips, and tools for working professionals." />
-        <meta name="keywords" content="MBA while working, Online MBA, Working professionals MBA, Flexible MBA, Part-time MBA India, UniFost Blog" />
-        <link rel="canonical" href="https://unifostedu.com/blog/mba-while-working" />
-        <meta property="og:title" content="Can I Do MBA While Working? Here's How" />
-        <meta property="og:description" content="Explore flexible MBA options and tips to manage work and studies together." />
-        <meta property="og:image" content="https://www.unifost.com/images/blogs/mba-while-working.webp" />
-        <meta property="og:url" content="https://www.unifost.com/blog/mba-while-working" />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Can I Do MBA While Working? Here's How" />
-        <meta name="twitter:description" content="Explore flexible MBA options and tips to manage work and studies together." />
-        <meta name="twitter:image" content="https://www.unifost.com/images/blogs/mba-while-working.webp" />
-      
-
       <div className="flex flex-col md:flex-row gap-10">
         <article className="prose prose-lg max-w-none flex-1">
           <h1 className="text-4xl font-bold text-blue-900 mb-2">Can I Do MBA While Working? Here's How</h1>

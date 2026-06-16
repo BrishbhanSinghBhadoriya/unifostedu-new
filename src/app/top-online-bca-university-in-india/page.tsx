@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useState, useEffect } from 'react';
 import { GraduationCap, Clock, DollarSign, Target, Briefcase, Code, Globe, Rocket,  CheckCircle, ChevronDown, Menu, X } from 'lucide-react';
 import Image from "next/image";

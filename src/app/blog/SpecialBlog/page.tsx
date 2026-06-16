@@ -1,7 +1,47 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Education Blog | Online MBA, University Reviews & Career Guides | UniFost",
+  description:
+    "Explore UniFost's expert blogs on online education, career guidance, and university reviews. Get valuable insights to plan your academic journey better.",
+  keywords: [
+    "UniFost blog",
+    "online MBA",
+    "university reviews",
+    "online degrees India",
+    "education guide",
+    "career after MBA",
+    "online BBA",
+    "UGC approved degree",
+  ],
+  alternates: {
+    canonical: "https://unifostedu.com/blog/SpecialBlog",
+  },
+  openGraph: {
+    title: "Education Blog | Online MBA, University Reviews & Career Guides",
+    description:
+      "Explore UniFost's expert blogs on online education, career guidance, and university reviews. Get valuable insights to plan your academic journey.",
+    url: "https://unifostedu.com/blog/SpecialBlog",
+    siteName: "UNIFOST",
+    type: "website",
+    images: [
+      {
+        url: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp",
+        width: 1200,
+        height: 630,
+        alt: "UniFost Education Blog",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Education Blog | Online MBA & University Reviews | UniFost",
+    description:
+      "Explore expert blogs on online education, career guidance, and university reviews.",
+    images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/uni_uyjow6.webp"],
+  },
+};
 
 const blogs = [
   {
@@ -101,16 +141,6 @@ const BlogsPage = () => {
 
   return (
     <>
-      
-        <title>Unifost Blog – Online Courses, Career Advice, University Reviews</title>
-        <meta
-          name="description"
-          content="Explore Unifost's expert blogs on online education, career guidance, and university reviews. Get valuable insights to plan your academic journey better."
-        />
-        <meta name="keywords" content="Unifost blog, online MBA, university reviews, online degrees India, education guide" />
-        <link rel="canonical" href="https://yourdomain.com/blog" />
-      
-
       <main className="max-w-7xl mx-auto px-4 py-12 bg-green-50 min-h-screen">
         <h1 className="text-4xl font-bold mb-2 text-gray-800 text-center">
           🎓 Explore Our Expert Blog Guides
