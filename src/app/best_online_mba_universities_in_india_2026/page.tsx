@@ -1,12 +1,13 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 import styles from "./page.module.css";
 
 const universities = [
   {
     rank: 1,
     name: "Amity University Online",
-    logo: "🎓",
+    logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327032/amitylogo_nfe7fa.webp",
     accreditation: "UGC-DEB, NAAC A+",
     fees: "₹2,25,000 – ₹3,25,000",
     duration: "2 Years",
@@ -59,7 +60,7 @@ specializations: [
  {
   rank: 2,
   name: "Manipal University Jaipur",
-  logo: "🏛️",
+  logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipallogo_yduega.jpg",
   accreditation: "UGC-DEB, NAAC A+",
   fees: "₹1,80,000",
   duration: "2 Years",
@@ -76,7 +77,8 @@ specializations: [
     "Information Systems Management",
     "Project Management",
     "Supply Chain Management",
-    "Retail Management"
+    "Retail Management",
+    "Business Analytics"
   ],
   courses: [
     "MBA in Digital Marketing",
@@ -91,7 +93,8 @@ specializations: [
     "MBA in Information Systems Management",
     "MBA in Project Management",
     "MBA in Supply Chain Management",
-    "MBA in Retail Management"
+    "MBA in Retail Management",
+    "MBA in Business Analytics"
   ],
   highlights: [
     "UGC Approved",
@@ -108,7 +111,7 @@ specializations: [
  {
   rank: 3,
   name: "Lovely Professional University (LPU) Online",
-  logo: "💼",
+  logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762329087/lpulogo_vdgb4x.png",
   accreditation: "UGC-DEB, NAAC A++",
   fees: "₹2,00,000",
   duration: "2 Years",
@@ -155,7 +158,7 @@ specializations: [
   {
   rank: 4,
   name: "Amrita Vishwa Vidyapeetham Online",
-  logo: "🕉️",
+  logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1770874326/amrita_rq4xlg.jpg",
   accreditation: "UGC-DEB, NAAC A++",
   fees: "₹1,70,000 – ₹2,60,000",
   duration: "2 Years",
@@ -188,7 +191,7 @@ specializations: [
   {
   rank: 5,
   name: "Sikkim Manipal University (SMU-DE)",
-  logo: "📚",
+  logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp",
   accreditation: "UGC-DEB, NAAC A+",
   fees: "₹1,20,000",
   duration: "2 Years",
@@ -221,7 +224,7 @@ specializations: [
  {
   rank: 6,
   name: "Uttaranchal University Online",
-  logo: "🏔️",
+  logo: "/images/uu_logo.webp",
   accreditation: "UGC-DEB, NAAC A+",
   fees: "₹1,40,000",
   duration: "2 Years",
@@ -256,224 +259,458 @@ specializations: [
   tagColor: "#16a34a"
 },
   {
-    rank: 7,
-    name: "Chandigarh University Online",
-    logo: "🔖",
-    accreditation: "UGC-DEB, NAAC A+",
-    fees: "₹95,000 – ₹1,20,000",
-    duration: "2 Years",
-    specializations: ["Finance", "Marketing", "HR", "IT Management", "Retail", "Logistics"],
-    courses: [
-      "MBA in Finance",
-      "MBA in Marketing",
-      "MBA in Human Resource Management",
-      "MBA in IT Management",
-      "MBA in Retail Management",
-      "MBA in Logistics & Supply Chain",
-    ],
-    highlights: ["QS Ranked", "Placement Cell", "International Exposure"],
-    rating: 4.1,
-    link: "https://cuchd.in/online-mba",
-    tag: "QS Ranked",
-    tagColor: "#1d4ed8",
+  rank: 7,
+  name: "Chandigarh University Online",
+  logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762328967/cu-logo_gunzgp.png",
+  accreditation: "UGC-DEB, NAAC A+",
+  fees: "₹2,20,000",
+  duration: "2 Years",
+  specializations: [
+    "Human Resource Management (HRM)",
+    "Marketing",
+    "International Business (IB)",
+    "Entrepreneurship",
+    "Finance",
+    "Information Technology (IT)",
+    "Logistics and Supply Chain Management (LSCM)",
+    "Retail Management",
+    "Operation Management",
+    "Banking and Insurance",
+    "Hospital Management",
+    "Event Management",
+    "Media Management",
+    "Travel and Tourism Management",
+    "Airlines & Airport Management",
+    "Digital Marketing",
+    "Data Science & Artificial Intelligence",
+    "International Relations",
+    "FinTech",
+    "General Management",
+    "Business Analytics",
+    "Disaster Management",
+    "Brand Management"
+  ],
+  courses: [
+    "MBA in Human Resource Management",
+    "MBA in Marketing",
+    "MBA in International Business",
+    "MBA in Entrepreneurship",
+    "MBA in Finance",
+    "MBA in Information Technology",
+    "MBA in Logistics and Supply Chain Management",
+    "MBA in Retail Management",
+    "MBA in Operation Management",
+    "MBA in Banking and Insurance",
+    "MBA in Hospital Management",
+    "MBA in Event Management",
+    "MBA in Media Management",
+    "MBA in Travel and Tourism Management",
+    "MBA in Airlines & Airport Management",
+    "MBA in Digital Marketing",
+    "MBA in Data Science & Artificial Intelligence",
+    "MBA in International Relations",
+    "MBA in FinTech",
+    "MBA in General Management",
+    "MBA in Business Analytics",
+    "MBA in Disaster Management",
+    "MBA in Brand Management"
+  ],
+  highlights: [
+    "QS Ranked University",
+    "Placement Assistance",
+    "International Exposure"
+  ],
+  rating: 4.1,
+  link: "https://cuchd.in/online-mba",
+  tag: "QS Ranked",
+  tagColor: "#1d4ed8"
+},
+  {
+  rank: 8,
+  name: "Jain University Online",
+  logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762328981/jainlogo_ewfeoy.png",
+  accreditation: "UGC-DEB, NAAC A++",
+  fees: "₹1,96,000 – ₹2,50,000",
+  duration: "2 Years",
+  specializations: [
+    "Human Resource Management and Finance",
+    "Finance and Marketing",
+    "Marketing and Human Resource Management",
+    "Marketing and Business Analytics",
+    "Finance and Business Analytics",
+    "Human Resource and Business Analytics",
+    "Project Management",
+    "Retail Management and Quick Commerce",
+    "Information Technology Management",
+    "Healthcare Management",
+    "Supply Chain Management",
+    "Production and Operations Management",
+    "Business Intelligence and Analytics",
+    "Entrepreneurship and Venture Creation",
+    "International Finance",
+    "Data Science and Analytics",
+    "E-commerce",
+    "Artificial Intelligence and Human Resource Management",
+    "Digital Marketing",
+    "Banking and Finance",
+    "Technology Management",
+    "General Management",
+    "AI-Driven Marketing",
+    "AI-Driven Finance",
+    "AI-Driven Business Strategy",
+    "AI-Driven Human Resource Management"
+  ],
+  courses: [
+    "MBA in Human Resource Management and Finance",
+    "MBA in Finance and Marketing",
+    "MBA in Marketing and Human Resource Management",
+    "MBA in Marketing and Business Analytics",
+    "MBA in Finance and Business Analytics",
+    "MBA in Human Resource and Business Analytics",
+    "MBA in Project Management",
+    "MBA in Retail Management and Quick Commerce",
+    "MBA in Information Technology Management",
+    "MBA in Healthcare Management",
+    "MBA in Supply Chain Management",
+    "MBA in Production and Operations Management",
+    "MBA in Business Intelligence and Analytics",
+    "MBA in Entrepreneurship and Venture Creation",
+    "MBA in International Finance",
+    "MBA in Data Science and Analytics",
+    "MBA in E-commerce",
+    "MBA in Artificial Intelligence and Human Resource Management",
+    "MBA in Digital Marketing",
+    "MBA in Banking and Finance",
+    "MBA in Technology Management",
+    "MBA in General Management",
+    "MBA in AI-Driven Marketing",
+    "MBA in AI-Driven Finance",
+    "MBA in AI-Driven Business Strategy",
+    "MBA in AI-Driven Human Resource Management"
+  ],
+  highlights: [
+    "Mentorship Program",
+    "Industry Tie-ups",
+    "Global Exposure"
+  ],
+  rating: 4.1,
+  link: "https://jainuniversity.ac.in/online-mba",
+  tag: "Emerging Top",
+  tagColor: "#0d9488"
+},
+ {
+  rank: 9,
+  name: "DY Patil Vidyapeeth Online",
+  logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762328967/dypatillogo_c8uqm7.png",
+  accreditation: "UGC-DEB, NAAC A++",
+  fees: "₹1,89,400",
+  duration: "2 Years",
+  specializations: [
+    "Marketing Management",
+    "Human Resource Management",
+    "Finance Management",
+    "IT Management",
+    "Project Management",
+    "Operations Management",
+    "Hospital Administration & Healthcare Management",
+    "International Business Management",
+    "FinTech Management",
+    "Business Analytics Management",
+    "Artificial Intelligence & Machine Learning Management",
+    "Logistics, Materials & Supply Chain Management",
+    "Blockchain Management",
+    "Digital Marketing Management",
+    "Agri-Business Management"
+  ],
+  courses: [
+    "MBA in Marketing Management",
+    "MBA in Human Resource Management",
+    "MBA in Finance Management",
+    "MBA in IT Management",
+    "MBA in Project Management",
+    "MBA in Operations Management",
+    "MBA in Hospital Administration & Healthcare Management",
+    "MBA in International Business Management",
+    "MBA in FinTech Management",
+    "MBA in Business Analytics Management",
+    "MBA in AI & Machine Learning Management",
+    "MBA in Logistics & Supply Chain Management",
+    "MBA in Blockchain Management",
+    "MBA in Digital Marketing Management",
+    "MBA in Agri-Business Management"
+  ],
+  highlights: ["Healthcare Focus", "Expert Faculty", "Weekend Batches"],
+  rating: 4.0,
+  link: "https://dpu.edu.in/online-mba",
+  tag: "Healthcare MBA",
+  tagColor: "#9333ea"
+},
+
+{
+  rank: 10,
+  name: "OP Jindal Global University Online",
+  logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762329099/opjindallogo_vksxpm.png",
+  accreditation: "UGC-DEB, NAAC A",
+  fees: "₹1,80,000 – ₹3,00,000",
+  duration: "12 Months",
+  specializations: [
+    "Business Analytics",
+    "Business & Law",
+    "Finance",
+    "Human Resource Management",
+    "Marketing",
+    "Strategy & Leadership",
+    "Supply Chain & Operations",
+    "AI for Business",
+    "Digital Finance"
+  ],
+  courses: [
+    "MBA in Business Analytics",
+    "MBA in Business & Law",
+    "MBA in Finance",
+    "MBA in Human Resource Management",
+    "MBA in Marketing",
+    "MBA in Strategy & Leadership",
+    "MBA in Supply Chain & Operations",
+    "MBA in AI for Business",
+    "MBA in Digital Finance"
+  ],
+  highlights: ["QS Ranked India Top 50", "Global Faculty", "International Curriculum"],
+  rating: 4.3,
+  link: "https://online.jgu.edu.in/mba",
+  tag: "Global MBA",
+  tagColor: "#b45309"
+},
+
+{
+  rank: 11,
+  name: "Kurukshetra University Online",
+  logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku_xu5nkx.webp",
+  accreditation: "UGC-DEB, NAAC A+",
+  fees: "₹98,545",
+  duration: "2 Years",
+  specializations: ["General Management"],
+  courses: ["MBA in General Management"],
+  highlights: ["Central University", "Lowest Fees", "UGC Approved"],
+  rating: 3.8,
+  link: "https://kuk.ac.in/online-mba",
+  tag: "Govt. University",
+  tagColor: "#15803d"
+},
+
+{
+  rank: 12,
+  name: "Shoolini University Online",
+  logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762329091/shoolinilogo_jxkt71.png",
+  accreditation: "UGC-DEB, NAAC A+",
+  fees: "₹1,40,000",
+  duration: "2 Years",
+  specializations: [
+    "Marketing Management",
+    "Operation & Supply Chain Management",
+    "Agri Business Management",
+    "Human Resource Management",
+    "IT Management",
+    "Biotechnology Management",
+    "Financial Management",
+    "Tourism Management",
+    "Food Technology Management",
+    "Digital Marketing",
+    "Real Estate Management",
+    "Pharma & Health Care Management",
+    "Retail Management",
+    "Direct Selling Management",
+    "Banking & Insurance",
+    "Data Science & Business Analytics"
+  ],
+  courses: [
+    "MBA in Marketing Management",
+    "MBA in Operation & Supply Chain Management",
+    "MBA in Agri Business Management",
+    "MBA in Human Resource Management",
+    "MBA in IT Management",
+    "MBA in Biotechnology Management",
+    "MBA in Financial Management",
+    "MBA in Tourism Management",
+    "MBA in Food Technology Management",
+    "MBA in Digital Marketing",
+    "MBA in Real Estate Management",
+    "MBA in Pharma & Health Care Management",
+    "MBA in Retail Management",
+    "MBA in Direct Selling Management",
+    "MBA in Banking & Insurance",
+    "MBA in Data Science & Business Analytics"
+  ],
+  highlights: ["Himachal Pradesh", "Research Oriented", "Pharma MBA Unique"],
+  rating: 3.9,
+  link: "https://shooliniuniversity.com/online-mba",
+  tag: "Pharma Focused",
+  tagColor: "#047857"
+},
+
+{
+  rank: 13,
+  name: "Vivekananda Global University Online",
+  logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762329092/vgulogo_cg5pke.png",
+  accreditation: "UGC-DEB, NAAC A",
+  fees: "₹1,50,000 – ₹2,40,000",
+  duration: "2 Years",
+  specializations: [
+    "Finance",
+    "Marketing",
+    "Human Resources",
+    "Operations",
+    "Business Analytics",
+    "Information Technology Management",
+    "Healthcare Management",
+    "Agribusiness Management",
+    "International Business"
+  ],
+  courses: [
+    "MBA in Finance",
+    "MBA in Marketing",
+    "MBA in Human Resources",
+    "MBA in Operations",
+    "MBA in Business Analytics",
+    "MBA in Information Technology Management",
+    "MBA in Healthcare Management",
+    "MBA in Agribusiness Management",
+    "MBA in International Business"
+  ],
+  highlights: ["Jaipur Based", "Affordable Fees", "Industry Partnerships"],
+  rating: 3.8,
+  link: "https://vgu.ac.in/online-mba",
+  tag: "Value For Money",
+  tagColor: "#dc2626"
+},
+
+{
+  rank: 14,
+  name: "UPES Online",
+  logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762329092/upeslogo_i1dwgp.png",
+  accreditation: "UGC-DEB, NAAC A",
+  fees: "₹1,90,920 – ₹2,40,000",
+  duration: "2 Years",
+  specializations: [
+    "Oil & Gas Management",
+    "Power Management",
+    "Logistics & Supply Chain Management",
+    "Business Analytics",
+    "Finance",
+    "Human Resource Management",
+    "Infrastructure Management",
+    "International Business",
+    "Marketing Management",
+    "Operations Management",
+    "Financial Management",
+    "Digital Business"
+  ],
+  courses: [
+    "MBA in Oil & Gas Management",
+    "MBA in Power Management",
+    "MBA in Logistics & Supply Chain Management",
+    "MBA in Business Analytics",
+    "MBA in Finance",
+    "MBA in Human Resource Management",
+    "MBA in Infrastructure Management",
+    "MBA in International Business",
+    "MBA in Marketing Management",
+    "MBA in Operations Management",
+    "MBA in Financial Management",
+    "MBA in Digital Business"
+  ],
+  highlights: ["Energy Sector Specialist", "Industry Projects", "Dehradun Based"],
+  rating: 4.0,
+  link: "https://online.upes.ac.in/mba",
+  tag: "Energy Sector",
+  tagColor: "#ca8a04"
+},
+
+{
+  rank: 15,
+  name: "Sharda University Online",
+  logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762329091/shardalogo_cmsla3.png",
+  accreditation: "UGC-DEB, NAAC A+",
+  fees: "₹1,40,000 – ₹1,96,000",
+  duration: "2 Years",
+  specializations: [
+    "Data Science and Analytics",
+    "Marketing",
+    "Healthcare and Hospital Administration",
+    "Human Resource Management",
+    "Finance"
+  ],
+  courses: [
+    "MBA in Data Science and Analytics",
+    "MBA in Marketing",
+    "MBA in Healthcare and Hospital Administration",
+    "MBA in Human Resource Management",
+    "MBA in Finance"
+  ],
+  highlights: ["Greater Noida Campus", "International Tie-ups", "Career Cell"],
+  rating: 4.0,
+  link: "https://shardaonline.ac.in/mba",
+  tag: "International MBA",
+  tagColor: "#db2777"
+},
+
+{
+  rank: 16,
+  name: "NMIMS Global Access Online",
+  logo: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762329088/nmimslogo_blukfn.jpg",
+  accreditation: "UGC-DEB, NAAC A++",
+  fees: "₹2,20,000",
+  duration: "2 Years",
+  specializations: [
+    "Marketing Management",
+    "Business Management",
+    "Finance Management",
+    "Human Resources Management",
+    "Operations and Data Science Management",
+    "Information Technology Management",
+    "Business Analytics"
+  ],
+  courses: [
+    "MBA in Marketing Management",
+    "MBA in Business Management",
+    "MBA in Finance Management",
+    "MBA in Human Resources Management",
+    "MBA in Operations and Data Science Management",
+    "MBA in Information Technology Management",
+    "MBA in Business Analytics"
+  ],
+  highlights: [
+    "Mumbai Based Premium",
+    "Industry Mentors",
+    "Strong Alumni Network"
+  ],
+  rating: 4.4,
+  link: "https://online.nmims.edu/mba",
+  tag: "Mumbai Premium",
+  tagColor: "#7c3aed"
+}
+];
+
+const sliderImages = [
+  {
+    src: "https://res.cloudinary.com/deht3c1bt/image/upload/q_auto/f_auto/v1781612737/Gemini_Generated_Image_vkp8cwvkp8cwvkp8_ffsxgs.png",
+    alt: "Best Online MBA Universities India 2026 – UGC Approved Programs",
   },
   {
-    rank: 8,
-    name: "Jain University Online",
-    logo: "📖",
-    accreditation: "UGC-DEB, NAAC A++",
-    fees: "₹1,20,000 – ₹1,50,000",
-    duration: "2 Years",
-    specializations: ["Finance", "Marketing", "HR", "Analytics", "Supply Chain", "Entrepreneurship"],
-    courses: [
-      "MBA in Finance",
-      "MBA in Marketing Management",
-      "MBA in Human Resource Management",
-      "MBA in Business Analytics",
-      "MBA in Supply Chain Management",
-      "MBA in Entrepreneurship & Leadership",
-    ],
-    highlights: ["Mentorship Program", "Industry Tie-ups", "Global Exposure"],
-    rating: 4.1,
-    link: "https://jainuniversity.ac.in/online-mba",
-    tag: "Emerging Top",
-    tagColor: "#0d9488",
+    src: "https://res.cloudinary.com/deht3c1bt/image/upload/q_auto/f_auto/v1781612737/Gemini_Generated_Image_8tvyln8tvyln8tvy_gjfnce.png",
+    alt: "Top Ranked Online MBA Colleges India – Compare Fees & Specializations",
   },
   {
-    rank: 9,
-    name: "DY Patil Vidyapeeth Online",
-    logo: "🎯",
-    accreditation: "UGC-DEB, NAAC A++",
-    fees: "₹1,00,000 – ₹1,30,000",
-    duration: "2 Years",
-    specializations: ["Healthcare Mgmt", "Finance", "Marketing", "HR", "IT", "Operations"],
-    courses: [
-      "MBA in Healthcare Management",
-      "MBA in Finance",
-      "MBA in Marketing",
-      "MBA in Human Resource Management",
-      "MBA in IT Management",
-      "MBA in Operations Management",
-    ],
-    highlights: ["Healthcare Focus", "Expert Faculty", "Weekend Batches"],
-    rating: 4.0,
-    link: "https://dpu.edu.in/online-mba",
-    tag: "Healthcare MBA",
-    tagColor: "#9333ea",
+    src: "https://res.cloudinary.com/deht3c1bt/image/upload/q_auto/f_auto/v1781612737/Gemini_Generated_Image_nyluzmnyluzmnylu_zgtwmn.png",
+    alt: "Online MBA Admission 2026 – NAAC Accredited Universities",
   },
   {
-    rank: 10,
-    name: "OP Jindal Global University Online",
-    logo: "⚖️",
-    accreditation: "UGC-DEB, NAAC A",
-    fees: "₹2,00,000 – ₹2,50,000",
-    duration: "2 Years",
-    specializations: ["Finance", "Strategy", "Analytics", "HR", "Global Business", "Law & Business"],
-    courses: [
-      "MBA in Finance",
-      "MBA in Strategy & Leadership",
-      "MBA in Business Analytics",
-      "MBA in Human Resource Management",
-      "MBA in Global Business",
-      "MBA in Law & Business",
-    ],
-    highlights: ["QS Ranked India Top 50", "Global Faculty", "International Curriculum"],
-    rating: 4.3,
-    link: "https://online.jgu.edu.in/mba",
-    tag: "Global MBA",
-    tagColor: "#b45309",
+    src: "https://res.cloudinary.com/deht3c1bt/image/upload/q_auto/f_auto/v1781612736/Gemini_Generated_Image_fn39zgfn39zgfn39_jlcfd2.png",
+    alt: "UGC-DEB Online MBA Programs – Placement & Career Support",
   },
   {
-    rank: 11,
-    name: "Kurukshetra University Online",
-    logo: "🏺",
-    accreditation: "UGC-DEB, NAAC A+",
-    fees: "₹40,000 – ₹60,000",
-    duration: "2 Years",
-    specializations: ["Finance", "Marketing", "HR", "Tourism", "IT", "Retail"],
-    courses: [
-      "MBA in Finance",
-      "MBA in Marketing Management",
-      "MBA in Human Resource Management",
-      "MBA in Tourism Management",
-      "MBA in IT Management",
-      "MBA in Retail Management",
-    ],
-    highlights: ["Central University", "Lowest Fees", "UGC Approved"],
-    rating: 3.8,
-    link: "https://kuk.ac.in/online-mba",
-    tag: "Govt. University",
-    tagColor: "#15803d",
-  },
-  {
-    rank: 12,
-    name: "Shoolini University Online",
-    logo: "🌿",
-    accreditation: "UGC-DEB, NAAC A+",
-    fees: "₹85,000 – ₹1,05,000",
-    duration: "2 Years",
-    specializations: ["Finance", "Marketing", "HR", "Pharma Management", "Analytics", "Agri-Business"],
-    courses: [
-      "MBA in Finance",
-      "MBA in Marketing",
-      "MBA in Human Resource Management",
-      "MBA in Pharmaceutical Management",
-      "MBA in Business Analytics",
-      "MBA in Agri-Business Management",
-    ],
-    highlights: ["Himachal Pradesh", "Research Oriented", "Pharma MBA Unique"],
-    rating: 3.9,
-    link: "https://shooliniuniversity.com/online-mba",
-    tag: "Pharma Focused",
-    tagColor: "#047857",
-  },
-  {
-    rank: 13,
-    name: "Vivekananda Global University Online",
-    logo: "🔱",
-    accreditation: "UGC-DEB, NAAC A",
-    fees: "₹75,000 – ₹95,000",
-    duration: "2 Years",
-    specializations: ["Finance", "Marketing", "HR", "IT", "Operations", "Logistics"],
-    courses: [
-      "MBA in Finance",
-      "MBA in Marketing Management",
-      "MBA in Human Resource Management",
-      "MBA in IT Management",
-      "MBA in Operations Management",
-      "MBA in Logistics & Supply Chain",
-    ],
-    highlights: ["Jaipur Based", "Affordable Fees", "Industry Partnerships"],
-    rating: 3.8,
-    link: "https://vgu.ac.in/online-mba",
-    tag: "Value For Money",
-    tagColor: "#dc2626",
-  },
-  {
-    rank: 14,
-    name: "UPES Online",
-    logo: "⚡",
-    accreditation: "UGC-DEB, NAAC A",
-    fees: "₹1,10,000 – ₹1,35,000",
-    duration: "2 Years",
-    specializations: ["Oil & Gas Mgmt", "Power Mgmt", "Analytics", "Finance", "Marketing", "HR"],
-    courses: [
-      "MBA in Oil & Gas Management",
-      "MBA in Power Management",
-      "MBA in Business Analytics",
-      "MBA in Finance",
-      "MBA in Marketing",
-      "MBA in Human Resource Management",
-    ],
-    highlights: ["Energy Sector Specialist", "Industry Projects", "Dehradun Based"],
-    rating: 4.0,
-    link: "https://online.upes.ac.in/mba",
-    tag: "Energy Sector",
-    tagColor: "#ca8a04",
-  },
-  {
-    rank: 15,
-    name: "Sharda University Online",
-    logo: "🌸",
-    accreditation: "UGC-DEB, NAAC A+",
-    fees: "₹90,000 – ₹1,15,000",
-    duration: "2 Years",
-    specializations: ["Finance", "Marketing", "HR", "Analytics", "International Business", "IT"],
-    courses: [
-      "MBA in Finance",
-      "MBA in Marketing Management",
-      "MBA in Human Resource Management",
-      "MBA in Business Analytics",
-      "MBA in International Business",
-      "MBA in IT Management",
-    ],
-    highlights: ["Greater Noida Campus", "International Tie-ups", "Career Cell"],
-    rating: 4.0,
-    link: "https://shardaonline.ac.in/mba",
-    tag: "International MBA",
-    tagColor: "#db2777",
-  },
-  {
-    rank: 16,
-    name: "NMIMS Global Access Online",
-    logo: "🏙️",
-    accreditation: "UGC-DEB, NAAC A++",
-    fees: "₹1,50,000 – ₹1,90,000",
-    duration: "2 Years",
-    specializations: ["Finance", "Marketing", "HR", "Operations", "IT", "Retail"],
-    courses: [
-      "MBA in Finance",
-      "MBA in Marketing",
-      "MBA in Human Resource Management",
-      "MBA in Operations Management",
-      "MBA in IT Management",
-      "MBA in Retail Management",
-    ],
-    highlights: ["Mumbai Based Premium", "Industry Mentors", "Strong Alumni Network"],
-    rating: 4.4,
-    link: "https://online.nmims.edu/mba",
-    tag: "Mumbai Premium",
-    tagColor: "#7c3aed",
+    src: "https://res.cloudinary.com/deht3c1bt/image/upload/q_auto/f_auto/v1781612736/Gemini_Generated_Image_yn7uwyyn7uwyyn7u_fvrij3.png",
+    alt: "Flexible Online MBA India 2026 – Study While Working",
   },
 ];
 
@@ -553,17 +790,146 @@ function StarRating({ rating }: { rating: number }) {
 export default function BestOnlineMBAPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [filter, setFilter] = useState("All");
-  const [openCourses, setOpenCourses] = useState<number | null>(null);
+  const [expandedSpecs, setExpandedSpecs] = useState<Set<number>>(new Set());
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const specializations = ["All", "Finance", "Marketing", "HR", "Analytics", "IT", "Healthcare"];
+  const toggleSpecs = (rank: number) => {
+    setExpandedSpecs((prev) => {
+      const next = new Set(prev);
+      next.has(rank) ? next.delete(rank) : next.add(rank);
+      return next;
+    });
+  };
+
+  const totalSlides = sliderImages.length;
+
+  const goToNext = useCallback(() => {
+    setCurrentSlide((prev) => (prev + 1) % totalSlides);
+  }, [totalSlides]);
+
+  const goToPrev = () => {
+    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  // Auto-play every 4 seconds
+  useEffect(() => {
+    const timer = setInterval(goToNext, 4000);
+    return () => clearInterval(timer);
+  }, [goToNext]);
+
+  const specializations = [
+    "All",
+    "Agri-Business Management",
+    "AI & Machine Learning",
+    "Artificial Intelligence",
+    "Banking & Finance",
+    "Banking & Insurance",
+    "Blockchain Management",
+    "Business Analytics",
+    "Data Science",
+    "Digital Business",
+    "Digital Marketing",
+    "Disaster Management",
+    "E-commerce",
+    "Energy & Power Management",
+    "Entrepreneurship",
+    "ESG Management",
+    "Event Management",
+    "Finance",
+    "FinTech",
+    "General Management",
+    "Healthcare Management",
+    "Human Resource Management",
+    "Information Technology",
+    "Infrastructure Management",
+    "Insurance",
+    "International Business",
+    "Logistics & Supply Chain Management",
+    "Marketing",
+    "Media Management",
+    "Oil & Gas Management",
+    "Operations Management",
+    "Pharma Management",
+    "Project Management",
+    "Real Estate Management",
+    "Retail Management",
+    "Strategy & Leadership",
+    "Tourism Management",
+  ];
 
   const filtered =
     filter === "All"
       ? universities
-      : universities.filter((u) => u.specializations.includes(filter));
+      : universities.filter((u) =>
+          u.specializations.some((s) =>
+            s.toLowerCase().includes(filter.toLowerCase()) ||
+            filter.toLowerCase().includes(s.toLowerCase())
+          )
+        );
 
   return (
     <main className={styles.main}>
+
+      {/* IMAGE SLIDER */}
+      <div className={styles.sliderWrapper}>
+        <div className={styles.sliderTrack}>
+          {sliderImages.map((img, i) => (
+            <div
+              key={i}
+              className={`${styles.slide} ${i === currentSlide ? styles.slideActive : ""}`}
+              aria-hidden={i !== currentSlide}
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                sizes="100vw"
+                priority={i === 0}
+                className={styles.slideImage}
+              />
+              <div className={styles.slideOverlay} />
+            </div>
+          ))}
+        </div>
+
+        {/* Prev / Next Arrows */}
+        <button
+          className={`${styles.sliderArrow} ${styles.sliderArrowLeft}`}
+          onClick={goToPrev}
+          aria-label="Previous slide"
+        >
+          ‹
+        </button>
+        <button
+          className={`${styles.sliderArrow} ${styles.sliderArrowRight}`}
+          onClick={goToNext}
+          aria-label="Next slide"
+        >
+          ›
+        </button>
+
+        {/* Dots */}
+        <div className={styles.sliderDots}>
+          {sliderImages.map((_, i) => (
+            <button
+              key={i}
+              className={`${styles.dot} ${i === currentSlide ? styles.dotActive : ""}`}
+              onClick={() => goToSlide(i)}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
+
+        {/* Slide counter */}
+        <div className={styles.slideCounter}>
+          {currentSlide + 1} / {totalSlides}
+        </div>
+      </div>
+
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.heroBadge}>📊 Updated June 2026</div>
@@ -672,7 +1038,15 @@ export default function BestOnlineMBAPage() {
                     {uni.tag}
                   </span>
                 </div>
-                <div className={styles.uniLogo}>{uni.logo}</div>
+                <div className={styles.uniLogo}>
+                  <Image
+                    src={uni.logo}
+                    alt={`${uni.name} logo`}
+                    width={120}
+                    height={48}
+                    className={styles.uniLogoImg}
+                  />
+                </div>
                 <h3 className={styles.uniName}>{uni.name}</h3>
                 <StarRating rating={uni.rating} />
                 <div className={styles.uniMeta}>
@@ -690,26 +1064,21 @@ export default function BestOnlineMBAPage() {
                   </div>
                 </div>
                 <div className={styles.specList}>
-                  {uni.specializations.map((s) => (
+                  {(expandedSpecs.has(uni.rank)
+                    ? uni.specializations
+                    : uni.specializations.slice(0, 5)
+                  ).map((s) => (
                     <span key={s} className={styles.specTag}>{s}</span>
                   ))}
-                </div>
-
-                {/* Courses toggle */}
-                <div className={styles.coursesBox}>
-                  <button
-                    className={styles.coursesToggle}
-                    onClick={() => setOpenCourses(openCourses === uni.rank ? null : uni.rank)}
-                  >
-                    <span>📋 View MBA Courses Offered</span>
-                    <span>{openCourses === uni.rank ? "▲" : "▼"}</span>
-                  </button>
-                  {openCourses === uni.rank && (
-                    <ul className={styles.coursesList}>
-                      {uni.courses.map((c) => (
-                        <li key={c} className={styles.courseItem}>🎓 {c}</li>
-                      ))}
-                    </ul>
+                  {uni.specializations.length > 5 && (
+                    <button
+                      className={styles.specMoreBtn}
+                      onClick={() => toggleSpecs(uni.rank)}
+                    >
+                      {expandedSpecs.has(uni.rank)
+                        ? "See Less ▲"
+                        : `+${uni.specializations.length - 5} More ▼`}
+                    </button>
                   )}
                 </div>
 
