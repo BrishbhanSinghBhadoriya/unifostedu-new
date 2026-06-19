@@ -91,6 +91,7 @@ export default async function sitemap() {
   const workingProfessionalRoutes = [
     'best-online-mba-for-working-professionals-india-2025',
     'best-online-mca-for-working-professionals-in-india',
+    'best_online_mba_universities_in_india_2026',
     'top-online-bca-university-in-india',
   ].map((route) => ({
     url: `${baseUrl}/${route}`,

@@ -20,8 +20,8 @@ const Introduction = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenM
                   priority
                   sizes="100vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" aria-hidden="true"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" aria-hidden="true"></div>
             </div>
     
               {/* Content Container */}
@@ -38,12 +38,14 @@ const Introduction = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenM
                     >
                       {/* University Badge */}
                       <div className="inline-flex items-center gap-1.5 sm:gap-2 md:gap-3 bg-white/30 rounded-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 border-2 border-white/50">
-                        <img 
-                          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" 
-                          alt="Manipal Logo" 
-                          className="h-5 sm:h-6 md:h-8 w-auto" 
+                        <Image
+                          src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg"
+                          alt="Manipal University Jaipur logo"
+                          width={120}
+                          height={32}
+                          className="h-5 sm:h-6 md:h-8 w-auto"
+                          loading="lazy"
                         />
-                      
                       </div>
     
                       {/* Main Heading */}

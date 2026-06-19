@@ -59,16 +59,23 @@ const FaqReviewsHiring = ({ setOpenModal, openModal }: { setOpenModal: (state: O
                   className="group bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:border-orange-300 transition-all duration-300"
                 >
                   <button
+                    type="button"
                     onClick={() => toggleFAQ(index)}
+                    aria-expanded={openIndex === index}
+                    aria-controls={`faq-answer-${index}`}
                     className="w-full text-left px-6 py-5 sm:px-8 sm:py-6 bg-gradient-to-r from-gray-50 to-gray-100 hover:from-orange-50 hover:to-orange-100 flex justify-between items-center font-semibold text-gray-800 transition-all duration-300 group-hover:text-orange-700 cursor-pointer"
                   >
                     <span className="text-sm sm:text-base lg:text-lg pr-4">{faq.question}</span>
-                    <div className="flex-shrink-0 w-8 h-8 bg-white rounded-full flex items-center justify-center border border-gray-200 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                    <div className="flex-shrink-0 w-8 h-8 bg-white rounded-full flex items-center justify-center border border-gray-200 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300" aria-hidden="true">
                       <span className="text-lg font-bold">{openIndex === index ? "−" : "+"}</span>
                     </div>
                   </button>
                   {openIndex === index && (
-                    <div className="px-6 py-5 sm:px-8 sm:py-6 text-gray-700 bg-white border-t border-gray-100 animate-[fadeIn_0.3s_ease-in-out]">
+                    <div
+                      id={`faq-answer-${index}`}
+                      role="region"
+                      className="px-6 py-5 sm:px-8 sm:py-6 text-gray-700 bg-white border-t border-gray-100 animate-[fadeIn_0.3s_ease-in-out]"
+                    >
                       <p className="text-sm sm:text-base leading-relaxed">{faq.answer}</p>
                     </div>
                   )}

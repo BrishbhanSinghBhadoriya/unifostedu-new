@@ -4,7 +4,6 @@ import EnquiryForm from '@/components/EnquiryForm';
 import PageContent from '@/components/PageContent/PageContent';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { optimizeCloudinary } from '@/utils/cloudinary';
-import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { FaBars } from "react-icons/fa6";
@@ -280,9 +279,10 @@ const Manipal = () => {
                 {/* Phone - Hidden on small screens */}
                 <a
                   href="tel:+917042646766"
+                  aria-label="Call Manipal University admissions at +91 7042646766"
                   className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm md:text-base hover:text-orange-600 transition-colors"
                 >
-                  <span className="text-lg">📞</span>
+                  <span className="text-lg" aria-hidden="true">📞</span>
                   <span className="hidden lg:inline">+91 7042646766</span>
                   <span className="lg:hidden">Call</span>
                 </a>
@@ -290,14 +290,17 @@ const Manipal = () => {
                 {/* Mobile Phone Icon */}
                 <a
                   href="tel:+917042646766"
+                  aria-label="Call Manipal University admissions"
                   className="sm:hidden flex items-center justify-center w-9 h-9 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
                 >
-                  <span className="text-base">📞</span>
+                  <span className="text-base" aria-hidden="true">📞</span>
                 </a>
 
                 {/* Apply Button */}
                 <button
+                  type="button"
                   onClick={() => setOpenModal({ type: 'apply' })}
+                  aria-label="Apply now for Manipal University Jaipur Online admission"
                   className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-4 sm:px-5 md:px-6 lg:px-8 py-2 sm:py-2.5 lg:py-3 rounded-full transition-all duration-300 transform hover:scale-105 text-sm sm:text-base cursor-pointer whitespace-nowrap"
                 >
                   <span className="hidden sm:inline">Apply Now</span>

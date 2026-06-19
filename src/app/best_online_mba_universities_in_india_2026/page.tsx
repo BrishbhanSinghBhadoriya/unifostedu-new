@@ -767,10 +767,11 @@ const faqs = [
 
 function StarRating({ rating }: { rating: number }) {
   return (
-    <div className={styles.stars} aria-label={`Rating: ${rating} out of 5`}>
+    <div className={styles.stars} aria-label={`Rating: ${rating} out of 5`} role="img">
       {[1, 2, 3, 4, 5].map((star) => (
         <span
           key={star}
+          aria-hidden="true"
           className={
             star <= Math.floor(rating)
               ? styles.starFilled
@@ -782,7 +783,7 @@ function StarRating({ rating }: { rating: number }) {
           ★
         </span>
       ))}
-      <span className={styles.ratingNum}>{rating}</span>
+      <span className={styles.ratingNum} aria-hidden="true">{rating}</span>
     </div>
   );
 }
@@ -872,26 +873,44 @@ export default function BestOnlineMBAPage() {
         );
 
   return (
-    <main className={styles.main}>
+    <main className={styles.main} id="main-content">
+
+      {/* SKIP TO CONTENT — agentic browsing + screen reader */}
+      <a href="#university-cards" className={styles.skipLink}>
+        Skip to university listings
+      </a>
 
       {/* IMAGE SLIDER */}
-      <div className={styles.sliderWrapper}>
-        <div className={styles.sliderTrack}>
+      <div
+        className={styles.sliderWrapper}
+        role="region"
+        aria-label="Featured online MBA banner images"
+        aria-roledescription="carousel"
+      >
+        <div
+          className={styles.sliderTrack}
+          aria-live="polite"
+          aria-atomic="true"
+        >
           {sliderImages.map((img, i) => (
             <div
               key={i}
               className={`${styles.slide} ${i === currentSlide ? styles.slideActive : ""}`}
               aria-hidden={i !== currentSlide}
+              role="group"
+              aria-roledescription="slide"
+              aria-label={`Slide ${i + 1} of ${totalSlides}`}
             >
               <Image
                 src={img.src}
                 alt={img.alt}
                 fill
-                sizes="100vw"
+                sizes="(max-width: 768px) 100vw, 100vw"
                 priority={i === 0}
+                loading={i === 0 ? "eager" : "lazy"}
                 className={styles.slideImage}
               />
-              <div className={styles.slideOverlay} />
+              <div className={styles.slideOverlay} aria-hidden="true" />
             </div>
           ))}
         </div>
@@ -901,39 +920,47 @@ export default function BestOnlineMBAPage() {
           className={`${styles.sliderArrow} ${styles.sliderArrowLeft}`}
           onClick={goToPrev}
           aria-label="Previous slide"
+          type="button"
         >
-          ‹
+          <span aria-hidden="true">‹</span>
         </button>
         <button
           className={`${styles.sliderArrow} ${styles.sliderArrowRight}`}
           onClick={goToNext}
           aria-label="Next slide"
+          type="button"
         >
-          ›
+          <span aria-hidden="true">›</span>
         </button>
 
         {/* Dots */}
-        <div className={styles.sliderDots}>
+        <div
+          className={styles.sliderDots}
+          role="group"
+          aria-label="Slide navigation"
+        >
           {sliderImages.map((_, i) => (
             <button
               key={i}
+              type="button"
               className={`${styles.dot} ${i === currentSlide ? styles.dotActive : ""}`}
               onClick={() => goToSlide(i)}
-              aria-label={`Go to slide ${i + 1}`}
+              aria-label={`Go to slide ${i + 1} of ${totalSlides}`}
+              aria-current={i === currentSlide ? "true" : undefined}
             />
           ))}
         </div>
 
         {/* Slide counter */}
-        <div className={styles.slideCounter}>
+        <div className={styles.slideCounter} aria-hidden="true">
           {currentSlide + 1} / {totalSlides}
         </div>
       </div>
 
       {/* HERO */}
-      <section className={styles.hero}>
-        <div className={styles.heroBadge}>📊 Updated June 2026</div>
-        <h1 className={styles.heroTitle}>
+      <section className={styles.hero} aria-labelledby="hero-heading">
+        <div className={styles.heroBadge} aria-hidden="true">📊 Updated June 2026</div>
+        <h1 id="hero-heading" className={styles.heroTitle}>
           Best Online MBA Universities
           <span className={styles.heroAccent}> in India 2026</span>
         </h1>
@@ -945,24 +972,24 @@ export default function BestOnlineMBAPage() {
           rankings, specializations, and admission process. Trusted by{" "}
           <strong>2 lakh+ students</strong> making their MBA decision.
         </p>
-        <div className={styles.heroStats}>
-          <div className={styles.stat}>
-            <span className={styles.statNum}>16</span>
+        <div className={styles.heroStats} role="list" aria-label="Key statistics">
+          <div className={styles.stat} role="listitem">
+            <span className={styles.statNum} aria-label="16 top universities">16</span>
             <span className={styles.statLabel}>Top Universities</span>
           </div>
-          <div className={styles.statDivider} />
-          <div className={styles.stat}>
-            <span className={styles.statNum}>₹40K</span>
+          <div className={styles.statDivider} aria-hidden="true" />
+          <div className={styles.stat} role="listitem">
+            <span className={styles.statNum} aria-label="Minimum fees 40 thousand rupees">₹40K</span>
             <span className={styles.statLabel}>Min. Fees</span>
           </div>
-          <div className={styles.statDivider} />
-          <div className={styles.stat}>
-            <span className={styles.statNum}>20+</span>
+          <div className={styles.statDivider} aria-hidden="true" />
+          <div className={styles.stat} role="listitem">
+            <span className={styles.statNum} aria-label="More than 20 specializations">20+</span>
             <span className={styles.statLabel}>Specializations</span>
           </div>
-          <div className={styles.statDivider} />
-          <div className={styles.stat}>
-            <span className={styles.statNum}>100%</span>
+          <div className={styles.statDivider} aria-hidden="true" />
+          <div className={styles.stat} role="listitem">
+            <span className={styles.statNum} aria-label="100 percent UGC approved">100%</span>
             <span className={styles.statLabel}>UGC Approved</span>
           </div>
         </div>
@@ -987,33 +1014,35 @@ export default function BestOnlineMBAPage() {
           </p>
           <div className={styles.quickTips}>
             <div className={styles.tip}>
-              <span>✅</span>
+              <span aria-hidden="true">✅</span>
               <p>Verify UGC-DEB approval</p>
             </div>
             <div className={styles.tip}>
-              <span>✅</span>
+              <span aria-hidden="true">✅</span>
               <p>Check NAAC accreditation</p>
             </div>
             <div className={styles.tip}>
-              <span>✅</span>
+              <span aria-hidden="true">✅</span>
               <p>Choose specialization wisely</p>
             </div>
             <div className={styles.tip}>
-              <span>✅</span>
+              <span aria-hidden="true">✅</span>
               <p>Review placement records</p>
             </div>
           </div>
         </section>
 
         {/* FILTER */}
-        <section className={styles.filterSection}>
-          <h2 className={styles.sectionHeading}>Filter by Specialization</h2>
-          <div className={styles.filters}>
+        <section className={styles.filterSection} aria-labelledby="filter-heading">
+          <h2 id="filter-heading" className={styles.sectionHeading}>Filter by Specialization</h2>
+          <div className={styles.filters} role="group" aria-label="Filter universities by specialization">
             {specializations.map((s) => (
               <button
                 key={s}
+                type="button"
                 className={`${styles.filterBtn} ${filter === s ? styles.filterActive : ""}`}
                 onClick={() => setFilter(s)}
+                aria-pressed={filter === s}
               >
                 {s}
               </button>
@@ -1022,15 +1051,19 @@ export default function BestOnlineMBAPage() {
         </section>
 
         {/* UNIVERSITY CARDS */}
-        <section className={styles.uniSection}>
-          <h2 className={styles.sectionHeading}>
+        <section className={styles.uniSection} aria-labelledby="uni-section-heading">
+          <h2 id="uni-section-heading" className={styles.sectionHeading}>
             Top {filtered.length} Online MBA Universities in India 2026
           </h2>
-          <div className={styles.uniGrid}>
+          <div className={styles.uniGrid} id="university-cards">
             {filtered.map((uni) => (
-              <article key={uni.rank} className={styles.uniCard}>
+              <article
+                key={uni.rank}
+                className={styles.uniCard}
+                aria-label={`${uni.name} – Rank ${uni.rank}`}
+              >
                 <div className={styles.cardHeader}>
-                  <div className={styles.rankBadge}>#{uni.rank}</div>
+                  <div className={styles.rankBadge} aria-label={`Rank ${uni.rank}`}>#{uni.rank}</div>
                   <span
                     className={styles.tagBadge}
                     style={{ backgroundColor: uni.tagColor }}
@@ -1041,9 +1074,11 @@ export default function BestOnlineMBAPage() {
                 <div className={styles.uniLogo}>
                   <Image
                     src={uni.logo}
-                    alt={`${uni.name} logo`}
+                    alt={`${uni.name} official logo`}
                     width={120}
                     height={48}
+                    loading="lazy"
+                    sizes="120px"
                     className={styles.uniLogoImg}
                   />
                 </div>
@@ -1063,7 +1098,7 @@ export default function BestOnlineMBAPage() {
                     <span className={styles.metaValue}>{uni.duration}</span>
                   </div>
                 </div>
-                <div className={styles.specList}>
+                <div className={styles.specList} aria-label="Specializations offered">
                   {(expandedSpecs.has(uni.rank)
                     ? uni.specializations
                     : uni.specializations.slice(0, 5)
@@ -1072,8 +1107,15 @@ export default function BestOnlineMBAPage() {
                   ))}
                   {uni.specializations.length > 5 && (
                     <button
+                      type="button"
                       className={styles.specMoreBtn}
                       onClick={() => toggleSpecs(uni.rank)}
+                      aria-expanded={expandedSpecs.has(uni.rank)}
+                      aria-label={
+                        expandedSpecs.has(uni.rank)
+                          ? `Show fewer specializations for ${uni.name}`
+                          : `Show ${uni.specializations.length - 5} more specializations for ${uni.name}`
+                      }
                     >
                       {expandedSpecs.has(uni.rank)
                         ? "See Less ▲"
@@ -1082,7 +1124,7 @@ export default function BestOnlineMBAPage() {
                   )}
                 </div>
 
-                <ul className={styles.highlights}>
+                <ul className={styles.highlights} aria-label="Key highlights">
                   {uni.highlights.map((h) => (
                     <li key={h} className={styles.highlightItem}>✓ {h}</li>
                   ))}
@@ -1092,6 +1134,7 @@ export default function BestOnlineMBAPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.visitBtn}
+                  aria-label={`Visit ${uni.name} official website`}
                 >
                   Visit University →
                 </a>
@@ -1198,7 +1241,7 @@ export default function BestOnlineMBAPage() {
                 rel={link.url.startsWith("http") ? "noopener noreferrer" : ""}
                 className={styles.resourceLink}
               >
-                <span className={styles.linkIcon}>🔗</span>
+                <span className={styles.linkIcon} aria-hidden="true">🔗</span>
                 {link.title}
               </a>
             ))}
@@ -1206,11 +1249,11 @@ export default function BestOnlineMBAPage() {
         </section>
 
         {/* WHY ONLINE MBA */}
-        <section className={styles.whySection}>
-          <h2 className={styles.sectionHeading}>Why Choose an Online MBA? – Benefits 2026</h2>
+        <section className={styles.whySection} aria-labelledby="why-heading">
+          <h2 id="why-heading" className={styles.sectionHeading}>Why Choose an Online MBA? – Benefits 2026</h2>
           <div className={styles.whyGrid}>
             <div className={styles.whyCard}>
-              <div className={styles.whyIcon}>💰</div>
+              <div className={styles.whyIcon} aria-hidden="true">💰</div>
               <h3 className={styles.whyCardTitle}>Cost Effective</h3>
               <p className={styles.whyCardText}>
                 60–70% lower fees than a regular MBA with the same quality education.
@@ -1218,7 +1261,7 @@ export default function BestOnlineMBAPage() {
               </p>
             </div>
             <div className={styles.whyCard}>
-              <div className={styles.whyIcon}>⏰</div>
+              <div className={styles.whyIcon} aria-hidden="true">⏰</div>
               <h3 className={styles.whyCardTitle}>Flexible Schedule</h3>
               <p className={styles.whyCardText}>
                 Study anytime, anywhere. Freedom to complete your MBA alongside a
@@ -1226,7 +1269,7 @@ export default function BestOnlineMBAPage() {
               </p>
             </div>
             <div className={styles.whyCard}>
-              <div className={styles.whyIcon}>🏅</div>
+              <div className={styles.whyIcon} aria-hidden="true">🏅</div>
               <h3 className={styles.whyCardTitle}>Equal Recognition</h3>
               <p className={styles.whyCardText}>
                 A UGC-DEB approved Online MBA degree is equally valid as a Regular MBA,
@@ -1234,7 +1277,7 @@ export default function BestOnlineMBAPage() {
               </p>
             </div>
             <div className={styles.whyCard}>
-              <div className={styles.whyIcon}>🌐</div>
+              <div className={styles.whyIcon} aria-hidden="true">🌐</div>
               <h3 className={styles.whyCardTitle}>Global Networking</h3>
               <p className={styles.whyCardText}>
                 Network with pan-India and international students. Access alumni
@@ -1242,7 +1285,7 @@ export default function BestOnlineMBAPage() {
               </p>
             </div>
             <div className={styles.whyCard}>
-              <div className={styles.whyIcon}>📈</div>
+              <div className={styles.whyIcon} aria-hidden="true">📈</div>
               <h3 className={styles.whyCardTitle}>Career Growth</h3>
               <p className={styles.whyCardText}>
                 Average 30–40% salary hike after MBA. Better prepared for management
@@ -1250,7 +1293,7 @@ export default function BestOnlineMBAPage() {
               </p>
             </div>
             <div className={styles.whyCard}>
-              <div className={styles.whyIcon}>🎯</div>
+              <div className={styles.whyIcon} aria-hidden="true">🎯</div>
               <h3 className={styles.whyCardTitle}>20+ Specializations</h3>
               <p className={styles.whyCardText}>
                 Build expertise in niche areas like Business Analytics, FinTech,
@@ -1286,8 +1329,8 @@ export default function BestOnlineMBAPage() {
         </section>
 
         {/* FINAL CTA */}
-        <section className={styles.ctaSection}>
-          <h2 className={styles.ctaHeading}>Start Your Online MBA Journey</h2>
+        <section className={styles.ctaSection} aria-labelledby="cta-heading">
+          <h2 id="cta-heading" className={styles.ctaHeading}>Start Your Online MBA Journey</h2>
           <p className={styles.ctaText}>
             Choose the best Online MBA program from India's top 16 universities.
             Transform your career with a UGC-approved degree, flexible schedule,
@@ -1299,10 +1342,15 @@ export default function BestOnlineMBAPage() {
               target="_blank"
               rel="noopener noreferrer"
               className={styles.ctaPrimary}
+              aria-label="View UGC-DEB approved online MBA universities list (opens in new tab)"
             >
               View UGC-DEB Approved List
             </a>
-            <a href="/mba-specializations-india" className={styles.ctaSecondary}>
+            <a
+              href="/mba-specializations-india"
+              className={styles.ctaSecondary}
+              aria-label="Compare online MBA specializations available in India"
+            >
               Compare Specializations
             </a>
           </div>

@@ -118,25 +118,19 @@ export default function RootLayout({ children }: ChildrenProps) {
     <html lang="en" suppressHydrationWarning={true}>
       <head>
         <OrganizationSchema />
-
-        {/* Educational Organization Schema */}
-       {/* Google Ads Global Site Tag */}
-{/* Google Ads Global Site Tag */}
-<Script
-  src="https://www.googletagmanager.com/gtag/js?id=AW-17800709438"
-  strategy="lazyOnload"
-/>
-<Script id="gtag-init" strategy="lazyOnload">
-{`
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-17800709438', { 'page_path': window.location.pathname });
-`}
-</Script>
-
-
-
+        {/* Google Ads Global Site Tag */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17800709438"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-17800709438', { 'page_path': window.location.pathname });
+        `}
+        </Script>
         {/* Structured Data - WebSite */}
         <script
           type="application/ld+json"
@@ -157,16 +151,20 @@ export default function RootLayout({ children }: ChildrenProps) {
             }),
           }}
         />
-
-        
-      
       </head>
       <body
         className={`${inter.className} ${baskervville.variable} overflow-x-hidden`}
       >
+        {/* Skip to main content — accessibility + agentic browsing */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:bg-blue-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold focus:shadow-lg focus:outline-none"
+        >
+          Skip to main content
+        </a>
         <LenisProvider>
           <Header />
-          <main>{children}</main>
+          <main id="main-content" tabIndex={-1}>{children}</main>
           <ChatBoxWrapper />
           <Footer />
         </LenisProvider>

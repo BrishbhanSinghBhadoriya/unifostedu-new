@@ -587,16 +587,7 @@ const ugCourses = useMemo<Course[]>(() => [
 
   const renderPreResultsEnquiry = () => (
     <Dialog open={preResultsEnquiryOpen} onOpenChange={(v) => setPreResultsEnquiryOpen(v)}>
-      <DialogContent 
-        className="sm:max-w-[560px]"
-        style={{
-          position: 'fixed',
-          top: '50vh',
-          left: '50vw',
-          transform: 'translate(-50%, -50%)',
-          margin: 0
-        }}
-      >
+      <DialogContent className="sm:max-w-[560px]">
         <DialogHeader>
           <DialogTitle>Enquire to View Matches</DialogTitle>
         </DialogHeader>

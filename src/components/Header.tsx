@@ -380,7 +380,11 @@ const Header = () => {
   </div>
 
   {searchQuery && (
-    <div className="absolute left-0 top-full mt-2 w-full bg-white rounded-xl shadow-2xl border border-slate-200 z-[9999] max-h-80 overflow-auto">
+    <div
+      className="absolute left-0 top-full mt-2 w-full bg-white rounded-xl shadow-2xl border border-slate-200 z-[9999] max-h-80 overflow-auto"
+      role="listbox"
+      aria-label="Search suggestions"
+    >
       {filtered.map((item, idx) => {
         const universityLogo = item.type === "university" 
           ? (item.logo || universities.find((u) => u.link === item.href)?.logo)
@@ -391,6 +395,8 @@ const Header = () => {
             key={idx}
             onClick={() => handleSuggestionClick(item.href)}
             aria-label={`Go to ${item.title}`}
+            role="option"
+            aria-selected={false}
             className="block w-full text-left px-4 py-3 hover:bg-slate-50 border-b border-slate-100 last:border-0 transition"
           >
             <div className="flex items-center gap-3">
