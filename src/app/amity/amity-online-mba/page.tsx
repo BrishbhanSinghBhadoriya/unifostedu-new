@@ -23,8 +23,10 @@ import Headers from '../_components/Headers';
 import ApplyEnquiryModal from '@/components/ApplyEnquiryModal';
 
 const ApplyButton = ({ text = "Apply Now - Limited Seats", onClick }: { text?: string; onClick?: () => void }) => (
-  <button 
+  <button
+    type="button"
     onClick={onClick}
+    aria-label={text}
     className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-lg text-lg transition-all transform hover:scale-105 shadow-lg cursor-pointer"
   >
     {text}
@@ -37,14 +39,18 @@ export default function AmityOnlineMBA() {
   return (
     
     <div className="min-h-screen bg-gray-50">
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:bg-blue-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold">
+        Skip to main content
+      </a>
       <Headers />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-900 to-indigo-800 text-white py-20">
+      <main id="main-content">
+      <section className="relative bg-gradient-to-r from-blue-900 to-indigo-800 text-white py-20" aria-labelledby="hero-heading">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                Amity Online MBA: UGC Approved Distance MBA Degree for Working Professionals 2025
+              <h1 id="hero-heading" className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Amity Online MBA: UGC Approved Distance MBA Degree for Working Professionals 2026
               </h1>
               <p className="text-xl mb-8 text-gray-200">
                 Advance your career with India's most trusted online MBA program. Study from anywhere, no career break needed. 100% UGC-DEB approved degree equivalent to regular MBA.
@@ -67,10 +73,12 @@ export default function AmityOnlineMBA() {
             </div>
             <div className="hidden md:block">
               <Image 
-                src="/images/amity/mbaherosection.jpeg" 
-                alt="Amity Online MBA for Working Professionals" 
+                src="https://res.cloudinary.com/didkrwhbu/image/upload/w_600,q_auto,f_auto/v1762327391/mba-online-image_jklc4w.webp"
+                alt="Amity Online MBA for working professionals — UGC approved program"
                 width={600}
                 height={400}
+                priority
+                sizes="(max-width: 768px) 0px, 600px"
                 className="rounded-lg shadow-2xl"
               />
             </div>
@@ -958,7 +966,7 @@ export default function AmityOnlineMBA() {
                         formType={openModal?.type === "apply" ? "getStarted" : "general"}
                       />
                     )}
-     
+      </main>
     </div>
   );
 }

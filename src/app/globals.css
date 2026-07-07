@@ -281,3 +281,9 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Header slide-down animation (replaces framer-motion in amity/Headers.tsx) */
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0);     opacity: 1; }
+}

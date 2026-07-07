@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import UniversityDateSlider from "@/components/UniversityDateSlider";
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
   CheckCircle,
@@ -401,23 +400,6 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
  
 
   
-  const fadeIn = {
-    initial: { opacity: 0, y: 20 },
-    whileInView: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 },
-    viewport: { once: true },
-  };
-  const staggerChildren = {
-    initial: { opacity: 0 },
-    whileInView: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-    viewport: { once: true },
-  };
-
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [activeSection, setActiveSection] = useState<string | null>(
   sectionItems[0]?.id ?? null
@@ -461,7 +443,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
             <FeeStructure ugCourses={ugCourses} pgCourses={pgCourses} ug_pgCourses={ug_pgCourses} openModal={openModal} setOpenModal={setOpenModal}/>
             <Feature setOpenModal={setOpenModal} openModal={openModal}/>
             <OnlineRegular/>
-            <Resources fadeIn={fadeIn} staggerChildren={staggerChildren}/>
+            <Resources />
             <Achievements/> 
            <Scholarship setOpenModal={setOpenModal} openModal={openModal}/>
            <Certificate setOpenModal={setOpenModal} openModal={openModal}/>
@@ -471,7 +453,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
               setOpenModal={setOpenModal}
               openModal={openModal}
             />
-            <HiringPartners fadeIn={fadeIn} staggerChildren={staggerChildren}  setOpenModal={setOpenModal}/>
+            <HiringPartners setOpenModal={setOpenModal}/>
             <CTA/>
             <ResourceLinks setOpenModal={setOpenModal} openModal={openModal}/>
             <Faq

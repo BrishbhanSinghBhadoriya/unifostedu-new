@@ -18,6 +18,9 @@ export default async function sitemap() {
     { url: `${baseUrl}/faqs`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/privacy`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.4 },
     { url: `${baseUrl}/compare-university`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${baseUrl}/search`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.6 },
+    { url: `${baseUrl}/career-test`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
   ];
 
   // Dynamic University routes from UniversityList
@@ -69,13 +72,16 @@ export default async function sitemap() {
     priority: 0.8,
   }));
 
-  // NMIMS course routes
+  // NMIMS course routes (all programs from nmimscourses.json)
   const nmimsCourseRoutes = Object.keys(nmimsCourses.programs).map((slug) => ({
     url: `${baseUrl}/nmims/${slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.8,
   }));
+
+  // NMIMS main page route (covered in universityRoutes, but also explicit)
+  // Amrita main page route is covered in universityRoutes
 
   // MUJ Online specific routes
   const mujOnlineRoutes = [

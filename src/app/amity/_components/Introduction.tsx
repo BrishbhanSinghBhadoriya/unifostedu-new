@@ -1,9 +1,6 @@
 "use client";
-import React, { memo } from 'react'
-import { useRouter } from 'next/navigation';
+import { memo } from 'react'
 import Image from "next/image";
-import ApplyEnquiryModal from "@/components/ApplyEnquiryModal";
-import EnquiryForm from "@/components/EnquiryForm";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Award, CheckCircle, Globe, LucideIcon } from "lucide-react";
@@ -33,9 +30,9 @@ interface IntroductionProps {
 }
 
 // Memoized stats component for better performance
-const StatItem = memo(({ stat, index }: { stat: Stat, index: number }) => (
+const StatItem = memo(({ stat }: { stat: Stat }) => (
   <div className="text-center">
-    <stat.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 mx-auto mb-1 sm:mb-2 text-yellow-500" />
+    <stat.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 mx-auto mb-1 sm:mb-2 text-yellow-500" aria-hidden="true" />
     <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-900">
       {stat.number}
     </div>
@@ -46,13 +43,14 @@ const StatItem = memo(({ stat, index }: { stat: Stat, index: number }) => (
 ));
 StatItem.displayName = 'StatItem';
 
-// Memoized program card for better performance
-const ProgramCard = memo(({ item, index, onClick }: { item: Specialization, index: number, onClick: () => void }) => (
-  <div
-    className="rounded-lg sm:rounded-xl overflow-hidden shadow-md sm:shadow-lg bg-white cursor-pointer hover:shadow-xl transition-shadow duration-200"
-    onClick={onClick}
+// Program card — uses Link for keyboard + screen reader accessibility
+const ProgramCard = memo(({ item, index }: { item: Specialization, index: number }) => (
+  <Link
+    href={item.url}
+    className="rounded-lg sm:rounded-xl overflow-hidden shadow-md sm:shadow-lg bg-white hover:shadow-xl transition-shadow duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+    aria-label={`Explore ${item.program} — ${item.count}`}
   >
-    {/* Image - use native img for better LCP on mobile */}
+    {/* Image */}
     <div className="h-20 sm:h-24 md:h-32 lg:h-40 w-full bg-gray-100">
       <Image
         src={item.image}
@@ -60,8 +58,9 @@ const ProgramCard = memo(({ item, index, onClick }: { item: Specialization, inde
         className="h-full w-full object-cover"
         loading={index === 0 ? "eager" : "lazy"}
         decoding="async"
-        width="200"
-        height="160"
+        width={200}
+        height={160}
+        sizes="(max-width: 640px) 140px, (max-width: 1024px) 160px, 200px"
       />
     </div>
     {/* Text Section */}
@@ -73,14 +72,12 @@ const ProgramCard = memo(({ item, index, onClick }: { item: Specialization, inde
         {item.count}
       </div>
     </div>
-  </div>
+  </Link>
 ));
 
 ProgramCard.displayName = 'ProgramCard';
 
-const Introduction = ({ inter, playfair, openModal, setOpenModal }: IntroductionProps) => {
-
-  const router = useRouter();
+const Introduction = ({ inter, playfair, setOpenModal }: IntroductionProps) => {
   const stats: Stat[] = [
     { number: "1.6L+", label: "Students Enrolled", icon: Users },
     { number: "25+", label: "Years of Excellence", icon: Award },
@@ -120,8 +117,6 @@ const specializations: Specialization[] = [
 ];
 
 const handleApplyNowClick = () => {
-  console.log(openModal,setOpenModal);
-  console.log("Apply Now clicked");
   setOpenModal({ type: "apply" });
 };
 
@@ -185,7 +180,6 @@ const handleApplyNowClick = () => {
                   key={index}
                   item={item}
                   index={index}
-                  onClick={() => router.push(item.url)}
                 />
               ))}
             </div>
@@ -215,7 +209,7 @@ const handleApplyNowClick = () => {
             {/* Stats - No animations for faster mobile render */}
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
               {stats.map((stat, index) => (
-                <StatItem key={index} stat={stat} index={index} />
+                <StatItem key={index} stat={stat} />
               ))}
             </div>
           </div>

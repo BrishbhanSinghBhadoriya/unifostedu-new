@@ -117,8 +117,10 @@ const Faq = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalState
         
                       <div className="w-full flex justify-center mt-4">
           <Button
+            type="button"
             onClick={() => setOpenModal({ type: "apply" })}
             size="lg"
+            aria-label="Enquire now about Amity University online programs"
             className="bg-yellow-400 text-black border border-black 
                        hover:text-white hover:bg-blue-900 
                        text-sm sm:text-base px-6 sm:px-8 py-2.5 
