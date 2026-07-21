@@ -419,18 +419,7 @@
         "accreditation": "UGC Approved",
         "features": ["Expert Faculty", "Industry Connect", "Career Services"]
       },
-      {
-        "name": "Manipal Academy of Higher Education",
-        "location": "Manipal, Karnataka",
-        "NIRF": "Top 5",
-        "rating": 4.6,
-        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/mahe-uni_dvnm1d.webp",
-        "specializations": ["Data Science, Business Analytics"],
-        "fee": "₹2,80,000",
-        "duration": "2 Years",
-        "accreditation": "UGC Approved",
-        "features": ["Expert Faculty", "Career Services", "Flexible Learning"]
-      },
+    
       {
         "name": "Shoolini University",
         "location": "Solan, Himachal Pradesh",
@@ -773,30 +762,8 @@
           "accreditation": "UGC Approved",
           "features": ["Expert Faculty", "Career Services", "Flexible Learning"]
         },
-        {
-          "name": "Manipal Academy of Higher Education",
-          "location": "Manipal, Karnataka",
-          "NIRF": "Top 5",
-          "rating": 4.6,
-          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/mahe-uni_dvnm1d.webp",
-          "specializations": ["Healthcare Management, Business Analytics, Financial Technology (FinTech), Marketing Management, Human Resource Management"],
-          "fee": "₹1,80,000 ",
-          "duration": "3 Years",
-          "accreditation": "UGC Approved",
-          "features": ["Expert Faculty", "Career Services", "Flexible Learning"]
-        },
-        {
-          "name": "Manipal Academy of Higher Education",
-          "location": "Manipal, Karnataka",
-          "NIRF": "Top 5",
-          "rating": 4.6,
-          "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/mahe-uni_dvnm1d.webp",
-          "specializations": ["BBA Hons.(Healthcare Management, Business Analytics, Financial Technology (FinTech), Marketing Management, Human Resource Management)"],
-          "fee": "₹2,40,000 ",
-          "duration": "4 Years",
-          "accreditation": "UGC Approved",
-          "features": ["Expert Faculty", "Career Services", "Flexible Learning"]
-        },
+        
+       
         {
           "name": "Sharda University",
           "location": "Greater Noida, Uttar Pradesh",
@@ -1118,18 +1085,7 @@
         "accreditation": "UGC Approved",
         "features": ["Expert Faculty", "Career Services", "Flexible Learning"]
       },
-      {
-        "name": "Manipal Academy of Higher Education",
-        "location": "Manipal, Karnataka",
-        "NIRF": "Top 5",
-        "rating": 4.6,
-        "image": "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/mahe-uni_dvnm1d.webp",
-        "specializations": ["B Com(Professional)"],
-        "fee": "₹2,94,000 ",
-        "duration": "3 Years",
-        "accreditation": "UGC Approved",
-        "features": ["Expert Faculty", "Career Services", "Flexible Learning"]
-      },
+     
       {
         "name": "Jain University",
         "location": "Bangalore, Karnataka",

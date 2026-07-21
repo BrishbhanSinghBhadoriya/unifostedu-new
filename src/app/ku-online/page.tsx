@@ -41,7 +41,7 @@ const KU = () => {
       image: "https://res.cloudinary.com/didkrwhbu/image/upload/v1762327056/bba_qnepdk.webp",
     },
     {
-      course: "Bachelor of Computer Applications (BCA)",
+      course: "Bachelor of Computer Arts (BA)",
       duration: "3 Years",
       eligibility: "10+2 Pass",
       fees: "₹72,661",
@@ -197,7 +197,7 @@ useEffect(() => {
       
       🔹 Undergraduate Programs (UG):
       - BBA (Bachelor of Business Administration)
-      - BCA (Bachelor of Computer Applications)
+      - BA (Bachelor of Arts)
       - B.Com (Bachelor of Commerce)
 
       🔹 Postgraduate Programs (PG):
@@ -285,21 +285,21 @@ useEffect(() => {
   return (
     <>
       <Head>
-        <title>Kurukshetra University Online Admission 2026 | MBA, MCA, BBA, BCA, B.Com, MA — Haryana</title>
+        <title>Kurukshetra University Online Admission 2026 | MBA, MCA, BBA, BA, B.Com, MA — Haryana</title>
         <meta
           name="description"
-          content="Kurukshetra University Online Admission 2026 open. Apply for NAAC A++ accredited online MBA, MCA, BBA, BCA, B.Com, M.Com, MA programs. UGC-entitled degrees, 100% placement assistance, flexible learning since 1956. Best online university in Haryana."
+          content="Kurukshetra University Online Admission 2026 open. Apply for NAAC A++ accredited online MBA, MCA, BBA, BA, B.Com, M.Com, MA programs. UGC-entitled degrees, 100% placement assistance, flexible learning since 1956. Best online university in Haryana."
         />
         <meta
           name="keywords"
-          content="Kurukshetra University Online admission 2026, KU Online admission 2026, Kurukshetra University Online apply now, KU Online degree programs, NAAC A++ online university Haryana, UGC entitled online degree Kurukshetra University, best online university Haryana 2026, Kurukshetra University Online valid degree, KU Online degree recognized employers, Kurukshetra University online MBA 2026, KU Online MBA fees, KU Online MBA specializations, KU Online MBA placement, online MBA Haryana 2026, KU Online MBA Finance Management, KU Online MBA HR Management, KU Online MBA Marketing, KU Online MBA IT Management, KU Online MBA Business Analytics, Kurukshetra University online MCA 2026, KU Online MCA fees, best online MCA Haryana, Kurukshetra University online BBA 2026, KU Online BCA 2026, KU Online B.Com 2026, KU Online BBA fees, KU Online M.Com 2026, KU Online MA English, KU Online MA Journalism Mass Communication, KU Online MA Political Science, KU Online admission last date 2026, KU Online scholarship 2026, Kurukshetra University Online degree abroad, Kurukshetra University Online exam online, Kurukshetra University established 1956, KU Online MBA Chandigarh, Kurukshetra University online admission Delhi, KU Online MBA Ambala, KU Online admission Panipat, KU Online MBA Faridabad, KU Online admission Gurugram, KU Online MBA Hisar, KU Online admission Rohtak, KU Online MBA Karnal, Kurukshetra University online Mumbai, KU Online admission Noida"
+          content="Kurukshetra University Online admission 2026, KU Online admission 2026, Kurukshetra University Online apply now, KU Online degree programs, NAAC A++ online university Haryana, UGC entitled online degree Kurukshetra University, best online university Haryana 2026, Kurukshetra University Online valid degree, KU Online degree recognized employers, Kurukshetra University online MBA 2026, KU Online MBA fees, KU Online MBA specializations, KU Online MBA placement, online MBA Haryana 2026, KU Online MBA Finance Management, KU Online MBA HR Management, KU Online MBA Marketing, KU Online MBA IT Management, KU Online MBA Business Analytics, Kurukshetra University online MCA 2026, KU Online MCA fees, best online MCA Haryana, Kurukshetra University online BBA 2026, KU Online BA 2026, KU Online B.Com 2026, KU Online BBA fees, KU Online M.Com 2026, KU Online MA English, KU Online MA Journalism Mass Communication, KU Online MA Political Science, KU Online admission last date 2026, KU Online scholarship 2026, Kurukshetra University Online degree abroad, Kurukshetra University Online exam online, Kurukshetra University established 1956, KU Online MBA Chandigarh, Kurukshetra University online admission Delhi, KU Online MBA Ambala, KU Online admission Panipat, KU Online MBA Faridabad, KU Online admission Gurugram, KU Online MBA Hisar, KU Online admission Rohtak, KU Online MBA Karnal, Kurukshetra University online Mumbai, KU Online admission Noida"
         />
         <meta name="author" content="Unifost Education" />
         <meta name="robots" content="index, follow" />
 
         {/* Open Graph / Social Media */}
         <meta property="og:title" content="Kurukshetra University Online Admission 2026 | MBA, MCA, BBA, BCA — Haryana" />
-        <meta property="og:description" content="Join Kurukshetra University Online — NAAC A++ accredited, established 1956. UGC-entitled online MBA, MCA, BBA, BCA, B.Com, M.Com, MA with 100% placement assistance and affordable fees. Apply today." />
+        <meta property="og:description" content="Join Kurukshetra University Online — NAAC A++ accredited, established 1956. UGC-entitled online MBA, MCA, BBA, BA, B.Com, M.Com, MA with 100% placement assistance and affordable fees. Apply today." />
         <meta property="og:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku_xu5nkx.webp" />
         <meta property="og:type" content="website" />
       
@@ -307,7 +307,7 @@ useEffect(() => {
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Kurukshetra University Online Admission 2026 | Apply Now" />
-        <meta name="twitter:description" content="NAAC A++ accredited online MBA, MCA, BBA, BCA, M.Com, MA from Kurukshetra University. UGC-entitled degrees, 100% placement support and flexible learning." />
+        <meta name="twitter:description" content="NAAC A++ accredited online MBA, MCA, BBA, BA, M.Com, MA from Kurukshetra University. UGC-entitled degrees, 100% placement support and flexible learning." />
         <meta name="twitter:image" content="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku_xu5nkx.webp" />
       </Head>
 
@@ -946,7 +946,7 @@ useEffect(() => {
             <div className="flex flex-wrap justify-center gap-2 cursor-pointer">
               {[
   "BBA Business Administration - KU Online",
-  "BCA Computer Applications - KU Online",
+  "BA Computer Applications - KU Online",
   "B.Com Commerce - KU Online",
 
   "MBA General Management - KU Online",

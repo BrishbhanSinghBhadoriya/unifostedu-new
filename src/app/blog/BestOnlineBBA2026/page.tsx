@@ -358,30 +358,9 @@ const universities: University[] = [
     rating: 4.7,
     placement: "87%",
   },
+ 
   {
     id: "7",
-    name: "Manipal Academy of Higher Education (MAHE)",
-    grade: "NAAC A++",
-    fee: "₹1,80,000 – ₹2,40,000 / annum",
-    specializations: [
-      "Healthcare Management",
-      "Business Analytics",
-      "Financial Technology",
-      "Marketing Management",
-      "Human Resource Management",
-    ],
-    highlight:
-      "One of India's pioneering distance & online education providers with 3 lakh+ enrolled students and affordable fee structure.",
-    slug: "smu",
-    externalUrl: "https://www.smude.edu.in",
-    location: "Manipal, Karnataka (India)",
-    established: "1953",
-    ugcApproved: true,
-    rating: 4.8,
-    placement: "91%",
-  },
-  {
-    id: "8",
     name: "DY Patil Online (Deemed University)",
     grade: "NAAC A++",
     fee: "₹1,40,400 / annum",
@@ -397,7 +376,7 @@ const universities: University[] = [
     placement: "89%",
   },
   {
-    id: "9",
+    id: "8",
     name: "Uttaranchal University Online",
     grade: "NAAC A",
     fee: "₹1,20,000 / annum",
@@ -413,7 +392,7 @@ const universities: University[] = [
     placement: "80%",
   },
   {
-    id: "10",
+    id: "9",
     name: "Vivekananda Global University (VGU)",
     grade: "NAAC A+",
     fee: "₹1,32,000 / annum",

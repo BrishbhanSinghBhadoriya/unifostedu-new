@@ -2014,9 +2014,7 @@ const UniversityPage: React.FC = () => {
                     viewport={{ once: true }}
                     className="border-t border-white/10 pt-8 mb-8"
                   >
-                    <h4 className="text-lg font-bold mb-6 text-white text-center">
-                      Popular Programs & Specializations –Manipal Academy of Higher Education Online(MAHE) "
-                    </h4>
+                   
 
                     <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
                       {[
