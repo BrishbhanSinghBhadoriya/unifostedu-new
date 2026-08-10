@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 
 type PageContentProps = {
   sectionItems: { id: string; label: string }[];
@@ -37,19 +36,22 @@ const PageContent = ({
   const [maxIndexReached, setMaxIndexReached] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
+    let ticking = false;
+
+    const run = () => {
+      ticking = false;
       const scrollPosition = window.scrollY + 150;
       let activeId: string | null = null;
 
       for (let i = 0; i < sectionItems.length; i++) {
         const section = document.getElementById(sectionItems[i].id);
-
         if (section && scrollPosition >= section.offsetTop) {
           activeId = sectionItems[i].id;
         }
       }
 
-      setCurrentActiveSection(activeId);
+      setCurrentActiveSection((prev) => (prev === activeId ? prev : activeId));
+
       if (progressive && activeId) {
         const idx = sectionItems.findIndex((s) => s.id === activeId);
         if (idx !== -1) {
@@ -58,8 +60,14 @@ const PageContent = ({
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
+    const handleScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(run);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    run();
     return () => window.removeEventListener("scroll", handleScroll);
   }, [sectionItems, progressive]);
 
@@ -145,93 +153,73 @@ const PageContent = ({
         {mode !== "chips" && (
           <div className={breadcrumbPaddingClass}>
             <div className="flex flex-wrap items-center gap-1 w-full">
-              <AnimatePresence mode="popLayout">
-                {visibleItems.map((item, idx) => {
-                  const isActive = currentActiveSection === item.id;
-                  return (
-                    <motion.div
-                      key={item.id}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, scale: 0.9 }}
-                      transition={{ duration: 0.3 }}
-                      className="flex items-center gap-1"
+              {visibleItems.map((item, idx) => {
+                const isActive = currentActiveSection === item.id;
+                return (
+                  <div key={item.id} className="flex items-center gap-1">
+                    <button
+                      onClick={() => handleSectionClick(item.id)}
+                      className={`text-xs sm:text-sm uppercase tracking-wide transition-colors duration-200 ${
+                        isActive
+                          ? "text-indigo-700 font-bold"
+                          : "text-gray-500 hover:text-indigo-700"
+                      }`}
+                      aria-current={isActive ? "true" : undefined}
                     >
-                      <button
-                        onClick={() => handleSectionClick(item.id)}
-                        className={`text-xs sm:text-sm uppercase tracking-wide transition-colors duration-200 ${
-                          isActive
-                            ? "text-indigo-700 font-bold scale-105"
-                            : "text-gray-500 hover:text-indigo-700"
-                        }`}
-                        aria-current={isActive ? "true" : undefined}
-                      >
-                        {item.label}
-                      </button>
-                      {idx < visibleItems.length - 1 && (
-                        <span className="text-gray-300">›</span>
-                      )}
-                    </motion.div>
-                  );
-                })}
-              </AnimatePresence>
+                      {item.label}
+                    </button>
+                    {idx < visibleItems.length - 1 && (
+                      <span className="text-gray-300">›</span>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
         )}
       </nav>
 
       {/* Mobile Navigation Sidebar/Modal */}
-      <AnimatePresence>
-        {ismobilemenuopen && (
-          <div className="fixed inset-0 z-[100] md:hidden">
-            {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={onClose}
-              className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            />
-            
-            {/* Drawer */}
-            <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="absolute right-0 top-0 bottom-0 w-3/4 max-w-sm bg-white shadow-xl overflow-y-auto"
-            >
-              <div className="p-4 border-b flex items-center justify-between">
-                <h2 className="font-bold text-lg">Quick Navigation</h2>
-                <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-full">
-                  <X className="w-6 h-6" />
-                </button>
-              </div>
-              <div className="p-4">
-                <ul className="space-y-2">
-                  {visibleItems.map((item) => {
-                    const isActive = currentActiveSection === item.id;
-                    return (
-                      <li key={item.id}>
-                        <button
-                          onClick={() => handleSectionClick(item.id)}
-                          className={`w-full text-left px-4 py-3 rounded-lg text-sm transition-colors ${
-                            isActive
-                              ? "bg-indigo-600 text-white font-medium"
-                              : "bg-gray-50 text-gray-700 hover:bg-gray-100"
-                          }`}
-                        >
-                          {item.label}
-                        </button>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </motion.div>
+      {ismobilemenuopen && (
+        <div className="fixed inset-0 z-[100] md:hidden">
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close quick navigation"
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+          />
+
+          <div className="absolute right-0 top-0 bottom-0 w-3/4 max-w-sm bg-white shadow-xl overflow-y-auto">
+            <div className="p-4 border-b flex items-center justify-between">
+              <h2 className="font-bold text-lg">Quick Navigation</h2>
+              <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-full">
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            <div className="p-4">
+              <ul className="space-y-2">
+                {visibleItems.map((item) => {
+                  const isActive = currentActiveSection === item.id;
+                  return (
+                    <li key={item.id}>
+                      <button
+                        onClick={() => handleSectionClick(item.id)}
+                        className={`w-full text-left px-4 py-3 rounded-lg text-sm transition-colors ${
+                          isActive
+                            ? "bg-indigo-600 text-white font-medium"
+                            : "bg-gray-50 text-gray-700 hover:bg-gray-100"
+                        }`}
+                      >
+                        {item.label}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
-        )}
-      </AnimatePresence>
+        </div>
+      )}
     </div>
   );
 };

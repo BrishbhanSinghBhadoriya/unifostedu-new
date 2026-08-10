@@ -2,18 +2,9 @@
 
 import EnquiryForm from '@/components/EnquiryForm';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useCallback, useState } from 'react';
-import {
-  FaArrowRight,
-  FaBookOpen,
-  FaChevronDown,
-  FaChevronUp,
-  FaClock,
-  FaGraduationCap,
-  FaMoneyBillWave
-} from 'react-icons/fa6';
+import { ArrowRight, BookOpen, ChevronDown, ChevronUp, Clock, GraduationCap, IndianRupee } from 'lucide-react';
 
 const EnquireCard = ({ 
   course, 
@@ -53,13 +44,8 @@ const EnquireCard = ({
 
   return (
     <>
-      <motion.div 
+      <div
         className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-500 border border-gray-100 group"
-        whileHover={{ y: -8, scale: 1.02 }}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
       >
         {/* Image Container with Overlay */}
         <div className="relative h-40 overflow-hidden">
@@ -91,7 +77,7 @@ const EnquireCard = ({
           <div className="grid grid-cols-1 gap-2 mb-3">
             <div className="flex items-center bg-blue-50 p-2 rounded-lg">
               <div className="bg-blue-100 p-1.5 rounded-md mr-2">
-                <FaClock className="text-blue-600 text-xs" />
+                <Clock className="text-blue-600" size={14} />
               </div>
               <div>
                 <p className="text-xs text-gray-500 font-medium">Duration</p>
@@ -101,7 +87,7 @@ const EnquireCard = ({
             
             <div className="flex items-center bg-green-50 p-2 rounded-lg">
               <div className="bg-green-100 p-1.5 rounded-md mr-2">
-                <FaGraduationCap className="text-green-600 text-xs" />
+                <GraduationCap className="text-green-600" size={14} />
               </div>
               <div>
                 <p className="text-xs text-gray-500 font-medium">Eligibility</p>
@@ -112,7 +98,7 @@ const EnquireCard = ({
             {displayFees && (
               <div className="flex items-center bg-purple-50 p-2 rounded-lg">
                 <div className="bg-purple-100 p-1.5 rounded-md mr-2">
-                  <FaMoneyBillWave className="text-purple-600 text-xs" />
+                  <IndianRupee className="text-purple-600" size={14} />
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 font-medium">Total Fees</p>
@@ -127,7 +113,7 @@ const EnquireCard = ({
             <div className="mb-3">
               <div className="flex items-center justify-between mb-1">
                 <span className="text-xs font-semibold text-gray-700 flex items-center">
-                  <FaBookOpen className="mr-1 text-blue-600 text-xs" />
+                  <BookOpen className="mr-1 text-blue-600" size={14} />
                   Specializations
                 </span>
                 {specializationList.length > 1 && (
@@ -136,7 +122,7 @@ const EnquireCard = ({
                     className="text-blue-600 text-xs font-medium hover:text-blue-800 transition-colors flex items-center gap-1"
                   >
                     {showMore ? 'Less' : 'More'}
-                    {showMore ? <FaChevronUp className="text-xs" /> : <FaChevronDown className="text-xs" />}
+                    {showMore ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                   </button>
                 )}
               </div>
@@ -158,18 +144,16 @@ const EnquireCard = ({
 
           {/* Enquire Button */}
           <div className="mt-auto pt-2">
-            <motion.button
+            <button
               onClick={handleEnquireClick}
               className="w-full bg-[#1a325d] text-white px-4 py-2.5 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 group/btn cursor-pointer"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
             >
               <span>Enquire Now</span>
-              <FaArrowRight className="text-sm group-hover/btn:translate-x-1 transition-transform duration-300" />
-            </motion.button>
+              <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform duration-300" />
+            </button>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Enquiry Dialog */}
       <Dialog open={isEnquiryOpen} onOpenChange={setIsEnquiryOpen}>

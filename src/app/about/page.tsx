@@ -488,19 +488,6 @@ export default function About() {
         
 
 
-     <div className="w-full rounded-xl overflow-hidden shadow-lg">
-  <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.6832009747964!2d77.31252000920001!3d28.579274275592528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5d98ee6d3c5%3A0x34c5ea3d0f04f8a7!2sLogix%20Park!5e0!3m2!1sen!2sin!4v1757655392841!5m2!1sen!2sin"
-      style={{ border: 0 }}
-      allowFullScreen
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-      className="absolute inset-0 w-full h-full"
-    ></iframe>
-  </div>
-</div>
-
 {/* Enquiry Modal */}
 <Dialog open={showEnquiryModal} onOpenChange={setShowEnquiryModal} modal={false}>
   <DialogContent className="w-[95vw] max-w-lg md:max-w-xl lg:max-w-2xl max-h-[90vh] overflow-y-auto mx-auto my-6 md:my-12 p-4 sm:p-6">
