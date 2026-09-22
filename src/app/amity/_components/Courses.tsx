@@ -1,7 +1,8 @@
+'use client';
 import React from 'react'
 import { useState } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { motion, AnimatePresence } from "framer-motion";
+
 import EnquireCard from "@/components/EnquireCard";
 import { OpenModalState } from '../../../../types/Modal'
 type ExploreCoursesProps = {
@@ -82,74 +83,35 @@ const Courses : React.FC<ExploreCoursesProps> = ({
                       </div>
     
                       {/* Tab Content */}
-                      <TabsContent value="ug" className="mt-4 sm:mt-6">
-                        <motion.div
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.5 }}
-                        >
+                        <TabsContent value="ug" className="mt-4 sm:mt-6">
                           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
                             {ugCourses.map((item, index) => (
-                              <div
-                                key={`ug-${item.course}-${index}`}
-                                className="w-full"
-                              >
-                                <EnquireCard
-                                  {...item}
-                                  universityName="Amity University Online"
-                                  uniqueId={`ug-${index}`}
-                                />
+                              <div key={`ug-${item.course}-${index}`} className="w-full">
+                                <EnquireCard {...item} universityName="Amity University Online" uniqueId={`ug-${index}`} />
                               </div>
                             ))}
                           </div>
-                        </motion.div>
-                      </TabsContent>
+                        </TabsContent>
     
-                      <TabsContent value="pg" className="mt-4 sm:mt-6">
-                        <motion.div
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.5 }}
-                        >
+                        <TabsContent value="pg" className="mt-4 sm:mt-6">
                           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
                             {pgCourses.map((item, index) => (
-                              <div
-                                key={`pg-${item.course}-${index}`}
-                                className="w-full"
-                              >
-                                <EnquireCard
-                                  {...item}
-                                  universityName="Amity University Online"
-                                  uniqueId={`pg-${index}`}
-                                />
+                              <div key={`pg-${item.course}-${index}`} className="w-full">
+                                <EnquireCard {...item} universityName="Amity University Online" uniqueId={`pg-${index}`} />
                               </div>
                             ))}
                           </div>
-                        </motion.div>
-                      </TabsContent>
+                        </TabsContent>
     
-                      <TabsContent value="integrated" className="mt-4 sm:mt-6">
-                        <motion.div
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.5 }}
-                        >
+                        <TabsContent value="integrated" className="mt-4 sm:mt-6">
                           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
                             {ug_pgCourses.map((item, index) => (
-                              <div
-                                key={`integrated-${item.course}-${index}`}
-                                className="w-full"
-                              >
-                                <EnquireCard
-                                  {...item}
-                                  universityName="Amity University Online"
-                                  uniqueId={`integrated-${index}`}
-                                />
+                              <div key={`integrated-${item.course}-${index}`} className="w-full">
+                                <EnquireCard {...item} universityName="Amity University Online" uniqueId={`integrated-${index}`} />
                               </div>
                             ))}
                           </div>
-                        </motion.div>
-                      </TabsContent>
+                        </TabsContent>
                     </Tabs>
                   </div>
                 </section>

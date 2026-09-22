@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import Link from 'next/link'
 import { ArrowRight, BookOpen, GraduationCap, Users, Building2, FileText, Award } from 'lucide-react'

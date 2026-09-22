@@ -334,7 +334,7 @@ export default function OnlineBCAPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              🏛️ Top Online BCA Universities in India
+              🏛️
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Choose from India's best universities offering quality online BCA programs
