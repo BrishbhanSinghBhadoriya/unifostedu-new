@@ -274,6 +274,7 @@ const Header = () => {
   useEffect(() => {
     const hideHeaderRoutes = [
       "/amity",
+      "/ignou_university",
       "/lpu-online",
       "/manipal",
       "/cuOnline",

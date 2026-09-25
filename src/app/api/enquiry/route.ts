@@ -1,0 +1,116 @@
+import { NextRequest, NextResponse } from "next/server";
+import clientPromise from "@/lib/mongodb";
+
+export async function POST(req: NextRequest) {
+  try {
+    if (!clientPromise) {
+      return NextResponse.json({ error: "Database not configured" }, { status: 500 });
+    }
+
+    const dbName        = process.env.MONGODB_DB        || "ignou_online";
+    const collectionName = process.env.MONGODB_COLLECTION || "leads";
+
+    const body      = await req.json();
+    const name      = typeof body?.name      === "string" ? body.name.trim()      : "";
+    const email     = typeof body?.email     === "string" ? body.email.trim()     : "";
+    const phone     = typeof body?.phone     === "string" ? body.phone.trim()     : "";
+    const state     = typeof body?.state     === "string" ? body.state.trim()     : "";
+    const program   = typeof body?.program   === "string" ? body.program.trim()   : "";
+    const message   = typeof body?.message   === "string" ? body.message.trim()   : "";
+    const url       = typeof body?.url       === "string" ? body.url.trim()       : "";
+    const source    = typeof body?.source    === "string" ? body.source.trim()    : "";
+    const campaign  = typeof body?.campaign  === "string" ? body.campaign.trim()  : "";
+    const university = typeof body?.university === "string" ? body.university.trim() : "";
+
+    // ── Validation ────────────────────────────────────────────────────────
+    if (!name || !email || !phone) {
+      return NextResponse.json({ error: "name, email, phone are required" }, { status: 400 });
+    }
+
+    const cleanPhone = phone.replace(/\D/g, "");
+    if (cleanPhone.length !== 10) {
+      return NextResponse.json(
+        { error: "Please enter a valid 10-digit phone number." },
+        { status: 400 }
+      );
+    }
+
+    // ── MongoDB document ──────────────────────────────────────────────────
+    const doc = {
+      name,
+      email:     email.toLowerCase(),
+      phone,
+      state:     state    || null,
+      program:   program  || null,
+      message:   message  || null,
+      source:    source   || url || "Ignouonline",
+      campaign:  campaign || null,
+      university: university || null,
+      createdAt: new Date(),
+    };
+
+    // ── NeoDove CRM payload ───────────────────────────────────────────────
+    // NeoDove integration expects: name, mobile, email, location, course, university
+    const apiEndpoint = process.env.API_ENDPOINT;
+
+    const crmPayload: Record<string, string> = {
+      name,
+      mobile:     cleanPhone,
+      email:      email.toLowerCase(),
+      location:   state      || "",   // NeoDove uses "location" for state/city
+      course:     program    || "",   // NeoDove uses "course"
+      university: university || "",
+      source:     source     || url  || "Ignouonline",
+      campaign:   campaign   || "",
+    };
+    // Remove empty strings — NeoDove does not want blank fields
+    (Object.keys(crmPayload) as string[]).forEach((k) => {
+      if (!crmPayload[k]) delete crmPayload[k];
+    });
+
+    // ── Step 1: Save to MongoDB ───────────────────────────────────────────
+    try {
+      const client = await clientPromise;
+      const db     = client!.db(dbName);
+      await db.collection(collectionName).insertOne(doc);
+      console.log("✅ Lead saved to MongoDB");
+    } catch (dbErr) {
+      console.error("❌ MongoDB insert failed:", dbErr);
+      // Continue — still try CRM even if Mongo fails
+    }
+
+    // ── Step 2: Push to CRM (runs BEFORE response, no after()) ───────────
+    if (apiEndpoint) {
+      try {
+        const crmResponse = await fetch(apiEndpoint, {
+          method:  "POST",
+          headers: { "Content-Type": "application/json" },
+          body:    JSON.stringify(crmPayload),
+        });
+
+        if (crmResponse.ok) {
+          console.log("✅ Lead sent to CRM successfully");
+        } else {
+          const errText = await crmResponse.text();
+          console.error("❌ CRM API error:", {
+            status:     crmResponse.status,
+            statusText: crmResponse.statusText,
+            body:       errText,
+          });
+        }
+      } catch (crmErr) {
+        console.error("❌ CRM fetch failed:", crmErr);
+      }
+    } else {
+      console.warn("⚠️ API_ENDPOINT not set — CRM push skipped");
+    }
+
+    return NextResponse.json({ ok: true }, { status: 201 });
+
+  } catch (err) {
+    console.error("❌ Enquiry API unexpected error:", err);
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+  }
+}
+
+export const dynamic = "force-dynamic";

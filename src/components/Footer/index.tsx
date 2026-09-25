@@ -43,6 +43,7 @@ const Footer = () => {
 
   const hideFooterRoutes = [
     "/amity",
+    "/ignou_university",
     "/lpu-online",
     "/manipal",
     "/cuOnline",
