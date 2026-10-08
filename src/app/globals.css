@@ -148,6 +148,25 @@ body {
   animation: scroll 40s linear infinite;
 }
 
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-scroll-logos {
+  animation: scroll-logos 40s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.group:hover .animate-scroll-logos {
+  animation-play-state: paused;
+}
+
 /* Cities Auto Slider Animation */
 @keyframes slide-infinite {
   0% {
@@ -286,4 +305,15 @@ body {
 @keyframes slideDown {
   from { transform: translateY(-100%); opacity: 0; }
   to   { transform: translateY(0);     opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

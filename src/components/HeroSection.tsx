@@ -21,6 +21,7 @@ type heroSectionProps = {
   students: string;
   partners: string;
   campus: string;
+  priority?: boolean;
 };
 const HeroSection = ({
   universityName,
@@ -39,6 +40,7 @@ const HeroSection = ({
   students,
   partners,
   campus,
+  priority = true,
 }: heroSectionProps) => {
   return (
     <section className="relative py-12 px-6 font-[Inter] border-b border-gray-100">
@@ -152,14 +154,15 @@ const HeroSection = ({
         >
           <div className="absolute -inset-3 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-2xl blur-md opacity-70"></div>
 
-          <div className="relative rounded-xl shadow-md overflow-hidden border border-gray-200">
+          <div className="relative rounded-xl shadow-md overflow-hidden border border-gray-200 aspect-[4/3] w-full bg-gray-100">
             <Image
               src={imgSrc}
               alt={imgAlt}
               width={600}
-              height={1200}
-              loading="lazy"
-              className="w-full h-auto"
+              height={450}
+              priority={priority}
+              sizes="(max-width: 768px) 100vw, 600px"
+              className="w-full h-full object-cover"
             />
 
             {/* Floating Badges */}

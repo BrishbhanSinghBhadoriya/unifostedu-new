@@ -3,11 +3,9 @@ import { ChildrenProps } from "types/ChildrenProps";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ChatBoxWrapper from '@/components/ChatBoxWrapper';
 import OrganizationSchema from "@/components/OrganizationSchema";
-import { Toaster as SonnerToaster } from "sonner";
 import Script from 'next/script';
-import LenisProvider from "@/components/LenisProvider";
+import ClientProviders from "@/components/ClientProviders";
 
 const inter = Inter({ 
   subsets: ["latin"], 
@@ -20,7 +18,7 @@ const baskervville = Baskervville({
   weight: ["400"],
   variable: "--font-baskervville",
   display: 'swap',
-  preload: true,
+  preload: false,
   adjustFontFallback: true
 });
 
@@ -121,9 +119,9 @@ export default function RootLayout({ children }: ChildrenProps) {
         {/* Google Ads Global Site Tag */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17800709438"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="gtag-init" strategy="afterInteractive">
+        <Script id="gtag-init" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -162,18 +160,11 @@ export default function RootLayout({ children }: ChildrenProps) {
         >
           Skip to main content
         </a>
-        <LenisProvider>
+        <ClientProviders>
           <Header />
           <main id="main-content" tabIndex={-1}>{children}</main>
-          <ChatBoxWrapper />
           <Footer />
-        </LenisProvider>
-        <SonnerToaster
-          position="top-center"
-          richColors
-          expand={false}
-          duration={3500}
-        />
+        </ClientProviders>
       </body>
     </html>
   );

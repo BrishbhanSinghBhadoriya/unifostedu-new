@@ -56,7 +56,8 @@ const ProgramCard = memo(({ item, index }: { item: Specialization, index: number
         src={item.image}
         alt={`${item.program} program at Amity Online`}
         className="h-full w-full object-cover"
-        loading={index === 0 ? "eager" : "lazy"}
+        priority={index === 0}
+        loading={index === 0 ? undefined : "lazy"}
         decoding="async"
         width={200}
         height={160}

@@ -1,5 +1,4 @@
 import Landing from "@/components/pages/Landing";
-import Image from "next/image";
 import { getLandingData } from "./lib/getCourse";
 
 export const metadata = {
@@ -54,7 +53,6 @@ export const revalidate = 3600;
 
 export default async function Home() {
   const data = await getLandingData();
-  console.log(data);
 
   return <Landing data={data} />
 

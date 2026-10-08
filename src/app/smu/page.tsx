@@ -304,7 +304,8 @@ const [openModal, setOpenModal] = useState<OpenModalState>(null);
                     alt="SMU Logo"
                     fill
                     className="object-contain"
-                    loading="eager"
+                    priority
+                    sizes="(max-width: 640px) 128px, 192px"
                   />
                 </div>
                 <h1 className="font-queens text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold">

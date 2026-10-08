@@ -2501,7 +2501,7 @@ const MUJBBAPage = () => {
                       className="space-y-4"
                     >
                       <div className="flex items-center gap-3 mb-4">
-                        <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" alt="Manipal" className="h-10 w-auto" />
+                        <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" alt="Manipal" width={120} height={40} loading="lazy" sizes="120px" className="h-10 w-auto" />
                         <span className="text-xl font-bold text-white">Online Manipal</span>
                       </div>
                       <p className="text-sm text-gray-400 leading-relaxed">

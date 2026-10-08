@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import { optimizeCloudinary } from '@/utils/cloudinary'
+import AccreditationBadgeImage from '@/components/AccreditationBadgeImage'
 import { OpenModalState } from '../../../../types/Modal'
 const Introduction = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalState) => void; openModal: OpenModalState }) => {
   return (
@@ -18,7 +19,8 @@ const Introduction = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenM
                   fill
                   className="object-cover object-center"
                   priority
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+                  fetchPriority="high"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" aria-hidden="true"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" aria-hidden="true"></div>
@@ -134,19 +136,19 @@ const Introduction = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenM
                 >
                   {/* Card 1 */}
                   <div className="flex flex-col items-center text-center">
-                    <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp" alt="NAAC A+ Accredited" className="h-12 sm:h-16 w-12 sm:w-16 object-contain mb-2" />
+                    <AccreditationBadgeImage src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327508/naac_sh5g6b.webp" alt="NAAC A+ Accredited" className="h-12 sm:h-16 w-12 sm:w-16 object-contain mb-2" />
                     <p className="text-xs sm:text-sm font-bold text-gray-900">NAAC A+</p>
                   </div>
     
                   {/* Card 2 */}
                   <div className="flex flex-col items-center text-center">
-                    <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp" alt="UGC Approved" className="h-12 sm:h-16 w-12 sm:w-16 object-contain mb-2" />
+                    <AccreditationBadgeImage src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327862/ugc_e5udyp.webp" alt="UGC Approved" className="h-12 sm:h-16 w-12 sm:w-16 object-contain mb-2" />
                     <p className="text-xs sm:text-sm font-bold text-gray-800">UGC Approved</p>
                   </div>
     
                   {/* Card 3 */}
                   <div className="flex flex-col items-center text-center">
-                    <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/qs_k5hl4c.webp" alt="Global Recognition" className="h-12 sm:h-16 w-12 sm:w-16 object-contain mb-2" />
+                    <AccreditationBadgeImage src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327854/qs_k5hl4c.webp" alt="Global Recognition" className="h-12 sm:h-16 w-12 sm:w-16 object-contain mb-2" />
                     <p className="text-xs sm:text-sm font-bold text-gray-800">Global Recognition</p>
                   </div>
                 </motion.div>

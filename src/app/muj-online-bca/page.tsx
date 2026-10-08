@@ -87,7 +87,7 @@ const MUJBCAPage = () => {
         <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
             <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-4 flex-shrink-0">
-              <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" alt="Manipal University Logo" className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto" />
+              <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" alt="Manipal University Logo" width={160} height={48} priority sizes="(max-width: 1024px) 120px, 160px" className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto" />
               <h1 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-orange-600">
 
               </h1>
@@ -125,7 +125,7 @@ const MUJBCAPage = () => {
         {/* Hero Section */}
         <section className="relative w-full min-h-[450px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] overflow-hidden pt-14 sm:pt-16 lg:pt-20">
           <div className="absolute inset-0">
-            <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bca-online-image_awhemy.webp" alt="A student learning with Manipal's Online BCA Program"  className="object-cover object-center" priority sizes="100vw" width={1920} height={1080} />
+            <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327069/bca-online-image_awhemy.webp" alt="A student learning with Manipal's Online BCA Program" fill className="object-cover object-center" priority sizes="(max-width: 768px) 100vw, 1200px" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
           </div>
@@ -133,7 +133,7 @@ const MUJBCAPage = () => {
             <div className="flex-1 max-w-2xl lg:max-w-3xl text-white py-6 sm:py-8 md:py-12 lg:py-20">
               <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="space-y-3 sm:space-y-4 md:space-y-6">
                 <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 border border-white/30">
-                  <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" alt="Manipal University Jaipur Logo" className="h-6 sm:h-8 w-auto" />
+                  <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" alt="Manipal University Jaipur Logo" width={120} height={32} loading="lazy" sizes="120px" className="h-6 sm:h-8 w-auto" />
                   <span className="font-semibold tracking-wider">Online BCA</span>
                 </div>
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
@@ -840,7 +840,7 @@ const MUJBCAPage = () => {
                     className="space-y-4"
                   >
                     <div className="flex items-center gap-3 mb-4 bg-white rounded-full p-3">
-                      <img src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" alt="Manipal" className="h-10 w-auto" />
+                      <Image src="https://res.cloudinary.com/didkrwhbu/image/upload/v1762327390/manipallogo_r6lssy.svg" alt="Manipal" width={120} height={40} loading="lazy" sizes="120px" className="h-10 w-auto" />
 
                     </div>
                     <p className="text-sm text-gray-400 leading-relaxed">

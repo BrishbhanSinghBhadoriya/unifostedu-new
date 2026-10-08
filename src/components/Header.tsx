@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef, useMemo } from "react";
+import React, { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import Link from "next/link";
 import { FaCompass, FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -35,22 +35,12 @@ import {
 import EnquiryForm from "@/components/EnquiryForm";
 import dynamic from 'next/dynamic';
 
-const BlogsDropdown = dynamic(() => import("@/components/BlogsDropdown"), { ssr: false });
 const MobileMenu = dynamic(() => import("./MobileMenu"), { ssr: false });
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import searchIndex from "@/data/searchIndex.json";
-import courseData from "@/data/courseData.json";
-import { BLOG_API_ENDPOINT, fetchBlogs } from "@/lib/blogApi";
 import { MenuKey } from "types/menu";
 import { Shield } from "lucide-react";
 
-
-type BlogProps = {
-  slug: string;
-  createdAt?: string;
-  updatedAt?: string;
-};
 type SearchItem = {
   title: string;
   type: string;
@@ -181,51 +171,78 @@ const Header = () => {
     "videoCall" | "homeDemo" | "getStarted" | undefined
   >();
 
-  const suggestions = useMemo(() => {
-    const fromJson = (searchIndex as SearchItem[]).map((i) => ({
-      title: i.title,
-      type: i.type,
-      href: i.href,
-      logo: undefined,
-    }));
-    const fromCourses = Object.keys(courseData as Record<string, any>).map(
-      (slug) => ({
-        title: (courseData as any)[slug]?.title || slug,
+  const universitySuggestions = useMemo(
+    () =>
+      universities.map((u) => ({
+        title: u.name,
+        type: "university",
+        href: u.link,
+        logo: u.logo,
+      })),
+    []
+  );
+
+  const [suggestions, setSuggestions] = useState<SearchItem[]>(universitySuggestions);
+  const searchDataLoadedRef = useRef(false);
+
+  const loadSearchIndex = useCallback(() => {
+    if (searchDataLoadedRef.current) return;
+    searchDataLoadedRef.current = true;
+
+    void Promise.all([
+      import("@/data/searchIndex.json"),
+      import("@/data/courseData.json"),
+    ]).then(([searchMod, courseMod]) => {
+      const searchIndex = searchMod.default as SearchItem[];
+      const courseData = courseMod.default as Record<string, { title?: string }>;
+
+      const fromJson = searchIndex.map((i) => ({
+        title: i.title,
+        type: i.type,
+        href: i.href,
+        logo: undefined as string | undefined,
+      }));
+
+      const fromCourses = Object.keys(courseData).map((slug) => ({
+        title: courseData[slug]?.title || slug,
         type: "course",
         href: `/courses/${slug}`,
-        logo: undefined,
-      })
-    );
+        logo: undefined as string | undefined,
+      }));
 
-    const fromUniversities = universities.map((u) => ({
-      title: u.name,
-      type: "university",
-      href: u.link,
-      logo: u.logo,
-    }));
-
-    const map = new Map<string, SearchItem>();
-    [...fromUniversities, ...fromJson, ...fromCourses].forEach((item) => {
-      const existing = map.get(item.href);
-      if (!existing) {
-        map.set(item.href, item);
-      } else if (existing.type !== "university" && item.type === "university") {
-        map.set(item.href, item);
-      }
+      const map = new Map<string, SearchItem>();
+      [...universitySuggestions, ...fromJson, ...fromCourses].forEach((item) => {
+        const existing = map.get(item.href);
+        if (!existing) {
+          map.set(item.href, item);
+        } else if (existing.type !== "university" && item.type === "university") {
+          map.set(item.href, item);
+        }
+      });
+      setSuggestions(Array.from(map.values()));
     });
-    return Array.from(map.values());
-  }, []);
-
-  const [latestBlogs, setLatestBlogs] = useState<BlogProps[]>([]);
-  const [blogsLoading, setBlogsLoading] = useState(false);
+  }, [universitySuggestions]);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        setScrolled(window.scrollY > 20);
+        ticking = false;
+      });
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      loadSearchIndex();
+    }
+  }, [mobileMenuOpen, loadSearchIndex]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -308,41 +325,6 @@ const Header = () => {
     setShowHeader(!shouldHide);
   }, [pathname]);
 
-  useEffect(() => {
-    const controller = new AbortController();
-
-    const loadLatestBlogs = async () => {
-      setBlogsLoading(true);
-      try {
-        const blogs = await fetchBlogs({
-          signal: controller.signal,
-        });
-
-        if (blogs && blogs.length > 0) {
-          const sorted = [...blogs]
-            .filter((blog: BlogProps) => blog?.slug)
-            .sort((a: BlogProps, b: BlogProps) => {
-              const dateA = new Date(a.createdAt || a.updatedAt || 0).getTime();
-              const dateB = new Date(b.createdAt || b.updatedAt || 0).getTime();
-              return dateB - dateA;
-            });
-          setLatestBlogs(sorted);
-        } else {
-          setLatestBlogs([]);
-        }
-      } catch (err: unknown) {
-        // Silently handle errors as fallback is provided by fetchBlogs
-        setLatestBlogs([]);
-      } finally {
-        setBlogsLoading(false);
-      }
-    };
-
-    loadLatestBlogs();
-
-    return () => controller.abort();
-  }, []);
-
   return (
     showHeader && (
       <header className="w-full font-sans sticky top-0 z-50">
@@ -376,7 +358,11 @@ const Header = () => {
       aria-label="Search courses and universities"
       className="outline-none bg-transparent text-slate-700 px-3 w-full text-base placeholder:text-slate-400"
       value={searchQuery}
-      onChange={(e) => setSearchQuery(e.target.value)}
+      onFocus={loadSearchIndex}
+      onChange={(e) => {
+        loadSearchIndex();
+        setSearchQuery(e.target.value);
+      }}
     />
   </div>
 

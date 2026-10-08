@@ -116,6 +116,9 @@ const AccreditationSection: React.FC<AccreditationSectionProps> = ({
                     alt={item.alt}
                     width={40}
                     height={40}
+                    loading="lazy"
+                    sizes="40px"
+                    className="h-10 w-10 object-contain shrink-0"
                   />
                   <span className="ml-3 text-sm font-medium">
                     {item.name}

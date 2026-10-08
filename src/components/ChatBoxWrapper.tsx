@@ -12,6 +12,21 @@ const ChatBox = dynamic(() => import('@/components/ChatBox'), {
 export default function ChatBoxWrapper() {
   const pathname = usePathname();
   const [showChatBox, setShowChatBox] = useState(true);
+  const [chatReady, setChatReady] = useState(false);
+
+  useEffect(() => {
+    const mountChat = () => setChatReady(true);
+    if (typeof window === 'undefined') return;
+
+    if ('requestIdleCallback' in window) {
+      const id = window.requestIdleCallback(mountChat, { timeout: 3500 });
+      return () => window.cancelIdleCallback(id);
+    }
+
+    const timer = setTimeout(mountChat, 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
   useEffect(() => {
     const hideHeaderRoutes = [
       "/amity",
@@ -45,6 +60,7 @@ export default function ChatBoxWrapper() {
 
     setShowChatBox(!shouldHideChatBox);
   }, [pathname]);
-  return showChatBox ? <ChatBox /> : null;
+  if (!showChatBox || !chatReady) return null;
+  return <ChatBox />;
 }
 

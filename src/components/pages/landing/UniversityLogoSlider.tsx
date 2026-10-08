@@ -16,7 +16,7 @@ const UniversityLogoSlider = ({ universityLogos = [] }: UniversityLogoSliderProp
     <section className="py-1 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-1">
         <div className="relative flex overflow-x-hidden group">
-          <div className="flex animate-scroll whitespace-nowrap py-4 group-hover:pause-animation">
+          <div className="flex animate-scroll-logos whitespace-nowrap py-4">
             {[...universityLogos, ...universityLogos, ...universityLogos].map((university, index) => (
               <div
                 key={`${university.name}-${index}`}
@@ -39,20 +39,6 @@ const UniversityLogoSlider = ({ universityLogos = [] }: UniversityLogoSliderProp
         </div>
       </div>
 
-      <style jsx>{`
-        .animate-scroll {
-          animation: scroll 40s linear infinite;
-          display: flex;
-          width: max-content;
-        }
-        @keyframes scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-33.33%); }
-        }
-        .group:hover .animate-scroll {
-          animation-play-state: paused;
-        }
-      `}</style>
     </section>
   );
 };

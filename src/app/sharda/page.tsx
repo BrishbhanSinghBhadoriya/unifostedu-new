@@ -1945,7 +1945,7 @@ const UniversityPage: React.FC = () => {
                     {/* Brand */}
                     <div className="lg:col-span-1">
                       <div className="flex bg-white items-center gap-4 mb-6">
-                        <img src={universityData.logo} alt={universityData.name} className="h-12 w-auto" />
+                        <Image src={universityData.logo} alt={universityData.name} width={120} height={48} loading="lazy" sizes="120px" className="h-12 w-auto" />
                         <span className="text-2xl text-white font-bold">Online {universityData.shortName}</span>
                       </div>
                       <p className="text-gray-400 leading-relaxed mb-6 ">

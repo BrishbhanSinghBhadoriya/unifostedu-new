@@ -85,7 +85,8 @@ const Hero = ({ onOpenModal, heroSlides = [] }: HeroProps) => {
                             src={s.src}
                             alt={`${s.title} | UNIFOST`}
                             priority={i === 0}
-                            loading={i === 0 ? "eager" : "lazy"}
+                            fetchPriority={i === 0 ? "high" : "auto"}
+                            loading={i === 0 ? undefined : "lazy"}
                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
                             className="object-contain rounded-2xl"
                           />

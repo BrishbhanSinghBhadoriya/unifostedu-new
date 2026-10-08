@@ -1,21 +1,16 @@
 'use client';
 
-import React, { useState, useEffect, Suspense, FC } from 'react';
-import { useSearchParams } from 'next/navigation';
+import React, { useState, useMemo, Suspense, useCallback } from 'react';
+import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import Head from 'next/head';
 import Image from 'next/image';
 import EnquiryForm from '@/components/EnquiryForm';
-import Hero from '@/components/pages/landing/Hero';
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-/* ------------------ TYPES ------------------ */
-type EnquiryFormType = "getStarted" | "videoCall" | "homeDemo";
-
 
 interface SearchResultItem {
   type: 'course';
@@ -35,50 +30,60 @@ interface SearchContentProps {
   onOpenModal: (type: "getStarted") => void;
 }
 
-/* ------------------ CHILD ------------------ */
+const ALL_SEARCH_RESULTS: SearchResultItem[] = [
+  { type: 'course', title: 'MBA Online', description: 'Master of Business Administration program with specializations in Finance, HR, Marketing, and IT.', tag: "Popular" },
+  { type: 'course', title: 'MCA Online', description: 'Master of Computer Applications with AI, Cloud, and Data Science electives.', tag: "Top Rated" },
+  { type: 'course', title: 'M.Com Online', description: 'Deepen commerce expertise with advanced finance and accounting modules.', tag: "Best Value" },
+  { type: 'course', title: 'MA Online', description: 'Explore diverse arts and humanities specializations through flexible learning.', tag: "Literature" },
+  { type: 'course', title: 'MAJMC Online', description: 'Master journalism and mass communication skills for media careers.', tag: "Media" },
+  { type: 'course', title: 'BBA Online', description: 'Learn management fundamentals tailored for the digital business age.', tag: "Career Starter" },
+  { type: 'course', title: 'BCA Online', description: 'Build a career in software development with industry-ready curriculum.', tag: "Trending" },
+  { type: 'course', title: 'B.Com Online', description: 'Commerce foundation covering business, accounting, and finance basics.', tag: "Business" },
+  { type: 'course', title: 'BA Online', description: 'Liberal arts education offering a foundation for multiple career paths.', tag: "Arts" },
+  { type: 'course', title: 'BAJMC Online', description: 'Learn journalism and mass communication essentials for modern media.', tag: "Media" },
+];
+
+const POPULAR_UNIVERSITIES: UniversityItem[] = [
+  { name: 'Amity University', href: '/amity', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp', rating: '4.8' },
+  { name: 'Manipal University', href: '/manipal', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp', rating: '4.7' },
+  { name: 'NMIMS University', href: '/nmims', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327721/nmims_os8kn9.webp', rating: '4.9' },
+  { name: 'Dr. D Y Patil University', href: '/dypatil', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dypatil_tbbpf9.webp', rating: '4.6' },
+  { name: 'Jain University', href: '/jain', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp', rating: '4.5' },
+  { name: 'Lovely Professional University', href: '/lpu-online', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp', rating: '4.4' },
+  { name: 'Sharda University', href: '/sharda', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp', rating: '4.3' },
+  { name: 'Shoolini University', href: '/shoolini', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327856/shoolini_txvq6k.webp', rating: '4.2' },
+  { name: 'Sikkim Manipal University', href: '/smu', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp', rating: '4.5' },
+  { name: 'UPES University', href: '/upes', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/upes_uzkkmm.webp', rating: '4.7' },
+  { name: 'Uttaranchal University', href: '/uu', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp', rating: '4.1' },
+  { name: 'VGU University', href: '/vgu', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgu1_ieijw9.webp', rating: '4.0' },
+  { name: 'Kurukshetra University', href: '/ku-online', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku_xu5nkx.webp', rating: '4.3' },
+  { name: 'OP Jindal University', href: '/opjindal', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/opjindal_jdl7az.webp', rating: '4.6' },
+  { name: 'Chandigarh University', href: '/cuOnline', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp', rating: '4.4' },
+];
+
 function SearchContent({ onOpenModal }: SearchContentProps) {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const query = searchParams.get('query') || '';
-  const [searchResults, setSearchResults] = useState<SearchResultItem[]>([]);
-  const [loading, setLoading] = useState<boolean>(false);
 
-  const allResults: SearchResultItem[] = [
-    { type: 'course', title: 'MBA Online', description: 'Master of Business Administration program with specializations in Finance, HR, Marketing, and IT.', tag: "Popular" },
-    { type: 'course', title: 'MCA Online', description: 'Master of Computer Applications with AI, Cloud, and Data Science electives.', tag: "Top Rated" },
-    { type: 'course', title: 'M.Com Online', description: 'Deepen commerce expertise with advanced finance and accounting modules.', tag: "Best Value" },
-    { type: 'course', title: 'MA Online', description: 'Explore diverse arts and humanities specializations through flexible learning.', tag: "Literature" },
-    { type: 'course', title: 'MAJMC Online', description: 'Master journalism and mass communication skills for media careers.', tag: "Media" },
-    { type: 'course', title: 'BBA Online', description: 'Learn management fundamentals tailored for the digital business age.', tag: "Career Starter" },
-    { type: 'course', title: 'BCA Online', description: 'Build a career in software development with industry-ready curriculum.', tag: "Trending" },
-    { type: 'course', title: 'B.Com Online', description: 'Commerce foundation covering business, accounting, and finance basics.', tag: "Business" },
-    { type: 'course', title: 'BA Online', description: 'Liberal arts education offering a foundation for multiple career paths.', tag: "Arts" },
-    { type: 'course', title: 'BAJMC Online', description: 'Learn journalism and mass communication essentials for modern media.', tag: "Media" },
-  ];
-
-  useEffect(() => {
-    if (query) {
-      performSearch(query);
-    } else {
-      setSearchResults(allResults.slice(0, 15));
+  const searchResults = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) {
+      return ALL_SEARCH_RESULTS.slice(0, 15);
     }
+    return ALL_SEARCH_RESULTS.filter(
+      (item) =>
+        item.title.toLowerCase().includes(q) ||
+        item.description.toLowerCase().includes(q)
+    );
   }, [query]);
 
-  const performSearch = (searchQuery: string) => {
-    setLoading(true);
-    const results = allResults.filter(item =>
-      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.description.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    setSearchResults(results);
-    setLoading(false);
-  };
-
-  // Define proper page title and H1 content
-  const getPageTitle = () => {
-    return query
-      ? `Search results for "${query}" | UniFost`
-      : 'Search Online Courses & Universities | UniFost';
-  };
+  const navigateToSearch = useCallback(
+    (term: string) => {
+      router.push(`/search?query=${encodeURIComponent(term)}`);
+    },
+    [router]
+  );
 
   const getH1Content = () => {
     return query
@@ -86,19 +91,8 @@ function SearchContent({ onOpenModal }: SearchContentProps) {
       : 'Find Your Perfect Online Courses & Universities';
   };
 
-  const getPageDescription = () => {
-    return query
-      ? `Find online courses and universities related to "${query}". Compare MBA, BBA, MCA, BCA, and more programs with UniFost.`
-      : 'Explore top online universities and courses. Discover MBA, BBA, MCA, BCA, and other online degrees for your career goals.';
-  };
-
   return (
     <>
-      <Head>
-        <title>{getPageTitle()}</title>
-        <meta name="description" content={getPageDescription()} />
-      </Head>
-
       {/* Professional Hero Section with PROPER H1 */}
       <div className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-20 overflow-hidden">
         {/* Background Pattern */}
@@ -162,12 +156,7 @@ function SearchContent({ onOpenModal }: SearchContentProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Enhanced Search Results */}
-          {loading ? (
-            <div className="flex justify-center items-center py-20">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-              <span className="ml-4 text-gray-600 text-lg">Searching courses...</span>
-            </div>
-          ) : searchResults.length > 0 ? (
+          {searchResults.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {searchResults.map((result, index) => (
                 <div
@@ -242,7 +231,7 @@ function SearchContent({ onOpenModal }: SearchContentProps) {
                     {['MBA', 'BBA', 'MCA', 'BCA', 'M.Com', 'B.Com'].map((term) => (
                       <button
                         key={term}
-                        onClick={() => performSearch(term)}
+                        onClick={() => navigateToSearch(term)}
                         className="px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors"
                       >
                         {term}
@@ -272,23 +261,7 @@ function SearchContent({ onOpenModal }: SearchContentProps) {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {([
-                { name: 'Amity University', href: '/amity', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327030/amity_vmd34g.webp', rating: '4.8' },
-                { name: 'Manipal University', href: '/manipal', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327389/manipal_nqk6jz.webp', rating: '4.7' },
-                { name: 'NMIMS University', href: '/nmims', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327721/nmims_os8kn9.webp', rating: '4.9' },
-                { name: 'Dr. D Y Patil University', href: '/dypatil', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dypatil_tbbpf9.webp', rating: '4.6' },
-                { name: 'Jain University', href: '/jain', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327239/jain_hn6im7.webp', rating: '4.5' },
-                { name: 'Lovely Professional University', href: '/lpu-online', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327345/lpu_dj3dun.webp', rating: '4.4' },
-                { name: 'Sharda University', href: '/sharda', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327855/sharda_mkidbt.webp', rating: '4.3' },
-                { name: 'Shoolini University', href: '/shoolini', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327856/shoolini_txvq6k.webp', rating: '4.2' },
-                { name: 'Sikkim Manipal University', href: '/smu', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp', rating: '4.5' },
-                { name: 'UPES University', href: '/upes', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327863/upes_uzkkmm.webp', rating: '4.7' },
-                { name: 'Uttaranchal University', href: '/uu', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327868/uu-uni_j3budp.webp', rating: '4.1' },
-                { name: 'VGU University', href: '/vgu', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327869/vgu1_ieijw9.webp', rating: '4.0' },
-                { name: 'Kurukshetra University', href: '/ku-online', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327280/ku_xu5nkx.webp', rating: '4.3' },
-                { name: 'OP Jindal University', href: '/opjindal', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327835/opjindal_jdl7az.webp', rating: '4.6' },
-                { name: 'Chandigarh University', href: '/cuOnline', img: 'https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp', rating: '4.4' },
-              ] as UniversityItem[]).map((university, idx) => (
+              {POPULAR_UNIVERSITIES.map((university, idx) => (
                 <div key={idx} className="group">
                   <Link
                     href={university.href}
@@ -300,6 +273,9 @@ function SearchContent({ onOpenModal }: SearchContentProps) {
                         src={university.img}
                         alt={university.name}
                         fill
+                        priority={idx < 4}
+                        loading={idx < 4 ? undefined : 'lazy'}
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>

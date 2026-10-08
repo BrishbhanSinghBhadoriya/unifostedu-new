@@ -486,6 +486,7 @@ const CuOnline = () => {
           p-0 sm:p-4
         "
                   priority
+                  sizes="(max-width: 768px) 100vw, 1400px"
                 />
               </SwiperSlide>
 
@@ -496,6 +497,8 @@ const CuOnline = () => {
                   alt="Banner 2"
                   width={1400}
                   height={800}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 1400px"
                   className="
           w-full h-full 
           object-cover 
@@ -513,6 +516,8 @@ const CuOnline = () => {
                   alt="Banner 3"
                   width={1400}
                   height={800}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 1400px"
                   className="
           w-full h-full 
           object-cover 
@@ -530,6 +535,8 @@ const CuOnline = () => {
                   alt="Banner 4"
                   width={1400}
                   height={800}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 1400px"
                   className="
           w-full h-full 
           object-cover 
@@ -547,6 +554,8 @@ const CuOnline = () => {
                   alt="Banner 5"
                   width={1400}
                   height={800}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 1400px"
                   className="
           w-full h-full 
           object-cover 
@@ -564,6 +573,8 @@ const CuOnline = () => {
                   alt="Banner 6"
                   width={1400}
                   height={800}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 1400px"
                   className="
           w-full h-full 
           object-cover 
