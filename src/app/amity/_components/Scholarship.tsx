@@ -168,7 +168,7 @@ const Scholarship = ({ setOpenModal }: { setOpenModal: (state: OpenModalState) =
               </div>
               <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
                 <GraduationCap className="w-12 h-12 text-blue-900 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">July 2026 Batch</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">JANUARY 2027 Batch</h3>
                 <p className="text-gray-600">
                   <strong>Early bird scholarships</strong> are now available for the July session. Enroll early and
                   save your academic year!

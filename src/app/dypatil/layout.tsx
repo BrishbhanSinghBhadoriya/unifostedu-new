@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Dr. DY Patil University (DPU) Online Admission 2026 open. Apply for NAAC A++ accredited, UGC-approved online MBA, MCA, BBA, BCA programs. 15+ MBA specializations, Zero Cost EMI, scholarship up to ₹10,000, 100% placement assistance. July 2026 batch.",
+    "Dr. DY Patil University (DPU) Online Admission 2026 open. Apply for NAAC A++ accredited, UGC-approved online MBA, MCA, BBA, BCA programs. 15+ MBA specializations, Zero Cost EMI, scholarship up to ₹10,000, 100% placement assistance. JANUARY 2027 batch.",
 
   keywords: [
     "Dr DY Patil University Online",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dr. DY Patil University Online Admission 2026 | MBA, MCA, BBA, BCA — NAAC A++",
     description:
-      "DPU Online — UGC & NAAC A++ approved degrees. MBA ₹1.89L, MCA ₹1.4L, BBA ₹1.45L. 15+ specializations, Zero Cost EMI, scholarship up to ₹10K, 100% placement assistance. July 2026 batch open. Apply free!",
+      "DPU Online — UGC & NAAC A++ approved degrees. MBA ₹1.89L, MCA ₹1.4L, BBA ₹1.45L. 15+ specializations, Zero Cost EMI, scholarship up to ₹10K, 100% placement assistance. JANUARY 2027 batch open. Apply free!",
     url: PAGE_URL,
     siteName: "Unifost Education",
     images: [
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "DPU Online 2026 | MBA, MCA, BBA, BCA — NAAC A++ | Dr. DY Patil University",
     description:
-      "UGC-approved, NAAC A++ online MBA, MCA, BBA, BCA from Dr. DY Patil University. 15+ specializations, Zero Cost EMI, scholarship up to ₹10K, 100% placement assistance. July 2026 batch.",
+      "UGC-approved, NAAC A++ online MBA, MCA, BBA, BCA from Dr. DY Patil University. 15+ specializations, Zero Cost EMI, scholarship up to ₹10K, 100% placement assistance. JANUARY 2027 batch.",
     images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327129/dypatil_tbbpf9.webp"],
   },
 

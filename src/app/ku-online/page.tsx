@@ -369,7 +369,7 @@ useEffect(() => {
           {/*hero section*/}
       <section className="relative w-full h-[75vh] md:h-[85vh] mt-[60px] mb-[20px] font-[Poppins]">
         <UniversityDateSlider
-        currentDate="JULY 2026 Session Admission Start"
+        currentDate="JANUARY 2027 Session Admission Start"
          nextUpdateDate="Early Bird Discount Available"
         information="Limited Seats Available - Apply Now!"
         special="Average of 15% - 40% salary growth"

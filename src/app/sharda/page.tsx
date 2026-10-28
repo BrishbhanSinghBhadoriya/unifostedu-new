@@ -414,7 +414,7 @@ const UniversityPage: React.FC = () => {
           onClose={() => setIsMobileMenuOpen(false) } 
         />
         <UniversityDateSlider
-          currentDate="JULY 2026 Session Admission Start"
+          currentDate="JANUARY 2027 Session Admission Start"
            nextUpdateDate="Early Bird Discount Available"
           information="Limited Seats Available - Apply Now!"
           special="Average of 15% - 40% salary growth"
@@ -1288,7 +1288,7 @@ const UniversityPage: React.FC = () => {
                     Sharda Online conducts multiple admission cycles every year.
                     <br />
                     <span className="font-semibold text-blue-600 text-xl">
-                      Upcoming Admission Cycle: January / July 2026
+                      Upcoming Admission Cycle: January / JANUARY 2027
                     </span>
                   </p>
 

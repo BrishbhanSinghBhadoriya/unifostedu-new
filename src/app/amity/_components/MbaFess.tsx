@@ -738,12 +738,12 @@ const MbaFees = () => {
                 <h3 className="text-xl font-bold mb-4">Important Admission Dates</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <p className="font-semibold text-indigo-600">JULY 2026 Session Admission Start</p>
+                    <p className="font-semibold text-indigo-600">JANUARY 2027 Session Admission Start</p>
                     <p className="text-gray-600">Applications open: December 2025</p>
                     <p className="text-gray-600">Deadline: January 31, 2026</p>
                   </div>
                   <div>
-                    <p className="font-semibold text-indigo-600">July 2026 Session</p>
+                    <p className="font-semibold text-indigo-600">JANUARY 2027 Session</p>
                     <p className="text-gray-600">Applications open: June 2026</p>
                     <p className="text-gray-600">Deadline: August 31, 2026</p>
                   </div>

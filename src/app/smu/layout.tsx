@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Sikkim Manipal University (SMU) Online Admission 2026 open. Apply for NAAC A+ accredited, UGC-approved online MBA, MCA, B.Com, BA, BBA, M.Com, MA programs. Dual specialization, AI-proctored exams, EMI from ₹2,083/month. 150+ hiring partners. July 2026 batch.",
+    "Sikkim Manipal University (SMU) Online Admission 2026 open. Apply for NAAC A+ accredited, UGC-approved online MBA, MCA, B.Com, BA, BBA, M.Com, MA programs. Dual specialization, AI-proctored exams, EMI from ₹2,083/month. 150+ hiring partners. JANUARY 2027 batch.",
 
   keywords: [
     "Sikkim Manipal University Online",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sikkim Manipal University Online Admission 2026 | MBA, MCA, B.Com — NAAC A+",
     description:
-      "SMU Online — UGC & NAAC A+ approved degrees. MBA ₹1.1L, BCom ₹75K, MCA ₹98K. Dual specialization, AI-proctored exams, EMI from ₹2,083/month. 150+ hiring partners. July 2026 batch open. Apply free!",
+      "SMU Online — UGC & NAAC A+ approved degrees. MBA ₹1.1L, BCom ₹75K, MCA ₹98K. Dual specialization, AI-proctored exams, EMI from ₹2,083/month. 150+ hiring partners. JANUARY 2027 batch open. Apply free!",
     url: PAGE_URL,
     siteName: "Unifost Education",
     images: [
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SMU Online 2026 | MBA, MCA, B.Com — NAAC A+ | Sikkim Manipal University",
     description:
-      "UGC-approved, NAAC A+ online MBA, MCA, B.Com, BA from Sikkim Manipal University. Dual specialization, EMI ₹2,083/month, 150+ hiring partners. July 2026 batch.",
+      "UGC-approved, NAAC A+ online MBA, MCA, B.Com, BA from Sikkim Manipal University. Dual specialization, EMI ₹2,083/month, 150+ hiring partners. JANUARY 2027 batch.",
     images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327861/smu-uni_bfti15.webp"],
   },
 

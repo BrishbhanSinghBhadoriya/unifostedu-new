@@ -3,7 +3,7 @@ import { ChildrenProps } from "types/ChildrenProps";
 export const metadata = {
   title: "SMU Online MA 2026-27 | English, Political Science, Sociology | ₹72,000 | NAAC A+ | Sikkim Manipal University",
   description:
-    "Online MA Programs from Sikkim Manipal University (SMU) — MA English, MA Political Science, MA Sociology. NAAC A+ accredited, UGC-DEB approved. ₹18,000/semester, EMI ₹3,000/month. 100% online, AI-proctored exams, NET eligible. July 2026 batch open. Apply free!",
+    "Online MA Programs from Sikkim Manipal University (SMU) — MA English, MA Political Science, MA Sociology. NAAC A+ accredited, UGC-DEB approved. ₹18,000/semester, EMI ₹3,000/month. 100% online, AI-proctored exams, NET eligible. JANUARY 2027 batch open. Apply free!",
   keywords: [
     // MA English
     "SMU Online MA English",
@@ -37,7 +37,7 @@ export const metadata = {
   openGraph: {
     title: "SMU Online MA 2026-27 | English, Political Science & Sociology | ₹72K | NAAC A+",
     description:
-      "Choose from 3 Online MA Programs at Sikkim Manipal University — MA English, MA Political Science, MA Sociology. NAAC A+, UGC-DEB approved. ₹18,000/semester, no-cost EMI ₹3,000/month. 100% online, NET eligible. July 2026 batch — Apply free now!",
+      "Choose from 3 Online MA Programs at Sikkim Manipal University — MA English, MA Political Science, MA Sociology. NAAC A+, UGC-DEB approved. ₹18,000/semester, no-cost EMI ₹3,000/month. 100% online, NET eligible. JANUARY 2027 batch — Apply free now!",
     url: "https://unifostedu.com/smu/ma",
     siteName: "UNIFOST",
     images: [
@@ -58,7 +58,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "SMU Online MA 2026-27 | English, Pol. Science, Sociology | NAAC A+ | ₹72K",
     description:
-      "3 Online MA programs from SMU — English, Political Science, Sociology. UGC-DEB approved, NAAC A+. ₹18,000/semester, NET eligible, 100% online. July 2026 batch open!",
+      "3 Online MA programs from SMU — English, Political Science, Sociology. UGC-DEB approved, NAAC A+. ₹18,000/semester, NET eligible, 100% online. JANUARY 2027 batch open!",
     images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327391/mba_ju1pxv.webp"],
   },
 };

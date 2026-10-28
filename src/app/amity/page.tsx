@@ -127,7 +127,7 @@ const AmityLandingPage = () => {
           <div className="bg-[#1A325D] text-gray-900 py-2 sm:py-2.5 md:py-3 mb-0">
             <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 text-center">
               <UniversityDateSlider
-                currentDate="JULY 2026 Session Admission Start"
+                currentDate="JANUARY 2027 Session Admission Start"
                 nextUpdateDate="Early Bird Discount Available"
                 information="Limited Seats Available - Apply Now!"
                 special="Average of 15% - 40% salary growth"

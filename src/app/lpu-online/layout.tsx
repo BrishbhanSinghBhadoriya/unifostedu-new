@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "LPU Online 2026 Admission Open. Enroll in NAAC A++ accredited, UGC-entitled online MBA, MCA, BBA, BCA, B.Com, M.Com, MA, M.Sc from Lovely Professional University. 50,000+ students. 100% placement assistance. No-Cost EMI. WES recognized. Fees from ₹80,000. Apply for July 2026 session now!",
+    "LPU Online 2026 Admission Open. Enroll in NAAC A++ accredited, UGC-entitled online MBA, MCA, BBA, BCA, B.Com, M.Com, MA, M.Sc from Lovely Professional University. 50,000+ students. 100% placement assistance. No-Cost EMI. WES recognized. Fees from ₹80,000. Apply for JANUARY 2027 session now!",
 
   keywords: [
     // ── Brand ──────────────────────────────────────────────────────────────
@@ -164,7 +164,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:       "LPU Online 2026 | MBA, MCA, BBA, BCA, M.Com, MA, M.Sc — Lovely Professional University",
-    description: "Join 50,000+ learners at LPU Online. NAAC A++ accredited, UGC-entitled online MBA, MCA, BBA, BCA, M.Com, MA, M.Sc. 100% placement support. No-Cost EMI. WES recognized. Apply July 2026.",
+    description: "Join 50,000+ learners at LPU Online. NAAC A++ accredited, UGC-entitled online MBA, MCA, BBA, BCA, M.Com, MA, M.Sc. 100% placement support. No-Cost EMI. WES recognized. Apply JANUARY 2027.",
     url:         PAGE_URL,
     siteName:    "Unifost Education — LPU Online",
     type:        "website",
@@ -347,7 +347,7 @@ const webPageSchema = {
   "@id":         `${PAGE_URL}/#webpage`,
   url:           PAGE_URL,
   name:          "LPU Online 2026 | MBA, MCA, BBA, BCA, M.Com, MA, M.Sc | NAAC A++ | UGC Approved",
-  description:   "Apply for LPU Online UG & PG programs. NAAC A++ accredited, UGC-entitled degrees with 100% placement support, No-Cost EMI, and global recognition. July 2026 session open.",
+  description:   "Apply for LPU Online UG & PG programs. NAAC A++ accredited, UGC-entitled degrees with 100% placement support, No-Cost EMI, and global recognition. JANUARY 2027 session open.",
   inLanguage:    "en-IN",
   isPartOf:      { "@type": "WebSite", "@id": `${BASE_URL}/#website` },
   about:         { "@type": "EducationalOrganization", "@id": `${PAGE_URL}/#organization` },
@@ -370,7 +370,7 @@ const coursesSchema = {
   "@context":      "https://schema.org",
   "@type":         "ItemList",
   name:            "LPU Online Programs 2026 — Full Course Catalog",
-  description:     "Complete list of UGC-entitled online programs from Lovely Professional University for July 2026 session.",
+  description:     "Complete list of UGC-entitled online programs from Lovely Professional University for JANUARY 2027 session.",
   url:             PAGE_URL,
   numberOfItems:   8,
   itemListElement: [
@@ -729,7 +729,7 @@ const faqSchema = {
       name:    "When does the next LPU Online batch start?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:   "The July 2026 session admissions are currently open. New batches start in January and July every year. Early Bird Discounts are available for a limited period. Apply now as seats are limited.",
+        text:   "The JANUARY 2027 session admissions are currently open. New batches start in January and July every year. Early Bird Discounts are available for a limited period. Apply now as seats are limited.",
       },
     },
     {
@@ -748,7 +748,7 @@ const howToSchema = {
   "@context":  "https://schema.org",
   "@type":     "HowTo",
   name:        "How to Apply for LPU Online Admission 2026",
-  description: "Step-by-step guide to enroll in any LPU Online program for the July 2026 session.",
+  description: "Step-by-step guide to enroll in any LPU Online program for the JANUARY 2027 session.",
   totalTime:   "P2D",
   supply: [
     { "@type": "HowToSupply", name: "10th & 12th mark sheets / Graduation certificate" },
@@ -771,8 +771,8 @@ const howToSchema = {
 const eventSchema = {
   "@context":          "https://schema.org",
   "@type":             "Event",
-  name:                "LPU Online — July 2026 Admission Session",
-  description:         "Admissions open for July 2026 session. Online MBA, MCA, BBA, BCA, BA, M.Com, MA, M.Sc. NAAC A++, UGC-entitled. Early Bird Discount available. Limited seats.",
+  name:                "LPU Online — JANUARY 2027 Admission Session",
+  description:         "Admissions open for JANUARY 2027 session. Online MBA, MCA, BBA, BCA, BA, M.Com, MA, M.Sc. NAAC A++, UGC-entitled. Early Bird Discount available. Limited seats.",
   startDate:           "2026-07-01",
   endDate:             "2026-07-31",
   eventStatus:         "https://schema.org/EventScheduled",

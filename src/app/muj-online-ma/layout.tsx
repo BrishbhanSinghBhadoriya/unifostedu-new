@@ -496,7 +496,7 @@ NGO workers, and those pursuing social work or civil services.`,
       intakes: [
         { intake: "January 2026", status: "Ongoing", deadline: "30 days before intake" },
         { intake: "April 2026", status: "Open Soon", deadline: "Announced Soon" },
-        { intake: "July 2026", status: "Open Soon", deadline: "Announced Soon" },
+        { intake: "JANUARY 2027", status: "Open Soon", deadline: "Announced Soon" },
         { intake: "October 2026", status: "Open Soon", deadline: "Announced Soon" },
       ],
     },

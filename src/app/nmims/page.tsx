@@ -212,8 +212,8 @@ const NMIMSLandingPage = () => {
       />
       <main className="pt-16 lg:pt-20">
         <UniversityDateSlider
-          currentDate="July 2026 Session"
-          nextUpdateDate="Applications Closing on 20 July 2026"
+          currentDate="JANUARY 2027 Session"
+          nextUpdateDate="Applications Closing on 20 JANUARY 2027"
           information="Limited Seats Available - Apply Now!"
          
           color="#dc2626"

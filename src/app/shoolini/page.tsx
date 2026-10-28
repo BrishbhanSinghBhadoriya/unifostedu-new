@@ -808,7 +808,7 @@ const Shoolini = () => {
             {/* Main Content - Scrollable */}
             <main className="flex-1 overflow-x-hidden px-4 lg:px-8 pb-10 lg:pl-64">
                             <UniversityDateSlider
-                                currentDate="JULY 2026 Session Admission Start"
+                                currentDate="JANUARY 2027 Session Admission Start"
                                  nextUpdateDate="Early Bird Discount Available"
                                 information="Limited Seats Available - Apply Now!"
                                 special="Average of 15% - 40% salary growth"

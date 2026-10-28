@@ -3,7 +3,7 @@ import { ChildrenProps } from "types/ChildrenProps";
 export const metadata = {
   title: "SMU Online MCA 2026-27 | Master of Computer Applications | Fees ₹98K | NAAC A+ | Sikkim Manipal University",
   description:
-    "Online MCA from Sikkim Manipal University (SMU). NAAC A+ accredited, UGC-approved. ₹24,500/semester, EMI ₹4,083/month. Java, Python, AI, Cloud Computing, Machine Learning. July 2026 batch open. 83% seats filled. Apply free!",
+    "Online MCA from Sikkim Manipal University (SMU). NAAC A+ accredited, UGC-approved. ₹24,500/semester, EMI ₹4,083/month. Java, Python, AI, Cloud Computing, Machine Learning. JANUARY 2027 batch open. 83% seats filled. Apply free!",
   keywords: [
     "SMU Online MCA",
     "Sikkim Manipal University Online MCA",
@@ -27,7 +27,7 @@ export const metadata = {
     "online MCA 24 months",
   ],
   openGraph: {
-    title: "SMU Online MCA 2026-27 | ₹98,000 | NAAC A+ | July 2026 Batch Open | Sikkim Manipal University",
+    title: "SMU Online MCA 2026-27 | ₹98,000 | NAAC A+ | JANUARY 2027 Batch Open | Sikkim Manipal University",
     description:
       "Earn a UGC-approved Online MCA from Sikkim Manipal University (NAAC A+). ₹24,500/semester, EMI ₹4,083/month. Java, Python, AI, Cloud, ML. 100% online, AI-proctored exams, placement support. 83% seats filled — Apply now!",
     url: "https://unifostedu.com/smu/mca",
@@ -48,7 +48,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SMU Online MCA 2026-27 | NAAC A+ | ₹98K Fee | July 2026 Batch",
+    title: "SMU Online MCA 2026-27 | NAAC A+ | ₹98K Fee | JANUARY 2027 Batch",
     description:
       "Online MCA from Sikkim Manipal University — UGC approved, NAAC A+, ₹24,500/semester, 80 credits, 150+ hiring partners. Java, Python, AI, Cloud. Apply free!",
     images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327468/mca1_ilvxyr.webp"],

@@ -205,7 +205,7 @@ const Upes = () => {
 
         <div className="pt-16 lg:pt-20">
           <UniversityDateSlider
-            currentDate="JULY 2026 Session Admission Start"
+            currentDate="JANUARY 2027 Session Admission Start"
             nextUpdateDate="Early Bird Discount Available"
             information="Limited Seats Available - Apply Now!"
             special="Average of 15% - 40% salary growth"

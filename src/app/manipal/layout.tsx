@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "online manipal university fees structure",
     "online manipal eligibility criteria MBA",
     "online manipal vs other online universities",
-    "online manipal university july 2026 batch",
+    "online manipal university JANUARY 2027 batch",
     "manipal online university 2026 fees",
     "manipal online university 2026 eligibility",
     "online manipal university 2026 placement",

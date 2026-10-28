@@ -408,7 +408,7 @@ const AdmissionFeesProcessSessions = ({ setOpenModal, openModal }: { setOpenModa
         <div className="space-y-4">
           <div className="bg-white rounded-xl p-6 border border-gray-200 border-l-4 border-green-500">
             <div className="flex items-center justify-between mb-2">
-              <h4 className="font-bold text-lg text-gray-900">JULY 2026 Session Admission Start</h4>
+              <h4 className="font-bold text-lg text-gray-900">JANUARY 2027 Session Admission Start</h4>
               <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Applications Open</span>
             </div>
             <p className="text-gray-600 text-sm">Start your academic journey with comprehensive support and guidance.</p>
@@ -424,7 +424,7 @@ const AdmissionFeesProcessSessions = ({ setOpenModal, openModal }: { setOpenModa
           
           <div className="bg-white rounded-xl p-6 border border-gray-200 border-l-4 border-orange-500">
             <div className="flex items-center justify-between mb-2">
-              <h4 className="font-bold text-lg text-gray-900">July 2026 Session</h4>
+              <h4 className="font-bold text-lg text-gray-900">JANUARY 2027 Session</h4>
               <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">Early Bird Discounts Available</span>
             </div>
             <p className="text-gray-600 text-sm">Special offers and scholarships for early applicants.</p>

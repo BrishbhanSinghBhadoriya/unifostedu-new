@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Chandigarh University (CU) Online Admission 2026 open. Apply for NAAC A+ accredited, UGC-approved online MBA, MCA, BBA, BCA, MA, M.Sc programs. 22+ MBA specializations, KPMG Business Analytics, AWS Academy, 100% placement assistance, EMI available. July 2026 batch.",
+    "Chandigarh University (CU) Online Admission 2026 open. Apply for NAAC A+ accredited, UGC-approved online MBA, MCA, BBA, BCA, MA, M.Sc programs. 22+ MBA specializations, KPMG Business Analytics, AWS Academy, 100% placement assistance, EMI available. JANUARY 2027 batch.",
 
   keywords: [
     "Chandigarh University Online",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Chandigarh University Online Admission 2026 | MBA, BBA, MCA, BCA — NAAC A+",
     description:
-      "CU Online — UGC & NAAC A+ approved degrees. MBA ₹2.2L, BBA ₹1.68L, MCA ₹1.55L, BCA ₹1.77L. 22+ specializations, KPMG certification, AWS Academy, 100% placement assistance. July 2026 batch open. Apply free!",
+      "CU Online — UGC & NAAC A+ approved degrees. MBA ₹2.2L, BBA ₹1.68L, MCA ₹1.55L, BCA ₹1.77L. 22+ specializations, KPMG certification, AWS Academy, 100% placement assistance. JANUARY 2027 batch open. Apply free!",
     url: PAGE_URL,
     siteName: "Unifost Education",
     images: [
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "CU Online 2026 | MBA, MCA, BBA, BCA — NAAC A+ | Chandigarh University",
     description:
-      "UGC-approved, NAAC A+ online MBA, MCA, BBA, BCA from Chandigarh University. 22+ specializations, KPMG certification, AWS Academy, 100% placement assistance. July 2026 batch.",
+      "UGC-approved, NAAC A+ online MBA, MCA, BBA, BCA from Chandigarh University. 22+ specializations, KPMG certification, AWS Academy, 100% placement assistance. JANUARY 2027 batch.",
     images: ["https://res.cloudinary.com/didkrwhbu/image/upload/v1762327089/chandigarh_w0uyzw.webp"],
   },
 
