@@ -76,7 +76,7 @@ const Footer: React.FC<IntroducationProps> = ({ setOpenModal }) => {
                     </div>
                     <div>
                       <p className="text-sm text-gray-400">Call Us</p>
-                      <p className="text-white font-semibold">+91 7042646766</p>
+                      <p className="text-white font-semibold">+91 9354735410</p>
                     </div>
                   </div>
                   

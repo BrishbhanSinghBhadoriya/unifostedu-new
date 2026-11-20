@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { students } from "@/data/testimonials";
 
-const WA_NUMBER = "917042646766";
+const WA_NUMBER = "919354735410";
 const WA_LINK   = `https://wa.me/${WA_NUMBER}?text=Hi%20Unifost%20Edu.%20Pvt.%20Ltd.%2C%20I%20want%20to%20know%20more%20about%20university%20admissions.`;
 
 const WhatsAppIcon = () => (

@@ -247,7 +247,7 @@ const [openModal, setOpenModal] = useState<OpenModalState>(null);
 
   const openWhatsAppSupport = () => {
     if (typeof window === "undefined") return;
-    window.open("https://wa.me/917042646766", "_blank", "noopener,noreferrer");
+    window.open("https://wa.me/919354735410", "_blank", "noopener,noreferrer");
   };
 
   const quickActionCards = [
@@ -319,17 +319,17 @@ const [openModal, setOpenModal] = useState<OpenModalState>(null);
 
                 {/* Phone (Desktop) */}
                 <a
-                  href="tel:+917042646766"
+                  href="tel:+919354735410"
                   className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-[#f26722] transition-colors"
                 >
                   <FaPhone className="text-orange-500 rotate-90" />
-                  <span className="hidden lg:inline">+91 7042646766</span>
+                  <span className="hidden lg:inline">+91 9354735410</span>
                   <span className="lg:hidden">Call Now</span>
                 </a>
 
                 {/* Phone (Mobile) */}
                 <a
-                  href="tel:+917042646766"
+                  href="tel:+919354735410"
                   className="sm:hidden flex items-center justify-center w-10 h-10 bg-[#f26722]/10 rounded-full text-[#f26722] hover:bg-[#f26722]/20 transition-colors cursor-pointer"
                 >
                   📞

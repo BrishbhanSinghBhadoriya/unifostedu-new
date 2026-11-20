@@ -912,7 +912,7 @@ export default function AmityOnlineMBA() {
               <Phone className="w-6 h-6" />
               <div className="text-left">
                 <div className="text-sm text-gray-300">Call us now</div>
-                <div className="text-xl font-bold">+917042646766</div>
+                <div className="text-xl font-bold">+919354735410</div>
               </div>
             </div>
             <div className="flex items-center gap-3">

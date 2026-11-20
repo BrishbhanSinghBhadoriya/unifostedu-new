@@ -270,17 +270,17 @@ const Vgu = () => {
               <div className="flex items-center gap-2 sm:gap-4">
                 {/* Phone - Hidden on small screens */}
                 <a
-                  href="tel:+917042646766"
+                  href="tel:+919354735410"
                   className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-orange-600 transition-colors"
                 >
                   <span className="text-lg">📞</span>
-                  <span className="hidden lg:inline">+91 7042646766</span>
+                  <span className="hidden lg:inline">+91 9354735410</span>
                   <span className="lg:hidden">Call Now</span>
                 </a>
 
                 {/* Mobile Phone Icon */}
                 <a
-                  href="tel:+917042646766"
+                  href="tel:+919354735410"
                   className="sm:hidden flex items-center justify-center w-10 h-10 bg-[#821812] rounded-full text-white hover:bg-[#821812] transition-colors"
                 >
                   📞
@@ -2243,11 +2243,11 @@ Through the campus tour, students can explore digital classrooms, study resource
                         <div className="space-y-3">
                           <div className="flex items-center gap-3">
 
-                            <a href="tel:+917042646766" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us" aria-label="Email us at info@unifostedu.com">
+                            <a href="tel:+919354735410" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us" aria-label="Email us at info@unifostedu.com">
 
                               <span className="text-[#821812]-400">📞</span>
                             </a>
-                            <span className="text-sm">+91 7042646766</span>
+                            <span className="text-sm">+91 9354735410</span>
                           </div>
                           <div className="flex items-center gap-3">
                             <div className="w-8 h-8 bg-[#821812] rounded-full flex items-center justify-center">

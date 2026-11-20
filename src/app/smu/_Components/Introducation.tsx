@@ -40,7 +40,7 @@ const Introducation: React.FC<IntroducationProps> = ({ setOpenModal }) => {
 
   const openWhatsAppSupport = () => {
     if (typeof window === "undefined") return;
-    window.open("https://wa.me/917042646766", "_blank");
+    window.open("https://wa.me/919354735410", "_blank");
   };
 
   const quickActionCards = [

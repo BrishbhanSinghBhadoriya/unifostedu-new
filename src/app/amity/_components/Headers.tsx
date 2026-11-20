@@ -51,12 +51,12 @@ const Headers: React.FC<HeadersProps> = ({
           <nav aria-label="Header actions">
             <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
               <a
-                href="tel:+917042646766"
-                aria-label="Call Amity admissions at +91 7042646766"
+                href="tel:+919354735410"
+                aria-label="Call Amity admissions at +91 9354735410"
                 className="hidden sm:flex items-center space-x-2 text-xs md:text-sm border border-gray-300 rounded-md px-3 py-1.5 hover:bg-gray-50 transition-colors text-gray-700"
               >
                 <Phone className="w-4 h-4" aria-hidden="true" />
-                <span>+91 7042646766</span>
+                <span>+91 9354735410</span>
               </a>
 
               <Button

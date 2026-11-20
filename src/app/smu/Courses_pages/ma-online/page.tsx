@@ -198,17 +198,17 @@ const MAOnline: React.FC<MAOnlineProps> = ({ }) => {
 
                 {/* Phone (Desktop) */}
                 <a
-                  href="tel:+917042646766"
+                  href="tel:+919354735410"
                   className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-[#f26722] transition-colors"
                 >
                   <FaPhone className="text-orange-500 rotate-90" />
-                  <span className="hidden lg:inline">+91 7042646766</span>
+                  <span className="hidden lg:inline">+91 9354735410</span>
                   <span className="lg:hidden">Call Now</span>
                 </a>
 
                 {/* Phone (Mobile) */}
                 <a
-                  href="tel:+917042646766"
+                  href="tel:+919354735410"
                   className="sm:hidden flex items-center justify-center w-10 h-10 bg-[#f26722]/10 rounded-full text-[#f26722] hover:bg-[#f26722]/20 transition-colors cursor-pointer"
                 >
                   📞
@@ -740,7 +740,7 @@ const MAOnline: React.FC<MAOnlineProps> = ({ }) => {
           <div className="flex items-center justify-center gap-3">
             <FaPhone className="rotate-90 text-white/70" />
             <span className="text-white/80">Talk to an advisor:</span>
-            <a href="tel:+917042646766" className="text-white font-bold hover:underline">+91 7042646766</a>
+            <a href="tel:+919354735410" className="text-white font-bold hover:underline">+91 9354735410</a>
           </div>
         </div>
       </section>

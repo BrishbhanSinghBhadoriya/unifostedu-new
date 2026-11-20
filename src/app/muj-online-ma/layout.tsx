@@ -449,7 +449,7 @@ NGO workers, and those pursuing social work or civil services.`,
         {
           stepNo: 1,
           title: "Contact UNIFOST for Counseling",
-          description: "Call +91-7042646766 or fill inquiry form for free guidance",
+          description: "Call +91-9354735410 or fill inquiry form for free guidance",
           timeFrame: "Same day response",
         },
         {
@@ -889,7 +889,7 @@ const organizationSchema = {
   contactPoint: [
     {
       "@type": "ContactPoint",
-      telephone: "+91-7042646766",
+      telephone: "+91-9354735410",
       contactType: "customer service",
       areaServed: ["IN", "Delhi", "Mumbai", "Bangalore", "Hyderabad"],
       availableLanguage: ["en", "hi"],
@@ -1254,7 +1254,7 @@ const localBusinessSchema = {
   description:
     "India's trusted education consultancy for online Master's and Bachelor's degree admissions from UGC-approved universities including Manipal, Amity, and LPU.",
   url: "https://unifostedu.com",
-  telephone: "+91-7042646766",
+  telephone: "+91-9354735410",
   email: "info@unifostedu.com",
   priceRange: "Free Counseling",
   openingHoursSpecification: {

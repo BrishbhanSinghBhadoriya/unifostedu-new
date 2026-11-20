@@ -186,13 +186,13 @@ const MobileMenu = ({
             {/* Contact Buttons */}
             <div className="grid grid-cols-3 gap-3">
               <a
-                href="tel:+917042646766"
+                href="tel:+919354735410"
                 className="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg text-white font-bold text-sm hover:scale-105 transition">
                 <FaPhone className="text-xl" />
                 <span>Call</span>
               </a>
               <a
-                href="https://wa.me/917042646766?text=Hi%20Unifost,%20I%20want%20to%20know%20more%20about%20courses.%20My%20Name%20is:%20"
+                href="https://wa.me/919354735410?text=Hi%20Unifost,%20I%20want%20to%20know%20more%20about%20courses.%20My%20Name%20is:%20"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg text-white font-bold text-sm hover:scale-105 transition">
@@ -216,7 +216,7 @@ const MobileMenu = ({
                 <FaPhone className="text-blue-500 text-lg" />
                 <div>
                   <p className="text-xs text-slate-500">Phone</p>
-                  <p className="font-semibold">+91 7042646766</p>
+                  <p className="font-semibold">+91 9354735410</p>
                 </div>
               </div>
               <div className="flex items-center gap-3 text-slate-700">

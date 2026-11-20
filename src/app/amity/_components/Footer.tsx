@@ -68,8 +68,8 @@ const Footer = ({ setOpenModal, openModal }: { setOpenModal: (state: OpenModalSt
             <div className="space-y-2 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <Phone size={14} />
-                <a href="tel:+917042646766" className="hover:text-yellow-400">
-                  +91 7042646766
+                <a href="tel:+919354735410" className="hover:text-yellow-400">
+                  +91 9354735410
                 </a>
               </div>
 

@@ -823,7 +823,7 @@ const AmityMCALandingPage = () => {
                   <div className="space-y-2 text-sm text-gray-400">
                     <div className="flex items-center space-x-2">
                       <Phone className="w-4 h-4" />
-                      <span>+91 7042646766</span>
+                      <span>+91 9354735410</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Mail className="w-4 h-4" />

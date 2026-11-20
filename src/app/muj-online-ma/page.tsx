@@ -201,18 +201,18 @@ const ManipalMAPage = () => {
 
               {/* Phone – desktop */}
               <a
-                href="tel:+917042646766"
-                aria-label="Call us: +91 7042646766"
+                href="tel:+919354735410"
+                aria-label="Call us: +91 9354735410"
                 className="hidden sm:flex items-center gap-1.5 md:gap-2 text-gray-700 font-medium text-xs sm:text-sm md:text-base hover:text-orange-600 transition-colors"
               >
                 <FaPhone className="text-base sm:text-lg" aria-hidden="true" />
-                <span className="hidden lg:inline">+91 7042646766</span>
+                <span className="hidden lg:inline">+91 9354735410</span>
                 <span className="lg:hidden">Call</span>
               </a>
 
               {/* Phone – mobile icon only */}
               <a
-                href="tel:+917042646766"
+                href="tel:+919354735410"
                 aria-label="Call us"
                 className="sm:hidden flex items-center justify-center w-8 h-8 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
               >
@@ -318,7 +318,7 @@ const ManipalMAPage = () => {
                       Apply Now
                     </button>
                     <a
-                      href="tel:+917042646766"
+                      href="tel:+919354735410"
                       aria-label="Call UNIFOST counselor"
                       className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 border border-white/30"
                     >
@@ -1433,7 +1433,7 @@ const ManipalMAPage = () => {
                       <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center flex-shrink-0" aria-hidden="true">
                         <span className="text-orange-400">📞</span>
                       </div>
-                      <a href="tel:+917042646766" className="text-sm hover:text-orange-400 transition-colors">+91 7042646766</a>
+                      <a href="tel:+919354735410" className="text-sm hover:text-orange-400 transition-colors">+91 9354735410</a>
                     </div>
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center flex-shrink-0" aria-hidden="true">

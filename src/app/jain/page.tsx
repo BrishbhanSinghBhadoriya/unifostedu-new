@@ -445,13 +445,13 @@ const Jain = () => {
               </button>
 
               {/* Phone Number */}
-              <a href="tel:+917042646766" className="hidden sm:flex items-center gap-2 bg-gradient-to-r from-[#001C54] to-[#b91c1c] text-white rounded-full px-4 py-2 shadow-lg hover:shadow-xl transition-all duration-300">
+              <a href="tel:+919354735410" className="hidden sm:flex items-center gap-2 bg-gradient-to-r from-[#001C54] to-[#b91c1c] text-white rounded-full px-4 py-2 shadow-lg hover:shadow-xl transition-all duration-300">
                 <FaPhone className="text-white text-sm rotate-100" />
-                <span className="font-semibold text-sm whitespace-nowrap">+91 7042646766</span>
+                <span className="font-semibold text-sm whitespace-nowrap">+91 9354735410</span>
               </a>
               {/* Phone (Mobile) */}
               <a
-                href="tel:+917042646766"
+                href="tel:+919354735410"
                 className="sm:hidden flex items-center justify-center w-10 h-10 bg-white-500 rounded-full text-[#f26722] hover:bg-red-700 transition-colors cursor-pointer"
               >
                 📞

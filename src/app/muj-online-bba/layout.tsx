@@ -123,7 +123,7 @@ const organizationSchema = {
   contact: {
     "@type": "ContactPoint",
     contactType: "Customer Support",
-    telephone: "+91-7042646766",
+    telephone: "+91-9354735410",
     email: "info@unifostedu.com",
     availableLanguage: "en-IN",
   },

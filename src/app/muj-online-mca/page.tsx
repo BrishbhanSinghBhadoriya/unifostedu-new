@@ -406,17 +406,17 @@ const MUJOnlineMCAPage = () => {
                 </button>
                 
                 <a
-                  href="tel:+917042646766"
+                  href="tel:+919354735410"
                   className="hidden sm:flex items-center gap-1.5 md:gap-2 text-gray-700 font-medium text-xs sm:text-sm md:text-base hover:text-orange-600 transition-colors"
-                  aria-label="Call us at 7042646766"
+                  aria-label="Call us at 9354735410"
                 > 
                   <FaPhone className="text-base sm:text-lg" />
-                  <span className="hidden lg:inline">+91 7042646766</span>
+                  <span className="hidden lg:inline">+91 9354735410</span>
                   <span className="lg:hidden">Call</span>
                 </a>
                 
                 <a
-                  href="tel:+917042646766"
+                  href="tel:+919354735410"
                   className="sm:hidden flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
                   aria-label="Call us"
                 >
@@ -496,7 +496,7 @@ const MUJOnlineMCAPage = () => {
                       Apply Now
                     </button>
                     <a
-                      href="tel:+917042646766"
+                      href="tel:+919354735410"
                       className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 border border-white/30"
                     >
                       <FaPhone className="inline mr-2" />

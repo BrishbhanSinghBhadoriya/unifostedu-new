@@ -593,14 +593,14 @@ const Header = () => {
                 </button>
 
                 <Link
-                  href="tel:+917042646766"
-                  aria-label="Call us at +91 7042646766"
+                  href="tel:+919354735410"
+                  aria-label="Call us at +91 9354735410"
                   className="p-2.5 rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-100 transition-all duration-200 flex-shrink-0">
                   <FaPhone className="text-lg" />
                 </Link>
 
                 <Link
-                  href="https://wa.me/917042646766?text=Hi%20Unifost,%20I%20want%20to%20know%20more%20about%20courses.%20My%20Name%20is:%20"
+                  href="https://wa.me/919354735410?text=Hi%20Unifost,%20I%20want%20to%20know%20more%20about%20courses.%20My%20Name%20is:%20"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2.5 rounded-lg bg-green-50 text-green-600 hover:bg-green-100 transition-all duration-200 flex-shrink-0"
@@ -652,7 +652,7 @@ const Header = () => {
                 <div className="flex items-center gap-1.5 lg:gap-2 text-slate-600">
                   <FaPhone className="text-blue-500 text-xs lg:text-sm" />
                   <span className="font-medium whitespace-nowrap">
-                    +91 7042646766
+                    +91 9354735410
                   </span>
                 </div>
                 <div className="flex items-center gap-1.5 lg:gap-2 text-slate-600">

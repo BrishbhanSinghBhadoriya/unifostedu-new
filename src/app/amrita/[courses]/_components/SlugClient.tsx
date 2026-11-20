@@ -1129,11 +1129,11 @@ const [openModal, setOpenModal] = useState<ModalState | null>(null);
                     <div className="space-y-1 text-gray-600">
                       <div className="flex items-center">
                         <FaPhone className="mr-2" size={14} />
-                        <span>+91 7042646766</span>
+                        <span>+91 9354735410</span>
                       </div>
                       <div className="flex items-center">
                         <FaPhone className="mr-2" size={14} />
-                        <span>+91 7042646766</span>
+                        <span>+91 9354735410</span>
                       </div>
                       <div className="flex items-center">
                         <FaEnvelope className="mr-2" size={14} />
@@ -1184,7 +1184,7 @@ const [openModal, setOpenModal] = useState<ModalState | null>(null);
                 <FaChevronUp />
               </button>
               <a 
-                href="https://wa.me/917042646766"
+                href="https://wa.me/919354735410"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center hover:bg-green-600 transition shadow-lg"

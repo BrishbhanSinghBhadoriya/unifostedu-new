@@ -969,7 +969,7 @@ const MbaFees = () => {
                   <div className="space-y-2 text-gray-400 text-sm">
                     <div className="flex items-center gap-2">
                       <Phone className="w-4 h-4" />
-                      <span>+91 7042646766</span>
+                      <span>+91 9354735410</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Mail className="w-4 h-4" />

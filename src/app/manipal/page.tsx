@@ -278,18 +278,18 @@ const Manipal = () => {
 
                 {/* Phone - Hidden on small screens */}
                 <a
-                  href="tel:+917042646766"
-                  aria-label="Call Manipal University admissions at +91 7042646766"
+                  href="tel:+919354735410"
+                  aria-label="Call Manipal University admissions at +91 9354735410"
                   className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm md:text-base hover:text-orange-600 transition-colors"
                 >
                   <span className="text-lg" aria-hidden="true">📞</span>
-                  <span className="hidden lg:inline">+91 7042646766</span>
+                  <span className="hidden lg:inline">+91 9354735410</span>
                   <span className="lg:hidden">Call</span>
                 </a>
 
                 {/* Mobile Phone Icon */}
                 <a
-                  href="tel:+917042646766"
+                  href="tel:+919354735410"
                   aria-label="Call Manipal University admissions"
                   className="sm:hidden flex items-center justify-center w-9 h-9 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
                 >

@@ -114,7 +114,7 @@ const organizationSchema = {
   description: "NMIMS Online offers NAAC A++ accredited, UGC-approved online degrees in management and technology from one of India's premier management institutes in Mumbai.",
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+91 7042646766",
+    telephone: "+91 9354735410",
     contactType: "admissions",
     areaServed: "IN",
     availableLanguage: ["en", "hi"],
