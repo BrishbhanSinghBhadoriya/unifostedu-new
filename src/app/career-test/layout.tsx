@@ -103,7 +103,7 @@ const organizationSchema = {
   description: "AI-powered career guidance and psychometric assessment platform for students and professionals.",
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+91-9354735410",
+    telephone: "+91-9876678955",
     contactType: "customer support",
     areaServed: "IN",
     availableLanguage: ["English", "Hindi"],

@@ -115,7 +115,7 @@ const organizationSchema = {
     "UNIFOST is India's leading EdTech platform that helps students choose the right online university degrees through expert career counseling. We provide personalized guidance and end-to-end support for UGC-approved online programs.",
   contactPoint: {
     "@type":           "ContactPoint",
-    telephone:         "+91 9354735410",
+    telephone:         "+91 9876678955",
     contactType:       "customer support",
     areaServed:        "IN",
     availableLanguage: ["en", "hi"],

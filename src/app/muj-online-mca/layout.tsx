@@ -123,7 +123,7 @@ const universitySchema = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "Admissions",
-    telephone: "+91-9354735410",
+    telephone: "+91-9876678955",
     email: "info@unifostedu.com",
   },
   accreditation: {

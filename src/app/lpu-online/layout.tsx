@@ -269,13 +269,13 @@ const organizationSchema = {
     latitude:   31.2271,
     longitude:  75.7742,
   },
-  telephone: "+91-9354735410",
+  telephone: "+91-9876678955",
   email:     "info@unifostedu.com",
   contactPoint: [
     {
       "@type":           "ContactPoint",
       contactType:       "admissions",
-      telephone:         "+91-9354735410",
+      telephone:         "+91-9876678955",
       areaServed:        "IN",
       availableLanguage: ["English", "Hindi"],
       hoursAvailable: {

@@ -50,9 +50,9 @@ const Header = ({ navigationLinks, setOpenModal }: HeaderProps) => {
         </nav>
 
         <div className="flex items-center gap-4">
-          <a href="tel:+919354735410" className="flex gap-2 text-purple-600">
+          <a href="tel:+919876678955" className="flex gap-2 text-purple-600">
             <Phone size={18} />
-            +91 9354735410
+            +91 9876678955
           </a>
 
           <button

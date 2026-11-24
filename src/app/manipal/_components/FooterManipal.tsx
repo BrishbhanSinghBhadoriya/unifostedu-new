@@ -102,7 +102,7 @@ const FooterManipal = ({ setOpenModal, openModal }: { setOpenModal: (state: Open
                       <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
                         <span className="text-orange-400">📞</span>
                       </div>
-                      <span className="text-sm">+91 9354735410</span>
+                      <span className="text-sm">+91 9876678955</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">

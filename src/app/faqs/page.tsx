@@ -169,10 +169,10 @@ const FAQPage = () => {
               Book Free Counseling
             </a>
             <a
-              href="tel:+919354735410"
+              href="tel:+919876678955"
               className="px-8 py-3 border border-white text-white font-semibold rounded-full hover:bg-white/10 transition-colors"
             >
-              Call Us: +91 9354735410
+              Call Us: +91 9876678955
             </a>
           </div>
         </div>

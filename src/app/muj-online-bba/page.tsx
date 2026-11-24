@@ -174,16 +174,16 @@ const MUJBBAPage = () => {
                 </button>
 
                 <a
-                  href="tel:+919354735410"
+                  href="tel:+919876678955"
                   className="hidden sm:flex items-center gap-1.5 md:gap-2 text-gray-700 font-medium text-xs sm:text-sm md:text-base hover:text-orange-600 transition-colors"
                 >
                   <FaPhone className="text-base sm:text-lg" />
-                  <span className="hidden lg:inline">+91 9354735410</span>
+                  <span className="hidden lg:inline">+91 9876678955</span>
                   <span className="lg:hidden">Call</span>
                 </a>
 
                 <a
-                  href="tel:+919354735410"
+                  href="tel:+919876678955"
                   className="sm:hidden flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
                 >
                   <FaPhone className="text-base" />
@@ -260,7 +260,7 @@ const MUJBBAPage = () => {
                       Apply Now
                     </button>
                     <a
-                      href="tel:+919354735410"
+                      href="tel:+919876678955"
                       className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 border border-white/30"
                     >
                       <FaPhone className="inline mr-2" />
@@ -2587,7 +2587,7 @@ const MUJBBAPage = () => {
                           <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
                             <span className="text-orange-400">📞</span>
                           </div>
-                          <span className="text-sm">+91 9354735410</span>
+                          <span className="text-sm">+91 9876678955</span>
                         </div>
                         <div className="flex items-center gap-3">
                           <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">

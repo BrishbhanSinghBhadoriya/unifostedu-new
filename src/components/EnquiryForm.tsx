@@ -149,7 +149,7 @@ export default function EnquiryForm({
 
   const handleWhatsAppConnect = () => {
     const values = getValues();
-    const targetNumber = '919354735410';
+    const targetNumber = '919876678955';
     const composed = [
       `Hello Sir/ Madam, I would like to connect with a counselor via WhatsApp.`,
       values.name ? `Name: ${values.name}` : `Name: `,

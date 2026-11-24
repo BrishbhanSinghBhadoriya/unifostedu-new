@@ -180,13 +180,13 @@ const Upes = () => {
               </div>
 
               <div className="flex items-center gap-2 sm:gap-4">
-                <a href="tel:+919354735410" className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-orange-600 transition-colors">
+                <a href="tel:+919876678955" className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-orange-600 transition-colors">
                   <span className="text-lg">📞</span>
-                  <span className="hidden lg:inline">+91 9354735410</span>
+                  <span className="hidden lg:inline">+91 9876678955</span>
                   <span className="lg:hidden">Call Now</span>
                 </a>
 
-                <a href="tel:+919354735410" className="sm:hidden flex items-center justify-center w-10 h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors">
+                <a href="tel:+919876678955" className="sm:hidden flex items-center justify-center w-10 h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors">
                   📞
                 </a>
 
@@ -876,7 +876,7 @@ const Upes = () => {
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
                       <span className="text-orange-400">📞</span>
-                      <a href="tel:+919354735410" className="text-sm">+91 9354735410</a>
+                      <a href="tel:+919876678955" className="text-sm">+91 9876678955</a>
                     </div>
                     <div className="flex items-center gap-3">
                       <span className="text-orange-400">✉️</span>

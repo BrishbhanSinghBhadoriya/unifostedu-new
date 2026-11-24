@@ -268,16 +268,16 @@ const UttaranchalUniversity = () => {
 
               <div className="flex items-center gap-2 sm:gap-4">
                 <a
-                  href="tel:+919354735410"
+                  href="tel:+919876678955"
                   className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-blue-600 transition-colors"
                 >
                   <span className="text-lg">📞</span>
-                  <span className="hidden lg:inline">+91 9354735410</span>
+                  <span className="hidden lg:inline">+91 9876678955</span>
                   <span className="lg:hidden">Call Now</span>
                 </a>
 
                 <a
-                  href="tel:+919354735410"
+                  href="tel:+919876678955"
                   className="sm:hidden flex items-center justify-center w-10 h-10 bg-blue-100 rounded-full text-blue-600 hover:bg-blue-200 transition-colors"
                 >
                   📞
@@ -1764,10 +1764,10 @@ const UttaranchalUniversity = () => {
                     <h4 className="text-white font-bold mb-4 text-lg">Contact Us</h4>
                     <div className="space-y-3">
                       <div className="flex items-center gap-3">
-                        <a href="tel:+919354735410" className="p-2 rounded-lg hover:bg-blue-900 transition-all duration-200">
+                        <a href="tel:+919876678955" className="p-2 rounded-lg hover:bg-blue-900 transition-all duration-200">
                           <span className="text-blue-400">📞</span>
                         </a>
-                        <span className="text-sm">+91 9354735410</span>
+                        <span className="text-sm">+91 9876678955</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <a href="mailto:info@unifostedu.com" className="p-2 rounded-lg hover:bg-blue-900 transition-all duration-200">

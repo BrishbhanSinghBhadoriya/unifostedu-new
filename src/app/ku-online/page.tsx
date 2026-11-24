@@ -328,10 +328,10 @@ useEffect(() => {
     {/* Desktop Phone + Apply */}
     <div className="hidden sm:flex items-center gap-4">
       <a
-        href="tel:+919354735410"
+        href="tel:+919876678955"
         className="flex items-center gap-2 text-gray-700 font-medium"
       >
-        📞 +91 9354735410
+        📞 +91 9876678955
       </a>
 
       <button
@@ -347,7 +347,7 @@ useEffect(() => {
 
       {/* Phone Icon */}
       <a
-        href="tel:+919354735410"
+        href="tel:+919876678955"
         className="flex items-center justify-center w-10 h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
       >
         📞
@@ -921,7 +921,7 @@ useEffect(() => {
               </p>
               <p className="mt-3 text-sm">
                 General Helpline No: <br />
-                <a href="tel:+91 9354735410" className="text-yellow-400 font-semibold">+91 9354735410</a>
+                <a href="tel:+91 9876678955" className="text-yellow-400 font-semibold">+91 9876678955</a>
               </p>
               <p className="mt-2 text-sm">
                 Email: <br />

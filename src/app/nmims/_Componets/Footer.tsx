@@ -90,7 +90,7 @@ const Footer: React.FC<FooterProps> = ({ programs, setOpenModal }) => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-2">
                 <Phone size={16} className="text-purple-400" />
-                <span>+91 9354735410</span>
+                <span>+91 9876678955</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail size={16} className="text-purple-400" />

@@ -121,7 +121,7 @@ const UniversityPage: React.FC = () => {
     description: "Globally recognized university offering quality online education",
     themeColor: "#EC027C",
     accreditation: "NAAC A+",
-    phone: "+91 9354735410"
+    phone: "+91 9876678955"
   };
 
   const ugCourses: Course[] = [

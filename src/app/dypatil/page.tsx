@@ -377,13 +377,13 @@ const Dypatil = () => {
 
               {/* Call button (text on >=sm, icon on mobile) */}
               <a
-                href="tel:+919354735410"
+                href="tel:+919876678955"
                 className="hidden sm:inline-flex items-center bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white px-4 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-opacity text-sm cursor-pointer"
               >
-                +91 9354735410
+                +91 9876678955
               </a>
               <a
-                href="tel:+919354735410"
+                href="tel:+919876678955"
                 className="sm:hidden inline-flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-r from-[#d91c5c] to-[#b11747] text-white"
                 aria-label="Call"
               >
@@ -2076,7 +2076,7 @@ const Dypatil = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <span>📞</span>
-                  <a href="tel:+919354735410" className="hover:text-white transition-colors">+91 9354735410</a>
+                  <a href="tel:+919876678955" className="hover:text-white transition-colors">+91 9876678955</a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <span>📧</span>

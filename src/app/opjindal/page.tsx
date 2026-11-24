@@ -477,17 +477,17 @@ const OPJindal: FC = () => {
                         <FaBars className="w-5 h-5 text-white" />
                       </button>
                       <a
-                        href="tel:+919354735410"
+                        href="tel:+919876678955"
                         className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-orange-600 transition-colors"
                       > 
                         <FaPhone className="text-blue-500 rotate-90" />
-                        <span className="text-white lg:inline">+91 9354735410</span>
+                        <span className="text-white lg:inline">+91 9876678955</span>
                         <span className="lg:hidden">Call Now</span>
                       </a>
                       
                       {/* Mobile Phone Icon */}
                       <a
-                        href="tel:+919354735410"
+                        href="tel:+919876678955"
                         className="sm:hidden flex items-center justify-center w-10 h-10 bg-orange-100 rounded-full text-orange-600 hover:bg-orange-200 transition-colors"
                       >
                         <FaPhone className="text-blue-500 rotate-90" />
@@ -1791,11 +1791,11 @@ const OPJindal: FC = () => {
                             <div className="space-y-3">
                               <div className="flex items-center gap-3">
                                 
-                                <a href="tel:+919354735410" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us"  aria-label="Email us at info@unifostedu.com">
+                                <a href="tel:+919876678955" className="p-2 rounded-lg hover:bg-slate-100 transition-all duration-200" title="Call us"  aria-label="Email us at info@unifostedu.com">
                                              
                                            <FaPhone className="text-blue-500 rotate-90" />
                                             </a>
-                                <span className="text-sm">+91 9354735410</span>
+                                <span className="text-sm">+91 9876678955</span>
                               </div>
                               <div className="flex items-center gap-3">
                                 <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">

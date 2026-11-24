@@ -133,7 +133,7 @@ const organizationSchema = {
   contact: {
     "@type": "ContactPoint",
     contactType: "Customer Service",
-    telephone: "+91-9354735410",
+    telephone: "+91-9876678955",
     email: "info@unifostedu.com",
     areaServed: "IN",
     availableLanguage: "en-IN",
@@ -163,7 +163,7 @@ const universitySchema = {
     postalCode: "302022",
     addressCountry: "IN",
   },
-  telephone: "+91-9354735410",
+  telephone: "+91-9876678955",
   email: "info@unifostedu.com",
   areaServed: "IN",
   educationalCredentialAwarded: [
@@ -482,7 +482,7 @@ const localBusinessSchema = {
     postalCode: "302022",
     addressCountry: "IN",
   },
-  telephone: "+91-9354735410",
+  telephone: "+91-9876678955",
   email: "info@unifostedu.com",
   areaServed: {
     "@type": "GeoShape",

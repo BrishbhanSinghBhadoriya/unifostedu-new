@@ -375,16 +375,16 @@ const CuOnline = () => {
                 </button>
 
                 <a
-                  href="tel:+919354735410"
+                  href="tel:+919876678955"
                   className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-[#f26722] transition-colors">
                   <FaPhone className="text-red-500 rotate-90" />
-                  <span className="hidden lg:inline">+91 9354735410</span>
+                  <span className="hidden lg:inline">+91 9876678955</span>
                   <span className="lg:hidden">Call Now</span>
                 </a>
 
                 {/* Phone (Mobile) */}
                 <a
-                  href="tel:+919354735410"
+                  href="tel:+919876678955"
                   className="sm:hidden flex items-center justify-center w-10 h-10 bg-white-500 rounded-full text-[#f26722] hover:bg-red-700 transition-colors cursor-pointer">
                   📞
                 </a>
@@ -1656,9 +1656,9 @@ const CuOnline = () => {
               <p className="mt-3 text-sm">
                 General Helpline No: <br />
                 <a
-                  href="tel:+91 9354735410"
+                  href="tel:+91 9876678955"
                   className="text-yellow-400 font-semibold">
-                  +91 9354735410
+                  +91 9876678955
                 </a>
               </p>
               <p className="mt-2 text-sm">

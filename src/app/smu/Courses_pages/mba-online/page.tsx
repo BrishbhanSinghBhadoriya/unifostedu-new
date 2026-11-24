@@ -133,7 +133,7 @@ const MBAPage: React.FC<MBAPageProps> = ({  }) => {
               '@type': 'EducationalOrganization',
               name: 'Sikkim Manipal University Online',
               sameAs: 'https://unifostedu.com/smu',
-              telephone: '+91-9354735410',
+              telephone: '+91-9876678955',
             },
             offers: {
               '@type': 'Offer',
@@ -168,17 +168,17 @@ const MBAPage: React.FC<MBAPageProps> = ({  }) => {
 
                 {/* Phone (Desktop) */}
                 <a
-                  href="tel:+919354735410"
+                  href="tel:+919876678955"
                   className="hidden sm:flex items-center gap-2 text-gray-700 font-medium text-sm lg:text-base hover:text-[#f26722] transition-colors"
                 >
                   <FaPhone className="text-orange-500 rotate-90" />
-                  <span className="hidden lg:inline">+91 9354735410</span>
+                  <span className="hidden lg:inline">+91 9876678955</span>
                   <span className="lg:hidden">Call Now</span>
                 </a>
 
                 {/* Phone (Mobile) */}
                 <a
-                  href="tel:+919354735410"
+                  href="tel:+919876678955"
                   className="sm:hidden flex items-center justify-center w-10 h-10 bg-[#f26722]/10 rounded-full text-[#f26722] hover:bg-[#f26722]/20 transition-colors cursor-pointer"
                 >
                   📞
@@ -815,7 +815,7 @@ const MBAPage: React.FC<MBAPageProps> = ({  }) => {
           <div className="flex items-center justify-center gap-3 mt-7">
             <FaPhone className="rotate-90 text-orange-200" />
             <span className="text-orange-100">Talk to an advisor: </span>
-            <a href="tel:+919354735410" className="text-white font-bold hover:underline">+91 9354735410</a>
+            <a href="tel:+919876678955" className="text-white font-bold hover:underline">+91 9876678955</a>
           </div>
         </div>
       </section>

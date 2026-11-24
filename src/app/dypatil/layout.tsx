@@ -129,7 +129,7 @@ const organizationSchema = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+91-9354735410",
+    telephone: "+91-9876678955",
     email: "info@unifostedu.com",
     contactType: "admissions",
     areaServed: "IN",

@@ -1333,11 +1333,11 @@ export default function AmritaOnlinePage() {
                 </div>
                 <div className="flex items-center">
                   <FaPhone className="text-[#B8164A] mr-4" size={20} />
-                  <span className="text-gray-700">+91 9354735410</span>
+                  <span className="text-gray-700">+91 9876678955</span>
                 </div>
                 <div className="flex items-center">
                   <FaWhatsapp className="text-[#B8164A] mr-4" size={20} />
-                  <span className="text-gray-700">9354735410</span>
+                  <span className="text-gray-700">9876678955</span>
                 </div>
               </div>
 
@@ -1381,11 +1381,11 @@ export default function AmritaOnlinePage() {
               <div className="space-y-1 text-gray-600">
                 <div className="flex items-center">
                   <FaPhone className="mr-2" size={14} />
-                  <span>+91 9354735410</span>
+                  <span>+91 9876678955</span>
                 </div>
                 <div className="flex items-center">
                   <FaPhone className="mr-2" size={14} />
-                  <span>+91 9354735410</span>
+                  <span>+91 9876678955</span>
                 </div>
                 <div className="flex items-center">
                   <FaEnvelope className="mr-2" size={14} />
@@ -1436,7 +1436,7 @@ export default function AmritaOnlinePage() {
           <FaChevronUp />
         </button>
         <a 
-          href="https://wa.me/919354735410"
+          href="https://wa.me/919876678955"
           target="_blank"
           rel="noopener noreferrer"
           className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center hover:bg-green-600 transition shadow-lg"

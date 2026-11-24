@@ -20,8 +20,8 @@ export async function POST(req) {
     // Support/Contact information
     const supportInfo = {
       email: "info@unifostedu.com",
-      phone: "+91 9354735410",
-      whatsapp: "+91 9354735410",
+      phone: "+91 9876678955",
+      whatsapp: "+91 9876678955",
       address: "Noida, Uttar Pradesh, India",
       workingHours: "10:00 AM to 7:00 PM (Monday to Saturday)"
     };
@@ -40,8 +40,8 @@ export async function POST(req) {
       ],
       contact: {
         email: "info@unifostedu.com",
-        phone: "+91 9354735410",
-        whatsapp: "+91 9354735410",
+        phone: "+91 9876678955",
+        whatsapp: "+91 9876678955",
         website: "www.unifostedu.com"
       }
     };
